@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationCategory extends Entity implements Parsable {
     /**
-     * Unique identifier for the category.
-     */
-    private String displayName;
-    /**
      * Instantiates a new EducationCategory and sets the default values.
      */
     public EducationCategory() {
@@ -34,7 +30,7 @@ public class EducationCategory extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -60,6 +56,6 @@ public class EducationCategory extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
 }

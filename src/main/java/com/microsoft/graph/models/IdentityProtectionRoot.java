@@ -4,39 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
+public class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Risk detection in Microsoft Entra ID Protection and the associated information about the detection.
-     */
-    private java.util.List<RiskDetection> riskDetections;
-    /**
-     * Microsoft Entra service principals that are at risk.
-     */
-    private java.util.List<RiskyServicePrincipal> riskyServicePrincipals;
-    /**
-     * Users that are flagged as at-risk by Microsoft Entra ID Protection.
-     */
-    private java.util.List<RiskyUser> riskyUsers;
-    /**
-     * Represents information about detected at-risk service principals in a Microsoft Entra tenant.
-     */
-    private java.util.List<ServicePrincipalRiskDetection> servicePrincipalRiskDetections;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new IdentityProtectionRoot and sets the default values.
      */
     public IdentityProtectionRoot() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +40,12 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -77,7 +67,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the riskDetections property value. Risk detection in Microsoft Entra ID Protection and the associated information about the detection.
@@ -85,7 +75,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<RiskDetection> getRiskDetections() {
-        return this.riskDetections;
+        return this.backingStore.get("riskDetections");
     }
     /**
      * Gets the riskyServicePrincipals property value. Microsoft Entra service principals that are at risk.
@@ -93,7 +83,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<RiskyServicePrincipal> getRiskyServicePrincipals() {
-        return this.riskyServicePrincipals;
+        return this.backingStore.get("riskyServicePrincipals");
     }
     /**
      * Gets the riskyUsers property value. Users that are flagged as at-risk by Microsoft Entra ID Protection.
@@ -101,7 +91,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<RiskyUser> getRiskyUsers() {
-        return this.riskyUsers;
+        return this.backingStore.get("riskyUsers");
     }
     /**
      * Gets the servicePrincipalRiskDetections property value. Represents information about detected at-risk service principals in a Microsoft Entra tenant.
@@ -109,7 +99,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServicePrincipalRiskDetection> getServicePrincipalRiskDetections() {
-        return this.servicePrincipalRiskDetections;
+        return this.backingStore.get("servicePrincipalRiskDetections");
     }
     /**
      * Serializes information the current object
@@ -129,41 +119,41 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the riskDetections property value. Risk detection in Microsoft Entra ID Protection and the associated information about the detection.
      * @param value Value to set for the riskDetections property.
      */
     public void setRiskDetections(@jakarta.annotation.Nullable final java.util.List<RiskDetection> value) {
-        this.riskDetections = value;
+        this.backingStore.set("riskDetections", value);
     }
     /**
      * Sets the riskyServicePrincipals property value. Microsoft Entra service principals that are at risk.
      * @param value Value to set for the riskyServicePrincipals property.
      */
     public void setRiskyServicePrincipals(@jakarta.annotation.Nullable final java.util.List<RiskyServicePrincipal> value) {
-        this.riskyServicePrincipals = value;
+        this.backingStore.set("riskyServicePrincipals", value);
     }
     /**
      * Sets the riskyUsers property value. Users that are flagged as at-risk by Microsoft Entra ID Protection.
      * @param value Value to set for the riskyUsers property.
      */
     public void setRiskyUsers(@jakarta.annotation.Nullable final java.util.List<RiskyUser> value) {
-        this.riskyUsers = value;
+        this.backingStore.set("riskyUsers", value);
     }
     /**
      * Sets the servicePrincipalRiskDetections property value. Represents information about detected at-risk service principals in a Microsoft Entra tenant.
      * @param value Value to set for the servicePrincipalRiskDetections property.
      */
     public void setServicePrincipalRiskDetections(@jakarta.annotation.Nullable final java.util.List<ServicePrincipalRiskDetection> value) {
-        this.servicePrincipalRiskDetections = value;
+        this.backingStore.set("servicePrincipalRiskDetections", value);
     }
 }

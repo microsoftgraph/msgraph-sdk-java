@@ -4,31 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DateTimeColumn implements AdditionalDataHolder, Parsable {
+public class DateTimeColumn implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * How the value should be presented in the UX. Must be one of default, friendly, or standard. See below for more details. If unspecified, treated as default.
-     */
-    private String displayAs;
-    /**
-     * Indicates whether the value should be presented as a date only or a date and time. Must be one of dateOnly or dateTime
-     */
-    private String format;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new DateTimeColumn and sets the default values.
      */
     public DateTimeColumn() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +40,12 @@ public class DateTimeColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the displayAs property value. How the value should be presented in the UX. Must be one of default, friendly, or standard. See below for more details. If unspecified, treated as default.
@@ -55,7 +53,7 @@ public class DateTimeColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayAs() {
-        return this.displayAs;
+        return this.backingStore.get("displayAs");
     }
     /**
      * The deserialization information for the current model
@@ -75,7 +73,7 @@ public class DateTimeColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getFormat() {
-        return this.format;
+        return this.backingStore.get("format");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -83,7 +81,7 @@ public class DateTimeColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -101,27 +99,27 @@ public class DateTimeColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the displayAs property value. How the value should be presented in the UX. Must be one of default, friendly, or standard. See below for more details. If unspecified, treated as default.
      * @param value Value to set for the displayAs property.
      */
     public void setDisplayAs(@jakarta.annotation.Nullable final String value) {
-        this.displayAs = value;
+        this.backingStore.set("displayAs", value);
     }
     /**
      * Sets the format property value. Indicates whether the value should be presented as a date only or a date and time. Must be one of dateOnly or dateTime
      * @param value Value to set for the format property.
      */
     public void setFormat(@jakarta.annotation.Nullable final String value) {
-        this.format = value;
+        this.backingStore.set("format", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

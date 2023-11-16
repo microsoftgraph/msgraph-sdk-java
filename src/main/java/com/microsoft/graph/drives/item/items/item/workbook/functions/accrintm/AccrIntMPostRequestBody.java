@@ -5,39 +5,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AccrIntMPostRequestBody implements AdditionalDataHolder, Parsable {
+public class AccrIntMPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The basis property
-     */
-    private Json basis;
-    /**
-     * The issue property
-     */
-    private Json issue;
-    /**
-     * The par property
-     */
-    private Json par;
-    /**
-     * The rate property
-     */
-    private Json rate;
-    /**
-     * The settlement property
-     */
-    private Json settlement;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new AccrIntMPostRequestBody and sets the default values.
      */
     public AccrIntMPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -56,7 +41,12 @@ public class AccrIntMPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the basis property value. The basis property
@@ -64,7 +54,7 @@ public class AccrIntMPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getBasis() {
-        return this.basis;
+        return this.backingStore.get("basis");
     }
     /**
      * The deserialization information for the current model
@@ -86,7 +76,7 @@ public class AccrIntMPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getIssue() {
-        return this.issue;
+        return this.backingStore.get("issue");
     }
     /**
      * Gets the par property value. The par property
@@ -94,7 +84,7 @@ public class AccrIntMPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getPar() {
-        return this.par;
+        return this.backingStore.get("par");
     }
     /**
      * Gets the rate property value. The rate property
@@ -102,7 +92,7 @@ public class AccrIntMPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getRate() {
-        return this.rate;
+        return this.backingStore.get("rate");
     }
     /**
      * Gets the settlement property value. The settlement property
@@ -110,7 +100,7 @@ public class AccrIntMPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getSettlement() {
-        return this.settlement;
+        return this.backingStore.get("settlement");
     }
     /**
      * Serializes information the current object
@@ -130,41 +120,41 @@ public class AccrIntMPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the basis property value. The basis property
      * @param value Value to set for the basis property.
      */
     public void setBasis(@jakarta.annotation.Nullable final Json value) {
-        this.basis = value;
+        this.backingStore.set("basis", value);
     }
     /**
      * Sets the issue property value. The issue property
      * @param value Value to set for the issue property.
      */
     public void setIssue(@jakarta.annotation.Nullable final Json value) {
-        this.issue = value;
+        this.backingStore.set("issue", value);
     }
     /**
      * Sets the par property value. The par property
      * @param value Value to set for the par property.
      */
     public void setPar(@jakarta.annotation.Nullable final Json value) {
-        this.par = value;
+        this.backingStore.set("par", value);
     }
     /**
      * Sets the rate property value. The rate property
      * @param value Value to set for the rate property.
      */
     public void setRate(@jakarta.annotation.Nullable final Json value) {
-        this.rate = value;
+        this.backingStore.set("rate", value);
     }
     /**
      * Sets the settlement property value. The settlement property
      * @param value Value to set for the settlement property.
      */
     public void setSettlement(@jakarta.annotation.Nullable final Json value) {
-        this.settlement = value;
+        this.backingStore.set("settlement", value);
     }
 }

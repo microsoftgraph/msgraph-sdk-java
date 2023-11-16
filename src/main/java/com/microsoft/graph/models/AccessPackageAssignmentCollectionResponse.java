@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageAssignmentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<AccessPackageAssignment> value;
-    /**
      * Instantiates a new AccessPackageAssignmentCollectionResponse and sets the default values.
      */
     public AccessPackageAssignmentCollectionResponse() {
@@ -44,7 +40,7 @@ public class AccessPackageAssignmentCollectionResponse extends BaseCollectionPag
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignment> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AccessPackageAssignmentCollectionResponse extends BaseCollectionPag
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AccessPackageAssignment> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

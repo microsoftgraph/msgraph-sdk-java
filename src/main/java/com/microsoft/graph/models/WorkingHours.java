@@ -4,40 +4,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.LocalTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class WorkingHours implements AdditionalDataHolder, Parsable {
+public class WorkingHours implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The days of the week on which the user works.
-     */
-    private java.util.List<DayOfWeek> daysOfWeek;
-    /**
-     * The time of the day that the user stops working.
-     */
-    private LocalTime endTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The time of the day that the user starts working.
-     */
-    private LocalTime startTime;
-    /**
-     * The time zone to which the working hours apply.
-     */
-    private TimeZoneBase timeZone;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new WorkingHours and sets the default values.
      */
     public WorkingHours() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -56,7 +41,12 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the daysOfWeek property value. The days of the week on which the user works.
@@ -64,7 +54,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DayOfWeek> getDaysOfWeek() {
-        return this.daysOfWeek;
+        return this.backingStore.get("daysOfWeek");
     }
     /**
      * Gets the endTime property value. The time of the day that the user stops working.
@@ -72,7 +62,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalTime getEndTime() {
-        return this.endTime;
+        return this.backingStore.get("endTime");
     }
     /**
      * The deserialization information for the current model
@@ -94,7 +84,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the startTime property value. The time of the day that the user starts working.
@@ -102,7 +92,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalTime getStartTime() {
-        return this.startTime;
+        return this.backingStore.get("startTime");
     }
     /**
      * Gets the timeZone property value. The time zone to which the working hours apply.
@@ -110,7 +100,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public TimeZoneBase getTimeZone() {
-        return this.timeZone;
+        return this.backingStore.get("timeZone");
     }
     /**
      * Serializes information the current object
@@ -130,41 +120,41 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the daysOfWeek property value. The days of the week on which the user works.
      * @param value Value to set for the daysOfWeek property.
      */
     public void setDaysOfWeek(@jakarta.annotation.Nullable final java.util.List<DayOfWeek> value) {
-        this.daysOfWeek = value;
+        this.backingStore.set("daysOfWeek", value);
     }
     /**
      * Sets the endTime property value. The time of the day that the user stops working.
      * @param value Value to set for the endTime property.
      */
     public void setEndTime(@jakarta.annotation.Nullable final LocalTime value) {
-        this.endTime = value;
+        this.backingStore.set("endTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the startTime property value. The time of the day that the user starts working.
      * @param value Value to set for the startTime property.
      */
     public void setStartTime(@jakarta.annotation.Nullable final LocalTime value) {
-        this.startTime = value;
+        this.backingStore.set("startTime", value);
     }
     /**
      * Sets the timeZone property value. The time zone to which the working hours apply.
      * @param value Value to set for the timeZone property.
      */
     public void setTimeZone(@jakarta.annotation.Nullable final TimeZoneBase value) {
-        this.timeZone = value;
+        this.backingStore.set("timeZone", value);
     }
 }

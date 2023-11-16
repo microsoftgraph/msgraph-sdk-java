@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnclassifiedArtifact extends Artifact implements Parsable {
     /**
-     * The kind for this unclassifiedArtifact resource, describing what this value means.
-     */
-    private String kind;
-    /**
-     * The value for this unclassifiedArtifact.
-     */
-    private String value;
-    /**
      * Instantiates a new UnclassifiedArtifact and sets the default values.
      */
     public UnclassifiedArtifact() {
@@ -50,7 +42,7 @@ public class UnclassifiedArtifact extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getKind() {
-        return this.kind;
+        return this.backingStore.get("kind");
     }
     /**
      * Gets the value property value. The value for this unclassifiedArtifact.
@@ -58,7 +50,7 @@ public class UnclassifiedArtifact extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class UnclassifiedArtifact extends Artifact implements Parsable {
      * @param value Value to set for the kind property.
      */
     public void setKind(@jakarta.annotation.Nullable final String value) {
-        this.kind = value;
+        this.backingStore.set("kind", value);
     }
     /**
      * Sets the value property value. The value for this unclassifiedArtifact.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidMobileAppIdentifier extends MobileAppIdentifier implements Parsable {
     /**
-     * The identifier for an app, as specified in the play store.
-     */
-    private String packageId;
-    /**
      * Instantiates a new AndroidMobileAppIdentifier and sets the default values.
      */
     public AndroidMobileAppIdentifier() {
@@ -48,7 +44,7 @@ public class AndroidMobileAppIdentifier extends MobileAppIdentifier implements P
      */
     @jakarta.annotation.Nullable
     public String getPackageId() {
-        return this.packageId;
+        return this.backingStore.get("packageId");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class AndroidMobileAppIdentifier extends MobileAppIdentifier implements P
      * @param value Value to set for the packageId property.
      */
     public void setPackageId(@jakarta.annotation.Nullable final String value) {
-        this.packageId = value;
+        this.backingStore.set("packageId", value);
     }
 }

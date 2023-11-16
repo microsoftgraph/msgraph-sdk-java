@@ -10,42 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TrainingLanguageDetail extends Entity implements Parsable {
     /**
-     * Language specific content for the training.
-     */
-    private String content;
-    /**
-     * Identity of the user who created the language details.
-     */
-    private EmailIdentity createdBy;
-    /**
-     * Date and time when the language details were created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Description as defined by the user.
-     */
-    private String description;
-    /**
-     * Display name as defined by the user.
-     */
-    private String displayName;
-    /**
-     * Indicates whether the training has a default language.
-     */
-    private Boolean isDefaultLangauge;
-    /**
-     * Identity of the user who last modified the details.
-     */
-    private EmailIdentity lastModifiedBy;
-    /**
-     * Date and time when the trainingLanguageDetail was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Content locale for the training detail.
-     */
-    private String locale;
-    /**
      * Instantiates a new TrainingLanguageDetail and sets the default values.
      */
     public TrainingLanguageDetail() {
@@ -67,7 +31,7 @@ public class TrainingLanguageDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getContent() {
-        return this.content;
+        return this.backingStore.get("content");
     }
     /**
      * Gets the createdBy property value. Identity of the user who created the language details.
@@ -75,7 +39,7 @@ public class TrainingLanguageDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getCreatedBy() {
-        return this.createdBy;
+        return this.backingStore.get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. Date and time when the language details were created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -83,7 +47,7 @@ public class TrainingLanguageDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the description property value. Description as defined by the user.
@@ -91,7 +55,7 @@ public class TrainingLanguageDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. Display name as defined by the user.
@@ -99,7 +63,7 @@ public class TrainingLanguageDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -125,7 +89,7 @@ public class TrainingLanguageDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefaultLangauge() {
-        return this.isDefaultLangauge;
+        return this.backingStore.get("isDefaultLangauge");
     }
     /**
      * Gets the lastModifiedBy property value. Identity of the user who last modified the details.
@@ -133,7 +97,7 @@ public class TrainingLanguageDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.backingStore.get("lastModifiedBy");
     }
     /**
      * Gets the lastModifiedDateTime property value. Date and time when the trainingLanguageDetail was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -141,7 +105,7 @@ public class TrainingLanguageDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the locale property value. Content locale for the training detail.
@@ -149,7 +113,7 @@ public class TrainingLanguageDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLocale() {
-        return this.locale;
+        return this.backingStore.get("locale");
     }
     /**
      * Serializes information the current object
@@ -173,62 +137,62 @@ public class TrainingLanguageDetail extends Entity implements Parsable {
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final String value) {
-        this.content = value;
+        this.backingStore.set("content", value);
     }
     /**
      * Sets the createdBy property value. Identity of the user who created the language details.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
-        this.createdBy = value;
+        this.backingStore.set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. Date and time when the language details were created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the description property value. Description as defined by the user.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Display name as defined by the user.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the isDefaultLangauge property value. Indicates whether the training has a default language.
      * @param value Value to set for the isDefaultLangauge property.
      */
     public void setIsDefaultLangauge(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDefaultLangauge = value;
+        this.backingStore.set("isDefaultLangauge", value);
     }
     /**
      * Sets the lastModifiedBy property value. Identity of the user who last modified the details.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
-        this.lastModifiedBy = value;
+        this.backingStore.set("lastModifiedBy", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. Date and time when the trainingLanguageDetail was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the locale property value. Content locale for the training detail.
      * @param value Value to set for the locale property.
      */
     public void setLocale(@jakarta.annotation.Nullable final String value) {
-        this.locale = value;
+        this.backingStore.set("locale", value);
     }
 }

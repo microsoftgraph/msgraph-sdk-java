@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,67 +14,17 @@ import java.util.Objects;
  * Device operating system summary.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsable {
+public class DeviceOperatingSystemSummary implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The count of Corporate work profile Android devices. Also known as Corporate Owned Personally Enabled (COPE). Valid values -1 to 2147483647
-     */
-    private Integer androidCorporateWorkProfileCount;
-    /**
-     * Number of android device count.
-     */
-    private Integer androidCount;
-    /**
-     * Number of dedicated Android devices.
-     */
-    private Integer androidDedicatedCount;
-    /**
-     * Number of device admin Android devices.
-     */
-    private Integer androidDeviceAdminCount;
-    /**
-     * Number of fully managed Android devices.
-     */
-    private Integer androidFullyManagedCount;
-    /**
-     * Number of work profile Android devices.
-     */
-    private Integer androidWorkProfileCount;
-    /**
-     * Number of ConfigMgr managed devices.
-     */
-    private Integer configMgrDeviceCount;
-    /**
-     * Number of iOS device count.
-     */
-    private Integer iosCount;
-    /**
-     * Number of Mac OS X device count.
-     */
-    private Integer macOSCount;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Number of unknown device count.
-     */
-    private Integer unknownCount;
-    /**
-     * Number of Windows device count.
-     */
-    private Integer windowsCount;
-    /**
-     * Number of Windows mobile device count.
-     */
-    private Integer windowsMobileCount;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new DeviceOperatingSystemSummary and sets the default values.
      */
     public DeviceOperatingSystemSummary() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -90,7 +43,12 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the androidCorporateWorkProfileCount property value. The count of Corporate work profile Android devices. Also known as Corporate Owned Personally Enabled (COPE). Valid values -1 to 2147483647
@@ -98,7 +56,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public Integer getAndroidCorporateWorkProfileCount() {
-        return this.androidCorporateWorkProfileCount;
+        return this.backingStore.get("androidCorporateWorkProfileCount");
     }
     /**
      * Gets the androidCount property value. Number of android device count.
@@ -106,7 +64,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public Integer getAndroidCount() {
-        return this.androidCount;
+        return this.backingStore.get("androidCount");
     }
     /**
      * Gets the androidDedicatedCount property value. Number of dedicated Android devices.
@@ -114,7 +72,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public Integer getAndroidDedicatedCount() {
-        return this.androidDedicatedCount;
+        return this.backingStore.get("androidDedicatedCount");
     }
     /**
      * Gets the androidDeviceAdminCount property value. Number of device admin Android devices.
@@ -122,7 +80,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public Integer getAndroidDeviceAdminCount() {
-        return this.androidDeviceAdminCount;
+        return this.backingStore.get("androidDeviceAdminCount");
     }
     /**
      * Gets the androidFullyManagedCount property value. Number of fully managed Android devices.
@@ -130,7 +88,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public Integer getAndroidFullyManagedCount() {
-        return this.androidFullyManagedCount;
+        return this.backingStore.get("androidFullyManagedCount");
     }
     /**
      * Gets the androidWorkProfileCount property value. Number of work profile Android devices.
@@ -138,7 +96,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public Integer getAndroidWorkProfileCount() {
-        return this.androidWorkProfileCount;
+        return this.backingStore.get("androidWorkProfileCount");
     }
     /**
      * Gets the configMgrDeviceCount property value. Number of ConfigMgr managed devices.
@@ -146,7 +104,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public Integer getConfigMgrDeviceCount() {
-        return this.configMgrDeviceCount;
+        return this.backingStore.get("configMgrDeviceCount");
     }
     /**
      * The deserialization information for the current model
@@ -176,7 +134,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public Integer getIosCount() {
-        return this.iosCount;
+        return this.backingStore.get("iosCount");
     }
     /**
      * Gets the macOSCount property value. Number of Mac OS X device count.
@@ -184,7 +142,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public Integer getMacOSCount() {
-        return this.macOSCount;
+        return this.backingStore.get("macOSCount");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -192,7 +150,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the unknownCount property value. Number of unknown device count.
@@ -200,7 +158,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public Integer getUnknownCount() {
-        return this.unknownCount;
+        return this.backingStore.get("unknownCount");
     }
     /**
      * Gets the windowsCount property value. Number of Windows device count.
@@ -208,7 +166,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public Integer getWindowsCount() {
-        return this.windowsCount;
+        return this.backingStore.get("windowsCount");
     }
     /**
      * Gets the windowsMobileCount property value. Number of Windows mobile device count.
@@ -216,7 +174,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public Integer getWindowsMobileCount() {
-        return this.windowsMobileCount;
+        return this.backingStore.get("windowsMobileCount");
     }
     /**
      * Serializes information the current object
@@ -244,97 +202,97 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the androidCorporateWorkProfileCount property value. The count of Corporate work profile Android devices. Also known as Corporate Owned Personally Enabled (COPE). Valid values -1 to 2147483647
      * @param value Value to set for the androidCorporateWorkProfileCount property.
      */
     public void setAndroidCorporateWorkProfileCount(@jakarta.annotation.Nullable final Integer value) {
-        this.androidCorporateWorkProfileCount = value;
+        this.backingStore.set("androidCorporateWorkProfileCount", value);
     }
     /**
      * Sets the androidCount property value. Number of android device count.
      * @param value Value to set for the androidCount property.
      */
     public void setAndroidCount(@jakarta.annotation.Nullable final Integer value) {
-        this.androidCount = value;
+        this.backingStore.set("androidCount", value);
     }
     /**
      * Sets the androidDedicatedCount property value. Number of dedicated Android devices.
      * @param value Value to set for the androidDedicatedCount property.
      */
     public void setAndroidDedicatedCount(@jakarta.annotation.Nullable final Integer value) {
-        this.androidDedicatedCount = value;
+        this.backingStore.set("androidDedicatedCount", value);
     }
     /**
      * Sets the androidDeviceAdminCount property value. Number of device admin Android devices.
      * @param value Value to set for the androidDeviceAdminCount property.
      */
     public void setAndroidDeviceAdminCount(@jakarta.annotation.Nullable final Integer value) {
-        this.androidDeviceAdminCount = value;
+        this.backingStore.set("androidDeviceAdminCount", value);
     }
     /**
      * Sets the androidFullyManagedCount property value. Number of fully managed Android devices.
      * @param value Value to set for the androidFullyManagedCount property.
      */
     public void setAndroidFullyManagedCount(@jakarta.annotation.Nullable final Integer value) {
-        this.androidFullyManagedCount = value;
+        this.backingStore.set("androidFullyManagedCount", value);
     }
     /**
      * Sets the androidWorkProfileCount property value. Number of work profile Android devices.
      * @param value Value to set for the androidWorkProfileCount property.
      */
     public void setAndroidWorkProfileCount(@jakarta.annotation.Nullable final Integer value) {
-        this.androidWorkProfileCount = value;
+        this.backingStore.set("androidWorkProfileCount", value);
     }
     /**
      * Sets the configMgrDeviceCount property value. Number of ConfigMgr managed devices.
      * @param value Value to set for the configMgrDeviceCount property.
      */
     public void setConfigMgrDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.configMgrDeviceCount = value;
+        this.backingStore.set("configMgrDeviceCount", value);
     }
     /**
      * Sets the iosCount property value. Number of iOS device count.
      * @param value Value to set for the iosCount property.
      */
     public void setIosCount(@jakarta.annotation.Nullable final Integer value) {
-        this.iosCount = value;
+        this.backingStore.set("iosCount", value);
     }
     /**
      * Sets the macOSCount property value. Number of Mac OS X device count.
      * @param value Value to set for the macOSCount property.
      */
     public void setMacOSCount(@jakarta.annotation.Nullable final Integer value) {
-        this.macOSCount = value;
+        this.backingStore.set("macOSCount", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the unknownCount property value. Number of unknown device count.
      * @param value Value to set for the unknownCount property.
      */
     public void setUnknownCount(@jakarta.annotation.Nullable final Integer value) {
-        this.unknownCount = value;
+        this.backingStore.set("unknownCount", value);
     }
     /**
      * Sets the windowsCount property value. Number of Windows device count.
      * @param value Value to set for the windowsCount property.
      */
     public void setWindowsCount(@jakarta.annotation.Nullable final Integer value) {
-        this.windowsCount = value;
+        this.backingStore.set("windowsCount", value);
     }
     /**
      * Sets the windowsMobileCount property value. Number of Windows mobile device count.
      * @param value Value to set for the windowsMobileCount property.
      */
     public void setWindowsMobileCount(@jakarta.annotation.Nullable final Integer value) {
-        this.windowsMobileCount = value;
+        this.backingStore.set("windowsMobileCount", value);
     }
 }

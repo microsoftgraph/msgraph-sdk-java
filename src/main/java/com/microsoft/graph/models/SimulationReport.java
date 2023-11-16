@@ -4,31 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SimulationReport implements AdditionalDataHolder, Parsable {
+public class SimulationReport implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Overview of an attack simulation and training campaign.
-     */
-    private SimulationReportOverview overview;
-    /**
-     * The tenant users and their online actions in an attack simulation and training campaign.
-     */
-    private java.util.List<UserSimulationDetails> simulationUsers;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new SimulationReport and sets the default values.
      */
     public SimulationReport() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +40,12 @@ public class SimulationReport implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -67,7 +65,7 @@ public class SimulationReport implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the overview property value. Overview of an attack simulation and training campaign.
@@ -75,7 +73,7 @@ public class SimulationReport implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public SimulationReportOverview getOverview() {
-        return this.overview;
+        return this.backingStore.get("overview");
     }
     /**
      * Gets the simulationUsers property value. The tenant users and their online actions in an attack simulation and training campaign.
@@ -83,7 +81,7 @@ public class SimulationReport implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserSimulationDetails> getSimulationUsers() {
-        return this.simulationUsers;
+        return this.backingStore.get("simulationUsers");
     }
     /**
      * Serializes information the current object
@@ -101,27 +99,27 @@ public class SimulationReport implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the overview property value. Overview of an attack simulation and training campaign.
      * @param value Value to set for the overview property.
      */
     public void setOverview(@jakarta.annotation.Nullable final SimulationReportOverview value) {
-        this.overview = value;
+        this.backingStore.set("overview", value);
     }
     /**
      * Sets the simulationUsers property value. The tenant users and their online actions in an attack simulation and training campaign.
      * @param value Value to set for the simulationUsers property.
      */
     public void setSimulationUsers(@jakarta.annotation.Nullable final java.util.List<UserSimulationDetails> value) {
-        this.simulationUsers = value;
+        this.backingStore.set("simulationUsers", value);
     }
 }

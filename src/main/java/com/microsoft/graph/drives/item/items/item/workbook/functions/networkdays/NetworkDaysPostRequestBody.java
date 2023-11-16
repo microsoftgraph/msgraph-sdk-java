@@ -5,31 +5,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class NetworkDaysPostRequestBody implements AdditionalDataHolder, Parsable {
+public class NetworkDaysPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The endDate property
-     */
-    private Json endDate;
-    /**
-     * The holidays property
-     */
-    private Json holidays;
-    /**
-     * The startDate property
-     */
-    private Json startDate;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new NetworkDaysPostRequestBody and sets the default values.
      */
     public NetworkDaysPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -48,7 +41,12 @@ public class NetworkDaysPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the endDate property value. The endDate property
@@ -56,7 +54,7 @@ public class NetworkDaysPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Json getEndDate() {
-        return this.endDate;
+        return this.backingStore.get("endDate");
     }
     /**
      * The deserialization information for the current model
@@ -76,7 +74,7 @@ public class NetworkDaysPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Json getHolidays() {
-        return this.holidays;
+        return this.backingStore.get("holidays");
     }
     /**
      * Gets the startDate property value. The startDate property
@@ -84,7 +82,7 @@ public class NetworkDaysPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Json getStartDate() {
-        return this.startDate;
+        return this.backingStore.get("startDate");
     }
     /**
      * Serializes information the current object
@@ -102,27 +100,27 @@ public class NetworkDaysPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the endDate property value. The endDate property
      * @param value Value to set for the endDate property.
      */
     public void setEndDate(@jakarta.annotation.Nullable final Json value) {
-        this.endDate = value;
+        this.backingStore.set("endDate", value);
     }
     /**
      * Sets the holidays property value. The holidays property
      * @param value Value to set for the holidays property.
      */
     public void setHolidays(@jakarta.annotation.Nullable final Json value) {
-        this.holidays = value;
+        this.backingStore.set("holidays", value);
     }
     /**
      * Sets the startDate property value. The startDate property
      * @param value Value to set for the startDate property.
      */
     public void setStartDate(@jakarta.annotation.Nullable final Json value) {
-        this.startDate = value;
+        this.backingStore.set("startDate", value);
     }
 }

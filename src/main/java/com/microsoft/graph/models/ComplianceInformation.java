@@ -4,31 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ComplianceInformation implements AdditionalDataHolder, Parsable {
+public class ComplianceInformation implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Collection of the certification controls associated with the certification.
-     */
-    private java.util.List<CertificationControl> certificationControls;
-    /**
-     * The name of the compliance certification, for example, ISO 27018:2014, GDPR, FedRAMP, and NIST 800-171.
-     */
-    private String certificationName;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new ComplianceInformation and sets the default values.
      */
     public ComplianceInformation() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +40,12 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the certificationControls property value. Collection of the certification controls associated with the certification.
@@ -55,7 +53,7 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<CertificationControl> getCertificationControls() {
-        return this.certificationControls;
+        return this.backingStore.get("certificationControls");
     }
     /**
      * Gets the certificationName property value. The name of the compliance certification, for example, ISO 27018:2014, GDPR, FedRAMP, and NIST 800-171.
@@ -63,7 +61,7 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCertificationName() {
-        return this.certificationName;
+        return this.backingStore.get("certificationName");
     }
     /**
      * The deserialization information for the current model
@@ -83,7 +81,7 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -101,27 +99,27 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the certificationControls property value. Collection of the certification controls associated with the certification.
      * @param value Value to set for the certificationControls property.
      */
     public void setCertificationControls(@jakarta.annotation.Nullable final java.util.List<CertificationControl> value) {
-        this.certificationControls = value;
+        this.backingStore.set("certificationControls", value);
     }
     /**
      * Sets the certificationName property value. The name of the compliance certification, for example, ISO 27018:2014, GDPR, FedRAMP, and NIST 800-171.
      * @param value Value to set for the certificationName property.
      */
     public void setCertificationName(@jakarta.annotation.Nullable final String value) {
-        this.certificationName = value;
+        this.backingStore.set("certificationName", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

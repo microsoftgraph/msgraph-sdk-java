@@ -5,39 +5,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class HypGeomDistPostRequestBody implements AdditionalDataHolder, Parsable {
+public class HypGeomDistPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The cumulative property
-     */
-    private Json cumulative;
-    /**
-     * The numberPop property
-     */
-    private Json numberPop;
-    /**
-     * The numberSample property
-     */
-    private Json numberSample;
-    /**
-     * The populationS property
-     */
-    private Json populationS;
-    /**
-     * The sampleS property
-     */
-    private Json sampleS;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new HypGeomDistPostRequestBody and sets the default values.
      */
     public HypGeomDistPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -56,7 +41,12 @@ public class HypGeomDistPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the cumulative property value. The cumulative property
@@ -64,7 +54,7 @@ public class HypGeomDistPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Json getCumulative() {
-        return this.cumulative;
+        return this.backingStore.get("cumulative");
     }
     /**
      * The deserialization information for the current model
@@ -86,7 +76,7 @@ public class HypGeomDistPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Json getNumberPop() {
-        return this.numberPop;
+        return this.backingStore.get("numberPop");
     }
     /**
      * Gets the numberSample property value. The numberSample property
@@ -94,7 +84,7 @@ public class HypGeomDistPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Json getNumberSample() {
-        return this.numberSample;
+        return this.backingStore.get("numberSample");
     }
     /**
      * Gets the populationS property value. The populationS property
@@ -102,7 +92,7 @@ public class HypGeomDistPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Json getPopulationS() {
-        return this.populationS;
+        return this.backingStore.get("populationS");
     }
     /**
      * Gets the sampleS property value. The sampleS property
@@ -110,7 +100,7 @@ public class HypGeomDistPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Json getSampleS() {
-        return this.sampleS;
+        return this.backingStore.get("sampleS");
     }
     /**
      * Serializes information the current object
@@ -130,41 +120,41 @@ public class HypGeomDistPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the cumulative property value. The cumulative property
      * @param value Value to set for the cumulative property.
      */
     public void setCumulative(@jakarta.annotation.Nullable final Json value) {
-        this.cumulative = value;
+        this.backingStore.set("cumulative", value);
     }
     /**
      * Sets the numberPop property value. The numberPop property
      * @param value Value to set for the numberPop property.
      */
     public void setNumberPop(@jakarta.annotation.Nullable final Json value) {
-        this.numberPop = value;
+        this.backingStore.set("numberPop", value);
     }
     /**
      * Sets the numberSample property value. The numberSample property
      * @param value Value to set for the numberSample property.
      */
     public void setNumberSample(@jakarta.annotation.Nullable final Json value) {
-        this.numberSample = value;
+        this.backingStore.set("numberSample", value);
     }
     /**
      * Sets the populationS property value. The populationS property
      * @param value Value to set for the populationS property.
      */
     public void setPopulationS(@jakarta.annotation.Nullable final Json value) {
-        this.populationS = value;
+        this.backingStore.set("populationS", value);
     }
     /**
      * Sets the sampleS property value. The sampleS property
      * @param value Value to set for the sampleS property.
      */
     public void setSampleS(@jakarta.annotation.Nullable final Json value) {
-        this.sampleS = value;
+        this.backingStore.set("sampleS", value);
     }
 }

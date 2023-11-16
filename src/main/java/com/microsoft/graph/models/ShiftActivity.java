@@ -4,48 +4,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ShiftActivity implements AdditionalDataHolder, Parsable {
+public class ShiftActivity implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Customer defined code for the shiftActivity. Required.
-     */
-    private String code;
-    /**
-     * The name of the shiftActivity. Required.
-     */
-    private String displayName;
-    /**
-     * The end date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
-     */
-    private OffsetDateTime endDateTime;
-    /**
-     * Indicates whether the microsoft.graph.user should be paid for the activity during their shift. Required.
-     */
-    private Boolean isPaid;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The start date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
-     */
-    private OffsetDateTime startDateTime;
-    /**
-     * The theme property
-     */
-    private ScheduleEntityTheme theme;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new ShiftActivity and sets the default values.
      */
     public ShiftActivity() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -64,7 +41,12 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the code property value. Customer defined code for the shiftActivity. Required.
@@ -72,7 +54,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCode() {
-        return this.code;
+        return this.backingStore.get("code");
     }
     /**
      * Gets the displayName property value. The name of the shiftActivity. Required.
@@ -80,7 +62,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * Gets the endDateTime property value. The end date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
@@ -88,7 +70,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this.endDateTime;
+        return this.backingStore.get("endDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -112,7 +94,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPaid() {
-        return this.isPaid;
+        return this.backingStore.get("isPaid");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -120,7 +102,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the startDateTime property value. The start date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
@@ -128,7 +110,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.backingStore.get("startDateTime");
     }
     /**
      * Gets the theme property value. The theme property
@@ -136,7 +118,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public ScheduleEntityTheme getTheme() {
-        return this.theme;
+        return this.backingStore.get("theme");
     }
     /**
      * Serializes information the current object
@@ -158,55 +140,55 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the code property value. Customer defined code for the shiftActivity. Required.
      * @param value Value to set for the code property.
      */
     public void setCode(@jakarta.annotation.Nullable final String value) {
-        this.code = value;
+        this.backingStore.set("code", value);
     }
     /**
      * Sets the displayName property value. The name of the shiftActivity. Required.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the endDateTime property value. The end date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.endDateTime = value;
+        this.backingStore.set("endDateTime", value);
     }
     /**
      * Sets the isPaid property value. Indicates whether the microsoft.graph.user should be paid for the activity during their shift. Required.
      * @param value Value to set for the isPaid property.
      */
     public void setIsPaid(@jakarta.annotation.Nullable final Boolean value) {
-        this.isPaid = value;
+        this.backingStore.set("isPaid", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the startDateTime property value. The start date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.backingStore.set("startDateTime", value);
     }
     /**
      * Sets the theme property value. The theme property
      * @param value Value to set for the theme property.
      */
     public void setTheme(@jakarta.annotation.Nullable final ScheduleEntityTheme value) {
-        this.theme = value;
+        this.backingStore.set("theme", value);
     }
 }

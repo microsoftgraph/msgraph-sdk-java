@@ -5,31 +5,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PercentRankExcPostRequestBody implements AdditionalDataHolder, Parsable {
+public class PercentRankExcPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The array property
-     */
-    private Json array;
-    /**
-     * The significance property
-     */
-    private Json significance;
-    /**
-     * The x property
-     */
-    private Json x;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new PercentRankExcPostRequestBody and sets the default values.
      */
     public PercentRankExcPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -48,7 +41,12 @@ public class PercentRankExcPostRequestBody implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the array property value. The array property
@@ -56,7 +54,7 @@ public class PercentRankExcPostRequestBody implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public Json getArray() {
-        return this.array;
+        return this.backingStore.get("array");
     }
     /**
      * The deserialization information for the current model
@@ -76,7 +74,7 @@ public class PercentRankExcPostRequestBody implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public Json getSignificance() {
-        return this.significance;
+        return this.backingStore.get("significance");
     }
     /**
      * Gets the x property value. The x property
@@ -84,7 +82,7 @@ public class PercentRankExcPostRequestBody implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public Json getX() {
-        return this.x;
+        return this.backingStore.get("x");
     }
     /**
      * Serializes information the current object
@@ -102,27 +100,27 @@ public class PercentRankExcPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the array property value. The array property
      * @param value Value to set for the array property.
      */
     public void setArray(@jakarta.annotation.Nullable final Json value) {
-        this.array = value;
+        this.backingStore.set("array", value);
     }
     /**
      * Sets the significance property value. The significance property
      * @param value Value to set for the significance property.
      */
     public void setSignificance(@jakarta.annotation.Nullable final Json value) {
-        this.significance = value;
+        this.backingStore.set("significance", value);
     }
     /**
      * Sets the x property value. The x property
      * @param value Value to set for the x property.
      */
     public void setX(@jakarta.annotation.Nullable final Json value) {
-        this.x = value;
+        this.backingStore.set("x", value);
     }
 }

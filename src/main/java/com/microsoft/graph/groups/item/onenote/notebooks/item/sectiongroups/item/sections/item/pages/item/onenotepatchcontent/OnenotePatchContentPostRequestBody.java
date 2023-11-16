@@ -5,23 +5,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class OnenotePatchContentPostRequestBody implements AdditionalDataHolder, Parsable {
+public class OnenotePatchContentPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The commands property
-     */
-    private java.util.List<OnenotePatchContentCommand> commands;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new OnenotePatchContentPostRequestBody and sets the default values.
      */
     public OnenotePatchContentPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -40,7 +41,12 @@ public class OnenotePatchContentPostRequestBody implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the commands property value. The commands property
@@ -48,7 +54,7 @@ public class OnenotePatchContentPostRequestBody implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnenotePatchContentCommand> getCommands() {
-        return this.commands;
+        return this.backingStore.get("commands");
     }
     /**
      * The deserialization information for the current model
@@ -74,13 +80,13 @@ public class OnenotePatchContentPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the commands property value. The commands property
      * @param value Value to set for the commands property.
      */
     public void setCommands(@jakarta.annotation.Nullable final java.util.List<OnenotePatchContentCommand> value) {
-        this.commands = value;
+        this.backingStore.set("commands", value);
     }
 }

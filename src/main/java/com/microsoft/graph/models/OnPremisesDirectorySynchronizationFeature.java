@@ -4,99 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder, Parsable {
+public class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Used to block cloud object takeover via source anchor hard match if enabled.
-     */
-    private Boolean blockCloudObjectTakeoverThroughHardMatchEnabled;
-    /**
-     * Use to block soft match for all objects if enabled for the  tenant. Customers are encouraged to enable this feature and keep it enabled until soft matching is required again for their tenancy. This flag should be enabled again after any soft matching has been completed and is no longer needed.
-     */
-    private Boolean blockSoftMatchEnabled;
-    /**
-     * When true, persists the values of Mobile and OtherMobile in on-premises AD during sync cycles instead of values of MobilePhone or AlternateMobilePhones in Microsoft Entra ID.
-     */
-    private Boolean bypassDirSyncOverridesEnabled;
-    /**
-     * Used to indicate that cloud password policy applies to users whose passwords are synchronized from on-premises.
-     */
-    private Boolean cloudPasswordPolicyForPasswordSyncedUsersEnabled;
-    /**
-     * Used to enable concurrent user credentials update in OrgId.
-     */
-    private Boolean concurrentCredentialUpdateEnabled;
-    /**
-     * Used to enable concurrent user creation in OrgId.
-     */
-    private Boolean concurrentOrgIdProvisioningEnabled;
-    /**
-     * Used to indicate that device write-back is enabled.
-     */
-    private Boolean deviceWritebackEnabled;
-    /**
-     * Used to indicate that directory extensions are being synced from on-premises AD to Microsoft Entra ID.
-     */
-    private Boolean directoryExtensionsEnabled;
-    /**
-     * Used to indicate that for a Microsoft Forefront Online Protection for Exchange (FOPE) migrated tenant, the conflicting proxy address should be migrated over.
-     */
-    private Boolean fopeConflictResolutionEnabled;
-    /**
-     * Used to enable object-level group writeback feature for additional group types.
-     */
-    private Boolean groupWriteBackEnabled;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Used to indicate on-premise password synchronization is enabled.
-     */
-    private Boolean passwordSyncEnabled;
-    /**
-     * Used to indicate that writeback of password resets from Microsoft Entra ID to on-premises AD is enabled.
-     */
-    private Boolean passwordWritebackEnabled;
-    /**
-     * Used to indicate that we should quarantine objects with conflicting proxy address.
-     */
-    private Boolean quarantineUponProxyAddressesConflictEnabled;
-    /**
-     * Used to indicate that we should quarantine objects conflicting with duplicate userPrincipalName.
-     */
-    private Boolean quarantineUponUpnConflictEnabled;
-    /**
-     * Used to indicate that we should soft match objects based on userPrincipalName.
-     */
-    private Boolean softMatchOnUpnEnabled;
-    /**
-     * Used to indicate that we should synchronize userPrincipalName objects for managed users with licenses.
-     */
-    private Boolean synchronizeUpnForManagedUsersEnabled;
-    /**
-     * Used to indicate that Microsoft 365 Group write-back is enabled.
-     */
-    private Boolean unifiedGroupWritebackEnabled;
-    /**
-     * Used to indicate that feature to force password change for a user on logon is enabled while synchronizing on-premise credentials.
-     */
-    private Boolean userForcePasswordChangeOnLogonEnabled;
-    /**
-     * Used to indicate that user writeback is enabled.
-     */
-    private Boolean userWritebackEnabled;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new OnPremisesDirectorySynchronizationFeature and sets the default values.
      */
     public OnPremisesDirectorySynchronizationFeature() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -115,7 +40,12 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the blockCloudObjectTakeoverThroughHardMatchEnabled property value. Used to block cloud object takeover via source anchor hard match if enabled.
@@ -123,7 +53,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockCloudObjectTakeoverThroughHardMatchEnabled() {
-        return this.blockCloudObjectTakeoverThroughHardMatchEnabled;
+        return this.backingStore.get("blockCloudObjectTakeoverThroughHardMatchEnabled");
     }
     /**
      * Gets the blockSoftMatchEnabled property value. Use to block soft match for all objects if enabled for the  tenant. Customers are encouraged to enable this feature and keep it enabled until soft matching is required again for their tenancy. This flag should be enabled again after any soft matching has been completed and is no longer needed.
@@ -131,7 +61,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockSoftMatchEnabled() {
-        return this.blockSoftMatchEnabled;
+        return this.backingStore.get("blockSoftMatchEnabled");
     }
     /**
      * Gets the bypassDirSyncOverridesEnabled property value. When true, persists the values of Mobile and OtherMobile in on-premises AD during sync cycles instead of values of MobilePhone or AlternateMobilePhones in Microsoft Entra ID.
@@ -139,7 +69,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public Boolean getBypassDirSyncOverridesEnabled() {
-        return this.bypassDirSyncOverridesEnabled;
+        return this.backingStore.get("bypassDirSyncOverridesEnabled");
     }
     /**
      * Gets the cloudPasswordPolicyForPasswordSyncedUsersEnabled property value. Used to indicate that cloud password policy applies to users whose passwords are synchronized from on-premises.
@@ -147,7 +77,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public Boolean getCloudPasswordPolicyForPasswordSyncedUsersEnabled() {
-        return this.cloudPasswordPolicyForPasswordSyncedUsersEnabled;
+        return this.backingStore.get("cloudPasswordPolicyForPasswordSyncedUsersEnabled");
     }
     /**
      * Gets the concurrentCredentialUpdateEnabled property value. Used to enable concurrent user credentials update in OrgId.
@@ -155,7 +85,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public Boolean getConcurrentCredentialUpdateEnabled() {
-        return this.concurrentCredentialUpdateEnabled;
+        return this.backingStore.get("concurrentCredentialUpdateEnabled");
     }
     /**
      * Gets the concurrentOrgIdProvisioningEnabled property value. Used to enable concurrent user creation in OrgId.
@@ -163,7 +93,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public Boolean getConcurrentOrgIdProvisioningEnabled() {
-        return this.concurrentOrgIdProvisioningEnabled;
+        return this.backingStore.get("concurrentOrgIdProvisioningEnabled");
     }
     /**
      * Gets the deviceWritebackEnabled property value. Used to indicate that device write-back is enabled.
@@ -171,7 +101,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceWritebackEnabled() {
-        return this.deviceWritebackEnabled;
+        return this.backingStore.get("deviceWritebackEnabled");
     }
     /**
      * Gets the directoryExtensionsEnabled property value. Used to indicate that directory extensions are being synced from on-premises AD to Microsoft Entra ID.
@@ -179,7 +109,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public Boolean getDirectoryExtensionsEnabled() {
-        return this.directoryExtensionsEnabled;
+        return this.backingStore.get("directoryExtensionsEnabled");
     }
     /**
      * The deserialization information for the current model
@@ -216,7 +146,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public Boolean getFopeConflictResolutionEnabled() {
-        return this.fopeConflictResolutionEnabled;
+        return this.backingStore.get("fopeConflictResolutionEnabled");
     }
     /**
      * Gets the groupWriteBackEnabled property value. Used to enable object-level group writeback feature for additional group types.
@@ -224,7 +154,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public Boolean getGroupWriteBackEnabled() {
-        return this.groupWriteBackEnabled;
+        return this.backingStore.get("groupWriteBackEnabled");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -232,7 +162,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the passwordSyncEnabled property value. Used to indicate on-premise password synchronization is enabled.
@@ -240,7 +170,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordSyncEnabled() {
-        return this.passwordSyncEnabled;
+        return this.backingStore.get("passwordSyncEnabled");
     }
     /**
      * Gets the passwordWritebackEnabled property value. Used to indicate that writeback of password resets from Microsoft Entra ID to on-premises AD is enabled.
@@ -248,7 +178,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordWritebackEnabled() {
-        return this.passwordWritebackEnabled;
+        return this.backingStore.get("passwordWritebackEnabled");
     }
     /**
      * Gets the quarantineUponProxyAddressesConflictEnabled property value. Used to indicate that we should quarantine objects with conflicting proxy address.
@@ -256,7 +186,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public Boolean getQuarantineUponProxyAddressesConflictEnabled() {
-        return this.quarantineUponProxyAddressesConflictEnabled;
+        return this.backingStore.get("quarantineUponProxyAddressesConflictEnabled");
     }
     /**
      * Gets the quarantineUponUpnConflictEnabled property value. Used to indicate that we should quarantine objects conflicting with duplicate userPrincipalName.
@@ -264,7 +194,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public Boolean getQuarantineUponUpnConflictEnabled() {
-        return this.quarantineUponUpnConflictEnabled;
+        return this.backingStore.get("quarantineUponUpnConflictEnabled");
     }
     /**
      * Gets the softMatchOnUpnEnabled property value. Used to indicate that we should soft match objects based on userPrincipalName.
@@ -272,7 +202,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public Boolean getSoftMatchOnUpnEnabled() {
-        return this.softMatchOnUpnEnabled;
+        return this.backingStore.get("softMatchOnUpnEnabled");
     }
     /**
      * Gets the synchronizeUpnForManagedUsersEnabled property value. Used to indicate that we should synchronize userPrincipalName objects for managed users with licenses.
@@ -280,7 +210,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public Boolean getSynchronizeUpnForManagedUsersEnabled() {
-        return this.synchronizeUpnForManagedUsersEnabled;
+        return this.backingStore.get("synchronizeUpnForManagedUsersEnabled");
     }
     /**
      * Gets the unifiedGroupWritebackEnabled property value. Used to indicate that Microsoft 365 Group write-back is enabled.
@@ -288,7 +218,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public Boolean getUnifiedGroupWritebackEnabled() {
-        return this.unifiedGroupWritebackEnabled;
+        return this.backingStore.get("unifiedGroupWritebackEnabled");
     }
     /**
      * Gets the userForcePasswordChangeOnLogonEnabled property value. Used to indicate that feature to force password change for a user on logon is enabled while synchronizing on-premise credentials.
@@ -296,7 +226,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public Boolean getUserForcePasswordChangeOnLogonEnabled() {
-        return this.userForcePasswordChangeOnLogonEnabled;
+        return this.backingStore.get("userForcePasswordChangeOnLogonEnabled");
     }
     /**
      * Gets the userWritebackEnabled property value. Used to indicate that user writeback is enabled.
@@ -304,7 +234,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public Boolean getUserWritebackEnabled() {
-        return this.userWritebackEnabled;
+        return this.backingStore.get("userWritebackEnabled");
     }
     /**
      * Serializes information the current object
@@ -339,146 +269,146 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the blockCloudObjectTakeoverThroughHardMatchEnabled property value. Used to block cloud object takeover via source anchor hard match if enabled.
      * @param value Value to set for the blockCloudObjectTakeoverThroughHardMatchEnabled property.
      */
     public void setBlockCloudObjectTakeoverThroughHardMatchEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.blockCloudObjectTakeoverThroughHardMatchEnabled = value;
+        this.backingStore.set("blockCloudObjectTakeoverThroughHardMatchEnabled", value);
     }
     /**
      * Sets the blockSoftMatchEnabled property value. Use to block soft match for all objects if enabled for the  tenant. Customers are encouraged to enable this feature and keep it enabled until soft matching is required again for their tenancy. This flag should be enabled again after any soft matching has been completed and is no longer needed.
      * @param value Value to set for the blockSoftMatchEnabled property.
      */
     public void setBlockSoftMatchEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.blockSoftMatchEnabled = value;
+        this.backingStore.set("blockSoftMatchEnabled", value);
     }
     /**
      * Sets the bypassDirSyncOverridesEnabled property value. When true, persists the values of Mobile and OtherMobile in on-premises AD during sync cycles instead of values of MobilePhone or AlternateMobilePhones in Microsoft Entra ID.
      * @param value Value to set for the bypassDirSyncOverridesEnabled property.
      */
     public void setBypassDirSyncOverridesEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.bypassDirSyncOverridesEnabled = value;
+        this.backingStore.set("bypassDirSyncOverridesEnabled", value);
     }
     /**
      * Sets the cloudPasswordPolicyForPasswordSyncedUsersEnabled property value. Used to indicate that cloud password policy applies to users whose passwords are synchronized from on-premises.
      * @param value Value to set for the cloudPasswordPolicyForPasswordSyncedUsersEnabled property.
      */
     public void setCloudPasswordPolicyForPasswordSyncedUsersEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.cloudPasswordPolicyForPasswordSyncedUsersEnabled = value;
+        this.backingStore.set("cloudPasswordPolicyForPasswordSyncedUsersEnabled", value);
     }
     /**
      * Sets the concurrentCredentialUpdateEnabled property value. Used to enable concurrent user credentials update in OrgId.
      * @param value Value to set for the concurrentCredentialUpdateEnabled property.
      */
     public void setConcurrentCredentialUpdateEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.concurrentCredentialUpdateEnabled = value;
+        this.backingStore.set("concurrentCredentialUpdateEnabled", value);
     }
     /**
      * Sets the concurrentOrgIdProvisioningEnabled property value. Used to enable concurrent user creation in OrgId.
      * @param value Value to set for the concurrentOrgIdProvisioningEnabled property.
      */
     public void setConcurrentOrgIdProvisioningEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.concurrentOrgIdProvisioningEnabled = value;
+        this.backingStore.set("concurrentOrgIdProvisioningEnabled", value);
     }
     /**
      * Sets the deviceWritebackEnabled property value. Used to indicate that device write-back is enabled.
      * @param value Value to set for the deviceWritebackEnabled property.
      */
     public void setDeviceWritebackEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.deviceWritebackEnabled = value;
+        this.backingStore.set("deviceWritebackEnabled", value);
     }
     /**
      * Sets the directoryExtensionsEnabled property value. Used to indicate that directory extensions are being synced from on-premises AD to Microsoft Entra ID.
      * @param value Value to set for the directoryExtensionsEnabled property.
      */
     public void setDirectoryExtensionsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.directoryExtensionsEnabled = value;
+        this.backingStore.set("directoryExtensionsEnabled", value);
     }
     /**
      * Sets the fopeConflictResolutionEnabled property value. Used to indicate that for a Microsoft Forefront Online Protection for Exchange (FOPE) migrated tenant, the conflicting proxy address should be migrated over.
      * @param value Value to set for the fopeConflictResolutionEnabled property.
      */
     public void setFopeConflictResolutionEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.fopeConflictResolutionEnabled = value;
+        this.backingStore.set("fopeConflictResolutionEnabled", value);
     }
     /**
      * Sets the groupWriteBackEnabled property value. Used to enable object-level group writeback feature for additional group types.
      * @param value Value to set for the groupWriteBackEnabled property.
      */
     public void setGroupWriteBackEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.groupWriteBackEnabled = value;
+        this.backingStore.set("groupWriteBackEnabled", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the passwordSyncEnabled property value. Used to indicate on-premise password synchronization is enabled.
      * @param value Value to set for the passwordSyncEnabled property.
      */
     public void setPasswordSyncEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.passwordSyncEnabled = value;
+        this.backingStore.set("passwordSyncEnabled", value);
     }
     /**
      * Sets the passwordWritebackEnabled property value. Used to indicate that writeback of password resets from Microsoft Entra ID to on-premises AD is enabled.
      * @param value Value to set for the passwordWritebackEnabled property.
      */
     public void setPasswordWritebackEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.passwordWritebackEnabled = value;
+        this.backingStore.set("passwordWritebackEnabled", value);
     }
     /**
      * Sets the quarantineUponProxyAddressesConflictEnabled property value. Used to indicate that we should quarantine objects with conflicting proxy address.
      * @param value Value to set for the quarantineUponProxyAddressesConflictEnabled property.
      */
     public void setQuarantineUponProxyAddressesConflictEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.quarantineUponProxyAddressesConflictEnabled = value;
+        this.backingStore.set("quarantineUponProxyAddressesConflictEnabled", value);
     }
     /**
      * Sets the quarantineUponUpnConflictEnabled property value. Used to indicate that we should quarantine objects conflicting with duplicate userPrincipalName.
      * @param value Value to set for the quarantineUponUpnConflictEnabled property.
      */
     public void setQuarantineUponUpnConflictEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.quarantineUponUpnConflictEnabled = value;
+        this.backingStore.set("quarantineUponUpnConflictEnabled", value);
     }
     /**
      * Sets the softMatchOnUpnEnabled property value. Used to indicate that we should soft match objects based on userPrincipalName.
      * @param value Value to set for the softMatchOnUpnEnabled property.
      */
     public void setSoftMatchOnUpnEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.softMatchOnUpnEnabled = value;
+        this.backingStore.set("softMatchOnUpnEnabled", value);
     }
     /**
      * Sets the synchronizeUpnForManagedUsersEnabled property value. Used to indicate that we should synchronize userPrincipalName objects for managed users with licenses.
      * @param value Value to set for the synchronizeUpnForManagedUsersEnabled property.
      */
     public void setSynchronizeUpnForManagedUsersEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.synchronizeUpnForManagedUsersEnabled = value;
+        this.backingStore.set("synchronizeUpnForManagedUsersEnabled", value);
     }
     /**
      * Sets the unifiedGroupWritebackEnabled property value. Used to indicate that Microsoft 365 Group write-back is enabled.
      * @param value Value to set for the unifiedGroupWritebackEnabled property.
      */
     public void setUnifiedGroupWritebackEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.unifiedGroupWritebackEnabled = value;
+        this.backingStore.set("unifiedGroupWritebackEnabled", value);
     }
     /**
      * Sets the userForcePasswordChangeOnLogonEnabled property value. Used to indicate that feature to force password change for a user on logon is enabled while synchronizing on-premise credentials.
      * @param value Value to set for the userForcePasswordChangeOnLogonEnabled property.
      */
     public void setUserForcePasswordChangeOnLogonEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.userForcePasswordChangeOnLogonEnabled = value;
+        this.backingStore.set("userForcePasswordChangeOnLogonEnabled", value);
     }
     /**
      * Sets the userWritebackEnabled property value. Used to indicate that user writeback is enabled.
      * @param value Value to set for the userWritebackEnabled property.
      */
     public void setUserWritebackEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.userWritebackEnabled = value;
+        this.backingStore.set("userWritebackEnabled", value);
     }
 }

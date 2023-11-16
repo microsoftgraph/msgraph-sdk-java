@@ -4,27 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UploadClientCertificatePostRequestBody implements AdditionalDataHolder, Parsable {
+public class UploadClientCertificatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The password property
-     */
-    private String password;
-    /**
-     * The pkcs12Value property
-     */
-    private String pkcs12Value;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new UploadClientCertificatePostRequestBody and sets the default values.
      */
     public UploadClientCertificatePostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -43,7 +40,12 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -62,7 +64,7 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
      */
     @jakarta.annotation.Nullable
     public String getPassword() {
-        return this.password;
+        return this.backingStore.get("password");
     }
     /**
      * Gets the pkcs12Value property value. The pkcs12Value property
@@ -70,7 +72,7 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
      */
     @jakarta.annotation.Nullable
     public String getPkcs12Value() {
-        return this.pkcs12Value;
+        return this.backingStore.get("pkcs12Value");
     }
     /**
      * Serializes information the current object
@@ -87,20 +89,20 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the password property value. The password property
      * @param value Value to set for the password property.
      */
     public void setPassword(@jakarta.annotation.Nullable final String value) {
-        this.password = value;
+        this.backingStore.set("password", value);
     }
     /**
      * Sets the pkcs12Value property value. The pkcs12Value property
      * @param value Value to set for the pkcs12Value property.
      */
     public void setPkcs12Value(@jakarta.annotation.Nullable final String value) {
-        this.pkcs12Value = value;
+        this.backingStore.set("pkcs12Value", value);
     }
 }

@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,55 +14,17 @@ import java.util.Objects;
  * An item describing notification setting.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
+public class IosNotificationSettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Notification Settings Alert Type.
-     */
-    private IosNotificationAlertType alertType;
-    /**
-     * Application name to be associated with the bundleID.
-     */
-    private String appName;
-    /**
-     * Indicates whether badges are allowed for this app.
-     */
-    private Boolean badgesEnabled;
-    /**
-     * Bundle id of app to which to apply these notification settings.
-     */
-    private String bundleID;
-    /**
-     * Indicates whether notifications are allowed for this app.
-     */
-    private Boolean enabled;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Publisher to be associated with the bundleID.
-     */
-    private String publisher;
-    /**
-     * Indicates whether notifications can be shown in notification center.
-     */
-    private Boolean showInNotificationCenter;
-    /**
-     * Indicates whether notifications can be shown on the lock screen.
-     */
-    private Boolean showOnLockScreen;
-    /**
-     * Indicates whether sounds are allowed for this app.
-     */
-    private Boolean soundsEnabled;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new IosNotificationSettings and sets the default values.
      */
     public IosNotificationSettings() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -78,7 +43,12 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the alertType property value. Notification Settings Alert Type.
@@ -86,7 +56,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public IosNotificationAlertType getAlertType() {
-        return this.alertType;
+        return this.backingStore.get("alertType");
     }
     /**
      * Gets the appName property value. Application name to be associated with the bundleID.
@@ -94,7 +64,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAppName() {
-        return this.appName;
+        return this.backingStore.get("appName");
     }
     /**
      * Gets the badgesEnabled property value. Indicates whether badges are allowed for this app.
@@ -102,7 +72,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getBadgesEnabled() {
-        return this.badgesEnabled;
+        return this.backingStore.get("badgesEnabled");
     }
     /**
      * Gets the bundleID property value. Bundle id of app to which to apply these notification settings.
@@ -110,7 +80,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getBundleID() {
-        return this.bundleID;
+        return this.backingStore.get("bundleID");
     }
     /**
      * Gets the enabled property value. Indicates whether notifications are allowed for this app.
@@ -118,7 +88,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getEnabled() {
-        return this.enabled;
+        return this.backingStore.get("enabled");
     }
     /**
      * The deserialization information for the current model
@@ -145,7 +115,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the publisher property value. Publisher to be associated with the bundleID.
@@ -153,7 +123,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
-        return this.publisher;
+        return this.backingStore.get("publisher");
     }
     /**
      * Gets the showInNotificationCenter property value. Indicates whether notifications can be shown in notification center.
@@ -161,7 +131,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getShowInNotificationCenter() {
-        return this.showInNotificationCenter;
+        return this.backingStore.get("showInNotificationCenter");
     }
     /**
      * Gets the showOnLockScreen property value. Indicates whether notifications can be shown on the lock screen.
@@ -169,7 +139,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getShowOnLockScreen() {
-        return this.showOnLockScreen;
+        return this.backingStore.get("showOnLockScreen");
     }
     /**
      * Gets the soundsEnabled property value. Indicates whether sounds are allowed for this app.
@@ -177,7 +147,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getSoundsEnabled() {
-        return this.soundsEnabled;
+        return this.backingStore.get("soundsEnabled");
     }
     /**
      * Serializes information the current object
@@ -202,76 +172,76 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the alertType property value. Notification Settings Alert Type.
      * @param value Value to set for the alertType property.
      */
     public void setAlertType(@jakarta.annotation.Nullable final IosNotificationAlertType value) {
-        this.alertType = value;
+        this.backingStore.set("alertType", value);
     }
     /**
      * Sets the appName property value. Application name to be associated with the bundleID.
      * @param value Value to set for the appName property.
      */
     public void setAppName(@jakarta.annotation.Nullable final String value) {
-        this.appName = value;
+        this.backingStore.set("appName", value);
     }
     /**
      * Sets the badgesEnabled property value. Indicates whether badges are allowed for this app.
      * @param value Value to set for the badgesEnabled property.
      */
     public void setBadgesEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.badgesEnabled = value;
+        this.backingStore.set("badgesEnabled", value);
     }
     /**
      * Sets the bundleID property value. Bundle id of app to which to apply these notification settings.
      * @param value Value to set for the bundleID property.
      */
     public void setBundleID(@jakarta.annotation.Nullable final String value) {
-        this.bundleID = value;
+        this.backingStore.set("bundleID", value);
     }
     /**
      * Sets the enabled property value. Indicates whether notifications are allowed for this app.
      * @param value Value to set for the enabled property.
      */
     public void setEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.enabled = value;
+        this.backingStore.set("enabled", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the publisher property value. Publisher to be associated with the bundleID.
      * @param value Value to set for the publisher property.
      */
     public void setPublisher(@jakarta.annotation.Nullable final String value) {
-        this.publisher = value;
+        this.backingStore.set("publisher", value);
     }
     /**
      * Sets the showInNotificationCenter property value. Indicates whether notifications can be shown in notification center.
      * @param value Value to set for the showInNotificationCenter property.
      */
     public void setShowInNotificationCenter(@jakarta.annotation.Nullable final Boolean value) {
-        this.showInNotificationCenter = value;
+        this.backingStore.set("showInNotificationCenter", value);
     }
     /**
      * Sets the showOnLockScreen property value. Indicates whether notifications can be shown on the lock screen.
      * @param value Value to set for the showOnLockScreen property.
      */
     public void setShowOnLockScreen(@jakarta.annotation.Nullable final Boolean value) {
-        this.showOnLockScreen = value;
+        this.backingStore.set("showOnLockScreen", value);
     }
     /**
      * Sets the soundsEnabled property value. Indicates whether sounds are allowed for this app.
      * @param value Value to set for the soundsEnabled property.
      */
     public void setSoundsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.soundsEnabled = value;
+        this.backingStore.set("soundsEnabled", value);
     }
 }

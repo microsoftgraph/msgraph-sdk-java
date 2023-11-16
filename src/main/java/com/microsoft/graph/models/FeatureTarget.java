@@ -4,31 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class FeatureTarget implements AdditionalDataHolder, Parsable {
+public class FeatureTarget implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The ID of the entity that's targeted in the include or exclude rule, or all_users to target all users.
-     */
-    private String id;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The kind of entity that's targeted. The possible values are: group, administrativeUnit, role, unknownFutureValue.
-     */
-    private FeatureTargetType targetType;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new FeatureTarget and sets the default values.
      */
     public FeatureTarget() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +40,12 @@ public class FeatureTarget implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -67,7 +65,7 @@ public class FeatureTarget implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getId() {
-        return this.id;
+        return this.backingStore.get("id");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -75,7 +73,7 @@ public class FeatureTarget implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the targetType property value. The kind of entity that's targeted. The possible values are: group, administrativeUnit, role, unknownFutureValue.
@@ -83,7 +81,7 @@ public class FeatureTarget implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public FeatureTargetType getTargetType() {
-        return this.targetType;
+        return this.backingStore.get("targetType");
     }
     /**
      * Serializes information the current object
@@ -101,27 +99,27 @@ public class FeatureTarget implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the id property value. The ID of the entity that's targeted in the include or exclude rule, or all_users to target all users.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
-        this.id = value;
+        this.backingStore.set("id", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the targetType property value. The kind of entity that's targeted. The possible values are: group, administrativeUnit, role, unknownFutureValue.
      * @param value Value to set for the targetType property.
      */
     public void setTargetType(@jakarta.annotation.Nullable final FeatureTargetType value) {
-        this.targetType = value;
+        this.backingStore.set("targetType", value);
     }
 }

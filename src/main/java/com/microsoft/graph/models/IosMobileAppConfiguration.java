@@ -12,14 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration implements Parsable {
     /**
-     * mdm app configuration Base64 binary.
-     */
-    private byte[] encodedSettingXml;
-    /**
-     * app configuration setting items.
-     */
-    private java.util.List<AppConfigurationSettingItem> settings;
-    /**
      * Instantiates a new IosMobileAppConfiguration and sets the default values.
      */
     public IosMobileAppConfiguration() {
@@ -42,7 +34,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
      */
     @jakarta.annotation.Nullable
     public byte[] getEncodedSettingXml() {
-        return this.encodedSettingXml;
+        return this.backingStore.get("encodedSettingXml");
     }
     /**
      * The deserialization information for the current model
@@ -61,7 +53,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppConfigurationSettingItem> getSettings() {
-        return this.settings;
+        return this.backingStore.get("settings");
     }
     /**
      * Serializes information the current object
@@ -78,13 +70,13 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
      * @param value Value to set for the encodedSettingXml property.
      */
     public void setEncodedSettingXml(@jakarta.annotation.Nullable final byte[] value) {
-        this.encodedSettingXml = value;
+        this.backingStore.set("encodedSettingXml", value);
     }
     /**
      * Sets the settings property value. app configuration setting items.
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final java.util.List<AppConfigurationSettingItem> value) {
-        this.settings = value;
+        this.backingStore.set("settings", value);
     }
 }

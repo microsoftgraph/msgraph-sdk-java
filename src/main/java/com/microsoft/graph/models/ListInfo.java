@@ -4,35 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ListInfo implements AdditionalDataHolder, Parsable {
+public class ListInfo implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * If true, indicates that content types are enabled for this list.
-     */
-    private Boolean contentTypesEnabled;
-    /**
-     * If true, indicates that the list isn't normally visible in the SharePoint user experience.
-     */
-    private Boolean hidden;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * An enumerated value that represents the base list template used in creating the list. Possible values include documentLibrary, genericList, task, survey, announcements, contacts, and more.
-     */
-    private String template;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new ListInfo and sets the default values.
      */
     public ListInfo() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +40,12 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the contentTypesEnabled property value. If true, indicates that content types are enabled for this list.
@@ -59,7 +53,7 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getContentTypesEnabled() {
-        return this.contentTypesEnabled;
+        return this.backingStore.get("contentTypesEnabled");
     }
     /**
      * The deserialization information for the current model
@@ -80,7 +74,7 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getHidden() {
-        return this.hidden;
+        return this.backingStore.get("hidden");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -88,7 +82,7 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the template property value. An enumerated value that represents the base list template used in creating the list. Possible values include documentLibrary, genericList, task, survey, announcements, contacts, and more.
@@ -96,7 +90,7 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTemplate() {
-        return this.template;
+        return this.backingStore.get("template");
     }
     /**
      * Serializes information the current object
@@ -115,34 +109,34 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the contentTypesEnabled property value. If true, indicates that content types are enabled for this list.
      * @param value Value to set for the contentTypesEnabled property.
      */
     public void setContentTypesEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.contentTypesEnabled = value;
+        this.backingStore.set("contentTypesEnabled", value);
     }
     /**
      * Sets the hidden property value. If true, indicates that the list isn't normally visible in the SharePoint user experience.
      * @param value Value to set for the hidden property.
      */
     public void setHidden(@jakarta.annotation.Nullable final Boolean value) {
-        this.hidden = value;
+        this.backingStore.set("hidden", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the template property value. An enumerated value that represents the base list template used in creating the list. Possible values include documentLibrary, genericList, task, survey, announcements, contacts, and more.
      * @param value Value to set for the template property.
      */
     public void setTemplate(@jakarta.annotation.Nullable final String value) {
-        this.template = value;
+        this.backingStore.set("template", value);
     }
 }

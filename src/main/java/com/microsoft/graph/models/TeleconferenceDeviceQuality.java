@@ -4,64 +4,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable {
+public class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * A unique identifier for all  the participant calls in a conference or a unique identifier for two participant calls in P2P call. This needs to be copied over from Microsoft.Graph.Call.CallChainId.
-     */
-    private UUID callChainId;
-    /**
-     * A geo-region where the service is deployed, such as ProdNoam.
-     */
-    private String cloudServiceDeploymentEnvironment;
-    /**
-     * A unique deployment identifier assigned by Azure.
-     */
-    private String cloudServiceDeploymentId;
-    /**
-     * The Azure deployed cloud service instance name, such as FrontEndIN3.
-     */
-    private String cloudServiceInstanceName;
-    /**
-     * The Azure deployed cloud service name, such as contoso.cloudapp.net.
-     */
-    private String cloudServiceName;
-    /**
-     * Any additional description, such as VTC Bldg 30/21.
-     */
-    private String deviceDescription;
-    /**
-     * The user media agent name, such as Cisco SX80.
-     */
-    private String deviceName;
-    /**
-     * A unique identifier for a specific media leg of a participant in a conference.  One participant can have multiple media leg identifiers if retargeting happens. CVI partner assigns this value.
-     */
-    private UUID mediaLegId;
-    /**
-     * The list of media qualities in a media session (call), such as audio quality, video quality, and/or screen sharing quality.
-     */
-    private java.util.List<TeleconferenceDeviceMediaQuality> mediaQualityList;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property.
-     */
-    private UUID participantId;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new TeleconferenceDeviceQuality and sets the default values.
      */
     public TeleconferenceDeviceQuality() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -80,7 +41,12 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the callChainId property value. A unique identifier for all  the participant calls in a conference or a unique identifier for two participant calls in P2P call. This needs to be copied over from Microsoft.Graph.Call.CallChainId.
@@ -88,7 +54,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public UUID getCallChainId() {
-        return this.callChainId;
+        return this.backingStore.get("callChainId");
     }
     /**
      * Gets the cloudServiceDeploymentEnvironment property value. A geo-region where the service is deployed, such as ProdNoam.
@@ -96,7 +62,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public String getCloudServiceDeploymentEnvironment() {
-        return this.cloudServiceDeploymentEnvironment;
+        return this.backingStore.get("cloudServiceDeploymentEnvironment");
     }
     /**
      * Gets the cloudServiceDeploymentId property value. A unique deployment identifier assigned by Azure.
@@ -104,7 +70,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public String getCloudServiceDeploymentId() {
-        return this.cloudServiceDeploymentId;
+        return this.backingStore.get("cloudServiceDeploymentId");
     }
     /**
      * Gets the cloudServiceInstanceName property value. The Azure deployed cloud service instance name, such as FrontEndIN3.
@@ -112,7 +78,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public String getCloudServiceInstanceName() {
-        return this.cloudServiceInstanceName;
+        return this.backingStore.get("cloudServiceInstanceName");
     }
     /**
      * Gets the cloudServiceName property value. The Azure deployed cloud service name, such as contoso.cloudapp.net.
@@ -120,7 +86,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public String getCloudServiceName() {
-        return this.cloudServiceName;
+        return this.backingStore.get("cloudServiceName");
     }
     /**
      * Gets the deviceDescription property value. Any additional description, such as VTC Bldg 30/21.
@@ -128,7 +94,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public String getDeviceDescription() {
-        return this.deviceDescription;
+        return this.backingStore.get("deviceDescription");
     }
     /**
      * Gets the deviceName property value. The user media agent name, such as Cisco SX80.
@@ -136,7 +102,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
-        return this.deviceName;
+        return this.backingStore.get("deviceName");
     }
     /**
      * The deserialization information for the current model
@@ -164,7 +130,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public UUID getMediaLegId() {
-        return this.mediaLegId;
+        return this.backingStore.get("mediaLegId");
     }
     /**
      * Gets the mediaQualityList property value. The list of media qualities in a media session (call), such as audio quality, video quality, and/or screen sharing quality.
@@ -172,7 +138,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeleconferenceDeviceMediaQuality> getMediaQualityList() {
-        return this.mediaQualityList;
+        return this.backingStore.get("mediaQualityList");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -180,7 +146,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the participantId property value. A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property.
@@ -188,7 +154,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public UUID getParticipantId() {
-        return this.participantId;
+        return this.backingStore.get("participantId");
     }
     /**
      * Serializes information the current object
@@ -214,83 +180,83 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the callChainId property value. A unique identifier for all  the participant calls in a conference or a unique identifier for two participant calls in P2P call. This needs to be copied over from Microsoft.Graph.Call.CallChainId.
      * @param value Value to set for the callChainId property.
      */
     public void setCallChainId(@jakarta.annotation.Nullable final UUID value) {
-        this.callChainId = value;
+        this.backingStore.set("callChainId", value);
     }
     /**
      * Sets the cloudServiceDeploymentEnvironment property value. A geo-region where the service is deployed, such as ProdNoam.
      * @param value Value to set for the cloudServiceDeploymentEnvironment property.
      */
     public void setCloudServiceDeploymentEnvironment(@jakarta.annotation.Nullable final String value) {
-        this.cloudServiceDeploymentEnvironment = value;
+        this.backingStore.set("cloudServiceDeploymentEnvironment", value);
     }
     /**
      * Sets the cloudServiceDeploymentId property value. A unique deployment identifier assigned by Azure.
      * @param value Value to set for the cloudServiceDeploymentId property.
      */
     public void setCloudServiceDeploymentId(@jakarta.annotation.Nullable final String value) {
-        this.cloudServiceDeploymentId = value;
+        this.backingStore.set("cloudServiceDeploymentId", value);
     }
     /**
      * Sets the cloudServiceInstanceName property value. The Azure deployed cloud service instance name, such as FrontEndIN3.
      * @param value Value to set for the cloudServiceInstanceName property.
      */
     public void setCloudServiceInstanceName(@jakarta.annotation.Nullable final String value) {
-        this.cloudServiceInstanceName = value;
+        this.backingStore.set("cloudServiceInstanceName", value);
     }
     /**
      * Sets the cloudServiceName property value. The Azure deployed cloud service name, such as contoso.cloudapp.net.
      * @param value Value to set for the cloudServiceName property.
      */
     public void setCloudServiceName(@jakarta.annotation.Nullable final String value) {
-        this.cloudServiceName = value;
+        this.backingStore.set("cloudServiceName", value);
     }
     /**
      * Sets the deviceDescription property value. Any additional description, such as VTC Bldg 30/21.
      * @param value Value to set for the deviceDescription property.
      */
     public void setDeviceDescription(@jakarta.annotation.Nullable final String value) {
-        this.deviceDescription = value;
+        this.backingStore.set("deviceDescription", value);
     }
     /**
      * Sets the deviceName property value. The user media agent name, such as Cisco SX80.
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.deviceName = value;
+        this.backingStore.set("deviceName", value);
     }
     /**
      * Sets the mediaLegId property value. A unique identifier for a specific media leg of a participant in a conference.  One participant can have multiple media leg identifiers if retargeting happens. CVI partner assigns this value.
      * @param value Value to set for the mediaLegId property.
      */
     public void setMediaLegId(@jakarta.annotation.Nullable final UUID value) {
-        this.mediaLegId = value;
+        this.backingStore.set("mediaLegId", value);
     }
     /**
      * Sets the mediaQualityList property value. The list of media qualities in a media session (call), such as audio quality, video quality, and/or screen sharing quality.
      * @param value Value to set for the mediaQualityList property.
      */
     public void setMediaQualityList(@jakarta.annotation.Nullable final java.util.List<TeleconferenceDeviceMediaQuality> value) {
-        this.mediaQualityList = value;
+        this.backingStore.set("mediaQualityList", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the participantId property value. A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property.
      * @param value Value to set for the participantId property.
      */
     public void setParticipantId(@jakarta.annotation.Nullable final UUID value) {
-        this.participantId = value;
+        this.backingStore.set("participantId", value);
     }
 }

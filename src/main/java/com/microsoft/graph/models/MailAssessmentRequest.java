@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MailAssessmentRequest extends ThreatAssessmentRequest implements Parsable {
     /**
-     * The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
-     */
-    private MailDestinationRoutingReason destinationRoutingReason;
-    /**
-     * The resource URI of the mail message for assessment.
-     */
-    private String messageUri;
-    /**
-     * The mail recipient whose policies are used to assess the mail.
-     */
-    private String recipientEmail;
-    /**
      * Instantiates a new MailAssessmentRequest and sets the default values.
      */
     public MailAssessmentRequest() {
@@ -43,7 +31,7 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      */
     @jakarta.annotation.Nullable
     public MailDestinationRoutingReason getDestinationRoutingReason() {
-        return this.destinationRoutingReason;
+        return this.backingStore.get("destinationRoutingReason");
     }
     /**
      * The deserialization information for the current model
@@ -63,7 +51,7 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      */
     @jakarta.annotation.Nullable
     public String getMessageUri() {
-        return this.messageUri;
+        return this.backingStore.get("messageUri");
     }
     /**
      * Gets the recipientEmail property value. The mail recipient whose policies are used to assess the mail.
@@ -71,7 +59,7 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      */
     @jakarta.annotation.Nullable
     public String getRecipientEmail() {
-        return this.recipientEmail;
+        return this.backingStore.get("recipientEmail");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * @param value Value to set for the destinationRoutingReason property.
      */
     public void setDestinationRoutingReason(@jakarta.annotation.Nullable final MailDestinationRoutingReason value) {
-        this.destinationRoutingReason = value;
+        this.backingStore.set("destinationRoutingReason", value);
     }
     /**
      * Sets the messageUri property value. The resource URI of the mail message for assessment.
      * @param value Value to set for the messageUri property.
      */
     public void setMessageUri(@jakarta.annotation.Nullable final String value) {
-        this.messageUri = value;
+        this.backingStore.set("messageUri", value);
     }
     /**
      * Sets the recipientEmail property value. The mail recipient whose policies are used to assess the mail.
      * @param value Value to set for the recipientEmail property.
      */
     public void setRecipientEmail(@jakarta.annotation.Nullable final String value) {
-        this.recipientEmail = value;
+        this.backingStore.set("recipientEmail", value);
     }
 }

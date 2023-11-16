@@ -12,14 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsCategory extends Entity implements Parsable {
     /**
-     * The insights for the category. Read-only.
-     */
-    private java.util.List<UserExperienceAnalyticsInsight> insights;
-    /**
-     * The metric values for the user experience analytics category. Read-only.
-     */
-    private java.util.List<UserExperienceAnalyticsMetric> metricValues;
-    /**
      * Instantiates a new UserExperienceAnalyticsCategory and sets the default values.
      */
     public UserExperienceAnalyticsCategory() {
@@ -52,7 +44,7 @@ public class UserExperienceAnalyticsCategory extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsInsight> getInsights() {
-        return this.insights;
+        return this.backingStore.get("insights");
     }
     /**
      * Gets the metricValues property value. The metric values for the user experience analytics category. Read-only.
@@ -60,7 +52,7 @@ public class UserExperienceAnalyticsCategory extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsMetric> getMetricValues() {
-        return this.metricValues;
+        return this.backingStore.get("metricValues");
     }
     /**
      * Serializes information the current object
@@ -77,13 +69,13 @@ public class UserExperienceAnalyticsCategory extends Entity implements Parsable 
      * @param value Value to set for the insights property.
      */
     public void setInsights(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsInsight> value) {
-        this.insights = value;
+        this.backingStore.set("insights", value);
     }
     /**
      * Sets the metricValues property value. The metric values for the user experience analytics category. Read-only.
      * @param value Value to set for the metricValues property.
      */
     public void setMetricValues(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsMetric> value) {
-        this.metricValues = value;
+        this.backingStore.set("metricValues", value);
     }
 }

@@ -9,34 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookNamedItem extends Entity implements Parsable {
     /**
-     * Represents the comment associated with this name.
-     */
-    private String comment;
-    /**
-     * The name of the object. Read-only.
-     */
-    private String name;
-    /**
-     * Indicates whether the name is scoped to the workbook or to a specific worksheet. Read-only.
-     */
-    private String scope;
-    /**
-     * Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only.
-     */
-    private String type;
-    /**
-     * Represents the formula that the name is defined to refer to. for example, =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
-     */
-    private Json value;
-    /**
-     * Specifies whether the object is visible or not.
-     */
-    private Boolean visible;
-    /**
-     * Returns the worksheet on which the named item is scoped to. Available only if the item is scoped to the worksheet. Read-only.
-     */
-    private WorkbookWorksheet worksheet;
-    /**
      * Instantiates a new WorkbookNamedItem and sets the default values.
      */
     public WorkbookNamedItem() {
@@ -58,7 +30,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getComment() {
-        return this.comment;
+        return this.backingStore.get("comment");
     }
     /**
      * The deserialization information for the current model
@@ -82,7 +54,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the scope property value. Indicates whether the name is scoped to the workbook or to a specific worksheet. Read-only.
@@ -90,7 +62,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getScope() {
-        return this.scope;
+        return this.backingStore.get("scope");
     }
     /**
      * Gets the type property value. Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only.
@@ -98,7 +70,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getType() {
-        return this.type;
+        return this.backingStore.get("type");
     }
     /**
      * Gets the value property value. Represents the formula that the name is defined to refer to. for example, =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
@@ -106,7 +78,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Gets the visible property value. Specifies whether the object is visible or not.
@@ -114,7 +86,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getVisible() {
-        return this.visible;
+        return this.backingStore.get("visible");
     }
     /**
      * Gets the worksheet property value. Returns the worksheet on which the named item is scoped to. Available only if the item is scoped to the worksheet. Read-only.
@@ -122,7 +94,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookWorksheet getWorksheet() {
-        return this.worksheet;
+        return this.backingStore.get("worksheet");
     }
     /**
      * Serializes information the current object
@@ -144,48 +116,48 @@ public class WorkbookNamedItem extends Entity implements Parsable {
      * @param value Value to set for the comment property.
      */
     public void setComment(@jakarta.annotation.Nullable final String value) {
-        this.comment = value;
+        this.backingStore.set("comment", value);
     }
     /**
      * Sets the name property value. The name of the object. Read-only.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the scope property value. Indicates whether the name is scoped to the workbook or to a specific worksheet. Read-only.
      * @param value Value to set for the scope property.
      */
     public void setScope(@jakarta.annotation.Nullable final String value) {
-        this.scope = value;
+        this.backingStore.set("scope", value);
     }
     /**
      * Sets the type property value. Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {
-        this.type = value;
+        this.backingStore.set("type", value);
     }
     /**
      * Sets the value property value. Represents the formula that the name is defined to refer to. for example, =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final Json value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
     /**
      * Sets the visible property value. Specifies whether the object is visible or not.
      * @param value Value to set for the visible property.
      */
     public void setVisible(@jakarta.annotation.Nullable final Boolean value) {
-        this.visible = value;
+        this.backingStore.set("visible", value);
     }
     /**
      * Sets the worksheet property value. Returns the worksheet on which the named item is scoped to. Available only if the item is scoped to the worksheet. Read-only.
      * @param value Value to set for the worksheet property.
      */
     public void setWorksheet(@jakarta.annotation.Nullable final WorkbookWorksheet value) {
-        this.worksheet = value;
+        this.backingStore.set("worksheet", value);
     }
 }

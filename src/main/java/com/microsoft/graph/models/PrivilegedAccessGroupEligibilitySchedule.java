@@ -9,30 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSchedule implements Parsable {
     /**
-     * The identifier of the membership or ownership eligibility to the group that is governed by PIM. Required. The possible values are: owner, member. Supports $filter (eq).
-     */
-    private PrivilegedAccessGroupRelationships accessId;
-    /**
-     * References the group that is the scope of the membership or ownership eligibility through PIM for groups. Supports $expand.
-     */
-    private Group group;
-    /**
-     * The identifier of the group representing the scope of the membership or ownership eligibility through PIM for groups. Required. Supports $filter (eq).
-     */
-    private String groupId;
-    /**
-     * Indicates whether the assignment is derived from a group assignment. It can further imply whether the caller can manage the schedule. Required. The possible values are: direct, group, unknownFutureValue. Supports $filter (eq).
-     */
-    private PrivilegedAccessGroupMemberType memberType;
-    /**
-     * References the principal that's in the scope of this membership or ownership eligibility request to the group that's governed by PIM. Supports $expand.
-     */
-    private DirectoryObject principal;
-    /**
-     * The identifier of the principal whose membership or ownership eligibility is granted through PIM for groups. Required. Supports $filter (eq).
-     */
-    private String principalId;
-    /**
      * Instantiates a new PrivilegedAccessGroupEligibilitySchedule and sets the default values.
      */
     public PrivilegedAccessGroupEligibilitySchedule() {
@@ -55,7 +31,7 @@ public class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSc
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupRelationships getAccessId() {
-        return this.accessId;
+        return this.backingStore.get("accessId");
     }
     /**
      * The deserialization information for the current model
@@ -78,7 +54,7 @@ public class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSc
      */
     @jakarta.annotation.Nullable
     public Group getGroup() {
-        return this.group;
+        return this.backingStore.get("group");
     }
     /**
      * Gets the groupId property value. The identifier of the group representing the scope of the membership or ownership eligibility through PIM for groups. Required. Supports $filter (eq).
@@ -86,7 +62,7 @@ public class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSc
      */
     @jakarta.annotation.Nullable
     public String getGroupId() {
-        return this.groupId;
+        return this.backingStore.get("groupId");
     }
     /**
      * Gets the memberType property value. Indicates whether the assignment is derived from a group assignment. It can further imply whether the caller can manage the schedule. Required. The possible values are: direct, group, unknownFutureValue. Supports $filter (eq).
@@ -94,7 +70,7 @@ public class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSc
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupMemberType getMemberType() {
-        return this.memberType;
+        return this.backingStore.get("memberType");
     }
     /**
      * Gets the principal property value. References the principal that's in the scope of this membership or ownership eligibility request to the group that's governed by PIM. Supports $expand.
@@ -102,7 +78,7 @@ public class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSc
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getPrincipal() {
-        return this.principal;
+        return this.backingStore.get("principal");
     }
     /**
      * Gets the principalId property value. The identifier of the principal whose membership or ownership eligibility is granted through PIM for groups. Required. Supports $filter (eq).
@@ -110,7 +86,7 @@ public class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSc
      */
     @jakarta.annotation.Nullable
     public String getPrincipalId() {
-        return this.principalId;
+        return this.backingStore.get("principalId");
     }
     /**
      * Serializes information the current object
@@ -131,41 +107,41 @@ public class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSc
      * @param value Value to set for the accessId property.
      */
     public void setAccessId(@jakarta.annotation.Nullable final PrivilegedAccessGroupRelationships value) {
-        this.accessId = value;
+        this.backingStore.set("accessId", value);
     }
     /**
      * Sets the group property value. References the group that is the scope of the membership or ownership eligibility through PIM for groups. Supports $expand.
      * @param value Value to set for the group property.
      */
     public void setGroup(@jakarta.annotation.Nullable final Group value) {
-        this.group = value;
+        this.backingStore.set("group", value);
     }
     /**
      * Sets the groupId property value. The identifier of the group representing the scope of the membership or ownership eligibility through PIM for groups. Required. Supports $filter (eq).
      * @param value Value to set for the groupId property.
      */
     public void setGroupId(@jakarta.annotation.Nullable final String value) {
-        this.groupId = value;
+        this.backingStore.set("groupId", value);
     }
     /**
      * Sets the memberType property value. Indicates whether the assignment is derived from a group assignment. It can further imply whether the caller can manage the schedule. Required. The possible values are: direct, group, unknownFutureValue. Supports $filter (eq).
      * @param value Value to set for the memberType property.
      */
     public void setMemberType(@jakarta.annotation.Nullable final PrivilegedAccessGroupMemberType value) {
-        this.memberType = value;
+        this.backingStore.set("memberType", value);
     }
     /**
      * Sets the principal property value. References the principal that's in the scope of this membership or ownership eligibility request to the group that's governed by PIM. Supports $expand.
      * @param value Value to set for the principal property.
      */
     public void setPrincipal(@jakarta.annotation.Nullable final DirectoryObject value) {
-        this.principal = value;
+        this.backingStore.set("principal", value);
     }
     /**
      * Sets the principalId property value. The identifier of the principal whose membership or ownership eligibility is granted through PIM for groups. Required. Supports $filter (eq).
      * @param value Value to set for the principalId property.
      */
     public void setPrincipalId(@jakarta.annotation.Nullable final String value) {
-        this.principalId = value;
+        this.backingStore.set("principalId", value);
     }
 }

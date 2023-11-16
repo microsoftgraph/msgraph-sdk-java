@@ -4,35 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class MeetingParticipantInfo implements AdditionalDataHolder, Parsable {
+public class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Identity information of the participant.
-     */
-    private IdentitySet identity;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Specifies the participant's role in the meeting.
-     */
-    private OnlineMeetingRole role;
-    /**
-     * User principal name of the participant.
-     */
-    private String upn;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new MeetingParticipantInfo and sets the default values.
      */
     public MeetingParticipantInfo() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +40,12 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -72,7 +66,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public IdentitySet getIdentity() {
-        return this.identity;
+        return this.backingStore.get("identity");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -80,7 +74,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the role property value. Specifies the participant's role in the meeting.
@@ -88,7 +82,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OnlineMeetingRole getRole() {
-        return this.role;
+        return this.backingStore.get("role");
     }
     /**
      * Gets the upn property value. User principal name of the participant.
@@ -96,7 +90,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUpn() {
-        return this.upn;
+        return this.backingStore.get("upn");
     }
     /**
      * Serializes information the current object
@@ -115,34 +109,34 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the identity property value. Identity information of the participant.
      * @param value Value to set for the identity property.
      */
     public void setIdentity(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.identity = value;
+        this.backingStore.set("identity", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the role property value. Specifies the participant's role in the meeting.
      * @param value Value to set for the role property.
      */
     public void setRole(@jakarta.annotation.Nullable final OnlineMeetingRole value) {
-        this.role = value;
+        this.backingStore.set("role", value);
     }
     /**
      * Sets the upn property value. User principal name of the participant.
      * @param value Value to set for the upn property.
      */
     public void setUpn(@jakarta.annotation.Nullable final String value) {
-        this.upn = value;
+        this.backingStore.set("upn", value);
     }
 }

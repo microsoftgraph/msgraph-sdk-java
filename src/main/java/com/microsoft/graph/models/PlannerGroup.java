@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerGroup extends Entity implements Parsable {
     /**
-     * Read-only. Nullable. Returns the plannerPlans owned by the group.
-     */
-    private java.util.List<PlannerPlan> plans;
-    /**
      * Instantiates a new PlannerGroup and sets the default values.
      */
     public PlannerGroup() {
@@ -44,7 +40,7 @@ public class PlannerGroup extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerPlan> getPlans() {
-        return this.plans;
+        return this.backingStore.get("plans");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class PlannerGroup extends Entity implements Parsable {
      * @param value Value to set for the plans property.
      */
     public void setPlans(@jakarta.annotation.Nullable final java.util.List<PlannerPlan> value) {
-        this.plans = value;
+        this.backingStore.set("plans", value);
     }
 }

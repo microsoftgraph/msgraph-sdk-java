@@ -4,31 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHolder, Parsable {
+public class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Rules are configured in addition to the authentication mode to bind a specific x509CertificateRuleType to an x509CertificateAuthenticationMode. For example, bind the policyOID with identifier 1.32.132.343 to x509CertificateMultiFactor authentication mode.
-     */
-    private java.util.List<X509CertificateRule> rules;
-    /**
-     * The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue.
-     */
-    private X509CertificateAuthenticationMode x509CertificateAuthenticationDefaultMode;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new X509CertificateAuthenticationModeConfiguration and sets the default values.
      */
     public X509CertificateAuthenticationModeConfiguration() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +40,12 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -67,7 +65,7 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the rules property value. Rules are configured in addition to the authentication mode to bind a specific x509CertificateRuleType to an x509CertificateAuthenticationMode. For example, bind the policyOID with identifier 1.32.132.343 to x509CertificateMultiFactor authentication mode.
@@ -75,7 +73,7 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      */
     @jakarta.annotation.Nullable
     public java.util.List<X509CertificateRule> getRules() {
-        return this.rules;
+        return this.backingStore.get("rules");
     }
     /**
      * Gets the x509CertificateAuthenticationDefaultMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue.
@@ -83,7 +81,7 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      */
     @jakarta.annotation.Nullable
     public X509CertificateAuthenticationMode getX509CertificateAuthenticationDefaultMode() {
-        return this.x509CertificateAuthenticationDefaultMode;
+        return this.backingStore.get("x509CertificateAuthenticationDefaultMode");
     }
     /**
      * Serializes information the current object
@@ -101,27 +99,27 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the rules property value. Rules are configured in addition to the authentication mode to bind a specific x509CertificateRuleType to an x509CertificateAuthenticationMode. For example, bind the policyOID with identifier 1.32.132.343 to x509CertificateMultiFactor authentication mode.
      * @param value Value to set for the rules property.
      */
     public void setRules(@jakarta.annotation.Nullable final java.util.List<X509CertificateRule> value) {
-        this.rules = value;
+        this.backingStore.set("rules", value);
     }
     /**
      * Sets the x509CertificateAuthenticationDefaultMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue.
      * @param value Value to set for the x509CertificateAuthenticationDefaultMode property.
      */
     public void setX509CertificateAuthenticationDefaultMode(@jakarta.annotation.Nullable final X509CertificateAuthenticationMode value) {
-        this.x509CertificateAuthenticationDefaultMode = value;
+        this.backingStore.set("x509CertificateAuthenticationDefaultMode", value);
     }
 }

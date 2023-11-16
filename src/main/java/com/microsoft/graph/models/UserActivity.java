@@ -10,62 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserActivity extends Entity implements Parsable {
     /**
-     * Required. URL used to launch the activity in the best native experience represented by the appId. Might launch a web-based app if no native app exists.
-     */
-    private String activationUrl;
-    /**
-     * Required. URL for the domain representing the cross-platform identity mapping for the app. Mapping is stored either as a JSON file hosted on the domain or configurable via Windows Dev Center. The JSON file is named cross-platform-app-identifiers and is hosted at root of your HTTPS domain, either at the top level domain or include a sub domain. For example: https://contoso.com or https://myapp.contoso.com but NOT https://myapp.contoso.com/somepath. You must have a unique file and domain (or sub domain) per cross-platform app identity. For example, a separate file and domain is needed for Word vs. PowerPoint.
-     */
-    private String activitySourceHost;
-    /**
-     * Required. The unique activity ID in the context of the app - supplied by caller and immutable thereafter.
-     */
-    private String appActivityId;
-    /**
-     * Optional. Short text description of the app used to generate the activity for use in cases when the app is not installed on the users local device.
-     */
-    private String appDisplayName;
-    /**
-     * Optional. A custom piece of data - JSON-LD extensible description of content according to schema.org syntax.
-     */
-    private Json contentInfo;
-    /**
-     * Optional. Used in the event the content can be rendered outside of a native or web-based app experience (for example, a pointer to an item in an RSS feed).
-     */
-    private String contentUrl;
-    /**
-     * Set by the server. DateTime in UTC when the object was created on the server.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Set by the server. DateTime in UTC when the object expired on the server.
-     */
-    private OffsetDateTime expirationDateTime;
-    /**
-     * Optional. URL used to launch the activity in a web-based app, if available.
-     */
-    private String fallbackUrl;
-    /**
-     * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
-     */
-    private java.util.List<ActivityHistoryItem> historyItems;
-    /**
-     * Set by the server. DateTime in UTC when the object was modified on the server.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
-     */
-    private Status status;
-    /**
-     * Optional. The timezone in which the user's device used to generate the activity was located at activity creation time; values supplied as Olson IDs in order to support cross-platform representation.
-     */
-    private String userTimezone;
-    /**
-     * The visualElements property
-     */
-    private VisualInfo visualElements;
-    /**
      * Instantiates a new UserActivity and sets the default values.
      */
     public UserActivity() {
@@ -87,7 +31,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getActivationUrl() {
-        return this.activationUrl;
+        return this.backingStore.get("activationUrl");
     }
     /**
      * Gets the activitySourceHost property value. Required. URL for the domain representing the cross-platform identity mapping for the app. Mapping is stored either as a JSON file hosted on the domain or configurable via Windows Dev Center. The JSON file is named cross-platform-app-identifiers and is hosted at root of your HTTPS domain, either at the top level domain or include a sub domain. For example: https://contoso.com or https://myapp.contoso.com but NOT https://myapp.contoso.com/somepath. You must have a unique file and domain (or sub domain) per cross-platform app identity. For example, a separate file and domain is needed for Word vs. PowerPoint.
@@ -95,7 +39,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getActivitySourceHost() {
-        return this.activitySourceHost;
+        return this.backingStore.get("activitySourceHost");
     }
     /**
      * Gets the appActivityId property value. Required. The unique activity ID in the context of the app - supplied by caller and immutable thereafter.
@@ -103,7 +47,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAppActivityId() {
-        return this.appActivityId;
+        return this.backingStore.get("appActivityId");
     }
     /**
      * Gets the appDisplayName property value. Optional. Short text description of the app used to generate the activity for use in cases when the app is not installed on the users local device.
@@ -111,7 +55,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
-        return this.appDisplayName;
+        return this.backingStore.get("appDisplayName");
     }
     /**
      * Gets the contentInfo property value. Optional. A custom piece of data - JSON-LD extensible description of content according to schema.org syntax.
@@ -119,7 +63,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getContentInfo() {
-        return this.contentInfo;
+        return this.backingStore.get("contentInfo");
     }
     /**
      * Gets the contentUrl property value. Optional. Used in the event the content can be rendered outside of a native or web-based app experience (for example, a pointer to an item in an RSS feed).
@@ -127,7 +71,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getContentUrl() {
-        return this.contentUrl;
+        return this.backingStore.get("contentUrl");
     }
     /**
      * Gets the createdDateTime property value. Set by the server. DateTime in UTC when the object was created on the server.
@@ -135,7 +79,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the expirationDateTime property value. Set by the server. DateTime in UTC when the object expired on the server.
@@ -143,7 +87,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this.expirationDateTime;
+        return this.backingStore.get("expirationDateTime");
     }
     /**
      * Gets the fallbackUrl property value. Optional. URL used to launch the activity in a web-based app, if available.
@@ -151,7 +95,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getFallbackUrl() {
-        return this.fallbackUrl;
+        return this.backingStore.get("fallbackUrl");
     }
     /**
      * The deserialization information for the current model
@@ -182,7 +126,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ActivityHistoryItem> getHistoryItems() {
-        return this.historyItems;
+        return this.backingStore.get("historyItems");
     }
     /**
      * Gets the lastModifiedDateTime property value. Set by the server. DateTime in UTC when the object was modified on the server.
@@ -190,7 +134,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
@@ -198,7 +142,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Status getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Gets the userTimezone property value. Optional. The timezone in which the user's device used to generate the activity was located at activity creation time; values supplied as Olson IDs in order to support cross-platform representation.
@@ -206,7 +150,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUserTimezone() {
-        return this.userTimezone;
+        return this.backingStore.get("userTimezone");
     }
     /**
      * Gets the visualElements property value. The visualElements property
@@ -214,7 +158,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public VisualInfo getVisualElements() {
-        return this.visualElements;
+        return this.backingStore.get("visualElements");
     }
     /**
      * Serializes information the current object
@@ -243,97 +187,97 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the activationUrl property.
      */
     public void setActivationUrl(@jakarta.annotation.Nullable final String value) {
-        this.activationUrl = value;
+        this.backingStore.set("activationUrl", value);
     }
     /**
      * Sets the activitySourceHost property value. Required. URL for the domain representing the cross-platform identity mapping for the app. Mapping is stored either as a JSON file hosted on the domain or configurable via Windows Dev Center. The JSON file is named cross-platform-app-identifiers and is hosted at root of your HTTPS domain, either at the top level domain or include a sub domain. For example: https://contoso.com or https://myapp.contoso.com but NOT https://myapp.contoso.com/somepath. You must have a unique file and domain (or sub domain) per cross-platform app identity. For example, a separate file and domain is needed for Word vs. PowerPoint.
      * @param value Value to set for the activitySourceHost property.
      */
     public void setActivitySourceHost(@jakarta.annotation.Nullable final String value) {
-        this.activitySourceHost = value;
+        this.backingStore.set("activitySourceHost", value);
     }
     /**
      * Sets the appActivityId property value. Required. The unique activity ID in the context of the app - supplied by caller and immutable thereafter.
      * @param value Value to set for the appActivityId property.
      */
     public void setAppActivityId(@jakarta.annotation.Nullable final String value) {
-        this.appActivityId = value;
+        this.backingStore.set("appActivityId", value);
     }
     /**
      * Sets the appDisplayName property value. Optional. Short text description of the app used to generate the activity for use in cases when the app is not installed on the users local device.
      * @param value Value to set for the appDisplayName property.
      */
     public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.appDisplayName = value;
+        this.backingStore.set("appDisplayName", value);
     }
     /**
      * Sets the contentInfo property value. Optional. A custom piece of data - JSON-LD extensible description of content according to schema.org syntax.
      * @param value Value to set for the contentInfo property.
      */
     public void setContentInfo(@jakarta.annotation.Nullable final Json value) {
-        this.contentInfo = value;
+        this.backingStore.set("contentInfo", value);
     }
     /**
      * Sets the contentUrl property value. Optional. Used in the event the content can be rendered outside of a native or web-based app experience (for example, a pointer to an item in an RSS feed).
      * @param value Value to set for the contentUrl property.
      */
     public void setContentUrl(@jakarta.annotation.Nullable final String value) {
-        this.contentUrl = value;
+        this.backingStore.set("contentUrl", value);
     }
     /**
      * Sets the createdDateTime property value. Set by the server. DateTime in UTC when the object was created on the server.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the expirationDateTime property value. Set by the server. DateTime in UTC when the object expired on the server.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.expirationDateTime = value;
+        this.backingStore.set("expirationDateTime", value);
     }
     /**
      * Sets the fallbackUrl property value. Optional. URL used to launch the activity in a web-based app, if available.
      * @param value Value to set for the fallbackUrl property.
      */
     public void setFallbackUrl(@jakarta.annotation.Nullable final String value) {
-        this.fallbackUrl = value;
+        this.backingStore.set("fallbackUrl", value);
     }
     /**
      * Sets the historyItems property value. Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
      * @param value Value to set for the historyItems property.
      */
     public void setHistoryItems(@jakarta.annotation.Nullable final java.util.List<ActivityHistoryItem> value) {
-        this.historyItems = value;
+        this.backingStore.set("historyItems", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. Set by the server. DateTime in UTC when the object was modified on the server.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final Status value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
     /**
      * Sets the userTimezone property value. Optional. The timezone in which the user's device used to generate the activity was located at activity creation time; values supplied as Olson IDs in order to support cross-platform representation.
      * @param value Value to set for the userTimezone property.
      */
     public void setUserTimezone(@jakarta.annotation.Nullable final String value) {
-        this.userTimezone = value;
+        this.backingStore.set("userTimezone", value);
     }
     /**
      * Sets the visualElements property value. The visualElements property
      * @param value Value to set for the visualElements property.
      */
     public void setVisualElements(@jakarta.annotation.Nullable final VisualInfo value) {
-        this.visualElements = value;
+        this.backingStore.set("visualElements", value);
     }
 }

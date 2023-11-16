@@ -9,42 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LearningProvider extends Entity implements Parsable {
     /**
-     * The display name that appears in Viva Learning. Required.
-     */
-    private String displayName;
-    /**
-     * Indicates whether a provider can ingest learning course activity records. The default value is false. Set to true to make learningCourseActivities available for this provider.
-     */
-    private Boolean isCourseActivitySyncEnabled;
-    /**
-     * Learning catalog items for the provider.
-     */
-    private java.util.List<LearningContent> learningContents;
-    /**
-     * The learningCourseActivities property
-     */
-    private java.util.List<LearningCourseActivity> learningCourseActivities;
-    /**
-     * Authentication URL to access the courses for the provider. Optional.
-     */
-    private String loginWebUrl;
-    /**
-     * The long logo URL for the dark mode that needs to be a publicly accessible image. This image would be saved to the blob storage of Viva Learning for rendering within the Viva Learning app. Required.
-     */
-    private String longLogoWebUrlForDarkTheme;
-    /**
-     * The long logo URL for the light mode that needs to be a publicly accessible image. This image would be saved to the blob storage of Viva Learning for rendering within the Viva Learning app. Required.
-     */
-    private String longLogoWebUrlForLightTheme;
-    /**
-     * The square logo URL for the dark mode that needs to be a publicly accessible image. This image would be saved to the blob storage of Viva Learning for rendering within the Viva Learning app. Required.
-     */
-    private String squareLogoWebUrlForDarkTheme;
-    /**
-     * The square logo URL for the light mode that needs to be a publicly accessible image. This image would be saved to the blob storage of Viva Learning for rendering within the Viva Learning app. Required.
-     */
-    private String squareLogoWebUrlForLightTheme;
-    /**
      * Instantiates a new LearningProvider and sets the default values.
      */
     public LearningProvider() {
@@ -66,7 +30,7 @@ public class LearningProvider extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -92,7 +56,7 @@ public class LearningProvider extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCourseActivitySyncEnabled() {
-        return this.isCourseActivitySyncEnabled;
+        return this.backingStore.get("isCourseActivitySyncEnabled");
     }
     /**
      * Gets the learningContents property value. Learning catalog items for the provider.
@@ -100,7 +64,7 @@ public class LearningProvider extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<LearningContent> getLearningContents() {
-        return this.learningContents;
+        return this.backingStore.get("learningContents");
     }
     /**
      * Gets the learningCourseActivities property value. The learningCourseActivities property
@@ -108,7 +72,7 @@ public class LearningProvider extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<LearningCourseActivity> getLearningCourseActivities() {
-        return this.learningCourseActivities;
+        return this.backingStore.get("learningCourseActivities");
     }
     /**
      * Gets the loginWebUrl property value. Authentication URL to access the courses for the provider. Optional.
@@ -116,7 +80,7 @@ public class LearningProvider extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLoginWebUrl() {
-        return this.loginWebUrl;
+        return this.backingStore.get("loginWebUrl");
     }
     /**
      * Gets the longLogoWebUrlForDarkTheme property value. The long logo URL for the dark mode that needs to be a publicly accessible image. This image would be saved to the blob storage of Viva Learning for rendering within the Viva Learning app. Required.
@@ -124,7 +88,7 @@ public class LearningProvider extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLongLogoWebUrlForDarkTheme() {
-        return this.longLogoWebUrlForDarkTheme;
+        return this.backingStore.get("longLogoWebUrlForDarkTheme");
     }
     /**
      * Gets the longLogoWebUrlForLightTheme property value. The long logo URL for the light mode that needs to be a publicly accessible image. This image would be saved to the blob storage of Viva Learning for rendering within the Viva Learning app. Required.
@@ -132,7 +96,7 @@ public class LearningProvider extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLongLogoWebUrlForLightTheme() {
-        return this.longLogoWebUrlForLightTheme;
+        return this.backingStore.get("longLogoWebUrlForLightTheme");
     }
     /**
      * Gets the squareLogoWebUrlForDarkTheme property value. The square logo URL for the dark mode that needs to be a publicly accessible image. This image would be saved to the blob storage of Viva Learning for rendering within the Viva Learning app. Required.
@@ -140,7 +104,7 @@ public class LearningProvider extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSquareLogoWebUrlForDarkTheme() {
-        return this.squareLogoWebUrlForDarkTheme;
+        return this.backingStore.get("squareLogoWebUrlForDarkTheme");
     }
     /**
      * Gets the squareLogoWebUrlForLightTheme property value. The square logo URL for the light mode that needs to be a publicly accessible image. This image would be saved to the blob storage of Viva Learning for rendering within the Viva Learning app. Required.
@@ -148,7 +112,7 @@ public class LearningProvider extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSquareLogoWebUrlForLightTheme() {
-        return this.squareLogoWebUrlForLightTheme;
+        return this.backingStore.get("squareLogoWebUrlForLightTheme");
     }
     /**
      * Serializes information the current object
@@ -172,62 +136,62 @@ public class LearningProvider extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the isCourseActivitySyncEnabled property value. Indicates whether a provider can ingest learning course activity records. The default value is false. Set to true to make learningCourseActivities available for this provider.
      * @param value Value to set for the isCourseActivitySyncEnabled property.
      */
     public void setIsCourseActivitySyncEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isCourseActivitySyncEnabled = value;
+        this.backingStore.set("isCourseActivitySyncEnabled", value);
     }
     /**
      * Sets the learningContents property value. Learning catalog items for the provider.
      * @param value Value to set for the learningContents property.
      */
     public void setLearningContents(@jakarta.annotation.Nullable final java.util.List<LearningContent> value) {
-        this.learningContents = value;
+        this.backingStore.set("learningContents", value);
     }
     /**
      * Sets the learningCourseActivities property value. The learningCourseActivities property
      * @param value Value to set for the learningCourseActivities property.
      */
     public void setLearningCourseActivities(@jakarta.annotation.Nullable final java.util.List<LearningCourseActivity> value) {
-        this.learningCourseActivities = value;
+        this.backingStore.set("learningCourseActivities", value);
     }
     /**
      * Sets the loginWebUrl property value. Authentication URL to access the courses for the provider. Optional.
      * @param value Value to set for the loginWebUrl property.
      */
     public void setLoginWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.loginWebUrl = value;
+        this.backingStore.set("loginWebUrl", value);
     }
     /**
      * Sets the longLogoWebUrlForDarkTheme property value. The long logo URL for the dark mode that needs to be a publicly accessible image. This image would be saved to the blob storage of Viva Learning for rendering within the Viva Learning app. Required.
      * @param value Value to set for the longLogoWebUrlForDarkTheme property.
      */
     public void setLongLogoWebUrlForDarkTheme(@jakarta.annotation.Nullable final String value) {
-        this.longLogoWebUrlForDarkTheme = value;
+        this.backingStore.set("longLogoWebUrlForDarkTheme", value);
     }
     /**
      * Sets the longLogoWebUrlForLightTheme property value. The long logo URL for the light mode that needs to be a publicly accessible image. This image would be saved to the blob storage of Viva Learning for rendering within the Viva Learning app. Required.
      * @param value Value to set for the longLogoWebUrlForLightTheme property.
      */
     public void setLongLogoWebUrlForLightTheme(@jakarta.annotation.Nullable final String value) {
-        this.longLogoWebUrlForLightTheme = value;
+        this.backingStore.set("longLogoWebUrlForLightTheme", value);
     }
     /**
      * Sets the squareLogoWebUrlForDarkTheme property value. The square logo URL for the dark mode that needs to be a publicly accessible image. This image would be saved to the blob storage of Viva Learning for rendering within the Viva Learning app. Required.
      * @param value Value to set for the squareLogoWebUrlForDarkTheme property.
      */
     public void setSquareLogoWebUrlForDarkTheme(@jakarta.annotation.Nullable final String value) {
-        this.squareLogoWebUrlForDarkTheme = value;
+        this.backingStore.set("squareLogoWebUrlForDarkTheme", value);
     }
     /**
      * Sets the squareLogoWebUrlForLightTheme property value. The square logo URL for the light mode that needs to be a publicly accessible image. This image would be saved to the blob storage of Viva Learning for rendering within the Viva Learning app. Required.
      * @param value Value to set for the squareLogoWebUrlForLightTheme property.
      */
     public void setSquareLogoWebUrlForLightTheme(@jakarta.annotation.Nullable final String value) {
-        this.squareLogoWebUrlForLightTheme = value;
+        this.backingStore.set("squareLogoWebUrlForLightTheme", value);
     }
 }

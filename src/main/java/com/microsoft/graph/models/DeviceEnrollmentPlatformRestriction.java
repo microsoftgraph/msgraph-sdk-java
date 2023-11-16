@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,35 +14,17 @@ import java.util.Objects;
  * Platform specific enrollment restrictions
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Parsable {
+public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Max OS version supported
-     */
-    private String osMaximumVersion;
-    /**
-     * Min OS version supported
-     */
-    private String osMinimumVersion;
-    /**
-     * Block personally owned devices from enrolling
-     */
-    private Boolean personalDeviceEnrollmentBlocked;
-    /**
-     * Block the platform from enrolling
-     */
-    private Boolean platformBlocked;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new DeviceEnrollmentPlatformRestriction and sets the default values.
      */
     public DeviceEnrollmentPlatformRestriction() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -58,7 +43,12 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -80,7 +70,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the osMaximumVersion property value. Max OS version supported
@@ -88,7 +78,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      */
     @jakarta.annotation.Nullable
     public String getOsMaximumVersion() {
-        return this.osMaximumVersion;
+        return this.backingStore.get("osMaximumVersion");
     }
     /**
      * Gets the osMinimumVersion property value. Min OS version supported
@@ -96,7 +86,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      */
     @jakarta.annotation.Nullable
     public String getOsMinimumVersion() {
-        return this.osMinimumVersion;
+        return this.backingStore.get("osMinimumVersion");
     }
     /**
      * Gets the personalDeviceEnrollmentBlocked property value. Block personally owned devices from enrolling
@@ -104,7 +94,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      */
     @jakarta.annotation.Nullable
     public Boolean getPersonalDeviceEnrollmentBlocked() {
-        return this.personalDeviceEnrollmentBlocked;
+        return this.backingStore.get("personalDeviceEnrollmentBlocked");
     }
     /**
      * Gets the platformBlocked property value. Block the platform from enrolling
@@ -112,7 +102,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      */
     @jakarta.annotation.Nullable
     public Boolean getPlatformBlocked() {
-        return this.platformBlocked;
+        return this.backingStore.get("platformBlocked");
     }
     /**
      * Serializes information the current object
@@ -132,41 +122,41 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the osMaximumVersion property value. Max OS version supported
      * @param value Value to set for the osMaximumVersion property.
      */
     public void setOsMaximumVersion(@jakarta.annotation.Nullable final String value) {
-        this.osMaximumVersion = value;
+        this.backingStore.set("osMaximumVersion", value);
     }
     /**
      * Sets the osMinimumVersion property value. Min OS version supported
      * @param value Value to set for the osMinimumVersion property.
      */
     public void setOsMinimumVersion(@jakarta.annotation.Nullable final String value) {
-        this.osMinimumVersion = value;
+        this.backingStore.set("osMinimumVersion", value);
     }
     /**
      * Sets the personalDeviceEnrollmentBlocked property value. Block personally owned devices from enrolling
      * @param value Value to set for the personalDeviceEnrollmentBlocked property.
      */
     public void setPersonalDeviceEnrollmentBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.personalDeviceEnrollmentBlocked = value;
+        this.backingStore.set("personalDeviceEnrollmentBlocked", value);
     }
     /**
      * Sets the platformBlocked property value. Block the platform from enrolling
      * @param value Value to set for the platformBlocked property.
      */
     public void setPlatformBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.platformBlocked = value;
+        this.backingStore.set("platformBlocked", value);
     }
 }

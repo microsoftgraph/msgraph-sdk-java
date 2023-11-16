@@ -12,18 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsInformationProtectionAppLearningSummary extends Entity implements Parsable {
     /**
-     * Application Name
-     */
-    private String applicationName;
-    /**
-     * Possible types of Application
-     */
-    private ApplicationType applicationType;
-    /**
-     * Device Count
-     */
-    private Integer deviceCount;
-    /**
      * Instantiates a new WindowsInformationProtectionAppLearningSummary and sets the default values.
      */
     public WindowsInformationProtectionAppLearningSummary() {
@@ -45,7 +33,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
      */
     @jakarta.annotation.Nullable
     public String getApplicationName() {
-        return this.applicationName;
+        return this.backingStore.get("applicationName");
     }
     /**
      * Gets the applicationType property value. Possible types of Application
@@ -53,7 +41,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
      */
     @jakarta.annotation.Nullable
     public ApplicationType getApplicationType() {
-        return this.applicationType;
+        return this.backingStore.get("applicationType");
     }
     /**
      * Gets the deviceCount property value. Device Count
@@ -61,7 +49,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceCount() {
-        return this.deviceCount;
+        return this.backingStore.get("deviceCount");
     }
     /**
      * The deserialization information for the current model
@@ -91,20 +79,20 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
      * @param value Value to set for the applicationName property.
      */
     public void setApplicationName(@jakarta.annotation.Nullable final String value) {
-        this.applicationName = value;
+        this.backingStore.set("applicationName", value);
     }
     /**
      * Sets the applicationType property value. Possible types of Application
      * @param value Value to set for the applicationType property.
      */
     public void setApplicationType(@jakarta.annotation.Nullable final ApplicationType value) {
-        this.applicationType = value;
+        this.backingStore.set("applicationType", value);
     }
     /**
      * Sets the deviceCount property value. Device Count
      * @param value Value to set for the deviceCount property.
      */
     public void setDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.deviceCount = value;
+        this.backingStore.set("deviceCount", value);
     }
 }

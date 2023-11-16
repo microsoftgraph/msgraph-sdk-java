@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidWorkProfileCustomConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * OMA settings. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<OmaSetting> omaSettings;
-    /**
      * Instantiates a new AndroidWorkProfileCustomConfiguration and sets the default values.
      */
     public AndroidWorkProfileCustomConfiguration() {
@@ -48,7 +44,7 @@ public class AndroidWorkProfileCustomConfiguration extends DeviceConfiguration i
      */
     @jakarta.annotation.Nullable
     public java.util.List<OmaSetting> getOmaSettings() {
-        return this.omaSettings;
+        return this.backingStore.get("omaSettings");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class AndroidWorkProfileCustomConfiguration extends DeviceConfiguration i
      * @param value Value to set for the omaSettings property.
      */
     public void setOmaSettings(@jakarta.annotation.Nullable final java.util.List<OmaSetting> value) {
-        this.omaSettings = value;
+        this.backingStore.set("omaSettings", value);
     }
 }

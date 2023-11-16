@@ -4,67 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class MessageRuleActions implements AdditionalDataHolder, Parsable {
+public class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * A list of categories to be assigned to a message.
-     */
-    private java.util.List<String> assignCategories;
-    /**
-     * The ID of a folder that a message is to be copied to.
-     */
-    private String copyToFolder;
-    /**
-     * Indicates whether a message should be moved to the Deleted Items folder.
-     */
-    private Boolean delete;
-    /**
-     * The email addresses of the recipients to which a message should be forwarded as an attachment.
-     */
-    private java.util.List<Recipient> forwardAsAttachmentTo;
-    /**
-     * The email addresses of the recipients to which a message should be forwarded.
-     */
-    private java.util.List<Recipient> forwardTo;
-    /**
-     * Indicates whether a message should be marked as read.
-     */
-    private Boolean markAsRead;
-    /**
-     * Sets the importance of the message, which can be: low, normal, high.
-     */
-    private Importance markImportance;
-    /**
-     * The ID of the folder that a message will be moved to.
-     */
-    private String moveToFolder;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Indicates whether a message should be permanently deleted and not saved to the Deleted Items folder.
-     */
-    private Boolean permanentDelete;
-    /**
-     * The email addresses to which a message should be redirected.
-     */
-    private java.util.List<Recipient> redirectTo;
-    /**
-     * Indicates whether subsequent rules should be evaluated.
-     */
-    private Boolean stopProcessingRules;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new MessageRuleActions and sets the default values.
      */
     public MessageRuleActions() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -83,7 +40,12 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the assignCategories property value. A list of categories to be assigned to a message.
@@ -91,7 +53,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAssignCategories() {
-        return this.assignCategories;
+        return this.backingStore.get("assignCategories");
     }
     /**
      * Gets the copyToFolder property value. The ID of a folder that a message is to be copied to.
@@ -99,7 +61,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCopyToFolder() {
-        return this.copyToFolder;
+        return this.backingStore.get("copyToFolder");
     }
     /**
      * Gets the delete property value. Indicates whether a message should be moved to the Deleted Items folder.
@@ -107,7 +69,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getDelete() {
-        return this.delete;
+        return this.backingStore.get("delete");
     }
     /**
      * The deserialization information for the current model
@@ -136,7 +98,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getForwardAsAttachmentTo() {
-        return this.forwardAsAttachmentTo;
+        return this.backingStore.get("forwardAsAttachmentTo");
     }
     /**
      * Gets the forwardTo property value. The email addresses of the recipients to which a message should be forwarded.
@@ -144,7 +106,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getForwardTo() {
-        return this.forwardTo;
+        return this.backingStore.get("forwardTo");
     }
     /**
      * Gets the markAsRead property value. Indicates whether a message should be marked as read.
@@ -152,7 +114,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getMarkAsRead() {
-        return this.markAsRead;
+        return this.backingStore.get("markAsRead");
     }
     /**
      * Gets the markImportance property value. Sets the importance of the message, which can be: low, normal, high.
@@ -160,7 +122,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Importance getMarkImportance() {
-        return this.markImportance;
+        return this.backingStore.get("markImportance");
     }
     /**
      * Gets the moveToFolder property value. The ID of the folder that a message will be moved to.
@@ -168,7 +130,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getMoveToFolder() {
-        return this.moveToFolder;
+        return this.backingStore.get("moveToFolder");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -176,7 +138,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the permanentDelete property value. Indicates whether a message should be permanently deleted and not saved to the Deleted Items folder.
@@ -184,7 +146,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getPermanentDelete() {
-        return this.permanentDelete;
+        return this.backingStore.get("permanentDelete");
     }
     /**
      * Gets the redirectTo property value. The email addresses to which a message should be redirected.
@@ -192,7 +154,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getRedirectTo() {
-        return this.redirectTo;
+        return this.backingStore.get("redirectTo");
     }
     /**
      * Gets the stopProcessingRules property value. Indicates whether subsequent rules should be evaluated.
@@ -200,7 +162,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getStopProcessingRules() {
-        return this.stopProcessingRules;
+        return this.backingStore.get("stopProcessingRules");
     }
     /**
      * Serializes information the current object
@@ -227,90 +189,90 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the assignCategories property value. A list of categories to be assigned to a message.
      * @param value Value to set for the assignCategories property.
      */
     public void setAssignCategories(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.assignCategories = value;
+        this.backingStore.set("assignCategories", value);
     }
     /**
      * Sets the copyToFolder property value. The ID of a folder that a message is to be copied to.
      * @param value Value to set for the copyToFolder property.
      */
     public void setCopyToFolder(@jakarta.annotation.Nullable final String value) {
-        this.copyToFolder = value;
+        this.backingStore.set("copyToFolder", value);
     }
     /**
      * Sets the delete property value. Indicates whether a message should be moved to the Deleted Items folder.
      * @param value Value to set for the delete property.
      */
     public void setDelete(@jakarta.annotation.Nullable final Boolean value) {
-        this.delete = value;
+        this.backingStore.set("delete", value);
     }
     /**
      * Sets the forwardAsAttachmentTo property value. The email addresses of the recipients to which a message should be forwarded as an attachment.
      * @param value Value to set for the forwardAsAttachmentTo property.
      */
     public void setForwardAsAttachmentTo(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
-        this.forwardAsAttachmentTo = value;
+        this.backingStore.set("forwardAsAttachmentTo", value);
     }
     /**
      * Sets the forwardTo property value. The email addresses of the recipients to which a message should be forwarded.
      * @param value Value to set for the forwardTo property.
      */
     public void setForwardTo(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
-        this.forwardTo = value;
+        this.backingStore.set("forwardTo", value);
     }
     /**
      * Sets the markAsRead property value. Indicates whether a message should be marked as read.
      * @param value Value to set for the markAsRead property.
      */
     public void setMarkAsRead(@jakarta.annotation.Nullable final Boolean value) {
-        this.markAsRead = value;
+        this.backingStore.set("markAsRead", value);
     }
     /**
      * Sets the markImportance property value. Sets the importance of the message, which can be: low, normal, high.
      * @param value Value to set for the markImportance property.
      */
     public void setMarkImportance(@jakarta.annotation.Nullable final Importance value) {
-        this.markImportance = value;
+        this.backingStore.set("markImportance", value);
     }
     /**
      * Sets the moveToFolder property value. The ID of the folder that a message will be moved to.
      * @param value Value to set for the moveToFolder property.
      */
     public void setMoveToFolder(@jakarta.annotation.Nullable final String value) {
-        this.moveToFolder = value;
+        this.backingStore.set("moveToFolder", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the permanentDelete property value. Indicates whether a message should be permanently deleted and not saved to the Deleted Items folder.
      * @param value Value to set for the permanentDelete property.
      */
     public void setPermanentDelete(@jakarta.annotation.Nullable final Boolean value) {
-        this.permanentDelete = value;
+        this.backingStore.set("permanentDelete", value);
     }
     /**
      * Sets the redirectTo property value. The email addresses to which a message should be redirected.
      * @param value Value to set for the redirectTo property.
      */
     public void setRedirectTo(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
-        this.redirectTo = value;
+        this.backingStore.set("redirectTo", value);
     }
     /**
      * Sets the stopProcessingRules property value. Indicates whether subsequent rules should be evaluated.
      * @param value Value to set for the stopProcessingRules property.
      */
     public void setStopProcessingRules(@jakarta.annotation.Nullable final Boolean value) {
-        this.stopProcessingRules = value;
+        this.backingStore.set("stopProcessingRules", value);
     }
 }

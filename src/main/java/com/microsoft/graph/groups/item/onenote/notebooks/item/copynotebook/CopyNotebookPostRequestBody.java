@@ -4,39 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CopyNotebookPostRequestBody implements AdditionalDataHolder, Parsable {
+public class CopyNotebookPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The groupId property
-     */
-    private String groupId;
-    /**
-     * The notebookFolder property
-     */
-    private String notebookFolder;
-    /**
-     * The renameAs property
-     */
-    private String renameAs;
-    /**
-     * The siteCollectionId property
-     */
-    private String siteCollectionId;
-    /**
-     * The siteId property
-     */
-    private String siteId;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new CopyNotebookPostRequestBody and sets the default values.
      */
     public CopyNotebookPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +40,12 @@ public class CopyNotebookPostRequestBody implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -77,7 +67,7 @@ public class CopyNotebookPostRequestBody implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public String getGroupId() {
-        return this.groupId;
+        return this.backingStore.get("groupId");
     }
     /**
      * Gets the notebookFolder property value. The notebookFolder property
@@ -85,7 +75,7 @@ public class CopyNotebookPostRequestBody implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public String getNotebookFolder() {
-        return this.notebookFolder;
+        return this.backingStore.get("notebookFolder");
     }
     /**
      * Gets the renameAs property value. The renameAs property
@@ -93,7 +83,7 @@ public class CopyNotebookPostRequestBody implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public String getRenameAs() {
-        return this.renameAs;
+        return this.backingStore.get("renameAs");
     }
     /**
      * Gets the siteCollectionId property value. The siteCollectionId property
@@ -101,7 +91,7 @@ public class CopyNotebookPostRequestBody implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public String getSiteCollectionId() {
-        return this.siteCollectionId;
+        return this.backingStore.get("siteCollectionId");
     }
     /**
      * Gets the siteId property value. The siteId property
@@ -109,7 +99,7 @@ public class CopyNotebookPostRequestBody implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public String getSiteId() {
-        return this.siteId;
+        return this.backingStore.get("siteId");
     }
     /**
      * Serializes information the current object
@@ -129,41 +119,41 @@ public class CopyNotebookPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the groupId property value. The groupId property
      * @param value Value to set for the groupId property.
      */
     public void setGroupId(@jakarta.annotation.Nullable final String value) {
-        this.groupId = value;
+        this.backingStore.set("groupId", value);
     }
     /**
      * Sets the notebookFolder property value. The notebookFolder property
      * @param value Value to set for the notebookFolder property.
      */
     public void setNotebookFolder(@jakarta.annotation.Nullable final String value) {
-        this.notebookFolder = value;
+        this.backingStore.set("notebookFolder", value);
     }
     /**
      * Sets the renameAs property value. The renameAs property
      * @param value Value to set for the renameAs property.
      */
     public void setRenameAs(@jakarta.annotation.Nullable final String value) {
-        this.renameAs = value;
+        this.backingStore.set("renameAs", value);
     }
     /**
      * Sets the siteCollectionId property value. The siteCollectionId property
      * @param value Value to set for the siteCollectionId property.
      */
     public void setSiteCollectionId(@jakarta.annotation.Nullable final String value) {
-        this.siteCollectionId = value;
+        this.backingStore.set("siteCollectionId", value);
     }
     /**
      * Sets the siteId property value. The siteId property
      * @param value Value to set for the siteId property.
      */
     public void setSiteId(@jakarta.annotation.Nullable final String value) {
-        this.siteId = value;
+        this.backingStore.set("siteId", value);
     }
 }

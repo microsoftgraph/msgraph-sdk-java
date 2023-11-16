@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserFlowLanguagePageCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<UserFlowLanguagePage> value;
-    /**
      * Instantiates a new UserFlowLanguagePageCollectionResponse and sets the default values.
      */
     public UserFlowLanguagePageCollectionResponse() {
@@ -44,7 +40,7 @@ public class UserFlowLanguagePageCollectionResponse extends BaseCollectionPagina
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserFlowLanguagePage> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class UserFlowLanguagePageCollectionResponse extends BaseCollectionPagina
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<UserFlowLanguagePage> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuditLogRoot extends Entity implements Parsable {
     /**
-     * The directoryAudits property
-     */
-    private java.util.List<DirectoryAudit> directoryAudits;
-    /**
-     * The provisioning property
-     */
-    private java.util.List<ProvisioningObjectSummary> provisioning;
-    /**
-     * The signIns property
-     */
-    private java.util.List<SignIn> signIns;
-    /**
      * Instantiates a new AuditLogRoot and sets the default values.
      */
     public AuditLogRoot() {
@@ -42,7 +30,7 @@ public class AuditLogRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryAudit> getDirectoryAudits() {
-        return this.directoryAudits;
+        return this.backingStore.get("directoryAudits");
     }
     /**
      * The deserialization information for the current model
@@ -62,7 +50,7 @@ public class AuditLogRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProvisioningObjectSummary> getProvisioning() {
-        return this.provisioning;
+        return this.backingStore.get("provisioning");
     }
     /**
      * Gets the signIns property value. The signIns property
@@ -70,7 +58,7 @@ public class AuditLogRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<SignIn> getSignIns() {
-        return this.signIns;
+        return this.backingStore.get("signIns");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class AuditLogRoot extends Entity implements Parsable {
      * @param value Value to set for the directoryAudits property.
      */
     public void setDirectoryAudits(@jakarta.annotation.Nullable final java.util.List<DirectoryAudit> value) {
-        this.directoryAudits = value;
+        this.backingStore.set("directoryAudits", value);
     }
     /**
      * Sets the provisioning property value. The provisioning property
      * @param value Value to set for the provisioning property.
      */
     public void setProvisioning(@jakarta.annotation.Nullable final java.util.List<ProvisioningObjectSummary> value) {
-        this.provisioning = value;
+        this.backingStore.set("provisioning", value);
     }
     /**
      * Sets the signIns property value. The signIns property
      * @param value Value to set for the signIns property.
      */
     public void setSignIns(@jakarta.annotation.Nullable final java.util.List<SignIn> value) {
-        this.signIns = value;
+        this.backingStore.set("signIns", value);
     }
 }

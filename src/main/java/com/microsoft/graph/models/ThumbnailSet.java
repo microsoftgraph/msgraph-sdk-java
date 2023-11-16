@@ -9,22 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ThumbnailSet extends Entity implements Parsable {
     /**
-     * A 1920x1920 scaled thumbnail.
-     */
-    private Thumbnail large;
-    /**
-     * A 176x176 scaled thumbnail.
-     */
-    private Thumbnail medium;
-    /**
-     * A 48x48 cropped thumbnail.
-     */
-    private Thumbnail small;
-    /**
-     * A custom thumbnail image or the original image used to generate other thumbnails.
-     */
-    private Thumbnail source;
-    /**
      * Instantiates a new ThumbnailSet and sets the default values.
      */
     public ThumbnailSet() {
@@ -59,7 +43,7 @@ public class ThumbnailSet extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Thumbnail getLarge() {
-        return this.large;
+        return this.backingStore.get("large");
     }
     /**
      * Gets the medium property value. A 176x176 scaled thumbnail.
@@ -67,7 +51,7 @@ public class ThumbnailSet extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Thumbnail getMedium() {
-        return this.medium;
+        return this.backingStore.get("medium");
     }
     /**
      * Gets the small property value. A 48x48 cropped thumbnail.
@@ -75,7 +59,7 @@ public class ThumbnailSet extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Thumbnail getSmall() {
-        return this.small;
+        return this.backingStore.get("small");
     }
     /**
      * Gets the source property value. A custom thumbnail image or the original image used to generate other thumbnails.
@@ -83,7 +67,7 @@ public class ThumbnailSet extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Thumbnail getSource() {
-        return this.source;
+        return this.backingStore.get("source");
     }
     /**
      * Serializes information the current object
@@ -102,27 +86,27 @@ public class ThumbnailSet extends Entity implements Parsable {
      * @param value Value to set for the large property.
      */
     public void setLarge(@jakarta.annotation.Nullable final Thumbnail value) {
-        this.large = value;
+        this.backingStore.set("large", value);
     }
     /**
      * Sets the medium property value. A 176x176 scaled thumbnail.
      * @param value Value to set for the medium property.
      */
     public void setMedium(@jakarta.annotation.Nullable final Thumbnail value) {
-        this.medium = value;
+        this.backingStore.set("medium", value);
     }
     /**
      * Sets the small property value. A 48x48 cropped thumbnail.
      * @param value Value to set for the small property.
      */
     public void setSmall(@jakarta.annotation.Nullable final Thumbnail value) {
-        this.small = value;
+        this.backingStore.set("small", value);
     }
     /**
      * Sets the source property value. A custom thumbnail image or the original image used to generate other thumbnails.
      * @param value Value to set for the source property.
      */
     public void setSource(@jakarta.annotation.Nullable final Thumbnail value) {
-        this.source = value;
+        this.backingStore.set("source", value);
     }
 }

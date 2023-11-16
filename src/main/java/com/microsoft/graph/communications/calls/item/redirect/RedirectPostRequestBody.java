@@ -5,31 +5,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
+public class RedirectPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The callbackUri property
-     */
-    private String callbackUri;
-    /**
-     * The targets property
-     */
-    private java.util.List<InvitationParticipantInfo> targets;
-    /**
-     * The timeout property
-     */
-    private Integer timeout;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new RedirectPostRequestBody and sets the default values.
      */
     public RedirectPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -48,7 +41,12 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the callbackUri property value. The callbackUri property
@@ -56,7 +54,7 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCallbackUri() {
-        return this.callbackUri;
+        return this.backingStore.get("callbackUri");
     }
     /**
      * The deserialization information for the current model
@@ -76,7 +74,7 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<InvitationParticipantInfo> getTargets() {
-        return this.targets;
+        return this.backingStore.get("targets");
     }
     /**
      * Gets the timeout property value. The timeout property
@@ -84,7 +82,7 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getTimeout() {
-        return this.timeout;
+        return this.backingStore.get("timeout");
     }
     /**
      * Serializes information the current object
@@ -102,27 +100,27 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the callbackUri property value. The callbackUri property
      * @param value Value to set for the callbackUri property.
      */
     public void setCallbackUri(@jakarta.annotation.Nullable final String value) {
-        this.callbackUri = value;
+        this.backingStore.set("callbackUri", value);
     }
     /**
      * Sets the targets property value. The targets property
      * @param value Value to set for the targets property.
      */
     public void setTargets(@jakarta.annotation.Nullable final java.util.List<InvitationParticipantInfo> value) {
-        this.targets = value;
+        this.backingStore.set("targets", value);
     }
     /**
      * Sets the timeout property value. The timeout property
      * @param value Value to set for the timeout property.
      */
     public void setTimeout(@jakarta.annotation.Nullable final Integer value) {
-        this.timeout = value;
+        this.backingStore.set("timeout", value);
     }
 }

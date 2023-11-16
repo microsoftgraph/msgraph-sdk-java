@@ -4,108 +4,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
+public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Number of the user or bot who received the call. E.164 format, but might include other data.
-     */
-    private String calleeNumber;
-    /**
-     * In addition to the SIP codes, Microsoft has subcodes that indicate the specific issue.
-     */
-    private Integer callEndSubReason;
-    /**
-     * Number of the user or bot who made the call. E.164 format, but might include other data.
-     */
-    private String callerNumber;
-    /**
-     * Call type and direction.
-     */
-    private String callType;
-    /**
-     * Identifier for the call that you can use when calling Microsoft Support. GUID.
-     */
-    private String correlationId;
-    /**
-     * Duration of the call in seconds.
-     */
-    private Integer duration;
-    /**
-     * Only exists for successful (fully established) calls. Time when call ended.
-     */
-    private OffsetDateTime endDateTime;
-    /**
-     * Only exists for failed (not fully established) calls.
-     */
-    private OffsetDateTime failureDateTime;
-    /**
-     * The code with which the call ended. For more information, see RFC 3261.
-     */
-    private Integer finalSipCode;
-    /**
-     * Description of the SIP code and Microsoft subcode.
-     */
-    private String finalSipCodePhrase;
-    /**
-     * Unique call identifier. GUID.
-     */
-    private String id;
-    /**
-     * When the initial invite was sent.
-     */
-    private OffsetDateTime inviteDateTime;
-    /**
-     * Indicates whether the trunk was enabled for media bypass.
-     */
-    private Boolean mediaBypassEnabled;
-    /**
-     * The datacenter used for media path in a nonbypass call.
-     */
-    private String mediaPathLocation;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The datacenter used for signaling for both bypass and nonbypass calls.
-     */
-    private String signalingLocation;
-    /**
-     * Call start time.For failed and unanswered calls, this can be equal to the invite or failure time.
-     */
-    private OffsetDateTime startDateTime;
-    /**
-     * Success or attempt.
-     */
-    private Boolean successfulCall;
-    /**
-     * Fully qualified domain name of the session border controller.
-     */
-    private String trunkFullyQualifiedDomainName;
-    /**
-     * Display name of the user.
-     */
-    private String userDisplayName;
-    /**
-     * Calling user's ID in Microsoft Graph. This and other user information is null/empty for bot call types. GUID.
-     */
-    private String userId;
-    /**
-     * UserPrincipalName (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP Address, and can be the same as the user's email address.
-     */
-    private String userPrincipalName;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new DirectRoutingLogRow and sets the default values.
      */
     public DirectRoutingLogRow() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -124,7 +41,12 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the calleeNumber property value. Number of the user or bot who received the call. E.164 format, but might include other data.
@@ -132,7 +54,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCalleeNumber() {
-        return this.calleeNumber;
+        return this.backingStore.get("calleeNumber");
     }
     /**
      * Gets the callEndSubReason property value. In addition to the SIP codes, Microsoft has subcodes that indicate the specific issue.
@@ -140,7 +62,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getCallEndSubReason() {
-        return this.callEndSubReason;
+        return this.backingStore.get("callEndSubReason");
     }
     /**
      * Gets the callerNumber property value. Number of the user or bot who made the call. E.164 format, but might include other data.
@@ -148,7 +70,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCallerNumber() {
-        return this.callerNumber;
+        return this.backingStore.get("callerNumber");
     }
     /**
      * Gets the callType property value. Call type and direction.
@@ -156,7 +78,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCallType() {
-        return this.callType;
+        return this.backingStore.get("callType");
     }
     /**
      * Gets the correlationId property value. Identifier for the call that you can use when calling Microsoft Support. GUID.
@@ -164,7 +86,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCorrelationId() {
-        return this.correlationId;
+        return this.backingStore.get("correlationId");
     }
     /**
      * Gets the duration property value. Duration of the call in seconds.
@@ -172,7 +94,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getDuration() {
-        return this.duration;
+        return this.backingStore.get("duration");
     }
     /**
      * Gets the endDateTime property value. Only exists for successful (fully established) calls. Time when call ended.
@@ -180,7 +102,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this.endDateTime;
+        return this.backingStore.get("endDateTime");
     }
     /**
      * Gets the failureDateTime property value. Only exists for failed (not fully established) calls.
@@ -188,7 +110,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFailureDateTime() {
-        return this.failureDateTime;
+        return this.backingStore.get("failureDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -227,7 +149,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getFinalSipCode() {
-        return this.finalSipCode;
+        return this.backingStore.get("finalSipCode");
     }
     /**
      * Gets the finalSipCodePhrase property value. Description of the SIP code and Microsoft subcode.
@@ -235,7 +157,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getFinalSipCodePhrase() {
-        return this.finalSipCodePhrase;
+        return this.backingStore.get("finalSipCodePhrase");
     }
     /**
      * Gets the id property value. Unique call identifier. GUID.
@@ -243,7 +165,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getId() {
-        return this.id;
+        return this.backingStore.get("id");
     }
     /**
      * Gets the inviteDateTime property value. When the initial invite was sent.
@@ -251,7 +173,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getInviteDateTime() {
-        return this.inviteDateTime;
+        return this.backingStore.get("inviteDateTime");
     }
     /**
      * Gets the mediaBypassEnabled property value. Indicates whether the trunk was enabled for media bypass.
@@ -259,7 +181,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getMediaBypassEnabled() {
-        return this.mediaBypassEnabled;
+        return this.backingStore.get("mediaBypassEnabled");
     }
     /**
      * Gets the mediaPathLocation property value. The datacenter used for media path in a nonbypass call.
@@ -267,7 +189,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getMediaPathLocation() {
-        return this.mediaPathLocation;
+        return this.backingStore.get("mediaPathLocation");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -275,7 +197,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the signalingLocation property value. The datacenter used for signaling for both bypass and nonbypass calls.
@@ -283,7 +205,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSignalingLocation() {
-        return this.signalingLocation;
+        return this.backingStore.get("signalingLocation");
     }
     /**
      * Gets the startDateTime property value. Call start time.For failed and unanswered calls, this can be equal to the invite or failure time.
@@ -291,7 +213,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.backingStore.get("startDateTime");
     }
     /**
      * Gets the successfulCall property value. Success or attempt.
@@ -299,7 +221,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getSuccessfulCall() {
-        return this.successfulCall;
+        return this.backingStore.get("successfulCall");
     }
     /**
      * Gets the trunkFullyQualifiedDomainName property value. Fully qualified domain name of the session border controller.
@@ -307,7 +229,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTrunkFullyQualifiedDomainName() {
-        return this.trunkFullyQualifiedDomainName;
+        return this.backingStore.get("trunkFullyQualifiedDomainName");
     }
     /**
      * Gets the userDisplayName property value. Display name of the user.
@@ -315,7 +237,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
-        return this.userDisplayName;
+        return this.backingStore.get("userDisplayName");
     }
     /**
      * Gets the userId property value. Calling user's ID in Microsoft Graph. This and other user information is null/empty for bot call types. GUID.
@@ -323,7 +245,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.backingStore.get("userId");
     }
     /**
      * Gets the userPrincipalName property value. UserPrincipalName (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP Address, and can be the same as the user's email address.
@@ -331,7 +253,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.backingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -368,160 +290,160 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the calleeNumber property value. Number of the user or bot who received the call. E.164 format, but might include other data.
      * @param value Value to set for the calleeNumber property.
      */
     public void setCalleeNumber(@jakarta.annotation.Nullable final String value) {
-        this.calleeNumber = value;
+        this.backingStore.set("calleeNumber", value);
     }
     /**
      * Sets the callEndSubReason property value. In addition to the SIP codes, Microsoft has subcodes that indicate the specific issue.
      * @param value Value to set for the callEndSubReason property.
      */
     public void setCallEndSubReason(@jakarta.annotation.Nullable final Integer value) {
-        this.callEndSubReason = value;
+        this.backingStore.set("callEndSubReason", value);
     }
     /**
      * Sets the callerNumber property value. Number of the user or bot who made the call. E.164 format, but might include other data.
      * @param value Value to set for the callerNumber property.
      */
     public void setCallerNumber(@jakarta.annotation.Nullable final String value) {
-        this.callerNumber = value;
+        this.backingStore.set("callerNumber", value);
     }
     /**
      * Sets the callType property value. Call type and direction.
      * @param value Value to set for the callType property.
      */
     public void setCallType(@jakarta.annotation.Nullable final String value) {
-        this.callType = value;
+        this.backingStore.set("callType", value);
     }
     /**
      * Sets the correlationId property value. Identifier for the call that you can use when calling Microsoft Support. GUID.
      * @param value Value to set for the correlationId property.
      */
     public void setCorrelationId(@jakarta.annotation.Nullable final String value) {
-        this.correlationId = value;
+        this.backingStore.set("correlationId", value);
     }
     /**
      * Sets the duration property value. Duration of the call in seconds.
      * @param value Value to set for the duration property.
      */
     public void setDuration(@jakarta.annotation.Nullable final Integer value) {
-        this.duration = value;
+        this.backingStore.set("duration", value);
     }
     /**
      * Sets the endDateTime property value. Only exists for successful (fully established) calls. Time when call ended.
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.endDateTime = value;
+        this.backingStore.set("endDateTime", value);
     }
     /**
      * Sets the failureDateTime property value. Only exists for failed (not fully established) calls.
      * @param value Value to set for the failureDateTime property.
      */
     public void setFailureDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.failureDateTime = value;
+        this.backingStore.set("failureDateTime", value);
     }
     /**
      * Sets the finalSipCode property value. The code with which the call ended. For more information, see RFC 3261.
      * @param value Value to set for the finalSipCode property.
      */
     public void setFinalSipCode(@jakarta.annotation.Nullable final Integer value) {
-        this.finalSipCode = value;
+        this.backingStore.set("finalSipCode", value);
     }
     /**
      * Sets the finalSipCodePhrase property value. Description of the SIP code and Microsoft subcode.
      * @param value Value to set for the finalSipCodePhrase property.
      */
     public void setFinalSipCodePhrase(@jakarta.annotation.Nullable final String value) {
-        this.finalSipCodePhrase = value;
+        this.backingStore.set("finalSipCodePhrase", value);
     }
     /**
      * Sets the id property value. Unique call identifier. GUID.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
-        this.id = value;
+        this.backingStore.set("id", value);
     }
     /**
      * Sets the inviteDateTime property value. When the initial invite was sent.
      * @param value Value to set for the inviteDateTime property.
      */
     public void setInviteDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.inviteDateTime = value;
+        this.backingStore.set("inviteDateTime", value);
     }
     /**
      * Sets the mediaBypassEnabled property value. Indicates whether the trunk was enabled for media bypass.
      * @param value Value to set for the mediaBypassEnabled property.
      */
     public void setMediaBypassEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.mediaBypassEnabled = value;
+        this.backingStore.set("mediaBypassEnabled", value);
     }
     /**
      * Sets the mediaPathLocation property value. The datacenter used for media path in a nonbypass call.
      * @param value Value to set for the mediaPathLocation property.
      */
     public void setMediaPathLocation(@jakarta.annotation.Nullable final String value) {
-        this.mediaPathLocation = value;
+        this.backingStore.set("mediaPathLocation", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the signalingLocation property value. The datacenter used for signaling for both bypass and nonbypass calls.
      * @param value Value to set for the signalingLocation property.
      */
     public void setSignalingLocation(@jakarta.annotation.Nullable final String value) {
-        this.signalingLocation = value;
+        this.backingStore.set("signalingLocation", value);
     }
     /**
      * Sets the startDateTime property value. Call start time.For failed and unanswered calls, this can be equal to the invite or failure time.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.backingStore.set("startDateTime", value);
     }
     /**
      * Sets the successfulCall property value. Success or attempt.
      * @param value Value to set for the successfulCall property.
      */
     public void setSuccessfulCall(@jakarta.annotation.Nullable final Boolean value) {
-        this.successfulCall = value;
+        this.backingStore.set("successfulCall", value);
     }
     /**
      * Sets the trunkFullyQualifiedDomainName property value. Fully qualified domain name of the session border controller.
      * @param value Value to set for the trunkFullyQualifiedDomainName property.
      */
     public void setTrunkFullyQualifiedDomainName(@jakarta.annotation.Nullable final String value) {
-        this.trunkFullyQualifiedDomainName = value;
+        this.backingStore.set("trunkFullyQualifiedDomainName", value);
     }
     /**
      * Sets the userDisplayName property value. Display name of the user.
      * @param value Value to set for the userDisplayName property.
      */
     public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.userDisplayName = value;
+        this.backingStore.set("userDisplayName", value);
     }
     /**
      * Sets the userId property value. Calling user's ID in Microsoft Graph. This and other user information is null/empty for bot call types. GUID.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.backingStore.set("userId", value);
     }
     /**
      * Sets the userPrincipalName property value. UserPrincipalName (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP Address, and can be the same as the user's email address.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.backingStore.set("userPrincipalName", value);
     }
 }

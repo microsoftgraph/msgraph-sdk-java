@@ -4,35 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Parsable {
+public class ConditionalAccessPolicyDetail implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The conditions property
-     */
-    private ConditionalAccessConditionSet conditions;
-    /**
-     * Represents grant controls that must be fulfilled for the policy.
-     */
-    private ConditionalAccessGrantControls grantControls;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Represents a complex type of session controls that is enforced after sign-in.
-     */
-    private ConditionalAccessSessionControls sessionControls;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new ConditionalAccessPolicyDetail and sets the default values.
      */
     public ConditionalAccessPolicyDetail() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +40,12 @@ public class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the conditions property value. The conditions property
@@ -59,7 +53,7 @@ public class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessConditionSet getConditions() {
-        return this.conditions;
+        return this.backingStore.get("conditions");
     }
     /**
      * The deserialization information for the current model
@@ -80,7 +74,7 @@ public class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessGrantControls getGrantControls() {
-        return this.grantControls;
+        return this.backingStore.get("grantControls");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -88,7 +82,7 @@ public class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the sessionControls property value. Represents a complex type of session controls that is enforced after sign-in.
@@ -96,7 +90,7 @@ public class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessSessionControls getSessionControls() {
-        return this.sessionControls;
+        return this.backingStore.get("sessionControls");
     }
     /**
      * Serializes information the current object
@@ -115,34 +109,34 @@ public class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the conditions property value. The conditions property
      * @param value Value to set for the conditions property.
      */
     public void setConditions(@jakarta.annotation.Nullable final ConditionalAccessConditionSet value) {
-        this.conditions = value;
+        this.backingStore.set("conditions", value);
     }
     /**
      * Sets the grantControls property value. Represents grant controls that must be fulfilled for the policy.
      * @param value Value to set for the grantControls property.
      */
     public void setGrantControls(@jakarta.annotation.Nullable final ConditionalAccessGrantControls value) {
-        this.grantControls = value;
+        this.backingStore.set("grantControls", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the sessionControls property value. Represents a complex type of session controls that is enforced after sign-in.
      * @param value Value to set for the sessionControls property.
      */
     public void setSessionControls(@jakarta.annotation.Nullable final ConditionalAccessSessionControls value) {
-        this.sessionControls = value;
+        this.backingStore.set("sessionControls", value);
     }
 }

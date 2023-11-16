@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsable {
     /**
-     * Hint value used to order the task on the progress view of the task board. For details about the supported format, see Using order hints in Planner.
-     */
-    private String orderHint;
-    /**
      * Instantiates a new PlannerProgressTaskBoardTaskFormat and sets the default values.
      */
     public PlannerProgressTaskBoardTaskFormat() {
@@ -44,7 +40,7 @@ public class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsab
      */
     @jakarta.annotation.Nullable
     public String getOrderHint() {
-        return this.orderHint;
+        return this.backingStore.get("orderHint");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsab
      * @param value Value to set for the orderHint property.
      */
     public void setOrderHint(@jakarta.annotation.Nullable final String value) {
-        this.orderHint = value;
+        this.backingStore.set("orderHint", value);
     }
 }

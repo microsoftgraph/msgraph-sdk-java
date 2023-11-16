@@ -4,31 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class WorkbookSessionInfo implements AdditionalDataHolder, Parsable {
+public class WorkbookSessionInfo implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * ID of the workbook session.
-     */
-    private String id;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * true for persistent session. false for non-persistent session (view mode)
-     */
-    private Boolean persistChanges;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new WorkbookSessionInfo and sets the default values.
      */
     public WorkbookSessionInfo() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +40,12 @@ public class WorkbookSessionInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -67,7 +65,7 @@ public class WorkbookSessionInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getId() {
-        return this.id;
+        return this.backingStore.get("id");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -75,7 +73,7 @@ public class WorkbookSessionInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the persistChanges property value. true for persistent session. false for non-persistent session (view mode)
@@ -83,7 +81,7 @@ public class WorkbookSessionInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getPersistChanges() {
-        return this.persistChanges;
+        return this.backingStore.get("persistChanges");
     }
     /**
      * Serializes information the current object
@@ -101,27 +99,27 @@ public class WorkbookSessionInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the id property value. ID of the workbook session.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
-        this.id = value;
+        this.backingStore.set("id", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the persistChanges property value. true for persistent session. false for non-persistent session (view mode)
      * @param value Value to set for the persistChanges property.
      */
     public void setPersistChanges(@jakarta.annotation.Nullable final Boolean value) {
-        this.persistChanges = value;
+        this.backingStore.set("persistChanges", value);
     }
 }

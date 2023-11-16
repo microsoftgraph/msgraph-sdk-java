@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Win32LobAppCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<Win32LobApp> value;
-    /**
      * Instantiates a new Win32LobAppCollectionResponse and sets the default values.
      */
     public Win32LobAppCollectionResponse() {
@@ -44,7 +40,7 @@ public class Win32LobAppCollectionResponse extends BaseCollectionPaginationCount
      */
     @jakarta.annotation.Nullable
     public java.util.List<Win32LobApp> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class Win32LobAppCollectionResponse extends BaseCollectionPaginationCount
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<Win32LobApp> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

@@ -10,10 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IncidentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<Incident> value;
-    /**
      * Instantiates a new IncidentCollectionResponse and sets the default values.
      */
     public IncidentCollectionResponse() {
@@ -45,7 +41,7 @@ public class IncidentCollectionResponse extends BaseCollectionPaginationCountRes
      */
     @jakarta.annotation.Nullable
     public java.util.List<Incident> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class IncidentCollectionResponse extends BaseCollectionPaginationCountRes
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<Incident> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

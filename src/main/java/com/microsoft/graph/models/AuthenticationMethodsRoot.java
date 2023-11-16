@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationMethodsRoot extends Entity implements Parsable {
     /**
-     * Represents the state of a user's authentication methods, including which methods are registered and which features the user is registered and capable of (such as multifactor authentication, self-service password reset, and passwordless authentication).
-     */
-    private java.util.List<UserRegistrationDetails> userRegistrationDetails;
-    /**
      * Instantiates a new AuthenticationMethodsRoot and sets the default values.
      */
     public AuthenticationMethodsRoot() {
@@ -44,7 +40,7 @@ public class AuthenticationMethodsRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserRegistrationDetails> getUserRegistrationDetails() {
-        return this.userRegistrationDetails;
+        return this.backingStore.get("userRegistrationDetails");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AuthenticationMethodsRoot extends Entity implements Parsable {
      * @param value Value to set for the userRegistrationDetails property.
      */
     public void setUserRegistrationDetails(@jakarta.annotation.Nullable final java.util.List<UserRegistrationDetails> value) {
-        this.userRegistrationDetails = value;
+        this.backingStore.set("userRegistrationDetails", value);
     }
 }

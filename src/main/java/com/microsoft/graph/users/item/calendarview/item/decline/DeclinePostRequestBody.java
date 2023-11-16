@@ -5,31 +5,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
+public class DeclinePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The Comment property
-     */
-    private String comment;
-    /**
-     * The ProposedNewTime property
-     */
-    private TimeSlot proposedNewTime;
-    /**
-     * The SendResponse property
-     */
-    private Boolean sendResponse;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new DeclinePostRequestBody and sets the default values.
      */
     public DeclinePostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -48,7 +41,12 @@ public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the Comment property value. The Comment property
@@ -56,7 +54,7 @@ public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getComment() {
-        return this.comment;
+        return this.backingStore.get("comment");
     }
     /**
      * The deserialization information for the current model
@@ -76,7 +74,7 @@ public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public TimeSlot getProposedNewTime() {
-        return this.proposedNewTime;
+        return this.backingStore.get("proposedNewTime");
     }
     /**
      * Gets the SendResponse property value. The SendResponse property
@@ -84,7 +82,7 @@ public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getSendResponse() {
-        return this.sendResponse;
+        return this.backingStore.get("sendResponse");
     }
     /**
      * Serializes information the current object
@@ -102,27 +100,27 @@ public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the Comment property value. The Comment property
      * @param value Value to set for the Comment property.
      */
     public void setComment(@jakarta.annotation.Nullable final String value) {
-        this.comment = value;
+        this.backingStore.set("comment", value);
     }
     /**
      * Sets the ProposedNewTime property value. The ProposedNewTime property
      * @param value Value to set for the ProposedNewTime property.
      */
     public void setProposedNewTime(@jakarta.annotation.Nullable final TimeSlot value) {
-        this.proposedNewTime = value;
+        this.backingStore.set("proposedNewTime", value);
     }
     /**
      * Sets the SendResponse property value. The SendResponse property
      * @param value Value to set for the SendResponse property.
      */
     public void setSendResponse(@jakarta.annotation.Nullable final Boolean value) {
-        this.sendResponse = value;
+        this.backingStore.set("sendResponse", value);
     }
 }

@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,27 +14,17 @@ import java.util.Objects;
  * Windows Information Protection Resource Collection
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class WindowsInformationProtectionResourceCollection implements AdditionalDataHolder, Parsable {
+public class WindowsInformationProtectionResourceCollection implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Display name
-     */
-    private String displayName;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Collection of resources
-     */
-    private java.util.List<String> resources;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new WindowsInformationProtectionResourceCollection and sets the default values.
      */
     public WindowsInformationProtectionResourceCollection() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -50,7 +43,12 @@ public class WindowsInformationProtectionResourceCollection implements Additiona
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the displayName property value. Display name
@@ -58,7 +56,7 @@ public class WindowsInformationProtectionResourceCollection implements Additiona
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -78,7 +76,7 @@ public class WindowsInformationProtectionResourceCollection implements Additiona
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the resources property value. Collection of resources
@@ -86,7 +84,7 @@ public class WindowsInformationProtectionResourceCollection implements Additiona
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getResources() {
-        return this.resources;
+        return this.backingStore.get("resources");
     }
     /**
      * Serializes information the current object
@@ -104,27 +102,27 @@ public class WindowsInformationProtectionResourceCollection implements Additiona
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the displayName property value. Display name
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the resources property value. Collection of resources
      * @param value Value to set for the resources property.
      */
     public void setResources(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.resources = value;
+        this.backingStore.set("resources", value);
     }
 }

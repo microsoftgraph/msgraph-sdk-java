@@ -4,31 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UrlMatchInfo implements AdditionalDataHolder, Parsable {
+public class UrlMatchInfo implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * A list of the URL prefixes that must match URLs to be processed by this URL-to-item-resolver.
-     */
-    private java.util.List<String> baseUrls;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * A regular expression that will be matched towards the URL that is processed by this URL-to-item-resolver. The ECMAScript specification for regular expressions (ECMA-262) is used for the evaluation. The named groups defined by the regular expression will be used later to extract values from the URL.
-     */
-    private String urlPattern;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new UrlMatchInfo and sets the default values.
      */
     public UrlMatchInfo() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +40,12 @@ public class UrlMatchInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the baseUrls property value. A list of the URL prefixes that must match URLs to be processed by this URL-to-item-resolver.
@@ -55,7 +53,7 @@ public class UrlMatchInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getBaseUrls() {
-        return this.baseUrls;
+        return this.backingStore.get("baseUrls");
     }
     /**
      * The deserialization information for the current model
@@ -75,7 +73,7 @@ public class UrlMatchInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the urlPattern property value. A regular expression that will be matched towards the URL that is processed by this URL-to-item-resolver. The ECMAScript specification for regular expressions (ECMA-262) is used for the evaluation. The named groups defined by the regular expression will be used later to extract values from the URL.
@@ -83,7 +81,7 @@ public class UrlMatchInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUrlPattern() {
-        return this.urlPattern;
+        return this.backingStore.get("urlPattern");
     }
     /**
      * Serializes information the current object
@@ -101,27 +99,27 @@ public class UrlMatchInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the baseUrls property value. A list of the URL prefixes that must match URLs to be processed by this URL-to-item-resolver.
      * @param value Value to set for the baseUrls property.
      */
     public void setBaseUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.baseUrls = value;
+        this.backingStore.set("baseUrls", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the urlPattern property value. A regular expression that will be matched towards the URL that is processed by this URL-to-item-resolver. The ECMAScript specification for regular expressions (ECMA-262) is used for the evaluation. The named groups defined by the regular expression will be used later to extract values from the URL.
      * @param value Value to set for the urlPattern property.
      */
     public void setUrlPattern(@jakarta.annotation.Nullable final String value) {
-        this.urlPattern = value;
+        this.backingStore.set("urlPattern", value);
     }
 }

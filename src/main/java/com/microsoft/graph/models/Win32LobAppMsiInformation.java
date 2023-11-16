@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,47 +14,17 @@ import java.util.Objects;
  * Contains MSI app properties for a Win32 App.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable {
+public class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Indicates the package type of an MSI Win32LobApp.
-     */
-    private Win32LobAppMsiPackageType packageType;
-    /**
-     * The MSI product code.
-     */
-    private String productCode;
-    /**
-     * The MSI product name.
-     */
-    private String productName;
-    /**
-     * The MSI product version.
-     */
-    private String productVersion;
-    /**
-     * The MSI publisher.
-     */
-    private String publisher;
-    /**
-     * Whether the MSI app requires the machine to reboot to complete installation.
-     */
-    private Boolean requiresReboot;
-    /**
-     * The MSI upgrade code.
-     */
-    private String upgradeCode;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new Win32LobAppMsiInformation and sets the default values.
      */
     public Win32LobAppMsiInformation() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -70,7 +43,12 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -95,7 +73,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the packageType property value. Indicates the package type of an MSI Win32LobApp.
@@ -103,7 +81,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public Win32LobAppMsiPackageType getPackageType() {
-        return this.packageType;
+        return this.backingStore.get("packageType");
     }
     /**
      * Gets the productCode property value. The MSI product code.
@@ -111,7 +89,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public String getProductCode() {
-        return this.productCode;
+        return this.backingStore.get("productCode");
     }
     /**
      * Gets the productName property value. The MSI product name.
@@ -119,7 +97,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public String getProductName() {
-        return this.productName;
+        return this.backingStore.get("productName");
     }
     /**
      * Gets the productVersion property value. The MSI product version.
@@ -127,7 +105,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public String getProductVersion() {
-        return this.productVersion;
+        return this.backingStore.get("productVersion");
     }
     /**
      * Gets the publisher property value. The MSI publisher.
@@ -135,7 +113,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
-        return this.publisher;
+        return this.backingStore.get("publisher");
     }
     /**
      * Gets the requiresReboot property value. Whether the MSI app requires the machine to reboot to complete installation.
@@ -143,7 +121,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public Boolean getRequiresReboot() {
-        return this.requiresReboot;
+        return this.backingStore.get("requiresReboot");
     }
     /**
      * Gets the upgradeCode property value. The MSI upgrade code.
@@ -151,7 +129,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public String getUpgradeCode() {
-        return this.upgradeCode;
+        return this.backingStore.get("upgradeCode");
     }
     /**
      * Serializes information the current object
@@ -174,62 +152,62 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the packageType property value. Indicates the package type of an MSI Win32LobApp.
      * @param value Value to set for the packageType property.
      */
     public void setPackageType(@jakarta.annotation.Nullable final Win32LobAppMsiPackageType value) {
-        this.packageType = value;
+        this.backingStore.set("packageType", value);
     }
     /**
      * Sets the productCode property value. The MSI product code.
      * @param value Value to set for the productCode property.
      */
     public void setProductCode(@jakarta.annotation.Nullable final String value) {
-        this.productCode = value;
+        this.backingStore.set("productCode", value);
     }
     /**
      * Sets the productName property value. The MSI product name.
      * @param value Value to set for the productName property.
      */
     public void setProductName(@jakarta.annotation.Nullable final String value) {
-        this.productName = value;
+        this.backingStore.set("productName", value);
     }
     /**
      * Sets the productVersion property value. The MSI product version.
      * @param value Value to set for the productVersion property.
      */
     public void setProductVersion(@jakarta.annotation.Nullable final String value) {
-        this.productVersion = value;
+        this.backingStore.set("productVersion", value);
     }
     /**
      * Sets the publisher property value. The MSI publisher.
      * @param value Value to set for the publisher property.
      */
     public void setPublisher(@jakarta.annotation.Nullable final String value) {
-        this.publisher = value;
+        this.backingStore.set("publisher", value);
     }
     /**
      * Sets the requiresReboot property value. Whether the MSI app requires the machine to reboot to complete installation.
      * @param value Value to set for the requiresReboot property.
      */
     public void setRequiresReboot(@jakarta.annotation.Nullable final Boolean value) {
-        this.requiresReboot = value;
+        this.backingStore.set("requiresReboot", value);
     }
     /**
      * Sets the upgradeCode property value. The MSI upgrade code.
      * @param value Value to set for the upgradeCode property.
      */
     public void setUpgradeCode(@jakarta.annotation.Nullable final String value) {
-        this.upgradeCode = value;
+        this.backingStore.set("upgradeCode", value);
     }
 }

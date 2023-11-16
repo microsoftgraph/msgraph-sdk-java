@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TabUpdatedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * Initiator of the event.
-     */
-    private IdentitySet initiator;
-    /**
-     * Unique identifier of the tab.
-     */
-    private String tabId;
-    /**
      * Instantiates a new TabUpdatedEventMessageDetail and sets the default values.
      */
     public TabUpdatedEventMessageDetail() {
@@ -50,7 +42,7 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this.initiator;
+        return this.backingStore.get("initiator");
     }
     /**
      * Gets the tabId property value. Unique identifier of the tab.
@@ -58,7 +50,7 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
      */
     @jakarta.annotation.Nullable
     public String getTabId() {
-        return this.tabId;
+        return this.backingStore.get("tabId");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
      * @param value Value to set for the initiator property.
      */
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.initiator = value;
+        this.backingStore.set("initiator", value);
     }
     /**
      * Sets the tabId property value. Unique identifier of the tab.
      * @param value Value to set for the tabId property.
      */
     public void setTabId(@jakarta.annotation.Nullable final String value) {
-        this.tabId = value;
+        this.backingStore.set("tabId", value);
     }
 }

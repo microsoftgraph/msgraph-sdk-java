@@ -5,35 +5,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class VlookupPostRequestBody implements AdditionalDataHolder, Parsable {
+public class VlookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The colIndexNum property
-     */
-    private Json colIndexNum;
-    /**
-     * The lookupValue property
-     */
-    private Json lookupValue;
-    /**
-     * The rangeLookup property
-     */
-    private Json rangeLookup;
-    /**
-     * The tableArray property
-     */
-    private Json tableArray;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new VlookupPostRequestBody and sets the default values.
      */
     public VlookupPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -52,7 +41,12 @@ public class VlookupPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the colIndexNum property value. The colIndexNum property
@@ -60,7 +54,7 @@ public class VlookupPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getColIndexNum() {
-        return this.colIndexNum;
+        return this.backingStore.get("colIndexNum");
     }
     /**
      * The deserialization information for the current model
@@ -81,7 +75,7 @@ public class VlookupPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getLookupValue() {
-        return this.lookupValue;
+        return this.backingStore.get("lookupValue");
     }
     /**
      * Gets the rangeLookup property value. The rangeLookup property
@@ -89,7 +83,7 @@ public class VlookupPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getRangeLookup() {
-        return this.rangeLookup;
+        return this.backingStore.get("rangeLookup");
     }
     /**
      * Gets the tableArray property value. The tableArray property
@@ -97,7 +91,7 @@ public class VlookupPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getTableArray() {
-        return this.tableArray;
+        return this.backingStore.get("tableArray");
     }
     /**
      * Serializes information the current object
@@ -116,34 +110,34 @@ public class VlookupPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the colIndexNum property value. The colIndexNum property
      * @param value Value to set for the colIndexNum property.
      */
     public void setColIndexNum(@jakarta.annotation.Nullable final Json value) {
-        this.colIndexNum = value;
+        this.backingStore.set("colIndexNum", value);
     }
     /**
      * Sets the lookupValue property value. The lookupValue property
      * @param value Value to set for the lookupValue property.
      */
     public void setLookupValue(@jakarta.annotation.Nullable final Json value) {
-        this.lookupValue = value;
+        this.backingStore.set("lookupValue", value);
     }
     /**
      * Sets the rangeLookup property value. The rangeLookup property
      * @param value Value to set for the rangeLookup property.
      */
     public void setRangeLookup(@jakarta.annotation.Nullable final Json value) {
-        this.rangeLookup = value;
+        this.backingStore.set("rangeLookup", value);
     }
     /**
      * Sets the tableArray property value. The tableArray property
      * @param value Value to set for the tableArray property.
      */
     public void setTableArray(@jakarta.annotation.Nullable final Json value) {
-        this.tableArray = value;
+        this.backingStore.set("tableArray", value);
     }
 }

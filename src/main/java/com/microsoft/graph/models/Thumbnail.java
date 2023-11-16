@@ -4,43 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Thumbnail implements AdditionalDataHolder, Parsable {
+public class Thumbnail implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The content stream for the thumbnail.
-     */
-    private byte[] content;
-    /**
-     * The height of the thumbnail, in pixels.
-     */
-    private Integer height;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The unique identifier of the item that provided the thumbnail. This is only available when a folder thumbnail is requested.
-     */
-    private String sourceItemId;
-    /**
-     * The URL used to fetch the thumbnail content.
-     */
-    private String url;
-    /**
-     * The width of the thumbnail, in pixels.
-     */
-    private Integer width;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new Thumbnail and sets the default values.
      */
     public Thumbnail() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -59,7 +40,12 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the content property value. The content stream for the thumbnail.
@@ -67,7 +53,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
-        return this.content;
+        return this.backingStore.get("content");
     }
     /**
      * The deserialization information for the current model
@@ -90,7 +76,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getHeight() {
-        return this.height;
+        return this.backingStore.get("height");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -98,7 +84,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the sourceItemId property value. The unique identifier of the item that provided the thumbnail. This is only available when a folder thumbnail is requested.
@@ -106,7 +92,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSourceItemId() {
-        return this.sourceItemId;
+        return this.backingStore.get("sourceItemId");
     }
     /**
      * Gets the url property value. The URL used to fetch the thumbnail content.
@@ -114,7 +100,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUrl() {
-        return this.url;
+        return this.backingStore.get("url");
     }
     /**
      * Gets the width property value. The width of the thumbnail, in pixels.
@@ -122,7 +108,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getWidth() {
-        return this.width;
+        return this.backingStore.get("width");
     }
     /**
      * Serializes information the current object
@@ -143,48 +129,48 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the content property value. The content stream for the thumbnail.
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final byte[] value) {
-        this.content = value;
+        this.backingStore.set("content", value);
     }
     /**
      * Sets the height property value. The height of the thumbnail, in pixels.
      * @param value Value to set for the height property.
      */
     public void setHeight(@jakarta.annotation.Nullable final Integer value) {
-        this.height = value;
+        this.backingStore.set("height", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the sourceItemId property value. The unique identifier of the item that provided the thumbnail. This is only available when a folder thumbnail is requested.
      * @param value Value to set for the sourceItemId property.
      */
     public void setSourceItemId(@jakarta.annotation.Nullable final String value) {
-        this.sourceItemId = value;
+        this.backingStore.set("sourceItemId", value);
     }
     /**
      * Sets the url property value. The URL used to fetch the thumbnail content.
      * @param value Value to set for the url property.
      */
     public void setUrl(@jakarta.annotation.Nullable final String value) {
-        this.url = value;
+        this.backingStore.set("url", value);
     }
     /**
      * Sets the width property value. The width of the thumbnail, in pixels.
      * @param value Value to set for the width property.
      */
     public void setWidth(@jakarta.annotation.Nullable final Integer value) {
-        this.width = value;
+        this.backingStore.set("width", value);
     }
 }

@@ -5,27 +5,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TDist2TPostRequestBody implements AdditionalDataHolder, Parsable {
+public class TDist2TPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The degFreedom property
-     */
-    private Json degFreedom;
-    /**
-     * The x property
-     */
-    private Json x;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new TDist2TPostRequestBody and sets the default values.
      */
     public TDist2TPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -44,7 +41,12 @@ public class TDist2TPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the degFreedom property value. The degFreedom property
@@ -52,7 +54,7 @@ public class TDist2TPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getDegFreedom() {
-        return this.degFreedom;
+        return this.backingStore.get("degFreedom");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +73,7 @@ public class TDist2TPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getX() {
-        return this.x;
+        return this.backingStore.get("x");
     }
     /**
      * Serializes information the current object
@@ -88,20 +90,20 @@ public class TDist2TPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the degFreedom property value. The degFreedom property
      * @param value Value to set for the degFreedom property.
      */
     public void setDegFreedom(@jakarta.annotation.Nullable final Json value) {
-        this.degFreedom = value;
+        this.backingStore.set("degFreedom", value);
     }
     /**
      * Sets the x property value. The x property
      * @param value Value to set for the x property.
      */
     public void setX(@jakarta.annotation.Nullable final Json value) {
-        this.x = value;
+        this.backingStore.set("x", value);
     }
 }

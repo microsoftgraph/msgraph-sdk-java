@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserScopeTeamsAppInstallation extends TeamsAppInstallation implements Parsable {
     /**
-     * The chat between the user and Teams app.
-     */
-    private Chat chat;
-    /**
      * Instantiates a new UserScopeTeamsAppInstallation and sets the default values.
      */
     public UserScopeTeamsAppInstallation() {
@@ -35,7 +31,7 @@ public class UserScopeTeamsAppInstallation extends TeamsAppInstallation implemen
      */
     @jakarta.annotation.Nullable
     public Chat getChat() {
-        return this.chat;
+        return this.backingStore.get("chat");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class UserScopeTeamsAppInstallation extends TeamsAppInstallation implemen
      * @param value Value to set for the chat property.
      */
     public void setChat(@jakarta.annotation.Nullable final Chat value) {
-        this.chat = value;
+        this.backingStore.set("chat", value);
     }
 }

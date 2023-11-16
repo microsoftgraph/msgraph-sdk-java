@@ -4,39 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable {
+public class AutomaticRepliesMailTips implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The automatic reply message.
-     */
-    private String message;
-    /**
-     * The language that the automatic reply message is in.
-     */
-    private LocaleInfo messageLanguage;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The date and time that automatic replies are set to end.
-     */
-    private DateTimeTimeZone scheduledEndTime;
-    /**
-     * The date and time that automatic replies are set to begin.
-     */
-    private DateTimeTimeZone scheduledStartTime;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new AutomaticRepliesMailTips and sets the default values.
      */
     public AutomaticRepliesMailTips() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +40,12 @@ public class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -77,7 +67,7 @@ public class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public String getMessage() {
-        return this.message;
+        return this.backingStore.get("message");
     }
     /**
      * Gets the messageLanguage property value. The language that the automatic reply message is in.
@@ -85,7 +75,7 @@ public class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public LocaleInfo getMessageLanguage() {
-        return this.messageLanguage;
+        return this.backingStore.get("messageLanguage");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -93,7 +83,7 @@ public class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the scheduledEndTime property value. The date and time that automatic replies are set to end.
@@ -101,7 +91,7 @@ public class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getScheduledEndTime() {
-        return this.scheduledEndTime;
+        return this.backingStore.get("scheduledEndTime");
     }
     /**
      * Gets the scheduledStartTime property value. The date and time that automatic replies are set to begin.
@@ -109,7 +99,7 @@ public class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getScheduledStartTime() {
-        return this.scheduledStartTime;
+        return this.backingStore.get("scheduledStartTime");
     }
     /**
      * Serializes information the current object
@@ -129,41 +119,41 @@ public class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the message property value. The automatic reply message.
      * @param value Value to set for the message property.
      */
     public void setMessage(@jakarta.annotation.Nullable final String value) {
-        this.message = value;
+        this.backingStore.set("message", value);
     }
     /**
      * Sets the messageLanguage property value. The language that the automatic reply message is in.
      * @param value Value to set for the messageLanguage property.
      */
     public void setMessageLanguage(@jakarta.annotation.Nullable final LocaleInfo value) {
-        this.messageLanguage = value;
+        this.backingStore.set("messageLanguage", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the scheduledEndTime property value. The date and time that automatic replies are set to end.
      * @param value Value to set for the scheduledEndTime property.
      */
     public void setScheduledEndTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
-        this.scheduledEndTime = value;
+        this.backingStore.set("scheduledEndTime", value);
     }
     /**
      * Sets the scheduledStartTime property value. The date and time that automatic replies are set to begin.
      * @param value Value to set for the scheduledStartTime property.
      */
     public void setScheduledStartTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
-        this.scheduledStartTime = value;
+        this.backingStore.set("scheduledStartTime", value);
     }
 }

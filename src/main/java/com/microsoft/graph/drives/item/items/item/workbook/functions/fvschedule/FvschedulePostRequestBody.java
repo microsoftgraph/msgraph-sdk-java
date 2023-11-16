@@ -5,27 +5,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class FvschedulePostRequestBody implements AdditionalDataHolder, Parsable {
+public class FvschedulePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The principal property
-     */
-    private Json principal;
-    /**
-     * The schedule property
-     */
-    private Json schedule;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new FvschedulePostRequestBody and sets the default values.
      */
     public FvschedulePostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -44,7 +41,12 @@ public class FvschedulePostRequestBody implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -63,7 +65,7 @@ public class FvschedulePostRequestBody implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public Json getPrincipal() {
-        return this.principal;
+        return this.backingStore.get("principal");
     }
     /**
      * Gets the schedule property value. The schedule property
@@ -71,7 +73,7 @@ public class FvschedulePostRequestBody implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public Json getSchedule() {
-        return this.schedule;
+        return this.backingStore.get("schedule");
     }
     /**
      * Serializes information the current object
@@ -88,20 +90,20 @@ public class FvschedulePostRequestBody implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the principal property value. The principal property
      * @param value Value to set for the principal property.
      */
     public void setPrincipal(@jakarta.annotation.Nullable final Json value) {
-        this.principal = value;
+        this.backingStore.set("principal", value);
     }
     /**
      * Sets the schedule property value. The schedule property
      * @param value Value to set for the schedule property.
      */
     public void setSchedule(@jakarta.annotation.Nullable final Json value) {
-        this.schedule = value;
+        this.backingStore.set("schedule", value);
     }
 }

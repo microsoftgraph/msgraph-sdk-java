@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class KubernetesSecretEvidence extends AlertEvidence implements Parsable {
     /**
-     * The secret name.
-     */
-    private String name;
-    /**
-     * The secret namespace.
-     */
-    private KubernetesNamespaceEvidence namespace;
-    /**
-     * The secret type can include both built-in types and custom ones. Examples of built-in types are: Opaque, kubernetes.io/service-account-token, kubernetes.io/dockercfg, kubernetes.io/dockerconfigjson, kubernetes.io/basic-auth, kubernetes.io/ssh-auth, kubernetes.io/tls, bootstrap.kubernetes.io/token.
-     */
-    private String secretType;
-    /**
      * Instantiates a new KubernetesSecretEvidence and sets the default values.
      */
     public KubernetesSecretEvidence() {
@@ -55,7 +43,7 @@ public class KubernetesSecretEvidence extends AlertEvidence implements Parsable 
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the namespace property value. The secret namespace.
@@ -63,7 +51,7 @@ public class KubernetesSecretEvidence extends AlertEvidence implements Parsable 
      */
     @jakarta.annotation.Nullable
     public KubernetesNamespaceEvidence getNamespace() {
-        return this.namespace;
+        return this.backingStore.get("namespace");
     }
     /**
      * Gets the secretType property value. The secret type can include both built-in types and custom ones. Examples of built-in types are: Opaque, kubernetes.io/service-account-token, kubernetes.io/dockercfg, kubernetes.io/dockerconfigjson, kubernetes.io/basic-auth, kubernetes.io/ssh-auth, kubernetes.io/tls, bootstrap.kubernetes.io/token.
@@ -71,7 +59,7 @@ public class KubernetesSecretEvidence extends AlertEvidence implements Parsable 
      */
     @jakarta.annotation.Nullable
     public String getSecretType() {
-        return this.secretType;
+        return this.backingStore.get("secretType");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class KubernetesSecretEvidence extends AlertEvidence implements Parsable 
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the namespace property value. The secret namespace.
      * @param value Value to set for the namespace property.
      */
     public void setNamespace(@jakarta.annotation.Nullable final KubernetesNamespaceEvidence value) {
-        this.namespace = value;
+        this.backingStore.set("namespace", value);
     }
     /**
      * Sets the secretType property value. The secret type can include both built-in types and custom ones. Examples of built-in types are: Opaque, kubernetes.io/service-account-token, kubernetes.io/dockercfg, kubernetes.io/dockerconfigjson, kubernetes.io/basic-auth, kubernetes.io/ssh-auth, kubernetes.io/tls, bootstrap.kubernetes.io/token.
      * @param value Value to set for the secretType property.
      */
     public void setSecretType(@jakarta.annotation.Nullable final String value) {
-        this.secretType = value;
+        this.backingStore.set("secretType", value);
     }
 }

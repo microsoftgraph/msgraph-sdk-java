@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SharePointIdentitySet extends IdentitySet implements Parsable {
     /**
-     * The group associated with this action. Optional.
-     */
-    private Identity group;
-    /**
-     * The SharePoint group associated with this action. Optional.
-     */
-    private SharePointIdentity siteGroup;
-    /**
-     * The SharePoint user associated with this action. Optional.
-     */
-    private SharePointIdentity siteUser;
-    /**
      * Instantiates a new SharePointIdentitySet and sets the default values.
      */
     public SharePointIdentitySet() {
@@ -55,7 +43,7 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Identity getGroup() {
-        return this.group;
+        return this.backingStore.get("group");
     }
     /**
      * Gets the siteGroup property value. The SharePoint group associated with this action. Optional.
@@ -63,7 +51,7 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
      */
     @jakarta.annotation.Nullable
     public SharePointIdentity getSiteGroup() {
-        return this.siteGroup;
+        return this.backingStore.get("siteGroup");
     }
     /**
      * Gets the siteUser property value. The SharePoint user associated with this action. Optional.
@@ -71,7 +59,7 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
      */
     @jakarta.annotation.Nullable
     public SharePointIdentity getSiteUser() {
-        return this.siteUser;
+        return this.backingStore.get("siteUser");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
      * @param value Value to set for the group property.
      */
     public void setGroup(@jakarta.annotation.Nullable final Identity value) {
-        this.group = value;
+        this.backingStore.set("group", value);
     }
     /**
      * Sets the siteGroup property value. The SharePoint group associated with this action. Optional.
      * @param value Value to set for the siteGroup property.
      */
     public void setSiteGroup(@jakarta.annotation.Nullable final SharePointIdentity value) {
-        this.siteGroup = value;
+        this.backingStore.set("siteGroup", value);
     }
     /**
      * Sets the siteUser property value. The SharePoint user associated with this action. Optional.
      * @param value Value to set for the siteUser property.
      */
     public void setSiteUser(@jakarta.annotation.Nullable final SharePointIdentity value) {
-        this.siteUser = value;
+        this.backingStore.set("siteUser", value);
     }
 }

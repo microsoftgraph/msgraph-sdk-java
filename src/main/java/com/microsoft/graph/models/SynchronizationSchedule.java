@@ -5,36 +5,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
+public class SynchronizationSchedule implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Date and time when this job expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime expiration;
-    /**
-     * The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of one month.
-     */
-    private PeriodAndDuration interval;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The state property
-     */
-    private SynchronizationScheduleState state;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new SynchronizationSchedule and sets the default values.
      */
     public SynchronizationSchedule() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -53,7 +42,12 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the expiration property value. Date and time when this job expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -61,7 +55,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpiration() {
-        return this.expiration;
+        return this.backingStore.get("expiration");
     }
     /**
      * The deserialization information for the current model
@@ -82,7 +76,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getInterval() {
-        return this.interval;
+        return this.backingStore.get("interval");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -90,7 +84,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the state property value. The state property
@@ -98,7 +92,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public SynchronizationScheduleState getState() {
-        return this.state;
+        return this.backingStore.get("state");
     }
     /**
      * Serializes information the current object
@@ -117,34 +111,34 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the expiration property value. Date and time when this job expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the expiration property.
      */
     public void setExpiration(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.expiration = value;
+        this.backingStore.set("expiration", value);
     }
     /**
      * Sets the interval property value. The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of one month.
      * @param value Value to set for the interval property.
      */
     public void setInterval(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.interval = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.backingStore.set("interval", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final SynchronizationScheduleState value) {
-        this.state = value;
+        this.backingStore.set("state", value);
     }
 }

@@ -4,39 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
+public class AttributeMappingSource implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Equivalent expression representation of this attributeMappingSource object.
-     */
-    private String expression;
-    /**
-     * Name parameter of the mapping source. Depending on the type property value, this can be the name of the function, the name of the source attribute, or a constant value to be used.
-     */
-    private String name;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type isn't Function, this property is null/empty array.
-     */
-    private java.util.List<StringKeyAttributeMappingSourceValuePair> parameters;
-    /**
-     * The type property
-     */
-    private AttributeMappingSourceType type;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new AttributeMappingSource and sets the default values.
      */
     public AttributeMappingSource() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +40,12 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the expression property value. Equivalent expression representation of this attributeMappingSource object.
@@ -63,7 +53,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getExpression() {
-        return this.expression;
+        return this.backingStore.get("expression");
     }
     /**
      * The deserialization information for the current model
@@ -85,7 +75,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -93,7 +83,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the parameters property value. If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type isn't Function, this property is null/empty array.
@@ -101,7 +91,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<StringKeyAttributeMappingSourceValuePair> getParameters() {
-        return this.parameters;
+        return this.backingStore.get("parameters");
     }
     /**
      * Gets the type property value. The type property
@@ -109,7 +99,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public AttributeMappingSourceType getType() {
-        return this.type;
+        return this.backingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -129,41 +119,41 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the expression property value. Equivalent expression representation of this attributeMappingSource object.
      * @param value Value to set for the expression property.
      */
     public void setExpression(@jakarta.annotation.Nullable final String value) {
-        this.expression = value;
+        this.backingStore.set("expression", value);
     }
     /**
      * Sets the name property value. Name parameter of the mapping source. Depending on the type property value, this can be the name of the function, the name of the source attribute, or a constant value to be used.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the parameters property value. If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type isn't Function, this property is null/empty array.
      * @param value Value to set for the parameters property.
      */
     public void setParameters(@jakarta.annotation.Nullable final java.util.List<StringKeyAttributeMappingSourceValuePair> value) {
-        this.parameters = value;
+        this.backingStore.set("parameters", value);
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final AttributeMappingSourceType value) {
-        this.type = value;
+        this.backingStore.set("type", value);
     }
 }

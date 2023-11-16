@@ -5,31 +5,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class BinomInvPostRequestBody implements AdditionalDataHolder, Parsable {
+public class BinomInvPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The alpha property
-     */
-    private Json alpha;
-    /**
-     * The probabilityS property
-     */
-    private Json probabilityS;
-    /**
-     * The trials property
-     */
-    private Json trials;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new BinomInvPostRequestBody and sets the default values.
      */
     public BinomInvPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -48,7 +41,12 @@ public class BinomInvPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the alpha property value. The alpha property
@@ -56,7 +54,7 @@ public class BinomInvPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getAlpha() {
-        return this.alpha;
+        return this.backingStore.get("alpha");
     }
     /**
      * The deserialization information for the current model
@@ -76,7 +74,7 @@ public class BinomInvPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getProbabilityS() {
-        return this.probabilityS;
+        return this.backingStore.get("probabilityS");
     }
     /**
      * Gets the trials property value. The trials property
@@ -84,7 +82,7 @@ public class BinomInvPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getTrials() {
-        return this.trials;
+        return this.backingStore.get("trials");
     }
     /**
      * Serializes information the current object
@@ -102,27 +100,27 @@ public class BinomInvPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the alpha property value. The alpha property
      * @param value Value to set for the alpha property.
      */
     public void setAlpha(@jakarta.annotation.Nullable final Json value) {
-        this.alpha = value;
+        this.backingStore.set("alpha", value);
     }
     /**
      * Sets the probabilityS property value. The probabilityS property
      * @param value Value to set for the probabilityS property.
      */
     public void setProbabilityS(@jakarta.annotation.Nullable final Json value) {
-        this.probabilityS = value;
+        this.backingStore.set("probabilityS", value);
     }
     /**
      * Sets the trials property value. The trials property
      * @param value Value to set for the trials property.
      */
     public void setTrials(@jakarta.annotation.Nullable final Json value) {
-        this.trials = value;
+        this.backingStore.set("trials", value);
     }
 }

@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AddressBookAccountTargetContent extends AccountTargetContent implements Parsable {
     /**
-     * List of user emails targeted for an attack simulation training campaign.
-     */
-    private java.util.List<String> accountTargetEmails;
-    /**
      * Instantiates a new AddressBookAccountTargetContent and sets the default values.
      */
     public AddressBookAccountTargetContent() {
@@ -35,7 +31,7 @@ public class AddressBookAccountTargetContent extends AccountTargetContent implem
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAccountTargetEmails() {
-        return this.accountTargetEmails;
+        return this.backingStore.get("accountTargetEmails");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class AddressBookAccountTargetContent extends AccountTargetContent implem
      * @param value Value to set for the accountTargetEmails property.
      */
     public void setAccountTargetEmails(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.accountTargetEmails = value;
+        this.backingStore.set("accountTargetEmails", value);
     }
 }

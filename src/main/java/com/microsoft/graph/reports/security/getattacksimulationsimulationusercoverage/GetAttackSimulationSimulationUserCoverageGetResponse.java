@@ -11,10 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetAttackSimulationSimulationUserCoverageGetResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<AttackSimulationSimulationUserCoverage> value;
-    /**
      * Instantiates a new GetAttackSimulationSimulationUserCoverageGetResponse and sets the default values.
      */
     public GetAttackSimulationSimulationUserCoverageGetResponse() {
@@ -46,7 +42,7 @@ public class GetAttackSimulationSimulationUserCoverageGetResponse extends BaseCo
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttackSimulationSimulationUserCoverage> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class GetAttackSimulationSimulationUserCoverageGetResponse extends BaseCo
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AttackSimulationSimulationUserCoverage> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

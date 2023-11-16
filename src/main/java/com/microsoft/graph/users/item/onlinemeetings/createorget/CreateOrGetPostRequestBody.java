@@ -6,44 +6,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsable {
+public class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The chatInfo property
-     */
-    private ChatInfo chatInfo;
-    /**
-     * The endDateTime property
-     */
-    private OffsetDateTime endDateTime;
-    /**
-     * The externalId property
-     */
-    private String externalId;
-    /**
-     * The participants property
-     */
-    private MeetingParticipants participants;
-    /**
-     * The startDateTime property
-     */
-    private OffsetDateTime startDateTime;
-    /**
-     * The subject property
-     */
-    private String subject;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new CreateOrGetPostRequestBody and sets the default values.
      */
     public CreateOrGetPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -62,7 +43,12 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the chatInfo property value. The chatInfo property
@@ -70,7 +56,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public ChatInfo getChatInfo() {
-        return this.chatInfo;
+        return this.backingStore.get("chatInfo");
     }
     /**
      * Gets the endDateTime property value. The endDateTime property
@@ -78,7 +64,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this.endDateTime;
+        return this.backingStore.get("endDateTime");
     }
     /**
      * Gets the externalId property value. The externalId property
@@ -86,7 +72,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
-        return this.externalId;
+        return this.backingStore.get("externalId");
     }
     /**
      * The deserialization information for the current model
@@ -109,7 +95,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public MeetingParticipants getParticipants() {
-        return this.participants;
+        return this.backingStore.get("participants");
     }
     /**
      * Gets the startDateTime property value. The startDateTime property
@@ -117,7 +103,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.backingStore.get("startDateTime");
     }
     /**
      * Gets the subject property value. The subject property
@@ -125,7 +111,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
-        return this.subject;
+        return this.backingStore.get("subject");
     }
     /**
      * Serializes information the current object
@@ -146,48 +132,48 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the chatInfo property value. The chatInfo property
      * @param value Value to set for the chatInfo property.
      */
     public void setChatInfo(@jakarta.annotation.Nullable final ChatInfo value) {
-        this.chatInfo = value;
+        this.backingStore.set("chatInfo", value);
     }
     /**
      * Sets the endDateTime property value. The endDateTime property
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.endDateTime = value;
+        this.backingStore.set("endDateTime", value);
     }
     /**
      * Sets the externalId property value. The externalId property
      * @param value Value to set for the externalId property.
      */
     public void setExternalId(@jakarta.annotation.Nullable final String value) {
-        this.externalId = value;
+        this.backingStore.set("externalId", value);
     }
     /**
      * Sets the participants property value. The participants property
      * @param value Value to set for the participants property.
      */
     public void setParticipants(@jakarta.annotation.Nullable final MeetingParticipants value) {
-        this.participants = value;
+        this.backingStore.set("participants", value);
     }
     /**
      * Sets the startDateTime property value. The startDateTime property
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.backingStore.set("startDateTime", value);
     }
     /**
      * Sets the subject property value. The subject property
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {
-        this.subject = value;
+        this.backingStore.set("subject", value);
     }
 }

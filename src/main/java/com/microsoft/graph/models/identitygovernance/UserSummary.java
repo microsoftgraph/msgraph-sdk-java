@@ -4,43 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UserSummary implements AdditionalDataHolder, Parsable {
+public class UserSummary implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The number of failed tasks for users in a user summary.
-     */
-    private Integer failedTasks;
-    /**
-     * The number of failed users in a user summary.
-     */
-    private Integer failedUsers;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The number of successful users in a user summary.
-     */
-    private Integer successfulUsers;
-    /**
-     * The total tasks of users in a user summary.
-     */
-    private Integer totalTasks;
-    /**
-     * The total number of users in a user summary
-     */
-    private Integer totalUsers;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new UserSummary and sets the default values.
      */
     public UserSummary() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -59,7 +40,12 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the failedTasks property value. The number of failed tasks for users in a user summary.
@@ -67,7 +53,7 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getFailedTasks() {
-        return this.failedTasks;
+        return this.backingStore.get("failedTasks");
     }
     /**
      * Gets the failedUsers property value. The number of failed users in a user summary.
@@ -75,7 +61,7 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getFailedUsers() {
-        return this.failedUsers;
+        return this.backingStore.get("failedUsers");
     }
     /**
      * The deserialization information for the current model
@@ -98,7 +84,7 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the successfulUsers property value. The number of successful users in a user summary.
@@ -106,7 +92,7 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessfulUsers() {
-        return this.successfulUsers;
+        return this.backingStore.get("successfulUsers");
     }
     /**
      * Gets the totalTasks property value. The total tasks of users in a user summary.
@@ -114,7 +100,7 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getTotalTasks() {
-        return this.totalTasks;
+        return this.backingStore.get("totalTasks");
     }
     /**
      * Gets the totalUsers property value. The total number of users in a user summary
@@ -122,7 +108,7 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getTotalUsers() {
-        return this.totalUsers;
+        return this.backingStore.get("totalUsers");
     }
     /**
      * Serializes information the current object
@@ -143,48 +129,48 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the failedTasks property value. The number of failed tasks for users in a user summary.
      * @param value Value to set for the failedTasks property.
      */
     public void setFailedTasks(@jakarta.annotation.Nullable final Integer value) {
-        this.failedTasks = value;
+        this.backingStore.set("failedTasks", value);
     }
     /**
      * Sets the failedUsers property value. The number of failed users in a user summary.
      * @param value Value to set for the failedUsers property.
      */
     public void setFailedUsers(@jakarta.annotation.Nullable final Integer value) {
-        this.failedUsers = value;
+        this.backingStore.set("failedUsers", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the successfulUsers property value. The number of successful users in a user summary.
      * @param value Value to set for the successfulUsers property.
      */
     public void setSuccessfulUsers(@jakarta.annotation.Nullable final Integer value) {
-        this.successfulUsers = value;
+        this.backingStore.set("successfulUsers", value);
     }
     /**
      * Sets the totalTasks property value. The total tasks of users in a user summary.
      * @param value Value to set for the totalTasks property.
      */
     public void setTotalTasks(@jakarta.annotation.Nullable final Integer value) {
-        this.totalTasks = value;
+        this.backingStore.set("totalTasks", value);
     }
     /**
      * Sets the totalUsers property value. The total number of users in a user summary
      * @param value Value to set for the totalUsers property.
      */
     public void setTotalUsers(@jakarta.annotation.Nullable final Integer value) {
-        this.totalUsers = value;
+        this.backingStore.set("totalUsers", value);
     }
 }

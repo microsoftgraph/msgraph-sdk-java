@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationFeedbackResourceOutcome extends EducationOutcome implements Parsable {
     /**
-     * The actual feedback resource.
-     */
-    private EducationResource feedbackResource;
-    /**
-     * The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, unknownFutureValue.
-     */
-    private EducationFeedbackResourceOutcomeStatus resourceStatus;
-    /**
      * Instantiates a new EducationFeedbackResourceOutcome and sets the default values.
      */
     public EducationFeedbackResourceOutcome() {
@@ -39,7 +31,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      */
     @jakarta.annotation.Nullable
     public EducationResource getFeedbackResource() {
-        return this.feedbackResource;
+        return this.backingStore.get("feedbackResource");
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +50,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      */
     @jakarta.annotation.Nullable
     public EducationFeedbackResourceOutcomeStatus getResourceStatus() {
-        return this.resourceStatus;
+        return this.backingStore.get("resourceStatus");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      * @param value Value to set for the feedbackResource property.
      */
     public void setFeedbackResource(@jakarta.annotation.Nullable final EducationResource value) {
-        this.feedbackResource = value;
+        this.backingStore.set("feedbackResource", value);
     }
     /**
      * Sets the resourceStatus property value. The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, unknownFutureValue.
      * @param value Value to set for the resourceStatus property.
      */
     public void setResourceStatus(@jakarta.annotation.Nullable final EducationFeedbackResourceOutcomeStatus value) {
-        this.resourceStatus = value;
+        this.backingStore.set("resourceStatus", value);
     }
 }

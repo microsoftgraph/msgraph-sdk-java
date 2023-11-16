@@ -4,39 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Admin implements AdditionalDataHolder, Parsable {
+public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * A container for Microsoft Edge resources. Read-only.
-     */
-    private Edge edge;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Represents a setting to control people-related admin settings in the tenant.
-     */
-    private PeopleAdminSettings people;
-    /**
-     * A container for service communications resources. Read-only.
-     */
-    private ServiceAnnouncement serviceAnnouncement;
-    /**
-     * The sharepoint property
-     */
-    private Sharepoint sharepoint;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new Admin and sets the default values.
      */
     public Admin() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +40,12 @@ public class Admin implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the edge property value. A container for Microsoft Edge resources. Read-only.
@@ -63,7 +53,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Edge getEdge() {
-        return this.edge;
+        return this.backingStore.get("edge");
     }
     /**
      * The deserialization information for the current model
@@ -85,7 +75,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the people property value. Represents a setting to control people-related admin settings in the tenant.
@@ -93,7 +83,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public PeopleAdminSettings getPeople() {
-        return this.people;
+        return this.backingStore.get("people");
     }
     /**
      * Gets the serviceAnnouncement property value. A container for service communications resources. Read-only.
@@ -101,7 +91,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public ServiceAnnouncement getServiceAnnouncement() {
-        return this.serviceAnnouncement;
+        return this.backingStore.get("serviceAnnouncement");
     }
     /**
      * Gets the sharepoint property value. The sharepoint property
@@ -109,7 +99,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Sharepoint getSharepoint() {
-        return this.sharepoint;
+        return this.backingStore.get("sharepoint");
     }
     /**
      * Serializes information the current object
@@ -129,41 +119,41 @@ public class Admin implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the edge property value. A container for Microsoft Edge resources. Read-only.
      * @param value Value to set for the edge property.
      */
     public void setEdge(@jakarta.annotation.Nullable final Edge value) {
-        this.edge = value;
+        this.backingStore.set("edge", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the people property value. Represents a setting to control people-related admin settings in the tenant.
      * @param value Value to set for the people property.
      */
     public void setPeople(@jakarta.annotation.Nullable final PeopleAdminSettings value) {
-        this.people = value;
+        this.backingStore.set("people", value);
     }
     /**
      * Sets the serviceAnnouncement property value. A container for service communications resources. Read-only.
      * @param value Value to set for the serviceAnnouncement property.
      */
     public void setServiceAnnouncement(@jakarta.annotation.Nullable final ServiceAnnouncement value) {
-        this.serviceAnnouncement = value;
+        this.backingStore.set("serviceAnnouncement", value);
     }
     /**
      * Sets the sharepoint property value. The sharepoint property
      * @param value Value to set for the sharepoint property.
      */
     public void setSharepoint(@jakarta.annotation.Nullable final Sharepoint value) {
-        this.sharepoint = value;
+        this.backingStore.set("sharepoint", value);
     }
 }

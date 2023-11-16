@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,31 +14,17 @@ import java.util.Objects;
  * Represents diagnostics status.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ManagedAppDiagnosticStatus implements AdditionalDataHolder, Parsable {
+public class ManagedAppDiagnosticStatus implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Instruction on how to mitigate a failed validation
-     */
-    private String mitigationInstruction;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The state of the operation
-     */
-    private String state;
-    /**
-     * The validation friendly name
-     */
-    private String validationName;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new ManagedAppDiagnosticStatus and sets the default values.
      */
     public ManagedAppDiagnosticStatus() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -54,7 +43,12 @@ public class ManagedAppDiagnosticStatus implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -75,7 +69,7 @@ public class ManagedAppDiagnosticStatus implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getMitigationInstruction() {
-        return this.mitigationInstruction;
+        return this.backingStore.get("mitigationInstruction");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -83,7 +77,7 @@ public class ManagedAppDiagnosticStatus implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the state property value. The state of the operation
@@ -91,7 +85,7 @@ public class ManagedAppDiagnosticStatus implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getState() {
-        return this.state;
+        return this.backingStore.get("state");
     }
     /**
      * Gets the validationName property value. The validation friendly name
@@ -99,7 +93,7 @@ public class ManagedAppDiagnosticStatus implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getValidationName() {
-        return this.validationName;
+        return this.backingStore.get("validationName");
     }
     /**
      * Serializes information the current object
@@ -118,34 +112,34 @@ public class ManagedAppDiagnosticStatus implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the mitigationInstruction property value. Instruction on how to mitigate a failed validation
      * @param value Value to set for the mitigationInstruction property.
      */
     public void setMitigationInstruction(@jakarta.annotation.Nullable final String value) {
-        this.mitigationInstruction = value;
+        this.backingStore.set("mitigationInstruction", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the state property value. The state of the operation
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final String value) {
-        this.state = value;
+        this.backingStore.set("state", value);
     }
     /**
      * Sets the validationName property value. The validation friendly name
      * @param value Value to set for the validationName property.
      */
     public void setValidationName(@jakarta.annotation.Nullable final String value) {
-        this.validationName = value;
+        this.backingStore.set("validationName", value);
     }
 }

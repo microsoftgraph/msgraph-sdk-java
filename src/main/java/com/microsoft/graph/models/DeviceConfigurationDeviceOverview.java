@@ -10,34 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceConfigurationDeviceOverview extends Entity implements Parsable {
     /**
-     * Version of the policy for that overview
-     */
-    private Integer configurationVersion;
-    /**
-     * Number of error devices
-     */
-    private Integer errorCount;
-    /**
-     * Number of failed devices
-     */
-    private Integer failedCount;
-    /**
-     * Last update time
-     */
-    private OffsetDateTime lastUpdateDateTime;
-    /**
-     * Number of not applicable devices
-     */
-    private Integer notApplicableCount;
-    /**
-     * Number of pending devices
-     */
-    private Integer pendingCount;
-    /**
-     * Number of succeeded devices
-     */
-    private Integer successCount;
-    /**
      * Instantiates a new DeviceConfigurationDeviceOverview and sets the default values.
      */
     public DeviceConfigurationDeviceOverview() {
@@ -59,7 +31,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public Integer getConfigurationVersion() {
-        return this.configurationVersion;
+        return this.backingStore.get("configurationVersion");
     }
     /**
      * Gets the errorCount property value. Number of error devices
@@ -67,7 +39,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCount() {
-        return this.errorCount;
+        return this.backingStore.get("errorCount");
     }
     /**
      * Gets the failedCount property value. Number of failed devices
@@ -75,7 +47,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public Integer getFailedCount() {
-        return this.failedCount;
+        return this.backingStore.get("failedCount");
     }
     /**
      * The deserialization information for the current model
@@ -99,7 +71,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdateDateTime() {
-        return this.lastUpdateDateTime;
+        return this.backingStore.get("lastUpdateDateTime");
     }
     /**
      * Gets the notApplicableCount property value. Number of not applicable devices
@@ -107,7 +79,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableCount() {
-        return this.notApplicableCount;
+        return this.backingStore.get("notApplicableCount");
     }
     /**
      * Gets the pendingCount property value. Number of pending devices
@@ -115,7 +87,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public Integer getPendingCount() {
-        return this.pendingCount;
+        return this.backingStore.get("pendingCount");
     }
     /**
      * Gets the successCount property value. Number of succeeded devices
@@ -123,7 +95,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessCount() {
-        return this.successCount;
+        return this.backingStore.get("successCount");
     }
     /**
      * Serializes information the current object
@@ -145,48 +117,48 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
      * @param value Value to set for the configurationVersion property.
      */
     public void setConfigurationVersion(@jakarta.annotation.Nullable final Integer value) {
-        this.configurationVersion = value;
+        this.backingStore.set("configurationVersion", value);
     }
     /**
      * Sets the errorCount property value. Number of error devices
      * @param value Value to set for the errorCount property.
      */
     public void setErrorCount(@jakarta.annotation.Nullable final Integer value) {
-        this.errorCount = value;
+        this.backingStore.set("errorCount", value);
     }
     /**
      * Sets the failedCount property value. Number of failed devices
      * @param value Value to set for the failedCount property.
      */
     public void setFailedCount(@jakarta.annotation.Nullable final Integer value) {
-        this.failedCount = value;
+        this.backingStore.set("failedCount", value);
     }
     /**
      * Sets the lastUpdateDateTime property value. Last update time
      * @param value Value to set for the lastUpdateDateTime property.
      */
     public void setLastUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastUpdateDateTime = value;
+        this.backingStore.set("lastUpdateDateTime", value);
     }
     /**
      * Sets the notApplicableCount property value. Number of not applicable devices
      * @param value Value to set for the notApplicableCount property.
      */
     public void setNotApplicableCount(@jakarta.annotation.Nullable final Integer value) {
-        this.notApplicableCount = value;
+        this.backingStore.set("notApplicableCount", value);
     }
     /**
      * Sets the pendingCount property value. Number of pending devices
      * @param value Value to set for the pendingCount property.
      */
     public void setPendingCount(@jakarta.annotation.Nullable final Integer value) {
-        this.pendingCount = value;
+        this.backingStore.set("pendingCount", value);
     }
     /**
      * Sets the successCount property value. Number of succeeded devices
      * @param value Value to set for the successCount property.
      */
     public void setSuccessCount(@jakarta.annotation.Nullable final Integer value) {
-        this.successCount = value;
+        this.backingStore.set("successCount", value);
     }
 }

@@ -5,27 +5,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class QuotientPostRequestBody implements AdditionalDataHolder, Parsable {
+public class QuotientPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The denominator property
-     */
-    private Json denominator;
-    /**
-     * The numerator property
-     */
-    private Json numerator;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new QuotientPostRequestBody and sets the default values.
      */
     public QuotientPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -44,7 +41,12 @@ public class QuotientPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the denominator property value. The denominator property
@@ -52,7 +54,7 @@ public class QuotientPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getDenominator() {
-        return this.denominator;
+        return this.backingStore.get("denominator");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +73,7 @@ public class QuotientPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getNumerator() {
-        return this.numerator;
+        return this.backingStore.get("numerator");
     }
     /**
      * Serializes information the current object
@@ -88,20 +90,20 @@ public class QuotientPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the denominator property value. The denominator property
      * @param value Value to set for the denominator property.
      */
     public void setDenominator(@jakarta.annotation.Nullable final Json value) {
-        this.denominator = value;
+        this.backingStore.set("denominator", value);
     }
     /**
      * Sets the numerator property value. The numerator property
      * @param value Value to set for the numerator property.
      */
     public void setNumerator(@jakarta.annotation.Nullable final Json value) {
-        this.numerator = value;
+        this.backingStore.set("numerator", value);
     }
 }

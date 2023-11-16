@@ -4,27 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Album implements AdditionalDataHolder, Parsable {
+public class Album implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Unique identifier of the [driveItem][] that is the cover of the album.
-     */
-    private String coverImageItemId;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new Album and sets the default values.
      */
     public Album() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -43,7 +40,12 @@ public class Album implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the coverImageItemId property value. Unique identifier of the [driveItem][] that is the cover of the album.
@@ -51,7 +53,7 @@ public class Album implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCoverImageItemId() {
-        return this.coverImageItemId;
+        return this.backingStore.get("coverImageItemId");
     }
     /**
      * The deserialization information for the current model
@@ -70,7 +72,7 @@ public class Album implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -87,20 +89,20 @@ public class Album implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the coverImageItemId property value. Unique identifier of the [driveItem][] that is the cover of the album.
      * @param value Value to set for the coverImageItemId property.
      */
     public void setCoverImageItemId(@jakarta.annotation.Nullable final String value) {
-        this.coverImageItemId = value;
+        this.backingStore.set("coverImageItemId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

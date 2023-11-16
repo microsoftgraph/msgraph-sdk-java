@@ -5,27 +5,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class BitandPostRequestBody implements AdditionalDataHolder, Parsable {
+public class BitandPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The number1 property
-     */
-    private Json number1;
-    /**
-     * The number2 property
-     */
-    private Json number2;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new BitandPostRequestBody and sets the default values.
      */
     public BitandPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -44,7 +41,12 @@ public class BitandPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -63,7 +65,7 @@ public class BitandPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getNumber1() {
-        return this.number1;
+        return this.backingStore.get("number1");
     }
     /**
      * Gets the number2 property value. The number2 property
@@ -71,7 +73,7 @@ public class BitandPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getNumber2() {
-        return this.number2;
+        return this.backingStore.get("number2");
     }
     /**
      * Serializes information the current object
@@ -88,20 +90,20 @@ public class BitandPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the number1 property value. The number1 property
      * @param value Value to set for the number1 property.
      */
     public void setNumber1(@jakarta.annotation.Nullable final Json value) {
-        this.number1 = value;
+        this.backingStore.set("number1", value);
     }
     /**
      * Sets the number2 property value. The number2 property
      * @param value Value to set for the number2 property.
      */
     public void setNumber2(@jakarta.annotation.Nullable final Json value) {
-        this.number2 = value;
+        this.backingStore.set("number2", value);
     }
 }

@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DelegatedAdminServiceManagementDetail extends Entity implements Parsable {
     /**
-     * The URL of the management portal for the managed service. Read-only.
-     */
-    private String serviceManagementUrl;
-    /**
-     * The name of a managed service. Read-only.
-     */
-    private String serviceName;
-    /**
      * Instantiates a new DelegatedAdminServiceManagementDetail and sets the default values.
      */
     public DelegatedAdminServiceManagementDetail() {
@@ -49,7 +41,7 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
      */
     @jakarta.annotation.Nullable
     public String getServiceManagementUrl() {
-        return this.serviceManagementUrl;
+        return this.backingStore.get("serviceManagementUrl");
     }
     /**
      * Gets the serviceName property value. The name of a managed service. Read-only.
@@ -57,7 +49,7 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
      */
     @jakarta.annotation.Nullable
     public String getServiceName() {
-        return this.serviceName;
+        return this.backingStore.get("serviceName");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
      * @param value Value to set for the serviceManagementUrl property.
      */
     public void setServiceManagementUrl(@jakarta.annotation.Nullable final String value) {
-        this.serviceManagementUrl = value;
+        this.backingStore.set("serviceManagementUrl", value);
     }
     /**
      * Sets the serviceName property value. The name of a managed service. Read-only.
      * @param value Value to set for the serviceName property.
      */
     public void setServiceName(@jakarta.annotation.Nullable final String value) {
-        this.serviceName = value;
+        this.backingStore.set("serviceName", value);
     }
 }

@@ -4,23 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class GetMemberGroupsPostRequestBody implements AdditionalDataHolder, Parsable {
+public class GetMemberGroupsPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The securityEnabledOnly property
-     */
-    private Boolean securityEnabledOnly;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new GetMemberGroupsPostRequestBody and sets the default values.
      */
     public GetMemberGroupsPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -39,7 +40,12 @@ public class GetMemberGroupsPostRequestBody implements AdditionalDataHolder, Par
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -57,7 +63,7 @@ public class GetMemberGroupsPostRequestBody implements AdditionalDataHolder, Par
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityEnabledOnly() {
-        return this.securityEnabledOnly;
+        return this.backingStore.get("securityEnabledOnly");
     }
     /**
      * Serializes information the current object
@@ -73,13 +79,13 @@ public class GetMemberGroupsPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the securityEnabledOnly property value. The securityEnabledOnly property
      * @param value Value to set for the securityEnabledOnly property.
      */
     public void setSecurityEnabledOnly(@jakarta.annotation.Nullable final Boolean value) {
-        this.securityEnabledOnly = value;
+        this.backingStore.set("securityEnabledOnly", value);
     }
 }

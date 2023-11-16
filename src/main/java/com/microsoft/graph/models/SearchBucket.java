@@ -4,35 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SearchBucket implements AdditionalDataHolder, Parsable {
+public class SearchBucket implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * A token containing the encoded filter to aggregate search matches by the specific key value. To use the filter, pass the token as part of the aggregationFilter property in a searchRequest object, in the format '{field}:/'{aggregationFilterToken}/''. See an example.
-     */
-    private String aggregationFilterToken;
-    /**
-     * The approximate number of search matches that share the same value specified in the key property. Note that this number is not the exact number of matches.
-     */
-    private Integer count;
-    /**
-     * The discrete value of the field that an aggregation was computed on.
-     */
-    private String key;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new SearchBucket and sets the default values.
      */
     public SearchBucket() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +40,12 @@ public class SearchBucket implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the aggregationFilterToken property value. A token containing the encoded filter to aggregate search matches by the specific key value. To use the filter, pass the token as part of the aggregationFilter property in a searchRequest object, in the format '{field}:/'{aggregationFilterToken}/''. See an example.
@@ -59,7 +53,7 @@ public class SearchBucket implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAggregationFilterToken() {
-        return this.aggregationFilterToken;
+        return this.backingStore.get("aggregationFilterToken");
     }
     /**
      * Gets the count property value. The approximate number of search matches that share the same value specified in the key property. Note that this number is not the exact number of matches.
@@ -67,7 +61,7 @@ public class SearchBucket implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getCount() {
-        return this.count;
+        return this.backingStore.get("count");
     }
     /**
      * The deserialization information for the current model
@@ -88,7 +82,7 @@ public class SearchBucket implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getKey() {
-        return this.key;
+        return this.backingStore.get("key");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -96,7 +90,7 @@ public class SearchBucket implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -115,34 +109,34 @@ public class SearchBucket implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the aggregationFilterToken property value. A token containing the encoded filter to aggregate search matches by the specific key value. To use the filter, pass the token as part of the aggregationFilter property in a searchRequest object, in the format '{field}:/'{aggregationFilterToken}/''. See an example.
      * @param value Value to set for the aggregationFilterToken property.
      */
     public void setAggregationFilterToken(@jakarta.annotation.Nullable final String value) {
-        this.aggregationFilterToken = value;
+        this.backingStore.set("aggregationFilterToken", value);
     }
     /**
      * Sets the count property value. The approximate number of search matches that share the same value specified in the key property. Note that this number is not the exact number of matches.
      * @param value Value to set for the count property.
      */
     public void setCount(@jakarta.annotation.Nullable final Integer value) {
-        this.count = value;
+        this.backingStore.set("count", value);
     }
     /**
      * Sets the key property value. The discrete value of the field that an aggregation was computed on.
      * @param value Value to set for the key property.
      */
     public void setKey(@jakarta.annotation.Nullable final String value) {
-        this.key = value;
+        this.backingStore.set("key", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

@@ -4,35 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Parsable {
+public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Indicates whether captions are enabled for this Teams live event.
-     */
-    private Boolean isCaptionEnabled;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The spoken language.
-     */
-    private String spokenLanguage;
-    /**
-     * The translation languages (choose up to 6).
-     */
-    private java.util.List<String> translationLanguages;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new BroadcastMeetingCaptionSettings and sets the default values.
      */
     public BroadcastMeetingCaptionSettings() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +40,12 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -72,7 +66,7 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCaptionEnabled() {
-        return this.isCaptionEnabled;
+        return this.backingStore.get("isCaptionEnabled");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -80,7 +74,7 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the spokenLanguage property value. The spoken language.
@@ -88,7 +82,7 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public String getSpokenLanguage() {
-        return this.spokenLanguage;
+        return this.backingStore.get("spokenLanguage");
     }
     /**
      * Gets the translationLanguages property value. The translation languages (choose up to 6).
@@ -96,7 +90,7 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTranslationLanguages() {
-        return this.translationLanguages;
+        return this.backingStore.get("translationLanguages");
     }
     /**
      * Serializes information the current object
@@ -115,34 +109,34 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the isCaptionEnabled property value. Indicates whether captions are enabled for this Teams live event.
      * @param value Value to set for the isCaptionEnabled property.
      */
     public void setIsCaptionEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isCaptionEnabled = value;
+        this.backingStore.set("isCaptionEnabled", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the spokenLanguage property value. The spoken language.
      * @param value Value to set for the spokenLanguage property.
      */
     public void setSpokenLanguage(@jakarta.annotation.Nullable final String value) {
-        this.spokenLanguage = value;
+        this.backingStore.set("spokenLanguage", value);
     }
     /**
      * Sets the translationLanguages property value. The translation languages (choose up to 6).
      * @param value Value to set for the translationLanguages property.
      */
     public void setTranslationLanguages(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.translationLanguages = value;
+        this.backingStore.set("translationLanguages", value);
     }
 }

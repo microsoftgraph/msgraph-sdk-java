@@ -4,44 +4,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ResourceSpecificPermission implements AdditionalDataHolder, Parsable {
+public class ResourceSpecificPermission implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Describes the level of access that the resource-specific permission represents.
-     */
-    private String description;
-    /**
-     * The display name for the resource-specific permission.
-     */
-    private String displayName;
-    /**
-     * The unique identifier for the resource-specific application permission.
-     */
-    private UUID id;
-    /**
-     * Indicates whether the permission is enabled.
-     */
-    private Boolean isEnabled;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The value of the permission.
-     */
-    private String value;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new ResourceSpecificPermission and sets the default values.
      */
     public ResourceSpecificPermission() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -60,7 +41,12 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the description property value. Describes the level of access that the resource-specific permission represents.
@@ -68,7 +54,7 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. The display name for the resource-specific permission.
@@ -76,7 +62,7 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -99,7 +85,7 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public UUID getId() {
-        return this.id;
+        return this.backingStore.get("id");
     }
     /**
      * Gets the isEnabled property value. Indicates whether the permission is enabled.
@@ -107,7 +93,7 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this.isEnabled;
+        return this.backingStore.get("isEnabled");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -115,7 +101,7 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the value property value. The value of the permission.
@@ -123,7 +109,7 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -144,48 +130,48 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the description property value. Describes the level of access that the resource-specific permission represents.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The display name for the resource-specific permission.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the id property value. The unique identifier for the resource-specific application permission.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final UUID value) {
-        this.id = value;
+        this.backingStore.set("id", value);
     }
     /**
      * Sets the isEnabled property value. Indicates whether the permission is enabled.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabled = value;
+        this.backingStore.set("isEnabled", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the value property value. The value of the permission.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

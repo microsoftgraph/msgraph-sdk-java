@@ -5,27 +5,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
+public class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The clientContext property
-     */
-    private String clientContext;
-    /**
-     * The participants property
-     */
-    private java.util.List<InvitationParticipantInfo> participants;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new InvitePostRequestBody and sets the default values.
      */
     public InvitePostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -44,7 +41,12 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the clientContext property value. The clientContext property
@@ -52,7 +54,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getClientContext() {
-        return this.clientContext;
+        return this.backingStore.get("clientContext");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +73,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<InvitationParticipantInfo> getParticipants() {
-        return this.participants;
+        return this.backingStore.get("participants");
     }
     /**
      * Serializes information the current object
@@ -88,20 +90,20 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the clientContext property value. The clientContext property
      * @param value Value to set for the clientContext property.
      */
     public void setClientContext(@jakarta.annotation.Nullable final String value) {
-        this.clientContext = value;
+        this.backingStore.set("clientContext", value);
     }
     /**
      * Sets the participants property value. The participants property
      * @param value Value to set for the participants property.
      */
     public void setParticipants(@jakarta.annotation.Nullable final java.util.List<InvitationParticipantInfo> value) {
-        this.participants = value;
+        this.backingStore.set("participants", value);
     }
 }

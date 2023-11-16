@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserInstallStateSummaryCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<UserInstallStateSummary> value;
-    /**
      * Instantiates a new UserInstallStateSummaryCollectionResponse and sets the default values.
      */
     public UserInstallStateSummaryCollectionResponse() {
@@ -44,7 +40,7 @@ public class UserInstallStateSummaryCollectionResponse extends BaseCollectionPag
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserInstallStateSummary> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class UserInstallStateSummaryCollectionResponse extends BaseCollectionPag
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<UserInstallStateSummary> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

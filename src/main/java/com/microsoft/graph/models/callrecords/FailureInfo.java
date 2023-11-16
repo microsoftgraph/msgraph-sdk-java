@@ -4,31 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class FailureInfo implements AdditionalDataHolder, Parsable {
+public class FailureInfo implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Classification of why a call or portion of a call failed.
-     */
-    private String reason;
-    /**
-     * The stage property
-     */
-    private FailureStage stage;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new FailureInfo and sets the default values.
      */
     public FailureInfo() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +40,12 @@ public class FailureInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -67,7 +65,7 @@ public class FailureInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the reason property value. Classification of why a call or portion of a call failed.
@@ -75,7 +73,7 @@ public class FailureInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getReason() {
-        return this.reason;
+        return this.backingStore.get("reason");
     }
     /**
      * Gets the stage property value. The stage property
@@ -83,7 +81,7 @@ public class FailureInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public FailureStage getStage() {
-        return this.stage;
+        return this.backingStore.get("stage");
     }
     /**
      * Serializes information the current object
@@ -101,27 +99,27 @@ public class FailureInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the reason property value. Classification of why a call or portion of a call failed.
      * @param value Value to set for the reason property.
      */
     public void setReason(@jakarta.annotation.Nullable final String value) {
-        this.reason = value;
+        this.backingStore.set("reason", value);
     }
     /**
      * Sets the stage property value. The stage property
      * @param value Value to set for the stage property.
      */
     public void setStage(@jakarta.annotation.Nullable final FailureStage value) {
-        this.stage = value;
+        this.backingStore.set("stage", value);
     }
 }

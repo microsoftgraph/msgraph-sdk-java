@@ -4,44 +4,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class RecurrenceRange implements AdditionalDataHolder, Parsable {
+public class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The date to stop applying the recurrence pattern. Depending on the recurrence pattern of the event, the last occurrence of the meeting may not be this date. Required if type is endDate.
-     */
-    private LocalDate endDate;
-    /**
-     * The number of times to repeat the event. Required and must be positive if type is numbered.
-     */
-    private Integer numberOfOccurrences;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Time zone for the startDate and endDate properties. Optional. If not specified, the time zone of the event is used.
-     */
-    private String recurrenceTimeZone;
-    /**
-     * The date to start applying the recurrence pattern. The first occurrence of the meeting may be this date or later, depending on the recurrence pattern of the event. Must be the same value as the start property of the recurring event. Required.
-     */
-    private LocalDate startDate;
-    /**
-     * The recurrence range. The possible values are: endDate, noEnd, numbered. Required.
-     */
-    private RecurrenceRangeType type;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new RecurrenceRange and sets the default values.
      */
     public RecurrenceRange() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -60,7 +41,12 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the endDate property value. The date to stop applying the recurrence pattern. Depending on the recurrence pattern of the event, the last occurrence of the meeting may not be this date. Required if type is endDate.
@@ -68,7 +54,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getEndDate() {
-        return this.endDate;
+        return this.backingStore.get("endDate");
     }
     /**
      * The deserialization information for the current model
@@ -91,7 +77,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfOccurrences() {
-        return this.numberOfOccurrences;
+        return this.backingStore.get("numberOfOccurrences");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -99,7 +85,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the recurrenceTimeZone property value. Time zone for the startDate and endDate properties. Optional. If not specified, the time zone of the event is used.
@@ -107,7 +93,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRecurrenceTimeZone() {
-        return this.recurrenceTimeZone;
+        return this.backingStore.get("recurrenceTimeZone");
     }
     /**
      * Gets the startDate property value. The date to start applying the recurrence pattern. The first occurrence of the meeting may be this date or later, depending on the recurrence pattern of the event. Must be the same value as the start property of the recurring event. Required.
@@ -115,7 +101,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getStartDate() {
-        return this.startDate;
+        return this.backingStore.get("startDate");
     }
     /**
      * Gets the type property value. The recurrence range. The possible values are: endDate, noEnd, numbered. Required.
@@ -123,7 +109,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public RecurrenceRangeType getType() {
-        return this.type;
+        return this.backingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -144,48 +130,48 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the endDate property value. The date to stop applying the recurrence pattern. Depending on the recurrence pattern of the event, the last occurrence of the meeting may not be this date. Required if type is endDate.
      * @param value Value to set for the endDate property.
      */
     public void setEndDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.endDate = value;
+        this.backingStore.set("endDate", value);
     }
     /**
      * Sets the numberOfOccurrences property value. The number of times to repeat the event. Required and must be positive if type is numbered.
      * @param value Value to set for the numberOfOccurrences property.
      */
     public void setNumberOfOccurrences(@jakarta.annotation.Nullable final Integer value) {
-        this.numberOfOccurrences = value;
+        this.backingStore.set("numberOfOccurrences", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the recurrenceTimeZone property value. Time zone for the startDate and endDate properties. Optional. If not specified, the time zone of the event is used.
      * @param value Value to set for the recurrenceTimeZone property.
      */
     public void setRecurrenceTimeZone(@jakarta.annotation.Nullable final String value) {
-        this.recurrenceTimeZone = value;
+        this.backingStore.set("recurrenceTimeZone", value);
     }
     /**
      * Sets the startDate property value. The date to start applying the recurrence pattern. The first occurrence of the meeting may be this date or later, depending on the recurrence pattern of the event. Must be the same value as the start property of the recurring event. Required.
      * @param value Value to set for the startDate property.
      */
     public void setStartDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.startDate = value;
+        this.backingStore.set("startDate", value);
     }
     /**
      * Sets the type property value. The recurrence range. The possible values are: endDate, noEnd, numbered. Required.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final RecurrenceRangeType value) {
-        this.type = value;
+        this.backingStore.set("type", value);
     }
 }

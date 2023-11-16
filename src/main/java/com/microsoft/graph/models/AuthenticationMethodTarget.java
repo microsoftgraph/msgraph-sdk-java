@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationMethodTarget extends Entity implements Parsable {
     /**
-     * Determines if the user is enforced to register the authentication method.
-     */
-    private Boolean isRegistrationRequired;
-    /**
-     * The targetType property
-     */
-    private AuthenticationMethodTargetType targetType;
-    /**
      * Instantiates a new AuthenticationMethodTarget and sets the default values.
      */
     public AuthenticationMethodTarget() {
@@ -57,7 +49,7 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRegistrationRequired() {
-        return this.isRegistrationRequired;
+        return this.backingStore.get("isRegistrationRequired");
     }
     /**
      * Gets the targetType property value. The targetType property
@@ -65,7 +57,7 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodTargetType getTargetType() {
-        return this.targetType;
+        return this.backingStore.get("targetType");
     }
     /**
      * Serializes information the current object
@@ -82,13 +74,13 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
      * @param value Value to set for the isRegistrationRequired property.
      */
     public void setIsRegistrationRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRegistrationRequired = value;
+        this.backingStore.set("isRegistrationRequired", value);
     }
     /**
      * Sets the targetType property value. The targetType property
      * @param value Value to set for the targetType property.
      */
     public void setTargetType(@jakarta.annotation.Nullable final AuthenticationMethodTargetType value) {
-        this.targetType = value;
+        this.backingStore.set("targetType", value);
     }
 }

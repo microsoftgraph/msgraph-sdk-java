@@ -10,38 +10,6 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthorizationPolicy extends PolicyBase implements Parsable {
     /**
-     * Indicates whether users can sign up for email based subscriptions.
-     */
-    private Boolean allowedToSignUpEmailBasedSubscriptions;
-    /**
-     * Indicates whether users can use the Self-Service Password Reset feature on the tenant.
-     */
-    private Boolean allowedToUseSSPR;
-    /**
-     * Indicates whether a user can join the tenant by email validation.
-     */
-    private Boolean allowEmailVerifiedUsersToJoinOrganization;
-    /**
-     * Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. For more information, see allowInvitesFrom values.
-     */
-    private AllowInvitesFrom allowInvitesFrom;
-    /**
-     * Indicates whether user consent for risky apps is allowed. We recommend keeping allowUserConsentForRiskyApps as false. Default value is false.
-     */
-    private Boolean allowUserConsentForRiskyApps;
-    /**
-     * To disable the use of MSOL PowerShell, set this property to true. This also disables user-based access to the legacy service endpoint used by MSOL PowerShell. This doesn't affect Microsoft Entra Connect or Microsoft Graph.
-     */
-    private Boolean blockMsolPowerShell;
-    /**
-     * The defaultUserRolePermissions property
-     */
-    private DefaultUserRolePermissions defaultUserRolePermissions;
-    /**
-     * Represents role templateId for the role that should be granted to guest user. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
-     */
-    private UUID guestUserRoleId;
-    /**
      * Instantiates a new AuthorizationPolicy and sets the default values.
      */
     public AuthorizationPolicy() {
@@ -64,7 +32,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowedToSignUpEmailBasedSubscriptions() {
-        return this.allowedToSignUpEmailBasedSubscriptions;
+        return this.backingStore.get("allowedToSignUpEmailBasedSubscriptions");
     }
     /**
      * Gets the allowedToUseSSPR property value. Indicates whether users can use the Self-Service Password Reset feature on the tenant.
@@ -72,7 +40,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowedToUseSSPR() {
-        return this.allowedToUseSSPR;
+        return this.backingStore.get("allowedToUseSSPR");
     }
     /**
      * Gets the allowEmailVerifiedUsersToJoinOrganization property value. Indicates whether a user can join the tenant by email validation.
@@ -80,7 +48,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowEmailVerifiedUsersToJoinOrganization() {
-        return this.allowEmailVerifiedUsersToJoinOrganization;
+        return this.backingStore.get("allowEmailVerifiedUsersToJoinOrganization");
     }
     /**
      * Gets the allowInvitesFrom property value. Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. For more information, see allowInvitesFrom values.
@@ -88,7 +56,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AllowInvitesFrom getAllowInvitesFrom() {
-        return this.allowInvitesFrom;
+        return this.backingStore.get("allowInvitesFrom");
     }
     /**
      * Gets the allowUserConsentForRiskyApps property value. Indicates whether user consent for risky apps is allowed. We recommend keeping allowUserConsentForRiskyApps as false. Default value is false.
@@ -96,7 +64,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowUserConsentForRiskyApps() {
-        return this.allowUserConsentForRiskyApps;
+        return this.backingStore.get("allowUserConsentForRiskyApps");
     }
     /**
      * Gets the blockMsolPowerShell property value. To disable the use of MSOL PowerShell, set this property to true. This also disables user-based access to the legacy service endpoint used by MSOL PowerShell. This doesn't affect Microsoft Entra Connect or Microsoft Graph.
@@ -104,7 +72,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockMsolPowerShell() {
-        return this.blockMsolPowerShell;
+        return this.backingStore.get("blockMsolPowerShell");
     }
     /**
      * Gets the defaultUserRolePermissions property value. The defaultUserRolePermissions property
@@ -112,7 +80,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DefaultUserRolePermissions getDefaultUserRolePermissions() {
-        return this.defaultUserRolePermissions;
+        return this.backingStore.get("defaultUserRolePermissions");
     }
     /**
      * The deserialization information for the current model
@@ -137,7 +105,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getGuestUserRoleId() {
-        return this.guestUserRoleId;
+        return this.backingStore.get("guestUserRoleId");
     }
     /**
      * Serializes information the current object
@@ -160,55 +128,55 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the allowedToSignUpEmailBasedSubscriptions property.
      */
     public void setAllowedToSignUpEmailBasedSubscriptions(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowedToSignUpEmailBasedSubscriptions = value;
+        this.backingStore.set("allowedToSignUpEmailBasedSubscriptions", value);
     }
     /**
      * Sets the allowedToUseSSPR property value. Indicates whether users can use the Self-Service Password Reset feature on the tenant.
      * @param value Value to set for the allowedToUseSSPR property.
      */
     public void setAllowedToUseSSPR(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowedToUseSSPR = value;
+        this.backingStore.set("allowedToUseSSPR", value);
     }
     /**
      * Sets the allowEmailVerifiedUsersToJoinOrganization property value. Indicates whether a user can join the tenant by email validation.
      * @param value Value to set for the allowEmailVerifiedUsersToJoinOrganization property.
      */
     public void setAllowEmailVerifiedUsersToJoinOrganization(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowEmailVerifiedUsersToJoinOrganization = value;
+        this.backingStore.set("allowEmailVerifiedUsersToJoinOrganization", value);
     }
     /**
      * Sets the allowInvitesFrom property value. Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. For more information, see allowInvitesFrom values.
      * @param value Value to set for the allowInvitesFrom property.
      */
     public void setAllowInvitesFrom(@jakarta.annotation.Nullable final AllowInvitesFrom value) {
-        this.allowInvitesFrom = value;
+        this.backingStore.set("allowInvitesFrom", value);
     }
     /**
      * Sets the allowUserConsentForRiskyApps property value. Indicates whether user consent for risky apps is allowed. We recommend keeping allowUserConsentForRiskyApps as false. Default value is false.
      * @param value Value to set for the allowUserConsentForRiskyApps property.
      */
     public void setAllowUserConsentForRiskyApps(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowUserConsentForRiskyApps = value;
+        this.backingStore.set("allowUserConsentForRiskyApps", value);
     }
     /**
      * Sets the blockMsolPowerShell property value. To disable the use of MSOL PowerShell, set this property to true. This also disables user-based access to the legacy service endpoint used by MSOL PowerShell. This doesn't affect Microsoft Entra Connect or Microsoft Graph.
      * @param value Value to set for the blockMsolPowerShell property.
      */
     public void setBlockMsolPowerShell(@jakarta.annotation.Nullable final Boolean value) {
-        this.blockMsolPowerShell = value;
+        this.backingStore.set("blockMsolPowerShell", value);
     }
     /**
      * Sets the defaultUserRolePermissions property value. The defaultUserRolePermissions property
      * @param value Value to set for the defaultUserRolePermissions property.
      */
     public void setDefaultUserRolePermissions(@jakarta.annotation.Nullable final DefaultUserRolePermissions value) {
-        this.defaultUserRolePermissions = value;
+        this.backingStore.set("defaultUserRolePermissions", value);
     }
     /**
      * Sets the guestUserRoleId property value. Represents role templateId for the role that should be granted to guest user. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
      * @param value Value to set for the guestUserRoleId property.
      */
     public void setGuestUserRoleId(@jakarta.annotation.Nullable final UUID value) {
-        this.guestUserRoleId = value;
+        this.backingStore.set("guestUserRoleId", value);
     }
 }

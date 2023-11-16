@@ -4,39 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AppIdentity implements AdditionalDataHolder, Parsable {
+public class AppIdentity implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Refers to the unique ID representing application in Microsoft Entra ID.
-     */
-    private String appId;
-    /**
-     * Refers to the application name displayed in the Microsoft Entra admin center.
-     */
-    private String displayName;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Refers to the unique ID for the service principal in Microsoft Entra ID.
-     */
-    private String servicePrincipalId;
-    /**
-     * Refers to the Service Principal Name is the Application name in the tenant.
-     */
-    private String servicePrincipalName;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new AppIdentity and sets the default values.
      */
     public AppIdentity() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +40,12 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the appId property value. Refers to the unique ID representing application in Microsoft Entra ID.
@@ -63,7 +53,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
-        return this.appId;
+        return this.backingStore.get("appId");
     }
     /**
      * Gets the displayName property value. Refers to the application name displayed in the Microsoft Entra admin center.
@@ -71,7 +61,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -93,7 +83,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the servicePrincipalId property value. Refers to the unique ID for the service principal in Microsoft Entra ID.
@@ -101,7 +91,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalId() {
-        return this.servicePrincipalId;
+        return this.backingStore.get("servicePrincipalId");
     }
     /**
      * Gets the servicePrincipalName property value. Refers to the Service Principal Name is the Application name in the tenant.
@@ -109,7 +99,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalName() {
-        return this.servicePrincipalName;
+        return this.backingStore.get("servicePrincipalName");
     }
     /**
      * Serializes information the current object
@@ -129,41 +119,41 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the appId property value. Refers to the unique ID representing application in Microsoft Entra ID.
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
-        this.appId = value;
+        this.backingStore.set("appId", value);
     }
     /**
      * Sets the displayName property value. Refers to the application name displayed in the Microsoft Entra admin center.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the servicePrincipalId property value. Refers to the unique ID for the service principal in Microsoft Entra ID.
      * @param value Value to set for the servicePrincipalId property.
      */
     public void setServicePrincipalId(@jakarta.annotation.Nullable final String value) {
-        this.servicePrincipalId = value;
+        this.backingStore.set("servicePrincipalId", value);
     }
     /**
      * Sets the servicePrincipalName property value. Refers to the Service Principal Name is the Application name in the tenant.
      * @param value Value to set for the servicePrincipalName property.
      */
     public void setServicePrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.servicePrincipalName = value;
+        this.backingStore.set("servicePrincipalName", value);
     }
 }

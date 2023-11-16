@@ -4,47 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AttachmentItem implements AdditionalDataHolder, Parsable {
+public class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The type of attachment. Possible values are: file, item, reference. Required.
-     */
-    private AttachmentType attachmentType;
-    /**
-     * The CID or Content-Id of the attachment for referencing for the in-line attachments using the <img src='cid:contentId'> tag in HTML messages. Optional.
-     */
-    private String contentId;
-    /**
-     * The nature of the data in the attachment. Optional.
-     */
-    private String contentType;
-    /**
-     * true if the attachment is an inline attachment; otherwise, false. Optional.
-     */
-    private Boolean isInline;
-    /**
-     * The display name of the attachment. This can be a descriptive string and doesn't have to be the actual file name. Required.
-     */
-    private String name;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The length of the attachment in bytes. Required.
-     */
-    private Long size;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new AttachmentItem and sets the default values.
      */
     public AttachmentItem() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -63,7 +40,12 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the attachmentType property value. The type of attachment. Possible values are: file, item, reference. Required.
@@ -71,7 +53,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public AttachmentType getAttachmentType() {
-        return this.attachmentType;
+        return this.backingStore.get("attachmentType");
     }
     /**
      * Gets the contentId property value. The CID or Content-Id of the attachment for referencing for the in-line attachments using the <img src='cid:contentId'> tag in HTML messages. Optional.
@@ -79,7 +61,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getContentId() {
-        return this.contentId;
+        return this.backingStore.get("contentId");
     }
     /**
      * Gets the contentType property value. The nature of the data in the attachment. Optional.
@@ -87,7 +69,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getContentType() {
-        return this.contentType;
+        return this.backingStore.get("contentType");
     }
     /**
      * The deserialization information for the current model
@@ -111,7 +93,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsInline() {
-        return this.isInline;
+        return this.backingStore.get("isInline");
     }
     /**
      * Gets the name property value. The display name of the attachment. This can be a descriptive string and doesn't have to be the actual file name. Required.
@@ -119,7 +101,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -127,7 +109,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the size property value. The length of the attachment in bytes. Required.
@@ -135,7 +117,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getSize() {
-        return this.size;
+        return this.backingStore.get("size");
     }
     /**
      * Serializes information the current object
@@ -157,55 +139,55 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the attachmentType property value. The type of attachment. Possible values are: file, item, reference. Required.
      * @param value Value to set for the attachmentType property.
      */
     public void setAttachmentType(@jakarta.annotation.Nullable final AttachmentType value) {
-        this.attachmentType = value;
+        this.backingStore.set("attachmentType", value);
     }
     /**
      * Sets the contentId property value. The CID or Content-Id of the attachment for referencing for the in-line attachments using the <img src='cid:contentId'> tag in HTML messages. Optional.
      * @param value Value to set for the contentId property.
      */
     public void setContentId(@jakarta.annotation.Nullable final String value) {
-        this.contentId = value;
+        this.backingStore.set("contentId", value);
     }
     /**
      * Sets the contentType property value. The nature of the data in the attachment. Optional.
      * @param value Value to set for the contentType property.
      */
     public void setContentType(@jakarta.annotation.Nullable final String value) {
-        this.contentType = value;
+        this.backingStore.set("contentType", value);
     }
     /**
      * Sets the isInline property value. true if the attachment is an inline attachment; otherwise, false. Optional.
      * @param value Value to set for the isInline property.
      */
     public void setIsInline(@jakarta.annotation.Nullable final Boolean value) {
-        this.isInline = value;
+        this.backingStore.set("isInline", value);
     }
     /**
      * Sets the name property value. The display name of the attachment. This can be a descriptive string and doesn't have to be the actual file name. Required.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the size property value. The length of the attachment in bytes. Required.
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Long value) {
-        this.size = value;
+        this.backingStore.set("size", value);
     }
 }

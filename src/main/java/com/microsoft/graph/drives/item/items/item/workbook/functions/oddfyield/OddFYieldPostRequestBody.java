@@ -5,55 +5,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class OddFYieldPostRequestBody implements AdditionalDataHolder, Parsable {
+public class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The basis property
-     */
-    private Json basis;
-    /**
-     * The firstCoupon property
-     */
-    private Json firstCoupon;
-    /**
-     * The frequency property
-     */
-    private Json frequency;
-    /**
-     * The issue property
-     */
-    private Json issue;
-    /**
-     * The maturity property
-     */
-    private Json maturity;
-    /**
-     * The pr property
-     */
-    private Json pr;
-    /**
-     * The rate property
-     */
-    private Json rate;
-    /**
-     * The redemption property
-     */
-    private Json redemption;
-    /**
-     * The settlement property
-     */
-    private Json settlement;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new OddFYieldPostRequestBody and sets the default values.
      */
     public OddFYieldPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -72,7 +41,12 @@ public class OddFYieldPostRequestBody implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the basis property value. The basis property
@@ -80,7 +54,7 @@ public class OddFYieldPostRequestBody implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public Json getBasis() {
-        return this.basis;
+        return this.backingStore.get("basis");
     }
     /**
      * The deserialization information for the current model
@@ -106,7 +80,7 @@ public class OddFYieldPostRequestBody implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public Json getFirstCoupon() {
-        return this.firstCoupon;
+        return this.backingStore.get("firstCoupon");
     }
     /**
      * Gets the frequency property value. The frequency property
@@ -114,7 +88,7 @@ public class OddFYieldPostRequestBody implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public Json getFrequency() {
-        return this.frequency;
+        return this.backingStore.get("frequency");
     }
     /**
      * Gets the issue property value. The issue property
@@ -122,7 +96,7 @@ public class OddFYieldPostRequestBody implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public Json getIssue() {
-        return this.issue;
+        return this.backingStore.get("issue");
     }
     /**
      * Gets the maturity property value. The maturity property
@@ -130,7 +104,7 @@ public class OddFYieldPostRequestBody implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public Json getMaturity() {
-        return this.maturity;
+        return this.backingStore.get("maturity");
     }
     /**
      * Gets the pr property value. The pr property
@@ -138,7 +112,7 @@ public class OddFYieldPostRequestBody implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public Json getPr() {
-        return this.pr;
+        return this.backingStore.get("pr");
     }
     /**
      * Gets the rate property value. The rate property
@@ -146,7 +120,7 @@ public class OddFYieldPostRequestBody implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public Json getRate() {
-        return this.rate;
+        return this.backingStore.get("rate");
     }
     /**
      * Gets the redemption property value. The redemption property
@@ -154,7 +128,7 @@ public class OddFYieldPostRequestBody implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public Json getRedemption() {
-        return this.redemption;
+        return this.backingStore.get("redemption");
     }
     /**
      * Gets the settlement property value. The settlement property
@@ -162,7 +136,7 @@ public class OddFYieldPostRequestBody implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public Json getSettlement() {
-        return this.settlement;
+        return this.backingStore.get("settlement");
     }
     /**
      * Serializes information the current object
@@ -186,69 +160,69 @@ public class OddFYieldPostRequestBody implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the basis property value. The basis property
      * @param value Value to set for the basis property.
      */
     public void setBasis(@jakarta.annotation.Nullable final Json value) {
-        this.basis = value;
+        this.backingStore.set("basis", value);
     }
     /**
      * Sets the firstCoupon property value. The firstCoupon property
      * @param value Value to set for the firstCoupon property.
      */
     public void setFirstCoupon(@jakarta.annotation.Nullable final Json value) {
-        this.firstCoupon = value;
+        this.backingStore.set("firstCoupon", value);
     }
     /**
      * Sets the frequency property value. The frequency property
      * @param value Value to set for the frequency property.
      */
     public void setFrequency(@jakarta.annotation.Nullable final Json value) {
-        this.frequency = value;
+        this.backingStore.set("frequency", value);
     }
     /**
      * Sets the issue property value. The issue property
      * @param value Value to set for the issue property.
      */
     public void setIssue(@jakarta.annotation.Nullable final Json value) {
-        this.issue = value;
+        this.backingStore.set("issue", value);
     }
     /**
      * Sets the maturity property value. The maturity property
      * @param value Value to set for the maturity property.
      */
     public void setMaturity(@jakarta.annotation.Nullable final Json value) {
-        this.maturity = value;
+        this.backingStore.set("maturity", value);
     }
     /**
      * Sets the pr property value. The pr property
      * @param value Value to set for the pr property.
      */
     public void setPr(@jakarta.annotation.Nullable final Json value) {
-        this.pr = value;
+        this.backingStore.set("pr", value);
     }
     /**
      * Sets the rate property value. The rate property
      * @param value Value to set for the rate property.
      */
     public void setRate(@jakarta.annotation.Nullable final Json value) {
-        this.rate = value;
+        this.backingStore.set("rate", value);
     }
     /**
      * Sets the redemption property value. The redemption property
      * @param value Value to set for the redemption property.
      */
     public void setRedemption(@jakarta.annotation.Nullable final Json value) {
-        this.redemption = value;
+        this.backingStore.set("redemption", value);
     }
     /**
      * Sets the settlement property value. The settlement property
      * @param value Value to set for the settlement property.
      */
     public void setSettlement(@jakarta.annotation.Nullable final Json value) {
-        this.settlement = value;
+        this.backingStore.set("settlement", value);
     }
 }

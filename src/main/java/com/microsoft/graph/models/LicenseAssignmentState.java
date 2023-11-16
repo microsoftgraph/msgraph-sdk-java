@@ -4,49 +4,26 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
+public class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The assignedByGroup property
-     */
-    private String assignedByGroup;
-    /**
-     * The disabledPlans property
-     */
-    private java.util.List<UUID> disabledPlans;
-    /**
-     * The error property
-     */
-    private String error;
-    /**
-     * The lastUpdatedDateTime property
-     */
-    private OffsetDateTime lastUpdatedDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The skuId property
-     */
-    private UUID skuId;
-    /**
-     * The state property
-     */
-    private String state;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new LicenseAssignmentState and sets the default values.
      */
     public LicenseAssignmentState() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -65,7 +42,12 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the assignedByGroup property value. The assignedByGroup property
@@ -73,7 +55,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAssignedByGroup() {
-        return this.assignedByGroup;
+        return this.backingStore.get("assignedByGroup");
     }
     /**
      * Gets the disabledPlans property value. The disabledPlans property
@@ -81,7 +63,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<UUID> getDisabledPlans() {
-        return this.disabledPlans;
+        return this.backingStore.get("disabledPlans");
     }
     /**
      * Gets the error property value. The error property
@@ -89,7 +71,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getError() {
-        return this.error;
+        return this.backingStore.get("error");
     }
     /**
      * The deserialization information for the current model
@@ -113,7 +95,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
-        return this.lastUpdatedDateTime;
+        return this.backingStore.get("lastUpdatedDateTime");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -121,7 +103,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the skuId property value. The skuId property
@@ -129,7 +111,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getSkuId() {
-        return this.skuId;
+        return this.backingStore.get("skuId");
     }
     /**
      * Gets the state property value. The state property
@@ -137,7 +119,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getState() {
-        return this.state;
+        return this.backingStore.get("state");
     }
     /**
      * Serializes information the current object
@@ -159,55 +141,55 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the assignedByGroup property value. The assignedByGroup property
      * @param value Value to set for the assignedByGroup property.
      */
     public void setAssignedByGroup(@jakarta.annotation.Nullable final String value) {
-        this.assignedByGroup = value;
+        this.backingStore.set("assignedByGroup", value);
     }
     /**
      * Sets the disabledPlans property value. The disabledPlans property
      * @param value Value to set for the disabledPlans property.
      */
     public void setDisabledPlans(@jakarta.annotation.Nullable final java.util.List<UUID> value) {
-        this.disabledPlans = value;
+        this.backingStore.set("disabledPlans", value);
     }
     /**
      * Sets the error property value. The error property
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final String value) {
-        this.error = value;
+        this.backingStore.set("error", value);
     }
     /**
      * Sets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
      * @param value Value to set for the lastUpdatedDateTime property.
      */
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastUpdatedDateTime = value;
+        this.backingStore.set("lastUpdatedDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the skuId property value. The skuId property
      * @param value Value to set for the skuId property.
      */
     public void setSkuId(@jakarta.annotation.Nullable final UUID value) {
-        this.skuId = value;
+        this.backingStore.set("skuId", value);
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final String value) {
-        this.state = value;
+        this.backingStore.set("state", value);
     }
 }

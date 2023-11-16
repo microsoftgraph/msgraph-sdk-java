@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * Initiator of the event.
-     */
-    private IdentitySet initiator;
-    /**
-     * Represents whether the meeting chat is enabled or not.
-     */
-    private Boolean meetingChatEnabled;
-    /**
-     * Unique identifier of the meeting chat.
-     */
-    private String meetingChatId;
-    /**
      * Instantiates a new MeetingPolicyUpdatedEventMessageDetail and sets the default values.
      */
     public MeetingPolicyUpdatedEventMessageDetail() {
@@ -55,7 +43,7 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this.initiator;
+        return this.backingStore.get("initiator");
     }
     /**
      * Gets the meetingChatEnabled property value. Represents whether the meeting chat is enabled or not.
@@ -63,7 +51,7 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
      */
     @jakarta.annotation.Nullable
     public Boolean getMeetingChatEnabled() {
-        return this.meetingChatEnabled;
+        return this.backingStore.get("meetingChatEnabled");
     }
     /**
      * Gets the meetingChatId property value. Unique identifier of the meeting chat.
@@ -71,7 +59,7 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
      */
     @jakarta.annotation.Nullable
     public String getMeetingChatId() {
-        return this.meetingChatId;
+        return this.backingStore.get("meetingChatId");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
      * @param value Value to set for the initiator property.
      */
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.initiator = value;
+        this.backingStore.set("initiator", value);
     }
     /**
      * Sets the meetingChatEnabled property value. Represents whether the meeting chat is enabled or not.
      * @param value Value to set for the meetingChatEnabled property.
      */
     public void setMeetingChatEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.meetingChatEnabled = value;
+        this.backingStore.set("meetingChatEnabled", value);
     }
     /**
      * Sets the meetingChatId property value. Unique identifier of the meeting chat.
      * @param value Value to set for the meetingChatId property.
      */
     public void setMeetingChatId(@jakarta.annotation.Nullable final String value) {
-        this.meetingChatId = value;
+        this.backingStore.set("meetingChatId", value);
     }
 }

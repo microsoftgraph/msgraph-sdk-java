@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CommsOperation extends Entity implements Parsable {
     /**
-     * Unique Client Context string. Max limit is 256 chars.
-     */
-    private String clientContext;
-    /**
-     * The result information. Read-only.
-     */
-    private ResultInfo resultInfo;
-    /**
-     * The status property
-     */
-    private OperationStatus status;
-    /**
      * Instantiates a new CommsOperation and sets the default values.
      */
     public CommsOperation() {
@@ -59,7 +47,7 @@ public class CommsOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getClientContext() {
-        return this.clientContext;
+        return this.backingStore.get("clientContext");
     }
     /**
      * The deserialization information for the current model
@@ -79,7 +67,7 @@ public class CommsOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ResultInfo getResultInfo() {
-        return this.resultInfo;
+        return this.backingStore.get("resultInfo");
     }
     /**
      * Gets the status property value. The status property
@@ -87,7 +75,7 @@ public class CommsOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OperationStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -105,20 +93,20 @@ public class CommsOperation extends Entity implements Parsable {
      * @param value Value to set for the clientContext property.
      */
     public void setClientContext(@jakarta.annotation.Nullable final String value) {
-        this.clientContext = value;
+        this.backingStore.set("clientContext", value);
     }
     /**
      * Sets the resultInfo property value. The result information. Read-only.
      * @param value Value to set for the resultInfo property.
      */
     public void setResultInfo(@jakarta.annotation.Nullable final ResultInfo value) {
-        this.resultInfo = value;
+        this.backingStore.set("resultInfo", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final OperationStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
 }

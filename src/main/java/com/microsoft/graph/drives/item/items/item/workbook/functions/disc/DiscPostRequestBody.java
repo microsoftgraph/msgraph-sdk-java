@@ -5,39 +5,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DiscPostRequestBody implements AdditionalDataHolder, Parsable {
+public class DiscPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The basis property
-     */
-    private Json basis;
-    /**
-     * The maturity property
-     */
-    private Json maturity;
-    /**
-     * The pr property
-     */
-    private Json pr;
-    /**
-     * The redemption property
-     */
-    private Json redemption;
-    /**
-     * The settlement property
-     */
-    private Json settlement;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new DiscPostRequestBody and sets the default values.
      */
     public DiscPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -56,7 +41,12 @@ public class DiscPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the basis property value. The basis property
@@ -64,7 +54,7 @@ public class DiscPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getBasis() {
-        return this.basis;
+        return this.backingStore.get("basis");
     }
     /**
      * The deserialization information for the current model
@@ -86,7 +76,7 @@ public class DiscPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getMaturity() {
-        return this.maturity;
+        return this.backingStore.get("maturity");
     }
     /**
      * Gets the pr property value. The pr property
@@ -94,7 +84,7 @@ public class DiscPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getPr() {
-        return this.pr;
+        return this.backingStore.get("pr");
     }
     /**
      * Gets the redemption property value. The redemption property
@@ -102,7 +92,7 @@ public class DiscPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getRedemption() {
-        return this.redemption;
+        return this.backingStore.get("redemption");
     }
     /**
      * Gets the settlement property value. The settlement property
@@ -110,7 +100,7 @@ public class DiscPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getSettlement() {
-        return this.settlement;
+        return this.backingStore.get("settlement");
     }
     /**
      * Serializes information the current object
@@ -130,41 +120,41 @@ public class DiscPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the basis property value. The basis property
      * @param value Value to set for the basis property.
      */
     public void setBasis(@jakarta.annotation.Nullable final Json value) {
-        this.basis = value;
+        this.backingStore.set("basis", value);
     }
     /**
      * Sets the maturity property value. The maturity property
      * @param value Value to set for the maturity property.
      */
     public void setMaturity(@jakarta.annotation.Nullable final Json value) {
-        this.maturity = value;
+        this.backingStore.set("maturity", value);
     }
     /**
      * Sets the pr property value. The pr property
      * @param value Value to set for the pr property.
      */
     public void setPr(@jakarta.annotation.Nullable final Json value) {
-        this.pr = value;
+        this.backingStore.set("pr", value);
     }
     /**
      * Sets the redemption property value. The redemption property
      * @param value Value to set for the redemption property.
      */
     public void setRedemption(@jakarta.annotation.Nullable final Json value) {
-        this.redemption = value;
+        this.backingStore.set("redemption", value);
     }
     /**
      * Sets the settlement property value. The settlement property
      * @param value Value to set for the settlement property.
      */
     public void setSettlement(@jakarta.annotation.Nullable final Json value) {
-        this.settlement = value;
+        this.backingStore.set("settlement", value);
     }
 }

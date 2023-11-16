@@ -12,50 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Entity implements Parsable {
     /**
-     * The percentage of devices for which OS check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double osCheckFailedPercentage;
-    /**
-     * The percentage of devices for which processor hardware 64-bit architecture check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double processor64BitCheckFailedPercentage;
-    /**
-     * The percentage of devices for which processor hardware core count check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double processorCoreCountCheckFailedPercentage;
-    /**
-     * The percentage of devices for which processor hardware family check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double processorFamilyCheckFailedPercentage;
-    /**
-     * The percentage of devices for which processor hardware speed check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double processorSpeedCheckFailedPercentage;
-    /**
-     * The percentage of devices for which RAM hardware check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double ramCheckFailedPercentage;
-    /**
-     * The percentage of devices for which secure boot hardware check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double secureBootCheckFailedPercentage;
-    /**
-     * The percentage of devices for which storage hardware check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double storageCheckFailedPercentage;
-    /**
-     * The count of total devices in an organization. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer totalDeviceCount;
-    /**
-     * The percentage of devices for which Trusted Platform Module (TPM) hardware check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double tpmCheckFailedPercentage;
-    /**
-     * The count of devices in an organization eligible for windows upgrade. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer upgradeEligibleDeviceCount;
-    /**
      * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric and sets the default values.
      */
     public UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric() {
@@ -97,7 +53,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
      */
     @jakarta.annotation.Nullable
     public Double getOsCheckFailedPercentage() {
-        return this.osCheckFailedPercentage;
+        return this.backingStore.get("osCheckFailedPercentage");
     }
     /**
      * Gets the processor64BitCheckFailedPercentage property value. The percentage of devices for which processor hardware 64-bit architecture check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -105,7 +61,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
      */
     @jakarta.annotation.Nullable
     public Double getProcessor64BitCheckFailedPercentage() {
-        return this.processor64BitCheckFailedPercentage;
+        return this.backingStore.get("processor64BitCheckFailedPercentage");
     }
     /**
      * Gets the processorCoreCountCheckFailedPercentage property value. The percentage of devices for which processor hardware core count check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -113,7 +69,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
      */
     @jakarta.annotation.Nullable
     public Double getProcessorCoreCountCheckFailedPercentage() {
-        return this.processorCoreCountCheckFailedPercentage;
+        return this.backingStore.get("processorCoreCountCheckFailedPercentage");
     }
     /**
      * Gets the processorFamilyCheckFailedPercentage property value. The percentage of devices for which processor hardware family check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -121,7 +77,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
      */
     @jakarta.annotation.Nullable
     public Double getProcessorFamilyCheckFailedPercentage() {
-        return this.processorFamilyCheckFailedPercentage;
+        return this.backingStore.get("processorFamilyCheckFailedPercentage");
     }
     /**
      * Gets the processorSpeedCheckFailedPercentage property value. The percentage of devices for which processor hardware speed check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -129,7 +85,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
      */
     @jakarta.annotation.Nullable
     public Double getProcessorSpeedCheckFailedPercentage() {
-        return this.processorSpeedCheckFailedPercentage;
+        return this.backingStore.get("processorSpeedCheckFailedPercentage");
     }
     /**
      * Gets the ramCheckFailedPercentage property value. The percentage of devices for which RAM hardware check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -137,7 +93,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
      */
     @jakarta.annotation.Nullable
     public Double getRamCheckFailedPercentage() {
-        return this.ramCheckFailedPercentage;
+        return this.backingStore.get("ramCheckFailedPercentage");
     }
     /**
      * Gets the secureBootCheckFailedPercentage property value. The percentage of devices for which secure boot hardware check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -145,7 +101,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
      */
     @jakarta.annotation.Nullable
     public Double getSecureBootCheckFailedPercentage() {
-        return this.secureBootCheckFailedPercentage;
+        return this.backingStore.get("secureBootCheckFailedPercentage");
     }
     /**
      * Gets the storageCheckFailedPercentage property value. The percentage of devices for which storage hardware check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -153,7 +109,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
      */
     @jakarta.annotation.Nullable
     public Double getStorageCheckFailedPercentage() {
-        return this.storageCheckFailedPercentage;
+        return this.backingStore.get("storageCheckFailedPercentage");
     }
     /**
      * Gets the totalDeviceCount property value. The count of total devices in an organization. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
@@ -161,7 +117,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
      */
     @jakarta.annotation.Nullable
     public Integer getTotalDeviceCount() {
-        return this.totalDeviceCount;
+        return this.backingStore.get("totalDeviceCount");
     }
     /**
      * Gets the tpmCheckFailedPercentage property value. The percentage of devices for which Trusted Platform Module (TPM) hardware check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -169,7 +125,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
      */
     @jakarta.annotation.Nullable
     public Double getTpmCheckFailedPercentage() {
-        return this.tpmCheckFailedPercentage;
+        return this.backingStore.get("tpmCheckFailedPercentage");
     }
     /**
      * Gets the upgradeEligibleDeviceCount property value. The count of devices in an organization eligible for windows upgrade. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
@@ -177,7 +133,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
      */
     @jakarta.annotation.Nullable
     public Integer getUpgradeEligibleDeviceCount() {
-        return this.upgradeEligibleDeviceCount;
+        return this.backingStore.get("upgradeEligibleDeviceCount");
     }
     /**
      * Serializes information the current object
@@ -203,76 +159,76 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
      * @param value Value to set for the osCheckFailedPercentage property.
      */
     public void setOsCheckFailedPercentage(@jakarta.annotation.Nullable final Double value) {
-        this.osCheckFailedPercentage = value;
+        this.backingStore.set("osCheckFailedPercentage", value);
     }
     /**
      * Sets the processor64BitCheckFailedPercentage property value. The percentage of devices for which processor hardware 64-bit architecture check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the processor64BitCheckFailedPercentage property.
      */
     public void setProcessor64BitCheckFailedPercentage(@jakarta.annotation.Nullable final Double value) {
-        this.processor64BitCheckFailedPercentage = value;
+        this.backingStore.set("processor64BitCheckFailedPercentage", value);
     }
     /**
      * Sets the processorCoreCountCheckFailedPercentage property value. The percentage of devices for which processor hardware core count check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the processorCoreCountCheckFailedPercentage property.
      */
     public void setProcessorCoreCountCheckFailedPercentage(@jakarta.annotation.Nullable final Double value) {
-        this.processorCoreCountCheckFailedPercentage = value;
+        this.backingStore.set("processorCoreCountCheckFailedPercentage", value);
     }
     /**
      * Sets the processorFamilyCheckFailedPercentage property value. The percentage of devices for which processor hardware family check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the processorFamilyCheckFailedPercentage property.
      */
     public void setProcessorFamilyCheckFailedPercentage(@jakarta.annotation.Nullable final Double value) {
-        this.processorFamilyCheckFailedPercentage = value;
+        this.backingStore.set("processorFamilyCheckFailedPercentage", value);
     }
     /**
      * Sets the processorSpeedCheckFailedPercentage property value. The percentage of devices for which processor hardware speed check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the processorSpeedCheckFailedPercentage property.
      */
     public void setProcessorSpeedCheckFailedPercentage(@jakarta.annotation.Nullable final Double value) {
-        this.processorSpeedCheckFailedPercentage = value;
+        this.backingStore.set("processorSpeedCheckFailedPercentage", value);
     }
     /**
      * Sets the ramCheckFailedPercentage property value. The percentage of devices for which RAM hardware check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the ramCheckFailedPercentage property.
      */
     public void setRamCheckFailedPercentage(@jakarta.annotation.Nullable final Double value) {
-        this.ramCheckFailedPercentage = value;
+        this.backingStore.set("ramCheckFailedPercentage", value);
     }
     /**
      * Sets the secureBootCheckFailedPercentage property value. The percentage of devices for which secure boot hardware check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the secureBootCheckFailedPercentage property.
      */
     public void setSecureBootCheckFailedPercentage(@jakarta.annotation.Nullable final Double value) {
-        this.secureBootCheckFailedPercentage = value;
+        this.backingStore.set("secureBootCheckFailedPercentage", value);
     }
     /**
      * Sets the storageCheckFailedPercentage property value. The percentage of devices for which storage hardware check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the storageCheckFailedPercentage property.
      */
     public void setStorageCheckFailedPercentage(@jakarta.annotation.Nullable final Double value) {
-        this.storageCheckFailedPercentage = value;
+        this.backingStore.set("storageCheckFailedPercentage", value);
     }
     /**
      * Sets the totalDeviceCount property value. The count of total devices in an organization. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the totalDeviceCount property.
      */
     public void setTotalDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.totalDeviceCount = value;
+        this.backingStore.set("totalDeviceCount", value);
     }
     /**
      * Sets the tpmCheckFailedPercentage property value. The percentage of devices for which Trusted Platform Module (TPM) hardware check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the tpmCheckFailedPercentage property.
      */
     public void setTpmCheckFailedPercentage(@jakarta.annotation.Nullable final Double value) {
-        this.tpmCheckFailedPercentage = value;
+        this.backingStore.set("tpmCheckFailedPercentage", value);
     }
     /**
      * Sets the upgradeEligibleDeviceCount property value. The count of devices in an organization eligible for windows upgrade. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the upgradeEligibleDeviceCount property.
      */
     public void setUpgradeEligibleDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.upgradeEligibleDeviceCount = value;
+        this.backingStore.set("upgradeEligibleDeviceCount", value);
     }
 }

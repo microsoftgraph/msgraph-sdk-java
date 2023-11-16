@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessReviewInstanceDecisionItemResource implements Parsable {
     /**
-     * Details of the scope this role is associated with.
-     */
-    private AccessReviewInstanceDecisionItemResource scope;
-    /**
      * Instantiates a new AccessReviewInstanceDecisionItemAzureRoleResource and sets the default values.
      */
     public AccessReviewInstanceDecisionItemAzureRoleResource() {
@@ -45,7 +41,7 @@ public class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessRev
      */
     @jakarta.annotation.Nullable
     public AccessReviewInstanceDecisionItemResource getScope() {
-        return this.scope;
+        return this.backingStore.get("scope");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessRev
      * @param value Value to set for the scope property.
      */
     public void setScope(@jakarta.annotation.Nullable final AccessReviewInstanceDecisionItemResource value) {
-        this.scope = value;
+        this.backingStore.set("scope", value);
     }
 }

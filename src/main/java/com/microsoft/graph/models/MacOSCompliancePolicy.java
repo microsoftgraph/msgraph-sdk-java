@@ -12,74 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable {
     /**
-     * Require that devices have enabled device threat protection.
-     */
-    private Boolean deviceThreatProtectionEnabled;
-    /**
-     * Device threat protection levels for the Device Threat Protection API.
-     */
-    private DeviceThreatProtectionLevel deviceThreatProtectionRequiredSecurityLevel;
-    /**
-     * Corresponds to the 'Block all incoming connections' option.
-     */
-    private Boolean firewallBlockAllIncoming;
-    /**
-     * Whether the firewall should be enabled or not.
-     */
-    private Boolean firewallEnabled;
-    /**
-     * Corresponds to 'Enable stealth mode.'
-     */
-    private Boolean firewallEnableStealthMode;
-    /**
-     * Maximum MacOS version.
-     */
-    private String osMaximumVersion;
-    /**
-     * Minimum MacOS version.
-     */
-    private String osMinimumVersion;
-    /**
-     * Indicates whether or not to block simple passwords.
-     */
-    private Boolean passwordBlockSimple;
-    /**
-     * Number of days before the password expires. Valid values 1 to 65535
-     */
-    private Integer passwordExpirationDays;
-    /**
-     * The number of character sets required in the password.
-     */
-    private Integer passwordMinimumCharacterSetCount;
-    /**
-     * Minimum length of password. Valid values 4 to 14
-     */
-    private Integer passwordMinimumLength;
-    /**
-     * Minutes of inactivity before a password is required.
-     */
-    private Integer passwordMinutesOfInactivityBeforeLock;
-    /**
-     * Number of previous passwords to block. Valid values 1 to 24
-     */
-    private Integer passwordPreviousPasswordBlockCount;
-    /**
-     * Whether or not to require a password.
-     */
-    private Boolean passwordRequired;
-    /**
-     * Possible values of required passwords.
-     */
-    private RequiredPasswordType passwordRequiredType;
-    /**
-     * Require encryption on Mac OS devices.
-     */
-    private Boolean storageRequireEncryption;
-    /**
-     * Require that devices have enabled system integrity protection.
-     */
-    private Boolean systemIntegrityProtectionEnabled;
-    /**
      * Instantiates a new MacOSCompliancePolicy and sets the default values.
      */
     public MacOSCompliancePolicy() {
@@ -102,7 +34,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceThreatProtectionEnabled() {
-        return this.deviceThreatProtectionEnabled;
+        return this.backingStore.get("deviceThreatProtectionEnabled");
     }
     /**
      * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
@@ -110,7 +42,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @jakarta.annotation.Nullable
     public DeviceThreatProtectionLevel getDeviceThreatProtectionRequiredSecurityLevel() {
-        return this.deviceThreatProtectionRequiredSecurityLevel;
+        return this.backingStore.get("deviceThreatProtectionRequiredSecurityLevel");
     }
     /**
      * The deserialization information for the current model
@@ -144,7 +76,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @jakarta.annotation.Nullable
     public Boolean getFirewallBlockAllIncoming() {
-        return this.firewallBlockAllIncoming;
+        return this.backingStore.get("firewallBlockAllIncoming");
     }
     /**
      * Gets the firewallEnabled property value. Whether the firewall should be enabled or not.
@@ -152,7 +84,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @jakarta.annotation.Nullable
     public Boolean getFirewallEnabled() {
-        return this.firewallEnabled;
+        return this.backingStore.get("firewallEnabled");
     }
     /**
      * Gets the firewallEnableStealthMode property value. Corresponds to 'Enable stealth mode.'
@@ -160,7 +92,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @jakarta.annotation.Nullable
     public Boolean getFirewallEnableStealthMode() {
-        return this.firewallEnableStealthMode;
+        return this.backingStore.get("firewallEnableStealthMode");
     }
     /**
      * Gets the osMaximumVersion property value. Maximum MacOS version.
@@ -168,7 +100,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @jakarta.annotation.Nullable
     public String getOsMaximumVersion() {
-        return this.osMaximumVersion;
+        return this.backingStore.get("osMaximumVersion");
     }
     /**
      * Gets the osMinimumVersion property value. Minimum MacOS version.
@@ -176,7 +108,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @jakarta.annotation.Nullable
     public String getOsMinimumVersion() {
-        return this.osMinimumVersion;
+        return this.backingStore.get("osMinimumVersion");
     }
     /**
      * Gets the passwordBlockSimple property value. Indicates whether or not to block simple passwords.
@@ -184,7 +116,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockSimple() {
-        return this.passwordBlockSimple;
+        return this.backingStore.get("passwordBlockSimple");
     }
     /**
      * Gets the passwordExpirationDays property value. Number of days before the password expires. Valid values 1 to 65535
@@ -192,7 +124,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
-        return this.passwordExpirationDays;
+        return this.backingStore.get("passwordExpirationDays");
     }
     /**
      * Gets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
@@ -200,7 +132,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumCharacterSetCount() {
-        return this.passwordMinimumCharacterSetCount;
+        return this.backingStore.get("passwordMinimumCharacterSetCount");
     }
     /**
      * Gets the passwordMinimumLength property value. Minimum length of password. Valid values 4 to 14
@@ -208,7 +140,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
-        return this.passwordMinimumLength;
+        return this.backingStore.get("passwordMinimumLength");
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
@@ -216,7 +148,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeLock() {
-        return this.passwordMinutesOfInactivityBeforeLock;
+        return this.backingStore.get("passwordMinutesOfInactivityBeforeLock");
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 1 to 24
@@ -224,7 +156,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
-        return this.passwordPreviousPasswordBlockCount;
+        return this.backingStore.get("passwordPreviousPasswordBlockCount");
     }
     /**
      * Gets the passwordRequired property value. Whether or not to require a password.
@@ -232,7 +164,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRequired() {
-        return this.passwordRequired;
+        return this.backingStore.get("passwordRequired");
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
@@ -240,7 +172,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @jakarta.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {
-        return this.passwordRequiredType;
+        return this.backingStore.get("passwordRequiredType");
     }
     /**
      * Gets the storageRequireEncryption property value. Require encryption on Mac OS devices.
@@ -248,7 +180,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageRequireEncryption() {
-        return this.storageRequireEncryption;
+        return this.backingStore.get("storageRequireEncryption");
     }
     /**
      * Gets the systemIntegrityProtectionEnabled property value. Require that devices have enabled system integrity protection.
@@ -256,7 +188,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @jakarta.annotation.Nullable
     public Boolean getSystemIntegrityProtectionEnabled() {
-        return this.systemIntegrityProtectionEnabled;
+        return this.backingStore.get("systemIntegrityProtectionEnabled");
     }
     /**
      * Serializes information the current object
@@ -288,118 +220,118 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the deviceThreatProtectionEnabled property.
      */
     public void setDeviceThreatProtectionEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.deviceThreatProtectionEnabled = value;
+        this.backingStore.set("deviceThreatProtectionEnabled", value);
     }
     /**
      * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      * @param value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
      */
     public void setDeviceThreatProtectionRequiredSecurityLevel(@jakarta.annotation.Nullable final DeviceThreatProtectionLevel value) {
-        this.deviceThreatProtectionRequiredSecurityLevel = value;
+        this.backingStore.set("deviceThreatProtectionRequiredSecurityLevel", value);
     }
     /**
      * Sets the firewallBlockAllIncoming property value. Corresponds to the 'Block all incoming connections' option.
      * @param value Value to set for the firewallBlockAllIncoming property.
      */
     public void setFirewallBlockAllIncoming(@jakarta.annotation.Nullable final Boolean value) {
-        this.firewallBlockAllIncoming = value;
+        this.backingStore.set("firewallBlockAllIncoming", value);
     }
     /**
      * Sets the firewallEnabled property value. Whether the firewall should be enabled or not.
      * @param value Value to set for the firewallEnabled property.
      */
     public void setFirewallEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.firewallEnabled = value;
+        this.backingStore.set("firewallEnabled", value);
     }
     /**
      * Sets the firewallEnableStealthMode property value. Corresponds to 'Enable stealth mode.'
      * @param value Value to set for the firewallEnableStealthMode property.
      */
     public void setFirewallEnableStealthMode(@jakarta.annotation.Nullable final Boolean value) {
-        this.firewallEnableStealthMode = value;
+        this.backingStore.set("firewallEnableStealthMode", value);
     }
     /**
      * Sets the osMaximumVersion property value. Maximum MacOS version.
      * @param value Value to set for the osMaximumVersion property.
      */
     public void setOsMaximumVersion(@jakarta.annotation.Nullable final String value) {
-        this.osMaximumVersion = value;
+        this.backingStore.set("osMaximumVersion", value);
     }
     /**
      * Sets the osMinimumVersion property value. Minimum MacOS version.
      * @param value Value to set for the osMinimumVersion property.
      */
     public void setOsMinimumVersion(@jakarta.annotation.Nullable final String value) {
-        this.osMinimumVersion = value;
+        this.backingStore.set("osMinimumVersion", value);
     }
     /**
      * Sets the passwordBlockSimple property value. Indicates whether or not to block simple passwords.
      * @param value Value to set for the passwordBlockSimple property.
      */
     public void setPasswordBlockSimple(@jakarta.annotation.Nullable final Boolean value) {
-        this.passwordBlockSimple = value;
+        this.backingStore.set("passwordBlockSimple", value);
     }
     /**
      * Sets the passwordExpirationDays property value. Number of days before the password expires. Valid values 1 to 65535
      * @param value Value to set for the passwordExpirationDays property.
      */
     public void setPasswordExpirationDays(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordExpirationDays = value;
+        this.backingStore.set("passwordExpirationDays", value);
     }
     /**
      * Sets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
      */
     public void setPasswordMinimumCharacterSetCount(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordMinimumCharacterSetCount = value;
+        this.backingStore.set("passwordMinimumCharacterSetCount", value);
     }
     /**
      * Sets the passwordMinimumLength property value. Minimum length of password. Valid values 4 to 14
      * @param value Value to set for the passwordMinimumLength property.
      */
     public void setPasswordMinimumLength(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordMinimumLength = value;
+        this.backingStore.set("passwordMinimumLength", value);
     }
     /**
      * Sets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
      * @param value Value to set for the passwordMinutesOfInactivityBeforeLock property.
      */
     public void setPasswordMinutesOfInactivityBeforeLock(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordMinutesOfInactivityBeforeLock = value;
+        this.backingStore.set("passwordMinutesOfInactivityBeforeLock", value);
     }
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 1 to 24
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      */
     public void setPasswordPreviousPasswordBlockCount(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordPreviousPasswordBlockCount = value;
+        this.backingStore.set("passwordPreviousPasswordBlockCount", value);
     }
     /**
      * Sets the passwordRequired property value. Whether or not to require a password.
      * @param value Value to set for the passwordRequired property.
      */
     public void setPasswordRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.passwordRequired = value;
+        this.backingStore.set("passwordRequired", value);
     }
     /**
      * Sets the passwordRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passwordRequiredType property.
      */
     public void setPasswordRequiredType(@jakarta.annotation.Nullable final RequiredPasswordType value) {
-        this.passwordRequiredType = value;
+        this.backingStore.set("passwordRequiredType", value);
     }
     /**
      * Sets the storageRequireEncryption property value. Require encryption on Mac OS devices.
      * @param value Value to set for the storageRequireEncryption property.
      */
     public void setStorageRequireEncryption(@jakarta.annotation.Nullable final Boolean value) {
-        this.storageRequireEncryption = value;
+        this.backingStore.set("storageRequireEncryption", value);
     }
     /**
      * Sets the systemIntegrityProtectionEnabled property value. Require that devices have enabled system integrity protection.
      * @param value Value to set for the systemIntegrityProtectionEnabled property.
      */
     public void setSystemIntegrityProtectionEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.systemIntegrityProtectionEnabled = value;
+        this.backingStore.set("systemIntegrityProtectionEnabled", value);
     }
 }

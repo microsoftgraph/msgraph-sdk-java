@@ -11,10 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InvitePostResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<Permission> value;
-    /**
      * Instantiates a new InvitePostResponse and sets the default values.
      */
     public InvitePostResponse() {
@@ -46,7 +42,7 @@ public class InvitePostResponse extends BaseCollectionPaginationCountResponse im
      */
     @jakarta.annotation.Nullable
     public java.util.List<Permission> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class InvitePostResponse extends BaseCollectionPaginationCountResponse im
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<Permission> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

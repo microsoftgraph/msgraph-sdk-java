@@ -10,22 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceLocalCredential extends Entity implements Parsable {
     /**
-     * The name of the local admin account for which LAPS is enabled.
-     */
-    private String accountName;
-    /**
-     * The SID of the local admin account for which LAPS is enabled.
-     */
-    private String accountSid;
-    /**
-     * When the local administrator account credential for the device object was backed up to Azure Active Directory.
-     */
-    private OffsetDateTime backupDateTime;
-    /**
-     * The password for the local administrator account that is backed up to Azure Active Directory and returned as a Base64 encoded value.
-     */
-    private String passwordBase64;
-    /**
      * Instantiates a new DeviceLocalCredential and sets the default values.
      */
     public DeviceLocalCredential() {
@@ -47,7 +31,7 @@ public class DeviceLocalCredential extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAccountName() {
-        return this.accountName;
+        return this.backingStore.get("accountName");
     }
     /**
      * Gets the accountSid property value. The SID of the local admin account for which LAPS is enabled.
@@ -55,7 +39,7 @@ public class DeviceLocalCredential extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAccountSid() {
-        return this.accountSid;
+        return this.backingStore.get("accountSid");
     }
     /**
      * Gets the backupDateTime property value. When the local administrator account credential for the device object was backed up to Azure Active Directory.
@@ -63,7 +47,7 @@ public class DeviceLocalCredential extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getBackupDateTime() {
-        return this.backupDateTime;
+        return this.backingStore.get("backupDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -84,7 +68,7 @@ public class DeviceLocalCredential extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPasswordBase64() {
-        return this.passwordBase64;
+        return this.backingStore.get("passwordBase64");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class DeviceLocalCredential extends Entity implements Parsable {
      * @param value Value to set for the accountName property.
      */
     public void setAccountName(@jakarta.annotation.Nullable final String value) {
-        this.accountName = value;
+        this.backingStore.set("accountName", value);
     }
     /**
      * Sets the accountSid property value. The SID of the local admin account for which LAPS is enabled.
      * @param value Value to set for the accountSid property.
      */
     public void setAccountSid(@jakarta.annotation.Nullable final String value) {
-        this.accountSid = value;
+        this.backingStore.set("accountSid", value);
     }
     /**
      * Sets the backupDateTime property value. When the local administrator account credential for the device object was backed up to Azure Active Directory.
      * @param value Value to set for the backupDateTime property.
      */
     public void setBackupDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.backupDateTime = value;
+        this.backingStore.set("backupDateTime", value);
     }
     /**
      * Sets the passwordBase64 property value. The password for the local administrator account that is backed up to Azure Active Directory and returned as a Base64 encoded value.
      * @param value Value to set for the passwordBase64 property.
      */
     public void setPasswordBase64(@jakarta.annotation.Nullable final String value) {
-        this.passwordBase64 = value;
+        this.backingStore.set("passwordBase64", value);
     }
 }

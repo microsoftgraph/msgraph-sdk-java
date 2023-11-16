@@ -10,46 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamsAppDefinition extends Entity implements Parsable {
     /**
-     * Authorization requirements specified in the Teams app manifest.
-     */
-    private TeamsAppAuthorization authorization;
-    /**
-     * The details of the bot specified in the Teams app manifest.
-     */
-    private TeamworkBot bot;
-    /**
-     * The createdBy property
-     */
-    private IdentitySet createdBy;
-    /**
-     * Verbose description of the application.
-     */
-    private String description;
-    /**
-     * The name of the app provided by the app developer.
-     */
-    private String displayName;
-    /**
-     * The lastModifiedDateTime property
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The published status of a specific version of a Teams app. Possible values are:submittedThe specific version of the Teams app has been submitted and is under review. publishedThe request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejectedThe admin rejected the request to publish the specific version of the Teams app.
-     */
-    private TeamsAppPublishingState publishingState;
-    /**
-     * Short description of the application.
-     */
-    private String shortDescription;
-    /**
-     * The ID from the Teams app manifest.
-     */
-    private String teamsAppId;
-    /**
-     * The version number of the application.
-     */
-    private String version;
-    /**
      * Instantiates a new TeamsAppDefinition and sets the default values.
      */
     public TeamsAppDefinition() {
@@ -71,7 +31,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public TeamsAppAuthorization getAuthorization() {
-        return this.authorization;
+        return this.backingStore.get("authorization");
     }
     /**
      * Gets the bot property value. The details of the bot specified in the Teams app manifest.
@@ -79,7 +39,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public TeamworkBot getBot() {
-        return this.bot;
+        return this.backingStore.get("bot");
     }
     /**
      * Gets the createdBy property value. The createdBy property
@@ -87,7 +47,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this.createdBy;
+        return this.backingStore.get("createdBy");
     }
     /**
      * Gets the description property value. Verbose description of the application.
@@ -95,7 +55,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. The name of the app provided by the app developer.
@@ -103,7 +63,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -130,7 +90,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submittedThe specific version of the Teams app has been submitted and is under review. publishedThe request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejectedThe admin rejected the request to publish the specific version of the Teams app.
@@ -138,7 +98,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public TeamsAppPublishingState getPublishingState() {
-        return this.publishingState;
+        return this.backingStore.get("publishingState");
     }
     /**
      * Gets the shortDescription property value. Short description of the application.
@@ -146,7 +106,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getShortDescription() {
-        return this.shortDescription;
+        return this.backingStore.get("shortDescription");
     }
     /**
      * Gets the teamsAppId property value. The ID from the Teams app manifest.
@@ -154,7 +114,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTeamsAppId() {
-        return this.teamsAppId;
+        return this.backingStore.get("teamsAppId");
     }
     /**
      * Gets the version property value. The version number of the application.
@@ -162,7 +122,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
-        return this.version;
+        return this.backingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -187,69 +147,69 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the authorization property.
      */
     public void setAuthorization(@jakarta.annotation.Nullable final TeamsAppAuthorization value) {
-        this.authorization = value;
+        this.backingStore.set("authorization", value);
     }
     /**
      * Sets the bot property value. The details of the bot specified in the Teams app manifest.
      * @param value Value to set for the bot property.
      */
     public void setBot(@jakarta.annotation.Nullable final TeamworkBot value) {
-        this.bot = value;
+        this.backingStore.set("bot", value);
     }
     /**
      * Sets the createdBy property value. The createdBy property
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.createdBy = value;
+        this.backingStore.set("createdBy", value);
     }
     /**
      * Sets the description property value. Verbose description of the application.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The name of the app provided by the app developer.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submittedThe specific version of the Teams app has been submitted and is under review. publishedThe request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejectedThe admin rejected the request to publish the specific version of the Teams app.
      * @param value Value to set for the publishingState property.
      */
     public void setPublishingState(@jakarta.annotation.Nullable final TeamsAppPublishingState value) {
-        this.publishingState = value;
+        this.backingStore.set("publishingState", value);
     }
     /**
      * Sets the shortDescription property value. Short description of the application.
      * @param value Value to set for the shortDescription property.
      */
     public void setShortDescription(@jakarta.annotation.Nullable final String value) {
-        this.shortDescription = value;
+        this.backingStore.set("shortDescription", value);
     }
     /**
      * Sets the teamsAppId property value. The ID from the Teams app manifest.
      * @param value Value to set for the teamsAppId property.
      */
     public void setTeamsAppId(@jakarta.annotation.Nullable final String value) {
-        this.teamsAppId = value;
+        this.backingStore.set("teamsAppId", value);
     }
     /**
      * Sets the version property value. The version number of the application.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {
-        this.version = value;
+        this.backingStore.set("version", value);
     }
 }

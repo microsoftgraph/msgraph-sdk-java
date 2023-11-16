@@ -4,37 +4,26 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ChatMessageHistoryItem implements AdditionalDataHolder, Parsable {
+public class ChatMessageHistoryItem implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The actions property
+     * Stores model information.
      */
-    private EnumSet<ChatMessageActions> actions;
-    /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The date and time when the message was modified.
-     */
-    private OffsetDateTime modifiedDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The reaction in the modified message.
-     */
-    private ChatMessageReaction reaction;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new ChatMessageHistoryItem and sets the default values.
      */
     public ChatMessageHistoryItem() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -53,7 +42,7 @@ public class ChatMessageHistoryItem implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public EnumSet<ChatMessageActions> getActions() {
-        return this.actions;
+        return this.backingStore.get("actions");
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -61,7 +50,12 @@ public class ChatMessageHistoryItem implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -82,7 +76,7 @@ public class ChatMessageHistoryItem implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
-        return this.modifiedDateTime;
+        return this.backingStore.get("modifiedDateTime");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -90,7 +84,7 @@ public class ChatMessageHistoryItem implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the reaction property value. The reaction in the modified message.
@@ -98,7 +92,7 @@ public class ChatMessageHistoryItem implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public ChatMessageReaction getReaction() {
-        return this.reaction;
+        return this.backingStore.get("reaction");
     }
     /**
      * Serializes information the current object
@@ -117,34 +111,34 @@ public class ChatMessageHistoryItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the actions property.
      */
     public void setActions(@jakarta.annotation.Nullable final EnumSet<ChatMessageActions> value) {
-        this.actions = value;
+        this.backingStore.set("actions", value);
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the modifiedDateTime property value. The date and time when the message was modified.
      * @param value Value to set for the modifiedDateTime property.
      */
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.modifiedDateTime = value;
+        this.backingStore.set("modifiedDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the reaction property value. The reaction in the modified message.
      * @param value Value to set for the reaction property.
      */
     public void setReaction(@jakarta.annotation.Nullable final ChatMessageReaction value) {
-        this.reaction = value;
+        this.backingStore.set("reaction", value);
     }
 }

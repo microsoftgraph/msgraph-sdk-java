@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Hostname extends Host implements Parsable {
     /**
-     * The company or individual who registered this hostname, from WHOIS data.
-     */
-    private String registrant;
-    /**
-     * The registrar for this hostname, from WHOIS data.
-     */
-    private String registrar;
-    /**
      * Instantiates a new Hostname and sets the default values.
      */
     public Hostname() {
@@ -50,7 +42,7 @@ public class Hostname extends Host implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRegistrant() {
-        return this.registrant;
+        return this.backingStore.get("registrant");
     }
     /**
      * Gets the registrar property value. The registrar for this hostname, from WHOIS data.
@@ -58,7 +50,7 @@ public class Hostname extends Host implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRegistrar() {
-        return this.registrar;
+        return this.backingStore.get("registrar");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class Hostname extends Host implements Parsable {
      * @param value Value to set for the registrant property.
      */
     public void setRegistrant(@jakarta.annotation.Nullable final String value) {
-        this.registrant = value;
+        this.backingStore.set("registrant", value);
     }
     /**
      * Sets the registrar property value. The registrar for this hostname, from WHOIS data.
      * @param value Value to set for the registrar property.
      */
     public void setRegistrar(@jakarta.annotation.Nullable final String value) {
-        this.registrar = value;
+        this.backingStore.set("registrar", value);
     }
 }

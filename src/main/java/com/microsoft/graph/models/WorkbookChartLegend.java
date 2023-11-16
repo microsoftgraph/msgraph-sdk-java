@@ -9,22 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartLegend extends Entity implements Parsable {
     /**
-     * Represents the formatting of a chart legend, which includes fill and font formatting. Read-only.
-     */
-    private WorkbookChartLegendFormat format;
-    /**
-     * Boolean value for whether the chart legend should overlap with the main body of the chart.
-     */
-    private Boolean overlay;
-    /**
-     * Represents the position of the legend on the chart. The possible values are: Top, Bottom, Left, Right, Corner, Custom.
-     */
-    private String position;
-    /**
-     * A boolean value the represents the visibility of a ChartLegend object.
-     */
-    private Boolean visible;
-    /**
      * Instantiates a new WorkbookChartLegend and sets the default values.
      */
     public WorkbookChartLegend() {
@@ -59,7 +43,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookChartLegendFormat getFormat() {
-        return this.format;
+        return this.backingStore.get("format");
     }
     /**
      * Gets the overlay property value. Boolean value for whether the chart legend should overlap with the main body of the chart.
@@ -67,7 +51,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getOverlay() {
-        return this.overlay;
+        return this.backingStore.get("overlay");
     }
     /**
      * Gets the position property value. Represents the position of the legend on the chart. The possible values are: Top, Bottom, Left, Right, Corner, Custom.
@@ -75,7 +59,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPosition() {
-        return this.position;
+        return this.backingStore.get("position");
     }
     /**
      * Gets the visible property value. A boolean value the represents the visibility of a ChartLegend object.
@@ -83,7 +67,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getVisible() {
-        return this.visible;
+        return this.backingStore.get("visible");
     }
     /**
      * Serializes information the current object
@@ -102,27 +86,27 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      * @param value Value to set for the format property.
      */
     public void setFormat(@jakarta.annotation.Nullable final WorkbookChartLegendFormat value) {
-        this.format = value;
+        this.backingStore.set("format", value);
     }
     /**
      * Sets the overlay property value. Boolean value for whether the chart legend should overlap with the main body of the chart.
      * @param value Value to set for the overlay property.
      */
     public void setOverlay(@jakarta.annotation.Nullable final Boolean value) {
-        this.overlay = value;
+        this.backingStore.set("overlay", value);
     }
     /**
      * Sets the position property value. Represents the position of the legend on the chart. The possible values are: Top, Bottom, Left, Right, Corner, Custom.
      * @param value Value to set for the position property.
      */
     public void setPosition(@jakarta.annotation.Nullable final String value) {
-        this.position = value;
+        this.backingStore.set("position", value);
     }
     /**
      * Sets the visible property value. A boolean value the represents the visibility of a ChartLegend object.
      * @param value Value to set for the visible property.
      */
     public void setVisible(@jakarta.annotation.Nullable final Boolean value) {
-        this.visible = value;
+        this.backingStore.set("visible", value);
     }
 }

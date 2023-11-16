@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DaylightTimeZoneOffset extends StandardTimeZoneOffset implements Parsable {
     /**
-     * The time offset from Coordinated Universal Time (UTC) for daylight saving time. This value is in minutes.
-     */
-    private Integer daylightBias;
-    /**
      * Instantiates a new DaylightTimeZoneOffset and sets the default values.
      */
     public DaylightTimeZoneOffset() {
@@ -35,7 +31,7 @@ public class DaylightTimeZoneOffset extends StandardTimeZoneOffset implements Pa
      */
     @jakarta.annotation.Nullable
     public Integer getDaylightBias() {
-        return this.daylightBias;
+        return this.backingStore.get("daylightBias");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class DaylightTimeZoneOffset extends StandardTimeZoneOffset implements Pa
      * @param value Value to set for the daylightBias property.
      */
     public void setDaylightBias(@jakarta.annotation.Nullable final Integer value) {
-        this.daylightBias = value;
+        this.backingStore.set("daylightBias", value);
     }
 }

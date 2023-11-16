@@ -10,10 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IntelligenceProfileCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<IntelligenceProfile> value;
-    /**
      * Instantiates a new IntelligenceProfileCollectionResponse and sets the default values.
      */
     public IntelligenceProfileCollectionResponse() {
@@ -45,7 +41,7 @@ public class IntelligenceProfileCollectionResponse extends BaseCollectionPaginat
      */
     @jakarta.annotation.Nullable
     public java.util.List<IntelligenceProfile> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class IntelligenceProfileCollectionResponse extends BaseCollectionPaginat
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<IntelligenceProfile> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

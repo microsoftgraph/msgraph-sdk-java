@@ -4,35 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class IdentitySet implements AdditionalDataHolder, Parsable {
+public class IdentitySet implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Optional. The application associated with this action.
-     */
-    private Identity application;
-    /**
-     * Optional. The device associated with this action.
-     */
-    private Identity device;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Optional. The user associated with this action.
-     */
-    private Identity user;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new IdentitySet and sets the default values.
      */
     public IdentitySet() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -62,7 +51,12 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the application property value. Optional. The application associated with this action.
@@ -70,7 +64,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Identity getApplication() {
-        return this.application;
+        return this.backingStore.get("application");
     }
     /**
      * Gets the device property value. Optional. The device associated with this action.
@@ -78,7 +72,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Identity getDevice() {
-        return this.device;
+        return this.backingStore.get("device");
     }
     /**
      * The deserialization information for the current model
@@ -99,7 +93,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the user property value. Optional. The user associated with this action.
@@ -107,7 +101,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Identity getUser() {
-        return this.user;
+        return this.backingStore.get("user");
     }
     /**
      * Serializes information the current object
@@ -126,34 +120,34 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the application property value. Optional. The application associated with this action.
      * @param value Value to set for the application property.
      */
     public void setApplication(@jakarta.annotation.Nullable final Identity value) {
-        this.application = value;
+        this.backingStore.set("application", value);
     }
     /**
      * Sets the device property value. Optional. The device associated with this action.
      * @param value Value to set for the device property.
      */
     public void setDevice(@jakarta.annotation.Nullable final Identity value) {
-        this.device = value;
+        this.backingStore.set("device", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the user property value. Optional. The user associated with this action.
      * @param value Value to set for the user property.
      */
     public void setUser(@jakarta.annotation.Nullable final Identity value) {
-        this.user = value;
+        this.backingStore.set("user", value);
     }
 }

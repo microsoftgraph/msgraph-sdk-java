@@ -4,31 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsable {
+public class AccessPackageLocalizedText implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The language code that text is in. For example, 'en-us'. The language component follows 2-letter codes as defined in ISO 639-1, and the country component follows 2-letter codes as defined in ISO 3166-1 alpha-2. Required.
-     */
-    private String languageCode;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The question in the specific language. Required.
-     */
-    private String text;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new AccessPackageLocalizedText and sets the default values.
      */
     public AccessPackageLocalizedText() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +40,12 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -67,7 +65,7 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getLanguageCode() {
-        return this.languageCode;
+        return this.backingStore.get("languageCode");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -75,7 +73,7 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the text property value. The question in the specific language. Required.
@@ -83,7 +81,7 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getText() {
-        return this.text;
+        return this.backingStore.get("text");
     }
     /**
      * Serializes information the current object
@@ -101,27 +99,27 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the languageCode property value. The language code that text is in. For example, 'en-us'. The language component follows 2-letter codes as defined in ISO 639-1, and the country component follows 2-letter codes as defined in ISO 3166-1 alpha-2. Required.
      * @param value Value to set for the languageCode property.
      */
     public void setLanguageCode(@jakarta.annotation.Nullable final String value) {
-        this.languageCode = value;
+        this.backingStore.set("languageCode", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the text property value. The question in the specific language. Required.
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final String value) {
-        this.text = value;
+        this.backingStore.set("text", value);
     }
 }

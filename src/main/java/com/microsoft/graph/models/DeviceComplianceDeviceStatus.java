@@ -10,34 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceComplianceDeviceStatus extends Entity implements Parsable {
     /**
-     * The DateTime when device compliance grace period expires
-     */
-    private OffsetDateTime complianceGracePeriodExpirationDateTime;
-    /**
-     * Device name of the DevicePolicyStatus.
-     */
-    private String deviceDisplayName;
-    /**
-     * The device model that is being reported
-     */
-    private String deviceModel;
-    /**
-     * Last modified date time of the policy report.
-     */
-    private OffsetDateTime lastReportedDateTime;
-    /**
-     * The status property
-     */
-    private ComplianceStatus status;
-    /**
-     * The User Name that is being reported
-     */
-    private String userName;
-    /**
-     * UserPrincipalName.
-     */
-    private String userPrincipalName;
-    /**
      * Instantiates a new DeviceComplianceDeviceStatus and sets the default values.
      */
     public DeviceComplianceDeviceStatus() {
@@ -59,7 +31,7 @@ public class DeviceComplianceDeviceStatus extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getComplianceGracePeriodExpirationDateTime() {
-        return this.complianceGracePeriodExpirationDateTime;
+        return this.backingStore.get("complianceGracePeriodExpirationDateTime");
     }
     /**
      * Gets the deviceDisplayName property value. Device name of the DevicePolicyStatus.
@@ -67,7 +39,7 @@ public class DeviceComplianceDeviceStatus extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
-        return this.deviceDisplayName;
+        return this.backingStore.get("deviceDisplayName");
     }
     /**
      * Gets the deviceModel property value. The device model that is being reported
@@ -75,7 +47,7 @@ public class DeviceComplianceDeviceStatus extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDeviceModel() {
-        return this.deviceModel;
+        return this.backingStore.get("deviceModel");
     }
     /**
      * The deserialization information for the current model
@@ -99,7 +71,7 @@ public class DeviceComplianceDeviceStatus extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastReportedDateTime() {
-        return this.lastReportedDateTime;
+        return this.backingStore.get("lastReportedDateTime");
     }
     /**
      * Gets the status property value. The status property
@@ -107,7 +79,7 @@ public class DeviceComplianceDeviceStatus extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ComplianceStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Gets the userName property value. The User Name that is being reported
@@ -115,7 +87,7 @@ public class DeviceComplianceDeviceStatus extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
-        return this.userName;
+        return this.backingStore.get("userName");
     }
     /**
      * Gets the userPrincipalName property value. UserPrincipalName.
@@ -123,7 +95,7 @@ public class DeviceComplianceDeviceStatus extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.backingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -145,48 +117,48 @@ public class DeviceComplianceDeviceStatus extends Entity implements Parsable {
      * @param value Value to set for the complianceGracePeriodExpirationDateTime property.
      */
     public void setComplianceGracePeriodExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.complianceGracePeriodExpirationDateTime = value;
+        this.backingStore.set("complianceGracePeriodExpirationDateTime", value);
     }
     /**
      * Sets the deviceDisplayName property value. Device name of the DevicePolicyStatus.
      * @param value Value to set for the deviceDisplayName property.
      */
     public void setDeviceDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.deviceDisplayName = value;
+        this.backingStore.set("deviceDisplayName", value);
     }
     /**
      * Sets the deviceModel property value. The device model that is being reported
      * @param value Value to set for the deviceModel property.
      */
     public void setDeviceModel(@jakarta.annotation.Nullable final String value) {
-        this.deviceModel = value;
+        this.backingStore.set("deviceModel", value);
     }
     /**
      * Sets the lastReportedDateTime property value. Last modified date time of the policy report.
      * @param value Value to set for the lastReportedDateTime property.
      */
     public void setLastReportedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastReportedDateTime = value;
+        this.backingStore.set("lastReportedDateTime", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final ComplianceStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
     /**
      * Sets the userName property value. The User Name that is being reported
      * @param value Value to set for the userName property.
      */
     public void setUserName(@jakarta.annotation.Nullable final String value) {
-        this.userName = value;
+        this.backingStore.set("userName", value);
     }
     /**
      * Sets the userPrincipalName property value. UserPrincipalName.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.backingStore.set("userPrincipalName", value);
     }
 }

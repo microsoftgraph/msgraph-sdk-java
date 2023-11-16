@@ -5,27 +5,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class RightPostRequestBody implements AdditionalDataHolder, Parsable {
+public class RightPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The numChars property
-     */
-    private Json numChars;
-    /**
-     * The text property
-     */
-    private Json text;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new RightPostRequestBody and sets the default values.
      */
     public RightPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -44,7 +41,12 @@ public class RightPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -63,7 +65,7 @@ public class RightPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getNumChars() {
-        return this.numChars;
+        return this.backingStore.get("numChars");
     }
     /**
      * Gets the text property value. The text property
@@ -71,7 +73,7 @@ public class RightPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getText() {
-        return this.text;
+        return this.backingStore.get("text");
     }
     /**
      * Serializes information the current object
@@ -88,20 +90,20 @@ public class RightPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the numChars property value. The numChars property
      * @param value Value to set for the numChars property.
      */
     public void setNumChars(@jakarta.annotation.Nullable final Json value) {
-        this.numChars = value;
+        this.backingStore.set("numChars", value);
     }
     /**
      * Sets the text property value. The text property
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final Json value) {
-        this.text = value;
+        this.backingStore.set("text", value);
     }
 }

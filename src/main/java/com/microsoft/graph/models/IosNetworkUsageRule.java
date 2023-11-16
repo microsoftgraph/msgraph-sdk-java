@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,31 +14,17 @@ import java.util.Objects;
  * Network Usage Rules allow enterprises to specify how managed apps use networks, such as cellular data networks.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
+public class IosNetworkUsageRule implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * If set to true, corresponding managed apps will not be allowed to use cellular data at any time.
-     */
-    private Boolean cellularDataBlocked;
-    /**
-     * If set to true, corresponding managed apps will not be allowed to use cellular data when roaming.
-     */
-    private Boolean cellularDataBlockWhenRoaming;
-    /**
-     * Information about the managed apps that this rule is going to apply to. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<AppListItem> managedApps;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new IosNetworkUsageRule and sets the default values.
      */
     public IosNetworkUsageRule() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -54,7 +43,12 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the cellularDataBlocked property value. If set to true, corresponding managed apps will not be allowed to use cellular data at any time.
@@ -62,7 +56,7 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getCellularDataBlocked() {
-        return this.cellularDataBlocked;
+        return this.backingStore.get("cellularDataBlocked");
     }
     /**
      * Gets the cellularDataBlockWhenRoaming property value. If set to true, corresponding managed apps will not be allowed to use cellular data when roaming.
@@ -70,7 +64,7 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getCellularDataBlockWhenRoaming() {
-        return this.cellularDataBlockWhenRoaming;
+        return this.backingStore.get("cellularDataBlockWhenRoaming");
     }
     /**
      * The deserialization information for the current model
@@ -91,7 +85,7 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getManagedApps() {
-        return this.managedApps;
+        return this.backingStore.get("managedApps");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -99,7 +93,7 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -118,34 +112,34 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the cellularDataBlocked property value. If set to true, corresponding managed apps will not be allowed to use cellular data at any time.
      * @param value Value to set for the cellularDataBlocked property.
      */
     public void setCellularDataBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.cellularDataBlocked = value;
+        this.backingStore.set("cellularDataBlocked", value);
     }
     /**
      * Sets the cellularDataBlockWhenRoaming property value. If set to true, corresponding managed apps will not be allowed to use cellular data when roaming.
      * @param value Value to set for the cellularDataBlockWhenRoaming property.
      */
     public void setCellularDataBlockWhenRoaming(@jakarta.annotation.Nullable final Boolean value) {
-        this.cellularDataBlockWhenRoaming = value;
+        this.backingStore.set("cellularDataBlockWhenRoaming", value);
     }
     /**
      * Sets the managedApps property value. Information about the managed apps that this rule is going to apply to. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the managedApps property.
      */
     public void setManagedApps(@jakarta.annotation.Nullable final java.util.List<AppListItem> value) {
-        this.managedApps = value;
+        this.backingStore.set("managedApps", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }
