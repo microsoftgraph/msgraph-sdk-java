@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CrossTenantAccessPolicyConfigurationPartnerCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<CrossTenantAccessPolicyConfigurationPartner> value;
-    /**
      * Instantiates a new CrossTenantAccessPolicyConfigurationPartnerCollectionResponse and sets the default values.
      */
     public CrossTenantAccessPolicyConfigurationPartnerCollectionResponse() {
@@ -44,7 +40,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerCollectionResponse exten
      */
     @jakarta.annotation.Nullable
     public java.util.List<CrossTenantAccessPolicyConfigurationPartner> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class CrossTenantAccessPolicyConfigurationPartnerCollectionResponse exten
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<CrossTenantAccessPolicyConfigurationPartner> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

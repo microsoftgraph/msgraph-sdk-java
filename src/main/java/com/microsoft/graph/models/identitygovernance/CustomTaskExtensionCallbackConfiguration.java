@@ -11,10 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomTaskExtensionCallbackConfiguration extends CustomExtensionCallbackConfiguration implements Parsable {
     /**
-     * The authorizedApps property
-     */
-    private java.util.List<Application> authorizedApps;
-    /**
      * Instantiates a new CustomTaskExtensionCallbackConfiguration and sets the default values.
      */
     public CustomTaskExtensionCallbackConfiguration() {
@@ -37,7 +33,7 @@ public class CustomTaskExtensionCallbackConfiguration extends CustomExtensionCal
      */
     @jakarta.annotation.Nullable
     public java.util.List<Application> getAuthorizedApps() {
-        return this.authorizedApps;
+        return this.backingStore.get("authorizedApps");
     }
     /**
      * The deserialization information for the current model
@@ -63,6 +59,6 @@ public class CustomTaskExtensionCallbackConfiguration extends CustomExtensionCal
      * @param value Value to set for the authorizedApps property.
      */
     public void setAuthorizedApps(@jakarta.annotation.Nullable final java.util.List<Application> value) {
-        this.authorizedApps = value;
+        this.backingStore.set("authorizedApps", value);
     }
 }

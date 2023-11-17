@@ -10,42 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Workflow extends WorkflowBase implements Parsable {
     /**
-     * When the workflow was deleted.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
-     */
-    private OffsetDateTime deletedDateTime;
-    /**
-     * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
-     */
-    private java.util.List<UserProcessingResult> executionScope;
-    /**
-     * Identifier used for individually addressing a specific workflow.Supports $filter(eq, ne) and $orderby.
-     */
-    private String id;
-    /**
-     * The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderby.
-     */
-    private OffsetDateTime nextScheduleRunDateTime;
-    /**
-     * Workflow runs.
-     */
-    private java.util.List<Run> runs;
-    /**
-     * Represents the aggregation of task execution data for tasks within a workflow object.
-     */
-    private java.util.List<TaskReport> taskReports;
-    /**
-     * Per-user workflow execution results.
-     */
-    private java.util.List<UserProcessingResult> userProcessingResults;
-    /**
-     * The current version number of the workflow. Value is 1 when the workflow is first created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
-     */
-    private Integer version;
-    /**
-     * The workflow versions that are available.
-     */
-    private java.util.List<WorkflowVersion> versions;
-    /**
      * Instantiates a new Workflow and sets the default values.
      */
     public Workflow() {
@@ -68,7 +32,7 @@ public class Workflow extends WorkflowBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDeletedDateTime() {
-        return this.deletedDateTime;
+        return this.backingStore.get("deletedDateTime");
     }
     /**
      * Gets the executionScope property value. The unique identifier of the Microsoft Entra identity that last modified the workflow object.
@@ -76,7 +40,7 @@ public class Workflow extends WorkflowBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserProcessingResult> getExecutionScope() {
-        return this.executionScope;
+        return this.backingStore.get("executionScope");
     }
     /**
      * The deserialization information for the current model
@@ -102,7 +66,7 @@ public class Workflow extends WorkflowBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getId() {
-        return this.id;
+        return this.backingStore.get("id");
     }
     /**
      * Gets the nextScheduleRunDateTime property value. The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderby.
@@ -110,7 +74,7 @@ public class Workflow extends WorkflowBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getNextScheduleRunDateTime() {
-        return this.nextScheduleRunDateTime;
+        return this.backingStore.get("nextScheduleRunDateTime");
     }
     /**
      * Gets the runs property value. Workflow runs.
@@ -118,7 +82,7 @@ public class Workflow extends WorkflowBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Run> getRuns() {
-        return this.runs;
+        return this.backingStore.get("runs");
     }
     /**
      * Gets the taskReports property value. Represents the aggregation of task execution data for tasks within a workflow object.
@@ -126,7 +90,7 @@ public class Workflow extends WorkflowBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<TaskReport> getTaskReports() {
-        return this.taskReports;
+        return this.backingStore.get("taskReports");
     }
     /**
      * Gets the userProcessingResults property value. Per-user workflow execution results.
@@ -134,7 +98,7 @@ public class Workflow extends WorkflowBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserProcessingResult> getUserProcessingResults() {
-        return this.userProcessingResults;
+        return this.backingStore.get("userProcessingResults");
     }
     /**
      * Gets the version property value. The current version number of the workflow. Value is 1 when the workflow is first created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
@@ -142,7 +106,7 @@ public class Workflow extends WorkflowBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {
-        return this.version;
+        return this.backingStore.get("version");
     }
     /**
      * Gets the versions property value. The workflow versions that are available.
@@ -150,7 +114,7 @@ public class Workflow extends WorkflowBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkflowVersion> getVersions() {
-        return this.versions;
+        return this.backingStore.get("versions");
     }
     /**
      * Serializes information the current object
@@ -174,62 +138,62 @@ public class Workflow extends WorkflowBase implements Parsable {
      * @param value Value to set for the deletedDateTime property.
      */
     public void setDeletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.deletedDateTime = value;
+        this.backingStore.set("deletedDateTime", value);
     }
     /**
      * Sets the executionScope property value. The unique identifier of the Microsoft Entra identity that last modified the workflow object.
      * @param value Value to set for the executionScope property.
      */
     public void setExecutionScope(@jakarta.annotation.Nullable final java.util.List<UserProcessingResult> value) {
-        this.executionScope = value;
+        this.backingStore.set("executionScope", value);
     }
     /**
      * Sets the id property value. Identifier used for individually addressing a specific workflow.Supports $filter(eq, ne) and $orderby.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
-        this.id = value;
+        this.backingStore.set("id", value);
     }
     /**
      * Sets the nextScheduleRunDateTime property value. The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderby.
      * @param value Value to set for the nextScheduleRunDateTime property.
      */
     public void setNextScheduleRunDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.nextScheduleRunDateTime = value;
+        this.backingStore.set("nextScheduleRunDateTime", value);
     }
     /**
      * Sets the runs property value. Workflow runs.
      * @param value Value to set for the runs property.
      */
     public void setRuns(@jakarta.annotation.Nullable final java.util.List<Run> value) {
-        this.runs = value;
+        this.backingStore.set("runs", value);
     }
     /**
      * Sets the taskReports property value. Represents the aggregation of task execution data for tasks within a workflow object.
      * @param value Value to set for the taskReports property.
      */
     public void setTaskReports(@jakarta.annotation.Nullable final java.util.List<TaskReport> value) {
-        this.taskReports = value;
+        this.backingStore.set("taskReports", value);
     }
     /**
      * Sets the userProcessingResults property value. Per-user workflow execution results.
      * @param value Value to set for the userProcessingResults property.
      */
     public void setUserProcessingResults(@jakarta.annotation.Nullable final java.util.List<UserProcessingResult> value) {
-        this.userProcessingResults = value;
+        this.backingStore.set("userProcessingResults", value);
     }
     /**
      * Sets the version property value. The current version number of the workflow. Value is 1 when the workflow is first created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final Integer value) {
-        this.version = value;
+        this.backingStore.set("version", value);
     }
     /**
      * Sets the versions property value. The workflow versions that are available.
      * @param value Value to set for the versions property.
      */
     public void setVersions(@jakarta.annotation.Nullable final java.util.List<WorkflowVersion> value) {
-        this.versions = value;
+        this.backingStore.set("versions", value);
     }
 }

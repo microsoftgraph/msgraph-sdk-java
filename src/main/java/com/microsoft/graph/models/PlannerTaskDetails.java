@@ -9,22 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerTaskDetails extends Entity implements Parsable {
     /**
-     * The collection of checklist items on the task.
-     */
-    private PlannerChecklistItems checklist;
-    /**
-     * Description of the task.
-     */
-    private String description;
-    /**
-     * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
-     */
-    private PlannerPreviewType previewType;
-    /**
-     * The collection of references on the task.
-     */
-    private PlannerExternalReferences references;
-    /**
      * Instantiates a new PlannerTaskDetails and sets the default values.
      */
     public PlannerTaskDetails() {
@@ -46,7 +30,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PlannerChecklistItems getChecklist() {
-        return this.checklist;
+        return this.backingStore.get("checklist");
     }
     /**
      * Gets the description property value. Description of the task.
@@ -54,7 +38,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -75,7 +59,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PlannerPreviewType getPreviewType() {
-        return this.previewType;
+        return this.backingStore.get("previewType");
     }
     /**
      * Gets the references property value. The collection of references on the task.
@@ -83,7 +67,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PlannerExternalReferences getReferences() {
-        return this.references;
+        return this.backingStore.get("references");
     }
     /**
      * Serializes information the current object
@@ -102,27 +86,27 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      * @param value Value to set for the checklist property.
      */
     public void setChecklist(@jakarta.annotation.Nullable final PlannerChecklistItems value) {
-        this.checklist = value;
+        this.backingStore.set("checklist", value);
     }
     /**
      * Sets the description property value. Description of the task.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
      * @param value Value to set for the previewType property.
      */
     public void setPreviewType(@jakarta.annotation.Nullable final PlannerPreviewType value) {
-        this.previewType = value;
+        this.backingStore.set("previewType", value);
     }
     /**
      * Sets the references property value. The collection of references on the task.
      * @param value Value to set for the references property.
      */
     public void setReferences(@jakarta.annotation.Nullable final PlannerExternalReferences value) {
-        this.references = value;
+        this.backingStore.set("references", value);
     }
 }

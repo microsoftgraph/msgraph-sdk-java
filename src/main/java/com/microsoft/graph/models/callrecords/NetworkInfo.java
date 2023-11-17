@@ -4,127 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class NetworkInfo implements AdditionalDataHolder, Parsable {
+public class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent.
-     */
-    private Float bandwidthLowEventRatio;
-    /**
-     * The wireless LAN basic service set identifier of the media endpoint used to connect to the network.
-     */
-    private String basicServiceSetIdentifier;
-    /**
-     * The connectionType property
-     */
-    private NetworkConnectionType connectionType;
-    /**
-     * Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication.
-     */
-    private Float delayEventRatio;
-    /**
-     * DNS suffix associated with the network adapter of the media endpoint.
-     */
-    private String dnsSuffix;
-    /**
-     * IP address of the media endpoint.
-     */
-    private String ipAddress;
-    /**
-     * Link speed in bits per second reported by the network adapter used by the media endpoint.
-     */
-    private Long linkSpeed;
-    /**
-     * The media access control (MAC) address of the media endpoint's network device. This value may be missing or shown as 02:00:00:00:00:00 due to operating system privacy policies.
-     */
-    private String macAddress;
-    /**
-     * The networkTransportProtocol property
-     */
-    private NetworkTransportProtocol networkTransportProtocol;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Network port number used by media endpoint.
-     */
-    private Integer port;
-    /**
-     * Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received.
-     */
-    private Float receivedQualityEventRatio;
-    /**
-     * IP address of the media endpoint as seen by the media relay server. This is typically the public internet IP address associated to the endpoint.
-     */
-    private String reflexiveIPAddress;
-    /**
-     * IP address of the media relay server allocated by the media endpoint.
-     */
-    private String relayIPAddress;
-    /**
-     * Network port number allocated on the media relay server by the media endpoint.
-     */
-    private Integer relayPort;
-    /**
-     * Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent.
-     */
-    private Float sentQualityEventRatio;
-    /**
-     * Subnet used for media stream by the media endpoint.
-     */
-    private String subnet;
-    /**
-     * List of network trace route hops collected for this media stream.*
-     */
-    private java.util.List<TraceRouteHop> traceRouteHops;
-    /**
-     * The wifiBand property
-     */
-    private WifiBand wifiBand;
-    /**
-     * Estimated remaining battery charge in percentage reported by the media endpoint.
-     */
-    private Integer wifiBatteryCharge;
-    /**
-     * WiFi channel used by the media endpoint.
-     */
-    private Integer wifiChannel;
-    /**
-     * Name of the Microsoft WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
-     */
-    private String wifiMicrosoftDriver;
-    /**
-     * Version of the Microsoft WiFi driver used by the media endpoint.
-     */
-    private String wifiMicrosoftDriverVersion;
-    /**
-     * The wifiRadioType property
-     */
-    private WifiRadioType wifiRadioType;
-    /**
-     * WiFi signal strength in percentage reported by the media endpoint.
-     */
-    private Integer wifiSignalStrength;
-    /**
-     * Name of the WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
-     */
-    private String wifiVendorDriver;
-    /**
-     * Version of the WiFi driver used by the media endpoint.
-     */
-    private String wifiVendorDriverVersion;
+    private BackingStore backingStore;
     /**
      * Instantiates a new NetworkInfo and sets the default values.
      */
     public NetworkInfo() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -143,7 +39,20 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the bandwidthLowEventRatio property value. Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent.
@@ -151,7 +60,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Float getBandwidthLowEventRatio() {
-        return this.bandwidthLowEventRatio;
+        return this.backingStore.get("bandwidthLowEventRatio");
     }
     /**
      * Gets the basicServiceSetIdentifier property value. The wireless LAN basic service set identifier of the media endpoint used to connect to the network.
@@ -159,7 +68,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getBasicServiceSetIdentifier() {
-        return this.basicServiceSetIdentifier;
+        return this.backingStore.get("basicServiceSetIdentifier");
     }
     /**
      * Gets the connectionType property value. The connectionType property
@@ -167,7 +76,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public NetworkConnectionType getConnectionType() {
-        return this.connectionType;
+        return this.backingStore.get("connectionType");
     }
     /**
      * Gets the delayEventRatio property value. Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication.
@@ -175,7 +84,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Float getDelayEventRatio() {
-        return this.delayEventRatio;
+        return this.backingStore.get("delayEventRatio");
     }
     /**
      * Gets the dnsSuffix property value. DNS suffix associated with the network adapter of the media endpoint.
@@ -183,7 +92,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDnsSuffix() {
-        return this.dnsSuffix;
+        return this.backingStore.get("dnsSuffix");
     }
     /**
      * The deserialization information for the current model
@@ -227,7 +136,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
-        return this.ipAddress;
+        return this.backingStore.get("ipAddress");
     }
     /**
      * Gets the linkSpeed property value. Link speed in bits per second reported by the network adapter used by the media endpoint.
@@ -235,7 +144,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getLinkSpeed() {
-        return this.linkSpeed;
+        return this.backingStore.get("linkSpeed");
     }
     /**
      * Gets the macAddress property value. The media access control (MAC) address of the media endpoint's network device. This value may be missing or shown as 02:00:00:00:00:00 due to operating system privacy policies.
@@ -243,7 +152,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getMacAddress() {
-        return this.macAddress;
+        return this.backingStore.get("macAddress");
     }
     /**
      * Gets the networkTransportProtocol property value. The networkTransportProtocol property
@@ -251,7 +160,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public NetworkTransportProtocol getNetworkTransportProtocol() {
-        return this.networkTransportProtocol;
+        return this.backingStore.get("networkTransportProtocol");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -259,7 +168,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the port property value. Network port number used by media endpoint.
@@ -267,7 +176,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getPort() {
-        return this.port;
+        return this.backingStore.get("port");
     }
     /**
      * Gets the receivedQualityEventRatio property value. Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received.
@@ -275,7 +184,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Float getReceivedQualityEventRatio() {
-        return this.receivedQualityEventRatio;
+        return this.backingStore.get("receivedQualityEventRatio");
     }
     /**
      * Gets the reflexiveIPAddress property value. IP address of the media endpoint as seen by the media relay server. This is typically the public internet IP address associated to the endpoint.
@@ -283,7 +192,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getReflexiveIPAddress() {
-        return this.reflexiveIPAddress;
+        return this.backingStore.get("reflexiveIPAddress");
     }
     /**
      * Gets the relayIPAddress property value. IP address of the media relay server allocated by the media endpoint.
@@ -291,7 +200,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRelayIPAddress() {
-        return this.relayIPAddress;
+        return this.backingStore.get("relayIPAddress");
     }
     /**
      * Gets the relayPort property value. Network port number allocated on the media relay server by the media endpoint.
@@ -299,7 +208,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getRelayPort() {
-        return this.relayPort;
+        return this.backingStore.get("relayPort");
     }
     /**
      * Gets the sentQualityEventRatio property value. Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent.
@@ -307,7 +216,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Float getSentQualityEventRatio() {
-        return this.sentQualityEventRatio;
+        return this.backingStore.get("sentQualityEventRatio");
     }
     /**
      * Gets the subnet property value. Subnet used for media stream by the media endpoint.
@@ -315,7 +224,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSubnet() {
-        return this.subnet;
+        return this.backingStore.get("subnet");
     }
     /**
      * Gets the traceRouteHops property value. List of network trace route hops collected for this media stream.*
@@ -323,7 +232,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<TraceRouteHop> getTraceRouteHops() {
-        return this.traceRouteHops;
+        return this.backingStore.get("traceRouteHops");
     }
     /**
      * Gets the wifiBand property value. The wifiBand property
@@ -331,7 +240,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public WifiBand getWifiBand() {
-        return this.wifiBand;
+        return this.backingStore.get("wifiBand");
     }
     /**
      * Gets the wifiBatteryCharge property value. Estimated remaining battery charge in percentage reported by the media endpoint.
@@ -339,7 +248,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getWifiBatteryCharge() {
-        return this.wifiBatteryCharge;
+        return this.backingStore.get("wifiBatteryCharge");
     }
     /**
      * Gets the wifiChannel property value. WiFi channel used by the media endpoint.
@@ -347,7 +256,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getWifiChannel() {
-        return this.wifiChannel;
+        return this.backingStore.get("wifiChannel");
     }
     /**
      * Gets the wifiMicrosoftDriver property value. Name of the Microsoft WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
@@ -355,7 +264,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getWifiMicrosoftDriver() {
-        return this.wifiMicrosoftDriver;
+        return this.backingStore.get("wifiMicrosoftDriver");
     }
     /**
      * Gets the wifiMicrosoftDriverVersion property value. Version of the Microsoft WiFi driver used by the media endpoint.
@@ -363,7 +272,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getWifiMicrosoftDriverVersion() {
-        return this.wifiMicrosoftDriverVersion;
+        return this.backingStore.get("wifiMicrosoftDriverVersion");
     }
     /**
      * Gets the wifiRadioType property value. The wifiRadioType property
@@ -371,7 +280,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public WifiRadioType getWifiRadioType() {
-        return this.wifiRadioType;
+        return this.backingStore.get("wifiRadioType");
     }
     /**
      * Gets the wifiSignalStrength property value. WiFi signal strength in percentage reported by the media endpoint.
@@ -379,7 +288,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getWifiSignalStrength() {
-        return this.wifiSignalStrength;
+        return this.backingStore.get("wifiSignalStrength");
     }
     /**
      * Gets the wifiVendorDriver property value. Name of the WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
@@ -387,7 +296,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getWifiVendorDriver() {
-        return this.wifiVendorDriver;
+        return this.backingStore.get("wifiVendorDriver");
     }
     /**
      * Gets the wifiVendorDriverVersion property value. Version of the WiFi driver used by the media endpoint.
@@ -395,7 +304,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getWifiVendorDriverVersion() {
-        return this.wifiVendorDriverVersion;
+        return this.backingStore.get("wifiVendorDriverVersion");
     }
     /**
      * Serializes information the current object
@@ -437,195 +346,203 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the bandwidthLowEventRatio property value. Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent.
      * @param value Value to set for the bandwidthLowEventRatio property.
      */
     public void setBandwidthLowEventRatio(@jakarta.annotation.Nullable final Float value) {
-        this.bandwidthLowEventRatio = value;
+        this.backingStore.set("bandwidthLowEventRatio", value);
     }
     /**
      * Sets the basicServiceSetIdentifier property value. The wireless LAN basic service set identifier of the media endpoint used to connect to the network.
      * @param value Value to set for the basicServiceSetIdentifier property.
      */
     public void setBasicServiceSetIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.basicServiceSetIdentifier = value;
+        this.backingStore.set("basicServiceSetIdentifier", value);
     }
     /**
      * Sets the connectionType property value. The connectionType property
      * @param value Value to set for the connectionType property.
      */
     public void setConnectionType(@jakarta.annotation.Nullable final NetworkConnectionType value) {
-        this.connectionType = value;
+        this.backingStore.set("connectionType", value);
     }
     /**
      * Sets the delayEventRatio property value. Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication.
      * @param value Value to set for the delayEventRatio property.
      */
     public void setDelayEventRatio(@jakarta.annotation.Nullable final Float value) {
-        this.delayEventRatio = value;
+        this.backingStore.set("delayEventRatio", value);
     }
     /**
      * Sets the dnsSuffix property value. DNS suffix associated with the network adapter of the media endpoint.
      * @param value Value to set for the dnsSuffix property.
      */
     public void setDnsSuffix(@jakarta.annotation.Nullable final String value) {
-        this.dnsSuffix = value;
+        this.backingStore.set("dnsSuffix", value);
     }
     /**
      * Sets the ipAddress property value. IP address of the media endpoint.
      * @param value Value to set for the ipAddress property.
      */
     public void setIpAddress(@jakarta.annotation.Nullable final String value) {
-        this.ipAddress = value;
+        this.backingStore.set("ipAddress", value);
     }
     /**
      * Sets the linkSpeed property value. Link speed in bits per second reported by the network adapter used by the media endpoint.
      * @param value Value to set for the linkSpeed property.
      */
     public void setLinkSpeed(@jakarta.annotation.Nullable final Long value) {
-        this.linkSpeed = value;
+        this.backingStore.set("linkSpeed", value);
     }
     /**
      * Sets the macAddress property value. The media access control (MAC) address of the media endpoint's network device. This value may be missing or shown as 02:00:00:00:00:00 due to operating system privacy policies.
      * @param value Value to set for the macAddress property.
      */
     public void setMacAddress(@jakarta.annotation.Nullable final String value) {
-        this.macAddress = value;
+        this.backingStore.set("macAddress", value);
     }
     /**
      * Sets the networkTransportProtocol property value. The networkTransportProtocol property
      * @param value Value to set for the networkTransportProtocol property.
      */
     public void setNetworkTransportProtocol(@jakarta.annotation.Nullable final NetworkTransportProtocol value) {
-        this.networkTransportProtocol = value;
+        this.backingStore.set("networkTransportProtocol", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the port property value. Network port number used by media endpoint.
      * @param value Value to set for the port property.
      */
     public void setPort(@jakarta.annotation.Nullable final Integer value) {
-        this.port = value;
+        this.backingStore.set("port", value);
     }
     /**
      * Sets the receivedQualityEventRatio property value. Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received.
      * @param value Value to set for the receivedQualityEventRatio property.
      */
     public void setReceivedQualityEventRatio(@jakarta.annotation.Nullable final Float value) {
-        this.receivedQualityEventRatio = value;
+        this.backingStore.set("receivedQualityEventRatio", value);
     }
     /**
      * Sets the reflexiveIPAddress property value. IP address of the media endpoint as seen by the media relay server. This is typically the public internet IP address associated to the endpoint.
      * @param value Value to set for the reflexiveIPAddress property.
      */
     public void setReflexiveIPAddress(@jakarta.annotation.Nullable final String value) {
-        this.reflexiveIPAddress = value;
+        this.backingStore.set("reflexiveIPAddress", value);
     }
     /**
      * Sets the relayIPAddress property value. IP address of the media relay server allocated by the media endpoint.
      * @param value Value to set for the relayIPAddress property.
      */
     public void setRelayIPAddress(@jakarta.annotation.Nullable final String value) {
-        this.relayIPAddress = value;
+        this.backingStore.set("relayIPAddress", value);
     }
     /**
      * Sets the relayPort property value. Network port number allocated on the media relay server by the media endpoint.
      * @param value Value to set for the relayPort property.
      */
     public void setRelayPort(@jakarta.annotation.Nullable final Integer value) {
-        this.relayPort = value;
+        this.backingStore.set("relayPort", value);
     }
     /**
      * Sets the sentQualityEventRatio property value. Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent.
      * @param value Value to set for the sentQualityEventRatio property.
      */
     public void setSentQualityEventRatio(@jakarta.annotation.Nullable final Float value) {
-        this.sentQualityEventRatio = value;
+        this.backingStore.set("sentQualityEventRatio", value);
     }
     /**
      * Sets the subnet property value. Subnet used for media stream by the media endpoint.
      * @param value Value to set for the subnet property.
      */
     public void setSubnet(@jakarta.annotation.Nullable final String value) {
-        this.subnet = value;
+        this.backingStore.set("subnet", value);
     }
     /**
      * Sets the traceRouteHops property value. List of network trace route hops collected for this media stream.*
      * @param value Value to set for the traceRouteHops property.
      */
     public void setTraceRouteHops(@jakarta.annotation.Nullable final java.util.List<TraceRouteHop> value) {
-        this.traceRouteHops = value;
+        this.backingStore.set("traceRouteHops", value);
     }
     /**
      * Sets the wifiBand property value. The wifiBand property
      * @param value Value to set for the wifiBand property.
      */
     public void setWifiBand(@jakarta.annotation.Nullable final WifiBand value) {
-        this.wifiBand = value;
+        this.backingStore.set("wifiBand", value);
     }
     /**
      * Sets the wifiBatteryCharge property value. Estimated remaining battery charge in percentage reported by the media endpoint.
      * @param value Value to set for the wifiBatteryCharge property.
      */
     public void setWifiBatteryCharge(@jakarta.annotation.Nullable final Integer value) {
-        this.wifiBatteryCharge = value;
+        this.backingStore.set("wifiBatteryCharge", value);
     }
     /**
      * Sets the wifiChannel property value. WiFi channel used by the media endpoint.
      * @param value Value to set for the wifiChannel property.
      */
     public void setWifiChannel(@jakarta.annotation.Nullable final Integer value) {
-        this.wifiChannel = value;
+        this.backingStore.set("wifiChannel", value);
     }
     /**
      * Sets the wifiMicrosoftDriver property value. Name of the Microsoft WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
      * @param value Value to set for the wifiMicrosoftDriver property.
      */
     public void setWifiMicrosoftDriver(@jakarta.annotation.Nullable final String value) {
-        this.wifiMicrosoftDriver = value;
+        this.backingStore.set("wifiMicrosoftDriver", value);
     }
     /**
      * Sets the wifiMicrosoftDriverVersion property value. Version of the Microsoft WiFi driver used by the media endpoint.
      * @param value Value to set for the wifiMicrosoftDriverVersion property.
      */
     public void setWifiMicrosoftDriverVersion(@jakarta.annotation.Nullable final String value) {
-        this.wifiMicrosoftDriverVersion = value;
+        this.backingStore.set("wifiMicrosoftDriverVersion", value);
     }
     /**
      * Sets the wifiRadioType property value. The wifiRadioType property
      * @param value Value to set for the wifiRadioType property.
      */
     public void setWifiRadioType(@jakarta.annotation.Nullable final WifiRadioType value) {
-        this.wifiRadioType = value;
+        this.backingStore.set("wifiRadioType", value);
     }
     /**
      * Sets the wifiSignalStrength property value. WiFi signal strength in percentage reported by the media endpoint.
      * @param value Value to set for the wifiSignalStrength property.
      */
     public void setWifiSignalStrength(@jakarta.annotation.Nullable final Integer value) {
-        this.wifiSignalStrength = value;
+        this.backingStore.set("wifiSignalStrength", value);
     }
     /**
      * Sets the wifiVendorDriver property value. Name of the WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
      * @param value Value to set for the wifiVendorDriver property.
      */
     public void setWifiVendorDriver(@jakarta.annotation.Nullable final String value) {
-        this.wifiVendorDriver = value;
+        this.backingStore.set("wifiVendorDriver", value);
     }
     /**
      * Sets the wifiVendorDriverVersion property value. Version of the WiFi driver used by the media endpoint.
      * @param value Value to set for the wifiVendorDriverVersion property.
      */
     public void setWifiVendorDriverVersion(@jakarta.annotation.Nullable final String value) {
-        this.wifiVendorDriverVersion = value;
+        this.backingStore.set("wifiVendorDriverVersion", value);
     }
 }

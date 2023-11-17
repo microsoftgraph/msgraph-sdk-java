@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintDocument extends Entity implements Parsable {
     /**
-     * The document's content (MIME) type. Read-only.
-     */
-    private String contentType;
-    /**
-     * The document's name. Read-only.
-     */
-    private String displayName;
-    /**
-     * The document's size in bytes. Read-only.
-     */
-    private Long size;
-    /**
      * Instantiates a new PrintDocument and sets the default values.
      */
     public PrintDocument() {
@@ -42,7 +30,7 @@ public class PrintDocument extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getContentType() {
-        return this.contentType;
+        return this.backingStore.get("contentType");
     }
     /**
      * Gets the displayName property value. The document's name. Read-only.
@@ -50,7 +38,7 @@ public class PrintDocument extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -70,7 +58,7 @@ public class PrintDocument extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getSize() {
-        return this.size;
+        return this.backingStore.get("size");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class PrintDocument extends Entity implements Parsable {
      * @param value Value to set for the contentType property.
      */
     public void setContentType(@jakarta.annotation.Nullable final String value) {
-        this.contentType = value;
+        this.backingStore.set("contentType", value);
     }
     /**
      * Sets the displayName property value. The document's name. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the size property value. The document's size in bytes. Read-only.
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Long value) {
-        this.size = value;
+        this.backingStore.set("size", value);
     }
 }

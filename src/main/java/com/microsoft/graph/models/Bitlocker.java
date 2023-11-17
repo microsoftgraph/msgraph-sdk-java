@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Bitlocker extends Entity implements Parsable {
     /**
-     * The recovery keys associated with the bitlocker entity.
-     */
-    private java.util.List<BitlockerRecoveryKey> recoveryKeys;
-    /**
      * Instantiates a new Bitlocker and sets the default values.
      */
     public Bitlocker() {
@@ -44,7 +40,7 @@ public class Bitlocker extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<BitlockerRecoveryKey> getRecoveryKeys() {
-        return this.recoveryKeys;
+        return this.backingStore.get("recoveryKeys");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class Bitlocker extends Entity implements Parsable {
      * @param value Value to set for the recoveryKeys property.
      */
     public void setRecoveryKeys(@jakarta.annotation.Nullable final java.util.List<BitlockerRecoveryKey> value) {
-        this.recoveryKeys = value;
+        this.backingStore.set("recoveryKeys", value);
     }
 }

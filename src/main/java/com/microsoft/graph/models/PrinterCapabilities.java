@@ -4,123 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
+public class PrinterCapabilities implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * A list of supported bottom margins(in microns) for the printer.
-     */
-    private java.util.List<Integer> bottomMargins;
-    /**
-     * True if the printer supports collating when printing muliple copies of a multi-page document; false otherwise.
-     */
-    private Boolean collation;
-    /**
-     * The color modes supported by the printer. Valid values are described in the following table.
-     */
-    private java.util.List<PrintColorMode> colorModes;
-    /**
-     * A list of supported content (MIME) types that the printer supports. It is not guaranteed that the Universal Print service supports printing all of these MIME types.
-     */
-    private java.util.List<String> contentTypes;
-    /**
-     * The range of copies per job supported by the printer.
-     */
-    private IntegerRange copiesPerJob;
-    /**
-     * The list of print resolutions in DPI that are supported by the printer.
-     */
-    private java.util.List<Integer> dpis;
-    /**
-     * The list of duplex modes that are supported by the printer. Valid values are described in the following table.
-     */
-    private java.util.List<PrintDuplexMode> duplexModes;
-    /**
-     * The list of feed orientations that are supported by the printer.
-     */
-    private java.util.List<PrinterFeedOrientation> feedOrientations;
-    /**
-     * Finishing processes the printer supports for a printed document.
-     */
-    private java.util.List<PrintFinishing> finishings;
-    /**
-     * Supported input bins for the printer.
-     */
-    private java.util.List<String> inputBins;
-    /**
-     * True if color printing is supported by the printer; false otherwise. Read-only.
-     */
-    private Boolean isColorPrintingSupported;
-    /**
-     * True if the printer supports printing by page ranges; false otherwise.
-     */
-    private Boolean isPageRangeSupported;
-    /**
-     * A list of supported left margins(in microns) for the printer.
-     */
-    private java.util.List<Integer> leftMargins;
-    /**
-     * The media (i.e., paper) colors supported by the printer.
-     */
-    private java.util.List<String> mediaColors;
-    /**
-     * The media sizes supported by the printer. Supports standard size names for ISO and ANSI media sizes. Valid values are in the following table.
-     */
-    private java.util.List<String> mediaSizes;
-    /**
-     * The media types supported by the printer.
-     */
-    private java.util.List<String> mediaTypes;
-    /**
-     * The presentation directions supported by the printer. Supported values are described in the following table.
-     */
-    private java.util.List<PrintMultipageLayout> multipageLayouts;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The print orientations supported by the printer. Valid values are described in the following table.
-     */
-    private java.util.List<PrintOrientation> orientations;
-    /**
-     * The printer's supported output bins (trays).
-     */
-    private java.util.List<String> outputBins;
-    /**
-     * Supported number of Input Pages to impose upon a single Impression.
-     */
-    private java.util.List<Integer> pagesPerSheet;
-    /**
-     * The print qualities supported by the printer.
-     */
-    private java.util.List<PrintQuality> qualities;
-    /**
-     * A list of supported right margins(in microns) for the printer.
-     */
-    private java.util.List<Integer> rightMargins;
-    /**
-     * Supported print scalings.
-     */
-    private java.util.List<PrintScaling> scalings;
-    /**
-     * True if the printer supports scaling PDF pages to match the print media size; false otherwise.
-     */
-    private Boolean supportsFitPdfToPage;
-    /**
-     * A list of supported top margins(in microns) for the printer.
-     */
-    private java.util.List<Integer> topMargins;
+    private BackingStore backingStore;
     /**
      * Instantiates a new PrinterCapabilities and sets the default values.
      */
     public PrinterCapabilities() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -139,7 +39,20 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the bottomMargins property value. A list of supported bottom margins(in microns) for the printer.
@@ -147,7 +60,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Integer> getBottomMargins() {
-        return this.bottomMargins;
+        return this.backingStore.get("bottomMargins");
     }
     /**
      * Gets the collation property value. True if the printer supports collating when printing muliple copies of a multi-page document; false otherwise.
@@ -155,7 +68,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getCollation() {
-        return this.collation;
+        return this.backingStore.get("collation");
     }
     /**
      * Gets the colorModes property value. The color modes supported by the printer. Valid values are described in the following table.
@@ -163,7 +76,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintColorMode> getColorModes() {
-        return this.colorModes;
+        return this.backingStore.get("colorModes");
     }
     /**
      * Gets the contentTypes property value. A list of supported content (MIME) types that the printer supports. It is not guaranteed that the Universal Print service supports printing all of these MIME types.
@@ -171,7 +84,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getContentTypes() {
-        return this.contentTypes;
+        return this.backingStore.get("contentTypes");
     }
     /**
      * Gets the copiesPerJob property value. The range of copies per job supported by the printer.
@@ -179,7 +92,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public IntegerRange getCopiesPerJob() {
-        return this.copiesPerJob;
+        return this.backingStore.get("copiesPerJob");
     }
     /**
      * Gets the dpis property value. The list of print resolutions in DPI that are supported by the printer.
@@ -187,7 +100,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Integer> getDpis() {
-        return this.dpis;
+        return this.backingStore.get("dpis");
     }
     /**
      * Gets the duplexModes property value. The list of duplex modes that are supported by the printer. Valid values are described in the following table.
@@ -195,7 +108,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintDuplexMode> getDuplexModes() {
-        return this.duplexModes;
+        return this.backingStore.get("duplexModes");
     }
     /**
      * Gets the feedOrientations property value. The list of feed orientations that are supported by the printer.
@@ -203,7 +116,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrinterFeedOrientation> getFeedOrientations() {
-        return this.feedOrientations;
+        return this.backingStore.get("feedOrientations");
     }
     /**
      * The deserialization information for the current model
@@ -246,7 +159,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintFinishing> getFinishings() {
-        return this.finishings;
+        return this.backingStore.get("finishings");
     }
     /**
      * Gets the inputBins property value. Supported input bins for the printer.
@@ -254,7 +167,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getInputBins() {
-        return this.inputBins;
+        return this.backingStore.get("inputBins");
     }
     /**
      * Gets the isColorPrintingSupported property value. True if color printing is supported by the printer; false otherwise. Read-only.
@@ -262,7 +175,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsColorPrintingSupported() {
-        return this.isColorPrintingSupported;
+        return this.backingStore.get("isColorPrintingSupported");
     }
     /**
      * Gets the isPageRangeSupported property value. True if the printer supports printing by page ranges; false otherwise.
@@ -270,7 +183,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPageRangeSupported() {
-        return this.isPageRangeSupported;
+        return this.backingStore.get("isPageRangeSupported");
     }
     /**
      * Gets the leftMargins property value. A list of supported left margins(in microns) for the printer.
@@ -278,7 +191,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Integer> getLeftMargins() {
-        return this.leftMargins;
+        return this.backingStore.get("leftMargins");
     }
     /**
      * Gets the mediaColors property value. The media (i.e., paper) colors supported by the printer.
@@ -286,7 +199,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getMediaColors() {
-        return this.mediaColors;
+        return this.backingStore.get("mediaColors");
     }
     /**
      * Gets the mediaSizes property value. The media sizes supported by the printer. Supports standard size names for ISO and ANSI media sizes. Valid values are in the following table.
@@ -294,7 +207,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getMediaSizes() {
-        return this.mediaSizes;
+        return this.backingStore.get("mediaSizes");
     }
     /**
      * Gets the mediaTypes property value. The media types supported by the printer.
@@ -302,7 +215,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getMediaTypes() {
-        return this.mediaTypes;
+        return this.backingStore.get("mediaTypes");
     }
     /**
      * Gets the multipageLayouts property value. The presentation directions supported by the printer. Supported values are described in the following table.
@@ -310,7 +223,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintMultipageLayout> getMultipageLayouts() {
-        return this.multipageLayouts;
+        return this.backingStore.get("multipageLayouts");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -318,7 +231,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the orientations property value. The print orientations supported by the printer. Valid values are described in the following table.
@@ -326,7 +239,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintOrientation> getOrientations() {
-        return this.orientations;
+        return this.backingStore.get("orientations");
     }
     /**
      * Gets the outputBins property value. The printer's supported output bins (trays).
@@ -334,7 +247,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getOutputBins() {
-        return this.outputBins;
+        return this.backingStore.get("outputBins");
     }
     /**
      * Gets the pagesPerSheet property value. Supported number of Input Pages to impose upon a single Impression.
@@ -342,7 +255,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Integer> getPagesPerSheet() {
-        return this.pagesPerSheet;
+        return this.backingStore.get("pagesPerSheet");
     }
     /**
      * Gets the qualities property value. The print qualities supported by the printer.
@@ -350,7 +263,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintQuality> getQualities() {
-        return this.qualities;
+        return this.backingStore.get("qualities");
     }
     /**
      * Gets the rightMargins property value. A list of supported right margins(in microns) for the printer.
@@ -358,7 +271,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Integer> getRightMargins() {
-        return this.rightMargins;
+        return this.backingStore.get("rightMargins");
     }
     /**
      * Gets the scalings property value. Supported print scalings.
@@ -366,7 +279,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintScaling> getScalings() {
-        return this.scalings;
+        return this.backingStore.get("scalings");
     }
     /**
      * Gets the supportsFitPdfToPage property value. True if the printer supports scaling PDF pages to match the print media size; false otherwise.
@@ -374,7 +287,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getSupportsFitPdfToPage() {
-        return this.supportsFitPdfToPage;
+        return this.backingStore.get("supportsFitPdfToPage");
     }
     /**
      * Gets the topMargins property value. A list of supported top margins(in microns) for the printer.
@@ -382,7 +295,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Integer> getTopMargins() {
-        return this.topMargins;
+        return this.backingStore.get("topMargins");
     }
     /**
      * Serializes information the current object
@@ -423,188 +336,196 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the bottomMargins property value. A list of supported bottom margins(in microns) for the printer.
      * @param value Value to set for the bottomMargins property.
      */
     public void setBottomMargins(@jakarta.annotation.Nullable final java.util.List<Integer> value) {
-        this.bottomMargins = value;
+        this.backingStore.set("bottomMargins", value);
     }
     /**
      * Sets the collation property value. True if the printer supports collating when printing muliple copies of a multi-page document; false otherwise.
      * @param value Value to set for the collation property.
      */
     public void setCollation(@jakarta.annotation.Nullable final Boolean value) {
-        this.collation = value;
+        this.backingStore.set("collation", value);
     }
     /**
      * Sets the colorModes property value. The color modes supported by the printer. Valid values are described in the following table.
      * @param value Value to set for the colorModes property.
      */
     public void setColorModes(@jakarta.annotation.Nullable final java.util.List<PrintColorMode> value) {
-        this.colorModes = value;
+        this.backingStore.set("colorModes", value);
     }
     /**
      * Sets the contentTypes property value. A list of supported content (MIME) types that the printer supports. It is not guaranteed that the Universal Print service supports printing all of these MIME types.
      * @param value Value to set for the contentTypes property.
      */
     public void setContentTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.contentTypes = value;
+        this.backingStore.set("contentTypes", value);
     }
     /**
      * Sets the copiesPerJob property value. The range of copies per job supported by the printer.
      * @param value Value to set for the copiesPerJob property.
      */
     public void setCopiesPerJob(@jakarta.annotation.Nullable final IntegerRange value) {
-        this.copiesPerJob = value;
+        this.backingStore.set("copiesPerJob", value);
     }
     /**
      * Sets the dpis property value. The list of print resolutions in DPI that are supported by the printer.
      * @param value Value to set for the dpis property.
      */
     public void setDpis(@jakarta.annotation.Nullable final java.util.List<Integer> value) {
-        this.dpis = value;
+        this.backingStore.set("dpis", value);
     }
     /**
      * Sets the duplexModes property value. The list of duplex modes that are supported by the printer. Valid values are described in the following table.
      * @param value Value to set for the duplexModes property.
      */
     public void setDuplexModes(@jakarta.annotation.Nullable final java.util.List<PrintDuplexMode> value) {
-        this.duplexModes = value;
+        this.backingStore.set("duplexModes", value);
     }
     /**
      * Sets the feedOrientations property value. The list of feed orientations that are supported by the printer.
      * @param value Value to set for the feedOrientations property.
      */
     public void setFeedOrientations(@jakarta.annotation.Nullable final java.util.List<PrinterFeedOrientation> value) {
-        this.feedOrientations = value;
+        this.backingStore.set("feedOrientations", value);
     }
     /**
      * Sets the finishings property value. Finishing processes the printer supports for a printed document.
      * @param value Value to set for the finishings property.
      */
     public void setFinishings(@jakarta.annotation.Nullable final java.util.List<PrintFinishing> value) {
-        this.finishings = value;
+        this.backingStore.set("finishings", value);
     }
     /**
      * Sets the inputBins property value. Supported input bins for the printer.
      * @param value Value to set for the inputBins property.
      */
     public void setInputBins(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.inputBins = value;
+        this.backingStore.set("inputBins", value);
     }
     /**
      * Sets the isColorPrintingSupported property value. True if color printing is supported by the printer; false otherwise. Read-only.
      * @param value Value to set for the isColorPrintingSupported property.
      */
     public void setIsColorPrintingSupported(@jakarta.annotation.Nullable final Boolean value) {
-        this.isColorPrintingSupported = value;
+        this.backingStore.set("isColorPrintingSupported", value);
     }
     /**
      * Sets the isPageRangeSupported property value. True if the printer supports printing by page ranges; false otherwise.
      * @param value Value to set for the isPageRangeSupported property.
      */
     public void setIsPageRangeSupported(@jakarta.annotation.Nullable final Boolean value) {
-        this.isPageRangeSupported = value;
+        this.backingStore.set("isPageRangeSupported", value);
     }
     /**
      * Sets the leftMargins property value. A list of supported left margins(in microns) for the printer.
      * @param value Value to set for the leftMargins property.
      */
     public void setLeftMargins(@jakarta.annotation.Nullable final java.util.List<Integer> value) {
-        this.leftMargins = value;
+        this.backingStore.set("leftMargins", value);
     }
     /**
      * Sets the mediaColors property value. The media (i.e., paper) colors supported by the printer.
      * @param value Value to set for the mediaColors property.
      */
     public void setMediaColors(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.mediaColors = value;
+        this.backingStore.set("mediaColors", value);
     }
     /**
      * Sets the mediaSizes property value. The media sizes supported by the printer. Supports standard size names for ISO and ANSI media sizes. Valid values are in the following table.
      * @param value Value to set for the mediaSizes property.
      */
     public void setMediaSizes(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.mediaSizes = value;
+        this.backingStore.set("mediaSizes", value);
     }
     /**
      * Sets the mediaTypes property value. The media types supported by the printer.
      * @param value Value to set for the mediaTypes property.
      */
     public void setMediaTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.mediaTypes = value;
+        this.backingStore.set("mediaTypes", value);
     }
     /**
      * Sets the multipageLayouts property value. The presentation directions supported by the printer. Supported values are described in the following table.
      * @param value Value to set for the multipageLayouts property.
      */
     public void setMultipageLayouts(@jakarta.annotation.Nullable final java.util.List<PrintMultipageLayout> value) {
-        this.multipageLayouts = value;
+        this.backingStore.set("multipageLayouts", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the orientations property value. The print orientations supported by the printer. Valid values are described in the following table.
      * @param value Value to set for the orientations property.
      */
     public void setOrientations(@jakarta.annotation.Nullable final java.util.List<PrintOrientation> value) {
-        this.orientations = value;
+        this.backingStore.set("orientations", value);
     }
     /**
      * Sets the outputBins property value. The printer's supported output bins (trays).
      * @param value Value to set for the outputBins property.
      */
     public void setOutputBins(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.outputBins = value;
+        this.backingStore.set("outputBins", value);
     }
     /**
      * Sets the pagesPerSheet property value. Supported number of Input Pages to impose upon a single Impression.
      * @param value Value to set for the pagesPerSheet property.
      */
     public void setPagesPerSheet(@jakarta.annotation.Nullable final java.util.List<Integer> value) {
-        this.pagesPerSheet = value;
+        this.backingStore.set("pagesPerSheet", value);
     }
     /**
      * Sets the qualities property value. The print qualities supported by the printer.
      * @param value Value to set for the qualities property.
      */
     public void setQualities(@jakarta.annotation.Nullable final java.util.List<PrintQuality> value) {
-        this.qualities = value;
+        this.backingStore.set("qualities", value);
     }
     /**
      * Sets the rightMargins property value. A list of supported right margins(in microns) for the printer.
      * @param value Value to set for the rightMargins property.
      */
     public void setRightMargins(@jakarta.annotation.Nullable final java.util.List<Integer> value) {
-        this.rightMargins = value;
+        this.backingStore.set("rightMargins", value);
     }
     /**
      * Sets the scalings property value. Supported print scalings.
      * @param value Value to set for the scalings property.
      */
     public void setScalings(@jakarta.annotation.Nullable final java.util.List<PrintScaling> value) {
-        this.scalings = value;
+        this.backingStore.set("scalings", value);
     }
     /**
      * Sets the supportsFitPdfToPage property value. True if the printer supports scaling PDF pages to match the print media size; false otherwise.
      * @param value Value to set for the supportsFitPdfToPage property.
      */
     public void setSupportsFitPdfToPage(@jakarta.annotation.Nullable final Boolean value) {
-        this.supportsFitPdfToPage = value;
+        this.backingStore.set("supportsFitPdfToPage", value);
     }
     /**
      * Sets the topMargins property value. A list of supported top margins(in microns) for the printer.
      * @param value Value to set for the topMargins property.
      */
     public void setTopMargins(@jakarta.annotation.Nullable final java.util.List<Integer> value) {
-        this.topMargins = value;
+        this.backingStore.set("topMargins", value);
     }
 }

@@ -10,14 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType implements Parsable {
     /**
-     * Active Hours End
-     */
-    private LocalTime activeHoursEnd;
-    /**
-     * Active Hours Start
-     */
-    private LocalTime activeHoursStart;
-    /**
      * Instantiates a new WindowsUpdateActiveHoursInstall and sets the default values.
      */
     public WindowsUpdateActiveHoursInstall() {
@@ -40,7 +32,7 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
      */
     @jakarta.annotation.Nullable
     public LocalTime getActiveHoursEnd() {
-        return this.activeHoursEnd;
+        return this.backingStore.get("activeHoursEnd");
     }
     /**
      * Gets the activeHoursStart property value. Active Hours Start
@@ -48,7 +40,7 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
      */
     @jakarta.annotation.Nullable
     public LocalTime getActiveHoursStart() {
-        return this.activeHoursStart;
+        return this.backingStore.get("activeHoursStart");
     }
     /**
      * The deserialization information for the current model
@@ -76,13 +68,13 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
      * @param value Value to set for the activeHoursEnd property.
      */
     public void setActiveHoursEnd(@jakarta.annotation.Nullable final LocalTime value) {
-        this.activeHoursEnd = value;
+        this.backingStore.set("activeHoursEnd", value);
     }
     /**
      * Sets the activeHoursStart property value. Active Hours Start
      * @param value Value to set for the activeHoursStart property.
      */
     public void setActiveHoursStart(@jakarta.annotation.Nullable final LocalTime value) {
-        this.activeHoursStart = value;
+        this.backingStore.set("activeHoursStart", value);
     }
 }

@@ -4,31 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ErrorDetails implements AdditionalDataHolder, Parsable {
+public class ErrorDetails implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The code property
-     */
-    private String code;
-    /**
-     * The message property
-     */
-    private String message;
-    /**
-     * The target property
-     */
-    private String target;
+    private BackingStore backingStore;
     /**
      * Instantiates a new ErrorDetails and sets the default values.
      */
     public ErrorDetails() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +39,20 @@ public class ErrorDetails implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the code property value. The code property
@@ -55,7 +60,7 @@ public class ErrorDetails implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCode() {
-        return this.code;
+        return this.backingStore.get("code");
     }
     /**
      * The deserialization information for the current model
@@ -75,7 +80,7 @@ public class ErrorDetails implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getMessage() {
-        return this.message;
+        return this.backingStore.get("message");
     }
     /**
      * Gets the target property value. The target property
@@ -83,7 +88,7 @@ public class ErrorDetails implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTarget() {
-        return this.target;
+        return this.backingStore.get("target");
     }
     /**
      * Serializes information the current object
@@ -101,27 +106,35 @@ public class ErrorDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the code property value. The code property
      * @param value Value to set for the code property.
      */
     public void setCode(@jakarta.annotation.Nullable final String value) {
-        this.code = value;
+        this.backingStore.set("code", value);
     }
     /**
      * Sets the message property value. The message property
      * @param value Value to set for the message property.
      */
     public void setMessage(@jakarta.annotation.Nullable final String value) {
-        this.message = value;
+        this.backingStore.set("message", value);
     }
     /**
      * Sets the target property value. The target property
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final String value) {
-        this.target = value;
+        this.backingStore.set("target", value);
     }
 }

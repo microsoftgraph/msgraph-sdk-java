@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ParticipantJoiningNotification extends Entity implements Parsable {
     /**
-     * The call property
-     */
-    private Call call;
-    /**
      * Instantiates a new ParticipantJoiningNotification and sets the default values.
      */
     public ParticipantJoiningNotification() {
@@ -34,7 +30,7 @@ public class ParticipantJoiningNotification extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Call getCall() {
-        return this.call;
+        return this.backingStore.get("call");
     }
     /**
      * The deserialization information for the current model
@@ -60,6 +56,6 @@ public class ParticipantJoiningNotification extends Entity implements Parsable {
      * @param value Value to set for the call property.
      */
     public void setCall(@jakarta.annotation.Nullable final Call value) {
-        this.call = value;
+        this.backingStore.set("call", value);
     }
 }

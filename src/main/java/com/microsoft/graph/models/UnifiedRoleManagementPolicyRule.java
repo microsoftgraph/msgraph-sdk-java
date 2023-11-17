@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable {
     /**
-     * Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne).
-     */
-    private UnifiedRoleManagementPolicyRuleTarget target;
-    /**
      * Instantiates a new UnifiedRoleManagementPolicyRule and sets the default values.
      */
     public UnifiedRoleManagementPolicyRule() {
@@ -55,7 +51,7 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleManagementPolicyRuleTarget getTarget() {
-        return this.target;
+        return this.backingStore.get("target");
     }
     /**
      * Serializes information the current object
@@ -71,6 +67,6 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final UnifiedRoleManagementPolicyRuleTarget value) {
-        this.target = value;
+        this.backingStore.set("target", value);
     }
 }

@@ -10,58 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Post extends OutlookItem implements Parsable {
     /**
-     * Read-only. Nullable. Supports $expand.
-     */
-    private java.util.List<Attachment> attachments;
-    /**
-     * The contents of the post. This is a default property. This property can be null.
-     */
-    private ItemBody body;
-    /**
-     * Unique ID of the conversation. Read-only.
-     */
-    private String conversationId;
-    /**
-     * Unique ID of the conversation thread. Read-only.
-     */
-    private String conversationThreadId;
-    /**
-     * The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand.
-     */
-    private java.util.List<Extension> extensions;
-    /**
-     * The from property
-     */
-    private Recipient from;
-    /**
-     * Indicates whether the post has at least one attachment. This is a default property.
-     */
-    private Boolean hasAttachments;
-    /**
-     * Read-only. Supports $expand.
-     */
-    private Post inReplyTo;
-    /**
-     * The collection of multi-value extended properties defined for the post. Read-only. Nullable.
-     */
-    private java.util.List<MultiValueLegacyExtendedProperty> multiValueExtendedProperties;
-    /**
-     * Conversation participants that were added to the thread as part of this post.
-     */
-    private java.util.List<Recipient> newParticipants;
-    /**
-     * Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime receivedDateTime;
-    /**
-     * Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.
-     */
-    private Recipient sender;
-    /**
-     * The collection of single-value extended properties defined for the post. Read-only. Nullable.
-     */
-    private java.util.List<SingleValueLegacyExtendedProperty> singleValueExtendedProperties;
-    /**
      * Instantiates a new Post and sets the default values.
      */
     public Post() {
@@ -84,7 +32,7 @@ public class Post extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Attachment> getAttachments() {
-        return this.attachments;
+        return this.backingStore.get("attachments");
     }
     /**
      * Gets the body property value. The contents of the post. This is a default property. This property can be null.
@@ -92,7 +40,7 @@ public class Post extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ItemBody getBody() {
-        return this.body;
+        return this.backingStore.get("body");
     }
     /**
      * Gets the conversationId property value. Unique ID of the conversation. Read-only.
@@ -100,7 +48,7 @@ public class Post extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getConversationId() {
-        return this.conversationId;
+        return this.backingStore.get("conversationId");
     }
     /**
      * Gets the conversationThreadId property value. Unique ID of the conversation thread. Read-only.
@@ -108,7 +56,7 @@ public class Post extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getConversationThreadId() {
-        return this.conversationThreadId;
+        return this.backingStore.get("conversationThreadId");
     }
     /**
      * Gets the extensions property value. The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand.
@@ -116,7 +64,7 @@ public class Post extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
-        return this.extensions;
+        return this.backingStore.get("extensions");
     }
     /**
      * The deserialization information for the current model
@@ -146,7 +94,7 @@ public class Post extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Recipient getFrom() {
-        return this.from;
+        return this.backingStore.get("from");
     }
     /**
      * Gets the hasAttachments property value. Indicates whether the post has at least one attachment. This is a default property.
@@ -154,7 +102,7 @@ public class Post extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getHasAttachments() {
-        return this.hasAttachments;
+        return this.backingStore.get("hasAttachments");
     }
     /**
      * Gets the inReplyTo property value. Read-only. Supports $expand.
@@ -162,7 +110,7 @@ public class Post extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Post getInReplyTo() {
-        return this.inReplyTo;
+        return this.backingStore.get("inReplyTo");
     }
     /**
      * Gets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the post. Read-only. Nullable.
@@ -170,7 +118,7 @@ public class Post extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<MultiValueLegacyExtendedProperty> getMultiValueExtendedProperties() {
-        return this.multiValueExtendedProperties;
+        return this.backingStore.get("multiValueExtendedProperties");
     }
     /**
      * Gets the newParticipants property value. Conversation participants that were added to the thread as part of this post.
@@ -178,7 +126,7 @@ public class Post extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getNewParticipants() {
-        return this.newParticipants;
+        return this.backingStore.get("newParticipants");
     }
     /**
      * Gets the receivedDateTime property value. Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -186,7 +134,7 @@ public class Post extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReceivedDateTime() {
-        return this.receivedDateTime;
+        return this.backingStore.get("receivedDateTime");
     }
     /**
      * Gets the sender property value. Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.
@@ -194,7 +142,7 @@ public class Post extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Recipient getSender() {
-        return this.sender;
+        return this.backingStore.get("sender");
     }
     /**
      * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the post. Read-only. Nullable.
@@ -202,7 +150,7 @@ public class Post extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<SingleValueLegacyExtendedProperty> getSingleValueExtendedProperties() {
-        return this.singleValueExtendedProperties;
+        return this.backingStore.get("singleValueExtendedProperties");
     }
     /**
      * Serializes information the current object
@@ -230,90 +178,90 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the attachments property.
      */
     public void setAttachments(@jakarta.annotation.Nullable final java.util.List<Attachment> value) {
-        this.attachments = value;
+        this.backingStore.set("attachments", value);
     }
     /**
      * Sets the body property value. The contents of the post. This is a default property. This property can be null.
      * @param value Value to set for the body property.
      */
     public void setBody(@jakarta.annotation.Nullable final ItemBody value) {
-        this.body = value;
+        this.backingStore.set("body", value);
     }
     /**
      * Sets the conversationId property value. Unique ID of the conversation. Read-only.
      * @param value Value to set for the conversationId property.
      */
     public void setConversationId(@jakarta.annotation.Nullable final String value) {
-        this.conversationId = value;
+        this.backingStore.set("conversationId", value);
     }
     /**
      * Sets the conversationThreadId property value. Unique ID of the conversation thread. Read-only.
      * @param value Value to set for the conversationThreadId property.
      */
     public void setConversationThreadId(@jakarta.annotation.Nullable final String value) {
-        this.conversationThreadId = value;
+        this.backingStore.set("conversationThreadId", value);
     }
     /**
      * Sets the extensions property value. The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the extensions property.
      */
     public void setExtensions(@jakarta.annotation.Nullable final java.util.List<Extension> value) {
-        this.extensions = value;
+        this.backingStore.set("extensions", value);
     }
     /**
      * Sets the from property value. The from property
      * @param value Value to set for the from property.
      */
     public void setFrom(@jakarta.annotation.Nullable final Recipient value) {
-        this.from = value;
+        this.backingStore.set("from", value);
     }
     /**
      * Sets the hasAttachments property value. Indicates whether the post has at least one attachment. This is a default property.
      * @param value Value to set for the hasAttachments property.
      */
     public void setHasAttachments(@jakarta.annotation.Nullable final Boolean value) {
-        this.hasAttachments = value;
+        this.backingStore.set("hasAttachments", value);
     }
     /**
      * Sets the inReplyTo property value. Read-only. Supports $expand.
      * @param value Value to set for the inReplyTo property.
      */
     public void setInReplyTo(@jakarta.annotation.Nullable final Post value) {
-        this.inReplyTo = value;
+        this.backingStore.set("inReplyTo", value);
     }
     /**
      * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the post. Read-only. Nullable.
      * @param value Value to set for the multiValueExtendedProperties property.
      */
     public void setMultiValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
-        this.multiValueExtendedProperties = value;
+        this.backingStore.set("multiValueExtendedProperties", value);
     }
     /**
      * Sets the newParticipants property value. Conversation participants that were added to the thread as part of this post.
      * @param value Value to set for the newParticipants property.
      */
     public void setNewParticipants(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
-        this.newParticipants = value;
+        this.backingStore.set("newParticipants", value);
     }
     /**
      * Sets the receivedDateTime property value. Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the receivedDateTime property.
      */
     public void setReceivedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.receivedDateTime = value;
+        this.backingStore.set("receivedDateTime", value);
     }
     /**
      * Sets the sender property value. Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.
      * @param value Value to set for the sender property.
      */
     public void setSender(@jakarta.annotation.Nullable final Recipient value) {
-        this.sender = value;
+        this.backingStore.set("sender", value);
     }
     /**
      * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the post. Read-only. Nullable.
      * @param value Value to set for the singleValueExtendedProperties property.
      */
     public void setSingleValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
-        this.singleValueExtendedProperties = value;
+        this.backingStore.set("singleValueExtendedProperties", value);
     }
 }

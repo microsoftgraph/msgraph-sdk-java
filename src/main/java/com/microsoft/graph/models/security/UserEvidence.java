@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserEvidence extends AlertEvidence implements Parsable {
     /**
-     * The user account details.
-     */
-    private UserAccount userAccount;
-    /**
      * Instantiates a new UserEvidence and sets the default values.
      */
     public UserEvidence() {
@@ -45,7 +41,7 @@ public class UserEvidence extends AlertEvidence implements Parsable {
      */
     @jakarta.annotation.Nullable
     public UserAccount getUserAccount() {
-        return this.userAccount;
+        return this.backingStore.get("userAccount");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class UserEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the userAccount property.
      */
     public void setUserAccount(@jakarta.annotation.Nullable final UserAccount value) {
-        this.userAccount = value;
+        this.backingStore.set("userAccount", value);
     }
 }

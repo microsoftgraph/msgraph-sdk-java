@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartAxisTitleFormat extends Entity implements Parsable {
     /**
-     * Represents the font attributes, such as font name, font size, color, etc. of chart axis title object. Read-only.
-     */
-    private WorkbookChartFont font;
-    /**
      * Instantiates a new WorkbookChartAxisTitleFormat and sets the default values.
      */
     public WorkbookChartAxisTitleFormat() {
@@ -44,7 +40,7 @@ public class WorkbookChartAxisTitleFormat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookChartFont getFont() {
-        return this.font;
+        return this.backingStore.get("font");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class WorkbookChartAxisTitleFormat extends Entity implements Parsable {
      * @param value Value to set for the font property.
      */
     public void setFont(@jakarta.annotation.Nullable final WorkbookChartFont value) {
-        this.font = value;
+        this.backingStore.set("font", value);
     }
 }

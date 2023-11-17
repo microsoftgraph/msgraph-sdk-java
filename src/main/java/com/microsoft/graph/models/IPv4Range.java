@@ -12,14 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IPv4Range extends IpRange implements Parsable {
     /**
-     * Lower address.
-     */
-    private String lowerAddress;
-    /**
-     * Upper address.
-     */
-    private String upperAddress;
-    /**
      * Instantiates a new IPv4Range and sets the default values.
      */
     public IPv4Range() {
@@ -53,7 +45,7 @@ public class IPv4Range extends IpRange implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLowerAddress() {
-        return this.lowerAddress;
+        return this.backingStore.get("lowerAddress");
     }
     /**
      * Gets the upperAddress property value. Upper address.
@@ -61,7 +53,7 @@ public class IPv4Range extends IpRange implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUpperAddress() {
-        return this.upperAddress;
+        return this.backingStore.get("upperAddress");
     }
     /**
      * Serializes information the current object
@@ -78,13 +70,13 @@ public class IPv4Range extends IpRange implements Parsable {
      * @param value Value to set for the lowerAddress property.
      */
     public void setLowerAddress(@jakarta.annotation.Nullable final String value) {
-        this.lowerAddress = value;
+        this.backingStore.set("lowerAddress", value);
     }
     /**
      * Sets the upperAddress property value. Upper address.
      * @param value Value to set for the upperAddress property.
      */
     public void setUpperAddress(@jakarta.annotation.Nullable final String value) {
-        this.upperAddress = value;
+        this.backingStore.set("upperAddress", value);
     }
 }

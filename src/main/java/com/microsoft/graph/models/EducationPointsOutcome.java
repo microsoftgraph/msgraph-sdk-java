@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationPointsOutcome extends EducationOutcome implements Parsable {
     /**
-     * The numeric grade the teacher has given the student for this assignment.
-     */
-    private EducationAssignmentPointsGrade points;
-    /**
-     * A copy of the points property that is made when the grade is released to the student.
-     */
-    private EducationAssignmentPointsGrade publishedPoints;
-    /**
      * Instantiates a new EducationPointsOutcome and sets the default values.
      */
     public EducationPointsOutcome() {
@@ -50,7 +42,7 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
      */
     @jakarta.annotation.Nullable
     public EducationAssignmentPointsGrade getPoints() {
-        return this.points;
+        return this.backingStore.get("points");
     }
     /**
      * Gets the publishedPoints property value. A copy of the points property that is made when the grade is released to the student.
@@ -58,7 +50,7 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
      */
     @jakarta.annotation.Nullable
     public EducationAssignmentPointsGrade getPublishedPoints() {
-        return this.publishedPoints;
+        return this.backingStore.get("publishedPoints");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
      * @param value Value to set for the points property.
      */
     public void setPoints(@jakarta.annotation.Nullable final EducationAssignmentPointsGrade value) {
-        this.points = value;
+        this.backingStore.set("points", value);
     }
     /**
      * Sets the publishedPoints property value. A copy of the points property that is made when the grade is released to the student.
      * @param value Value to set for the publishedPoints property.
      */
     public void setPublishedPoints(@jakarta.annotation.Nullable final EducationAssignmentPointsGrade value) {
-        this.publishedPoints = value;
+        this.backingStore.set("publishedPoints", value);
     }
 }

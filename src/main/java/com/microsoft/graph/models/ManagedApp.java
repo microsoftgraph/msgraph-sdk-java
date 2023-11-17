@@ -12,14 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedApp extends MobileApp implements Parsable {
     /**
-     * A managed (MAM) application's availability.
-     */
-    private ManagedAppAvailability appAvailability;
-    /**
-     * The Application's version.
-     */
-    private String version;
-    /**
      * Instantiates a new ManagedApp and sets the default values.
      */
     public ManagedApp() {
@@ -53,7 +45,7 @@ public class ManagedApp extends MobileApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ManagedAppAvailability getAppAvailability() {
-        return this.appAvailability;
+        return this.backingStore.get("appAvailability");
     }
     /**
      * The deserialization information for the current model
@@ -72,7 +64,7 @@ public class ManagedApp extends MobileApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
-        return this.version;
+        return this.backingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -89,13 +81,13 @@ public class ManagedApp extends MobileApp implements Parsable {
      * @param value Value to set for the appAvailability property.
      */
     public void setAppAvailability(@jakarta.annotation.Nullable final ManagedAppAvailability value) {
-        this.appAvailability = value;
+        this.backingStore.set("appAvailability", value);
     }
     /**
      * Sets the version property value. The Application's version.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {
-        this.version = value;
+        this.backingStore.set("version", value);
     }
 }

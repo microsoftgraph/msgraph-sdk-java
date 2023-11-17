@@ -10,10 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DirectoryObject extends Entity implements Parsable {
     /**
-     * Date and time when this object was deleted. Always null when the object hasn't been deleted.
-     */
-    private OffsetDateTime deletedDateTime;
-    /**
      * Instantiates a new DirectoryObject and sets the default values.
      */
     public DirectoryObject() {
@@ -71,7 +67,7 @@ public class DirectoryObject extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDeletedDateTime() {
-        return this.deletedDateTime;
+        return this.backingStore.get("deletedDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -97,6 +93,6 @@ public class DirectoryObject extends Entity implements Parsable {
      * @param value Value to set for the deletedDateTime property.
      */
     public void setDeletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.deletedDateTime = value;
+        this.backingStore.set("deletedDateTime", value);
     }
 }

@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationExternalResource extends EducationResource implements Parsable {
     /**
-     * Location of the resource. Required
-     */
-    private String webUrl;
-    /**
      * Instantiates a new EducationExternalResource and sets the default values.
      */
     public EducationExternalResource() {
@@ -45,7 +41,7 @@ public class EducationExternalResource extends EducationResource implements Pars
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {
-        return this.webUrl;
+        return this.backingStore.get("webUrl");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class EducationExternalResource extends EducationResource implements Pars
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.webUrl = value;
+        this.backingStore.set("webUrl", value);
     }
 }

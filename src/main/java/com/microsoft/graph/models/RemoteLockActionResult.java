@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RemoteLockActionResult extends DeviceActionResult implements Parsable {
     /**
-     * Pin to unlock the client
-     */
-    private String unlockPin;
-    /**
      * Instantiates a new RemoteLockActionResult and sets the default values.
      */
     public RemoteLockActionResult() {
@@ -47,7 +43,7 @@ public class RemoteLockActionResult extends DeviceActionResult implements Parsab
      */
     @jakarta.annotation.Nullable
     public String getUnlockPin() {
-        return this.unlockPin;
+        return this.backingStore.get("unlockPin");
     }
     /**
      * Serializes information the current object
@@ -63,6 +59,6 @@ public class RemoteLockActionResult extends DeviceActionResult implements Parsab
      * @param value Value to set for the unlockPin property.
      */
     public void setUnlockPin(@jakarta.annotation.Nullable final String value) {
-        this.unlockPin = value;
+        this.backingStore.set("unlockPin", value);
     }
 }

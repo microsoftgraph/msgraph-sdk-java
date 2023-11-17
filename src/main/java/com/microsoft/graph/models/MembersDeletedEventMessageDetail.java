@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MembersDeletedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * Initiator of the event.
-     */
-    private IdentitySet initiator;
-    /**
-     * List of members deleted.
-     */
-    private java.util.List<TeamworkUserIdentity> members;
-    /**
      * Instantiates a new MembersDeletedEventMessageDetail and sets the default values.
      */
     public MembersDeletedEventMessageDetail() {
@@ -50,7 +42,7 @@ public class MembersDeletedEventMessageDetail extends EventMessageDetail impleme
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this.initiator;
+        return this.backingStore.get("initiator");
     }
     /**
      * Gets the members property value. List of members deleted.
@@ -58,7 +50,7 @@ public class MembersDeletedEventMessageDetail extends EventMessageDetail impleme
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamworkUserIdentity> getMembers() {
-        return this.members;
+        return this.backingStore.get("members");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class MembersDeletedEventMessageDetail extends EventMessageDetail impleme
      * @param value Value to set for the initiator property.
      */
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.initiator = value;
+        this.backingStore.set("initiator", value);
     }
     /**
      * Sets the members property value. List of members deleted.
      * @param value Value to set for the members property.
      */
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<TeamworkUserIdentity> value) {
-        this.members = value;
+        this.backingStore.set("members", value);
     }
 }

@@ -10,10 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SubdomainCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<Subdomain> value;
-    /**
      * Instantiates a new SubdomainCollectionResponse and sets the default values.
      */
     public SubdomainCollectionResponse() {
@@ -45,7 +41,7 @@ public class SubdomainCollectionResponse extends BaseCollectionPaginationCountRe
      */
     @jakarta.annotation.Nullable
     public java.util.List<Subdomain> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class SubdomainCollectionResponse extends BaseCollectionPaginationCountRe
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<Subdomain> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

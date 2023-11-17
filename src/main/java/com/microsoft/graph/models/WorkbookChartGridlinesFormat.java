@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartGridlinesFormat extends Entity implements Parsable {
     /**
-     * Represents chart line formatting. Read-only.
-     */
-    private WorkbookChartLineFormat line;
-    /**
      * Instantiates a new WorkbookChartGridlinesFormat and sets the default values.
      */
     public WorkbookChartGridlinesFormat() {
@@ -44,7 +40,7 @@ public class WorkbookChartGridlinesFormat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookChartLineFormat getLine() {
-        return this.line;
+        return this.backingStore.get("line");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class WorkbookChartGridlinesFormat extends Entity implements Parsable {
      * @param value Value to set for the line property.
      */
     public void setLine(@jakarta.annotation.Nullable final WorkbookChartLineFormat value) {
-        this.line = value;
+        this.backingStore.set("line", value);
     }
 }

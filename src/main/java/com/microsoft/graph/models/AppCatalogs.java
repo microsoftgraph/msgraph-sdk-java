@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppCatalogs extends Entity implements Parsable {
     /**
-     * The teamsApps property
-     */
-    private java.util.List<TeamsApp> teamsApps;
-    /**
      * Instantiates a new AppCatalogs and sets the default values.
      */
     public AppCatalogs() {
@@ -44,7 +40,7 @@ public class AppCatalogs extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamsApp> getTeamsApps() {
-        return this.teamsApps;
+        return this.backingStore.get("teamsApps");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AppCatalogs extends Entity implements Parsable {
      * @param value Value to set for the teamsApps property.
      */
     public void setTeamsApps(@jakarta.annotation.Nullable final java.util.List<TeamsApp> value) {
-        this.teamsApps = value;
+        this.backingStore.set("teamsApps", value);
     }
 }

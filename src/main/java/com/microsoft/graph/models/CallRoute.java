@@ -4,35 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CallRoute implements AdditionalDataHolder, Parsable {
+public class CallRoute implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The final property
-     */
-    private IdentitySet finalEscaped;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The original property
-     */
-    private IdentitySet original;
-    /**
-     * The routingType property
-     */
-    private RoutingType routingType;
+    private BackingStore backingStore;
     /**
      * Instantiates a new CallRoute and sets the default values.
      */
     public CallRoute() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +39,20 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -72,7 +73,7 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public IdentitySet getFinal() {
-        return this.finalEscaped;
+        return this.backingStore.get("final");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -80,7 +81,7 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the original property value. The original property
@@ -88,7 +89,7 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public IdentitySet getOriginal() {
-        return this.original;
+        return this.backingStore.get("original");
     }
     /**
      * Gets the routingType property value. The routingType property
@@ -96,7 +97,7 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public RoutingType getRoutingType() {
-        return this.routingType;
+        return this.backingStore.get("routingType");
     }
     /**
      * Serializes information the current object
@@ -115,34 +116,42 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the final property value. The final property
      * @param value Value to set for the final property.
      */
     public void setFinal(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.finalEscaped = value;
+        this.backingStore.set("final", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the original property value. The original property
      * @param value Value to set for the original property.
      */
     public void setOriginal(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.original = value;
+        this.backingStore.set("original", value);
     }
     /**
      * Sets the routingType property value. The routingType property
      * @param value Value to set for the routingType property.
      */
     public void setRoutingType(@jakarta.annotation.Nullable final RoutingType value) {
-        this.routingType = value;
+        this.backingStore.set("routingType", value);
     }
 }

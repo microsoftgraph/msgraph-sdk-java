@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamsAppInstalledEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * Initiator of the event.
-     */
-    private IdentitySet initiator;
-    /**
-     * Display name of the teamsApp.
-     */
-    private String teamsAppDisplayName;
-    /**
-     * Unique identifier of the teamsApp.
-     */
-    private String teamsAppId;
-    /**
      * Instantiates a new TeamsAppInstalledEventMessageDetail and sets the default values.
      */
     public TeamsAppInstalledEventMessageDetail() {
@@ -55,7 +43,7 @@ public class TeamsAppInstalledEventMessageDetail extends EventMessageDetail impl
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this.initiator;
+        return this.backingStore.get("initiator");
     }
     /**
      * Gets the teamsAppDisplayName property value. Display name of the teamsApp.
@@ -63,7 +51,7 @@ public class TeamsAppInstalledEventMessageDetail extends EventMessageDetail impl
      */
     @jakarta.annotation.Nullable
     public String getTeamsAppDisplayName() {
-        return this.teamsAppDisplayName;
+        return this.backingStore.get("teamsAppDisplayName");
     }
     /**
      * Gets the teamsAppId property value. Unique identifier of the teamsApp.
@@ -71,7 +59,7 @@ public class TeamsAppInstalledEventMessageDetail extends EventMessageDetail impl
      */
     @jakarta.annotation.Nullable
     public String getTeamsAppId() {
-        return this.teamsAppId;
+        return this.backingStore.get("teamsAppId");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class TeamsAppInstalledEventMessageDetail extends EventMessageDetail impl
      * @param value Value to set for the initiator property.
      */
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.initiator = value;
+        this.backingStore.set("initiator", value);
     }
     /**
      * Sets the teamsAppDisplayName property value. Display name of the teamsApp.
      * @param value Value to set for the teamsAppDisplayName property.
      */
     public void setTeamsAppDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.teamsAppDisplayName = value;
+        this.backingStore.set("teamsAppDisplayName", value);
     }
     /**
      * Sets the teamsAppId property value. Unique identifier of the teamsApp.
      * @param value Value to set for the teamsAppId property.
      */
     public void setTeamsAppId(@jakarta.annotation.Nullable final String value) {
-        this.teamsAppId = value;
+        this.backingStore.set("teamsAppId", value);
     }
 }

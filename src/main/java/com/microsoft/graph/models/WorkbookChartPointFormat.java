@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartPointFormat extends Entity implements Parsable {
     /**
-     * Represents the fill format of a chart, which includes background formatting information. Read-only.
-     */
-    private WorkbookChartFill fill;
-    /**
      * Instantiates a new WorkbookChartPointFormat and sets the default values.
      */
     public WorkbookChartPointFormat() {
@@ -44,7 +40,7 @@ public class WorkbookChartPointFormat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookChartFill getFill() {
-        return this.fill;
+        return this.backingStore.get("fill");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class WorkbookChartPointFormat extends Entity implements Parsable {
      * @param value Value to set for the fill property.
      */
     public void setFill(@jakarta.annotation.Nullable final WorkbookChartFill value) {
-        this.fill = value;
+        this.backingStore.set("fill", value);
     }
 }

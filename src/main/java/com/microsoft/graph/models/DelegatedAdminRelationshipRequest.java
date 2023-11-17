@@ -10,22 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DelegatedAdminRelationshipRequest extends Entity implements Parsable {
     /**
-     * The action property
-     */
-    private DelegatedAdminRelationshipRequestAction action;
-    /**
-     * The date and time in ISO 8601 format and in UTC time when the relationship request was created. Read-only.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The date and time in ISO 8601 format and UTC time when this relationship request was last modified. Read-only.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The status of the request. Read-only. The possible values are: created, pending, succeeded, failed, unknownFutureValue.
-     */
-    private DelegatedAdminRelationshipRequestStatus status;
-    /**
      * Instantiates a new DelegatedAdminRelationshipRequest and sets the default values.
      */
     public DelegatedAdminRelationshipRequest() {
@@ -47,7 +31,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminRelationshipRequestAction getAction() {
-        return this.action;
+        return this.backingStore.get("action");
     }
     /**
      * Gets the createdDateTime property value. The date and time in ISO 8601 format and in UTC time when the relationship request was created. Read-only.
@@ -55,7 +39,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -76,7 +60,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the status property value. The status of the request. Read-only. The possible values are: created, pending, succeeded, failed, unknownFutureValue.
@@ -84,7 +68,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminRelationshipRequestStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
      * @param value Value to set for the action property.
      */
     public void setAction(@jakarta.annotation.Nullable final DelegatedAdminRelationshipRequestAction value) {
-        this.action = value;
+        this.backingStore.set("action", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time in ISO 8601 format and in UTC time when the relationship request was created. Read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time in ISO 8601 format and UTC time when this relationship request was last modified. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the status property value. The status of the request. Read-only. The possible values are: created, pending, succeeded, failed, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final DelegatedAdminRelationshipRequestStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
 }

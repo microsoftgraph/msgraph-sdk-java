@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewScheduleDefinitionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<AccessReviewScheduleDefinition> value;
-    /**
      * Instantiates a new AccessReviewScheduleDefinitionCollectionResponse and sets the default values.
      */
     public AccessReviewScheduleDefinitionCollectionResponse() {
@@ -44,7 +40,7 @@ public class AccessReviewScheduleDefinitionCollectionResponse extends BaseCollec
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewScheduleDefinition> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AccessReviewScheduleDefinitionCollectionResponse extends BaseCollec
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AccessReviewScheduleDefinition> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

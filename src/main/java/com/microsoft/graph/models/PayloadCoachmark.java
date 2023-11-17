@@ -4,47 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PayloadCoachmark implements AdditionalDataHolder, Parsable {
+public class PayloadCoachmark implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The coachmark location.
-     */
-    private CoachmarkLocation coachmarkLocation;
-    /**
-     * The description about the coachmark.
-     */
-    private String description;
-    /**
-     * The coachmark indicator.
-     */
-    private String indicator;
-    /**
-     * Indicates whether the coachmark is valid or not.
-     */
-    private Boolean isValid;
-    /**
-     * The coachmark language.
-     */
-    private String language;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The coachmark order.
-     */
-    private String order;
+    private BackingStore backingStore;
     /**
      * Instantiates a new PayloadCoachmark and sets the default values.
      */
     public PayloadCoachmark() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -63,7 +39,20 @@ public class PayloadCoachmark implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the coachmarkLocation property value. The coachmark location.
@@ -71,7 +60,7 @@ public class PayloadCoachmark implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public CoachmarkLocation getCoachmarkLocation() {
-        return this.coachmarkLocation;
+        return this.backingStore.get("coachmarkLocation");
     }
     /**
      * Gets the description property value. The description about the coachmark.
@@ -79,7 +68,7 @@ public class PayloadCoachmark implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -103,7 +92,7 @@ public class PayloadCoachmark implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getIndicator() {
-        return this.indicator;
+        return this.backingStore.get("indicator");
     }
     /**
      * Gets the isValid property value. Indicates whether the coachmark is valid or not.
@@ -111,7 +100,7 @@ public class PayloadCoachmark implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsValid() {
-        return this.isValid;
+        return this.backingStore.get("isValid");
     }
     /**
      * Gets the language property value. The coachmark language.
@@ -119,7 +108,7 @@ public class PayloadCoachmark implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLanguage() {
-        return this.language;
+        return this.backingStore.get("language");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -127,7 +116,7 @@ public class PayloadCoachmark implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the order property value. The coachmark order.
@@ -135,7 +124,7 @@ public class PayloadCoachmark implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOrder() {
-        return this.order;
+        return this.backingStore.get("order");
     }
     /**
      * Serializes information the current object
@@ -157,55 +146,63 @@ public class PayloadCoachmark implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the coachmarkLocation property value. The coachmark location.
      * @param value Value to set for the coachmarkLocation property.
      */
     public void setCoachmarkLocation(@jakarta.annotation.Nullable final CoachmarkLocation value) {
-        this.coachmarkLocation = value;
+        this.backingStore.set("coachmarkLocation", value);
     }
     /**
      * Sets the description property value. The description about the coachmark.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the indicator property value. The coachmark indicator.
      * @param value Value to set for the indicator property.
      */
     public void setIndicator(@jakarta.annotation.Nullable final String value) {
-        this.indicator = value;
+        this.backingStore.set("indicator", value);
     }
     /**
      * Sets the isValid property value. Indicates whether the coachmark is valid or not.
      * @param value Value to set for the isValid property.
      */
     public void setIsValid(@jakarta.annotation.Nullable final Boolean value) {
-        this.isValid = value;
+        this.backingStore.set("isValid", value);
     }
     /**
      * Sets the language property value. The coachmark language.
      * @param value Value to set for the language property.
      */
     public void setLanguage(@jakarta.annotation.Nullable final String value) {
-        this.language = value;
+        this.backingStore.set("language", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the order property value. The coachmark order.
      * @param value Value to set for the order property.
      */
     public void setOrder(@jakarta.annotation.Nullable final String value) {
-        this.order = value;
+        this.backingStore.set("order", value);
     }
 }

@@ -13,86 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Indicates whether or not to Block Azure Operational Insights.
-     */
-    private Boolean azureOperationalInsightsBlockTelemetry;
-    /**
-     * The Azure Operational Insights workspace id.
-     */
-    private String azureOperationalInsightsWorkspaceId;
-    /**
-     * The Azure Operational Insights Workspace key.
-     */
-    private String azureOperationalInsightsWorkspaceKey;
-    /**
-     * Specifies whether to automatically launch the Connect app whenever a projection is initiated.
-     */
-    private Boolean connectAppBlockAutoLaunch;
-    /**
-     * Indicates whether or not to Block setting a maintenance window for device updates.
-     */
-    private Boolean maintenanceWindowBlocked;
-    /**
-     * Maintenance window duration for device updates. Valid values 0 to 5
-     */
-    private Integer maintenanceWindowDurationInHours;
-    /**
-     * Maintenance window start time for device updates.
-     */
-    private LocalTime maintenanceWindowStartTime;
-    /**
-     * Indicates whether or not to Block wireless projection.
-     */
-    private Boolean miracastBlocked;
-    /**
-     * Possible values for Miracast channel.
-     */
-    private MiracastChannel miracastChannel;
-    /**
-     * Indicates whether or not to require a pin for wireless projection.
-     */
-    private Boolean miracastRequirePin;
-    /**
-     * Specifies whether to disable the 'My meetings and files' feature in the Start menu, which shows the signed-in user's meetings and files from Office 365.
-     */
-    private Boolean settingsBlockMyMeetingsAndFiles;
-    /**
-     * Specifies whether to allow the ability to resume a session when the session times out.
-     */
-    private Boolean settingsBlockSessionResume;
-    /**
-     * Specifies whether to disable auto-populating of the sign-in dialog with invitees from scheduled meetings.
-     */
-    private Boolean settingsBlockSigninSuggestions;
-    /**
-     * Specifies the default volume value for a new session. Permitted values are 0-100. The default is 45. Valid values 0 to 100
-     */
-    private Integer settingsDefaultVolume;
-    /**
-     * Specifies the number of minutes until the Hub screen turns off.
-     */
-    private Integer settingsScreenTimeoutInMinutes;
-    /**
-     * Specifies the number of minutes until the session times out.
-     */
-    private Integer settingsSessionTimeoutInMinutes;
-    /**
-     * Specifies the number of minutes until the Hub enters sleep mode.
-     */
-    private Integer settingsSleepTimeoutInMinutes;
-    /**
-     * The welcome screen background image URL. The URL must use the HTTPS protocol and return a PNG image.
-     */
-    private String welcomeScreenBackgroundImageUrl;
-    /**
-     * Indicates whether or not to Block the welcome screen from waking up automatically when someone enters the room.
-     */
-    private Boolean welcomeScreenBlockAutomaticWakeUp;
-    /**
-     * Possible values for welcome screen meeting information.
-     */
-    private WelcomeScreenMeetingInformation welcomeScreenMeetingInformation;
-    /**
      * Instantiates a new Windows10TeamGeneralConfiguration and sets the default values.
      */
     public Windows10TeamGeneralConfiguration() {
@@ -115,7 +35,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      */
     @jakarta.annotation.Nullable
     public Boolean getAzureOperationalInsightsBlockTelemetry() {
-        return this.azureOperationalInsightsBlockTelemetry;
+        return this.backingStore.get("azureOperationalInsightsBlockTelemetry");
     }
     /**
      * Gets the azureOperationalInsightsWorkspaceId property value. The Azure Operational Insights workspace id.
@@ -123,7 +43,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      */
     @jakarta.annotation.Nullable
     public String getAzureOperationalInsightsWorkspaceId() {
-        return this.azureOperationalInsightsWorkspaceId;
+        return this.backingStore.get("azureOperationalInsightsWorkspaceId");
     }
     /**
      * Gets the azureOperationalInsightsWorkspaceKey property value. The Azure Operational Insights Workspace key.
@@ -131,7 +51,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      */
     @jakarta.annotation.Nullable
     public String getAzureOperationalInsightsWorkspaceKey() {
-        return this.azureOperationalInsightsWorkspaceKey;
+        return this.backingStore.get("azureOperationalInsightsWorkspaceKey");
     }
     /**
      * Gets the connectAppBlockAutoLaunch property value. Specifies whether to automatically launch the Connect app whenever a projection is initiated.
@@ -139,7 +59,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectAppBlockAutoLaunch() {
-        return this.connectAppBlockAutoLaunch;
+        return this.backingStore.get("connectAppBlockAutoLaunch");
     }
     /**
      * The deserialization information for the current model
@@ -176,7 +96,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      */
     @jakarta.annotation.Nullable
     public Boolean getMaintenanceWindowBlocked() {
-        return this.maintenanceWindowBlocked;
+        return this.backingStore.get("maintenanceWindowBlocked");
     }
     /**
      * Gets the maintenanceWindowDurationInHours property value. Maintenance window duration for device updates. Valid values 0 to 5
@@ -184,7 +104,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      */
     @jakarta.annotation.Nullable
     public Integer getMaintenanceWindowDurationInHours() {
-        return this.maintenanceWindowDurationInHours;
+        return this.backingStore.get("maintenanceWindowDurationInHours");
     }
     /**
      * Gets the maintenanceWindowStartTime property value. Maintenance window start time for device updates.
@@ -192,7 +112,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      */
     @jakarta.annotation.Nullable
     public LocalTime getMaintenanceWindowStartTime() {
-        return this.maintenanceWindowStartTime;
+        return this.backingStore.get("maintenanceWindowStartTime");
     }
     /**
      * Gets the miracastBlocked property value. Indicates whether or not to Block wireless projection.
@@ -200,7 +120,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      */
     @jakarta.annotation.Nullable
     public Boolean getMiracastBlocked() {
-        return this.miracastBlocked;
+        return this.backingStore.get("miracastBlocked");
     }
     /**
      * Gets the miracastChannel property value. Possible values for Miracast channel.
@@ -208,7 +128,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      */
     @jakarta.annotation.Nullable
     public MiracastChannel getMiracastChannel() {
-        return this.miracastChannel;
+        return this.backingStore.get("miracastChannel");
     }
     /**
      * Gets the miracastRequirePin property value. Indicates whether or not to require a pin for wireless projection.
@@ -216,7 +136,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      */
     @jakarta.annotation.Nullable
     public Boolean getMiracastRequirePin() {
-        return this.miracastRequirePin;
+        return this.backingStore.get("miracastRequirePin");
     }
     /**
      * Gets the settingsBlockMyMeetingsAndFiles property value. Specifies whether to disable the 'My meetings and files' feature in the Start menu, which shows the signed-in user's meetings and files from Office 365.
@@ -224,7 +144,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      */
     @jakarta.annotation.Nullable
     public Boolean getSettingsBlockMyMeetingsAndFiles() {
-        return this.settingsBlockMyMeetingsAndFiles;
+        return this.backingStore.get("settingsBlockMyMeetingsAndFiles");
     }
     /**
      * Gets the settingsBlockSessionResume property value. Specifies whether to allow the ability to resume a session when the session times out.
@@ -232,7 +152,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      */
     @jakarta.annotation.Nullable
     public Boolean getSettingsBlockSessionResume() {
-        return this.settingsBlockSessionResume;
+        return this.backingStore.get("settingsBlockSessionResume");
     }
     /**
      * Gets the settingsBlockSigninSuggestions property value. Specifies whether to disable auto-populating of the sign-in dialog with invitees from scheduled meetings.
@@ -240,7 +160,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      */
     @jakarta.annotation.Nullable
     public Boolean getSettingsBlockSigninSuggestions() {
-        return this.settingsBlockSigninSuggestions;
+        return this.backingStore.get("settingsBlockSigninSuggestions");
     }
     /**
      * Gets the settingsDefaultVolume property value. Specifies the default volume value for a new session. Permitted values are 0-100. The default is 45. Valid values 0 to 100
@@ -248,7 +168,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      */
     @jakarta.annotation.Nullable
     public Integer getSettingsDefaultVolume() {
-        return this.settingsDefaultVolume;
+        return this.backingStore.get("settingsDefaultVolume");
     }
     /**
      * Gets the settingsScreenTimeoutInMinutes property value. Specifies the number of minutes until the Hub screen turns off.
@@ -256,7 +176,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      */
     @jakarta.annotation.Nullable
     public Integer getSettingsScreenTimeoutInMinutes() {
-        return this.settingsScreenTimeoutInMinutes;
+        return this.backingStore.get("settingsScreenTimeoutInMinutes");
     }
     /**
      * Gets the settingsSessionTimeoutInMinutes property value. Specifies the number of minutes until the session times out.
@@ -264,7 +184,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      */
     @jakarta.annotation.Nullable
     public Integer getSettingsSessionTimeoutInMinutes() {
-        return this.settingsSessionTimeoutInMinutes;
+        return this.backingStore.get("settingsSessionTimeoutInMinutes");
     }
     /**
      * Gets the settingsSleepTimeoutInMinutes property value. Specifies the number of minutes until the Hub enters sleep mode.
@@ -272,7 +192,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      */
     @jakarta.annotation.Nullable
     public Integer getSettingsSleepTimeoutInMinutes() {
-        return this.settingsSleepTimeoutInMinutes;
+        return this.backingStore.get("settingsSleepTimeoutInMinutes");
     }
     /**
      * Gets the welcomeScreenBackgroundImageUrl property value. The welcome screen background image URL. The URL must use the HTTPS protocol and return a PNG image.
@@ -280,7 +200,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      */
     @jakarta.annotation.Nullable
     public String getWelcomeScreenBackgroundImageUrl() {
-        return this.welcomeScreenBackgroundImageUrl;
+        return this.backingStore.get("welcomeScreenBackgroundImageUrl");
     }
     /**
      * Gets the welcomeScreenBlockAutomaticWakeUp property value. Indicates whether or not to Block the welcome screen from waking up automatically when someone enters the room.
@@ -288,7 +208,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      */
     @jakarta.annotation.Nullable
     public Boolean getWelcomeScreenBlockAutomaticWakeUp() {
-        return this.welcomeScreenBlockAutomaticWakeUp;
+        return this.backingStore.get("welcomeScreenBlockAutomaticWakeUp");
     }
     /**
      * Gets the welcomeScreenMeetingInformation property value. Possible values for welcome screen meeting information.
@@ -296,7 +216,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      */
     @jakarta.annotation.Nullable
     public WelcomeScreenMeetingInformation getWelcomeScreenMeetingInformation() {
-        return this.welcomeScreenMeetingInformation;
+        return this.backingStore.get("welcomeScreenMeetingInformation");
     }
     /**
      * Serializes information the current object
@@ -331,139 +251,139 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the azureOperationalInsightsBlockTelemetry property.
      */
     public void setAzureOperationalInsightsBlockTelemetry(@jakarta.annotation.Nullable final Boolean value) {
-        this.azureOperationalInsightsBlockTelemetry = value;
+        this.backingStore.set("azureOperationalInsightsBlockTelemetry", value);
     }
     /**
      * Sets the azureOperationalInsightsWorkspaceId property value. The Azure Operational Insights workspace id.
      * @param value Value to set for the azureOperationalInsightsWorkspaceId property.
      */
     public void setAzureOperationalInsightsWorkspaceId(@jakarta.annotation.Nullable final String value) {
-        this.azureOperationalInsightsWorkspaceId = value;
+        this.backingStore.set("azureOperationalInsightsWorkspaceId", value);
     }
     /**
      * Sets the azureOperationalInsightsWorkspaceKey property value. The Azure Operational Insights Workspace key.
      * @param value Value to set for the azureOperationalInsightsWorkspaceKey property.
      */
     public void setAzureOperationalInsightsWorkspaceKey(@jakarta.annotation.Nullable final String value) {
-        this.azureOperationalInsightsWorkspaceKey = value;
+        this.backingStore.set("azureOperationalInsightsWorkspaceKey", value);
     }
     /**
      * Sets the connectAppBlockAutoLaunch property value. Specifies whether to automatically launch the Connect app whenever a projection is initiated.
      * @param value Value to set for the connectAppBlockAutoLaunch property.
      */
     public void setConnectAppBlockAutoLaunch(@jakarta.annotation.Nullable final Boolean value) {
-        this.connectAppBlockAutoLaunch = value;
+        this.backingStore.set("connectAppBlockAutoLaunch", value);
     }
     /**
      * Sets the maintenanceWindowBlocked property value. Indicates whether or not to Block setting a maintenance window for device updates.
      * @param value Value to set for the maintenanceWindowBlocked property.
      */
     public void setMaintenanceWindowBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.maintenanceWindowBlocked = value;
+        this.backingStore.set("maintenanceWindowBlocked", value);
     }
     /**
      * Sets the maintenanceWindowDurationInHours property value. Maintenance window duration for device updates. Valid values 0 to 5
      * @param value Value to set for the maintenanceWindowDurationInHours property.
      */
     public void setMaintenanceWindowDurationInHours(@jakarta.annotation.Nullable final Integer value) {
-        this.maintenanceWindowDurationInHours = value;
+        this.backingStore.set("maintenanceWindowDurationInHours", value);
     }
     /**
      * Sets the maintenanceWindowStartTime property value. Maintenance window start time for device updates.
      * @param value Value to set for the maintenanceWindowStartTime property.
      */
     public void setMaintenanceWindowStartTime(@jakarta.annotation.Nullable final LocalTime value) {
-        this.maintenanceWindowStartTime = value;
+        this.backingStore.set("maintenanceWindowStartTime", value);
     }
     /**
      * Sets the miracastBlocked property value. Indicates whether or not to Block wireless projection.
      * @param value Value to set for the miracastBlocked property.
      */
     public void setMiracastBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.miracastBlocked = value;
+        this.backingStore.set("miracastBlocked", value);
     }
     /**
      * Sets the miracastChannel property value. Possible values for Miracast channel.
      * @param value Value to set for the miracastChannel property.
      */
     public void setMiracastChannel(@jakarta.annotation.Nullable final MiracastChannel value) {
-        this.miracastChannel = value;
+        this.backingStore.set("miracastChannel", value);
     }
     /**
      * Sets the miracastRequirePin property value. Indicates whether or not to require a pin for wireless projection.
      * @param value Value to set for the miracastRequirePin property.
      */
     public void setMiracastRequirePin(@jakarta.annotation.Nullable final Boolean value) {
-        this.miracastRequirePin = value;
+        this.backingStore.set("miracastRequirePin", value);
     }
     /**
      * Sets the settingsBlockMyMeetingsAndFiles property value. Specifies whether to disable the 'My meetings and files' feature in the Start menu, which shows the signed-in user's meetings and files from Office 365.
      * @param value Value to set for the settingsBlockMyMeetingsAndFiles property.
      */
     public void setSettingsBlockMyMeetingsAndFiles(@jakarta.annotation.Nullable final Boolean value) {
-        this.settingsBlockMyMeetingsAndFiles = value;
+        this.backingStore.set("settingsBlockMyMeetingsAndFiles", value);
     }
     /**
      * Sets the settingsBlockSessionResume property value. Specifies whether to allow the ability to resume a session when the session times out.
      * @param value Value to set for the settingsBlockSessionResume property.
      */
     public void setSettingsBlockSessionResume(@jakarta.annotation.Nullable final Boolean value) {
-        this.settingsBlockSessionResume = value;
+        this.backingStore.set("settingsBlockSessionResume", value);
     }
     /**
      * Sets the settingsBlockSigninSuggestions property value. Specifies whether to disable auto-populating of the sign-in dialog with invitees from scheduled meetings.
      * @param value Value to set for the settingsBlockSigninSuggestions property.
      */
     public void setSettingsBlockSigninSuggestions(@jakarta.annotation.Nullable final Boolean value) {
-        this.settingsBlockSigninSuggestions = value;
+        this.backingStore.set("settingsBlockSigninSuggestions", value);
     }
     /**
      * Sets the settingsDefaultVolume property value. Specifies the default volume value for a new session. Permitted values are 0-100. The default is 45. Valid values 0 to 100
      * @param value Value to set for the settingsDefaultVolume property.
      */
     public void setSettingsDefaultVolume(@jakarta.annotation.Nullable final Integer value) {
-        this.settingsDefaultVolume = value;
+        this.backingStore.set("settingsDefaultVolume", value);
     }
     /**
      * Sets the settingsScreenTimeoutInMinutes property value. Specifies the number of minutes until the Hub screen turns off.
      * @param value Value to set for the settingsScreenTimeoutInMinutes property.
      */
     public void setSettingsScreenTimeoutInMinutes(@jakarta.annotation.Nullable final Integer value) {
-        this.settingsScreenTimeoutInMinutes = value;
+        this.backingStore.set("settingsScreenTimeoutInMinutes", value);
     }
     /**
      * Sets the settingsSessionTimeoutInMinutes property value. Specifies the number of minutes until the session times out.
      * @param value Value to set for the settingsSessionTimeoutInMinutes property.
      */
     public void setSettingsSessionTimeoutInMinutes(@jakarta.annotation.Nullable final Integer value) {
-        this.settingsSessionTimeoutInMinutes = value;
+        this.backingStore.set("settingsSessionTimeoutInMinutes", value);
     }
     /**
      * Sets the settingsSleepTimeoutInMinutes property value. Specifies the number of minutes until the Hub enters sleep mode.
      * @param value Value to set for the settingsSleepTimeoutInMinutes property.
      */
     public void setSettingsSleepTimeoutInMinutes(@jakarta.annotation.Nullable final Integer value) {
-        this.settingsSleepTimeoutInMinutes = value;
+        this.backingStore.set("settingsSleepTimeoutInMinutes", value);
     }
     /**
      * Sets the welcomeScreenBackgroundImageUrl property value. The welcome screen background image URL. The URL must use the HTTPS protocol and return a PNG image.
      * @param value Value to set for the welcomeScreenBackgroundImageUrl property.
      */
     public void setWelcomeScreenBackgroundImageUrl(@jakarta.annotation.Nullable final String value) {
-        this.welcomeScreenBackgroundImageUrl = value;
+        this.backingStore.set("welcomeScreenBackgroundImageUrl", value);
     }
     /**
      * Sets the welcomeScreenBlockAutomaticWakeUp property value. Indicates whether or not to Block the welcome screen from waking up automatically when someone enters the room.
      * @param value Value to set for the welcomeScreenBlockAutomaticWakeUp property.
      */
     public void setWelcomeScreenBlockAutomaticWakeUp(@jakarta.annotation.Nullable final Boolean value) {
-        this.welcomeScreenBlockAutomaticWakeUp = value;
+        this.backingStore.set("welcomeScreenBlockAutomaticWakeUp", value);
     }
     /**
      * Sets the welcomeScreenMeetingInformation property value. Possible values for welcome screen meeting information.
      * @param value Value to set for the welcomeScreenMeetingInformation property.
      */
     public void setWelcomeScreenMeetingInformation(@jakarta.annotation.Nullable final WelcomeScreenMeetingInformation value) {
-        this.welcomeScreenMeetingInformation = value;
+        this.backingStore.set("welcomeScreenMeetingInformation", value);
     }
 }

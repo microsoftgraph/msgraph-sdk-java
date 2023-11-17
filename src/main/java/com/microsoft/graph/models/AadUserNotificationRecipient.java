@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AadUserNotificationRecipient extends TeamworkNotificationRecipient implements Parsable {
     /**
-     * Microsoft Entra user identifier. Use the List users method to get this ID.
-     */
-    private String userId;
-    /**
      * Instantiates a new AadUserNotificationRecipient and sets the default values.
      */
     public AadUserNotificationRecipient() {
@@ -45,7 +41,7 @@ public class AadUserNotificationRecipient extends TeamworkNotificationRecipient 
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.backingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class AadUserNotificationRecipient extends TeamworkNotificationRecipient 
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.backingStore.set("userId", value);
     }
 }

@@ -9,26 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AttendanceRecord extends Entity implements Parsable {
     /**
-     * List of time periods between joining and leaving a meeting.
-     */
-    private java.util.List<AttendanceInterval> attendanceIntervals;
-    /**
-     * Email address of the user associated with this attendance record.
-     */
-    private String emailAddress;
-    /**
-     * Identity of the user associated with this attendance record.
-     */
-    private Identity identity;
-    /**
-     * Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.
-     */
-    private String role;
-    /**
-     * Total duration of the attendances in seconds.
-     */
-    private Integer totalAttendanceInSeconds;
-    /**
      * Instantiates a new AttendanceRecord and sets the default values.
      */
     public AttendanceRecord() {
@@ -50,7 +30,7 @@ public class AttendanceRecord extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttendanceInterval> getAttendanceIntervals() {
-        return this.attendanceIntervals;
+        return this.backingStore.get("attendanceIntervals");
     }
     /**
      * Gets the emailAddress property value. Email address of the user associated with this attendance record.
@@ -58,7 +38,7 @@ public class AttendanceRecord extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getEmailAddress() {
-        return this.emailAddress;
+        return this.backingStore.get("emailAddress");
     }
     /**
      * The deserialization information for the current model
@@ -80,7 +60,7 @@ public class AttendanceRecord extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Identity getIdentity() {
-        return this.identity;
+        return this.backingStore.get("identity");
     }
     /**
      * Gets the role property value. Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.
@@ -88,7 +68,7 @@ public class AttendanceRecord extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRole() {
-        return this.role;
+        return this.backingStore.get("role");
     }
     /**
      * Gets the totalAttendanceInSeconds property value. Total duration of the attendances in seconds.
@@ -96,7 +76,7 @@ public class AttendanceRecord extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getTotalAttendanceInSeconds() {
-        return this.totalAttendanceInSeconds;
+        return this.backingStore.get("totalAttendanceInSeconds");
     }
     /**
      * Serializes information the current object
@@ -116,34 +96,34 @@ public class AttendanceRecord extends Entity implements Parsable {
      * @param value Value to set for the attendanceIntervals property.
      */
     public void setAttendanceIntervals(@jakarta.annotation.Nullable final java.util.List<AttendanceInterval> value) {
-        this.attendanceIntervals = value;
+        this.backingStore.set("attendanceIntervals", value);
     }
     /**
      * Sets the emailAddress property value. Email address of the user associated with this attendance record.
      * @param value Value to set for the emailAddress property.
      */
     public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
-        this.emailAddress = value;
+        this.backingStore.set("emailAddress", value);
     }
     /**
      * Sets the identity property value. Identity of the user associated with this attendance record.
      * @param value Value to set for the identity property.
      */
     public void setIdentity(@jakarta.annotation.Nullable final Identity value) {
-        this.identity = value;
+        this.backingStore.set("identity", value);
     }
     /**
      * Sets the role property value. Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.
      * @param value Value to set for the role property.
      */
     public void setRole(@jakarta.annotation.Nullable final String value) {
-        this.role = value;
+        this.backingStore.set("role", value);
     }
     /**
      * Sets the totalAttendanceInSeconds property value. Total duration of the attendances in seconds.
      * @param value Value to set for the totalAttendanceInSeconds property.
      */
     public void setTotalAttendanceInSeconds(@jakarta.annotation.Nullable final Integer value) {
-        this.totalAttendanceInSeconds = value;
+        this.backingStore.set("totalAttendanceInSeconds", value);
     }
 }

@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,27 +14,16 @@ import java.util.Objects;
  * Contains installation experience properties for a Win32 App
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsable {
+public class Win32LobAppInstallExperience implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Indicates the type of restart action.
-     */
-    private Win32LobAppRestartBehavior deviceRestartBehavior;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Indicates the type of execution context the app runs in.
-     */
-    private RunAsAccountType runAsAccount;
+    private BackingStore backingStore;
     /**
      * Instantiates a new Win32LobAppInstallExperience and sets the default values.
      */
     public Win32LobAppInstallExperience() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -50,7 +42,20 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the deviceRestartBehavior property value. Indicates the type of restart action.
@@ -58,7 +63,7 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public Win32LobAppRestartBehavior getDeviceRestartBehavior() {
-        return this.deviceRestartBehavior;
+        return this.backingStore.get("deviceRestartBehavior");
     }
     /**
      * The deserialization information for the current model
@@ -78,7 +83,7 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the runAsAccount property value. Indicates the type of execution context the app runs in.
@@ -86,7 +91,7 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public RunAsAccountType getRunAsAccount() {
-        return this.runAsAccount;
+        return this.backingStore.get("runAsAccount");
     }
     /**
      * Serializes information the current object
@@ -104,27 +109,35 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the deviceRestartBehavior property value. Indicates the type of restart action.
      * @param value Value to set for the deviceRestartBehavior property.
      */
     public void setDeviceRestartBehavior(@jakarta.annotation.Nullable final Win32LobAppRestartBehavior value) {
-        this.deviceRestartBehavior = value;
+        this.backingStore.set("deviceRestartBehavior", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the runAsAccount property value. Indicates the type of execution context the app runs in.
      * @param value Value to set for the runAsAccount property.
      */
     public void setRunAsAccount(@jakarta.annotation.Nullable final RunAsAccountType value) {
-        this.runAsAccount = value;
+        this.backingStore.set("runAsAccount", value);
     }
 }

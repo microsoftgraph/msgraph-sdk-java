@@ -9,22 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmailPayloadDetail extends PayloadDetail implements Parsable {
     /**
-     * Email address of the user.
-     */
-    private String fromEmail;
-    /**
-     * Display name of the user.
-     */
-    private String fromName;
-    /**
-     * Indicates whether the sender isn't from the user's organization.
-     */
-    private Boolean isExternalSender;
-    /**
-     * The subject of the email address sent to the user.
-     */
-    private String subject;
-    /**
      * Instantiates a new EmailPayloadDetail and sets the default values.
      */
     public EmailPayloadDetail() {
@@ -60,7 +44,7 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getFromEmail() {
-        return this.fromEmail;
+        return this.backingStore.get("fromEmail");
     }
     /**
      * Gets the fromName property value. Display name of the user.
@@ -68,7 +52,7 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getFromName() {
-        return this.fromName;
+        return this.backingStore.get("fromName");
     }
     /**
      * Gets the isExternalSender property value. Indicates whether the sender isn't from the user's organization.
@@ -76,7 +60,7 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExternalSender() {
-        return this.isExternalSender;
+        return this.backingStore.get("isExternalSender");
     }
     /**
      * Gets the subject property value. The subject of the email address sent to the user.
@@ -84,7 +68,7 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
-        return this.subject;
+        return this.backingStore.get("subject");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
      * @param value Value to set for the fromEmail property.
      */
     public void setFromEmail(@jakarta.annotation.Nullable final String value) {
-        this.fromEmail = value;
+        this.backingStore.set("fromEmail", value);
     }
     /**
      * Sets the fromName property value. Display name of the user.
      * @param value Value to set for the fromName property.
      */
     public void setFromName(@jakarta.annotation.Nullable final String value) {
-        this.fromName = value;
+        this.backingStore.set("fromName", value);
     }
     /**
      * Sets the isExternalSender property value. Indicates whether the sender isn't from the user's organization.
      * @param value Value to set for the isExternalSender property.
      */
     public void setIsExternalSender(@jakarta.annotation.Nullable final Boolean value) {
-        this.isExternalSender = value;
+        this.backingStore.set("isExternalSender", value);
     }
     /**
      * Sets the subject property value. The subject of the email address sent to the user.
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {
-        this.subject = value;
+        this.backingStore.set("subject", value);
     }
 }

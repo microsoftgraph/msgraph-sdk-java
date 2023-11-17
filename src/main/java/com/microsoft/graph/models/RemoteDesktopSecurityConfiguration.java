@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RemoteDesktopSecurityConfiguration extends Entity implements Parsable {
     /**
-     * Determines if Microsoft Entra ID RDS authentication protocol for RDP is enabled.
-     */
-    private Boolean isRemoteDesktopProtocolEnabled;
-    /**
-     * The collection of target device groups that are associated with the RDS security configuration that will be enabled for SSO when a client connects to the target device over RDP using the new Microsoft Entra ID RDS authentication protocol.
-     */
-    private java.util.List<TargetDeviceGroup> targetDeviceGroups;
-    /**
      * Instantiates a new RemoteDesktopSecurityConfiguration and sets the default values.
      */
     public RemoteDesktopSecurityConfiguration() {
@@ -49,7 +41,7 @@ public class RemoteDesktopSecurityConfiguration extends Entity implements Parsab
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRemoteDesktopProtocolEnabled() {
-        return this.isRemoteDesktopProtocolEnabled;
+        return this.backingStore.get("isRemoteDesktopProtocolEnabled");
     }
     /**
      * Gets the targetDeviceGroups property value. The collection of target device groups that are associated with the RDS security configuration that will be enabled for SSO when a client connects to the target device over RDP using the new Microsoft Entra ID RDS authentication protocol.
@@ -57,7 +49,7 @@ public class RemoteDesktopSecurityConfiguration extends Entity implements Parsab
      */
     @jakarta.annotation.Nullable
     public java.util.List<TargetDeviceGroup> getTargetDeviceGroups() {
-        return this.targetDeviceGroups;
+        return this.backingStore.get("targetDeviceGroups");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class RemoteDesktopSecurityConfiguration extends Entity implements Parsab
      * @param value Value to set for the isRemoteDesktopProtocolEnabled property.
      */
     public void setIsRemoteDesktopProtocolEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRemoteDesktopProtocolEnabled = value;
+        this.backingStore.set("isRemoteDesktopProtocolEnabled", value);
     }
     /**
      * Sets the targetDeviceGroups property value. The collection of target device groups that are associated with the RDS security configuration that will be enabled for SSO when a client connects to the target device over RDP using the new Microsoft Entra ID RDS authentication protocol.
      * @param value Value to set for the targetDeviceGroups property.
      */
     public void setTargetDeviceGroups(@jakarta.annotation.Nullable final java.util.List<TargetDeviceGroup> value) {
-        this.targetDeviceGroups = value;
+        this.backingStore.set("targetDeviceGroups", value);
     }
 }

@@ -12,30 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceConfigurationState extends Entity implements Parsable {
     /**
-     * The name of the policy for this policyBase
-     */
-    private String displayName;
-    /**
-     * Supported platform types for policies.
-     */
-    private PolicyPlatformType platformType;
-    /**
-     * Count of how many setting a policy holds
-     */
-    private Integer settingCount;
-    /**
-     * The settingStates property
-     */
-    private java.util.List<DeviceConfigurationSettingState> settingStates;
-    /**
-     * The state property
-     */
-    private ComplianceStatus state;
-    /**
-     * The version of the policy
-     */
-    private Integer version;
-    /**
      * Instantiates a new DeviceConfigurationState and sets the default values.
      */
     public DeviceConfigurationState() {
@@ -57,7 +33,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -80,7 +56,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PolicyPlatformType getPlatformType() {
-        return this.platformType;
+        return this.backingStore.get("platformType");
     }
     /**
      * Gets the settingCount property value. Count of how many setting a policy holds
@@ -88,7 +64,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getSettingCount() {
-        return this.settingCount;
+        return this.backingStore.get("settingCount");
     }
     /**
      * Gets the settingStates property value. The settingStates property
@@ -96,7 +72,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceConfigurationSettingState> getSettingStates() {
-        return this.settingStates;
+        return this.backingStore.get("settingStates");
     }
     /**
      * Gets the state property value. The state property
@@ -104,7 +80,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ComplianceStatus getState() {
-        return this.state;
+        return this.backingStore.get("state");
     }
     /**
      * Gets the version property value. The version of the policy
@@ -112,7 +88,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {
-        return this.version;
+        return this.backingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -133,41 +109,41 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the platformType property value. Supported platform types for policies.
      * @param value Value to set for the platformType property.
      */
     public void setPlatformType(@jakarta.annotation.Nullable final PolicyPlatformType value) {
-        this.platformType = value;
+        this.backingStore.set("platformType", value);
     }
     /**
      * Sets the settingCount property value. Count of how many setting a policy holds
      * @param value Value to set for the settingCount property.
      */
     public void setSettingCount(@jakarta.annotation.Nullable final Integer value) {
-        this.settingCount = value;
+        this.backingStore.set("settingCount", value);
     }
     /**
      * Sets the settingStates property value. The settingStates property
      * @param value Value to set for the settingStates property.
      */
     public void setSettingStates(@jakarta.annotation.Nullable final java.util.List<DeviceConfigurationSettingState> value) {
-        this.settingStates = value;
+        this.backingStore.set("settingStates", value);
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final ComplianceStatus value) {
-        this.state = value;
+        this.backingStore.set("state", value);
     }
     /**
      * Sets the version property value. The version of the policy
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final Integer value) {
-        this.version = value;
+        this.backingStore.set("version", value);
     }
 }

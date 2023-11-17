@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationAssignmentIndividualRecipient extends EducationAssignmentRecipient implements Parsable {
     /**
-     * A collection of IDs of the recipients.
-     */
-    private java.util.List<String> recipients;
-    /**
      * Instantiates a new EducationAssignmentIndividualRecipient and sets the default values.
      */
     public EducationAssignmentIndividualRecipient() {
@@ -45,7 +41,7 @@ public class EducationAssignmentIndividualRecipient extends EducationAssignmentR
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRecipients() {
-        return this.recipients;
+        return this.backingStore.get("recipients");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class EducationAssignmentIndividualRecipient extends EducationAssignmentR
      * @param value Value to set for the recipients property.
      */
     public void setRecipients(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.recipients = value;
+        this.backingStore.set("recipients", value);
     }
 }

@@ -13,50 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceComplianceSettingState extends Entity implements Parsable {
     /**
-     * The DateTime when device compliance grace period expires
-     */
-    private OffsetDateTime complianceGracePeriodExpirationDateTime;
-    /**
-     * The Device Id that is being reported
-     */
-    private String deviceId;
-    /**
-     * The device model that is being reported
-     */
-    private String deviceModel;
-    /**
-     * The Device Name that is being reported
-     */
-    private String deviceName;
-    /**
-     * The setting class name and property name.
-     */
-    private String setting;
-    /**
-     * The Setting Name that is being reported
-     */
-    private String settingName;
-    /**
-     * The state property
-     */
-    private ComplianceStatus state;
-    /**
-     * The User email address that is being reported
-     */
-    private String userEmail;
-    /**
-     * The user Id that is being reported
-     */
-    private String userId;
-    /**
-     * The User Name that is being reported
-     */
-    private String userName;
-    /**
-     * The User PrincipalName that is being reported
-     */
-    private String userPrincipalName;
-    /**
      * Instantiates a new DeviceComplianceSettingState and sets the default values.
      */
     public DeviceComplianceSettingState() {
@@ -78,7 +34,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getComplianceGracePeriodExpirationDateTime() {
-        return this.complianceGracePeriodExpirationDateTime;
+        return this.backingStore.get("complianceGracePeriodExpirationDateTime");
     }
     /**
      * Gets the deviceId property value. The Device Id that is being reported
@@ -86,7 +42,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.backingStore.get("deviceId");
     }
     /**
      * Gets the deviceModel property value. The device model that is being reported
@@ -94,7 +50,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDeviceModel() {
-        return this.deviceModel;
+        return this.backingStore.get("deviceModel");
     }
     /**
      * Gets the deviceName property value. The Device Name that is being reported
@@ -102,7 +58,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
-        return this.deviceName;
+        return this.backingStore.get("deviceName");
     }
     /**
      * The deserialization information for the current model
@@ -130,7 +86,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSetting() {
-        return this.setting;
+        return this.backingStore.get("setting");
     }
     /**
      * Gets the settingName property value. The Setting Name that is being reported
@@ -138,7 +94,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSettingName() {
-        return this.settingName;
+        return this.backingStore.get("settingName");
     }
     /**
      * Gets the state property value. The state property
@@ -146,7 +102,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ComplianceStatus getState() {
-        return this.state;
+        return this.backingStore.get("state");
     }
     /**
      * Gets the userEmail property value. The User email address that is being reported
@@ -154,7 +110,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUserEmail() {
-        return this.userEmail;
+        return this.backingStore.get("userEmail");
     }
     /**
      * Gets the userId property value. The user Id that is being reported
@@ -162,7 +118,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.backingStore.get("userId");
     }
     /**
      * Gets the userName property value. The User Name that is being reported
@@ -170,7 +126,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
-        return this.userName;
+        return this.backingStore.get("userName");
     }
     /**
      * Gets the userPrincipalName property value. The User PrincipalName that is being reported
@@ -178,7 +134,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.backingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -204,76 +160,76 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * @param value Value to set for the complianceGracePeriodExpirationDateTime property.
      */
     public void setComplianceGracePeriodExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.complianceGracePeriodExpirationDateTime = value;
+        this.backingStore.set("complianceGracePeriodExpirationDateTime", value);
     }
     /**
      * Sets the deviceId property value. The Device Id that is being reported
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.backingStore.set("deviceId", value);
     }
     /**
      * Sets the deviceModel property value. The device model that is being reported
      * @param value Value to set for the deviceModel property.
      */
     public void setDeviceModel(@jakarta.annotation.Nullable final String value) {
-        this.deviceModel = value;
+        this.backingStore.set("deviceModel", value);
     }
     /**
      * Sets the deviceName property value. The Device Name that is being reported
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.deviceName = value;
+        this.backingStore.set("deviceName", value);
     }
     /**
      * Sets the setting property value. The setting class name and property name.
      * @param value Value to set for the setting property.
      */
     public void setSetting(@jakarta.annotation.Nullable final String value) {
-        this.setting = value;
+        this.backingStore.set("setting", value);
     }
     /**
      * Sets the settingName property value. The Setting Name that is being reported
      * @param value Value to set for the settingName property.
      */
     public void setSettingName(@jakarta.annotation.Nullable final String value) {
-        this.settingName = value;
+        this.backingStore.set("settingName", value);
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final ComplianceStatus value) {
-        this.state = value;
+        this.backingStore.set("state", value);
     }
     /**
      * Sets the userEmail property value. The User email address that is being reported
      * @param value Value to set for the userEmail property.
      */
     public void setUserEmail(@jakarta.annotation.Nullable final String value) {
-        this.userEmail = value;
+        this.backingStore.set("userEmail", value);
     }
     /**
      * Sets the userId property value. The user Id that is being reported
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.backingStore.set("userId", value);
     }
     /**
      * Sets the userName property value. The User Name that is being reported
      * @param value Value to set for the userName property.
      */
     public void setUserName(@jakarta.annotation.Nullable final String value) {
-        this.userName = value;
+        this.backingStore.set("userName", value);
     }
     /**
      * Sets the userPrincipalName property value. The User PrincipalName that is being reported
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.backingStore.set("userPrincipalName", value);
     }
 }

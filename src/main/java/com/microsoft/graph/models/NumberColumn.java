@@ -4,39 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class NumberColumn implements AdditionalDataHolder, Parsable {
+public class NumberColumn implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * How many decimal places to display. See below for information about the possible values.
-     */
-    private String decimalPlaces;
-    /**
-     * How the value should be presented in the UX. Must be one of number or percentage. If unspecified, treated as number.
-     */
-    private String displayAs;
-    /**
-     * The maximum permitted value.
-     */
-    private Double maximum;
-    /**
-     * The minimum permitted value.
-     */
-    private Double minimum;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    private BackingStore backingStore;
     /**
      * Instantiates a new NumberColumn and sets the default values.
      */
     public NumberColumn() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +39,20 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the decimalPlaces property value. How many decimal places to display. See below for information about the possible values.
@@ -63,7 +60,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDecimalPlaces() {
-        return this.decimalPlaces;
+        return this.backingStore.get("decimalPlaces");
     }
     /**
      * Gets the displayAs property value. How the value should be presented in the UX. Must be one of number or percentage. If unspecified, treated as number.
@@ -71,7 +68,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayAs() {
-        return this.displayAs;
+        return this.backingStore.get("displayAs");
     }
     /**
      * The deserialization information for the current model
@@ -93,7 +90,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Double getMaximum() {
-        return this.maximum;
+        return this.backingStore.get("maximum");
     }
     /**
      * Gets the minimum property value. The minimum permitted value.
@@ -101,7 +98,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Double getMinimum() {
-        return this.minimum;
+        return this.backingStore.get("minimum");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -109,7 +106,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -129,41 +126,49 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the decimalPlaces property value. How many decimal places to display. See below for information about the possible values.
      * @param value Value to set for the decimalPlaces property.
      */
     public void setDecimalPlaces(@jakarta.annotation.Nullable final String value) {
-        this.decimalPlaces = value;
+        this.backingStore.set("decimalPlaces", value);
     }
     /**
      * Sets the displayAs property value. How the value should be presented in the UX. Must be one of number or percentage. If unspecified, treated as number.
      * @param value Value to set for the displayAs property.
      */
     public void setDisplayAs(@jakarta.annotation.Nullable final String value) {
-        this.displayAs = value;
+        this.backingStore.set("displayAs", value);
     }
     /**
      * Sets the maximum property value. The maximum permitted value.
      * @param value Value to set for the maximum property.
      */
     public void setMaximum(@jakarta.annotation.Nullable final Double value) {
-        this.maximum = value;
+        this.backingStore.set("maximum", value);
     }
     /**
      * Sets the minimum property value. The minimum permitted value.
      * @param value Value to set for the minimum property.
      */
     public void setMinimum(@jakarta.annotation.Nullable final Double value) {
-        this.minimum = value;
+        this.backingStore.set("minimum", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

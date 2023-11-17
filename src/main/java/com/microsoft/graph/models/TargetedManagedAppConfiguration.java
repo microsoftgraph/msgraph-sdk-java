@@ -12,26 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TargetedManagedAppConfiguration extends ManagedAppConfiguration implements Parsable {
     /**
-     * List of apps to which the policy is deployed.
-     */
-    private java.util.List<ManagedMobileApp> apps;
-    /**
-     * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
-     */
-    private java.util.List<TargetedManagedAppPolicyAssignment> assignments;
-    /**
-     * Count of apps to which the current policy is deployed.
-     */
-    private Integer deployedAppCount;
-    /**
-     * Navigation property to deployment summary of the configuration.
-     */
-    private ManagedAppPolicyDeploymentSummary deploymentSummary;
-    /**
-     * Indicates if the policy is deployed to any inclusion groups or not.
-     */
-    private Boolean isAssigned;
-    /**
      * Instantiates a new TargetedManagedAppConfiguration and sets the default values.
      */
     public TargetedManagedAppConfiguration() {
@@ -54,7 +34,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedMobileApp> getApps() {
-        return this.apps;
+        return this.backingStore.get("apps");
     }
     /**
      * Gets the assignments property value. Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
@@ -62,7 +42,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      */
     @jakarta.annotation.Nullable
     public java.util.List<TargetedManagedAppPolicyAssignment> getAssignments() {
-        return this.assignments;
+        return this.backingStore.get("assignments");
     }
     /**
      * Gets the deployedAppCount property value. Count of apps to which the current policy is deployed.
@@ -70,7 +50,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      */
     @jakarta.annotation.Nullable
     public Integer getDeployedAppCount() {
-        return this.deployedAppCount;
+        return this.backingStore.get("deployedAppCount");
     }
     /**
      * Gets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
@@ -78,7 +58,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      */
     @jakarta.annotation.Nullable
     public ManagedAppPolicyDeploymentSummary getDeploymentSummary() {
-        return this.deploymentSummary;
+        return this.backingStore.get("deploymentSummary");
     }
     /**
      * The deserialization information for the current model
@@ -100,7 +80,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAssigned() {
-        return this.isAssigned;
+        return this.backingStore.get("isAssigned");
     }
     /**
      * Serializes information the current object
@@ -120,34 +100,34 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      * @param value Value to set for the apps property.
      */
     public void setApps(@jakarta.annotation.Nullable final java.util.List<ManagedMobileApp> value) {
-        this.apps = value;
+        this.backingStore.set("apps", value);
     }
     /**
      * Sets the assignments property value. Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<TargetedManagedAppPolicyAssignment> value) {
-        this.assignments = value;
+        this.backingStore.set("assignments", value);
     }
     /**
      * Sets the deployedAppCount property value. Count of apps to which the current policy is deployed.
      * @param value Value to set for the deployedAppCount property.
      */
     public void setDeployedAppCount(@jakarta.annotation.Nullable final Integer value) {
-        this.deployedAppCount = value;
+        this.backingStore.set("deployedAppCount", value);
     }
     /**
      * Sets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
      * @param value Value to set for the deploymentSummary property.
      */
     public void setDeploymentSummary(@jakarta.annotation.Nullable final ManagedAppPolicyDeploymentSummary value) {
-        this.deploymentSummary = value;
+        this.backingStore.set("deploymentSummary", value);
     }
     /**
      * Sets the isAssigned property value. Indicates if the policy is deployed to any inclusion groups or not.
      * @param value Value to set for the isAssigned property.
      */
     public void setIsAssigned(@jakarta.annotation.Nullable final Boolean value) {
-        this.isAssigned = value;
+        this.backingStore.set("isAssigned", value);
     }
 }

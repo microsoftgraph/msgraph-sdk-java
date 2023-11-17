@@ -10,14 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Indicator extends Entity implements Parsable {
     /**
-     * The artifact property
-     */
-    private Artifact artifact;
-    /**
-     * The source property
-     */
-    private IndicatorSource source;
-    /**
      * Instantiates a new Indicator and sets the default values.
      */
     public Indicator() {
@@ -47,7 +39,7 @@ public class Indicator extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Artifact getArtifact() {
-        return this.artifact;
+        return this.backingStore.get("artifact");
     }
     /**
      * The deserialization information for the current model
@@ -66,7 +58,7 @@ public class Indicator extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IndicatorSource getSource() {
-        return this.source;
+        return this.backingStore.get("source");
     }
     /**
      * Serializes information the current object
@@ -83,13 +75,13 @@ public class Indicator extends Entity implements Parsable {
      * @param value Value to set for the artifact property.
      */
     public void setArtifact(@jakarta.annotation.Nullable final Artifact value) {
-        this.artifact = value;
+        this.backingStore.set("artifact", value);
     }
     /**
      * Sets the source property value. The source property
      * @param value Value to set for the source property.
      */
     public void setSource(@jakarta.annotation.Nullable final IndicatorSource value) {
-        this.source = value;
+        this.backingStore.set("source", value);
     }
 }

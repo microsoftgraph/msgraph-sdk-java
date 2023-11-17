@@ -5,35 +5,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder, Parsable {
+public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The applicationIdentifier property
-     */
-    private String applicationIdentifier;
-    /**
-     * The credentials property
-     */
-    private java.util.List<SynchronizationSecretKeyStringValuePair> credentials;
-    /**
-     * The templateId property
-     */
-    private String templateId;
-    /**
-     * The useSavedCredentials property
-     */
-    private Boolean useSavedCredentials;
+    private BackingStore backingStore;
     /**
      * Instantiates a new ValidateCredentialsPostRequestBody and sets the default values.
      */
     public ValidateCredentialsPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -52,7 +40,12 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the applicationIdentifier property value. The applicationIdentifier property
@@ -60,7 +53,15 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nullable
     public String getApplicationIdentifier() {
-        return this.applicationIdentifier;
+        return this.backingStore.get("applicationIdentifier");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the credentials property value. The credentials property
@@ -68,7 +69,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nullable
     public java.util.List<SynchronizationSecretKeyStringValuePair> getCredentials() {
-        return this.credentials;
+        return this.backingStore.get("credentials");
     }
     /**
      * The deserialization information for the current model
@@ -89,7 +90,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nullable
     public String getTemplateId() {
-        return this.templateId;
+        return this.backingStore.get("templateId");
     }
     /**
      * Gets the useSavedCredentials property value. The useSavedCredentials property
@@ -97,7 +98,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nullable
     public Boolean getUseSavedCredentials() {
-        return this.useSavedCredentials;
+        return this.backingStore.get("useSavedCredentials");
     }
     /**
      * Serializes information the current object
@@ -116,34 +117,42 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the applicationIdentifier property value. The applicationIdentifier property
      * @param value Value to set for the applicationIdentifier property.
      */
     public void setApplicationIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.applicationIdentifier = value;
+        this.backingStore.set("applicationIdentifier", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the credentials property value. The credentials property
      * @param value Value to set for the credentials property.
      */
     public void setCredentials(@jakarta.annotation.Nullable final java.util.List<SynchronizationSecretKeyStringValuePair> value) {
-        this.credentials = value;
+        this.backingStore.set("credentials", value);
     }
     /**
      * Sets the templateId property value. The templateId property
      * @param value Value to set for the templateId property.
      */
     public void setTemplateId(@jakarta.annotation.Nullable final String value) {
-        this.templateId = value;
+        this.backingStore.set("templateId", value);
     }
     /**
      * Sets the useSavedCredentials property value. The useSavedCredentials property
      * @param value Value to set for the useSavedCredentials property.
      */
     public void setUseSavedCredentials(@jakarta.annotation.Nullable final Boolean value) {
-        this.useSavedCredentials = value;
+        this.backingStore.set("useSavedCredentials", value);
     }
 }

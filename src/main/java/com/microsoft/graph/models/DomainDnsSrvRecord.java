@@ -9,30 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
     /**
-     * Value to use when configuring the Target property of the SRV record at the DNS host.
-     */
-    private String nameTarget;
-    /**
-     * Value to use when configuring the port property of the SRV record at the DNS host.
-     */
-    private Integer port;
-    /**
-     * Value to use when configuring the priority property of the SRV record at the DNS host.
-     */
-    private Integer priority;
-    /**
-     * Value to use when configuring the protocol property of the SRV record at the DNS host.
-     */
-    private String protocol;
-    /**
-     * Value to use when configuring the service property of the SRV record at the DNS host.
-     */
-    private String service;
-    /**
-     * Value to use when configuring the weight property of the SRV record at the DNS host.
-     */
-    private Integer weight;
-    /**
      * Instantiates a new DomainDnsSrvRecord and sets the default values.
      */
     public DomainDnsSrvRecord() {
@@ -69,7 +45,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getNameTarget() {
-        return this.nameTarget;
+        return this.backingStore.get("nameTarget");
     }
     /**
      * Gets the port property value. Value to use when configuring the port property of the SRV record at the DNS host.
@@ -77,7 +53,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getPort() {
-        return this.port;
+        return this.backingStore.get("port");
     }
     /**
      * Gets the priority property value. Value to use when configuring the priority property of the SRV record at the DNS host.
@@ -85,7 +61,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
-        return this.priority;
+        return this.backingStore.get("priority");
     }
     /**
      * Gets the protocol property value. Value to use when configuring the protocol property of the SRV record at the DNS host.
@@ -93,7 +69,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getProtocol() {
-        return this.protocol;
+        return this.backingStore.get("protocol");
     }
     /**
      * Gets the service property value. Value to use when configuring the service property of the SRV record at the DNS host.
@@ -101,7 +77,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getService() {
-        return this.service;
+        return this.backingStore.get("service");
     }
     /**
      * Gets the weight property value. Value to use when configuring the weight property of the SRV record at the DNS host.
@@ -109,7 +85,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getWeight() {
-        return this.weight;
+        return this.backingStore.get("weight");
     }
     /**
      * Serializes information the current object
@@ -130,41 +106,41 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      * @param value Value to set for the nameTarget property.
      */
     public void setNameTarget(@jakarta.annotation.Nullable final String value) {
-        this.nameTarget = value;
+        this.backingStore.set("nameTarget", value);
     }
     /**
      * Sets the port property value. Value to use when configuring the port property of the SRV record at the DNS host.
      * @param value Value to set for the port property.
      */
     public void setPort(@jakarta.annotation.Nullable final Integer value) {
-        this.port = value;
+        this.backingStore.set("port", value);
     }
     /**
      * Sets the priority property value. Value to use when configuring the priority property of the SRV record at the DNS host.
      * @param value Value to set for the priority property.
      */
     public void setPriority(@jakarta.annotation.Nullable final Integer value) {
-        this.priority = value;
+        this.backingStore.set("priority", value);
     }
     /**
      * Sets the protocol property value. Value to use when configuring the protocol property of the SRV record at the DNS host.
      * @param value Value to set for the protocol property.
      */
     public void setProtocol(@jakarta.annotation.Nullable final String value) {
-        this.protocol = value;
+        this.backingStore.set("protocol", value);
     }
     /**
      * Sets the service property value. Value to use when configuring the service property of the SRV record at the DNS host.
      * @param value Value to set for the service property.
      */
     public void setService(@jakarta.annotation.Nullable final String value) {
-        this.service = value;
+        this.backingStore.set("service", value);
     }
     /**
      * Sets the weight property value. Value to use when configuring the weight property of the SRV record at the DNS host.
      * @param value Value to set for the weight property.
      */
     public void setWeight(@jakarta.annotation.Nullable final Integer value) {
-        this.weight = value;
+        this.backingStore.set("weight", value);
     }
 }

@@ -9,22 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerBucket extends Entity implements Parsable {
     /**
-     * Name of the bucket.
-     */
-    private String name;
-    /**
-     * Hint used to order items of this type in a list view. For details about the supported format, see Using order hints in Planner.
-     */
-    private String orderHint;
-    /**
-     * Plan ID to which the bucket belongs.
-     */
-    private String planId;
-    /**
-     * Read-only. Nullable. The collection of tasks in the bucket.
-     */
-    private java.util.List<PlannerTask> tasks;
-    /**
      * Instantiates a new PlannerBucket and sets the default values.
      */
     public PlannerBucket() {
@@ -59,7 +43,7 @@ public class PlannerBucket extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the orderHint property value. Hint used to order items of this type in a list view. For details about the supported format, see Using order hints in Planner.
@@ -67,7 +51,7 @@ public class PlannerBucket extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOrderHint() {
-        return this.orderHint;
+        return this.backingStore.get("orderHint");
     }
     /**
      * Gets the planId property value. Plan ID to which the bucket belongs.
@@ -75,7 +59,7 @@ public class PlannerBucket extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPlanId() {
-        return this.planId;
+        return this.backingStore.get("planId");
     }
     /**
      * Gets the tasks property value. Read-only. Nullable. The collection of tasks in the bucket.
@@ -83,7 +67,7 @@ public class PlannerBucket extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerTask> getTasks() {
-        return this.tasks;
+        return this.backingStore.get("tasks");
     }
     /**
      * Serializes information the current object
@@ -102,27 +86,27 @@ public class PlannerBucket extends Entity implements Parsable {
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the orderHint property value. Hint used to order items of this type in a list view. For details about the supported format, see Using order hints in Planner.
      * @param value Value to set for the orderHint property.
      */
     public void setOrderHint(@jakarta.annotation.Nullable final String value) {
-        this.orderHint = value;
+        this.backingStore.set("orderHint", value);
     }
     /**
      * Sets the planId property value. Plan ID to which the bucket belongs.
      * @param value Value to set for the planId property.
      */
     public void setPlanId(@jakarta.annotation.Nullable final String value) {
-        this.planId = value;
+        this.backingStore.set("planId", value);
     }
     /**
      * Sets the tasks property value. Read-only. Nullable. The collection of tasks in the bucket.
      * @param value Value to set for the tasks property.
      */
     public void setTasks(@jakarta.annotation.Nullable final java.util.List<PlannerTask> value) {
-        this.tasks = value;
+        this.backingStore.set("tasks", value);
     }
 }

@@ -9,22 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamsTab extends Entity implements Parsable {
     /**
-     * Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
-     */
-    private TeamsTabConfiguration configuration;
-    /**
-     * Name of the tab.
-     */
-    private String displayName;
-    /**
-     * The application that is linked to the tab. This can't be changed after tab creation.
-     */
-    private TeamsApp teamsApp;
-    /**
-     * Deep link URL of the tab instance. Read only.
-     */
-    private String webUrl;
-    /**
      * Instantiates a new TeamsTab and sets the default values.
      */
     public TeamsTab() {
@@ -46,7 +30,7 @@ public class TeamsTab extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public TeamsTabConfiguration getConfiguration() {
-        return this.configuration;
+        return this.backingStore.get("configuration");
     }
     /**
      * Gets the displayName property value. Name of the tab.
@@ -54,7 +38,7 @@ public class TeamsTab extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -75,7 +59,7 @@ public class TeamsTab extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public TeamsApp getTeamsApp() {
-        return this.teamsApp;
+        return this.backingStore.get("teamsApp");
     }
     /**
      * Gets the webUrl property value. Deep link URL of the tab instance. Read only.
@@ -83,7 +67,7 @@ public class TeamsTab extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {
-        return this.webUrl;
+        return this.backingStore.get("webUrl");
     }
     /**
      * Serializes information the current object
@@ -102,27 +86,27 @@ public class TeamsTab extends Entity implements Parsable {
      * @param value Value to set for the configuration property.
      */
     public void setConfiguration(@jakarta.annotation.Nullable final TeamsTabConfiguration value) {
-        this.configuration = value;
+        this.backingStore.set("configuration", value);
     }
     /**
      * Sets the displayName property value. Name of the tab.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the teamsApp property value. The application that is linked to the tab. This can't be changed after tab creation.
      * @param value Value to set for the teamsApp property.
      */
     public void setTeamsApp(@jakarta.annotation.Nullable final TeamsApp value) {
-        this.teamsApp = value;
+        this.backingStore.set("teamsApp", value);
     }
     /**
      * Sets the webUrl property value. Deep link URL of the tab instance. Read only.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.webUrl = value;
+        this.backingStore.set("webUrl", value);
     }
 }

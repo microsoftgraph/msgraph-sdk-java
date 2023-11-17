@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,51 +14,16 @@ import java.util.Objects;
  * A class containing the properties for Audit Actor.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AuditActor implements AdditionalDataHolder, Parsable {
+public class AuditActor implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Name of the Application.
-     */
-    private String applicationDisplayName;
-    /**
-     * AAD Application Id.
-     */
-    private String applicationId;
-    /**
-     * Actor Type.
-     */
-    private String auditActorType;
-    /**
-     * IPAddress.
-     */
-    private String ipAddress;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Service Principal Name (SPN).
-     */
-    private String servicePrincipalName;
-    /**
-     * User Id.
-     */
-    private String userId;
-    /**
-     * List of user permissions when the audit was performed.
-     */
-    private java.util.List<String> userPermissions;
-    /**
-     * User Principal Name (UPN).
-     */
-    private String userPrincipalName;
+    private BackingStore backingStore;
     /**
      * Instantiates a new AuditActor and sets the default values.
      */
     public AuditActor() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -74,7 +42,12 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the applicationDisplayName property value. Name of the Application.
@@ -82,7 +55,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getApplicationDisplayName() {
-        return this.applicationDisplayName;
+        return this.backingStore.get("applicationDisplayName");
     }
     /**
      * Gets the applicationId property value. AAD Application Id.
@@ -90,7 +63,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getApplicationId() {
-        return this.applicationId;
+        return this.backingStore.get("applicationId");
     }
     /**
      * Gets the auditActorType property value. Actor Type.
@@ -98,7 +71,15 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAuditActorType() {
-        return this.auditActorType;
+        return this.backingStore.get("auditActorType");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -124,7 +105,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
-        return this.ipAddress;
+        return this.backingStore.get("ipAddress");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -132,7 +113,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the servicePrincipalName property value. Service Principal Name (SPN).
@@ -140,7 +121,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalName() {
-        return this.servicePrincipalName;
+        return this.backingStore.get("servicePrincipalName");
     }
     /**
      * Gets the userId property value. User Id.
@@ -148,7 +129,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.backingStore.get("userId");
     }
     /**
      * Gets the userPermissions property value. List of user permissions when the audit was performed.
@@ -156,7 +137,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getUserPermissions() {
-        return this.userPermissions;
+        return this.backingStore.get("userPermissions");
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name (UPN).
@@ -164,7 +145,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.backingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -188,69 +169,77 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the applicationDisplayName property value. Name of the Application.
      * @param value Value to set for the applicationDisplayName property.
      */
     public void setApplicationDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.applicationDisplayName = value;
+        this.backingStore.set("applicationDisplayName", value);
     }
     /**
      * Sets the applicationId property value. AAD Application Id.
      * @param value Value to set for the applicationId property.
      */
     public void setApplicationId(@jakarta.annotation.Nullable final String value) {
-        this.applicationId = value;
+        this.backingStore.set("applicationId", value);
     }
     /**
      * Sets the auditActorType property value. Actor Type.
      * @param value Value to set for the auditActorType property.
      */
     public void setAuditActorType(@jakarta.annotation.Nullable final String value) {
-        this.auditActorType = value;
+        this.backingStore.set("auditActorType", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the ipAddress property value. IPAddress.
      * @param value Value to set for the ipAddress property.
      */
     public void setIpAddress(@jakarta.annotation.Nullable final String value) {
-        this.ipAddress = value;
+        this.backingStore.set("ipAddress", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the servicePrincipalName property value. Service Principal Name (SPN).
      * @param value Value to set for the servicePrincipalName property.
      */
     public void setServicePrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.servicePrincipalName = value;
+        this.backingStore.set("servicePrincipalName", value);
     }
     /**
      * Sets the userId property value. User Id.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.backingStore.set("userId", value);
     }
     /**
      * Sets the userPermissions property value. List of user permissions when the audit was performed.
      * @param value Value to set for the userPermissions property.
      */
     public void setUserPermissions(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.userPermissions = value;
+        this.backingStore.set("userPermissions", value);
     }
     /**
      * Sets the userPrincipalName property value. User Principal Name (UPN).
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.backingStore.set("userPrincipalName", value);
     }
 }

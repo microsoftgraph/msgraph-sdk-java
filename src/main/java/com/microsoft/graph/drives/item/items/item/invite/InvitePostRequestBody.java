@@ -5,51 +5,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
+public class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The expirationDateTime property
-     */
-    private String expirationDateTime;
-    /**
-     * The message property
-     */
-    private String message;
-    /**
-     * The password property
-     */
-    private String password;
-    /**
-     * The recipients property
-     */
-    private java.util.List<DriveRecipient> recipients;
-    /**
-     * The requireSignIn property
-     */
-    private Boolean requireSignIn;
-    /**
-     * The retainInheritedPermissions property
-     */
-    private Boolean retainInheritedPermissions;
-    /**
-     * The roles property
-     */
-    private java.util.List<String> roles;
-    /**
-     * The sendInvitation property
-     */
-    private Boolean sendInvitation;
+    private BackingStore backingStore;
     /**
      * Instantiates a new InvitePostRequestBody and sets the default values.
      */
     public InvitePostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -68,7 +40,20 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the expirationDateTime property value. The expirationDateTime property
@@ -76,7 +61,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getExpirationDateTime() {
-        return this.expirationDateTime;
+        return this.backingStore.get("expirationDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -101,7 +86,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getMessage() {
-        return this.message;
+        return this.backingStore.get("message");
     }
     /**
      * Gets the password property value. The password property
@@ -109,7 +94,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPassword() {
-        return this.password;
+        return this.backingStore.get("password");
     }
     /**
      * Gets the recipients property value. The recipients property
@@ -117,7 +102,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DriveRecipient> getRecipients() {
-        return this.recipients;
+        return this.backingStore.get("recipients");
     }
     /**
      * Gets the requireSignIn property value. The requireSignIn property
@@ -125,7 +110,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getRequireSignIn() {
-        return this.requireSignIn;
+        return this.backingStore.get("requireSignIn");
     }
     /**
      * Gets the retainInheritedPermissions property value. The retainInheritedPermissions property
@@ -133,7 +118,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getRetainInheritedPermissions() {
-        return this.retainInheritedPermissions;
+        return this.backingStore.get("retainInheritedPermissions");
     }
     /**
      * Gets the roles property value. The roles property
@@ -141,7 +126,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoles() {
-        return this.roles;
+        return this.backingStore.get("roles");
     }
     /**
      * Gets the sendInvitation property value. The sendInvitation property
@@ -149,7 +134,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getSendInvitation() {
-        return this.sendInvitation;
+        return this.backingStore.get("sendInvitation");
     }
     /**
      * Serializes information the current object
@@ -172,62 +157,70 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the expirationDateTime property value. The expirationDateTime property
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final String value) {
-        this.expirationDateTime = value;
+        this.backingStore.set("expirationDateTime", value);
     }
     /**
      * Sets the message property value. The message property
      * @param value Value to set for the message property.
      */
     public void setMessage(@jakarta.annotation.Nullable final String value) {
-        this.message = value;
+        this.backingStore.set("message", value);
     }
     /**
      * Sets the password property value. The password property
      * @param value Value to set for the password property.
      */
     public void setPassword(@jakarta.annotation.Nullable final String value) {
-        this.password = value;
+        this.backingStore.set("password", value);
     }
     /**
      * Sets the recipients property value. The recipients property
      * @param value Value to set for the recipients property.
      */
     public void setRecipients(@jakarta.annotation.Nullable final java.util.List<DriveRecipient> value) {
-        this.recipients = value;
+        this.backingStore.set("recipients", value);
     }
     /**
      * Sets the requireSignIn property value. The requireSignIn property
      * @param value Value to set for the requireSignIn property.
      */
     public void setRequireSignIn(@jakarta.annotation.Nullable final Boolean value) {
-        this.requireSignIn = value;
+        this.backingStore.set("requireSignIn", value);
     }
     /**
      * Sets the retainInheritedPermissions property value. The retainInheritedPermissions property
      * @param value Value to set for the retainInheritedPermissions property.
      */
     public void setRetainInheritedPermissions(@jakarta.annotation.Nullable final Boolean value) {
-        this.retainInheritedPermissions = value;
+        this.backingStore.set("retainInheritedPermissions", value);
     }
     /**
      * Sets the roles property value. The roles property
      * @param value Value to set for the roles property.
      */
     public void setRoles(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.roles = value;
+        this.backingStore.set("roles", value);
     }
     /**
      * Sets the sendInvitation property value. The sendInvitation property
      * @param value Value to set for the sendInvitation property.
      */
     public void setSendInvitation(@jakarta.annotation.Nullable final Boolean value) {
-        this.sendInvitation = value;
+        this.backingStore.set("sendInvitation", value);
     }
 }

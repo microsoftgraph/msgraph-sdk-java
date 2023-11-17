@@ -4,32 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
+public class OnlineMeetingRestricted implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Specifies the reason shared content from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
-     */
-    private EnumSet<OnlineMeetingContentSharingDisabledReason> contentSharingDisabled;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Specifies the reason video from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
-     */
-    private EnumSet<OnlineMeetingVideoDisabledReason> videoDisabled;
+    private BackingStore backingStore;
     /**
      * Instantiates a new OnlineMeetingRestricted and sets the default values.
      */
     public OnlineMeetingRestricted() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -48,7 +40,20 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the contentSharingDisabled property value. Specifies the reason shared content from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
@@ -56,7 +61,7 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public EnumSet<OnlineMeetingContentSharingDisabledReason> getContentSharingDisabled() {
-        return this.contentSharingDisabled;
+        return this.backingStore.get("contentSharingDisabled");
     }
     /**
      * The deserialization information for the current model
@@ -76,7 +81,7 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the videoDisabled property value. Specifies the reason video from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
@@ -84,7 +89,7 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public EnumSet<OnlineMeetingVideoDisabledReason> getVideoDisabled() {
-        return this.videoDisabled;
+        return this.backingStore.get("videoDisabled");
     }
     /**
      * Serializes information the current object
@@ -102,27 +107,35 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the contentSharingDisabled property value. Specifies the reason shared content from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
      * @param value Value to set for the contentSharingDisabled property.
      */
     public void setContentSharingDisabled(@jakarta.annotation.Nullable final EnumSet<OnlineMeetingContentSharingDisabledReason> value) {
-        this.contentSharingDisabled = value;
+        this.backingStore.set("contentSharingDisabled", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the videoDisabled property value. Specifies the reason video from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
      * @param value Value to set for the videoDisabled property.
      */
     public void setVideoDisabled(@jakarta.annotation.Nullable final EnumSet<OnlineMeetingVideoDisabledReason> value) {
-        this.videoDisabled = value;
+        this.backingStore.set("videoDisabled", value);
     }
 }

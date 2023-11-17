@@ -10,10 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkflowCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<Workflow> value;
-    /**
      * Instantiates a new WorkflowCollectionResponse and sets the default values.
      */
     public WorkflowCollectionResponse() {
@@ -45,7 +41,7 @@ public class WorkflowCollectionResponse extends BaseCollectionPaginationCountRes
      */
     @jakarta.annotation.Nullable
     public java.util.List<Workflow> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class WorkflowCollectionResponse extends BaseCollectionPaginationCountRes
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<Workflow> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

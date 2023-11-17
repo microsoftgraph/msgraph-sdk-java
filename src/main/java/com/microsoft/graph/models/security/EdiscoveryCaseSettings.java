@@ -10,18 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryCaseSettings extends Entity implements Parsable {
     /**
-     * The OCR (Optical Character Recognition) settings for the case.
-     */
-    private OcrSettings ocr;
-    /**
-     * The redundancy (near duplicate and email threading) detection settings for the case.
-     */
-    private RedundancyDetectionSettings redundancyDetection;
-    /**
-     * The Topic Modeling (Themes) settings for the case.
-     */
-    private TopicModelingSettings topicModeling;
-    /**
      * Instantiates a new EdiscoveryCaseSettings and sets the default values.
      */
     public EdiscoveryCaseSettings() {
@@ -55,7 +43,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OcrSettings getOcr() {
-        return this.ocr;
+        return this.backingStore.get("ocr");
     }
     /**
      * Gets the redundancyDetection property value. The redundancy (near duplicate and email threading) detection settings for the case.
@@ -63,7 +51,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public RedundancyDetectionSettings getRedundancyDetection() {
-        return this.redundancyDetection;
+        return this.backingStore.get("redundancyDetection");
     }
     /**
      * Gets the topicModeling property value. The Topic Modeling (Themes) settings for the case.
@@ -71,7 +59,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public TopicModelingSettings getTopicModeling() {
-        return this.topicModeling;
+        return this.backingStore.get("topicModeling");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
      * @param value Value to set for the ocr property.
      */
     public void setOcr(@jakarta.annotation.Nullable final OcrSettings value) {
-        this.ocr = value;
+        this.backingStore.set("ocr", value);
     }
     /**
      * Sets the redundancyDetection property value. The redundancy (near duplicate and email threading) detection settings for the case.
      * @param value Value to set for the redundancyDetection property.
      */
     public void setRedundancyDetection(@jakarta.annotation.Nullable final RedundancyDetectionSettings value) {
-        this.redundancyDetection = value;
+        this.backingStore.set("redundancyDetection", value);
     }
     /**
      * Sets the topicModeling property value. The Topic Modeling (Themes) settings for the case.
      * @param value Value to set for the topicModeling property.
      */
     public void setTopicModeling(@jakarta.annotation.Nullable final TopicModelingSettings value) {
-        this.topicModeling = value;
+        this.backingStore.set("topicModeling", value);
     }
 }

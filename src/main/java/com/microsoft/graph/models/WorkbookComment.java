@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookComment extends Entity implements Parsable {
     /**
-     * The content of comment.
-     */
-    private String content;
-    /**
-     * Indicates the type for the comment.
-     */
-    private String contentType;
-    /**
-     * The replies property
-     */
-    private java.util.List<WorkbookCommentReply> replies;
-    /**
      * Instantiates a new WorkbookComment and sets the default values.
      */
     public WorkbookComment() {
@@ -42,7 +30,7 @@ public class WorkbookComment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getContent() {
-        return this.content;
+        return this.backingStore.get("content");
     }
     /**
      * Gets the contentType property value. Indicates the type for the comment.
@@ -50,7 +38,7 @@ public class WorkbookComment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getContentType() {
-        return this.contentType;
+        return this.backingStore.get("contentType");
     }
     /**
      * The deserialization information for the current model
@@ -70,7 +58,7 @@ public class WorkbookComment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookCommentReply> getReplies() {
-        return this.replies;
+        return this.backingStore.get("replies");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class WorkbookComment extends Entity implements Parsable {
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final String value) {
-        this.content = value;
+        this.backingStore.set("content", value);
     }
     /**
      * Sets the contentType property value. Indicates the type for the comment.
      * @param value Value to set for the contentType property.
      */
     public void setContentType(@jakarta.annotation.Nullable final String value) {
-        this.contentType = value;
+        this.backingStore.set("contentType", value);
     }
     /**
      * Sets the replies property value. The replies property
      * @param value Value to set for the replies property.
      */
     public void setReplies(@jakarta.annotation.Nullable final java.util.List<WorkbookCommentReply> value) {
-        this.replies = value;
+        this.backingStore.set("replies", value);
     }
 }

@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConnectedOrganizationMembers extends SubjectSet implements Parsable {
     /**
-     * The ID of the connected organization in entitlement management.
-     */
-    private String connectedOrganizationId;
-    /**
-     * The name of the connected organization.
-     */
-    private String description;
-    /**
      * Instantiates a new ConnectedOrganizationMembers and sets the default values.
      */
     public ConnectedOrganizationMembers() {
@@ -39,7 +31,7 @@ public class ConnectedOrganizationMembers extends SubjectSet implements Parsable
      */
     @jakarta.annotation.Nullable
     public String getConnectedOrganizationId() {
-        return this.connectedOrganizationId;
+        return this.backingStore.get("connectedOrganizationId");
     }
     /**
      * Gets the description property value. The name of the connected organization.
@@ -47,7 +39,7 @@ public class ConnectedOrganizationMembers extends SubjectSet implements Parsable
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -75,13 +67,13 @@ public class ConnectedOrganizationMembers extends SubjectSet implements Parsable
      * @param value Value to set for the connectedOrganizationId property.
      */
     public void setConnectedOrganizationId(@jakarta.annotation.Nullable final String value) {
-        this.connectedOrganizationId = value;
+        this.backingStore.set("connectedOrganizationId", value);
     }
     /**
      * Sets the description property value. The name of the connected organization.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
 }

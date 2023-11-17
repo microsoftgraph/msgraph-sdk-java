@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SkypeForBusinessUserConversationMember extends ConversationMember implements Parsable {
     /**
-     * ID of the tenant that the user belongs to.
-     */
-    private String tenantId;
-    /**
-     * Microsoft Entra ID of the user.
-     */
-    private String userId;
-    /**
      * Instantiates a new SkypeForBusinessUserConversationMember and sets the default values.
      */
     public SkypeForBusinessUserConversationMember() {
@@ -50,7 +42,7 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.backingStore.get("tenantId");
     }
     /**
      * Gets the userId property value. Microsoft Entra ID of the user.
@@ -58,7 +50,7 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.backingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.backingStore.set("tenantId", value);
     }
     /**
      * Sets the userId property value. Microsoft Entra ID of the user.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.backingStore.set("userId", value);
     }
 }

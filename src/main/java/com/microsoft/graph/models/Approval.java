@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Approval extends Entity implements Parsable {
     /**
-     * A collection of stages in the approval decision.
-     */
-    private java.util.List<ApprovalStage> stages;
-    /**
      * Instantiates a new Approval and sets the default values.
      */
     public Approval() {
@@ -44,7 +40,7 @@ public class Approval extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ApprovalStage> getStages() {
-        return this.stages;
+        return this.backingStore.get("stages");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class Approval extends Entity implements Parsable {
      * @param value Value to set for the stages property.
      */
     public void setStages(@jakarta.annotation.Nullable final java.util.List<ApprovalStage> value) {
-        this.stages = value;
+        this.backingStore.set("stages", value);
     }
 }

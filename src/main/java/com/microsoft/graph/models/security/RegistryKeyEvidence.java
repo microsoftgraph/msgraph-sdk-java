@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RegistryKeyEvidence extends AlertEvidence implements Parsable {
     /**
-     * Registry hive of the key that the recorded action was applied to.
-     */
-    private String registryHive;
-    /**
-     * Registry key that the recorded action was applied to.
-     */
-    private String registryKey;
-    /**
      * Instantiates a new RegistryKeyEvidence and sets the default values.
      */
     public RegistryKeyEvidence() {
@@ -50,7 +42,7 @@ public class RegistryKeyEvidence extends AlertEvidence implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRegistryHive() {
-        return this.registryHive;
+        return this.backingStore.get("registryHive");
     }
     /**
      * Gets the registryKey property value. Registry key that the recorded action was applied to.
@@ -58,7 +50,7 @@ public class RegistryKeyEvidence extends AlertEvidence implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRegistryKey() {
-        return this.registryKey;
+        return this.backingStore.get("registryKey");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class RegistryKeyEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the registryHive property.
      */
     public void setRegistryHive(@jakarta.annotation.Nullable final String value) {
-        this.registryHive = value;
+        this.backingStore.set("registryHive", value);
     }
     /**
      * Sets the registryKey property value. Registry key that the recorded action was applied to.
      * @param value Value to set for the registryKey property.
      */
     public void setRegistryKey(@jakarta.annotation.Nullable final String value) {
-        this.registryKey = value;
+        this.backingStore.set("registryKey", value);
     }
 }
