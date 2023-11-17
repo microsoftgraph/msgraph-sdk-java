@@ -9,19 +9,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.OnlineMeetingPresenters;
-import com.microsoft.graph.models.MeetingChatMode;
-import com.microsoft.graph.models.AudioConferencing;
 import com.microsoft.graph.models.BroadcastMeetingSettings;
-import com.microsoft.graph.models.ChatInfo;
-import com.microsoft.graph.models.ItemBody;
-import com.microsoft.graph.models.JoinMeetingIdSettings;
-import com.microsoft.graph.models.LobbyBypassSettings;
 import com.microsoft.graph.models.MeetingParticipants;
-import com.microsoft.graph.models.MeetingChatHistoryDefaultMode;
-import com.microsoft.graph.models.WatermarkProtectionValues;
-import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.MeetingAttendanceReportCollectionPage;
+import com.microsoft.graph.models.OnlineMeetingBase;
 import com.microsoft.graph.requests.CallRecordingCollectionPage;
 import com.microsoft.graph.requests.CallTranscriptCollectionPage;
 
@@ -37,71 +27,8 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Online Meeting.
  */
-public class OnlineMeeting extends Entity implements IJsonBackedObject {
+public class OnlineMeeting extends OnlineMeetingBase implements IJsonBackedObject {
 
-
-    /**
-     * The Allow Attendee To Enable Camera.
-     * Indicates whether attendees can turn on their camera.
-     */
-    @SerializedName(value = "allowAttendeeToEnableCamera", alternate = {"AllowAttendeeToEnableCamera"})
-    @Expose
-	@Nullable
-    public Boolean allowAttendeeToEnableCamera;
-
-    /**
-     * The Allow Attendee To Enable Mic.
-     * Indicates whether attendees can turn on their microphone.
-     */
-    @SerializedName(value = "allowAttendeeToEnableMic", alternate = {"AllowAttendeeToEnableMic"})
-    @Expose
-	@Nullable
-    public Boolean allowAttendeeToEnableMic;
-
-    /**
-     * The Allowed Presenters.
-     * Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
-     */
-    @SerializedName(value = "allowedPresenters", alternate = {"AllowedPresenters"})
-    @Expose
-	@Nullable
-    public OnlineMeetingPresenters allowedPresenters;
-
-    /**
-     * The Allow Meeting Chat.
-     * Specifies the mode of meeting chat.
-     */
-    @SerializedName(value = "allowMeetingChat", alternate = {"AllowMeetingChat"})
-    @Expose
-	@Nullable
-    public MeetingChatMode allowMeetingChat;
-
-    /**
-     * The Allow Participants To Change Name.
-     * Specifies if participants are allowed to rename themselves in an instance of the meeting.
-     */
-    @SerializedName(value = "allowParticipantsToChangeName", alternate = {"AllowParticipantsToChangeName"})
-    @Expose
-	@Nullable
-    public Boolean allowParticipantsToChangeName;
-
-    /**
-     * The Allow Teamwork Reactions.
-     * Indicates whether Teams reactions are enabled for the meeting.
-     */
-    @SerializedName(value = "allowTeamworkReactions", alternate = {"AllowTeamworkReactions"})
-    @Expose
-	@Nullable
-    public Boolean allowTeamworkReactions;
-
-    /**
-     * The Audio Conferencing.
-     * The phone access (dial-in) information for an online meeting. Read-only.
-     */
-    @SerializedName(value = "audioConferencing", alternate = {"AudioConferencing"})
-    @Expose
-	@Nullable
-    public AudioConferencing audioConferencing;
 
     /**
      * The Broadcast Settings.
@@ -111,15 +38,6 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public BroadcastMeetingSettings broadcastSettings;
-
-    /**
-     * The Chat Info.
-     * The chat information associated with this online meeting.
-     */
-    @SerializedName(value = "chatInfo", alternate = {"ChatInfo"})
-    @Expose
-	@Nullable
-    public ChatInfo chatInfo;
 
     /**
      * The Creation Date Time.
@@ -158,51 +76,6 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     public Boolean isBroadcast;
 
     /**
-     * The Is Entry Exit Announced.
-     * Indicates whether to announce when callers join or leave.
-     */
-    @SerializedName(value = "isEntryExitAnnounced", alternate = {"IsEntryExitAnnounced"})
-    @Expose
-	@Nullable
-    public Boolean isEntryExitAnnounced;
-
-    /**
-     * The Join Information.
-     * The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
-     */
-    @SerializedName(value = "joinInformation", alternate = {"JoinInformation"})
-    @Expose
-	@Nullable
-    public ItemBody joinInformation;
-
-    /**
-     * The Join Meeting Id Settings.
-     * Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode. Once an onlineMeeting is created, the joinMeetingIdSettings cannot be modified. To make any changes to this property, the meeting needs to be canceled and a new one needs to be created.
-     */
-    @SerializedName(value = "joinMeetingIdSettings", alternate = {"JoinMeetingIdSettings"})
-    @Expose
-	@Nullable
-    public JoinMeetingIdSettings joinMeetingIdSettings;
-
-    /**
-     * The Join Web Url.
-     * The join URL of the online meeting. Read-only.
-     */
-    @SerializedName(value = "joinWebUrl", alternate = {"JoinWebUrl"})
-    @Expose
-	@Nullable
-    public String joinWebUrl;
-
-    /**
-     * The Lobby Bypass Settings.
-     * Specifies which participants can bypass the meeting   lobby.
-     */
-    @SerializedName(value = "lobbyBypassSettings", alternate = {"LobbyBypassSettings"})
-    @Expose
-	@Nullable
-    public LobbyBypassSettings lobbyBypassSettings;
-
-    /**
      * The Participants.
      * The participants associated with the online meeting.  This includes the organizer and the attendees.
      */
@@ -210,24 +83,6 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public MeetingParticipants participants;
-
-    /**
-     * The Record Automatically.
-     * Indicates whether to record the meeting automatically.
-     */
-    @SerializedName(value = "recordAutomatically", alternate = {"RecordAutomatically"})
-    @Expose
-	@Nullable
-    public Boolean recordAutomatically;
-
-    /**
-     * The Share Meeting Chat History Default.
-     * Specifies whether meeting chat history is shared with participants. Possible values are: all, none, unknownFutureValue.
-     */
-    @SerializedName(value = "shareMeetingChatHistoryDefault", alternate = {"ShareMeetingChatHistoryDefault"})
-    @Expose
-	@Nullable
-    public MeetingChatHistoryDefaultMode shareMeetingChatHistoryDefault;
 
     /**
      * The Start Date Time.
@@ -239,44 +94,8 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     public java.time.OffsetDateTime startDateTime;
 
     /**
-     * The Subject.
-     * The subject of the online meeting.
-     */
-    @SerializedName(value = "subject", alternate = {"Subject"})
-    @Expose
-	@Nullable
-    public String subject;
-
-    /**
-     * The Video Teleconference Id.
-     * The video teleconferencing ID. Read-only.
-     */
-    @SerializedName(value = "videoTeleconferenceId", alternate = {"VideoTeleconferenceId"})
-    @Expose
-	@Nullable
-    public String videoTeleconferenceId;
-
-    /**
-     * The Watermark Protection.
-     * Specifies whether a watermark should be applied to a content type by the client application.
-     */
-    @SerializedName(value = "watermarkProtection", alternate = {"WatermarkProtection"})
-    @Expose
-	@Nullable
-    public WatermarkProtectionValues watermarkProtection;
-
-    /**
-     * The Attendance Reports.
-     * The attendance reports of an online meeting. Read-only.
-     */
-    @SerializedName(value = "attendanceReports", alternate = {"AttendanceReports"})
-    @Expose
-	@Nullable
-    public com.microsoft.graph.requests.MeetingAttendanceReportCollectionPage attendanceReports;
-
-    /**
      * The Recordings.
-     * 
+     * The recordings of an online meeting. Read-only.
      */
     @SerializedName(value = "recordings", alternate = {"Recordings"})
     @Expose
@@ -301,10 +120,6 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
-
-        if (json.has("attendanceReports")) {
-            attendanceReports = serializer.deserializeObject(json.get("attendanceReports"), com.microsoft.graph.requests.MeetingAttendanceReportCollectionPage.class);
-        }
 
         if (json.has("recordings")) {
             recordings = serializer.deserializeObject(json.get("recordings"), com.microsoft.graph.requests.CallRecordingCollectionPage.class);

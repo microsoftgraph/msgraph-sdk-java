@@ -96,4 +96,14 @@ public class SolutionsRootRequestBuilder extends BaseRequestBuilder<SolutionsRoo
     public com.microsoft.graph.requests.BookingCurrencyRequestBuilder bookingCurrencies(@Nonnull final String id) {
         return new com.microsoft.graph.requests.BookingCurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("bookingCurrencies") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Gets the request builder for VirtualEventsRoot
+     *
+     * @return the VirtualEventsRootRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.VirtualEventsRootRequestBuilder virtualEvents() {
+        return new com.microsoft.graph.requests.VirtualEventsRootRequestBuilder(getRequestUrlWithAdditionalSegment("virtualEvents"), getClient(), null);
+    }
 }
