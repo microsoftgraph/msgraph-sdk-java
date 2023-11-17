@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRbacResourceNamespace extends Entity implements Parsable {
     /**
-     * The name property
-     */
-    private String name;
-    /**
-     * The resourceActions property
-     */
-    private java.util.List<UnifiedRbacResourceAction> resourceActions;
-    /**
      * Instantiates a new UnifiedRbacResourceNamespace and sets the default values.
      */
     public UnifiedRbacResourceNamespace() {
@@ -49,7 +41,7 @@ public class UnifiedRbacResourceNamespace extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the resourceActions property value. The resourceActions property
@@ -57,7 +49,7 @@ public class UnifiedRbacResourceNamespace extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRbacResourceAction> getResourceActions() {
-        return this.resourceActions;
+        return this.backingStore.get("resourceActions");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class UnifiedRbacResourceNamespace extends Entity implements Parsable {
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the resourceActions property value. The resourceActions property
      * @param value Value to set for the resourceActions property.
      */
     public void setResourceActions(@jakarta.annotation.Nullable final java.util.List<UnifiedRbacResourceAction> value) {
-        this.resourceActions = value;
+        this.backingStore.set("resourceActions", value);
     }
 }

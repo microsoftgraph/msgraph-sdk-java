@@ -9,26 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable {
     /**
-     * The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.
-     */
-    private UnifiedRoleManagementPolicy policy;
-    /**
-     * The id of the policy. Inherited from entity.
-     */
-    private String policyId;
-    /**
-     * For Microsoft Entra roles policy, it's the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it's either member or owner. Supports $filter (eq).
-     */
-    private String roleDefinitionId;
-    /**
-     * The identifier of the scope where the policy is assigned.  Can be / for the tenant or a group ID. Required.
-     */
-    private String scopeId;
-    /**
-     * The type of the scope where the policy is assigned. One of Directory, DirectoryRole, Group. Required.
-     */
-    private String scopeType;
-    /**
      * Instantiates a new UnifiedRoleManagementPolicyAssignment and sets the default values.
      */
     public UnifiedRoleManagementPolicyAssignment() {
@@ -64,7 +44,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleManagementPolicy getPolicy() {
-        return this.policy;
+        return this.backingStore.get("policy");
     }
     /**
      * Gets the policyId property value. The id of the policy. Inherited from entity.
@@ -72,7 +52,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      */
     @jakarta.annotation.Nullable
     public String getPolicyId() {
-        return this.policyId;
+        return this.backingStore.get("policyId");
     }
     /**
      * Gets the roleDefinitionId property value. For Microsoft Entra roles policy, it's the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it's either member or owner. Supports $filter (eq).
@@ -80,7 +60,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      */
     @jakarta.annotation.Nullable
     public String getRoleDefinitionId() {
-        return this.roleDefinitionId;
+        return this.backingStore.get("roleDefinitionId");
     }
     /**
      * Gets the scopeId property value. The identifier of the scope where the policy is assigned.  Can be / for the tenant or a group ID. Required.
@@ -88,7 +68,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      */
     @jakarta.annotation.Nullable
     public String getScopeId() {
-        return this.scopeId;
+        return this.backingStore.get("scopeId");
     }
     /**
      * Gets the scopeType property value. The type of the scope where the policy is assigned. One of Directory, DirectoryRole, Group. Required.
@@ -96,7 +76,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      */
     @jakarta.annotation.Nullable
     public String getScopeType() {
-        return this.scopeType;
+        return this.backingStore.get("scopeType");
     }
     /**
      * Serializes information the current object
@@ -116,34 +96,34 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      * @param value Value to set for the policy property.
      */
     public void setPolicy(@jakarta.annotation.Nullable final UnifiedRoleManagementPolicy value) {
-        this.policy = value;
+        this.backingStore.set("policy", value);
     }
     /**
      * Sets the policyId property value. The id of the policy. Inherited from entity.
      * @param value Value to set for the policyId property.
      */
     public void setPolicyId(@jakarta.annotation.Nullable final String value) {
-        this.policyId = value;
+        this.backingStore.set("policyId", value);
     }
     /**
      * Sets the roleDefinitionId property value. For Microsoft Entra roles policy, it's the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it's either member or owner. Supports $filter (eq).
      * @param value Value to set for the roleDefinitionId property.
      */
     public void setRoleDefinitionId(@jakarta.annotation.Nullable final String value) {
-        this.roleDefinitionId = value;
+        this.backingStore.set("roleDefinitionId", value);
     }
     /**
      * Sets the scopeId property value. The identifier of the scope where the policy is assigned.  Can be / for the tenant or a group ID. Required.
      * @param value Value to set for the scopeId property.
      */
     public void setScopeId(@jakarta.annotation.Nullable final String value) {
-        this.scopeId = value;
+        this.backingStore.set("scopeId", value);
     }
     /**
      * Sets the scopeType property value. The type of the scope where the policy is assigned. One of Directory, DirectoryRole, Group. Required.
      * @param value Value to set for the scopeType property.
      */
     public void setScopeType(@jakarta.annotation.Nullable final String value) {
-        this.scopeType = value;
+        this.backingStore.set("scopeType", value);
     }
 }

@@ -6,31 +6,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Parsable {
+public class ParseExpressionPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The expression property
-     */
-    private String expression;
-    /**
-     * The targetAttributeDefinition property
-     */
-    private AttributeDefinition targetAttributeDefinition;
-    /**
-     * The testInputObject property
-     */
-    private ExpressionInputObject testInputObject;
+    private BackingStore backingStore;
     /**
      * Instantiates a new ParseExpressionPostRequestBody and sets the default values.
      */
     public ParseExpressionPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -49,7 +41,20 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the expression property value. The expression property
@@ -57,7 +62,7 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      */
     @jakarta.annotation.Nullable
     public String getExpression() {
-        return this.expression;
+        return this.backingStore.get("expression");
     }
     /**
      * The deserialization information for the current model
@@ -77,7 +82,7 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      */
     @jakarta.annotation.Nullable
     public AttributeDefinition getTargetAttributeDefinition() {
-        return this.targetAttributeDefinition;
+        return this.backingStore.get("targetAttributeDefinition");
     }
     /**
      * Gets the testInputObject property value. The testInputObject property
@@ -85,7 +90,7 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      */
     @jakarta.annotation.Nullable
     public ExpressionInputObject getTestInputObject() {
-        return this.testInputObject;
+        return this.backingStore.get("testInputObject");
     }
     /**
      * Serializes information the current object
@@ -103,27 +108,35 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the expression property value. The expression property
      * @param value Value to set for the expression property.
      */
     public void setExpression(@jakarta.annotation.Nullable final String value) {
-        this.expression = value;
+        this.backingStore.set("expression", value);
     }
     /**
      * Sets the targetAttributeDefinition property value. The targetAttributeDefinition property
      * @param value Value to set for the targetAttributeDefinition property.
      */
     public void setTargetAttributeDefinition(@jakarta.annotation.Nullable final AttributeDefinition value) {
-        this.targetAttributeDefinition = value;
+        this.backingStore.set("targetAttributeDefinition", value);
     }
     /**
      * Sets the testInputObject property value. The testInputObject property
      * @param value Value to set for the testInputObject property.
      */
     public void setTestInputObject(@jakarta.annotation.Nullable final ExpressionInputObject value) {
-        this.testInputObject = value;
+        this.backingStore.set("testInputObject", value);
     }
 }

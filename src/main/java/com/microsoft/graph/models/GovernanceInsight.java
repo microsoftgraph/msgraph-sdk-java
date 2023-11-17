@@ -10,10 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GovernanceInsight extends Entity implements Parsable {
     /**
-     * Indicates when the insight was created.
-     */
-    private OffsetDateTime insightCreatedDateTime;
-    /**
      * Instantiates a new GovernanceInsight and sets the default values.
      */
     public GovernanceInsight() {
@@ -53,7 +49,7 @@ public class GovernanceInsight extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getInsightCreatedDateTime() {
-        return this.insightCreatedDateTime;
+        return this.backingStore.get("insightCreatedDateTime");
     }
     /**
      * Serializes information the current object
@@ -69,6 +65,6 @@ public class GovernanceInsight extends Entity implements Parsable {
      * @param value Value to set for the insightCreatedDateTime property.
      */
     public void setInsightCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.insightCreatedDateTime = value;
+        this.backingStore.set("insightCreatedDateTime", value);
     }
 }

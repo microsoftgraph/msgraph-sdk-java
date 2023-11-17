@@ -1,0 +1,375 @@
+package com.microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
+public class OnlineMeetingBase extends Entity implements Parsable {
+    /**
+     * Instantiates a new OnlineMeetingBase and sets the default values.
+     */
+    public OnlineMeetingBase() {
+        super();
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a OnlineMeetingBase
+     */
+    @jakarta.annotation.Nonnull
+    public static OnlineMeetingBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.onlineMeeting": return new OnlineMeeting();
+                case "#microsoft.graph.virtualEventSession": return new VirtualEventSession();
+            }
+        }
+        return new OnlineMeetingBase();
+    }
+    /**
+     * Gets the allowAttendeeToEnableCamera property value. The allowAttendeeToEnableCamera property
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getAllowAttendeeToEnableCamera() {
+        return this.backingStore.get("allowAttendeeToEnableCamera");
+    }
+    /**
+     * Gets the allowAttendeeToEnableMic property value. The allowAttendeeToEnableMic property
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getAllowAttendeeToEnableMic() {
+        return this.backingStore.get("allowAttendeeToEnableMic");
+    }
+    /**
+     * Gets the allowedPresenters property value. The allowedPresenters property
+     * @return a OnlineMeetingPresenters
+     */
+    @jakarta.annotation.Nullable
+    public OnlineMeetingPresenters getAllowedPresenters() {
+        return this.backingStore.get("allowedPresenters");
+    }
+    /**
+     * Gets the allowMeetingChat property value. The allowMeetingChat property
+     * @return a MeetingChatMode
+     */
+    @jakarta.annotation.Nullable
+    public MeetingChatMode getAllowMeetingChat() {
+        return this.backingStore.get("allowMeetingChat");
+    }
+    /**
+     * Gets the allowParticipantsToChangeName property value. The allowParticipantsToChangeName property
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getAllowParticipantsToChangeName() {
+        return this.backingStore.get("allowParticipantsToChangeName");
+    }
+    /**
+     * Gets the allowTeamworkReactions property value. The allowTeamworkReactions property
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getAllowTeamworkReactions() {
+        return this.backingStore.get("allowTeamworkReactions");
+    }
+    /**
+     * Gets the attendanceReports property value. The attendanceReports property
+     * @return a java.util.List<MeetingAttendanceReport>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<MeetingAttendanceReport> getAttendanceReports() {
+        return this.backingStore.get("attendanceReports");
+    }
+    /**
+     * Gets the audioConferencing property value. The audioConferencing property
+     * @return a AudioConferencing
+     */
+    @jakarta.annotation.Nullable
+    public AudioConferencing getAudioConferencing() {
+        return this.backingStore.get("audioConferencing");
+    }
+    /**
+     * Gets the chatInfo property value. The chatInfo property
+     * @return a ChatInfo
+     */
+    @jakarta.annotation.Nullable
+    public ChatInfo getChatInfo() {
+        return this.backingStore.get("chatInfo");
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     */
+    @jakarta.annotation.Nonnull
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowAttendeeToEnableCamera", (n) -> { this.setAllowAttendeeToEnableCamera(n.getBooleanValue()); });
+        deserializerMap.put("allowAttendeeToEnableMic", (n) -> { this.setAllowAttendeeToEnableMic(n.getBooleanValue()); });
+        deserializerMap.put("allowedPresenters", (n) -> { this.setAllowedPresenters(n.getEnumValue(OnlineMeetingPresenters.class)); });
+        deserializerMap.put("allowMeetingChat", (n) -> { this.setAllowMeetingChat(n.getEnumValue(MeetingChatMode.class)); });
+        deserializerMap.put("allowParticipantsToChangeName", (n) -> { this.setAllowParticipantsToChangeName(n.getBooleanValue()); });
+        deserializerMap.put("allowTeamworkReactions", (n) -> { this.setAllowTeamworkReactions(n.getBooleanValue()); });
+        deserializerMap.put("attendanceReports", (n) -> { this.setAttendanceReports(n.getCollectionOfObjectValues(MeetingAttendanceReport::createFromDiscriminatorValue)); });
+        deserializerMap.put("audioConferencing", (n) -> { this.setAudioConferencing(n.getObjectValue(AudioConferencing::createFromDiscriminatorValue)); });
+        deserializerMap.put("chatInfo", (n) -> { this.setChatInfo(n.getObjectValue(ChatInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("isEntryExitAnnounced", (n) -> { this.setIsEntryExitAnnounced(n.getBooleanValue()); });
+        deserializerMap.put("joinInformation", (n) -> { this.setJoinInformation(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("joinMeetingIdSettings", (n) -> { this.setJoinMeetingIdSettings(n.getObjectValue(JoinMeetingIdSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("joinWebUrl", (n) -> { this.setJoinWebUrl(n.getStringValue()); });
+        deserializerMap.put("lobbyBypassSettings", (n) -> { this.setLobbyBypassSettings(n.getObjectValue(LobbyBypassSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("recordAutomatically", (n) -> { this.setRecordAutomatically(n.getBooleanValue()); });
+        deserializerMap.put("shareMeetingChatHistoryDefault", (n) -> { this.setShareMeetingChatHistoryDefault(n.getEnumValue(MeetingChatHistoryDefaultMode.class)); });
+        deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
+        deserializerMap.put("videoTeleconferenceId", (n) -> { this.setVideoTeleconferenceId(n.getStringValue()); });
+        deserializerMap.put("watermarkProtection", (n) -> { this.setWatermarkProtection(n.getObjectValue(WatermarkProtectionValues::createFromDiscriminatorValue)); });
+        return deserializerMap;
+    }
+    /**
+     * Gets the isEntryExitAnnounced property value. The isEntryExitAnnounced property
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsEntryExitAnnounced() {
+        return this.backingStore.get("isEntryExitAnnounced");
+    }
+    /**
+     * Gets the joinInformation property value. The joinInformation property
+     * @return a ItemBody
+     */
+    @jakarta.annotation.Nullable
+    public ItemBody getJoinInformation() {
+        return this.backingStore.get("joinInformation");
+    }
+    /**
+     * Gets the joinMeetingIdSettings property value. The joinMeetingIdSettings property
+     * @return a JoinMeetingIdSettings
+     */
+    @jakarta.annotation.Nullable
+    public JoinMeetingIdSettings getJoinMeetingIdSettings() {
+        return this.backingStore.get("joinMeetingIdSettings");
+    }
+    /**
+     * Gets the joinWebUrl property value. The joinWebUrl property
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getJoinWebUrl() {
+        return this.backingStore.get("joinWebUrl");
+    }
+    /**
+     * Gets the lobbyBypassSettings property value. The lobbyBypassSettings property
+     * @return a LobbyBypassSettings
+     */
+    @jakarta.annotation.Nullable
+    public LobbyBypassSettings getLobbyBypassSettings() {
+        return this.backingStore.get("lobbyBypassSettings");
+    }
+    /**
+     * Gets the recordAutomatically property value. The recordAutomatically property
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getRecordAutomatically() {
+        return this.backingStore.get("recordAutomatically");
+    }
+    /**
+     * Gets the shareMeetingChatHistoryDefault property value. The shareMeetingChatHistoryDefault property
+     * @return a MeetingChatHistoryDefaultMode
+     */
+    @jakarta.annotation.Nullable
+    public MeetingChatHistoryDefaultMode getShareMeetingChatHistoryDefault() {
+        return this.backingStore.get("shareMeetingChatHistoryDefault");
+    }
+    /**
+     * Gets the subject property value. The subject property
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getSubject() {
+        return this.backingStore.get("subject");
+    }
+    /**
+     * Gets the videoTeleconferenceId property value. The videoTeleconferenceId property
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getVideoTeleconferenceId() {
+        return this.backingStore.get("videoTeleconferenceId");
+    }
+    /**
+     * Gets the watermarkProtection property value. The watermarkProtection property
+     * @return a WatermarkProtectionValues
+     */
+    @jakarta.annotation.Nullable
+    public WatermarkProtectionValues getWatermarkProtection() {
+        return this.backingStore.get("watermarkProtection");
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     */
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeBooleanValue("allowAttendeeToEnableCamera", this.getAllowAttendeeToEnableCamera());
+        writer.writeBooleanValue("allowAttendeeToEnableMic", this.getAllowAttendeeToEnableMic());
+        writer.writeEnumValue("allowedPresenters", this.getAllowedPresenters());
+        writer.writeEnumValue("allowMeetingChat", this.getAllowMeetingChat());
+        writer.writeBooleanValue("allowParticipantsToChangeName", this.getAllowParticipantsToChangeName());
+        writer.writeBooleanValue("allowTeamworkReactions", this.getAllowTeamworkReactions());
+        writer.writeCollectionOfObjectValues("attendanceReports", this.getAttendanceReports());
+        writer.writeObjectValue("audioConferencing", this.getAudioConferencing());
+        writer.writeObjectValue("chatInfo", this.getChatInfo());
+        writer.writeBooleanValue("isEntryExitAnnounced", this.getIsEntryExitAnnounced());
+        writer.writeObjectValue("joinInformation", this.getJoinInformation());
+        writer.writeObjectValue("joinMeetingIdSettings", this.getJoinMeetingIdSettings());
+        writer.writeStringValue("joinWebUrl", this.getJoinWebUrl());
+        writer.writeObjectValue("lobbyBypassSettings", this.getLobbyBypassSettings());
+        writer.writeBooleanValue("recordAutomatically", this.getRecordAutomatically());
+        writer.writeEnumValue("shareMeetingChatHistoryDefault", this.getShareMeetingChatHistoryDefault());
+        writer.writeStringValue("subject", this.getSubject());
+        writer.writeStringValue("videoTeleconferenceId", this.getVideoTeleconferenceId());
+        writer.writeObjectValue("watermarkProtection", this.getWatermarkProtection());
+    }
+    /**
+     * Sets the allowAttendeeToEnableCamera property value. The allowAttendeeToEnableCamera property
+     * @param value Value to set for the allowAttendeeToEnableCamera property.
+     */
+    public void setAllowAttendeeToEnableCamera(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("allowAttendeeToEnableCamera", value);
+    }
+    /**
+     * Sets the allowAttendeeToEnableMic property value. The allowAttendeeToEnableMic property
+     * @param value Value to set for the allowAttendeeToEnableMic property.
+     */
+    public void setAllowAttendeeToEnableMic(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("allowAttendeeToEnableMic", value);
+    }
+    /**
+     * Sets the allowedPresenters property value. The allowedPresenters property
+     * @param value Value to set for the allowedPresenters property.
+     */
+    public void setAllowedPresenters(@jakarta.annotation.Nullable final OnlineMeetingPresenters value) {
+        this.backingStore.set("allowedPresenters", value);
+    }
+    /**
+     * Sets the allowMeetingChat property value. The allowMeetingChat property
+     * @param value Value to set for the allowMeetingChat property.
+     */
+    public void setAllowMeetingChat(@jakarta.annotation.Nullable final MeetingChatMode value) {
+        this.backingStore.set("allowMeetingChat", value);
+    }
+    /**
+     * Sets the allowParticipantsToChangeName property value. The allowParticipantsToChangeName property
+     * @param value Value to set for the allowParticipantsToChangeName property.
+     */
+    public void setAllowParticipantsToChangeName(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("allowParticipantsToChangeName", value);
+    }
+    /**
+     * Sets the allowTeamworkReactions property value. The allowTeamworkReactions property
+     * @param value Value to set for the allowTeamworkReactions property.
+     */
+    public void setAllowTeamworkReactions(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("allowTeamworkReactions", value);
+    }
+    /**
+     * Sets the attendanceReports property value. The attendanceReports property
+     * @param value Value to set for the attendanceReports property.
+     */
+    public void setAttendanceReports(@jakarta.annotation.Nullable final java.util.List<MeetingAttendanceReport> value) {
+        this.backingStore.set("attendanceReports", value);
+    }
+    /**
+     * Sets the audioConferencing property value. The audioConferencing property
+     * @param value Value to set for the audioConferencing property.
+     */
+    public void setAudioConferencing(@jakarta.annotation.Nullable final AudioConferencing value) {
+        this.backingStore.set("audioConferencing", value);
+    }
+    /**
+     * Sets the chatInfo property value. The chatInfo property
+     * @param value Value to set for the chatInfo property.
+     */
+    public void setChatInfo(@jakarta.annotation.Nullable final ChatInfo value) {
+        this.backingStore.set("chatInfo", value);
+    }
+    /**
+     * Sets the isEntryExitAnnounced property value. The isEntryExitAnnounced property
+     * @param value Value to set for the isEntryExitAnnounced property.
+     */
+    public void setIsEntryExitAnnounced(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isEntryExitAnnounced", value);
+    }
+    /**
+     * Sets the joinInformation property value. The joinInformation property
+     * @param value Value to set for the joinInformation property.
+     */
+    public void setJoinInformation(@jakarta.annotation.Nullable final ItemBody value) {
+        this.backingStore.set("joinInformation", value);
+    }
+    /**
+     * Sets the joinMeetingIdSettings property value. The joinMeetingIdSettings property
+     * @param value Value to set for the joinMeetingIdSettings property.
+     */
+    public void setJoinMeetingIdSettings(@jakarta.annotation.Nullable final JoinMeetingIdSettings value) {
+        this.backingStore.set("joinMeetingIdSettings", value);
+    }
+    /**
+     * Sets the joinWebUrl property value. The joinWebUrl property
+     * @param value Value to set for the joinWebUrl property.
+     */
+    public void setJoinWebUrl(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("joinWebUrl", value);
+    }
+    /**
+     * Sets the lobbyBypassSettings property value. The lobbyBypassSettings property
+     * @param value Value to set for the lobbyBypassSettings property.
+     */
+    public void setLobbyBypassSettings(@jakarta.annotation.Nullable final LobbyBypassSettings value) {
+        this.backingStore.set("lobbyBypassSettings", value);
+    }
+    /**
+     * Sets the recordAutomatically property value. The recordAutomatically property
+     * @param value Value to set for the recordAutomatically property.
+     */
+    public void setRecordAutomatically(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("recordAutomatically", value);
+    }
+    /**
+     * Sets the shareMeetingChatHistoryDefault property value. The shareMeetingChatHistoryDefault property
+     * @param value Value to set for the shareMeetingChatHistoryDefault property.
+     */
+    public void setShareMeetingChatHistoryDefault(@jakarta.annotation.Nullable final MeetingChatHistoryDefaultMode value) {
+        this.backingStore.set("shareMeetingChatHistoryDefault", value);
+    }
+    /**
+     * Sets the subject property value. The subject property
+     * @param value Value to set for the subject property.
+     */
+    public void setSubject(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("subject", value);
+    }
+    /**
+     * Sets the videoTeleconferenceId property value. The videoTeleconferenceId property
+     * @param value Value to set for the videoTeleconferenceId property.
+     */
+    public void setVideoTeleconferenceId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("videoTeleconferenceId", value);
+    }
+    /**
+     * Sets the watermarkProtection property value. The watermarkProtection property
+     * @param value Value to set for the watermarkProtection property.
+     */
+    public void setWatermarkProtection(@jakarta.annotation.Nullable final WatermarkProtectionValues value) {
+        this.backingStore.set("watermarkProtection", value);
+    }
+}

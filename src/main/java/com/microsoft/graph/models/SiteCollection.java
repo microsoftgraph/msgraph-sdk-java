@@ -4,35 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SiteCollection implements AdditionalDataHolder, Parsable {
+public class SiteCollection implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The geographic region code for where this site collection resides. Read-only.
-     */
-    private String dataLocationCode;
-    /**
-     * The hostname for the site collection. Read-only.
-     */
-    private String hostname;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * If present, indicates that this is a root site collection in SharePoint. Read-only.
-     */
-    private Root root;
+    private BackingStore backingStore;
     /**
      * Instantiates a new SiteCollection and sets the default values.
      */
     public SiteCollection() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +39,20 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the dataLocationCode property value. The geographic region code for where this site collection resides. Read-only.
@@ -59,7 +60,7 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDataLocationCode() {
-        return this.dataLocationCode;
+        return this.backingStore.get("dataLocationCode");
     }
     /**
      * The deserialization information for the current model
@@ -80,7 +81,7 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getHostname() {
-        return this.hostname;
+        return this.backingStore.get("hostname");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -88,7 +89,7 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the root property value. If present, indicates that this is a root site collection in SharePoint. Read-only.
@@ -96,7 +97,7 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Root getRoot() {
-        return this.root;
+        return this.backingStore.get("root");
     }
     /**
      * Serializes information the current object
@@ -115,34 +116,42 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the dataLocationCode property value. The geographic region code for where this site collection resides. Read-only.
      * @param value Value to set for the dataLocationCode property.
      */
     public void setDataLocationCode(@jakarta.annotation.Nullable final String value) {
-        this.dataLocationCode = value;
+        this.backingStore.set("dataLocationCode", value);
     }
     /**
      * Sets the hostname property value. The hostname for the site collection. Read-only.
      * @param value Value to set for the hostname property.
      */
     public void setHostname(@jakarta.annotation.Nullable final String value) {
-        this.hostname = value;
+        this.backingStore.set("hostname", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the root property value. If present, indicates that this is a root site collection in SharePoint. Read-only.
      * @param value Value to set for the root property.
      */
     public void setRoot(@jakarta.annotation.Nullable final Root value) {
-        this.root = value;
+        this.backingStore.set("root", value);
     }
 }

@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AttackSimulationOperation extends LongRunningOperation implements Parsable {
     /**
-     * Percentage of completion of the respective operation.
-     */
-    private Integer percentageCompleted;
-    /**
-     * Tenant identifier.
-     */
-    private String tenantId;
-    /**
-     * The attack simulation operation type. Possible values are: createSimulation, updateSimulation, unknownFutureValue.
-     */
-    private AttackSimulationOperationType type;
-    /**
      * Instantiates a new AttackSimulationOperation and sets the default values.
      */
     public AttackSimulationOperation() {
@@ -54,7 +42,7 @@ public class AttackSimulationOperation extends LongRunningOperation implements P
      */
     @jakarta.annotation.Nullable
     public Integer getPercentageCompleted() {
-        return this.percentageCompleted;
+        return this.backingStore.get("percentageCompleted");
     }
     /**
      * Gets the tenantId property value. Tenant identifier.
@@ -62,7 +50,7 @@ public class AttackSimulationOperation extends LongRunningOperation implements P
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.backingStore.get("tenantId");
     }
     /**
      * Gets the type property value. The attack simulation operation type. Possible values are: createSimulation, updateSimulation, unknownFutureValue.
@@ -70,7 +58,7 @@ public class AttackSimulationOperation extends LongRunningOperation implements P
      */
     @jakarta.annotation.Nullable
     public AttackSimulationOperationType getType() {
-        return this.type;
+        return this.backingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class AttackSimulationOperation extends LongRunningOperation implements P
      * @param value Value to set for the percentageCompleted property.
      */
     public void setPercentageCompleted(@jakarta.annotation.Nullable final Integer value) {
-        this.percentageCompleted = value;
+        this.backingStore.set("percentageCompleted", value);
     }
     /**
      * Sets the tenantId property value. Tenant identifier.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.backingStore.set("tenantId", value);
     }
     /**
      * Sets the type property value. The attack simulation operation type. Possible values are: createSimulation, updateSimulation, unknownFutureValue.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final AttackSimulationOperationType value) {
-        this.type = value;
+        this.backingStore.set("type", value);
     }
 }

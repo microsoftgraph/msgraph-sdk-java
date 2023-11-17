@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerBucketCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<PlannerBucket> value;
-    /**
      * Instantiates a new PlannerBucketCollectionResponse and sets the default values.
      */
     public PlannerBucketCollectionResponse() {
@@ -44,7 +40,7 @@ public class PlannerBucketCollectionResponse extends BaseCollectionPaginationCou
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerBucket> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class PlannerBucketCollectionResponse extends BaseCollectionPaginationCou
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<PlannerBucket> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

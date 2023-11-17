@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceCompliancePolicyAssignmentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<DeviceCompliancePolicyAssignment> value;
-    /**
      * Instantiates a new DeviceCompliancePolicyAssignmentCollectionResponse and sets the default values.
      */
     public DeviceCompliancePolicyAssignmentCollectionResponse() {
@@ -44,7 +40,7 @@ public class DeviceCompliancePolicyAssignmentCollectionResponse extends BaseColl
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceCompliancePolicyAssignment> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class DeviceCompliancePolicyAssignmentCollectionResponse extends BaseColl
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<DeviceCompliancePolicyAssignment> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

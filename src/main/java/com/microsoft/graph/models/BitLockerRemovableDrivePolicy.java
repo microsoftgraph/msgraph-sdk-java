@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,31 +14,16 @@ import java.util.Objects;
  * BitLocker Removable Drive Policies.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Parsable {
+public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * This policy setting determines whether BitLocker protection is required for removable data drives to be writable on a computer.
-     */
-    private Boolean blockCrossOrganizationWriteAccess;
-    /**
-     * Select the encryption method for removable  drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
-     */
-    private BitLockerEncryptionMethod encryptionMethod;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Indicates whether to block write access to devices configured in another organization.  If requireEncryptionForWriteAccess is false, this value does not affect.
-     */
-    private Boolean requireEncryptionForWriteAccess;
+    private BackingStore backingStore;
     /**
      * Instantiates a new BitLockerRemovableDrivePolicy and sets the default values.
      */
     public BitLockerRemovableDrivePolicy() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -54,7 +42,20 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the blockCrossOrganizationWriteAccess property value. This policy setting determines whether BitLocker protection is required for removable data drives to be writable on a computer.
@@ -62,7 +63,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockCrossOrganizationWriteAccess() {
-        return this.blockCrossOrganizationWriteAccess;
+        return this.backingStore.get("blockCrossOrganizationWriteAccess");
     }
     /**
      * Gets the encryptionMethod property value. Select the encryption method for removable  drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
@@ -70,7 +71,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public BitLockerEncryptionMethod getEncryptionMethod() {
-        return this.encryptionMethod;
+        return this.backingStore.get("encryptionMethod");
     }
     /**
      * The deserialization information for the current model
@@ -91,7 +92,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the requireEncryptionForWriteAccess property value. Indicates whether to block write access to devices configured in another organization.  If requireEncryptionForWriteAccess is false, this value does not affect.
@@ -99,7 +100,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public Boolean getRequireEncryptionForWriteAccess() {
-        return this.requireEncryptionForWriteAccess;
+        return this.backingStore.get("requireEncryptionForWriteAccess");
     }
     /**
      * Serializes information the current object
@@ -118,34 +119,42 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the blockCrossOrganizationWriteAccess property value. This policy setting determines whether BitLocker protection is required for removable data drives to be writable on a computer.
      * @param value Value to set for the blockCrossOrganizationWriteAccess property.
      */
     public void setBlockCrossOrganizationWriteAccess(@jakarta.annotation.Nullable final Boolean value) {
-        this.blockCrossOrganizationWriteAccess = value;
+        this.backingStore.set("blockCrossOrganizationWriteAccess", value);
     }
     /**
      * Sets the encryptionMethod property value. Select the encryption method for removable  drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
      * @param value Value to set for the encryptionMethod property.
      */
     public void setEncryptionMethod(@jakarta.annotation.Nullable final BitLockerEncryptionMethod value) {
-        this.encryptionMethod = value;
+        this.backingStore.set("encryptionMethod", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the requireEncryptionForWriteAccess property value. Indicates whether to block write access to devices configured in another organization.  If requireEncryptionForWriteAccess is false, this value does not affect.
      * @param value Value to set for the requireEncryptionForWriteAccess property.
      */
     public void setRequireEncryptionForWriteAccess(@jakarta.annotation.Nullable final Boolean value) {
-        this.requireEncryptionForWriteAccess = value;
+        this.backingStore.set("requireEncryptionForWriteAccess", value);
     }
 }

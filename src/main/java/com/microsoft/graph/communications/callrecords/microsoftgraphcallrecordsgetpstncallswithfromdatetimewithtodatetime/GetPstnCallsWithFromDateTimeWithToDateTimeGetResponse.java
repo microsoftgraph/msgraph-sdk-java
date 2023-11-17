@@ -11,10 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetPstnCallsWithFromDateTimeWithToDateTimeGetResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<PstnCallLogRow> value;
-    /**
      * Instantiates a new GetPstnCallsWithFromDateTimeWithToDateTimeGetResponse and sets the default values.
      */
     public GetPstnCallsWithFromDateTimeWithToDateTimeGetResponse() {
@@ -46,7 +42,7 @@ public class GetPstnCallsWithFromDateTimeWithToDateTimeGetResponse extends BaseC
      */
     @jakarta.annotation.Nullable
     public java.util.List<PstnCallLogRow> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class GetPstnCallsWithFromDateTimeWithToDateTimeGetResponse extends BaseC
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<PstnCallLogRow> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

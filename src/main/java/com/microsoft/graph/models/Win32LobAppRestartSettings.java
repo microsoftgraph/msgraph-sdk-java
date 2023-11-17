@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,31 +14,16 @@ import java.util.Objects;
  * Contains properties describing restart coordination following an app installation.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Win32LobAppRestartSettings implements AdditionalDataHolder, Parsable {
+public class Win32LobAppRestartSettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The number of minutes before the restart time to display the countdown dialog for pending restarts.
-     */
-    private Integer countdownDisplayBeforeRestartInMinutes;
-    /**
-     * The number of minutes to wait before restarting the device after an app installation.
-     */
-    private Integer gracePeriodInMinutes;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The number of minutes to snooze the restart notification dialog when the snooze button is selected.
-     */
-    private Integer restartNotificationSnoozeDurationInMinutes;
+    private BackingStore backingStore;
     /**
      * Instantiates a new Win32LobAppRestartSettings and sets the default values.
      */
     public Win32LobAppRestartSettings() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -54,7 +42,20 @@ public class Win32LobAppRestartSettings implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the countdownDisplayBeforeRestartInMinutes property value. The number of minutes before the restart time to display the countdown dialog for pending restarts.
@@ -62,7 +63,7 @@ public class Win32LobAppRestartSettings implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Integer getCountdownDisplayBeforeRestartInMinutes() {
-        return this.countdownDisplayBeforeRestartInMinutes;
+        return this.backingStore.get("countdownDisplayBeforeRestartInMinutes");
     }
     /**
      * The deserialization information for the current model
@@ -83,7 +84,7 @@ public class Win32LobAppRestartSettings implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Integer getGracePeriodInMinutes() {
-        return this.gracePeriodInMinutes;
+        return this.backingStore.get("gracePeriodInMinutes");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -91,7 +92,7 @@ public class Win32LobAppRestartSettings implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the restartNotificationSnoozeDurationInMinutes property value. The number of minutes to snooze the restart notification dialog when the snooze button is selected.
@@ -99,7 +100,7 @@ public class Win32LobAppRestartSettings implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Integer getRestartNotificationSnoozeDurationInMinutes() {
-        return this.restartNotificationSnoozeDurationInMinutes;
+        return this.backingStore.get("restartNotificationSnoozeDurationInMinutes");
     }
     /**
      * Serializes information the current object
@@ -118,34 +119,42 @@ public class Win32LobAppRestartSettings implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the countdownDisplayBeforeRestartInMinutes property value. The number of minutes before the restart time to display the countdown dialog for pending restarts.
      * @param value Value to set for the countdownDisplayBeforeRestartInMinutes property.
      */
     public void setCountdownDisplayBeforeRestartInMinutes(@jakarta.annotation.Nullable final Integer value) {
-        this.countdownDisplayBeforeRestartInMinutes = value;
+        this.backingStore.set("countdownDisplayBeforeRestartInMinutes", value);
     }
     /**
      * Sets the gracePeriodInMinutes property value. The number of minutes to wait before restarting the device after an app installation.
      * @param value Value to set for the gracePeriodInMinutes property.
      */
     public void setGracePeriodInMinutes(@jakarta.annotation.Nullable final Integer value) {
-        this.gracePeriodInMinutes = value;
+        this.backingStore.set("gracePeriodInMinutes", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the restartNotificationSnoozeDurationInMinutes property value. The number of minutes to snooze the restart notification dialog when the snooze button is selected.
      * @param value Value to set for the restartNotificationSnoozeDurationInMinutes property.
      */
     public void setRestartNotificationSnoozeDurationInMinutes(@jakarta.annotation.Nullable final Integer value) {
-        this.restartNotificationSnoozeDurationInMinutes = value;
+        this.backingStore.set("restartNotificationSnoozeDurationInMinutes", value);
     }
 }

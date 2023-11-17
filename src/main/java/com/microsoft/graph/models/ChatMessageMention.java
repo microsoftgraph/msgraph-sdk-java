@@ -4,35 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ChatMessageMention implements AdditionalDataHolder, Parsable {
+public class ChatMessageMention implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Index of an entity being mentioned in the specified chatMessage. Matches the {index} value in the corresponding <at id='{index}'> tag in the message body.
-     */
-    private Integer id;
-    /**
-     * The entity (user, application, team, or channel) that was @mentioned.
-     */
-    private ChatMessageMentionedIdentitySet mentioned;
-    /**
-     * String used to represent the mention. For example, a user's display name, a team name.
-     */
-    private String mentionText;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    private BackingStore backingStore;
     /**
      * Instantiates a new ChatMessageMention and sets the default values.
      */
     public ChatMessageMention() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +39,20 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -72,7 +73,7 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getId() {
-        return this.id;
+        return this.backingStore.get("id");
     }
     /**
      * Gets the mentioned property value. The entity (user, application, team, or channel) that was @mentioned.
@@ -80,7 +81,7 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public ChatMessageMentionedIdentitySet getMentioned() {
-        return this.mentioned;
+        return this.backingStore.get("mentioned");
     }
     /**
      * Gets the mentionText property value. String used to represent the mention. For example, a user's display name, a team name.
@@ -88,7 +89,7 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getMentionText() {
-        return this.mentionText;
+        return this.backingStore.get("mentionText");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -96,7 +97,7 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -115,34 +116,42 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the id property value. Index of an entity being mentioned in the specified chatMessage. Matches the {index} value in the corresponding <at id='{index}'> tag in the message body.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final Integer value) {
-        this.id = value;
+        this.backingStore.set("id", value);
     }
     /**
      * Sets the mentioned property value. The entity (user, application, team, or channel) that was @mentioned.
      * @param value Value to set for the mentioned property.
      */
     public void setMentioned(@jakarta.annotation.Nullable final ChatMessageMentionedIdentitySet value) {
-        this.mentioned = value;
+        this.backingStore.set("mentioned", value);
     }
     /**
      * Sets the mentionText property value. String used to represent the mention. For example, a user's display name, a team name.
      * @param value Value to set for the mentionText property.
      */
     public void setMentionText(@jakarta.annotation.Nullable final String value) {
-        this.mentionText = value;
+        this.backingStore.set("mentionText", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

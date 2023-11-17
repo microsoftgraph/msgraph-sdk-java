@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SharedDriveItemCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<SharedDriveItem> value;
-    /**
      * Instantiates a new SharedDriveItemCollectionResponse and sets the default values.
      */
     public SharedDriveItemCollectionResponse() {
@@ -44,7 +40,7 @@ public class SharedDriveItemCollectionResponse extends BaseCollectionPaginationC
      */
     @jakarta.annotation.Nullable
     public java.util.List<SharedDriveItem> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class SharedDriveItemCollectionResponse extends BaseCollectionPaginationC
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<SharedDriveItem> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

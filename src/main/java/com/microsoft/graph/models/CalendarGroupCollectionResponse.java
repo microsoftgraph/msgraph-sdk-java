@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CalendarGroupCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<CalendarGroup> value;
-    /**
      * Instantiates a new CalendarGroupCollectionResponse and sets the default values.
      */
     public CalendarGroupCollectionResponse() {
@@ -44,7 +40,7 @@ public class CalendarGroupCollectionResponse extends BaseCollectionPaginationCou
      */
     @jakarta.annotation.Nullable
     public java.util.List<CalendarGroup> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class CalendarGroupCollectionResponse extends BaseCollectionPaginationCou
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<CalendarGroup> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

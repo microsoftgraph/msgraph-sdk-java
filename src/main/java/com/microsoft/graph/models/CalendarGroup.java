@@ -10,22 +10,6 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CalendarGroup extends Entity implements Parsable {
     /**
-     * The calendars in the calendar group. Navigation property. Read-only. Nullable.
-     */
-    private java.util.List<Calendar> calendars;
-    /**
-     * Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
-     */
-    private String changeKey;
-    /**
-     * The class identifier. Read-only.
-     */
-    private UUID classId;
-    /**
-     * The group name.
-     */
-    private String name;
-    /**
      * Instantiates a new CalendarGroup and sets the default values.
      */
     public CalendarGroup() {
@@ -47,7 +31,7 @@ public class CalendarGroup extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Calendar> getCalendars() {
-        return this.calendars;
+        return this.backingStore.get("calendars");
     }
     /**
      * Gets the changeKey property value. Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
@@ -55,7 +39,7 @@ public class CalendarGroup extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getChangeKey() {
-        return this.changeKey;
+        return this.backingStore.get("changeKey");
     }
     /**
      * Gets the classId property value. The class identifier. Read-only.
@@ -63,7 +47,7 @@ public class CalendarGroup extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getClassId() {
-        return this.classId;
+        return this.backingStore.get("classId");
     }
     /**
      * The deserialization information for the current model
@@ -84,7 +68,7 @@ public class CalendarGroup extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class CalendarGroup extends Entity implements Parsable {
      * @param value Value to set for the calendars property.
      */
     public void setCalendars(@jakarta.annotation.Nullable final java.util.List<Calendar> value) {
-        this.calendars = value;
+        this.backingStore.set("calendars", value);
     }
     /**
      * Sets the changeKey property value. Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
      * @param value Value to set for the changeKey property.
      */
     public void setChangeKey(@jakarta.annotation.Nullable final String value) {
-        this.changeKey = value;
+        this.backingStore.set("changeKey", value);
     }
     /**
      * Sets the classId property value. The class identifier. Read-only.
      * @param value Value to set for the classId property.
      */
     public void setClassId(@jakarta.annotation.Nullable final UUID value) {
-        this.classId = value;
+        this.backingStore.set("classId", value);
     }
     /**
      * Sets the name property value. The group name.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
 }

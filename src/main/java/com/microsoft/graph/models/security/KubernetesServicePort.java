@@ -4,47 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
+public class KubernetesServicePort implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The application protocol for this port.
-     */
-    private String appProtocol;
-    /**
-     * The name of this port within the service.
-     */
-    private String name;
-    /**
-     * The port on each node on which this service is exposed when the type is either NodePort or LoadBalancer.
-     */
-    private Integer nodePort;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The port that this service exposes.
-     */
-    private Integer port;
-    /**
-     * The protocol name. Possible values are: udp, tcp, sctp, unknownFutureValue.
-     */
-    private ContainerPortProtocol protocol;
-    /**
-     * The name or number of the port to access on the pods targeted by the service. The port number must be in the range 1 to 65535. The name must be an IANASVCNAME.
-     */
-    private String targetPort;
+    private BackingStore backingStore;
     /**
      * Instantiates a new KubernetesServicePort and sets the default values.
      */
     public KubernetesServicePort() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -63,7 +39,12 @@ public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the appProtocol property value. The application protocol for this port.
@@ -71,7 +52,15 @@ public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAppProtocol() {
-        return this.appProtocol;
+        return this.backingStore.get("appProtocol");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -95,7 +84,7 @@ public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the nodePort property value. The port on each node on which this service is exposed when the type is either NodePort or LoadBalancer.
@@ -103,7 +92,7 @@ public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getNodePort() {
-        return this.nodePort;
+        return this.backingStore.get("nodePort");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -111,7 +100,7 @@ public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the port property value. The port that this service exposes.
@@ -119,7 +108,7 @@ public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getPort() {
-        return this.port;
+        return this.backingStore.get("port");
     }
     /**
      * Gets the protocol property value. The protocol name. Possible values are: udp, tcp, sctp, unknownFutureValue.
@@ -127,7 +116,7 @@ public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public ContainerPortProtocol getProtocol() {
-        return this.protocol;
+        return this.backingStore.get("protocol");
     }
     /**
      * Gets the targetPort property value. The name or number of the port to access on the pods targeted by the service. The port number must be in the range 1 to 65535. The name must be an IANASVCNAME.
@@ -135,7 +124,7 @@ public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTargetPort() {
-        return this.targetPort;
+        return this.backingStore.get("targetPort");
     }
     /**
      * Serializes information the current object
@@ -157,55 +146,63 @@ public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the appProtocol property value. The application protocol for this port.
      * @param value Value to set for the appProtocol property.
      */
     public void setAppProtocol(@jakarta.annotation.Nullable final String value) {
-        this.appProtocol = value;
+        this.backingStore.set("appProtocol", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the name property value. The name of this port within the service.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the nodePort property value. The port on each node on which this service is exposed when the type is either NodePort or LoadBalancer.
      * @param value Value to set for the nodePort property.
      */
     public void setNodePort(@jakarta.annotation.Nullable final Integer value) {
-        this.nodePort = value;
+        this.backingStore.set("nodePort", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the port property value. The port that this service exposes.
      * @param value Value to set for the port property.
      */
     public void setPort(@jakarta.annotation.Nullable final Integer value) {
-        this.port = value;
+        this.backingStore.set("port", value);
     }
     /**
      * Sets the protocol property value. The protocol name. Possible values are: udp, tcp, sctp, unknownFutureValue.
      * @param value Value to set for the protocol property.
      */
     public void setProtocol(@jakarta.annotation.Nullable final ContainerPortProtocol value) {
-        this.protocol = value;
+        this.backingStore.set("protocol", value);
     }
     /**
      * Sets the targetPort property value. The name or number of the port to access on the pods targeted by the service. The port number must be in the range 1 to 65535. The name must be an IANASVCNAME.
      * @param value Value to set for the targetPort property.
      */
     public void setTargetPort(@jakarta.annotation.Nullable final String value) {
-        this.targetPort = value;
+        this.backingStore.set("targetPort", value);
     }
 }

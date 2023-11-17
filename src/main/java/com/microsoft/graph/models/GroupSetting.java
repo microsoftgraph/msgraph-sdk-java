@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupSetting extends Entity implements Parsable {
     /**
-     * Display name of this group of settings, which comes from the associated template.
-     */
-    private String displayName;
-    /**
-     * Unique identifier for the tenant-level groupSettingTemplates object that's been customized for this group-level settings object. Read-only.
-     */
-    private String templateId;
-    /**
-     * Collection of name-value pairs corresponding to the name and defaultValue properties in the referenced groupSettingTemplates object.
-     */
-    private java.util.List<SettingValue> values;
-    /**
      * Instantiates a new GroupSetting and sets the default values.
      */
     public GroupSetting() {
@@ -42,7 +30,7 @@ public class GroupSetting extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -62,7 +50,7 @@ public class GroupSetting extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTemplateId() {
-        return this.templateId;
+        return this.backingStore.get("templateId");
     }
     /**
      * Gets the values property value. Collection of name-value pairs corresponding to the name and defaultValue properties in the referenced groupSettingTemplates object.
@@ -70,7 +58,7 @@ public class GroupSetting extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<SettingValue> getValues() {
-        return this.values;
+        return this.backingStore.get("values");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class GroupSetting extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the templateId property value. Unique identifier for the tenant-level groupSettingTemplates object that's been customized for this group-level settings object. Read-only.
      * @param value Value to set for the templateId property.
      */
     public void setTemplateId(@jakarta.annotation.Nullable final String value) {
-        this.templateId = value;
+        this.backingStore.set("templateId", value);
     }
     /**
      * Sets the values property value. Collection of name-value pairs corresponding to the name and defaultValue properties in the referenced groupSettingTemplates object.
      * @param value Value to set for the values property.
      */
     public void setValues(@jakarta.annotation.Nullable final java.util.List<SettingValue> value) {
-        this.values = value;
+        this.backingStore.set("values", value);
     }
 }

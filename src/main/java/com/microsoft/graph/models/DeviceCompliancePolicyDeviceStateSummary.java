@@ -9,42 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements Parsable {
     /**
-     * Number of compliant devices
-     */
-    private Integer compliantDeviceCount;
-    /**
-     * Number of devices that have compliance managed by System Center Configuration Manager
-     */
-    private Integer configManagerCount;
-    /**
-     * Number of conflict devices
-     */
-    private Integer conflictDeviceCount;
-    /**
-     * Number of error devices
-     */
-    private Integer errorDeviceCount;
-    /**
-     * Number of devices that are in grace period
-     */
-    private Integer inGracePeriodCount;
-    /**
-     * Number of NonCompliant devices
-     */
-    private Integer nonCompliantDeviceCount;
-    /**
-     * Number of not applicable devices
-     */
-    private Integer notApplicableDeviceCount;
-    /**
-     * Number of remediated devices
-     */
-    private Integer remediatedDeviceCount;
-    /**
-     * Number of unknown devices
-     */
-    private Integer unknownDeviceCount;
-    /**
      * Instantiates a new DeviceCompliancePolicyDeviceStateSummary and sets the default values.
      */
     public DeviceCompliancePolicyDeviceStateSummary() {
@@ -66,7 +30,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public Integer getCompliantDeviceCount() {
-        return this.compliantDeviceCount;
+        return this.backingStore.get("compliantDeviceCount");
     }
     /**
      * Gets the configManagerCount property value. Number of devices that have compliance managed by System Center Configuration Manager
@@ -74,7 +38,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public Integer getConfigManagerCount() {
-        return this.configManagerCount;
+        return this.backingStore.get("configManagerCount");
     }
     /**
      * Gets the conflictDeviceCount property value. Number of conflict devices
@@ -82,7 +46,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public Integer getConflictDeviceCount() {
-        return this.conflictDeviceCount;
+        return this.backingStore.get("conflictDeviceCount");
     }
     /**
      * Gets the errorDeviceCount property value. Number of error devices
@@ -90,7 +54,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public Integer getErrorDeviceCount() {
-        return this.errorDeviceCount;
+        return this.backingStore.get("errorDeviceCount");
     }
     /**
      * The deserialization information for the current model
@@ -116,7 +80,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public Integer getInGracePeriodCount() {
-        return this.inGracePeriodCount;
+        return this.backingStore.get("inGracePeriodCount");
     }
     /**
      * Gets the nonCompliantDeviceCount property value. Number of NonCompliant devices
@@ -124,7 +88,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public Integer getNonCompliantDeviceCount() {
-        return this.nonCompliantDeviceCount;
+        return this.backingStore.get("nonCompliantDeviceCount");
     }
     /**
      * Gets the notApplicableDeviceCount property value. Number of not applicable devices
@@ -132,7 +96,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableDeviceCount() {
-        return this.notApplicableDeviceCount;
+        return this.backingStore.get("notApplicableDeviceCount");
     }
     /**
      * Gets the remediatedDeviceCount property value. Number of remediated devices
@@ -140,7 +104,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public Integer getRemediatedDeviceCount() {
-        return this.remediatedDeviceCount;
+        return this.backingStore.get("remediatedDeviceCount");
     }
     /**
      * Gets the unknownDeviceCount property value. Number of unknown devices
@@ -148,7 +112,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public Integer getUnknownDeviceCount() {
-        return this.unknownDeviceCount;
+        return this.backingStore.get("unknownDeviceCount");
     }
     /**
      * Serializes information the current object
@@ -172,62 +136,62 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
      * @param value Value to set for the compliantDeviceCount property.
      */
     public void setCompliantDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.compliantDeviceCount = value;
+        this.backingStore.set("compliantDeviceCount", value);
     }
     /**
      * Sets the configManagerCount property value. Number of devices that have compliance managed by System Center Configuration Manager
      * @param value Value to set for the configManagerCount property.
      */
     public void setConfigManagerCount(@jakarta.annotation.Nullable final Integer value) {
-        this.configManagerCount = value;
+        this.backingStore.set("configManagerCount", value);
     }
     /**
      * Sets the conflictDeviceCount property value. Number of conflict devices
      * @param value Value to set for the conflictDeviceCount property.
      */
     public void setConflictDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.conflictDeviceCount = value;
+        this.backingStore.set("conflictDeviceCount", value);
     }
     /**
      * Sets the errorDeviceCount property value. Number of error devices
      * @param value Value to set for the errorDeviceCount property.
      */
     public void setErrorDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.errorDeviceCount = value;
+        this.backingStore.set("errorDeviceCount", value);
     }
     /**
      * Sets the inGracePeriodCount property value. Number of devices that are in grace period
      * @param value Value to set for the inGracePeriodCount property.
      */
     public void setInGracePeriodCount(@jakarta.annotation.Nullable final Integer value) {
-        this.inGracePeriodCount = value;
+        this.backingStore.set("inGracePeriodCount", value);
     }
     /**
      * Sets the nonCompliantDeviceCount property value. Number of NonCompliant devices
      * @param value Value to set for the nonCompliantDeviceCount property.
      */
     public void setNonCompliantDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.nonCompliantDeviceCount = value;
+        this.backingStore.set("nonCompliantDeviceCount", value);
     }
     /**
      * Sets the notApplicableDeviceCount property value. Number of not applicable devices
      * @param value Value to set for the notApplicableDeviceCount property.
      */
     public void setNotApplicableDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.notApplicableDeviceCount = value;
+        this.backingStore.set("notApplicableDeviceCount", value);
     }
     /**
      * Sets the remediatedDeviceCount property value. Number of remediated devices
      * @param value Value to set for the remediatedDeviceCount property.
      */
     public void setRemediatedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.remediatedDeviceCount = value;
+        this.backingStore.set("remediatedDeviceCount", value);
     }
     /**
      * Sets the unknownDeviceCount property value. Number of unknown devices
      * @param value Value to set for the unknownDeviceCount property.
      */
     public void setUnknownDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.unknownDeviceCount = value;
+        this.backingStore.set("unknownDeviceCount", value);
     }
 }

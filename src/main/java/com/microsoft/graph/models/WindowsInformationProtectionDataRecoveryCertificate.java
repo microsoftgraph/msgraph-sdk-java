@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,35 +15,16 @@ import java.util.Objects;
  * Windows Information Protection DataRecoveryCertificate
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalDataHolder, Parsable {
+public class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Data recovery Certificate
-     */
-    private byte[] certificate;
-    /**
-     * Data recovery Certificate description
-     */
-    private String description;
-    /**
-     * Data recovery Certificate expiration datetime
-     */
-    private OffsetDateTime expirationDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Data recovery Certificate subject name
-     */
-    private String subjectName;
+    private BackingStore backingStore;
     /**
      * Instantiates a new WindowsInformationProtectionDataRecoveryCertificate and sets the default values.
      */
     public WindowsInformationProtectionDataRecoveryCertificate() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -59,7 +43,20 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the certificate property value. Data recovery Certificate
@@ -67,7 +64,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
      */
     @jakarta.annotation.Nullable
     public byte[] getCertificate() {
-        return this.certificate;
+        return this.backingStore.get("certificate");
     }
     /**
      * Gets the description property value. Data recovery Certificate description
@@ -75,7 +72,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the expirationDateTime property value. Data recovery Certificate expiration datetime
@@ -83,7 +80,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this.expirationDateTime;
+        return this.backingStore.get("expirationDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -105,7 +102,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the subjectName property value. Data recovery Certificate subject name
@@ -113,7 +110,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
      */
     @jakarta.annotation.Nullable
     public String getSubjectName() {
-        return this.subjectName;
+        return this.backingStore.get("subjectName");
     }
     /**
      * Serializes information the current object
@@ -133,41 +130,49 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the certificate property value. Data recovery Certificate
      * @param value Value to set for the certificate property.
      */
     public void setCertificate(@jakarta.annotation.Nullable final byte[] value) {
-        this.certificate = value;
+        this.backingStore.set("certificate", value);
     }
     /**
      * Sets the description property value. Data recovery Certificate description
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the expirationDateTime property value. Data recovery Certificate expiration datetime
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.expirationDateTime = value;
+        this.backingStore.set("expirationDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the subjectName property value. Data recovery Certificate subject name
      * @param value Value to set for the subjectName property.
      */
     public void setSubjectName(@jakarta.annotation.Nullable final String value) {
-        this.subjectName = value;
+        this.backingStore.set("subjectName", value);
     }
 }

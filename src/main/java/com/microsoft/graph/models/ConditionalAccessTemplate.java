@@ -10,22 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConditionalAccessTemplate extends Entity implements Parsable {
     /**
-     * The user-friendly name of the template.
-     */
-    private String description;
-    /**
-     * The details property
-     */
-    private ConditionalAccessPolicyDetail details;
-    /**
-     * The user-friendly name of the template.
-     */
-    private String name;
-    /**
-     * The scenarios property
-     */
-    private EnumSet<TemplateScenarios> scenarios;
-    /**
      * Instantiates a new ConditionalAccessTemplate and sets the default values.
      */
     public ConditionalAccessTemplate() {
@@ -47,7 +31,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the details property value. The details property
@@ -55,7 +39,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessPolicyDetail getDetails() {
-        return this.details;
+        return this.backingStore.get("details");
     }
     /**
      * The deserialization information for the current model
@@ -76,7 +60,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the scenarios property value. The scenarios property
@@ -84,7 +68,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EnumSet<TemplateScenarios> getScenarios() {
-        return this.scenarios;
+        return this.backingStore.get("scenarios");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the details property value. The details property
      * @param value Value to set for the details property.
      */
     public void setDetails(@jakarta.annotation.Nullable final ConditionalAccessPolicyDetail value) {
-        this.details = value;
+        this.backingStore.set("details", value);
     }
     /**
      * Sets the name property value. The user-friendly name of the template.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the scenarios property value. The scenarios property
      * @param value Value to set for the scenarios property.
      */
     public void setScenarios(@jakarta.annotation.Nullable final EnumSet<TemplateScenarios> value) {
-        this.scenarios = value;
+        this.backingStore.set("scenarios", value);
     }
 }

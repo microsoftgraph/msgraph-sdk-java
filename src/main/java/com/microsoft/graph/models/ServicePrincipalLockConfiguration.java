@@ -4,43 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, Parsable {
+public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Enables locking all sensitive properties. The sensitive properties are keyCredentials, passwordCredentials, and tokenEncryptionKeyId.
-     */
-    private Boolean allProperties;
-    /**
-     * Locks the keyCredentials and passwordCredentials properties for modification where credential usage type is Sign.
-     */
-    private Boolean credentialsWithUsageSign;
-    /**
-     * Locks the keyCredentials and passwordCredentials properties for modification where credential usage type is Verify. This locks OAuth service principals.
-     */
-    private Boolean credentialsWithUsageVerify;
-    /**
-     * Enables or disables service principal lock configuration. To allow the sensitive properties to be updated, update this property to false to disable the lock on the service principal.
-     */
-    private Boolean isEnabled;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Locks the tokenEncryptionKeyId property for modification on the service principal.
-     */
-    private Boolean tokenEncryptionKeyId;
+    private BackingStore backingStore;
     /**
      * Instantiates a new ServicePrincipalLockConfiguration and sets the default values.
      */
     public ServicePrincipalLockConfiguration() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -59,7 +39,12 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the allProperties property value. Enables locking all sensitive properties. The sensitive properties are keyCredentials, passwordCredentials, and tokenEncryptionKeyId.
@@ -67,7 +52,15 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      */
     @jakarta.annotation.Nullable
     public Boolean getAllProperties() {
-        return this.allProperties;
+        return this.backingStore.get("allProperties");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the credentialsWithUsageSign property value. Locks the keyCredentials and passwordCredentials properties for modification where credential usage type is Sign.
@@ -75,7 +68,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      */
     @jakarta.annotation.Nullable
     public Boolean getCredentialsWithUsageSign() {
-        return this.credentialsWithUsageSign;
+        return this.backingStore.get("credentialsWithUsageSign");
     }
     /**
      * Gets the credentialsWithUsageVerify property value. Locks the keyCredentials and passwordCredentials properties for modification where credential usage type is Verify. This locks OAuth service principals.
@@ -83,7 +76,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      */
     @jakarta.annotation.Nullable
     public Boolean getCredentialsWithUsageVerify() {
-        return this.credentialsWithUsageVerify;
+        return this.backingStore.get("credentialsWithUsageVerify");
     }
     /**
      * The deserialization information for the current model
@@ -106,7 +99,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this.isEnabled;
+        return this.backingStore.get("isEnabled");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -114,7 +107,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the tokenEncryptionKeyId property value. Locks the tokenEncryptionKeyId property for modification on the service principal.
@@ -122,7 +115,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      */
     @jakarta.annotation.Nullable
     public Boolean getTokenEncryptionKeyId() {
-        return this.tokenEncryptionKeyId;
+        return this.backingStore.get("tokenEncryptionKeyId");
     }
     /**
      * Serializes information the current object
@@ -143,48 +136,56 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the allProperties property value. Enables locking all sensitive properties. The sensitive properties are keyCredentials, passwordCredentials, and tokenEncryptionKeyId.
      * @param value Value to set for the allProperties property.
      */
     public void setAllProperties(@jakarta.annotation.Nullable final Boolean value) {
-        this.allProperties = value;
+        this.backingStore.set("allProperties", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the credentialsWithUsageSign property value. Locks the keyCredentials and passwordCredentials properties for modification where credential usage type is Sign.
      * @param value Value to set for the credentialsWithUsageSign property.
      */
     public void setCredentialsWithUsageSign(@jakarta.annotation.Nullable final Boolean value) {
-        this.credentialsWithUsageSign = value;
+        this.backingStore.set("credentialsWithUsageSign", value);
     }
     /**
      * Sets the credentialsWithUsageVerify property value. Locks the keyCredentials and passwordCredentials properties for modification where credential usage type is Verify. This locks OAuth service principals.
      * @param value Value to set for the credentialsWithUsageVerify property.
      */
     public void setCredentialsWithUsageVerify(@jakarta.annotation.Nullable final Boolean value) {
-        this.credentialsWithUsageVerify = value;
+        this.backingStore.set("credentialsWithUsageVerify", value);
     }
     /**
      * Sets the isEnabled property value. Enables or disables service principal lock configuration. To allow the sensitive properties to be updated, update this property to false to disable the lock on the service principal.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabled = value;
+        this.backingStore.set("isEnabled", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the tokenEncryptionKeyId property value. Locks the tokenEncryptionKeyId property for modification on the service principal.
      * @param value Value to set for the tokenEncryptionKeyId property.
      */
     public void setTokenEncryptionKeyId(@jakarta.annotation.Nullable final Boolean value) {
-        this.tokenEncryptionKeyId = value;
+        this.backingStore.set("tokenEncryptionKeyId", value);
     }
 }

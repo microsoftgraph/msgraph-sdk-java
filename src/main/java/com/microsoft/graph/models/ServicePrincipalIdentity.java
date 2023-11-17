@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServicePrincipalIdentity extends Identity implements Parsable {
     /**
-     * The application identifier of the service principal.
-     */
-    private String appId;
-    /**
      * Instantiates a new ServicePrincipalIdentity and sets the default values.
      */
     public ServicePrincipalIdentity() {
@@ -35,7 +31,7 @@ public class ServicePrincipalIdentity extends Identity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
-        return this.appId;
+        return this.backingStore.get("appId");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class ServicePrincipalIdentity extends Identity implements Parsable {
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
-        this.appId = value;
+        this.backingStore.set("appId", value);
     }
 }

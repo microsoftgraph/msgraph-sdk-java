@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
     /**
-     * Value used when configuring the answer/destination/value of the MX record at the DNS host.
-     */
-    private String mailExchange;
-    /**
-     * Value used when configuring the Preference/Priority property of the MX record at the DNS host.
-     */
-    private Integer preference;
-    /**
      * Instantiates a new DomainDnsMxRecord and sets the default values.
      */
     public DomainDnsMxRecord() {
@@ -49,7 +41,7 @@ public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getMailExchange() {
-        return this.mailExchange;
+        return this.backingStore.get("mailExchange");
     }
     /**
      * Gets the preference property value. Value used when configuring the Preference/Priority property of the MX record at the DNS host.
@@ -57,7 +49,7 @@ public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getPreference() {
-        return this.preference;
+        return this.backingStore.get("preference");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
      * @param value Value to set for the mailExchange property.
      */
     public void setMailExchange(@jakarta.annotation.Nullable final String value) {
-        this.mailExchange = value;
+        this.backingStore.set("mailExchange", value);
     }
     /**
      * Sets the preference property value. Value used when configuring the Preference/Priority property of the MX record at the DNS host.
      * @param value Value to set for the preference property.
      */
     public void setPreference(@jakarta.annotation.Nullable final Integer value) {
-        this.preference = value;
+        this.backingStore.set("preference", value);
     }
 }

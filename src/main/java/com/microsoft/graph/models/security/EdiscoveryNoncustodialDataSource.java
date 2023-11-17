@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Parsable {
     /**
-     * User source or SharePoint site data source as noncustodial data source.
-     */
-    private DataSource dataSource;
-    /**
-     * Operation entity that represents the latest indexing for the noncustodial data source.
-     */
-    private EdiscoveryIndexOperation lastIndexOperation;
-    /**
      * Instantiates a new EdiscoveryNoncustodialDataSource and sets the default values.
      */
     public EdiscoveryNoncustodialDataSource() {
@@ -39,7 +31,7 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
      */
     @jakarta.annotation.Nullable
     public DataSource getDataSource() {
-        return this.dataSource;
+        return this.backingStore.get("dataSource");
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +50,7 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
      */
     @jakarta.annotation.Nullable
     public EdiscoveryIndexOperation getLastIndexOperation() {
-        return this.lastIndexOperation;
+        return this.backingStore.get("lastIndexOperation");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
      * @param value Value to set for the dataSource property.
      */
     public void setDataSource(@jakarta.annotation.Nullable final DataSource value) {
-        this.dataSource = value;
+        this.backingStore.set("dataSource", value);
     }
     /**
      * Sets the lastIndexOperation property value. Operation entity that represents the latest indexing for the noncustodial data source.
      * @param value Value to set for the lastIndexOperation property.
      */
     public void setLastIndexOperation(@jakarta.annotation.Nullable final EdiscoveryIndexOperation value) {
-        this.lastIndexOperation = value;
+        this.backingStore.set("lastIndexOperation", value);
     }
 }

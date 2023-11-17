@@ -10,22 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BitlockerRecoveryKey extends Entity implements Parsable {
     /**
-     * The date and time when the key was originally backed up to Microsoft Entra ID. Not nullable.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Identifier of the device the BitLocker key is originally backed up from. Supports $filter (eq).
-     */
-    private String deviceId;
-    /**
-     * The BitLocker recovery key. Returned only on $select. Not nullable.
-     */
-    private String key;
-    /**
-     * Indicates the type of volume the BitLocker key is associated with. The possible values are: 1 (for operatingSystemVolume), 2 (for fixedDataVolume), 3 (for removableDataVolume), and 4 (for unknownFutureValue).
-     */
-    private VolumeType volumeType;
-    /**
      * Instantiates a new BitlockerRecoveryKey and sets the default values.
      */
     public BitlockerRecoveryKey() {
@@ -47,7 +31,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the deviceId property value. Identifier of the device the BitLocker key is originally backed up from. Supports $filter (eq).
@@ -55,7 +39,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.backingStore.get("deviceId");
     }
     /**
      * The deserialization information for the current model
@@ -76,7 +60,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getKey() {
-        return this.key;
+        return this.backingStore.get("key");
     }
     /**
      * Gets the volumeType property value. Indicates the type of volume the BitLocker key is associated with. The possible values are: 1 (for operatingSystemVolume), 2 (for fixedDataVolume), 3 (for removableDataVolume), and 4 (for unknownFutureValue).
@@ -84,7 +68,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public VolumeType getVolumeType() {
-        return this.volumeType;
+        return this.backingStore.get("volumeType");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the deviceId property value. Identifier of the device the BitLocker key is originally backed up from. Supports $filter (eq).
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.backingStore.set("deviceId", value);
     }
     /**
      * Sets the key property value. The BitLocker recovery key. Returned only on $select. Not nullable.
      * @param value Value to set for the key property.
      */
     public void setKey(@jakarta.annotation.Nullable final String value) {
-        this.key = value;
+        this.backingStore.set("key", value);
     }
     /**
      * Sets the volumeType property value. Indicates the type of volume the BitLocker key is associated with. The possible values are: 1 (for operatingSystemVolume), 2 (for fixedDataVolume), 3 (for removableDataVolume), and 4 (for unknownFutureValue).
      * @param value Value to set for the volumeType property.
      */
     public void setVolumeType(@jakarta.annotation.Nullable final VolumeType value) {
-        this.volumeType = value;
+        this.backingStore.set("volumeType", value);
     }
 }

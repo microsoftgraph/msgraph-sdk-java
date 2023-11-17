@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,31 +14,16 @@ import java.util.Objects;
  * The user experience work from anywhere Cloud management devices summary.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UserExperienceAnalyticsCloudManagementDevicesSummary implements AdditionalDataHolder, Parsable {
+public class UserExperienceAnalyticsCloudManagementDevicesSummary implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Total number of  co-managed devices. Read-only.
-     */
-    private Integer coManagedDeviceCount;
-    /**
-     * The count of intune devices that are not autopilot registerd. Read-only.
-     */
-    private Integer intuneDeviceCount;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Total count of tenant attach devices. Read-only.
-     */
-    private Integer tenantAttachDeviceCount;
+    private BackingStore backingStore;
     /**
      * Instantiates a new UserExperienceAnalyticsCloudManagementDevicesSummary and sets the default values.
      */
     public UserExperienceAnalyticsCloudManagementDevicesSummary() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -54,7 +42,20 @@ public class UserExperienceAnalyticsCloudManagementDevicesSummary implements Add
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the coManagedDeviceCount property value. Total number of  co-managed devices. Read-only.
@@ -62,7 +63,7 @@ public class UserExperienceAnalyticsCloudManagementDevicesSummary implements Add
      */
     @jakarta.annotation.Nullable
     public Integer getCoManagedDeviceCount() {
-        return this.coManagedDeviceCount;
+        return this.backingStore.get("coManagedDeviceCount");
     }
     /**
      * The deserialization information for the current model
@@ -83,7 +84,7 @@ public class UserExperienceAnalyticsCloudManagementDevicesSummary implements Add
      */
     @jakarta.annotation.Nullable
     public Integer getIntuneDeviceCount() {
-        return this.intuneDeviceCount;
+        return this.backingStore.get("intuneDeviceCount");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -91,7 +92,7 @@ public class UserExperienceAnalyticsCloudManagementDevicesSummary implements Add
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the tenantAttachDeviceCount property value. Total count of tenant attach devices. Read-only.
@@ -99,7 +100,7 @@ public class UserExperienceAnalyticsCloudManagementDevicesSummary implements Add
      */
     @jakarta.annotation.Nullable
     public Integer getTenantAttachDeviceCount() {
-        return this.tenantAttachDeviceCount;
+        return this.backingStore.get("tenantAttachDeviceCount");
     }
     /**
      * Serializes information the current object
@@ -118,34 +119,42 @@ public class UserExperienceAnalyticsCloudManagementDevicesSummary implements Add
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the coManagedDeviceCount property value. Total number of  co-managed devices. Read-only.
      * @param value Value to set for the coManagedDeviceCount property.
      */
     public void setCoManagedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.coManagedDeviceCount = value;
+        this.backingStore.set("coManagedDeviceCount", value);
     }
     /**
      * Sets the intuneDeviceCount property value. The count of intune devices that are not autopilot registerd. Read-only.
      * @param value Value to set for the intuneDeviceCount property.
      */
     public void setIntuneDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.intuneDeviceCount = value;
+        this.backingStore.set("intuneDeviceCount", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the tenantAttachDeviceCount property value. Total count of tenant attach devices. Read-only.
      * @param value Value to set for the tenantAttachDeviceCount property.
      */
     public void setTenantAttachDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.tenantAttachDeviceCount = value;
+        this.backingStore.set("tenantAttachDeviceCount", value);
     }
 }

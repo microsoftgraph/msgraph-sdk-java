@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Initiator extends Identity implements Parsable {
     /**
-     * Type of initiator. Possible values are: user, application, system, unknownFutureValue.
-     */
-    private InitiatorType initiatorType;
-    /**
      * Instantiates a new Initiator and sets the default values.
      */
     public Initiator() {
@@ -45,7 +41,7 @@ public class Initiator extends Identity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public InitiatorType getInitiatorType() {
-        return this.initiatorType;
+        return this.backingStore.get("initiatorType");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class Initiator extends Identity implements Parsable {
      * @param value Value to set for the initiatorType property.
      */
     public void setInitiatorType(@jakarta.annotation.Nullable final InitiatorType value) {
-        this.initiatorType = value;
+        this.backingStore.set("initiatorType", value);
     }
 }

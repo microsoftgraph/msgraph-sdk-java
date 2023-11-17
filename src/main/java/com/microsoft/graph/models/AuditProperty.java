@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,31 +14,16 @@ import java.util.Objects;
  * A class containing the properties for Audit Property.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AuditProperty implements AdditionalDataHolder, Parsable {
+public class AuditProperty implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Display name.
-     */
-    private String displayName;
-    /**
-     * New value.
-     */
-    private String newValue;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Old value.
-     */
-    private String oldValue;
+    private BackingStore backingStore;
     /**
      * Instantiates a new AuditProperty and sets the default values.
      */
     public AuditProperty() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -54,7 +42,20 @@ public class AuditProperty implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the displayName property value. Display name.
@@ -62,7 +63,7 @@ public class AuditProperty implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -83,7 +84,7 @@ public class AuditProperty implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getNewValue() {
-        return this.newValue;
+        return this.backingStore.get("newValue");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -91,7 +92,7 @@ public class AuditProperty implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the oldValue property value. Old value.
@@ -99,7 +100,7 @@ public class AuditProperty implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOldValue() {
-        return this.oldValue;
+        return this.backingStore.get("oldValue");
     }
     /**
      * Serializes information the current object
@@ -118,34 +119,42 @@ public class AuditProperty implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the displayName property value. Display name.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the newValue property value. New value.
      * @param value Value to set for the newValue property.
      */
     public void setNewValue(@jakarta.annotation.Nullable final String value) {
-        this.newValue = value;
+        this.backingStore.set("newValue", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the oldValue property value. Old value.
      * @param value Value to set for the oldValue property.
      */
     public void setOldValue(@jakarta.annotation.Nullable final String value) {
-        this.oldValue = value;
+        this.backingStore.set("oldValue", value);
     }
 }

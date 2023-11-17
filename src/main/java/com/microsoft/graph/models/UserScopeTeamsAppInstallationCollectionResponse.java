@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserScopeTeamsAppInstallationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<UserScopeTeamsAppInstallation> value;
-    /**
      * Instantiates a new UserScopeTeamsAppInstallationCollectionResponse and sets the default values.
      */
     public UserScopeTeamsAppInstallationCollectionResponse() {
@@ -44,7 +40,7 @@ public class UserScopeTeamsAppInstallationCollectionResponse extends BaseCollect
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserScopeTeamsAppInstallation> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class UserScopeTeamsAppInstallationCollectionResponse extends BaseCollect
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<UserScopeTeamsAppInstallation> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

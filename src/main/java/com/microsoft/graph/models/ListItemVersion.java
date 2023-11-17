@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ListItemVersion extends BaseItemVersion implements Parsable {
     /**
-     * A collection of the fields and values for this version of the list item.
-     */
-    private FieldValueSet fields;
-    /**
      * Instantiates a new ListItemVersion and sets the default values.
      */
     public ListItemVersion() {
@@ -52,7 +48,7 @@ public class ListItemVersion extends BaseItemVersion implements Parsable {
      */
     @jakarta.annotation.Nullable
     public FieldValueSet getFields() {
-        return this.fields;
+        return this.backingStore.get("fields");
     }
     /**
      * Serializes information the current object
@@ -68,6 +64,6 @@ public class ListItemVersion extends BaseItemVersion implements Parsable {
      * @param value Value to set for the fields property.
      */
     public void setFields(@jakarta.annotation.Nullable final FieldValueSet value) {
-        this.fields = value;
+        this.backingStore.set("fields", value);
     }
 }

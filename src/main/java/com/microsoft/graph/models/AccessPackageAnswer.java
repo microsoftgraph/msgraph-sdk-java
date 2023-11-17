@@ -4,31 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
+public class AccessPackageAnswer implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The answeredQuestion property
-     */
-    private AccessPackageQuestion answeredQuestion;
-    /**
-     * The localized display value shown to the requestor and approvers.
-     */
-    private String displayValue;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    private BackingStore backingStore;
     /**
      * Instantiates a new AccessPackageAnswer and sets the default values.
      */
     public AccessPackageAnswer() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -54,7 +46,12 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the answeredQuestion property value. The answeredQuestion property
@@ -62,7 +59,15 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public AccessPackageQuestion getAnsweredQuestion() {
-        return this.answeredQuestion;
+        return this.backingStore.get("answeredQuestion");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the displayValue property value. The localized display value shown to the requestor and approvers.
@@ -70,7 +75,7 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayValue() {
-        return this.displayValue;
+        return this.backingStore.get("displayValue");
     }
     /**
      * The deserialization information for the current model
@@ -90,7 +95,7 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -108,27 +113,35 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the answeredQuestion property value. The answeredQuestion property
      * @param value Value to set for the answeredQuestion property.
      */
     public void setAnsweredQuestion(@jakarta.annotation.Nullable final AccessPackageQuestion value) {
-        this.answeredQuestion = value;
+        this.backingStore.set("answeredQuestion", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the displayValue property value. The localized display value shown to the requestor and approvers.
      * @param value Value to set for the displayValue property.
      */
     public void setDisplayValue(@jakarta.annotation.Nullable final String value) {
-        this.displayValue = value;
+        this.backingStore.set("displayValue", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

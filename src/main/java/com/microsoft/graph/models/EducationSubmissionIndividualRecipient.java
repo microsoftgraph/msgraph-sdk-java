@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationSubmissionIndividualRecipient extends EducationSubmissionRecipient implements Parsable {
     /**
-     * User ID of the user to whom the submission is assigned.
-     */
-    private String userId;
-    /**
      * Instantiates a new EducationSubmissionIndividualRecipient and sets the default values.
      */
     public EducationSubmissionIndividualRecipient() {
@@ -45,7 +41,7 @@ public class EducationSubmissionIndividualRecipient extends EducationSubmissionR
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.backingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class EducationSubmissionIndividualRecipient extends EducationSubmissionR
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.backingStore.set("userId", value);
     }
 }

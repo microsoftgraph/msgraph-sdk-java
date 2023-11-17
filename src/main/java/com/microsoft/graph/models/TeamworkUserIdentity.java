@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamworkUserIdentity extends Identity implements Parsable {
     /**
-     * Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, unknownFutureValue and emailUser.
-     */
-    private TeamworkUserIdentityType userIdentityType;
-    /**
      * Instantiates a new TeamworkUserIdentity and sets the default values.
      */
     public TeamworkUserIdentity() {
@@ -45,7 +41,7 @@ public class TeamworkUserIdentity extends Identity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public TeamworkUserIdentityType getUserIdentityType() {
-        return this.userIdentityType;
+        return this.backingStore.get("userIdentityType");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class TeamworkUserIdentity extends Identity implements Parsable {
      * @param value Value to set for the userIdentityType property.
      */
     public void setUserIdentityType(@jakarta.annotation.Nullable final TeamworkUserIdentityType value) {
-        this.userIdentityType = value;
+        this.backingStore.set("userIdentityType", value);
     }
 }

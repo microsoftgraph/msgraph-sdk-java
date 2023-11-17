@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ColumnLink extends Entity implements Parsable {
     /**
-     * The name of the column  in this content type.
-     */
-    private String name;
-    /**
      * Instantiates a new ColumnLink and sets the default values.
      */
     public ColumnLink() {
@@ -44,7 +40,7 @@ public class ColumnLink extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class ColumnLink extends Entity implements Parsable {
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
 }

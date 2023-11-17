@@ -4,63 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class RegistryKeyState implements AdditionalDataHolder, Parsable {
+public class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * A Windows registry hive : HKEYCURRENTCONFIG HKEYCURRENTUSER HKEYLOCALMACHINE/SAM HKEYLOCALMACHINE/Security HKEYLOCALMACHINE/Software HKEYLOCALMACHINE/System HKEY_USERS/.Default. Possible values are: unknown, currentConfig, currentUser, localMachineSam, localMachineSecurity, localMachineSoftware, localMachineSystem, usersDefault.
-     */
-    private RegistryHive hive;
-    /**
-     * Current (i.e. changed) registry key (excludes HIVE).
-     */
-    private String key;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Previous (i.e. before changed) registry key (excludes HIVE).
-     */
-    private String oldKey;
-    /**
-     * Previous (i.e. before changed) registry key value data (contents).
-     */
-    private String oldValueData;
-    /**
-     * Previous (i.e. before changed) registry key value name.
-     */
-    private String oldValueName;
-    /**
-     * Operation that changed the registry key name and/or value. Possible values are: unknown, create, modify, delete.
-     */
-    private RegistryOperation operation;
-    /**
-     * Process ID (PID) of the process that modified the registry key (process details will appear in the alert 'processes' collection).
-     */
-    private Integer processId;
-    /**
-     * Current (i.e. changed) registry key value data (contents).
-     */
-    private String valueData;
-    /**
-     * Current (i.e. changed) registry key value name
-     */
-    private String valueName;
-    /**
-     * Registry key value type REGBINARY REGDWORD REGDWORDLITTLEENDIAN REGDWORDBIGENDIANREGEXPANDSZ REGLINK REGMULTISZ REGNONE REGQWORD REGQWORDLITTLEENDIAN REG_SZ Possible values are: unknown, binary, dword, dwordLittleEndian, dwordBigEndian, expandSz, link, multiSz, none, qword, qwordlittleEndian, sz.
-     */
-    private RegistryValueType valueType;
+    private BackingStore backingStore;
     /**
      * Instantiates a new RegistryKeyState and sets the default values.
      */
     public RegistryKeyState() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -79,7 +39,20 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -107,7 +80,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public RegistryHive getHive() {
-        return this.hive;
+        return this.backingStore.get("hive");
     }
     /**
      * Gets the key property value. Current (i.e. changed) registry key (excludes HIVE).
@@ -115,7 +88,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getKey() {
-        return this.key;
+        return this.backingStore.get("key");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -123,7 +96,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the oldKey property value. Previous (i.e. before changed) registry key (excludes HIVE).
@@ -131,7 +104,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOldKey() {
-        return this.oldKey;
+        return this.backingStore.get("oldKey");
     }
     /**
      * Gets the oldValueData property value. Previous (i.e. before changed) registry key value data (contents).
@@ -139,7 +112,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOldValueData() {
-        return this.oldValueData;
+        return this.backingStore.get("oldValueData");
     }
     /**
      * Gets the oldValueName property value. Previous (i.e. before changed) registry key value name.
@@ -147,7 +120,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOldValueName() {
-        return this.oldValueName;
+        return this.backingStore.get("oldValueName");
     }
     /**
      * Gets the operation property value. Operation that changed the registry key name and/or value. Possible values are: unknown, create, modify, delete.
@@ -155,7 +128,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public RegistryOperation getOperation() {
-        return this.operation;
+        return this.backingStore.get("operation");
     }
     /**
      * Gets the processId property value. Process ID (PID) of the process that modified the registry key (process details will appear in the alert 'processes' collection).
@@ -163,7 +136,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getProcessId() {
-        return this.processId;
+        return this.backingStore.get("processId");
     }
     /**
      * Gets the valueData property value. Current (i.e. changed) registry key value data (contents).
@@ -171,7 +144,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getValueData() {
-        return this.valueData;
+        return this.backingStore.get("valueData");
     }
     /**
      * Gets the valueName property value. Current (i.e. changed) registry key value name
@@ -179,7 +152,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getValueName() {
-        return this.valueName;
+        return this.backingStore.get("valueName");
     }
     /**
      * Gets the valueType property value. Registry key value type REGBINARY REGDWORD REGDWORDLITTLEENDIAN REGDWORDBIGENDIANREGEXPANDSZ REGLINK REGMULTISZ REGNONE REGQWORD REGQWORDLITTLEENDIAN REG_SZ Possible values are: unknown, binary, dword, dwordLittleEndian, dwordBigEndian, expandSz, link, multiSz, none, qword, qwordlittleEndian, sz.
@@ -187,7 +160,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public RegistryValueType getValueType() {
-        return this.valueType;
+        return this.backingStore.get("valueType");
     }
     /**
      * Serializes information the current object
@@ -213,83 +186,91 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the hive property value. A Windows registry hive : HKEYCURRENTCONFIG HKEYCURRENTUSER HKEYLOCALMACHINE/SAM HKEYLOCALMACHINE/Security HKEYLOCALMACHINE/Software HKEYLOCALMACHINE/System HKEY_USERS/.Default. Possible values are: unknown, currentConfig, currentUser, localMachineSam, localMachineSecurity, localMachineSoftware, localMachineSystem, usersDefault.
      * @param value Value to set for the hive property.
      */
     public void setHive(@jakarta.annotation.Nullable final RegistryHive value) {
-        this.hive = value;
+        this.backingStore.set("hive", value);
     }
     /**
      * Sets the key property value. Current (i.e. changed) registry key (excludes HIVE).
      * @param value Value to set for the key property.
      */
     public void setKey(@jakarta.annotation.Nullable final String value) {
-        this.key = value;
+        this.backingStore.set("key", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the oldKey property value. Previous (i.e. before changed) registry key (excludes HIVE).
      * @param value Value to set for the oldKey property.
      */
     public void setOldKey(@jakarta.annotation.Nullable final String value) {
-        this.oldKey = value;
+        this.backingStore.set("oldKey", value);
     }
     /**
      * Sets the oldValueData property value. Previous (i.e. before changed) registry key value data (contents).
      * @param value Value to set for the oldValueData property.
      */
     public void setOldValueData(@jakarta.annotation.Nullable final String value) {
-        this.oldValueData = value;
+        this.backingStore.set("oldValueData", value);
     }
     /**
      * Sets the oldValueName property value. Previous (i.e. before changed) registry key value name.
      * @param value Value to set for the oldValueName property.
      */
     public void setOldValueName(@jakarta.annotation.Nullable final String value) {
-        this.oldValueName = value;
+        this.backingStore.set("oldValueName", value);
     }
     /**
      * Sets the operation property value. Operation that changed the registry key name and/or value. Possible values are: unknown, create, modify, delete.
      * @param value Value to set for the operation property.
      */
     public void setOperation(@jakarta.annotation.Nullable final RegistryOperation value) {
-        this.operation = value;
+        this.backingStore.set("operation", value);
     }
     /**
      * Sets the processId property value. Process ID (PID) of the process that modified the registry key (process details will appear in the alert 'processes' collection).
      * @param value Value to set for the processId property.
      */
     public void setProcessId(@jakarta.annotation.Nullable final Integer value) {
-        this.processId = value;
+        this.backingStore.set("processId", value);
     }
     /**
      * Sets the valueData property value. Current (i.e. changed) registry key value data (contents).
      * @param value Value to set for the valueData property.
      */
     public void setValueData(@jakarta.annotation.Nullable final String value) {
-        this.valueData = value;
+        this.backingStore.set("valueData", value);
     }
     /**
      * Sets the valueName property value. Current (i.e. changed) registry key value name
      * @param value Value to set for the valueName property.
      */
     public void setValueName(@jakarta.annotation.Nullable final String value) {
-        this.valueName = value;
+        this.backingStore.set("valueName", value);
     }
     /**
      * Sets the valueType property value. Registry key value type REGBINARY REGDWORD REGDWORDLITTLEENDIAN REGDWORDBIGENDIANREGEXPANDSZ REGLINK REGMULTISZ REGNONE REGQWORD REGQWORDLITTLEENDIAN REG_SZ Possible values are: unknown, binary, dword, dwordLittleEndian, dwordBigEndian, expandSz, link, multiSz, none, qword, qwordlittleEndian, sz.
      * @param value Value to set for the valueType property.
      */
     public void setValueType(@jakarta.annotation.Nullable final RegistryValueType value) {
-        this.valueType = value;
+        this.backingStore.set("valueType", value);
     }
 }

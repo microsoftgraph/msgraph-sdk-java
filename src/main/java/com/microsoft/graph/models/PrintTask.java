@@ -9,22 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintTask extends Entity implements Parsable {
     /**
-     * The definition property
-     */
-    private PrintTaskDefinition definition;
-    /**
-     * The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/v1.0/print/printers/{printerId}/jobs/{jobId}. Read-only.
-     */
-    private String parentUrl;
-    /**
-     * The status property
-     */
-    private PrintTaskStatus status;
-    /**
-     * The trigger property
-     */
-    private PrintTaskTrigger trigger;
-    /**
      * Instantiates a new PrintTask and sets the default values.
      */
     public PrintTask() {
@@ -46,7 +30,7 @@ public class PrintTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PrintTaskDefinition getDefinition() {
-        return this.definition;
+        return this.backingStore.get("definition");
     }
     /**
      * The deserialization information for the current model
@@ -67,7 +51,7 @@ public class PrintTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getParentUrl() {
-        return this.parentUrl;
+        return this.backingStore.get("parentUrl");
     }
     /**
      * Gets the status property value. The status property
@@ -75,7 +59,7 @@ public class PrintTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PrintTaskStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Gets the trigger property value. The trigger property
@@ -83,7 +67,7 @@ public class PrintTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PrintTaskTrigger getTrigger() {
-        return this.trigger;
+        return this.backingStore.get("trigger");
     }
     /**
      * Serializes information the current object
@@ -102,27 +86,27 @@ public class PrintTask extends Entity implements Parsable {
      * @param value Value to set for the definition property.
      */
     public void setDefinition(@jakarta.annotation.Nullable final PrintTaskDefinition value) {
-        this.definition = value;
+        this.backingStore.set("definition", value);
     }
     /**
      * Sets the parentUrl property value. The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/v1.0/print/printers/{printerId}/jobs/{jobId}. Read-only.
      * @param value Value to set for the parentUrl property.
      */
     public void setParentUrl(@jakarta.annotation.Nullable final String value) {
-        this.parentUrl = value;
+        this.backingStore.set("parentUrl", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final PrintTaskStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
     /**
      * Sets the trigger property value. The trigger property
      * @param value Value to set for the trigger property.
      */
     public void setTrigger(@jakarta.annotation.Nullable final PrintTaskTrigger value) {
-        this.trigger = value;
+        this.backingStore.set("trigger", value);
     }
 }

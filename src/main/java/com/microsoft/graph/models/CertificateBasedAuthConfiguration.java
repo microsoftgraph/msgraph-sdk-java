@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CertificateBasedAuthConfiguration extends Entity implements Parsable {
     /**
-     * Collection of certificate authorities which creates a trusted certificate chain.
-     */
-    private java.util.List<CertificateAuthority> certificateAuthorities;
-    /**
      * Instantiates a new CertificateBasedAuthConfiguration and sets the default values.
      */
     public CertificateBasedAuthConfiguration() {
@@ -34,7 +30,7 @@ public class CertificateBasedAuthConfiguration extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public java.util.List<CertificateAuthority> getCertificateAuthorities() {
-        return this.certificateAuthorities;
+        return this.backingStore.get("certificateAuthorities");
     }
     /**
      * The deserialization information for the current model
@@ -60,6 +56,6 @@ public class CertificateBasedAuthConfiguration extends Entity implements Parsabl
      * @param value Value to set for the certificateAuthorities property.
      */
     public void setCertificateAuthorities(@jakarta.annotation.Nullable final java.util.List<CertificateAuthority> value) {
-        this.certificateAuthorities = value;
+        this.backingStore.set("certificateAuthorities", value);
     }
 }

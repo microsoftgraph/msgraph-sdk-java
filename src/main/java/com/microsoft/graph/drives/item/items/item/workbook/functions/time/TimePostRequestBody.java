@@ -5,31 +5,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TimePostRequestBody implements AdditionalDataHolder, Parsable {
+public class TimePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The hour property
-     */
-    private Json hour;
-    /**
-     * The minute property
-     */
-    private Json minute;
-    /**
-     * The second property
-     */
-    private Json second;
+    private BackingStore backingStore;
     /**
      * Instantiates a new TimePostRequestBody and sets the default values.
      */
     public TimePostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -48,7 +40,20 @@ public class TimePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -68,7 +73,7 @@ public class TimePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getHour() {
-        return this.hour;
+        return this.backingStore.get("hour");
     }
     /**
      * Gets the minute property value. The minute property
@@ -76,7 +81,7 @@ public class TimePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getMinute() {
-        return this.minute;
+        return this.backingStore.get("minute");
     }
     /**
      * Gets the second property value. The second property
@@ -84,7 +89,7 @@ public class TimePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getSecond() {
-        return this.second;
+        return this.backingStore.get("second");
     }
     /**
      * Serializes information the current object
@@ -102,27 +107,35 @@ public class TimePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the hour property value. The hour property
      * @param value Value to set for the hour property.
      */
     public void setHour(@jakarta.annotation.Nullable final Json value) {
-        this.hour = value;
+        this.backingStore.set("hour", value);
     }
     /**
      * Sets the minute property value. The minute property
      * @param value Value to set for the minute property.
      */
     public void setMinute(@jakarta.annotation.Nullable final Json value) {
-        this.minute = value;
+        this.backingStore.set("minute", value);
     }
     /**
      * Sets the second property value. The second property
      * @param value Value to set for the second property.
      */
     public void setSecond(@jakarta.annotation.Nullable final Json value) {
-        this.second = value;
+        this.backingStore.set("second", value);
     }
 }

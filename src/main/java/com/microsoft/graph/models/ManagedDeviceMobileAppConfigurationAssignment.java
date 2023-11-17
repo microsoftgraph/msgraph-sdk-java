@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedDeviceMobileAppConfigurationAssignment extends Entity implements Parsable {
     /**
-     * Assignment target that the T&C policy is assigned to.
-     */
-    private DeviceAndAppManagementAssignmentTarget target;
-    /**
      * Instantiates a new ManagedDeviceMobileAppConfigurationAssignment and sets the default values.
      */
     public ManagedDeviceMobileAppConfigurationAssignment() {
@@ -47,7 +43,7 @@ public class ManagedDeviceMobileAppConfigurationAssignment extends Entity implem
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {
-        return this.target;
+        return this.backingStore.get("target");
     }
     /**
      * Serializes information the current object
@@ -63,6 +59,6 @@ public class ManagedDeviceMobileAppConfigurationAssignment extends Entity implem
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
-        this.target = value;
+        this.backingStore.set("target", value);
     }
 }

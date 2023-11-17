@@ -11,10 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ReminderViewWithStartDateTimeWithEndDateTimeGetResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<Reminder> value;
-    /**
      * Instantiates a new ReminderViewWithStartDateTimeWithEndDateTimeGetResponse and sets the default values.
      */
     public ReminderViewWithStartDateTimeWithEndDateTimeGetResponse() {
@@ -46,7 +42,7 @@ public class ReminderViewWithStartDateTimeWithEndDateTimeGetResponse extends Bas
      */
     @jakarta.annotation.Nullable
     public java.util.List<Reminder> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class ReminderViewWithStartDateTimeWithEndDateTimeGetResponse extends Bas
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<Reminder> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

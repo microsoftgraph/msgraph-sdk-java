@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable {
     /**
-     * The content stream
-     */
-    private byte[] content;
-    /**
-     * The URL for downloading the content
-     */
-    private String contentUrl;
-    /**
      * Instantiates a new OnenoteResource and sets the default values.
      */
     public OnenoteResource() {
@@ -39,7 +31,7 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
-        return this.content;
+        return this.backingStore.get("content");
     }
     /**
      * Gets the contentUrl property value. The URL for downloading the content
@@ -47,7 +39,7 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
      */
     @jakarta.annotation.Nullable
     public String getContentUrl() {
-        return this.contentUrl;
+        return this.backingStore.get("contentUrl");
     }
     /**
      * The deserialization information for the current model
@@ -75,13 +67,13 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final byte[] value) {
-        this.content = value;
+        this.backingStore.set("content", value);
     }
     /**
      * Sets the contentUrl property value. The URL for downloading the content
      * @param value Value to set for the contentUrl property.
      */
     public void setContentUrl(@jakarta.annotation.Nullable final String value) {
-        this.contentUrl = value;
+        this.backingStore.set("contentUrl", value);
     }
 }

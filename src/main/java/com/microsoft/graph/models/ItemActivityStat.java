@@ -10,46 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemActivityStat extends Entity implements Parsable {
     /**
-     * Statistics about the access actions in this interval. Read-only.
-     */
-    private ItemActionStat access;
-    /**
-     * Exposes the itemActivities represented in this itemActivityStat resource.
-     */
-    private java.util.List<ItemActivity> activities;
-    /**
-     * Statistics about the create actions in this interval. Read-only.
-     */
-    private ItemActionStat create;
-    /**
-     * Statistics about the delete actions in this interval. Read-only.
-     */
-    private ItemActionStat delete;
-    /**
-     * Statistics about the edit actions in this interval. Read-only.
-     */
-    private ItemActionStat edit;
-    /**
-     * When the interval ends. Read-only.
-     */
-    private OffsetDateTime endDateTime;
-    /**
-     * Indicates that the statistics in this interval are based on incomplete data. Read-only.
-     */
-    private IncompleteData incompleteData;
-    /**
-     * Indicates whether the item is 'trending.' Read-only.
-     */
-    private Boolean isTrending;
-    /**
-     * Statistics about the move actions in this interval. Read-only.
-     */
-    private ItemActionStat move;
-    /**
-     * When the interval starts. Read-only.
-     */
-    private OffsetDateTime startDateTime;
-    /**
      * Instantiates a new ItemActivityStat and sets the default values.
      */
     public ItemActivityStat() {
@@ -71,7 +31,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ItemActionStat getAccess() {
-        return this.access;
+        return this.backingStore.get("access");
     }
     /**
      * Gets the activities property value. Exposes the itemActivities represented in this itemActivityStat resource.
@@ -79,7 +39,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ItemActivity> getActivities() {
-        return this.activities;
+        return this.backingStore.get("activities");
     }
     /**
      * Gets the create property value. Statistics about the create actions in this interval. Read-only.
@@ -87,7 +47,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ItemActionStat getCreate() {
-        return this.create;
+        return this.backingStore.get("create");
     }
     /**
      * Gets the delete property value. Statistics about the delete actions in this interval. Read-only.
@@ -95,7 +55,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ItemActionStat getDelete() {
-        return this.delete;
+        return this.backingStore.get("delete");
     }
     /**
      * Gets the edit property value. Statistics about the edit actions in this interval. Read-only.
@@ -103,7 +63,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ItemActionStat getEdit() {
-        return this.edit;
+        return this.backingStore.get("edit");
     }
     /**
      * Gets the endDateTime property value. When the interval ends. Read-only.
@@ -111,7 +71,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this.endDateTime;
+        return this.backingStore.get("endDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -138,7 +98,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IncompleteData getIncompleteData() {
-        return this.incompleteData;
+        return this.backingStore.get("incompleteData");
     }
     /**
      * Gets the isTrending property value. Indicates whether the item is 'trending.' Read-only.
@@ -146,7 +106,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsTrending() {
-        return this.isTrending;
+        return this.backingStore.get("isTrending");
     }
     /**
      * Gets the move property value. Statistics about the move actions in this interval. Read-only.
@@ -154,7 +114,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ItemActionStat getMove() {
-        return this.move;
+        return this.backingStore.get("move");
     }
     /**
      * Gets the startDateTime property value. When the interval starts. Read-only.
@@ -162,7 +122,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.backingStore.get("startDateTime");
     }
     /**
      * Serializes information the current object
@@ -187,69 +147,69 @@ public class ItemActivityStat extends Entity implements Parsable {
      * @param value Value to set for the access property.
      */
     public void setAccess(@jakarta.annotation.Nullable final ItemActionStat value) {
-        this.access = value;
+        this.backingStore.set("access", value);
     }
     /**
      * Sets the activities property value. Exposes the itemActivities represented in this itemActivityStat resource.
      * @param value Value to set for the activities property.
      */
     public void setActivities(@jakarta.annotation.Nullable final java.util.List<ItemActivity> value) {
-        this.activities = value;
+        this.backingStore.set("activities", value);
     }
     /**
      * Sets the create property value. Statistics about the create actions in this interval. Read-only.
      * @param value Value to set for the create property.
      */
     public void setCreate(@jakarta.annotation.Nullable final ItemActionStat value) {
-        this.create = value;
+        this.backingStore.set("create", value);
     }
     /**
      * Sets the delete property value. Statistics about the delete actions in this interval. Read-only.
      * @param value Value to set for the delete property.
      */
     public void setDelete(@jakarta.annotation.Nullable final ItemActionStat value) {
-        this.delete = value;
+        this.backingStore.set("delete", value);
     }
     /**
      * Sets the edit property value. Statistics about the edit actions in this interval. Read-only.
      * @param value Value to set for the edit property.
      */
     public void setEdit(@jakarta.annotation.Nullable final ItemActionStat value) {
-        this.edit = value;
+        this.backingStore.set("edit", value);
     }
     /**
      * Sets the endDateTime property value. When the interval ends. Read-only.
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.endDateTime = value;
+        this.backingStore.set("endDateTime", value);
     }
     /**
      * Sets the incompleteData property value. Indicates that the statistics in this interval are based on incomplete data. Read-only.
      * @param value Value to set for the incompleteData property.
      */
     public void setIncompleteData(@jakarta.annotation.Nullable final IncompleteData value) {
-        this.incompleteData = value;
+        this.backingStore.set("incompleteData", value);
     }
     /**
      * Sets the isTrending property value. Indicates whether the item is 'trending.' Read-only.
      * @param value Value to set for the isTrending property.
      */
     public void setIsTrending(@jakarta.annotation.Nullable final Boolean value) {
-        this.isTrending = value;
+        this.backingStore.set("isTrending", value);
     }
     /**
      * Sets the move property value. Statistics about the move actions in this interval. Read-only.
      * @param value Value to set for the move property.
      */
     public void setMove(@jakarta.annotation.Nullable final ItemActionStat value) {
-        this.move = value;
+        this.backingStore.set("move", value);
     }
     /**
      * Sets the startDateTime property value. When the interval starts. Read-only.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.backingStore.set("startDateTime", value);
     }
 }

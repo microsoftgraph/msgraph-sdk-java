@@ -12,138 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account.
-     */
-    private Boolean accountsBlockAddingNonMicrosoftAccountEmail;
-    /**
-     * Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
-     */
-    private Boolean applyOnlyToWindows81;
-    /**
-     * Indicates whether or not to block auto fill.
-     */
-    private Boolean browserBlockAutofill;
-    /**
-     * Indicates whether or not to block automatic detection of Intranet sites.
-     */
-    private Boolean browserBlockAutomaticDetectionOfIntranetSites;
-    /**
-     * Indicates whether or not to block enterprise mode access.
-     */
-    private Boolean browserBlockEnterpriseModeAccess;
-    /**
-     * Indicates whether or not to Block the user from using JavaScript.
-     */
-    private Boolean browserBlockJavaScript;
-    /**
-     * Indicates whether or not to block plug-ins.
-     */
-    private Boolean browserBlockPlugins;
-    /**
-     * Indicates whether or not to block popups.
-     */
-    private Boolean browserBlockPopups;
-    /**
-     * Indicates whether or not to Block the user from sending the do not track header.
-     */
-    private Boolean browserBlockSendingDoNotTrackHeader;
-    /**
-     * Indicates whether or not to block a single word entry on Intranet sites.
-     */
-    private Boolean browserBlockSingleWordEntryOnIntranetSites;
-    /**
-     * The enterprise mode site list location. Could be a local file, local network or http location.
-     */
-    private String browserEnterpriseModeSiteListLocation;
-    /**
-     * Possible values for internet site security level.
-     */
-    private InternetSiteSecurityLevel browserInternetSecurityLevel;
-    /**
-     * Possible values for site security level.
-     */
-    private SiteSecurityLevel browserIntranetSecurityLevel;
-    /**
-     * The logging report location.
-     */
-    private String browserLoggingReportLocation;
-    /**
-     * Indicates whether or not to require a firewall.
-     */
-    private Boolean browserRequireFirewall;
-    /**
-     * Indicates whether or not to require fraud warning.
-     */
-    private Boolean browserRequireFraudWarning;
-    /**
-     * Indicates whether or not to require high security for restricted sites.
-     */
-    private Boolean browserRequireHighSecurityForRestrictedSites;
-    /**
-     * Indicates whether or not to require the user to use the smart screen filter.
-     */
-    private Boolean browserRequireSmartScreen;
-    /**
-     * Possible values for site security level.
-     */
-    private SiteSecurityLevel browserTrustedSitesSecurityLevel;
-    /**
-     * Indicates whether or not to block data roaming.
-     */
-    private Boolean cellularBlockDataRoaming;
-    /**
-     * Indicates whether or not to block diagnostic data submission.
-     */
-    private Boolean diagnosticsBlockDataSubmission;
-    /**
-     * Indicates whether or not to Block the user from using a pictures password and pin.
-     */
-    private Boolean passwordBlockPicturePasswordAndPin;
-    /**
-     * Password expiration in days.
-     */
-    private Integer passwordExpirationDays;
-    /**
-     * The number of character sets required in the password.
-     */
-    private Integer passwordMinimumCharacterSetCount;
-    /**
-     * The minimum password length.
-     */
-    private Integer passwordMinimumLength;
-    /**
-     * The minutes of inactivity before the screen times out.
-     */
-    private Integer passwordMinutesOfInactivityBeforeScreenTimeout;
-    /**
-     * The number of previous passwords to prevent re-use of. Valid values 0 to 24
-     */
-    private Integer passwordPreviousPasswordBlockCount;
-    /**
-     * Possible values of required passwords.
-     */
-    private RequiredPasswordType passwordRequiredType;
-    /**
-     * The number of sign in failures before factory reset.
-     */
-    private Integer passwordSignInFailureCountBeforeFactoryReset;
-    /**
-     * Indicates whether or not to require encryption on a mobile device.
-     */
-    private Boolean storageRequireDeviceEncryption;
-    /**
-     * Indicates whether or not to require automatic updates.
-     */
-    private Boolean updatesRequireAutomaticUpdates;
-    /**
-     * Possible values for Windows user account control settings.
-     */
-    private WindowsUserAccountControlSettings userAccountControlSettings;
-    /**
-     * The work folders url.
-     */
-    private String workFoldersUrl;
-    /**
      * Instantiates a new Windows81GeneralConfiguration and sets the default values.
      */
     public Windows81GeneralConfiguration() {
@@ -166,7 +34,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public Boolean getAccountsBlockAddingNonMicrosoftAccountEmail() {
-        return this.accountsBlockAddingNonMicrosoftAccountEmail;
+        return this.backingStore.get("accountsBlockAddingNonMicrosoftAccountEmail");
     }
     /**
      * Gets the applyOnlyToWindows81 property value. Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
@@ -174,7 +42,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public Boolean getApplyOnlyToWindows81() {
-        return this.applyOnlyToWindows81;
+        return this.backingStore.get("applyOnlyToWindows81");
     }
     /**
      * Gets the browserBlockAutofill property value. Indicates whether or not to block auto fill.
@@ -182,7 +50,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public Boolean getBrowserBlockAutofill() {
-        return this.browserBlockAutofill;
+        return this.backingStore.get("browserBlockAutofill");
     }
     /**
      * Gets the browserBlockAutomaticDetectionOfIntranetSites property value. Indicates whether or not to block automatic detection of Intranet sites.
@@ -190,7 +58,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public Boolean getBrowserBlockAutomaticDetectionOfIntranetSites() {
-        return this.browserBlockAutomaticDetectionOfIntranetSites;
+        return this.backingStore.get("browserBlockAutomaticDetectionOfIntranetSites");
     }
     /**
      * Gets the browserBlockEnterpriseModeAccess property value. Indicates whether or not to block enterprise mode access.
@@ -198,7 +66,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public Boolean getBrowserBlockEnterpriseModeAccess() {
-        return this.browserBlockEnterpriseModeAccess;
+        return this.backingStore.get("browserBlockEnterpriseModeAccess");
     }
     /**
      * Gets the browserBlockJavaScript property value. Indicates whether or not to Block the user from using JavaScript.
@@ -206,7 +74,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public Boolean getBrowserBlockJavaScript() {
-        return this.browserBlockJavaScript;
+        return this.backingStore.get("browserBlockJavaScript");
     }
     /**
      * Gets the browserBlockPlugins property value. Indicates whether or not to block plug-ins.
@@ -214,7 +82,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public Boolean getBrowserBlockPlugins() {
-        return this.browserBlockPlugins;
+        return this.backingStore.get("browserBlockPlugins");
     }
     /**
      * Gets the browserBlockPopups property value. Indicates whether or not to block popups.
@@ -222,7 +90,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public Boolean getBrowserBlockPopups() {
-        return this.browserBlockPopups;
+        return this.backingStore.get("browserBlockPopups");
     }
     /**
      * Gets the browserBlockSendingDoNotTrackHeader property value. Indicates whether or not to Block the user from sending the do not track header.
@@ -230,7 +98,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public Boolean getBrowserBlockSendingDoNotTrackHeader() {
-        return this.browserBlockSendingDoNotTrackHeader;
+        return this.backingStore.get("browserBlockSendingDoNotTrackHeader");
     }
     /**
      * Gets the browserBlockSingleWordEntryOnIntranetSites property value. Indicates whether or not to block a single word entry on Intranet sites.
@@ -238,7 +106,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public Boolean getBrowserBlockSingleWordEntryOnIntranetSites() {
-        return this.browserBlockSingleWordEntryOnIntranetSites;
+        return this.backingStore.get("browserBlockSingleWordEntryOnIntranetSites");
     }
     /**
      * Gets the browserEnterpriseModeSiteListLocation property value. The enterprise mode site list location. Could be a local file, local network or http location.
@@ -246,7 +114,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public String getBrowserEnterpriseModeSiteListLocation() {
-        return this.browserEnterpriseModeSiteListLocation;
+        return this.backingStore.get("browserEnterpriseModeSiteListLocation");
     }
     /**
      * Gets the browserInternetSecurityLevel property value. Possible values for internet site security level.
@@ -254,7 +122,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public InternetSiteSecurityLevel getBrowserInternetSecurityLevel() {
-        return this.browserInternetSecurityLevel;
+        return this.backingStore.get("browserInternetSecurityLevel");
     }
     /**
      * Gets the browserIntranetSecurityLevel property value. Possible values for site security level.
@@ -262,7 +130,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public SiteSecurityLevel getBrowserIntranetSecurityLevel() {
-        return this.browserIntranetSecurityLevel;
+        return this.backingStore.get("browserIntranetSecurityLevel");
     }
     /**
      * Gets the browserLoggingReportLocation property value. The logging report location.
@@ -270,7 +138,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public String getBrowserLoggingReportLocation() {
-        return this.browserLoggingReportLocation;
+        return this.backingStore.get("browserLoggingReportLocation");
     }
     /**
      * Gets the browserRequireFirewall property value. Indicates whether or not to require a firewall.
@@ -278,7 +146,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public Boolean getBrowserRequireFirewall() {
-        return this.browserRequireFirewall;
+        return this.backingStore.get("browserRequireFirewall");
     }
     /**
      * Gets the browserRequireFraudWarning property value. Indicates whether or not to require fraud warning.
@@ -286,7 +154,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public Boolean getBrowserRequireFraudWarning() {
-        return this.browserRequireFraudWarning;
+        return this.backingStore.get("browserRequireFraudWarning");
     }
     /**
      * Gets the browserRequireHighSecurityForRestrictedSites property value. Indicates whether or not to require high security for restricted sites.
@@ -294,7 +162,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public Boolean getBrowserRequireHighSecurityForRestrictedSites() {
-        return this.browserRequireHighSecurityForRestrictedSites;
+        return this.backingStore.get("browserRequireHighSecurityForRestrictedSites");
     }
     /**
      * Gets the browserRequireSmartScreen property value. Indicates whether or not to require the user to use the smart screen filter.
@@ -302,7 +170,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public Boolean getBrowserRequireSmartScreen() {
-        return this.browserRequireSmartScreen;
+        return this.backingStore.get("browserRequireSmartScreen");
     }
     /**
      * Gets the browserTrustedSitesSecurityLevel property value. Possible values for site security level.
@@ -310,7 +178,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public SiteSecurityLevel getBrowserTrustedSitesSecurityLevel() {
-        return this.browserTrustedSitesSecurityLevel;
+        return this.backingStore.get("browserTrustedSitesSecurityLevel");
     }
     /**
      * Gets the cellularBlockDataRoaming property value. Indicates whether or not to block data roaming.
@@ -318,7 +186,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public Boolean getCellularBlockDataRoaming() {
-        return this.cellularBlockDataRoaming;
+        return this.backingStore.get("cellularBlockDataRoaming");
     }
     /**
      * Gets the diagnosticsBlockDataSubmission property value. Indicates whether or not to block diagnostic data submission.
@@ -326,7 +194,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public Boolean getDiagnosticsBlockDataSubmission() {
-        return this.diagnosticsBlockDataSubmission;
+        return this.backingStore.get("diagnosticsBlockDataSubmission");
     }
     /**
      * The deserialization information for the current model
@@ -376,7 +244,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockPicturePasswordAndPin() {
-        return this.passwordBlockPicturePasswordAndPin;
+        return this.backingStore.get("passwordBlockPicturePasswordAndPin");
     }
     /**
      * Gets the passwordExpirationDays property value. Password expiration in days.
@@ -384,7 +252,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
-        return this.passwordExpirationDays;
+        return this.backingStore.get("passwordExpirationDays");
     }
     /**
      * Gets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
@@ -392,7 +260,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumCharacterSetCount() {
-        return this.passwordMinimumCharacterSetCount;
+        return this.backingStore.get("passwordMinimumCharacterSetCount");
     }
     /**
      * Gets the passwordMinimumLength property value. The minimum password length.
@@ -400,7 +268,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
-        return this.passwordMinimumLength;
+        return this.backingStore.get("passwordMinimumLength");
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeScreenTimeout property value. The minutes of inactivity before the screen times out.
@@ -408,7 +276,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeScreenTimeout() {
-        return this.passwordMinutesOfInactivityBeforeScreenTimeout;
+        return this.backingStore.get("passwordMinutesOfInactivityBeforeScreenTimeout");
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. The number of previous passwords to prevent re-use of. Valid values 0 to 24
@@ -416,7 +284,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
-        return this.passwordPreviousPasswordBlockCount;
+        return this.backingStore.get("passwordPreviousPasswordBlockCount");
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
@@ -424,7 +292,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {
-        return this.passwordRequiredType;
+        return this.backingStore.get("passwordRequiredType");
     }
     /**
      * Gets the passwordSignInFailureCountBeforeFactoryReset property value. The number of sign in failures before factory reset.
@@ -432,7 +300,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordSignInFailureCountBeforeFactoryReset() {
-        return this.passwordSignInFailureCountBeforeFactoryReset;
+        return this.backingStore.get("passwordSignInFailureCountBeforeFactoryReset");
     }
     /**
      * Gets the storageRequireDeviceEncryption property value. Indicates whether or not to require encryption on a mobile device.
@@ -440,7 +308,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageRequireDeviceEncryption() {
-        return this.storageRequireDeviceEncryption;
+        return this.backingStore.get("storageRequireDeviceEncryption");
     }
     /**
      * Gets the updatesRequireAutomaticUpdates property value. Indicates whether or not to require automatic updates.
@@ -448,7 +316,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public Boolean getUpdatesRequireAutomaticUpdates() {
-        return this.updatesRequireAutomaticUpdates;
+        return this.backingStore.get("updatesRequireAutomaticUpdates");
     }
     /**
      * Gets the userAccountControlSettings property value. Possible values for Windows user account control settings.
@@ -456,7 +324,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public WindowsUserAccountControlSettings getUserAccountControlSettings() {
-        return this.userAccountControlSettings;
+        return this.backingStore.get("userAccountControlSettings");
     }
     /**
      * Gets the workFoldersUrl property value. The work folders url.
@@ -464,7 +332,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @jakarta.annotation.Nullable
     public String getWorkFoldersUrl() {
-        return this.workFoldersUrl;
+        return this.backingStore.get("workFoldersUrl");
     }
     /**
      * Serializes information the current object
@@ -511,230 +379,230 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the accountsBlockAddingNonMicrosoftAccountEmail property.
      */
     public void setAccountsBlockAddingNonMicrosoftAccountEmail(@jakarta.annotation.Nullable final Boolean value) {
-        this.accountsBlockAddingNonMicrosoftAccountEmail = value;
+        this.backingStore.set("accountsBlockAddingNonMicrosoftAccountEmail", value);
     }
     /**
      * Sets the applyOnlyToWindows81 property value. Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
      * @param value Value to set for the applyOnlyToWindows81 property.
      */
     public void setApplyOnlyToWindows81(@jakarta.annotation.Nullable final Boolean value) {
-        this.applyOnlyToWindows81 = value;
+        this.backingStore.set("applyOnlyToWindows81", value);
     }
     /**
      * Sets the browserBlockAutofill property value. Indicates whether or not to block auto fill.
      * @param value Value to set for the browserBlockAutofill property.
      */
     public void setBrowserBlockAutofill(@jakarta.annotation.Nullable final Boolean value) {
-        this.browserBlockAutofill = value;
+        this.backingStore.set("browserBlockAutofill", value);
     }
     /**
      * Sets the browserBlockAutomaticDetectionOfIntranetSites property value. Indicates whether or not to block automatic detection of Intranet sites.
      * @param value Value to set for the browserBlockAutomaticDetectionOfIntranetSites property.
      */
     public void setBrowserBlockAutomaticDetectionOfIntranetSites(@jakarta.annotation.Nullable final Boolean value) {
-        this.browserBlockAutomaticDetectionOfIntranetSites = value;
+        this.backingStore.set("browserBlockAutomaticDetectionOfIntranetSites", value);
     }
     /**
      * Sets the browserBlockEnterpriseModeAccess property value. Indicates whether or not to block enterprise mode access.
      * @param value Value to set for the browserBlockEnterpriseModeAccess property.
      */
     public void setBrowserBlockEnterpriseModeAccess(@jakarta.annotation.Nullable final Boolean value) {
-        this.browserBlockEnterpriseModeAccess = value;
+        this.backingStore.set("browserBlockEnterpriseModeAccess", value);
     }
     /**
      * Sets the browserBlockJavaScript property value. Indicates whether or not to Block the user from using JavaScript.
      * @param value Value to set for the browserBlockJavaScript property.
      */
     public void setBrowserBlockJavaScript(@jakarta.annotation.Nullable final Boolean value) {
-        this.browserBlockJavaScript = value;
+        this.backingStore.set("browserBlockJavaScript", value);
     }
     /**
      * Sets the browserBlockPlugins property value. Indicates whether or not to block plug-ins.
      * @param value Value to set for the browserBlockPlugins property.
      */
     public void setBrowserBlockPlugins(@jakarta.annotation.Nullable final Boolean value) {
-        this.browserBlockPlugins = value;
+        this.backingStore.set("browserBlockPlugins", value);
     }
     /**
      * Sets the browserBlockPopups property value. Indicates whether or not to block popups.
      * @param value Value to set for the browserBlockPopups property.
      */
     public void setBrowserBlockPopups(@jakarta.annotation.Nullable final Boolean value) {
-        this.browserBlockPopups = value;
+        this.backingStore.set("browserBlockPopups", value);
     }
     /**
      * Sets the browserBlockSendingDoNotTrackHeader property value. Indicates whether or not to Block the user from sending the do not track header.
      * @param value Value to set for the browserBlockSendingDoNotTrackHeader property.
      */
     public void setBrowserBlockSendingDoNotTrackHeader(@jakarta.annotation.Nullable final Boolean value) {
-        this.browserBlockSendingDoNotTrackHeader = value;
+        this.backingStore.set("browserBlockSendingDoNotTrackHeader", value);
     }
     /**
      * Sets the browserBlockSingleWordEntryOnIntranetSites property value. Indicates whether or not to block a single word entry on Intranet sites.
      * @param value Value to set for the browserBlockSingleWordEntryOnIntranetSites property.
      */
     public void setBrowserBlockSingleWordEntryOnIntranetSites(@jakarta.annotation.Nullable final Boolean value) {
-        this.browserBlockSingleWordEntryOnIntranetSites = value;
+        this.backingStore.set("browserBlockSingleWordEntryOnIntranetSites", value);
     }
     /**
      * Sets the browserEnterpriseModeSiteListLocation property value. The enterprise mode site list location. Could be a local file, local network or http location.
      * @param value Value to set for the browserEnterpriseModeSiteListLocation property.
      */
     public void setBrowserEnterpriseModeSiteListLocation(@jakarta.annotation.Nullable final String value) {
-        this.browserEnterpriseModeSiteListLocation = value;
+        this.backingStore.set("browserEnterpriseModeSiteListLocation", value);
     }
     /**
      * Sets the browserInternetSecurityLevel property value. Possible values for internet site security level.
      * @param value Value to set for the browserInternetSecurityLevel property.
      */
     public void setBrowserInternetSecurityLevel(@jakarta.annotation.Nullable final InternetSiteSecurityLevel value) {
-        this.browserInternetSecurityLevel = value;
+        this.backingStore.set("browserInternetSecurityLevel", value);
     }
     /**
      * Sets the browserIntranetSecurityLevel property value. Possible values for site security level.
      * @param value Value to set for the browserIntranetSecurityLevel property.
      */
     public void setBrowserIntranetSecurityLevel(@jakarta.annotation.Nullable final SiteSecurityLevel value) {
-        this.browserIntranetSecurityLevel = value;
+        this.backingStore.set("browserIntranetSecurityLevel", value);
     }
     /**
      * Sets the browserLoggingReportLocation property value. The logging report location.
      * @param value Value to set for the browserLoggingReportLocation property.
      */
     public void setBrowserLoggingReportLocation(@jakarta.annotation.Nullable final String value) {
-        this.browserLoggingReportLocation = value;
+        this.backingStore.set("browserLoggingReportLocation", value);
     }
     /**
      * Sets the browserRequireFirewall property value. Indicates whether or not to require a firewall.
      * @param value Value to set for the browserRequireFirewall property.
      */
     public void setBrowserRequireFirewall(@jakarta.annotation.Nullable final Boolean value) {
-        this.browserRequireFirewall = value;
+        this.backingStore.set("browserRequireFirewall", value);
     }
     /**
      * Sets the browserRequireFraudWarning property value. Indicates whether or not to require fraud warning.
      * @param value Value to set for the browserRequireFraudWarning property.
      */
     public void setBrowserRequireFraudWarning(@jakarta.annotation.Nullable final Boolean value) {
-        this.browserRequireFraudWarning = value;
+        this.backingStore.set("browserRequireFraudWarning", value);
     }
     /**
      * Sets the browserRequireHighSecurityForRestrictedSites property value. Indicates whether or not to require high security for restricted sites.
      * @param value Value to set for the browserRequireHighSecurityForRestrictedSites property.
      */
     public void setBrowserRequireHighSecurityForRestrictedSites(@jakarta.annotation.Nullable final Boolean value) {
-        this.browserRequireHighSecurityForRestrictedSites = value;
+        this.backingStore.set("browserRequireHighSecurityForRestrictedSites", value);
     }
     /**
      * Sets the browserRequireSmartScreen property value. Indicates whether or not to require the user to use the smart screen filter.
      * @param value Value to set for the browserRequireSmartScreen property.
      */
     public void setBrowserRequireSmartScreen(@jakarta.annotation.Nullable final Boolean value) {
-        this.browserRequireSmartScreen = value;
+        this.backingStore.set("browserRequireSmartScreen", value);
     }
     /**
      * Sets the browserTrustedSitesSecurityLevel property value. Possible values for site security level.
      * @param value Value to set for the browserTrustedSitesSecurityLevel property.
      */
     public void setBrowserTrustedSitesSecurityLevel(@jakarta.annotation.Nullable final SiteSecurityLevel value) {
-        this.browserTrustedSitesSecurityLevel = value;
+        this.backingStore.set("browserTrustedSitesSecurityLevel", value);
     }
     /**
      * Sets the cellularBlockDataRoaming property value. Indicates whether or not to block data roaming.
      * @param value Value to set for the cellularBlockDataRoaming property.
      */
     public void setCellularBlockDataRoaming(@jakarta.annotation.Nullable final Boolean value) {
-        this.cellularBlockDataRoaming = value;
+        this.backingStore.set("cellularBlockDataRoaming", value);
     }
     /**
      * Sets the diagnosticsBlockDataSubmission property value. Indicates whether or not to block diagnostic data submission.
      * @param value Value to set for the diagnosticsBlockDataSubmission property.
      */
     public void setDiagnosticsBlockDataSubmission(@jakarta.annotation.Nullable final Boolean value) {
-        this.diagnosticsBlockDataSubmission = value;
+        this.backingStore.set("diagnosticsBlockDataSubmission", value);
     }
     /**
      * Sets the passwordBlockPicturePasswordAndPin property value. Indicates whether or not to Block the user from using a pictures password and pin.
      * @param value Value to set for the passwordBlockPicturePasswordAndPin property.
      */
     public void setPasswordBlockPicturePasswordAndPin(@jakarta.annotation.Nullable final Boolean value) {
-        this.passwordBlockPicturePasswordAndPin = value;
+        this.backingStore.set("passwordBlockPicturePasswordAndPin", value);
     }
     /**
      * Sets the passwordExpirationDays property value. Password expiration in days.
      * @param value Value to set for the passwordExpirationDays property.
      */
     public void setPasswordExpirationDays(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordExpirationDays = value;
+        this.backingStore.set("passwordExpirationDays", value);
     }
     /**
      * Sets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
      */
     public void setPasswordMinimumCharacterSetCount(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordMinimumCharacterSetCount = value;
+        this.backingStore.set("passwordMinimumCharacterSetCount", value);
     }
     /**
      * Sets the passwordMinimumLength property value. The minimum password length.
      * @param value Value to set for the passwordMinimumLength property.
      */
     public void setPasswordMinimumLength(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordMinimumLength = value;
+        this.backingStore.set("passwordMinimumLength", value);
     }
     /**
      * Sets the passwordMinutesOfInactivityBeforeScreenTimeout property value. The minutes of inactivity before the screen times out.
      * @param value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
      */
     public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordMinutesOfInactivityBeforeScreenTimeout = value;
+        this.backingStore.set("passwordMinutesOfInactivityBeforeScreenTimeout", value);
     }
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. The number of previous passwords to prevent re-use of. Valid values 0 to 24
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      */
     public void setPasswordPreviousPasswordBlockCount(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordPreviousPasswordBlockCount = value;
+        this.backingStore.set("passwordPreviousPasswordBlockCount", value);
     }
     /**
      * Sets the passwordRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passwordRequiredType property.
      */
     public void setPasswordRequiredType(@jakarta.annotation.Nullable final RequiredPasswordType value) {
-        this.passwordRequiredType = value;
+        this.backingStore.set("passwordRequiredType", value);
     }
     /**
      * Sets the passwordSignInFailureCountBeforeFactoryReset property value. The number of sign in failures before factory reset.
      * @param value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
      */
     public void setPasswordSignInFailureCountBeforeFactoryReset(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordSignInFailureCountBeforeFactoryReset = value;
+        this.backingStore.set("passwordSignInFailureCountBeforeFactoryReset", value);
     }
     /**
      * Sets the storageRequireDeviceEncryption property value. Indicates whether or not to require encryption on a mobile device.
      * @param value Value to set for the storageRequireDeviceEncryption property.
      */
     public void setStorageRequireDeviceEncryption(@jakarta.annotation.Nullable final Boolean value) {
-        this.storageRequireDeviceEncryption = value;
+        this.backingStore.set("storageRequireDeviceEncryption", value);
     }
     /**
      * Sets the updatesRequireAutomaticUpdates property value. Indicates whether or not to require automatic updates.
      * @param value Value to set for the updatesRequireAutomaticUpdates property.
      */
     public void setUpdatesRequireAutomaticUpdates(@jakarta.annotation.Nullable final Boolean value) {
-        this.updatesRequireAutomaticUpdates = value;
+        this.backingStore.set("updatesRequireAutomaticUpdates", value);
     }
     /**
      * Sets the userAccountControlSettings property value. Possible values for Windows user account control settings.
      * @param value Value to set for the userAccountControlSettings property.
      */
     public void setUserAccountControlSettings(@jakarta.annotation.Nullable final WindowsUserAccountControlSettings value) {
-        this.userAccountControlSettings = value;
+        this.backingStore.set("userAccountControlSettings", value);
     }
     /**
      * Sets the workFoldersUrl property value. The work folders url.
      * @param value Value to set for the workFoldersUrl property.
      */
     public void setWorkFoldersUrl(@jakarta.annotation.Nullable final String value) {
-        this.workFoldersUrl = value;
+        this.backingStore.set("workFoldersUrl", value);
     }
 }

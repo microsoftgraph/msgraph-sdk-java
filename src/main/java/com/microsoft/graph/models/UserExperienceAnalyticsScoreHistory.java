@@ -13,10 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsScoreHistory extends Entity implements Parsable {
     /**
-     * The device startup date time. The value cannot be modified and is automatically populated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default.
-     */
-    private OffsetDateTime startupDateTime;
-    /**
      * Instantiates a new UserExperienceAnalyticsScoreHistory and sets the default values.
      */
     public UserExperienceAnalyticsScoreHistory() {
@@ -48,7 +44,7 @@ public class UserExperienceAnalyticsScoreHistory extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartupDateTime() {
-        return this.startupDateTime;
+        return this.backingStore.get("startupDateTime");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class UserExperienceAnalyticsScoreHistory extends Entity implements Parsa
      * @param value Value to set for the startupDateTime property.
      */
     public void setStartupDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startupDateTime = value;
+        this.backingStore.set("startupDateTime", value);
     }
 }

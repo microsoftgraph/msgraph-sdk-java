@@ -4,43 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class RelatedContact implements AdditionalDataHolder, Parsable {
+public class RelatedContact implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Indicates whether the user has been consented to access student data.
+     * Stores model information.
      */
-    private Boolean accessConsent;
-    /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * Name of the contact. Required.
-     */
-    private String displayName;
-    /**
-     * Primary email address of the contact. Required.
-     */
-    private String emailAddress;
-    /**
-     * Mobile phone number of the contact.
-     */
-    private String mobilePhone;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The relationship property
-     */
-    private ContactRelationship relationship;
+    private BackingStore backingStore;
     /**
      * Instantiates a new RelatedContact and sets the default values.
      */
     public RelatedContact() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -59,7 +39,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAccessConsent() {
-        return this.accessConsent;
+        return this.backingStore.get("accessConsent");
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -67,7 +47,20 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the displayName property value. Name of the contact. Required.
@@ -75,7 +68,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * Gets the emailAddress property value. Primary email address of the contact. Required.
@@ -83,7 +76,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getEmailAddress() {
-        return this.emailAddress;
+        return this.backingStore.get("emailAddress");
     }
     /**
      * The deserialization information for the current model
@@ -106,7 +99,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getMobilePhone() {
-        return this.mobilePhone;
+        return this.backingStore.get("mobilePhone");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -114,7 +107,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the relationship property value. The relationship property
@@ -122,7 +115,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public ContactRelationship getRelationship() {
-        return this.relationship;
+        return this.backingStore.get("relationship");
     }
     /**
      * Serializes information the current object
@@ -143,48 +136,56 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the accessConsent property.
      */
     public void setAccessConsent(@jakarta.annotation.Nullable final Boolean value) {
-        this.accessConsent = value;
+        this.backingStore.set("accessConsent", value);
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the displayName property value. Name of the contact. Required.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the emailAddress property value. Primary email address of the contact. Required.
      * @param value Value to set for the emailAddress property.
      */
     public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
-        this.emailAddress = value;
+        this.backingStore.set("emailAddress", value);
     }
     /**
      * Sets the mobilePhone property value. Mobile phone number of the contact.
      * @param value Value to set for the mobilePhone property.
      */
     public void setMobilePhone(@jakarta.annotation.Nullable final String value) {
-        this.mobilePhone = value;
+        this.backingStore.set("mobilePhone", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the relationship property value. The relationship property
      * @param value Value to set for the relationship property.
      */
     public void setRelationship(@jakarta.annotation.Nullable final ContactRelationship value) {
-        this.relationship = value;
+        this.backingStore.set("relationship", value);
     }
 }

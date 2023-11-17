@@ -5,24 +5,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataHolder, Parsable {
+public class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The allowedCombinations property
-     */
-    private java.util.List<AuthenticationMethodModes> allowedCombinations;
+    private BackingStore backingStore;
     /**
      * Instantiates a new UpdateAllowedCombinationsPostRequestBody and sets the default values.
      */
     public UpdateAllowedCombinationsPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -41,7 +41,12 @@ public class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataH
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the allowedCombinations property value. The allowedCombinations property
@@ -49,7 +54,15 @@ public class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataH
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodModes> getAllowedCombinations() {
-        return this.allowedCombinations;
+        return this.backingStore.get("allowedCombinations");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -75,13 +88,21 @@ public class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataH
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the allowedCombinations property value. The allowedCombinations property
      * @param value Value to set for the allowedCombinations property.
      */
     public void setAllowedCombinations(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodModes> value) {
-        this.allowedCombinations = value;
+        this.backingStore.set("allowedCombinations", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
 }

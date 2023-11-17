@@ -9,38 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartAxis extends Entity implements Parsable {
     /**
-     * Represents the formatting of a chart object, which includes line and font formatting. Read-only.
-     */
-    private WorkbookChartAxisFormat format;
-    /**
-     * Returns a gridlines object that represents the major gridlines for the specified axis. Read-only.
-     */
-    private WorkbookChartGridlines majorGridlines;
-    /**
-     * Represents the interval between two major tick marks. Can be set to a numeric value or an empty string.  The returned value is always a number.
-     */
-    private Json majorUnit;
-    /**
-     * Represents the maximum value on the value axis.  Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
-     */
-    private Json maximum;
-    /**
-     * Represents the minimum value on the value axis. Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
-     */
-    private Json minimum;
-    /**
-     * Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
-     */
-    private WorkbookChartGridlines minorGridlines;
-    /**
-     * Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number.
-     */
-    private Json minorUnit;
-    /**
-     * Represents the axis title. Read-only.
-     */
-    private WorkbookChartAxisTitle title;
-    /**
      * Instantiates a new WorkbookChartAxis and sets the default values.
      */
     public WorkbookChartAxis() {
@@ -79,7 +47,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookChartAxisFormat getFormat() {
-        return this.format;
+        return this.backingStore.get("format");
     }
     /**
      * Gets the majorGridlines property value. Returns a gridlines object that represents the major gridlines for the specified axis. Read-only.
@@ -87,7 +55,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookChartGridlines getMajorGridlines() {
-        return this.majorGridlines;
+        return this.backingStore.get("majorGridlines");
     }
     /**
      * Gets the majorUnit property value. Represents the interval between two major tick marks. Can be set to a numeric value or an empty string.  The returned value is always a number.
@@ -95,7 +63,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getMajorUnit() {
-        return this.majorUnit;
+        return this.backingStore.get("majorUnit");
     }
     /**
      * Gets the maximum property value. Represents the maximum value on the value axis.  Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
@@ -103,7 +71,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getMaximum() {
-        return this.maximum;
+        return this.backingStore.get("maximum");
     }
     /**
      * Gets the minimum property value. Represents the minimum value on the value axis. Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
@@ -111,7 +79,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getMinimum() {
-        return this.minimum;
+        return this.backingStore.get("minimum");
     }
     /**
      * Gets the minorGridlines property value. Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
@@ -119,7 +87,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookChartGridlines getMinorGridlines() {
-        return this.minorGridlines;
+        return this.backingStore.get("minorGridlines");
     }
     /**
      * Gets the minorUnit property value. Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number.
@@ -127,7 +95,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getMinorUnit() {
-        return this.minorUnit;
+        return this.backingStore.get("minorUnit");
     }
     /**
      * Gets the title property value. Represents the axis title. Read-only.
@@ -135,7 +103,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookChartAxisTitle getTitle() {
-        return this.title;
+        return this.backingStore.get("title");
     }
     /**
      * Serializes information the current object
@@ -158,55 +126,55 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      * @param value Value to set for the format property.
      */
     public void setFormat(@jakarta.annotation.Nullable final WorkbookChartAxisFormat value) {
-        this.format = value;
+        this.backingStore.set("format", value);
     }
     /**
      * Sets the majorGridlines property value. Returns a gridlines object that represents the major gridlines for the specified axis. Read-only.
      * @param value Value to set for the majorGridlines property.
      */
     public void setMajorGridlines(@jakarta.annotation.Nullable final WorkbookChartGridlines value) {
-        this.majorGridlines = value;
+        this.backingStore.set("majorGridlines", value);
     }
     /**
      * Sets the majorUnit property value. Represents the interval between two major tick marks. Can be set to a numeric value or an empty string.  The returned value is always a number.
      * @param value Value to set for the majorUnit property.
      */
     public void setMajorUnit(@jakarta.annotation.Nullable final Json value) {
-        this.majorUnit = value;
+        this.backingStore.set("majorUnit", value);
     }
     /**
      * Sets the maximum property value. Represents the maximum value on the value axis.  Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
      * @param value Value to set for the maximum property.
      */
     public void setMaximum(@jakarta.annotation.Nullable final Json value) {
-        this.maximum = value;
+        this.backingStore.set("maximum", value);
     }
     /**
      * Sets the minimum property value. Represents the minimum value on the value axis. Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
      * @param value Value to set for the minimum property.
      */
     public void setMinimum(@jakarta.annotation.Nullable final Json value) {
-        this.minimum = value;
+        this.backingStore.set("minimum", value);
     }
     /**
      * Sets the minorGridlines property value. Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
      * @param value Value to set for the minorGridlines property.
      */
     public void setMinorGridlines(@jakarta.annotation.Nullable final WorkbookChartGridlines value) {
-        this.minorGridlines = value;
+        this.backingStore.set("minorGridlines", value);
     }
     /**
      * Sets the minorUnit property value. Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number.
      * @param value Value to set for the minorUnit property.
      */
     public void setMinorUnit(@jakarta.annotation.Nullable final Json value) {
-        this.minorUnit = value;
+        this.backingStore.set("minorUnit", value);
     }
     /**
      * Sets the title property value. Represents the axis title. Read-only.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final WorkbookChartAxisTitle value) {
-        this.title = value;
+        this.backingStore.set("title", value);
     }
 }

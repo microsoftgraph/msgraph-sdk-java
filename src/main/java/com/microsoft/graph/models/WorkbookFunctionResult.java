@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookFunctionResult extends Entity implements Parsable {
     /**
-     * The error property
-     */
-    private String error;
-    /**
-     * The value property
-     */
-    private Json value;
-    /**
      * Instantiates a new WorkbookFunctionResult and sets the default values.
      */
     public WorkbookFunctionResult() {
@@ -38,7 +30,7 @@ public class WorkbookFunctionResult extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getError() {
-        return this.error;
+        return this.backingStore.get("error");
     }
     /**
      * The deserialization information for the current model
@@ -57,7 +49,7 @@ public class WorkbookFunctionResult extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class WorkbookFunctionResult extends Entity implements Parsable {
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final String value) {
-        this.error = value;
+        this.backingStore.set("error", value);
     }
     /**
      * Sets the value property value. The value property
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final Json value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

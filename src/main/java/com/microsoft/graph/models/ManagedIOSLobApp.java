@@ -13,30 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedIOSLobApp extends ManagedMobileLobApp implements Parsable {
     /**
-     * Contains properties of the possible iOS device types the mobile app can run on.
-     */
-    private IosDeviceType applicableDeviceType;
-    /**
-     * The build number of managed iOS Line of Business (LoB) app.
-     */
-    private String buildNumber;
-    /**
-     * The Identity Name.
-     */
-    private String bundleId;
-    /**
-     * The expiration time.
-     */
-    private OffsetDateTime expirationDateTime;
-    /**
-     * The value for the minimum applicable operating system.
-     */
-    private IosMinimumOperatingSystem minimumSupportedOperatingSystem;
-    /**
-     * The version number of managed iOS Line of Business (LoB) app.
-     */
-    private String versionNumber;
-    /**
      * Instantiates a new ManagedIOSLobApp and sets the default values.
      */
     public ManagedIOSLobApp() {
@@ -59,7 +35,7 @@ public class ManagedIOSLobApp extends ManagedMobileLobApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IosDeviceType getApplicableDeviceType() {
-        return this.applicableDeviceType;
+        return this.backingStore.get("applicableDeviceType");
     }
     /**
      * Gets the buildNumber property value. The build number of managed iOS Line of Business (LoB) app.
@@ -67,7 +43,7 @@ public class ManagedIOSLobApp extends ManagedMobileLobApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getBuildNumber() {
-        return this.buildNumber;
+        return this.backingStore.get("buildNumber");
     }
     /**
      * Gets the bundleId property value. The Identity Name.
@@ -75,7 +51,7 @@ public class ManagedIOSLobApp extends ManagedMobileLobApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getBundleId() {
-        return this.bundleId;
+        return this.backingStore.get("bundleId");
     }
     /**
      * Gets the expirationDateTime property value. The expiration time.
@@ -83,7 +59,7 @@ public class ManagedIOSLobApp extends ManagedMobileLobApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this.expirationDateTime;
+        return this.backingStore.get("expirationDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -106,7 +82,7 @@ public class ManagedIOSLobApp extends ManagedMobileLobApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IosMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
-        return this.minimumSupportedOperatingSystem;
+        return this.backingStore.get("minimumSupportedOperatingSystem");
     }
     /**
      * Gets the versionNumber property value. The version number of managed iOS Line of Business (LoB) app.
@@ -114,7 +90,7 @@ public class ManagedIOSLobApp extends ManagedMobileLobApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getVersionNumber() {
-        return this.versionNumber;
+        return this.backingStore.get("versionNumber");
     }
     /**
      * Serializes information the current object
@@ -135,41 +111,41 @@ public class ManagedIOSLobApp extends ManagedMobileLobApp implements Parsable {
      * @param value Value to set for the applicableDeviceType property.
      */
     public void setApplicableDeviceType(@jakarta.annotation.Nullable final IosDeviceType value) {
-        this.applicableDeviceType = value;
+        this.backingStore.set("applicableDeviceType", value);
     }
     /**
      * Sets the buildNumber property value. The build number of managed iOS Line of Business (LoB) app.
      * @param value Value to set for the buildNumber property.
      */
     public void setBuildNumber(@jakarta.annotation.Nullable final String value) {
-        this.buildNumber = value;
+        this.backingStore.set("buildNumber", value);
     }
     /**
      * Sets the bundleId property value. The Identity Name.
      * @param value Value to set for the bundleId property.
      */
     public void setBundleId(@jakarta.annotation.Nullable final String value) {
-        this.bundleId = value;
+        this.backingStore.set("bundleId", value);
     }
     /**
      * Sets the expirationDateTime property value. The expiration time.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.expirationDateTime = value;
+        this.backingStore.set("expirationDateTime", value);
     }
     /**
      * Sets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      */
     public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final IosMinimumOperatingSystem value) {
-        this.minimumSupportedOperatingSystem = value;
+        this.backingStore.set("minimumSupportedOperatingSystem", value);
     }
     /**
      * Sets the versionNumber property value. The version number of managed iOS Line of Business (LoB) app.
      * @param value Value to set for the versionNumber property.
      */
     public void setVersionNumber(@jakarta.annotation.Nullable final String value) {
-        this.versionNumber = value;
+        this.backingStore.set("versionNumber", value);
     }
 }

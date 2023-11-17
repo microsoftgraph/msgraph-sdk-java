@@ -4,32 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, Parsable {
+public class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The displayName property
-     */
-    private String displayName;
-    /**
-     * The mailNickname property
-     */
-    private String mailNickname;
-    /**
-     * The onBehalfOfUserId property
-     */
-    private UUID onBehalfOfUserId;
+    private BackingStore backingStore;
     /**
      * Instantiates a new ValidatePropertiesPostRequestBody and sets the default values.
      */
     public ValidatePropertiesPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -48,7 +40,20 @@ public class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, 
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the displayName property value. The displayName property
@@ -56,7 +61,7 @@ public class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, 
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -76,7 +81,7 @@ public class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, 
      */
     @jakarta.annotation.Nullable
     public String getMailNickname() {
-        return this.mailNickname;
+        return this.backingStore.get("mailNickname");
     }
     /**
      * Gets the onBehalfOfUserId property value. The onBehalfOfUserId property
@@ -84,7 +89,7 @@ public class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, 
      */
     @jakarta.annotation.Nullable
     public UUID getOnBehalfOfUserId() {
-        return this.onBehalfOfUserId;
+        return this.backingStore.get("onBehalfOfUserId");
     }
     /**
      * Serializes information the current object
@@ -102,27 +107,35 @@ public class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the mailNickname property value. The mailNickname property
      * @param value Value to set for the mailNickname property.
      */
     public void setMailNickname(@jakarta.annotation.Nullable final String value) {
-        this.mailNickname = value;
+        this.backingStore.set("mailNickname", value);
     }
     /**
      * Sets the onBehalfOfUserId property value. The onBehalfOfUserId property
      * @param value Value to set for the onBehalfOfUserId property.
      */
     public void setOnBehalfOfUserId(@jakarta.annotation.Nullable final UUID value) {
-        this.onBehalfOfUserId = value;
+        this.backingStore.set("onBehalfOfUserId", value);
     }
 }

@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceProvisioningXmlError extends ServiceProvisioningError implements Parsable {
     /**
-     * The errorDetail property
-     */
-    private String errorDetail;
-    /**
      * Instantiates a new ServiceProvisioningXmlError and sets the default values.
      */
     public ServiceProvisioningXmlError() {
@@ -35,7 +31,7 @@ public class ServiceProvisioningXmlError extends ServiceProvisioningError implem
      */
     @jakarta.annotation.Nullable
     public String getErrorDetail() {
-        return this.errorDetail;
+        return this.backingStore.get("errorDetail");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class ServiceProvisioningXmlError extends ServiceProvisioningError implem
      * @param value Value to set for the errorDetail property.
      */
     public void setErrorDetail(@jakarta.annotation.Nullable final String value) {
-        this.errorDetail = value;
+        this.backingStore.set("errorDetail", value);
     }
 }

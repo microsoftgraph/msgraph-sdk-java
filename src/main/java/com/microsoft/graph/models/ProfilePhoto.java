@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProfilePhoto extends Entity implements Parsable {
     /**
-     * The height of the photo. Read-only.
-     */
-    private Integer height;
-    /**
-     * The width of the photo. Read-only.
-     */
-    private Integer width;
-    /**
      * Instantiates a new ProfilePhoto and sets the default values.
      */
     public ProfilePhoto() {
@@ -49,7 +41,7 @@ public class ProfilePhoto extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getHeight() {
-        return this.height;
+        return this.backingStore.get("height");
     }
     /**
      * Gets the width property value. The width of the photo. Read-only.
@@ -57,7 +49,7 @@ public class ProfilePhoto extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getWidth() {
-        return this.width;
+        return this.backingStore.get("width");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class ProfilePhoto extends Entity implements Parsable {
      * @param value Value to set for the height property.
      */
     public void setHeight(@jakarta.annotation.Nullable final Integer value) {
-        this.height = value;
+        this.backingStore.set("height", value);
     }
     /**
      * Sets the width property value. The width of the photo. Read-only.
      * @param value Value to set for the width property.
      */
     public void setWidth(@jakarta.annotation.Nullable final Integer value) {
-        this.width = value;
+        this.backingStore.set("width", value);
     }
 }

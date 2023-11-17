@@ -13,22 +13,6 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnPremisesConditionalAccessSettings extends Entity implements Parsable {
     /**
-     * Indicates if on premises conditional access is enabled for this organization
-     */
-    private Boolean enabled;
-    /**
-     * User groups that will be exempt by on premises conditional access. All users in these groups will be exempt from the conditional access policy.
-     */
-    private java.util.List<UUID> excludedGroups;
-    /**
-     * User groups that will be targeted by on premises conditional access. All users in these groups will be required to have mobile device managed and compliant for mail access.
-     */
-    private java.util.List<UUID> includedGroups;
-    /**
-     * Override the default access rule when allowing a device to ensure access is granted.
-     */
-    private Boolean overrideDefaultRule;
-    /**
      * Instantiates a new OnPremisesConditionalAccessSettings and sets the default values.
      */
     public OnPremisesConditionalAccessSettings() {
@@ -50,7 +34,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public Boolean getEnabled() {
-        return this.enabled;
+        return this.backingStore.get("enabled");
     }
     /**
      * Gets the excludedGroups property value. User groups that will be exempt by on premises conditional access. All users in these groups will be exempt from the conditional access policy.
@@ -58,7 +42,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public java.util.List<UUID> getExcludedGroups() {
-        return this.excludedGroups;
+        return this.backingStore.get("excludedGroups");
     }
     /**
      * The deserialization information for the current model
@@ -79,7 +63,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public java.util.List<UUID> getIncludedGroups() {
-        return this.includedGroups;
+        return this.backingStore.get("includedGroups");
     }
     /**
      * Gets the overrideDefaultRule property value. Override the default access rule when allowing a device to ensure access is granted.
@@ -87,7 +71,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public Boolean getOverrideDefaultRule() {
-        return this.overrideDefaultRule;
+        return this.backingStore.get("overrideDefaultRule");
     }
     /**
      * Serializes information the current object
@@ -106,27 +90,27 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
      * @param value Value to set for the enabled property.
      */
     public void setEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.enabled = value;
+        this.backingStore.set("enabled", value);
     }
     /**
      * Sets the excludedGroups property value. User groups that will be exempt by on premises conditional access. All users in these groups will be exempt from the conditional access policy.
      * @param value Value to set for the excludedGroups property.
      */
     public void setExcludedGroups(@jakarta.annotation.Nullable final java.util.List<UUID> value) {
-        this.excludedGroups = value;
+        this.backingStore.set("excludedGroups", value);
     }
     /**
      * Sets the includedGroups property value. User groups that will be targeted by on premises conditional access. All users in these groups will be required to have mobile device managed and compliant for mail access.
      * @param value Value to set for the includedGroups property.
      */
     public void setIncludedGroups(@jakarta.annotation.Nullable final java.util.List<UUID> value) {
-        this.includedGroups = value;
+        this.backingStore.set("includedGroups", value);
     }
     /**
      * Sets the overrideDefaultRule property value. Override the default access rule when allowing a device to ensure access is granted.
      * @param value Value to set for the overrideDefaultRule property.
      */
     public void setOverrideDefaultRule(@jakarta.annotation.Nullable final Boolean value) {
-        this.overrideDefaultRule = value;
+        this.backingStore.set("overrideDefaultRule", value);
     }
 }

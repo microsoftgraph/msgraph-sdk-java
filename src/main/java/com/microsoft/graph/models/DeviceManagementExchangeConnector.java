@@ -13,42 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementExchangeConnector extends Entity implements Parsable {
     /**
-     * The name of the server hosting the Exchange Connector.
-     */
-    private String connectorServerName;
-    /**
-     * An alias assigned to the Exchange server
-     */
-    private String exchangeAlias;
-    /**
-     * The type of Exchange Connector.
-     */
-    private DeviceManagementExchangeConnectorType exchangeConnectorType;
-    /**
-     * Exchange Organization to the Exchange server
-     */
-    private String exchangeOrganization;
-    /**
-     * Last sync time for the Exchange Connector
-     */
-    private OffsetDateTime lastSyncDateTime;
-    /**
-     * Email address used to configure the Service To Service Exchange Connector.
-     */
-    private String primarySmtpAddress;
-    /**
-     * The name of the Exchange server.
-     */
-    private String serverName;
-    /**
-     * The current status of the Exchange Connector.
-     */
-    private DeviceManagementExchangeConnectorStatus status;
-    /**
-     * The version of the ExchangeConnectorAgent
-     */
-    private String version;
-    /**
      * Instantiates a new DeviceManagementExchangeConnector and sets the default values.
      */
     public DeviceManagementExchangeConnector() {
@@ -70,7 +34,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public String getConnectorServerName() {
-        return this.connectorServerName;
+        return this.backingStore.get("connectorServerName");
     }
     /**
      * Gets the exchangeAlias property value. An alias assigned to the Exchange server
@@ -78,7 +42,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public String getExchangeAlias() {
-        return this.exchangeAlias;
+        return this.backingStore.get("exchangeAlias");
     }
     /**
      * Gets the exchangeConnectorType property value. The type of Exchange Connector.
@@ -86,7 +50,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public DeviceManagementExchangeConnectorType getExchangeConnectorType() {
-        return this.exchangeConnectorType;
+        return this.backingStore.get("exchangeConnectorType");
     }
     /**
      * Gets the exchangeOrganization property value. Exchange Organization to the Exchange server
@@ -94,7 +58,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public String getExchangeOrganization() {
-        return this.exchangeOrganization;
+        return this.backingStore.get("exchangeOrganization");
     }
     /**
      * The deserialization information for the current model
@@ -120,7 +84,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
-        return this.lastSyncDateTime;
+        return this.backingStore.get("lastSyncDateTime");
     }
     /**
      * Gets the primarySmtpAddress property value. Email address used to configure the Service To Service Exchange Connector.
@@ -128,7 +92,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public String getPrimarySmtpAddress() {
-        return this.primarySmtpAddress;
+        return this.backingStore.get("primarySmtpAddress");
     }
     /**
      * Gets the serverName property value. The name of the Exchange server.
@@ -136,7 +100,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public String getServerName() {
-        return this.serverName;
+        return this.backingStore.get("serverName");
     }
     /**
      * Gets the status property value. The current status of the Exchange Connector.
@@ -144,7 +108,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public DeviceManagementExchangeConnectorStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Gets the version property value. The version of the ExchangeConnectorAgent
@@ -152,7 +116,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
-        return this.version;
+        return this.backingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -176,62 +140,62 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      * @param value Value to set for the connectorServerName property.
      */
     public void setConnectorServerName(@jakarta.annotation.Nullable final String value) {
-        this.connectorServerName = value;
+        this.backingStore.set("connectorServerName", value);
     }
     /**
      * Sets the exchangeAlias property value. An alias assigned to the Exchange server
      * @param value Value to set for the exchangeAlias property.
      */
     public void setExchangeAlias(@jakarta.annotation.Nullable final String value) {
-        this.exchangeAlias = value;
+        this.backingStore.set("exchangeAlias", value);
     }
     /**
      * Sets the exchangeConnectorType property value. The type of Exchange Connector.
      * @param value Value to set for the exchangeConnectorType property.
      */
     public void setExchangeConnectorType(@jakarta.annotation.Nullable final DeviceManagementExchangeConnectorType value) {
-        this.exchangeConnectorType = value;
+        this.backingStore.set("exchangeConnectorType", value);
     }
     /**
      * Sets the exchangeOrganization property value. Exchange Organization to the Exchange server
      * @param value Value to set for the exchangeOrganization property.
      */
     public void setExchangeOrganization(@jakarta.annotation.Nullable final String value) {
-        this.exchangeOrganization = value;
+        this.backingStore.set("exchangeOrganization", value);
     }
     /**
      * Sets the lastSyncDateTime property value. Last sync time for the Exchange Connector
      * @param value Value to set for the lastSyncDateTime property.
      */
     public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSyncDateTime = value;
+        this.backingStore.set("lastSyncDateTime", value);
     }
     /**
      * Sets the primarySmtpAddress property value. Email address used to configure the Service To Service Exchange Connector.
      * @param value Value to set for the primarySmtpAddress property.
      */
     public void setPrimarySmtpAddress(@jakarta.annotation.Nullable final String value) {
-        this.primarySmtpAddress = value;
+        this.backingStore.set("primarySmtpAddress", value);
     }
     /**
      * Sets the serverName property value. The name of the Exchange server.
      * @param value Value to set for the serverName property.
      */
     public void setServerName(@jakarta.annotation.Nullable final String value) {
-        this.serverName = value;
+        this.backingStore.set("serverName", value);
     }
     /**
      * Sets the status property value. The current status of the Exchange Connector.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final DeviceManagementExchangeConnectorStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
     /**
      * Sets the version property value. The version of the ExchangeConnectorAgent
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {
-        this.version = value;
+        this.backingStore.set("version", value);
     }
 }
