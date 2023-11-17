@@ -4,31 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ConditionalAccessLocations implements AdditionalDataHolder, Parsable {
+public class ConditionalAccessLocations implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Location IDs excluded from scope of policy.
-     */
-    private java.util.List<String> excludeLocations;
-    /**
-     * Location IDs in scope of policy unless explicitly excluded, All, or AllTrusted.
-     */
-    private java.util.List<String> includeLocations;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new ConditionalAccessLocations and sets the default values.
      */
     public ConditionalAccessLocations() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +40,20 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the excludeLocations property value. Location IDs excluded from scope of policy.
@@ -55,7 +61,7 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExcludeLocations() {
-        return this.excludeLocations;
+        return this.backingStore.get("excludeLocations");
     }
     /**
      * The deserialization information for the current model
@@ -75,7 +81,7 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getIncludeLocations() {
-        return this.includeLocations;
+        return this.backingStore.get("includeLocations");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -83,7 +89,7 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -101,27 +107,35 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the excludeLocations property value. Location IDs excluded from scope of policy.
      * @param value Value to set for the excludeLocations property.
      */
     public void setExcludeLocations(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.excludeLocations = value;
+        this.backingStore.set("excludeLocations", value);
     }
     /**
      * Sets the includeLocations property value. Location IDs in scope of policy unless explicitly excluded, All, or AllTrusted.
      * @param value Value to set for the includeLocations property.
      */
     public void setIncludeLocations(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.includeLocations = value;
+        this.backingStore.set("includeLocations", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

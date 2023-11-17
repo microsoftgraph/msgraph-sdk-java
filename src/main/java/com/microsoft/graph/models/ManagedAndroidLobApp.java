@@ -12,22 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsable {
     /**
-     * The value for the minimum applicable operating system.
-     */
-    private AndroidMinimumOperatingSystem minimumSupportedOperatingSystem;
-    /**
-     * The package identifier.
-     */
-    private String packageId;
-    /**
-     * The version code of managed Android Line of Business (LoB) app.
-     */
-    private String versionCode;
-    /**
-     * The version name of managed Android Line of Business (LoB) app.
-     */
-    private String versionName;
-    /**
      * Instantiates a new ManagedAndroidLobApp and sets the default values.
      */
     public ManagedAndroidLobApp() {
@@ -63,7 +47,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      */
     @jakarta.annotation.Nullable
     public AndroidMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
-        return this.minimumSupportedOperatingSystem;
+        return this.backingStore.get("minimumSupportedOperatingSystem");
     }
     /**
      * Gets the packageId property value. The package identifier.
@@ -71,7 +55,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      */
     @jakarta.annotation.Nullable
     public String getPackageId() {
-        return this.packageId;
+        return this.backingStore.get("packageId");
     }
     /**
      * Gets the versionCode property value. The version code of managed Android Line of Business (LoB) app.
@@ -79,7 +63,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      */
     @jakarta.annotation.Nullable
     public String getVersionCode() {
-        return this.versionCode;
+        return this.backingStore.get("versionCode");
     }
     /**
      * Gets the versionName property value. The version name of managed Android Line of Business (LoB) app.
@@ -87,7 +71,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      */
     @jakarta.annotation.Nullable
     public String getVersionName() {
-        return this.versionName;
+        return this.backingStore.get("versionName");
     }
     /**
      * Serializes information the current object
@@ -106,27 +90,27 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      */
     public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final AndroidMinimumOperatingSystem value) {
-        this.minimumSupportedOperatingSystem = value;
+        this.backingStore.set("minimumSupportedOperatingSystem", value);
     }
     /**
      * Sets the packageId property value. The package identifier.
      * @param value Value to set for the packageId property.
      */
     public void setPackageId(@jakarta.annotation.Nullable final String value) {
-        this.packageId = value;
+        this.backingStore.set("packageId", value);
     }
     /**
      * Sets the versionCode property value. The version code of managed Android Line of Business (LoB) app.
      * @param value Value to set for the versionCode property.
      */
     public void setVersionCode(@jakarta.annotation.Nullable final String value) {
-        this.versionCode = value;
+        this.backingStore.set("versionCode", value);
     }
     /**
      * Sets the versionName property value. The version name of managed Android Line of Business (LoB) app.
      * @param value Value to set for the versionName property.
      */
     public void setVersionName(@jakarta.annotation.Nullable final String value) {
-        this.versionName = value;
+        this.backingStore.set("versionName", value);
     }
 }

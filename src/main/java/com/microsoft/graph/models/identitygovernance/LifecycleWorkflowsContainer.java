@@ -11,30 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LifecycleWorkflowsContainer extends Entity implements Parsable {
     /**
-     * The customTaskExtension instance.
-     */
-    private java.util.List<CustomTaskExtension> customTaskExtensions;
-    /**
-     * Deleted workflows in your lifecycle workflows instance.
-     */
-    private DeletedItemContainer deletedItems;
-    /**
-     * The settings property
-     */
-    private LifecycleManagementSettings settings;
-    /**
-     * The definition of tasks within the lifecycle workflows instance.
-     */
-    private java.util.List<TaskDefinition> taskDefinitions;
-    /**
-     * The workflows in the lifecycle workflows instance.
-     */
-    private java.util.List<Workflow> workflows;
-    /**
-     * The workflow templates in the lifecycle workflow instance.
-     */
-    private java.util.List<WorkflowTemplate> workflowTemplates;
-    /**
      * Instantiates a new LifecycleWorkflowsContainer and sets the default values.
      */
     public LifecycleWorkflowsContainer() {
@@ -56,7 +32,7 @@ public class LifecycleWorkflowsContainer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomTaskExtension> getCustomTaskExtensions() {
-        return this.customTaskExtensions;
+        return this.backingStore.get("customTaskExtensions");
     }
     /**
      * Gets the deletedItems property value. Deleted workflows in your lifecycle workflows instance.
@@ -64,7 +40,7 @@ public class LifecycleWorkflowsContainer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DeletedItemContainer getDeletedItems() {
-        return this.deletedItems;
+        return this.backingStore.get("deletedItems");
     }
     /**
      * The deserialization information for the current model
@@ -87,7 +63,7 @@ public class LifecycleWorkflowsContainer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LifecycleManagementSettings getSettings() {
-        return this.settings;
+        return this.backingStore.get("settings");
     }
     /**
      * Gets the taskDefinitions property value. The definition of tasks within the lifecycle workflows instance.
@@ -95,7 +71,7 @@ public class LifecycleWorkflowsContainer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<TaskDefinition> getTaskDefinitions() {
-        return this.taskDefinitions;
+        return this.backingStore.get("taskDefinitions");
     }
     /**
      * Gets the workflows property value. The workflows in the lifecycle workflows instance.
@@ -103,7 +79,7 @@ public class LifecycleWorkflowsContainer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Workflow> getWorkflows() {
-        return this.workflows;
+        return this.backingStore.get("workflows");
     }
     /**
      * Gets the workflowTemplates property value. The workflow templates in the lifecycle workflow instance.
@@ -111,7 +87,7 @@ public class LifecycleWorkflowsContainer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkflowTemplate> getWorkflowTemplates() {
-        return this.workflowTemplates;
+        return this.backingStore.get("workflowTemplates");
     }
     /**
      * Serializes information the current object
@@ -132,41 +108,41 @@ public class LifecycleWorkflowsContainer extends Entity implements Parsable {
      * @param value Value to set for the customTaskExtensions property.
      */
     public void setCustomTaskExtensions(@jakarta.annotation.Nullable final java.util.List<CustomTaskExtension> value) {
-        this.customTaskExtensions = value;
+        this.backingStore.set("customTaskExtensions", value);
     }
     /**
      * Sets the deletedItems property value. Deleted workflows in your lifecycle workflows instance.
      * @param value Value to set for the deletedItems property.
      */
     public void setDeletedItems(@jakarta.annotation.Nullable final DeletedItemContainer value) {
-        this.deletedItems = value;
+        this.backingStore.set("deletedItems", value);
     }
     /**
      * Sets the settings property value. The settings property
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final LifecycleManagementSettings value) {
-        this.settings = value;
+        this.backingStore.set("settings", value);
     }
     /**
      * Sets the taskDefinitions property value. The definition of tasks within the lifecycle workflows instance.
      * @param value Value to set for the taskDefinitions property.
      */
     public void setTaskDefinitions(@jakarta.annotation.Nullable final java.util.List<TaskDefinition> value) {
-        this.taskDefinitions = value;
+        this.backingStore.set("taskDefinitions", value);
     }
     /**
      * Sets the workflows property value. The workflows in the lifecycle workflows instance.
      * @param value Value to set for the workflows property.
      */
     public void setWorkflows(@jakarta.annotation.Nullable final java.util.List<Workflow> value) {
-        this.workflows = value;
+        this.backingStore.set("workflows", value);
     }
     /**
      * Sets the workflowTemplates property value. The workflow templates in the lifecycle workflow instance.
      * @param value Value to set for the workflowTemplates property.
      */
     public void setWorkflowTemplates(@jakarta.annotation.Nullable final java.util.List<WorkflowTemplate> value) {
-        this.workflowTemplates = value;
+        this.backingStore.set("workflowTemplates", value);
     }
 }

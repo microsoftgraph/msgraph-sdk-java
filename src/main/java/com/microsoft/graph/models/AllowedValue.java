@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AllowedValue extends Entity implements Parsable {
     /**
-     * Indicates whether the predefined value is active or deactivated. If set to false, this predefined value can't be assigned to any other supported directory objects.
-     */
-    private Boolean isActive;
-    /**
      * Instantiates a new AllowedValue and sets the default values.
      */
     public AllowedValue() {
@@ -44,7 +40,7 @@ public class AllowedValue extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsActive() {
-        return this.isActive;
+        return this.backingStore.get("isActive");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AllowedValue extends Entity implements Parsable {
      * @param value Value to set for the isActive property.
      */
     public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {
-        this.isActive = value;
+        this.backingStore.set("isActive", value);
     }
 }

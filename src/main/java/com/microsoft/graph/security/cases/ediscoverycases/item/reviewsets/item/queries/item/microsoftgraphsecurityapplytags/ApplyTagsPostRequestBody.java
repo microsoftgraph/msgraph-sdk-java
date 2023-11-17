@@ -5,27 +5,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ApplyTagsPostRequestBody implements AdditionalDataHolder, Parsable {
+public class ApplyTagsPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The tagsToAdd property
-     */
-    private java.util.List<EdiscoveryReviewTag> tagsToAdd;
-    /**
-     * The tagsToRemove property
-     */
-    private java.util.List<EdiscoveryReviewTag> tagsToRemove;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new ApplyTagsPostRequestBody and sets the default values.
      */
     public ApplyTagsPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -44,7 +41,20 @@ public class ApplyTagsPostRequestBody implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -63,7 +73,7 @@ public class ApplyTagsPostRequestBody implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryReviewTag> getTagsToAdd() {
-        return this.tagsToAdd;
+        return this.backingStore.get("tagsToAdd");
     }
     /**
      * Gets the tagsToRemove property value. The tagsToRemove property
@@ -71,7 +81,7 @@ public class ApplyTagsPostRequestBody implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryReviewTag> getTagsToRemove() {
-        return this.tagsToRemove;
+        return this.backingStore.get("tagsToRemove");
     }
     /**
      * Serializes information the current object
@@ -88,20 +98,28 @@ public class ApplyTagsPostRequestBody implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the tagsToAdd property value. The tagsToAdd property
      * @param value Value to set for the tagsToAdd property.
      */
     public void setTagsToAdd(@jakarta.annotation.Nullable final java.util.List<EdiscoveryReviewTag> value) {
-        this.tagsToAdd = value;
+        this.backingStore.set("tagsToAdd", value);
     }
     /**
      * Sets the tagsToRemove property value. The tagsToRemove property
      * @param value Value to set for the tagsToRemove property.
      */
     public void setTagsToRemove(@jakarta.annotation.Nullable final java.util.List<EdiscoveryReviewTag> value) {
-        this.tagsToRemove = value;
+        this.backingStore.set("tagsToRemove", value);
     }
 }

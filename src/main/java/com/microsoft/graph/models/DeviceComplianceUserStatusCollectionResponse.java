@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceComplianceUserStatusCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<DeviceComplianceUserStatus> value;
-    /**
      * Instantiates a new DeviceComplianceUserStatusCollectionResponse and sets the default values.
      */
     public DeviceComplianceUserStatusCollectionResponse() {
@@ -44,7 +40,7 @@ public class DeviceComplianceUserStatusCollectionResponse extends BaseCollection
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceComplianceUserStatus> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class DeviceComplianceUserStatusCollectionResponse extends BaseCollection
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<DeviceComplianceUserStatus> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

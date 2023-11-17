@@ -10,26 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CallRecording extends Entity implements Parsable {
     /**
-     * The content property
-     */
-    private byte[] content;
-    /**
-     * The createdDateTime property
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The meetingId property
-     */
-    private String meetingId;
-    /**
-     * The meetingOrganizer property
-     */
-    private IdentitySet meetingOrganizer;
-    /**
-     * The recordingContentUrl property
-     */
-    private String recordingContentUrl;
-    /**
      * Instantiates a new CallRecording and sets the default values.
      */
     public CallRecording() {
@@ -46,20 +26,20 @@ public class CallRecording extends Entity implements Parsable {
         return new CallRecording();
     }
     /**
-     * Gets the content property value. The content property
+     * Gets the content property value. The content of the recording. Read-only.
      * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
-        return this.content;
+        return this.backingStore.get("content");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Date and time at which the recording was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -76,28 +56,28 @@ public class CallRecording extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the meetingId property value. The meetingId property
+     * Gets the meetingId property value. The unique identifier of the onlineMeeting related to this recording. Read-only.
      * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMeetingId() {
-        return this.meetingId;
+        return this.backingStore.get("meetingId");
     }
     /**
-     * Gets the meetingOrganizer property value. The meetingOrganizer property
+     * Gets the meetingOrganizer property value. The identity information of the organizer of the onlineMeeting related to this recording. Read-only.
      * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getMeetingOrganizer() {
-        return this.meetingOrganizer;
+        return this.backingStore.get("meetingOrganizer");
     }
     /**
-     * Gets the recordingContentUrl property value. The recordingContentUrl property
+     * Gets the recordingContentUrl property value. The URL that can be used to access the content of the recording. Read-only.
      * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRecordingContentUrl() {
-        return this.recordingContentUrl;
+        return this.backingStore.get("recordingContentUrl");
     }
     /**
      * Serializes information the current object
@@ -113,38 +93,38 @@ public class CallRecording extends Entity implements Parsable {
         writer.writeStringValue("recordingContentUrl", this.getRecordingContentUrl());
     }
     /**
-     * Sets the content property value. The content property
+     * Sets the content property value. The content of the recording. Read-only.
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final byte[] value) {
-        this.content = value;
+        this.backingStore.set("content", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Date and time at which the recording was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the meetingId property value. The meetingId property
+     * Sets the meetingId property value. The unique identifier of the onlineMeeting related to this recording. Read-only.
      * @param value Value to set for the meetingId property.
      */
     public void setMeetingId(@jakarta.annotation.Nullable final String value) {
-        this.meetingId = value;
+        this.backingStore.set("meetingId", value);
     }
     /**
-     * Sets the meetingOrganizer property value. The meetingOrganizer property
+     * Sets the meetingOrganizer property value. The identity information of the organizer of the onlineMeeting related to this recording. Read-only.
      * @param value Value to set for the meetingOrganizer property.
      */
     public void setMeetingOrganizer(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.meetingOrganizer = value;
+        this.backingStore.set("meetingOrganizer", value);
     }
     /**
-     * Sets the recordingContentUrl property value. The recordingContentUrl property
+     * Sets the recordingContentUrl property value. The URL that can be used to access the content of the recording. Read-only.
      * @param value Value to set for the recordingContentUrl property.
      */
     public void setRecordingContentUrl(@jakarta.annotation.Nullable final String value) {
-        this.recordingContentUrl = value;
+        this.backingStore.set("recordingContentUrl", value);
     }
 }

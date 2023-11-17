@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DomainDnsUnavailableRecord extends DomainDnsRecord implements Parsable {
     /**
-     * Provides the reason why the DomainDnsUnavailableRecord entity is returned.
-     */
-    private String description;
-    /**
      * Instantiates a new DomainDnsUnavailableRecord and sets the default values.
      */
     public DomainDnsUnavailableRecord() {
@@ -34,7 +30,7 @@ public class DomainDnsUnavailableRecord extends DomainDnsRecord implements Parsa
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -60,6 +56,6 @@ public class DomainDnsUnavailableRecord extends DomainDnsRecord implements Parsa
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
 }

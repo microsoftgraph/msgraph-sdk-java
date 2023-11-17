@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RotateBitLockerKeysDeviceActionResult extends DeviceActionResult implements Parsable {
     /**
-     * RotateBitLockerKeys action error code
-     */
-    private Integer errorCode;
-    /**
      * Instantiates a new RotateBitLockerKeysDeviceActionResult and sets the default values.
      */
     public RotateBitLockerKeysDeviceActionResult() {
@@ -37,7 +33,7 @@ public class RotateBitLockerKeysDeviceActionResult extends DeviceActionResult im
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCode() {
-        return this.errorCode;
+        return this.backingStore.get("errorCode");
     }
     /**
      * The deserialization information for the current model
@@ -63,6 +59,6 @@ public class RotateBitLockerKeysDeviceActionResult extends DeviceActionResult im
      * @param value Value to set for the errorCode property.
      */
     public void setErrorCode(@jakarta.annotation.Nullable final Integer value) {
-        this.errorCode = value;
+        this.backingStore.set("errorCode", value);
     }
 }

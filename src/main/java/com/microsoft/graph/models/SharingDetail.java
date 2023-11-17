@@ -4,44 +4,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SharingDetail implements AdditionalDataHolder, Parsable {
+public class SharingDetail implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The user who shared the document.
-     */
-    private InsightIdentity sharedBy;
-    /**
-     * The date and time the file was last shared. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     */
-    private OffsetDateTime sharedDateTime;
-    /**
-     * The sharingReference property
-     */
-    private ResourceReference sharingReference;
-    /**
-     * The subject with which the document was shared.
-     */
-    private String sharingSubject;
-    /**
-     * Determines the way the document was shared, can be by a 'Link', 'Attachment', 'Group', 'Site'.
-     */
-    private String sharingType;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new SharingDetail and sets the default values.
      */
     public SharingDetail() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -60,7 +41,20 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -83,7 +77,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the sharedBy property value. The user who shared the document.
@@ -91,7 +85,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public InsightIdentity getSharedBy() {
-        return this.sharedBy;
+        return this.backingStore.get("sharedBy");
     }
     /**
      * Gets the sharedDateTime property value. The date and time the file was last shared. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -99,7 +93,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getSharedDateTime() {
-        return this.sharedDateTime;
+        return this.backingStore.get("sharedDateTime");
     }
     /**
      * Gets the sharingReference property value. The sharingReference property
@@ -107,7 +101,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public ResourceReference getSharingReference() {
-        return this.sharingReference;
+        return this.backingStore.get("sharingReference");
     }
     /**
      * Gets the sharingSubject property value. The subject with which the document was shared.
@@ -115,7 +109,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSharingSubject() {
-        return this.sharingSubject;
+        return this.backingStore.get("sharingSubject");
     }
     /**
      * Gets the sharingType property value. Determines the way the document was shared, can be by a 'Link', 'Attachment', 'Group', 'Site'.
@@ -123,7 +117,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSharingType() {
-        return this.sharingType;
+        return this.backingStore.get("sharingType");
     }
     /**
      * Serializes information the current object
@@ -143,48 +137,56 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the sharedBy property value. The user who shared the document.
      * @param value Value to set for the sharedBy property.
      */
     public void setSharedBy(@jakarta.annotation.Nullable final InsightIdentity value) {
-        this.sharedBy = value;
+        this.backingStore.set("sharedBy", value);
     }
     /**
      * Sets the sharedDateTime property value. The date and time the file was last shared. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the sharedDateTime property.
      */
     public void setSharedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.sharedDateTime = value;
+        this.backingStore.set("sharedDateTime", value);
     }
     /**
      * Sets the sharingReference property value. The sharingReference property
      * @param value Value to set for the sharingReference property.
      */
     public void setSharingReference(@jakarta.annotation.Nullable final ResourceReference value) {
-        this.sharingReference = value;
+        this.backingStore.set("sharingReference", value);
     }
     /**
      * Sets the sharingSubject property value. The subject with which the document was shared.
      * @param value Value to set for the sharingSubject property.
      */
     public void setSharingSubject(@jakarta.annotation.Nullable final String value) {
-        this.sharingSubject = value;
+        this.backingStore.set("sharingSubject", value);
     }
     /**
      * Sets the sharingType property value. Determines the way the document was shared, can be by a 'Link', 'Attachment', 'Group', 'Site'.
      * @param value Value to set for the sharingType property.
      */
     public void setSharingType(@jakarta.annotation.Nullable final String value) {
-        this.sharingType = value;
+        this.backingStore.set("sharingType", value);
     }
 }

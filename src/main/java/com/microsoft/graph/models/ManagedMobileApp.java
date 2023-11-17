@@ -12,14 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedMobileApp extends Entity implements Parsable {
     /**
-     * The identifier for an app with it's operating system type.
-     */
-    private MobileAppIdentifier mobileAppIdentifier;
-    /**
-     * Version of the entity.
-     */
-    private String version;
-    /**
      * Instantiates a new ManagedMobileApp and sets the default values.
      */
     public ManagedMobileApp() {
@@ -52,7 +44,7 @@ public class ManagedMobileApp extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public MobileAppIdentifier getMobileAppIdentifier() {
-        return this.mobileAppIdentifier;
+        return this.backingStore.get("mobileAppIdentifier");
     }
     /**
      * Gets the version property value. Version of the entity.
@@ -60,7 +52,7 @@ public class ManagedMobileApp extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
-        return this.version;
+        return this.backingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -77,13 +69,13 @@ public class ManagedMobileApp extends Entity implements Parsable {
      * @param value Value to set for the mobileAppIdentifier property.
      */
     public void setMobileAppIdentifier(@jakarta.annotation.Nullable final MobileAppIdentifier value) {
-        this.mobileAppIdentifier = value;
+        this.backingStore.set("mobileAppIdentifier", value);
     }
     /**
      * Sets the version property value. Version of the entity.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {
-        this.version = value;
+        this.backingStore.set("version", value);
     }
 }

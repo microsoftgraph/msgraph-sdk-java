@@ -13,54 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BrowserSite extends Entity implements Parsable {
     /**
-     * Controls the behavior of redirected sites. If true, indicates that the site will open in Internet Explorer 11 or Microsoft Edge even if the site is navigated to as part of a HTTP or meta refresh redirection chain.
-     */
-    private Boolean allowRedirect;
-    /**
-     * The comment for the site.
-     */
-    private String comment;
-    /**
-     * The compatibilityMode property
-     */
-    private BrowserSiteCompatibilityMode compatibilityMode;
-    /**
-     * The date and time when the site was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The date and time when the site was deleted.
-     */
-    private OffsetDateTime deletedDateTime;
-    /**
-     * The history of modifications applied to the site.
-     */
-    private java.util.List<BrowserSiteHistory> history;
-    /**
-     * The user who last modified the site.
-     */
-    private IdentitySet lastModifiedBy;
-    /**
-     * The date and time when the site was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The mergeType property
-     */
-    private BrowserSiteMergeType mergeType;
-    /**
-     * The status property
-     */
-    private BrowserSiteStatus status;
-    /**
-     * The targetEnvironment property
-     */
-    private BrowserSiteTargetEnvironment targetEnvironment;
-    /**
-     * The URL of the site.
-     */
-    private String webUrl;
-    /**
      * Instantiates a new BrowserSite and sets the default values.
      */
     public BrowserSite() {
@@ -82,7 +34,7 @@ public class BrowserSite extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowRedirect() {
-        return this.allowRedirect;
+        return this.backingStore.get("allowRedirect");
     }
     /**
      * Gets the comment property value. The comment for the site.
@@ -90,7 +42,7 @@ public class BrowserSite extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getComment() {
-        return this.comment;
+        return this.backingStore.get("comment");
     }
     /**
      * Gets the compatibilityMode property value. The compatibilityMode property
@@ -98,7 +50,7 @@ public class BrowserSite extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public BrowserSiteCompatibilityMode getCompatibilityMode() {
-        return this.compatibilityMode;
+        return this.backingStore.get("compatibilityMode");
     }
     /**
      * Gets the createdDateTime property value. The date and time when the site was created.
@@ -106,7 +58,7 @@ public class BrowserSite extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the deletedDateTime property value. The date and time when the site was deleted.
@@ -114,7 +66,7 @@ public class BrowserSite extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDeletedDateTime() {
-        return this.deletedDateTime;
+        return this.backingStore.get("deletedDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -143,7 +95,7 @@ public class BrowserSite extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<BrowserSiteHistory> getHistory() {
-        return this.history;
+        return this.backingStore.get("history");
     }
     /**
      * Gets the lastModifiedBy property value. The user who last modified the site.
@@ -151,7 +103,7 @@ public class BrowserSite extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.backingStore.get("lastModifiedBy");
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the site was last modified.
@@ -159,7 +111,7 @@ public class BrowserSite extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the mergeType property value. The mergeType property
@@ -167,7 +119,7 @@ public class BrowserSite extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public BrowserSiteMergeType getMergeType() {
-        return this.mergeType;
+        return this.backingStore.get("mergeType");
     }
     /**
      * Gets the status property value. The status property
@@ -175,7 +127,7 @@ public class BrowserSite extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public BrowserSiteStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Gets the targetEnvironment property value. The targetEnvironment property
@@ -183,7 +135,7 @@ public class BrowserSite extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public BrowserSiteTargetEnvironment getTargetEnvironment() {
-        return this.targetEnvironment;
+        return this.backingStore.get("targetEnvironment");
     }
     /**
      * Gets the webUrl property value. The URL of the site.
@@ -191,7 +143,7 @@ public class BrowserSite extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {
-        return this.webUrl;
+        return this.backingStore.get("webUrl");
     }
     /**
      * Serializes information the current object
@@ -218,83 +170,83 @@ public class BrowserSite extends Entity implements Parsable {
      * @param value Value to set for the allowRedirect property.
      */
     public void setAllowRedirect(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowRedirect = value;
+        this.backingStore.set("allowRedirect", value);
     }
     /**
      * Sets the comment property value. The comment for the site.
      * @param value Value to set for the comment property.
      */
     public void setComment(@jakarta.annotation.Nullable final String value) {
-        this.comment = value;
+        this.backingStore.set("comment", value);
     }
     /**
      * Sets the compatibilityMode property value. The compatibilityMode property
      * @param value Value to set for the compatibilityMode property.
      */
     public void setCompatibilityMode(@jakarta.annotation.Nullable final BrowserSiteCompatibilityMode value) {
-        this.compatibilityMode = value;
+        this.backingStore.set("compatibilityMode", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time when the site was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the deletedDateTime property value. The date and time when the site was deleted.
      * @param value Value to set for the deletedDateTime property.
      */
     public void setDeletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.deletedDateTime = value;
+        this.backingStore.set("deletedDateTime", value);
     }
     /**
      * Sets the history property value. The history of modifications applied to the site.
      * @param value Value to set for the history property.
      */
     public void setHistory(@jakarta.annotation.Nullable final java.util.List<BrowserSiteHistory> value) {
-        this.history = value;
+        this.backingStore.set("history", value);
     }
     /**
      * Sets the lastModifiedBy property value. The user who last modified the site.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.lastModifiedBy = value;
+        this.backingStore.set("lastModifiedBy", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the site was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the mergeType property value. The mergeType property
      * @param value Value to set for the mergeType property.
      */
     public void setMergeType(@jakarta.annotation.Nullable final BrowserSiteMergeType value) {
-        this.mergeType = value;
+        this.backingStore.set("mergeType", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final BrowserSiteStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
     /**
      * Sets the targetEnvironment property value. The targetEnvironment property
      * @param value Value to set for the targetEnvironment property.
      */
     public void setTargetEnvironment(@jakarta.annotation.Nullable final BrowserSiteTargetEnvironment value) {
-        this.targetEnvironment = value;
+        this.backingStore.set("targetEnvironment", value);
     }
     /**
      * Sets the webUrl property value. The URL of the site.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.webUrl = value;
+        this.backingStore.set("webUrl", value);
     }
 }

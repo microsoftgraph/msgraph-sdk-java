@@ -5,31 +5,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ComplexPostRequestBody implements AdditionalDataHolder, Parsable {
+public class ComplexPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The iNum property
-     */
-    private Json iNum;
-    /**
-     * The realNum property
-     */
-    private Json realNum;
-    /**
-     * The suffix property
-     */
-    private Json suffix;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new ComplexPostRequestBody and sets the default values.
      */
     public ComplexPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -48,7 +41,20 @@ public class ComplexPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -68,7 +74,7 @@ public class ComplexPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getINum() {
-        return this.iNum;
+        return this.backingStore.get("iNum");
     }
     /**
      * Gets the realNum property value. The realNum property
@@ -76,7 +82,7 @@ public class ComplexPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getRealNum() {
-        return this.realNum;
+        return this.backingStore.get("realNum");
     }
     /**
      * Gets the suffix property value. The suffix property
@@ -84,7 +90,7 @@ public class ComplexPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getSuffix() {
-        return this.suffix;
+        return this.backingStore.get("suffix");
     }
     /**
      * Serializes information the current object
@@ -102,27 +108,35 @@ public class ComplexPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the iNum property value. The iNum property
      * @param value Value to set for the iNum property.
      */
     public void setINum(@jakarta.annotation.Nullable final Json value) {
-        this.iNum = value;
+        this.backingStore.set("iNum", value);
     }
     /**
      * Sets the realNum property value. The realNum property
      * @param value Value to set for the realNum property.
      */
     public void setRealNum(@jakarta.annotation.Nullable final Json value) {
-        this.realNum = value;
+        this.backingStore.set("realNum", value);
     }
     /**
      * Sets the suffix property value. The suffix property
      * @param value Value to set for the suffix property.
      */
     public void setSuffix(@jakarta.annotation.Nullable final Json value) {
-        this.suffix = value;
+        this.backingStore.set("suffix", value);
     }
 }

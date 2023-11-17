@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileAppTroubleshootingEventCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<MobileAppTroubleshootingEvent> value;
-    /**
      * Instantiates a new MobileAppTroubleshootingEventCollectionResponse and sets the default values.
      */
     public MobileAppTroubleshootingEventCollectionResponse() {
@@ -44,7 +40,7 @@ public class MobileAppTroubleshootingEventCollectionResponse extends BaseCollect
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileAppTroubleshootingEvent> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class MobileAppTroubleshootingEventCollectionResponse extends BaseCollect
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<MobileAppTroubleshootingEvent> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

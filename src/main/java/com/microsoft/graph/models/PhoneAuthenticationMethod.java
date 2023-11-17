@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PhoneAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /**
-     * The phone number to text or call for authentication. Phone numbers use the format +{country code} {number}x{extension}, with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating or updating if they don't match the required format.
-     */
-    private String phoneNumber;
-    /**
-     * The type of this phone. Possible values are: mobile, alternateMobile, or office.
-     */
-    private AuthenticationPhoneType phoneType;
-    /**
-     * Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
-     */
-    private AuthenticationMethodSignInState smsSignInState;
-    /**
      * Instantiates a new PhoneAuthenticationMethod and sets the default values.
      */
     public PhoneAuthenticationMethod() {
@@ -55,7 +43,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
      */
     @jakarta.annotation.Nullable
     public String getPhoneNumber() {
-        return this.phoneNumber;
+        return this.backingStore.get("phoneNumber");
     }
     /**
      * Gets the phoneType property value. The type of this phone. Possible values are: mobile, alternateMobile, or office.
@@ -63,7 +51,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
      */
     @jakarta.annotation.Nullable
     public AuthenticationPhoneType getPhoneType() {
-        return this.phoneType;
+        return this.backingStore.get("phoneType");
     }
     /**
      * Gets the smsSignInState property value. Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
@@ -71,7 +59,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodSignInState getSmsSignInState() {
-        return this.smsSignInState;
+        return this.backingStore.get("smsSignInState");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
      * @param value Value to set for the phoneNumber property.
      */
     public void setPhoneNumber(@jakarta.annotation.Nullable final String value) {
-        this.phoneNumber = value;
+        this.backingStore.set("phoneNumber", value);
     }
     /**
      * Sets the phoneType property value. The type of this phone. Possible values are: mobile, alternateMobile, or office.
      * @param value Value to set for the phoneType property.
      */
     public void setPhoneType(@jakarta.annotation.Nullable final AuthenticationPhoneType value) {
-        this.phoneType = value;
+        this.backingStore.set("phoneType", value);
     }
     /**
      * Sets the smsSignInState property value. Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
      * @param value Value to set for the smsSignInState property.
      */
     public void setSmsSignInState(@jakarta.annotation.Nullable final AuthenticationMethodSignInState value) {
-        this.smsSignInState = value;
+        this.backingStore.set("smsSignInState", value);
     }
 }

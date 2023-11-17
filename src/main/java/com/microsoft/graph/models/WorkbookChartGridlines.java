@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartGridlines extends Entity implements Parsable {
     /**
-     * Represents the formatting of chart gridlines. Read-only.
-     */
-    private WorkbookChartGridlinesFormat format;
-    /**
-     * Boolean value representing if the axis gridlines are visible or not.
-     */
-    private Boolean visible;
-    /**
      * Instantiates a new WorkbookChartGridlines and sets the default values.
      */
     public WorkbookChartGridlines() {
@@ -49,7 +41,7 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookChartGridlinesFormat getFormat() {
-        return this.format;
+        return this.backingStore.get("format");
     }
     /**
      * Gets the visible property value. Boolean value representing if the axis gridlines are visible or not.
@@ -57,7 +49,7 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getVisible() {
-        return this.visible;
+        return this.backingStore.get("visible");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
      * @param value Value to set for the format property.
      */
     public void setFormat(@jakarta.annotation.Nullable final WorkbookChartGridlinesFormat value) {
-        this.format = value;
+        this.backingStore.set("format", value);
     }
     /**
      * Sets the visible property value. Boolean value representing if the axis gridlines are visible or not.
      * @param value Value to set for the visible property.
      */
     public void setVisible(@jakarta.annotation.Nullable final Boolean value) {
-        this.visible = value;
+        this.backingStore.set("visible", value);
     }
 }

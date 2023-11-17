@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarget implements Parsable {
     /**
-     * The group Id that is the target of the assignment.
-     */
-    private String groupId;
-    /**
      * Instantiates a new GroupAssignmentTarget and sets the default values.
      */
     public GroupAssignmentTarget() {
@@ -55,7 +51,7 @@ public class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarge
      */
     @jakarta.annotation.Nullable
     public String getGroupId() {
-        return this.groupId;
+        return this.backingStore.get("groupId");
     }
     /**
      * Serializes information the current object
@@ -71,6 +67,6 @@ public class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarge
      * @param value Value to set for the groupId property.
      */
     public void setGroupId(@jakarta.annotation.Nullable final String value) {
-        this.groupId = value;
+        this.backingStore.set("groupId", value);
     }
 }

@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DelegatedPermissionClassificationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<DelegatedPermissionClassification> value;
-    /**
      * Instantiates a new DelegatedPermissionClassificationCollectionResponse and sets the default values.
      */
     public DelegatedPermissionClassificationCollectionResponse() {
@@ -44,7 +40,7 @@ public class DelegatedPermissionClassificationCollectionResponse extends BaseCol
      */
     @jakarta.annotation.Nullable
     public java.util.List<DelegatedPermissionClassification> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class DelegatedPermissionClassificationCollectionResponse extends BaseCol
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<DelegatedPermissionClassification> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

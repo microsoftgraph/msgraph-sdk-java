@@ -10,10 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExternalActivityResult extends ExternalActivity implements Parsable {
     /**
-     * Error information that explains the failure to process an external activity.
-     */
-    private PublicError error;
-    /**
      * Instantiates a new ExternalActivityResult and sets the default values.
      */
     public ExternalActivityResult() {
@@ -35,7 +31,7 @@ public class ExternalActivityResult extends ExternalActivity implements Parsable
      */
     @jakarta.annotation.Nullable
     public PublicError getError() {
-        return this.error;
+        return this.backingStore.get("error");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class ExternalActivityResult extends ExternalActivity implements Parsable
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final PublicError value) {
-        this.error = value;
+        this.backingStore.set("error", value);
     }
 }

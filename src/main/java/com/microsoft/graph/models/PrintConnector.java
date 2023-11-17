@@ -10,30 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintConnector extends Entity implements Parsable {
     /**
-     * The connector's version.
-     */
-    private String appVersion;
-    /**
-     * The name of the connector.
-     */
-    private String displayName;
-    /**
-     * The connector machine's hostname.
-     */
-    private String fullyQualifiedDomainName;
-    /**
-     * The physical and/or organizational location of the connector.
-     */
-    private PrinterLocation location;
-    /**
-     * The connector machine's operating system version.
-     */
-    private String operatingSystem;
-    /**
-     * The DateTimeOffset when the connector was registered.
-     */
-    private OffsetDateTime registeredDateTime;
-    /**
      * Instantiates a new PrintConnector and sets the default values.
      */
     public PrintConnector() {
@@ -55,7 +31,7 @@ public class PrintConnector extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAppVersion() {
-        return this.appVersion;
+        return this.backingStore.get("appVersion");
     }
     /**
      * Gets the displayName property value. The name of the connector.
@@ -63,7 +39,7 @@ public class PrintConnector extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -86,7 +62,7 @@ public class PrintConnector extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getFullyQualifiedDomainName() {
-        return this.fullyQualifiedDomainName;
+        return this.backingStore.get("fullyQualifiedDomainName");
     }
     /**
      * Gets the location property value. The physical and/or organizational location of the connector.
@@ -94,7 +70,7 @@ public class PrintConnector extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PrinterLocation getLocation() {
-        return this.location;
+        return this.backingStore.get("location");
     }
     /**
      * Gets the operatingSystem property value. The connector machine's operating system version.
@@ -102,7 +78,7 @@ public class PrintConnector extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystem() {
-        return this.operatingSystem;
+        return this.backingStore.get("operatingSystem");
     }
     /**
      * Gets the registeredDateTime property value. The DateTimeOffset when the connector was registered.
@@ -110,7 +86,7 @@ public class PrintConnector extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRegisteredDateTime() {
-        return this.registeredDateTime;
+        return this.backingStore.get("registeredDateTime");
     }
     /**
      * Serializes information the current object
@@ -131,41 +107,41 @@ public class PrintConnector extends Entity implements Parsable {
      * @param value Value to set for the appVersion property.
      */
     public void setAppVersion(@jakarta.annotation.Nullable final String value) {
-        this.appVersion = value;
+        this.backingStore.set("appVersion", value);
     }
     /**
      * Sets the displayName property value. The name of the connector.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the fullyQualifiedDomainName property value. The connector machine's hostname.
      * @param value Value to set for the fullyQualifiedDomainName property.
      */
     public void setFullyQualifiedDomainName(@jakarta.annotation.Nullable final String value) {
-        this.fullyQualifiedDomainName = value;
+        this.backingStore.set("fullyQualifiedDomainName", value);
     }
     /**
      * Sets the location property value. The physical and/or organizational location of the connector.
      * @param value Value to set for the location property.
      */
     public void setLocation(@jakarta.annotation.Nullable final PrinterLocation value) {
-        this.location = value;
+        this.backingStore.set("location", value);
     }
     /**
      * Sets the operatingSystem property value. The connector machine's operating system version.
      * @param value Value to set for the operatingSystem property.
      */
     public void setOperatingSystem(@jakarta.annotation.Nullable final String value) {
-        this.operatingSystem = value;
+        this.backingStore.set("operatingSystem", value);
     }
     /**
      * Sets the registeredDateTime property value. The DateTimeOffset when the connector was registered.
      * @param value Value to set for the registeredDateTime property.
      */
     public void setRegisteredDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.registeredDateTime = value;
+        this.backingStore.set("registeredDateTime", value);
     }
 }

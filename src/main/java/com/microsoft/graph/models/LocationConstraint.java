@@ -4,35 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class LocationConstraint implements AdditionalDataHolder, Parsable {
+public class LocationConstraint implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The client requests the service to include in the response a meeting location for the meeting. If this is true and all the resources are busy, findMeetingTimes won't return any meeting time suggestions. If this is false and all the resources are busy, findMeetingTimes would still look for meeting times without locations.
-     */
-    private Boolean isRequired;
-    /**
-     * Constraint information for one or more locations that the client requests for the meeting.
-     */
-    private java.util.List<LocationConstraintItem> locations;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The client requests the service to suggest one or more meeting locations.
-     */
-    private Boolean suggestLocation;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new LocationConstraint and sets the default values.
      */
     public LocationConstraint() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +40,20 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -72,7 +74,7 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRequired() {
-        return this.isRequired;
+        return this.backingStore.get("isRequired");
     }
     /**
      * Gets the locations property value. Constraint information for one or more locations that the client requests for the meeting.
@@ -80,7 +82,7 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<LocationConstraintItem> getLocations() {
-        return this.locations;
+        return this.backingStore.get("locations");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -88,7 +90,7 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the suggestLocation property value. The client requests the service to suggest one or more meeting locations.
@@ -96,7 +98,7 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getSuggestLocation() {
-        return this.suggestLocation;
+        return this.backingStore.get("suggestLocation");
     }
     /**
      * Serializes information the current object
@@ -115,34 +117,42 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the isRequired property value. The client requests the service to include in the response a meeting location for the meeting. If this is true and all the resources are busy, findMeetingTimes won't return any meeting time suggestions. If this is false and all the resources are busy, findMeetingTimes would still look for meeting times without locations.
      * @param value Value to set for the isRequired property.
      */
     public void setIsRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRequired = value;
+        this.backingStore.set("isRequired", value);
     }
     /**
      * Sets the locations property value. Constraint information for one or more locations that the client requests for the meeting.
      * @param value Value to set for the locations property.
      */
     public void setLocations(@jakarta.annotation.Nullable final java.util.List<LocationConstraintItem> value) {
-        this.locations = value;
+        this.backingStore.set("locations", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the suggestLocation property value. The client requests the service to suggest one or more meeting locations.
      * @param value Value to set for the suggestLocation property.
      */
     public void setSuggestLocation(@jakarta.annotation.Nullable final Boolean value) {
-        this.suggestLocation = value;
+        this.backingStore.set("suggestLocation", value);
     }
 }

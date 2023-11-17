@@ -4,83 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Parsable {
+public class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * First customizable extension attribute.
-     */
-    private String extensionAttribute1;
-    /**
-     * Tenth customizable extension attribute.
-     */
-    private String extensionAttribute10;
-    /**
-     * Eleventh customizable extension attribute.
-     */
-    private String extensionAttribute11;
-    /**
-     * Twelfth customizable extension attribute.
-     */
-    private String extensionAttribute12;
-    /**
-     * Thirteenth customizable extension attribute.
-     */
-    private String extensionAttribute13;
-    /**
-     * Fourteenth customizable extension attribute.
-     */
-    private String extensionAttribute14;
-    /**
-     * Fifteenth customizable extension attribute.
-     */
-    private String extensionAttribute15;
-    /**
-     * Second customizable extension attribute.
-     */
-    private String extensionAttribute2;
-    /**
-     * Third customizable extension attribute.
-     */
-    private String extensionAttribute3;
-    /**
-     * Fourth customizable extension attribute.
-     */
-    private String extensionAttribute4;
-    /**
-     * Fifth customizable extension attribute.
-     */
-    private String extensionAttribute5;
-    /**
-     * Sixth customizable extension attribute.
-     */
-    private String extensionAttribute6;
-    /**
-     * Seventh customizable extension attribute.
-     */
-    private String extensionAttribute7;
-    /**
-     * Eighth customizable extension attribute.
-     */
-    private String extensionAttribute8;
-    /**
-     * Ninth customizable extension attribute.
-     */
-    private String extensionAttribute9;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new OnPremisesExtensionAttributes and sets the default values.
      */
     public OnPremisesExtensionAttributes() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -99,7 +40,20 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the extensionAttribute1 property value. First customizable extension attribute.
@@ -107,7 +61,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute1() {
-        return this.extensionAttribute1;
+        return this.backingStore.get("extensionAttribute1");
     }
     /**
      * Gets the extensionAttribute10 property value. Tenth customizable extension attribute.
@@ -115,7 +69,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute10() {
-        return this.extensionAttribute10;
+        return this.backingStore.get("extensionAttribute10");
     }
     /**
      * Gets the extensionAttribute11 property value. Eleventh customizable extension attribute.
@@ -123,7 +77,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute11() {
-        return this.extensionAttribute11;
+        return this.backingStore.get("extensionAttribute11");
     }
     /**
      * Gets the extensionAttribute12 property value. Twelfth customizable extension attribute.
@@ -131,7 +85,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute12() {
-        return this.extensionAttribute12;
+        return this.backingStore.get("extensionAttribute12");
     }
     /**
      * Gets the extensionAttribute13 property value. Thirteenth customizable extension attribute.
@@ -139,7 +93,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute13() {
-        return this.extensionAttribute13;
+        return this.backingStore.get("extensionAttribute13");
     }
     /**
      * Gets the extensionAttribute14 property value. Fourteenth customizable extension attribute.
@@ -147,7 +101,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute14() {
-        return this.extensionAttribute14;
+        return this.backingStore.get("extensionAttribute14");
     }
     /**
      * Gets the extensionAttribute15 property value. Fifteenth customizable extension attribute.
@@ -155,7 +109,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute15() {
-        return this.extensionAttribute15;
+        return this.backingStore.get("extensionAttribute15");
     }
     /**
      * Gets the extensionAttribute2 property value. Second customizable extension attribute.
@@ -163,7 +117,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute2() {
-        return this.extensionAttribute2;
+        return this.backingStore.get("extensionAttribute2");
     }
     /**
      * Gets the extensionAttribute3 property value. Third customizable extension attribute.
@@ -171,7 +125,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute3() {
-        return this.extensionAttribute3;
+        return this.backingStore.get("extensionAttribute3");
     }
     /**
      * Gets the extensionAttribute4 property value. Fourth customizable extension attribute.
@@ -179,7 +133,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute4() {
-        return this.extensionAttribute4;
+        return this.backingStore.get("extensionAttribute4");
     }
     /**
      * Gets the extensionAttribute5 property value. Fifth customizable extension attribute.
@@ -187,7 +141,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute5() {
-        return this.extensionAttribute5;
+        return this.backingStore.get("extensionAttribute5");
     }
     /**
      * Gets the extensionAttribute6 property value. Sixth customizable extension attribute.
@@ -195,7 +149,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute6() {
-        return this.extensionAttribute6;
+        return this.backingStore.get("extensionAttribute6");
     }
     /**
      * Gets the extensionAttribute7 property value. Seventh customizable extension attribute.
@@ -203,7 +157,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute7() {
-        return this.extensionAttribute7;
+        return this.backingStore.get("extensionAttribute7");
     }
     /**
      * Gets the extensionAttribute8 property value. Eighth customizable extension attribute.
@@ -211,7 +165,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute8() {
-        return this.extensionAttribute8;
+        return this.backingStore.get("extensionAttribute8");
     }
     /**
      * Gets the extensionAttribute9 property value. Ninth customizable extension attribute.
@@ -219,7 +173,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute9() {
-        return this.extensionAttribute9;
+        return this.backingStore.get("extensionAttribute9");
     }
     /**
      * The deserialization information for the current model
@@ -252,7 +206,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -283,118 +237,126 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the extensionAttribute1 property value. First customizable extension attribute.
      * @param value Value to set for the extensionAttribute1 property.
      */
     public void setExtensionAttribute1(@jakarta.annotation.Nullable final String value) {
-        this.extensionAttribute1 = value;
+        this.backingStore.set("extensionAttribute1", value);
     }
     /**
      * Sets the extensionAttribute10 property value. Tenth customizable extension attribute.
      * @param value Value to set for the extensionAttribute10 property.
      */
     public void setExtensionAttribute10(@jakarta.annotation.Nullable final String value) {
-        this.extensionAttribute10 = value;
+        this.backingStore.set("extensionAttribute10", value);
     }
     /**
      * Sets the extensionAttribute11 property value. Eleventh customizable extension attribute.
      * @param value Value to set for the extensionAttribute11 property.
      */
     public void setExtensionAttribute11(@jakarta.annotation.Nullable final String value) {
-        this.extensionAttribute11 = value;
+        this.backingStore.set("extensionAttribute11", value);
     }
     /**
      * Sets the extensionAttribute12 property value. Twelfth customizable extension attribute.
      * @param value Value to set for the extensionAttribute12 property.
      */
     public void setExtensionAttribute12(@jakarta.annotation.Nullable final String value) {
-        this.extensionAttribute12 = value;
+        this.backingStore.set("extensionAttribute12", value);
     }
     /**
      * Sets the extensionAttribute13 property value. Thirteenth customizable extension attribute.
      * @param value Value to set for the extensionAttribute13 property.
      */
     public void setExtensionAttribute13(@jakarta.annotation.Nullable final String value) {
-        this.extensionAttribute13 = value;
+        this.backingStore.set("extensionAttribute13", value);
     }
     /**
      * Sets the extensionAttribute14 property value. Fourteenth customizable extension attribute.
      * @param value Value to set for the extensionAttribute14 property.
      */
     public void setExtensionAttribute14(@jakarta.annotation.Nullable final String value) {
-        this.extensionAttribute14 = value;
+        this.backingStore.set("extensionAttribute14", value);
     }
     /**
      * Sets the extensionAttribute15 property value. Fifteenth customizable extension attribute.
      * @param value Value to set for the extensionAttribute15 property.
      */
     public void setExtensionAttribute15(@jakarta.annotation.Nullable final String value) {
-        this.extensionAttribute15 = value;
+        this.backingStore.set("extensionAttribute15", value);
     }
     /**
      * Sets the extensionAttribute2 property value. Second customizable extension attribute.
      * @param value Value to set for the extensionAttribute2 property.
      */
     public void setExtensionAttribute2(@jakarta.annotation.Nullable final String value) {
-        this.extensionAttribute2 = value;
+        this.backingStore.set("extensionAttribute2", value);
     }
     /**
      * Sets the extensionAttribute3 property value. Third customizable extension attribute.
      * @param value Value to set for the extensionAttribute3 property.
      */
     public void setExtensionAttribute3(@jakarta.annotation.Nullable final String value) {
-        this.extensionAttribute3 = value;
+        this.backingStore.set("extensionAttribute3", value);
     }
     /**
      * Sets the extensionAttribute4 property value. Fourth customizable extension attribute.
      * @param value Value to set for the extensionAttribute4 property.
      */
     public void setExtensionAttribute4(@jakarta.annotation.Nullable final String value) {
-        this.extensionAttribute4 = value;
+        this.backingStore.set("extensionAttribute4", value);
     }
     /**
      * Sets the extensionAttribute5 property value. Fifth customizable extension attribute.
      * @param value Value to set for the extensionAttribute5 property.
      */
     public void setExtensionAttribute5(@jakarta.annotation.Nullable final String value) {
-        this.extensionAttribute5 = value;
+        this.backingStore.set("extensionAttribute5", value);
     }
     /**
      * Sets the extensionAttribute6 property value. Sixth customizable extension attribute.
      * @param value Value to set for the extensionAttribute6 property.
      */
     public void setExtensionAttribute6(@jakarta.annotation.Nullable final String value) {
-        this.extensionAttribute6 = value;
+        this.backingStore.set("extensionAttribute6", value);
     }
     /**
      * Sets the extensionAttribute7 property value. Seventh customizable extension attribute.
      * @param value Value to set for the extensionAttribute7 property.
      */
     public void setExtensionAttribute7(@jakarta.annotation.Nullable final String value) {
-        this.extensionAttribute7 = value;
+        this.backingStore.set("extensionAttribute7", value);
     }
     /**
      * Sets the extensionAttribute8 property value. Eighth customizable extension attribute.
      * @param value Value to set for the extensionAttribute8 property.
      */
     public void setExtensionAttribute8(@jakarta.annotation.Nullable final String value) {
-        this.extensionAttribute8 = value;
+        this.backingStore.set("extensionAttribute8", value);
     }
     /**
      * Sets the extensionAttribute9 property value. Ninth customizable extension attribute.
      * @param value Value to set for the extensionAttribute9 property.
      */
     public void setExtensionAttribute9(@jakarta.annotation.Nullable final String value) {
-        this.extensionAttribute9 = value;
+        this.backingStore.set("extensionAttribute9", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

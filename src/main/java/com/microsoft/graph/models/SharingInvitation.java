@@ -4,39 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SharingInvitation implements AdditionalDataHolder, Parsable {
+public class SharingInvitation implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The email address provided for the recipient of the sharing invitation. Read-only.
-     */
-    private String email;
-    /**
-     * Provides information about who sent the invitation that created this permission, if that information is available. Read-only.
-     */
-    private IdentitySet invitedBy;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The redeemedBy property
-     */
-    private String redeemedBy;
-    /**
-     * If true the recipient of the invitation needs to sign in in order to access the shared item. Read-only.
-     */
-    private Boolean signInRequired;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new SharingInvitation and sets the default values.
      */
     public SharingInvitation() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +40,20 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the email property value. The email address provided for the recipient of the sharing invitation. Read-only.
@@ -63,7 +61,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
-        return this.email;
+        return this.backingStore.get("email");
     }
     /**
      * The deserialization information for the current model
@@ -85,7 +83,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInvitedBy() {
-        return this.invitedBy;
+        return this.backingStore.get("invitedBy");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -93,7 +91,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the redeemedBy property value. The redeemedBy property
@@ -101,7 +99,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRedeemedBy() {
-        return this.redeemedBy;
+        return this.backingStore.get("redeemedBy");
     }
     /**
      * Gets the signInRequired property value. If true the recipient of the invitation needs to sign in in order to access the shared item. Read-only.
@@ -109,7 +107,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getSignInRequired() {
-        return this.signInRequired;
+        return this.backingStore.get("signInRequired");
     }
     /**
      * Serializes information the current object
@@ -129,41 +127,49 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the email property value. The email address provided for the recipient of the sharing invitation. Read-only.
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
-        this.email = value;
+        this.backingStore.set("email", value);
     }
     /**
      * Sets the invitedBy property value. Provides information about who sent the invitation that created this permission, if that information is available. Read-only.
      * @param value Value to set for the invitedBy property.
      */
     public void setInvitedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.invitedBy = value;
+        this.backingStore.set("invitedBy", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the redeemedBy property value. The redeemedBy property
      * @param value Value to set for the redeemedBy property.
      */
     public void setRedeemedBy(@jakarta.annotation.Nullable final String value) {
-        this.redeemedBy = value;
+        this.backingStore.set("redeemedBy", value);
     }
     /**
      * Sets the signInRequired property value. If true the recipient of the invitation needs to sign in in order to access the shared item. Read-only.
      * @param value Value to set for the signInRequired property.
      */
     public void setSignInRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.signInRequired = value;
+        this.backingStore.set("signInRequired", value);
     }
 }

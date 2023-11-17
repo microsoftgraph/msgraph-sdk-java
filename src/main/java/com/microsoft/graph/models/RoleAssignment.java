@@ -12,22 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RoleAssignment extends Entity implements Parsable {
     /**
-     * Description of the Role Assignment.
-     */
-    private String description;
-    /**
-     * The display or friendly name of the role Assignment.
-     */
-    private String displayName;
-    /**
-     * List of ids of role scope member security groups.  These are IDs from Azure Active Directory.
-     */
-    private java.util.List<String> resourceScopes;
-    /**
-     * Role definition this assignment is part of.
-     */
-    private RoleDefinition roleDefinition;
-    /**
      * Instantiates a new RoleAssignment and sets the default values.
      */
     public RoleAssignment() {
@@ -56,7 +40,7 @@ public class RoleAssignment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. The display or friendly name of the role Assignment.
@@ -64,7 +48,7 @@ public class RoleAssignment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -85,7 +69,7 @@ public class RoleAssignment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getResourceScopes() {
-        return this.resourceScopes;
+        return this.backingStore.get("resourceScopes");
     }
     /**
      * Gets the roleDefinition property value. Role definition this assignment is part of.
@@ -93,7 +77,7 @@ public class RoleAssignment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public RoleDefinition getRoleDefinition() {
-        return this.roleDefinition;
+        return this.backingStore.get("roleDefinition");
     }
     /**
      * Serializes information the current object
@@ -112,27 +96,27 @@ public class RoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The display or friendly name of the role Assignment.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the resourceScopes property value. List of ids of role scope member security groups.  These are IDs from Azure Active Directory.
      * @param value Value to set for the resourceScopes property.
      */
     public void setResourceScopes(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.resourceScopes = value;
+        this.backingStore.set("resourceScopes", value);
     }
     /**
      * Sets the roleDefinition property value. Role definition this assignment is part of.
      * @param value Value to set for the roleDefinition property.
      */
     public void setRoleDefinition(@jakarta.annotation.Nullable final RoleDefinition value) {
-        this.roleDefinition = value;
+        this.backingStore.set("roleDefinition", value);
     }
 }

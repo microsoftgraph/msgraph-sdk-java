@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceAnnouncement extends Entity implements Parsable {
     /**
-     * A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
-     */
-    private java.util.List<ServiceHealth> healthOverviews;
-    /**
-     * A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
-     */
-    private java.util.List<ServiceHealthIssue> issues;
-    /**
-     * A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
-     */
-    private java.util.List<ServiceUpdateMessage> messages;
-    /**
      * Instantiates a new ServiceAnnouncement and sets the default values.
      */
     public ServiceAnnouncement() {
@@ -54,7 +42,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServiceHealth> getHealthOverviews() {
-        return this.healthOverviews;
+        return this.backingStore.get("healthOverviews");
     }
     /**
      * Gets the issues property value. A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
@@ -62,7 +50,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServiceHealthIssue> getIssues() {
-        return this.issues;
+        return this.backingStore.get("issues");
     }
     /**
      * Gets the messages property value. A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
@@ -70,7 +58,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServiceUpdateMessage> getMessages() {
-        return this.messages;
+        return this.backingStore.get("messages");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      * @param value Value to set for the healthOverviews property.
      */
     public void setHealthOverviews(@jakarta.annotation.Nullable final java.util.List<ServiceHealth> value) {
-        this.healthOverviews = value;
+        this.backingStore.set("healthOverviews", value);
     }
     /**
      * Sets the issues property value. A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
      * @param value Value to set for the issues property.
      */
     public void setIssues(@jakarta.annotation.Nullable final java.util.List<ServiceHealthIssue> value) {
-        this.issues = value;
+        this.backingStore.set("issues", value);
     }
     /**
      * Sets the messages property value. A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
      * @param value Value to set for the messages property.
      */
     public void setMessages(@jakarta.annotation.Nullable final java.util.List<ServiceUpdateMessage> value) {
-        this.messages = value;
+        this.backingStore.set("messages", value);
     }
 }

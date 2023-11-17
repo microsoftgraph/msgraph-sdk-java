@@ -5,27 +5,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CeilingPrecisePostRequestBody implements AdditionalDataHolder, Parsable {
+public class CeilingPrecisePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The number property
-     */
-    private Json number;
-    /**
-     * The significance property
-     */
-    private Json significance;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new CeilingPrecisePostRequestBody and sets the default values.
      */
     public CeilingPrecisePostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -44,7 +41,20 @@ public class CeilingPrecisePostRequestBody implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -63,7 +73,7 @@ public class CeilingPrecisePostRequestBody implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public Json getNumber() {
-        return this.number;
+        return this.backingStore.get("number");
     }
     /**
      * Gets the significance property value. The significance property
@@ -71,7 +81,7 @@ public class CeilingPrecisePostRequestBody implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public Json getSignificance() {
-        return this.significance;
+        return this.backingStore.get("significance");
     }
     /**
      * Serializes information the current object
@@ -88,20 +98,28 @@ public class CeilingPrecisePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the number property value. The number property
      * @param value Value to set for the number property.
      */
     public void setNumber(@jakarta.annotation.Nullable final Json value) {
-        this.number = value;
+        this.backingStore.set("number", value);
     }
     /**
      * Sets the significance property value. The significance property
      * @param value Value to set for the significance property.
      */
     public void setSignificance(@jakarta.annotation.Nullable final Json value) {
-        this.significance = value;
+        this.backingStore.set("significance", value);
     }
 }

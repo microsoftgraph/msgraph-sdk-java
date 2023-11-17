@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftTrainingAssignmentMapping extends TrainingSetting implements Parsable {
     /**
-     * A user collection that specifies to whom the training should be assigned. Possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
-     */
-    private java.util.List<TrainingAssignedTo> assignedTo;
-    /**
-     * The training property
-     */
-    private Training training;
-    /**
      * Instantiates a new MicrosoftTrainingAssignmentMapping and sets the default values.
      */
     public MicrosoftTrainingAssignmentMapping() {
@@ -39,7 +31,7 @@ public class MicrosoftTrainingAssignmentMapping extends TrainingSetting implemen
      */
     @jakarta.annotation.Nullable
     public java.util.List<TrainingAssignedTo> getAssignedTo() {
-        return this.assignedTo;
+        return this.backingStore.get("assignedTo");
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +50,7 @@ public class MicrosoftTrainingAssignmentMapping extends TrainingSetting implemen
      */
     @jakarta.annotation.Nullable
     public Training getTraining() {
-        return this.training;
+        return this.backingStore.get("training");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class MicrosoftTrainingAssignmentMapping extends TrainingSetting implemen
      * @param value Value to set for the assignedTo property.
      */
     public void setAssignedTo(@jakarta.annotation.Nullable final java.util.List<TrainingAssignedTo> value) {
-        this.assignedTo = value;
+        this.backingStore.set("assignedTo", value);
     }
     /**
      * Sets the training property value. The training property
      * @param value Value to set for the training property.
      */
     public void setTraining(@jakarta.annotation.Nullable final Training value) {
-        this.training = value;
+        this.backingStore.set("training", value);
     }
 }

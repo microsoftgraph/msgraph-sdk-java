@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsDeviceAzureADAccount extends WindowsDeviceAccount implements Parsable {
     /**
-     * Not yet documented
-     */
-    private String userPrincipalName;
-    /**
      * Instantiates a new WindowsDeviceAzureADAccount and sets the default values.
      */
     public WindowsDeviceAzureADAccount() {
@@ -45,7 +41,7 @@ public class WindowsDeviceAzureADAccount extends WindowsDeviceAccount implements
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.backingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class WindowsDeviceAzureADAccount extends WindowsDeviceAccount implements
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.backingStore.set("userPrincipalName", value);
     }
 }

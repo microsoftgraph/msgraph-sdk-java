@@ -10,50 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     /**
-     * The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand.
-     */
-    private AccessPackage accessPackage;
-    /**
-     * Answers provided by the requestor to accessPackageQuestions asked of them at the time of request.
-     */
-    private java.util.List<AccessPackageAnswer> answers;
-    /**
-     * For a requestType of userAdd or adminAdd, this is an access package assignment requested to be created.  For a requestType of userRemove, adminRemove or systemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
-     */
-    private AccessPackageAssignment assignment;
-    /**
-     * The date of the end of processing, either successful or failure, of a request. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     */
-    private OffsetDateTime completedDateTime;
-    /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Information about all the custom extension calls that were made during the access package assignment workflow.
-     */
-    private java.util.List<CustomExtensionCalloutInstance> customExtensionCalloutInstances;
-    /**
-     * The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.
-     */
-    private AccessPackageSubject requestor;
-    /**
-     * The type of the request. The possible values are: notSpecified, userAdd, UserExtend, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd (not supported), unknownFutureValue. A request from the user themselves would have requestType of userAdd, userUpdate or userRemove. This property can't be changed once set.
-     */
-    private AccessPackageRequestType requestType;
-    /**
-     * The range of dates that access is to be assigned to the requestor. This property can't be changed once set.
-     */
-    private EntitlementManagementSchedule schedule;
-    /**
-     * The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only. Supports $filter (eq).
-     */
-    private AccessPackageRequestState state;
-    /**
-     * More information on the request processing status. Read-only.
-     */
-    private String status;
-    /**
      * Instantiates a new AccessPackageAssignmentRequest and sets the default values.
      */
     public AccessPackageAssignmentRequest() {
@@ -75,7 +31,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AccessPackage getAccessPackage() {
-        return this.accessPackage;
+        return this.backingStore.get("accessPackage");
     }
     /**
      * Gets the answers property value. Answers provided by the requestor to accessPackageQuestions asked of them at the time of request.
@@ -83,7 +39,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAnswer> getAnswers() {
-        return this.answers;
+        return this.backingStore.get("answers");
     }
     /**
      * Gets the assignment property value. For a requestType of userAdd or adminAdd, this is an access package assignment requested to be created.  For a requestType of userRemove, adminRemove or systemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
@@ -91,7 +47,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignment getAssignment() {
-        return this.assignment;
+        return this.backingStore.get("assignment");
     }
     /**
      * Gets the completedDateTime property value. The date of the end of processing, either successful or failure, of a request. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -99,7 +55,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
-        return this.completedDateTime;
+        return this.backingStore.get("completedDateTime");
     }
     /**
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter.
@@ -107,7 +63,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the customExtensionCalloutInstances property value. Information about all the custom extension calls that were made during the access package assignment workflow.
@@ -115,7 +71,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomExtensionCalloutInstance> getCustomExtensionCalloutInstances() {
-        return this.customExtensionCalloutInstances;
+        return this.backingStore.get("customExtensionCalloutInstances");
     }
     /**
      * The deserialization information for the current model
@@ -143,7 +99,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AccessPackageSubject getRequestor() {
-        return this.requestor;
+        return this.backingStore.get("requestor");
     }
     /**
      * Gets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, UserExtend, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd (not supported), unknownFutureValue. A request from the user themselves would have requestType of userAdd, userUpdate or userRemove. This property can't be changed once set.
@@ -151,7 +107,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AccessPackageRequestType getRequestType() {
-        return this.requestType;
+        return this.backingStore.get("requestType");
     }
     /**
      * Gets the schedule property value. The range of dates that access is to be assigned to the requestor. This property can't be changed once set.
@@ -159,7 +115,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EntitlementManagementSchedule getSchedule() {
-        return this.schedule;
+        return this.backingStore.get("schedule");
     }
     /**
      * Gets the state property value. The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only. Supports $filter (eq).
@@ -167,7 +123,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AccessPackageRequestState getState() {
-        return this.state;
+        return this.backingStore.get("state");
     }
     /**
      * Gets the status property value. More information on the request processing status. Read-only.
@@ -175,7 +131,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -201,76 +157,76 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param value Value to set for the accessPackage property.
      */
     public void setAccessPackage(@jakarta.annotation.Nullable final AccessPackage value) {
-        this.accessPackage = value;
+        this.backingStore.set("accessPackage", value);
     }
     /**
      * Sets the answers property value. Answers provided by the requestor to accessPackageQuestions asked of them at the time of request.
      * @param value Value to set for the answers property.
      */
     public void setAnswers(@jakarta.annotation.Nullable final java.util.List<AccessPackageAnswer> value) {
-        this.answers = value;
+        this.backingStore.set("answers", value);
     }
     /**
      * Sets the assignment property value. For a requestType of userAdd or adminAdd, this is an access package assignment requested to be created.  For a requestType of userRemove, adminRemove or systemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
      * @param value Value to set for the assignment property.
      */
     public void setAssignment(@jakarta.annotation.Nullable final AccessPackageAssignment value) {
-        this.assignment = value;
+        this.backingStore.set("assignment", value);
     }
     /**
      * Sets the completedDateTime property value. The date of the end of processing, either successful or failure, of a request. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the completedDateTime property.
      */
     public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.completedDateTime = value;
+        this.backingStore.set("completedDateTime", value);
     }
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the customExtensionCalloutInstances property value. Information about all the custom extension calls that were made during the access package assignment workflow.
      * @param value Value to set for the customExtensionCalloutInstances property.
      */
     public void setCustomExtensionCalloutInstances(@jakarta.annotation.Nullable final java.util.List<CustomExtensionCalloutInstance> value) {
-        this.customExtensionCalloutInstances = value;
+        this.backingStore.set("customExtensionCalloutInstances", value);
     }
     /**
      * Sets the requestor property value. The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the requestor property.
      */
     public void setRequestor(@jakarta.annotation.Nullable final AccessPackageSubject value) {
-        this.requestor = value;
+        this.backingStore.set("requestor", value);
     }
     /**
      * Sets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, UserExtend, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd (not supported), unknownFutureValue. A request from the user themselves would have requestType of userAdd, userUpdate or userRemove. This property can't be changed once set.
      * @param value Value to set for the requestType property.
      */
     public void setRequestType(@jakarta.annotation.Nullable final AccessPackageRequestType value) {
-        this.requestType = value;
+        this.backingStore.set("requestType", value);
     }
     /**
      * Sets the schedule property value. The range of dates that access is to be assigned to the requestor. This property can't be changed once set.
      * @param value Value to set for the schedule property.
      */
     public void setSchedule(@jakarta.annotation.Nullable final EntitlementManagementSchedule value) {
-        this.schedule = value;
+        this.backingStore.set("schedule", value);
     }
     /**
      * Sets the state property value. The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only. Supports $filter (eq).
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final AccessPackageRequestState value) {
-        this.state = value;
+        this.backingStore.set("state", value);
     }
     /**
      * Sets the status property value. More information on the request processing status. Read-only.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
 }

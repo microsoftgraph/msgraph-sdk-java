@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerBucketTaskBoardTaskFormat extends Entity implements Parsable {
     /**
-     * Hint used to order tasks in the bucket view of the task board. For details about the supported format, see Using order hints in Planner.
-     */
-    private String orderHint;
-    /**
      * Instantiates a new PlannerBucketTaskBoardTaskFormat and sets the default values.
      */
     public PlannerBucketTaskBoardTaskFormat() {
@@ -44,7 +40,7 @@ public class PlannerBucketTaskBoardTaskFormat extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public String getOrderHint() {
-        return this.orderHint;
+        return this.backingStore.get("orderHint");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class PlannerBucketTaskBoardTaskFormat extends Entity implements Parsable
      * @param value Value to set for the orderHint property.
      */
     public void setOrderHint(@jakarta.annotation.Nullable final String value) {
-        this.orderHint = value;
+        this.backingStore.set("orderHint", value);
     }
 }

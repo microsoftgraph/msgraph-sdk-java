@@ -9,34 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Participant extends Entity implements Parsable {
     /**
-     * The info property
-     */
-    private ParticipantInfo info;
-    /**
-     * true if the participant is in lobby.
-     */
-    private Boolean isInLobby;
-    /**
-     * true if the participant is muted (client or server muted).
-     */
-    private Boolean isMuted;
-    /**
-     * The list of media streams.
-     */
-    private java.util.List<MediaStream> mediaStreams;
-    /**
-     * A blob of data provided by the participant in the roster.
-     */
-    private String metadata;
-    /**
-     * Information about whether the participant has recording capability.
-     */
-    private RecordingInfo recordingInfo;
-    /**
-     * Indicates the reason or reasons media content from this participant is restricted.
-     */
-    private OnlineMeetingRestricted restrictedExperience;
-    /**
      * Instantiates a new Participant and sets the default values.
      */
     public Participant() {
@@ -65,7 +37,9 @@ public class Participant extends Entity implements Parsable {
         deserializerMap.put("mediaStreams", (n) -> { this.setMediaStreams(n.getCollectionOfObjectValues(MediaStream::createFromDiscriminatorValue)); });
         deserializerMap.put("metadata", (n) -> { this.setMetadata(n.getStringValue()); });
         deserializerMap.put("recordingInfo", (n) -> { this.setRecordingInfo(n.getObjectValue(RecordingInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("removedState", (n) -> { this.setRemovedState(n.getObjectValue(RemovedState::createFromDiscriminatorValue)); });
         deserializerMap.put("restrictedExperience", (n) -> { this.setRestrictedExperience(n.getObjectValue(OnlineMeetingRestricted::createFromDiscriminatorValue)); });
+        deserializerMap.put("rosterSequenceNumber", (n) -> { this.setRosterSequenceNumber(n.getLongValue()); });
         return deserializerMap;
     }
     /**
@@ -74,7 +48,7 @@ public class Participant extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ParticipantInfo getInfo() {
-        return this.info;
+        return this.backingStore.get("info");
     }
     /**
      * Gets the isInLobby property value. true if the participant is in lobby.
@@ -82,7 +56,7 @@ public class Participant extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsInLobby() {
-        return this.isInLobby;
+        return this.backingStore.get("isInLobby");
     }
     /**
      * Gets the isMuted property value. true if the participant is muted (client or server muted).
@@ -90,7 +64,7 @@ public class Participant extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMuted() {
-        return this.isMuted;
+        return this.backingStore.get("isMuted");
     }
     /**
      * Gets the mediaStreams property value. The list of media streams.
@@ -98,7 +72,7 @@ public class Participant extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<MediaStream> getMediaStreams() {
-        return this.mediaStreams;
+        return this.backingStore.get("mediaStreams");
     }
     /**
      * Gets the metadata property value. A blob of data provided by the participant in the roster.
@@ -106,7 +80,7 @@ public class Participant extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getMetadata() {
-        return this.metadata;
+        return this.backingStore.get("metadata");
     }
     /**
      * Gets the recordingInfo property value. Information about whether the participant has recording capability.
@@ -114,7 +88,15 @@ public class Participant extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public RecordingInfo getRecordingInfo() {
-        return this.recordingInfo;
+        return this.backingStore.get("recordingInfo");
+    }
+    /**
+     * Gets the removedState property value. The removedState property
+     * @return a RemovedState
+     */
+    @jakarta.annotation.Nullable
+    public RemovedState getRemovedState() {
+        return this.backingStore.get("removedState");
     }
     /**
      * Gets the restrictedExperience property value. Indicates the reason or reasons media content from this participant is restricted.
@@ -122,7 +104,15 @@ public class Participant extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OnlineMeetingRestricted getRestrictedExperience() {
-        return this.restrictedExperience;
+        return this.backingStore.get("restrictedExperience");
+    }
+    /**
+     * Gets the rosterSequenceNumber property value. The rosterSequenceNumber property
+     * @return a Long
+     */
+    @jakarta.annotation.Nullable
+    public Long getRosterSequenceNumber() {
+        return this.backingStore.get("rosterSequenceNumber");
     }
     /**
      * Serializes information the current object
@@ -137,55 +127,71 @@ public class Participant extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("mediaStreams", this.getMediaStreams());
         writer.writeStringValue("metadata", this.getMetadata());
         writer.writeObjectValue("recordingInfo", this.getRecordingInfo());
+        writer.writeObjectValue("removedState", this.getRemovedState());
         writer.writeObjectValue("restrictedExperience", this.getRestrictedExperience());
+        writer.writeLongValue("rosterSequenceNumber", this.getRosterSequenceNumber());
     }
     /**
      * Sets the info property value. The info property
      * @param value Value to set for the info property.
      */
     public void setInfo(@jakarta.annotation.Nullable final ParticipantInfo value) {
-        this.info = value;
+        this.backingStore.set("info", value);
     }
     /**
      * Sets the isInLobby property value. true if the participant is in lobby.
      * @param value Value to set for the isInLobby property.
      */
     public void setIsInLobby(@jakarta.annotation.Nullable final Boolean value) {
-        this.isInLobby = value;
+        this.backingStore.set("isInLobby", value);
     }
     /**
      * Sets the isMuted property value. true if the participant is muted (client or server muted).
      * @param value Value to set for the isMuted property.
      */
     public void setIsMuted(@jakarta.annotation.Nullable final Boolean value) {
-        this.isMuted = value;
+        this.backingStore.set("isMuted", value);
     }
     /**
      * Sets the mediaStreams property value. The list of media streams.
      * @param value Value to set for the mediaStreams property.
      */
     public void setMediaStreams(@jakarta.annotation.Nullable final java.util.List<MediaStream> value) {
-        this.mediaStreams = value;
+        this.backingStore.set("mediaStreams", value);
     }
     /**
      * Sets the metadata property value. A blob of data provided by the participant in the roster.
      * @param value Value to set for the metadata property.
      */
     public void setMetadata(@jakarta.annotation.Nullable final String value) {
-        this.metadata = value;
+        this.backingStore.set("metadata", value);
     }
     /**
      * Sets the recordingInfo property value. Information about whether the participant has recording capability.
      * @param value Value to set for the recordingInfo property.
      */
     public void setRecordingInfo(@jakarta.annotation.Nullable final RecordingInfo value) {
-        this.recordingInfo = value;
+        this.backingStore.set("recordingInfo", value);
+    }
+    /**
+     * Sets the removedState property value. The removedState property
+     * @param value Value to set for the removedState property.
+     */
+    public void setRemovedState(@jakarta.annotation.Nullable final RemovedState value) {
+        this.backingStore.set("removedState", value);
     }
     /**
      * Sets the restrictedExperience property value. Indicates the reason or reasons media content from this participant is restricted.
      * @param value Value to set for the restrictedExperience property.
      */
     public void setRestrictedExperience(@jakarta.annotation.Nullable final OnlineMeetingRestricted value) {
-        this.restrictedExperience = value;
+        this.backingStore.set("restrictedExperience", value);
+    }
+    /**
+     * Sets the rosterSequenceNumber property value. The rosterSequenceNumber property
+     * @param value Value to set for the rosterSequenceNumber property.
+     */
+    public void setRosterSequenceNumber(@jakarta.annotation.Nullable final Long value) {
+        this.backingStore.set("rosterSequenceNumber", value);
     }
 }

@@ -83,6 +83,8 @@ import com.microsoft.kiota.serialization.ParseNodeFactoryRegistry;
 import com.microsoft.kiota.serialization.SerializationWriterFactoryRegistry;
 import com.microsoft.kiota.serialization.TextParseNodeFactory;
 import com.microsoft.kiota.serialization.TextSerializationWriterFactory;
+import com.microsoft.kiota.store.BackingStoreFactory;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Objects;
 /**
@@ -571,9 +573,10 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Instantiates a new BaseGraphServiceClient and sets the default values.
+     * @param backingStore The backing store to use for the models.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public BaseGraphServiceClient(@jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+    public BaseGraphServiceClient(@jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final BackingStoreFactory backingStore) {
         super(requestAdapter, "{+baseurl}");
         this.pathParameters = new HashMap<>();
         ApiClientBuilder.registerDefaultSerializer(JsonSerializationWriterFactory.class);
@@ -587,6 +590,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
             requestAdapter.setBaseUrl("https://graph.microsoft.com/v1.0");
         }
         pathParameters.put("baseurl", requestAdapter.getBaseUrl());
+        this.requestAdapter.enableBackingStore(backingStore);
     }
     /**
      * Provides operations to manage the collection of device entities.

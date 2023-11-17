@@ -4,39 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class RubricLevel implements AdditionalDataHolder, Parsable {
+public class RubricLevel implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The description of this rubric level.
-     */
-    private EducationItemBody description;
-    /**
-     * The name of this rubric level.
-     */
-    private String displayName;
-    /**
-     * Null if this is a no-points rubric; educationAssignmentPointsGradeType if it's a points rubric.
-     */
-    private EducationAssignmentGradeType grading;
-    /**
-     * The ID of this resource.
-     */
-    private String levelId;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new RubricLevel and sets the default values.
      */
     public RubricLevel() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +40,20 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the description property value. The description of this rubric level.
@@ -63,7 +61,7 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public EducationItemBody getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. The name of this rubric level.
@@ -71,7 +69,7 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -93,7 +91,7 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public EducationAssignmentGradeType getGrading() {
-        return this.grading;
+        return this.backingStore.get("grading");
     }
     /**
      * Gets the levelId property value. The ID of this resource.
@@ -101,7 +99,7 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLevelId() {
-        return this.levelId;
+        return this.backingStore.get("levelId");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -109,7 +107,7 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -129,41 +127,49 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the description property value. The description of this rubric level.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final EducationItemBody value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The name of this rubric level.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the grading property value. Null if this is a no-points rubric; educationAssignmentPointsGradeType if it's a points rubric.
      * @param value Value to set for the grading property.
      */
     public void setGrading(@jakarta.annotation.Nullable final EducationAssignmentGradeType value) {
-        this.grading = value;
+        this.backingStore.set("grading", value);
     }
     /**
      * Sets the levelId property value. The ID of this resource.
      * @param value Value to set for the levelId property.
      */
     public void setLevelId(@jakarta.annotation.Nullable final String value) {
-        this.levelId = value;
+        this.backingStore.set("levelId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

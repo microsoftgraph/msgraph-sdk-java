@@ -10,10 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CasesRoot extends Entity implements Parsable {
     /**
-     * The ediscoveryCases property
-     */
-    private java.util.List<EdiscoveryCase> ediscoveryCases;
-    /**
      * Instantiates a new CasesRoot and sets the default values.
      */
     public CasesRoot() {
@@ -35,7 +31,7 @@ public class CasesRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryCase> getEdiscoveryCases() {
-        return this.ediscoveryCases;
+        return this.backingStore.get("ediscoveryCases");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class CasesRoot extends Entity implements Parsable {
      * @param value Value to set for the ediscoveryCases property.
      */
     public void setEdiscoveryCases(@jakarta.annotation.Nullable final java.util.List<EdiscoveryCase> value) {
-        this.ediscoveryCases = value;
+        this.backingStore.set("ediscoveryCases", value);
     }
 }

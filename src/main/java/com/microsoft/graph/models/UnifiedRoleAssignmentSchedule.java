@@ -9,22 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase implements Parsable {
     /**
-     * If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
-     */
-    private UnifiedRoleEligibilitySchedule activatedUsing;
-    /**
-     * Type of the assignment which can either be Assigned or Activated. Supports $filter (eq, ne).
-     */
-    private String assignmentType;
-    /**
-     * How the assignments is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).
-     */
-    private String memberType;
-    /**
-     * The period of the role assignment. It can represent a single occurrence or multiple recurrences.
-     */
-    private RequestSchedule scheduleInfo;
-    /**
      * Instantiates a new UnifiedRoleAssignmentSchedule and sets the default values.
      */
     public UnifiedRoleAssignmentSchedule() {
@@ -46,7 +30,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleEligibilitySchedule getActivatedUsing() {
-        return this.activatedUsing;
+        return this.backingStore.get("activatedUsing");
     }
     /**
      * Gets the assignmentType property value. Type of the assignment which can either be Assigned or Activated. Supports $filter (eq, ne).
@@ -54,7 +38,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
      */
     @jakarta.annotation.Nullable
     public String getAssignmentType() {
-        return this.assignmentType;
+        return this.backingStore.get("assignmentType");
     }
     /**
      * The deserialization information for the current model
@@ -75,7 +59,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
      */
     @jakarta.annotation.Nullable
     public String getMemberType() {
-        return this.memberType;
+        return this.backingStore.get("memberType");
     }
     /**
      * Gets the scheduleInfo property value. The period of the role assignment. It can represent a single occurrence or multiple recurrences.
@@ -83,7 +67,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
      */
     @jakarta.annotation.Nullable
     public RequestSchedule getScheduleInfo() {
-        return this.scheduleInfo;
+        return this.backingStore.get("scheduleInfo");
     }
     /**
      * Serializes information the current object
@@ -102,27 +86,27 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
      * @param value Value to set for the activatedUsing property.
      */
     public void setActivatedUsing(@jakarta.annotation.Nullable final UnifiedRoleEligibilitySchedule value) {
-        this.activatedUsing = value;
+        this.backingStore.set("activatedUsing", value);
     }
     /**
      * Sets the assignmentType property value. Type of the assignment which can either be Assigned or Activated. Supports $filter (eq, ne).
      * @param value Value to set for the assignmentType property.
      */
     public void setAssignmentType(@jakarta.annotation.Nullable final String value) {
-        this.assignmentType = value;
+        this.backingStore.set("assignmentType", value);
     }
     /**
      * Sets the memberType property value. How the assignments is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).
      * @param value Value to set for the memberType property.
      */
     public void setMemberType(@jakarta.annotation.Nullable final String value) {
-        this.memberType = value;
+        this.backingStore.set("memberType", value);
     }
     /**
      * Sets the scheduleInfo property value. The period of the role assignment. It can represent a single occurrence or multiple recurrences.
      * @param value Value to set for the scheduleInfo property.
      */
     public void setScheduleInfo(@jakarta.annotation.Nullable final RequestSchedule value) {
-        this.scheduleInfo = value;
+        this.backingStore.set("scheduleInfo", value);
     }
 }

@@ -7,39 +7,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
+public class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The acceptedModalities property
+     * Stores model information.
      */
-    private java.util.List<Modality> acceptedModalities;
-    /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The callbackUri property
-     */
-    private String callbackUri;
-    /**
-     * The callOptions property
-     */
-    private IncomingCallOptions callOptions;
-    /**
-     * The mediaConfig property
-     */
-    private MediaConfig mediaConfig;
-    /**
-     * The participantCapacity property
-     */
-    private Integer participantCapacity;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new AnswerPostRequestBody and sets the default values.
      */
     public AnswerPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -58,7 +43,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Modality> getAcceptedModalities() {
-        return this.acceptedModalities;
+        return this.backingStore.get("acceptedModalities");
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -66,7 +51,20 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the callbackUri property value. The callbackUri property
@@ -74,7 +72,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCallbackUri() {
-        return this.callbackUri;
+        return this.backingStore.get("callbackUri");
     }
     /**
      * Gets the callOptions property value. The callOptions property
@@ -82,7 +80,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public IncomingCallOptions getCallOptions() {
-        return this.callOptions;
+        return this.backingStore.get("callOptions");
     }
     /**
      * The deserialization information for the current model
@@ -104,7 +102,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public MediaConfig getMediaConfig() {
-        return this.mediaConfig;
+        return this.backingStore.get("mediaConfig");
     }
     /**
      * Gets the participantCapacity property value. The participantCapacity property
@@ -112,7 +110,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getParticipantCapacity() {
-        return this.participantCapacity;
+        return this.backingStore.get("participantCapacity");
     }
     /**
      * Serializes information the current object
@@ -132,41 +130,49 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the acceptedModalities property.
      */
     public void setAcceptedModalities(@jakarta.annotation.Nullable final java.util.List<Modality> value) {
-        this.acceptedModalities = value;
+        this.backingStore.set("acceptedModalities", value);
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the callbackUri property value. The callbackUri property
      * @param value Value to set for the callbackUri property.
      */
     public void setCallbackUri(@jakarta.annotation.Nullable final String value) {
-        this.callbackUri = value;
+        this.backingStore.set("callbackUri", value);
     }
     /**
      * Sets the callOptions property value. The callOptions property
      * @param value Value to set for the callOptions property.
      */
     public void setCallOptions(@jakarta.annotation.Nullable final IncomingCallOptions value) {
-        this.callOptions = value;
+        this.backingStore.set("callOptions", value);
     }
     /**
      * Sets the mediaConfig property value. The mediaConfig property
      * @param value Value to set for the mediaConfig property.
      */
     public void setMediaConfig(@jakarta.annotation.Nullable final MediaConfig value) {
-        this.mediaConfig = value;
+        this.backingStore.set("mediaConfig", value);
     }
     /**
      * Sets the participantCapacity property value. The participantCapacity property
      * @param value Value to set for the participantCapacity property.
      */
     public void setParticipantCapacity(@jakarta.annotation.Nullable final Integer value) {
-        this.participantCapacity = value;
+        this.backingStore.set("participantCapacity", value);
     }
 }

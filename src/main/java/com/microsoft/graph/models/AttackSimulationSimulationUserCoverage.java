@@ -4,44 +4,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Parsable {
+public class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * User in an attack simulation and training campaign.
-     */
-    private AttackSimulationUser attackSimulationUser;
-    /**
-     * Number of link clicks in the received payloads by the user in attack simulation and training campaigns.
-     */
-    private Integer clickCount;
-    /**
-     * Number of compromising actions by the user in attack simulation and training campaigns.
-     */
-    private Integer compromisedCount;
-    /**
-     * Date and time of the latest attack simulation and training campaign that the user was included in.
-     */
-    private OffsetDateTime latestSimulationDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Number of attack simulation and training campaigns that the user was included in.
-     */
-    private Integer simulationCount;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new AttackSimulationSimulationUserCoverage and sets the default values.
      */
     public AttackSimulationSimulationUserCoverage() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -60,7 +41,12 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the attackSimulationUser property value. User in an attack simulation and training campaign.
@@ -68,7 +54,15 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
      */
     @jakarta.annotation.Nullable
     public AttackSimulationUser getAttackSimulationUser() {
-        return this.attackSimulationUser;
+        return this.backingStore.get("attackSimulationUser");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the clickCount property value. Number of link clicks in the received payloads by the user in attack simulation and training campaigns.
@@ -76,7 +70,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
      */
     @jakarta.annotation.Nullable
     public Integer getClickCount() {
-        return this.clickCount;
+        return this.backingStore.get("clickCount");
     }
     /**
      * Gets the compromisedCount property value. Number of compromising actions by the user in attack simulation and training campaigns.
@@ -84,7 +78,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
      */
     @jakarta.annotation.Nullable
     public Integer getCompromisedCount() {
-        return this.compromisedCount;
+        return this.backingStore.get("compromisedCount");
     }
     /**
      * The deserialization information for the current model
@@ -107,7 +101,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLatestSimulationDateTime() {
-        return this.latestSimulationDateTime;
+        return this.backingStore.get("latestSimulationDateTime");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -115,7 +109,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the simulationCount property value. Number of attack simulation and training campaigns that the user was included in.
@@ -123,7 +117,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
      */
     @jakarta.annotation.Nullable
     public Integer getSimulationCount() {
-        return this.simulationCount;
+        return this.backingStore.get("simulationCount");
     }
     /**
      * Serializes information the current object
@@ -144,48 +138,56 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the attackSimulationUser property value. User in an attack simulation and training campaign.
      * @param value Value to set for the attackSimulationUser property.
      */
     public void setAttackSimulationUser(@jakarta.annotation.Nullable final AttackSimulationUser value) {
-        this.attackSimulationUser = value;
+        this.backingStore.set("attackSimulationUser", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the clickCount property value. Number of link clicks in the received payloads by the user in attack simulation and training campaigns.
      * @param value Value to set for the clickCount property.
      */
     public void setClickCount(@jakarta.annotation.Nullable final Integer value) {
-        this.clickCount = value;
+        this.backingStore.set("clickCount", value);
     }
     /**
      * Sets the compromisedCount property value. Number of compromising actions by the user in attack simulation and training campaigns.
      * @param value Value to set for the compromisedCount property.
      */
     public void setCompromisedCount(@jakarta.annotation.Nullable final Integer value) {
-        this.compromisedCount = value;
+        this.backingStore.set("compromisedCount", value);
     }
     /**
      * Sets the latestSimulationDateTime property value. Date and time of the latest attack simulation and training campaign that the user was included in.
      * @param value Value to set for the latestSimulationDateTime property.
      */
     public void setLatestSimulationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.latestSimulationDateTime = value;
+        this.backingStore.set("latestSimulationDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the simulationCount property value. Number of attack simulation and training campaigns that the user was included in.
      * @param value Value to set for the simulationCount property.
      */
     public void setSimulationCount(@jakarta.annotation.Nullable final Integer value) {
-        this.simulationCount = value;
+        this.backingStore.set("simulationCount", value);
     }
 }

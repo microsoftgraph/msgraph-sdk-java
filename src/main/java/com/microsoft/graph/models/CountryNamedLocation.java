@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CountryNamedLocation extends NamedLocation implements Parsable {
     /**
-     * List of countries and/or regions in two-letter format specified by ISO 3166-2. Required.
-     */
-    private java.util.List<String> countriesAndRegions;
-    /**
-     * Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress(default) and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.
-     */
-    private CountryLookupMethodType countryLookupMethod;
-    /**
-     * true if IP addresses that don't map to a country or region should be included in the named location. Optional. Default value is false.
-     */
-    private Boolean includeUnknownCountriesAndRegions;
-    /**
      * Instantiates a new CountryNamedLocation and sets the default values.
      */
     public CountryNamedLocation() {
@@ -42,7 +30,7 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCountriesAndRegions() {
-        return this.countriesAndRegions;
+        return this.backingStore.get("countriesAndRegions");
     }
     /**
      * Gets the countryLookupMethod property value. Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress(default) and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.
@@ -50,7 +38,7 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
      */
     @jakarta.annotation.Nullable
     public CountryLookupMethodType getCountryLookupMethod() {
-        return this.countryLookupMethod;
+        return this.backingStore.get("countryLookupMethod");
     }
     /**
      * The deserialization information for the current model
@@ -70,7 +58,7 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIncludeUnknownCountriesAndRegions() {
-        return this.includeUnknownCountriesAndRegions;
+        return this.backingStore.get("includeUnknownCountriesAndRegions");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
      * @param value Value to set for the countriesAndRegions property.
      */
     public void setCountriesAndRegions(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.countriesAndRegions = value;
+        this.backingStore.set("countriesAndRegions", value);
     }
     /**
      * Sets the countryLookupMethod property value. Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress(default) and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.
      * @param value Value to set for the countryLookupMethod property.
      */
     public void setCountryLookupMethod(@jakarta.annotation.Nullable final CountryLookupMethodType value) {
-        this.countryLookupMethod = value;
+        this.backingStore.set("countryLookupMethod", value);
     }
     /**
      * Sets the includeUnknownCountriesAndRegions property value. true if IP addresses that don't map to a country or region should be included in the named location. Optional. Default value is false.
      * @param value Value to set for the includeUnknownCountriesAndRegions property.
      */
     public void setIncludeUnknownCountriesAndRegions(@jakarta.annotation.Nullable final Boolean value) {
-        this.includeUnknownCountriesAndRegions = value;
+        this.backingStore.set("includeUnknownCountriesAndRegions", value);
     }
 }

@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkflowVersion extends WorkflowBase implements Parsable {
     /**
-     * The version of the workflow.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
-     */
-    private Integer versionNumber;
-    /**
      * Instantiates a new WorkflowVersion and sets the default values.
      */
     public WorkflowVersion() {
@@ -45,7 +41,7 @@ public class WorkflowVersion extends WorkflowBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getVersionNumber() {
-        return this.versionNumber;
+        return this.backingStore.get("versionNumber");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class WorkflowVersion extends WorkflowBase implements Parsable {
      * @param value Value to set for the versionNumber property.
      */
     public void setVersionNumber(@jakarta.annotation.Nullable final Integer value) {
-        this.versionNumber = value;
+        this.backingStore.set("versionNumber", value);
     }
 }

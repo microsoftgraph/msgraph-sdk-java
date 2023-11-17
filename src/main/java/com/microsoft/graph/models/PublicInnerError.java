@@ -4,39 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PublicInnerError implements AdditionalDataHolder, Parsable {
+public class PublicInnerError implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The error code.
-     */
-    private String code;
-    /**
-     * A collection of error details.
-     */
-    private java.util.List<PublicErrorDetail> details;
-    /**
-     * The error message.
-     */
-    private String message;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The target of the error.
-     */
-    private String target;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new PublicInnerError and sets the default values.
      */
     public PublicInnerError() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +40,20 @@ public class PublicInnerError implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the code property value. The error code.
@@ -63,7 +61,7 @@ public class PublicInnerError implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCode() {
-        return this.code;
+        return this.backingStore.get("code");
     }
     /**
      * Gets the details property value. A collection of error details.
@@ -71,7 +69,7 @@ public class PublicInnerError implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PublicErrorDetail> getDetails() {
-        return this.details;
+        return this.backingStore.get("details");
     }
     /**
      * The deserialization information for the current model
@@ -93,7 +91,7 @@ public class PublicInnerError implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getMessage() {
-        return this.message;
+        return this.backingStore.get("message");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -101,7 +99,7 @@ public class PublicInnerError implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the target property value. The target of the error.
@@ -109,7 +107,7 @@ public class PublicInnerError implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTarget() {
-        return this.target;
+        return this.backingStore.get("target");
     }
     /**
      * Serializes information the current object
@@ -129,41 +127,49 @@ public class PublicInnerError implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the code property value. The error code.
      * @param value Value to set for the code property.
      */
     public void setCode(@jakarta.annotation.Nullable final String value) {
-        this.code = value;
+        this.backingStore.set("code", value);
     }
     /**
      * Sets the details property value. A collection of error details.
      * @param value Value to set for the details property.
      */
     public void setDetails(@jakarta.annotation.Nullable final java.util.List<PublicErrorDetail> value) {
-        this.details = value;
+        this.backingStore.set("details", value);
     }
     /**
      * Sets the message property value. The error message.
      * @param value Value to set for the message property.
      */
     public void setMessage(@jakarta.annotation.Nullable final String value) {
-        this.message = value;
+        this.backingStore.set("message", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the target property value. The target of the error.
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final String value) {
-        this.target = value;
+        this.backingStore.set("target", value);
     }
 }

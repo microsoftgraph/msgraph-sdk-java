@@ -4,47 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ParticipantInfo implements AdditionalDataHolder, Parsable {
+public class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only.
-     */
-    private String countryCode;
-    /**
-     * The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
-     */
-    private EndpointType endpointType;
-    /**
-     * The identity property
-     */
-    private IdentitySet identity;
-    /**
-     * The language culture string. Read-only.
-     */
-    private String languageId;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The participant ID of the participant. Read-only.
-     */
-    private String participantId;
-    /**
-     * The home region of the participant. This can be a country, a continent, or a larger geographic region. This doesn't change based on the participant's current physical location. Read-only.
-     */
-    private String region;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new ParticipantInfo and sets the default values.
      */
     public ParticipantInfo() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -63,7 +40,20 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the countryCode property value. The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only.
@@ -71,7 +61,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCountryCode() {
-        return this.countryCode;
+        return this.backingStore.get("countryCode");
     }
     /**
      * Gets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
@@ -79,7 +69,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public EndpointType getEndpointType() {
-        return this.endpointType;
+        return this.backingStore.get("endpointType");
     }
     /**
      * The deserialization information for the current model
@@ -103,7 +93,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public IdentitySet getIdentity() {
-        return this.identity;
+        return this.backingStore.get("identity");
     }
     /**
      * Gets the languageId property value. The language culture string. Read-only.
@@ -111,7 +101,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLanguageId() {
-        return this.languageId;
+        return this.backingStore.get("languageId");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -119,7 +109,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the participantId property value. The participant ID of the participant. Read-only.
@@ -127,7 +117,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getParticipantId() {
-        return this.participantId;
+        return this.backingStore.get("participantId");
     }
     /**
      * Gets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This doesn't change based on the participant's current physical location. Read-only.
@@ -135,7 +125,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRegion() {
-        return this.region;
+        return this.backingStore.get("region");
     }
     /**
      * Serializes information the current object
@@ -157,55 +147,63 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the countryCode property value. The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only.
      * @param value Value to set for the countryCode property.
      */
     public void setCountryCode(@jakarta.annotation.Nullable final String value) {
-        this.countryCode = value;
+        this.backingStore.set("countryCode", value);
     }
     /**
      * Sets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
      * @param value Value to set for the endpointType property.
      */
     public void setEndpointType(@jakarta.annotation.Nullable final EndpointType value) {
-        this.endpointType = value;
+        this.backingStore.set("endpointType", value);
     }
     /**
      * Sets the identity property value. The identity property
      * @param value Value to set for the identity property.
      */
     public void setIdentity(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.identity = value;
+        this.backingStore.set("identity", value);
     }
     /**
      * Sets the languageId property value. The language culture string. Read-only.
      * @param value Value to set for the languageId property.
      */
     public void setLanguageId(@jakarta.annotation.Nullable final String value) {
-        this.languageId = value;
+        this.backingStore.set("languageId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the participantId property value. The participant ID of the participant. Read-only.
      * @param value Value to set for the participantId property.
      */
     public void setParticipantId(@jakarta.annotation.Nullable final String value) {
-        this.participantId = value;
+        this.backingStore.set("participantId", value);
     }
     /**
      * Sets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This doesn't change based on the participant's current physical location. Read-only.
      * @param value Value to set for the region property.
      */
     public void setRegion(@jakarta.annotation.Nullable final String value) {
-        this.region = value;
+        this.backingStore.set("region", value);
     }
 }

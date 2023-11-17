@@ -88,27 +88,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Entity implements AdditionalDataHolder, Parsable {
+public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The unique identifier for an entity. Read-only.
-     */
-    private String id;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new Entity and sets the default values.
      */
     public Entity() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -303,6 +300,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.delegatedPermissionClassification": return new DelegatedPermissionClassification();
             case "#microsoft.graph.deletedItemContainer": return new DeletedItemContainer();
             case "#microsoft.graph.deletedTeam": return new DeletedTeam();
+            case "#microsoft.graph.deltaParticipants": return new DeltaParticipants();
             case "#microsoft.graph.detectedApp": return new DetectedApp();
             case "#microsoft.graph.device": return new Device();
             case "#microsoft.graph.deviceAndAppManagementRoleAssignment": return new DeviceAndAppManagementRoleAssignment();
@@ -472,6 +470,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.itemActivityStat": return new ItemActivityStat();
             case "#microsoft.graph.itemAnalytics": return new ItemAnalytics();
             case "#microsoft.graph.itemAttachment": return new ItemAttachment();
+            case "#microsoft.graph.itemRetentionLabel": return new ItemRetentionLabel();
             case "#microsoft.graph.landingPage": return new LandingPage();
             case "#microsoft.graph.landingPageDetail": return new LandingPageDetail();
             case "#microsoft.graph.learningAssignment": return new LearningAssignment();
@@ -561,6 +560,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.onenoteResource": return new OnenoteResource();
             case "#microsoft.graph.onenoteSection": return new OnenoteSection();
             case "#microsoft.graph.onlineMeeting": return new OnlineMeeting();
+            case "#microsoft.graph.onlineMeetingBase": return new OnlineMeetingBase();
             case "#microsoft.graph.onPremisesConditionalAccessSettings": return new OnPremisesConditionalAccessSettings();
             case "#microsoft.graph.onPremisesDirectorySynchronization": return new OnPremisesDirectorySynchronization();
             case "#microsoft.graph.openShift": return new OpenShift();
@@ -638,9 +638,6 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.recordOperation": return new RecordOperation();
             case "#microsoft.graph.referenceAttachment": return new ReferenceAttachment();
             case "#microsoft.graph.remoteAssistancePartner": return new RemoteAssistancePartner();
-            case "#microsoft.graph.remoteDesktopSecurityConfiguration": return new RemoteDesktopSecurityConfiguration();
-            case "#microsoft.graph.request": return new Request();
-            case "#microsoft.graph.resellerDelegatedAdminRelationship": return new ResellerDelegatedAdminRelationship();
         }
         return null;
     }
@@ -652,6 +649,9 @@ public class Entity implements AdditionalDataHolder, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.remoteDesktopSecurityConfiguration": return new RemoteDesktopSecurityConfiguration();
+            case "#microsoft.graph.request": return new Request();
+            case "#microsoft.graph.resellerDelegatedAdminRelationship": return new ResellerDelegatedAdminRelationship();
             case "#microsoft.graph.resourceOperation": return new ResourceOperation();
             case "#microsoft.graph.resourceSpecificPermissionGrant": return new ResourceSpecificPermissionGrant();
             case "#microsoft.graph.richLongRunningOperation": return new RichLongRunningOperation();
@@ -883,6 +883,11 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.userSettings": return new UserSettings();
             case "#microsoft.graph.userSignInInsight": return new UserSignInInsight();
             case "#microsoft.graph.userTeamwork": return new UserTeamwork();
+            case "#microsoft.graph.virtualEvent": return new VirtualEvent();
+            case "#microsoft.graph.virtualEventRegistration": return new VirtualEventRegistration();
+            case "#microsoft.graph.virtualEventSession": return new VirtualEventSession();
+            case "#microsoft.graph.virtualEventsRoot": return new VirtualEventsRoot();
+            case "#microsoft.graph.virtualEventWebinar": return new VirtualEventWebinar();
             case "#microsoft.graph.voiceAuthenticationMethodConfiguration": return new VoiceAuthenticationMethodConfiguration();
             case "#microsoft.graph.vppToken": return new VppToken();
             case "#microsoft.graph.webApp": return new WebApp();
@@ -975,7 +980,20 @@ public class Entity implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -994,7 +1012,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getId() {
-        return this.id;
+        return this.backingStore.get("id");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -1002,7 +1020,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -1019,20 +1037,28 @@ public class Entity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the id property value. The unique identifier for an entity. Read-only.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
-        this.id = value;
+        this.backingStore.set("id", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

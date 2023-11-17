@@ -4,35 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, Parsable {
+public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * If false, then approval isn't required for new requests in this policy.
-     */
-    private Boolean isApprovalRequiredForAdd;
-    /**
-     * If false, then approval isn't required for updates to requests in this policy.
-     */
-    private Boolean isApprovalRequiredForUpdate;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * If approval is required, the one, two or three elements of this collection define each of the stages of approval. An empty array is present if no approval is required.
-     */
-    private java.util.List<AccessPackageApprovalStage> stages;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new AccessPackageAssignmentApprovalSettings and sets the default values.
      */
     public AccessPackageAssignmentApprovalSettings() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +40,20 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -72,7 +74,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      */
     @jakarta.annotation.Nullable
     public Boolean getIsApprovalRequiredForAdd() {
-        return this.isApprovalRequiredForAdd;
+        return this.backingStore.get("isApprovalRequiredForAdd");
     }
     /**
      * Gets the isApprovalRequiredForUpdate property value. If false, then approval isn't required for updates to requests in this policy.
@@ -80,7 +82,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      */
     @jakarta.annotation.Nullable
     public Boolean getIsApprovalRequiredForUpdate() {
-        return this.isApprovalRequiredForUpdate;
+        return this.backingStore.get("isApprovalRequiredForUpdate");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -88,7 +90,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the stages property value. If approval is required, the one, two or three elements of this collection define each of the stages of approval. An empty array is present if no approval is required.
@@ -96,7 +98,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageApprovalStage> getStages() {
-        return this.stages;
+        return this.backingStore.get("stages");
     }
     /**
      * Serializes information the current object
@@ -115,34 +117,42 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the isApprovalRequiredForAdd property value. If false, then approval isn't required for new requests in this policy.
      * @param value Value to set for the isApprovalRequiredForAdd property.
      */
     public void setIsApprovalRequiredForAdd(@jakarta.annotation.Nullable final Boolean value) {
-        this.isApprovalRequiredForAdd = value;
+        this.backingStore.set("isApprovalRequiredForAdd", value);
     }
     /**
      * Sets the isApprovalRequiredForUpdate property value. If false, then approval isn't required for updates to requests in this policy.
      * @param value Value to set for the isApprovalRequiredForUpdate property.
      */
     public void setIsApprovalRequiredForUpdate(@jakarta.annotation.Nullable final Boolean value) {
-        this.isApprovalRequiredForUpdate = value;
+        this.backingStore.set("isApprovalRequiredForUpdate", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the stages property value. If approval is required, the one, two or three elements of this collection define each of the stages of approval. An empty array is present if no approval is required.
      * @param value Value to set for the stages property.
      */
     public void setStages(@jakarta.annotation.Nullable final java.util.List<AccessPackageApprovalStage> value) {
-        this.stages = value;
+        this.backingStore.set("stages", value);
     }
 }

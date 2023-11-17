@@ -12,122 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Value indicating whether this policy only applies to Windows Phone 8.1. This property is read-only.
-     */
-    private Boolean applyOnlyToWindowsPhone81;
-    /**
-     * Indicates whether or not to block copy paste.
-     */
-    private Boolean appsBlockCopyPaste;
-    /**
-     * Indicates whether or not to block bluetooth.
-     */
-    private Boolean bluetoothBlocked;
-    /**
-     * Indicates whether or not to block camera.
-     */
-    private Boolean cameraBlocked;
-    /**
-     * Indicates whether or not to block Wi-Fi tethering. Has no impact if Wi-Fi is blocked.
-     */
-    private Boolean cellularBlockWifiTethering;
-    /**
-     * Possible values of the compliance app list.
-     */
-    private AppListType compliantAppListType;
-    /**
-     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
-     */
-    private java.util.List<AppListItem> compliantAppsList;
-    /**
-     * Indicates whether or not to block diagnostic data submission.
-     */
-    private Boolean diagnosticDataBlockSubmission;
-    /**
-     * Indicates whether or not to block custom email accounts.
-     */
-    private Boolean emailBlockAddingAccounts;
-    /**
-     * Indicates whether or not to block location services.
-     */
-    private Boolean locationServicesBlocked;
-    /**
-     * Indicates whether or not to block using a Microsoft Account.
-     */
-    private Boolean microsoftAccountBlocked;
-    /**
-     * Indicates whether or not to block Near-Field Communication.
-     */
-    private Boolean nfcBlocked;
-    /**
-     * Indicates whether or not to block syncing the calendar.
-     */
-    private Boolean passwordBlockSimple;
-    /**
-     * Number of days before the password expires.
-     */
-    private Integer passwordExpirationDays;
-    /**
-     * Number of character sets a password must contain.
-     */
-    private Integer passwordMinimumCharacterSetCount;
-    /**
-     * Minimum length of passwords.
-     */
-    private Integer passwordMinimumLength;
-    /**
-     * Minutes of inactivity before screen timeout.
-     */
-    private Integer passwordMinutesOfInactivityBeforeScreenTimeout;
-    /**
-     * Number of previous passwords to block. Valid values 0 to 24
-     */
-    private Integer passwordPreviousPasswordBlockCount;
-    /**
-     * Indicates whether or not to require a password.
-     */
-    private Boolean passwordRequired;
-    /**
-     * Possible values of required passwords.
-     */
-    private RequiredPasswordType passwordRequiredType;
-    /**
-     * Number of sign in failures allowed before factory reset.
-     */
-    private Integer passwordSignInFailureCountBeforeFactoryReset;
-    /**
-     * Indicates whether or not to block screenshots.
-     */
-    private Boolean screenCaptureBlocked;
-    /**
-     * Indicates whether or not to block removable storage.
-     */
-    private Boolean storageBlockRemovableStorage;
-    /**
-     * Indicates whether or not to require encryption.
-     */
-    private Boolean storageRequireEncryption;
-    /**
-     * Indicates whether or not to block the web browser.
-     */
-    private Boolean webBrowserBlocked;
-    /**
-     * Indicates whether or not to block automatically connecting to Wi-Fi hotspots. Has no impact if Wi-Fi is blocked.
-     */
-    private Boolean wifiBlockAutomaticConnectHotspots;
-    /**
-     * Indicates whether or not to block Wi-Fi.
-     */
-    private Boolean wifiBlocked;
-    /**
-     * Indicates whether or not to block Wi-Fi hotspot reporting. Has no impact if Wi-Fi is blocked.
-     */
-    private Boolean wifiBlockHotspotReporting;
-    /**
-     * Indicates whether or not to block the Windows Store.
-     */
-    private Boolean windowsStoreBlocked;
-    /**
      * Instantiates a new WindowsPhone81GeneralConfiguration and sets the default values.
      */
     public WindowsPhone81GeneralConfiguration() {
@@ -150,7 +34,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Boolean getApplyOnlyToWindowsPhone81() {
-        return this.applyOnlyToWindowsPhone81;
+        return this.backingStore.get("applyOnlyToWindowsPhone81");
     }
     /**
      * Gets the appsBlockCopyPaste property value. Indicates whether or not to block copy paste.
@@ -158,7 +42,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Boolean getAppsBlockCopyPaste() {
-        return this.appsBlockCopyPaste;
+        return this.backingStore.get("appsBlockCopyPaste");
     }
     /**
      * Gets the bluetoothBlocked property value. Indicates whether or not to block bluetooth.
@@ -166,7 +50,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Boolean getBluetoothBlocked() {
-        return this.bluetoothBlocked;
+        return this.backingStore.get("bluetoothBlocked");
     }
     /**
      * Gets the cameraBlocked property value. Indicates whether or not to block camera.
@@ -174,7 +58,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Boolean getCameraBlocked() {
-        return this.cameraBlocked;
+        return this.backingStore.get("cameraBlocked");
     }
     /**
      * Gets the cellularBlockWifiTethering property value. Indicates whether or not to block Wi-Fi tethering. Has no impact if Wi-Fi is blocked.
@@ -182,7 +66,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Boolean getCellularBlockWifiTethering() {
-        return this.cellularBlockWifiTethering;
+        return this.backingStore.get("cellularBlockWifiTethering");
     }
     /**
      * Gets the compliantAppListType property value. Possible values of the compliance app list.
@@ -190,7 +74,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public AppListType getCompliantAppListType() {
-        return this.compliantAppListType;
+        return this.backingStore.get("compliantAppListType");
     }
     /**
      * Gets the compliantAppsList property value. List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
@@ -198,7 +82,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getCompliantAppsList() {
-        return this.compliantAppsList;
+        return this.backingStore.get("compliantAppsList");
     }
     /**
      * Gets the diagnosticDataBlockSubmission property value. Indicates whether or not to block diagnostic data submission.
@@ -206,7 +90,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Boolean getDiagnosticDataBlockSubmission() {
-        return this.diagnosticDataBlockSubmission;
+        return this.backingStore.get("diagnosticDataBlockSubmission");
     }
     /**
      * Gets the emailBlockAddingAccounts property value. Indicates whether or not to block custom email accounts.
@@ -214,7 +98,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Boolean getEmailBlockAddingAccounts() {
-        return this.emailBlockAddingAccounts;
+        return this.backingStore.get("emailBlockAddingAccounts");
     }
     /**
      * The deserialization information for the current model
@@ -260,7 +144,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Boolean getLocationServicesBlocked() {
-        return this.locationServicesBlocked;
+        return this.backingStore.get("locationServicesBlocked");
     }
     /**
      * Gets the microsoftAccountBlocked property value. Indicates whether or not to block using a Microsoft Account.
@@ -268,7 +152,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Boolean getMicrosoftAccountBlocked() {
-        return this.microsoftAccountBlocked;
+        return this.backingStore.get("microsoftAccountBlocked");
     }
     /**
      * Gets the nfcBlocked property value. Indicates whether or not to block Near-Field Communication.
@@ -276,7 +160,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Boolean getNfcBlocked() {
-        return this.nfcBlocked;
+        return this.backingStore.get("nfcBlocked");
     }
     /**
      * Gets the passwordBlockSimple property value. Indicates whether or not to block syncing the calendar.
@@ -284,7 +168,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockSimple() {
-        return this.passwordBlockSimple;
+        return this.backingStore.get("passwordBlockSimple");
     }
     /**
      * Gets the passwordExpirationDays property value. Number of days before the password expires.
@@ -292,7 +176,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
-        return this.passwordExpirationDays;
+        return this.backingStore.get("passwordExpirationDays");
     }
     /**
      * Gets the passwordMinimumCharacterSetCount property value. Number of character sets a password must contain.
@@ -300,7 +184,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumCharacterSetCount() {
-        return this.passwordMinimumCharacterSetCount;
+        return this.backingStore.get("passwordMinimumCharacterSetCount");
     }
     /**
      * Gets the passwordMinimumLength property value. Minimum length of passwords.
@@ -308,7 +192,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
-        return this.passwordMinimumLength;
+        return this.backingStore.get("passwordMinimumLength");
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before screen timeout.
@@ -316,7 +200,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeScreenTimeout() {
-        return this.passwordMinutesOfInactivityBeforeScreenTimeout;
+        return this.backingStore.get("passwordMinutesOfInactivityBeforeScreenTimeout");
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 0 to 24
@@ -324,7 +208,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
-        return this.passwordPreviousPasswordBlockCount;
+        return this.backingStore.get("passwordPreviousPasswordBlockCount");
     }
     /**
      * Gets the passwordRequired property value. Indicates whether or not to require a password.
@@ -332,7 +216,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRequired() {
-        return this.passwordRequired;
+        return this.backingStore.get("passwordRequired");
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
@@ -340,7 +224,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {
-        return this.passwordRequiredType;
+        return this.backingStore.get("passwordRequiredType");
     }
     /**
      * Gets the passwordSignInFailureCountBeforeFactoryReset property value. Number of sign in failures allowed before factory reset.
@@ -348,7 +232,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordSignInFailureCountBeforeFactoryReset() {
-        return this.passwordSignInFailureCountBeforeFactoryReset;
+        return this.backingStore.get("passwordSignInFailureCountBeforeFactoryReset");
     }
     /**
      * Gets the screenCaptureBlocked property value. Indicates whether or not to block screenshots.
@@ -356,7 +240,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Boolean getScreenCaptureBlocked() {
-        return this.screenCaptureBlocked;
+        return this.backingStore.get("screenCaptureBlocked");
     }
     /**
      * Gets the storageBlockRemovableStorage property value. Indicates whether or not to block removable storage.
@@ -364,7 +248,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageBlockRemovableStorage() {
-        return this.storageBlockRemovableStorage;
+        return this.backingStore.get("storageBlockRemovableStorage");
     }
     /**
      * Gets the storageRequireEncryption property value. Indicates whether or not to require encryption.
@@ -372,7 +256,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageRequireEncryption() {
-        return this.storageRequireEncryption;
+        return this.backingStore.get("storageRequireEncryption");
     }
     /**
      * Gets the webBrowserBlocked property value. Indicates whether or not to block the web browser.
@@ -380,7 +264,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Boolean getWebBrowserBlocked() {
-        return this.webBrowserBlocked;
+        return this.backingStore.get("webBrowserBlocked");
     }
     /**
      * Gets the wifiBlockAutomaticConnectHotspots property value. Indicates whether or not to block automatically connecting to Wi-Fi hotspots. Has no impact if Wi-Fi is blocked.
@@ -388,7 +272,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Boolean getWifiBlockAutomaticConnectHotspots() {
-        return this.wifiBlockAutomaticConnectHotspots;
+        return this.backingStore.get("wifiBlockAutomaticConnectHotspots");
     }
     /**
      * Gets the wifiBlocked property value. Indicates whether or not to block Wi-Fi.
@@ -396,7 +280,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Boolean getWifiBlocked() {
-        return this.wifiBlocked;
+        return this.backingStore.get("wifiBlocked");
     }
     /**
      * Gets the wifiBlockHotspotReporting property value. Indicates whether or not to block Wi-Fi hotspot reporting. Has no impact if Wi-Fi is blocked.
@@ -404,7 +288,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Boolean getWifiBlockHotspotReporting() {
-        return this.wifiBlockHotspotReporting;
+        return this.backingStore.get("wifiBlockHotspotReporting");
     }
     /**
      * Gets the windowsStoreBlocked property value. Indicates whether or not to block the Windows Store.
@@ -412,7 +296,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @jakarta.annotation.Nullable
     public Boolean getWindowsStoreBlocked() {
-        return this.windowsStoreBlocked;
+        return this.backingStore.get("windowsStoreBlocked");
     }
     /**
      * Serializes information the current object
@@ -455,202 +339,202 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the applyOnlyToWindowsPhone81 property.
      */
     public void setApplyOnlyToWindowsPhone81(@jakarta.annotation.Nullable final Boolean value) {
-        this.applyOnlyToWindowsPhone81 = value;
+        this.backingStore.set("applyOnlyToWindowsPhone81", value);
     }
     /**
      * Sets the appsBlockCopyPaste property value. Indicates whether or not to block copy paste.
      * @param value Value to set for the appsBlockCopyPaste property.
      */
     public void setAppsBlockCopyPaste(@jakarta.annotation.Nullable final Boolean value) {
-        this.appsBlockCopyPaste = value;
+        this.backingStore.set("appsBlockCopyPaste", value);
     }
     /**
      * Sets the bluetoothBlocked property value. Indicates whether or not to block bluetooth.
      * @param value Value to set for the bluetoothBlocked property.
      */
     public void setBluetoothBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.bluetoothBlocked = value;
+        this.backingStore.set("bluetoothBlocked", value);
     }
     /**
      * Sets the cameraBlocked property value. Indicates whether or not to block camera.
      * @param value Value to set for the cameraBlocked property.
      */
     public void setCameraBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.cameraBlocked = value;
+        this.backingStore.set("cameraBlocked", value);
     }
     /**
      * Sets the cellularBlockWifiTethering property value. Indicates whether or not to block Wi-Fi tethering. Has no impact if Wi-Fi is blocked.
      * @param value Value to set for the cellularBlockWifiTethering property.
      */
     public void setCellularBlockWifiTethering(@jakarta.annotation.Nullable final Boolean value) {
-        this.cellularBlockWifiTethering = value;
+        this.backingStore.set("cellularBlockWifiTethering", value);
     }
     /**
      * Sets the compliantAppListType property value. Possible values of the compliance app list.
      * @param value Value to set for the compliantAppListType property.
      */
     public void setCompliantAppListType(@jakarta.annotation.Nullable final AppListType value) {
-        this.compliantAppListType = value;
+        this.backingStore.set("compliantAppListType", value);
     }
     /**
      * Sets the compliantAppsList property value. List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
      * @param value Value to set for the compliantAppsList property.
      */
     public void setCompliantAppsList(@jakarta.annotation.Nullable final java.util.List<AppListItem> value) {
-        this.compliantAppsList = value;
+        this.backingStore.set("compliantAppsList", value);
     }
     /**
      * Sets the diagnosticDataBlockSubmission property value. Indicates whether or not to block diagnostic data submission.
      * @param value Value to set for the diagnosticDataBlockSubmission property.
      */
     public void setDiagnosticDataBlockSubmission(@jakarta.annotation.Nullable final Boolean value) {
-        this.diagnosticDataBlockSubmission = value;
+        this.backingStore.set("diagnosticDataBlockSubmission", value);
     }
     /**
      * Sets the emailBlockAddingAccounts property value. Indicates whether or not to block custom email accounts.
      * @param value Value to set for the emailBlockAddingAccounts property.
      */
     public void setEmailBlockAddingAccounts(@jakarta.annotation.Nullable final Boolean value) {
-        this.emailBlockAddingAccounts = value;
+        this.backingStore.set("emailBlockAddingAccounts", value);
     }
     /**
      * Sets the locationServicesBlocked property value. Indicates whether or not to block location services.
      * @param value Value to set for the locationServicesBlocked property.
      */
     public void setLocationServicesBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.locationServicesBlocked = value;
+        this.backingStore.set("locationServicesBlocked", value);
     }
     /**
      * Sets the microsoftAccountBlocked property value. Indicates whether or not to block using a Microsoft Account.
      * @param value Value to set for the microsoftAccountBlocked property.
      */
     public void setMicrosoftAccountBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.microsoftAccountBlocked = value;
+        this.backingStore.set("microsoftAccountBlocked", value);
     }
     /**
      * Sets the nfcBlocked property value. Indicates whether or not to block Near-Field Communication.
      * @param value Value to set for the nfcBlocked property.
      */
     public void setNfcBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.nfcBlocked = value;
+        this.backingStore.set("nfcBlocked", value);
     }
     /**
      * Sets the passwordBlockSimple property value. Indicates whether or not to block syncing the calendar.
      * @param value Value to set for the passwordBlockSimple property.
      */
     public void setPasswordBlockSimple(@jakarta.annotation.Nullable final Boolean value) {
-        this.passwordBlockSimple = value;
+        this.backingStore.set("passwordBlockSimple", value);
     }
     /**
      * Sets the passwordExpirationDays property value. Number of days before the password expires.
      * @param value Value to set for the passwordExpirationDays property.
      */
     public void setPasswordExpirationDays(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordExpirationDays = value;
+        this.backingStore.set("passwordExpirationDays", value);
     }
     /**
      * Sets the passwordMinimumCharacterSetCount property value. Number of character sets a password must contain.
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
      */
     public void setPasswordMinimumCharacterSetCount(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordMinimumCharacterSetCount = value;
+        this.backingStore.set("passwordMinimumCharacterSetCount", value);
     }
     /**
      * Sets the passwordMinimumLength property value. Minimum length of passwords.
      * @param value Value to set for the passwordMinimumLength property.
      */
     public void setPasswordMinimumLength(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordMinimumLength = value;
+        this.backingStore.set("passwordMinimumLength", value);
     }
     /**
      * Sets the passwordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before screen timeout.
      * @param value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
      */
     public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordMinutesOfInactivityBeforeScreenTimeout = value;
+        this.backingStore.set("passwordMinutesOfInactivityBeforeScreenTimeout", value);
     }
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 0 to 24
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      */
     public void setPasswordPreviousPasswordBlockCount(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordPreviousPasswordBlockCount = value;
+        this.backingStore.set("passwordPreviousPasswordBlockCount", value);
     }
     /**
      * Sets the passwordRequired property value. Indicates whether or not to require a password.
      * @param value Value to set for the passwordRequired property.
      */
     public void setPasswordRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.passwordRequired = value;
+        this.backingStore.set("passwordRequired", value);
     }
     /**
      * Sets the passwordRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passwordRequiredType property.
      */
     public void setPasswordRequiredType(@jakarta.annotation.Nullable final RequiredPasswordType value) {
-        this.passwordRequiredType = value;
+        this.backingStore.set("passwordRequiredType", value);
     }
     /**
      * Sets the passwordSignInFailureCountBeforeFactoryReset property value. Number of sign in failures allowed before factory reset.
      * @param value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
      */
     public void setPasswordSignInFailureCountBeforeFactoryReset(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordSignInFailureCountBeforeFactoryReset = value;
+        this.backingStore.set("passwordSignInFailureCountBeforeFactoryReset", value);
     }
     /**
      * Sets the screenCaptureBlocked property value. Indicates whether or not to block screenshots.
      * @param value Value to set for the screenCaptureBlocked property.
      */
     public void setScreenCaptureBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.screenCaptureBlocked = value;
+        this.backingStore.set("screenCaptureBlocked", value);
     }
     /**
      * Sets the storageBlockRemovableStorage property value. Indicates whether or not to block removable storage.
      * @param value Value to set for the storageBlockRemovableStorage property.
      */
     public void setStorageBlockRemovableStorage(@jakarta.annotation.Nullable final Boolean value) {
-        this.storageBlockRemovableStorage = value;
+        this.backingStore.set("storageBlockRemovableStorage", value);
     }
     /**
      * Sets the storageRequireEncryption property value. Indicates whether or not to require encryption.
      * @param value Value to set for the storageRequireEncryption property.
      */
     public void setStorageRequireEncryption(@jakarta.annotation.Nullable final Boolean value) {
-        this.storageRequireEncryption = value;
+        this.backingStore.set("storageRequireEncryption", value);
     }
     /**
      * Sets the webBrowserBlocked property value. Indicates whether or not to block the web browser.
      * @param value Value to set for the webBrowserBlocked property.
      */
     public void setWebBrowserBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.webBrowserBlocked = value;
+        this.backingStore.set("webBrowserBlocked", value);
     }
     /**
      * Sets the wifiBlockAutomaticConnectHotspots property value. Indicates whether or not to block automatically connecting to Wi-Fi hotspots. Has no impact if Wi-Fi is blocked.
      * @param value Value to set for the wifiBlockAutomaticConnectHotspots property.
      */
     public void setWifiBlockAutomaticConnectHotspots(@jakarta.annotation.Nullable final Boolean value) {
-        this.wifiBlockAutomaticConnectHotspots = value;
+        this.backingStore.set("wifiBlockAutomaticConnectHotspots", value);
     }
     /**
      * Sets the wifiBlocked property value. Indicates whether or not to block Wi-Fi.
      * @param value Value to set for the wifiBlocked property.
      */
     public void setWifiBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.wifiBlocked = value;
+        this.backingStore.set("wifiBlocked", value);
     }
     /**
      * Sets the wifiBlockHotspotReporting property value. Indicates whether or not to block Wi-Fi hotspot reporting. Has no impact if Wi-Fi is blocked.
      * @param value Value to set for the wifiBlockHotspotReporting property.
      */
     public void setWifiBlockHotspotReporting(@jakarta.annotation.Nullable final Boolean value) {
-        this.wifiBlockHotspotReporting = value;
+        this.backingStore.set("wifiBlockHotspotReporting", value);
     }
     /**
      * Sets the windowsStoreBlocked property value. Indicates whether or not to block the Windows Store.
      * @param value Value to set for the windowsStoreBlocked property.
      */
     public void setWindowsStoreBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.windowsStoreBlocked = value;
+        this.backingStore.set("windowsStoreBlocked", value);
     }
 }

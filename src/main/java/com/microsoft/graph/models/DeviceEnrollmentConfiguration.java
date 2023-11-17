@@ -13,34 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     /**
-     * The list of group assignments for the device configuration profile
-     */
-    private java.util.List<EnrollmentConfigurationAssignment> assignments;
-    /**
-     * Created date time in UTC of the device enrollment configuration
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The description of the device enrollment configuration
-     */
-    private String description;
-    /**
-     * The display name of the device enrollment configuration
-     */
-    private String displayName;
-    /**
-     * Last modified date time in UTC of the device enrollment configuration
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Priority is used when a user exists in multiple groups that are assigned enrollment configuration. Users are subject only to the configuration with the lowest priority value.
-     */
-    private Integer priority;
-    /**
-     * The version of the device enrollment configuration
-     */
-    private Integer version;
-    /**
      * Instantiates a new DeviceEnrollmentConfiguration and sets the default values.
      */
     public DeviceEnrollmentConfiguration() {
@@ -71,7 +43,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<EnrollmentConfigurationAssignment> getAssignments() {
-        return this.assignments;
+        return this.backingStore.get("assignments");
     }
     /**
      * Gets the createdDateTime property value. Created date time in UTC of the device enrollment configuration
@@ -79,7 +51,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the description property value. The description of the device enrollment configuration
@@ -87,7 +59,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. The display name of the device enrollment configuration
@@ -95,7 +67,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -119,7 +91,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the priority property value. Priority is used when a user exists in multiple groups that are assigned enrollment configuration. Users are subject only to the configuration with the lowest priority value.
@@ -127,7 +99,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
-        return this.priority;
+        return this.backingStore.get("priority");
     }
     /**
      * Gets the version property value. The version of the device enrollment configuration
@@ -135,7 +107,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {
-        return this.version;
+        return this.backingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -157,48 +129,48 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<EnrollmentConfigurationAssignment> value) {
-        this.assignments = value;
+        this.backingStore.set("assignments", value);
     }
     /**
      * Sets the createdDateTime property value. Created date time in UTC of the device enrollment configuration
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the description property value. The description of the device enrollment configuration
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The display name of the device enrollment configuration
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. Last modified date time in UTC of the device enrollment configuration
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the priority property value. Priority is used when a user exists in multiple groups that are assigned enrollment configuration. Users are subject only to the configuration with the lowest priority value.
      * @param value Value to set for the priority property.
      */
     public void setPriority(@jakarta.annotation.Nullable final Integer value) {
-        this.priority = value;
+        this.backingStore.set("priority", value);
     }
     /**
      * Sets the version property value. The version of the device enrollment configuration
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final Integer value) {
-        this.version = value;
+        this.backingStore.set("version", value);
     }
 }

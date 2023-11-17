@@ -4,43 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class LookupColumn implements AdditionalDataHolder, Parsable {
+public class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Indicates whether multiple values can be selected from the source.
-     */
-    private Boolean allowMultipleValues;
-    /**
-     * Indicates whether values in the column should be able to exceed the standard limit of 255 characters.
-     */
-    private Boolean allowUnlimitedLength;
-    /**
-     * The name of the lookup source column.
-     */
-    private String columnName;
-    /**
-     * The unique identifier of the lookup source list.
-     */
-    private String listId;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * If specified, this column is a secondary lookup, pulling an additional field from the list item looked up by the primary lookup. Use the list item looked up by the primary as the source for the column named here.
-     */
-    private String primaryLookupColumnId;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new LookupColumn and sets the default values.
      */
     public LookupColumn() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -59,7 +40,12 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the allowMultipleValues property value. Indicates whether multiple values can be selected from the source.
@@ -67,7 +53,7 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowMultipleValues() {
-        return this.allowMultipleValues;
+        return this.backingStore.get("allowMultipleValues");
     }
     /**
      * Gets the allowUnlimitedLength property value. Indicates whether values in the column should be able to exceed the standard limit of 255 characters.
@@ -75,7 +61,15 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowUnlimitedLength() {
-        return this.allowUnlimitedLength;
+        return this.backingStore.get("allowUnlimitedLength");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the columnName property value. The name of the lookup source column.
@@ -83,7 +77,7 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getColumnName() {
-        return this.columnName;
+        return this.backingStore.get("columnName");
     }
     /**
      * The deserialization information for the current model
@@ -106,7 +100,7 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getListId() {
-        return this.listId;
+        return this.backingStore.get("listId");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -114,7 +108,7 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the primaryLookupColumnId property value. If specified, this column is a secondary lookup, pulling an additional field from the list item looked up by the primary lookup. Use the list item looked up by the primary as the source for the column named here.
@@ -122,7 +116,7 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPrimaryLookupColumnId() {
-        return this.primaryLookupColumnId;
+        return this.backingStore.get("primaryLookupColumnId");
     }
     /**
      * Serializes information the current object
@@ -143,48 +137,56 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the allowMultipleValues property value. Indicates whether multiple values can be selected from the source.
      * @param value Value to set for the allowMultipleValues property.
      */
     public void setAllowMultipleValues(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowMultipleValues = value;
+        this.backingStore.set("allowMultipleValues", value);
     }
     /**
      * Sets the allowUnlimitedLength property value. Indicates whether values in the column should be able to exceed the standard limit of 255 characters.
      * @param value Value to set for the allowUnlimitedLength property.
      */
     public void setAllowUnlimitedLength(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowUnlimitedLength = value;
+        this.backingStore.set("allowUnlimitedLength", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the columnName property value. The name of the lookup source column.
      * @param value Value to set for the columnName property.
      */
     public void setColumnName(@jakarta.annotation.Nullable final String value) {
-        this.columnName = value;
+        this.backingStore.set("columnName", value);
     }
     /**
      * Sets the listId property value. The unique identifier of the lookup source list.
      * @param value Value to set for the listId property.
      */
     public void setListId(@jakarta.annotation.Nullable final String value) {
-        this.listId = value;
+        this.backingStore.set("listId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the primaryLookupColumnId property value. If specified, this column is a secondary lookup, pulling an additional field from the list item looked up by the primary lookup. Use the list item looked up by the primary as the source for the column named here.
      * @param value Value to set for the primaryLookupColumnId property.
      */
     public void setPrimaryLookupColumnId(@jakarta.annotation.Nullable final String value) {
-        this.primaryLookupColumnId = value;
+        this.backingStore.set("primaryLookupColumnId", value);
     }
 }

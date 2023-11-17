@@ -9,42 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartDataLabels extends Entity implements Parsable {
     /**
-     * Represents the format of chart data labels, which includes fill and font formatting. Read-only.
-     */
-    private WorkbookChartDataLabelFormat format;
-    /**
-     * DataLabelPosition value that represents the position of the data label. The possible values are: None, Center, InsideEnd, InsideBase, OutsideEnd, Left, Right, Top, Bottom, BestFit, Callout.
-     */
-    private String position;
-    /**
-     * String representing the separator used for the data labels on a chart.
-     */
-    private String separator;
-    /**
-     * Boolean value representing if the data label bubble size is visible or not.
-     */
-    private Boolean showBubbleSize;
-    /**
-     * Boolean value representing if the data label category name is visible or not.
-     */
-    private Boolean showCategoryName;
-    /**
-     * Boolean value representing if the data label legend key is visible or not.
-     */
-    private Boolean showLegendKey;
-    /**
-     * Boolean value representing if the data label percentage is visible or not.
-     */
-    private Boolean showPercentage;
-    /**
-     * Boolean value representing if the data label series name is visible or not.
-     */
-    private Boolean showSeriesName;
-    /**
-     * Boolean value representing if the data label value is visible or not.
-     */
-    private Boolean showValue;
-    /**
      * Instantiates a new WorkbookChartDataLabels and sets the default values.
      */
     public WorkbookChartDataLabels() {
@@ -84,7 +48,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookChartDataLabelFormat getFormat() {
-        return this.format;
+        return this.backingStore.get("format");
     }
     /**
      * Gets the position property value. DataLabelPosition value that represents the position of the data label. The possible values are: None, Center, InsideEnd, InsideBase, OutsideEnd, Left, Right, Top, Bottom, BestFit, Callout.
@@ -92,7 +56,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPosition() {
-        return this.position;
+        return this.backingStore.get("position");
     }
     /**
      * Gets the separator property value. String representing the separator used for the data labels on a chart.
@@ -100,7 +64,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSeparator() {
-        return this.separator;
+        return this.backingStore.get("separator");
     }
     /**
      * Gets the showBubbleSize property value. Boolean value representing if the data label bubble size is visible or not.
@@ -108,7 +72,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getShowBubbleSize() {
-        return this.showBubbleSize;
+        return this.backingStore.get("showBubbleSize");
     }
     /**
      * Gets the showCategoryName property value. Boolean value representing if the data label category name is visible or not.
@@ -116,7 +80,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getShowCategoryName() {
-        return this.showCategoryName;
+        return this.backingStore.get("showCategoryName");
     }
     /**
      * Gets the showLegendKey property value. Boolean value representing if the data label legend key is visible or not.
@@ -124,7 +88,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getShowLegendKey() {
-        return this.showLegendKey;
+        return this.backingStore.get("showLegendKey");
     }
     /**
      * Gets the showPercentage property value. Boolean value representing if the data label percentage is visible or not.
@@ -132,7 +96,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getShowPercentage() {
-        return this.showPercentage;
+        return this.backingStore.get("showPercentage");
     }
     /**
      * Gets the showSeriesName property value. Boolean value representing if the data label series name is visible or not.
@@ -140,7 +104,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getShowSeriesName() {
-        return this.showSeriesName;
+        return this.backingStore.get("showSeriesName");
     }
     /**
      * Gets the showValue property value. Boolean value representing if the data label value is visible or not.
@@ -148,7 +112,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getShowValue() {
-        return this.showValue;
+        return this.backingStore.get("showValue");
     }
     /**
      * Serializes information the current object
@@ -172,62 +136,62 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
      * @param value Value to set for the format property.
      */
     public void setFormat(@jakarta.annotation.Nullable final WorkbookChartDataLabelFormat value) {
-        this.format = value;
+        this.backingStore.set("format", value);
     }
     /**
      * Sets the position property value. DataLabelPosition value that represents the position of the data label. The possible values are: None, Center, InsideEnd, InsideBase, OutsideEnd, Left, Right, Top, Bottom, BestFit, Callout.
      * @param value Value to set for the position property.
      */
     public void setPosition(@jakarta.annotation.Nullable final String value) {
-        this.position = value;
+        this.backingStore.set("position", value);
     }
     /**
      * Sets the separator property value. String representing the separator used for the data labels on a chart.
      * @param value Value to set for the separator property.
      */
     public void setSeparator(@jakarta.annotation.Nullable final String value) {
-        this.separator = value;
+        this.backingStore.set("separator", value);
     }
     /**
      * Sets the showBubbleSize property value. Boolean value representing if the data label bubble size is visible or not.
      * @param value Value to set for the showBubbleSize property.
      */
     public void setShowBubbleSize(@jakarta.annotation.Nullable final Boolean value) {
-        this.showBubbleSize = value;
+        this.backingStore.set("showBubbleSize", value);
     }
     /**
      * Sets the showCategoryName property value. Boolean value representing if the data label category name is visible or not.
      * @param value Value to set for the showCategoryName property.
      */
     public void setShowCategoryName(@jakarta.annotation.Nullable final Boolean value) {
-        this.showCategoryName = value;
+        this.backingStore.set("showCategoryName", value);
     }
     /**
      * Sets the showLegendKey property value. Boolean value representing if the data label legend key is visible or not.
      * @param value Value to set for the showLegendKey property.
      */
     public void setShowLegendKey(@jakarta.annotation.Nullable final Boolean value) {
-        this.showLegendKey = value;
+        this.backingStore.set("showLegendKey", value);
     }
     /**
      * Sets the showPercentage property value. Boolean value representing if the data label percentage is visible or not.
      * @param value Value to set for the showPercentage property.
      */
     public void setShowPercentage(@jakarta.annotation.Nullable final Boolean value) {
-        this.showPercentage = value;
+        this.backingStore.set("showPercentage", value);
     }
     /**
      * Sets the showSeriesName property value. Boolean value representing if the data label series name is visible or not.
      * @param value Value to set for the showSeriesName property.
      */
     public void setShowSeriesName(@jakarta.annotation.Nullable final Boolean value) {
-        this.showSeriesName = value;
+        this.backingStore.set("showSeriesName", value);
     }
     /**
      * Sets the showValue property value. Boolean value representing if the data label value is visible or not.
      * @param value Value to set for the showValue property.
      */
     public void setShowValue(@jakarta.annotation.Nullable final Boolean value) {
-        this.showValue = value;
+        this.backingStore.set("showValue", value);
     }
 }

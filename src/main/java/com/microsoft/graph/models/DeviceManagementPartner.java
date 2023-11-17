@@ -13,42 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementPartner extends Entity implements Parsable {
     /**
-     * Partner display name
-     */
-    private String displayName;
-    /**
-     * User groups that specifies whether enrollment is through partner.
-     */
-    private java.util.List<DeviceManagementPartnerAssignment> groupsRequiringPartnerEnrollment;
-    /**
-     * Whether device management partner is configured or not
-     */
-    private Boolean isConfigured;
-    /**
-     * Timestamp of last heartbeat after admin enabled option Connect to Device management Partner
-     */
-    private OffsetDateTime lastHeartbeatDateTime;
-    /**
-     * Partner App Type.
-     */
-    private DeviceManagementPartnerAppType partnerAppType;
-    /**
-     * Partner state of this tenant.
-     */
-    private DeviceManagementPartnerTenantState partnerState;
-    /**
-     * Partner Single tenant App id
-     */
-    private String singleTenantAppId;
-    /**
-     * DateTime in UTC when PartnerDevices will be marked as NonCompliant
-     */
-    private OffsetDateTime whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime;
-    /**
-     * DateTime in UTC when PartnerDevices will be removed
-     */
-    private OffsetDateTime whenPartnerDevicesWillBeRemovedDateTime;
-    /**
      * Instantiates a new DeviceManagementPartner and sets the default values.
      */
     public DeviceManagementPartner() {
@@ -70,7 +34,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -96,7 +60,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementPartnerAssignment> getGroupsRequiringPartnerEnrollment() {
-        return this.groupsRequiringPartnerEnrollment;
+        return this.backingStore.get("groupsRequiringPartnerEnrollment");
     }
     /**
      * Gets the isConfigured property value. Whether device management partner is configured or not
@@ -104,7 +68,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsConfigured() {
-        return this.isConfigured;
+        return this.backingStore.get("isConfigured");
     }
     /**
      * Gets the lastHeartbeatDateTime property value. Timestamp of last heartbeat after admin enabled option Connect to Device management Partner
@@ -112,7 +76,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastHeartbeatDateTime() {
-        return this.lastHeartbeatDateTime;
+        return this.backingStore.get("lastHeartbeatDateTime");
     }
     /**
      * Gets the partnerAppType property value. Partner App Type.
@@ -120,7 +84,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DeviceManagementPartnerAppType getPartnerAppType() {
-        return this.partnerAppType;
+        return this.backingStore.get("partnerAppType");
     }
     /**
      * Gets the partnerState property value. Partner state of this tenant.
@@ -128,7 +92,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DeviceManagementPartnerTenantState getPartnerState() {
-        return this.partnerState;
+        return this.backingStore.get("partnerState");
     }
     /**
      * Gets the singleTenantAppId property value. Partner Single tenant App id
@@ -136,7 +100,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSingleTenantAppId() {
-        return this.singleTenantAppId;
+        return this.backingStore.get("singleTenantAppId");
     }
     /**
      * Gets the whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime property value. DateTime in UTC when PartnerDevices will be marked as NonCompliant
@@ -144,7 +108,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getWhenPartnerDevicesWillBeMarkedAsNonCompliantDateTime() {
-        return this.whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime;
+        return this.backingStore.get("whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime");
     }
     /**
      * Gets the whenPartnerDevicesWillBeRemovedDateTime property value. DateTime in UTC when PartnerDevices will be removed
@@ -152,7 +116,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getWhenPartnerDevicesWillBeRemovedDateTime() {
-        return this.whenPartnerDevicesWillBeRemovedDateTime;
+        return this.backingStore.get("whenPartnerDevicesWillBeRemovedDateTime");
     }
     /**
      * Serializes information the current object
@@ -176,62 +140,62 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the groupsRequiringPartnerEnrollment property value. User groups that specifies whether enrollment is through partner.
      * @param value Value to set for the groupsRequiringPartnerEnrollment property.
      */
     public void setGroupsRequiringPartnerEnrollment(@jakarta.annotation.Nullable final java.util.List<DeviceManagementPartnerAssignment> value) {
-        this.groupsRequiringPartnerEnrollment = value;
+        this.backingStore.set("groupsRequiringPartnerEnrollment", value);
     }
     /**
      * Sets the isConfigured property value. Whether device management partner is configured or not
      * @param value Value to set for the isConfigured property.
      */
     public void setIsConfigured(@jakarta.annotation.Nullable final Boolean value) {
-        this.isConfigured = value;
+        this.backingStore.set("isConfigured", value);
     }
     /**
      * Sets the lastHeartbeatDateTime property value. Timestamp of last heartbeat after admin enabled option Connect to Device management Partner
      * @param value Value to set for the lastHeartbeatDateTime property.
      */
     public void setLastHeartbeatDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastHeartbeatDateTime = value;
+        this.backingStore.set("lastHeartbeatDateTime", value);
     }
     /**
      * Sets the partnerAppType property value. Partner App Type.
      * @param value Value to set for the partnerAppType property.
      */
     public void setPartnerAppType(@jakarta.annotation.Nullable final DeviceManagementPartnerAppType value) {
-        this.partnerAppType = value;
+        this.backingStore.set("partnerAppType", value);
     }
     /**
      * Sets the partnerState property value. Partner state of this tenant.
      * @param value Value to set for the partnerState property.
      */
     public void setPartnerState(@jakarta.annotation.Nullable final DeviceManagementPartnerTenantState value) {
-        this.partnerState = value;
+        this.backingStore.set("partnerState", value);
     }
     /**
      * Sets the singleTenantAppId property value. Partner Single tenant App id
      * @param value Value to set for the singleTenantAppId property.
      */
     public void setSingleTenantAppId(@jakarta.annotation.Nullable final String value) {
-        this.singleTenantAppId = value;
+        this.backingStore.set("singleTenantAppId", value);
     }
     /**
      * Sets the whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime property value. DateTime in UTC when PartnerDevices will be marked as NonCompliant
      * @param value Value to set for the whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime property.
      */
     public void setWhenPartnerDevicesWillBeMarkedAsNonCompliantDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime = value;
+        this.backingStore.set("whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime", value);
     }
     /**
      * Sets the whenPartnerDevicesWillBeRemovedDateTime property value. DateTime in UTC when PartnerDevices will be removed
      * @param value Value to set for the whenPartnerDevicesWillBeRemovedDateTime property.
      */
     public void setWhenPartnerDevicesWillBeRemovedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.whenPartnerDevicesWillBeRemovedDateTime = value;
+        this.backingStore.set("whenPartnerDevicesWillBeRemovedDateTime", value);
     }
 }

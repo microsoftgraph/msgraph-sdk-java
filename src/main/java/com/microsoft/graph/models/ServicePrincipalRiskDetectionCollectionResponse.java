@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServicePrincipalRiskDetectionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<ServicePrincipalRiskDetection> value;
-    /**
      * Instantiates a new ServicePrincipalRiskDetectionCollectionResponse and sets the default values.
      */
     public ServicePrincipalRiskDetectionCollectionResponse() {
@@ -44,7 +40,7 @@ public class ServicePrincipalRiskDetectionCollectionResponse extends BaseCollect
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServicePrincipalRiskDetection> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class ServicePrincipalRiskDetectionCollectionResponse extends BaseCollect
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<ServicePrincipalRiskDetection> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

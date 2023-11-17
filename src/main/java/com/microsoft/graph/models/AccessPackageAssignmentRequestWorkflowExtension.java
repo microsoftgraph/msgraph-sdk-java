@@ -10,26 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageAssignmentRequestWorkflowExtension extends CustomCalloutExtension implements Parsable {
     /**
-     * The callback configuration for a custom extension.
-     */
-    private CustomExtensionCallbackConfiguration callbackConfiguration;
-    /**
-     * The userPrincipalName of the user or identity of the subject that created this resource. Read-only.
-     */
-    private String createdBy;
-    /**
-     * When the object was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The userPrincipalName of the identity that last modified the object.
-     */
-    private String lastModifiedBy;
-    /**
-     * When the object was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
      * Instantiates a new AccessPackageAssignmentRequestWorkflowExtension and sets the default values.
      */
     public AccessPackageAssignmentRequestWorkflowExtension() {
@@ -52,7 +32,7 @@ public class AccessPackageAssignmentRequestWorkflowExtension extends CustomCallo
      */
     @jakarta.annotation.Nullable
     public CustomExtensionCallbackConfiguration getCallbackConfiguration() {
-        return this.callbackConfiguration;
+        return this.backingStore.get("callbackConfiguration");
     }
     /**
      * Gets the createdBy property value. The userPrincipalName of the user or identity of the subject that created this resource. Read-only.
@@ -60,7 +40,7 @@ public class AccessPackageAssignmentRequestWorkflowExtension extends CustomCallo
      */
     @jakarta.annotation.Nullable
     public String getCreatedBy() {
-        return this.createdBy;
+        return this.backingStore.get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. When the object was created.
@@ -68,7 +48,7 @@ public class AccessPackageAssignmentRequestWorkflowExtension extends CustomCallo
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -90,7 +70,7 @@ public class AccessPackageAssignmentRequestWorkflowExtension extends CustomCallo
      */
     @jakarta.annotation.Nullable
     public String getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.backingStore.get("lastModifiedBy");
     }
     /**
      * Gets the lastModifiedDateTime property value. When the object was last modified.
@@ -98,7 +78,7 @@ public class AccessPackageAssignmentRequestWorkflowExtension extends CustomCallo
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Serializes information the current object
@@ -118,34 +98,34 @@ public class AccessPackageAssignmentRequestWorkflowExtension extends CustomCallo
      * @param value Value to set for the callbackConfiguration property.
      */
     public void setCallbackConfiguration(@jakarta.annotation.Nullable final CustomExtensionCallbackConfiguration value) {
-        this.callbackConfiguration = value;
+        this.backingStore.set("callbackConfiguration", value);
     }
     /**
      * Sets the createdBy property value. The userPrincipalName of the user or identity of the subject that created this resource. Read-only.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final String value) {
-        this.createdBy = value;
+        this.backingStore.set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. When the object was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the lastModifiedBy property value. The userPrincipalName of the identity that last modified the object.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final String value) {
-        this.lastModifiedBy = value;
+        this.backingStore.set("lastModifiedBy", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. When the object was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
 }

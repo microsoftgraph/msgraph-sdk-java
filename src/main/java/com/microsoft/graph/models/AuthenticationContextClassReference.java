@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationContextClassReference extends Entity implements Parsable {
     /**
-     * A short explanation of the policies that are enforced by authenticationContextClassReference. This value should be used to provide secondary text to describe the authentication context class reference when building user-facing admin experiences. For example, a selection UX.
-     */
-    private String description;
-    /**
-     * The display name is the friendly name of the authenticationContextClassReference object. This value should be used to identify the authentication context class reference when building user-facing admin experiences. For example, a selection UX.
-     */
-    private String displayName;
-    /**
-     * Indicates whether the authenticationContextClassReference has been published by the security admin and is ready for use by apps. When it's set to false, it shouldn't be shown in authentication context selection UX, or used to protect app resources. It's shown and available for Conditional Access policy authoring. The default value is false.  Supports $filter (eq).
-     */
-    private Boolean isAvailable;
-    /**
      * Instantiates a new AuthenticationContextClassReference and sets the default values.
      */
     public AuthenticationContextClassReference() {
@@ -42,7 +30,7 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. The display name is the friendly name of the authenticationContextClassReference object. This value should be used to identify the authentication context class reference when building user-facing admin experiences. For example, a selection UX.
@@ -50,7 +38,7 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -70,7 +58,7 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAvailable() {
-        return this.isAvailable;
+        return this.backingStore.get("isAvailable");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The display name is the friendly name of the authenticationContextClassReference object. This value should be used to identify the authentication context class reference when building user-facing admin experiences. For example, a selection UX.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the isAvailable property value. Indicates whether the authenticationContextClassReference has been published by the security admin and is ready for use by apps. When it's set to false, it shouldn't be shown in authentication context selection UX, or used to protect app resources. It's shown and available for Conditional Access policy authoring. The default value is false.  Supports $filter (eq).
      * @param value Value to set for the isAvailable property.
      */
     public void setIsAvailable(@jakarta.annotation.Nullable final Boolean value) {
-        this.isAvailable = value;
+        this.backingStore.set("isAvailable", value);
     }
 }

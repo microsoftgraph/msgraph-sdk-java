@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class NoTrainingNotificationSetting extends EndUserNotificationSetting implements Parsable {
     /**
-     * The notification for the user who is part of the simulation.
-     */
-    private SimulationNotification simulationNotification;
-    /**
      * Instantiates a new NoTrainingNotificationSetting and sets the default values.
      */
     public NoTrainingNotificationSetting() {
@@ -45,7 +41,7 @@ public class NoTrainingNotificationSetting extends EndUserNotificationSetting im
      */
     @jakarta.annotation.Nullable
     public SimulationNotification getSimulationNotification() {
-        return this.simulationNotification;
+        return this.backingStore.get("simulationNotification");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class NoTrainingNotificationSetting extends EndUserNotificationSetting im
      * @param value Value to set for the simulationNotification property.
      */
     public void setSimulationNotification(@jakarta.annotation.Nullable final SimulationNotification value) {
-        this.simulationNotification = value;
+        this.backingStore.set("simulationNotification", value);
     }
 }

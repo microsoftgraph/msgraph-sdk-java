@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookRangeFill extends Entity implements Parsable {
     /**
-     * HTML color code representing the color of the border line, of the form #RRGGBB (for example 'FFA500') or as a named HTML color (for example 'orange')
-     */
-    private String color;
-    /**
      * Instantiates a new WorkbookRangeFill and sets the default values.
      */
     public WorkbookRangeFill() {
@@ -34,7 +30,7 @@ public class WorkbookRangeFill extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getColor() {
-        return this.color;
+        return this.backingStore.get("color");
     }
     /**
      * The deserialization information for the current model
@@ -60,6 +56,6 @@ public class WorkbookRangeFill extends Entity implements Parsable {
      * @param value Value to set for the color property.
      */
     public void setColor(@jakarta.annotation.Nullable final String value) {
-        this.color = value;
+        this.backingStore.set("color", value);
     }
 }
