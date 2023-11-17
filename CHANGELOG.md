@@ -11,6 +11,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.77.0] - 2023-11-17
+
+### Added
+
+- ItemRetentionLabel model and derived request.
+- MeetingAudience model.
+- OnlineMeetingBase model and derived request.
+- RetentionLabelSettings model.
+- VirtualEvent model and derived requests.
+- VirtualEventAttendeeRegistrationStatus model.
+- VirtualEventRegistration model and derived requests.
+- VirtualEventRegistrationQuestionAnswer model.
+- VirtualEventSession model and derived requests.
+- VirtualEventsRoot model and derived request.
+- VirtualEventStatus model.
+- VirtualEventWebinar model and derived requests.
+- VirtualEventWebinarGetByUserIdAndRoleParameterSet model and derived requests.
+- VirtualEventWebinarGetByUserRoleParameterSet model and derived requests.
+- BehaviorDuringRetentionPeriod model.
+
+### Changed
+
+- DriveItem model and derived request.
+- OnlineMeeting model.
+- SolutionsRoot model and derived request.
+
 ## [5.76.0] - 2023-11-10
 
 ### Added 
