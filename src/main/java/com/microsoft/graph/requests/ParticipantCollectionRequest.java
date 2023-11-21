@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.Call;
+import com.microsoft.graph.models.DeltaParticipants;
 import com.microsoft.graph.models.Participant;
 import com.microsoft.graph.models.InvitationParticipantInfo;
 import com.microsoft.graph.models.InviteParticipantsOperation;

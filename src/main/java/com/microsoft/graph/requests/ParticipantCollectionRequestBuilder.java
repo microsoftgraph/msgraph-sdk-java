@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.Call;
+import com.microsoft.graph.models.DeltaParticipants;
 import com.microsoft.graph.models.Participant;
 import com.microsoft.graph.models.InvitationParticipantInfo;
 import com.microsoft.graph.models.InviteParticipantsOperation;
@@ -39,7 +39,7 @@ import com.microsoft.graph.models.ParticipantStopHoldMusicParameterSet;
 public class ParticipantCollectionRequestBuilder extends BaseCollectionRequestBuilder<Participant, ParticipantRequestBuilder, ParticipantCollectionResponse, ParticipantCollectionPage, ParticipantCollectionRequest> {
 
     /**
-     * The request builder for this collection of Call
+     * The request builder for this collection of DeltaParticipants
      *
      * @param requestUrl     the request URL
      * @param client         the service client
