@@ -13,102 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BookingAppointment extends Entity implements Parsable {
     /**
-     * Additional information that is sent to the customer when an appointment is confirmed.
-     */
-    private String additionalInformation;
-    /**
-     * The URL of the meeting to join anonymously.
-     */
-    private String anonymousJoinWebUrl;
-    /**
-     * A collection of customer properties for an appointment. An appointment contains a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
-     */
-    private java.util.List<BookingCustomerInformationBase> customers;
-    /**
-     * The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
-     */
-    private String customerTimeZone;
-    /**
-     * The length of the appointment, denoted in ISO8601 format.
-     */
-    private PeriodAndDuration duration;
-    /**
-     * The endDateTime property
-     */
-    private DateTimeTimeZone endDateTime;
-    /**
-     * The current number of customers in the appointment
-     */
-    private Integer filledAttendeesCount;
-    /**
-     * If true, indicates that the appointment will be held online. Default value is false.
-     */
-    private Boolean isLocationOnline;
-    /**
-     * The URL of the online meeting for the appointment.
-     */
-    private String joinWebUrl;
-    /**
-     * The maximum number of customers allowed in an appointment. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation.
-     */
-    private Integer maximumAttendeesCount;
-    /**
-     * If true indicates that the bookingCustomer for this appointment doesn't wish to receive a confirmation for this appointment.
-     */
-    private Boolean optOutOfCustomerEmail;
-    /**
-     * The amount of time to reserve after the appointment ends, for cleaning up, as an example. The value is expressed in ISO8601 format.
-     */
-    private PeriodAndDuration postBuffer;
-    /**
-     * The amount of time to reserve before the appointment begins, for preparation, as an example. The value is expressed in ISO8601 format.
-     */
-    private PeriodAndDuration preBuffer;
-    /**
-     * The regular price for an appointment for the specified bookingService.
-     */
-    private Double price;
-    /**
-     * Represents the type of pricing of a booking service.
-     */
-    private BookingPriceType priceType;
-    /**
-     * The collection of customer reminders sent for this appointment. The value of this property is available only when reading this bookingAppointment by its ID.
-     */
-    private java.util.List<BookingReminder> reminders;
-    /**
-     * An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer. Only supported for appointment if maxAttendeeCount is 1.
-     */
-    private String selfServiceAppointmentId;
-    /**
-     * The ID of the bookingService associated with this appointment.
-     */
-    private String serviceId;
-    /**
-     * The location where the service is delivered.
-     */
-    private Location serviceLocation;
-    /**
-     * The name of the bookingService associated with this appointment.This property is optional when creating a new appointment. If not specified, it's computed from the service associated with the appointment by the serviceId property.
-     */
-    private String serviceName;
-    /**
-     * Notes from a bookingStaffMember. The value of this property is available only when reading this bookingAppointment by its ID.
-     */
-    private String serviceNotes;
-    /**
-     * If true, indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
-     */
-    private Boolean smsNotificationsEnabled;
-    /**
-     * The ID of each bookingStaffMember who is scheduled in this appointment.
-     */
-    private java.util.List<String> staffMemberIds;
-    /**
-     * The startDateTime property
-     */
-    private DateTimeTimeZone startDateTime;
-    /**
      * Instantiates a new BookingAppointment and sets the default values.
      */
     public BookingAppointment() {
@@ -130,7 +34,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAdditionalInformation() {
-        return this.additionalInformation;
+        return this.backingStore.get("additionalInformation");
     }
     /**
      * Gets the anonymousJoinWebUrl property value. The URL of the meeting to join anonymously.
@@ -138,7 +42,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAnonymousJoinWebUrl() {
-        return this.anonymousJoinWebUrl;
+        return this.backingStore.get("anonymousJoinWebUrl");
     }
     /**
      * Gets the customers property value. A collection of customer properties for an appointment. An appointment contains a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
@@ -146,7 +50,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingCustomerInformationBase> getCustomers() {
-        return this.customers;
+        return this.backingStore.get("customers");
     }
     /**
      * Gets the customerTimeZone property value. The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
@@ -154,7 +58,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCustomerTimeZone() {
-        return this.customerTimeZone;
+        return this.backingStore.get("customerTimeZone");
     }
     /**
      * Gets the duration property value. The length of the appointment, denoted in ISO8601 format.
@@ -162,7 +66,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getDuration() {
-        return this.duration;
+        return this.backingStore.get("duration");
     }
     /**
      * Gets the endDateTime property value. The endDateTime property
@@ -170,7 +74,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getEndDateTime() {
-        return this.endDateTime;
+        return this.backingStore.get("endDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -211,7 +115,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getFilledAttendeesCount() {
-        return this.filledAttendeesCount;
+        return this.backingStore.get("filledAttendeesCount");
     }
     /**
      * Gets the isLocationOnline property value. If true, indicates that the appointment will be held online. Default value is false.
@@ -219,7 +123,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsLocationOnline() {
-        return this.isLocationOnline;
+        return this.backingStore.get("isLocationOnline");
     }
     /**
      * Gets the joinWebUrl property value. The URL of the online meeting for the appointment.
@@ -227,7 +131,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getJoinWebUrl() {
-        return this.joinWebUrl;
+        return this.backingStore.get("joinWebUrl");
     }
     /**
      * Gets the maximumAttendeesCount property value. The maximum number of customers allowed in an appointment. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation.
@@ -235,7 +139,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getMaximumAttendeesCount() {
-        return this.maximumAttendeesCount;
+        return this.backingStore.get("maximumAttendeesCount");
     }
     /**
      * Gets the optOutOfCustomerEmail property value. If true indicates that the bookingCustomer for this appointment doesn't wish to receive a confirmation for this appointment.
@@ -243,7 +147,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getOptOutOfCustomerEmail() {
-        return this.optOutOfCustomerEmail;
+        return this.backingStore.get("optOutOfCustomerEmail");
     }
     /**
      * Gets the postBuffer property value. The amount of time to reserve after the appointment ends, for cleaning up, as an example. The value is expressed in ISO8601 format.
@@ -251,7 +155,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getPostBuffer() {
-        return this.postBuffer;
+        return this.backingStore.get("postBuffer");
     }
     /**
      * Gets the preBuffer property value. The amount of time to reserve before the appointment begins, for preparation, as an example. The value is expressed in ISO8601 format.
@@ -259,7 +163,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getPreBuffer() {
-        return this.preBuffer;
+        return this.backingStore.get("preBuffer");
     }
     /**
      * Gets the price property value. The regular price for an appointment for the specified bookingService.
@@ -267,7 +171,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Double getPrice() {
-        return this.price;
+        return this.backingStore.get("price");
     }
     /**
      * Gets the priceType property value. Represents the type of pricing of a booking service.
@@ -275,7 +179,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public BookingPriceType getPriceType() {
-        return this.priceType;
+        return this.backingStore.get("priceType");
     }
     /**
      * Gets the reminders property value. The collection of customer reminders sent for this appointment. The value of this property is available only when reading this bookingAppointment by its ID.
@@ -283,7 +187,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingReminder> getReminders() {
-        return this.reminders;
+        return this.backingStore.get("reminders");
     }
     /**
      * Gets the selfServiceAppointmentId property value. An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer. Only supported for appointment if maxAttendeeCount is 1.
@@ -291,7 +195,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSelfServiceAppointmentId() {
-        return this.selfServiceAppointmentId;
+        return this.backingStore.get("selfServiceAppointmentId");
     }
     /**
      * Gets the serviceId property value. The ID of the bookingService associated with this appointment.
@@ -299,7 +203,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getServiceId() {
-        return this.serviceId;
+        return this.backingStore.get("serviceId");
     }
     /**
      * Gets the serviceLocation property value. The location where the service is delivered.
@@ -307,7 +211,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Location getServiceLocation() {
-        return this.serviceLocation;
+        return this.backingStore.get("serviceLocation");
     }
     /**
      * Gets the serviceName property value. The name of the bookingService associated with this appointment.This property is optional when creating a new appointment. If not specified, it's computed from the service associated with the appointment by the serviceId property.
@@ -315,7 +219,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getServiceName() {
-        return this.serviceName;
+        return this.backingStore.get("serviceName");
     }
     /**
      * Gets the serviceNotes property value. Notes from a bookingStaffMember. The value of this property is available only when reading this bookingAppointment by its ID.
@@ -323,7 +227,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getServiceNotes() {
-        return this.serviceNotes;
+        return this.backingStore.get("serviceNotes");
     }
     /**
      * Gets the smsNotificationsEnabled property value. If true, indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
@@ -331,7 +235,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getSmsNotificationsEnabled() {
-        return this.smsNotificationsEnabled;
+        return this.backingStore.get("smsNotificationsEnabled");
     }
     /**
      * Gets the staffMemberIds property value. The ID of each bookingStaffMember who is scheduled in this appointment.
@@ -339,7 +243,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getStaffMemberIds() {
-        return this.staffMemberIds;
+        return this.backingStore.get("staffMemberIds");
     }
     /**
      * Gets the startDateTime property value. The startDateTime property
@@ -347,7 +251,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getStartDateTime() {
-        return this.startDateTime;
+        return this.backingStore.get("startDateTime");
     }
     /**
      * Serializes information the current object
@@ -384,167 +288,167 @@ public class BookingAppointment extends Entity implements Parsable {
      * @param value Value to set for the additionalInformation property.
      */
     public void setAdditionalInformation(@jakarta.annotation.Nullable final String value) {
-        this.additionalInformation = value;
+        this.backingStore.set("additionalInformation", value);
     }
     /**
      * Sets the anonymousJoinWebUrl property value. The URL of the meeting to join anonymously.
      * @param value Value to set for the anonymousJoinWebUrl property.
      */
     public void setAnonymousJoinWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.anonymousJoinWebUrl = value;
+        this.backingStore.set("anonymousJoinWebUrl", value);
     }
     /**
      * Sets the customers property value. A collection of customer properties for an appointment. An appointment contains a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
      * @param value Value to set for the customers property.
      */
     public void setCustomers(@jakarta.annotation.Nullable final java.util.List<BookingCustomerInformationBase> value) {
-        this.customers = value;
+        this.backingStore.set("customers", value);
     }
     /**
      * Sets the customerTimeZone property value. The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
      * @param value Value to set for the customerTimeZone property.
      */
     public void setCustomerTimeZone(@jakarta.annotation.Nullable final String value) {
-        this.customerTimeZone = value;
+        this.backingStore.set("customerTimeZone", value);
     }
     /**
      * Sets the duration property value. The length of the appointment, denoted in ISO8601 format.
      * @param value Value to set for the duration property.
      */
     public void setDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.duration = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.backingStore.set("duration", value);
     }
     /**
      * Sets the endDateTime property value. The endDateTime property
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
-        this.endDateTime = value;
+        this.backingStore.set("endDateTime", value);
     }
     /**
      * Sets the filledAttendeesCount property value. The current number of customers in the appointment
      * @param value Value to set for the filledAttendeesCount property.
      */
     public void setFilledAttendeesCount(@jakarta.annotation.Nullable final Integer value) {
-        this.filledAttendeesCount = value;
+        this.backingStore.set("filledAttendeesCount", value);
     }
     /**
      * Sets the isLocationOnline property value. If true, indicates that the appointment will be held online. Default value is false.
      * @param value Value to set for the isLocationOnline property.
      */
     public void setIsLocationOnline(@jakarta.annotation.Nullable final Boolean value) {
-        this.isLocationOnline = value;
+        this.backingStore.set("isLocationOnline", value);
     }
     /**
      * Sets the joinWebUrl property value. The URL of the online meeting for the appointment.
      * @param value Value to set for the joinWebUrl property.
      */
     public void setJoinWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.joinWebUrl = value;
+        this.backingStore.set("joinWebUrl", value);
     }
     /**
      * Sets the maximumAttendeesCount property value. The maximum number of customers allowed in an appointment. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation.
      * @param value Value to set for the maximumAttendeesCount property.
      */
     public void setMaximumAttendeesCount(@jakarta.annotation.Nullable final Integer value) {
-        this.maximumAttendeesCount = value;
+        this.backingStore.set("maximumAttendeesCount", value);
     }
     /**
      * Sets the optOutOfCustomerEmail property value. If true indicates that the bookingCustomer for this appointment doesn't wish to receive a confirmation for this appointment.
      * @param value Value to set for the optOutOfCustomerEmail property.
      */
     public void setOptOutOfCustomerEmail(@jakarta.annotation.Nullable final Boolean value) {
-        this.optOutOfCustomerEmail = value;
+        this.backingStore.set("optOutOfCustomerEmail", value);
     }
     /**
      * Sets the postBuffer property value. The amount of time to reserve after the appointment ends, for cleaning up, as an example. The value is expressed in ISO8601 format.
      * @param value Value to set for the postBuffer property.
      */
     public void setPostBuffer(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.postBuffer = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.backingStore.set("postBuffer", value);
     }
     /**
      * Sets the preBuffer property value. The amount of time to reserve before the appointment begins, for preparation, as an example. The value is expressed in ISO8601 format.
      * @param value Value to set for the preBuffer property.
      */
     public void setPreBuffer(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.preBuffer = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.backingStore.set("preBuffer", value);
     }
     /**
      * Sets the price property value. The regular price for an appointment for the specified bookingService.
      * @param value Value to set for the price property.
      */
     public void setPrice(@jakarta.annotation.Nullable final Double value) {
-        this.price = value;
+        this.backingStore.set("price", value);
     }
     /**
      * Sets the priceType property value. Represents the type of pricing of a booking service.
      * @param value Value to set for the priceType property.
      */
     public void setPriceType(@jakarta.annotation.Nullable final BookingPriceType value) {
-        this.priceType = value;
+        this.backingStore.set("priceType", value);
     }
     /**
      * Sets the reminders property value. The collection of customer reminders sent for this appointment. The value of this property is available only when reading this bookingAppointment by its ID.
      * @param value Value to set for the reminders property.
      */
     public void setReminders(@jakarta.annotation.Nullable final java.util.List<BookingReminder> value) {
-        this.reminders = value;
+        this.backingStore.set("reminders", value);
     }
     /**
      * Sets the selfServiceAppointmentId property value. An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer. Only supported for appointment if maxAttendeeCount is 1.
      * @param value Value to set for the selfServiceAppointmentId property.
      */
     public void setSelfServiceAppointmentId(@jakarta.annotation.Nullable final String value) {
-        this.selfServiceAppointmentId = value;
+        this.backingStore.set("selfServiceAppointmentId", value);
     }
     /**
      * Sets the serviceId property value. The ID of the bookingService associated with this appointment.
      * @param value Value to set for the serviceId property.
      */
     public void setServiceId(@jakarta.annotation.Nullable final String value) {
-        this.serviceId = value;
+        this.backingStore.set("serviceId", value);
     }
     /**
      * Sets the serviceLocation property value. The location where the service is delivered.
      * @param value Value to set for the serviceLocation property.
      */
     public void setServiceLocation(@jakarta.annotation.Nullable final Location value) {
-        this.serviceLocation = value;
+        this.backingStore.set("serviceLocation", value);
     }
     /**
      * Sets the serviceName property value. The name of the bookingService associated with this appointment.This property is optional when creating a new appointment. If not specified, it's computed from the service associated with the appointment by the serviceId property.
      * @param value Value to set for the serviceName property.
      */
     public void setServiceName(@jakarta.annotation.Nullable final String value) {
-        this.serviceName = value;
+        this.backingStore.set("serviceName", value);
     }
     /**
      * Sets the serviceNotes property value. Notes from a bookingStaffMember. The value of this property is available only when reading this bookingAppointment by its ID.
      * @param value Value to set for the serviceNotes property.
      */
     public void setServiceNotes(@jakarta.annotation.Nullable final String value) {
-        this.serviceNotes = value;
+        this.backingStore.set("serviceNotes", value);
     }
     /**
      * Sets the smsNotificationsEnabled property value. If true, indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
      * @param value Value to set for the smsNotificationsEnabled property.
      */
     public void setSmsNotificationsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.smsNotificationsEnabled = value;
+        this.backingStore.set("smsNotificationsEnabled", value);
     }
     /**
      * Sets the staffMemberIds property value. The ID of each bookingStaffMember who is scheduled in this appointment.
      * @param value Value to set for the staffMemberIds property.
      */
     public void setStaffMemberIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.staffMemberIds = value;
+        this.backingStore.set("staffMemberIds", value);
     }
     /**
      * Sets the startDateTime property value. The startDateTime property
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
-        this.startDateTime = value;
+        this.backingStore.set("startDateTime", value);
     }
 }

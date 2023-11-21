@@ -10,26 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceAnnouncementBase extends Entity implements Parsable {
     /**
-     * More details about service event. This property doesn't support filters.
-     */
-    private java.util.List<KeyValuePair> details;
-    /**
-     * The end time of the service event.
-     */
-    private OffsetDateTime endDateTime;
-    /**
-     * The last modified time of the service event.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The start time of the service event.
-     */
-    private OffsetDateTime startDateTime;
-    /**
-     * The title of the service event.
-     */
-    private String title;
-    /**
      * Instantiates a new ServiceAnnouncementBase and sets the default values.
      */
     public ServiceAnnouncementBase() {
@@ -59,7 +39,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getDetails() {
-        return this.details;
+        return this.backingStore.get("details");
     }
     /**
      * Gets the endDateTime property value. The end time of the service event.
@@ -67,7 +47,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this.endDateTime;
+        return this.backingStore.get("endDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -89,7 +69,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the startDateTime property value. The start time of the service event.
@@ -97,7 +77,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.backingStore.get("startDateTime");
     }
     /**
      * Gets the title property value. The title of the service event.
@@ -105,7 +85,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
-        return this.title;
+        return this.backingStore.get("title");
     }
     /**
      * Serializes information the current object
@@ -125,34 +105,34 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
      * @param value Value to set for the details property.
      */
     public void setDetails(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this.details = value;
+        this.backingStore.set("details", value);
     }
     /**
      * Sets the endDateTime property value. The end time of the service event.
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.endDateTime = value;
+        this.backingStore.set("endDateTime", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The last modified time of the service event.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the startDateTime property value. The start time of the service event.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.backingStore.set("startDateTime", value);
     }
     /**
      * Sets the title property value. The title of the service event.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {
-        this.title = value;
+        this.backingStore.set("title", value);
     }
 }

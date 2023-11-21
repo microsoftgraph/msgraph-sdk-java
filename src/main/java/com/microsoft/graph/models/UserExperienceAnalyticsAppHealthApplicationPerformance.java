@@ -12,42 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Entity implements Parsable {
     /**
-     * The health score of the application. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer activeDeviceCount;
-    /**
-     * The number of crashes for the application. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer appCrashCount;
-    /**
-     * The friendly name of the application. Possible values are: Outlook, Excel. Supports: $select, $OrderBy. Read-only.
-     */
-    private String appDisplayName;
-    /**
-     * The number of hangs for the application. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer appHangCount;
-    /**
-     * The health score of the application. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double appHealthScore;
-    /**
-     * The name of the application. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
-     */
-    private String appName;
-    /**
-     * The publisher of the application. Supports: $select, $OrderBy. Read-only.
-     */
-    private String appPublisher;
-    /**
-     * The total usage time of the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer appUsageDuration;
-    /**
-     * The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer meanTimeToFailureInMinutes;
-    /**
      * Instantiates a new UserExperienceAnalyticsAppHealthApplicationPerformance and sets the default values.
      */
     public UserExperienceAnalyticsAppHealthApplicationPerformance() {
@@ -69,7 +33,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      */
     @jakarta.annotation.Nullable
     public Integer getActiveDeviceCount() {
-        return this.activeDeviceCount;
+        return this.backingStore.get("activeDeviceCount");
     }
     /**
      * Gets the appCrashCount property value. The number of crashes for the application. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
@@ -77,7 +41,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      */
     @jakarta.annotation.Nullable
     public Integer getAppCrashCount() {
-        return this.appCrashCount;
+        return this.backingStore.get("appCrashCount");
     }
     /**
      * Gets the appDisplayName property value. The friendly name of the application. Possible values are: Outlook, Excel. Supports: $select, $OrderBy. Read-only.
@@ -85,7 +49,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
-        return this.appDisplayName;
+        return this.backingStore.get("appDisplayName");
     }
     /**
      * Gets the appHangCount property value. The number of hangs for the application. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
@@ -93,7 +57,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      */
     @jakarta.annotation.Nullable
     public Integer getAppHangCount() {
-        return this.appHangCount;
+        return this.backingStore.get("appHangCount");
     }
     /**
      * Gets the appHealthScore property value. The health score of the application. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -101,7 +65,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      */
     @jakarta.annotation.Nullable
     public Double getAppHealthScore() {
-        return this.appHealthScore;
+        return this.backingStore.get("appHealthScore");
     }
     /**
      * Gets the appName property value. The name of the application. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
@@ -109,7 +73,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      */
     @jakarta.annotation.Nullable
     public String getAppName() {
-        return this.appName;
+        return this.backingStore.get("appName");
     }
     /**
      * Gets the appPublisher property value. The publisher of the application. Supports: $select, $OrderBy. Read-only.
@@ -117,7 +81,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      */
     @jakarta.annotation.Nullable
     public String getAppPublisher() {
-        return this.appPublisher;
+        return this.backingStore.get("appPublisher");
     }
     /**
      * Gets the appUsageDuration property value. The total usage time of the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
@@ -125,7 +89,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      */
     @jakarta.annotation.Nullable
     public Integer getAppUsageDuration() {
-        return this.appUsageDuration;
+        return this.backingStore.get("appUsageDuration");
     }
     /**
      * The deserialization information for the current model
@@ -151,7 +115,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      */
     @jakarta.annotation.Nullable
     public Integer getMeanTimeToFailureInMinutes() {
-        return this.meanTimeToFailureInMinutes;
+        return this.backingStore.get("meanTimeToFailureInMinutes");
     }
     /**
      * Serializes information the current object
@@ -175,62 +139,62 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      * @param value Value to set for the activeDeviceCount property.
      */
     public void setActiveDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.activeDeviceCount = value;
+        this.backingStore.set("activeDeviceCount", value);
     }
     /**
      * Sets the appCrashCount property value. The number of crashes for the application. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the appCrashCount property.
      */
     public void setAppCrashCount(@jakarta.annotation.Nullable final Integer value) {
-        this.appCrashCount = value;
+        this.backingStore.set("appCrashCount", value);
     }
     /**
      * Sets the appDisplayName property value. The friendly name of the application. Possible values are: Outlook, Excel. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the appDisplayName property.
      */
     public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.appDisplayName = value;
+        this.backingStore.set("appDisplayName", value);
     }
     /**
      * Sets the appHangCount property value. The number of hangs for the application. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the appHangCount property.
      */
     public void setAppHangCount(@jakarta.annotation.Nullable final Integer value) {
-        this.appHangCount = value;
+        this.backingStore.set("appHangCount", value);
     }
     /**
      * Sets the appHealthScore property value. The health score of the application. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the appHealthScore property.
      */
     public void setAppHealthScore(@jakarta.annotation.Nullable final Double value) {
-        this.appHealthScore = value;
+        this.backingStore.set("appHealthScore", value);
     }
     /**
      * Sets the appName property value. The name of the application. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the appName property.
      */
     public void setAppName(@jakarta.annotation.Nullable final String value) {
-        this.appName = value;
+        this.backingStore.set("appName", value);
     }
     /**
      * Sets the appPublisher property value. The publisher of the application. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the appPublisher property.
      */
     public void setAppPublisher(@jakarta.annotation.Nullable final String value) {
-        this.appPublisher = value;
+        this.backingStore.set("appPublisher", value);
     }
     /**
      * Sets the appUsageDuration property value. The total usage time of the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the appUsageDuration property.
      */
     public void setAppUsageDuration(@jakarta.annotation.Nullable final Integer value) {
-        this.appUsageDuration = value;
+        this.backingStore.set("appUsageDuration", value);
     }
     /**
      * Sets the meanTimeToFailureInMinutes property value. The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the meanTimeToFailureInMinutes property.
      */
     public void setMeanTimeToFailureInMinutes(@jakarta.annotation.Nullable final Integer value) {
-        this.meanTimeToFailureInMinutes = value;
+        this.backingStore.set("meanTimeToFailureInMinutes", value);
     }
 }

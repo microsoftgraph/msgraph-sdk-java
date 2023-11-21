@@ -4,43 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable {
+public class InvitationParticipantInfo implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Optional. Whether to hide the participant from the roster.
-     */
-    private Boolean hidden;
-    /**
-     * The identity property
-     */
-    private IdentitySet identity;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Optional. The ID of the target participant.
-     */
-    private String participantId;
-    /**
-     * Optional. Whether to remove them from the main mixer.
-     */
-    private Boolean removeFromDefaultAudioRoutingGroup;
-    /**
-     * Optional. The call which the target identity is currently a part of. For peer-to-peer case, the call will be dropped once the participant is added successfully.
-     */
-    private String replacesCallId;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new InvitationParticipantInfo and sets the default values.
      */
     public InvitationParticipantInfo() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -59,7 +40,20 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -82,7 +76,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public Boolean getHidden() {
-        return this.hidden;
+        return this.backingStore.get("hidden");
     }
     /**
      * Gets the identity property value. The identity property
@@ -90,7 +84,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public IdentitySet getIdentity() {
-        return this.identity;
+        return this.backingStore.get("identity");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -98,7 +92,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the participantId property value. Optional. The ID of the target participant.
@@ -106,7 +100,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public String getParticipantId() {
-        return this.participantId;
+        return this.backingStore.get("participantId");
     }
     /**
      * Gets the removeFromDefaultAudioRoutingGroup property value. Optional. Whether to remove them from the main mixer.
@@ -114,7 +108,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public Boolean getRemoveFromDefaultAudioRoutingGroup() {
-        return this.removeFromDefaultAudioRoutingGroup;
+        return this.backingStore.get("removeFromDefaultAudioRoutingGroup");
     }
     /**
      * Gets the replacesCallId property value. Optional. The call which the target identity is currently a part of. For peer-to-peer case, the call will be dropped once the participant is added successfully.
@@ -122,7 +116,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public String getReplacesCallId() {
-        return this.replacesCallId;
+        return this.backingStore.get("replacesCallId");
     }
     /**
      * Serializes information the current object
@@ -143,48 +137,56 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the hidden property value. Optional. Whether to hide the participant from the roster.
      * @param value Value to set for the hidden property.
      */
     public void setHidden(@jakarta.annotation.Nullable final Boolean value) {
-        this.hidden = value;
+        this.backingStore.set("hidden", value);
     }
     /**
      * Sets the identity property value. The identity property
      * @param value Value to set for the identity property.
      */
     public void setIdentity(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.identity = value;
+        this.backingStore.set("identity", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the participantId property value. Optional. The ID of the target participant.
      * @param value Value to set for the participantId property.
      */
     public void setParticipantId(@jakarta.annotation.Nullable final String value) {
-        this.participantId = value;
+        this.backingStore.set("participantId", value);
     }
     /**
      * Sets the removeFromDefaultAudioRoutingGroup property value. Optional. Whether to remove them from the main mixer.
      * @param value Value to set for the removeFromDefaultAudioRoutingGroup property.
      */
     public void setRemoveFromDefaultAudioRoutingGroup(@jakarta.annotation.Nullable final Boolean value) {
-        this.removeFromDefaultAudioRoutingGroup = value;
+        this.backingStore.set("removeFromDefaultAudioRoutingGroup", value);
     }
     /**
      * Sets the replacesCallId property value. Optional. The call which the target identity is currently a part of. For peer-to-peer case, the call will be dropped once the participant is added successfully.
      * @param value Value to set for the replacesCallId property.
      */
     public void setReplacesCallId(@jakarta.annotation.Nullable final String value) {
-        this.replacesCallId = value;
+        this.backingStore.set("replacesCallId", value);
     }
 }

@@ -4,35 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class File implements AdditionalDataHolder, Parsable {
+public class File implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Hashes of the file's binary content, if available. Read-only.
-     */
-    private Hashes hashes;
-    /**
-     * The MIME type for the file. This is determined by logic on the server and might not be the value provided when the file was uploaded. Read-only.
-     */
-    private String mimeType;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The processingMetadata property
-     */
-    private Boolean processingMetadata;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new File and sets the default values.
      */
     public File() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +40,20 @@ public class File implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -72,7 +74,7 @@ public class File implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Hashes getHashes() {
-        return this.hashes;
+        return this.backingStore.get("hashes");
     }
     /**
      * Gets the mimeType property value. The MIME type for the file. This is determined by logic on the server and might not be the value provided when the file was uploaded. Read-only.
@@ -80,7 +82,7 @@ public class File implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getMimeType() {
-        return this.mimeType;
+        return this.backingStore.get("mimeType");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -88,7 +90,7 @@ public class File implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the processingMetadata property value. The processingMetadata property
@@ -96,7 +98,7 @@ public class File implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getProcessingMetadata() {
-        return this.processingMetadata;
+        return this.backingStore.get("processingMetadata");
     }
     /**
      * Serializes information the current object
@@ -115,34 +117,42 @@ public class File implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the hashes property value. Hashes of the file's binary content, if available. Read-only.
      * @param value Value to set for the hashes property.
      */
     public void setHashes(@jakarta.annotation.Nullable final Hashes value) {
-        this.hashes = value;
+        this.backingStore.set("hashes", value);
     }
     /**
      * Sets the mimeType property value. The MIME type for the file. This is determined by logic on the server and might not be the value provided when the file was uploaded. Read-only.
      * @param value Value to set for the mimeType property.
      */
     public void setMimeType(@jakarta.annotation.Nullable final String value) {
-        this.mimeType = value;
+        this.backingStore.set("mimeType", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the processingMetadata property value. The processingMetadata property
      * @param value Value to set for the processingMetadata property.
      */
     public void setProcessingMetadata(@jakarta.annotation.Nullable final Boolean value) {
-        this.processingMetadata = value;
+        this.backingStore.set("processingMetadata", value);
     }
 }

@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartAxisFormat extends Entity implements Parsable {
     /**
-     * Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
-     */
-    private WorkbookChartFont font;
-    /**
-     * Represents chart line formatting. Read-only.
-     */
-    private WorkbookChartLineFormat line;
-    /**
      * Instantiates a new WorkbookChartAxisFormat and sets the default values.
      */
     public WorkbookChartAxisFormat() {
@@ -49,7 +41,7 @@ public class WorkbookChartAxisFormat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookChartFont getFont() {
-        return this.font;
+        return this.backingStore.get("font");
     }
     /**
      * Gets the line property value. Represents chart line formatting. Read-only.
@@ -57,7 +49,7 @@ public class WorkbookChartAxisFormat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookChartLineFormat getLine() {
-        return this.line;
+        return this.backingStore.get("line");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class WorkbookChartAxisFormat extends Entity implements Parsable {
      * @param value Value to set for the font property.
      */
     public void setFont(@jakarta.annotation.Nullable final WorkbookChartFont value) {
-        this.font = value;
+        this.backingStore.set("font", value);
     }
     /**
      * Sets the line property value. Represents chart line formatting. Read-only.
      * @param value Value to set for the line property.
      */
     public void setLine(@jakarta.annotation.Nullable final WorkbookChartLineFormat value) {
-        this.line = value;
+        this.backingStore.set("line", value);
     }
 }

@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationFlowsPolicy extends Entity implements Parsable {
     /**
-     * Inherited property. A description of the policy. Optional. Read-only.
-     */
-    private String description;
-    /**
-     * Inherited property. The human-readable name of the policy. Optional. Read-only.
-     */
-    private String displayName;
-    /**
-     * Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. Optional. Read-only.
-     */
-    private SelfServiceSignUpAuthenticationFlowConfiguration selfServiceSignUp;
-    /**
      * Instantiates a new AuthenticationFlowsPolicy and sets the default values.
      */
     public AuthenticationFlowsPolicy() {
@@ -42,7 +30,7 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. Inherited property. The human-readable name of the policy. Optional. Read-only.
@@ -50,7 +38,7 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -70,7 +58,7 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public SelfServiceSignUpAuthenticationFlowConfiguration getSelfServiceSignUp() {
-        return this.selfServiceSignUp;
+        return this.backingStore.get("selfServiceSignUp");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Inherited property. The human-readable name of the policy. Optional. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the selfServiceSignUp property value. Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. Optional. Read-only.
      * @param value Value to set for the selfServiceSignUp property.
      */
     public void setSelfServiceSignUp(@jakarta.annotation.Nullable final SelfServiceSignUpAuthenticationFlowConfiguration value) {
-        this.selfServiceSignUp = value;
+        this.backingStore.set("selfServiceSignUp", value);
     }
 }

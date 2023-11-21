@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OrganizationalBranding extends OrganizationalBrandingProperties implements Parsable {
     /**
-     * Add different branding based on a locale.
-     */
-    private java.util.List<OrganizationalBrandingLocalization> localizations;
-    /**
      * Instantiates a new OrganizationalBranding and sets the default values.
      */
     public OrganizationalBranding() {
@@ -45,7 +41,7 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
      */
     @jakarta.annotation.Nullable
     public java.util.List<OrganizationalBrandingLocalization> getLocalizations() {
-        return this.localizations;
+        return this.backingStore.get("localizations");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
      * @param value Value to set for the localizations property.
      */
     public void setLocalizations(@jakarta.annotation.Nullable final java.util.List<OrganizationalBrandingLocalization> value) {
-        this.localizations = value;
+        this.backingStore.set("localizations", value);
     }
 }

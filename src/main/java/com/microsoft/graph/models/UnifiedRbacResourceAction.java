@@ -9,30 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRbacResourceAction extends Entity implements Parsable {
     /**
-     * The actionVerb property
-     */
-    private String actionVerb;
-    /**
-     * The authenticationContextId property
-     */
-    private String authenticationContextId;
-    /**
-     * The description property
-     */
-    private String description;
-    /**
-     * The isAuthenticationContextSettable property
-     */
-    private Boolean isAuthenticationContextSettable;
-    /**
-     * The name property
-     */
-    private String name;
-    /**
-     * The resourceScopeId property
-     */
-    private String resourceScopeId;
-    /**
      * Instantiates a new UnifiedRbacResourceAction and sets the default values.
      */
     public UnifiedRbacResourceAction() {
@@ -54,7 +30,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getActionVerb() {
-        return this.actionVerb;
+        return this.backingStore.get("actionVerb");
     }
     /**
      * Gets the authenticationContextId property value. The authenticationContextId property
@@ -62,7 +38,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAuthenticationContextId() {
-        return this.authenticationContextId;
+        return this.backingStore.get("authenticationContextId");
     }
     /**
      * Gets the description property value. The description property
@@ -70,7 +46,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -93,7 +69,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAuthenticationContextSettable() {
-        return this.isAuthenticationContextSettable;
+        return this.backingStore.get("isAuthenticationContextSettable");
     }
     /**
      * Gets the name property value. The name property
@@ -101,7 +77,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the resourceScopeId property value. The resourceScopeId property
@@ -109,7 +85,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getResourceScopeId() {
-        return this.resourceScopeId;
+        return this.backingStore.get("resourceScopeId");
     }
     /**
      * Serializes information the current object
@@ -130,41 +106,41 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
      * @param value Value to set for the actionVerb property.
      */
     public void setActionVerb(@jakarta.annotation.Nullable final String value) {
-        this.actionVerb = value;
+        this.backingStore.set("actionVerb", value);
     }
     /**
      * Sets the authenticationContextId property value. The authenticationContextId property
      * @param value Value to set for the authenticationContextId property.
      */
     public void setAuthenticationContextId(@jakarta.annotation.Nullable final String value) {
-        this.authenticationContextId = value;
+        this.backingStore.set("authenticationContextId", value);
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the isAuthenticationContextSettable property value. The isAuthenticationContextSettable property
      * @param value Value to set for the isAuthenticationContextSettable property.
      */
     public void setIsAuthenticationContextSettable(@jakarta.annotation.Nullable final Boolean value) {
-        this.isAuthenticationContextSettable = value;
+        this.backingStore.set("isAuthenticationContextSettable", value);
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the resourceScopeId property value. The resourceScopeId property
      * @param value Value to set for the resourceScopeId property.
      */
     public void setResourceScopeId(@jakarta.annotation.Nullable final String value) {
-        this.resourceScopeId = value;
+        this.backingStore.set("resourceScopeId", value);
     }
 }

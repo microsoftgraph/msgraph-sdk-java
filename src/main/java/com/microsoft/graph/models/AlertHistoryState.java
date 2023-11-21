@@ -4,52 +4,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AlertHistoryState implements AdditionalDataHolder, Parsable {
+public class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The appId property
-     */
-    private String appId;
-    /**
-     * The assignedTo property
-     */
-    private String assignedTo;
-    /**
-     * The comments property
-     */
-    private java.util.List<String> comments;
-    /**
-     * The feedback property
-     */
-    private AlertFeedback feedback;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The status property
-     */
-    private AlertStatus status;
-    /**
-     * The updatedDateTime property
-     */
-    private OffsetDateTime updatedDateTime;
-    /**
-     * The user property
-     */
-    private String user;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new AlertHistoryState and sets the default values.
      */
     public AlertHistoryState() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -68,7 +41,12 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the appId property value. The appId property
@@ -76,7 +54,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
-        return this.appId;
+        return this.backingStore.get("appId");
     }
     /**
      * Gets the assignedTo property value. The assignedTo property
@@ -84,7 +62,15 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAssignedTo() {
-        return this.assignedTo;
+        return this.backingStore.get("assignedTo");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the comments property value. The comments property
@@ -92,7 +78,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getComments() {
-        return this.comments;
+        return this.backingStore.get("comments");
     }
     /**
      * Gets the feedback property value. The feedback property
@@ -100,7 +86,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public AlertFeedback getFeedback() {
-        return this.feedback;
+        return this.backingStore.get("feedback");
     }
     /**
      * The deserialization information for the current model
@@ -125,7 +111,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the status property value. The status property
@@ -133,7 +119,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public AlertStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Gets the updatedDateTime property value. The updatedDateTime property
@@ -141,7 +127,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getUpdatedDateTime() {
-        return this.updatedDateTime;
+        return this.backingStore.get("updatedDateTime");
     }
     /**
      * Gets the user property value. The user property
@@ -149,7 +135,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUser() {
-        return this.user;
+        return this.backingStore.get("user");
     }
     /**
      * Serializes information the current object
@@ -172,62 +158,70 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the appId property value. The appId property
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
-        this.appId = value;
+        this.backingStore.set("appId", value);
     }
     /**
      * Sets the assignedTo property value. The assignedTo property
      * @param value Value to set for the assignedTo property.
      */
     public void setAssignedTo(@jakarta.annotation.Nullable final String value) {
-        this.assignedTo = value;
+        this.backingStore.set("assignedTo", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the comments property value. The comments property
      * @param value Value to set for the comments property.
      */
     public void setComments(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.comments = value;
+        this.backingStore.set("comments", value);
     }
     /**
      * Sets the feedback property value. The feedback property
      * @param value Value to set for the feedback property.
      */
     public void setFeedback(@jakarta.annotation.Nullable final AlertFeedback value) {
-        this.feedback = value;
+        this.backingStore.set("feedback", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final AlertStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
     /**
      * Sets the updatedDateTime property value. The updatedDateTime property
      * @param value Value to set for the updatedDateTime property.
      */
     public void setUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.updatedDateTime = value;
+        this.backingStore.set("updatedDateTime", value);
     }
     /**
      * Sets the user property value. The user property
      * @param value Value to set for the user property.
      */
     public void setUser(@jakarta.annotation.Nullable final String value) {
-        this.user = value;
+        this.backingStore.set("user", value);
     }
 }

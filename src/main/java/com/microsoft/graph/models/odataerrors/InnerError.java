@@ -4,36 +4,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class InnerError implements AdditionalDataHolder, Parsable {
+public class InnerError implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Client request Id as sent by the client application.
-     */
-    private String clientRequestId;
-    /**
-     * Date when the error occured.
-     */
-    private OffsetDateTime date;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Request Id as tracked internally by the service
-     */
-    private String requestId;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new InnerError and sets the default values.
      */
     public InnerError() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -52,7 +41,20 @@ public class InnerError implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the client-request-id property value. Client request Id as sent by the client application.
@@ -60,7 +62,7 @@ public class InnerError implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getClientRequestId() {
-        return this.clientRequestId;
+        return this.backingStore.get("clientRequestId");
     }
     /**
      * Gets the Date property value. Date when the error occured.
@@ -68,7 +70,7 @@ public class InnerError implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDate() {
-        return this.date;
+        return this.backingStore.get("date");
     }
     /**
      * The deserialization information for the current model
@@ -89,7 +91,7 @@ public class InnerError implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the request-id property value. Request Id as tracked internally by the service
@@ -97,7 +99,7 @@ public class InnerError implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRequestId() {
-        return this.requestId;
+        return this.backingStore.get("requestId");
     }
     /**
      * Serializes information the current object
@@ -116,34 +118,42 @@ public class InnerError implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the client-request-id property value. Client request Id as sent by the client application.
      * @param value Value to set for the client-request-id property.
      */
     public void setClientRequestId(@jakarta.annotation.Nullable final String value) {
-        this.clientRequestId = value;
+        this.backingStore.set("clientRequestId", value);
     }
     /**
      * Sets the Date property value. Date when the error occured.
      * @param value Value to set for the Date property.
      */
     public void setDate(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.date = value;
+        this.backingStore.set("date", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the request-id property value. Request Id as tracked internally by the service
      * @param value Value to set for the request-id property.
      */
     public void setRequestId(@jakarta.annotation.Nullable final String value) {
-        this.requestId = value;
+        this.backingStore.set("requestId", value);
     }
 }

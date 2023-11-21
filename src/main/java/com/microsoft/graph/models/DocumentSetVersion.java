@@ -10,26 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DocumentSetVersion extends ListItemVersion implements Parsable {
     /**
-     * Comment about the captured version.
-     */
-    private String comment;
-    /**
-     * User who captured the version.
-     */
-    private IdentitySet createdBy;
-    /**
-     * Date and time when this version was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Items within the document set that are captured as part of this version.
-     */
-    private java.util.List<DocumentSetVersionItem> items;
-    /**
-     * If true, minor versions of items are also captured; otherwise, only major versions will be captured. Default value is false.
-     */
-    private Boolean shouldCaptureMinorVersion;
-    /**
      * Instantiates a new DocumentSetVersion and sets the default values.
      */
     public DocumentSetVersion() {
@@ -52,7 +32,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getComment() {
-        return this.comment;
+        return this.backingStore.get("comment");
     }
     /**
      * Gets the createdBy property value. User who captured the version.
@@ -60,7 +40,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this.createdBy;
+        return this.backingStore.get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. Date and time when this version was created.
@@ -68,7 +48,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -90,7 +70,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DocumentSetVersionItem> getItems() {
-        return this.items;
+        return this.backingStore.get("items");
     }
     /**
      * Gets the shouldCaptureMinorVersion property value. If true, minor versions of items are also captured; otherwise, only major versions will be captured. Default value is false.
@@ -98,7 +78,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getShouldCaptureMinorVersion() {
-        return this.shouldCaptureMinorVersion;
+        return this.backingStore.get("shouldCaptureMinorVersion");
     }
     /**
      * Serializes information the current object
@@ -118,34 +98,34 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      * @param value Value to set for the comment property.
      */
     public void setComment(@jakarta.annotation.Nullable final String value) {
-        this.comment = value;
+        this.backingStore.set("comment", value);
     }
     /**
      * Sets the createdBy property value. User who captured the version.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.createdBy = value;
+        this.backingStore.set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. Date and time when this version was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the items property value. Items within the document set that are captured as part of this version.
      * @param value Value to set for the items property.
      */
     public void setItems(@jakarta.annotation.Nullable final java.util.List<DocumentSetVersionItem> value) {
-        this.items = value;
+        this.backingStore.set("items", value);
     }
     /**
      * Sets the shouldCaptureMinorVersion property value. If true, minor versions of items are also captured; otherwise, only major versions will be captured. Default value is false.
      * @param value Value to set for the shouldCaptureMinorVersion property.
      */
     public void setShouldCaptureMinorVersion(@jakarta.annotation.Nullable final Boolean value) {
-        this.shouldCaptureMinorVersion = value;
+        this.backingStore.set("shouldCaptureMinorVersion", value);
     }
 }

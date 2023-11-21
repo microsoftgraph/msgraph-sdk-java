@@ -12,86 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsable {
     /**
-     * Average (mean) number of Blue Screens per device in the last 30 days. Valid values 0 to 9999999
-     */
-    private Double averageBlueScreens;
-    /**
-     * Average (mean) number of Restarts per device in the last 30 days. Valid values 0 to 9999999
-     */
-    private Double averageRestarts;
-    /**
-     * Number of Blue Screens in the last 30 days. Valid values 0 to 9999999
-     */
-    private Integer blueScreenCount;
-    /**
-     * The user experience analytics device boot score.
-     */
-    private Integer bootScore;
-    /**
-     * The user experience analytics device core boot time in milliseconds.
-     */
-    private Integer coreBootTimeInMs;
-    /**
-     * The user experience analytics device core login time in milliseconds.
-     */
-    private Integer coreLoginTimeInMs;
-    /**
-     * User experience analytics summarized device count.
-     */
-    private Long deviceCount;
-    /**
-     * The user experience analytics device name.
-     */
-    private String deviceName;
-    /**
-     * The diskType property
-     */
-    private DiskType diskType;
-    /**
-     * The user experience analytics device group policy boot time in milliseconds.
-     */
-    private Integer groupPolicyBootTimeInMs;
-    /**
-     * The user experience analytics device group policy login time in milliseconds.
-     */
-    private Integer groupPolicyLoginTimeInMs;
-    /**
-     * The healthStatus property
-     */
-    private UserExperienceAnalyticsHealthState healthStatus;
-    /**
-     * The user experience analytics device login score.
-     */
-    private Integer loginScore;
-    /**
-     * The user experience analytics device manufacturer.
-     */
-    private String manufacturer;
-    /**
-     * The user experience analytics device model.
-     */
-    private String model;
-    /**
-     * The user experience analytics model level startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double modelStartupPerformanceScore;
-    /**
-     * The user experience analytics device Operating System version.
-     */
-    private String operatingSystemVersion;
-    /**
-     * The user experience analytics responsive desktop time in milliseconds.
-     */
-    private Integer responsiveDesktopTimeInMs;
-    /**
-     * Number of Restarts in the last 30 days. Valid values 0 to 9999999
-     */
-    private Integer restartCount;
-    /**
-     * The user experience analytics device startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double startupPerformanceScore;
-    /**
      * Instantiates a new UserExperienceAnalyticsDevicePerformance and sets the default values.
      */
     public UserExperienceAnalyticsDevicePerformance() {
@@ -113,7 +33,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public Double getAverageBlueScreens() {
-        return this.averageBlueScreens;
+        return this.backingStore.get("averageBlueScreens");
     }
     /**
      * Gets the averageRestarts property value. Average (mean) number of Restarts per device in the last 30 days. Valid values 0 to 9999999
@@ -121,7 +41,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public Double getAverageRestarts() {
-        return this.averageRestarts;
+        return this.backingStore.get("averageRestarts");
     }
     /**
      * Gets the blueScreenCount property value. Number of Blue Screens in the last 30 days. Valid values 0 to 9999999
@@ -129,7 +49,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public Integer getBlueScreenCount() {
-        return this.blueScreenCount;
+        return this.backingStore.get("blueScreenCount");
     }
     /**
      * Gets the bootScore property value. The user experience analytics device boot score.
@@ -137,7 +57,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public Integer getBootScore() {
-        return this.bootScore;
+        return this.backingStore.get("bootScore");
     }
     /**
      * Gets the coreBootTimeInMs property value. The user experience analytics device core boot time in milliseconds.
@@ -145,7 +65,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public Integer getCoreBootTimeInMs() {
-        return this.coreBootTimeInMs;
+        return this.backingStore.get("coreBootTimeInMs");
     }
     /**
      * Gets the coreLoginTimeInMs property value. The user experience analytics device core login time in milliseconds.
@@ -153,7 +73,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public Integer getCoreLoginTimeInMs() {
-        return this.coreLoginTimeInMs;
+        return this.backingStore.get("coreLoginTimeInMs");
     }
     /**
      * Gets the deviceCount property value. User experience analytics summarized device count.
@@ -161,7 +81,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public Long getDeviceCount() {
-        return this.deviceCount;
+        return this.backingStore.get("deviceCount");
     }
     /**
      * Gets the deviceName property value. The user experience analytics device name.
@@ -169,7 +89,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
-        return this.deviceName;
+        return this.backingStore.get("deviceName");
     }
     /**
      * Gets the diskType property value. The diskType property
@@ -177,7 +97,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public DiskType getDiskType() {
-        return this.diskType;
+        return this.backingStore.get("diskType");
     }
     /**
      * The deserialization information for the current model
@@ -214,7 +134,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public Integer getGroupPolicyBootTimeInMs() {
-        return this.groupPolicyBootTimeInMs;
+        return this.backingStore.get("groupPolicyBootTimeInMs");
     }
     /**
      * Gets the groupPolicyLoginTimeInMs property value. The user experience analytics device group policy login time in milliseconds.
@@ -222,7 +142,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public Integer getGroupPolicyLoginTimeInMs() {
-        return this.groupPolicyLoginTimeInMs;
+        return this.backingStore.get("groupPolicyLoginTimeInMs");
     }
     /**
      * Gets the healthStatus property value. The healthStatus property
@@ -230,7 +150,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsHealthState getHealthStatus() {
-        return this.healthStatus;
+        return this.backingStore.get("healthStatus");
     }
     /**
      * Gets the loginScore property value. The user experience analytics device login score.
@@ -238,7 +158,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public Integer getLoginScore() {
-        return this.loginScore;
+        return this.backingStore.get("loginScore");
     }
     /**
      * Gets the manufacturer property value. The user experience analytics device manufacturer.
@@ -246,7 +166,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
-        return this.manufacturer;
+        return this.backingStore.get("manufacturer");
     }
     /**
      * Gets the model property value. The user experience analytics device model.
@@ -254,7 +174,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public String getModel() {
-        return this.model;
+        return this.backingStore.get("model");
     }
     /**
      * Gets the modelStartupPerformanceScore property value. The user experience analytics model level startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -262,7 +182,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public Double getModelStartupPerformanceScore() {
-        return this.modelStartupPerformanceScore;
+        return this.backingStore.get("modelStartupPerformanceScore");
     }
     /**
      * Gets the operatingSystemVersion property value. The user experience analytics device Operating System version.
@@ -270,7 +190,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystemVersion() {
-        return this.operatingSystemVersion;
+        return this.backingStore.get("operatingSystemVersion");
     }
     /**
      * Gets the responsiveDesktopTimeInMs property value. The user experience analytics responsive desktop time in milliseconds.
@@ -278,7 +198,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public Integer getResponsiveDesktopTimeInMs() {
-        return this.responsiveDesktopTimeInMs;
+        return this.backingStore.get("responsiveDesktopTimeInMs");
     }
     /**
      * Gets the restartCount property value. Number of Restarts in the last 30 days. Valid values 0 to 9999999
@@ -286,7 +206,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public Integer getRestartCount() {
-        return this.restartCount;
+        return this.backingStore.get("restartCount");
     }
     /**
      * Gets the startupPerformanceScore property value. The user experience analytics device startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -294,7 +214,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      */
     @jakarta.annotation.Nullable
     public Double getStartupPerformanceScore() {
-        return this.startupPerformanceScore;
+        return this.backingStore.get("startupPerformanceScore");
     }
     /**
      * Serializes information the current object
@@ -329,139 +249,139 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * @param value Value to set for the averageBlueScreens property.
      */
     public void setAverageBlueScreens(@jakarta.annotation.Nullable final Double value) {
-        this.averageBlueScreens = value;
+        this.backingStore.set("averageBlueScreens", value);
     }
     /**
      * Sets the averageRestarts property value. Average (mean) number of Restarts per device in the last 30 days. Valid values 0 to 9999999
      * @param value Value to set for the averageRestarts property.
      */
     public void setAverageRestarts(@jakarta.annotation.Nullable final Double value) {
-        this.averageRestarts = value;
+        this.backingStore.set("averageRestarts", value);
     }
     /**
      * Sets the blueScreenCount property value. Number of Blue Screens in the last 30 days. Valid values 0 to 9999999
      * @param value Value to set for the blueScreenCount property.
      */
     public void setBlueScreenCount(@jakarta.annotation.Nullable final Integer value) {
-        this.blueScreenCount = value;
+        this.backingStore.set("blueScreenCount", value);
     }
     /**
      * Sets the bootScore property value. The user experience analytics device boot score.
      * @param value Value to set for the bootScore property.
      */
     public void setBootScore(@jakarta.annotation.Nullable final Integer value) {
-        this.bootScore = value;
+        this.backingStore.set("bootScore", value);
     }
     /**
      * Sets the coreBootTimeInMs property value. The user experience analytics device core boot time in milliseconds.
      * @param value Value to set for the coreBootTimeInMs property.
      */
     public void setCoreBootTimeInMs(@jakarta.annotation.Nullable final Integer value) {
-        this.coreBootTimeInMs = value;
+        this.backingStore.set("coreBootTimeInMs", value);
     }
     /**
      * Sets the coreLoginTimeInMs property value. The user experience analytics device core login time in milliseconds.
      * @param value Value to set for the coreLoginTimeInMs property.
      */
     public void setCoreLoginTimeInMs(@jakarta.annotation.Nullable final Integer value) {
-        this.coreLoginTimeInMs = value;
+        this.backingStore.set("coreLoginTimeInMs", value);
     }
     /**
      * Sets the deviceCount property value. User experience analytics summarized device count.
      * @param value Value to set for the deviceCount property.
      */
     public void setDeviceCount(@jakarta.annotation.Nullable final Long value) {
-        this.deviceCount = value;
+        this.backingStore.set("deviceCount", value);
     }
     /**
      * Sets the deviceName property value. The user experience analytics device name.
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.deviceName = value;
+        this.backingStore.set("deviceName", value);
     }
     /**
      * Sets the diskType property value. The diskType property
      * @param value Value to set for the diskType property.
      */
     public void setDiskType(@jakarta.annotation.Nullable final DiskType value) {
-        this.diskType = value;
+        this.backingStore.set("diskType", value);
     }
     /**
      * Sets the groupPolicyBootTimeInMs property value. The user experience analytics device group policy boot time in milliseconds.
      * @param value Value to set for the groupPolicyBootTimeInMs property.
      */
     public void setGroupPolicyBootTimeInMs(@jakarta.annotation.Nullable final Integer value) {
-        this.groupPolicyBootTimeInMs = value;
+        this.backingStore.set("groupPolicyBootTimeInMs", value);
     }
     /**
      * Sets the groupPolicyLoginTimeInMs property value. The user experience analytics device group policy login time in milliseconds.
      * @param value Value to set for the groupPolicyLoginTimeInMs property.
      */
     public void setGroupPolicyLoginTimeInMs(@jakarta.annotation.Nullable final Integer value) {
-        this.groupPolicyLoginTimeInMs = value;
+        this.backingStore.set("groupPolicyLoginTimeInMs", value);
     }
     /**
      * Sets the healthStatus property value. The healthStatus property
      * @param value Value to set for the healthStatus property.
      */
     public void setHealthStatus(@jakarta.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
-        this.healthStatus = value;
+        this.backingStore.set("healthStatus", value);
     }
     /**
      * Sets the loginScore property value. The user experience analytics device login score.
      * @param value Value to set for the loginScore property.
      */
     public void setLoginScore(@jakarta.annotation.Nullable final Integer value) {
-        this.loginScore = value;
+        this.backingStore.set("loginScore", value);
     }
     /**
      * Sets the manufacturer property value. The user experience analytics device manufacturer.
      * @param value Value to set for the manufacturer property.
      */
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
-        this.manufacturer = value;
+        this.backingStore.set("manufacturer", value);
     }
     /**
      * Sets the model property value. The user experience analytics device model.
      * @param value Value to set for the model property.
      */
     public void setModel(@jakarta.annotation.Nullable final String value) {
-        this.model = value;
+        this.backingStore.set("model", value);
     }
     /**
      * Sets the modelStartupPerformanceScore property value. The user experience analytics model level startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the modelStartupPerformanceScore property.
      */
     public void setModelStartupPerformanceScore(@jakarta.annotation.Nullable final Double value) {
-        this.modelStartupPerformanceScore = value;
+        this.backingStore.set("modelStartupPerformanceScore", value);
     }
     /**
      * Sets the operatingSystemVersion property value. The user experience analytics device Operating System version.
      * @param value Value to set for the operatingSystemVersion property.
      */
     public void setOperatingSystemVersion(@jakarta.annotation.Nullable final String value) {
-        this.operatingSystemVersion = value;
+        this.backingStore.set("operatingSystemVersion", value);
     }
     /**
      * Sets the responsiveDesktopTimeInMs property value. The user experience analytics responsive desktop time in milliseconds.
      * @param value Value to set for the responsiveDesktopTimeInMs property.
      */
     public void setResponsiveDesktopTimeInMs(@jakarta.annotation.Nullable final Integer value) {
-        this.responsiveDesktopTimeInMs = value;
+        this.backingStore.set("responsiveDesktopTimeInMs", value);
     }
     /**
      * Sets the restartCount property value. Number of Restarts in the last 30 days. Valid values 0 to 9999999
      * @param value Value to set for the restartCount property.
      */
     public void setRestartCount(@jakarta.annotation.Nullable final Integer value) {
-        this.restartCount = value;
+        this.backingStore.set("restartCount", value);
     }
     /**
      * Sets the startupPerformanceScore property value. The user experience analytics device startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the startupPerformanceScore property.
      */
     public void setStartupPerformanceScore(@jakarta.annotation.Nullable final Double value) {
-        this.startupPerformanceScore = value;
+        this.backingStore.set("startupPerformanceScore", value);
     }
 }

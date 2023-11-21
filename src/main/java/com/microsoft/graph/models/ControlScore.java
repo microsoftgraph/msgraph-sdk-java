@@ -4,39 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ControlScore implements AdditionalDataHolder, Parsable {
+public class ControlScore implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Control action category (Identity, Data, Device, Apps, Infrastructure).
-     */
-    private String controlCategory;
-    /**
-     * Control unique name.
-     */
-    private String controlName;
-    /**
-     * Description of the control.
-     */
-    private String description;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Tenant achieved score for the control (it varies day by day depending on tenant operations on the control).
-     */
-    private Double score;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new ControlScore and sets the default values.
      */
     public ControlScore() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +40,20 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the controlCategory property value. Control action category (Identity, Data, Device, Apps, Infrastructure).
@@ -63,7 +61,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getControlCategory() {
-        return this.controlCategory;
+        return this.backingStore.get("controlCategory");
     }
     /**
      * Gets the controlName property value. Control unique name.
@@ -71,7 +69,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getControlName() {
-        return this.controlName;
+        return this.backingStore.get("controlName");
     }
     /**
      * Gets the description property value. Description of the control.
@@ -79,7 +77,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -101,7 +99,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the score property value. Tenant achieved score for the control (it varies day by day depending on tenant operations on the control).
@@ -109,7 +107,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Double getScore() {
-        return this.score;
+        return this.backingStore.get("score");
     }
     /**
      * Serializes information the current object
@@ -129,41 +127,49 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the controlCategory property value. Control action category (Identity, Data, Device, Apps, Infrastructure).
      * @param value Value to set for the controlCategory property.
      */
     public void setControlCategory(@jakarta.annotation.Nullable final String value) {
-        this.controlCategory = value;
+        this.backingStore.set("controlCategory", value);
     }
     /**
      * Sets the controlName property value. Control unique name.
      * @param value Value to set for the controlName property.
      */
     public void setControlName(@jakarta.annotation.Nullable final String value) {
-        this.controlName = value;
+        this.backingStore.set("controlName", value);
     }
     /**
      * Sets the description property value. Description of the control.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the score property value. Tenant achieved score for the control (it varies day by day depending on tenant operations on the control).
      * @param value Value to set for the score property.
      */
     public void setScore(@jakarta.annotation.Nullable final Double value) {
-        this.score = value;
+        this.backingStore.set("score", value);
     }
 }

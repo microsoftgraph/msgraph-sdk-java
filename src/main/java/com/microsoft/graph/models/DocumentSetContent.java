@@ -4,35 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DocumentSetContent implements AdditionalDataHolder, Parsable {
+public class DocumentSetContent implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Content type information of the file.
-     */
-    private ContentTypeInfo contentType;
-    /**
-     * Name of the file in resource folder that should be added as a default content or a template in the document set.
-     */
-    private String fileName;
-    /**
-     * Folder name in which the file will be placed when a new document set is created in the library.
-     */
-    private String folderName;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new DocumentSetContent and sets the default values.
      */
     public DocumentSetContent() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +40,20 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the contentType property value. Content type information of the file.
@@ -59,7 +61,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public ContentTypeInfo getContentType() {
-        return this.contentType;
+        return this.backingStore.get("contentType");
     }
     /**
      * The deserialization information for the current model
@@ -80,7 +82,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
-        return this.fileName;
+        return this.backingStore.get("fileName");
     }
     /**
      * Gets the folderName property value. Folder name in which the file will be placed when a new document set is created in the library.
@@ -88,7 +90,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getFolderName() {
-        return this.folderName;
+        return this.backingStore.get("folderName");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -96,7 +98,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -115,34 +117,42 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the contentType property value. Content type information of the file.
      * @param value Value to set for the contentType property.
      */
     public void setContentType(@jakarta.annotation.Nullable final ContentTypeInfo value) {
-        this.contentType = value;
+        this.backingStore.set("contentType", value);
     }
     /**
      * Sets the fileName property value. Name of the file in resource folder that should be added as a default content or a template in the document set.
      * @param value Value to set for the fileName property.
      */
     public void setFileName(@jakarta.annotation.Nullable final String value) {
-        this.fileName = value;
+        this.backingStore.set("fileName", value);
     }
     /**
      * Sets the folderName property value. Folder name in which the file will be placed when a new document set is created in the library.
      * @param value Value to set for the folderName property.
      */
     public void setFolderName(@jakarta.annotation.Nullable final String value) {
-        this.folderName = value;
+        this.backingStore.set("folderName", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

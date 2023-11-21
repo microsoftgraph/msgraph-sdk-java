@@ -12,14 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TargetedManagedAppProtection extends ManagedAppProtection implements Parsable {
     /**
-     * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
-     */
-    private java.util.List<TargetedManagedAppPolicyAssignment> assignments;
-    /**
-     * Indicates if the policy is deployed to any inclusion groups or not.
-     */
-    private Boolean isAssigned;
-    /**
      * Instantiates a new TargetedManagedAppProtection and sets the default values.
      */
     public TargetedManagedAppProtection() {
@@ -50,7 +42,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      */
     @jakarta.annotation.Nullable
     public java.util.List<TargetedManagedAppPolicyAssignment> getAssignments() {
-        return this.assignments;
+        return this.backingStore.get("assignments");
     }
     /**
      * The deserialization information for the current model
@@ -69,7 +61,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAssigned() {
-        return this.isAssigned;
+        return this.backingStore.get("isAssigned");
     }
     /**
      * Serializes information the current object
@@ -86,13 +78,13 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<TargetedManagedAppPolicyAssignment> value) {
-        this.assignments = value;
+        this.backingStore.set("assignments", value);
     }
     /**
      * Sets the isAssigned property value. Indicates if the policy is deployed to any inclusion groups or not.
      * @param value Value to set for the isAssigned property.
      */
     public void setIsAssigned(@jakarta.annotation.Nullable final Boolean value) {
-        this.isAssigned = value;
+        this.backingStore.set("isAssigned", value);
     }
 }

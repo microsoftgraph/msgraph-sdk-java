@@ -4,39 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SecurityVendorInformation implements AdditionalDataHolder, Parsable {
+public class SecurityVendorInformation implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Specific provider (product/service - not vendor company); for example, WindowsDefenderATP.
-     */
-    private String provider;
-    /**
-     * Version of the provider or subprovider, if it exists, that generated the alert. Required
-     */
-    private String providerVersion;
-    /**
-     * Specific subprovider (under aggregating provider); for example, WindowsDefenderATP.SmartScreen.
-     */
-    private String subProvider;
-    /**
-     * Name of the alert vendor (for example, Microsoft, Dell, FireEye). Required
-     */
-    private String vendor;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new SecurityVendorInformation and sets the default values.
      */
     public SecurityVendorInformation() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +40,20 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -77,7 +75,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the provider property value. Specific provider (product/service - not vendor company); for example, WindowsDefenderATP.
@@ -85,7 +83,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public String getProvider() {
-        return this.provider;
+        return this.backingStore.get("provider");
     }
     /**
      * Gets the providerVersion property value. Version of the provider or subprovider, if it exists, that generated the alert. Required
@@ -93,7 +91,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public String getProviderVersion() {
-        return this.providerVersion;
+        return this.backingStore.get("providerVersion");
     }
     /**
      * Gets the subProvider property value. Specific subprovider (under aggregating provider); for example, WindowsDefenderATP.SmartScreen.
@@ -101,7 +99,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public String getSubProvider() {
-        return this.subProvider;
+        return this.backingStore.get("subProvider");
     }
     /**
      * Gets the vendor property value. Name of the alert vendor (for example, Microsoft, Dell, FireEye). Required
@@ -109,7 +107,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public String getVendor() {
-        return this.vendor;
+        return this.backingStore.get("vendor");
     }
     /**
      * Serializes information the current object
@@ -129,41 +127,49 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the provider property value. Specific provider (product/service - not vendor company); for example, WindowsDefenderATP.
      * @param value Value to set for the provider property.
      */
     public void setProvider(@jakarta.annotation.Nullable final String value) {
-        this.provider = value;
+        this.backingStore.set("provider", value);
     }
     /**
      * Sets the providerVersion property value. Version of the provider or subprovider, if it exists, that generated the alert. Required
      * @param value Value to set for the providerVersion property.
      */
     public void setProviderVersion(@jakarta.annotation.Nullable final String value) {
-        this.providerVersion = value;
+        this.backingStore.set("providerVersion", value);
     }
     /**
      * Sets the subProvider property value. Specific subprovider (under aggregating provider); for example, WindowsDefenderATP.SmartScreen.
      * @param value Value to set for the subProvider property.
      */
     public void setSubProvider(@jakarta.annotation.Nullable final String value) {
-        this.subProvider = value;
+        this.backingStore.set("subProvider", value);
     }
     /**
      * Sets the vendor property value. Name of the alert vendor (for example, Microsoft, Dell, FireEye). Required
      * @param value Value to set for the vendor property.
      */
     public void setVendor(@jakarta.annotation.Nullable final String value) {
-        this.vendor = value;
+        this.backingStore.set("vendor", value);
     }
 }

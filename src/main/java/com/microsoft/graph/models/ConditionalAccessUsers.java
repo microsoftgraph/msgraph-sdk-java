@@ -4,55 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
+public class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Group IDs excluded from scope of policy.
-     */
-    private java.util.List<String> excludeGroups;
-    /**
-     * Internal guests or external users excluded from the policy scope. Optionally populated.
-     */
-    private ConditionalAccessGuestsOrExternalUsers excludeGuestsOrExternalUsers;
-    /**
-     * Role IDs excluded from scope of policy.
-     */
-    private java.util.List<String> excludeRoles;
-    /**
-     * User IDs excluded from scope of policy and/or GuestsOrExternalUsers.
-     */
-    private java.util.List<String> excludeUsers;
-    /**
-     * Group IDs in scope of policy unless explicitly excluded.
-     */
-    private java.util.List<String> includeGroups;
-    /**
-     * Internal guests or external users included in the policy scope. Optionally populated.
-     */
-    private ConditionalAccessGuestsOrExternalUsers includeGuestsOrExternalUsers;
-    /**
-     * Role IDs in scope of policy unless explicitly excluded.
-     */
-    private java.util.List<String> includeRoles;
-    /**
-     * User IDs in scope of policy unless explicitly excluded, None, All, or GuestsOrExternalUsers.
-     */
-    private java.util.List<String> includeUsers;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new ConditionalAccessUsers and sets the default values.
      */
     public ConditionalAccessUsers() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -71,7 +40,20 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the excludeGroups property value. Group IDs excluded from scope of policy.
@@ -79,7 +61,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExcludeGroups() {
-        return this.excludeGroups;
+        return this.backingStore.get("excludeGroups");
     }
     /**
      * Gets the excludeGuestsOrExternalUsers property value. Internal guests or external users excluded from the policy scope. Optionally populated.
@@ -87,7 +69,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessGuestsOrExternalUsers getExcludeGuestsOrExternalUsers() {
-        return this.excludeGuestsOrExternalUsers;
+        return this.backingStore.get("excludeGuestsOrExternalUsers");
     }
     /**
      * Gets the excludeRoles property value. Role IDs excluded from scope of policy.
@@ -95,7 +77,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExcludeRoles() {
-        return this.excludeRoles;
+        return this.backingStore.get("excludeRoles");
     }
     /**
      * Gets the excludeUsers property value. User IDs excluded from scope of policy and/or GuestsOrExternalUsers.
@@ -103,7 +85,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExcludeUsers() {
-        return this.excludeUsers;
+        return this.backingStore.get("excludeUsers");
     }
     /**
      * The deserialization information for the current model
@@ -129,7 +111,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getIncludeGroups() {
-        return this.includeGroups;
+        return this.backingStore.get("includeGroups");
     }
     /**
      * Gets the includeGuestsOrExternalUsers property value. Internal guests or external users included in the policy scope. Optionally populated.
@@ -137,7 +119,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessGuestsOrExternalUsers getIncludeGuestsOrExternalUsers() {
-        return this.includeGuestsOrExternalUsers;
+        return this.backingStore.get("includeGuestsOrExternalUsers");
     }
     /**
      * Gets the includeRoles property value. Role IDs in scope of policy unless explicitly excluded.
@@ -145,7 +127,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getIncludeRoles() {
-        return this.includeRoles;
+        return this.backingStore.get("includeRoles");
     }
     /**
      * Gets the includeUsers property value. User IDs in scope of policy unless explicitly excluded, None, All, or GuestsOrExternalUsers.
@@ -153,7 +135,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getIncludeUsers() {
-        return this.includeUsers;
+        return this.backingStore.get("includeUsers");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -161,7 +143,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -185,69 +167,77 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the excludeGroups property value. Group IDs excluded from scope of policy.
      * @param value Value to set for the excludeGroups property.
      */
     public void setExcludeGroups(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.excludeGroups = value;
+        this.backingStore.set("excludeGroups", value);
     }
     /**
      * Sets the excludeGuestsOrExternalUsers property value. Internal guests or external users excluded from the policy scope. Optionally populated.
      * @param value Value to set for the excludeGuestsOrExternalUsers property.
      */
     public void setExcludeGuestsOrExternalUsers(@jakarta.annotation.Nullable final ConditionalAccessGuestsOrExternalUsers value) {
-        this.excludeGuestsOrExternalUsers = value;
+        this.backingStore.set("excludeGuestsOrExternalUsers", value);
     }
     /**
      * Sets the excludeRoles property value. Role IDs excluded from scope of policy.
      * @param value Value to set for the excludeRoles property.
      */
     public void setExcludeRoles(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.excludeRoles = value;
+        this.backingStore.set("excludeRoles", value);
     }
     /**
      * Sets the excludeUsers property value. User IDs excluded from scope of policy and/or GuestsOrExternalUsers.
      * @param value Value to set for the excludeUsers property.
      */
     public void setExcludeUsers(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.excludeUsers = value;
+        this.backingStore.set("excludeUsers", value);
     }
     /**
      * Sets the includeGroups property value. Group IDs in scope of policy unless explicitly excluded.
      * @param value Value to set for the includeGroups property.
      */
     public void setIncludeGroups(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.includeGroups = value;
+        this.backingStore.set("includeGroups", value);
     }
     /**
      * Sets the includeGuestsOrExternalUsers property value. Internal guests or external users included in the policy scope. Optionally populated.
      * @param value Value to set for the includeGuestsOrExternalUsers property.
      */
     public void setIncludeGuestsOrExternalUsers(@jakarta.annotation.Nullable final ConditionalAccessGuestsOrExternalUsers value) {
-        this.includeGuestsOrExternalUsers = value;
+        this.backingStore.set("includeGuestsOrExternalUsers", value);
     }
     /**
      * Sets the includeRoles property value. Role IDs in scope of policy unless explicitly excluded.
      * @param value Value to set for the includeRoles property.
      */
     public void setIncludeRoles(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.includeRoles = value;
+        this.backingStore.set("includeRoles", value);
     }
     /**
      * Sets the includeUsers property value. User IDs in scope of policy unless explicitly excluded, None, All, or GuestsOrExternalUsers.
      * @param value Value to set for the includeUsers property.
      */
     public void setIncludeUsers(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.includeUsers = value;
+        this.backingStore.set("includeUsers", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

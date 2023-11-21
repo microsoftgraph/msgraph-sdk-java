@@ -4,35 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceManagementSettings implements AdditionalDataHolder, Parsable {
+public class DeviceManagementSettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The number of days a device is allowed to go without checking in to remain compliant.
-     */
-    private Integer deviceComplianceCheckinThresholdDays;
-    /**
-     * Is feature enabled or not for scheduled action for rule.
-     */
-    private Boolean isScheduledActionEnabled;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Device should be noncompliant when there is no compliance policy targeted when this is true
-     */
-    private Boolean secureByDefault;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new DeviceManagementSettings and sets the default values.
      */
     public DeviceManagementSettings() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +40,20 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the deviceComplianceCheckinThresholdDays property value. The number of days a device is allowed to go without checking in to remain compliant.
@@ -59,7 +61,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceComplianceCheckinThresholdDays() {
-        return this.deviceComplianceCheckinThresholdDays;
+        return this.backingStore.get("deviceComplianceCheckinThresholdDays");
     }
     /**
      * The deserialization information for the current model
@@ -80,7 +82,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public Boolean getIsScheduledActionEnabled() {
-        return this.isScheduledActionEnabled;
+        return this.backingStore.get("isScheduledActionEnabled");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -88,7 +90,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the secureByDefault property value. Device should be noncompliant when there is no compliance policy targeted when this is true
@@ -96,7 +98,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public Boolean getSecureByDefault() {
-        return this.secureByDefault;
+        return this.backingStore.get("secureByDefault");
     }
     /**
      * Serializes information the current object
@@ -115,34 +117,42 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the deviceComplianceCheckinThresholdDays property value. The number of days a device is allowed to go without checking in to remain compliant.
      * @param value Value to set for the deviceComplianceCheckinThresholdDays property.
      */
     public void setDeviceComplianceCheckinThresholdDays(@jakarta.annotation.Nullable final Integer value) {
-        this.deviceComplianceCheckinThresholdDays = value;
+        this.backingStore.set("deviceComplianceCheckinThresholdDays", value);
     }
     /**
      * Sets the isScheduledActionEnabled property value. Is feature enabled or not for scheduled action for rule.
      * @param value Value to set for the isScheduledActionEnabled property.
      */
     public void setIsScheduledActionEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isScheduledActionEnabled = value;
+        this.backingStore.set("isScheduledActionEnabled", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the secureByDefault property value. Device should be noncompliant when there is no compliance policy targeted when this is true
      * @param value Value to set for the secureByDefault property.
      */
     public void setSecureByDefault(@jakarta.annotation.Nullable final Boolean value) {
-        this.secureByDefault = value;
+        this.backingStore.set("secureByDefault", value);
     }
 }

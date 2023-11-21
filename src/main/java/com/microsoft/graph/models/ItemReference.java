@@ -4,55 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ItemReference implements AdditionalDataHolder, Parsable {
+public class ItemReference implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Unique identifier of the drive instance that contains the driveItem. Only returned if the item is located in a [drive][]. Read-only.
-     */
-    private String driveId;
-    /**
-     * Identifies the type of drive. Only returned if the item is located in a [drive][]. See [drive][] resource for values.
-     */
-    private String driveType;
-    /**
-     * Unique identifier of the driveItem in the drive or a listItem in a list. Read-only.
-     */
-    private String id;
-    /**
-     * The name of the item being referenced. Read-only.
-     */
-    private String name;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Path that can be used to navigate to the item. Read-only.
-     */
-    private String path;
-    /**
-     * A unique identifier for a shared resource that can be accessed via the [Shares][] API.
-     */
-    private String shareId;
-    /**
-     * Returns identifiers useful for SharePoint REST compatibility. Read-only.
-     */
-    private SharepointIds sharepointIds;
-    /**
-     * For OneDrive for Business and SharePoint, this property represents the ID of the site that contains the parent document library of the driveItem resource or the parent list of the listItem resource. The value is the same as the id property of that [site][] resource. It is an opaque string that consists of three identifiers of the site. For OneDrive, this property is not populated.
-     */
-    private String siteId;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new ItemReference and sets the default values.
      */
     public ItemReference() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -71,7 +40,20 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the driveId property value. Unique identifier of the drive instance that contains the driveItem. Only returned if the item is located in a [drive][]. Read-only.
@@ -79,7 +61,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDriveId() {
-        return this.driveId;
+        return this.backingStore.get("driveId");
     }
     /**
      * Gets the driveType property value. Identifies the type of drive. Only returned if the item is located in a [drive][]. See [drive][] resource for values.
@@ -87,7 +69,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDriveType() {
-        return this.driveType;
+        return this.backingStore.get("driveType");
     }
     /**
      * The deserialization information for the current model
@@ -113,7 +95,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getId() {
-        return this.id;
+        return this.backingStore.get("id");
     }
     /**
      * Gets the name property value. The name of the item being referenced. Read-only.
@@ -121,7 +103,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -129,7 +111,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the path property value. Path that can be used to navigate to the item. Read-only.
@@ -137,7 +119,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPath() {
-        return this.path;
+        return this.backingStore.get("path");
     }
     /**
      * Gets the shareId property value. A unique identifier for a shared resource that can be accessed via the [Shares][] API.
@@ -145,7 +127,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getShareId() {
-        return this.shareId;
+        return this.backingStore.get("shareId");
     }
     /**
      * Gets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
@@ -153,7 +135,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public SharepointIds getSharepointIds() {
-        return this.sharepointIds;
+        return this.backingStore.get("sharepointIds");
     }
     /**
      * Gets the siteId property value. For OneDrive for Business and SharePoint, this property represents the ID of the site that contains the parent document library of the driveItem resource or the parent list of the listItem resource. The value is the same as the id property of that [site][] resource. It is an opaque string that consists of three identifiers of the site. For OneDrive, this property is not populated.
@@ -161,7 +143,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSiteId() {
-        return this.siteId;
+        return this.backingStore.get("siteId");
     }
     /**
      * Serializes information the current object
@@ -185,69 +167,77 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the driveId property value. Unique identifier of the drive instance that contains the driveItem. Only returned if the item is located in a [drive][]. Read-only.
      * @param value Value to set for the driveId property.
      */
     public void setDriveId(@jakarta.annotation.Nullable final String value) {
-        this.driveId = value;
+        this.backingStore.set("driveId", value);
     }
     /**
      * Sets the driveType property value. Identifies the type of drive. Only returned if the item is located in a [drive][]. See [drive][] resource for values.
      * @param value Value to set for the driveType property.
      */
     public void setDriveType(@jakarta.annotation.Nullable final String value) {
-        this.driveType = value;
+        this.backingStore.set("driveType", value);
     }
     /**
      * Sets the id property value. Unique identifier of the driveItem in the drive or a listItem in a list. Read-only.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
-        this.id = value;
+        this.backingStore.set("id", value);
     }
     /**
      * Sets the name property value. The name of the item being referenced. Read-only.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the path property value. Path that can be used to navigate to the item. Read-only.
      * @param value Value to set for the path property.
      */
     public void setPath(@jakarta.annotation.Nullable final String value) {
-        this.path = value;
+        this.backingStore.set("path", value);
     }
     /**
      * Sets the shareId property value. A unique identifier for a shared resource that can be accessed via the [Shares][] API.
      * @param value Value to set for the shareId property.
      */
     public void setShareId(@jakarta.annotation.Nullable final String value) {
-        this.shareId = value;
+        this.backingStore.set("shareId", value);
     }
     /**
      * Sets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
      * @param value Value to set for the sharepointIds property.
      */
     public void setSharepointIds(@jakarta.annotation.Nullable final SharepointIds value) {
-        this.sharepointIds = value;
+        this.backingStore.set("sharepointIds", value);
     }
     /**
      * Sets the siteId property value. For OneDrive for Business and SharePoint, this property represents the ID of the site that contains the parent document library of the driveItem resource or the parent list of the listItem resource. The value is the same as the id property of that [site][] resource. It is an opaque string that consists of three identifiers of the site. For OneDrive, this property is not populated.
      * @param value Value to set for the siteId property.
      */
     public void setSiteId(@jakarta.annotation.Nullable final String value) {
-        this.siteId = value;
+        this.backingStore.set("siteId", value);
     }
 }

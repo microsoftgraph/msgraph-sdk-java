@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<WorkbookChart> value;
-    /**
      * Instantiates a new WorkbookChartCollectionResponse and sets the default values.
      */
     public WorkbookChartCollectionResponse() {
@@ -44,7 +40,7 @@ public class WorkbookChartCollectionResponse extends BaseCollectionPaginationCou
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookChart> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class WorkbookChartCollectionResponse extends BaseCollectionPaginationCou
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<WorkbookChart> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

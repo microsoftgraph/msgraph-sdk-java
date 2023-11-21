@@ -13,26 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TelecomExpenseManagementPartner extends Entity implements Parsable {
     /**
-     * Whether the partner's AAD app has been authorized to access Intune.
-     */
-    private Boolean appAuthorized;
-    /**
-     * Display name of the TEM partner.
-     */
-    private String displayName;
-    /**
-     * Whether Intune's connection to the TEM service is currently enabled or disabled.
-     */
-    private Boolean enabled;
-    /**
-     * Timestamp of the last request sent to Intune by the TEM partner.
-     */
-    private OffsetDateTime lastConnectionDateTime;
-    /**
-     * URL of the TEM partner's administrative control panel, where an administrator can configure their TEM service.
-     */
-    private String url;
-    /**
      * Instantiates a new TelecomExpenseManagementPartner and sets the default values.
      */
     public TelecomExpenseManagementPartner() {
@@ -54,7 +34,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public Boolean getAppAuthorized() {
-        return this.appAuthorized;
+        return this.backingStore.get("appAuthorized");
     }
     /**
      * Gets the displayName property value. Display name of the TEM partner.
@@ -62,7 +42,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * Gets the enabled property value. Whether Intune's connection to the TEM service is currently enabled or disabled.
@@ -70,7 +50,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public Boolean getEnabled() {
-        return this.enabled;
+        return this.backingStore.get("enabled");
     }
     /**
      * The deserialization information for the current model
@@ -92,7 +72,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastConnectionDateTime() {
-        return this.lastConnectionDateTime;
+        return this.backingStore.get("lastConnectionDateTime");
     }
     /**
      * Gets the url property value. URL of the TEM partner's administrative control panel, where an administrator can configure their TEM service.
@@ -100,7 +80,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public String getUrl() {
-        return this.url;
+        return this.backingStore.get("url");
     }
     /**
      * Serializes information the current object
@@ -120,34 +100,34 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      * @param value Value to set for the appAuthorized property.
      */
     public void setAppAuthorized(@jakarta.annotation.Nullable final Boolean value) {
-        this.appAuthorized = value;
+        this.backingStore.set("appAuthorized", value);
     }
     /**
      * Sets the displayName property value. Display name of the TEM partner.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the enabled property value. Whether Intune's connection to the TEM service is currently enabled or disabled.
      * @param value Value to set for the enabled property.
      */
     public void setEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.enabled = value;
+        this.backingStore.set("enabled", value);
     }
     /**
      * Sets the lastConnectionDateTime property value. Timestamp of the last request sent to Intune by the TEM partner.
      * @param value Value to set for the lastConnectionDateTime property.
      */
     public void setLastConnectionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastConnectionDateTime = value;
+        this.backingStore.set("lastConnectionDateTime", value);
     }
     /**
      * Sets the url property value. URL of the TEM partner's administrative control panel, where an administrator can configure their TEM service.
      * @param value Value to set for the url property.
      */
     public void setUrl(@jakarta.annotation.Nullable final String value) {
-        this.url = value;
+        this.backingStore.set("url", value);
     }
 }

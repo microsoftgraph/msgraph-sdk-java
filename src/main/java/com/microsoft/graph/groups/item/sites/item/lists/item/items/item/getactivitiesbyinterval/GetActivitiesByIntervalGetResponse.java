@@ -11,10 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetActivitiesByIntervalGetResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<ItemActivityStat> value;
-    /**
      * Instantiates a new GetActivitiesByIntervalGetResponse and sets the default values.
      */
     public GetActivitiesByIntervalGetResponse() {
@@ -46,7 +42,7 @@ public class GetActivitiesByIntervalGetResponse extends BaseCollectionPagination
      */
     @jakarta.annotation.Nullable
     public java.util.List<ItemActivityStat> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class GetActivitiesByIntervalGetResponse extends BaseCollectionPagination
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<ItemActivityStat> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

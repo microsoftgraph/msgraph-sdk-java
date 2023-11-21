@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementPolicyEnablementRule extends UnifiedRoleManagementPolicyRule implements Parsable {
     /**
-     * The collection of rules that are enabled for this policy rule. For example, MultiFactorAuthentication, Ticketing, and Justification.
-     */
-    private java.util.List<String> enabledRules;
-    /**
      * Instantiates a new UnifiedRoleManagementPolicyEnablementRule and sets the default values.
      */
     public UnifiedRoleManagementPolicyEnablementRule() {
@@ -35,7 +31,7 @@ public class UnifiedRoleManagementPolicyEnablementRule extends UnifiedRoleManage
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEnabledRules() {
-        return this.enabledRules;
+        return this.backingStore.get("enabledRules");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class UnifiedRoleManagementPolicyEnablementRule extends UnifiedRoleManage
      * @param value Value to set for the enabledRules property.
      */
     public void setEnabledRules(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.enabledRules = value;
+        this.backingStore.set("enabledRules", value);
     }
 }

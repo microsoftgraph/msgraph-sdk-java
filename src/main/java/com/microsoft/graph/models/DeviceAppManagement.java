@@ -13,78 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceAppManagement extends Entity implements Parsable {
     /**
-     * Android managed app policies.
-     */
-    private java.util.List<AndroidManagedAppProtection> androidManagedAppProtections;
-    /**
-     * Default managed app policies.
-     */
-    private java.util.List<DefaultManagedAppProtection> defaultManagedAppProtections;
-    /**
-     * iOS managed app policies.
-     */
-    private java.util.List<IosManagedAppProtection> iosManagedAppProtections;
-    /**
-     * Whether the account is enabled for syncing applications from the Microsoft Store for Business.
-     */
-    private Boolean isEnabledForMicrosoftStoreForBusiness;
-    /**
-     * Managed app policies.
-     */
-    private java.util.List<ManagedAppPolicy> managedAppPolicies;
-    /**
-     * The managed app registrations.
-     */
-    private java.util.List<ManagedAppRegistration> managedAppRegistrations;
-    /**
-     * The managed app statuses.
-     */
-    private java.util.List<ManagedAppStatus> managedAppStatuses;
-    /**
-     * The Managed eBook.
-     */
-    private java.util.List<ManagedEBook> managedEBooks;
-    /**
-     * Windows information protection for apps running on devices which are MDM enrolled.
-     */
-    private java.util.List<MdmWindowsInformationProtectionPolicy> mdmWindowsInformationProtectionPolicies;
-    /**
-     * The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -<country/regioncode2>, where  is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
-     */
-    private String microsoftStoreForBusinessLanguage;
-    /**
-     * The last time an application sync from the Microsoft Store for Business was completed.
-     */
-    private OffsetDateTime microsoftStoreForBusinessLastCompletedApplicationSyncTime;
-    /**
-     * The last time the apps from the Microsoft Store for Business were synced successfully for the account.
-     */
-    private OffsetDateTime microsoftStoreForBusinessLastSuccessfulSyncDateTime;
-    /**
-     * The mobile app categories.
-     */
-    private java.util.List<MobileAppCategory> mobileAppCategories;
-    /**
-     * The Managed Device Mobile Application Configurations.
-     */
-    private java.util.List<ManagedDeviceMobileAppConfiguration> mobileAppConfigurations;
-    /**
-     * The mobile apps.
-     */
-    private java.util.List<MobileApp> mobileApps;
-    /**
-     * Targeted managed app configurations.
-     */
-    private java.util.List<TargetedManagedAppConfiguration> targetedManagedAppConfigurations;
-    /**
-     * List of Vpp tokens for this organization.
-     */
-    private java.util.List<VppToken> vppTokens;
-    /**
-     * Windows information protection for apps running on devices which are not MDM enrolled.
-     */
-    private java.util.List<WindowsInformationProtectionPolicy> windowsInformationProtectionPolicies;
-    /**
      * Instantiates a new DeviceAppManagement and sets the default values.
      */
     public DeviceAppManagement() {
@@ -106,7 +34,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidManagedAppProtection> getAndroidManagedAppProtections() {
-        return this.androidManagedAppProtections;
+        return this.backingStore.get("androidManagedAppProtections");
     }
     /**
      * Gets the defaultManagedAppProtections property value. Default managed app policies.
@@ -114,7 +42,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DefaultManagedAppProtection> getDefaultManagedAppProtections() {
-        return this.defaultManagedAppProtections;
+        return this.backingStore.get("defaultManagedAppProtections");
     }
     /**
      * The deserialization information for the current model
@@ -149,7 +77,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<IosManagedAppProtection> getIosManagedAppProtections() {
-        return this.iosManagedAppProtections;
+        return this.backingStore.get("iosManagedAppProtections");
     }
     /**
      * Gets the isEnabledForMicrosoftStoreForBusiness property value. Whether the account is enabled for syncing applications from the Microsoft Store for Business.
@@ -157,7 +85,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabledForMicrosoftStoreForBusiness() {
-        return this.isEnabledForMicrosoftStoreForBusiness;
+        return this.backingStore.get("isEnabledForMicrosoftStoreForBusiness");
     }
     /**
      * Gets the managedAppPolicies property value. Managed app policies.
@@ -165,7 +93,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAppPolicy> getManagedAppPolicies() {
-        return this.managedAppPolicies;
+        return this.backingStore.get("managedAppPolicies");
     }
     /**
      * Gets the managedAppRegistrations property value. The managed app registrations.
@@ -173,7 +101,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAppRegistration> getManagedAppRegistrations() {
-        return this.managedAppRegistrations;
+        return this.backingStore.get("managedAppRegistrations");
     }
     /**
      * Gets the managedAppStatuses property value. The managed app statuses.
@@ -181,7 +109,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAppStatus> getManagedAppStatuses() {
-        return this.managedAppStatuses;
+        return this.backingStore.get("managedAppStatuses");
     }
     /**
      * Gets the managedEBooks property value. The Managed eBook.
@@ -189,7 +117,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedEBook> getManagedEBooks() {
-        return this.managedEBooks;
+        return this.backingStore.get("managedEBooks");
     }
     /**
      * Gets the mdmWindowsInformationProtectionPolicies property value. Windows information protection for apps running on devices which are MDM enrolled.
@@ -197,7 +125,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<MdmWindowsInformationProtectionPolicy> getMdmWindowsInformationProtectionPolicies() {
-        return this.mdmWindowsInformationProtectionPolicies;
+        return this.backingStore.get("mdmWindowsInformationProtectionPolicies");
     }
     /**
      * Gets the microsoftStoreForBusinessLanguage property value. The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -<country/regioncode2>, where  is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
@@ -205,7 +133,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getMicrosoftStoreForBusinessLanguage() {
-        return this.microsoftStoreForBusinessLanguage;
+        return this.backingStore.get("microsoftStoreForBusinessLanguage");
     }
     /**
      * Gets the microsoftStoreForBusinessLastCompletedApplicationSyncTime property value. The last time an application sync from the Microsoft Store for Business was completed.
@@ -213,7 +141,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getMicrosoftStoreForBusinessLastCompletedApplicationSyncTime() {
-        return this.microsoftStoreForBusinessLastCompletedApplicationSyncTime;
+        return this.backingStore.get("microsoftStoreForBusinessLastCompletedApplicationSyncTime");
     }
     /**
      * Gets the microsoftStoreForBusinessLastSuccessfulSyncDateTime property value. The last time the apps from the Microsoft Store for Business were synced successfully for the account.
@@ -221,7 +149,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getMicrosoftStoreForBusinessLastSuccessfulSyncDateTime() {
-        return this.microsoftStoreForBusinessLastSuccessfulSyncDateTime;
+        return this.backingStore.get("microsoftStoreForBusinessLastSuccessfulSyncDateTime");
     }
     /**
      * Gets the mobileAppCategories property value. The mobile app categories.
@@ -229,7 +157,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileAppCategory> getMobileAppCategories() {
-        return this.mobileAppCategories;
+        return this.backingStore.get("mobileAppCategories");
     }
     /**
      * Gets the mobileAppConfigurations property value. The Managed Device Mobile Application Configurations.
@@ -237,7 +165,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceMobileAppConfiguration> getMobileAppConfigurations() {
-        return this.mobileAppConfigurations;
+        return this.backingStore.get("mobileAppConfigurations");
     }
     /**
      * Gets the mobileApps property value. The mobile apps.
@@ -245,7 +173,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileApp> getMobileApps() {
-        return this.mobileApps;
+        return this.backingStore.get("mobileApps");
     }
     /**
      * Gets the targetedManagedAppConfigurations property value. Targeted managed app configurations.
@@ -253,7 +181,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<TargetedManagedAppConfiguration> getTargetedManagedAppConfigurations() {
-        return this.targetedManagedAppConfigurations;
+        return this.backingStore.get("targetedManagedAppConfigurations");
     }
     /**
      * Gets the vppTokens property value. List of Vpp tokens for this organization.
@@ -261,7 +189,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<VppToken> getVppTokens() {
-        return this.vppTokens;
+        return this.backingStore.get("vppTokens");
     }
     /**
      * Gets the windowsInformationProtectionPolicies property value. Windows information protection for apps running on devices which are not MDM enrolled.
@@ -269,7 +197,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsInformationProtectionPolicy> getWindowsInformationProtectionPolicies() {
-        return this.windowsInformationProtectionPolicies;
+        return this.backingStore.get("windowsInformationProtectionPolicies");
     }
     /**
      * Serializes information the current object
@@ -302,125 +230,125 @@ public class DeviceAppManagement extends Entity implements Parsable {
      * @param value Value to set for the androidManagedAppProtections property.
      */
     public void setAndroidManagedAppProtections(@jakarta.annotation.Nullable final java.util.List<AndroidManagedAppProtection> value) {
-        this.androidManagedAppProtections = value;
+        this.backingStore.set("androidManagedAppProtections", value);
     }
     /**
      * Sets the defaultManagedAppProtections property value. Default managed app policies.
      * @param value Value to set for the defaultManagedAppProtections property.
      */
     public void setDefaultManagedAppProtections(@jakarta.annotation.Nullable final java.util.List<DefaultManagedAppProtection> value) {
-        this.defaultManagedAppProtections = value;
+        this.backingStore.set("defaultManagedAppProtections", value);
     }
     /**
      * Sets the iosManagedAppProtections property value. iOS managed app policies.
      * @param value Value to set for the iosManagedAppProtections property.
      */
     public void setIosManagedAppProtections(@jakarta.annotation.Nullable final java.util.List<IosManagedAppProtection> value) {
-        this.iosManagedAppProtections = value;
+        this.backingStore.set("iosManagedAppProtections", value);
     }
     /**
      * Sets the isEnabledForMicrosoftStoreForBusiness property value. Whether the account is enabled for syncing applications from the Microsoft Store for Business.
      * @param value Value to set for the isEnabledForMicrosoftStoreForBusiness property.
      */
     public void setIsEnabledForMicrosoftStoreForBusiness(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabledForMicrosoftStoreForBusiness = value;
+        this.backingStore.set("isEnabledForMicrosoftStoreForBusiness", value);
     }
     /**
      * Sets the managedAppPolicies property value. Managed app policies.
      * @param value Value to set for the managedAppPolicies property.
      */
     public void setManagedAppPolicies(@jakarta.annotation.Nullable final java.util.List<ManagedAppPolicy> value) {
-        this.managedAppPolicies = value;
+        this.backingStore.set("managedAppPolicies", value);
     }
     /**
      * Sets the managedAppRegistrations property value. The managed app registrations.
      * @param value Value to set for the managedAppRegistrations property.
      */
     public void setManagedAppRegistrations(@jakarta.annotation.Nullable final java.util.List<ManagedAppRegistration> value) {
-        this.managedAppRegistrations = value;
+        this.backingStore.set("managedAppRegistrations", value);
     }
     /**
      * Sets the managedAppStatuses property value. The managed app statuses.
      * @param value Value to set for the managedAppStatuses property.
      */
     public void setManagedAppStatuses(@jakarta.annotation.Nullable final java.util.List<ManagedAppStatus> value) {
-        this.managedAppStatuses = value;
+        this.backingStore.set("managedAppStatuses", value);
     }
     /**
      * Sets the managedEBooks property value. The Managed eBook.
      * @param value Value to set for the managedEBooks property.
      */
     public void setManagedEBooks(@jakarta.annotation.Nullable final java.util.List<ManagedEBook> value) {
-        this.managedEBooks = value;
+        this.backingStore.set("managedEBooks", value);
     }
     /**
      * Sets the mdmWindowsInformationProtectionPolicies property value. Windows information protection for apps running on devices which are MDM enrolled.
      * @param value Value to set for the mdmWindowsInformationProtectionPolicies property.
      */
     public void setMdmWindowsInformationProtectionPolicies(@jakarta.annotation.Nullable final java.util.List<MdmWindowsInformationProtectionPolicy> value) {
-        this.mdmWindowsInformationProtectionPolicies = value;
+        this.backingStore.set("mdmWindowsInformationProtectionPolicies", value);
     }
     /**
      * Sets the microsoftStoreForBusinessLanguage property value. The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -<country/regioncode2>, where  is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
      * @param value Value to set for the microsoftStoreForBusinessLanguage property.
      */
     public void setMicrosoftStoreForBusinessLanguage(@jakarta.annotation.Nullable final String value) {
-        this.microsoftStoreForBusinessLanguage = value;
+        this.backingStore.set("microsoftStoreForBusinessLanguage", value);
     }
     /**
      * Sets the microsoftStoreForBusinessLastCompletedApplicationSyncTime property value. The last time an application sync from the Microsoft Store for Business was completed.
      * @param value Value to set for the microsoftStoreForBusinessLastCompletedApplicationSyncTime property.
      */
     public void setMicrosoftStoreForBusinessLastCompletedApplicationSyncTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.microsoftStoreForBusinessLastCompletedApplicationSyncTime = value;
+        this.backingStore.set("microsoftStoreForBusinessLastCompletedApplicationSyncTime", value);
     }
     /**
      * Sets the microsoftStoreForBusinessLastSuccessfulSyncDateTime property value. The last time the apps from the Microsoft Store for Business were synced successfully for the account.
      * @param value Value to set for the microsoftStoreForBusinessLastSuccessfulSyncDateTime property.
      */
     public void setMicrosoftStoreForBusinessLastSuccessfulSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.microsoftStoreForBusinessLastSuccessfulSyncDateTime = value;
+        this.backingStore.set("microsoftStoreForBusinessLastSuccessfulSyncDateTime", value);
     }
     /**
      * Sets the mobileAppCategories property value. The mobile app categories.
      * @param value Value to set for the mobileAppCategories property.
      */
     public void setMobileAppCategories(@jakarta.annotation.Nullable final java.util.List<MobileAppCategory> value) {
-        this.mobileAppCategories = value;
+        this.backingStore.set("mobileAppCategories", value);
     }
     /**
      * Sets the mobileAppConfigurations property value. The Managed Device Mobile Application Configurations.
      * @param value Value to set for the mobileAppConfigurations property.
      */
     public void setMobileAppConfigurations(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceMobileAppConfiguration> value) {
-        this.mobileAppConfigurations = value;
+        this.backingStore.set("mobileAppConfigurations", value);
     }
     /**
      * Sets the mobileApps property value. The mobile apps.
      * @param value Value to set for the mobileApps property.
      */
     public void setMobileApps(@jakarta.annotation.Nullable final java.util.List<MobileApp> value) {
-        this.mobileApps = value;
+        this.backingStore.set("mobileApps", value);
     }
     /**
      * Sets the targetedManagedAppConfigurations property value. Targeted managed app configurations.
      * @param value Value to set for the targetedManagedAppConfigurations property.
      */
     public void setTargetedManagedAppConfigurations(@jakarta.annotation.Nullable final java.util.List<TargetedManagedAppConfiguration> value) {
-        this.targetedManagedAppConfigurations = value;
+        this.backingStore.set("targetedManagedAppConfigurations", value);
     }
     /**
      * Sets the vppTokens property value. List of Vpp tokens for this organization.
      * @param value Value to set for the vppTokens property.
      */
     public void setVppTokens(@jakarta.annotation.Nullable final java.util.List<VppToken> value) {
-        this.vppTokens = value;
+        this.backingStore.set("vppTokens", value);
     }
     /**
      * Sets the windowsInformationProtectionPolicies property value. Windows information protection for apps running on devices which are not MDM enrolled.
      * @param value Value to set for the windowsInformationProtectionPolicies property.
      */
     public void setWindowsInformationProtectionPolicies(@jakarta.annotation.Nullable final java.util.List<WindowsInformationProtectionPolicy> value) {
-        this.windowsInformationProtectionPolicies = value;
+        this.backingStore.set("windowsInformationProtectionPolicies", value);
     }
 }

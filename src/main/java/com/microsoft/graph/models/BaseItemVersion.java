@@ -10,18 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BaseItemVersion extends Entity implements Parsable {
     /**
-     * Identity of the user which last modified the version. Read-only.
-     */
-    private IdentitySet lastModifiedBy;
-    /**
-     * Date and time the version was last modified. Read-only.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Indicates the publication status of this particular version. Read-only.
-     */
-    private PublicationFacet publication;
-    /**
      * Instantiates a new BaseItemVersion and sets the default values.
      */
     public BaseItemVersion() {
@@ -64,7 +52,7 @@ public class BaseItemVersion extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.backingStore.get("lastModifiedBy");
     }
     /**
      * Gets the lastModifiedDateTime property value. Date and time the version was last modified. Read-only.
@@ -72,7 +60,7 @@ public class BaseItemVersion extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the publication property value. Indicates the publication status of this particular version. Read-only.
@@ -80,7 +68,7 @@ public class BaseItemVersion extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PublicationFacet getPublication() {
-        return this.publication;
+        return this.backingStore.get("publication");
     }
     /**
      * Serializes information the current object
@@ -98,20 +86,20 @@ public class BaseItemVersion extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.lastModifiedBy = value;
+        this.backingStore.set("lastModifiedBy", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. Date and time the version was last modified. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the publication property value. Indicates the publication status of this particular version. Read-only.
      * @param value Value to set for the publication property.
      */
     public void setPublication(@jakarta.annotation.Nullable final PublicationFacet value) {
-        this.publication = value;
+        this.backingStore.set("publication", value);
     }
 }

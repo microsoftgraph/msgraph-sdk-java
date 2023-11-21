@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationCombinationConfigurationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<AuthenticationCombinationConfiguration> value;
-    /**
      * Instantiates a new AuthenticationCombinationConfigurationCollectionResponse and sets the default values.
      */
     public AuthenticationCombinationConfigurationCollectionResponse() {
@@ -44,7 +40,7 @@ public class AuthenticationCombinationConfigurationCollectionResponse extends Ba
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationCombinationConfiguration> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AuthenticationCombinationConfigurationCollectionResponse extends Ba
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AuthenticationCombinationConfiguration> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

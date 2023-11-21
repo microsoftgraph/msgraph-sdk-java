@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,75 +14,17 @@ import java.util.Objects;
  * The user experience analytics Work From Anywhere metrics devices summary.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements AdditionalDataHolder, Parsable {
+public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The user experience analytics work from anywhere Autopilot devices summary. Read-only.
-     */
-    private UserExperienceAnalyticsAutopilotDevicesSummary autopilotDevicesSummary;
-    /**
-     * The user experience analytics work from anywhere Cloud Identity devices summary. Read-only.
-     */
-    private UserExperienceAnalyticsCloudIdentityDevicesSummary cloudIdentityDevicesSummary;
-    /**
-     * The user experience analytics work from anywhere Cloud management devices summary. Read-only.
-     */
-    private UserExperienceAnalyticsCloudManagementDevicesSummary cloudManagementDevicesSummary;
-    /**
-     * Total number of co-managed devices. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer coManagedDevices;
-    /**
-     * The count of intune devices that are not autopilot registerd. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer devicesNotAutopilotRegistered;
-    /**
-     * The count of intune devices not autopilot profile assigned. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer devicesWithoutAutopilotProfileAssigned;
-    /**
-     * The count of devices that are not cloud identity. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer devicesWithoutCloudIdentity;
-    /**
-     * The count of intune devices that are not autopilot registerd. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer intuneDevices;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Total count of tenant attach devices. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer tenantAttachDevices;
-    /**
-     * The total count of devices. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer totalDevices;
-    /**
-     * The count of Windows 10 devices that have unsupported OS versions. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer unsupportedOSversionDevices;
-    /**
-     * The count of windows 10 devices. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer windows10Devices;
-    /**
-     * The user experience analytics work from anywhere Windows 10 devices summary. Read-only.
-     */
-    private UserExperienceAnalyticsWindows10DevicesSummary windows10DevicesSummary;
-    /**
-     * The count of windows 10 devices that are Intune and co-managed. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer windows10DevicesWithoutTenantAttach;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereDevicesSummary and sets the default values.
      */
     public UserExperienceAnalyticsWorkFromAnywhereDevicesSummary() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -98,7 +43,12 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the autopilotDevicesSummary property value. The user experience analytics work from anywhere Autopilot devices summary. Read-only.
@@ -106,7 +56,15 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAutopilotDevicesSummary getAutopilotDevicesSummary() {
-        return this.autopilotDevicesSummary;
+        return this.backingStore.get("autopilotDevicesSummary");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the cloudIdentityDevicesSummary property value. The user experience analytics work from anywhere Cloud Identity devices summary. Read-only.
@@ -114,7 +72,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCloudIdentityDevicesSummary getCloudIdentityDevicesSummary() {
-        return this.cloudIdentityDevicesSummary;
+        return this.backingStore.get("cloudIdentityDevicesSummary");
     }
     /**
      * Gets the cloudManagementDevicesSummary property value. The user experience analytics work from anywhere Cloud management devices summary. Read-only.
@@ -122,7 +80,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCloudManagementDevicesSummary getCloudManagementDevicesSummary() {
-        return this.cloudManagementDevicesSummary;
+        return this.backingStore.get("cloudManagementDevicesSummary");
     }
     /**
      * Gets the coManagedDevices property value. Total number of co-managed devices. Read-only. Valid values -2147483648 to 2147483647
@@ -130,7 +88,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      */
     @jakarta.annotation.Nullable
     public Integer getCoManagedDevices() {
-        return this.coManagedDevices;
+        return this.backingStore.get("coManagedDevices");
     }
     /**
      * Gets the devicesNotAutopilotRegistered property value. The count of intune devices that are not autopilot registerd. Read-only. Valid values -2147483648 to 2147483647
@@ -138,7 +96,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      */
     @jakarta.annotation.Nullable
     public Integer getDevicesNotAutopilotRegistered() {
-        return this.devicesNotAutopilotRegistered;
+        return this.backingStore.get("devicesNotAutopilotRegistered");
     }
     /**
      * Gets the devicesWithoutAutopilotProfileAssigned property value. The count of intune devices not autopilot profile assigned. Read-only. Valid values -2147483648 to 2147483647
@@ -146,7 +104,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      */
     @jakarta.annotation.Nullable
     public Integer getDevicesWithoutAutopilotProfileAssigned() {
-        return this.devicesWithoutAutopilotProfileAssigned;
+        return this.backingStore.get("devicesWithoutAutopilotProfileAssigned");
     }
     /**
      * Gets the devicesWithoutCloudIdentity property value. The count of devices that are not cloud identity. Read-only. Valid values -2147483648 to 2147483647
@@ -154,7 +112,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      */
     @jakarta.annotation.Nullable
     public Integer getDevicesWithoutCloudIdentity() {
-        return this.devicesWithoutCloudIdentity;
+        return this.backingStore.get("devicesWithoutCloudIdentity");
     }
     /**
      * The deserialization information for the current model
@@ -186,7 +144,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      */
     @jakarta.annotation.Nullable
     public Integer getIntuneDevices() {
-        return this.intuneDevices;
+        return this.backingStore.get("intuneDevices");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -194,7 +152,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the tenantAttachDevices property value. Total count of tenant attach devices. Read-only. Valid values -2147483648 to 2147483647
@@ -202,7 +160,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      */
     @jakarta.annotation.Nullable
     public Integer getTenantAttachDevices() {
-        return this.tenantAttachDevices;
+        return this.backingStore.get("tenantAttachDevices");
     }
     /**
      * Gets the totalDevices property value. The total count of devices. Read-only. Valid values -2147483648 to 2147483647
@@ -210,7 +168,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      */
     @jakarta.annotation.Nullable
     public Integer getTotalDevices() {
-        return this.totalDevices;
+        return this.backingStore.get("totalDevices");
     }
     /**
      * Gets the unsupportedOSversionDevices property value. The count of Windows 10 devices that have unsupported OS versions. Read-only. Valid values -2147483648 to 2147483647
@@ -218,7 +176,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      */
     @jakarta.annotation.Nullable
     public Integer getUnsupportedOSversionDevices() {
-        return this.unsupportedOSversionDevices;
+        return this.backingStore.get("unsupportedOSversionDevices");
     }
     /**
      * Gets the windows10Devices property value. The count of windows 10 devices. Read-only. Valid values -2147483648 to 2147483647
@@ -226,7 +184,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      */
     @jakarta.annotation.Nullable
     public Integer getWindows10Devices() {
-        return this.windows10Devices;
+        return this.backingStore.get("windows10Devices");
     }
     /**
      * Gets the windows10DevicesSummary property value. The user experience analytics work from anywhere Windows 10 devices summary. Read-only.
@@ -234,7 +192,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsWindows10DevicesSummary getWindows10DevicesSummary() {
-        return this.windows10DevicesSummary;
+        return this.backingStore.get("windows10DevicesSummary");
     }
     /**
      * Gets the windows10DevicesWithoutTenantAttach property value. The count of windows 10 devices that are Intune and co-managed. Read-only. Valid values -2147483648 to 2147483647
@@ -242,7 +200,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      */
     @jakarta.annotation.Nullable
     public Integer getWindows10DevicesWithoutTenantAttach() {
-        return this.windows10DevicesWithoutTenantAttach;
+        return this.backingStore.get("windows10DevicesWithoutTenantAttach");
     }
     /**
      * Serializes information the current object
@@ -272,111 +230,119 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the autopilotDevicesSummary property value. The user experience analytics work from anywhere Autopilot devices summary. Read-only.
      * @param value Value to set for the autopilotDevicesSummary property.
      */
     public void setAutopilotDevicesSummary(@jakarta.annotation.Nullable final UserExperienceAnalyticsAutopilotDevicesSummary value) {
-        this.autopilotDevicesSummary = value;
+        this.backingStore.set("autopilotDevicesSummary", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the cloudIdentityDevicesSummary property value. The user experience analytics work from anywhere Cloud Identity devices summary. Read-only.
      * @param value Value to set for the cloudIdentityDevicesSummary property.
      */
     public void setCloudIdentityDevicesSummary(@jakarta.annotation.Nullable final UserExperienceAnalyticsCloudIdentityDevicesSummary value) {
-        this.cloudIdentityDevicesSummary = value;
+        this.backingStore.set("cloudIdentityDevicesSummary", value);
     }
     /**
      * Sets the cloudManagementDevicesSummary property value. The user experience analytics work from anywhere Cloud management devices summary. Read-only.
      * @param value Value to set for the cloudManagementDevicesSummary property.
      */
     public void setCloudManagementDevicesSummary(@jakarta.annotation.Nullable final UserExperienceAnalyticsCloudManagementDevicesSummary value) {
-        this.cloudManagementDevicesSummary = value;
+        this.backingStore.set("cloudManagementDevicesSummary", value);
     }
     /**
      * Sets the coManagedDevices property value. Total number of co-managed devices. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the coManagedDevices property.
      */
     public void setCoManagedDevices(@jakarta.annotation.Nullable final Integer value) {
-        this.coManagedDevices = value;
+        this.backingStore.set("coManagedDevices", value);
     }
     /**
      * Sets the devicesNotAutopilotRegistered property value. The count of intune devices that are not autopilot registerd. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the devicesNotAutopilotRegistered property.
      */
     public void setDevicesNotAutopilotRegistered(@jakarta.annotation.Nullable final Integer value) {
-        this.devicesNotAutopilotRegistered = value;
+        this.backingStore.set("devicesNotAutopilotRegistered", value);
     }
     /**
      * Sets the devicesWithoutAutopilotProfileAssigned property value. The count of intune devices not autopilot profile assigned. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the devicesWithoutAutopilotProfileAssigned property.
      */
     public void setDevicesWithoutAutopilotProfileAssigned(@jakarta.annotation.Nullable final Integer value) {
-        this.devicesWithoutAutopilotProfileAssigned = value;
+        this.backingStore.set("devicesWithoutAutopilotProfileAssigned", value);
     }
     /**
      * Sets the devicesWithoutCloudIdentity property value. The count of devices that are not cloud identity. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the devicesWithoutCloudIdentity property.
      */
     public void setDevicesWithoutCloudIdentity(@jakarta.annotation.Nullable final Integer value) {
-        this.devicesWithoutCloudIdentity = value;
+        this.backingStore.set("devicesWithoutCloudIdentity", value);
     }
     /**
      * Sets the intuneDevices property value. The count of intune devices that are not autopilot registerd. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the intuneDevices property.
      */
     public void setIntuneDevices(@jakarta.annotation.Nullable final Integer value) {
-        this.intuneDevices = value;
+        this.backingStore.set("intuneDevices", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the tenantAttachDevices property value. Total count of tenant attach devices. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the tenantAttachDevices property.
      */
     public void setTenantAttachDevices(@jakarta.annotation.Nullable final Integer value) {
-        this.tenantAttachDevices = value;
+        this.backingStore.set("tenantAttachDevices", value);
     }
     /**
      * Sets the totalDevices property value. The total count of devices. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the totalDevices property.
      */
     public void setTotalDevices(@jakarta.annotation.Nullable final Integer value) {
-        this.totalDevices = value;
+        this.backingStore.set("totalDevices", value);
     }
     /**
      * Sets the unsupportedOSversionDevices property value. The count of Windows 10 devices that have unsupported OS versions. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the unsupportedOSversionDevices property.
      */
     public void setUnsupportedOSversionDevices(@jakarta.annotation.Nullable final Integer value) {
-        this.unsupportedOSversionDevices = value;
+        this.backingStore.set("unsupportedOSversionDevices", value);
     }
     /**
      * Sets the windows10Devices property value. The count of windows 10 devices. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the windows10Devices property.
      */
     public void setWindows10Devices(@jakarta.annotation.Nullable final Integer value) {
-        this.windows10Devices = value;
+        this.backingStore.set("windows10Devices", value);
     }
     /**
      * Sets the windows10DevicesSummary property value. The user experience analytics work from anywhere Windows 10 devices summary. Read-only.
      * @param value Value to set for the windows10DevicesSummary property.
      */
     public void setWindows10DevicesSummary(@jakarta.annotation.Nullable final UserExperienceAnalyticsWindows10DevicesSummary value) {
-        this.windows10DevicesSummary = value;
+        this.backingStore.set("windows10DevicesSummary", value);
     }
     /**
      * Sets the windows10DevicesWithoutTenantAttach property value. The count of windows 10 devices that are Intune and co-managed. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the windows10DevicesWithoutTenantAttach property.
      */
     public void setWindows10DevicesWithoutTenantAttach(@jakarta.annotation.Nullable final Integer value) {
-        this.windows10DevicesWithoutTenantAttach = value;
+        this.backingStore.set("windows10DevicesWithoutTenantAttach", value);
     }
 }

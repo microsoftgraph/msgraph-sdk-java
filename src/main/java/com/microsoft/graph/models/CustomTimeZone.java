@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomTimeZone extends TimeZoneBase implements Parsable {
     /**
-     * The time offset of the time zone from Coordinated Universal Time (UTC). This value is in minutes.Time zones that are ahead of UTC have a positive offset; time zones that are behind UTC have a negative offset.
-     */
-    private Integer bias;
-    /**
-     * Specifies when the time zone switches from standard time to daylight saving time.
-     */
-    private DaylightTimeZoneOffset daylightOffset;
-    /**
-     * Specifies when the time zone switches from daylight saving time to standard time.
-     */
-    private StandardTimeZoneOffset standardOffset;
-    /**
      * Instantiates a new CustomTimeZone and sets the default values.
      */
     public CustomTimeZone() {
@@ -43,7 +31,7 @@ public class CustomTimeZone extends TimeZoneBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getBias() {
-        return this.bias;
+        return this.backingStore.get("bias");
     }
     /**
      * Gets the daylightOffset property value. Specifies when the time zone switches from standard time to daylight saving time.
@@ -51,7 +39,7 @@ public class CustomTimeZone extends TimeZoneBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DaylightTimeZoneOffset getDaylightOffset() {
-        return this.daylightOffset;
+        return this.backingStore.get("daylightOffset");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +59,7 @@ public class CustomTimeZone extends TimeZoneBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public StandardTimeZoneOffset getStandardOffset() {
-        return this.standardOffset;
+        return this.backingStore.get("standardOffset");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class CustomTimeZone extends TimeZoneBase implements Parsable {
      * @param value Value to set for the bias property.
      */
     public void setBias(@jakarta.annotation.Nullable final Integer value) {
-        this.bias = value;
+        this.backingStore.set("bias", value);
     }
     /**
      * Sets the daylightOffset property value. Specifies when the time zone switches from standard time to daylight saving time.
      * @param value Value to set for the daylightOffset property.
      */
     public void setDaylightOffset(@jakarta.annotation.Nullable final DaylightTimeZoneOffset value) {
-        this.daylightOffset = value;
+        this.backingStore.set("daylightOffset", value);
     }
     /**
      * Sets the standardOffset property value. Specifies when the time zone switches from daylight saving time to standard time.
      * @param value Value to set for the standardOffset property.
      */
     public void setStandardOffset(@jakarta.annotation.Nullable final StandardTimeZoneOffset value) {
-        this.standardOffset = value;
+        this.backingStore.set("standardOffset", value);
     }
 }

@@ -9,54 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EntitlementManagement extends Entity implements Parsable {
     /**
-     * Approval stages for decisions associated with access package assignment requests.
-     */
-    private java.util.List<Approval> accessPackageAssignmentApprovals;
-    /**
-     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
-     */
-    private java.util.List<AccessPackage> accessPackages;
-    /**
-     * Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
-     */
-    private java.util.List<AccessPackageAssignmentPolicy> assignmentPolicies;
-    /**
-     * Access package assignment requests created by or on behalf of a subject.
-     */
-    private java.util.List<AccessPackageAssignmentRequest> assignmentRequests;
-    /**
-     * The assignment of an access package to a subject for a period of time.
-     */
-    private java.util.List<AccessPackageAssignment> assignments;
-    /**
-     * A container for access packages.
-     */
-    private java.util.List<AccessPackageCatalog> catalogs;
-    /**
-     * References to a directory or domain of another organization whose users can request access.
-     */
-    private java.util.List<ConnectedOrganization> connectedOrganizations;
-    /**
-     * A reference to the geolocation environments in which a resource is located.
-     */
-    private java.util.List<AccessPackageResourceEnvironment> resourceEnvironments;
-    /**
-     * Represents a request to add or remove a resource to or from a catalog respectively.
-     */
-    private java.util.List<AccessPackageResourceRequest> resourceRequests;
-    /**
-     * The resourceRoleScopes property
-     */
-    private java.util.List<AccessPackageResourceRoleScope> resourceRoleScopes;
-    /**
-     * The resources associated with the catalogs.
-     */
-    private java.util.List<AccessPackageResource> resources;
-    /**
-     * The settings that control the behavior of Microsoft Entra entitlement management.
-     */
-    private EntitlementManagementSettings settings;
-    /**
      * Instantiates a new EntitlementManagement and sets the default values.
      */
     public EntitlementManagement() {
@@ -78,7 +30,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Approval> getAccessPackageAssignmentApprovals() {
-        return this.accessPackageAssignmentApprovals;
+        return this.backingStore.get("accessPackageAssignmentApprovals");
     }
     /**
      * Gets the accessPackages property value. Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
@@ -86,7 +38,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackage> getAccessPackages() {
-        return this.accessPackages;
+        return this.backingStore.get("accessPackages");
     }
     /**
      * Gets the assignmentPolicies property value. Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
@@ -94,7 +46,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignmentPolicy> getAssignmentPolicies() {
-        return this.assignmentPolicies;
+        return this.backingStore.get("assignmentPolicies");
     }
     /**
      * Gets the assignmentRequests property value. Access package assignment requests created by or on behalf of a subject.
@@ -102,7 +54,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignmentRequest> getAssignmentRequests() {
-        return this.assignmentRequests;
+        return this.backingStore.get("assignmentRequests");
     }
     /**
      * Gets the assignments property value. The assignment of an access package to a subject for a period of time.
@@ -110,7 +62,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignment> getAssignments() {
-        return this.assignments;
+        return this.backingStore.get("assignments");
     }
     /**
      * Gets the catalogs property value. A container for access packages.
@@ -118,7 +70,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageCatalog> getCatalogs() {
-        return this.catalogs;
+        return this.backingStore.get("catalogs");
     }
     /**
      * Gets the connectedOrganizations property value. References to a directory or domain of another organization whose users can request access.
@@ -126,7 +78,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConnectedOrganization> getConnectedOrganizations() {
-        return this.connectedOrganizations;
+        return this.backingStore.get("connectedOrganizations");
     }
     /**
      * The deserialization information for the current model
@@ -155,7 +107,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceEnvironment> getResourceEnvironments() {
-        return this.resourceEnvironments;
+        return this.backingStore.get("resourceEnvironments");
     }
     /**
      * Gets the resourceRequests property value. Represents a request to add or remove a resource to or from a catalog respectively.
@@ -163,7 +115,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceRequest> getResourceRequests() {
-        return this.resourceRequests;
+        return this.backingStore.get("resourceRequests");
     }
     /**
      * Gets the resourceRoleScopes property value. The resourceRoleScopes property
@@ -171,7 +123,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceRoleScope> getResourceRoleScopes() {
-        return this.resourceRoleScopes;
+        return this.backingStore.get("resourceRoleScopes");
     }
     /**
      * Gets the resources property value. The resources associated with the catalogs.
@@ -179,7 +131,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResource> getResources() {
-        return this.resources;
+        return this.backingStore.get("resources");
     }
     /**
      * Gets the settings property value. The settings that control the behavior of Microsoft Entra entitlement management.
@@ -187,7 +139,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EntitlementManagementSettings getSettings() {
-        return this.settings;
+        return this.backingStore.get("settings");
     }
     /**
      * Serializes information the current object
@@ -214,83 +166,83 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the accessPackageAssignmentApprovals property.
      */
     public void setAccessPackageAssignmentApprovals(@jakarta.annotation.Nullable final java.util.List<Approval> value) {
-        this.accessPackageAssignmentApprovals = value;
+        this.backingStore.set("accessPackageAssignmentApprovals", value);
     }
     /**
      * Sets the accessPackages property value. Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
      * @param value Value to set for the accessPackages property.
      */
     public void setAccessPackages(@jakarta.annotation.Nullable final java.util.List<AccessPackage> value) {
-        this.accessPackages = value;
+        this.backingStore.set("accessPackages", value);
     }
     /**
      * Sets the assignmentPolicies property value. Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
      * @param value Value to set for the assignmentPolicies property.
      */
     public void setAssignmentPolicies(@jakarta.annotation.Nullable final java.util.List<AccessPackageAssignmentPolicy> value) {
-        this.assignmentPolicies = value;
+        this.backingStore.set("assignmentPolicies", value);
     }
     /**
      * Sets the assignmentRequests property value. Access package assignment requests created by or on behalf of a subject.
      * @param value Value to set for the assignmentRequests property.
      */
     public void setAssignmentRequests(@jakarta.annotation.Nullable final java.util.List<AccessPackageAssignmentRequest> value) {
-        this.assignmentRequests = value;
+        this.backingStore.set("assignmentRequests", value);
     }
     /**
      * Sets the assignments property value. The assignment of an access package to a subject for a period of time.
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<AccessPackageAssignment> value) {
-        this.assignments = value;
+        this.backingStore.set("assignments", value);
     }
     /**
      * Sets the catalogs property value. A container for access packages.
      * @param value Value to set for the catalogs property.
      */
     public void setCatalogs(@jakarta.annotation.Nullable final java.util.List<AccessPackageCatalog> value) {
-        this.catalogs = value;
+        this.backingStore.set("catalogs", value);
     }
     /**
      * Sets the connectedOrganizations property value. References to a directory or domain of another organization whose users can request access.
      * @param value Value to set for the connectedOrganizations property.
      */
     public void setConnectedOrganizations(@jakarta.annotation.Nullable final java.util.List<ConnectedOrganization> value) {
-        this.connectedOrganizations = value;
+        this.backingStore.set("connectedOrganizations", value);
     }
     /**
      * Sets the resourceEnvironments property value. A reference to the geolocation environments in which a resource is located.
      * @param value Value to set for the resourceEnvironments property.
      */
     public void setResourceEnvironments(@jakarta.annotation.Nullable final java.util.List<AccessPackageResourceEnvironment> value) {
-        this.resourceEnvironments = value;
+        this.backingStore.set("resourceEnvironments", value);
     }
     /**
      * Sets the resourceRequests property value. Represents a request to add or remove a resource to or from a catalog respectively.
      * @param value Value to set for the resourceRequests property.
      */
     public void setResourceRequests(@jakarta.annotation.Nullable final java.util.List<AccessPackageResourceRequest> value) {
-        this.resourceRequests = value;
+        this.backingStore.set("resourceRequests", value);
     }
     /**
      * Sets the resourceRoleScopes property value. The resourceRoleScopes property
      * @param value Value to set for the resourceRoleScopes property.
      */
     public void setResourceRoleScopes(@jakarta.annotation.Nullable final java.util.List<AccessPackageResourceRoleScope> value) {
-        this.resourceRoleScopes = value;
+        this.backingStore.set("resourceRoleScopes", value);
     }
     /**
      * Sets the resources property value. The resources associated with the catalogs.
      * @param value Value to set for the resources property.
      */
     public void setResources(@jakarta.annotation.Nullable final java.util.List<AccessPackageResource> value) {
-        this.resources = value;
+        this.backingStore.set("resources", value);
     }
     /**
      * Sets the settings property value. The settings that control the behavior of Microsoft Entra entitlement management.
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final EntitlementManagementSettings value) {
-        this.settings = value;
+        this.backingStore.set("settings", value);
     }
 }

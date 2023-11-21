@@ -10,14 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintOperation extends Entity implements Parsable {
     /**
-     * The DateTimeOffset when the operation was created. Read-only.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The status property
-     */
-    private PrintOperationStatus status;
-    /**
      * Instantiates a new PrintOperation and sets the default values.
      */
     public PrintOperation() {
@@ -46,7 +38,7 @@ public class PrintOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -65,7 +57,7 @@ public class PrintOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PrintOperationStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -82,13 +74,13 @@ public class PrintOperation extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final PrintOperationStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
 }

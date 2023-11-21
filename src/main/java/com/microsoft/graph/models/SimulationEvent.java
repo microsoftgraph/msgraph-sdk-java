@@ -4,31 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SimulationEvent implements AdditionalDataHolder, Parsable {
+public class SimulationEvent implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Count of the simulation event occurrence in an attack simulation and training campaign.
-     */
-    private Integer count;
-    /**
-     * Name of the simulation event in an attack simulation and training campaign.
-     */
-    private String eventName;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new SimulationEvent and sets the default values.
      */
     public SimulationEvent() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +40,20 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the count property value. Count of the simulation event occurrence in an attack simulation and training campaign.
@@ -55,7 +61,7 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getCount() {
-        return this.count;
+        return this.backingStore.get("count");
     }
     /**
      * Gets the eventName property value. Name of the simulation event in an attack simulation and training campaign.
@@ -63,7 +69,7 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getEventName() {
-        return this.eventName;
+        return this.backingStore.get("eventName");
     }
     /**
      * The deserialization information for the current model
@@ -83,7 +89,7 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -101,27 +107,35 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the count property value. Count of the simulation event occurrence in an attack simulation and training campaign.
      * @param value Value to set for the count property.
      */
     public void setCount(@jakarta.annotation.Nullable final Integer value) {
-        this.count = value;
+        this.backingStore.set("count", value);
     }
     /**
      * Sets the eventName property value. Name of the simulation event in an attack simulation and training campaign.
      * @param value Value to set for the eventName property.
      */
     public void setEventName(@jakarta.annotation.Nullable final String value) {
-        this.eventName = value;
+        this.backingStore.set("eventName", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

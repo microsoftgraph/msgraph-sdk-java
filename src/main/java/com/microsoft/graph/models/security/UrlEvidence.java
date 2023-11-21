@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UrlEvidence extends AlertEvidence implements Parsable {
     /**
-     * The Unique Resource Locator (URL).
-     */
-    private String url;
-    /**
      * Instantiates a new UrlEvidence and sets the default values.
      */
     public UrlEvidence() {
@@ -45,7 +41,7 @@ public class UrlEvidence extends AlertEvidence implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUrl() {
-        return this.url;
+        return this.backingStore.get("url");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class UrlEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the url property.
      */
     public void setUrl(@jakarta.annotation.Nullable final String value) {
-        this.url = value;
+        this.backingStore.set("url", value);
     }
 }

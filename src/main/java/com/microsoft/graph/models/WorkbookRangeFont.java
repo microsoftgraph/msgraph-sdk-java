@@ -9,30 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookRangeFont extends Entity implements Parsable {
     /**
-     * Represents the bold status of font.
-     */
-    private Boolean bold;
-    /**
-     * HTML color code representation of the text color. for example #FF0000 represents Red.
-     */
-    private String color;
-    /**
-     * Represents the italic status of the font.
-     */
-    private Boolean italic;
-    /**
-     * Font name (for example 'Calibri')
-     */
-    private String name;
-    /**
-     * Font size.
-     */
-    private Double size;
-    /**
-     * Type of underline applied to the font. The possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
-     */
-    private String underline;
-    /**
      * Instantiates a new WorkbookRangeFont and sets the default values.
      */
     public WorkbookRangeFont() {
@@ -54,7 +30,7 @@ public class WorkbookRangeFont extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getBold() {
-        return this.bold;
+        return this.backingStore.get("bold");
     }
     /**
      * Gets the color property value. HTML color code representation of the text color. for example #FF0000 represents Red.
@@ -62,7 +38,7 @@ public class WorkbookRangeFont extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getColor() {
-        return this.color;
+        return this.backingStore.get("color");
     }
     /**
      * The deserialization information for the current model
@@ -85,7 +61,7 @@ public class WorkbookRangeFont extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getItalic() {
-        return this.italic;
+        return this.backingStore.get("italic");
     }
     /**
      * Gets the name property value. Font name (for example 'Calibri')
@@ -93,7 +69,7 @@ public class WorkbookRangeFont extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the size property value. Font size.
@@ -101,7 +77,7 @@ public class WorkbookRangeFont extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Double getSize() {
-        return this.size;
+        return this.backingStore.get("size");
     }
     /**
      * Gets the underline property value. Type of underline applied to the font. The possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
@@ -109,7 +85,7 @@ public class WorkbookRangeFont extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUnderline() {
-        return this.underline;
+        return this.backingStore.get("underline");
     }
     /**
      * Serializes information the current object
@@ -130,41 +106,41 @@ public class WorkbookRangeFont extends Entity implements Parsable {
      * @param value Value to set for the bold property.
      */
     public void setBold(@jakarta.annotation.Nullable final Boolean value) {
-        this.bold = value;
+        this.backingStore.set("bold", value);
     }
     /**
      * Sets the color property value. HTML color code representation of the text color. for example #FF0000 represents Red.
      * @param value Value to set for the color property.
      */
     public void setColor(@jakarta.annotation.Nullable final String value) {
-        this.color = value;
+        this.backingStore.set("color", value);
     }
     /**
      * Sets the italic property value. Represents the italic status of the font.
      * @param value Value to set for the italic property.
      */
     public void setItalic(@jakarta.annotation.Nullable final Boolean value) {
-        this.italic = value;
+        this.backingStore.set("italic", value);
     }
     /**
      * Sets the name property value. Font name (for example 'Calibri')
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the size property value. Font size.
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Double value) {
-        this.size = value;
+        this.backingStore.set("size", value);
     }
     /**
      * Sets the underline property value. Type of underline applied to the font. The possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
      * @param value Value to set for the underline property.
      */
     public void setUnderline(@jakarta.annotation.Nullable final String value) {
-        this.underline = value;
+        this.backingStore.set("underline", value);
     }
 }

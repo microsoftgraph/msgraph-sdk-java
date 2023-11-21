@@ -4,31 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
+public class StaffAvailabilityItem implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Each item in this collection indicates a slot and the status of the staff member.
-     */
-    private java.util.List<AvailabilityItem> availabilityItems;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The ID of the staff member.
-     */
-    private String staffId;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new StaffAvailabilityItem and sets the default values.
      */
     public StaffAvailabilityItem() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +40,12 @@ public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the availabilityItems property value. Each item in this collection indicates a slot and the status of the staff member.
@@ -55,7 +53,15 @@ public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AvailabilityItem> getAvailabilityItems() {
-        return this.availabilityItems;
+        return this.backingStore.get("availabilityItems");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -75,7 +81,7 @@ public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the staffId property value. The ID of the staff member.
@@ -83,7 +89,7 @@ public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getStaffId() {
-        return this.staffId;
+        return this.backingStore.get("staffId");
     }
     /**
      * Serializes information the current object
@@ -101,27 +107,35 @@ public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the availabilityItems property value. Each item in this collection indicates a slot and the status of the staff member.
      * @param value Value to set for the availabilityItems property.
      */
     public void setAvailabilityItems(@jakarta.annotation.Nullable final java.util.List<AvailabilityItem> value) {
-        this.availabilityItems = value;
+        this.backingStore.set("availabilityItems", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the staffId property value. The ID of the staff member.
      * @param value Value to set for the staffId property.
      */
     public void setStaffId(@jakarta.annotation.Nullable final String value) {
-        this.staffId = value;
+        this.backingStore.set("staffId", value);
     }
 }

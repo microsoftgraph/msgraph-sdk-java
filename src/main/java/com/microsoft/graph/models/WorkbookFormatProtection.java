@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookFormatProtection extends Entity implements Parsable {
     /**
-     * Indicates if Excel hides the formula for the cells in the range. A null value indicates that the entire range doesn't have uniform formula hidden setting.
-     */
-    private Boolean formulaHidden;
-    /**
-     * Indicates if Excel locks the cells in the object. A null value indicates that the entire range doesn't have uniform lock setting.
-     */
-    private Boolean locked;
-    /**
      * Instantiates a new WorkbookFormatProtection and sets the default values.
      */
     public WorkbookFormatProtection() {
@@ -49,7 +41,7 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getFormulaHidden() {
-        return this.formulaHidden;
+        return this.backingStore.get("formulaHidden");
     }
     /**
      * Gets the locked property value. Indicates if Excel locks the cells in the object. A null value indicates that the entire range doesn't have uniform lock setting.
@@ -57,7 +49,7 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getLocked() {
-        return this.locked;
+        return this.backingStore.get("locked");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
      * @param value Value to set for the formulaHidden property.
      */
     public void setFormulaHidden(@jakarta.annotation.Nullable final Boolean value) {
-        this.formulaHidden = value;
+        this.backingStore.set("formulaHidden", value);
     }
     /**
      * Sets the locked property value. Indicates if Excel locks the cells in the object. A null value indicates that the entire range doesn't have uniform lock setting.
      * @param value Value to set for the locked property.
      */
     public void setLocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.locked = value;
+        this.backingStore.set("locked", value);
     }
 }

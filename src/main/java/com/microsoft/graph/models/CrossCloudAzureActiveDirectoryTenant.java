@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource implements Parsable {
     /**
-     * The ID of the cloud where the tenant is located, one of microsoftonline.com, microsoftonline.us or partner.microsoftonline.cn. Read only.
-     */
-    private String cloudInstance;
-    /**
-     * The name of the Microsoft Entra tenant. Read only.
-     */
-    private String displayName;
-    /**
-     * The ID of the Microsoft Entra tenant. Read only.
-     */
-    private String tenantId;
-    /**
      * Instantiates a new CrossCloudAzureActiveDirectoryTenant and sets the default values.
      */
     public CrossCloudAzureActiveDirectoryTenant() {
@@ -43,7 +31,7 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
      */
     @jakarta.annotation.Nullable
     public String getCloudInstance() {
-        return this.cloudInstance;
+        return this.backingStore.get("cloudInstance");
     }
     /**
      * Gets the displayName property value. The name of the Microsoft Entra tenant. Read only.
@@ -51,7 +39,7 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +59,7 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.backingStore.get("tenantId");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
      * @param value Value to set for the cloudInstance property.
      */
     public void setCloudInstance(@jakarta.annotation.Nullable final String value) {
-        this.cloudInstance = value;
+        this.backingStore.set("cloudInstance", value);
     }
     /**
      * Sets the displayName property value. The name of the Microsoft Entra tenant. Read only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the tenantId property value. The ID of the Microsoft Entra tenant. Read only.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.backingStore.set("tenantId", value);
     }
 }

@@ -10,42 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RiskyUser extends Entity implements Parsable {
     /**
-     * The activity related to user risk level change
-     */
-    private java.util.List<RiskyUserHistoryItem> history;
-    /**
-     * Indicates whether the user is deleted. Possible values are: true, false.
-     */
-    private Boolean isDeleted;
-    /**
-     * Indicates whether a user's risky state is being processed by the backend.
-     */
-    private Boolean isProcessing;
-    /**
-     * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
-     */
-    private RiskDetail riskDetail;
-    /**
-     * The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime riskLastUpdatedDateTime;
-    /**
-     * Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
-     */
-    private RiskLevel riskLevel;
-    /**
-     * State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
-     */
-    private RiskState riskState;
-    /**
-     * Risky user display name.
-     */
-    private String userDisplayName;
-    /**
-     * Risky user principal name.
-     */
-    private String userPrincipalName;
-    /**
      * Instantiates a new RiskyUser and sets the default values.
      */
     public RiskyUser() {
@@ -92,7 +56,7 @@ public class RiskyUser extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<RiskyUserHistoryItem> getHistory() {
-        return this.history;
+        return this.backingStore.get("history");
     }
     /**
      * Gets the isDeleted property value. Indicates whether the user is deleted. Possible values are: true, false.
@@ -100,7 +64,7 @@ public class RiskyUser extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeleted() {
-        return this.isDeleted;
+        return this.backingStore.get("isDeleted");
     }
     /**
      * Gets the isProcessing property value. Indicates whether a user's risky state is being processed by the backend.
@@ -108,7 +72,7 @@ public class RiskyUser extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsProcessing() {
-        return this.isProcessing;
+        return this.backingStore.get("isProcessing");
     }
     /**
      * Gets the riskDetail property value. Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
@@ -116,7 +80,7 @@ public class RiskyUser extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public RiskDetail getRiskDetail() {
-        return this.riskDetail;
+        return this.backingStore.get("riskDetail");
     }
     /**
      * Gets the riskLastUpdatedDateTime property value. The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -124,7 +88,7 @@ public class RiskyUser extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRiskLastUpdatedDateTime() {
-        return this.riskLastUpdatedDateTime;
+        return this.backingStore.get("riskLastUpdatedDateTime");
     }
     /**
      * Gets the riskLevel property value. Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
@@ -132,7 +96,7 @@ public class RiskyUser extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public RiskLevel getRiskLevel() {
-        return this.riskLevel;
+        return this.backingStore.get("riskLevel");
     }
     /**
      * Gets the riskState property value. State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
@@ -140,7 +104,7 @@ public class RiskyUser extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public RiskState getRiskState() {
-        return this.riskState;
+        return this.backingStore.get("riskState");
     }
     /**
      * Gets the userDisplayName property value. Risky user display name.
@@ -148,7 +112,7 @@ public class RiskyUser extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
-        return this.userDisplayName;
+        return this.backingStore.get("userDisplayName");
     }
     /**
      * Gets the userPrincipalName property value. Risky user principal name.
@@ -156,7 +120,7 @@ public class RiskyUser extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.backingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -180,62 +144,62 @@ public class RiskyUser extends Entity implements Parsable {
      * @param value Value to set for the history property.
      */
     public void setHistory(@jakarta.annotation.Nullable final java.util.List<RiskyUserHistoryItem> value) {
-        this.history = value;
+        this.backingStore.set("history", value);
     }
     /**
      * Sets the isDeleted property value. Indicates whether the user is deleted. Possible values are: true, false.
      * @param value Value to set for the isDeleted property.
      */
     public void setIsDeleted(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDeleted = value;
+        this.backingStore.set("isDeleted", value);
     }
     /**
      * Sets the isProcessing property value. Indicates whether a user's risky state is being processed by the backend.
      * @param value Value to set for the isProcessing property.
      */
     public void setIsProcessing(@jakarta.annotation.Nullable final Boolean value) {
-        this.isProcessing = value;
+        this.backingStore.set("isProcessing", value);
     }
     /**
      * Sets the riskDetail property value. Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
      * @param value Value to set for the riskDetail property.
      */
     public void setRiskDetail(@jakarta.annotation.Nullable final RiskDetail value) {
-        this.riskDetail = value;
+        this.backingStore.set("riskDetail", value);
     }
     /**
      * Sets the riskLastUpdatedDateTime property value. The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the riskLastUpdatedDateTime property.
      */
     public void setRiskLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.riskLastUpdatedDateTime = value;
+        this.backingStore.set("riskLastUpdatedDateTime", value);
     }
     /**
      * Sets the riskLevel property value. Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
      * @param value Value to set for the riskLevel property.
      */
     public void setRiskLevel(@jakarta.annotation.Nullable final RiskLevel value) {
-        this.riskLevel = value;
+        this.backingStore.set("riskLevel", value);
     }
     /**
      * Sets the riskState property value. State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
      * @param value Value to set for the riskState property.
      */
     public void setRiskState(@jakarta.annotation.Nullable final RiskState value) {
-        this.riskState = value;
+        this.backingStore.set("riskState", value);
     }
     /**
      * Sets the userDisplayName property value. Risky user display name.
      * @param value Value to set for the userDisplayName property.
      */
     public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.userDisplayName = value;
+        this.backingStore.set("userDisplayName", value);
     }
     /**
      * Sets the userPrincipalName property value. Risky user principal name.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.backingStore.set("userPrincipalName", value);
     }
 }

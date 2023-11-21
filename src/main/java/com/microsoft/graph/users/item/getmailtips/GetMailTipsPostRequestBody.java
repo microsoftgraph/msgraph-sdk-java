@@ -5,28 +5,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsable {
+public class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The EmailAddresses property
-     */
-    private java.util.List<String> emailAddresses;
-    /**
-     * The MailTipsOptions property
-     */
-    private EnumSet<MailTipsType> mailTipsOptions;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new GetMailTipsPostRequestBody and sets the default values.
      */
     public GetMailTipsPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -45,7 +42,20 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the EmailAddresses property value. The EmailAddresses property
@@ -53,7 +63,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEmailAddresses() {
-        return this.emailAddresses;
+        return this.backingStore.get("emailAddresses");
     }
     /**
      * The deserialization information for the current model
@@ -72,7 +82,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public EnumSet<MailTipsType> getMailTipsOptions() {
-        return this.mailTipsOptions;
+        return this.backingStore.get("mailTipsOptions");
     }
     /**
      * Serializes information the current object
@@ -89,20 +99,28 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the EmailAddresses property value. The EmailAddresses property
      * @param value Value to set for the EmailAddresses property.
      */
     public void setEmailAddresses(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.emailAddresses = value;
+        this.backingStore.set("emailAddresses", value);
     }
     /**
      * Sets the MailTipsOptions property value. The MailTipsOptions property
      * @param value Value to set for the MailTipsOptions property.
      */
     public void setMailTipsOptions(@jakarta.annotation.Nullable final EnumSet<MailTipsType> value) {
-        this.mailTipsOptions = value;
+        this.backingStore.set("mailTipsOptions", value);
     }
 }

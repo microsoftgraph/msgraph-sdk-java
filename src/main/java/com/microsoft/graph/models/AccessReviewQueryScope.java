@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewQueryScope extends AccessReviewScope implements Parsable {
     /**
-     * The query representing what will be reviewed in an access review.
-     */
-    private String query;
-    /**
-     * In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query is specified. For example, ./manager.
-     */
-    private String queryRoot;
-    /**
-     * Indicates the type of query. Types include MicrosoftGraph and ARM.
-     */
-    private String queryType;
-    /**
      * Instantiates a new AccessReviewQueryScope and sets the default values.
      */
     public AccessReviewQueryScope() {
@@ -62,7 +50,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
      */
     @jakarta.annotation.Nullable
     public String getQuery() {
-        return this.query;
+        return this.backingStore.get("query");
     }
     /**
      * Gets the queryRoot property value. In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query is specified. For example, ./manager.
@@ -70,7 +58,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
      */
     @jakarta.annotation.Nullable
     public String getQueryRoot() {
-        return this.queryRoot;
+        return this.backingStore.get("queryRoot");
     }
     /**
      * Gets the queryType property value. Indicates the type of query. Types include MicrosoftGraph and ARM.
@@ -78,7 +66,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
      */
     @jakarta.annotation.Nullable
     public String getQueryType() {
-        return this.queryType;
+        return this.backingStore.get("queryType");
     }
     /**
      * Serializes information the current object
@@ -96,20 +84,20 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
      * @param value Value to set for the query property.
      */
     public void setQuery(@jakarta.annotation.Nullable final String value) {
-        this.query = value;
+        this.backingStore.set("query", value);
     }
     /**
      * Sets the queryRoot property value. In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query is specified. For example, ./manager.
      * @param value Value to set for the queryRoot property.
      */
     public void setQueryRoot(@jakarta.annotation.Nullable final String value) {
-        this.queryRoot = value;
+        this.backingStore.set("queryRoot", value);
     }
     /**
      * Sets the queryType property value. Indicates the type of query. Types include MicrosoftGraph and ARM.
      * @param value Value to set for the queryType property.
      */
     public void setQueryType(@jakarta.annotation.Nullable final String value) {
-        this.queryType = value;
+        this.backingStore.set("queryType", value);
     }
 }

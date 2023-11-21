@@ -10,54 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleScheduleBase extends Entity implements Parsable {
     /**
-     * Read-only property with details of the app-specific scope when the role eligibility or assignment is scoped to an app. Nullable.
-     */
-    private AppScope appScope;
-    /**
-     * Identifier of the app-specific scope when the assignment or eligibility is scoped to an app. The scope of an assignment or eligibility determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units.
-     */
-    private String appScopeId;
-    /**
-     * When the schedule was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Identifier of the object through which this schedule was created.
-     */
-    private String createdUsing;
-    /**
-     * The directory object that is the scope of the role eligibility or assignment. Read-only.
-     */
-    private DirectoryObject directoryScope;
-    /**
-     * Identifier of the directory object representing the scope of the assignment or eligibility. The scope of an assignment or eligibility determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.
-     */
-    private String directoryScopeId;
-    /**
-     * When the schedule was last modified.
-     */
-    private OffsetDateTime modifiedDateTime;
-    /**
-     * The principal that's getting a role assignment or that's eligible for a role through the request.
-     */
-    private DirectoryObject principal;
-    /**
-     * Identifier of the principal that has been granted the role assignment or eligibility.
-     */
-    private String principalId;
-    /**
-     * Detailed information for the roleDefinition object that is referenced through the roleDefinitionId property.
-     */
-    private UnifiedRoleDefinition roleDefinition;
-    /**
-     * Identifier of the unifiedRoleDefinition object that is being assigned to the principal or that a principal is eligible for.
-     */
-    private String roleDefinitionId;
-    /**
-     * The status of the role assignment or eligibility request.
-     */
-    private String status;
-    /**
      * Instantiates a new UnifiedRoleScheduleBase and sets the default values.
      */
     public UnifiedRoleScheduleBase() {
@@ -87,7 +39,7 @@ public class UnifiedRoleScheduleBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AppScope getAppScope() {
-        return this.appScope;
+        return this.backingStore.get("appScope");
     }
     /**
      * Gets the appScopeId property value. Identifier of the app-specific scope when the assignment or eligibility is scoped to an app. The scope of an assignment or eligibility determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units.
@@ -95,7 +47,7 @@ public class UnifiedRoleScheduleBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAppScopeId() {
-        return this.appScopeId;
+        return this.backingStore.get("appScopeId");
     }
     /**
      * Gets the createdDateTime property value. When the schedule was created.
@@ -103,7 +55,7 @@ public class UnifiedRoleScheduleBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the createdUsing property value. Identifier of the object through which this schedule was created.
@@ -111,7 +63,7 @@ public class UnifiedRoleScheduleBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCreatedUsing() {
-        return this.createdUsing;
+        return this.backingStore.get("createdUsing");
     }
     /**
      * Gets the directoryScope property value. The directory object that is the scope of the role eligibility or assignment. Read-only.
@@ -119,7 +71,7 @@ public class UnifiedRoleScheduleBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getDirectoryScope() {
-        return this.directoryScope;
+        return this.backingStore.get("directoryScope");
     }
     /**
      * Gets the directoryScopeId property value. Identifier of the directory object representing the scope of the assignment or eligibility. The scope of an assignment or eligibility determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.
@@ -127,7 +79,7 @@ public class UnifiedRoleScheduleBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDirectoryScopeId() {
-        return this.directoryScopeId;
+        return this.backingStore.get("directoryScopeId");
     }
     /**
      * The deserialization information for the current model
@@ -156,7 +108,7 @@ public class UnifiedRoleScheduleBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
-        return this.modifiedDateTime;
+        return this.backingStore.get("modifiedDateTime");
     }
     /**
      * Gets the principal property value. The principal that's getting a role assignment or that's eligible for a role through the request.
@@ -164,7 +116,7 @@ public class UnifiedRoleScheduleBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getPrincipal() {
-        return this.principal;
+        return this.backingStore.get("principal");
     }
     /**
      * Gets the principalId property value. Identifier of the principal that has been granted the role assignment or eligibility.
@@ -172,7 +124,7 @@ public class UnifiedRoleScheduleBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPrincipalId() {
-        return this.principalId;
+        return this.backingStore.get("principalId");
     }
     /**
      * Gets the roleDefinition property value. Detailed information for the roleDefinition object that is referenced through the roleDefinitionId property.
@@ -180,7 +132,7 @@ public class UnifiedRoleScheduleBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleDefinition getRoleDefinition() {
-        return this.roleDefinition;
+        return this.backingStore.get("roleDefinition");
     }
     /**
      * Gets the roleDefinitionId property value. Identifier of the unifiedRoleDefinition object that is being assigned to the principal or that a principal is eligible for.
@@ -188,7 +140,7 @@ public class UnifiedRoleScheduleBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRoleDefinitionId() {
-        return this.roleDefinitionId;
+        return this.backingStore.get("roleDefinitionId");
     }
     /**
      * Gets the status property value. The status of the role assignment or eligibility request.
@@ -196,7 +148,7 @@ public class UnifiedRoleScheduleBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -223,83 +175,83 @@ public class UnifiedRoleScheduleBase extends Entity implements Parsable {
      * @param value Value to set for the appScope property.
      */
     public void setAppScope(@jakarta.annotation.Nullable final AppScope value) {
-        this.appScope = value;
+        this.backingStore.set("appScope", value);
     }
     /**
      * Sets the appScopeId property value. Identifier of the app-specific scope when the assignment or eligibility is scoped to an app. The scope of an assignment or eligibility determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units.
      * @param value Value to set for the appScopeId property.
      */
     public void setAppScopeId(@jakarta.annotation.Nullable final String value) {
-        this.appScopeId = value;
+        this.backingStore.set("appScopeId", value);
     }
     /**
      * Sets the createdDateTime property value. When the schedule was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the createdUsing property value. Identifier of the object through which this schedule was created.
      * @param value Value to set for the createdUsing property.
      */
     public void setCreatedUsing(@jakarta.annotation.Nullable final String value) {
-        this.createdUsing = value;
+        this.backingStore.set("createdUsing", value);
     }
     /**
      * Sets the directoryScope property value. The directory object that is the scope of the role eligibility or assignment. Read-only.
      * @param value Value to set for the directoryScope property.
      */
     public void setDirectoryScope(@jakarta.annotation.Nullable final DirectoryObject value) {
-        this.directoryScope = value;
+        this.backingStore.set("directoryScope", value);
     }
     /**
      * Sets the directoryScopeId property value. Identifier of the directory object representing the scope of the assignment or eligibility. The scope of an assignment or eligibility determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.
      * @param value Value to set for the directoryScopeId property.
      */
     public void setDirectoryScopeId(@jakarta.annotation.Nullable final String value) {
-        this.directoryScopeId = value;
+        this.backingStore.set("directoryScopeId", value);
     }
     /**
      * Sets the modifiedDateTime property value. When the schedule was last modified.
      * @param value Value to set for the modifiedDateTime property.
      */
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.modifiedDateTime = value;
+        this.backingStore.set("modifiedDateTime", value);
     }
     /**
      * Sets the principal property value. The principal that's getting a role assignment or that's eligible for a role through the request.
      * @param value Value to set for the principal property.
      */
     public void setPrincipal(@jakarta.annotation.Nullable final DirectoryObject value) {
-        this.principal = value;
+        this.backingStore.set("principal", value);
     }
     /**
      * Sets the principalId property value. Identifier of the principal that has been granted the role assignment or eligibility.
      * @param value Value to set for the principalId property.
      */
     public void setPrincipalId(@jakarta.annotation.Nullable final String value) {
-        this.principalId = value;
+        this.backingStore.set("principalId", value);
     }
     /**
      * Sets the roleDefinition property value. Detailed information for the roleDefinition object that is referenced through the roleDefinitionId property.
      * @param value Value to set for the roleDefinition property.
      */
     public void setRoleDefinition(@jakarta.annotation.Nullable final UnifiedRoleDefinition value) {
-        this.roleDefinition = value;
+        this.backingStore.set("roleDefinition", value);
     }
     /**
      * Sets the roleDefinitionId property value. Identifier of the unifiedRoleDefinition object that is being assigned to the principal or that a principal is eligible for.
      * @param value Value to set for the roleDefinitionId property.
      */
     public void setRoleDefinitionId(@jakarta.annotation.Nullable final String value) {
-        this.roleDefinitionId = value;
+        this.backingStore.set("roleDefinitionId", value);
     }
     /**
      * Sets the status property value. The status of the role assignment or eligibility request.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
 }

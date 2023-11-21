@@ -4,35 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsable {
+public class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The action property
+     * Stores model information.
      */
-    private CalendarSharingAction action;
-    /**
-     * The actionType property
-     */
-    private CalendarSharingActionType actionType;
-    /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The importance property
-     */
-    private CalendarSharingActionImportance importance;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new CalendarSharingMessageAction and sets the default values.
      */
     public CalendarSharingMessageAction() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +40,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public CalendarSharingAction getAction() {
-        return this.action;
+        return this.backingStore.get("action");
     }
     /**
      * Gets the actionType property value. The actionType property
@@ -59,7 +48,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public CalendarSharingActionType getActionType() {
-        return this.actionType;
+        return this.backingStore.get("actionType");
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -67,7 +56,20 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -88,7 +90,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public CalendarSharingActionImportance getImportance() {
-        return this.importance;
+        return this.backingStore.get("importance");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -96,7 +98,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -115,34 +117,42 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
      * @param value Value to set for the action property.
      */
     public void setAction(@jakarta.annotation.Nullable final CalendarSharingAction value) {
-        this.action = value;
+        this.backingStore.set("action", value);
     }
     /**
      * Sets the actionType property value. The actionType property
      * @param value Value to set for the actionType property.
      */
     public void setActionType(@jakarta.annotation.Nullable final CalendarSharingActionType value) {
-        this.actionType = value;
+        this.backingStore.set("actionType", value);
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the importance property value. The importance property
      * @param value Value to set for the importance property.
      */
     public void setImportance(@jakarta.annotation.Nullable final CalendarSharingActionImportance value) {
-        this.importance = value;
+        this.backingStore.set("importance", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

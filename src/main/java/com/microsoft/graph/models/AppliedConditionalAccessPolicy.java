@@ -4,43 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Parsable {
+public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Refers to the Name of the conditional access policy (example: 'Require MFA for Salesforce').
-     */
-    private String displayName;
-    /**
-     * Refers to the grant controls enforced by the conditional access policy (example: 'Require multifactor authentication').
-     */
-    private java.util.List<String> enforcedGrantControls;
-    /**
-     * Refers to the session controls enforced by the conditional access policy (example: 'Require app enforced controls').
-     */
-    private java.util.List<String> enforcedSessionControls;
-    /**
-     * An identifier of the conditional access policy.
-     */
-    private String id;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions weren't met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue.
-     */
-    private AppliedConditionalAccessPolicyResult result;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new AppliedConditionalAccessPolicy and sets the default values.
      */
     public AppliedConditionalAccessPolicy() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -59,7 +40,20 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the displayName property value. Refers to the Name of the conditional access policy (example: 'Require MFA for Salesforce').
@@ -67,7 +61,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * Gets the enforcedGrantControls property value. Refers to the grant controls enforced by the conditional access policy (example: 'Require multifactor authentication').
@@ -75,7 +69,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEnforcedGrantControls() {
-        return this.enforcedGrantControls;
+        return this.backingStore.get("enforcedGrantControls");
     }
     /**
      * Gets the enforcedSessionControls property value. Refers to the session controls enforced by the conditional access policy (example: 'Require app enforced controls').
@@ -83,7 +77,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEnforcedSessionControls() {
-        return this.enforcedSessionControls;
+        return this.backingStore.get("enforcedSessionControls");
     }
     /**
      * The deserialization information for the current model
@@ -106,7 +100,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      */
     @jakarta.annotation.Nullable
     public String getId() {
-        return this.id;
+        return this.backingStore.get("id");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -114,7 +108,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions weren't met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue.
@@ -122,7 +116,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      */
     @jakarta.annotation.Nullable
     public AppliedConditionalAccessPolicyResult getResult() {
-        return this.result;
+        return this.backingStore.get("result");
     }
     /**
      * Serializes information the current object
@@ -143,48 +137,56 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the displayName property value. Refers to the Name of the conditional access policy (example: 'Require MFA for Salesforce').
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the enforcedGrantControls property value. Refers to the grant controls enforced by the conditional access policy (example: 'Require multifactor authentication').
      * @param value Value to set for the enforcedGrantControls property.
      */
     public void setEnforcedGrantControls(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.enforcedGrantControls = value;
+        this.backingStore.set("enforcedGrantControls", value);
     }
     /**
      * Sets the enforcedSessionControls property value. Refers to the session controls enforced by the conditional access policy (example: 'Require app enforced controls').
      * @param value Value to set for the enforcedSessionControls property.
      */
     public void setEnforcedSessionControls(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.enforcedSessionControls = value;
+        this.backingStore.set("enforcedSessionControls", value);
     }
     /**
      * Sets the id property value. An identifier of the conditional access policy.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
-        this.id = value;
+        this.backingStore.set("id", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions weren't met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue.
      * @param value Value to set for the result property.
      */
     public void setResult(@jakarta.annotation.Nullable final AppliedConditionalAccessPolicyResult value) {
-        this.result = value;
+        this.backingStore.set("result", value);
     }
 }

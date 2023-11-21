@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosMobileAppIdentifier extends MobileAppIdentifier implements Parsable {
     /**
-     * The identifier for an app, as specified in the app store.
-     */
-    private String bundleId;
-    /**
      * Instantiates a new IosMobileAppIdentifier and sets the default values.
      */
     public IosMobileAppIdentifier() {
@@ -38,7 +34,7 @@ public class IosMobileAppIdentifier extends MobileAppIdentifier implements Parsa
      */
     @jakarta.annotation.Nullable
     public String getBundleId() {
-        return this.bundleId;
+        return this.backingStore.get("bundleId");
     }
     /**
      * The deserialization information for the current model
@@ -64,6 +60,6 @@ public class IosMobileAppIdentifier extends MobileAppIdentifier implements Parsa
      * @param value Value to set for the bundleId property.
      */
     public void setBundleId(@jakarta.annotation.Nullable final String value) {
-        this.bundleId = value;
+        this.backingStore.set("bundleId", value);
     }
 }

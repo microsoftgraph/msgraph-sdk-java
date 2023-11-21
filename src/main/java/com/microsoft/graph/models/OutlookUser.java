@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OutlookUser extends Entity implements Parsable {
     /**
-     * A list of categories defined for the user.
-     */
-    private java.util.List<OutlookCategory> masterCategories;
-    /**
      * Instantiates a new OutlookUser and sets the default values.
      */
     public OutlookUser() {
@@ -44,7 +40,7 @@ public class OutlookUser extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<OutlookCategory> getMasterCategories() {
-        return this.masterCategories;
+        return this.backingStore.get("masterCategories");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class OutlookUser extends Entity implements Parsable {
      * @param value Value to set for the masterCategories property.
      */
     public void setMasterCategories(@jakarta.annotation.Nullable final java.util.List<OutlookCategory> value) {
-        this.masterCategories = value;
+        this.backingStore.set("masterCategories", value);
     }
 }

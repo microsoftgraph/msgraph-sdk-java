@@ -4,47 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AudioConferencing implements AdditionalDataHolder, Parsable {
+public class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The conference id of the online meeting.
-     */
-    private String conferenceId;
-    /**
-     * A URL to the externally-accessible web page that contains dial-in information.
-     */
-    private String dialinUrl;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The tollFreeNumber property
-     */
-    private String tollFreeNumber;
-    /**
-     * List of toll-free numbers that are displayed in the meeting invite.
-     */
-    private java.util.List<String> tollFreeNumbers;
-    /**
-     * The tollNumber property
-     */
-    private String tollNumber;
-    /**
-     * List of toll numbers that are displayed in the meeting invite.
-     */
-    private java.util.List<String> tollNumbers;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new AudioConferencing and sets the default values.
      */
     public AudioConferencing() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -63,7 +40,20 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the conferenceId property value. The conference id of the online meeting.
@@ -71,7 +61,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getConferenceId() {
-        return this.conferenceId;
+        return this.backingStore.get("conferenceId");
     }
     /**
      * Gets the dialinUrl property value. A URL to the externally-accessible web page that contains dial-in information.
@@ -79,7 +69,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDialinUrl() {
-        return this.dialinUrl;
+        return this.backingStore.get("dialinUrl");
     }
     /**
      * The deserialization information for the current model
@@ -103,7 +93,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the tollFreeNumber property value. The tollFreeNumber property
@@ -111,7 +101,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTollFreeNumber() {
-        return this.tollFreeNumber;
+        return this.backingStore.get("tollFreeNumber");
     }
     /**
      * Gets the tollFreeNumbers property value. List of toll-free numbers that are displayed in the meeting invite.
@@ -119,7 +109,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTollFreeNumbers() {
-        return this.tollFreeNumbers;
+        return this.backingStore.get("tollFreeNumbers");
     }
     /**
      * Gets the tollNumber property value. The tollNumber property
@@ -127,7 +117,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTollNumber() {
-        return this.tollNumber;
+        return this.backingStore.get("tollNumber");
     }
     /**
      * Gets the tollNumbers property value. List of toll numbers that are displayed in the meeting invite.
@@ -135,7 +125,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTollNumbers() {
-        return this.tollNumbers;
+        return this.backingStore.get("tollNumbers");
     }
     /**
      * Serializes information the current object
@@ -157,55 +147,63 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the conferenceId property value. The conference id of the online meeting.
      * @param value Value to set for the conferenceId property.
      */
     public void setConferenceId(@jakarta.annotation.Nullable final String value) {
-        this.conferenceId = value;
+        this.backingStore.set("conferenceId", value);
     }
     /**
      * Sets the dialinUrl property value. A URL to the externally-accessible web page that contains dial-in information.
      * @param value Value to set for the dialinUrl property.
      */
     public void setDialinUrl(@jakarta.annotation.Nullable final String value) {
-        this.dialinUrl = value;
+        this.backingStore.set("dialinUrl", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the tollFreeNumber property value. The tollFreeNumber property
      * @param value Value to set for the tollFreeNumber property.
      */
     public void setTollFreeNumber(@jakarta.annotation.Nullable final String value) {
-        this.tollFreeNumber = value;
+        this.backingStore.set("tollFreeNumber", value);
     }
     /**
      * Sets the tollFreeNumbers property value. List of toll-free numbers that are displayed in the meeting invite.
      * @param value Value to set for the tollFreeNumbers property.
      */
     public void setTollFreeNumbers(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.tollFreeNumbers = value;
+        this.backingStore.set("tollFreeNumbers", value);
     }
     /**
      * Sets the tollNumber property value. The tollNumber property
      * @param value Value to set for the tollNumber property.
      */
     public void setTollNumber(@jakarta.annotation.Nullable final String value) {
-        this.tollNumber = value;
+        this.backingStore.set("tollNumber", value);
     }
     /**
      * Sets the tollNumbers property value. List of toll numbers that are displayed in the meeting invite.
      * @param value Value to set for the tollNumbers property.
      */
     public void setTollNumbers(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.tollNumbers = value;
+        this.backingStore.set("tollNumbers", value);
     }
 }

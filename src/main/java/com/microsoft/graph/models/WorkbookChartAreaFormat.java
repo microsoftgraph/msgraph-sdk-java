@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartAreaFormat extends Entity implements Parsable {
     /**
-     * Represents the fill format of an object, which includes background formatting information. Read-only.
-     */
-    private WorkbookChartFill fill;
-    /**
-     * Represents the font attributes (font name, font size, color, etc.) for the current object. Read-only.
-     */
-    private WorkbookChartFont font;
-    /**
      * Instantiates a new WorkbookChartAreaFormat and sets the default values.
      */
     public WorkbookChartAreaFormat() {
@@ -49,7 +41,7 @@ public class WorkbookChartAreaFormat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookChartFill getFill() {
-        return this.fill;
+        return this.backingStore.get("fill");
     }
     /**
      * Gets the font property value. Represents the font attributes (font name, font size, color, etc.) for the current object. Read-only.
@@ -57,7 +49,7 @@ public class WorkbookChartAreaFormat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookChartFont getFont() {
-        return this.font;
+        return this.backingStore.get("font");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class WorkbookChartAreaFormat extends Entity implements Parsable {
      * @param value Value to set for the fill property.
      */
     public void setFill(@jakarta.annotation.Nullable final WorkbookChartFill value) {
-        this.fill = value;
+        this.backingStore.set("fill", value);
     }
     /**
      * Sets the font property value. Represents the font attributes (font name, font size, color, etc.) for the current object. Read-only.
      * @param value Value to set for the font property.
      */
     public void setFont(@jakarta.annotation.Nullable final WorkbookChartFont value) {
-        this.font = value;
+        this.backingStore.set("font", value);
     }
 }

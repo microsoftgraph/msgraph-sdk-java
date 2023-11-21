@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationWordResource extends EducationResource implements Parsable {
     /**
-     * Location of the file on disk.
-     */
-    private String fileUrl;
-    /**
      * Instantiates a new EducationWordResource and sets the default values.
      */
     public EducationWordResource() {
@@ -45,7 +41,7 @@ public class EducationWordResource extends EducationResource implements Parsable
      */
     @jakarta.annotation.Nullable
     public String getFileUrl() {
-        return this.fileUrl;
+        return this.backingStore.get("fileUrl");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class EducationWordResource extends EducationResource implements Parsable
      * @param value Value to set for the fileUrl property.
      */
     public void setFileUrl(@jakarta.annotation.Nullable final String value) {
-        this.fileUrl = value;
+        this.backingStore.set("fileUrl", value);
     }
 }

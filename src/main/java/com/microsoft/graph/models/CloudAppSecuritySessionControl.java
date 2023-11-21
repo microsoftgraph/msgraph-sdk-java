@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudAppSecuritySessionControl extends ConditionalAccessSessionControl implements Parsable {
     /**
-     * Possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps.
-     */
-    private CloudAppSecuritySessionControlType cloudAppSecurityType;
-    /**
      * Instantiates a new CloudAppSecuritySessionControl and sets the default values.
      */
     public CloudAppSecuritySessionControl() {
@@ -35,7 +31,7 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
      */
     @jakarta.annotation.Nullable
     public CloudAppSecuritySessionControlType getCloudAppSecurityType() {
-        return this.cloudAppSecurityType;
+        return this.backingStore.get("cloudAppSecurityType");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
      * @param value Value to set for the cloudAppSecurityType property.
      */
     public void setCloudAppSecurityType(@jakarta.annotation.Nullable final CloudAppSecuritySessionControlType value) {
-        this.cloudAppSecurityType = value;
+        this.backingStore.set("cloudAppSecurityType", value);
     }
 }

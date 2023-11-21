@@ -10,18 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageResourceRoleScope extends Entity implements Parsable {
     /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The role property
-     */
-    private AccessPackageResourceRole role;
-    /**
-     * The scope property
-     */
-    private AccessPackageResourceScope scope;
-    /**
      * Instantiates a new AccessPackageResourceRoleScope and sets the default values.
      */
     public AccessPackageResourceRoleScope() {
@@ -43,7 +31,7 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -63,7 +51,7 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceRole getRole() {
-        return this.role;
+        return this.backingStore.get("role");
     }
     /**
      * Gets the scope property value. The scope property
@@ -71,7 +59,7 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceScope getScope() {
-        return this.scope;
+        return this.backingStore.get("scope");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the role property value. The role property
      * @param value Value to set for the role property.
      */
     public void setRole(@jakarta.annotation.Nullable final AccessPackageResourceRole value) {
-        this.role = value;
+        this.backingStore.set("role", value);
     }
     /**
      * Sets the scope property value. The scope property
      * @param value Value to set for the scope property.
      */
     public void setScope(@jakarta.annotation.Nullable final AccessPackageResourceScope value) {
-        this.scope = value;
+        this.backingStore.set("scope", value);
     }
 }

@@ -12,38 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BookingStaffMember extends BookingStaffMemberBase implements Parsable {
     /**
-     * True means that if the staff member is a Microsoft 365 user, the Bookings API would verify the staff member's availability in their personal calendar in Microsoft 365, before making a booking.
-     */
-    private Boolean availabilityIsAffectedByPersonalCalendar;
-    /**
-     * The name of the staff member, as displayed to customers. Required.
-     */
-    private String displayName;
-    /**
-     * The email address of the staff member. This can be in the same Microsoft 365 tenant as the business, or in a different email domain. This email address can be used if the sendConfirmationsToOwner property is set to true in the scheduling policy of the business. Required.
-     */
-    private String emailAddress;
-    /**
-     * True indicates that a staff member will be notified via email when a booking assigned to them is created or changed.
-     */
-    private Boolean isEmailNotificationEnabled;
-    /**
-     * The role property
-     */
-    private BookingStaffRole role;
-    /**
-     * The time zone of the staff member. For a list of possible values, see dateTimeTimeZone.
-     */
-    private String timeZone;
-    /**
-     * True means the staff member's availability is as specified in the businessHours property of the business. False means the availability is determined by the staff member's workingHours property setting.
-     */
-    private Boolean useBusinessHours;
-    /**
-     * The range of hours each day of the week that the staff member is available for booking. By default, they are initialized to be the same as the businessHours property of the business.
-     */
-    private java.util.List<BookingWorkHours> workingHours;
-    /**
      * Instantiates a new BookingStaffMember and sets the default values.
      */
     public BookingStaffMember() {
@@ -66,7 +34,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     @jakarta.annotation.Nullable
     public Boolean getAvailabilityIsAffectedByPersonalCalendar() {
-        return this.availabilityIsAffectedByPersonalCalendar;
+        return this.backingStore.get("availabilityIsAffectedByPersonalCalendar");
     }
     /**
      * Gets the displayName property value. The name of the staff member, as displayed to customers. Required.
@@ -74,7 +42,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * Gets the emailAddress property value. The email address of the staff member. This can be in the same Microsoft 365 tenant as the business, or in a different email domain. This email address can be used if the sendConfirmationsToOwner property is set to true in the scheduling policy of the business. Required.
@@ -82,7 +50,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     @jakarta.annotation.Nullable
     public String getEmailAddress() {
-        return this.emailAddress;
+        return this.backingStore.get("emailAddress");
     }
     /**
      * The deserialization information for the current model
@@ -107,7 +75,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEmailNotificationEnabled() {
-        return this.isEmailNotificationEnabled;
+        return this.backingStore.get("isEmailNotificationEnabled");
     }
     /**
      * Gets the role property value. The role property
@@ -115,7 +83,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     @jakarta.annotation.Nullable
     public BookingStaffRole getRole() {
-        return this.role;
+        return this.backingStore.get("role");
     }
     /**
      * Gets the timeZone property value. The time zone of the staff member. For a list of possible values, see dateTimeTimeZone.
@@ -123,7 +91,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     @jakarta.annotation.Nullable
     public String getTimeZone() {
-        return this.timeZone;
+        return this.backingStore.get("timeZone");
     }
     /**
      * Gets the useBusinessHours property value. True means the staff member's availability is as specified in the businessHours property of the business. False means the availability is determined by the staff member's workingHours property setting.
@@ -131,7 +99,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     @jakarta.annotation.Nullable
     public Boolean getUseBusinessHours() {
-        return this.useBusinessHours;
+        return this.backingStore.get("useBusinessHours");
     }
     /**
      * Gets the workingHours property value. The range of hours each day of the week that the staff member is available for booking. By default, they are initialized to be the same as the businessHours property of the business.
@@ -139,7 +107,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingWorkHours> getWorkingHours() {
-        return this.workingHours;
+        return this.backingStore.get("workingHours");
     }
     /**
      * Serializes information the current object
@@ -162,55 +130,55 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      * @param value Value to set for the availabilityIsAffectedByPersonalCalendar property.
      */
     public void setAvailabilityIsAffectedByPersonalCalendar(@jakarta.annotation.Nullable final Boolean value) {
-        this.availabilityIsAffectedByPersonalCalendar = value;
+        this.backingStore.set("availabilityIsAffectedByPersonalCalendar", value);
     }
     /**
      * Sets the displayName property value. The name of the staff member, as displayed to customers. Required.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the emailAddress property value. The email address of the staff member. This can be in the same Microsoft 365 tenant as the business, or in a different email domain. This email address can be used if the sendConfirmationsToOwner property is set to true in the scheduling policy of the business. Required.
      * @param value Value to set for the emailAddress property.
      */
     public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
-        this.emailAddress = value;
+        this.backingStore.set("emailAddress", value);
     }
     /**
      * Sets the isEmailNotificationEnabled property value. True indicates that a staff member will be notified via email when a booking assigned to them is created or changed.
      * @param value Value to set for the isEmailNotificationEnabled property.
      */
     public void setIsEmailNotificationEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEmailNotificationEnabled = value;
+        this.backingStore.set("isEmailNotificationEnabled", value);
     }
     /**
      * Sets the role property value. The role property
      * @param value Value to set for the role property.
      */
     public void setRole(@jakarta.annotation.Nullable final BookingStaffRole value) {
-        this.role = value;
+        this.backingStore.set("role", value);
     }
     /**
      * Sets the timeZone property value. The time zone of the staff member. For a list of possible values, see dateTimeTimeZone.
      * @param value Value to set for the timeZone property.
      */
     public void setTimeZone(@jakarta.annotation.Nullable final String value) {
-        this.timeZone = value;
+        this.backingStore.set("timeZone", value);
     }
     /**
      * Sets the useBusinessHours property value. True means the staff member's availability is as specified in the businessHours property of the business. False means the availability is determined by the staff member's workingHours property setting.
      * @param value Value to set for the useBusinessHours property.
      */
     public void setUseBusinessHours(@jakarta.annotation.Nullable final Boolean value) {
-        this.useBusinessHours = value;
+        this.backingStore.set("useBusinessHours", value);
     }
     /**
      * Sets the workingHours property value. The range of hours each day of the week that the staff member is available for booking. By default, they are initialized to be the same as the businessHours property of the business.
      * @param value Value to set for the workingHours property.
      */
     public void setWorkingHours(@jakarta.annotation.Nullable final java.util.List<BookingWorkHours> value) {
-        this.workingHours = value;
+        this.backingStore.set("workingHours", value);
     }
 }

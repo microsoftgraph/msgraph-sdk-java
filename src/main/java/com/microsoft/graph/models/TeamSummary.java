@@ -4,35 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TeamSummary implements AdditionalDataHolder, Parsable {
+public class TeamSummary implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Count of guests in a team.
-     */
-    private Integer guestsCount;
-    /**
-     * Count of members in a team.
-     */
-    private Integer membersCount;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Count of owners in a team.
-     */
-    private Integer ownersCount;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new TeamSummary and sets the default values.
      */
     public TeamSummary() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +40,20 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -72,7 +74,7 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getGuestsCount() {
-        return this.guestsCount;
+        return this.backingStore.get("guestsCount");
     }
     /**
      * Gets the membersCount property value. Count of members in a team.
@@ -80,7 +82,7 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getMembersCount() {
-        return this.membersCount;
+        return this.backingStore.get("membersCount");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -88,7 +90,7 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the ownersCount property value. Count of owners in a team.
@@ -96,7 +98,7 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getOwnersCount() {
-        return this.ownersCount;
+        return this.backingStore.get("ownersCount");
     }
     /**
      * Serializes information the current object
@@ -115,34 +117,42 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the guestsCount property value. Count of guests in a team.
      * @param value Value to set for the guestsCount property.
      */
     public void setGuestsCount(@jakarta.annotation.Nullable final Integer value) {
-        this.guestsCount = value;
+        this.backingStore.set("guestsCount", value);
     }
     /**
      * Sets the membersCount property value. Count of members in a team.
      * @param value Value to set for the membersCount property.
      */
     public void setMembersCount(@jakarta.annotation.Nullable final Integer value) {
-        this.membersCount = value;
+        this.backingStore.set("membersCount", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the ownersCount property value. Count of owners in a team.
      * @param value Value to set for the ownersCount property.
      */
     public void setOwnersCount(@jakarta.annotation.Nullable final Integer value) {
-        this.ownersCount = value;
+        this.backingStore.set("ownersCount", value);
     }
 }

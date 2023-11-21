@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DelegatedAdminCustomer extends Entity implements Parsable {
     /**
-     * The Microsoft Entra ID display name of the customer tenant. Read-only. Supports $orderby.
-     */
-    private String displayName;
-    /**
-     * Contains the management details of a service in the customer tenant that's managed by delegated administration.
-     */
-    private java.util.List<DelegatedAdminServiceManagementDetail> serviceManagementDetails;
-    /**
-     * The Microsoft Entra ID-assigned tenant ID of the customer. Read-only.
-     */
-    private String tenantId;
-    /**
      * Instantiates a new DelegatedAdminCustomer and sets the default values.
      */
     public DelegatedAdminCustomer() {
@@ -42,7 +30,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -62,7 +50,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DelegatedAdminServiceManagementDetail> getServiceManagementDetails() {
-        return this.serviceManagementDetails;
+        return this.backingStore.get("serviceManagementDetails");
     }
     /**
      * Gets the tenantId property value. The Microsoft Entra ID-assigned tenant ID of the customer. Read-only.
@@ -70,7 +58,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.backingStore.get("tenantId");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the serviceManagementDetails property value. Contains the management details of a service in the customer tenant that's managed by delegated administration.
      * @param value Value to set for the serviceManagementDetails property.
      */
     public void setServiceManagementDetails(@jakarta.annotation.Nullable final java.util.List<DelegatedAdminServiceManagementDetail> value) {
-        this.serviceManagementDetails = value;
+        this.backingStore.set("serviceManagementDetails", value);
     }
     /**
      * Sets the tenantId property value. The Microsoft Entra ID-assigned tenant ID of the customer. Read-only.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.backingStore.set("tenantId", value);
     }
 }

@@ -12,22 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BookingCustomer extends BookingCustomerBase implements Parsable {
     /**
-     * Addresses associated with the customer. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
-     */
-    private java.util.List<PhysicalAddress> addresses;
-    /**
-     * The name of the customer.
-     */
-    private String displayName;
-    /**
-     * The SMTP address of the customer.
-     */
-    private String emailAddress;
-    /**
-     * Phone numbers associated with the customer, including home, business and mobile numbers.
-     */
-    private java.util.List<Phone> phones;
-    /**
      * Instantiates a new BookingCustomer and sets the default values.
      */
     public BookingCustomer() {
@@ -50,7 +34,7 @@ public class BookingCustomer extends BookingCustomerBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PhysicalAddress> getAddresses() {
-        return this.addresses;
+        return this.backingStore.get("addresses");
     }
     /**
      * Gets the displayName property value. The name of the customer.
@@ -58,7 +42,7 @@ public class BookingCustomer extends BookingCustomerBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * Gets the emailAddress property value. The SMTP address of the customer.
@@ -66,7 +50,7 @@ public class BookingCustomer extends BookingCustomerBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getEmailAddress() {
-        return this.emailAddress;
+        return this.backingStore.get("emailAddress");
     }
     /**
      * The deserialization information for the current model
@@ -87,7 +71,7 @@ public class BookingCustomer extends BookingCustomerBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Phone> getPhones() {
-        return this.phones;
+        return this.backingStore.get("phones");
     }
     /**
      * Serializes information the current object
@@ -106,27 +90,27 @@ public class BookingCustomer extends BookingCustomerBase implements Parsable {
      * @param value Value to set for the addresses property.
      */
     public void setAddresses(@jakarta.annotation.Nullable final java.util.List<PhysicalAddress> value) {
-        this.addresses = value;
+        this.backingStore.set("addresses", value);
     }
     /**
      * Sets the displayName property value. The name of the customer.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the emailAddress property value. The SMTP address of the customer.
      * @param value Value to set for the emailAddress property.
      */
     public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
-        this.emailAddress = value;
+        this.backingStore.set("emailAddress", value);
     }
     /**
      * Sets the phones property value. Phone numbers associated with the customer, including home, business and mobile numbers.
      * @param value Value to set for the phones property.
      */
     public void setPhones(@jakarta.annotation.Nullable final java.util.List<Phone> value) {
-        this.phones = value;
+        this.backingStore.set("phones", value);
     }
 }

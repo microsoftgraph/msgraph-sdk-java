@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TargetedManagedAppPolicyAssignment extends Entity implements Parsable {
     /**
-     * Identifier for deployment to a group or app
-     */
-    private DeviceAndAppManagementAssignmentTarget target;
-    /**
      * Instantiates a new TargetedManagedAppPolicyAssignment and sets the default values.
      */
     public TargetedManagedAppPolicyAssignment() {
@@ -47,7 +43,7 @@ public class TargetedManagedAppPolicyAssignment extends Entity implements Parsab
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {
-        return this.target;
+        return this.backingStore.get("target");
     }
     /**
      * Serializes information the current object
@@ -63,6 +59,6 @@ public class TargetedManagedAppPolicyAssignment extends Entity implements Parsab
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
-        this.target = value;
+        this.backingStore.set("target", value);
     }
 }
