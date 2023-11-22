@@ -82,14 +82,14 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(ThreatCategory.class)); });
-        deserializerMap.put("contentType", (n) -> { this.setContentType(n.getEnumValue(ThreatAssessmentContentType.class)); });
+        deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(ThreatCategory::forValue)); });
+        deserializerMap.put("contentType", (n) -> { this.setContentType(n.getEnumValue(ThreatAssessmentContentType::forValue)); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("expectedAssessment", (n) -> { this.setExpectedAssessment(n.getEnumValue(ThreatExpectedAssessment.class)); });
-        deserializerMap.put("requestSource", (n) -> { this.setRequestSource(n.getEnumValue(ThreatAssessmentRequestSource.class)); });
+        deserializerMap.put("expectedAssessment", (n) -> { this.setExpectedAssessment(n.getEnumValue(ThreatExpectedAssessment::forValue)); });
+        deserializerMap.put("requestSource", (n) -> { this.setRequestSource(n.getEnumValue(ThreatAssessmentRequestSource::forValue)); });
         deserializerMap.put("results", (n) -> { this.setResults(n.getCollectionOfObjectValues(ThreatAssessmentResult::createFromDiscriminatorValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ThreatAssessmentStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ThreatAssessmentStatus::forValue)); });
         return deserializerMap;
     }
     /**

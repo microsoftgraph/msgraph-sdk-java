@@ -48,9 +48,9 @@ public class HostPort extends Entity implements Parsable {
         deserializerMap.put("lastSeenDateTime", (n) -> { this.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("mostRecentSslCertificate", (n) -> { this.setMostRecentSslCertificate(n.getObjectValue(SslCertificate::createFromDiscriminatorValue)); });
         deserializerMap.put("port", (n) -> { this.setPort(n.getIntegerValue()); });
-        deserializerMap.put("protocol", (n) -> { this.setProtocol(n.getEnumValue(HostPortProtocol.class)); });
+        deserializerMap.put("protocol", (n) -> { this.setProtocol(n.getEnumValue(HostPortProtocol::forValue)); });
         deserializerMap.put("services", (n) -> { this.setServices(n.getCollectionOfObjectValues(HostPortComponent::createFromDiscriminatorValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(HostPortStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(HostPortStatus::forValue)); });
         deserializerMap.put("timesObserved", (n) -> { this.setTimesObserved(n.getIntegerValue()); });
         return deserializerMap;
     }

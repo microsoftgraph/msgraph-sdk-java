@@ -78,7 +78,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
-        deserializerMap.put("allowedAudience", (n) -> { this.setAllowedAudience(n.getEnumValue(BroadcastMeetingAudience.class)); });
+        deserializerMap.put("allowedAudience", (n) -> { this.setAllowedAudience(n.getEnumValue(BroadcastMeetingAudience::forValue)); });
         deserializerMap.put("captions", (n) -> { this.setCaptions(n.getObjectValue(BroadcastMeetingCaptionSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("isAttendeeReportEnabled", (n) -> { this.setIsAttendeeReportEnabled(n.getBooleanValue()); });
         deserializerMap.put("isQuestionAndAnswerEnabled", (n) -> { this.setIsQuestionAndAnswerEnabled(n.getBooleanValue()); });

@@ -51,7 +51,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilder ext
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * The work from anywhere metric devices. Read-only.
@@ -72,7 +72,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilder ext
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsWorkFromAnywhereDevice::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsWorkFromAnywhereDevice::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property metricDevices in deviceManagement
@@ -96,7 +96,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilder ext
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsWorkFromAnywhereDevice::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsWorkFromAnywhereDevice::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property metricDevices for deviceManagement

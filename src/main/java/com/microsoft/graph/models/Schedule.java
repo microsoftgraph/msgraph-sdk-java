@@ -45,7 +45,7 @@ public class Schedule extends Entity implements Parsable {
         deserializerMap.put("openShiftChangeRequests", (n) -> { this.setOpenShiftChangeRequests(n.getCollectionOfObjectValues(OpenShiftChangeRequest::createFromDiscriminatorValue)); });
         deserializerMap.put("openShifts", (n) -> { this.setOpenShifts(n.getCollectionOfObjectValues(OpenShift::createFromDiscriminatorValue)); });
         deserializerMap.put("openShiftsEnabled", (n) -> { this.setOpenShiftsEnabled(n.getBooleanValue()); });
-        deserializerMap.put("provisionStatus", (n) -> { this.setProvisionStatus(n.getEnumValue(OperationStatus.class)); });
+        deserializerMap.put("provisionStatus", (n) -> { this.setProvisionStatus(n.getEnumValue(OperationStatus::forValue)); });
         deserializerMap.put("provisionStatusCode", (n) -> { this.setProvisionStatusCode(n.getStringValue()); });
         deserializerMap.put("schedulingGroups", (n) -> { this.setSchedulingGroups(n.getCollectionOfObjectValues(SchedulingGroup::createFromDiscriminatorValue)); });
         deserializerMap.put("shifts", (n) -> { this.setShifts(n.getCollectionOfObjectValues(Shift::createFromDiscriminatorValue)); });

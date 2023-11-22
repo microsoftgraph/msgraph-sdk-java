@@ -39,7 +39,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("authenticationMode", (n) -> { this.setAuthenticationMode(n.getEnumValue(MicrosoftAuthenticatorAuthenticationMode.class)); });
+        deserializerMap.put("authenticationMode", (n) -> { this.setAuthenticationMode(n.getEnumValue(MicrosoftAuthenticatorAuthenticationMode::forValue)); });
         return deserializerMap;
     }
     /**

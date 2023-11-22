@@ -78,7 +78,7 @@ public class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TaskProcessingResultCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TaskProcessingResultCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Get the task processing result from a userProcessingResult either directly or through a run. This API is available in the following national cloud deployments.

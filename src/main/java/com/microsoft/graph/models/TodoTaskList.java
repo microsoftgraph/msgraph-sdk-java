@@ -52,7 +52,7 @@ public class TodoTaskList extends Entity implements Parsable {
         deserializerMap.put("isOwner", (n) -> { this.setIsOwner(n.getBooleanValue()); });
         deserializerMap.put("isShared", (n) -> { this.setIsShared(n.getBooleanValue()); });
         deserializerMap.put("tasks", (n) -> { this.setTasks(n.getCollectionOfObjectValues(TodoTask::createFromDiscriminatorValue)); });
-        deserializerMap.put("wellknownListName", (n) -> { this.setWellknownListName(n.getEnumValue(WellknownListName.class)); });
+        deserializerMap.put("wellknownListName", (n) -> { this.setWellknownListName(n.getEnumValue(WellknownListName::forValue)); });
         return deserializerMap;
     }
     /**

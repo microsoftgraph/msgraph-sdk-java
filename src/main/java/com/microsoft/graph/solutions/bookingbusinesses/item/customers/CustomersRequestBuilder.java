@@ -79,7 +79,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, BookingCustomerBaseCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, BookingCustomerBaseCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new bookingCustomer object. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, BookingCustomerBase::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, BookingCustomerBase::createFromDiscriminatorValue);
     }
     /**
      * Get a list of bookingCustomer objects of a business. This API is available in the following national cloud deployments.

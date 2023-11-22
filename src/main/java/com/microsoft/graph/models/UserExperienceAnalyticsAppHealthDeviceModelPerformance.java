@@ -61,7 +61,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
         deserializerMap.put("activeDeviceCount", (n) -> { this.setActiveDeviceCount(n.getIntegerValue()); });
         deserializerMap.put("deviceManufacturer", (n) -> { this.setDeviceManufacturer(n.getStringValue()); });
         deserializerMap.put("deviceModel", (n) -> { this.setDeviceModel(n.getStringValue()); });
-        deserializerMap.put("healthStatus", (n) -> { this.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState.class)); });
+        deserializerMap.put("healthStatus", (n) -> { this.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState::forValue)); });
         deserializerMap.put("meanTimeToFailureInMinutes", (n) -> { this.setMeanTimeToFailureInMinutes(n.getIntegerValue()); });
         deserializerMap.put("modelAppHealthScore", (n) -> { this.setModelAppHealthScore(n.getDoubleValue()); });
         return deserializerMap;

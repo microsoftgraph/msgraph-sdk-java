@@ -63,7 +63,7 @@ public class ExternalItemContent implements AdditionalDataHolder, BackedModel, P
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(ExternalItemContentType.class)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(ExternalItemContentType::forValue)); });
         deserializerMap.put("value", (n) -> { this.setValue(n.getStringValue()); });
         return deserializerMap;
     }

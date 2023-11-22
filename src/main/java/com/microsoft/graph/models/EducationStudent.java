@@ -81,7 +81,7 @@ public class EducationStudent implements AdditionalDataHolder, BackedModel, Pars
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("birthDate", (n) -> { this.setBirthDate(n.getLocalDateValue()); });
         deserializerMap.put("externalId", (n) -> { this.setExternalId(n.getStringValue()); });
-        deserializerMap.put("gender", (n) -> { this.setGender(n.getEnumValue(EducationGender.class)); });
+        deserializerMap.put("gender", (n) -> { this.setGender(n.getEnumValue(EducationGender::forValue)); });
         deserializerMap.put("grade", (n) -> { this.setGrade(n.getStringValue()); });
         deserializerMap.put("graduationYear", (n) -> { this.setGraduationYear(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });

@@ -72,7 +72,7 @@ public class RejectPostRequestBody implements AdditionalDataHolder, BackedModel,
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("callbackUri", (n) -> { this.setCallbackUri(n.getStringValue()); });
-        deserializerMap.put("reason", (n) -> { this.setReason(n.getEnumValue(RejectReason.class)); });
+        deserializerMap.put("reason", (n) -> { this.setReason(n.getEnumValue(RejectReason::forValue)); });
         return deserializerMap;
     }
     /**

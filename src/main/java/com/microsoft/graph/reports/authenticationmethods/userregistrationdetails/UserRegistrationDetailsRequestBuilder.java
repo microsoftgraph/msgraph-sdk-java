@@ -79,7 +79,7 @@ public class UserRegistrationDetailsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserRegistrationDetailsCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserRegistrationDetailsCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to userRegistrationDetails for reports
@@ -103,7 +103,7 @@ public class UserRegistrationDetailsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserRegistrationDetails::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserRegistrationDetails::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the authentication methods registered for a user as defined in the userRegistrationDetails object. This API is available in the following national cloud deployments.

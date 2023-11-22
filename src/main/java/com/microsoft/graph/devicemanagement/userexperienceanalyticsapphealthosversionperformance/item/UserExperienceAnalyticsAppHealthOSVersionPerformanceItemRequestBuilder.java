@@ -51,7 +51,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformanceItemRequestBuil
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * User experience analytics appHealth OS version Performance
@@ -72,7 +72,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformanceItemRequestBuil
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsAppHealthOSVersionPerformance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsAppHealthOSVersionPerformance::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property userExperienceAnalyticsAppHealthOSVersionPerformance in deviceManagement
@@ -96,7 +96,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformanceItemRequestBuil
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsAppHealthOSVersionPerformance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsAppHealthOSVersionPerformance::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property userExperienceAnalyticsAppHealthOSVersionPerformance for deviceManagement

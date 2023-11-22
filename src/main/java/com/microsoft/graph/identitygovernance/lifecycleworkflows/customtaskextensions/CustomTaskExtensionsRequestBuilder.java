@@ -79,7 +79,7 @@ public class CustomTaskExtensionsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, CustomTaskExtensionCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, CustomTaskExtensionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new customTaskExtension object. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class CustomTaskExtensionsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, CustomTaskExtension::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, CustomTaskExtension::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the customTaskExtension objects and their properties. This API is available in the following national cloud deployments.

@@ -35,7 +35,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("group", (n) -> { this.setGroup(n.getObjectValue(Group::createFromDiscriminatorValue)); });
-        deserializerMap.put("includedSources", (n) -> { this.setIncludedSources(n.getEnumSetValue(SourceType.class)); });
+        deserializerMap.put("includedSources", (n) -> { this.setIncludedSources(n.getEnumSetValue(SourceType::forValue)); });
         return deserializerMap;
     }
     /**

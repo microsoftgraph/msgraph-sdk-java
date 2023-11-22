@@ -79,7 +79,7 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, BookingStaffMemberBaseCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, BookingStaffMemberBaseCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, BookingStaffMemberBase::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, BookingStaffMemberBase::createFromDiscriminatorValue);
     }
     /**
      * Get a list of bookingStaffMember objects in the specified bookingBusiness. This API is available in the following national cloud deployments.

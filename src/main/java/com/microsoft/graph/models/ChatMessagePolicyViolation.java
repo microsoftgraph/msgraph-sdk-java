@@ -71,12 +71,12 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
-        deserializerMap.put("dlpAction", (n) -> { this.setDlpAction(n.getEnumSetValue(ChatMessagePolicyViolationDlpActionTypes.class)); });
+        deserializerMap.put("dlpAction", (n) -> { this.setDlpAction(n.getEnumSetValue(ChatMessagePolicyViolationDlpActionTypes::forValue)); });
         deserializerMap.put("justificationText", (n) -> { this.setJustificationText(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("policyTip", (n) -> { this.setPolicyTip(n.getObjectValue(ChatMessagePolicyViolationPolicyTip::createFromDiscriminatorValue)); });
-        deserializerMap.put("userAction", (n) -> { this.setUserAction(n.getEnumSetValue(ChatMessagePolicyViolationUserActionTypes.class)); });
-        deserializerMap.put("verdictDetails", (n) -> { this.setVerdictDetails(n.getEnumSetValue(ChatMessagePolicyViolationVerdictDetailsTypes.class)); });
+        deserializerMap.put("userAction", (n) -> { this.setUserAction(n.getEnumSetValue(ChatMessagePolicyViolationUserActionTypes::forValue)); });
+        deserializerMap.put("verdictDetails", (n) -> { this.setVerdictDetails(n.getEnumSetValue(ChatMessagePolicyViolationVerdictDetailsTypes::forValue)); });
         return deserializerMap;
     }
     /**

@@ -76,7 +76,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
         deserializerMap.put("maintenanceWindowDurationInHours", (n) -> { this.setMaintenanceWindowDurationInHours(n.getIntegerValue()); });
         deserializerMap.put("maintenanceWindowStartTime", (n) -> { this.setMaintenanceWindowStartTime(n.getLocalTimeValue()); });
         deserializerMap.put("miracastBlocked", (n) -> { this.setMiracastBlocked(n.getBooleanValue()); });
-        deserializerMap.put("miracastChannel", (n) -> { this.setMiracastChannel(n.getEnumValue(MiracastChannel.class)); });
+        deserializerMap.put("miracastChannel", (n) -> { this.setMiracastChannel(n.getEnumValue(MiracastChannel::forValue)); });
         deserializerMap.put("miracastRequirePin", (n) -> { this.setMiracastRequirePin(n.getBooleanValue()); });
         deserializerMap.put("settingsBlockMyMeetingsAndFiles", (n) -> { this.setSettingsBlockMyMeetingsAndFiles(n.getBooleanValue()); });
         deserializerMap.put("settingsBlockSessionResume", (n) -> { this.setSettingsBlockSessionResume(n.getBooleanValue()); });
@@ -87,7 +87,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
         deserializerMap.put("settingsSleepTimeoutInMinutes", (n) -> { this.setSettingsSleepTimeoutInMinutes(n.getIntegerValue()); });
         deserializerMap.put("welcomeScreenBackgroundImageUrl", (n) -> { this.setWelcomeScreenBackgroundImageUrl(n.getStringValue()); });
         deserializerMap.put("welcomeScreenBlockAutomaticWakeUp", (n) -> { this.setWelcomeScreenBlockAutomaticWakeUp(n.getBooleanValue()); });
-        deserializerMap.put("welcomeScreenMeetingInformation", (n) -> { this.setWelcomeScreenMeetingInformation(n.getEnumValue(WelcomeScreenMeetingInformation.class)); });
+        deserializerMap.put("welcomeScreenMeetingInformation", (n) -> { this.setWelcomeScreenMeetingInformation(n.getEnumValue(WelcomeScreenMeetingInformation::forValue)); });
         return deserializerMap;
     }
     /**

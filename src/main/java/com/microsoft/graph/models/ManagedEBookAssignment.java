@@ -41,7 +41,7 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("installIntent", (n) -> { this.setInstallIntent(n.getEnumValue(InstallIntent.class)); });
+        deserializerMap.put("installIntent", (n) -> { this.setInstallIntent(n.getEnumValue(InstallIntent::forValue)); });
         deserializerMap.put("target", (n) -> { this.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
         return deserializerMap;
     }

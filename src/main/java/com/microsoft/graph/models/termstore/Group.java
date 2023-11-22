@@ -61,7 +61,7 @@ public class Group extends Entity implements Parsable {
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("parentSiteId", (n) -> { this.setParentSiteId(n.getStringValue()); });
-        deserializerMap.put("scope", (n) -> { this.setScope(n.getEnumValue(TermGroupScope.class)); });
+        deserializerMap.put("scope", (n) -> { this.setScope(n.getEnumValue(TermGroupScope::forValue)); });
         deserializerMap.put("sets", (n) -> { this.setSets(n.getCollectionOfObjectValues(Set::createFromDiscriminatorValue)); });
         return deserializerMap;
     }

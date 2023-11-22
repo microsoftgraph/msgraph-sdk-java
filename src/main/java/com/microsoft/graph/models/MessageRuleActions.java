@@ -92,7 +92,7 @@ public class MessageRuleActions implements AdditionalDataHolder, BackedModel, Pa
         deserializerMap.put("forwardAsAttachmentTo", (n) -> { this.setForwardAsAttachmentTo(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
         deserializerMap.put("forwardTo", (n) -> { this.setForwardTo(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
         deserializerMap.put("markAsRead", (n) -> { this.setMarkAsRead(n.getBooleanValue()); });
-        deserializerMap.put("markImportance", (n) -> { this.setMarkImportance(n.getEnumValue(Importance.class)); });
+        deserializerMap.put("markImportance", (n) -> { this.setMarkImportance(n.getEnumValue(Importance::forValue)); });
         deserializerMap.put("moveToFolder", (n) -> { this.setMoveToFolder(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("permanentDelete", (n) -> { this.setPermanentDelete(n.getBooleanValue()); });

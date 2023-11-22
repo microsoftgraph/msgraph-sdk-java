@@ -71,7 +71,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
         deserializerMap.put("lastActiveDateTime", (n) -> { this.setLastActiveDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("startedDateTime", (n) -> { this.setStartedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(Status.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(Status::forValue)); });
         deserializerMap.put("userTimezone", (n) -> { this.setUserTimezone(n.getStringValue()); });
         return deserializerMap;
     }

@@ -63,7 +63,7 @@ public class UserFeedback implements AdditionalDataHolder, BackedModel, Parsable
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("rating", (n) -> { this.setRating(n.getEnumValue(UserFeedbackRating.class)); });
+        deserializerMap.put("rating", (n) -> { this.setRating(n.getEnumValue(UserFeedbackRating::forValue)); });
         deserializerMap.put("text", (n) -> { this.setText(n.getStringValue()); });
         deserializerMap.put("tokens", (n) -> { this.setTokens(n.getObjectValue(FeedbackTokenSet::createFromDiscriminatorValue)); });
         return deserializerMap;

@@ -65,7 +65,7 @@ public class ApplicationTemplateItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ApplicationTemplate::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ApplicationTemplate::createFromDiscriminatorValue);
     }
     /**
      * Retrieve the properties of an applicationTemplate object. This API is available in the following national cloud deployments.

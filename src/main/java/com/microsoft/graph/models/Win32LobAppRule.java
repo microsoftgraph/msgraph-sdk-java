@@ -76,7 +76,7 @@ public class Win32LobAppRule implements AdditionalDataHolder, BackedModel, Parsa
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("ruleType", (n) -> { this.setRuleType(n.getEnumValue(Win32LobAppRuleType.class)); });
+        deserializerMap.put("ruleType", (n) -> { this.setRuleType(n.getEnumValue(Win32LobAppRuleType::forValue)); });
         return deserializerMap;
     }
     /**

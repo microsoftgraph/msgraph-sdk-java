@@ -61,7 +61,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get the properties of an activityBasedTimeoutPolicy object. This API is available in the following national cloud deployments.
@@ -84,7 +84,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ActivityBasedTimeoutPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ActivityBasedTimeoutPolicy::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of an activityBasedTimeoutPolicy object. This API is available in the following national cloud deployments.
@@ -110,7 +110,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ActivityBasedTimeoutPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ActivityBasedTimeoutPolicy::createFromDiscriminatorValue);
     }
     /**
      * Delete an activityBasedTimeoutPolicy object. This API is available in the following national cloud deployments.

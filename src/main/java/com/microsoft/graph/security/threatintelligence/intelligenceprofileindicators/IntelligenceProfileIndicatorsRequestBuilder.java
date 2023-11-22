@@ -77,7 +77,7 @@ public class IntelligenceProfileIndicatorsRequestBuilder extends BaseRequestBuil
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, IntelligenceProfileIndicatorCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, IntelligenceProfileIndicatorCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to intelligenceProfileIndicators for security
@@ -101,7 +101,7 @@ public class IntelligenceProfileIndicatorsRequestBuilder extends BaseRequestBuil
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, IntelligenceProfileIndicator::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, IntelligenceProfileIndicator::createFromDiscriminatorValue);
     }
     /**
      * Read the properties and relationships of a intelligenceProfileIndicator object. This API is available in the following national cloud deployments.

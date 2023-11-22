@@ -79,7 +79,7 @@ public class SharedWithTeamsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SharedWithChannelTeamInfoCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SharedWithChannelTeamInfoCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to sharedWithTeams for teamwork
@@ -103,7 +103,7 @@ public class SharedWithTeamsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SharedWithChannelTeamInfo::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SharedWithChannelTeamInfo::createFromDiscriminatorValue);
     }
     /**
      * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a membershipType value of shared. This API is available in the following national cloud deployments.

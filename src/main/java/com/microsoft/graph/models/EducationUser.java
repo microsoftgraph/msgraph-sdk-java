@@ -129,7 +129,7 @@ public class EducationUser extends Entity implements Parsable {
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("department", (n) -> { this.setDepartment(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("externalSource", (n) -> { this.setExternalSource(n.getEnumValue(EducationExternalSource.class)); });
+        deserializerMap.put("externalSource", (n) -> { this.setExternalSource(n.getEnumValue(EducationExternalSource::forValue)); });
         deserializerMap.put("externalSourceDetail", (n) -> { this.setExternalSourceDetail(n.getStringValue()); });
         deserializerMap.put("givenName", (n) -> { this.setGivenName(n.getStringValue()); });
         deserializerMap.put("mail", (n) -> { this.setMail(n.getStringValue()); });
@@ -142,7 +142,7 @@ public class EducationUser extends Entity implements Parsable {
         deserializerMap.put("passwordPolicies", (n) -> { this.setPasswordPolicies(n.getStringValue()); });
         deserializerMap.put("passwordProfile", (n) -> { this.setPasswordProfile(n.getObjectValue(PasswordProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("preferredLanguage", (n) -> { this.setPreferredLanguage(n.getStringValue()); });
-        deserializerMap.put("primaryRole", (n) -> { this.setPrimaryRole(n.getEnumValue(EducationUserRole.class)); });
+        deserializerMap.put("primaryRole", (n) -> { this.setPrimaryRole(n.getEnumValue(EducationUserRole::forValue)); });
         deserializerMap.put("provisionedPlans", (n) -> { this.setProvisionedPlans(n.getCollectionOfObjectValues(ProvisionedPlan::createFromDiscriminatorValue)); });
         deserializerMap.put("refreshTokensValidFromDateTime", (n) -> { this.setRefreshTokensValidFromDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("relatedContacts", (n) -> { this.setRelatedContacts(n.getCollectionOfObjectValues(RelatedContact::createFromDiscriminatorValue)); });

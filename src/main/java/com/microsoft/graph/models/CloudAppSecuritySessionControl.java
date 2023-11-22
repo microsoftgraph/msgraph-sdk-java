@@ -40,7 +40,7 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("cloudAppSecurityType", (n) -> { this.setCloudAppSecurityType(n.getEnumValue(CloudAppSecuritySessionControlType.class)); });
+        deserializerMap.put("cloudAppSecurityType", (n) -> { this.setCloudAppSecurityType(n.getEnumValue(CloudAppSecuritySessionControlType::forValue)); });
         return deserializerMap;
     }
     /**

@@ -89,7 +89,7 @@ public class TeamFunSettings implements AdditionalDataHolder, BackedModel, Parsa
         deserializerMap.put("allowCustomMemes", (n) -> { this.setAllowCustomMemes(n.getBooleanValue()); });
         deserializerMap.put("allowGiphy", (n) -> { this.setAllowGiphy(n.getBooleanValue()); });
         deserializerMap.put("allowStickersAndMemes", (n) -> { this.setAllowStickersAndMemes(n.getBooleanValue()); });
-        deserializerMap.put("giphyContentRating", (n) -> { this.setGiphyContentRating(n.getEnumValue(GiphyRatingType.class)); });
+        deserializerMap.put("giphyContentRating", (n) -> { this.setGiphyContentRating(n.getEnumValue(GiphyRatingType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }

@@ -74,7 +74,7 @@ public class HostReputationRule implements AdditionalDataHolder, BackedModel, Pa
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("relatedDetailsUrl", (n) -> { this.setRelatedDetailsUrl(n.getStringValue()); });
-        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(HostReputationRuleSeverity.class)); });
+        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(HostReputationRuleSeverity::forValue)); });
         return deserializerMap;
     }
     /**

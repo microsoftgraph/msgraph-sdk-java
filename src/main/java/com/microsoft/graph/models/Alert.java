@@ -166,7 +166,7 @@ public class Alert extends Entity implements Parsable {
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("detectionIds", (n) -> { this.setDetectionIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("eventDateTime", (n) -> { this.setEventDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("feedback", (n) -> { this.setFeedback(n.getEnumValue(AlertFeedback.class)); });
+        deserializerMap.put("feedback", (n) -> { this.setFeedback(n.getEnumValue(AlertFeedback::forValue)); });
         deserializerMap.put("fileStates", (n) -> { this.setFileStates(n.getCollectionOfObjectValues(FileSecurityState::createFromDiscriminatorValue)); });
         deserializerMap.put("historyStates", (n) -> { this.setHistoryStates(n.getCollectionOfObjectValues(AlertHistoryState::createFromDiscriminatorValue)); });
         deserializerMap.put("hostStates", (n) -> { this.setHostStates(n.getCollectionOfObjectValues(HostSecurityState::createFromDiscriminatorValue)); });
@@ -181,9 +181,9 @@ public class Alert extends Entity implements Parsable {
         deserializerMap.put("recommendedActions", (n) -> { this.setRecommendedActions(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("registryKeyStates", (n) -> { this.setRegistryKeyStates(n.getCollectionOfObjectValues(RegistryKeyState::createFromDiscriminatorValue)); });
         deserializerMap.put("securityResources", (n) -> { this.setSecurityResources(n.getCollectionOfObjectValues(SecurityResource::createFromDiscriminatorValue)); });
-        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(AlertSeverity.class)); });
+        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(AlertSeverity::forValue)); });
         deserializerMap.put("sourceMaterials", (n) -> { this.setSourceMaterials(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AlertStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AlertStatus::forValue)); });
         deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
         deserializerMap.put("triggers", (n) -> { this.setTriggers(n.getCollectionOfObjectValues(AlertTrigger::createFromDiscriminatorValue)); });

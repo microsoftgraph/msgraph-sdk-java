@@ -60,7 +60,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("policyMigrationState", (n) -> { this.setPolicyMigrationState(n.getEnumValue(AuthenticationMethodsPolicyMigrationState.class)); });
+        deserializerMap.put("policyMigrationState", (n) -> { this.setPolicyMigrationState(n.getEnumValue(AuthenticationMethodsPolicyMigrationState::forValue)); });
         deserializerMap.put("policyVersion", (n) -> { this.setPolicyVersion(n.getStringValue()); });
         deserializerMap.put("reconfirmationInDays", (n) -> { this.setReconfirmationInDays(n.getIntegerValue()); });
         deserializerMap.put("registrationEnforcement", (n) -> { this.setRegistrationEnforcement(n.getObjectValue(RegistrationEnforcement::createFromDiscriminatorValue)); });

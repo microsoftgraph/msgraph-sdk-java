@@ -56,15 +56,15 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("classification", (n) -> { this.setClassification(n.getEnumValue(ServiceHealthClassificationType.class)); });
+        deserializerMap.put("classification", (n) -> { this.setClassification(n.getEnumValue(ServiceHealthClassificationType::forValue)); });
         deserializerMap.put("feature", (n) -> { this.setFeature(n.getStringValue()); });
         deserializerMap.put("featureGroup", (n) -> { this.setFeatureGroup(n.getStringValue()); });
         deserializerMap.put("impactDescription", (n) -> { this.setImpactDescription(n.getStringValue()); });
         deserializerMap.put("isResolved", (n) -> { this.setIsResolved(n.getBooleanValue()); });
-        deserializerMap.put("origin", (n) -> { this.setOrigin(n.getEnumValue(ServiceHealthOrigin.class)); });
+        deserializerMap.put("origin", (n) -> { this.setOrigin(n.getEnumValue(ServiceHealthOrigin::forValue)); });
         deserializerMap.put("posts", (n) -> { this.setPosts(n.getCollectionOfObjectValues(ServiceHealthIssuePost::createFromDiscriminatorValue)); });
         deserializerMap.put("service", (n) -> { this.setService(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ServiceHealthStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ServiceHealthStatus::forValue)); });
         return deserializerMap;
     }
     /**

@@ -107,7 +107,7 @@ public class UnifiedRoleAssignmentScheduleRequestItemRequestBuilder extends Base
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * In PIM, read the details of a request for an active and persistent role assignment made through the unifiedRoleAssignmentScheduleRequest object. This API is available in the following national cloud deployments.
@@ -130,7 +130,7 @@ public class UnifiedRoleAssignmentScheduleRequestItemRequestBuilder extends Base
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UnifiedRoleAssignmentScheduleRequest::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleAssignmentScheduleRequest::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property roleAssignmentScheduleRequests in roleManagement
@@ -154,7 +154,7 @@ public class UnifiedRoleAssignmentScheduleRequestItemRequestBuilder extends Base
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UnifiedRoleAssignmentScheduleRequest::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleAssignmentScheduleRequest::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property roleAssignmentScheduleRequests for roleManagement

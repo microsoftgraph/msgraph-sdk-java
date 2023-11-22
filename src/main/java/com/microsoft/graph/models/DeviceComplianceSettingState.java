@@ -73,7 +73,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
         deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
         deserializerMap.put("setting", (n) -> { this.setSetting(n.getStringValue()); });
         deserializerMap.put("settingName", (n) -> { this.setSettingName(n.getStringValue()); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ComplianceStatus.class)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ComplianceStatus::forValue)); });
         deserializerMap.put("userEmail", (n) -> { this.setUserEmail(n.getStringValue()); });
         deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
         deserializerMap.put("userName", (n) -> { this.setUserName(n.getStringValue()); });

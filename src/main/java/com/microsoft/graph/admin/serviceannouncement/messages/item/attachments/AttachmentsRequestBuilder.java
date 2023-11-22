@@ -79,7 +79,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ServiceAnnouncementAttachmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ServiceAnnouncementAttachmentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to attachments for admin
@@ -103,7 +103,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ServiceAnnouncementAttachment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ServiceAnnouncementAttachment::createFromDiscriminatorValue);
     }
     /**
      * Get the list of attachments associated with a service message. This API is available in the following national cloud deployments.

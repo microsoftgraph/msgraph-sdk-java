@@ -51,7 +51,7 @@ public class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRe
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read the properties and relationships of an onPremisesDirectorySynchronization object. This API is available in the following national cloud deployments.
@@ -74,7 +74,7 @@ public class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRe
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, OnPremisesDirectorySynchronization::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, OnPremisesDirectorySynchronization::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of an onPremisesDirectorySynchronization object. This API is available in the following national cloud deployments.
@@ -100,7 +100,7 @@ public class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRe
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, OnPremisesDirectorySynchronization::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, OnPremisesDirectorySynchronization::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property onPremisesSynchronization for directory

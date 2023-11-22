@@ -53,7 +53,7 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve the properties and relationships of a authenticationContextClassReference object. This API is available in the following national cloud deployments.
@@ -76,7 +76,7 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AuthenticationContextClassReference::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationContextClassReference::createFromDiscriminatorValue);
     }
     /**
      * Create an authenticationContextClassReference object, if the ID has not been used. If ID has been used, this call updates the authenticationContextClassReference object. This API is available in the following national cloud deployments.
@@ -102,7 +102,7 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AuthenticationContextClassReference::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationContextClassReference::createFromDiscriminatorValue);
     }
     /**
      * Delete an authenticationContextClassReference object that's not published or used by a conditional access policy. This API is available in the following national cloud deployments.

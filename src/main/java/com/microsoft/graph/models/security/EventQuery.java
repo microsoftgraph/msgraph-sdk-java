@@ -64,7 +64,7 @@ public class EventQuery implements AdditionalDataHolder, BackedModel, Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("query", (n) -> { this.setQuery(n.getStringValue()); });
-        deserializerMap.put("queryType", (n) -> { this.setQueryType(n.getEnumValue(QueryType.class)); });
+        deserializerMap.put("queryType", (n) -> { this.setQueryType(n.getEnumValue(QueryType::forValue)); });
         return deserializerMap;
     }
     /**

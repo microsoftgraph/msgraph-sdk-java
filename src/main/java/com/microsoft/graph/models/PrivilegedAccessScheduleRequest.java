@@ -47,7 +47,7 @@ public class PrivilegedAccessScheduleRequest extends Request implements Parsable
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(ScheduleRequestActions.class)); });
+        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(ScheduleRequestActions::forValue)); });
         deserializerMap.put("isValidationOnly", (n) -> { this.setIsValidationOnly(n.getBooleanValue()); });
         deserializerMap.put("justification", (n) -> { this.setJustification(n.getStringValue()); });
         deserializerMap.put("scheduleInfo", (n) -> { this.setScheduleInfo(n.getObjectValue(RequestSchedule::createFromDiscriminatorValue)); });

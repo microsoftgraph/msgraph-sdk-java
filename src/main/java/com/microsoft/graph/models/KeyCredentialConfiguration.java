@@ -67,7 +67,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
         deserializerMap.put("maxLifetime", (n) -> { this.setMaxLifetime(n.getPeriodAndDurationValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("restrictForAppsCreatedAfterDateTime", (n) -> { this.setRestrictForAppsCreatedAfterDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("restrictionType", (n) -> { this.setRestrictionType(n.getEnumValue(AppKeyCredentialRestrictionType.class)); });
+        deserializerMap.put("restrictionType", (n) -> { this.setRestrictionType(n.getEnumValue(AppKeyCredentialRestrictionType::forValue)); });
         return deserializerMap;
     }
     /**

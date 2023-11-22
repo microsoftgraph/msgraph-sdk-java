@@ -93,7 +93,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     /**
      * List properties and relationships of the user objects.
      * @return a UserCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-user-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-user-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserCollectionResponse get() {
@@ -103,7 +103,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
      * List properties and relationships of the user objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UserCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-user-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-user-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new user.The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties. This API is available in the following national cloud deployments.
@@ -137,7 +137,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, User::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, User::createFromDiscriminatorValue);
     }
     /**
      * List properties and relationships of the user objects.

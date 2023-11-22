@@ -101,12 +101,12 @@ public class AttributeDefinition implements AdditionalDataHolder, BackedModel, P
         deserializerMap.put("flowNullValues", (n) -> { this.setFlowNullValues(n.getBooleanValue()); });
         deserializerMap.put("metadata", (n) -> { this.setMetadata(n.getCollectionOfObjectValues(AttributeDefinitionMetadataEntry::createFromDiscriminatorValue)); });
         deserializerMap.put("multivalued", (n) -> { this.setMultivalued(n.getBooleanValue()); });
-        deserializerMap.put("mutability", (n) -> { this.setMutability(n.getEnumValue(Mutability.class)); });
+        deserializerMap.put("mutability", (n) -> { this.setMutability(n.getEnumValue(Mutability::forValue)); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("referencedObjects", (n) -> { this.setReferencedObjects(n.getCollectionOfObjectValues(ReferencedObject::createFromDiscriminatorValue)); });
         deserializerMap.put("required", (n) -> { this.setRequired(n.getBooleanValue()); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(AttributeType.class)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(AttributeType::forValue)); });
         return deserializerMap;
     }
     /**

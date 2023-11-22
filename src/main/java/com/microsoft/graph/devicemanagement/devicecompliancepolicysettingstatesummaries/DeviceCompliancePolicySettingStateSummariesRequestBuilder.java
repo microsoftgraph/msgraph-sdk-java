@@ -79,7 +79,7 @@ public class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends B
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceCompliancePolicySettingStateSummaryCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceCompliancePolicySettingStateSummaryCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new deviceCompliancePolicySettingStateSummary object.
@@ -105,7 +105,7 @@ public class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends B
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceCompliancePolicySettingStateSummary::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceCompliancePolicySettingStateSummary::createFromDiscriminatorValue);
     }
     /**
      * List properties and relationships of the deviceCompliancePolicySettingStateSummary objects.

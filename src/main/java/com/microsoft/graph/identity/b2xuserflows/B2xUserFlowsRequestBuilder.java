@@ -79,7 +79,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, B2xIdentityUserFlowCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, B2xIdentityUserFlowCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new b2xIdentityUserFlow object. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, B2xIdentityUserFlow::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, B2xIdentityUserFlow::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of b2xIdentityUserFlow objects. This API is available in the following national cloud deployments.

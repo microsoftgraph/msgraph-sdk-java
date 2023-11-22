@@ -59,7 +59,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestB
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get resourceNamespaces from roleManagement
@@ -80,7 +80,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestB
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UnifiedRbacResourceNamespace::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRbacResourceNamespace::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property resourceNamespaces in roleManagement
@@ -104,7 +104,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestB
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UnifiedRbacResourceNamespace::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRbacResourceNamespace::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property resourceNamespaces for roleManagement

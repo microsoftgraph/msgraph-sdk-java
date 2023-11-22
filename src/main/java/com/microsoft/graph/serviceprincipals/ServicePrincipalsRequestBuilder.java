@@ -111,7 +111,7 @@ public class ServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ServicePrincipalCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ServicePrincipalCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new servicePrincipal object. This API is available in the following national cloud deployments.
@@ -137,7 +137,7 @@ public class ServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ServicePrincipal::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ServicePrincipal::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of servicePrincipal objects. This API is available in the following national cloud deployments.

@@ -58,7 +58,7 @@ public class UnfavoriteRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UnfavoritePostResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnfavoritePostResponse::createFromDiscriminatorValue);
     }
     /**
      * Remove the favorite status of serviceUpdateMessages for the signed in user. This API is available in the following national cloud deployments.

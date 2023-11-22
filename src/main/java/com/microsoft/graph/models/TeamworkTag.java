@@ -51,7 +51,7 @@ public class TeamworkTag extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("memberCount", (n) -> { this.setMemberCount(n.getIntegerValue()); });
         deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(TeamworkTagMember::createFromDiscriminatorValue)); });
-        deserializerMap.put("tagType", (n) -> { this.setTagType(n.getEnumValue(TeamworkTagType.class)); });
+        deserializerMap.put("tagType", (n) -> { this.setTagType(n.getEnumValue(TeamworkTagType::forValue)); });
         deserializerMap.put("teamId", (n) -> { this.setTeamId(n.getStringValue()); });
         return deserializerMap;
     }

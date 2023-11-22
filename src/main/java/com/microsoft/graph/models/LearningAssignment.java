@@ -66,7 +66,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignedDateTime", (n) -> { this.setAssignedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("assignerUserId", (n) -> { this.setAssignerUserId(n.getStringValue()); });
-        deserializerMap.put("assignmentType", (n) -> { this.setAssignmentType(n.getEnumValue(AssignmentType.class)); });
+        deserializerMap.put("assignmentType", (n) -> { this.setAssignmentType(n.getEnumValue(AssignmentType::forValue)); });
         deserializerMap.put("dueDateTime", (n) -> { this.setDueDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         deserializerMap.put("notes", (n) -> { this.setNotes(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
         return deserializerMap;

@@ -87,7 +87,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, EdiscoveryReviewTagCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryReviewTagCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new ediscoveryReviewTag object. This API is available in the following national cloud deployments.
@@ -113,7 +113,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, EdiscoveryReviewTag::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryReviewTag::createFromDiscriminatorValue);
     }
     /**
      * Get a list of eDiscoveryReviewTag objects and their properties. This API is available in the following national cloud deployments.

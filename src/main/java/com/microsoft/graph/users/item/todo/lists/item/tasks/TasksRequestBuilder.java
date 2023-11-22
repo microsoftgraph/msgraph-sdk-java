@@ -87,7 +87,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TodoTaskCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TodoTaskCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new task object in a specified todoTaskList. This API is available in the following national cloud deployments.
@@ -113,7 +113,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TodoTask::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TodoTask::createFromDiscriminatorValue);
     }
     /**
      * Get the todoTask resources from the tasks navigation property of a specified todoTaskList. This API is available in the following national cloud deployments.

@@ -54,7 +54,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
         deserializerMap.put("reviewHistoryPeriodEndDateTime", (n) -> { this.setReviewHistoryPeriodEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("reviewHistoryPeriodStartDateTime", (n) -> { this.setReviewHistoryPeriodStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("runDateTime", (n) -> { this.setRunDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AccessReviewHistoryStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AccessReviewHistoryStatus::forValue)); });
         return deserializerMap;
     }
     /**

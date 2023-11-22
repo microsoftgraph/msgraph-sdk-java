@@ -70,9 +70,9 @@ public class Acl implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("accessType", (n) -> { this.setAccessType(n.getEnumValue(AccessType.class)); });
+        deserializerMap.put("accessType", (n) -> { this.setAccessType(n.getEnumValue(AccessType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(AclType.class)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(AclType::forValue)); });
         deserializerMap.put("value", (n) -> { this.setValue(n.getStringValue()); });
         return deserializerMap;
     }

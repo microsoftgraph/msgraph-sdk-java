@@ -79,7 +79,7 @@ public class TelecomExpenseManagementPartnersRequestBuilder extends BaseRequestB
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TelecomExpenseManagementPartnerCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TelecomExpenseManagementPartnerCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new telecomExpenseManagementPartner object.
@@ -105,7 +105,7 @@ public class TelecomExpenseManagementPartnersRequestBuilder extends BaseRequestB
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TelecomExpenseManagementPartner::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TelecomExpenseManagementPartner::createFromDiscriminatorValue);
     }
     /**
      * List properties and relationships of the telecomExpenseManagementPartner objects.

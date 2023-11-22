@@ -80,8 +80,8 @@ public class AttributeMapping implements AdditionalDataHolder, BackedModel, Pars
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("defaultValue", (n) -> { this.setDefaultValue(n.getStringValue()); });
         deserializerMap.put("exportMissingReferences", (n) -> { this.setExportMissingReferences(n.getBooleanValue()); });
-        deserializerMap.put("flowBehavior", (n) -> { this.setFlowBehavior(n.getEnumValue(AttributeFlowBehavior.class)); });
-        deserializerMap.put("flowType", (n) -> { this.setFlowType(n.getEnumValue(AttributeFlowType.class)); });
+        deserializerMap.put("flowBehavior", (n) -> { this.setFlowBehavior(n.getEnumValue(AttributeFlowBehavior::forValue)); });
+        deserializerMap.put("flowType", (n) -> { this.setFlowType(n.getEnumValue(AttributeFlowType::forValue)); });
         deserializerMap.put("matchingPriority", (n) -> { this.setMatchingPriority(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("source", (n) -> { this.setSource(n.getObjectValue(AttributeMappingSource::createFromDiscriminatorValue)); });

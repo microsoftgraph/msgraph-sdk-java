@@ -42,7 +42,7 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("actionType", (n) -> { this.setActionType(n.getEnumValue(DeviceComplianceActionType.class)); });
+        deserializerMap.put("actionType", (n) -> { this.setActionType(n.getEnumValue(DeviceComplianceActionType::forValue)); });
         deserializerMap.put("gracePeriodHours", (n) -> { this.setGracePeriodHours(n.getIntegerValue()); });
         deserializerMap.put("notificationMessageCCList", (n) -> { this.setNotificationMessageCCList(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("notificationTemplateId", (n) -> { this.setNotificationTemplateId(n.getStringValue()); });

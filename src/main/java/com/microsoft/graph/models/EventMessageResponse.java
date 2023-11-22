@@ -33,7 +33,7 @@ public class EventMessageResponse extends EventMessage implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("proposedNewTime", (n) -> { this.setProposedNewTime(n.getObjectValue(TimeSlot::createFromDiscriminatorValue)); });
-        deserializerMap.put("responseType", (n) -> { this.setResponseType(n.getEnumValue(ResponseType.class)); });
+        deserializerMap.put("responseType", (n) -> { this.setResponseType(n.getEnumValue(ResponseType::forValue)); });
         return deserializerMap;
     }
     /**

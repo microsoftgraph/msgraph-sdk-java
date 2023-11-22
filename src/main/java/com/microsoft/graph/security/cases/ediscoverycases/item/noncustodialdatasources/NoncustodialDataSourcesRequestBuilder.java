@@ -93,7 +93,7 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, EdiscoveryNoncustodialDataSourceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryNoncustodialDataSourceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new ediscoveryNoncustodialDataSource object. This API is available in the following national cloud deployments.
@@ -119,7 +119,7 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, EdiscoveryNoncustodialDataSource::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryNoncustodialDataSource::createFromDiscriminatorValue);
     }
     /**
      * Returns a list of case ediscoveryNoncustodialDataSource objects for this case.

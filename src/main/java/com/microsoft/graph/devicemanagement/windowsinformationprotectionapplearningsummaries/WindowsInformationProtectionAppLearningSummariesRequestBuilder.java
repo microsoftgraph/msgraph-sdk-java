@@ -79,7 +79,7 @@ public class WindowsInformationProtectionAppLearningSummariesRequestBuilder exte
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, WindowsInformationProtectionAppLearningSummaryCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, WindowsInformationProtectionAppLearningSummaryCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new windowsInformationProtectionAppLearningSummary object.
@@ -105,7 +105,7 @@ public class WindowsInformationProtectionAppLearningSummariesRequestBuilder exte
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, WindowsInformationProtectionAppLearningSummary::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, WindowsInformationProtectionAppLearningSummary::createFromDiscriminatorValue);
     }
     /**
      * List properties and relationships of the windowsInformationProtectionAppLearningSummary objects.

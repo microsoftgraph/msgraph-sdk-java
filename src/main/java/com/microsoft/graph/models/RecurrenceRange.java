@@ -76,7 +76,7 @@ public class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsa
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("recurrenceTimeZone", (n) -> { this.setRecurrenceTimeZone(n.getStringValue()); });
         deserializerMap.put("startDate", (n) -> { this.setStartDate(n.getLocalDateValue()); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(RecurrenceRangeType.class)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(RecurrenceRangeType::forValue)); });
         return deserializerMap;
     }
     /**

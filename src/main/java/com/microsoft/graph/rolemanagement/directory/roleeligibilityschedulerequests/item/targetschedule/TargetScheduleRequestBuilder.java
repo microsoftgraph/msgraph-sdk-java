@@ -55,7 +55,7 @@ public class TargetScheduleRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UnifiedRoleEligibilitySchedule::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleEligibilitySchedule::createFromDiscriminatorValue);
     }
     /**
      * The schedule for a role eligibility that is referenced through the targetScheduleId property. Supports $expand.

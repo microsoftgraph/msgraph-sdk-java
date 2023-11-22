@@ -62,10 +62,10 @@ public class EventMessage extends Message implements Parsable {
         deserializerMap.put("isDelegated", (n) -> { this.setIsDelegated(n.getBooleanValue()); });
         deserializerMap.put("isOutOfDate", (n) -> { this.setIsOutOfDate(n.getBooleanValue()); });
         deserializerMap.put("location", (n) -> { this.setLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
-        deserializerMap.put("meetingMessageType", (n) -> { this.setMeetingMessageType(n.getEnumValue(MeetingMessageType.class)); });
+        deserializerMap.put("meetingMessageType", (n) -> { this.setMeetingMessageType(n.getEnumValue(MeetingMessageType::forValue)); });
         deserializerMap.put("recurrence", (n) -> { this.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(EventType.class)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(EventType::forValue)); });
         return deserializerMap;
     }
     /**

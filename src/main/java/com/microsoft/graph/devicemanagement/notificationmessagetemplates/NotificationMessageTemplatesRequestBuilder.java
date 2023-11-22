@@ -79,7 +79,7 @@ public class NotificationMessageTemplatesRequestBuilder extends BaseRequestBuild
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, NotificationMessageTemplateCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, NotificationMessageTemplateCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new notificationMessageTemplate object.
@@ -105,7 +105,7 @@ public class NotificationMessageTemplatesRequestBuilder extends BaseRequestBuild
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, NotificationMessageTemplate::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, NotificationMessageTemplate::createFromDiscriminatorValue);
     }
     /**
      * List properties and relationships of the notificationMessageTemplate objects.

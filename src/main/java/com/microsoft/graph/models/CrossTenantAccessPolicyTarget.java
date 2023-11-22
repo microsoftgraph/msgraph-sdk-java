@@ -64,7 +64,7 @@ public class CrossTenantAccessPolicyTarget implements AdditionalDataHolder, Back
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("target", (n) -> { this.setTarget(n.getStringValue()); });
-        deserializerMap.put("targetType", (n) -> { this.setTargetType(n.getEnumValue(CrossTenantAccessPolicyTargetType.class)); });
+        deserializerMap.put("targetType", (n) -> { this.setTargetType(n.getEnumValue(CrossTenantAccessPolicyTargetType::forValue)); });
         return deserializerMap;
     }
     /**

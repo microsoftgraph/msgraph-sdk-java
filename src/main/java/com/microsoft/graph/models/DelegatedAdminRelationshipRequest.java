@@ -48,10 +48,10 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(DelegatedAdminRelationshipRequestAction.class)); });
+        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(DelegatedAdminRelationshipRequestAction::forValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(DelegatedAdminRelationshipRequestStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(DelegatedAdminRelationshipRequestStatus::forValue)); });
         return deserializerMap;
     }
     /**

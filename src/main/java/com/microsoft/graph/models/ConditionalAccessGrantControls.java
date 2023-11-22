@@ -87,7 +87,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Bac
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("authenticationStrength", (n) -> { this.setAuthenticationStrength(n.getObjectValue(AuthenticationStrengthPolicy::createFromDiscriminatorValue)); });
-        deserializerMap.put("builtInControls", (n) -> { this.setBuiltInControls(n.getCollectionOfEnumValues(ConditionalAccessGrantControl.class)); });
+        deserializerMap.put("builtInControls", (n) -> { this.setBuiltInControls(n.getCollectionOfEnumValues(ConditionalAccessGrantControl::forValue)); });
         deserializerMap.put("customAuthenticationFactors", (n) -> { this.setCustomAuthenticationFactors(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("operator", (n) -> { this.setOperator(n.getStringValue()); });

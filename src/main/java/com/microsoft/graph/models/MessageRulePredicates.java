@@ -92,7 +92,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, BackedModel,
         deserializerMap.put("fromAddresses", (n) -> { this.setFromAddresses(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
         deserializerMap.put("hasAttachments", (n) -> { this.setHasAttachments(n.getBooleanValue()); });
         deserializerMap.put("headerContains", (n) -> { this.setHeaderContains(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("importance", (n) -> { this.setImportance(n.getEnumValue(Importance.class)); });
+        deserializerMap.put("importance", (n) -> { this.setImportance(n.getEnumValue(Importance::forValue)); });
         deserializerMap.put("isApprovalRequest", (n) -> { this.setIsApprovalRequest(n.getBooleanValue()); });
         deserializerMap.put("isAutomaticForward", (n) -> { this.setIsAutomaticForward(n.getBooleanValue()); });
         deserializerMap.put("isAutomaticReply", (n) -> { this.setIsAutomaticReply(n.getBooleanValue()); });
@@ -104,12 +104,12 @@ public class MessageRulePredicates implements AdditionalDataHolder, BackedModel,
         deserializerMap.put("isReadReceipt", (n) -> { this.setIsReadReceipt(n.getBooleanValue()); });
         deserializerMap.put("isSigned", (n) -> { this.setIsSigned(n.getBooleanValue()); });
         deserializerMap.put("isVoicemail", (n) -> { this.setIsVoicemail(n.getBooleanValue()); });
-        deserializerMap.put("messageActionFlag", (n) -> { this.setMessageActionFlag(n.getEnumValue(MessageActionFlag.class)); });
+        deserializerMap.put("messageActionFlag", (n) -> { this.setMessageActionFlag(n.getEnumValue(MessageActionFlag::forValue)); });
         deserializerMap.put("notSentToMe", (n) -> { this.setNotSentToMe(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("recipientContains", (n) -> { this.setRecipientContains(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("senderContains", (n) -> { this.setSenderContains(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("sensitivity", (n) -> { this.setSensitivity(n.getEnumValue(Sensitivity.class)); });
+        deserializerMap.put("sensitivity", (n) -> { this.setSensitivity(n.getEnumValue(Sensitivity::forValue)); });
         deserializerMap.put("sentCcMe", (n) -> { this.setSentCcMe(n.getBooleanValue()); });
         deserializerMap.put("sentOnlyToMe", (n) -> { this.setSentOnlyToMe(n.getBooleanValue()); });
         deserializerMap.put("sentToAddresses", (n) -> { this.setSentToAddresses(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });

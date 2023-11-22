@@ -34,7 +34,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("recommendationLookBackDuration", (n) -> { this.setRecommendationLookBackDuration(n.getPeriodAndDurationValue()); });
-        deserializerMap.put("signInScope", (n) -> { this.setSignInScope(n.getEnumValue(UserSignInRecommendationScope.class)); });
+        deserializerMap.put("signInScope", (n) -> { this.setSignInScope(n.getEnumValue(UserSignInRecommendationScope::forValue)); });
         return deserializerMap;
     }
     /**

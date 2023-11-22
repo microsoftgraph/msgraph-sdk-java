@@ -96,7 +96,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("deviceErrorCode", (n) -> { this.setDeviceErrorCode(n.getIntegerValue()); });
         deserializerMap.put("deviceErrorName", (n) -> { this.setDeviceErrorName(n.getStringValue()); });
-        deserializerMap.put("deviceImportStatus", (n) -> { this.setDeviceImportStatus(n.getEnumValue(ImportedWindowsAutopilotDeviceIdentityImportStatus.class)); });
+        deserializerMap.put("deviceImportStatus", (n) -> { this.setDeviceImportStatus(n.getEnumValue(ImportedWindowsAutopilotDeviceIdentityImportStatus::forValue)); });
         deserializerMap.put("deviceRegistrationId", (n) -> { this.setDeviceRegistrationId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;

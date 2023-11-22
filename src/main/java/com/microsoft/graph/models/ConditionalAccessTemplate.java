@@ -51,7 +51,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("details", (n) -> { this.setDetails(n.getObjectValue(ConditionalAccessPolicyDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
-        deserializerMap.put("scenarios", (n) -> { this.setScenarios(n.getEnumSetValue(TemplateScenarios.class)); });
+        deserializerMap.put("scenarios", (n) -> { this.setScenarios(n.getEnumSetValue(TemplateScenarios::forValue)); });
         return deserializerMap;
     }
     /**

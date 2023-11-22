@@ -87,7 +87,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SynchronizationJobCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SynchronizationJobCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new synchronization job with a default synchronization schema. The job is created in a disabled state. Call Start job to start synchronization. This API is available in the following national cloud deployments.
@@ -113,7 +113,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SynchronizationJob::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SynchronizationJob::createFromDiscriminatorValue);
     }
     /**
      * List existing jobs for a given application instance (service principal). This API is available in the following national cloud deployments.

@@ -71,7 +71,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         deserializerMap.put("initiatedBy", (n) -> { this.setInitiatedBy(n.getObjectValue(Initiator::createFromDiscriminatorValue)); });
         deserializerMap.put("jobId", (n) -> { this.setJobId(n.getStringValue()); });
         deserializerMap.put("modifiedProperties", (n) -> { this.setModifiedProperties(n.getCollectionOfObjectValues(ModifiedProperty::createFromDiscriminatorValue)); });
-        deserializerMap.put("provisioningAction", (n) -> { this.setProvisioningAction(n.getEnumValue(ProvisioningAction.class)); });
+        deserializerMap.put("provisioningAction", (n) -> { this.setProvisioningAction(n.getEnumValue(ProvisioningAction::forValue)); });
         deserializerMap.put("provisioningStatusInfo", (n) -> { this.setProvisioningStatusInfo(n.getObjectValue(ProvisioningStatusInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("provisioningSteps", (n) -> { this.setProvisioningSteps(n.getCollectionOfObjectValues(ProvisioningStep::createFromDiscriminatorValue)); });
         deserializerMap.put("servicePrincipal", (n) -> { this.setServicePrincipal(n.getObjectValue(ProvisioningServicePrincipal::createFromDiscriminatorValue)); });

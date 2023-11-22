@@ -59,7 +59,7 @@ public class MoveRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, Message::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, Message::createFromDiscriminatorValue);
     }
     /**
      * Move a message to another folder within the specified user's mailbox. This creates a new copy of the message in the destination folder and removes the original message. This API is available in the following national cloud deployments.

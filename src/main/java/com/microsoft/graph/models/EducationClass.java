@@ -146,7 +146,7 @@ public class EducationClass extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("externalId", (n) -> { this.setExternalId(n.getStringValue()); });
         deserializerMap.put("externalName", (n) -> { this.setExternalName(n.getStringValue()); });
-        deserializerMap.put("externalSource", (n) -> { this.setExternalSource(n.getEnumValue(EducationExternalSource.class)); });
+        deserializerMap.put("externalSource", (n) -> { this.setExternalSource(n.getEnumValue(EducationExternalSource::forValue)); });
         deserializerMap.put("externalSourceDetail", (n) -> { this.setExternalSourceDetail(n.getStringValue()); });
         deserializerMap.put("grade", (n) -> { this.setGrade(n.getStringValue()); });
         deserializerMap.put("group", (n) -> { this.setGroup(n.getObjectValue(Group::createFromDiscriminatorValue)); });

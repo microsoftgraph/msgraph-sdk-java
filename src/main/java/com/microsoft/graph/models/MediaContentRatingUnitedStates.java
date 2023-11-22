@@ -62,9 +62,9 @@ public class MediaContentRatingUnitedStates implements AdditionalDataHolder, Bac
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("movieRating", (n) -> { this.setMovieRating(n.getEnumValue(RatingUnitedStatesMoviesType.class)); });
+        deserializerMap.put("movieRating", (n) -> { this.setMovieRating(n.getEnumValue(RatingUnitedStatesMoviesType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("tvRating", (n) -> { this.setTvRating(n.getEnumValue(RatingUnitedStatesTelevisionType.class)); });
+        deserializerMap.put("tvRating", (n) -> { this.setTvRating(n.getEnumValue(RatingUnitedStatesTelevisionType::forValue)); });
         return deserializerMap;
     }
     /**

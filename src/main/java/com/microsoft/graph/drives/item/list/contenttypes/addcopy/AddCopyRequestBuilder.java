@@ -59,7 +59,7 @@ public class AddCopyRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ContentType::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ContentType::createFromDiscriminatorValue);
     }
     /**
      * Add a copy of a content type][contentType] from a [site][site] to a [list][list]. This API is available in the following [national cloud deployments.

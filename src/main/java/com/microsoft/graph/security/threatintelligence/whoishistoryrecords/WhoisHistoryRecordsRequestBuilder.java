@@ -77,7 +77,7 @@ public class WhoisHistoryRecordsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, WhoisHistoryRecordCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, WhoisHistoryRecordCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to whoisHistoryRecords for security
@@ -101,7 +101,7 @@ public class WhoisHistoryRecordsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, WhoisHistoryRecord::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, WhoisHistoryRecord::createFromDiscriminatorValue);
     }
     /**
      * Retrieve details about whoisHistoryRecord objects.Note: List retrieval is not yet supported.

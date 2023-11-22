@@ -78,13 +78,13 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
-        deserializerMap.put("externalAudience", (n) -> { this.setExternalAudience(n.getEnumValue(ExternalAudienceScope.class)); });
+        deserializerMap.put("externalAudience", (n) -> { this.setExternalAudience(n.getEnumValue(ExternalAudienceScope::forValue)); });
         deserializerMap.put("externalReplyMessage", (n) -> { this.setExternalReplyMessage(n.getStringValue()); });
         deserializerMap.put("internalReplyMessage", (n) -> { this.setInternalReplyMessage(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("scheduledEndDateTime", (n) -> { this.setScheduledEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         deserializerMap.put("scheduledStartDateTime", (n) -> { this.setScheduledStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AutomaticRepliesStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AutomaticRepliesStatus::forValue)); });
         return deserializerMap;
     }
     /**

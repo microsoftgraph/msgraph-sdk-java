@@ -71,7 +71,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
         deserializerMap.put("grantControls", (n) -> { this.setGrantControls(n.getObjectValue(ConditionalAccessGrantControls::createFromDiscriminatorValue)); });
         deserializerMap.put("modifiedDateTime", (n) -> { this.setModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("sessionControls", (n) -> { this.setSessionControls(n.getObjectValue(ConditionalAccessSessionControls::createFromDiscriminatorValue)); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ConditionalAccessPolicyState.class)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ConditionalAccessPolicyState::forValue)); });
         deserializerMap.put("templateId", (n) -> { this.setTemplateId(n.getStringValue()); });
         return deserializerMap;
     }

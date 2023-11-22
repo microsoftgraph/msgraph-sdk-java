@@ -171,7 +171,7 @@ public class PlannerTask extends Entity implements Parsable {
         deserializerMap.put("orderHint", (n) -> { this.setOrderHint(n.getStringValue()); });
         deserializerMap.put("percentComplete", (n) -> { this.setPercentComplete(n.getIntegerValue()); });
         deserializerMap.put("planId", (n) -> { this.setPlanId(n.getStringValue()); });
-        deserializerMap.put("previewType", (n) -> { this.setPreviewType(n.getEnumValue(PlannerPreviewType.class)); });
+        deserializerMap.put("previewType", (n) -> { this.setPreviewType(n.getEnumValue(PlannerPreviewType::forValue)); });
         deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
         deserializerMap.put("progressTaskBoardFormat", (n) -> { this.setProgressTaskBoardFormat(n.getObjectValue(PlannerProgressTaskBoardTaskFormat::createFromDiscriminatorValue)); });
         deserializerMap.put("referenceCount", (n) -> { this.setReferenceCount(n.getIntegerValue()); });

@@ -47,8 +47,8 @@ public class DeviceManagementPartner extends Entity implements Parsable {
         deserializerMap.put("groupsRequiringPartnerEnrollment", (n) -> { this.setGroupsRequiringPartnerEnrollment(n.getCollectionOfObjectValues(DeviceManagementPartnerAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("isConfigured", (n) -> { this.setIsConfigured(n.getBooleanValue()); });
         deserializerMap.put("lastHeartbeatDateTime", (n) -> { this.setLastHeartbeatDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("partnerAppType", (n) -> { this.setPartnerAppType(n.getEnumValue(DeviceManagementPartnerAppType.class)); });
-        deserializerMap.put("partnerState", (n) -> { this.setPartnerState(n.getEnumValue(DeviceManagementPartnerTenantState.class)); });
+        deserializerMap.put("partnerAppType", (n) -> { this.setPartnerAppType(n.getEnumValue(DeviceManagementPartnerAppType::forValue)); });
+        deserializerMap.put("partnerState", (n) -> { this.setPartnerState(n.getEnumValue(DeviceManagementPartnerTenantState::forValue)); });
         deserializerMap.put("singleTenantAppId", (n) -> { this.setSingleTenantAppId(n.getStringValue()); });
         deserializerMap.put("whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime", (n) -> { this.setWhenPartnerDevicesWillBeMarkedAsNonCompliantDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("whenPartnerDevicesWillBeRemovedDateTime", (n) -> { this.setWhenPartnerDevicesWillBeRemovedDateTime(n.getOffsetDateTimeValue()); });

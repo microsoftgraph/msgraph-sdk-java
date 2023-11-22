@@ -40,7 +40,7 @@ public class EmailAuthenticationMethodConfiguration extends AuthenticationMethod
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("allowExternalIdToUseEmailOtp", (n) -> { this.setAllowExternalIdToUseEmailOtp(n.getEnumValue(ExternalEmailOtpState.class)); });
+        deserializerMap.put("allowExternalIdToUseEmailOtp", (n) -> { this.setAllowExternalIdToUseEmailOtp(n.getEnumValue(ExternalEmailOtpState::forValue)); });
         deserializerMap.put("includeTargets", (n) -> { this.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodTarget::createFromDiscriminatorValue)); });
         return deserializerMap;
     }

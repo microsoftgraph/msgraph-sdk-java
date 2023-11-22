@@ -63,7 +63,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
         deserializerMap.put("isEmailNotificationEnabled", (n) -> { this.setIsEmailNotificationEnabled(n.getBooleanValue()); });
-        deserializerMap.put("role", (n) -> { this.setRole(n.getEnumValue(BookingStaffRole.class)); });
+        deserializerMap.put("role", (n) -> { this.setRole(n.getEnumValue(BookingStaffRole::forValue)); });
         deserializerMap.put("timeZone", (n) -> { this.setTimeZone(n.getStringValue()); });
         deserializerMap.put("useBusinessHours", (n) -> { this.setUseBusinessHours(n.getBooleanValue()); });
         deserializerMap.put("workingHours", (n) -> { this.setWorkingHours(n.getCollectionOfObjectValues(BookingWorkHours::createFromDiscriminatorValue)); });

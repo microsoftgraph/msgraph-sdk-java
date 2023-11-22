@@ -53,7 +53,7 @@ public class DetectedApp extends Entity implements Parsable {
         deserializerMap.put("deviceCount", (n) -> { this.setDeviceCount(n.getIntegerValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("managedDevices", (n) -> { this.setManagedDevices(n.getCollectionOfObjectValues(ManagedDevice::createFromDiscriminatorValue)); });
-        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getEnumValue(DetectedAppPlatformType.class)); });
+        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getEnumValue(DetectedAppPlatformType::forValue)); });
         deserializerMap.put("publisher", (n) -> { this.setPublisher(n.getStringValue()); });
         deserializerMap.put("sizeInByte", (n) -> { this.setSizeInByte(n.getLongValue()); });
         deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });

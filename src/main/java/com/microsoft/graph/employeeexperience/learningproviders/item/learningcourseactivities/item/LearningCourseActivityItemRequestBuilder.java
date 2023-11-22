@@ -53,7 +53,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get learningCourseActivities from employeeExperience
@@ -74,7 +74,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, LearningCourseActivity::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, LearningCourseActivity::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of a learningCourseActivity object.  This API is available in the following national cloud deployments.
@@ -100,7 +100,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, LearningCourseActivity::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, LearningCourseActivity::createFromDiscriminatorValue);
     }
     /**
      * Delete a learningCourseActivity object by using the course activity ID of either an assignment or a self-initiated activity. This API is available in the following national cloud deployments.

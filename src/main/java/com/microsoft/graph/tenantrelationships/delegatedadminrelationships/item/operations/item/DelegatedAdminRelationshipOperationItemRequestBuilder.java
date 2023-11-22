@@ -51,7 +51,7 @@ public class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseR
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read the properties of a delegatedAdminRelationshipOperation object. This API is available in the following national cloud deployments.
@@ -74,7 +74,7 @@ public class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseR
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DelegatedAdminRelationshipOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminRelationshipOperation::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property operations in tenantRelationships
@@ -98,7 +98,7 @@ public class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseR
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DelegatedAdminRelationshipOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminRelationshipOperation::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property operations for tenantRelationships

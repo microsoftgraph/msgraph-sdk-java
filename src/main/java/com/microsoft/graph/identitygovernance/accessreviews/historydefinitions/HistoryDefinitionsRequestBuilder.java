@@ -79,7 +79,7 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AccessReviewHistoryDefinitionCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewHistoryDefinitionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new accessReviewHistoryDefinition object. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AccessReviewHistoryDefinition::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewHistoryDefinition::createFromDiscriminatorValue);
     }
     /**
      * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties. This API is available in the following national cloud deployments.

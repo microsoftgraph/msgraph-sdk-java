@@ -109,23 +109,23 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceCompliancePolicies/{deviceCompliancePolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a windows81CompliancePolicy.
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows81compliancepolicy-delete?view=graph-rest-1.0">Find more info here</a>
+     * Deletes a macOSCompliancePolicy.
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-macoscompliancepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a windows81CompliancePolicy.
+     * Deletes a macOSCompliancePolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows81compliancepolicy-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-macoscompliancepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read properties and relationships of the androidCompliancePolicy object.
@@ -148,24 +148,24 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceCompliancePolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceCompliancePolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a iosCompliancePolicy object.
+     * Update the properties of a windows10MobileCompliancePolicy object.
      * @param body The request body
      * @return a DeviceCompliancePolicy
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-ioscompliancepolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10mobilecompliancepolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceCompliancePolicy patch(@jakarta.annotation.Nonnull final DeviceCompliancePolicy body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a iosCompliancePolicy object.
+     * Update the properties of a windows10MobileCompliancePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DeviceCompliancePolicy
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-ioscompliancepolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10mobilecompliancepolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceCompliancePolicy patch(@jakarta.annotation.Nonnull final DeviceCompliancePolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -174,10 +174,10 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceCompliancePolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceCompliancePolicy::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a windows81CompliancePolicy.
+     * Deletes a macOSCompliancePolicy.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -185,7 +185,7 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a windows81CompliancePolicy.
+     * Deletes a macOSCompliancePolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +217,7 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Update the properties of a iosCompliancePolicy object.
+     * Update the properties of a windows10MobileCompliancePolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +226,7 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a iosCompliancePolicy object.
+     * Update the properties of a windows10MobileCompliancePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

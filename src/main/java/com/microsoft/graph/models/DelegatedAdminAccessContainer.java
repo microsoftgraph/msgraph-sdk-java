@@ -79,7 +79,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Back
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("accessContainerId", (n) -> { this.setAccessContainerId(n.getStringValue()); });
-        deserializerMap.put("accessContainerType", (n) -> { this.setAccessContainerType(n.getEnumValue(DelegatedAdminAccessContainerType.class)); });
+        deserializerMap.put("accessContainerType", (n) -> { this.setAccessContainerType(n.getEnumValue(DelegatedAdminAccessContainerType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }

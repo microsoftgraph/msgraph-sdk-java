@@ -65,7 +65,7 @@ public class EventPropagationResult implements AdditionalDataHolder, BackedModel
         deserializerMap.put("location", (n) -> { this.setLocation(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("serviceName", (n) -> { this.setServiceName(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(EventPropagationStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(EventPropagationStatus::forValue)); });
         deserializerMap.put("statusInformation", (n) -> { this.setStatusInformation(n.getStringValue()); });
         return deserializerMap;
     }

@@ -167,7 +167,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("azureRightsManagementServicesAllowed", (n) -> { this.setAzureRightsManagementServicesAllowed(n.getBooleanValue()); });
         deserializerMap.put("dataRecoveryCertificate", (n) -> { this.setDataRecoveryCertificate(n.getObjectValue(WindowsInformationProtectionDataRecoveryCertificate::createFromDiscriminatorValue)); });
-        deserializerMap.put("enforcementLevel", (n) -> { this.setEnforcementLevel(n.getEnumValue(WindowsInformationProtectionEnforcementLevel.class)); });
+        deserializerMap.put("enforcementLevel", (n) -> { this.setEnforcementLevel(n.getEnumValue(WindowsInformationProtectionEnforcementLevel::forValue)); });
         deserializerMap.put("enterpriseDomain", (n) -> { this.setEnterpriseDomain(n.getStringValue()); });
         deserializerMap.put("enterpriseInternalProxyServers", (n) -> { this.setEnterpriseInternalProxyServers(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
         deserializerMap.put("enterpriseIPRanges", (n) -> { this.setEnterpriseIPRanges(n.getCollectionOfObjectValues(WindowsInformationProtectionIPRangeCollection::createFromDiscriminatorValue)); });

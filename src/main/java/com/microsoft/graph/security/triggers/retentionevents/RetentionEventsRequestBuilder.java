@@ -79,7 +79,7 @@ public class RetentionEventsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, RetentionEventCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, RetentionEventCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new retentionEvent object. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class RetentionEventsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, RetentionEvent::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, RetentionEvent::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the retentionEvent objects and their properties. This API is available in the following national cloud deployments.

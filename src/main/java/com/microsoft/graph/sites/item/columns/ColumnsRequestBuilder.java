@@ -79,7 +79,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ColumnDefinitionCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ColumnDefinitionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a column for a site][site] with a request that specifies a [columnDefinition][columnDefinition]. This API is available in the following [national cloud deployments.
@@ -105,7 +105,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ColumnDefinition::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ColumnDefinition::createFromDiscriminatorValue);
     }
     /**
      * Get the collection of columns represented as columnDefinition][columnDefinition] resources in a [site][site]. This API is available in the following [national cloud deployments.

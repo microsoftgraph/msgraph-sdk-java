@@ -73,9 +73,9 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("deviceRestartBehavior", (n) -> { this.setDeviceRestartBehavior(n.getEnumValue(Win32LobAppRestartBehavior.class)); });
+        deserializerMap.put("deviceRestartBehavior", (n) -> { this.setDeviceRestartBehavior(n.getEnumValue(Win32LobAppRestartBehavior::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("runAsAccount", (n) -> { this.setRunAsAccount(n.getEnumValue(RunAsAccountType.class)); });
+        deserializerMap.put("runAsAccount", (n) -> { this.setRunAsAccount(n.getEnumValue(RunAsAccountType::forValue)); });
         return deserializerMap;
     }
     /**

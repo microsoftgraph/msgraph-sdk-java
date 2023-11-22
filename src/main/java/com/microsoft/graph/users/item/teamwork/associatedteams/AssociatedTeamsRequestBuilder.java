@@ -79,7 +79,7 @@ public class AssociatedTeamsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AssociatedTeamInfoCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AssociatedTeamInfoCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to associatedTeams for users
@@ -103,7 +103,7 @@ public class AssociatedTeamsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AssociatedTeamInfo::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AssociatedTeamInfo::createFromDiscriminatorValue);
     }
     /**
      * Get the list of teams in Microsoft Teams that a user is associated with.Currently, a user can be associated with a team in two different ways: This API is available in the following national cloud deployments.

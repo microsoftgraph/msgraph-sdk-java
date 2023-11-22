@@ -50,7 +50,7 @@ public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionD
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("customExtensionStageInstanceDetail", (n) -> { this.setCustomExtensionStageInstanceDetail(n.getStringValue()); });
         deserializerMap.put("customExtensionStageInstanceId", (n) -> { this.setCustomExtensionStageInstanceId(n.getStringValue()); });
-        deserializerMap.put("stage", (n) -> { this.setStage(n.getEnumValue(AccessPackageCustomExtensionStage.class)); });
+        deserializerMap.put("stage", (n) -> { this.setStage(n.getEnumValue(AccessPackageCustomExtensionStage::forValue)); });
         deserializerMap.put("state", (n) -> { this.setState(n.getStringValue()); });
         return deserializerMap;
     }

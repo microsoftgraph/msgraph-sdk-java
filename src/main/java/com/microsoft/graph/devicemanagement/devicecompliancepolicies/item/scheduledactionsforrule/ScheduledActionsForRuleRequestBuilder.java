@@ -79,7 +79,7 @@ public class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceComplianceScheduledActionForRuleCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceComplianceScheduledActionForRuleCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new deviceComplianceScheduledActionForRule object.
@@ -105,7 +105,7 @@ public class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceComplianceScheduledActionForRule::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceComplianceScheduledActionForRule::createFromDiscriminatorValue);
     }
     /**
      * List properties and relationships of the deviceComplianceScheduledActionForRule objects.

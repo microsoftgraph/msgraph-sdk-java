@@ -79,7 +79,7 @@ public class ScopedMembersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ScopedRoleMembershipCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ScopedRoleMembershipCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to scopedMembers for directoryRoles
@@ -103,7 +103,7 @@ public class ScopedMembersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ScopedRoleMembership::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ScopedRoleMembership::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of scopedRoleMembership objects for a directory role. This API is available in the following national cloud deployments.

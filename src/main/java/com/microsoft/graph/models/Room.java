@@ -81,7 +81,7 @@ public class Room extends Place implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("audioDeviceName", (n) -> { this.setAudioDeviceName(n.getStringValue()); });
-        deserializerMap.put("bookingType", (n) -> { this.setBookingType(n.getEnumValue(BookingType.class)); });
+        deserializerMap.put("bookingType", (n) -> { this.setBookingType(n.getEnumValue(BookingType::forValue)); });
         deserializerMap.put("building", (n) -> { this.setBuilding(n.getStringValue()); });
         deserializerMap.put("capacity", (n) -> { this.setCapacity(n.getIntegerValue()); });
         deserializerMap.put("displayDeviceName", (n) -> { this.setDisplayDeviceName(n.getStringValue()); });

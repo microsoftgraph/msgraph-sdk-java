@@ -74,7 +74,7 @@ public class TrainingSetting implements AdditionalDataHolder, BackedModel, Parsa
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("settingType", (n) -> { this.setSettingType(n.getEnumValue(TrainingSettingType.class)); });
+        deserializerMap.put("settingType", (n) -> { this.setSettingType(n.getEnumValue(TrainingSettingType::forValue)); });
         return deserializerMap;
     }
     /**

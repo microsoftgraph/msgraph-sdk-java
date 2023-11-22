@@ -63,7 +63,7 @@ public class SyncPostRequestBody implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
-        deserializerMap.put("syncType", (n) -> { this.setSyncType(n.getEnumValue(DeviceManagementExchangeConnectorSyncType.class)); });
+        deserializerMap.put("syncType", (n) -> { this.setSyncType(n.getEnumValue(DeviceManagementExchangeConnectorSyncType::forValue)); });
         return deserializerMap;
     }
     /**

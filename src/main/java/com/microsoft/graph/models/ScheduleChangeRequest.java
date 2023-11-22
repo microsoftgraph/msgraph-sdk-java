@@ -51,14 +51,14 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getEnumValue(ScheduleChangeRequestActor.class)); });
+        deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getEnumValue(ScheduleChangeRequestActor::forValue)); });
         deserializerMap.put("managerActionDateTime", (n) -> { this.setManagerActionDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("managerActionMessage", (n) -> { this.setManagerActionMessage(n.getStringValue()); });
         deserializerMap.put("managerUserId", (n) -> { this.setManagerUserId(n.getStringValue()); });
         deserializerMap.put("senderDateTime", (n) -> { this.setSenderDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("senderMessage", (n) -> { this.setSenderMessage(n.getStringValue()); });
         deserializerMap.put("senderUserId", (n) -> { this.setSenderUserId(n.getStringValue()); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ScheduleChangeState.class)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ScheduleChangeState::forValue)); });
         return deserializerMap;
     }
     /**

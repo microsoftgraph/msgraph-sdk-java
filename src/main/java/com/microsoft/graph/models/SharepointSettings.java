@@ -69,7 +69,7 @@ public class SharepointSettings extends Entity implements Parsable {
         deserializerMap.put("deletedUserPersonalSiteRetentionPeriodInDays", (n) -> { this.setDeletedUserPersonalSiteRetentionPeriodInDays(n.getIntegerValue()); });
         deserializerMap.put("excludedFileExtensionsForSyncApp", (n) -> { this.setExcludedFileExtensionsForSyncApp(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("idleSessionSignOut", (n) -> { this.setIdleSessionSignOut(n.getObjectValue(IdleSessionSignOut::createFromDiscriminatorValue)); });
-        deserializerMap.put("imageTaggingOption", (n) -> { this.setImageTaggingOption(n.getEnumValue(ImageTaggingChoice.class)); });
+        deserializerMap.put("imageTaggingOption", (n) -> { this.setImageTaggingOption(n.getEnumValue(ImageTaggingChoice::forValue)); });
         deserializerMap.put("isCommentingOnSitePagesEnabled", (n) -> { this.setIsCommentingOnSitePagesEnabled(n.getBooleanValue()); });
         deserializerMap.put("isFileActivityNotificationEnabled", (n) -> { this.setIsFileActivityNotificationEnabled(n.getBooleanValue()); });
         deserializerMap.put("isLegacyAuthProtocolsEnabled", (n) -> { this.setIsLegacyAuthProtocolsEnabled(n.getBooleanValue()); });
@@ -88,8 +88,8 @@ public class SharepointSettings extends Entity implements Parsable {
         deserializerMap.put("personalSiteDefaultStorageLimitInMB", (n) -> { this.setPersonalSiteDefaultStorageLimitInMB(n.getLongValue()); });
         deserializerMap.put("sharingAllowedDomainList", (n) -> { this.setSharingAllowedDomainList(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("sharingBlockedDomainList", (n) -> { this.setSharingBlockedDomainList(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("sharingCapability", (n) -> { this.setSharingCapability(n.getEnumValue(SharingCapabilities.class)); });
-        deserializerMap.put("sharingDomainRestrictionMode", (n) -> { this.setSharingDomainRestrictionMode(n.getEnumValue(SharingDomainRestrictionMode.class)); });
+        deserializerMap.put("sharingCapability", (n) -> { this.setSharingCapability(n.getEnumValue(SharingCapabilities::forValue)); });
+        deserializerMap.put("sharingDomainRestrictionMode", (n) -> { this.setSharingDomainRestrictionMode(n.getEnumValue(SharingDomainRestrictionMode::forValue)); });
         deserializerMap.put("siteCreationDefaultManagedPath", (n) -> { this.setSiteCreationDefaultManagedPath(n.getStringValue()); });
         deserializerMap.put("siteCreationDefaultStorageLimitInMB", (n) -> { this.setSiteCreationDefaultStorageLimitInMB(n.getIntegerValue()); });
         deserializerMap.put("tenantDefaultTimezone", (n) -> { this.setTenantDefaultTimezone(n.getStringValue()); });

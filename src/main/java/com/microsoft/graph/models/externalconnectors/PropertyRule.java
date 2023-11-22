@@ -64,10 +64,10 @@ public class PropertyRule implements AdditionalDataHolder, BackedModel, Parsable
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("operation", (n) -> { this.setOperation(n.getEnumValue(RuleOperation.class)); });
+        deserializerMap.put("operation", (n) -> { this.setOperation(n.getEnumValue(RuleOperation::forValue)); });
         deserializerMap.put("property", (n) -> { this.setProperty(n.getStringValue()); });
         deserializerMap.put("values", (n) -> { this.setValues(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("valuesJoinedBy", (n) -> { this.setValuesJoinedBy(n.getEnumValue(BinaryOperator.class)); });
+        deserializerMap.put("valuesJoinedBy", (n) -> { this.setValuesJoinedBy(n.getEnumValue(BinaryOperator::forValue)); });
         return deserializerMap;
     }
     /**

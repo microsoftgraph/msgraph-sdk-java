@@ -69,7 +69,7 @@ public class BookingReminder implements AdditionalDataHolder, BackedModel, Parsa
         deserializerMap.put("message", (n) -> { this.setMessage(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("offset", (n) -> { this.setOffset(n.getPeriodAndDurationValue()); });
-        deserializerMap.put("recipients", (n) -> { this.setRecipients(n.getEnumValue(BookingReminderRecipients.class)); });
+        deserializerMap.put("recipients", (n) -> { this.setRecipients(n.getEnumValue(BookingReminderRecipients::forValue)); });
         return deserializerMap;
     }
     /**

@@ -90,7 +90,7 @@ public class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestB
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UnifiedRoleEligibilityScheduleInstanceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleEligibilityScheduleInstanceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to roleEligibilityScheduleInstances for roleManagement
@@ -114,7 +114,7 @@ public class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestB
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue);
     }
     /**
      * Get the instances of role eligibilities. This API is available in the following national cloud deployments.

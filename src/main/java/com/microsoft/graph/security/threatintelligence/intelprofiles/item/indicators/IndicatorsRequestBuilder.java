@@ -78,7 +78,7 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, IntelligenceProfileIndicatorCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, IntelligenceProfileIndicatorCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile. This API is available in the following national cloud deployments.

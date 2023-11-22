@@ -79,7 +79,7 @@ public class ServiceManagementDetailsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DelegatedAdminServiceManagementDetailCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminServiceManagementDetailCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to serviceManagementDetails for tenantRelationships
@@ -103,7 +103,7 @@ public class ServiceManagementDetailsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DelegatedAdminServiceManagementDetail::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminServiceManagementDetail::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the delegatedAdminServiceManagementDetail objects and their properties. This API is available in the following national cloud deployments.

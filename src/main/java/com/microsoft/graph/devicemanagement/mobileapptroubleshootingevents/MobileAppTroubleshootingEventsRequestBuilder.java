@@ -79,7 +79,7 @@ public class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBui
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, MobileAppTroubleshootingEventCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, MobileAppTroubleshootingEventCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new mobileAppTroubleshootingEvent object.
@@ -105,7 +105,7 @@ public class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBui
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, MobileAppTroubleshootingEvent::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, MobileAppTroubleshootingEvent::createFromDiscriminatorValue);
     }
     /**
      * List properties and relationships of the mobileAppTroubleshootingEvent objects.

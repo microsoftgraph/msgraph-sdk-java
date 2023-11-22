@@ -83,7 +83,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, BackedMo
         deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(SynchronizationError::createFromDiscriminatorValue)); });
         deserializerMap.put("nextAttempt", (n) -> { this.setNextAttempt(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("reason", (n) -> { this.setReason(n.getEnumValue(QuarantineReason.class)); });
+        deserializerMap.put("reason", (n) -> { this.setReason(n.getEnumValue(QuarantineReason::forValue)); });
         deserializerMap.put("seriesBegan", (n) -> { this.setSeriesBegan(n.getOffsetDateTimeValue()); });
         deserializerMap.put("seriesCount", (n) -> { this.setSeriesCount(n.getLongValue()); });
         return deserializerMap;

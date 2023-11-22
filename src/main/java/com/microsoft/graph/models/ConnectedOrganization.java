@@ -71,7 +71,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
         deserializerMap.put("identitySources", (n) -> { this.setIdentitySources(n.getCollectionOfObjectValues(IdentitySource::createFromDiscriminatorValue)); });
         deserializerMap.put("internalSponsors", (n) -> { this.setInternalSponsors(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("modifiedDateTime", (n) -> { this.setModifiedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ConnectedOrganizationState.class)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ConnectedOrganizationState::forValue)); });
         return deserializerMap;
     }
     /**

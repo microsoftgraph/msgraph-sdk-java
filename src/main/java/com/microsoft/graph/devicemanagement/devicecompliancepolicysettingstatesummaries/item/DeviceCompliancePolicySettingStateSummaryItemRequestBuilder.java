@@ -61,7 +61,7 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read properties and relationships of the deviceCompliancePolicySettingStateSummary object.
@@ -84,7 +84,7 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceCompliancePolicySettingStateSummary::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceCompliancePolicySettingStateSummary::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of a deviceCompliancePolicySettingStateSummary object.
@@ -110,7 +110,7 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceCompliancePolicySettingStateSummary::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceCompliancePolicySettingStateSummary::createFromDiscriminatorValue);
     }
     /**
      * Deletes a deviceCompliancePolicySettingStateSummary.

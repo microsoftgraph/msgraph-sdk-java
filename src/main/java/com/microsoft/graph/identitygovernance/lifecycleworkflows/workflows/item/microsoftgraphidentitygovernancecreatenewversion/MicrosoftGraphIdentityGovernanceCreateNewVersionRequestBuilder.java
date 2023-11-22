@@ -59,7 +59,7 @@ public class MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder exte
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, Workflow::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, Workflow::createFromDiscriminatorValue);
     }
     /**
      * Create a new version of the workflow object. This API is available in the following national cloud deployments.

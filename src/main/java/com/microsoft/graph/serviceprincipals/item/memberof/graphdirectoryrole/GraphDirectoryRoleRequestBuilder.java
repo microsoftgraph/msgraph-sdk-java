@@ -63,7 +63,7 @@ public class GraphDirectoryRoleRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DirectoryRoleCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DirectoryRoleCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Get the items of type microsoft.graph.directoryRole in the microsoft.graph.directoryObject collection

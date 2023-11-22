@@ -33,7 +33,7 @@ public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implemen
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("offsetInDays", (n) -> { this.setOffsetInDays(n.getIntegerValue()); });
-        deserializerMap.put("timeBasedAttribute", (n) -> { this.setTimeBasedAttribute(n.getEnumValue(WorkflowTriggerTimeBasedAttribute.class)); });
+        deserializerMap.put("timeBasedAttribute", (n) -> { this.setTimeBasedAttribute(n.getEnumValue(WorkflowTriggerTimeBasedAttribute::forValue)); });
         return deserializerMap;
     }
     /**

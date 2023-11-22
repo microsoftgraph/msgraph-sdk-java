@@ -42,7 +42,7 @@ public class ExternalActivity extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("performedBy", (n) -> { this.setPerformedBy(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(ExternalActivityType.class)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(ExternalActivityType::forValue)); });
         return deserializerMap;
     }
     /**

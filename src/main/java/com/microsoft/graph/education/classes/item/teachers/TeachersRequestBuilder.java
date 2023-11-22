@@ -86,7 +86,7 @@ public class TeachersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, EducationUserCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, EducationUserCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of teachers for a class. Delegated tokens must be members of the class to get the teacher list. This API is available in the following national cloud deployments.

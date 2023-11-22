@@ -42,7 +42,7 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("message", (n) -> { this.setMessage(n.getStringValue()); });
-        deserializerMap.put("resultType", (n) -> { this.setResultType(n.getEnumValue(ThreatAssessmentResultType.class)); });
+        deserializerMap.put("resultType", (n) -> { this.setResultType(n.getEnumValue(ThreatAssessmentResultType::forValue)); });
         return deserializerMap;
     }
     /**

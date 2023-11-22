@@ -66,7 +66,7 @@ public class Phone implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("number", (n) -> { this.setNumber(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("region", (n) -> { this.setRegion(n.getStringValue()); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(PhoneType.class)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(PhoneType::forValue)); });
         return deserializerMap;
     }
     /**

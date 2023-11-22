@@ -62,7 +62,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
         deserializerMap.put("description", (n) -> { this.setDescription(n.getObjectValue(FormattedContent::createFromDiscriminatorValue)); });
         deserializerMap.put("firstActiveDateTime", (n) -> { this.setFirstActiveDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("indicators", (n) -> { this.setIndicators(n.getCollectionOfObjectValues(IntelligenceProfileIndicator::createFromDiscriminatorValue)); });
-        deserializerMap.put("kind", (n) -> { this.setKind(n.getEnumValue(IntelligenceProfileKind.class)); });
+        deserializerMap.put("kind", (n) -> { this.setKind(n.getEnumValue(IntelligenceProfileKind::forValue)); });
         deserializerMap.put("summary", (n) -> { this.setSummary(n.getObjectValue(FormattedContent::createFromDiscriminatorValue)); });
         deserializerMap.put("targets", (n) -> { this.setTargets(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });

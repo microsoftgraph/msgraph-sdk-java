@@ -73,7 +73,7 @@ public class BookingWorkHours implements AdditionalDataHolder, BackedModel, Pars
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("day", (n) -> { this.setDay(n.getEnumValue(DayOfWeek.class)); });
+        deserializerMap.put("day", (n) -> { this.setDay(n.getEnumValue(DayOfWeek::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("timeSlots", (n) -> { this.setTimeSlots(n.getCollectionOfObjectValues(BookingWorkTimeSlot::createFromDiscriminatorValue)); });
         return deserializerMap;

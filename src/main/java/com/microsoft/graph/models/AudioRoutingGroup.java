@@ -32,7 +32,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("receivers", (n) -> { this.setReceivers(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("routingMode", (n) -> { this.setRoutingMode(n.getEnumValue(RoutingMode.class)); });
+        deserializerMap.put("routingMode", (n) -> { this.setRoutingMode(n.getEnumValue(RoutingMode::forValue)); });
         deserializerMap.put("sources", (n) -> { this.setSources(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
     }

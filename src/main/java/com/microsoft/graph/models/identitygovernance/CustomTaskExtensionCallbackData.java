@@ -33,7 +33,7 @@ public class CustomTaskExtensionCallbackData extends CustomExtensionData impleme
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("operationStatus", (n) -> { this.setOperationStatus(n.getEnumValue(CustomTaskExtensionOperationStatus.class)); });
+        deserializerMap.put("operationStatus", (n) -> { this.setOperationStatus(n.getEnumValue(CustomTaskExtensionOperationStatus::forValue)); });
         return deserializerMap;
     }
     /**

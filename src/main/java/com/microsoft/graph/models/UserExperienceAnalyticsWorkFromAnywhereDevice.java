@@ -133,7 +133,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
         deserializerMap.put("compliancePolicySetToIntune", (n) -> { this.setCompliancePolicySetToIntune(n.getBooleanValue()); });
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
         deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
-        deserializerMap.put("healthStatus", (n) -> { this.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState.class)); });
+        deserializerMap.put("healthStatus", (n) -> { this.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState::forValue)); });
         deserializerMap.put("isCloudManagedGatewayEnabled", (n) -> { this.setIsCloudManagedGatewayEnabled(n.getBooleanValue()); });
         deserializerMap.put("managedBy", (n) -> { this.setManagedBy(n.getStringValue()); });
         deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
@@ -153,7 +153,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
         deserializerMap.put("storageCheckFailed", (n) -> { this.setStorageCheckFailed(n.getBooleanValue()); });
         deserializerMap.put("tenantAttached", (n) -> { this.setTenantAttached(n.getBooleanValue()); });
         deserializerMap.put("tpmCheckFailed", (n) -> { this.setTpmCheckFailed(n.getBooleanValue()); });
-        deserializerMap.put("upgradeEligibility", (n) -> { this.setUpgradeEligibility(n.getEnumValue(OperatingSystemUpgradeEligibility.class)); });
+        deserializerMap.put("upgradeEligibility", (n) -> { this.setUpgradeEligibility(n.getEnumValue(OperatingSystemUpgradeEligibility::forValue)); });
         deserializerMap.put("windowsScore", (n) -> { this.setWindowsScore(n.getDoubleValue()); });
         deserializerMap.put("workFromAnywhereScore", (n) -> { this.setWorkFromAnywhereScore(n.getDoubleValue()); });
         return deserializerMap;

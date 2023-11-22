@@ -70,10 +70,10 @@ public class EndUserNotificationSetting implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("notificationPreference", (n) -> { this.setNotificationPreference(n.getEnumValue(EndUserNotificationPreference.class)); });
+        deserializerMap.put("notificationPreference", (n) -> { this.setNotificationPreference(n.getEnumValue(EndUserNotificationPreference::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("positiveReinforcement", (n) -> { this.setPositiveReinforcement(n.getObjectValue(PositiveReinforcementNotification::createFromDiscriminatorValue)); });
-        deserializerMap.put("settingType", (n) -> { this.setSettingType(n.getEnumValue(EndUserNotificationSettingType.class)); });
+        deserializerMap.put("settingType", (n) -> { this.setSettingType(n.getEnumValue(EndUserNotificationSettingType::forValue)); });
         return deserializerMap;
     }
     /**

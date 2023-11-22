@@ -58,7 +58,7 @@ public class QueryRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, QueryPostResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, QueryPostResponse::createFromDiscriminatorValue);
     }
     /**
      * Runs the query specified in the request body. Search results are provided in the response. This API is available in the following national cloud deployments.

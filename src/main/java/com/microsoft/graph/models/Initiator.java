@@ -32,7 +32,7 @@ public class Initiator extends Identity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("initiatorType", (n) -> { this.setInitiatorType(n.getEnumValue(InitiatorType.class)); });
+        deserializerMap.put("initiatorType", (n) -> { this.setInitiatorType(n.getEnumValue(InitiatorType::forValue)); });
         return deserializerMap;
     }
     /**

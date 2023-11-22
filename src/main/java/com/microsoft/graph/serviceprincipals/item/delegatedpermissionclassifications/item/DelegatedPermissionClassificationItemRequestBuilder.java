@@ -53,7 +53,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder extends BaseReq
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get delegatedPermissionClassifications from servicePrincipals
@@ -74,7 +74,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder extends BaseReq
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DelegatedPermissionClassification::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DelegatedPermissionClassification::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property delegatedPermissionClassifications in servicePrincipals
@@ -98,7 +98,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder extends BaseReq
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DelegatedPermissionClassification::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DelegatedPermissionClassification::createFromDiscriminatorValue);
     }
     /**
      * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission. This API is available in the following national cloud deployments.

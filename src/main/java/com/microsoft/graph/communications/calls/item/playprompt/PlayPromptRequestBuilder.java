@@ -59,7 +59,7 @@ public class PlayPromptRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PlayPromptOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PlayPromptOperation::createFromDiscriminatorValue);
     }
     /**
      * Play a prompt in the call. For more information about how to handle operations, see commsOperation This API is available in the following national cloud deployments.

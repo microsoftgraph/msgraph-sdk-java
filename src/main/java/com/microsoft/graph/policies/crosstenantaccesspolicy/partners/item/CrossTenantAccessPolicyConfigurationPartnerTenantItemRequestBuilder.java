@@ -61,7 +61,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read the properties and relationships of a partner-specific configuration. This API is available in the following national cloud deployments.
@@ -84,7 +84,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of a partner-specific configuration. This API is available in the following national cloud deployments.
@@ -110,7 +110,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue);
     }
     /**
      * Delete a partner-specific configuration in a cross-tenant access policy. If a configuration includes a user synchronization policy, you must first delete the user synchronization policy before you can delete the partner-specific configuration. This API is available in the following national cloud deployments.

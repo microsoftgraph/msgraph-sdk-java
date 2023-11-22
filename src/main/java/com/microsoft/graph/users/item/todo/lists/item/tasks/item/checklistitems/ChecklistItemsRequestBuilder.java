@@ -79,7 +79,7 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ChecklistItemCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ChecklistItemCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new checklistItem object. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ChecklistItem::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ChecklistItem::createFromDiscriminatorValue);
     }
     /**
      * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property. This API is available in the following national cloud deployments.

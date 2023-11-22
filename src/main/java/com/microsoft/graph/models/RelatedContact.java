@@ -91,7 +91,7 @@ public class RelatedContact implements AdditionalDataHolder, BackedModel, Parsab
         deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
         deserializerMap.put("mobilePhone", (n) -> { this.setMobilePhone(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("relationship", (n) -> { this.setRelationship(n.getEnumValue(ContactRelationship.class)); });
+        deserializerMap.put("relationship", (n) -> { this.setRelationship(n.getEnumValue(ContactRelationship::forValue)); });
         return deserializerMap;
     }
     /**

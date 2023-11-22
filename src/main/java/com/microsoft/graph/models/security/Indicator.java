@@ -49,7 +49,7 @@ public class Indicator extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("artifact", (n) -> { this.setArtifact(n.getObjectValue(Artifact::createFromDiscriminatorValue)); });
-        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(IndicatorSource.class)); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(IndicatorSource::forValue)); });
         return deserializerMap;
     }
     /**

@@ -79,7 +79,7 @@ public class SiteListsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, BrowserSiteListCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, BrowserSiteListCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new browserSiteList object to support Internet Explorer mode. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class SiteListsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, BrowserSiteList::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, BrowserSiteList::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the browserSiteList objects and their properties. This API is available in the following national cloud deployments.

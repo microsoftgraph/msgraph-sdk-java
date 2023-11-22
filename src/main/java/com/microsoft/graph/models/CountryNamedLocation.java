@@ -48,7 +48,7 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("countriesAndRegions", (n) -> { this.setCountriesAndRegions(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("countryLookupMethod", (n) -> { this.setCountryLookupMethod(n.getEnumValue(CountryLookupMethodType.class)); });
+        deserializerMap.put("countryLookupMethod", (n) -> { this.setCountryLookupMethod(n.getEnumValue(CountryLookupMethodType::forValue)); });
         deserializerMap.put("includeUnknownCountriesAndRegions", (n) -> { this.setIncludeUnknownCountriesAndRegions(n.getBooleanValue()); });
         return deserializerMap;
     }

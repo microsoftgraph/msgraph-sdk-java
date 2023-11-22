@@ -50,8 +50,8 @@ public class ClientUserAgent extends UserAgent implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("azureADAppId", (n) -> { this.setAzureADAppId(n.getStringValue()); });
         deserializerMap.put("communicationServiceId", (n) -> { this.setCommunicationServiceId(n.getStringValue()); });
-        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getEnumValue(ClientPlatform.class)); });
-        deserializerMap.put("productFamily", (n) -> { this.setProductFamily(n.getEnumValue(ProductFamily.class)); });
+        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getEnumValue(ClientPlatform::forValue)); });
+        deserializerMap.put("productFamily", (n) -> { this.setProductFamily(n.getEnumValue(ProductFamily::forValue)); });
         return deserializerMap;
     }
     /**

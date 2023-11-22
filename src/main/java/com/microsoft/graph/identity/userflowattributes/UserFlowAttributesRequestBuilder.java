@@ -79,7 +79,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, IdentityUserFlowAttributeCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, IdentityUserFlowAttributeCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new custom identityUserFlowAttribute object. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, IdentityUserFlowAttribute::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, IdentityUserFlowAttribute::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of identityUserFlowAttribute objects. This API is available in the following national cloud deployments.

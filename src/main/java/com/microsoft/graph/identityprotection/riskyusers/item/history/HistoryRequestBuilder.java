@@ -79,7 +79,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, RiskyUserHistoryItemCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, RiskyUserHistoryItemCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to history for identityProtection
@@ -103,7 +103,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, RiskyUserHistoryItem::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, RiskyUserHistoryItem::createFromDiscriminatorValue);
     }
     /**
      * Read the properties and relationships of a riskyUserHistoryItem object. This API is available in the following national cloud deployments.

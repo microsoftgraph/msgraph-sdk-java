@@ -80,8 +80,8 @@ public class LandingPage extends Entity implements Parsable {
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(EmailIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("locale", (n) -> { this.setLocale(n.getStringValue()); });
-        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(SimulationContentSource.class)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(SimulationContentStatus.class)); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(SimulationContentSource::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(SimulationContentStatus::forValue)); });
         deserializerMap.put("supportedLocales", (n) -> { this.setSupportedLocales(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
     }

@@ -79,7 +79,7 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, LearningContentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, LearningContentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to learningContents for employeeExperience
@@ -103,7 +103,7 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, LearningContent::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, LearningContent::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning. This API is available in the following national cloud deployments.

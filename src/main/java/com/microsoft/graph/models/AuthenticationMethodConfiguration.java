@@ -54,7 +54,7 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("excludeTargets", (n) -> { this.setExcludeTargets(n.getCollectionOfObjectValues(ExcludeTarget::createFromDiscriminatorValue)); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AuthenticationMethodState.class)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AuthenticationMethodState::forValue)); });
         return deserializerMap;
     }
     /**

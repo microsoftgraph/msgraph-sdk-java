@@ -64,7 +64,7 @@ public class CvssSummary implements AdditionalDataHolder, BackedModel, Parsable 
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("score", (n) -> { this.setScore(n.getDoubleValue()); });
-        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(VulnerabilitySeverity.class)); });
+        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(VulnerabilitySeverity::forValue)); });
         deserializerMap.put("vectorString", (n) -> { this.setVectorString(n.getStringValue()); });
         return deserializerMap;
     }

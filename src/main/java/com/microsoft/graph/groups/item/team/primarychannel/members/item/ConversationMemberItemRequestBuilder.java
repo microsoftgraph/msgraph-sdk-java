@@ -37,23 +37,23 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/primaryChannel/members/{conversationMember%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a conversationMember from a channel. This operation is allowed only for channels with a membershipType value of private or shared. This API is available in the following national cloud deployments.
-     * @see <a href="https://learn.microsoft.com/graph/api/channel-delete-members?view=graph-rest-1.0">Find more info here</a>
+     * Delete a conversationMember from a channel. This API is available in the following national cloud deployments.
+     * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a conversationMember from a channel. This operation is allowed only for channels with a membershipType value of private or shared. This API is available in the following national cloud deployments.
+     * Delete a conversationMember from a channel. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/channel-delete-members?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get a conversationMember from a channel. This API is available in the following national cloud deployments.
@@ -76,7 +76,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ConversationMember::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ConversationMember::createFromDiscriminatorValue);
     }
     /**
      * Update the role of a conversationMember in a team or channel. This API is available in the following national cloud deployments.
@@ -102,10 +102,10 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ConversationMember::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ConversationMember::createFromDiscriminatorValue);
     }
     /**
-     * Delete a conversationMember from a channel. This operation is allowed only for channels with a membershipType value of private or shared. This API is available in the following national cloud deployments.
+     * Delete a conversationMember from a channel. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a conversationMember from a channel. This operation is allowed only for channels with a membershipType value of private or shared. This API is available in the following national cloud deployments.
+     * Delete a conversationMember from a channel. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

@@ -59,22 +59,22 @@ public class ManagedAppPolicyItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read properties and relationships of the managedAppPolicy object.
+     * Read properties and relationships of the targetedManagedAppProtection object.
      * @return a ManagedAppPolicy
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedapppolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedappprotection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedAppPolicy get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the managedAppPolicy object.
+     * Read properties and relationships of the targetedManagedAppProtection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ManagedAppPolicy
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedapppolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedappprotection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedAppPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ManagedAppPolicyItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ManagedAppPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ManagedAppPolicy::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property managedAppPolicies in deviceAppManagement
@@ -106,7 +106,7 @@ public class ManagedAppPolicyItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ManagedAppPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ManagedAppPolicy::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property managedAppPolicies for deviceAppManagement
@@ -129,7 +129,7 @@ public class ManagedAppPolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the managedAppPolicy object.
+     * Read properties and relationships of the targetedManagedAppProtection object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +137,7 @@ public class ManagedAppPolicyItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the managedAppPolicy object.
+     * Read properties and relationships of the targetedManagedAppProtection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -189,7 +189,7 @@ public class ManagedAppPolicyItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the managedAppPolicy object.
+     * Read properties and relationships of the targetedManagedAppProtection object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

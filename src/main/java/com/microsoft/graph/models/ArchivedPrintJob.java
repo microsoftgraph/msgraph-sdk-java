@@ -121,7 +121,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Pars
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("printerId", (n) -> { this.setPrinterId(n.getStringValue()); });
         deserializerMap.put("printerName", (n) -> { this.setPrinterName(n.getStringValue()); });
-        deserializerMap.put("processingState", (n) -> { this.setProcessingState(n.getEnumValue(PrintJobProcessingState.class)); });
+        deserializerMap.put("processingState", (n) -> { this.setProcessingState(n.getEnumValue(PrintJobProcessingState::forValue)); });
         return deserializerMap;
     }
     /**

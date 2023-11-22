@@ -51,7 +51,7 @@ public class DelegatedAdminServiceManagementDetailItemRequestBuilder extends Bas
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Contains the management details of a service in the customer tenant that's managed by delegated administration.
@@ -72,7 +72,7 @@ public class DelegatedAdminServiceManagementDetailItemRequestBuilder extends Bas
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DelegatedAdminServiceManagementDetail::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminServiceManagementDetail::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property serviceManagementDetails in tenantRelationships
@@ -96,7 +96,7 @@ public class DelegatedAdminServiceManagementDetailItemRequestBuilder extends Bas
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DelegatedAdminServiceManagementDetail::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminServiceManagementDetail::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property serviceManagementDetails for tenantRelationships

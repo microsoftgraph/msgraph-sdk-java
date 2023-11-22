@@ -66,7 +66,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
         deserializerMap.put("appliesTo", (n) -> { this.setAppliesTo(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("feature", (n) -> { this.setFeature(n.getEnumValue(StagedFeatureName.class)); });
+        deserializerMap.put("feature", (n) -> { this.setFeature(n.getEnumValue(StagedFeatureName::forValue)); });
         deserializerMap.put("isAppliedToOrganization", (n) -> { this.setIsAppliedToOrganization(n.getBooleanValue()); });
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
         return deserializerMap;

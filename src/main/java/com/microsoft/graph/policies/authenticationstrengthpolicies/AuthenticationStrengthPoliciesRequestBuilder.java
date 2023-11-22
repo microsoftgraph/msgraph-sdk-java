@@ -79,7 +79,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AuthenticationStrengthPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationStrengthPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new custom authenticationStrengthPolicy object. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AuthenticationStrengthPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationStrengthPolicy::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies. This API is available in the following national cloud deployments.

@@ -79,9 +79,9 @@ public class PrinterStatus implements AdditionalDataHolder, BackedModel, Parsabl
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
-        deserializerMap.put("details", (n) -> { this.setDetails(n.getCollectionOfEnumValues(PrinterProcessingStateDetail.class)); });
+        deserializerMap.put("details", (n) -> { this.setDetails(n.getCollectionOfEnumValues(PrinterProcessingStateDetail::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(PrinterProcessingState.class)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(PrinterProcessingState::forValue)); });
         return deserializerMap;
     }
     /**

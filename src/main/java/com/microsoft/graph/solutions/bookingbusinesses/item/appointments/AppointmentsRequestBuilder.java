@@ -79,7 +79,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, BookingAppointmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, BookingAppointmentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new bookingAppointment for the specified bookingBusiness. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, BookingAppointment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, BookingAppointment::createFromDiscriminatorValue);
     }
     /**
      * Get a list of bookingAppointment objects for the specified bookingBusiness. This API is available in the following national cloud deployments.

@@ -51,7 +51,7 @@ public class DeviceManagementTroubleshootingEventItemRequestBuilder extends Base
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * The list of troubleshooting events for the tenant.
@@ -72,7 +72,7 @@ public class DeviceManagementTroubleshootingEventItemRequestBuilder extends Base
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceManagementTroubleshootingEvent::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementTroubleshootingEvent::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property troubleshootingEvents in deviceManagement
@@ -96,7 +96,7 @@ public class DeviceManagementTroubleshootingEventItemRequestBuilder extends Base
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceManagementTroubleshootingEvent::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementTroubleshootingEvent::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property troubleshootingEvents for deviceManagement

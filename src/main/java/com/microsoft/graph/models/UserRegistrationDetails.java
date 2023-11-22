@@ -44,9 +44,9 @@ public class UserRegistrationDetails extends Entity implements Parsable {
         deserializerMap.put("methodsRegistered", (n) -> { this.setMethodsRegistered(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("systemPreferredAuthenticationMethods", (n) -> { this.setSystemPreferredAuthenticationMethods(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("userDisplayName", (n) -> { this.setUserDisplayName(n.getStringValue()); });
-        deserializerMap.put("userPreferredMethodForSecondaryAuthentication", (n) -> { this.setUserPreferredMethodForSecondaryAuthentication(n.getEnumValue(UserDefaultAuthenticationMethod.class)); });
+        deserializerMap.put("userPreferredMethodForSecondaryAuthentication", (n) -> { this.setUserPreferredMethodForSecondaryAuthentication(n.getEnumValue(UserDefaultAuthenticationMethod::forValue)); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
-        deserializerMap.put("userType", (n) -> { this.setUserType(n.getEnumValue(SignInUserType.class)); });
+        deserializerMap.put("userType", (n) -> { this.setUserType(n.getEnumValue(SignInUserType::forValue)); });
         return deserializerMap;
     }
     /**

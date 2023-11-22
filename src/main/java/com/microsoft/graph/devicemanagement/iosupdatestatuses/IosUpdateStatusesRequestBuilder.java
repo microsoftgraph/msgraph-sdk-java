@@ -79,7 +79,7 @@ public class IosUpdateStatusesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, IosUpdateDeviceStatusCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, IosUpdateDeviceStatusCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new iosUpdateDeviceStatus object.
@@ -105,7 +105,7 @@ public class IosUpdateStatusesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, IosUpdateDeviceStatus::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, IosUpdateDeviceStatus::createFromDiscriminatorValue);
     }
     /**
      * List properties and relationships of the iosUpdateDeviceStatus objects.

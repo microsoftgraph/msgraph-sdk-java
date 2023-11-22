@@ -48,7 +48,7 @@ public class PrintTaskTrigger extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("definition", (n) -> { this.setDefinition(n.getObjectValue(PrintTaskDefinition::createFromDiscriminatorValue)); });
-        deserializerMap.put("event", (n) -> { this.setEvent(n.getEnumValue(PrintEvent.class)); });
+        deserializerMap.put("event", (n) -> { this.setEvent(n.getEnumValue(PrintEvent::forValue)); });
         return deserializerMap;
     }
     /**

@@ -60,7 +60,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
         deserializerMap.put("accessDetails", (n) -> { this.setAccessDetails(n.getObjectValue(DelegatedAdminAccessDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(DelegatedAdminAccessAssignmentStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(DelegatedAdminAccessAssignmentStatus::forValue)); });
         return deserializerMap;
     }
     /**

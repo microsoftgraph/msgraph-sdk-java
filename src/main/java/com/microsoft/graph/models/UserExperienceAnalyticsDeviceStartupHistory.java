@@ -77,7 +77,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
         deserializerMap.put("isFirstLogin", (n) -> { this.setIsFirstLogin(n.getBooleanValue()); });
         deserializerMap.put("operatingSystemVersion", (n) -> { this.setOperatingSystemVersion(n.getStringValue()); });
         deserializerMap.put("responsiveDesktopTimeInMs", (n) -> { this.setResponsiveDesktopTimeInMs(n.getIntegerValue()); });
-        deserializerMap.put("restartCategory", (n) -> { this.setRestartCategory(n.getEnumValue(UserExperienceAnalyticsOperatingSystemRestartCategory.class)); });
+        deserializerMap.put("restartCategory", (n) -> { this.setRestartCategory(n.getEnumValue(UserExperienceAnalyticsOperatingSystemRestartCategory::forValue)); });
         deserializerMap.put("restartFaultBucket", (n) -> { this.setRestartFaultBucket(n.getStringValue()); });
         deserializerMap.put("restartStopCode", (n) -> { this.setRestartStopCode(n.getStringValue()); });
         deserializerMap.put("startTime", (n) -> { this.setStartTime(n.getOffsetDateTimeValue()); });

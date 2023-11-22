@@ -71,7 +71,7 @@ public class AccountTargetContent implements AdditionalDataHolder, BackedModel, 
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(AccountTargetContentType.class)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(AccountTargetContentType::forValue)); });
         return deserializerMap;
     }
     /**

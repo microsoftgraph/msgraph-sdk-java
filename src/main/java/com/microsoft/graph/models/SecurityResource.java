@@ -64,7 +64,7 @@ public class SecurityResource implements AdditionalDataHolder, BackedModel, Pars
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("resource", (n) -> { this.setResource(n.getStringValue()); });
-        deserializerMap.put("resourceType", (n) -> { this.setResourceType(n.getEnumValue(SecurityResourceType.class)); });
+        deserializerMap.put("resourceType", (n) -> { this.setResourceType(n.getEnumValue(SecurityResourceType::forValue)); });
         return deserializerMap;
     }
     /**

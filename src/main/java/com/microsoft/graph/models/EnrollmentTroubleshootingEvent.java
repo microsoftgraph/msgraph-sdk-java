@@ -67,8 +67,8 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
-        deserializerMap.put("enrollmentType", (n) -> { this.setEnrollmentType(n.getEnumValue(DeviceEnrollmentType.class)); });
-        deserializerMap.put("failureCategory", (n) -> { this.setFailureCategory(n.getEnumValue(DeviceEnrollmentFailureReason.class)); });
+        deserializerMap.put("enrollmentType", (n) -> { this.setEnrollmentType(n.getEnumValue(DeviceEnrollmentType::forValue)); });
+        deserializerMap.put("failureCategory", (n) -> { this.setFailureCategory(n.getEnumValue(DeviceEnrollmentFailureReason::forValue)); });
         deserializerMap.put("failureReason", (n) -> { this.setFailureReason(n.getStringValue()); });
         deserializerMap.put("managedDeviceIdentifier", (n) -> { this.setManagedDeviceIdentifier(n.getStringValue()); });
         deserializerMap.put("operatingSystem", (n) -> { this.setOperatingSystem(n.getStringValue()); });

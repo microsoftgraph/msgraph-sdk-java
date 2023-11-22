@@ -98,9 +98,9 @@ public class AlertHistoryState implements AdditionalDataHolder, BackedModel, Par
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
         deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getStringValue()); });
         deserializerMap.put("comments", (n) -> { this.setComments(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("feedback", (n) -> { this.setFeedback(n.getEnumValue(AlertFeedback.class)); });
+        deserializerMap.put("feedback", (n) -> { this.setFeedback(n.getEnumValue(AlertFeedback::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AlertStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AlertStatus::forValue)); });
         deserializerMap.put("updatedDateTime", (n) -> { this.setUpdatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("user", (n) -> { this.setUser(n.getStringValue()); });
         return deserializerMap;

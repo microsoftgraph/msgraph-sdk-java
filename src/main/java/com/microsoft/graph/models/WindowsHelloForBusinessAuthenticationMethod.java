@@ -60,7 +60,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("device", (n) -> { this.setDevice(n.getObjectValue(Device::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("keyStrength", (n) -> { this.setKeyStrength(n.getEnumValue(AuthenticationMethodKeyStrength.class)); });
+        deserializerMap.put("keyStrength", (n) -> { this.setKeyStrength(n.getEnumValue(AuthenticationMethodKeyStrength::forValue)); });
         return deserializerMap;
     }
     /**

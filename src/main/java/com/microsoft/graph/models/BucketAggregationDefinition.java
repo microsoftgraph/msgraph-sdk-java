@@ -67,7 +67,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Backed
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("prefixFilter", (n) -> { this.setPrefixFilter(n.getStringValue()); });
         deserializerMap.put("ranges", (n) -> { this.setRanges(n.getCollectionOfObjectValues(BucketAggregationRange::createFromDiscriminatorValue)); });
-        deserializerMap.put("sortBy", (n) -> { this.setSortBy(n.getEnumValue(BucketAggregationSortProperty.class)); });
+        deserializerMap.put("sortBy", (n) -> { this.setSortBy(n.getEnumValue(BucketAggregationSortProperty::forValue)); });
         return deserializerMap;
     }
     /**

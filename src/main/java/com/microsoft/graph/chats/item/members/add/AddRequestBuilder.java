@@ -58,7 +58,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AddPostResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AddPostResponse::createFromDiscriminatorValue);
     }
     /**
      * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn't be created. This API is available in the following national cloud deployments.

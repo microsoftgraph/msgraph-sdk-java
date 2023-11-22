@@ -70,7 +70,7 @@ public class RowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of tablerow objects. This API is available in the following national cloud deployments.
      * @return a WorkbookTableRowCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/tablerow-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/table-list-rows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookTableRowCollectionResponse get() {
@@ -80,7 +80,7 @@ public class RowsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of tablerow objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookTableRowCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/tablerow-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/table-list-rows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookTableRowCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class RowsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, WorkbookTableRowCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, WorkbookTableRowCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Provides operations to call the itemAt method.
@@ -124,7 +124,7 @@ public class RowsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, WorkbookTableRow::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, WorkbookTableRow::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of tablerow objects. This API is available in the following national cloud deployments.

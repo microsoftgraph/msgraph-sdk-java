@@ -191,13 +191,13 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowWindows11Upgrade", (n) -> { this.setAllowWindows11Upgrade(n.getBooleanValue()); });
-        deserializerMap.put("automaticUpdateMode", (n) -> { this.setAutomaticUpdateMode(n.getEnumValue(AutomaticUpdateMode.class)); });
-        deserializerMap.put("autoRestartNotificationDismissal", (n) -> { this.setAutoRestartNotificationDismissal(n.getEnumValue(AutoRestartNotificationDismissalMethod.class)); });
-        deserializerMap.put("businessReadyUpdatesOnly", (n) -> { this.setBusinessReadyUpdatesOnly(n.getEnumValue(WindowsUpdateType.class)); });
+        deserializerMap.put("automaticUpdateMode", (n) -> { this.setAutomaticUpdateMode(n.getEnumValue(AutomaticUpdateMode::forValue)); });
+        deserializerMap.put("autoRestartNotificationDismissal", (n) -> { this.setAutoRestartNotificationDismissal(n.getEnumValue(AutoRestartNotificationDismissalMethod::forValue)); });
+        deserializerMap.put("businessReadyUpdatesOnly", (n) -> { this.setBusinessReadyUpdatesOnly(n.getEnumValue(WindowsUpdateType::forValue)); });
         deserializerMap.put("deadlineForFeatureUpdatesInDays", (n) -> { this.setDeadlineForFeatureUpdatesInDays(n.getIntegerValue()); });
         deserializerMap.put("deadlineForQualityUpdatesInDays", (n) -> { this.setDeadlineForQualityUpdatesInDays(n.getIntegerValue()); });
         deserializerMap.put("deadlineGracePeriodInDays", (n) -> { this.setDeadlineGracePeriodInDays(n.getIntegerValue()); });
-        deserializerMap.put("deliveryOptimizationMode", (n) -> { this.setDeliveryOptimizationMode(n.getEnumValue(WindowsDeliveryOptimizationMode.class)); });
+        deserializerMap.put("deliveryOptimizationMode", (n) -> { this.setDeliveryOptimizationMode(n.getEnumValue(WindowsDeliveryOptimizationMode::forValue)); });
         deserializerMap.put("driversExcluded", (n) -> { this.setDriversExcluded(n.getBooleanValue()); });
         deserializerMap.put("engagedRestartDeadlineInDays", (n) -> { this.setEngagedRestartDeadlineInDays(n.getIntegerValue()); });
         deserializerMap.put("engagedRestartSnoozeScheduleInDays", (n) -> { this.setEngagedRestartSnoozeScheduleInDays(n.getIntegerValue()); });
@@ -212,7 +212,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         deserializerMap.put("installationSchedule", (n) -> { this.setInstallationSchedule(n.getObjectValue(WindowsUpdateInstallScheduleType::createFromDiscriminatorValue)); });
         deserializerMap.put("microsoftUpdateServiceAllowed", (n) -> { this.setMicrosoftUpdateServiceAllowed(n.getBooleanValue()); });
         deserializerMap.put("postponeRebootUntilAfterDeadline", (n) -> { this.setPostponeRebootUntilAfterDeadline(n.getBooleanValue()); });
-        deserializerMap.put("prereleaseFeatures", (n) -> { this.setPrereleaseFeatures(n.getEnumValue(PrereleaseFeatures.class)); });
+        deserializerMap.put("prereleaseFeatures", (n) -> { this.setPrereleaseFeatures(n.getEnumValue(PrereleaseFeatures::forValue)); });
         deserializerMap.put("qualityUpdatesDeferralPeriodInDays", (n) -> { this.setQualityUpdatesDeferralPeriodInDays(n.getIntegerValue()); });
         deserializerMap.put("qualityUpdatesPaused", (n) -> { this.setQualityUpdatesPaused(n.getBooleanValue()); });
         deserializerMap.put("qualityUpdatesPauseExpiryDateTime", (n) -> { this.setQualityUpdatesPauseExpiryDateTime(n.getOffsetDateTimeValue()); });
@@ -222,10 +222,10 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         deserializerMap.put("scheduleImminentRestartWarningInMinutes", (n) -> { this.setScheduleImminentRestartWarningInMinutes(n.getIntegerValue()); });
         deserializerMap.put("scheduleRestartWarningInHours", (n) -> { this.setScheduleRestartWarningInHours(n.getIntegerValue()); });
         deserializerMap.put("skipChecksBeforeRestart", (n) -> { this.setSkipChecksBeforeRestart(n.getBooleanValue()); });
-        deserializerMap.put("updateNotificationLevel", (n) -> { this.setUpdateNotificationLevel(n.getEnumValue(WindowsUpdateNotificationDisplayOption.class)); });
-        deserializerMap.put("updateWeeks", (n) -> { this.setUpdateWeeks(n.getEnumSetValue(WindowsUpdateForBusinessUpdateWeeks.class)); });
-        deserializerMap.put("userPauseAccess", (n) -> { this.setUserPauseAccess(n.getEnumValue(Enablement.class)); });
-        deserializerMap.put("userWindowsUpdateScanAccess", (n) -> { this.setUserWindowsUpdateScanAccess(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("updateNotificationLevel", (n) -> { this.setUpdateNotificationLevel(n.getEnumValue(WindowsUpdateNotificationDisplayOption::forValue)); });
+        deserializerMap.put("updateWeeks", (n) -> { this.setUpdateWeeks(n.getEnumSetValue(WindowsUpdateForBusinessUpdateWeeks::forValue)); });
+        deserializerMap.put("userPauseAccess", (n) -> { this.setUserPauseAccess(n.getEnumValue(Enablement::forValue)); });
+        deserializerMap.put("userWindowsUpdateScanAccess", (n) -> { this.setUserWindowsUpdateScanAccess(n.getEnumValue(Enablement::forValue)); });
         return deserializerMap;
     }
     /**

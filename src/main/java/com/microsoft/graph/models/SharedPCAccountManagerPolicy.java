@@ -81,7 +81,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
-        deserializerMap.put("accountDeletionPolicy", (n) -> { this.setAccountDeletionPolicy(n.getEnumValue(SharedPCAccountDeletionPolicyType.class)); });
+        deserializerMap.put("accountDeletionPolicy", (n) -> { this.setAccountDeletionPolicy(n.getEnumValue(SharedPCAccountDeletionPolicyType::forValue)); });
         deserializerMap.put("cacheAccountsAboveDiskFreePercentage", (n) -> { this.setCacheAccountsAboveDiskFreePercentage(n.getIntegerValue()); });
         deserializerMap.put("inactiveThresholdDays", (n) -> { this.setInactiveThresholdDays(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });

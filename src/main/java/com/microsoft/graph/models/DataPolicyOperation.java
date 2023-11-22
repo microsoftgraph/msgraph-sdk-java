@@ -42,7 +42,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("progress", (n) -> { this.setProgress(n.getDoubleValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(DataPolicyOperationStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(DataPolicyOperationStatus::forValue)); });
         deserializerMap.put("storageLocation", (n) -> { this.setStorageLocation(n.getStringValue()); });
         deserializerMap.put("submittedDateTime", (n) -> { this.setSubmittedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });

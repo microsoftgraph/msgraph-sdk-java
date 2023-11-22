@@ -79,7 +79,7 @@ public class LocalizedNotificationMessagesRequestBuilder extends BaseRequestBuil
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, LocalizedNotificationMessageCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, LocalizedNotificationMessageCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new localizedNotificationMessage object.
@@ -105,7 +105,7 @@ public class LocalizedNotificationMessagesRequestBuilder extends BaseRequestBuil
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, LocalizedNotificationMessage::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, LocalizedNotificationMessage::createFromDiscriminatorValue);
     }
     /**
      * List properties and relationships of the localizedNotificationMessage objects.

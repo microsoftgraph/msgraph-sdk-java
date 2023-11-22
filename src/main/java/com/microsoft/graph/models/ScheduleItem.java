@@ -75,7 +75,7 @@ public class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
         deserializerMap.put("location", (n) -> { this.setLocation(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("start", (n) -> { this.setStart(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(FreeBusyStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(FreeBusyStatus::forValue)); });
         deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
         return deserializerMap;
     }

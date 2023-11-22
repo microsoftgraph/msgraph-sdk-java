@@ -79,7 +79,7 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TokenIssuancePolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TokenIssuancePolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new tokenIssuancePolicy object. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TokenIssuancePolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TokenIssuancePolicy::createFromDiscriminatorValue);
     }
     /**
      * Get a list of tokenIssuancePolicy objects. This API is available in the following national cloud deployments.

@@ -63,7 +63,7 @@ public class TeamworkActivityTopic implements AdditionalDataHolder, BackedModel,
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(TeamworkActivityTopicSource.class)); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(TeamworkActivityTopicSource::forValue)); });
         deserializerMap.put("value", (n) -> { this.setValue(n.getStringValue()); });
         deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
         return deserializerMap;

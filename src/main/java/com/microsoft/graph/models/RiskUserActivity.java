@@ -70,7 +70,7 @@ public class RiskUserActivity implements AdditionalDataHolder, BackedModel, Pars
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("detail", (n) -> { this.setDetail(n.getEnumValue(RiskDetail.class)); });
+        deserializerMap.put("detail", (n) -> { this.setDetail(n.getEnumValue(RiskDetail::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("riskEventTypes", (n) -> { this.setRiskEventTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;

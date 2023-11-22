@@ -64,8 +64,8 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("InputIds", (n) -> { this.setInputIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("SourceIdType", (n) -> { this.setSourceIdType(n.getEnumValue(ExchangeIdFormat.class)); });
-        deserializerMap.put("TargetIdType", (n) -> { this.setTargetIdType(n.getEnumValue(ExchangeIdFormat.class)); });
+        deserializerMap.put("SourceIdType", (n) -> { this.setSourceIdType(n.getEnumValue(ExchangeIdFormat::forValue)); });
+        deserializerMap.put("TargetIdType", (n) -> { this.setTargetIdType(n.getEnumValue(ExchangeIdFormat::forValue)); });
         return deserializerMap;
     }
     /**

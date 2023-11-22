@@ -51,7 +51,7 @@ public class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Another way to input exempt apps through xml files
@@ -72,7 +72,7 @@ public class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, WindowsInformationProtectionAppLockerFile::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, WindowsInformationProtectionAppLockerFile::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property exemptAppLockerFiles in deviceAppManagement
@@ -96,7 +96,7 @@ public class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, WindowsInformationProtectionAppLockerFile::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, WindowsInformationProtectionAppLockerFile::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property exemptAppLockerFiles for deviceAppManagement

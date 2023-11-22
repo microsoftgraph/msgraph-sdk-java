@@ -41,7 +41,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowNewTimeProposals", (n) -> { this.setAllowNewTimeProposals(n.getBooleanValue()); });
-        deserializerMap.put("meetingRequestType", (n) -> { this.setMeetingRequestType(n.getEnumValue(MeetingRequestType.class)); });
+        deserializerMap.put("meetingRequestType", (n) -> { this.setMeetingRequestType(n.getEnumValue(MeetingRequestType::forValue)); });
         deserializerMap.put("previousEndDateTime", (n) -> { this.setPreviousEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         deserializerMap.put("previousLocation", (n) -> { this.setPreviousLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
         deserializerMap.put("previousStartDateTime", (n) -> { this.setPreviousStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });

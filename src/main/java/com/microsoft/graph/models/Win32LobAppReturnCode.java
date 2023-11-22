@@ -67,7 +67,7 @@ public class Win32LobAppReturnCode implements AdditionalDataHolder, BackedModel,
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("returnCode", (n) -> { this.setReturnCode(n.getIntegerValue()); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(Win32LobAppReturnCodeType.class)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(Win32LobAppReturnCodeType::forValue)); });
         return deserializerMap;
     }
     /**
