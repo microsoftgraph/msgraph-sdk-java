@@ -58,7 +58,7 @@ public class AllChannelsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/allChannels{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the list of channels either in this team or shared with this team (incoming channels). This API is available in the following national cloud deployments.
+     * Get the list of channels either in this team or shared with this team (incoming channels).
      * @return a ChannelCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/team-list-allchannels?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class AllChannelsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of channels either in this team or shared with this team (incoming channels). This API is available in the following national cloud deployments.
+     * Get the list of channels either in this team or shared with this team (incoming channels).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ChannelCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/team-list-allchannels?view=graph-rest-1.0">Find more info here</a>
@@ -78,10 +78,10 @@ public class AllChannelsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ChannelCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ChannelCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of channels either in this team or shared with this team (incoming channels). This API is available in the following national cloud deployments.
+     * Get the list of channels either in this team or shared with this team (incoming channels).
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class AllChannelsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of channels either in this team or shared with this team (incoming channels). This API is available in the following national cloud deployments.
+     * Get the list of channels either in this team or shared with this team (incoming channels).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -111,7 +111,7 @@ public class AllChannelsRequestBuilder extends BaseRequestBuilder {
         return new AllChannelsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of channels either in this team or shared with this team (incoming channels). This API is available in the following national cloud deployments.
+     * Get the list of channels either in this team or shared with this team (incoming channels).
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

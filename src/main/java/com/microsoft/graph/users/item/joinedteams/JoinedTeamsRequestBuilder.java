@@ -67,7 +67,7 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/joinedTeams{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the teams in Microsoft Teams that the user is a direct member of. This API is available in the following national cloud deployments.
+     * Get the teams in Microsoft Teams that the user is a direct member of.
      * @return a TeamCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-joinedteams?view=graph-rest-1.0">Find more info here</a>
      */
@@ -76,7 +76,7 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the teams in Microsoft Teams that the user is a direct member of. This API is available in the following national cloud deployments.
+     * Get the teams in Microsoft Teams that the user is a direct member of.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TeamCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-joinedteams?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TeamCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TeamCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to joinedTeams for users
@@ -111,10 +111,10 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, Team::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, Team::createFromDiscriminatorValue);
     }
     /**
-     * Get the teams in Microsoft Teams that the user is a direct member of. This API is available in the following national cloud deployments.
+     * Get the teams in Microsoft Teams that the user is a direct member of.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -122,7 +122,7 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the teams in Microsoft Teams that the user is a direct member of. This API is available in the following national cloud deployments.
+     * Get the teams in Microsoft Teams that the user is a direct member of.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -168,7 +168,7 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
         return new JoinedTeamsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the teams in Microsoft Teams that the user is a direct member of. This API is available in the following national cloud deployments.
+     * Get the teams in Microsoft Teams that the user is a direct member of.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

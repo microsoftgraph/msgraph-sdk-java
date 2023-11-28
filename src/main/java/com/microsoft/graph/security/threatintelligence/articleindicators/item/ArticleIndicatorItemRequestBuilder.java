@@ -59,10 +59,10 @@ public class ArticleIndicatorItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an articleIndicator object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an articleIndicator object.
      * @return a ArticleIndicator
      * @see <a href="https://learn.microsoft.com/graph/api/security-articleindicator-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -71,7 +71,7 @@ public class ArticleIndicatorItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an articleIndicator object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an articleIndicator object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ArticleIndicator
      * @see <a href="https://learn.microsoft.com/graph/api/security-articleindicator-get?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class ArticleIndicatorItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ArticleIndicator::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ArticleIndicator::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property articleIndicators in security
@@ -106,7 +106,7 @@ public class ArticleIndicatorItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ArticleIndicator::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ArticleIndicator::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property articleIndicators for security
@@ -129,7 +129,7 @@ public class ArticleIndicatorItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an articleIndicator object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an articleIndicator object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +137,7 @@ public class ArticleIndicatorItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an articleIndicator object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an articleIndicator object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -189,7 +189,7 @@ public class ArticleIndicatorItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an articleIndicator object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an articleIndicator object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

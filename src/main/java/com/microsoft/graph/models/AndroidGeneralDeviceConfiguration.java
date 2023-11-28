@@ -183,7 +183,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
         deserializerMap.put("cellularBlockMessaging", (n) -> { this.setCellularBlockMessaging(n.getBooleanValue()); });
         deserializerMap.put("cellularBlockVoiceRoaming", (n) -> { this.setCellularBlockVoiceRoaming(n.getBooleanValue()); });
         deserializerMap.put("cellularBlockWiFiTethering", (n) -> { this.setCellularBlockWiFiTethering(n.getBooleanValue()); });
-        deserializerMap.put("compliantAppListType", (n) -> { this.setCompliantAppListType(n.getEnumValue(AppListType.class)); });
+        deserializerMap.put("compliantAppListType", (n) -> { this.setCompliantAppListType(n.getEnumValue(AppListType::forValue)); });
         deserializerMap.put("compliantAppsList", (n) -> { this.setCompliantAppsList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceSharingAllowed", (n) -> { this.setDeviceSharingAllowed(n.getBooleanValue()); });
         deserializerMap.put("diagnosticDataBlockSubmission", (n) -> { this.setDiagnosticDataBlockSubmission(n.getBooleanValue()); });
@@ -202,7 +202,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
         deserializerMap.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { this.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
         deserializerMap.put("passwordPreviousPasswordBlockCount", (n) -> { this.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
         deserializerMap.put("passwordRequired", (n) -> { this.setPasswordRequired(n.getBooleanValue()); });
-        deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(AndroidRequiredPasswordType.class)); });
+        deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(AndroidRequiredPasswordType::forValue)); });
         deserializerMap.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { this.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
         deserializerMap.put("powerOffBlocked", (n) -> { this.setPowerOffBlocked(n.getBooleanValue()); });
         deserializerMap.put("screenCaptureBlocked", (n) -> { this.setScreenCaptureBlocked(n.getBooleanValue()); });
@@ -217,7 +217,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
         deserializerMap.put("webBrowserBlocked", (n) -> { this.setWebBrowserBlocked(n.getBooleanValue()); });
         deserializerMap.put("webBrowserBlockJavaScript", (n) -> { this.setWebBrowserBlockJavaScript(n.getBooleanValue()); });
         deserializerMap.put("webBrowserBlockPopups", (n) -> { this.setWebBrowserBlockPopups(n.getBooleanValue()); });
-        deserializerMap.put("webBrowserCookieSettings", (n) -> { this.setWebBrowserCookieSettings(n.getEnumValue(WebBrowserCookieSettings.class)); });
+        deserializerMap.put("webBrowserCookieSettings", (n) -> { this.setWebBrowserCookieSettings(n.getEnumValue(WebBrowserCookieSettings::forValue)); });
         deserializerMap.put("wiFiBlocked", (n) -> { this.setWiFiBlocked(n.getBooleanValue()); });
         return deserializerMap;
     }

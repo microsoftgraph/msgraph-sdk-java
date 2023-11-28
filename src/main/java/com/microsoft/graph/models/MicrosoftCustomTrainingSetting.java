@@ -43,7 +43,7 @@ public class MicrosoftCustomTrainingSetting extends TrainingSetting implements P
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("completionDateTime", (n) -> { this.setCompletionDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("trainingAssignmentMappings", (n) -> { this.setTrainingAssignmentMappings(n.getCollectionOfObjectValues(MicrosoftTrainingAssignmentMapping::createFromDiscriminatorValue)); });
-        deserializerMap.put("trainingCompletionDuration", (n) -> { this.setTrainingCompletionDuration(n.getEnumValue(TrainingCompletionDuration.class)); });
+        deserializerMap.put("trainingCompletionDuration", (n) -> { this.setTrainingCompletionDuration(n.getEnumValue(TrainingCompletionDuration::forValue)); });
         return deserializerMap;
     }
     /**

@@ -62,9 +62,9 @@ public class MediaContentRatingJapan implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("movieRating", (n) -> { this.setMovieRating(n.getEnumValue(RatingJapanMoviesType.class)); });
+        deserializerMap.put("movieRating", (n) -> { this.setMovieRating(n.getEnumValue(RatingJapanMoviesType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("tvRating", (n) -> { this.setTvRating(n.getEnumValue(RatingJapanTelevisionType.class)); });
+        deserializerMap.put("tvRating", (n) -> { this.setTvRating(n.getEnumValue(RatingJapanTelevisionType::forValue)); });
         return deserializerMap;
     }
     /**

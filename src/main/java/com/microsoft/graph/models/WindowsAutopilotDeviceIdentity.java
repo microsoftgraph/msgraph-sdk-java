@@ -70,7 +70,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
         deserializerMap.put("addressableUserName", (n) -> { this.setAddressableUserName(n.getStringValue()); });
         deserializerMap.put("azureActiveDirectoryDeviceId", (n) -> { this.setAzureActiveDirectoryDeviceId(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("enrollmentState", (n) -> { this.setEnrollmentState(n.getEnumValue(EnrollmentState.class)); });
+        deserializerMap.put("enrollmentState", (n) -> { this.setEnrollmentState(n.getEnumValue(EnrollmentState::forValue)); });
         deserializerMap.put("groupTag", (n) -> { this.setGroupTag(n.getStringValue()); });
         deserializerMap.put("lastContactedDateTime", (n) -> { this.setLastContactedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("managedDeviceId", (n) -> { this.setManagedDeviceId(n.getStringValue()); });

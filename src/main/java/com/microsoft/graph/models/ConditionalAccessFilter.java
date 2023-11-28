@@ -62,7 +62,7 @@ public class ConditionalAccessFilter implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("mode", (n) -> { this.setMode(n.getEnumValue(FilterMode.class)); });
+        deserializerMap.put("mode", (n) -> { this.setMode(n.getEnumValue(FilterMode::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("rule", (n) -> { this.setRule(n.getStringValue()); });
         return deserializerMap;

@@ -59,7 +59,7 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/insights/trending{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Calculated insight that includes a list of documents trending around the user. This API is available in the following national cloud deployments.
+     * Calculated insight that includes a list of documents trending around the user.
      * @return a TrendingCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/insights-list-trending?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Calculated insight that includes a list of documents trending around the user. This API is available in the following national cloud deployments.
+     * Calculated insight that includes a list of documents trending around the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TrendingCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/insights-list-trending?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TrendingCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TrendingCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to trending for users
@@ -103,10 +103,10 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, Trending::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, Trending::createFromDiscriminatorValue);
     }
     /**
-     * Calculated insight that includes a list of documents trending around the user. This API is available in the following national cloud deployments.
+     * Calculated insight that includes a list of documents trending around the user.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Calculated insight that includes a list of documents trending around the user. This API is available in the following national cloud deployments.
+     * Calculated insight that includes a list of documents trending around the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
         return new TrendingRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Calculated insight that includes a list of documents trending around the user. This API is available in the following national cloud deployments.
+     * Calculated insight that includes a list of documents trending around the user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

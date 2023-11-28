@@ -35,7 +35,7 @@ public class RemoveGroupRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groupLifecyclePolicies/{groupLifecyclePolicy%2Did}/removeGroup", rawUrl);
     }
     /**
-     * Removes a group from a lifecycle policy. This API is available in the following national cloud deployments.
+     * Removes a group from a lifecycle policy.
      * @param body The request body
      * @return a RemoveGroupPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-removegroup?view=graph-rest-1.0">Find more info here</a>
@@ -45,7 +45,7 @@ public class RemoveGroupRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Removes a group from a lifecycle policy. This API is available in the following national cloud deployments.
+     * Removes a group from a lifecycle policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RemoveGroupPostResponse
@@ -58,10 +58,10 @@ public class RemoveGroupRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, RemoveGroupPostResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, RemoveGroupPostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Removes a group from a lifecycle policy. This API is available in the following national cloud deployments.
+     * Removes a group from a lifecycle policy.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -70,7 +70,7 @@ public class RemoveGroupRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Removes a group from a lifecycle policy. This API is available in the following national cloud deployments.
+     * Removes a group from a lifecycle policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

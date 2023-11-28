@@ -91,19 +91,19 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/organization{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the organization objects.
+     * Retrieve a list of organization objects. There's only one organization object in the collection.
      * @return a OrganizationCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-organization-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/organization-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OrganizationCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the organization objects.
+     * Retrieve a list of organization objects. There's only one organization object in the collection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a OrganizationCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-organization-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/organization-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OrganizationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, OrganizationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, OrganizationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Add new entity to organization
@@ -135,10 +135,10 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, Organization::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, Organization::createFromDiscriminatorValue);
     }
     /**
-     * List properties and relationships of the organization objects.
+     * Retrieve a list of organization objects. There's only one organization object in the collection.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +146,7 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the organization objects.
+     * Retrieve a list of organization objects. There's only one organization object in the collection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -192,7 +192,7 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
         return new OrganizationRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the organization objects.
+     * Retrieve a list of organization objects. There's only one organization object in the collection.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

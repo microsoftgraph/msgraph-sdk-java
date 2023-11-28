@@ -36,7 +36,7 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/messages/{message%2Did}/copy", rawUrl);
     }
     /**
-     * Copy a message to a folder within the user's mailbox. This API is available in the following national cloud deployments.
+     * Copy a message to a folder within the user's mailbox.
      * @param body The request body
      * @return a Message
      * @see <a href="https://learn.microsoft.com/graph/api/message-copy?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Copy a message to a folder within the user's mailbox. This API is available in the following national cloud deployments.
+     * Copy a message to a folder within the user's mailbox.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Message
@@ -59,10 +59,10 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, Message::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, Message::createFromDiscriminatorValue);
     }
     /**
-     * Copy a message to a folder within the user's mailbox. This API is available in the following national cloud deployments.
+     * Copy a message to a folder within the user's mailbox.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Copy a message to a folder within the user's mailbox. This API is available in the following national cloud deployments.
+     * Copy a message to a folder within the user's mailbox.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

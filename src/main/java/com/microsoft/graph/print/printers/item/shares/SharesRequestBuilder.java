@@ -58,7 +58,7 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printers/{printer%2Did}/shares{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of printer shares associated with the printer. This API is available in the following national cloud deployments.
+     * Retrieve a list of printer shares associated with the printer.
      * @return a PrinterShareCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/printer-list-shares?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of printer shares associated with the printer. This API is available in the following national cloud deployments.
+     * Retrieve a list of printer shares associated with the printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PrinterShareCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/printer-list-shares?view=graph-rest-1.0">Find more info here</a>
@@ -78,10 +78,10 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PrinterShareCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PrinterShareCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of printer shares associated with the printer. This API is available in the following national cloud deployments.
+     * Retrieve a list of printer shares associated with the printer.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of printer shares associated with the printer. This API is available in the following national cloud deployments.
+     * Retrieve a list of printer shares associated with the printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -111,7 +111,7 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
         return new SharesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of printer shares associated with the printer. This API is available in the following national cloud deployments.
+     * Retrieve a list of printer shares associated with the printer.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

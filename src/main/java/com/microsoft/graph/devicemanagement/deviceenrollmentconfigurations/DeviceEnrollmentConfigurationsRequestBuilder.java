@@ -79,7 +79,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceEnrollmentConfigurationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceEnrollmentConfigurationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new deviceEnrollmentPlatformRestrictionsConfiguration object.
@@ -105,7 +105,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceEnrollmentConfiguration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceEnrollmentConfiguration::createFromDiscriminatorValue);
     }
     /**
      * List properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration objects.

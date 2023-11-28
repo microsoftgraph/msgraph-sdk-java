@@ -59,7 +59,7 @@ public class SimulationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/simulations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of attack simulation campaigns for a tenant. This API is available in the following national cloud deployments.
+     * Get a list of attack simulation campaigns for a tenant.
      * @return a SimulationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-simulations?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class SimulationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of attack simulation campaigns for a tenant. This API is available in the following national cloud deployments.
+     * Get a list of attack simulation campaigns for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SimulationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-simulations?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class SimulationsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SimulationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SimulationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create an attack simulation campaign for a tenant.
@@ -105,10 +105,10 @@ public class SimulationsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, Simulation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, Simulation::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of attack simulation campaigns for a tenant. This API is available in the following national cloud deployments.
+     * Get a list of attack simulation campaigns for a tenant.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class SimulationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of attack simulation campaigns for a tenant. This API is available in the following national cloud deployments.
+     * Get a list of attack simulation campaigns for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -162,7 +162,7 @@ public class SimulationsRequestBuilder extends BaseRequestBuilder {
         return new SimulationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of attack simulation campaigns for a tenant. This API is available in the following national cloud deployments.
+     * Get a list of attack simulation campaigns for a tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -51,7 +51,7 @@ public class KubernetesClusterEvidence extends AlertEvidence implements Parsable
         deserializerMap.put("cloudResource", (n) -> { this.setCloudResource(n.getObjectValue(AlertEvidence::createFromDiscriminatorValue)); });
         deserializerMap.put("distribution", (n) -> { this.setDistribution(n.getStringValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
-        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getEnumValue(KubernetesPlatform.class)); });
+        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getEnumValue(KubernetesPlatform::forValue)); });
         deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
         return deserializerMap;
     }

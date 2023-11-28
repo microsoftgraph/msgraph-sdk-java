@@ -83,10 +83,10 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the instance of a role eligibility. This API is available in the following national cloud deployments.
+     * Get the instance of a role eligibility.
      * @return a UnifiedRoleEligibilityScheduleInstance
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityscheduleinstance-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -95,7 +95,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
         return get(null);
     }
     /**
-     * Get the instance of a role eligibility. This API is available in the following national cloud deployments.
+     * Get the instance of a role eligibility.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UnifiedRoleEligibilityScheduleInstance
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityscheduleinstance-get?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property roleEligibilityScheduleInstances in roleManagement
@@ -130,7 +130,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property roleEligibilityScheduleInstances for roleManagement
@@ -153,7 +153,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
         return requestInfo;
     }
     /**
-     * Get the instance of a role eligibility. This API is available in the following national cloud deployments.
+     * Get the instance of a role eligibility.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -161,7 +161,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
         return toGetRequestInformation(null);
     }
     /**
-     * Get the instance of a role eligibility. This API is available in the following national cloud deployments.
+     * Get the instance of a role eligibility.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -213,7 +213,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the instance of a role eligibility. This API is available in the following national cloud deployments.
+     * Get the instance of a role eligibility.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

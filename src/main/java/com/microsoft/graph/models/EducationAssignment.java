@@ -152,8 +152,8 @@ public class EducationAssignment extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("addedStudentAction", (n) -> { this.setAddedStudentAction(n.getEnumValue(EducationAddedStudentAction.class)); });
-        deserializerMap.put("addToCalendarAction", (n) -> { this.setAddToCalendarAction(n.getEnumValue(EducationAddToCalendarOptions.class)); });
+        deserializerMap.put("addedStudentAction", (n) -> { this.setAddedStudentAction(n.getEnumValue(EducationAddedStudentAction::forValue)); });
+        deserializerMap.put("addToCalendarAction", (n) -> { this.setAddToCalendarAction(n.getEnumValue(EducationAddToCalendarOptions::forValue)); });
         deserializerMap.put("allowLateSubmissions", (n) -> { this.setAllowLateSubmissions(n.getBooleanValue()); });
         deserializerMap.put("allowStudentsToAddResourcesToSubmission", (n) -> { this.setAllowStudentsToAddResourcesToSubmission(n.getBooleanValue()); });
         deserializerMap.put("assignDateTime", (n) -> { this.setAssignDateTime(n.getOffsetDateTimeValue()); });
@@ -175,7 +175,7 @@ public class EducationAssignment extends Entity implements Parsable {
         deserializerMap.put("resources", (n) -> { this.setResources(n.getCollectionOfObjectValues(EducationAssignmentResource::createFromDiscriminatorValue)); });
         deserializerMap.put("resourcesFolderUrl", (n) -> { this.setResourcesFolderUrl(n.getStringValue()); });
         deserializerMap.put("rubric", (n) -> { this.setRubric(n.getObjectValue(EducationRubric::createFromDiscriminatorValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(EducationAssignmentStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(EducationAssignmentStatus::forValue)); });
         deserializerMap.put("submissions", (n) -> { this.setSubmissions(n.getCollectionOfObjectValues(EducationSubmission::createFromDiscriminatorValue)); });
         deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
         return deserializerMap;

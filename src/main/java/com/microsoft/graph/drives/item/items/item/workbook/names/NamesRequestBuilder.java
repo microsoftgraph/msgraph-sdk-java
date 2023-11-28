@@ -75,7 +75,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/names{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of nameditem objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of nameditem objects.
      * @return a WorkbookNamedItemCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/nameditem-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -84,7 +84,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of nameditem objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of nameditem objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookNamedItemCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/nameditem-list?view=graph-rest-1.0">Find more info here</a>
@@ -95,7 +95,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, WorkbookNamedItemCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, WorkbookNamedItemCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to names for drives
@@ -119,10 +119,10 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, WorkbookNamedItem::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, WorkbookNamedItem::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of nameditem objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of nameditem objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of nameditem objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of nameditem objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -176,7 +176,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
         return new NamesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of nameditem objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of nameditem objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

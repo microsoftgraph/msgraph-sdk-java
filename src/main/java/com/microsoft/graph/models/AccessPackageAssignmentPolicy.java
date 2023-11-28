@@ -105,7 +105,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessPackage", (n) -> { this.setAccessPackage(n.getObjectValue(AccessPackage::createFromDiscriminatorValue)); });
-        deserializerMap.put("allowedTargetScope", (n) -> { this.setAllowedTargetScope(n.getEnumValue(AllowedTargetScope.class)); });
+        deserializerMap.put("allowedTargetScope", (n) -> { this.setAllowedTargetScope(n.getEnumValue(AllowedTargetScope::forValue)); });
         deserializerMap.put("automaticRequestSettings", (n) -> { this.setAutomaticRequestSettings(n.getObjectValue(AccessPackageAutomaticRequestSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("catalog", (n) -> { this.setCatalog(n.getObjectValue(AccessPackageCatalog::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });

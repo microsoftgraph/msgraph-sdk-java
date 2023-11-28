@@ -61,7 +61,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
         deserializerMap.put("eventDetail", (n) -> { this.setEventDetail(n.getObjectValue(EventMessageDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("from", (n) -> { this.setFrom(n.getObjectValue(ChatMessageFromIdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("isDeleted", (n) -> { this.setIsDeleted(n.getBooleanValue()); });
-        deserializerMap.put("messageType", (n) -> { this.setMessageType(n.getEnumValue(ChatMessageType.class)); });
+        deserializerMap.put("messageType", (n) -> { this.setMessageType(n.getEnumValue(ChatMessageType::forValue)); });
         return deserializerMap;
     }
     /**

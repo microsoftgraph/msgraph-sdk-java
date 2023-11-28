@@ -71,7 +71,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
-        deserializerMap.put("behaviorDuringRetentionPeriod", (n) -> { this.setBehaviorDuringRetentionPeriod(n.getEnumValue(BehaviorDuringRetentionPeriod.class)); });
+        deserializerMap.put("behaviorDuringRetentionPeriod", (n) -> { this.setBehaviorDuringRetentionPeriod(n.getEnumValue(BehaviorDuringRetentionPeriod::forValue)); });
         deserializerMap.put("isContentUpdateAllowed", (n) -> { this.setIsContentUpdateAllowed(n.getBooleanValue()); });
         deserializerMap.put("isDeleteAllowed", (n) -> { this.setIsDeleteAllowed(n.getBooleanValue()); });
         deserializerMap.put("isLabelUpdateAllowed", (n) -> { this.setIsLabelUpdateAllowed(n.getBooleanValue()); });

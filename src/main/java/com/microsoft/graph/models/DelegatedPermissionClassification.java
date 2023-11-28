@@ -39,7 +39,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("classification", (n) -> { this.setClassification(n.getEnumValue(PermissionClassificationType.class)); });
+        deserializerMap.put("classification", (n) -> { this.setClassification(n.getEnumValue(PermissionClassificationType::forValue)); });
         deserializerMap.put("permissionId", (n) -> { this.setPermissionId(n.getStringValue()); });
         deserializerMap.put("permissionName", (n) -> { this.setPermissionName(n.getStringValue()); });
         return deserializerMap;

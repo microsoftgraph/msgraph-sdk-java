@@ -70,7 +70,7 @@ public class FileHash implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("algorithm", (n) -> { this.setAlgorithm(n.getEnumValue(FileHashAlgorithm.class)); });
+        deserializerMap.put("algorithm", (n) -> { this.setAlgorithm(n.getEnumValue(FileHashAlgorithm::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("value", (n) -> { this.setValue(n.getStringValue()); });
         return deserializerMap;

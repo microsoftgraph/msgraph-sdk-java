@@ -83,10 +83,10 @@ public class PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilder e
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupEligibilityScheduleRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a privilegedAccessGroupEligibilityScheduleRequest object.
      * @return a PrivilegedAccessGroupEligibilityScheduleRequest
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroupeligibilityschedulerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -95,7 +95,7 @@ public class PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilder e
         return get(null);
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupEligibilityScheduleRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a privilegedAccessGroupEligibilityScheduleRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PrivilegedAccessGroupEligibilityScheduleRequest
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroupeligibilityschedulerequest-get?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilder e
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PrivilegedAccessGroupEligibilityScheduleRequest::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedAccessGroupEligibilityScheduleRequest::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property eligibilityScheduleRequests in identityGovernance
@@ -130,7 +130,7 @@ public class PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilder e
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PrivilegedAccessGroupEligibilityScheduleRequest::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedAccessGroupEligibilityScheduleRequest::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property eligibilityScheduleRequests for identityGovernance
@@ -153,7 +153,7 @@ public class PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilder e
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupEligibilityScheduleRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a privilegedAccessGroupEligibilityScheduleRequest object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -161,7 +161,7 @@ public class PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilder e
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupEligibilityScheduleRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a privilegedAccessGroupEligibilityScheduleRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -213,7 +213,7 @@ public class PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilder e
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupEligibilityScheduleRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a privilegedAccessGroupEligibilityScheduleRequest object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

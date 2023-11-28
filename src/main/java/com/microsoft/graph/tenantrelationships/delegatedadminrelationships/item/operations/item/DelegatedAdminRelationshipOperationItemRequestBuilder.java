@@ -51,10 +51,10 @@ public class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseR
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties of a delegatedAdminRelationshipOperation object. This API is available in the following national cloud deployments.
+     * Read the properties of a delegatedAdminRelationshipOperation object.
      * @return a DelegatedAdminRelationshipOperation
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationshipoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseR
         return get(null);
     }
     /**
-     * Read the properties of a delegatedAdminRelationshipOperation object. This API is available in the following national cloud deployments.
+     * Read the properties of a delegatedAdminRelationshipOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DelegatedAdminRelationshipOperation
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationshipoperation-get?view=graph-rest-1.0">Find more info here</a>
@@ -74,7 +74,7 @@ public class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseR
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DelegatedAdminRelationshipOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminRelationshipOperation::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property operations in tenantRelationships
@@ -98,7 +98,7 @@ public class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseR
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DelegatedAdminRelationshipOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminRelationshipOperation::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property operations for tenantRelationships
@@ -121,7 +121,7 @@ public class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * Read the properties of a delegatedAdminRelationshipOperation object. This API is available in the following national cloud deployments.
+     * Read the properties of a delegatedAdminRelationshipOperation object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseR
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties of a delegatedAdminRelationshipOperation object. This API is available in the following national cloud deployments.
+     * Read the properties of a delegatedAdminRelationshipOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -181,7 +181,7 @@ public class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseR
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties of a delegatedAdminRelationshipOperation object. This API is available in the following national cloud deployments.
+     * Read the properties of a delegatedAdminRelationshipOperation object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

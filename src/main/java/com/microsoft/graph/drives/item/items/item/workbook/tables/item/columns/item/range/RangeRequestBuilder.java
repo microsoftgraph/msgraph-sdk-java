@@ -36,7 +36,7 @@ public class RangeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/{workbookTable%2Did}/columns/{workbookTableColumn%2Did}/range()", rawUrl);
     }
     /**
-     * Gets the range object associated with the entire column. This API is available in the following national cloud deployments.
+     * Gets the range object associated with the entire column.
      * @return a WorkbookRange
      * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-range?view=graph-rest-1.0">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class RangeRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Gets the range object associated with the entire column. This API is available in the following national cloud deployments.
+     * Gets the range object associated with the entire column.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookRange
      * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-range?view=graph-rest-1.0">Find more info here</a>
@@ -56,10 +56,10 @@ public class RangeRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, WorkbookRange::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, WorkbookRange::createFromDiscriminatorValue);
     }
     /**
-     * Gets the range object associated with the entire column. This API is available in the following national cloud deployments.
+     * Gets the range object associated with the entire column.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class RangeRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Gets the range object associated with the entire column. This API is available in the following national cloud deployments.
+     * Gets the range object associated with the entire column.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

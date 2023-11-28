@@ -91,10 +91,10 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a onenoteSection object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a onenoteSection object.
      * @return a OnenoteSection
      * @see <a href="https://learn.microsoft.com/graph/api/section-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -103,7 +103,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a onenoteSection object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a onenoteSection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a OnenoteSection
      * @see <a href="https://learn.microsoft.com/graph/api/section-get?view=graph-rest-1.0">Find more info here</a>
@@ -114,7 +114,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, OnenoteSection::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, OnenoteSection::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property sections in sites
@@ -138,7 +138,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, OnenoteSection::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, OnenoteSection::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property sections for sites
@@ -161,7 +161,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a onenoteSection object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a onenoteSection object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -169,7 +169,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a onenoteSection object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a onenoteSection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -221,7 +221,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a onenoteSection object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a onenoteSection object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

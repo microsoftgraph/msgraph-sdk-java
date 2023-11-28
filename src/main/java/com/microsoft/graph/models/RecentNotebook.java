@@ -75,7 +75,7 @@ public class RecentNotebook implements AdditionalDataHolder, BackedModel, Parsab
         deserializerMap.put("lastAccessedTime", (n) -> { this.setLastAccessedTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("links", (n) -> { this.setLinks(n.getObjectValue(RecentNotebookLinks::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("sourceService", (n) -> { this.setSourceService(n.getEnumValue(OnenoteSourceService.class)); });
+        deserializerMap.put("sourceService", (n) -> { this.setSourceService(n.getEnumValue(OnenoteSourceService::forValue)); });
         return deserializerMap;
     }
     /**

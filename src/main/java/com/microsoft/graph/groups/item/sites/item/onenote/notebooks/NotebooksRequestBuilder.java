@@ -68,7 +68,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/onenote/notebooks{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of notebook objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of notebook objects.
      * @return a NotebookCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/onenote-list-notebooks?view=graph-rest-1.0">Find more info here</a>
      */
@@ -77,7 +77,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of notebook objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of notebook objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a NotebookCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/onenote-list-notebooks?view=graph-rest-1.0">Find more info here</a>
@@ -88,7 +88,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, NotebookCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, NotebookCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Provides operations to call the getRecentNotebooks method.
@@ -101,7 +101,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         return new GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder(pathParameters, requestAdapter, includePersonalNotebooks);
     }
     /**
-     * Create a new OneNote notebook. This API is available in the following national cloud deployments.
+     * Create a new OneNote notebook.
      * @param body The request body
      * @return a Notebook
      * @see <a href="https://learn.microsoft.com/graph/api/onenote-post-notebooks?view=graph-rest-1.0">Find more info here</a>
@@ -111,7 +111,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new OneNote notebook. This API is available in the following national cloud deployments.
+     * Create a new OneNote notebook.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Notebook
@@ -124,10 +124,10 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, Notebook::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, Notebook::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of notebook objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of notebook objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -135,7 +135,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of notebook objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of notebook objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -147,7 +147,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new OneNote notebook. This API is available in the following national cloud deployments.
+     * Create a new OneNote notebook.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -156,7 +156,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new OneNote notebook. This API is available in the following national cloud deployments.
+     * Create a new OneNote notebook.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -181,7 +181,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         return new NotebooksRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of notebook objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of notebook objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

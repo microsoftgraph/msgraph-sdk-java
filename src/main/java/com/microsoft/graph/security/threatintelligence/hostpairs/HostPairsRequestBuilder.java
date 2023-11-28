@@ -59,7 +59,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hostPairs{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a hostPair object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a hostPair object.
      * @return a HostPairCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a hostPair object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a hostPair object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a HostPairCollectionResponse
      */
@@ -77,7 +77,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, HostPairCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, HostPairCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to hostPairs for security
@@ -101,10 +101,10 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, HostPair::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, HostPair::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of a hostPair object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a hostPair object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a hostPair object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a hostPair object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         return new HostPairsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a hostPair object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a hostPair object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

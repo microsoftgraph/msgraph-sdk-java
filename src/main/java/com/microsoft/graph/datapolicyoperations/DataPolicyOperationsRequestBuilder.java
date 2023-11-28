@@ -59,7 +59,7 @@ public class DataPolicyOperationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/dataPolicyOperations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties of a dataPolicyOperation object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of a dataPolicyOperation object.
      * @return a DataPolicyOperationCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class DataPolicyOperationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties of a dataPolicyOperation object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of a dataPolicyOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DataPolicyOperationCollectionResponse
      */
@@ -77,7 +77,7 @@ public class DataPolicyOperationsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DataPolicyOperationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DataPolicyOperationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Add new entity to dataPolicyOperations
@@ -101,10 +101,10 @@ public class DataPolicyOperationsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DataPolicyOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DataPolicyOperation::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the properties of a dataPolicyOperation object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of a dataPolicyOperation object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class DataPolicyOperationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of a dataPolicyOperation object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of a dataPolicyOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class DataPolicyOperationsRequestBuilder extends BaseRequestBuilder {
         return new DataPolicyOperationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties of a dataPolicyOperation object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of a dataPolicyOperation object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

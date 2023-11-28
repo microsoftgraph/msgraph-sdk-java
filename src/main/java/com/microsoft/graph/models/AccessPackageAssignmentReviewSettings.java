@@ -78,7 +78,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
-        deserializerMap.put("expirationBehavior", (n) -> { this.setExpirationBehavior(n.getEnumValue(AccessReviewExpirationBehavior.class)); });
+        deserializerMap.put("expirationBehavior", (n) -> { this.setExpirationBehavior(n.getEnumValue(AccessReviewExpirationBehavior::forValue)); });
         deserializerMap.put("fallbackReviewers", (n) -> { this.setFallbackReviewers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
         deserializerMap.put("isRecommendationEnabled", (n) -> { this.setIsRecommendationEnabled(n.getBooleanValue()); });

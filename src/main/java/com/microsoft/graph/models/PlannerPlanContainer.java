@@ -72,7 +72,7 @@ public class PlannerPlanContainer implements AdditionalDataHolder, BackedModel, 
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("containerId", (n) -> { this.setContainerId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(PlannerContainerType.class)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(PlannerContainerType::forValue)); });
         deserializerMap.put("url", (n) -> { this.setUrl(n.getStringValue()); });
         return deserializerMap;
     }

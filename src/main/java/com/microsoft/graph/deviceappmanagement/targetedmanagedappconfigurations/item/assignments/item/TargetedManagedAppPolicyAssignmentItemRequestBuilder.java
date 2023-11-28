@@ -51,7 +51,7 @@ public class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRe
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
@@ -72,7 +72,7 @@ public class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRe
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property assignments in deviceAppManagement
@@ -96,7 +96,7 @@ public class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRe
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property assignments for deviceAppManagement

@@ -36,7 +36,7 @@ public class AddKeyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/addKey", rawUrl);
     }
     /**
-     * Add a key credential to an application. This method, along with removeKey can be used by an application to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.  Applications that dont have any existing valid certificates (no certificates have been added yet, or all certificates have expired), wont be able to use this service action. You can use the Update application operation to perform an update instead. This API is available in the following national cloud deployments.
+     * Add a key credential to an application. This method, along with removeKey can be used by an application to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.  Applications that dont have any existing valid certificates (no certificates have been added yet, or all certificates have expired), wont be able to use this service action. You can use the Update application operation to perform an update instead.
      * @param body The request body
      * @return a KeyCredential
      * @see <a href="https://learn.microsoft.com/graph/api/application-addkey?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class AddKeyRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Add a key credential to an application. This method, along with removeKey can be used by an application to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.  Applications that dont have any existing valid certificates (no certificates have been added yet, or all certificates have expired), wont be able to use this service action. You can use the Update application operation to perform an update instead. This API is available in the following national cloud deployments.
+     * Add a key credential to an application. This method, along with removeKey can be used by an application to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.  Applications that dont have any existing valid certificates (no certificates have been added yet, or all certificates have expired), wont be able to use this service action. You can use the Update application operation to perform an update instead.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a KeyCredential
@@ -59,10 +59,10 @@ public class AddKeyRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, KeyCredential::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, KeyCredential::createFromDiscriminatorValue);
     }
     /**
-     * Add a key credential to an application. This method, along with removeKey can be used by an application to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.  Applications that dont have any existing valid certificates (no certificates have been added yet, or all certificates have expired), wont be able to use this service action. You can use the Update application operation to perform an update instead. This API is available in the following national cloud deployments.
+     * Add a key credential to an application. This method, along with removeKey can be used by an application to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.  Applications that dont have any existing valid certificates (no certificates have been added yet, or all certificates have expired), wont be able to use this service action. You can use the Update application operation to perform an update instead.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class AddKeyRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add a key credential to an application. This method, along with removeKey can be used by an application to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.  Applications that dont have any existing valid certificates (no certificates have been added yet, or all certificates have expired), wont be able to use this service action. You can use the Update application operation to perform an update instead. This API is available in the following national cloud deployments.
+     * Add a key credential to an application. This method, along with removeKey can be used by an application to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.  Applications that dont have any existing valid certificates (no certificates have been added yet, or all certificates have expired), wont be able to use this service action. You can use the Update application operation to perform an update instead.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

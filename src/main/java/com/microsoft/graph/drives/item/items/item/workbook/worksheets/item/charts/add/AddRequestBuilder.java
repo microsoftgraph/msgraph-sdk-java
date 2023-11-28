@@ -36,7 +36,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/add", rawUrl);
     }
     /**
-     * Creates a new chart. This API is available in the following national cloud deployments.
+     * Creates a new chart.
      * @param body The request body
      * @return a WorkbookChart
      * @see <a href="https://learn.microsoft.com/graph/api/chartcollection-add?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Creates a new chart. This API is available in the following national cloud deployments.
+     * Creates a new chart.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookChart
@@ -59,10 +59,10 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, WorkbookChart::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, WorkbookChart::createFromDiscriminatorValue);
     }
     /**
-     * Creates a new chart. This API is available in the following national cloud deployments.
+     * Creates a new chart.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Creates a new chart. This API is available in the following national cloud deployments.
+     * Creates a new chart.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

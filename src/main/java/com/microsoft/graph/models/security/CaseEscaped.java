@@ -70,7 +70,7 @@ public class CaseEscaped extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CaseStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CaseStatus::forValue)); });
         return deserializerMap;
     }
     /**

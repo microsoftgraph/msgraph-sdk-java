@@ -39,14 +39,14 @@ public class DevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/devices(deviceId='{deviceId}'){?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a registered device. This API is available in the following national cloud deployments.
+     * Delete a registered device.
      * @see <a href="https://learn.microsoft.com/graph/api/device-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a registered device. This API is available in the following national cloud deployments.
+     * Delete a registered device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/device-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -55,10 +55,10 @@ public class DevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the properties and relationships of a device object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a device object.
      * @return a Device
      * @see <a href="https://learn.microsoft.com/graph/api/device-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class DevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the properties and relationships of a device object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a device object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Device
      * @see <a href="https://learn.microsoft.com/graph/api/device-get?view=graph-rest-1.0">Find more info here</a>
@@ -78,10 +78,10 @@ public class DevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, Device::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, Device::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a registered device. Only certain properties of a device can be updated through approved Mobile Device Managment (MDM) apps. This API is available in the following national cloud deployments.
+     * Update the properties of a registered device. Only certain properties of a device can be updated through approved Mobile Device Managment (MDM) apps.
      * @param body The request body
      * @return a Device
      * @see <a href="https://learn.microsoft.com/graph/api/device-update?view=graph-rest-1.0">Find more info here</a>
@@ -91,7 +91,7 @@ public class DevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a registered device. Only certain properties of a device can be updated through approved Mobile Device Managment (MDM) apps. This API is available in the following national cloud deployments.
+     * Update the properties of a registered device. Only certain properties of a device can be updated through approved Mobile Device Managment (MDM) apps.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Device
@@ -104,10 +104,10 @@ public class DevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, Device::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, Device::createFromDiscriminatorValue);
     }
     /**
-     * Delete a registered device. This API is available in the following national cloud deployments.
+     * Delete a registered device.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class DevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a registered device. This API is available in the following national cloud deployments.
+     * Delete a registered device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -127,7 +127,7 @@ public class DevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the properties and relationships of a device object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a device object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -135,7 +135,7 @@ public class DevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of a device object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a device object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -147,7 +147,7 @@ public class DevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a registered device. Only certain properties of a device can be updated through approved Mobile Device Managment (MDM) apps. This API is available in the following national cloud deployments.
+     * Update the properties of a registered device. Only certain properties of a device can be updated through approved Mobile Device Managment (MDM) apps.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -156,7 +156,7 @@ public class DevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a registered device. Only certain properties of a device can be updated through approved Mobile Device Managment (MDM) apps. This API is available in the following national cloud deployments.
+     * Update the properties of a registered device. Only certain properties of a device can be updated through approved Mobile Device Managment (MDM) apps.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -187,7 +187,7 @@ public class DevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties and relationships of a device object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a device object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

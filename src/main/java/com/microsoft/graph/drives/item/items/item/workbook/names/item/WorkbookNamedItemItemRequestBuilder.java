@@ -67,10 +67,10 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of nameditem object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of nameditem object.
      * @return a WorkbookNamedItem
      * @see <a href="https://learn.microsoft.com/graph/api/nameditem-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -79,7 +79,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of nameditem object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of nameditem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookNamedItem
      * @see <a href="https://learn.microsoft.com/graph/api/nameditem-get?view=graph-rest-1.0">Find more info here</a>
@@ -90,10 +90,10 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, WorkbookNamedItem::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, WorkbookNamedItem::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of nameditem object. This API is available in the following national cloud deployments.
+     * Update the properties of nameditem object.
      * @param body The request body
      * @return a WorkbookNamedItem
      * @see <a href="https://learn.microsoft.com/graph/api/nameditem-update?view=graph-rest-1.0">Find more info here</a>
@@ -103,7 +103,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of nameditem object. This API is available in the following national cloud deployments.
+     * Update the properties of nameditem object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookNamedItem
@@ -116,7 +116,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, WorkbookNamedItem::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, WorkbookNamedItem::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property names for drives
@@ -139,7 +139,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of nameditem object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of nameditem object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -147,7 +147,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of nameditem object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of nameditem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -159,7 +159,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of nameditem object. This API is available in the following national cloud deployments.
+     * Update the properties of nameditem object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -168,7 +168,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of nameditem object. This API is available in the following national cloud deployments.
+     * Update the properties of nameditem object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +199,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of nameditem object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of nameditem object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -54,7 +54,7 @@ public class GetManagedAppDiagnosticStatusesRequestBuilder extends BaseRequestBu
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, GetManagedAppDiagnosticStatusesGetResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, GetManagedAppDiagnosticStatusesGetResponse::createFromDiscriminatorValue);
     }
     /**
      * Gets diagnostics validation status for a given user.

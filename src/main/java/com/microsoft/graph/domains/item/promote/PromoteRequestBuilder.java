@@ -35,7 +35,7 @@ public class PromoteRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/domains/{domain%2Did}/promote", rawUrl);
     }
     /**
-     * Promote a verified subdomain to the root domain. A verified domain has its isVerified property set to true. This API is available in the following national cloud deployments.
+     * Promote a verified subdomain to the root domain. A verified domain has its isVerified property set to true.
      * @return a PromotePostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/domain-promote?view=graph-rest-1.0">Find more info here</a>
      */
@@ -44,7 +44,7 @@ public class PromoteRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Promote a verified subdomain to the root domain. A verified domain has its isVerified property set to true. This API is available in the following national cloud deployments.
+     * Promote a verified subdomain to the root domain. A verified domain has its isVerified property set to true.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PromotePostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/domain-promote?view=graph-rest-1.0">Find more info here</a>
@@ -55,10 +55,10 @@ public class PromoteRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PromotePostResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PromotePostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Promote a verified subdomain to the root domain. A verified domain has its isVerified property set to true. This API is available in the following national cloud deployments.
+     * Promote a verified subdomain to the root domain. A verified domain has its isVerified property set to true.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class PromoteRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Promote a verified subdomain to the root domain. A verified domain has its isVerified property set to true. This API is available in the following national cloud deployments.
+     * Promote a verified subdomain to the root domain. A verified domain has its isVerified property set to true.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

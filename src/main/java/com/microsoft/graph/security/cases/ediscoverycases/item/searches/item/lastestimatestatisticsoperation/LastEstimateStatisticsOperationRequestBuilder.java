@@ -37,7 +37,7 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/searches/{ediscoverySearch%2Did}/lastEstimateStatisticsOperation{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the last  ediscoveryEstimateOperation objects and their properties. This API is available in the following national cloud deployments.
+     * Get the last  ediscoveryEstimateOperation objects and their properties.
      * @return a EdiscoveryEstimateOperation
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-list-lastestimatestatisticsoperation?view=graph-rest-1.0">Find more info here</a>
      */
@@ -46,7 +46,7 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * Get the last  ediscoveryEstimateOperation objects and their properties. This API is available in the following national cloud deployments.
+     * Get the last  ediscoveryEstimateOperation objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EdiscoveryEstimateOperation
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-list-lastestimatestatisticsoperation?view=graph-rest-1.0">Find more info here</a>
@@ -57,10 +57,10 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, EdiscoveryEstimateOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryEstimateOperation::createFromDiscriminatorValue);
     }
     /**
-     * Get the last  ediscoveryEstimateOperation objects and their properties. This API is available in the following national cloud deployments.
+     * Get the last  ediscoveryEstimateOperation objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Get the last  ediscoveryEstimateOperation objects and their properties. This API is available in the following national cloud deployments.
+     * Get the last  ediscoveryEstimateOperation objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -90,7 +90,7 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         return new LastEstimateStatisticsOperationRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the last  ediscoveryEstimateOperation objects and their properties. This API is available in the following national cloud deployments.
+     * Get the last  ediscoveryEstimateOperation objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

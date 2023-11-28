@@ -60,8 +60,8 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(OperationError::createFromDiscriminatorValue)); });
         deserializerMap.put("lastActionDateTime", (n) -> { this.setLastActionDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("operationType", (n) -> { this.setOperationType(n.getEnumValue(TeamsAsyncOperationType.class)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(TeamsAsyncOperationStatus.class)); });
+        deserializerMap.put("operationType", (n) -> { this.setOperationType(n.getEnumValue(TeamsAsyncOperationType::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(TeamsAsyncOperationStatus::forValue)); });
         deserializerMap.put("targetResourceId", (n) -> { this.setTargetResourceId(n.getStringValue()); });
         deserializerMap.put("targetResourceLocation", (n) -> { this.setTargetResourceLocation(n.getStringValue()); });
         return deserializerMap;

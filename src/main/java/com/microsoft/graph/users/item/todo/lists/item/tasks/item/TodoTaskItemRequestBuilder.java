@@ -77,14 +77,14 @@ public class TodoTaskItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/todo/lists/{todoTaskList%2Did}/tasks/{todoTask%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a todoTask object. This API is available in the following national cloud deployments.
+     * Deletes a todoTask object.
      * @see <a href="https://learn.microsoft.com/graph/api/todotask-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a todoTask object. This API is available in the following national cloud deployments.
+     * Deletes a todoTask object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/todotask-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -93,10 +93,10 @@ public class TodoTaskItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a todoTask object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a todoTask object.
      * @return a TodoTask
      * @see <a href="https://learn.microsoft.com/graph/api/todotask-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -105,7 +105,7 @@ public class TodoTaskItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a todoTask object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a todoTask object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TodoTask
      * @see <a href="https://learn.microsoft.com/graph/api/todotask-get?view=graph-rest-1.0">Find more info here</a>
@@ -116,10 +116,10 @@ public class TodoTaskItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TodoTask::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TodoTask::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a todoTask object. This API is available in the following national cloud deployments.
+     * Update the properties of a todoTask object.
      * @param body The request body
      * @return a TodoTask
      * @see <a href="https://learn.microsoft.com/graph/api/todotask-update?view=graph-rest-1.0">Find more info here</a>
@@ -129,7 +129,7 @@ public class TodoTaskItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a todoTask object. This API is available in the following national cloud deployments.
+     * Update the properties of a todoTask object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TodoTask
@@ -142,10 +142,10 @@ public class TodoTaskItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TodoTask::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TodoTask::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a todoTask object. This API is available in the following national cloud deployments.
+     * Deletes a todoTask object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -153,7 +153,7 @@ public class TodoTaskItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a todoTask object. This API is available in the following national cloud deployments.
+     * Deletes a todoTask object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -165,7 +165,7 @@ public class TodoTaskItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a todoTask object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a todoTask object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -173,7 +173,7 @@ public class TodoTaskItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a todoTask object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a todoTask object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -185,7 +185,7 @@ public class TodoTaskItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a todoTask object. This API is available in the following national cloud deployments.
+     * Update the properties of a todoTask object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -194,7 +194,7 @@ public class TodoTaskItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a todoTask object. This API is available in the following national cloud deployments.
+     * Update the properties of a todoTask object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -225,7 +225,7 @@ public class TodoTaskItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a todoTask object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a todoTask object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

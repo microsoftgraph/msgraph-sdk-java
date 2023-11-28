@@ -65,7 +65,7 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements A
         deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("targetedAuthenticationMethod", (n) -> { this.setTargetedAuthenticationMethod(n.getStringValue()); });
-        deserializerMap.put("targetType", (n) -> { this.setTargetType(n.getEnumValue(AuthenticationMethodTargetType.class)); });
+        deserializerMap.put("targetType", (n) -> { this.setTargetType(n.getEnumValue(AuthenticationMethodTargetType::forValue)); });
         return deserializerMap;
     }
     /**

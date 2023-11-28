@@ -35,14 +35,14 @@ public class ReapplyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/tables/{workbookTable%2Did}/sort/reapply", rawUrl);
     }
     /**
-     * Reapplies the current sorting parameters to the table. This API is available in the following national cloud deployments.
+     * Reapplies the current sorting parameters to the table.
      * @see <a href="https://learn.microsoft.com/graph/api/tablesort-reapply?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Reapplies the current sorting parameters to the table. This API is available in the following national cloud deployments.
+     * Reapplies the current sorting parameters to the table.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/tablesort-reapply?view=graph-rest-1.0">Find more info here</a>
      */
@@ -51,10 +51,10 @@ public class ReapplyRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Reapplies the current sorting parameters to the table. This API is available in the following national cloud deployments.
+     * Reapplies the current sorting parameters to the table.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class ReapplyRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Reapplies the current sorting parameters to the table. This API is available in the following national cloud deployments.
+     * Reapplies the current sorting parameters to the table.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

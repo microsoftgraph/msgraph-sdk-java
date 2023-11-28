@@ -51,10 +51,10 @@ public class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilde
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a swapShiftsChangeRequest object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a swapShiftsChangeRequest object.
      * @return a SwapShiftsChangeRequest
      * @see <a href="https://learn.microsoft.com/graph/api/swapshiftschangerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilde
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a swapShiftsChangeRequest object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a swapShiftsChangeRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SwapShiftsChangeRequest
      * @see <a href="https://learn.microsoft.com/graph/api/swapshiftschangerequest-get?view=graph-rest-1.0">Find more info here</a>
@@ -74,7 +74,7 @@ public class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilde
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SwapShiftsChangeRequest::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SwapShiftsChangeRequest::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property swapShiftsChangeRequests in groups
@@ -98,7 +98,7 @@ public class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilde
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SwapShiftsChangeRequest::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SwapShiftsChangeRequest::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property swapShiftsChangeRequests for groups
@@ -121,7 +121,7 @@ public class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a swapShiftsChangeRequest object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a swapShiftsChangeRequest object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a swapShiftsChangeRequest object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a swapShiftsChangeRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -181,7 +181,7 @@ public class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a swapShiftsChangeRequest object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a swapShiftsChangeRequest object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

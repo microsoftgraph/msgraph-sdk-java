@@ -40,7 +40,7 @@ public class EducationSubmission extends Entity implements Parsable {
         deserializerMap.put("resourcesFolderUrl", (n) -> { this.setResourcesFolderUrl(n.getStringValue()); });
         deserializerMap.put("returnedBy", (n) -> { this.setReturnedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("returnedDateTime", (n) -> { this.setReturnedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(EducationSubmissionStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(EducationSubmissionStatus::forValue)); });
         deserializerMap.put("submittedBy", (n) -> { this.setSubmittedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("submittedDateTime", (n) -> { this.setSubmittedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("submittedResources", (n) -> { this.setSubmittedResources(n.getCollectionOfObjectValues(EducationSubmissionResource::createFromDiscriminatorValue)); });

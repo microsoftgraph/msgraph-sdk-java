@@ -59,7 +59,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/tasks{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of plannertask objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannertask objects.
      * @return a PlannerTaskCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/planner-list-tasks?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of plannertask objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannertask objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PlannerTaskCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/planner-list-tasks?view=graph-rest-1.0">Find more info here</a>
@@ -79,10 +79,10 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PlannerTaskCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PlannerTaskCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new plannerTask. This API is available in the following national cloud deployments.
+     * Create a new plannerTask.
      * @param body The request body
      * @return a PlannerTask
      * @see <a href="https://learn.microsoft.com/graph/api/planner-post-tasks?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new plannerTask. This API is available in the following national cloud deployments.
+     * Create a new plannerTask.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PlannerTask
@@ -105,10 +105,10 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PlannerTask::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PlannerTask::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of plannertask objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannertask objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of plannertask objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannertask objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new plannerTask. This API is available in the following national cloud deployments.
+     * Create a new plannerTask.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new plannerTask. This API is available in the following national cloud deployments.
+     * Create a new plannerTask.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return new TasksRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of plannertask objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannertask objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

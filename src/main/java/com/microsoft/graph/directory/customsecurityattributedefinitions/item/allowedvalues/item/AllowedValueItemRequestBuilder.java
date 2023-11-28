@@ -51,10 +51,10 @@ public class AllowedValueItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an allowedValue object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an allowedValue object.
      * @return a AllowedValue
      * @see <a href="https://learn.microsoft.com/graph/api/allowedvalue-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class AllowedValueItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an allowedValue object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an allowedValue object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AllowedValue
      * @see <a href="https://learn.microsoft.com/graph/api/allowedvalue-get?view=graph-rest-1.0">Find more info here</a>
@@ -74,10 +74,10 @@ public class AllowedValueItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AllowedValue::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AllowedValue::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an allowedValue object. This API is available in the following national cloud deployments.
+     * Update the properties of an allowedValue object.
      * @param body The request body
      * @return a AllowedValue
      * @see <a href="https://learn.microsoft.com/graph/api/allowedvalue-update?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class AllowedValueItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of an allowedValue object. This API is available in the following national cloud deployments.
+     * Update the properties of an allowedValue object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AllowedValue
@@ -100,7 +100,7 @@ public class AllowedValueItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AllowedValue::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AllowedValue::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property allowedValues for directory
@@ -123,7 +123,7 @@ public class AllowedValueItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an allowedValue object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an allowedValue object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class AllowedValueItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an allowedValue object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an allowedValue object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -143,7 +143,7 @@ public class AllowedValueItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an allowedValue object. This API is available in the following national cloud deployments.
+     * Update the properties of an allowedValue object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -152,7 +152,7 @@ public class AllowedValueItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an allowedValue object. This API is available in the following national cloud deployments.
+     * Update the properties of an allowedValue object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -183,7 +183,7 @@ public class AllowedValueItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an allowedValue object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an allowedValue object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

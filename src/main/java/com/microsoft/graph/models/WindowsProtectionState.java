@@ -70,7 +70,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("antiMalwareVersion", (n) -> { this.setAntiMalwareVersion(n.getStringValue()); });
         deserializerMap.put("detectedMalwareState", (n) -> { this.setDetectedMalwareState(n.getCollectionOfObjectValues(WindowsDeviceMalwareState::createFromDiscriminatorValue)); });
-        deserializerMap.put("deviceState", (n) -> { this.setDeviceState(n.getEnumSetValue(WindowsDeviceHealthState.class)); });
+        deserializerMap.put("deviceState", (n) -> { this.setDeviceState(n.getEnumSetValue(WindowsDeviceHealthState::forValue)); });
         deserializerMap.put("engineVersion", (n) -> { this.setEngineVersion(n.getStringValue()); });
         deserializerMap.put("fullScanOverdue", (n) -> { this.setFullScanOverdue(n.getBooleanValue()); });
         deserializerMap.put("fullScanRequired", (n) -> { this.setFullScanRequired(n.getBooleanValue()); });
@@ -82,7 +82,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
         deserializerMap.put("lastReportedDateTime", (n) -> { this.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("malwareProtectionEnabled", (n) -> { this.setMalwareProtectionEnabled(n.getBooleanValue()); });
         deserializerMap.put("networkInspectionSystemEnabled", (n) -> { this.setNetworkInspectionSystemEnabled(n.getBooleanValue()); });
-        deserializerMap.put("productStatus", (n) -> { this.setProductStatus(n.getEnumSetValue(WindowsDefenderProductStatus.class)); });
+        deserializerMap.put("productStatus", (n) -> { this.setProductStatus(n.getEnumSetValue(WindowsDefenderProductStatus::forValue)); });
         deserializerMap.put("quickScanOverdue", (n) -> { this.setQuickScanOverdue(n.getBooleanValue()); });
         deserializerMap.put("realTimeProtectionEnabled", (n) -> { this.setRealTimeProtectionEnabled(n.getBooleanValue()); });
         deserializerMap.put("rebootRequired", (n) -> { this.setRebootRequired(n.getBooleanValue()); });

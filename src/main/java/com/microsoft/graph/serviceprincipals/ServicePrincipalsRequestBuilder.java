@@ -91,7 +91,7 @@ public class ServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of servicePrincipal objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of servicePrincipal objects.
      * @return a ServicePrincipalCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -100,7 +100,7 @@ public class ServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of servicePrincipal objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of servicePrincipal objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ServicePrincipalCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list?view=graph-rest-1.0">Find more info here</a>
@@ -111,10 +111,10 @@ public class ServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ServicePrincipalCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ServicePrincipalCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new servicePrincipal object. This API is available in the following national cloud deployments.
+     * Create a new servicePrincipal object.
      * @param body The request body
      * @return a ServicePrincipal
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-post-serviceprincipals?view=graph-rest-1.0">Find more info here</a>
@@ -124,7 +124,7 @@ public class ServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new servicePrincipal object. This API is available in the following national cloud deployments.
+     * Create a new servicePrincipal object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ServicePrincipal
@@ -137,10 +137,10 @@ public class ServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ServicePrincipal::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ServicePrincipal::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of servicePrincipal objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of servicePrincipal objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class ServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of servicePrincipal objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of servicePrincipal objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class ServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new servicePrincipal object. This API is available in the following national cloud deployments.
+     * Create a new servicePrincipal object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class ServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new servicePrincipal object. This API is available in the following national cloud deployments.
+     * Create a new servicePrincipal object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -194,7 +194,7 @@ public class ServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         return new ServicePrincipalsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of servicePrincipal objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of servicePrincipal objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

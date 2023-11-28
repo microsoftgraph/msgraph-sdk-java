@@ -52,7 +52,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("issuer", (n) -> { this.setIssuer(n.getStringValue()); });
         deserializerMap.put("issuerName", (n) -> { this.setIssuerName(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CertificateStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CertificateStatus::forValue)); });
         deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
         deserializerMap.put("subjectName", (n) -> { this.setSubjectName(n.getStringValue()); });
         deserializerMap.put("uploadDateTime", (n) -> { this.setUploadDateTime(n.getOffsetDateTimeValue()); });

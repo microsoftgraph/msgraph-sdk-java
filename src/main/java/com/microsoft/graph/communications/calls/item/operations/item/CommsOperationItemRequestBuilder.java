@@ -51,10 +51,10 @@ public class CommsOperationItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the status of an operation that adds the large gallery view to a call. This API is available in the following national cloud deployments.
+     * Get the status of an operation that adds the large gallery view to a call.
      * @return a CommsOperation
      * @see <a href="https://learn.microsoft.com/graph/api/addlargegalleryviewoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class CommsOperationItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the status of an operation that adds the large gallery view to a call. This API is available in the following national cloud deployments.
+     * Get the status of an operation that adds the large gallery view to a call.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CommsOperation
      * @see <a href="https://learn.microsoft.com/graph/api/addlargegalleryviewoperation-get?view=graph-rest-1.0">Find more info here</a>
@@ -74,7 +74,7 @@ public class CommsOperationItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, CommsOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, CommsOperation::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property operations in communications
@@ -98,7 +98,7 @@ public class CommsOperationItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, CommsOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, CommsOperation::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property operations for communications
@@ -121,7 +121,7 @@ public class CommsOperationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the status of an operation that adds the large gallery view to a call. This API is available in the following national cloud deployments.
+     * Get the status of an operation that adds the large gallery view to a call.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class CommsOperationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the status of an operation that adds the large gallery view to a call. This API is available in the following national cloud deployments.
+     * Get the status of an operation that adds the large gallery view to a call.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -181,7 +181,7 @@ public class CommsOperationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the status of an operation that adds the large gallery view to a call. This API is available in the following national cloud deployments.
+     * Get the status of an operation that adds the large gallery view to a call.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

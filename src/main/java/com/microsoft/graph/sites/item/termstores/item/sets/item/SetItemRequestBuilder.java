@@ -69,14 +69,14 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/termStores/{store%2Did}/sets/{set%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a set object. This API is available in the following national cloud deployments.
+     * Delete a set object.
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-set-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a set object. This API is available in the following national cloud deployments.
+     * Delete a set object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-set-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -85,10 +85,10 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a set object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a set object.
      * @return a Set
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-set-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -97,7 +97,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a set object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a set object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Set
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-set-get?view=graph-rest-1.0">Find more info here</a>
@@ -108,10 +108,10 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, Set::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, Set::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a set object. This API is available in the following national cloud deployments.
+     * Update the properties of a set object.
      * @param body The request body
      * @return a Set
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-set-update?view=graph-rest-1.0">Find more info here</a>
@@ -121,7 +121,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a set object. This API is available in the following national cloud deployments.
+     * Update the properties of a set object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Set
@@ -134,10 +134,10 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, Set::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, Set::createFromDiscriminatorValue);
     }
     /**
-     * Delete a set object. This API is available in the following national cloud deployments.
+     * Delete a set object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -145,7 +145,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a set object. This API is available in the following national cloud deployments.
+     * Delete a set object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -157,7 +157,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a set object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a set object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -165,7 +165,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a set object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a set object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -177,7 +177,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a set object. This API is available in the following national cloud deployments.
+     * Update the properties of a set object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -186,7 +186,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a set object. This API is available in the following national cloud deployments.
+     * Update the properties of a set object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -217,7 +217,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a set object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a set object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

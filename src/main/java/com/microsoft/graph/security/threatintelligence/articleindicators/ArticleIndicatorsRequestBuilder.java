@@ -59,7 +59,7 @@ public class ArticleIndicatorsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/articleIndicators{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of an articleIndicator object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an articleIndicator object.
      * @return a ArticleIndicatorCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class ArticleIndicatorsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an articleIndicator object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an articleIndicator object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ArticleIndicatorCollectionResponse
      */
@@ -77,7 +77,7 @@ public class ArticleIndicatorsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ArticleIndicatorCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ArticleIndicatorCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to articleIndicators for security
@@ -101,10 +101,10 @@ public class ArticleIndicatorsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ArticleIndicator::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ArticleIndicator::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of an articleIndicator object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an articleIndicator object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class ArticleIndicatorsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an articleIndicator object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an articleIndicator object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class ArticleIndicatorsRequestBuilder extends BaseRequestBuilder {
         return new ArticleIndicatorsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of an articleIndicator object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an articleIndicator object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

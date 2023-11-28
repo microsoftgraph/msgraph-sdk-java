@@ -89,7 +89,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
-        deserializerMap.put("acceptedModalities", (n) -> { this.setAcceptedModalities(n.getCollectionOfEnumValues(Modality.class)); });
+        deserializerMap.put("acceptedModalities", (n) -> { this.setAcceptedModalities(n.getCollectionOfEnumValues(Modality::forValue)); });
         deserializerMap.put("callbackUri", (n) -> { this.setCallbackUri(n.getStringValue()); });
         deserializerMap.put("callOptions", (n) -> { this.setCallOptions(n.getObjectValue(IncomingCallOptions::createFromDiscriminatorValue)); });
         deserializerMap.put("mediaConfig", (n) -> { this.setMediaConfig(n.getObjectValue(MediaConfig::createFromDiscriminatorValue)); });

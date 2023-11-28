@@ -72,7 +72,7 @@ public class PrintOperationStatus implements AdditionalDataHolder, BackedModel, 
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(PrintOperationProcessingState.class)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(PrintOperationProcessingState::forValue)); });
         return deserializerMap;
     }
     /**

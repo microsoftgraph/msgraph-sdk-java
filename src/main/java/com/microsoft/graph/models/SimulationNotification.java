@@ -32,7 +32,7 @@ public class SimulationNotification extends BaseEndUserNotification implements P
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("targettedUserType", (n) -> { this.setTargettedUserType(n.getEnumValue(TargettedUserType.class)); });
+        deserializerMap.put("targettedUserType", (n) -> { this.setTargettedUserType(n.getEnumValue(TargettedUserType::forValue)); });
         return deserializerMap;
     }
     /**

@@ -120,8 +120,8 @@ public class Simulation extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("attackTechnique", (n) -> { this.setAttackTechnique(n.getEnumValue(SimulationAttackTechnique.class)); });
-        deserializerMap.put("attackType", (n) -> { this.setAttackType(n.getEnumValue(SimulationAttackType.class)); });
+        deserializerMap.put("attackTechnique", (n) -> { this.setAttackTechnique(n.getEnumValue(SimulationAttackTechnique::forValue)); });
+        deserializerMap.put("attackType", (n) -> { this.setAttackType(n.getEnumValue(SimulationAttackType::forValue)); });
         deserializerMap.put("automationId", (n) -> { this.setAutomationId(n.getStringValue()); });
         deserializerMap.put("completionDateTime", (n) -> { this.setCompletionDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(EmailIdentity::createFromDiscriminatorValue)); });
@@ -140,9 +140,9 @@ public class Simulation extends Entity implements Parsable {
         deserializerMap.put("loginPage", (n) -> { this.setLoginPage(n.getObjectValue(LoginPage::createFromDiscriminatorValue)); });
         deserializerMap.put("oAuthConsentAppDetail", (n) -> { this.setOAuthConsentAppDetail(n.getObjectValue(OAuthConsentAppDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("payload", (n) -> { this.setPayload(n.getObjectValue(Payload::createFromDiscriminatorValue)); });
-        deserializerMap.put("payloadDeliveryPlatform", (n) -> { this.setPayloadDeliveryPlatform(n.getEnumValue(PayloadDeliveryPlatform.class)); });
+        deserializerMap.put("payloadDeliveryPlatform", (n) -> { this.setPayloadDeliveryPlatform(n.getEnumValue(PayloadDeliveryPlatform::forValue)); });
         deserializerMap.put("report", (n) -> { this.setReport(n.getObjectValue(SimulationReport::createFromDiscriminatorValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(SimulationStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(SimulationStatus::forValue)); });
         deserializerMap.put("trainingSetting", (n) -> { this.setTrainingSetting(n.getObjectValue(TrainingSetting::createFromDiscriminatorValue)); });
         return deserializerMap;
     }

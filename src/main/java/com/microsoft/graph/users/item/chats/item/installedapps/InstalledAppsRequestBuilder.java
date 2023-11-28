@@ -59,7 +59,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/chats/{chat%2Did}/installedApps{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List all app installations within a chat. This API is available in the following national cloud deployments.
+     * List all app installations within a chat.
      * @return a TeamsAppInstallationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chat-list-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List all app installations within a chat. This API is available in the following national cloud deployments.
+     * List all app installations within a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TeamsAppInstallationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chat-list-installedapps?view=graph-rest-1.0">Find more info here</a>
@@ -79,10 +79,10 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TeamsAppInstallationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TeamsAppInstallationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Install a teamsApp to the specified chat. This API is available in the following national cloud deployments.
+     * Install a teamsApp to the specified chat.
      * @param body The request body
      * @return a TeamsAppInstallation
      * @see <a href="https://learn.microsoft.com/graph/api/chat-post-installedapps?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Install a teamsApp to the specified chat. This API is available in the following national cloud deployments.
+     * Install a teamsApp to the specified chat.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TeamsAppInstallation
@@ -105,10 +105,10 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TeamsAppInstallation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TeamsAppInstallation::createFromDiscriminatorValue);
     }
     /**
-     * List all app installations within a chat. This API is available in the following national cloud deployments.
+     * List all app installations within a chat.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List all app installations within a chat. This API is available in the following national cloud deployments.
+     * List all app installations within a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Install a teamsApp to the specified chat. This API is available in the following national cloud deployments.
+     * Install a teamsApp to the specified chat.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Install a teamsApp to the specified chat. This API is available in the following national cloud deployments.
+     * Install a teamsApp to the specified chat.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return new InstalledAppsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List all app installations within a chat. This API is available in the following national cloud deployments.
+     * List all app installations within a chat.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

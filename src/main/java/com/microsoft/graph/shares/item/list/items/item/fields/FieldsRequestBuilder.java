@@ -51,7 +51,7 @@ public class FieldsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * The values of the columns set on this list item.
@@ -72,10 +72,10 @@ public class FieldsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, FieldValueSet::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, FieldValueSet::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties on a listItem][]. This API is available in the following [national cloud deployments.
+     * Update the properties on a [listItem][].
      * @param body The request body
      * @return a FieldValueSet
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-update?view=graph-rest-1.0">Find more info here</a>
@@ -85,7 +85,7 @@ public class FieldsRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties on a listItem][]. This API is available in the following [national cloud deployments.
+     * Update the properties on a [listItem][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a FieldValueSet
@@ -98,7 +98,7 @@ public class FieldsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, FieldValueSet::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, FieldValueSet::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property fields for shares
@@ -141,7 +141,7 @@ public class FieldsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties on a listItem][]. This API is available in the following [national cloud deployments.
+     * Update the properties on a [listItem][].
      * @param body The request body
      * @return a RequestInformation
      */
@@ -150,7 +150,7 @@ public class FieldsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties on a listItem][]. This API is available in the following [national cloud deployments.
+     * Update the properties on a [listItem][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

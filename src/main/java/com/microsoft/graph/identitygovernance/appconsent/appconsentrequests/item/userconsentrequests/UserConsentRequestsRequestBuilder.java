@@ -70,7 +70,7 @@ public class UserConsentRequestsRequestBuilder extends BaseRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Retrieve a collection of userConsentRequest objects and their properties. This API is available in the following national cloud deployments.
+     * Retrieve a collection of userConsentRequest objects and their properties.
      * @return a UserConsentRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/appconsentrequest-list-userconsentrequests?view=graph-rest-1.0">Find more info here</a>
      */
@@ -79,7 +79,7 @@ public class UserConsentRequestsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a collection of userConsentRequest objects and their properties. This API is available in the following national cloud deployments.
+     * Retrieve a collection of userConsentRequest objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UserConsentRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/appconsentrequest-list-userconsentrequests?view=graph-rest-1.0">Find more info here</a>
@@ -90,7 +90,7 @@ public class UserConsentRequestsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserConsentRequestCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserConsentRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to userConsentRequests for identityGovernance
@@ -114,10 +114,10 @@ public class UserConsentRequestsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserConsentRequest::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserConsentRequest::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a collection of userConsentRequest objects and their properties. This API is available in the following national cloud deployments.
+     * Retrieve a collection of userConsentRequest objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +125,7 @@ public class UserConsentRequestsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a collection of userConsentRequest objects and their properties. This API is available in the following national cloud deployments.
+     * Retrieve a collection of userConsentRequest objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +171,7 @@ public class UserConsentRequestsRequestBuilder extends BaseRequestBuilder {
         return new UserConsentRequestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a collection of userConsentRequest objects and their properties. This API is available in the following national cloud deployments.
+     * Retrieve a collection of userConsentRequest objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

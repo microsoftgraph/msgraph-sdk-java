@@ -37,14 +37,14 @@ public class EducationOutcomeItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/users/{educationUser%2Did}/assignments/{educationAssignment%2Did}/submissions/{educationSubmission%2Did}/outcomes/{educationOutcome%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a feedback resource from a submission. This can only be done by a teacher. This API is available in the following national cloud deployments.
+     * Delete a feedback resource from a submission. This can only be done by a teacher.
      * @see <a href="https://learn.microsoft.com/graph/api/educationfeedbackresourceoutcome-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a feedback resource from a submission. This can only be done by a teacher. This API is available in the following national cloud deployments.
+     * Delete a feedback resource from a submission. This can only be done by a teacher.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/educationfeedbackresourceoutcome-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -53,7 +53,7 @@ public class EducationOutcomeItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get outcomes from education
@@ -74,10 +74,10 @@ public class EducationOutcomeItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, EducationOutcome::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, EducationOutcome::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an educationOutcome object. Only teachers can perform this operation. This API is available in the following national cloud deployments.
+     * Update the properties of an educationOutcome object. Only teachers can perform this operation.
      * @param body The request body
      * @return a EducationOutcome
      * @see <a href="https://learn.microsoft.com/graph/api/educationoutcome-update?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class EducationOutcomeItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of an educationOutcome object. Only teachers can perform this operation. This API is available in the following national cloud deployments.
+     * Update the properties of an educationOutcome object. Only teachers can perform this operation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EducationOutcome
@@ -100,10 +100,10 @@ public class EducationOutcomeItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, EducationOutcome::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, EducationOutcome::createFromDiscriminatorValue);
     }
     /**
-     * Delete a feedback resource from a submission. This can only be done by a teacher. This API is available in the following national cloud deployments.
+     * Delete a feedback resource from a submission. This can only be done by a teacher.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -111,7 +111,7 @@ public class EducationOutcomeItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a feedback resource from a submission. This can only be done by a teacher. This API is available in the following national cloud deployments.
+     * Delete a feedback resource from a submission. This can only be done by a teacher.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -143,7 +143,7 @@ public class EducationOutcomeItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an educationOutcome object. Only teachers can perform this operation. This API is available in the following national cloud deployments.
+     * Update the properties of an educationOutcome object. Only teachers can perform this operation.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -152,7 +152,7 @@ public class EducationOutcomeItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an educationOutcome object. Only teachers can perform this operation. This API is available in the following national cloud deployments.
+     * Update the properties of an educationOutcome object. Only teachers can perform this operation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

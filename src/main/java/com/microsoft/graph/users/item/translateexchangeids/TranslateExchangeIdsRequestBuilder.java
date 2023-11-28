@@ -35,7 +35,7 @@ public class TranslateExchangeIdsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/translateExchangeIds", rawUrl);
     }
     /**
-     * Translate identifiers of Outlook-related resources between formats. This API is available in the following national cloud deployments.
+     * Translate identifiers of Outlook-related resources between formats.
      * @param body The request body
      * @return a TranslateExchangeIdsPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-translateexchangeids?view=graph-rest-1.0">Find more info here</a>
@@ -45,7 +45,7 @@ public class TranslateExchangeIdsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Translate identifiers of Outlook-related resources between formats. This API is available in the following national cloud deployments.
+     * Translate identifiers of Outlook-related resources between formats.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TranslateExchangeIdsPostResponse
@@ -58,10 +58,10 @@ public class TranslateExchangeIdsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TranslateExchangeIdsPostResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TranslateExchangeIdsPostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Translate identifiers of Outlook-related resources between formats. This API is available in the following national cloud deployments.
+     * Translate identifiers of Outlook-related resources between formats.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -70,7 +70,7 @@ public class TranslateExchangeIdsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Translate identifiers of Outlook-related resources between formats. This API is available in the following national cloud deployments.
+     * Translate identifiers of Outlook-related resources between formats.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -35,7 +35,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/channels/{channel%2Did}/members/add", rawUrl);
     }
     /**
-     * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn't be created. This API is available in the following national cloud deployments.
+     * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn't be created.
      * @param body The request body
      * @return a AddPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/conversationmembers-add?view=graph-rest-1.0">Find more info here</a>
@@ -45,7 +45,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn't be created. This API is available in the following national cloud deployments.
+     * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn't be created.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AddPostResponse
@@ -58,10 +58,10 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AddPostResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AddPostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn't be created. This API is available in the following national cloud deployments.
+     * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn't be created.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -70,7 +70,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn't be created. This API is available in the following national cloud deployments.
+     * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn't be created.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

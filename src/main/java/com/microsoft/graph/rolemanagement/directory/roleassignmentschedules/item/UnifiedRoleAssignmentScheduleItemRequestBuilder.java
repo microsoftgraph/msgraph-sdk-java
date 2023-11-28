@@ -91,10 +91,10 @@ public class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequest
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the schedule for an active role assignment operation. This API is available in the following national cloud deployments.
+     * Retrieve the schedule for an active role assignment operation.
      * @return a UnifiedRoleAssignmentSchedule
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentschedule-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -103,7 +103,7 @@ public class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequest
         return get(null);
     }
     /**
-     * Retrieve the schedule for an active role assignment operation. This API is available in the following national cloud deployments.
+     * Retrieve the schedule for an active role assignment operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UnifiedRoleAssignmentSchedule
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentschedule-get?view=graph-rest-1.0">Find more info here</a>
@@ -114,7 +114,7 @@ public class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequest
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UnifiedRoleAssignmentSchedule::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleAssignmentSchedule::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property roleAssignmentSchedules in roleManagement
@@ -138,7 +138,7 @@ public class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequest
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UnifiedRoleAssignmentSchedule::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleAssignmentSchedule::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property roleAssignmentSchedules for roleManagement
@@ -161,7 +161,7 @@ public class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Retrieve the schedule for an active role assignment operation. This API is available in the following national cloud deployments.
+     * Retrieve the schedule for an active role assignment operation.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -169,7 +169,7 @@ public class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the schedule for an active role assignment operation. This API is available in the following national cloud deployments.
+     * Retrieve the schedule for an active role assignment operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -221,7 +221,7 @@ public class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the schedule for an active role assignment operation. This API is available in the following national cloud deployments.
+     * Retrieve the schedule for an active role assignment operation.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

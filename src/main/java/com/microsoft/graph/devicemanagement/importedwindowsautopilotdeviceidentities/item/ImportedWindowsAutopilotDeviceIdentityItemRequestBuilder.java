@@ -53,7 +53,7 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends Ba
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read properties and relationships of the importedWindowsAutopilotDeviceIdentity object.
@@ -76,7 +76,7 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends Ba
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ImportedWindowsAutopilotDeviceIdentity::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ImportedWindowsAutopilotDeviceIdentity::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property importedWindowsAutopilotDeviceIdentities in deviceManagement
@@ -100,7 +100,7 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends Ba
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ImportedWindowsAutopilotDeviceIdentity::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ImportedWindowsAutopilotDeviceIdentity::createFromDiscriminatorValue);
     }
     /**
      * Deletes a importedWindowsAutopilotDeviceIdentity.

@@ -35,7 +35,7 @@ public class AssociateWithHubSitesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/list/contentTypes/{contentType%2Did}/associateWithHubSites", rawUrl);
     }
     /**
-     * Associate a published content type][contentType] present in a content type hub with a list of hub sites. This API is available in the following [national cloud deployments.
+     * Associate a published [content type][contentType] present in a content type hub with a list of hub sites.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-associatewithhubsites?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class AssociateWithHubSitesRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Associate a published content type][contentType] present in a content type hub with a list of hub sites. This API is available in the following [national cloud deployments.
+     * Associate a published [content type][contentType] present in a content type hub with a list of hub sites.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-associatewithhubsites?view=graph-rest-1.0">Find more info here</a>
@@ -54,10 +54,10 @@ public class AssociateWithHubSitesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Associate a published content type][contentType] present in a content type hub with a list of hub sites. This API is available in the following [national cloud deployments.
+     * Associate a published [content type][contentType] present in a content type hub with a list of hub sites.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -66,7 +66,7 @@ public class AssociateWithHubSitesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Associate a published content type][contentType] present in a content type hub with a list of hub sites. This API is available in the following [national cloud deployments.
+     * Associate a published [content type][contentType] present in a content type hub with a list of hub sites.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

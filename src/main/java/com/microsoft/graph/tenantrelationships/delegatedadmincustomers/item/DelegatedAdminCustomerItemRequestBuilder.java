@@ -59,10 +59,10 @@ public class DelegatedAdminCustomerItemRequestBuilder extends BaseRequestBuilder
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties of a delegatedAdminCustomer object. This API is available in the following national cloud deployments.
+     * Read the properties of a delegatedAdminCustomer object.
      * @return a DelegatedAdminCustomer
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadmincustomer-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -71,7 +71,7 @@ public class DelegatedAdminCustomerItemRequestBuilder extends BaseRequestBuilder
         return get(null);
     }
     /**
-     * Read the properties of a delegatedAdminCustomer object. This API is available in the following national cloud deployments.
+     * Read the properties of a delegatedAdminCustomer object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DelegatedAdminCustomer
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadmincustomer-get?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class DelegatedAdminCustomerItemRequestBuilder extends BaseRequestBuilder
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DelegatedAdminCustomer::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminCustomer::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property delegatedAdminCustomers in tenantRelationships
@@ -106,7 +106,7 @@ public class DelegatedAdminCustomerItemRequestBuilder extends BaseRequestBuilder
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DelegatedAdminCustomer::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminCustomer::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property delegatedAdminCustomers for tenantRelationships
@@ -129,7 +129,7 @@ public class DelegatedAdminCustomerItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Read the properties of a delegatedAdminCustomer object. This API is available in the following national cloud deployments.
+     * Read the properties of a delegatedAdminCustomer object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +137,7 @@ public class DelegatedAdminCustomerItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties of a delegatedAdminCustomer object. This API is available in the following national cloud deployments.
+     * Read the properties of a delegatedAdminCustomer object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -189,7 +189,7 @@ public class DelegatedAdminCustomerItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties of a delegatedAdminCustomer object. This API is available in the following national cloud deployments.
+     * Read the properties of a delegatedAdminCustomer object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

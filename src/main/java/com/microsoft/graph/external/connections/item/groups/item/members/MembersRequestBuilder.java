@@ -77,10 +77,10 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, IdentityCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, IdentityCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create an identity resource for a new member in an externalGroup. This API is available in the following national cloud deployments.
+     * Create an identity resource for a new member in an externalGroup.
      * @param body The request body
      * @return a Identity
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalgroup-post-members?view=graph-rest-1.0">Find more info here</a>
@@ -90,7 +90,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create an identity resource for a new member in an externalGroup. This API is available in the following national cloud deployments.
+     * Create an identity resource for a new member in an externalGroup.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Identity
@@ -103,7 +103,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, Identity::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, Identity::createFromDiscriminatorValue);
     }
     /**
      * A member added to an externalGroup. You can add Microsoft Entra users, Microsoft Entra groups, or an externalGroup as members.
@@ -126,7 +126,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create an identity resource for a new member in an externalGroup. This API is available in the following national cloud deployments.
+     * Create an identity resource for a new member in an externalGroup.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -135,7 +135,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create an identity resource for a new member in an externalGroup. This API is available in the following national cloud deployments.
+     * Create an identity resource for a new member in an externalGroup.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

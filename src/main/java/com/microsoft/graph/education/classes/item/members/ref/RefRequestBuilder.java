@@ -38,7 +38,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/members/$ref{?%24top,%24skip,%24search,%24filter,%24count,%24orderby}", rawUrl);
     }
     /**
-     * Retrieves the educationUser members of an educationClass. This API is available in the following national cloud deployments.
+     * Retrieves the educationUser members of an educationClass.
      * @return a StringCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-list-members?view=graph-rest-1.0">Find more info here</a>
      */
@@ -47,7 +47,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieves the educationUser members of an educationClass. This API is available in the following national cloud deployments.
+     * Retrieves the educationUser members of an educationClass.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a StringCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-list-members?view=graph-rest-1.0">Find more info here</a>
@@ -58,10 +58,10 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, StringCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, StringCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Add an educationUser member to an educationClass. This API is available in the following national cloud deployments.
+     * Add an educationUser member to an educationClass.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-post-members?view=graph-rest-1.0">Find more info here</a>
      */
@@ -69,7 +69,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Add an educationUser member to an educationClass. This API is available in the following national cloud deployments.
+     * Add an educationUser member to an educationClass.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-post-members?view=graph-rest-1.0">Find more info here</a>
@@ -80,10 +80,10 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieves the educationUser members of an educationClass. This API is available in the following national cloud deployments.
+     * Retrieves the educationUser members of an educationClass.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieves the educationUser members of an educationClass. This API is available in the following national cloud deployments.
+     * Retrieves the educationUser members of an educationClass.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -103,7 +103,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add an educationUser member to an educationClass. This API is available in the following national cloud deployments.
+     * Add an educationUser member to an educationClass.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -112,7 +112,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add an educationUser member to an educationClass. This API is available in the following national cloud deployments.
+     * Add an educationUser member to an educationClass.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -137,7 +137,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieves the educationUser members of an educationClass. This API is available in the following national cloud deployments.
+     * Retrieves the educationUser members of an educationClass.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -51,10 +51,10 @@ public class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder 
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a plannerAssignedToTaskBoardTaskFormat object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a plannerAssignedToTaskBoardTaskFormat object.
      * @return a PlannerAssignedToTaskBoardTaskFormat
      * @see <a href="https://learn.microsoft.com/graph/api/plannerassignedtotaskboardtaskformat-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder 
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a plannerAssignedToTaskBoardTaskFormat object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a plannerAssignedToTaskBoardTaskFormat object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PlannerAssignedToTaskBoardTaskFormat
      * @see <a href="https://learn.microsoft.com/graph/api/plannerassignedtotaskboardtaskformat-get?view=graph-rest-1.0">Find more info here</a>
@@ -74,7 +74,7 @@ public class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder 
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PlannerAssignedToTaskBoardTaskFormat::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PlannerAssignedToTaskBoardTaskFormat::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property assignedToTaskBoardFormat in users
@@ -100,7 +100,7 @@ public class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder 
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PlannerAssignedToTaskBoardTaskFormat::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PlannerAssignedToTaskBoardTaskFormat::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property assignedToTaskBoardFormat for users
@@ -123,7 +123,7 @@ public class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a plannerAssignedToTaskBoardTaskFormat object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a plannerAssignedToTaskBoardTaskFormat object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a plannerAssignedToTaskBoardTaskFormat object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a plannerAssignedToTaskBoardTaskFormat object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -183,7 +183,7 @@ public class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a plannerAssignedToTaskBoardTaskFormat object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a plannerAssignedToTaskBoardTaskFormat object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

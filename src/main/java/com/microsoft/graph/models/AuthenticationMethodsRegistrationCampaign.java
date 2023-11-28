@@ -74,7 +74,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
         deserializerMap.put("includeTargets", (n) -> { this.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodsRegistrationCampaignIncludeTarget::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("snoozeDurationInDays", (n) -> { this.setSnoozeDurationInDays(n.getIntegerValue()); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AdvancedConfigState.class)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AdvancedConfigState::forValue)); });
         return deserializerMap;
     }
     /**

@@ -59,7 +59,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/termStores/{store%2Did}/sets{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a set object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a set object.
      * @return a SetCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a set object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a set object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SetCollectionResponse
      */
@@ -77,10 +77,10 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SetCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SetCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new set object. This API is available in the following national cloud deployments.
+     * Create a new set object.
      * @param body The request body
      * @return a Set
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-set-post?view=graph-rest-1.0">Find more info here</a>
@@ -90,7 +90,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new set object. This API is available in the following national cloud deployments.
+     * Create a new set object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Set
@@ -103,10 +103,10 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, Set::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, Set::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of a set object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a set object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a set object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a set object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -126,7 +126,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new set object. This API is available in the following national cloud deployments.
+     * Create a new set object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -135,7 +135,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new set object. This API is available in the following national cloud deployments.
+     * Create a new set object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -160,7 +160,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         return new SetsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a set object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a set object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

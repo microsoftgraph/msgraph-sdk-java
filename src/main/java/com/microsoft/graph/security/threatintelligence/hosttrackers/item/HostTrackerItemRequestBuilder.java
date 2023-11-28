@@ -59,10 +59,10 @@ public class HostTrackerItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a hostTracker object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a hostTracker object.
      * @return a HostTracker
      * @see <a href="https://learn.microsoft.com/graph/api/security-hosttracker-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -71,7 +71,7 @@ public class HostTrackerItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a hostTracker object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a hostTracker object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a HostTracker
      * @see <a href="https://learn.microsoft.com/graph/api/security-hosttracker-get?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class HostTrackerItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, HostTracker::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, HostTracker::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property hostTrackers in security
@@ -106,7 +106,7 @@ public class HostTrackerItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, HostTracker::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, HostTracker::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property hostTrackers for security
@@ -129,7 +129,7 @@ public class HostTrackerItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a hostTracker object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a hostTracker object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +137,7 @@ public class HostTrackerItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a hostTracker object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a hostTracker object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -189,7 +189,7 @@ public class HostTrackerItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a hostTracker object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a hostTracker object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

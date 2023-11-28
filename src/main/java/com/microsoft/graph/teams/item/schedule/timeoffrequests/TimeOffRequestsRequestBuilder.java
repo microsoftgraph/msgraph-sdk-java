@@ -59,7 +59,7 @@ public class TimeOffRequestsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/schedule/timeOffRequests{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
-     * Retrieve a list of timeOffRequest objects in the team. This API is available in the following national cloud deployments.
+     * Retrieve a list of timeOffRequest objects in the team.
      * @return a TimeOffRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/timeoffrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class TimeOffRequestsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of timeOffRequest objects in the team. This API is available in the following national cloud deployments.
+     * Retrieve a list of timeOffRequest objects in the team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TimeOffRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/timeoffrequest-list?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class TimeOffRequestsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TimeOffRequestCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TimeOffRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to timeOffRequests for teams
@@ -103,10 +103,10 @@ public class TimeOffRequestsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TimeOffRequest::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TimeOffRequest::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of timeOffRequest objects in the team. This API is available in the following national cloud deployments.
+     * Retrieve a list of timeOffRequest objects in the team.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class TimeOffRequestsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of timeOffRequest objects in the team. This API is available in the following national cloud deployments.
+     * Retrieve a list of timeOffRequest objects in the team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class TimeOffRequestsRequestBuilder extends BaseRequestBuilder {
         return new TimeOffRequestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of timeOffRequest objects in the team. This API is available in the following national cloud deployments.
+     * Retrieve a list of timeOffRequest objects in the team.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

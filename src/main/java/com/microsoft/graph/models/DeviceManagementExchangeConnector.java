@@ -69,12 +69,12 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("connectorServerName", (n) -> { this.setConnectorServerName(n.getStringValue()); });
         deserializerMap.put("exchangeAlias", (n) -> { this.setExchangeAlias(n.getStringValue()); });
-        deserializerMap.put("exchangeConnectorType", (n) -> { this.setExchangeConnectorType(n.getEnumValue(DeviceManagementExchangeConnectorType.class)); });
+        deserializerMap.put("exchangeConnectorType", (n) -> { this.setExchangeConnectorType(n.getEnumValue(DeviceManagementExchangeConnectorType::forValue)); });
         deserializerMap.put("exchangeOrganization", (n) -> { this.setExchangeOrganization(n.getStringValue()); });
         deserializerMap.put("lastSyncDateTime", (n) -> { this.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("primarySmtpAddress", (n) -> { this.setPrimarySmtpAddress(n.getStringValue()); });
         deserializerMap.put("serverName", (n) -> { this.setServerName(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(DeviceManagementExchangeConnectorStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(DeviceManagementExchangeConnectorStatus::forValue)); });
         deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
         return deserializerMap;
     }

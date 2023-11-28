@@ -43,10 +43,10 @@ public class DeviceCompliancePolicyState extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("platformType", (n) -> { this.setPlatformType(n.getEnumValue(PolicyPlatformType.class)); });
+        deserializerMap.put("platformType", (n) -> { this.setPlatformType(n.getEnumValue(PolicyPlatformType::forValue)); });
         deserializerMap.put("settingCount", (n) -> { this.setSettingCount(n.getIntegerValue()); });
         deserializerMap.put("settingStates", (n) -> { this.setSettingStates(n.getCollectionOfObjectValues(DeviceCompliancePolicySettingState::createFromDiscriminatorValue)); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ComplianceStatus.class)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ComplianceStatus::forValue)); });
         deserializerMap.put("version", (n) -> { this.setVersion(n.getIntegerValue()); });
         return deserializerMap;
     }

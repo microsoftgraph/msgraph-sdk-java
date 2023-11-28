@@ -77,11 +77,11 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
         deserializerMap.put("attachments", (n) -> { this.setAttachments(n.getCollectionOfObjectValues(ServiceAnnouncementAttachment::createFromDiscriminatorValue)); });
         deserializerMap.put("attachmentsArchive", (n) -> { this.setAttachmentsArchive(n.getByteArrayValue()); });
         deserializerMap.put("body", (n) -> { this.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-        deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(ServiceUpdateCategory.class)); });
+        deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(ServiceUpdateCategory::forValue)); });
         deserializerMap.put("hasAttachments", (n) -> { this.setHasAttachments(n.getBooleanValue()); });
         deserializerMap.put("isMajorChange", (n) -> { this.setIsMajorChange(n.getBooleanValue()); });
         deserializerMap.put("services", (n) -> { this.setServices(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(ServiceUpdateSeverity.class)); });
+        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(ServiceUpdateSeverity::forValue)); });
         deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("viewPoint", (n) -> { this.setViewPoint(n.getObjectValue(ServiceUpdateMessageViewpoint::createFromDiscriminatorValue)); });
         return deserializerMap;

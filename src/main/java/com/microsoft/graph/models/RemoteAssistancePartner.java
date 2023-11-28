@@ -45,7 +45,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("lastConnectionDateTime", (n) -> { this.setLastConnectionDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("onboardingStatus", (n) -> { this.setOnboardingStatus(n.getEnumValue(RemoteAssistanceOnboardingStatus.class)); });
+        deserializerMap.put("onboardingStatus", (n) -> { this.setOnboardingStatus(n.getEnumValue(RemoteAssistanceOnboardingStatus::forValue)); });
         deserializerMap.put("onboardingUrl", (n) -> { this.setOnboardingUrl(n.getStringValue()); });
         return deserializerMap;
     }

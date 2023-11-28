@@ -35,7 +35,7 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/calendarView/{bookingAppointment%2Did}/cancel", rawUrl);
     }
     /**
-     * Cancel the specified bookingAppointment in the specified bookingBusiness and send a message to the involved customer and staff members. This API is available in the following national cloud deployments.
+     * Cancel the specified bookingAppointment in the specified bookingBusiness and send a message to the involved customer and staff members.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/bookingappointment-cancel?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Cancel the specified bookingAppointment in the specified bookingBusiness and send a message to the involved customer and staff members. This API is available in the following national cloud deployments.
+     * Cancel the specified bookingAppointment in the specified bookingBusiness and send a message to the involved customer and staff members.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/bookingappointment-cancel?view=graph-rest-1.0">Find more info here</a>
@@ -54,10 +54,10 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Cancel the specified bookingAppointment in the specified bookingBusiness and send a message to the involved customer and staff members. This API is available in the following national cloud deployments.
+     * Cancel the specified bookingAppointment in the specified bookingBusiness and send a message to the involved customer and staff members.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -66,7 +66,7 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Cancel the specified bookingAppointment in the specified bookingBusiness and send a message to the involved customer and staff members. This API is available in the following national cloud deployments.
+     * Cancel the specified bookingAppointment in the specified bookingBusiness and send a message to the involved customer and staff members.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -39,9 +39,9 @@ public class FilterOperatorSchema extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("arity", (n) -> { this.setArity(n.getEnumValue(ScopeOperatorType.class)); });
-        deserializerMap.put("multivaluedComparisonType", (n) -> { this.setMultivaluedComparisonType(n.getEnumValue(ScopeOperatorMultiValuedComparisonType.class)); });
-        deserializerMap.put("supportedAttributeTypes", (n) -> { this.setSupportedAttributeTypes(n.getCollectionOfEnumValues(AttributeType.class)); });
+        deserializerMap.put("arity", (n) -> { this.setArity(n.getEnumValue(ScopeOperatorType::forValue)); });
+        deserializerMap.put("multivaluedComparisonType", (n) -> { this.setMultivaluedComparisonType(n.getEnumValue(ScopeOperatorMultiValuedComparisonType::forValue)); });
+        deserializerMap.put("supportedAttributeTypes", (n) -> { this.setSupportedAttributeTypes(n.getCollectionOfEnumValues(AttributeType::forValue)); });
         return deserializerMap;
     }
     /**

@@ -80,7 +80,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         deserializerMap.put("initiatedBy", (n) -> { this.setInitiatedBy(n.getObjectValue(AuditActivityInitiator::createFromDiscriminatorValue)); });
         deserializerMap.put("loggedByService", (n) -> { this.setLoggedByService(n.getStringValue()); });
         deserializerMap.put("operationType", (n) -> { this.setOperationType(n.getStringValue()); });
-        deserializerMap.put("result", (n) -> { this.setResult(n.getEnumValue(OperationResult.class)); });
+        deserializerMap.put("result", (n) -> { this.setResult(n.getEnumValue(OperationResult::forValue)); });
         deserializerMap.put("resultReason", (n) -> { this.setResultReason(n.getStringValue()); });
         deserializerMap.put("targetResources", (n) -> { this.setTargetResources(n.getCollectionOfObjectValues(TargetResource::createFromDiscriminatorValue)); });
         return deserializerMap;

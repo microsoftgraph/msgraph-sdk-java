@@ -36,14 +36,14 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/members/{directoryObject%2Did}/$ref{?%40id*}", rawUrl);
     }
     /**
-     * Remove a member from a group via the members navigation property. You can't remove a member from groups with dynamic memberships. This API is available in the following national cloud deployments.
+     * Remove a member from a group via the members navigation property. You can't remove a member from groups with dynamic memberships.
      * @see <a href="https://learn.microsoft.com/graph/api/group-delete-members?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Remove a member from a group via the members navigation property. You can't remove a member from groups with dynamic memberships. This API is available in the following national cloud deployments.
+     * Remove a member from a group via the members navigation property. You can't remove a member from groups with dynamic memberships.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/group-delete-members?view=graph-rest-1.0">Find more info here</a>
      */
@@ -52,10 +52,10 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Remove a member from a group via the members navigation property. You can't remove a member from groups with dynamic memberships. This API is available in the following national cloud deployments.
+     * Remove a member from a group via the members navigation property. You can't remove a member from groups with dynamic memberships.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Remove a member from a group via the members navigation property. You can't remove a member from groups with dynamic memberships. This API is available in the following national cloud deployments.
+     * Remove a member from a group via the members navigation property. You can't remove a member from groups with dynamic memberships.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -85,7 +85,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Remove a member from a group via the members navigation property. You can't remove a member from groups with dynamic memberships. This API is available in the following national cloud deployments.
+     * Remove a member from a group via the members navigation property. You can't remove a member from groups with dynamic memberships.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteQueryParameters {

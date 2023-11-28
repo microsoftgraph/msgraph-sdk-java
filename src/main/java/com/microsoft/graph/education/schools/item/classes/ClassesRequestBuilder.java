@@ -66,7 +66,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/schools/{educationSchool%2Did}/classes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the educationClass resources owned by an educationSchool. This API is available in the following national cloud deployments.
+     * Get the educationClass resources owned by an educationSchool.
      * @return a EducationClassCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationschool-list-classes?view=graph-rest-1.0">Find more info here</a>
      */
@@ -75,7 +75,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the educationClass resources owned by an educationSchool. This API is available in the following national cloud deployments.
+     * Get the educationClass resources owned by an educationSchool.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EducationClassCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationschool-list-classes?view=graph-rest-1.0">Find more info here</a>
@@ -86,10 +86,10 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, EducationClassCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, EducationClassCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the educationClass resources owned by an educationSchool. This API is available in the following national cloud deployments.
+     * Get the educationClass resources owned by an educationSchool.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the educationClass resources owned by an educationSchool. This API is available in the following national cloud deployments.
+     * Get the educationClass resources owned by an educationSchool.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -119,7 +119,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         return new ClassesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the educationClass resources owned by an educationSchool. This API is available in the following national cloud deployments.
+     * Get the educationClass resources owned by an educationSchool.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

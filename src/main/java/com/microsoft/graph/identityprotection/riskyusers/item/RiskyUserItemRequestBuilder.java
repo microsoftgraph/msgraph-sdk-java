@@ -59,10 +59,10 @@ public class RiskyUserItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a riskyUser object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a riskyUser object.
      * @return a RiskyUser
      * @see <a href="https://learn.microsoft.com/graph/api/riskyuser-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -71,7 +71,7 @@ public class RiskyUserItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a riskyUser object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a riskyUser object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RiskyUser
      * @see <a href="https://learn.microsoft.com/graph/api/riskyuser-get?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class RiskyUserItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, RiskyUser::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, RiskyUser::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property riskyUsers in identityProtection
@@ -106,7 +106,7 @@ public class RiskyUserItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, RiskyUser::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, RiskyUser::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property riskyUsers for identityProtection
@@ -129,7 +129,7 @@ public class RiskyUserItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a riskyUser object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a riskyUser object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +137,7 @@ public class RiskyUserItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a riskyUser object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a riskyUser object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -189,7 +189,7 @@ public class RiskyUserItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a riskyUser object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a riskyUser object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

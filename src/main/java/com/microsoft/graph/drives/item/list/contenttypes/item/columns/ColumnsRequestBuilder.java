@@ -59,7 +59,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/list/contentTypes/{contentType%2Did}/columns{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the collection of columns represented as columnDefinition][columnDefinition] resources in a [content type][contentType]. This API is available in the following [national cloud deployments.
+     * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [content type][contentType].
      * @return a ColumnDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-list-columns?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the collection of columns represented as columnDefinition][columnDefinition] resources in a [content type][contentType]. This API is available in the following [national cloud deployments.
+     * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [content type][contentType].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ColumnDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-list-columns?view=graph-rest-1.0">Find more info here</a>
@@ -79,10 +79,10 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ColumnDefinitionCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ColumnDefinitionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Add a column to a content type][contentType] in a site, or a list with a request that specifies a [columnDefinition][columnDefinition]. This API is available in the following [national cloud deployments.
+     * Add a column to a [content type][contentType] in a site, or a list with a request that specifies a [columnDefinition][columnDefinition].
      * @param body The request body
      * @return a ColumnDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-post-columns?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Add a column to a content type][contentType] in a site, or a list with a request that specifies a [columnDefinition][columnDefinition]. This API is available in the following [national cloud deployments.
+     * Add a column to a [content type][contentType] in a site, or a list with a request that specifies a [columnDefinition][columnDefinition].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ColumnDefinition
@@ -105,10 +105,10 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ColumnDefinition::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ColumnDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Get the collection of columns represented as columnDefinition][columnDefinition] resources in a [content type][contentType]. This API is available in the following [national cloud deployments.
+     * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [content type][contentType].
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the collection of columns represented as columnDefinition][columnDefinition] resources in a [content type][contentType]. This API is available in the following [national cloud deployments.
+     * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [content type][contentType].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add a column to a content type][contentType] in a site, or a list with a request that specifies a [columnDefinition][columnDefinition]. This API is available in the following [national cloud deployments.
+     * Add a column to a [content type][contentType] in a site, or a list with a request that specifies a [columnDefinition][columnDefinition].
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add a column to a content type][contentType] in a site, or a list with a request that specifies a [columnDefinition][columnDefinition]. This API is available in the following [national cloud deployments.
+     * Add a column to a [content type][contentType] in a site, or a list with a request that specifies a [columnDefinition][columnDefinition].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return new ColumnsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the collection of columns represented as columnDefinition][columnDefinition] resources in a [content type][contentType]. This API is available in the following [national cloud deployments.
+     * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [content type][contentType].
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

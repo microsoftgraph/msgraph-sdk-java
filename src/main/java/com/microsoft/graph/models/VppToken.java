@@ -73,11 +73,11 @@ public class VppToken extends Entity implements Parsable {
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastSyncDateTime", (n) -> { this.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("lastSyncStatus", (n) -> { this.setLastSyncStatus(n.getEnumValue(VppTokenSyncStatus.class)); });
+        deserializerMap.put("lastSyncStatus", (n) -> { this.setLastSyncStatus(n.getEnumValue(VppTokenSyncStatus::forValue)); });
         deserializerMap.put("organizationName", (n) -> { this.setOrganizationName(n.getStringValue()); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(VppTokenState.class)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(VppTokenState::forValue)); });
         deserializerMap.put("token", (n) -> { this.setToken(n.getStringValue()); });
-        deserializerMap.put("vppTokenAccountType", (n) -> { this.setVppTokenAccountType(n.getEnumValue(VppTokenAccountType.class)); });
+        deserializerMap.put("vppTokenAccountType", (n) -> { this.setVppTokenAccountType(n.getEnumValue(VppTokenAccountType::forValue)); });
         return deserializerMap;
     }
     /**

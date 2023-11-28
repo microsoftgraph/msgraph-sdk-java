@@ -45,14 +45,14 @@ public class UserActivityItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/activities/{userActivity%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an existing user activity for your app. This API is available in the following national cloud deployments.
+     * Delete an existing user activity for your app.
      * @see <a href="https://learn.microsoft.com/graph/api/projectrome-delete-activity?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an existing user activity for your app. This API is available in the following national cloud deployments.
+     * Delete an existing user activity for your app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/projectrome-delete-activity?view=graph-rest-1.0">Find more info here</a>
      */
@@ -61,7 +61,7 @@ public class UserActivityItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * The user's activities across devices. Read-only. Nullable.
@@ -82,7 +82,7 @@ public class UserActivityItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserActivity::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserActivity::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property activities in users
@@ -106,10 +106,10 @@ public class UserActivityItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserActivity::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserActivity::createFromDiscriminatorValue);
     }
     /**
-     * Delete an existing user activity for your app. This API is available in the following national cloud deployments.
+     * Delete an existing user activity for your app.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +117,7 @@ public class UserActivityItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an existing user activity for your app. This API is available in the following national cloud deployments.
+     * Delete an existing user activity for your app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

@@ -79,7 +79,7 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DefaultManagedAppProtectionCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DefaultManagedAppProtectionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new defaultManagedAppProtection object.
@@ -105,7 +105,7 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DefaultManagedAppProtection::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DefaultManagedAppProtection::createFromDiscriminatorValue);
     }
     /**
      * List properties and relationships of the defaultManagedAppProtection objects.

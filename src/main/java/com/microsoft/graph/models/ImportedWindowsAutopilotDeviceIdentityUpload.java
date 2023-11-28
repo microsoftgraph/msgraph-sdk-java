@@ -53,7 +53,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTimeUtc", (n) -> { this.setCreatedDateTimeUtc(n.getOffsetDateTimeValue()); });
         deserializerMap.put("deviceIdentities", (n) -> { this.setDeviceIdentities(n.getCollectionOfObjectValues(ImportedWindowsAutopilotDeviceIdentity::createFromDiscriminatorValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ImportedWindowsAutopilotDeviceIdentityUploadStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ImportedWindowsAutopilotDeviceIdentityUploadStatus::forValue)); });
         return deserializerMap;
     }
     /**

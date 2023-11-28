@@ -58,7 +58,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hosts/{host%2Did}/hostPairs{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*. This API is available in the following national cloud deployments.
+     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*.
      * @return a HostPairCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-hostpairs?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*. This API is available in the following national cloud deployments.
+     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a HostPairCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-hostpairs?view=graph-rest-1.0">Find more info here</a>
@@ -78,10 +78,10 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, HostPairCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, HostPairCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*. This API is available in the following national cloud deployments.
+     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*. This API is available in the following national cloud deployments.
+     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -111,7 +111,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         return new HostPairsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*. This API is available in the following national cloud deployments.
+     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

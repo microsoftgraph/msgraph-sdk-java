@@ -79,10 +79,10 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AppRoleAssignmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AppRoleAssignmentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Use this API to assign an app role to a user. To grant an app role assignment to a user, you need three identifiers: This API is available in the following national cloud deployments.
+     * Use this API to assign an app role to a user. To grant an app role assignment to a user, you need three identifiers:
      * @param body The request body
      * @return a AppRoleAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/user-post-approleassignments?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Use this API to assign an app role to a user. To grant an app role assignment to a user, you need three identifiers: This API is available in the following national cloud deployments.
+     * Use this API to assign an app role to a user. To grant an app role assignment to a user, you need three identifiers:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AppRoleAssignment
@@ -105,7 +105,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AppRoleAssignment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AppRoleAssignment::createFromDiscriminatorValue);
     }
     /**
      * Represents the app roles a user has been granted for an application. Supports $expand.
@@ -128,7 +128,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to assign an app role to a user. To grant an app role assignment to a user, you need three identifiers: This API is available in the following national cloud deployments.
+     * Use this API to assign an app role to a user. To grant an app role assignment to a user, you need three identifiers:
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to assign an app role to a user. To grant an app role assignment to a user, you need three identifiers: This API is available in the following national cloud deployments.
+     * Use this API to assign an app role to a user. To grant an app role assignment to a user, you need three identifiers:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

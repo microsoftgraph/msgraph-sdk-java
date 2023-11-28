@@ -37,7 +37,7 @@ public class LastIndexOperationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/{ediscoveryCustodian%2Did}/lastIndexOperation{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian. This API is available in the following national cloud deployments.
+     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian.
      * @return a EdiscoveryIndexOperation
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-lastindexoperation?view=graph-rest-1.0">Find more info here</a>
      */
@@ -46,7 +46,7 @@ public class LastIndexOperationRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian. This API is available in the following national cloud deployments.
+     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EdiscoveryIndexOperation
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-lastindexoperation?view=graph-rest-1.0">Find more info here</a>
@@ -57,10 +57,10 @@ public class LastIndexOperationRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, EdiscoveryIndexOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryIndexOperation::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian. This API is available in the following national cloud deployments.
+     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class LastIndexOperationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian. This API is available in the following national cloud deployments.
+     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -90,7 +90,7 @@ public class LastIndexOperationRequestBuilder extends BaseRequestBuilder {
         return new LastIndexOperationRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian. This API is available in the following national cloud deployments.
+     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

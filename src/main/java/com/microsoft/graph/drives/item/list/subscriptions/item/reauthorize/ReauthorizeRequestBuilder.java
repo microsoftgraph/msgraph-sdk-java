@@ -35,14 +35,14 @@ public class ReauthorizeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/list/subscriptions/{subscription%2Did}/reauthorize", rawUrl);
     }
     /**
-     * Reauthorize a subscription when you receive a reauthorizationRequired challenge. This API is available in the following national cloud deployments.
+     * Reauthorize a subscription when you receive a reauthorizationRequired challenge.
      * @see <a href="https://learn.microsoft.com/graph/api/subscription-reauthorize?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Reauthorize a subscription when you receive a reauthorizationRequired challenge. This API is available in the following national cloud deployments.
+     * Reauthorize a subscription when you receive a reauthorizationRequired challenge.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/subscription-reauthorize?view=graph-rest-1.0">Find more info here</a>
      */
@@ -51,10 +51,10 @@ public class ReauthorizeRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Reauthorize a subscription when you receive a reauthorizationRequired challenge. This API is available in the following national cloud deployments.
+     * Reauthorize a subscription when you receive a reauthorizationRequired challenge.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class ReauthorizeRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Reauthorize a subscription when you receive a reauthorizationRequired challenge. This API is available in the following national cloud deployments.
+     * Reauthorize a subscription when you receive a reauthorizationRequired challenge.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

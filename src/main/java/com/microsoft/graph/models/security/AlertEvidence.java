@@ -117,11 +117,11 @@ public class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsabl
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("detailedRoles", (n) -> { this.setDetailedRoles(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("remediationStatus", (n) -> { this.setRemediationStatus(n.getEnumValue(EvidenceRemediationStatus.class)); });
+        deserializerMap.put("remediationStatus", (n) -> { this.setRemediationStatus(n.getEnumValue(EvidenceRemediationStatus::forValue)); });
         deserializerMap.put("remediationStatusDetails", (n) -> { this.setRemediationStatusDetails(n.getStringValue()); });
-        deserializerMap.put("roles", (n) -> { this.setRoles(n.getCollectionOfEnumValues(EvidenceRole.class)); });
+        deserializerMap.put("roles", (n) -> { this.setRoles(n.getCollectionOfEnumValues(EvidenceRole::forValue)); });
         deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("verdict", (n) -> { this.setVerdict(n.getEnumValue(EvidenceVerdict.class)); });
+        deserializerMap.put("verdict", (n) -> { this.setVerdict(n.getEnumValue(EvidenceVerdict::forValue)); });
         return deserializerMap;
     }
     /**

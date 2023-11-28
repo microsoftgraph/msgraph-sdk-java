@@ -45,7 +45,7 @@ public class FilesFolderRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/channels/{channel%2Did}/filesFolder{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the metadata for the location where the files of a channel are stored.  This API is available in the following national cloud deployments.
+     * Get the metadata for the location where the files of a channel are stored. 
      * @return a DriveItem
      * @see <a href="https://learn.microsoft.com/graph/api/channel-get-filesfolder?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class FilesFolderRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the metadata for the location where the files of a channel are stored.  This API is available in the following national cloud deployments.
+     * Get the metadata for the location where the files of a channel are stored. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DriveItem
      * @see <a href="https://learn.microsoft.com/graph/api/channel-get-filesfolder?view=graph-rest-1.0">Find more info here</a>
@@ -65,10 +65,10 @@ public class FilesFolderRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DriveItem::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DriveItem::createFromDiscriminatorValue);
     }
     /**
-     * Get the metadata for the location where the files of a channel are stored.  This API is available in the following national cloud deployments.
+     * Get the metadata for the location where the files of a channel are stored. 
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +76,7 @@ public class FilesFolderRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the metadata for the location where the files of a channel are stored.  This API is available in the following national cloud deployments.
+     * Get the metadata for the location where the files of a channel are stored. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -98,7 +98,7 @@ public class FilesFolderRequestBuilder extends BaseRequestBuilder {
         return new FilesFolderRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the metadata for the location where the files of a channel are stored.  This API is available in the following national cloud deployments.
+     * Get the metadata for the location where the files of a channel are stored. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

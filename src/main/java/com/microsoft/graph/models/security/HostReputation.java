@@ -40,7 +40,7 @@ public class HostReputation extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("classification", (n) -> { this.setClassification(n.getEnumValue(HostReputationClassification.class)); });
+        deserializerMap.put("classification", (n) -> { this.setClassification(n.getEnumValue(HostReputationClassification::forValue)); });
         deserializerMap.put("rules", (n) -> { this.setRules(n.getCollectionOfObjectValues(HostReputationRule::createFromDiscriminatorValue)); });
         deserializerMap.put("score", (n) -> { this.setScore(n.getIntegerValue()); });
         return deserializerMap;

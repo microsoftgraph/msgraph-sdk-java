@@ -45,14 +45,14 @@ public class PinnedChatMessageInfoItemRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/chats/{chat%2Did}/pinnedMessages/{pinnedChatMessageInfo%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Unpin a message from a chat. This API is available in the following national cloud deployments.
+     * Unpin a message from a chat.
      * @see <a href="https://learn.microsoft.com/graph/api/chat-delete-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Unpin a message from a chat. This API is available in the following national cloud deployments.
+     * Unpin a message from a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/chat-delete-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
      */
@@ -61,7 +61,7 @@ public class PinnedChatMessageInfoItemRequestBuilder extends BaseRequestBuilder 
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * A collection of all the pinned messages in the chat. Nullable.
@@ -82,7 +82,7 @@ public class PinnedChatMessageInfoItemRequestBuilder extends BaseRequestBuilder 
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PinnedChatMessageInfo::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PinnedChatMessageInfo::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property pinnedMessages in chats
@@ -106,10 +106,10 @@ public class PinnedChatMessageInfoItemRequestBuilder extends BaseRequestBuilder 
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PinnedChatMessageInfo::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PinnedChatMessageInfo::createFromDiscriminatorValue);
     }
     /**
-     * Unpin a message from a chat. This API is available in the following national cloud deployments.
+     * Unpin a message from a chat.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +117,7 @@ public class PinnedChatMessageInfoItemRequestBuilder extends BaseRequestBuilder 
         return toDeleteRequestInformation(null);
     }
     /**
-     * Unpin a message from a chat. This API is available in the following national cloud deployments.
+     * Unpin a message from a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

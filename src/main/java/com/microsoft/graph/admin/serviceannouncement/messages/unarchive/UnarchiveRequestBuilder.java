@@ -35,7 +35,7 @@ public class UnarchiveRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/serviceAnnouncement/messages/unarchive", rawUrl);
     }
     /**
-     * Unarchive a list of serviceUpdateMessages for the signed in user. This API is available in the following national cloud deployments.
+     * Unarchive a list of serviceUpdateMessages for the signed in user.
      * @param body The request body
      * @return a UnarchivePostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-unarchive?view=graph-rest-1.0">Find more info here</a>
@@ -45,7 +45,7 @@ public class UnarchiveRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Unarchive a list of serviceUpdateMessages for the signed in user. This API is available in the following national cloud deployments.
+     * Unarchive a list of serviceUpdateMessages for the signed in user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UnarchivePostResponse
@@ -58,10 +58,10 @@ public class UnarchiveRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UnarchivePostResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnarchivePostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Unarchive a list of serviceUpdateMessages for the signed in user. This API is available in the following national cloud deployments.
+     * Unarchive a list of serviceUpdateMessages for the signed in user.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -70,7 +70,7 @@ public class UnarchiveRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Unarchive a list of serviceUpdateMessages for the signed in user. This API is available in the following national cloud deployments.
+     * Unarchive a list of serviceUpdateMessages for the signed in user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -64,7 +64,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("identity", (n) -> { this.setIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("role", (n) -> { this.setRole(n.getEnumValue(OnlineMeetingRole.class)); });
+        deserializerMap.put("role", (n) -> { this.setRole(n.getEnumValue(OnlineMeetingRole::forValue)); });
         deserializerMap.put("upn", (n) -> { this.setUpn(n.getStringValue()); });
         return deserializerMap;
     }

@@ -37,7 +37,7 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityProviders/{identityProvider%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an existing identityProvider. This API is available in the following national cloud deployments.
+     * Delete an existing identityProvider.
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
      * @see <a href="https://learn.microsoft.com/graph/api/identityprovider-delete?view=graph-rest-1.0">Find more info here</a>
@@ -47,7 +47,7 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Delete an existing identityProvider. This API is available in the following national cloud deployments.
+     * Delete an existing identityProvider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
@@ -59,10 +59,10 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties of an existing identityProvider. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an existing identityProvider.
      * @return a IdentityProvider
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
@@ -74,7 +74,7 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties of an existing identityProvider. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an existing identityProvider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a IdentityProvider
      * @deprecated
@@ -88,10 +88,10 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, IdentityProvider::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, IdentityProvider::createFromDiscriminatorValue);
     }
     /**
-     * Update properties in an existing identityProvider. This API is available in the following national cloud deployments.
+     * Update properties in an existing identityProvider.
      * @param body The request body
      * @return a IdentityProvider
      * @deprecated
@@ -104,7 +104,7 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update properties in an existing identityProvider. This API is available in the following national cloud deployments.
+     * Update properties in an existing identityProvider.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a IdentityProvider
@@ -120,10 +120,10 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, IdentityProvider::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, IdentityProvider::createFromDiscriminatorValue);
     }
     /**
-     * Delete an existing identityProvider. This API is available in the following national cloud deployments.
+     * Delete an existing identityProvider.
      * @return a RequestInformation
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
@@ -134,7 +134,7 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an existing identityProvider. This API is available in the following national cloud deployments.
+     * Delete an existing identityProvider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -149,7 +149,7 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties of an existing identityProvider. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an existing identityProvider.
      * @return a RequestInformation
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
@@ -160,7 +160,7 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of an existing identityProvider. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an existing identityProvider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -175,7 +175,7 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update properties in an existing identityProvider. This API is available in the following national cloud deployments.
+     * Update properties in an existing identityProvider.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -187,7 +187,7 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update properties in an existing identityProvider. This API is available in the following national cloud deployments.
+     * Update properties in an existing identityProvider.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -224,7 +224,7 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties of an existing identityProvider. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an existing identityProvider.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

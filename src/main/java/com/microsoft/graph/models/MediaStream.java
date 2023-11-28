@@ -70,9 +70,9 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
-        deserializerMap.put("direction", (n) -> { this.setDirection(n.getEnumValue(MediaDirection.class)); });
+        deserializerMap.put("direction", (n) -> { this.setDirection(n.getEnumValue(MediaDirection::forValue)); });
         deserializerMap.put("label", (n) -> { this.setLabel(n.getStringValue()); });
-        deserializerMap.put("mediaType", (n) -> { this.setMediaType(n.getEnumValue(Modality.class)); });
+        deserializerMap.put("mediaType", (n) -> { this.setMediaType(n.getEnumValue(Modality::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("serverMuted", (n) -> { this.setServerMuted(n.getBooleanValue()); });
         deserializerMap.put("sourceId", (n) -> { this.setSourceId(n.getStringValue()); });

@@ -49,7 +49,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("contentData", (n) -> { this.setContentData(n.getStringValue()); });
-        deserializerMap.put("destinationRoutingReason", (n) -> { this.setDestinationRoutingReason(n.getEnumValue(MailDestinationRoutingReason.class)); });
+        deserializerMap.put("destinationRoutingReason", (n) -> { this.setDestinationRoutingReason(n.getEnumValue(MailDestinationRoutingReason::forValue)); });
         deserializerMap.put("recipientEmail", (n) -> { this.setRecipientEmail(n.getStringValue()); });
         return deserializerMap;
     }

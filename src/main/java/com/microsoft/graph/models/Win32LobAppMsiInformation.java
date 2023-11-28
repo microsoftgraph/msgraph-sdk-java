@@ -66,7 +66,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedMo
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("packageType", (n) -> { this.setPackageType(n.getEnumValue(Win32LobAppMsiPackageType.class)); });
+        deserializerMap.put("packageType", (n) -> { this.setPackageType(n.getEnumValue(Win32LobAppMsiPackageType::forValue)); });
         deserializerMap.put("productCode", (n) -> { this.setProductCode(n.getStringValue()); });
         deserializerMap.put("productName", (n) -> { this.setProductName(n.getStringValue()); });
         deserializerMap.put("productVersion", (n) -> { this.setProductVersion(n.getStringValue()); });

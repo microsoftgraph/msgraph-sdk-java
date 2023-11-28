@@ -101,12 +101,12 @@ public class Team extends Entity implements Parsable {
         deserializerMap.put("photo", (n) -> { this.setPhoto(n.getObjectValue(ProfilePhoto::createFromDiscriminatorValue)); });
         deserializerMap.put("primaryChannel", (n) -> { this.setPrimaryChannel(n.getObjectValue(Channel::createFromDiscriminatorValue)); });
         deserializerMap.put("schedule", (n) -> { this.setSchedule(n.getObjectValue(Schedule::createFromDiscriminatorValue)); });
-        deserializerMap.put("specialization", (n) -> { this.setSpecialization(n.getEnumValue(TeamSpecialization.class)); });
+        deserializerMap.put("specialization", (n) -> { this.setSpecialization(n.getEnumValue(TeamSpecialization::forValue)); });
         deserializerMap.put("summary", (n) -> { this.setSummary(n.getObjectValue(TeamSummary::createFromDiscriminatorValue)); });
         deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfObjectValues(TeamworkTag::createFromDiscriminatorValue)); });
         deserializerMap.put("template", (n) -> { this.setTemplate(n.getObjectValue(TeamsTemplate::createFromDiscriminatorValue)); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
-        deserializerMap.put("visibility", (n) -> { this.setVisibility(n.getEnumValue(TeamVisibilityType.class)); });
+        deserializerMap.put("visibility", (n) -> { this.setVisibility(n.getEnumValue(TeamVisibilityType::forValue)); });
         deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
         return deserializerMap;
     }

@@ -77,10 +77,10 @@ public class InvitationsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, InvitationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, InvitationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Use this API to create a new invitation. Invitation adds an external user to the organization. When creating a new invitation, you have several options available: This API is available in the following national cloud deployments.
+     * Use this API to create a new invitation. Invitation adds an external user to the organization. When creating a new invitation, you have several options available:
      * @param body The request body
      * @return a Invitation
      * @see <a href="https://learn.microsoft.com/graph/api/invitation-post?view=graph-rest-1.0">Find more info here</a>
@@ -90,7 +90,7 @@ public class InvitationsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Use this API to create a new invitation. Invitation adds an external user to the organization. When creating a new invitation, you have several options available: This API is available in the following national cloud deployments.
+     * Use this API to create a new invitation. Invitation adds an external user to the organization. When creating a new invitation, you have several options available:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Invitation
@@ -103,7 +103,7 @@ public class InvitationsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, Invitation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, Invitation::createFromDiscriminatorValue);
     }
     /**
      * Get entities from invitations
@@ -126,7 +126,7 @@ public class InvitationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new invitation. Invitation adds an external user to the organization. When creating a new invitation, you have several options available: This API is available in the following national cloud deployments.
+     * Use this API to create a new invitation. Invitation adds an external user to the organization. When creating a new invitation, you have several options available:
      * @param body The request body
      * @return a RequestInformation
      */
@@ -135,7 +135,7 @@ public class InvitationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new invitation. Invitation adds an external user to the organization. When creating a new invitation, you have several options available: This API is available in the following national cloud deployments.
+     * Use this API to create a new invitation. Invitation adds an external user to the organization. When creating a new invitation, you have several options available:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

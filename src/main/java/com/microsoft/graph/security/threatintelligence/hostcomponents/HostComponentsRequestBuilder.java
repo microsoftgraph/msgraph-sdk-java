@@ -59,7 +59,7 @@ public class HostComponentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hostComponents{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a hostComponent object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a hostComponent object.
      * @return a HostComponentCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class HostComponentsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a hostComponent object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a hostComponent object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a HostComponentCollectionResponse
      */
@@ -77,7 +77,7 @@ public class HostComponentsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, HostComponentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, HostComponentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to hostComponents for security
@@ -101,10 +101,10 @@ public class HostComponentsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, HostComponent::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, HostComponent::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of a hostComponent object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a hostComponent object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class HostComponentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a hostComponent object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a hostComponent object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class HostComponentsRequestBuilder extends BaseRequestBuilder {
         return new HostComponentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a hostComponent object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a hostComponent object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -67,7 +67,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/chats/{chat%2Did}/members{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List all conversation members in a chat or channel. This API is available in the following national cloud deployments.
+     * List all conversation members in a chat or channel.
      * @return a ConversationMemberCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -76,7 +76,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List all conversation members in a chat or channel. This API is available in the following national cloud deployments.
+     * List all conversation members in a chat or channel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ConversationMemberCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-list?view=graph-rest-1.0">Find more info here</a>
@@ -87,10 +87,10 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ConversationMemberCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ConversationMemberCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Add a conversationMember to a chat. This API is available in the following national cloud deployments.
+     * Add a conversationMember to a chat.
      * @param body The request body
      * @return a ConversationMember
      * @see <a href="https://learn.microsoft.com/graph/api/chat-post-members?view=graph-rest-1.0">Find more info here</a>
@@ -100,7 +100,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Add a conversationMember to a chat. This API is available in the following national cloud deployments.
+     * Add a conversationMember to a chat.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ConversationMember
@@ -113,10 +113,10 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ConversationMember::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ConversationMember::createFromDiscriminatorValue);
     }
     /**
-     * List all conversation members in a chat or channel. This API is available in the following national cloud deployments.
+     * List all conversation members in a chat or channel.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List all conversation members in a chat or channel. This API is available in the following national cloud deployments.
+     * List all conversation members in a chat or channel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -136,7 +136,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add a conversationMember to a chat. This API is available in the following national cloud deployments.
+     * Add a conversationMember to a chat.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add a conversationMember to a chat. This API is available in the following national cloud deployments.
+     * Add a conversationMember to a chat.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -170,7 +170,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return new MembersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List all conversation members in a chat or channel. This API is available in the following national cloud deployments.
+     * List all conversation members in a chat or channel.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -83,7 +83,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Back
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
         deserializerMap.put("authorizedApplicationRulesFromGroupPolicyMerged", (n) -> { this.setAuthorizedApplicationRulesFromGroupPolicyMerged(n.getBooleanValue()); });
         deserializerMap.put("connectionSecurityRulesFromGroupPolicyMerged", (n) -> { this.setConnectionSecurityRulesFromGroupPolicyMerged(n.getBooleanValue()); });
-        deserializerMap.put("firewallEnabled", (n) -> { this.setFirewallEnabled(n.getEnumValue(StateManagementSetting.class)); });
+        deserializerMap.put("firewallEnabled", (n) -> { this.setFirewallEnabled(n.getEnumValue(StateManagementSetting::forValue)); });
         deserializerMap.put("globalPortRulesFromGroupPolicyMerged", (n) -> { this.setGlobalPortRulesFromGroupPolicyMerged(n.getBooleanValue()); });
         deserializerMap.put("inboundConnectionsBlocked", (n) -> { this.setInboundConnectionsBlocked(n.getBooleanValue()); });
         deserializerMap.put("inboundNotificationsBlocked", (n) -> { this.setInboundNotificationsBlocked(n.getBooleanValue()); });

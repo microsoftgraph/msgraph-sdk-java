@@ -35,14 +35,14 @@ public class MicrosoftGraphSecurityReleaseRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/noncustodialDataSources/{ediscoveryNoncustodialDataSource%2Did}/microsoft.graph.security.release", rawUrl);
     }
     /**
-     * Release the non-custodial data source from the case. This API is available in the following national cloud deployments.
+     * Release the non-custodial data source from the case.
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverynoncustodialdatasource-release?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Release the non-custodial data source from the case. This API is available in the following national cloud deployments.
+     * Release the non-custodial data source from the case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverynoncustodialdatasource-release?view=graph-rest-1.0">Find more info here</a>
      */
@@ -51,10 +51,10 @@ public class MicrosoftGraphSecurityReleaseRequestBuilder extends BaseRequestBuil
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Release the non-custodial data source from the case. This API is available in the following national cloud deployments.
+     * Release the non-custodial data source from the case.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class MicrosoftGraphSecurityReleaseRequestBuilder extends BaseRequestBuil
         return toPostRequestInformation(null);
     }
     /**
-     * Release the non-custodial data source from the case. This API is available in the following national cloud deployments.
+     * Release the non-custodial data source from the case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

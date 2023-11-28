@@ -93,14 +93,14 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/searches/{ediscoverySearch%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an ediscoverySearch object. This API is available in the following national cloud deployments.
+     * Delete an ediscoverySearch object.
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-delete-searches?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an ediscoverySearch object. This API is available in the following national cloud deployments.
+     * Delete an ediscoverySearch object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-delete-searches?view=graph-rest-1.0">Find more info here</a>
      */
@@ -109,10 +109,10 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an ediscoverySearch object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an ediscoverySearch object.
      * @return a EdiscoverySearch
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -121,7 +121,7 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an ediscoverySearch object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an ediscoverySearch object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EdiscoverySearch
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-get?view=graph-rest-1.0">Find more info here</a>
@@ -132,10 +132,10 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, EdiscoverySearch::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, EdiscoverySearch::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an ediscoverySearch object. This API is available in the following national cloud deployments.
+     * Update the properties of an ediscoverySearch object.
      * @param body The request body
      * @return a EdiscoverySearch
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-update?view=graph-rest-1.0">Find more info here</a>
@@ -145,7 +145,7 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of an ediscoverySearch object. This API is available in the following national cloud deployments.
+     * Update the properties of an ediscoverySearch object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EdiscoverySearch
@@ -158,10 +158,10 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, EdiscoverySearch::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, EdiscoverySearch::createFromDiscriminatorValue);
     }
     /**
-     * Delete an ediscoverySearch object. This API is available in the following national cloud deployments.
+     * Delete an ediscoverySearch object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -169,7 +169,7 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an ediscoverySearch object. This API is available in the following national cloud deployments.
+     * Delete an ediscoverySearch object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -181,7 +181,7 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an ediscoverySearch object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an ediscoverySearch object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -189,7 +189,7 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an ediscoverySearch object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an ediscoverySearch object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +201,7 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an ediscoverySearch object. This API is available in the following national cloud deployments.
+     * Update the properties of an ediscoverySearch object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -210,7 +210,7 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an ediscoverySearch object. This API is available in the following national cloud deployments.
+     * Update the properties of an ediscoverySearch object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -241,7 +241,7 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an ediscoverySearch object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an ediscoverySearch object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

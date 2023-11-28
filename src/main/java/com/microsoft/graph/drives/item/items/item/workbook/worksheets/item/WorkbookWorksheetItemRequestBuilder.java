@@ -108,14 +108,14 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes the worksheet from the workbook. This API is available in the following national cloud deployments.
+     * Deletes the worksheet from the workbook.
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes the worksheet from the workbook. This API is available in the following national cloud deployments.
+     * Deletes the worksheet from the workbook.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -124,10 +124,10 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of worksheet object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of worksheet object.
      * @return a WorkbookWorksheet
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -136,7 +136,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of worksheet object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of worksheet object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookWorksheet
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-get?view=graph-rest-1.0">Find more info here</a>
@@ -147,10 +147,10 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, WorkbookWorksheet::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, WorkbookWorksheet::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of worksheet object. This API is available in the following national cloud deployments.
+     * Update the properties of worksheet object.
      * @param body The request body
      * @return a WorkbookWorksheet
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-update?view=graph-rest-1.0">Find more info here</a>
@@ -160,7 +160,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of worksheet object. This API is available in the following national cloud deployments.
+     * Update the properties of worksheet object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookWorksheet
@@ -173,7 +173,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, WorkbookWorksheet::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, WorkbookWorksheet::createFromDiscriminatorValue);
     }
     /**
      * Provides operations to call the range method.
@@ -186,7 +186,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         return new RangeWithAddressRequestBuilder(pathParameters, requestAdapter, address);
     }
     /**
-     * Deletes the worksheet from the workbook. This API is available in the following national cloud deployments.
+     * Deletes the worksheet from the workbook.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -194,7 +194,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes the worksheet from the workbook. This API is available in the following national cloud deployments.
+     * Deletes the worksheet from the workbook.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -206,7 +206,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of worksheet object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of worksheet object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -214,7 +214,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of worksheet object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of worksheet object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -226,7 +226,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of worksheet object. This API is available in the following national cloud deployments.
+     * Update the properties of worksheet object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -235,7 +235,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of worksheet object. This API is available in the following national cloud deployments.
+     * Update the properties of worksheet object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -276,7 +276,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of worksheet object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of worksheet object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

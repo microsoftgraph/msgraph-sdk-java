@@ -133,7 +133,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
         deserializerMap.put("destinationLocation", (n) -> { this.setDestinationLocation(n.getStringValue()); });
         deserializerMap.put("destinationPort", (n) -> { this.setDestinationPort(n.getStringValue()); });
         deserializerMap.put("destinationUrl", (n) -> { this.setDestinationUrl(n.getStringValue()); });
-        deserializerMap.put("direction", (n) -> { this.setDirection(n.getEnumValue(ConnectionDirection.class)); });
+        deserializerMap.put("direction", (n) -> { this.setDirection(n.getEnumValue(ConnectionDirection::forValue)); });
         deserializerMap.put("domainRegisteredDateTime", (n) -> { this.setDomainRegisteredDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("localDnsName", (n) -> { this.setLocalDnsName(n.getStringValue()); });
         deserializerMap.put("natDestinationAddress", (n) -> { this.setNatDestinationAddress(n.getStringValue()); });
@@ -141,12 +141,12 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
         deserializerMap.put("natSourceAddress", (n) -> { this.setNatSourceAddress(n.getStringValue()); });
         deserializerMap.put("natSourcePort", (n) -> { this.setNatSourcePort(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("protocol", (n) -> { this.setProtocol(n.getEnumValue(SecurityNetworkProtocol.class)); });
+        deserializerMap.put("protocol", (n) -> { this.setProtocol(n.getEnumValue(SecurityNetworkProtocol::forValue)); });
         deserializerMap.put("riskScore", (n) -> { this.setRiskScore(n.getStringValue()); });
         deserializerMap.put("sourceAddress", (n) -> { this.setSourceAddress(n.getStringValue()); });
         deserializerMap.put("sourceLocation", (n) -> { this.setSourceLocation(n.getStringValue()); });
         deserializerMap.put("sourcePort", (n) -> { this.setSourcePort(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ConnectionStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ConnectionStatus::forValue)); });
         deserializerMap.put("urlParameters", (n) -> { this.setUrlParameters(n.getStringValue()); });
         return deserializerMap;
     }

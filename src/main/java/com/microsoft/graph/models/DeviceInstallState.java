@@ -62,7 +62,7 @@ public class DeviceInstallState extends Entity implements Parsable {
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
         deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
         deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getStringValue()); });
-        deserializerMap.put("installState", (n) -> { this.setInstallState(n.getEnumValue(InstallState.class)); });
+        deserializerMap.put("installState", (n) -> { this.setInstallState(n.getEnumValue(InstallState::forValue)); });
         deserializerMap.put("lastSyncDateTime", (n) -> { this.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("osDescription", (n) -> { this.setOsDescription(n.getStringValue()); });
         deserializerMap.put("osVersion", (n) -> { this.setOsVersion(n.getStringValue()); });

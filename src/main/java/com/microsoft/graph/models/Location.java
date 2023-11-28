@@ -97,11 +97,11 @@ public class Location implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("coordinates", (n) -> { this.setCoordinates(n.getObjectValue(OutlookGeoCoordinates::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("locationEmailAddress", (n) -> { this.setLocationEmailAddress(n.getStringValue()); });
-        deserializerMap.put("locationType", (n) -> { this.setLocationType(n.getEnumValue(LocationType.class)); });
+        deserializerMap.put("locationType", (n) -> { this.setLocationType(n.getEnumValue(LocationType::forValue)); });
         deserializerMap.put("locationUri", (n) -> { this.setLocationUri(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("uniqueId", (n) -> { this.setUniqueId(n.getStringValue()); });
-        deserializerMap.put("uniqueIdType", (n) -> { this.setUniqueIdType(n.getEnumValue(LocationUniqueIdType.class)); });
+        deserializerMap.put("uniqueIdType", (n) -> { this.setUniqueIdType(n.getEnumValue(LocationUniqueIdType::forValue)); });
         return deserializerMap;
     }
     /**

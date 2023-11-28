@@ -53,7 +53,7 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/users/{educationUser%2Did}/user{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the simple directory user that corresponds to this educationUser. This API is available in the following national cloud deployments.
+     * Retrieve the simple directory user that corresponds to this educationUser.
      * @return a User
      * @see <a href="https://learn.microsoft.com/graph/api/educationuser-get-user?view=graph-rest-1.0">Find more info here</a>
      */
@@ -62,7 +62,7 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the simple directory user that corresponds to this educationUser. This API is available in the following national cloud deployments.
+     * Retrieve the simple directory user that corresponds to this educationUser.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a User
      * @see <a href="https://learn.microsoft.com/graph/api/educationuser-get-user?view=graph-rest-1.0">Find more info here</a>
@@ -73,10 +73,10 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, User::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, User::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the simple directory user that corresponds to this educationUser. This API is available in the following national cloud deployments.
+     * Retrieve the simple directory user that corresponds to this educationUser.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the simple directory user that corresponds to this educationUser. This API is available in the following national cloud deployments.
+     * Retrieve the simple directory user that corresponds to this educationUser.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -106,7 +106,7 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         return new UserRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the simple directory user that corresponds to this educationUser. This API is available in the following national cloud deployments.
+     * Retrieve the simple directory user that corresponds to this educationUser.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

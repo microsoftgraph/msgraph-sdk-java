@@ -51,10 +51,10 @@ public class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties of an authorizationPolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an authorizationPolicy object.
      * @return a AuthorizationPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/authorizationpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties of an authorizationPolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an authorizationPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AuthorizationPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/authorizationpolicy-get?view=graph-rest-1.0">Find more info here</a>
@@ -74,10 +74,10 @@ public class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AuthorizationPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AuthorizationPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an authorizationPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of an authorizationPolicy object.
      * @param body The request body
      * @return a AuthorizationPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/authorizationpolicy-update?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of an authorizationPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of an authorizationPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AuthorizationPolicy
@@ -100,7 +100,7 @@ public class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AuthorizationPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AuthorizationPolicy::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property authorizationPolicy for policies
@@ -123,7 +123,7 @@ public class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties of an authorizationPolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an authorizationPolicy object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of an authorizationPolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an authorizationPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -143,7 +143,7 @@ public class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an authorizationPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of an authorizationPolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -152,7 +152,7 @@ public class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an authorizationPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of an authorizationPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -183,7 +183,7 @@ public class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties of an authorizationPolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an authorizationPolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

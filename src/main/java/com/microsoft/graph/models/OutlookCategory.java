@@ -47,7 +47,7 @@ public class OutlookCategory extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("color", (n) -> { this.setColor(n.getEnumValue(CategoryColor.class)); });
+        deserializerMap.put("color", (n) -> { this.setColor(n.getEnumValue(CategoryColor::forValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         return deserializerMap;
     }

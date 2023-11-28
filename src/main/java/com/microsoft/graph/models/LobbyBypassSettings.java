@@ -64,7 +64,7 @@ public class LobbyBypassSettings implements AdditionalDataHolder, BackedModel, P
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("isDialInBypassEnabled", (n) -> { this.setIsDialInBypassEnabled(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("scope", (n) -> { this.setScope(n.getEnumValue(LobbyBypassScope.class)); });
+        deserializerMap.put("scope", (n) -> { this.setScope(n.getEnumValue(LobbyBypassScope::forValue)); });
         return deserializerMap;
     }
     /**

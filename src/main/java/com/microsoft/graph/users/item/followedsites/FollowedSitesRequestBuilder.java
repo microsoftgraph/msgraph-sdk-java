@@ -58,7 +58,7 @@ public class FollowedSitesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/followedSites{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List the sites that have been followed by the signed in user. This API is available in the following national cloud deployments.
+     * List the sites that have been followed by the signed in user.
      * @return a SiteCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/sites-list-followed?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class FollowedSitesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List the sites that have been followed by the signed in user. This API is available in the following national cloud deployments.
+     * List the sites that have been followed by the signed in user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SiteCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/sites-list-followed?view=graph-rest-1.0">Find more info here</a>
@@ -78,10 +78,10 @@ public class FollowedSitesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SiteCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SiteCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * List the sites that have been followed by the signed in user. This API is available in the following national cloud deployments.
+     * List the sites that have been followed by the signed in user.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class FollowedSitesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List the sites that have been followed by the signed in user. This API is available in the following national cloud deployments.
+     * List the sites that have been followed by the signed in user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -111,7 +111,7 @@ public class FollowedSitesRequestBuilder extends BaseRequestBuilder {
         return new FollowedSitesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the sites that have been followed by the signed in user. This API is available in the following national cloud deployments.
+     * List the sites that have been followed by the signed in user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

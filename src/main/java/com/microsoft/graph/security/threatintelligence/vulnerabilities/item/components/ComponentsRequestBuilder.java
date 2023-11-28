@@ -59,7 +59,7 @@ public class ComponentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/vulnerabilities/{vulnerability%2Did}/components{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of vulnerabilityComponent objects related to a known vulnerability. This API is available in the following national cloud deployments.
+     * Get a list of vulnerabilityComponent objects related to a known vulnerability.
      * @return a VulnerabilityComponentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-vulnerability-list-components?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ComponentsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of vulnerabilityComponent objects related to a known vulnerability. This API is available in the following national cloud deployments.
+     * Get a list of vulnerabilityComponent objects related to a known vulnerability.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a VulnerabilityComponentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-vulnerability-list-components?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class ComponentsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, VulnerabilityComponentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, VulnerabilityComponentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to components for security
@@ -103,10 +103,10 @@ public class ComponentsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, VulnerabilityComponent::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, VulnerabilityComponent::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of vulnerabilityComponent objects related to a known vulnerability. This API is available in the following national cloud deployments.
+     * Get a list of vulnerabilityComponent objects related to a known vulnerability.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class ComponentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of vulnerabilityComponent objects related to a known vulnerability. This API is available in the following national cloud deployments.
+     * Get a list of vulnerabilityComponent objects related to a known vulnerability.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class ComponentsRequestBuilder extends BaseRequestBuilder {
         return new ComponentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of vulnerabilityComponent objects related to a known vulnerability. This API is available in the following national cloud deployments.
+     * Get a list of vulnerabilityComponent objects related to a known vulnerability.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

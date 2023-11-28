@@ -37,14 +37,14 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork/workforceIntegrations/{workforceIntegration%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an instance of a workforceIntegration. This API is available in the following national cloud deployments.
+     * Delete an instance of a workforceIntegration.
      * @see <a href="https://learn.microsoft.com/graph/api/workforceintegration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an instance of a workforceIntegration. This API is available in the following national cloud deployments.
+     * Delete an instance of a workforceIntegration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/workforceintegration-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -53,10 +53,10 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a workforceIntegration object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a workforceIntegration object.
      * @return a WorkforceIntegration
      * @see <a href="https://learn.microsoft.com/graph/api/workforceintegration-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a workforceIntegration object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a workforceIntegration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkforceIntegration
      * @see <a href="https://learn.microsoft.com/graph/api/workforceintegration-get?view=graph-rest-1.0">Find more info here</a>
@@ -76,10 +76,10 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, WorkforceIntegration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, WorkforceIntegration::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a workforceIntegration object. This API is available in the following national cloud deployments.
+     * Update the properties of a workforceIntegration object.
      * @param body The request body
      * @return a WorkforceIntegration
      * @see <a href="https://learn.microsoft.com/graph/api/workforceintegration-update?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a workforceIntegration object. This API is available in the following national cloud deployments.
+     * Update the properties of a workforceIntegration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkforceIntegration
@@ -102,10 +102,10 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, WorkforceIntegration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, WorkforceIntegration::createFromDiscriminatorValue);
     }
     /**
-     * Delete an instance of a workforceIntegration. This API is available in the following national cloud deployments.
+     * Delete an instance of a workforceIntegration.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an instance of a workforceIntegration. This API is available in the following national cloud deployments.
+     * Delete an instance of a workforceIntegration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -125,7 +125,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a workforceIntegration object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a workforceIntegration object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a workforceIntegration object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a workforceIntegration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a workforceIntegration object. This API is available in the following national cloud deployments.
+     * Update the properties of a workforceIntegration object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a workforceIntegration object. This API is available in the following national cloud deployments.
+     * Update the properties of a workforceIntegration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -185,7 +185,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a workforceIntegration object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a workforceIntegration object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

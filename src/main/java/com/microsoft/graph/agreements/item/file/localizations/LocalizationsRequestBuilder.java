@@ -59,7 +59,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/agreements/{agreement%2Did}/file/localizations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the default and localized agreement files. This API is available in the following national cloud deployments.
+     * Get a list of the default and localized agreement files.
      * @return a AgreementFileLocalizationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/agreementfile-list-localizations?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the default and localized agreement files. This API is available in the following national cloud deployments.
+     * Get a list of the default and localized agreement files.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AgreementFileLocalizationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/agreementfile-list-localizations?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AgreementFileLocalizationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AgreementFileLocalizationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to localizations for agreements
@@ -103,10 +103,10 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AgreementFileLocalization::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AgreementFileLocalization::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the default and localized agreement files. This API is available in the following national cloud deployments.
+     * Get a list of the default and localized agreement files.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the default and localized agreement files. This API is available in the following national cloud deployments.
+     * Get a list of the default and localized agreement files.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return new LocalizationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the default and localized agreement files. This API is available in the following national cloud deployments.
+     * Get a list of the default and localized agreement files.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

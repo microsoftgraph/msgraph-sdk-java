@@ -91,7 +91,7 @@ public class DirectoryRoleTemplatesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directoryRoleTemplates{?%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of directoryRoleTemplate objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of directoryRoleTemplate objects.
      * @return a DirectoryRoleTemplateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directoryroletemplate-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -100,7 +100,7 @@ public class DirectoryRoleTemplatesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of directoryRoleTemplate objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of directoryRoleTemplate objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DirectoryRoleTemplateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directoryroletemplate-list?view=graph-rest-1.0">Find more info here</a>
@@ -111,7 +111,7 @@ public class DirectoryRoleTemplatesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DirectoryRoleTemplateCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DirectoryRoleTemplateCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Add new entity to directoryRoleTemplates
@@ -135,10 +135,10 @@ public class DirectoryRoleTemplatesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DirectoryRoleTemplate::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DirectoryRoleTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of directoryRoleTemplate objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of directoryRoleTemplate objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +146,7 @@ public class DirectoryRoleTemplatesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of directoryRoleTemplate objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of directoryRoleTemplate objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -192,7 +192,7 @@ public class DirectoryRoleTemplatesRequestBuilder extends BaseRequestBuilder {
         return new DirectoryRoleTemplatesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of directoryRoleTemplate objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of directoryRoleTemplate objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

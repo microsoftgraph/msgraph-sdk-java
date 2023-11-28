@@ -59,7 +59,7 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/namedLocations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of namedLocation objects. This API is available in the following national cloud deployments.
+     * Get a list of namedLocation objects.
      * @return a NamedLocationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccessroot-list-namedlocations?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of namedLocation objects. This API is available in the following national cloud deployments.
+     * Get a list of namedLocation objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a NamedLocationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccessroot-list-namedlocations?view=graph-rest-1.0">Find more info here</a>
@@ -79,10 +79,10 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, NamedLocationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, NamedLocationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new namedLocation object. Named locations can be either ipNamedLocation or countryNamedLocation objects. This API is available in the following national cloud deployments.
+     * Create a new namedLocation object. Named locations can be either ipNamedLocation or countryNamedLocation objects.
      * @param body The request body
      * @return a NamedLocation
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccessroot-post-namedlocations?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new namedLocation object. Named locations can be either ipNamedLocation or countryNamedLocation objects. This API is available in the following national cloud deployments.
+     * Create a new namedLocation object. Named locations can be either ipNamedLocation or countryNamedLocation objects.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a NamedLocation
@@ -105,10 +105,10 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, NamedLocation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, NamedLocation::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of namedLocation objects. This API is available in the following national cloud deployments.
+     * Get a list of namedLocation objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of namedLocation objects. This API is available in the following national cloud deployments.
+     * Get a list of namedLocation objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new namedLocation object. Named locations can be either ipNamedLocation or countryNamedLocation objects. This API is available in the following national cloud deployments.
+     * Create a new namedLocation object. Named locations can be either ipNamedLocation or countryNamedLocation objects.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new namedLocation object. Named locations can be either ipNamedLocation or countryNamedLocation objects. This API is available in the following national cloud deployments.
+     * Create a new namedLocation object. Named locations can be either ipNamedLocation or countryNamedLocation objects.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         return new NamedLocationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of namedLocation objects. This API is available in the following national cloud deployments.
+     * Get a list of namedLocation objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

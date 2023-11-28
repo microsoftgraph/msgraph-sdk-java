@@ -176,7 +176,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(31);
-        deserializerMap.put("audioCodec", (n) -> { this.setAudioCodec(n.getEnumValue(AudioCodec.class)); });
+        deserializerMap.put("audioCodec", (n) -> { this.setAudioCodec(n.getEnumValue(AudioCodec::forValue)); });
         deserializerMap.put("averageAudioDegradation", (n) -> { this.setAverageAudioDegradation(n.getFloatValue()); });
         deserializerMap.put("averageAudioNetworkJitter", (n) -> { this.setAverageAudioNetworkJitter(n.getPeriodAndDurationValue()); });
         deserializerMap.put("averageBandwidthEstimate", (n) -> { this.setAverageBandwidthEstimate(n.getLongValue()); });
@@ -203,9 +203,9 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
         deserializerMap.put("postForwardErrorCorrectionPacketLossRate", (n) -> { this.setPostForwardErrorCorrectionPacketLossRate(n.getFloatValue()); });
         deserializerMap.put("rmsFreezeDuration", (n) -> { this.setRmsFreezeDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("streamDirection", (n) -> { this.setStreamDirection(n.getEnumValue(MediaStreamDirection.class)); });
+        deserializerMap.put("streamDirection", (n) -> { this.setStreamDirection(n.getEnumValue(MediaStreamDirection::forValue)); });
         deserializerMap.put("streamId", (n) -> { this.setStreamId(n.getStringValue()); });
-        deserializerMap.put("videoCodec", (n) -> { this.setVideoCodec(n.getEnumValue(VideoCodec.class)); });
+        deserializerMap.put("videoCodec", (n) -> { this.setVideoCodec(n.getEnumValue(VideoCodec::forValue)); });
         deserializerMap.put("wasMediaBypassed", (n) -> { this.setWasMediaBypassed(n.getBooleanValue()); });
         return deserializerMap;
     }

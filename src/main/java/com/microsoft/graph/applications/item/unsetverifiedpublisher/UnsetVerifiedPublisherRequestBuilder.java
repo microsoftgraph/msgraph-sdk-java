@@ -35,14 +35,14 @@ public class UnsetVerifiedPublisherRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/unsetVerifiedPublisher", rawUrl);
     }
     /**
-     * Unset the verifiedPublisher previously set on an application, removing all verified publisher properties. For more information, see Publisher verification. This API is available in the following national cloud deployments.
+     * Unset the verifiedPublisher previously set on an application, removing all verified publisher properties. For more information, see Publisher verification.
      * @see <a href="https://learn.microsoft.com/graph/api/application-unsetverifiedpublisher?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Unset the verifiedPublisher previously set on an application, removing all verified publisher properties. For more information, see Publisher verification. This API is available in the following national cloud deployments.
+     * Unset the verifiedPublisher previously set on an application, removing all verified publisher properties. For more information, see Publisher verification.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/application-unsetverifiedpublisher?view=graph-rest-1.0">Find more info here</a>
      */
@@ -51,10 +51,10 @@ public class UnsetVerifiedPublisherRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Unset the verifiedPublisher previously set on an application, removing all verified publisher properties. For more information, see Publisher verification. This API is available in the following national cloud deployments.
+     * Unset the verifiedPublisher previously set on an application, removing all verified publisher properties. For more information, see Publisher verification.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class UnsetVerifiedPublisherRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Unset the verifiedPublisher previously set on an application, removing all verified publisher properties. For more information, see Publisher verification. This API is available in the following national cloud deployments.
+     * Unset the verifiedPublisher previously set on an application, removing all verified publisher properties. For more information, see Publisher verification.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

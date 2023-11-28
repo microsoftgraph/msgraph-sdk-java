@@ -36,7 +36,7 @@ public class PlayPromptRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/playPrompt", rawUrl);
     }
     /**
-     * Play a prompt in the call. For more information about how to handle operations, see commsOperation This API is available in the following national cloud deployments.
+     * Play a prompt in the call. For more information about how to handle operations, see commsOperation
      * @param body The request body
      * @return a PlayPromptOperation
      * @see <a href="https://learn.microsoft.com/graph/api/call-playprompt?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class PlayPromptRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Play a prompt in the call. For more information about how to handle operations, see commsOperation This API is available in the following national cloud deployments.
+     * Play a prompt in the call. For more information about how to handle operations, see commsOperation
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PlayPromptOperation
@@ -59,10 +59,10 @@ public class PlayPromptRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PlayPromptOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PlayPromptOperation::createFromDiscriminatorValue);
     }
     /**
-     * Play a prompt in the call. For more information about how to handle operations, see commsOperation This API is available in the following national cloud deployments.
+     * Play a prompt in the call. For more information about how to handle operations, see commsOperation
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class PlayPromptRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Play a prompt in the call. For more information about how to handle operations, see commsOperation This API is available in the following national cloud deployments.
+     * Play a prompt in the call. For more information about how to handle operations, see commsOperation
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

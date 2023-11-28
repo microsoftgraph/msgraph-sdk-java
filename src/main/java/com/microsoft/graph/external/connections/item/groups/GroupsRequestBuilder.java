@@ -59,7 +59,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/connections/{externalConnection%2Did}/groups{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get an externalGroup object. This API is available in the following national cloud deployments.
+     * Get an externalGroup object.
      * @return a ExternalGroupCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get an externalGroup object. This API is available in the following national cloud deployments.
+     * Get an externalGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ExternalGroupCollectionResponse
      */
@@ -77,10 +77,10 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ExternalGroupCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ExternalGroupCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new externalGroup object. This API is available in the following national cloud deployments.
+     * Create a new externalGroup object.
      * @param body The request body
      * @return a ExternalGroup
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-post-groups?view=graph-rest-1.0">Find more info here</a>
@@ -90,7 +90,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new externalGroup object. This API is available in the following national cloud deployments.
+     * Create a new externalGroup object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ExternalGroup
@@ -103,10 +103,10 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ExternalGroup::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ExternalGroup::createFromDiscriminatorValue);
     }
     /**
-     * Get an externalGroup object. This API is available in the following national cloud deployments.
+     * Get an externalGroup object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get an externalGroup object. This API is available in the following national cloud deployments.
+     * Get an externalGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -126,7 +126,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new externalGroup object. This API is available in the following national cloud deployments.
+     * Create a new externalGroup object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -135,7 +135,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new externalGroup object. This API is available in the following national cloud deployments.
+     * Create a new externalGroup object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -160,7 +160,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return new GroupsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get an externalGroup object. This API is available in the following national cloud deployments.
+     * Get an externalGroup object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

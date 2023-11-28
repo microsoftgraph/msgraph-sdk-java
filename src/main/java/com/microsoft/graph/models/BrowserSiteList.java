@@ -60,7 +60,7 @@ public class BrowserSiteList extends Entity implements Parsable {
         deserializerMap.put("revision", (n) -> { this.setRevision(n.getStringValue()); });
         deserializerMap.put("sharedCookies", (n) -> { this.setSharedCookies(n.getCollectionOfObjectValues(BrowserSharedCookie::createFromDiscriminatorValue)); });
         deserializerMap.put("sites", (n) -> { this.setSites(n.getCollectionOfObjectValues(BrowserSite::createFromDiscriminatorValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(BrowserSiteListStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(BrowserSiteListStatus::forValue)); });
         return deserializerMap;
     }
     /**

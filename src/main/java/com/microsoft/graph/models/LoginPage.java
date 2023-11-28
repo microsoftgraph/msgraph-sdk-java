@@ -80,8 +80,8 @@ public class LoginPage extends Entity implements Parsable {
         deserializerMap.put("language", (n) -> { this.setLanguage(n.getStringValue()); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(EmailIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(SimulationContentSource.class)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(SimulationContentStatus.class)); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(SimulationContentSource::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(SimulationContentStatus::forValue)); });
         return deserializerMap;
     }
     /**

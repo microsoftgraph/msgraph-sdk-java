@@ -114,10 +114,10 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
         deserializerMap.put("coreLoginTimeInMs", (n) -> { this.setCoreLoginTimeInMs(n.getIntegerValue()); });
         deserializerMap.put("deviceCount", (n) -> { this.setDeviceCount(n.getLongValue()); });
         deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
-        deserializerMap.put("diskType", (n) -> { this.setDiskType(n.getEnumValue(DiskType.class)); });
+        deserializerMap.put("diskType", (n) -> { this.setDiskType(n.getEnumValue(DiskType::forValue)); });
         deserializerMap.put("groupPolicyBootTimeInMs", (n) -> { this.setGroupPolicyBootTimeInMs(n.getIntegerValue()); });
         deserializerMap.put("groupPolicyLoginTimeInMs", (n) -> { this.setGroupPolicyLoginTimeInMs(n.getIntegerValue()); });
-        deserializerMap.put("healthStatus", (n) -> { this.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState.class)); });
+        deserializerMap.put("healthStatus", (n) -> { this.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState::forValue)); });
         deserializerMap.put("loginScore", (n) -> { this.setLoginScore(n.getIntegerValue()); });
         deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
         deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });

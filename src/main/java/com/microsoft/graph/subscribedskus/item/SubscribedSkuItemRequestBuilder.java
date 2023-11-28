@@ -51,10 +51,10 @@ public class SubscribedSkuItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get a specific commercial subscription that an organization has acquired. This API is available in the following national cloud deployments.
+     * Get a specific commercial subscription that an organization has acquired.
      * @return a SubscribedSku
      * @see <a href="https://learn.microsoft.com/graph/api/subscribedsku-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class SubscribedSkuItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a specific commercial subscription that an organization has acquired. This API is available in the following national cloud deployments.
+     * Get a specific commercial subscription that an organization has acquired.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SubscribedSku
      * @see <a href="https://learn.microsoft.com/graph/api/subscribedsku-get?view=graph-rest-1.0">Find more info here</a>
@@ -74,7 +74,7 @@ public class SubscribedSkuItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SubscribedSku::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SubscribedSku::createFromDiscriminatorValue);
     }
     /**
      * Update entity in subscribedSkus
@@ -98,7 +98,7 @@ public class SubscribedSkuItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SubscribedSku::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SubscribedSku::createFromDiscriminatorValue);
     }
     /**
      * Delete entity from subscribedSkus
@@ -121,7 +121,7 @@ public class SubscribedSkuItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a specific commercial subscription that an organization has acquired. This API is available in the following national cloud deployments.
+     * Get a specific commercial subscription that an organization has acquired.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class SubscribedSkuItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a specific commercial subscription that an organization has acquired. This API is available in the following national cloud deployments.
+     * Get a specific commercial subscription that an organization has acquired.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -181,7 +181,7 @@ public class SubscribedSkuItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get a specific commercial subscription that an organization has acquired. This API is available in the following national cloud deployments.
+     * Get a specific commercial subscription that an organization has acquired.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

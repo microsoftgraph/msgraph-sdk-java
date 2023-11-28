@@ -77,14 +77,14 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a b2xIdentityUserFlow object. This API is available in the following national cloud deployments.
+     * Delete a b2xIdentityUserFlow object.
      * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a b2xIdentityUserFlow object. This API is available in the following national cloud deployments.
+     * Delete a b2xIdentityUserFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -93,10 +93,10 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a b2xIdentityUserFlow object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a b2xIdentityUserFlow object.
      * @return a B2xIdentityUserFlow
      * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -105,7 +105,7 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a b2xIdentityUserFlow object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a b2xIdentityUserFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a B2xIdentityUserFlow
      * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-get?view=graph-rest-1.0">Find more info here</a>
@@ -116,7 +116,7 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, B2xIdentityUserFlow::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, B2xIdentityUserFlow::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property b2xUserFlows in identity
@@ -140,10 +140,10 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, B2xIdentityUserFlow::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, B2xIdentityUserFlow::createFromDiscriminatorValue);
     }
     /**
-     * Delete a b2xIdentityUserFlow object. This API is available in the following national cloud deployments.
+     * Delete a b2xIdentityUserFlow object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -151,7 +151,7 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a b2xIdentityUserFlow object. This API is available in the following national cloud deployments.
+     * Delete a b2xIdentityUserFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -163,7 +163,7 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a b2xIdentityUserFlow object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a b2xIdentityUserFlow object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a b2xIdentityUserFlow object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a b2xIdentityUserFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -223,7 +223,7 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a b2xIdentityUserFlow object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a b2xIdentityUserFlow object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

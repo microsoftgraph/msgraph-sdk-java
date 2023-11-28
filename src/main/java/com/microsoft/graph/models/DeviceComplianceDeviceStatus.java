@@ -60,7 +60,7 @@ public class DeviceComplianceDeviceStatus extends Entity implements Parsable {
         deserializerMap.put("deviceDisplayName", (n) -> { this.setDeviceDisplayName(n.getStringValue()); });
         deserializerMap.put("deviceModel", (n) -> { this.setDeviceModel(n.getStringValue()); });
         deserializerMap.put("lastReportedDateTime", (n) -> { this.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ComplianceStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ComplianceStatus::forValue)); });
         deserializerMap.put("userName", (n) -> { this.setUserName(n.getStringValue()); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         return deserializerMap;

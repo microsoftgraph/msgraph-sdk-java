@@ -70,7 +70,7 @@ public class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestB
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Get the instances of role eligibilities. This API is available in the following national cloud deployments.
+     * Get the instances of role eligibilities.
      * @return a UnifiedRoleEligibilityScheduleInstanceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleeligibilityscheduleinstances?view=graph-rest-1.0">Find more info here</a>
      */
@@ -79,7 +79,7 @@ public class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestB
         return get(null);
     }
     /**
-     * Get the instances of role eligibilities. This API is available in the following national cloud deployments.
+     * Get the instances of role eligibilities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UnifiedRoleEligibilityScheduleInstanceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleeligibilityscheduleinstances?view=graph-rest-1.0">Find more info here</a>
@@ -90,7 +90,7 @@ public class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestB
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UnifiedRoleEligibilityScheduleInstanceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleEligibilityScheduleInstanceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to roleEligibilityScheduleInstances for roleManagement
@@ -114,10 +114,10 @@ public class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestB
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue);
     }
     /**
-     * Get the instances of role eligibilities. This API is available in the following national cloud deployments.
+     * Get the instances of role eligibilities.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +125,7 @@ public class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Get the instances of role eligibilities. This API is available in the following national cloud deployments.
+     * Get the instances of role eligibilities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +171,7 @@ public class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestB
         return new RoleEligibilityScheduleInstancesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the instances of role eligibilities. This API is available in the following national cloud deployments.
+     * Get the instances of role eligibilities.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

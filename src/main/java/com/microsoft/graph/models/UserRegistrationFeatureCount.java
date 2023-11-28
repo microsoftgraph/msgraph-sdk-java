@@ -70,7 +70,7 @@ public class UserRegistrationFeatureCount implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("feature", (n) -> { this.setFeature(n.getEnumValue(AuthenticationMethodFeature.class)); });
+        deserializerMap.put("feature", (n) -> { this.setFeature(n.getEnumValue(AuthenticationMethodFeature::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("userCount", (n) -> { this.setUserCount(n.getLongValue()); });
         return deserializerMap;

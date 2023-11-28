@@ -70,7 +70,7 @@ public class CallMediaState implements AdditionalDataHolder, BackedModel, Parsab
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("audio", (n) -> { this.setAudio(n.getEnumValue(MediaState.class)); });
+        deserializerMap.put("audio", (n) -> { this.setAudio(n.getEnumValue(MediaState::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }

@@ -51,10 +51,10 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the status of a rich long-running operation on a site or a list. This API is available in the following national cloud deployments.
+     * Get the status of a rich long-running operation on a site or a list.
      * @return a RichLongRunningOperation
      * @see <a href="https://learn.microsoft.com/graph/api/richlongrunningoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
         return get(null);
     }
     /**
-     * Get the status of a rich long-running operation on a site or a list. This API is available in the following national cloud deployments.
+     * Get the status of a rich long-running operation on a site or a list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RichLongRunningOperation
      * @see <a href="https://learn.microsoft.com/graph/api/richlongrunningoperation-get?view=graph-rest-1.0">Find more info here</a>
@@ -74,7 +74,7 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, RichLongRunningOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, RichLongRunningOperation::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property operations in groups
@@ -98,7 +98,7 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, RichLongRunningOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, RichLongRunningOperation::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property operations for groups
@@ -121,7 +121,7 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Get the status of a rich long-running operation on a site or a list. This API is available in the following national cloud deployments.
+     * Get the status of a rich long-running operation on a site or a list.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Get the status of a rich long-running operation on a site or a list. This API is available in the following national cloud deployments.
+     * Get the status of a rich long-running operation on a site or a list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -181,7 +181,7 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the status of a rich long-running operation on a site or a list. This API is available in the following national cloud deployments.
+     * Get the status of a rich long-running operation on a site or a list.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

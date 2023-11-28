@@ -59,7 +59,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/appointments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of bookingAppointment objects for the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Get a list of bookingAppointment objects for the specified bookingBusiness.
      * @return a BookingAppointmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-appointments?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of bookingAppointment objects for the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Get a list of bookingAppointment objects for the specified bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a BookingAppointmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-appointments?view=graph-rest-1.0">Find more info here</a>
@@ -79,10 +79,10 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, BookingAppointmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, BookingAppointmentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new bookingAppointment for the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Create a new bookingAppointment for the specified bookingBusiness.
      * @param body The request body
      * @return a BookingAppointment
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-post-appointments?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new bookingAppointment for the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Create a new bookingAppointment for the specified bookingBusiness.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a BookingAppointment
@@ -105,10 +105,10 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, BookingAppointment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, BookingAppointment::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of bookingAppointment objects for the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Get a list of bookingAppointment objects for the specified bookingBusiness.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of bookingAppointment objects for the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Get a list of bookingAppointment objects for the specified bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new bookingAppointment for the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Create a new bookingAppointment for the specified bookingBusiness.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new bookingAppointment for the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Create a new bookingAppointment for the specified bookingBusiness.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         return new AppointmentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of bookingAppointment objects for the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Get a list of bookingAppointment objects for the specified bookingBusiness.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

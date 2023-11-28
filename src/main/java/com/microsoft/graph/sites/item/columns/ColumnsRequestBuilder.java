@@ -59,7 +59,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/columns{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the collection of columns represented as columnDefinition][columnDefinition] resources in a [site][site]. This API is available in the following [national cloud deployments.
+     * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [site][site].
      * @return a ColumnDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/site-list-columns?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the collection of columns represented as columnDefinition][columnDefinition] resources in a [site][site]. This API is available in the following [national cloud deployments.
+     * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [site][site].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ColumnDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/site-list-columns?view=graph-rest-1.0">Find more info here</a>
@@ -79,10 +79,10 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ColumnDefinitionCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ColumnDefinitionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a column for a site][site] with a request that specifies a [columnDefinition][columnDefinition]. This API is available in the following [national cloud deployments.
+     * Create a column for a [site][site] with a request that specifies a [columnDefinition][columnDefinition].
      * @param body The request body
      * @return a ColumnDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/site-post-columns?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a column for a site][site] with a request that specifies a [columnDefinition][columnDefinition]. This API is available in the following [national cloud deployments.
+     * Create a column for a [site][site] with a request that specifies a [columnDefinition][columnDefinition].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ColumnDefinition
@@ -105,10 +105,10 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ColumnDefinition::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ColumnDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Get the collection of columns represented as columnDefinition][columnDefinition] resources in a [site][site]. This API is available in the following [national cloud deployments.
+     * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [site][site].
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the collection of columns represented as columnDefinition][columnDefinition] resources in a [site][site]. This API is available in the following [national cloud deployments.
+     * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [site][site].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a column for a site][site] with a request that specifies a [columnDefinition][columnDefinition]. This API is available in the following [national cloud deployments.
+     * Create a column for a [site][site] with a request that specifies a [columnDefinition][columnDefinition].
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a column for a site][site] with a request that specifies a [columnDefinition][columnDefinition]. This API is available in the following [national cloud deployments.
+     * Create a column for a [site][site] with a request that specifies a [columnDefinition][columnDefinition].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return new ColumnsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the collection of columns represented as columnDefinition][columnDefinition] resources in a [site][site]. This API is available in the following [national cloud deployments.
+     * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [site][site].
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

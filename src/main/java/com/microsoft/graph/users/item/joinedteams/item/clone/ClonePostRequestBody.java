@@ -93,8 +93,8 @@ public class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, 
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("mailNickname", (n) -> { this.setMailNickname(n.getStringValue()); });
-        deserializerMap.put("partsToClone", (n) -> { this.setPartsToClone(n.getEnumSetValue(ClonableTeamParts.class)); });
-        deserializerMap.put("visibility", (n) -> { this.setVisibility(n.getEnumValue(TeamVisibilityType.class)); });
+        deserializerMap.put("partsToClone", (n) -> { this.setPartsToClone(n.getEnumSetValue(ClonableTeamParts::forValue)); });
+        deserializerMap.put("visibility", (n) -> { this.setVisibility(n.getEnumValue(TeamVisibilityType::forValue)); });
         return deserializerMap;
     }
     /**

@@ -58,7 +58,7 @@ public class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow%2Did}/userProcessingResults/{userProcessingResult%2Did}/taskProcessingResults{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the task processing result from a userProcessingResult either directly or through a run. This API is available in the following national cloud deployments.
+     * Get the task processing result from a userProcessingResult either directly or through a run.
      * @return a TaskProcessingResultCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-userprocessingresult-list-taskprocessingresults?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the task processing result from a userProcessingResult either directly or through a run. This API is available in the following national cloud deployments.
+     * Get the task processing result from a userProcessingResult either directly or through a run.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TaskProcessingResultCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-userprocessingresult-list-taskprocessingresults?view=graph-rest-1.0">Find more info here</a>
@@ -78,10 +78,10 @@ public class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TaskProcessingResultCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TaskProcessingResultCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the task processing result from a userProcessingResult either directly or through a run. This API is available in the following national cloud deployments.
+     * Get the task processing result from a userProcessingResult either directly or through a run.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the task processing result from a userProcessingResult either directly or through a run. This API is available in the following national cloud deployments.
+     * Get the task processing result from a userProcessingResult either directly or through a run.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -111,7 +111,7 @@ public class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return new TaskProcessingResultsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the task processing result from a userProcessingResult either directly or through a run. This API is available in the following national cloud deployments.
+     * Get the task processing result from a userProcessingResult either directly or through a run.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

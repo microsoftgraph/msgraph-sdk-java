@@ -62,7 +62,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
         deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("customLogFolders", (n) -> { this.setCustomLogFolders(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("errorMessage", (n) -> { this.setErrorMessage(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AppLogUploadState.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AppLogUploadState::forValue)); });
         return deserializerMap;
     }
     /**

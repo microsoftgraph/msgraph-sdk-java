@@ -59,7 +59,7 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/schedule/swapShiftsChangeRequests{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of swapShiftsChangeRequest objects in the team. This API is available in the following national cloud deployments.
+     * Retrieve a list of swapShiftsChangeRequest objects in the team.
      * @return a SwapShiftsChangeRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/swapshiftschangerequest-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of swapShiftsChangeRequest objects in the team. This API is available in the following national cloud deployments.
+     * Retrieve a list of swapShiftsChangeRequest objects in the team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SwapShiftsChangeRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/swapshiftschangerequest-list?view=graph-rest-1.0">Find more info here</a>
@@ -79,10 +79,10 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SwapShiftsChangeRequestCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SwapShiftsChangeRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create an instance of a swapShiftsChangeRequest object. This API is available in the following national cloud deployments.
+     * Create an instance of a swapShiftsChangeRequest object.
      * @param body The request body
      * @return a SwapShiftsChangeRequest
      * @see <a href="https://learn.microsoft.com/graph/api/swapshiftschangerequest-post?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create an instance of a swapShiftsChangeRequest object. This API is available in the following national cloud deployments.
+     * Create an instance of a swapShiftsChangeRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SwapShiftsChangeRequest
@@ -105,10 +105,10 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SwapShiftsChangeRequest::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SwapShiftsChangeRequest::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of swapShiftsChangeRequest objects in the team. This API is available in the following national cloud deployments.
+     * Retrieve a list of swapShiftsChangeRequest objects in the team.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of swapShiftsChangeRequest objects in the team. This API is available in the following national cloud deployments.
+     * Retrieve a list of swapShiftsChangeRequest objects in the team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create an instance of a swapShiftsChangeRequest object. This API is available in the following national cloud deployments.
+     * Create an instance of a swapShiftsChangeRequest object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create an instance of a swapShiftsChangeRequest object. This API is available in the following national cloud deployments.
+     * Create an instance of a swapShiftsChangeRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return new SwapShiftsChangeRequestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of swapShiftsChangeRequest objects in the team. This API is available in the following national cloud deployments.
+     * Retrieve a list of swapShiftsChangeRequest objects in the team.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

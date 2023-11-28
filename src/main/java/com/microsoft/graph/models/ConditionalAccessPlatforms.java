@@ -70,8 +70,8 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("excludePlatforms", (n) -> { this.setExcludePlatforms(n.getCollectionOfEnumValues(ConditionalAccessDevicePlatform.class)); });
-        deserializerMap.put("includePlatforms", (n) -> { this.setIncludePlatforms(n.getCollectionOfEnumValues(ConditionalAccessDevicePlatform.class)); });
+        deserializerMap.put("excludePlatforms", (n) -> { this.setExcludePlatforms(n.getCollectionOfEnumValues(ConditionalAccessDevicePlatform::forValue)); });
+        deserializerMap.put("includePlatforms", (n) -> { this.setIncludePlatforms(n.getCollectionOfEnumValues(ConditionalAccessDevicePlatform::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }

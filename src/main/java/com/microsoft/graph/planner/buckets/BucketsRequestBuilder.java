@@ -59,7 +59,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/buckets{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of plannerbucket objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannerbucket objects.
      * @return a PlannerBucketCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/planner-list-buckets?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of plannerbucket objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannerbucket objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PlannerBucketCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/planner-list-buckets?view=graph-rest-1.0">Find more info here</a>
@@ -79,10 +79,10 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PlannerBucketCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PlannerBucketCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new plannerBucket object. This API is available in the following national cloud deployments.
+     * Create a new plannerBucket object.
      * @param body The request body
      * @return a PlannerBucket
      * @see <a href="https://learn.microsoft.com/graph/api/planner-post-buckets?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new plannerBucket object. This API is available in the following national cloud deployments.
+     * Create a new plannerBucket object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PlannerBucket
@@ -105,10 +105,10 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PlannerBucket::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PlannerBucket::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of plannerbucket objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannerbucket objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of plannerbucket objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannerbucket objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new plannerBucket object. This API is available in the following national cloud deployments.
+     * Create a new plannerBucket object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new plannerBucket object. This API is available in the following national cloud deployments.
+     * Create a new plannerBucket object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         return new BucketsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of plannerbucket objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannerbucket objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -59,7 +59,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/planner/plans/{plannerPlan%2Did}/tasks{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of plannerTask objects associated with a plannerPlan object. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannerTask objects associated with a plannerPlan object.
      * @return a PlannerTaskCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplan-list-tasks?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of plannerTask objects associated with a plannerPlan object. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannerTask objects associated with a plannerPlan object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PlannerTaskCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplan-list-tasks?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PlannerTaskCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PlannerTaskCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to tasks for groups
@@ -103,10 +103,10 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PlannerTask::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PlannerTask::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of plannerTask objects associated with a plannerPlan object. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannerTask objects associated with a plannerPlan object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of plannerTask objects associated with a plannerPlan object. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannerTask objects associated with a plannerPlan object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return new TasksRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of plannerTask objects associated with a plannerPlan object. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannerTask objects associated with a plannerPlan object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

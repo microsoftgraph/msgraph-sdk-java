@@ -83,10 +83,10 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the schedule for a role eligibility operation. This API is available in the following national cloud deployments.
+     * Retrieve the schedule for a role eligibility operation.
      * @return a UnifiedRoleEligibilitySchedule
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityschedule-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -95,7 +95,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
         return get(null);
     }
     /**
-     * Retrieve the schedule for a role eligibility operation. This API is available in the following national cloud deployments.
+     * Retrieve the schedule for a role eligibility operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UnifiedRoleEligibilitySchedule
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityschedule-get?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UnifiedRoleEligibilitySchedule::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleEligibilitySchedule::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property roleEligibilitySchedules in roleManagement
@@ -130,7 +130,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UnifiedRoleEligibilitySchedule::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleEligibilitySchedule::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property roleEligibilitySchedules for roleManagement
@@ -153,7 +153,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Retrieve the schedule for a role eligibility operation. This API is available in the following national cloud deployments.
+     * Retrieve the schedule for a role eligibility operation.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -161,7 +161,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the schedule for a role eligibility operation. This API is available in the following national cloud deployments.
+     * Retrieve the schedule for a role eligibility operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -213,7 +213,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the schedule for a role eligibility operation. This API is available in the following national cloud deployments.
+     * Retrieve the schedule for a role eligibility operation.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -51,10 +51,10 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties of an approvalStage object. An approval stage is contained within an approval object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
      * @return a ApprovalStage
      * @see <a href="https://learn.microsoft.com/graph/api/approvalstage-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties of an approvalStage object. An approval stage is contained within an approval object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ApprovalStage
      * @see <a href="https://learn.microsoft.com/graph/api/approvalstage-get?view=graph-rest-1.0">Find more info here</a>
@@ -74,10 +74,10 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ApprovalStage::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ApprovalStage::createFromDiscriminatorValue);
     }
     /**
-     * Approve or deny an approvalStage object in an approval. This API is available in the following national cloud deployments.
+     * Approve or deny an approvalStage object in an approval.
      * @param body The request body
      * @return a ApprovalStage
      * @see <a href="https://learn.microsoft.com/graph/api/approvalstage-update?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Approve or deny an approvalStage object in an approval. This API is available in the following national cloud deployments.
+     * Approve or deny an approvalStage object in an approval.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ApprovalStage
@@ -100,7 +100,7 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ApprovalStage::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ApprovalStage::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property stages for identityGovernance
@@ -123,7 +123,7 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties of an approvalStage object. An approval stage is contained within an approval object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of an approvalStage object. An approval stage is contained within an approval object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -143,7 +143,7 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Approve or deny an approvalStage object in an approval. This API is available in the following national cloud deployments.
+     * Approve or deny an approvalStage object in an approval.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -152,7 +152,7 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Approve or deny an approvalStage object in an approval. This API is available in the following national cloud deployments.
+     * Approve or deny an approvalStage object in an approval.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -183,7 +183,7 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties of an approvalStage object. An approval stage is contained within an approval object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

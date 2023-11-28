@@ -35,7 +35,7 @@ public class AcquireAccessTokenRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/synchronization/acquireAccessToken", rawUrl);
     }
     /**
-     * Acquire an OAuth access token to authorize the Microsoft Entra provisioning service to provision users into an application. This API is available in the following national cloud deployments.
+     * Acquire an OAuth access token to authorize the Microsoft Entra provisioning service to provision users into an application.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronization-acquireaccesstoken?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class AcquireAccessTokenRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Acquire an OAuth access token to authorize the Microsoft Entra provisioning service to provision users into an application. This API is available in the following national cloud deployments.
+     * Acquire an OAuth access token to authorize the Microsoft Entra provisioning service to provision users into an application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronization-acquireaccesstoken?view=graph-rest-1.0">Find more info here</a>
@@ -54,10 +54,10 @@ public class AcquireAccessTokenRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Acquire an OAuth access token to authorize the Microsoft Entra provisioning service to provision users into an application. This API is available in the following national cloud deployments.
+     * Acquire an OAuth access token to authorize the Microsoft Entra provisioning service to provision users into an application.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -66,7 +66,7 @@ public class AcquireAccessTokenRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Acquire an OAuth access token to authorize the Microsoft Entra provisioning service to provision users into an application. This API is available in the following national cloud deployments.
+     * Acquire an OAuth access token to authorize the Microsoft Entra provisioning service to provision users into an application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

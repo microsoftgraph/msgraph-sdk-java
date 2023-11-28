@@ -35,7 +35,7 @@ public class GetStaffAvailabilityRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/getStaffAvailability", rawUrl);
     }
     /**
-     * Get the availability information of staff members of a Microsoft Bookings calendar. This API is available in the following national cloud deployments.
+     * Get the availability information of staff members of a Microsoft Bookings calendar.
      * @param body The request body
      * @return a GetStaffAvailabilityPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-getstaffavailability?view=graph-rest-1.0">Find more info here</a>
@@ -45,7 +45,7 @@ public class GetStaffAvailabilityRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Get the availability information of staff members of a Microsoft Bookings calendar. This API is available in the following national cloud deployments.
+     * Get the availability information of staff members of a Microsoft Bookings calendar.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a GetStaffAvailabilityPostResponse
@@ -58,10 +58,10 @@ public class GetStaffAvailabilityRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, GetStaffAvailabilityPostResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, GetStaffAvailabilityPostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the availability information of staff members of a Microsoft Bookings calendar. This API is available in the following national cloud deployments.
+     * Get the availability information of staff members of a Microsoft Bookings calendar.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -70,7 +70,7 @@ public class GetStaffAvailabilityRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Get the availability information of staff members of a Microsoft Bookings calendar. This API is available in the following national cloud deployments.
+     * Get the availability information of staff members of a Microsoft Bookings calendar.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

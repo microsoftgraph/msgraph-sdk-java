@@ -81,7 +81,7 @@ public class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsabl
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("attributeMappings", (n) -> { this.setAttributeMappings(n.getCollectionOfObjectValues(AttributeMapping::createFromDiscriminatorValue)); });
         deserializerMap.put("enabled", (n) -> { this.setEnabled(n.getBooleanValue()); });
-        deserializerMap.put("flowTypes", (n) -> { this.setFlowTypes(n.getEnumSetValue(ObjectFlowTypes.class)); });
+        deserializerMap.put("flowTypes", (n) -> { this.setFlowTypes(n.getEnumSetValue(ObjectFlowTypes::forValue)); });
         deserializerMap.put("metadata", (n) -> { this.setMetadata(n.getCollectionOfObjectValues(ObjectMappingMetadataEntry::createFromDiscriminatorValue)); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });

@@ -37,14 +37,14 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/staffMembers/{bookingStaffMemberBase%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Delete a bookingStaffMember in the specified bookingBusiness.
      * @see <a href="https://learn.microsoft.com/graph/api/bookingstaffmember-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Delete a bookingStaffMember in the specified bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/bookingstaffmember-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -53,10 +53,10 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the properties and relationships of a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a bookingStaffMember in the specified bookingBusiness.
      * @return a BookingStaffMemberBase
      * @see <a href="https://learn.microsoft.com/graph/api/bookingstaffmember-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
         return get(null);
     }
     /**
-     * Get the properties and relationships of a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a bookingStaffMember in the specified bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a BookingStaffMemberBase
      * @see <a href="https://learn.microsoft.com/graph/api/bookingstaffmember-get?view=graph-rest-1.0">Find more info here</a>
@@ -76,10 +76,10 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, BookingStaffMemberBase::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, BookingStaffMemberBase::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Update the properties of a bookingStaffMember in the specified bookingBusiness.
      * @param body The request body
      * @return a BookingStaffMemberBase
      * @see <a href="https://learn.microsoft.com/graph/api/bookingstaffmember-update?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
         return patch(body, null);
     }
     /**
-     * Update the properties of a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Update the properties of a bookingStaffMember in the specified bookingBusiness.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a BookingStaffMemberBase
@@ -102,10 +102,10 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, BookingStaffMemberBase::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, BookingStaffMemberBase::createFromDiscriminatorValue);
     }
     /**
-     * Delete a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Delete a bookingStaffMember in the specified bookingBusiness.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Delete a bookingStaffMember in the specified bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -125,7 +125,7 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Get the properties and relationships of a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a bookingStaffMember in the specified bookingBusiness.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a bookingStaffMember in the specified bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Update the properties of a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Update the properties of a bookingStaffMember in the specified bookingBusiness.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Update the properties of a bookingStaffMember in the specified bookingBusiness.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -185,7 +185,7 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties and relationships of a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a bookingStaffMember in the specified bookingBusiness.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

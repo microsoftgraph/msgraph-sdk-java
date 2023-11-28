@@ -73,7 +73,7 @@ public class SimulationAutomation extends Entity implements Parsable {
         deserializerMap.put("lastRunDateTime", (n) -> { this.setLastRunDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("nextRunDateTime", (n) -> { this.setNextRunDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("runs", (n) -> { this.setRuns(n.getCollectionOfObjectValues(SimulationAutomationRun::createFromDiscriminatorValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(SimulationAutomationStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(SimulationAutomationStatus::forValue)); });
         return deserializerMap;
     }
     /**

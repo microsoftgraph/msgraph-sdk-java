@@ -49,7 +49,7 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("durationUntilExternalUserDeletedAfterBlocked", (n) -> { this.setDurationUntilExternalUserDeletedAfterBlocked(n.getPeriodAndDurationValue()); });
-        deserializerMap.put("externalUserLifecycleAction", (n) -> { this.setExternalUserLifecycleAction(n.getEnumValue(AccessPackageExternalUserLifecycleAction.class)); });
+        deserializerMap.put("externalUserLifecycleAction", (n) -> { this.setExternalUserLifecycleAction(n.getEnumValue(AccessPackageExternalUserLifecycleAction::forValue)); });
         return deserializerMap;
     }
     /**

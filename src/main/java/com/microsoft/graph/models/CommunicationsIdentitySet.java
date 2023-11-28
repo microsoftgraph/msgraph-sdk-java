@@ -76,7 +76,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
         deserializerMap.put("assertedIdentity", (n) -> { this.setAssertedIdentity(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
         deserializerMap.put("azureCommunicationServicesUser", (n) -> { this.setAzureCommunicationServicesUser(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
         deserializerMap.put("encrypted", (n) -> { this.setEncrypted(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-        deserializerMap.put("endpointType", (n) -> { this.setEndpointType(n.getEnumValue(EndpointType.class)); });
+        deserializerMap.put("endpointType", (n) -> { this.setEndpointType(n.getEnumValue(EndpointType::forValue)); });
         deserializerMap.put("guest", (n) -> { this.setGuest(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremises", (n) -> { this.setOnPremises(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
         deserializerMap.put("phone", (n) -> { this.setPhone(n.getObjectValue(Identity::createFromDiscriminatorValue)); });

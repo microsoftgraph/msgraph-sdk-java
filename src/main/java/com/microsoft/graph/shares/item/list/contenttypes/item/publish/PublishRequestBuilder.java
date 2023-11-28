@@ -35,14 +35,14 @@ public class PublishRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/list/contentTypes/{contentType%2Did}/publish", rawUrl);
     }
     /**
-     * Publishes a contentType][] present in the content type hub site. This API is available in the following [national cloud deployments.
+     * Publishes a [contentType][] present in the content type hub site.
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-publish?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Publishes a contentType][] present in the content type hub site. This API is available in the following [national cloud deployments.
+     * Publishes a [contentType][] present in the content type hub site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-publish?view=graph-rest-1.0">Find more info here</a>
      */
@@ -51,10 +51,10 @@ public class PublishRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Publishes a contentType][] present in the content type hub site. This API is available in the following [national cloud deployments.
+     * Publishes a [contentType][] present in the content type hub site.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class PublishRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Publishes a contentType][] present in the content type hub site. This API is available in the following [national cloud deployments.
+     * Publishes a [contentType][] present in the content type hub site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

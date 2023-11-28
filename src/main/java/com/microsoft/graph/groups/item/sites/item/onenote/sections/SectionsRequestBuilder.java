@@ -59,7 +59,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/onenote/sections{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of onenoteSection objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of onenoteSection objects.
      * @return a OnenoteSectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/onenote-list-sections?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of onenoteSection objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of onenoteSection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a OnenoteSectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/onenote-list-sections?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, OnenoteSectionCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, OnenoteSectionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to sections for groups
@@ -103,10 +103,10 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, OnenoteSection::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, OnenoteSection::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of onenoteSection objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of onenoteSection objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of onenoteSection objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of onenoteSection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return new SectionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of onenoteSection objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of onenoteSection objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

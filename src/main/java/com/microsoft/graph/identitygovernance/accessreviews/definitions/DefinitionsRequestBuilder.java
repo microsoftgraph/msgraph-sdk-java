@@ -70,7 +70,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Get a list of the accessReviewScheduleDefinition objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the accessReviewScheduleDefinition objects and their properties.
      * @return a AccessReviewScheduleDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-list-definitions?view=graph-rest-1.0">Find more info here</a>
      */
@@ -79,7 +79,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the accessReviewScheduleDefinition objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the accessReviewScheduleDefinition objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AccessReviewScheduleDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-list-definitions?view=graph-rest-1.0">Find more info here</a>
@@ -90,10 +90,10 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AccessReviewScheduleDefinitionCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewScheduleDefinitionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new accessReviewScheduleDefinition object. This API is available in the following national cloud deployments.
+     * Create a new accessReviewScheduleDefinition object.
      * @param body The request body
      * @return a AccessReviewScheduleDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-post-definitions?view=graph-rest-1.0">Find more info here</a>
@@ -103,7 +103,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new accessReviewScheduleDefinition object. This API is available in the following national cloud deployments.
+     * Create a new accessReviewScheduleDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AccessReviewScheduleDefinition
@@ -116,10 +116,10 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AccessReviewScheduleDefinition::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewScheduleDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the accessReviewScheduleDefinition objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the accessReviewScheduleDefinition objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -127,7 +127,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the accessReviewScheduleDefinition objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the accessReviewScheduleDefinition objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -139,7 +139,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new accessReviewScheduleDefinition object. This API is available in the following national cloud deployments.
+     * Create a new accessReviewScheduleDefinition object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -148,7 +148,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new accessReviewScheduleDefinition object. This API is available in the following national cloud deployments.
+     * Create a new accessReviewScheduleDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -173,7 +173,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         return new DefinitionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the accessReviewScheduleDefinition objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the accessReviewScheduleDefinition objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

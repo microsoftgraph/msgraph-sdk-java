@@ -72,7 +72,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
         deserializerMap.put("errorDeviceCount", (n) -> { this.setErrorDeviceCount(n.getIntegerValue()); });
         deserializerMap.put("nonCompliantDeviceCount", (n) -> { this.setNonCompliantDeviceCount(n.getIntegerValue()); });
         deserializerMap.put("notApplicableDeviceCount", (n) -> { this.setNotApplicableDeviceCount(n.getIntegerValue()); });
-        deserializerMap.put("platformType", (n) -> { this.setPlatformType(n.getEnumValue(PolicyPlatformType.class)); });
+        deserializerMap.put("platformType", (n) -> { this.setPlatformType(n.getEnumValue(PolicyPlatformType::forValue)); });
         deserializerMap.put("remediatedDeviceCount", (n) -> { this.setRemediatedDeviceCount(n.getIntegerValue()); });
         deserializerMap.put("setting", (n) -> { this.setSetting(n.getStringValue()); });
         deserializerMap.put("settingName", (n) -> { this.setSettingName(n.getStringValue()); });

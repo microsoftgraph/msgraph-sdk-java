@@ -89,9 +89,9 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Ba
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("additionalInformation", (n) -> { this.setAdditionalInformation(n.getStringValue()); });
         deserializerMap.put("conditionalAccessReferences", (n) -> { this.setConditionalAccessReferences(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("currentCombinations", (n) -> { this.setCurrentCombinations(n.getCollectionOfEnumValues(AuthenticationMethodModes.class)); });
+        deserializerMap.put("currentCombinations", (n) -> { this.setCurrentCombinations(n.getCollectionOfEnumValues(AuthenticationMethodModes::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("previousCombinations", (n) -> { this.setPreviousCombinations(n.getCollectionOfEnumValues(AuthenticationMethodModes.class)); });
+        deserializerMap.put("previousCombinations", (n) -> { this.setPreviousCombinations(n.getCollectionOfEnumValues(AuthenticationMethodModes::forValue)); });
         return deserializerMap;
     }
     /**

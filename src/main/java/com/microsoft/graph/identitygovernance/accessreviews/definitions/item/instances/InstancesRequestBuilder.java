@@ -70,7 +70,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Get a list of the accessReviewInstance objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the accessReviewInstance objects and their properties.
      * @return a AccessReviewInstanceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-list-instances?view=graph-rest-1.0">Find more info here</a>
      */
@@ -79,7 +79,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the accessReviewInstance objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the accessReviewInstance objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AccessReviewInstanceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-list-instances?view=graph-rest-1.0">Find more info here</a>
@@ -90,7 +90,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AccessReviewInstanceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewInstanceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to instances for identityGovernance
@@ -114,10 +114,10 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AccessReviewInstance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewInstance::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the accessReviewInstance objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the accessReviewInstance objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +125,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the accessReviewInstance objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the accessReviewInstance objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +171,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
         return new InstancesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the accessReviewInstance objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the accessReviewInstance objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

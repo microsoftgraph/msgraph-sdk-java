@@ -59,7 +59,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("applicationName", (n) -> { this.setApplicationName(n.getStringValue()); });
-        deserializerMap.put("applicationType", (n) -> { this.setApplicationType(n.getEnumValue(ApplicationType.class)); });
+        deserializerMap.put("applicationType", (n) -> { this.setApplicationType(n.getEnumValue(ApplicationType::forValue)); });
         deserializerMap.put("deviceCount", (n) -> { this.setDeviceCount(n.getIntegerValue()); });
         return deserializerMap;
     }

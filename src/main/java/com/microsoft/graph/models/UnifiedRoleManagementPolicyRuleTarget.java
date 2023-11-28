@@ -83,7 +83,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
         deserializerMap.put("inheritableSettings", (n) -> { this.setInheritableSettings(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("level", (n) -> { this.setLevel(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfEnumValues(UnifiedRoleManagementPolicyRuleTargetOperations.class)); });
+        deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfEnumValues(UnifiedRoleManagementPolicyRuleTargetOperations::forValue)); });
         deserializerMap.put("targetObjects", (n) -> { this.setTargetObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         return deserializerMap;
     }

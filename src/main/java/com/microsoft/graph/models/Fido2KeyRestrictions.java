@@ -79,7 +79,7 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, 
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("aaGuids", (n) -> { this.setAaGuids(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("enforcementType", (n) -> { this.setEnforcementType(n.getEnumValue(Fido2RestrictionEnforcementType.class)); });
+        deserializerMap.put("enforcementType", (n) -> { this.setEnforcementType(n.getEnumValue(Fido2RestrictionEnforcementType::forValue)); });
         deserializerMap.put("isEnforced", (n) -> { this.setIsEnforced(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;

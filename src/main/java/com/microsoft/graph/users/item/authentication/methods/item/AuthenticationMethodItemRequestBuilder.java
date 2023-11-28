@@ -45,7 +45,7 @@ public class AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/methods/{authenticationMethod%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of an authenticationMethod object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an authenticationMethod object.
      * @return a AuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of an authenticationMethod object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an authenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
@@ -65,7 +65,7 @@ public class AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AuthenticationMethod::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property methods in users
@@ -89,10 +89,10 @@ public class AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AuthenticationMethod::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the properties and relationships of an authenticationMethod object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an authenticationMethod object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +100,7 @@ public class AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an authenticationMethod object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an authenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder {
         return new AuthenticationMethodItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties and relationships of an authenticationMethod object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an authenticationMethod object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

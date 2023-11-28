@@ -79,7 +79,7 @@ public class TargetedManagedAppConfigurationsRequestBuilder extends BaseRequestB
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TargetedManagedAppConfigurationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TargetedManagedAppConfigurationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new targetedManagedAppConfiguration object.
@@ -105,7 +105,7 @@ public class TargetedManagedAppConfigurationsRequestBuilder extends BaseRequestB
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TargetedManagedAppConfiguration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TargetedManagedAppConfiguration::createFromDiscriminatorValue);
     }
     /**
      * List properties and relationships of the targetedManagedAppConfiguration objects.

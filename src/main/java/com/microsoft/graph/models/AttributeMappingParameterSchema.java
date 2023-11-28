@@ -74,7 +74,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Ba
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("required", (n) -> { this.setRequired(n.getBooleanValue()); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(AttributeType.class)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(AttributeType::forValue)); });
         return deserializerMap;
     }
     /**

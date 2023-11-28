@@ -64,7 +64,7 @@ public class ResponseStatus implements AdditionalDataHolder, BackedModel, Parsab
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("response", (n) -> { this.setResponse(n.getEnumValue(ResponseType.class)); });
+        deserializerMap.put("response", (n) -> { this.setResponse(n.getEnumValue(ResponseType::forValue)); });
         deserializerMap.put("time", (n) -> { this.setTime(n.getOffsetDateTimeValue()); });
         return deserializerMap;
     }

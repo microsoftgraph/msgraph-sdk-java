@@ -58,7 +58,7 @@ public class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/employeeExperience/learningCourseActivities{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the learningCourseActivity objects (assigned or self-initiated) for a user. This API is available in the following national cloud deployments.
+     * Get a list of the learningCourseActivity objects (assigned or self-initiated) for a user.
      * @return a LearningCourseActivityCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/learningcourseactivity-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the learningCourseActivity objects (assigned or self-initiated) for a user. This API is available in the following national cloud deployments.
+     * Get a list of the learningCourseActivity objects (assigned or self-initiated) for a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a LearningCourseActivityCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/learningcourseactivity-list?view=graph-rest-1.0">Find more info here</a>
@@ -78,10 +78,10 @@ public class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, LearningCourseActivityCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, LearningCourseActivityCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the learningCourseActivity objects (assigned or self-initiated) for a user. This API is available in the following national cloud deployments.
+     * Get a list of the learningCourseActivity objects (assigned or self-initiated) for a user.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the learningCourseActivity objects (assigned or self-initiated) for a user. This API is available in the following national cloud deployments.
+     * Get a list of the learningCourseActivity objects (assigned or self-initiated) for a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -111,7 +111,7 @@ public class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder {
         return new LearningCourseActivitiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the learningCourseActivity objects (assigned or self-initiated) for a user. This API is available in the following national cloud deployments.
+     * Get a list of the learningCourseActivity objects (assigned or self-initiated) for a user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

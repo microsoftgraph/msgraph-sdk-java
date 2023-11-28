@@ -91,7 +91,7 @@ public class ContractsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/contracts{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of contract objects associated to a partner tenant. This API is available in the following national cloud deployments.
+     * Retrieve a list of contract objects associated to a partner tenant.
      * @return a ContractCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/contract-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -100,7 +100,7 @@ public class ContractsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of contract objects associated to a partner tenant. This API is available in the following national cloud deployments.
+     * Retrieve a list of contract objects associated to a partner tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ContractCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/contract-list?view=graph-rest-1.0">Find more info here</a>
@@ -111,7 +111,7 @@ public class ContractsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ContractCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ContractCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Add new entity to contracts
@@ -135,10 +135,10 @@ public class ContractsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, Contract::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, Contract::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of contract objects associated to a partner tenant. This API is available in the following national cloud deployments.
+     * Retrieve a list of contract objects associated to a partner tenant.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +146,7 @@ public class ContractsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of contract objects associated to a partner tenant. This API is available in the following national cloud deployments.
+     * Retrieve a list of contract objects associated to a partner tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -192,7 +192,7 @@ public class ContractsRequestBuilder extends BaseRequestBuilder {
         return new ContractsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of contract objects associated to a partner tenant. This API is available in the following national cloud deployments.
+     * Retrieve a list of contract objects associated to a partner tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -45,13 +45,13 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("filter", (n) -> { this.setFilter(n.getStringValue()); });
-        deserializerMap.put("format", (n) -> { this.setFormat(n.getEnumValue(DeviceManagementReportFileFormat.class)); });
-        deserializerMap.put("localizationType", (n) -> { this.setLocalizationType(n.getEnumValue(DeviceManagementExportJobLocalizationType.class)); });
+        deserializerMap.put("format", (n) -> { this.setFormat(n.getEnumValue(DeviceManagementReportFileFormat::forValue)); });
+        deserializerMap.put("localizationType", (n) -> { this.setLocalizationType(n.getEnumValue(DeviceManagementExportJobLocalizationType::forValue)); });
         deserializerMap.put("reportName", (n) -> { this.setReportName(n.getStringValue()); });
         deserializerMap.put("requestDateTime", (n) -> { this.setRequestDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("select", (n) -> { this.setSelect(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("snapshotId", (n) -> { this.setSnapshotId(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(DeviceManagementReportStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(DeviceManagementReportStatus::forValue)); });
         deserializerMap.put("url", (n) -> { this.setUrl(n.getStringValue()); });
         return deserializerMap;
     }

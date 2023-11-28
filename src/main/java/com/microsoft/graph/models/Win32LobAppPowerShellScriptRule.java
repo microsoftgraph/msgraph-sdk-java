@@ -62,10 +62,10 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
         deserializerMap.put("comparisonValue", (n) -> { this.setComparisonValue(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("enforceSignatureCheck", (n) -> { this.setEnforceSignatureCheck(n.getBooleanValue()); });
-        deserializerMap.put("operationType", (n) -> { this.setOperationType(n.getEnumValue(Win32LobAppPowerShellScriptRuleOperationType.class)); });
-        deserializerMap.put("operator", (n) -> { this.setOperator(n.getEnumValue(Win32LobAppRuleOperator.class)); });
+        deserializerMap.put("operationType", (n) -> { this.setOperationType(n.getEnumValue(Win32LobAppPowerShellScriptRuleOperationType::forValue)); });
+        deserializerMap.put("operator", (n) -> { this.setOperator(n.getEnumValue(Win32LobAppRuleOperator::forValue)); });
         deserializerMap.put("runAs32Bit", (n) -> { this.setRunAs32Bit(n.getBooleanValue()); });
-        deserializerMap.put("runAsAccount", (n) -> { this.setRunAsAccount(n.getEnumValue(RunAsAccountType.class)); });
+        deserializerMap.put("runAsAccount", (n) -> { this.setRunAsAccount(n.getEnumValue(RunAsAccountType::forValue)); });
         deserializerMap.put("scriptContent", (n) -> { this.setScriptContent(n.getStringValue()); });
         return deserializerMap;
     }

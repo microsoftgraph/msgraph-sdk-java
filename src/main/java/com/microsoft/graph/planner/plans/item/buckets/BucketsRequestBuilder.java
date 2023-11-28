@@ -59,7 +59,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/plans/{plannerPlan%2Did}/buckets{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of plannerBucket objects contained by a plannerPlan object. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannerBucket objects contained by a plannerPlan object.
      * @return a PlannerBucketCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplan-list-buckets?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of plannerBucket objects contained by a plannerPlan object. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannerBucket objects contained by a plannerPlan object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PlannerBucketCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplan-list-buckets?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PlannerBucketCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PlannerBucketCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to buckets for planner
@@ -103,10 +103,10 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PlannerBucket::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PlannerBucket::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of plannerBucket objects contained by a plannerPlan object. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannerBucket objects contained by a plannerPlan object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of plannerBucket objects contained by a plannerPlan object. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannerBucket objects contained by a plannerPlan object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         return new BucketsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of plannerBucket objects contained by a plannerPlan object. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannerBucket objects contained by a plannerPlan object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

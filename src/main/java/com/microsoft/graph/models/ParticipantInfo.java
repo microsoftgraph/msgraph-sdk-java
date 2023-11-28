@@ -79,7 +79,7 @@ public class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("countryCode", (n) -> { this.setCountryCode(n.getStringValue()); });
-        deserializerMap.put("endpointType", (n) -> { this.setEndpointType(n.getEnumValue(EndpointType.class)); });
+        deserializerMap.put("endpointType", (n) -> { this.setEndpointType(n.getEnumValue(EndpointType::forValue)); });
         deserializerMap.put("identity", (n) -> { this.setIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("languageId", (n) -> { this.setLanguageId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });

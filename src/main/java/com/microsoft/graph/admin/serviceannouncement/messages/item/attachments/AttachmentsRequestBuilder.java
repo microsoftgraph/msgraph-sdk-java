@@ -59,7 +59,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/serviceAnnouncement/messages/{serviceUpdateMessage%2Did}/attachments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the list of attachments associated with a service message. This API is available in the following national cloud deployments.
+     * Get the list of attachments associated with a service message.
      * @return a ServiceAnnouncementAttachmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of attachments associated with a service message. This API is available in the following national cloud deployments.
+     * Get the list of attachments associated with a service message.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ServiceAnnouncementAttachmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-list-attachments?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ServiceAnnouncementAttachmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ServiceAnnouncementAttachmentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to attachments for admin
@@ -103,10 +103,10 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ServiceAnnouncementAttachment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ServiceAnnouncementAttachment::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of attachments associated with a service message. This API is available in the following national cloud deployments.
+     * Get the list of attachments associated with a service message.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of attachments associated with a service message. This API is available in the following national cloud deployments.
+     * Get the list of attachments associated with a service message.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return new AttachmentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of attachments associated with a service message. This API is available in the following national cloud deployments.
+     * Get the list of attachments associated with a service message.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

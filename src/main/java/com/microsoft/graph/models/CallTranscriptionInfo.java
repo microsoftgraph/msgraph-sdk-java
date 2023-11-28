@@ -65,7 +65,7 @@ public class CallTranscriptionInfo implements AdditionalDataHolder, BackedModel,
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(CallTranscriptionState.class)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(CallTranscriptionState::forValue)); });
         return deserializerMap;
     }
     /**

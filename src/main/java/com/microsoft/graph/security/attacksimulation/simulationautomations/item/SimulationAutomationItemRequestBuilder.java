@@ -59,10 +59,10 @@ public class SimulationAutomationItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get an attack simulation automation for a tenant. This API is available in the following national cloud deployments.
+     * Get an attack simulation automation for a tenant.
      * @return a SimulationAutomation
      * @see <a href="https://learn.microsoft.com/graph/api/simulationautomation-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -71,7 +71,7 @@ public class SimulationAutomationItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get an attack simulation automation for a tenant. This API is available in the following national cloud deployments.
+     * Get an attack simulation automation for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SimulationAutomation
      * @see <a href="https://learn.microsoft.com/graph/api/simulationautomation-get?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class SimulationAutomationItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SimulationAutomation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SimulationAutomation::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property simulationAutomations in security
@@ -106,7 +106,7 @@ public class SimulationAutomationItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SimulationAutomation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SimulationAutomation::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property simulationAutomations for security
@@ -129,7 +129,7 @@ public class SimulationAutomationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get an attack simulation automation for a tenant. This API is available in the following national cloud deployments.
+     * Get an attack simulation automation for a tenant.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +137,7 @@ public class SimulationAutomationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get an attack simulation automation for a tenant. This API is available in the following national cloud deployments.
+     * Get an attack simulation automation for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -189,7 +189,7 @@ public class SimulationAutomationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get an attack simulation automation for a tenant. This API is available in the following national cloud deployments.
+     * Get an attack simulation automation for a tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
