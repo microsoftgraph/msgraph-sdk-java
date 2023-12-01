@@ -10,9 +10,9 @@ jobs:
   Git_Release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Download Build Artifact
-        uses: dawidd6/action-download-artifact@v2.27.0
+        uses: dawidd6/action-download-artifact@v2.28.0
         with:
           workflow: preview-and-release.yml
           workflow_conclusion: success
