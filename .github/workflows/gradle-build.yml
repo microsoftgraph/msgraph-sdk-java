@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: 18
           distribution: 'adopt'
@@ -63,7 +63,7 @@ jobs:
     steps: 
       - uses: actions/checkout@v4
       - name: Set up JDK
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: 18
           distribution: 'adopt'
@@ -74,7 +74,7 @@ jobs:
           name: kiota-drop
           path: artifacts/current-kiota/
       - name: Download Last Successful Build
-        uses: dawidd6/action-download-artifact@v2.27.0
+        uses: dawidd6/action-download-artifact@v2.28.0
         with: 
           workflow: preview-and-release.yml
           workflow_conclusion: success
