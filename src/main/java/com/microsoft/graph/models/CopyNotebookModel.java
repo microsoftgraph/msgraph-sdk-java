@@ -102,7 +102,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Par
         deserializerMap.put("sectionGroupsUrl", (n) -> { this.setSectionGroupsUrl(n.getStringValue()); });
         deserializerMap.put("sectionsUrl", (n) -> { this.setSectionsUrl(n.getStringValue()); });
         deserializerMap.put("self", (n) -> { this.setSelf(n.getStringValue()); });
-        deserializerMap.put("userRole", (n) -> { this.setUserRole(n.getEnumValue(OnenoteUserRole.class)); });
+        deserializerMap.put("userRole", (n) -> { this.setUserRole(n.getEnumValue(OnenoteUserRole::forValue)); });
         return deserializerMap;
     }
     /**

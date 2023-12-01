@@ -40,7 +40,7 @@ public class PositiveReinforcementNotification extends BaseEndUserNotification i
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("deliveryPreference", (n) -> { this.setDeliveryPreference(n.getEnumValue(NotificationDeliveryPreference.class)); });
+        deserializerMap.put("deliveryPreference", (n) -> { this.setDeliveryPreference(n.getEnumValue(NotificationDeliveryPreference::forValue)); });
         return deserializerMap;
     }
     /**

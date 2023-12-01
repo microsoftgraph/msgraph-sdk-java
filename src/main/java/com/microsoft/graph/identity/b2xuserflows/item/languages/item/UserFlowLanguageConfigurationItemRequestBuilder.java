@@ -67,7 +67,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read the properties and relationships of a userFlowLanguageConfiguration object. These objects represent a language available in a user flow. Note: Language customization is enabled by default in Microsoft Entra user flows. This API is available in the following national cloud deployments.
@@ -90,7 +90,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserFlowLanguageConfiguration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserFlowLanguageConfiguration::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property languages in identity
@@ -114,7 +114,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserFlowLanguageConfiguration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserFlowLanguageConfiguration::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property languages for identity

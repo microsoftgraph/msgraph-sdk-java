@@ -78,7 +78,7 @@ public class TrackersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, HostTrackerCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, HostTrackerCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Get a list of hostTracker resources. This API is available in the following national cloud deployments.

@@ -53,7 +53,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve a user's single email authentication method object. This API is available in the following national cloud deployments.
@@ -76,7 +76,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, EmailAuthenticationMethod::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, EmailAuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
      * Update a user's email address represented by an emailAuthenticationMethod object. This API is available in the following national cloud deployments.
@@ -102,7 +102,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, EmailAuthenticationMethod::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, EmailAuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
      * Deletes a user's emailAuthenticationMethod object. This API is available in the following national cloud deployments.

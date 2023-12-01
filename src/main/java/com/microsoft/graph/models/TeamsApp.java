@@ -65,7 +65,7 @@ public class TeamsApp extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appDefinitions", (n) -> { this.setAppDefinitions(n.getCollectionOfObjectValues(TeamsAppDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("distributionMethod", (n) -> { this.setDistributionMethod(n.getEnumValue(TeamsAppDistributionMethod.class)); });
+        deserializerMap.put("distributionMethod", (n) -> { this.setDistributionMethod(n.getEnumValue(TeamsAppDistributionMethod::forValue)); });
         deserializerMap.put("externalId", (n) -> { this.setExternalId(n.getStringValue()); });
         return deserializerMap;
     }

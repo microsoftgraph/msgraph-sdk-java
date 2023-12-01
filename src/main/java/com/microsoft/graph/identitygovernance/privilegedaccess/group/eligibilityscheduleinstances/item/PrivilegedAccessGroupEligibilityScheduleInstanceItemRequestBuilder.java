@@ -67,7 +67,7 @@ public class PrivilegedAccessGroupEligibilityScheduleInstanceItemRequestBuilder 
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read the properties and relationships of a privilegedAccessGroupEligibilityScheduleInstance object. This API is available in the following national cloud deployments.
@@ -90,7 +90,7 @@ public class PrivilegedAccessGroupEligibilityScheduleInstanceItemRequestBuilder 
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PrivilegedAccessGroupEligibilityScheduleInstance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedAccessGroupEligibilityScheduleInstance::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property eligibilityScheduleInstances in identityGovernance
@@ -114,7 +114,7 @@ public class PrivilegedAccessGroupEligibilityScheduleInstanceItemRequestBuilder 
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PrivilegedAccessGroupEligibilityScheduleInstance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedAccessGroupEligibilityScheduleInstance::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property eligibilityScheduleInstances for identityGovernance

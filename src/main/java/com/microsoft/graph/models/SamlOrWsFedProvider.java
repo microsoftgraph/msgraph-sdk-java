@@ -43,7 +43,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
         deserializerMap.put("issuerUri", (n) -> { this.setIssuerUri(n.getStringValue()); });
         deserializerMap.put("metadataExchangeUri", (n) -> { this.setMetadataExchangeUri(n.getStringValue()); });
         deserializerMap.put("passiveSignInUri", (n) -> { this.setPassiveSignInUri(n.getStringValue()); });
-        deserializerMap.put("preferredAuthenticationProtocol", (n) -> { this.setPreferredAuthenticationProtocol(n.getEnumValue(AuthenticationProtocol.class)); });
+        deserializerMap.put("preferredAuthenticationProtocol", (n) -> { this.setPreferredAuthenticationProtocol(n.getEnumValue(AuthenticationProtocol::forValue)); });
         deserializerMap.put("signingCertificate", (n) -> { this.setSigningCertificate(n.getStringValue()); });
         return deserializerMap;
     }

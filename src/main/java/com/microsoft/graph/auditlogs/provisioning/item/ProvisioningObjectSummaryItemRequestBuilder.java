@@ -51,7 +51,7 @@ public class ProvisioningObjectSummaryItemRequestBuilder extends BaseRequestBuil
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get provisioning from auditLogs
@@ -72,7 +72,7 @@ public class ProvisioningObjectSummaryItemRequestBuilder extends BaseRequestBuil
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ProvisioningObjectSummary::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ProvisioningObjectSummary::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property provisioning in auditLogs
@@ -96,7 +96,7 @@ public class ProvisioningObjectSummaryItemRequestBuilder extends BaseRequestBuil
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ProvisioningObjectSummary::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ProvisioningObjectSummary::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property provisioning for auditLogs

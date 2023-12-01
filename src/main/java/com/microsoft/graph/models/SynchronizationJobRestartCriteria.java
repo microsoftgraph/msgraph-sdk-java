@@ -64,7 +64,7 @@ public class SynchronizationJobRestartCriteria implements AdditionalDataHolder, 
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("resetScope", (n) -> { this.setResetScope(n.getEnumSetValue(SynchronizationJobRestartScope.class)); });
+        deserializerMap.put("resetScope", (n) -> { this.setResetScope(n.getEnumSetValue(SynchronizationJobRestartScope::forValue)); });
         return deserializerMap;
     }
     /**

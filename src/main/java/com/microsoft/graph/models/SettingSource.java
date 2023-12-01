@@ -73,7 +73,7 @@ public class SettingSource implements AdditionalDataHolder, BackedModel, Parsabl
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("sourceType", (n) -> { this.setSourceType(n.getEnumValue(SettingSourceType.class)); });
+        deserializerMap.put("sourceType", (n) -> { this.setSourceType(n.getEnumValue(SettingSourceType::forValue)); });
         return deserializerMap;
     }
     /**

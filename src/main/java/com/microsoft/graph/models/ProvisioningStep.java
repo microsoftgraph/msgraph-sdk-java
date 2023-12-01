@@ -82,8 +82,8 @@ public class ProvisioningStep implements AdditionalDataHolder, BackedModel, Pars
         deserializerMap.put("details", (n) -> { this.setDetails(n.getObjectValue(DetailsInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("provisioningStepType", (n) -> { this.setProvisioningStepType(n.getEnumValue(ProvisioningStepType.class)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ProvisioningResult.class)); });
+        deserializerMap.put("provisioningStepType", (n) -> { this.setProvisioningStepType(n.getEnumValue(ProvisioningStepType::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ProvisioningResult::forValue)); });
         return deserializerMap;
     }
     /**

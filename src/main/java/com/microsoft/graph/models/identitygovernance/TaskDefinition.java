@@ -65,7 +65,7 @@ public class TaskDefinition extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumSetValue(LifecycleTaskCategory.class)); });
+        deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumSetValue(LifecycleTaskCategory::forValue)); });
         deserializerMap.put("continueOnError", (n) -> { this.setContinueOnError(n.getBooleanValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });

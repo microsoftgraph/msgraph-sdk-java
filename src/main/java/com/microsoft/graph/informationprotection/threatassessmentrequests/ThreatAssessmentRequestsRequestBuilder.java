@@ -79,7 +79,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ThreatAssessmentRequestCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ThreatAssessmentRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new threat assessment request. A threat assessment request can be one of the following types: This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ThreatAssessmentRequest::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ThreatAssessmentRequest::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types: This API is available in the following national cloud deployments.

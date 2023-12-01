@@ -64,7 +64,7 @@ public class RecordingInfo implements AdditionalDataHolder, BackedModel, Parsabl
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("recordingStatus", (n) -> { this.setRecordingStatus(n.getEnumValue(RecordingStatus.class)); });
+        deserializerMap.put("recordingStatus", (n) -> { this.setRecordingStatus(n.getEnumValue(RecordingStatus::forValue)); });
         return deserializerMap;
     }
     /**

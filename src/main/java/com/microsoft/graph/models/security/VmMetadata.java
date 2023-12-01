@@ -70,7 +70,7 @@ public class VmMetadata implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
-        deserializerMap.put("cloudProvider", (n) -> { this.setCloudProvider(n.getEnumValue(VmCloudProvider.class)); });
+        deserializerMap.put("cloudProvider", (n) -> { this.setCloudProvider(n.getEnumValue(VmCloudProvider::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("resourceId", (n) -> { this.setResourceId(n.getStringValue()); });
         deserializerMap.put("subscriptionId", (n) -> { this.setSubscriptionId(n.getStringValue()); });

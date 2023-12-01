@@ -64,7 +64,7 @@ public class FailureInfo implements AdditionalDataHolder, BackedModel, Parsable 
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("reason", (n) -> { this.setReason(n.getStringValue()); });
-        deserializerMap.put("stage", (n) -> { this.setStage(n.getEnumValue(FailureStage.class)); });
+        deserializerMap.put("stage", (n) -> { this.setStage(n.getEnumValue(FailureStage::forValue)); });
         return deserializerMap;
     }
     /**

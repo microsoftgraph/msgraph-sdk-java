@@ -74,7 +74,7 @@ public class AvailabilityItem implements AdditionalDataHolder, BackedModel, Pars
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("serviceId", (n) -> { this.setServiceId(n.getStringValue()); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(BookingsAvailabilityStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(BookingsAvailabilityStatus::forValue)); });
         return deserializerMap;
     }
     /**

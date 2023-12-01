@@ -78,9 +78,9 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(CalendarSharingAction.class)); });
-        deserializerMap.put("actionType", (n) -> { this.setActionType(n.getEnumValue(CalendarSharingActionType.class)); });
-        deserializerMap.put("importance", (n) -> { this.setImportance(n.getEnumValue(CalendarSharingActionImportance.class)); });
+        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(CalendarSharingAction::forValue)); });
+        deserializerMap.put("actionType", (n) -> { this.setActionType(n.getEnumValue(CalendarSharingActionType::forValue)); });
+        deserializerMap.put("importance", (n) -> { this.setImportance(n.getEnumValue(CalendarSharingActionImportance::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }

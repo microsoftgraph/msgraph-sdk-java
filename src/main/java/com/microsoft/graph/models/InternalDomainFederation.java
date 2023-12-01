@@ -49,10 +49,10 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activeSignInUri", (n) -> { this.setActiveSignInUri(n.getStringValue()); });
-        deserializerMap.put("federatedIdpMfaBehavior", (n) -> { this.setFederatedIdpMfaBehavior(n.getEnumValue(FederatedIdpMfaBehavior.class)); });
+        deserializerMap.put("federatedIdpMfaBehavior", (n) -> { this.setFederatedIdpMfaBehavior(n.getEnumValue(FederatedIdpMfaBehavior::forValue)); });
         deserializerMap.put("isSignedAuthenticationRequestRequired", (n) -> { this.setIsSignedAuthenticationRequestRequired(n.getBooleanValue()); });
         deserializerMap.put("nextSigningCertificate", (n) -> { this.setNextSigningCertificate(n.getStringValue()); });
-        deserializerMap.put("promptLoginBehavior", (n) -> { this.setPromptLoginBehavior(n.getEnumValue(PromptLoginBehavior.class)); });
+        deserializerMap.put("promptLoginBehavior", (n) -> { this.setPromptLoginBehavior(n.getEnumValue(PromptLoginBehavior::forValue)); });
         deserializerMap.put("signingCertificateUpdateStatus", (n) -> { this.setSigningCertificateUpdateStatus(n.getObjectValue(SigningCertificateUpdateStatus::createFromDiscriminatorValue)); });
         deserializerMap.put("signOutUri", (n) -> { this.setSignOutUri(n.getStringValue()); });
         return deserializerMap;

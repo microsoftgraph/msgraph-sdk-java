@@ -90,7 +90,7 @@ public class EligibilityScheduleInstancesRequestBuilder extends BaseRequestBuild
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PrivilegedAccessGroupEligibilityScheduleInstanceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedAccessGroupEligibilityScheduleInstanceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to eligibilityScheduleInstances for identityGovernance
@@ -114,7 +114,7 @@ public class EligibilityScheduleInstancesRequestBuilder extends BaseRequestBuild
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PrivilegedAccessGroupEligibilityScheduleInstance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedAccessGroupEligibilityScheduleInstance::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the privilegedAccessGroupEligibilityScheduleInstance objects and their properties. This API is available in the following national cloud deployments.

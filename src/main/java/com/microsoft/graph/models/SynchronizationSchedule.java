@@ -75,7 +75,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, BackedMode
         deserializerMap.put("expiration", (n) -> { this.setExpiration(n.getOffsetDateTimeValue()); });
         deserializerMap.put("interval", (n) -> { this.setInterval(n.getPeriodAndDurationValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(SynchronizationScheduleState.class)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(SynchronizationScheduleState::forValue)); });
         return deserializerMap;
     }
     /**

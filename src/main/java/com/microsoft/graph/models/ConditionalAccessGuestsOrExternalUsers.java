@@ -72,7 +72,7 @@ public class ConditionalAccessGuestsOrExternalUsers implements AdditionalDataHol
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("externalTenants", (n) -> { this.setExternalTenants(n.getObjectValue(ConditionalAccessExternalTenants::createFromDiscriminatorValue)); });
-        deserializerMap.put("guestOrExternalUserTypes", (n) -> { this.setGuestOrExternalUserTypes(n.getEnumSetValue(ConditionalAccessGuestOrExternalUserTypes.class)); });
+        deserializerMap.put("guestOrExternalUserTypes", (n) -> { this.setGuestOrExternalUserTypes(n.getEnumSetValue(ConditionalAccessGuestOrExternalUserTypes::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }

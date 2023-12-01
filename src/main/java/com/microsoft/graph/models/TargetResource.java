@@ -71,7 +71,7 @@ public class TargetResource implements AdditionalDataHolder, BackedModel, Parsab
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("groupType", (n) -> { this.setGroupType(n.getEnumValue(GroupType.class)); });
+        deserializerMap.put("groupType", (n) -> { this.setGroupType(n.getEnumValue(GroupType::forValue)); });
         deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
         deserializerMap.put("modifiedProperties", (n) -> { this.setModifiedProperties(n.getCollectionOfObjectValues(ModifiedProperty::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });

@@ -87,7 +87,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
-        deserializerMap.put("code", (n) -> { this.setCode(n.getEnumValue(SynchronizationStatusCode.class)); });
+        deserializerMap.put("code", (n) -> { this.setCode(n.getEnumValue(SynchronizationStatusCode::forValue)); });
         deserializerMap.put("countSuccessiveCompleteFailures", (n) -> { this.setCountSuccessiveCompleteFailures(n.getLongValue()); });
         deserializerMap.put("escrowsPruned", (n) -> { this.setEscrowsPruned(n.getBooleanValue()); });
         deserializerMap.put("lastExecution", (n) -> { this.setLastExecution(n.getObjectValue(SynchronizationTaskExecution::createFromDiscriminatorValue)); });

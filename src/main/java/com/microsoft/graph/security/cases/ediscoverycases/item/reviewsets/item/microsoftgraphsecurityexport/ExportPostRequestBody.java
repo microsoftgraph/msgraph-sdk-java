@@ -90,8 +90,8 @@ public class ExportPostRequestBody implements AdditionalDataHolder, BackedModel,
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
-        deserializerMap.put("exportOptions", (n) -> { this.setExportOptions(n.getEnumSetValue(ExportOptions.class)); });
-        deserializerMap.put("exportStructure", (n) -> { this.setExportStructure(n.getEnumValue(ExportFileStructure.class)); });
+        deserializerMap.put("exportOptions", (n) -> { this.setExportOptions(n.getEnumSetValue(ExportOptions::forValue)); });
+        deserializerMap.put("exportStructure", (n) -> { this.setExportStructure(n.getEnumValue(ExportFileStructure::forValue)); });
         deserializerMap.put("outputName", (n) -> { this.setOutputName(n.getStringValue()); });
         return deserializerMap;
     }

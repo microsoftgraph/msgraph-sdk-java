@@ -80,7 +80,7 @@ public class Training extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("availabilityStatus", (n) -> { this.setAvailabilityStatus(n.getEnumValue(TrainingAvailabilityStatus.class)); });
+        deserializerMap.put("availabilityStatus", (n) -> { this.setAvailabilityStatus(n.getEnumValue(TrainingAvailabilityStatus::forValue)); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(EmailIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -90,10 +90,10 @@ public class Training extends Entity implements Parsable {
         deserializerMap.put("languageDetails", (n) -> { this.setLanguageDetails(n.getCollectionOfObjectValues(TrainingLanguageDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(EmailIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(SimulationContentSource.class)); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(SimulationContentSource::forValue)); });
         deserializerMap.put("supportedLocales", (n) -> { this.setSupportedLocales(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(TrainingType.class)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(TrainingType::forValue)); });
         return deserializerMap;
     }
     /**

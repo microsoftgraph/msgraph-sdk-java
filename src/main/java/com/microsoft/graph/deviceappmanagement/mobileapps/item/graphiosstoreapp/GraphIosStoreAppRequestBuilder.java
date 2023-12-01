@@ -71,7 +71,7 @@ public class GraphIosStoreAppRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, IosStoreApp::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, IosStoreApp::createFromDiscriminatorValue);
     }
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.iosStoreApp

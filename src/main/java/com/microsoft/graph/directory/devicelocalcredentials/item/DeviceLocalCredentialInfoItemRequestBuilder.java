@@ -51,7 +51,7 @@ public class DeviceLocalCredentialInfoItemRequestBuilder extends BaseRequestBuil
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve the properties of a deviceLocalCredentialInfo for a specified device object. 
@@ -74,7 +74,7 @@ public class DeviceLocalCredentialInfoItemRequestBuilder extends BaseRequestBuil
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceLocalCredentialInfo::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceLocalCredentialInfo::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property deviceLocalCredentials in directory
@@ -98,7 +98,7 @@ public class DeviceLocalCredentialInfoItemRequestBuilder extends BaseRequestBuil
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceLocalCredentialInfo::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceLocalCredentialInfo::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property deviceLocalCredentials for directory

@@ -129,7 +129,7 @@ public class MobileApp extends Entity implements Parsable {
         deserializerMap.put("owner", (n) -> { this.setOwner(n.getStringValue()); });
         deserializerMap.put("privacyInformationUrl", (n) -> { this.setPrivacyInformationUrl(n.getStringValue()); });
         deserializerMap.put("publisher", (n) -> { this.setPublisher(n.getStringValue()); });
-        deserializerMap.put("publishingState", (n) -> { this.setPublishingState(n.getEnumValue(MobileAppPublishingState.class)); });
+        deserializerMap.put("publishingState", (n) -> { this.setPublishingState(n.getEnumValue(MobileAppPublishingState::forValue)); });
         return deserializerMap;
     }
     /**

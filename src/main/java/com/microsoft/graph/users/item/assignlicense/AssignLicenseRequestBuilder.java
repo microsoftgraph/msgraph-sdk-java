@@ -59,7 +59,7 @@ public class AssignLicenseRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, User::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, User::createFromDiscriminatorValue);
     }
     /**
      * Add or remove subscriptions for the user. You can also enable and disable specific plans associated with a subscription. This API is available in the following national cloud deployments.

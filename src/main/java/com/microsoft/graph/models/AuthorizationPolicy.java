@@ -92,7 +92,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         deserializerMap.put("allowedToSignUpEmailBasedSubscriptions", (n) -> { this.setAllowedToSignUpEmailBasedSubscriptions(n.getBooleanValue()); });
         deserializerMap.put("allowedToUseSSPR", (n) -> { this.setAllowedToUseSSPR(n.getBooleanValue()); });
         deserializerMap.put("allowEmailVerifiedUsersToJoinOrganization", (n) -> { this.setAllowEmailVerifiedUsersToJoinOrganization(n.getBooleanValue()); });
-        deserializerMap.put("allowInvitesFrom", (n) -> { this.setAllowInvitesFrom(n.getEnumValue(AllowInvitesFrom.class)); });
+        deserializerMap.put("allowInvitesFrom", (n) -> { this.setAllowInvitesFrom(n.getEnumValue(AllowInvitesFrom::forValue)); });
         deserializerMap.put("allowUserConsentForRiskyApps", (n) -> { this.setAllowUserConsentForRiskyApps(n.getBooleanValue()); });
         deserializerMap.put("blockMsolPowerShell", (n) -> { this.setBlockMsolPowerShell(n.getBooleanValue()); });
         deserializerMap.put("defaultUserRolePermissions", (n) -> { this.setDefaultUserRolePermissions(n.getObjectValue(DefaultUserRolePermissions::createFromDiscriminatorValue)); });

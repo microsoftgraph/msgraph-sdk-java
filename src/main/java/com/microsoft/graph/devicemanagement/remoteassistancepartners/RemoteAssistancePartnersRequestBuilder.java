@@ -79,7 +79,7 @@ public class RemoteAssistancePartnersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, RemoteAssistancePartnerCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, RemoteAssistancePartnerCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new remoteAssistancePartner object.
@@ -105,7 +105,7 @@ public class RemoteAssistancePartnersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, RemoteAssistancePartner::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, RemoteAssistancePartner::createFromDiscriminatorValue);
     }
     /**
      * List properties and relationships of the remoteAssistancePartner objects.

@@ -40,7 +40,7 @@ public class TrainingReminderNotification extends BaseEndUserNotification implem
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("deliveryFrequency", (n) -> { this.setDeliveryFrequency(n.getEnumValue(NotificationDeliveryFrequency.class)); });
+        deserializerMap.put("deliveryFrequency", (n) -> { this.setDeliveryFrequency(n.getEnumValue(NotificationDeliveryFrequency::forValue)); });
         return deserializerMap;
     }
     /**

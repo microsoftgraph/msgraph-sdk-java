@@ -51,7 +51,7 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get the status of a rich long-running operation on a site or a list. This API is available in the following national cloud deployments.
@@ -74,7 +74,7 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, RichLongRunningOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, RichLongRunningOperation::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property operations in groups
@@ -98,7 +98,7 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, RichLongRunningOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, RichLongRunningOperation::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property operations for groups

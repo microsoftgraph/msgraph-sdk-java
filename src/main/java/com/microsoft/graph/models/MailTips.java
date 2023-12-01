@@ -121,7 +121,7 @@ public class MailTips implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("mailboxFull", (n) -> { this.setMailboxFull(n.getBooleanValue()); });
         deserializerMap.put("maxMessageSize", (n) -> { this.setMaxMessageSize(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("recipientScope", (n) -> { this.setRecipientScope(n.getEnumSetValue(RecipientScopeType.class)); });
+        deserializerMap.put("recipientScope", (n) -> { this.setRecipientScope(n.getEnumSetValue(RecipientScopeType::forValue)); });
         deserializerMap.put("recipientSuggestions", (n) -> { this.setRecipientSuggestions(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
         deserializerMap.put("totalMemberCount", (n) -> { this.setTotalMemberCount(n.getIntegerValue()); });
         return deserializerMap;

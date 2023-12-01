@@ -43,7 +43,7 @@ public class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("edgeSearchEngineType", (n) -> { this.setEdgeSearchEngineType(n.getEnumValue(EdgeSearchEngineType.class)); });
+        deserializerMap.put("edgeSearchEngineType", (n) -> { this.setEdgeSearchEngineType(n.getEnumValue(EdgeSearchEngineType::forValue)); });
         return deserializerMap;
     }
     /**

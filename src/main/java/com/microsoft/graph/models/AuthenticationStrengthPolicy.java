@@ -73,14 +73,14 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("allowedCombinations", (n) -> { this.setAllowedCombinations(n.getCollectionOfEnumValues(AuthenticationMethodModes.class)); });
+        deserializerMap.put("allowedCombinations", (n) -> { this.setAllowedCombinations(n.getCollectionOfEnumValues(AuthenticationMethodModes::forValue)); });
         deserializerMap.put("combinationConfigurations", (n) -> { this.setCombinationConfigurations(n.getCollectionOfObjectValues(AuthenticationCombinationConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("modifiedDateTime", (n) -> { this.setModifiedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("policyType", (n) -> { this.setPolicyType(n.getEnumValue(AuthenticationStrengthPolicyType.class)); });
-        deserializerMap.put("requirementsSatisfied", (n) -> { this.setRequirementsSatisfied(n.getEnumSetValue(AuthenticationStrengthRequirements.class)); });
+        deserializerMap.put("policyType", (n) -> { this.setPolicyType(n.getEnumValue(AuthenticationStrengthPolicyType::forValue)); });
+        deserializerMap.put("requirementsSatisfied", (n) -> { this.setRequirementsSatisfied(n.getEnumSetValue(AuthenticationStrengthRequirements::forValue)); });
         return deserializerMap;
     }
     /**

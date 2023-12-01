@@ -74,7 +74,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, BackedModel
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("parameters", (n) -> { this.setParameters(n.getCollectionOfObjectValues(StringKeyAttributeMappingSourceValuePair::createFromDiscriminatorValue)); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(AttributeMappingSourceType.class)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(AttributeMappingSourceType::forValue)); });
         return deserializerMap;
     }
     /**

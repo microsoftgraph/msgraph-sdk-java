@@ -77,7 +77,7 @@ public class UserExperienceAnalyticsModelScoresRequestBuilder extends BaseReques
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsModelScoresCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsModelScoresCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to userExperienceAnalyticsModelScores for deviceManagement
@@ -101,7 +101,7 @@ public class UserExperienceAnalyticsModelScoresRequestBuilder extends BaseReques
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsModelScores::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsModelScores::createFromDiscriminatorValue);
     }
     /**
      * User experience analytics model scores

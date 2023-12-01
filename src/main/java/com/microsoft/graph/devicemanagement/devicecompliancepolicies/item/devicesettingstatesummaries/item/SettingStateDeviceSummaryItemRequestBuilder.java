@@ -51,7 +51,7 @@ public class SettingStateDeviceSummaryItemRequestBuilder extends BaseRequestBuil
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Compliance Setting State Device Summary
@@ -72,7 +72,7 @@ public class SettingStateDeviceSummaryItemRequestBuilder extends BaseRequestBuil
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SettingStateDeviceSummary::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SettingStateDeviceSummary::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property deviceSettingStateSummaries in deviceManagement
@@ -96,7 +96,7 @@ public class SettingStateDeviceSummaryItemRequestBuilder extends BaseRequestBuil
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SettingStateDeviceSummary::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SettingStateDeviceSummary::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property deviceSettingStateSummaries for deviceManagement

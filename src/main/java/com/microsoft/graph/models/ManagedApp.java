@@ -54,7 +54,7 @@ public class ManagedApp extends MobileApp implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("appAvailability", (n) -> { this.setAppAvailability(n.getEnumValue(ManagedAppAvailability.class)); });
+        deserializerMap.put("appAvailability", (n) -> { this.setAppAvailability(n.getEnumValue(ManagedAppAvailability::forValue)); });
         deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
         return deserializerMap;
     }

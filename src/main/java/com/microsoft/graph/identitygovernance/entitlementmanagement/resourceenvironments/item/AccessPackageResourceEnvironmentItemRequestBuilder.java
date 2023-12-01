@@ -59,7 +59,7 @@ public class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequ
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * A reference to the geolocation environments in which a resource is located.
@@ -80,7 +80,7 @@ public class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequ
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AccessPackageResourceEnvironment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageResourceEnvironment::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property resourceEnvironments in identityGovernance
@@ -104,7 +104,7 @@ public class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequ
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AccessPackageResourceEnvironment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageResourceEnvironment::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property resourceEnvironments for identityGovernance

@@ -41,7 +41,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("feedbackResource", (n) -> { this.setFeedbackResource(n.getObjectValue(EducationResource::createFromDiscriminatorValue)); });
-        deserializerMap.put("resourceStatus", (n) -> { this.setResourceStatus(n.getEnumValue(EducationFeedbackResourceOutcomeStatus.class)); });
+        deserializerMap.put("resourceStatus", (n) -> { this.setResourceStatus(n.getEnumValue(EducationFeedbackResourceOutcomeStatus::forValue)); });
         return deserializerMap;
     }
     /**

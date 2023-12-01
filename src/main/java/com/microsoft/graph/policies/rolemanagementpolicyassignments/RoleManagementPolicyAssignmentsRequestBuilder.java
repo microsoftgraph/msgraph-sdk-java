@@ -79,7 +79,7 @@ public class RoleManagementPolicyAssignmentsRequestBuilder extends BaseRequestBu
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UnifiedRoleManagementPolicyAssignmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleManagementPolicyAssignmentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to roleManagementPolicyAssignments for policies
@@ -103,7 +103,7 @@ public class RoleManagementPolicyAssignmentsRequestBuilder extends BaseRequestBu
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UnifiedRoleManagementPolicyAssignment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleManagementPolicyAssignment::createFromDiscriminatorValue);
     }
     /**
      * Get the details of all role management policy assignments made in PIM for Microsoft Entra roles and PIM for groups. This API is available in the following national cloud deployments.

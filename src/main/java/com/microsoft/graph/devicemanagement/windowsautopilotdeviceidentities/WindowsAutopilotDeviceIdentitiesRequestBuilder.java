@@ -79,7 +79,7 @@ public class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestB
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, WindowsAutopilotDeviceIdentityCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, WindowsAutopilotDeviceIdentityCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new windowsAutopilotDeviceIdentity object.
@@ -105,7 +105,7 @@ public class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestB
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, WindowsAutopilotDeviceIdentity::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, WindowsAutopilotDeviceIdentity::createFromDiscriminatorValue);
     }
     /**
      * List properties and relationships of the windowsAutopilotDeviceIdentity objects.

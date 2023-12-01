@@ -90,7 +90,7 @@ public class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new privilegedAccessGroupAssignmentScheduleRequest object. This API is available in the following national cloud deployments.
@@ -116,7 +116,7 @@ public class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PrivilegedAccessGroupAssignmentScheduleRequest::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedAccessGroupAssignmentScheduleRequest::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the privilegedAccessGroupAssignmentScheduleRequest objects and their properties. This API is available in the following national cloud deployments.

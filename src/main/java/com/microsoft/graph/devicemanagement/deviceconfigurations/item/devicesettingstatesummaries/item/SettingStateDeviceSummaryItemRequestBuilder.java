@@ -53,7 +53,7 @@ public class SettingStateDeviceSummaryItemRequestBuilder extends BaseRequestBuil
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read properties and relationships of the settingStateDeviceSummary object.
@@ -76,7 +76,7 @@ public class SettingStateDeviceSummaryItemRequestBuilder extends BaseRequestBuil
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SettingStateDeviceSummary::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SettingStateDeviceSummary::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of a settingStateDeviceSummary object.
@@ -102,7 +102,7 @@ public class SettingStateDeviceSummaryItemRequestBuilder extends BaseRequestBuil
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SettingStateDeviceSummary::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SettingStateDeviceSummary::createFromDiscriminatorValue);
     }
     /**
      * Deletes a settingStateDeviceSummary.

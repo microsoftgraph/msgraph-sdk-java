@@ -73,7 +73,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedM
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("EmailAddresses", (n) -> { this.setEmailAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("MailTipsOptions", (n) -> { this.setMailTipsOptions(n.getEnumSetValue(MailTipsType.class)); });
+        deserializerMap.put("MailTipsOptions", (n) -> { this.setMailTipsOptions(n.getEnumSetValue(MailTipsType::forValue)); });
         return deserializerMap;
     }
     /**

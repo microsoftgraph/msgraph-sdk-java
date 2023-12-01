@@ -77,7 +77,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SettingStateDeviceSummaryCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SettingStateDeviceSummaryCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to deviceSettingStateSummaries for deviceManagement
@@ -101,7 +101,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SettingStateDeviceSummary::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SettingStateDeviceSummary::createFromDiscriminatorValue);
     }
     /**
      * Compliance Setting State Device Summary

@@ -67,7 +67,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Bac
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("insightId", (n) -> { this.setInsightId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(UserExperienceAnalyticsInsightSeverity.class)); });
+        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(UserExperienceAnalyticsInsightSeverity::forValue)); });
         deserializerMap.put("userExperienceAnalyticsMetricId", (n) -> { this.setUserExperienceAnalyticsMetricId(n.getStringValue()); });
         deserializerMap.put("values", (n) -> { this.setValues(n.getCollectionOfObjectValues(UserExperienceAnalyticsInsightValue::createFromDiscriminatorValue)); });
         return deserializerMap;

@@ -69,7 +69,7 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve the properties and relationships of a groupLifecyclePolicies object. This API is available in the following national cloud deployments.
@@ -92,7 +92,7 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, GroupLifecyclePolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, GroupLifecyclePolicy::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object. This API is available in the following national cloud deployments.
@@ -118,7 +118,7 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, GroupLifecyclePolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, GroupLifecyclePolicy::createFromDiscriminatorValue);
     }
     /**
      * Delete a groupLifecyclePolicy. This API is available in the following national cloud deployments.

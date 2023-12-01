@@ -57,7 +57,7 @@ public class ConditionalAccessTemplateItemRequestBuilder extends BaseRequestBuil
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ConditionalAccessTemplate::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ConditionalAccessTemplate::createFromDiscriminatorValue);
     }
     /**
      * Read the properties and relationships of a conditionalAccessTemplate object. This API is available in the following national cloud deployments.

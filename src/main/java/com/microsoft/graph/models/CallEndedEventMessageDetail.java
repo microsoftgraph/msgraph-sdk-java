@@ -66,7 +66,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("callDuration", (n) -> { this.setCallDuration(n.getPeriodAndDurationValue()); });
-        deserializerMap.put("callEventType", (n) -> { this.setCallEventType(n.getEnumValue(TeamworkCallEventType.class)); });
+        deserializerMap.put("callEventType", (n) -> { this.setCallEventType(n.getEnumValue(TeamworkCallEventType::forValue)); });
         deserializerMap.put("callId", (n) -> { this.setCallId(n.getStringValue()); });
         deserializerMap.put("callParticipants", (n) -> { this.setCallParticipants(n.getCollectionOfObjectValues(CallParticipantInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });

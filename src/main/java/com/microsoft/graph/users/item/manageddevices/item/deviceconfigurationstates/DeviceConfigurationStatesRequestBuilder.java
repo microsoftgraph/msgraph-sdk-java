@@ -77,7 +77,7 @@ public class DeviceConfigurationStatesRequestBuilder extends BaseRequestBuilder 
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceConfigurationStateCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceConfigurationStateCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to deviceConfigurationStates for users
@@ -101,7 +101,7 @@ public class DeviceConfigurationStatesRequestBuilder extends BaseRequestBuilder 
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceConfigurationState::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceConfigurationState::createFromDiscriminatorValue);
     }
     /**
      * Device configuration states for this device.

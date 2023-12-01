@@ -83,7 +83,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get the instance of a role eligibility. This API is available in the following national cloud deployments.
@@ -106,7 +106,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property roleEligibilityScheduleInstances in roleManagement
@@ -130,7 +130,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property roleEligibilityScheduleInstances for roleManagement

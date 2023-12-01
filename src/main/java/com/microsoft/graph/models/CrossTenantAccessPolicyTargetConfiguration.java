@@ -70,7 +70,7 @@ public class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDat
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("accessType", (n) -> { this.setAccessType(n.getEnumValue(CrossTenantAccessPolicyTargetConfigurationAccessType.class)); });
+        deserializerMap.put("accessType", (n) -> { this.setAccessType(n.getEnumValue(CrossTenantAccessPolicyTargetConfigurationAccessType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("targets", (n) -> { this.setTargets(n.getCollectionOfObjectValues(CrossTenantAccessPolicyTarget::createFromDiscriminatorValue)); });
         return deserializerMap;

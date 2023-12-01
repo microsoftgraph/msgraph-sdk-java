@@ -87,7 +87,7 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AdministrativeUnitCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AdministrativeUnitCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Use this API to create a new administrativeUnit. This API is available in the following national cloud deployments.
@@ -113,7 +113,7 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AdministrativeUnit::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AdministrativeUnit::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of administrativeUnit objects. This API is available in the following national cloud deployments.

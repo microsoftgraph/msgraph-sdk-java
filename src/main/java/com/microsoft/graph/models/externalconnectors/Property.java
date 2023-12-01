@@ -75,10 +75,10 @@ public class Property implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("isRefinable", (n) -> { this.setIsRefinable(n.getBooleanValue()); });
         deserializerMap.put("isRetrievable", (n) -> { this.setIsRetrievable(n.getBooleanValue()); });
         deserializerMap.put("isSearchable", (n) -> { this.setIsSearchable(n.getBooleanValue()); });
-        deserializerMap.put("labels", (n) -> { this.setLabels(n.getCollectionOfEnumValues(Label.class)); });
+        deserializerMap.put("labels", (n) -> { this.setLabels(n.getCollectionOfEnumValues(Label::forValue)); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(PropertyType.class)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(PropertyType::forValue)); });
         return deserializerMap;
     }
     /**

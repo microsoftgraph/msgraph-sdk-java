@@ -77,7 +77,7 @@ public class OnPremisesSynchronizationRequestBuilder extends BaseRequestBuilder 
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, OnPremisesDirectorySynchronizationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, OnPremisesDirectorySynchronizationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to onPremisesSynchronization for directory
@@ -101,7 +101,7 @@ public class OnPremisesSynchronizationRequestBuilder extends BaseRequestBuilder 
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, OnPremisesDirectorySynchronization::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, OnPremisesDirectorySynchronization::createFromDiscriminatorValue);
     }
     /**
      * Read the properties and relationships of an onPremisesDirectorySynchronization object. This API is available in the following national cloud deployments.

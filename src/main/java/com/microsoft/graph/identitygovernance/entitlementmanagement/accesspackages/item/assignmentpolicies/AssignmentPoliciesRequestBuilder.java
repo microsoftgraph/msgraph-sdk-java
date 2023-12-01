@@ -77,7 +77,7 @@ public class AssignmentPoliciesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AccessPackageAssignmentPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageAssignmentPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to assignmentPolicies for identityGovernance
@@ -101,7 +101,7 @@ public class AssignmentPoliciesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AccessPackageAssignmentPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageAssignmentPolicy::createFromDiscriminatorValue);
     }
     /**
      * Read-only. Nullable. Supports $expand.

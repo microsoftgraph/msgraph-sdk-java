@@ -90,7 +90,7 @@ public class AppConfigurationSettingItem implements AdditionalDataHolder, Backed
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("appConfigKey", (n) -> { this.setAppConfigKey(n.getStringValue()); });
-        deserializerMap.put("appConfigKeyType", (n) -> { this.setAppConfigKeyType(n.getEnumValue(MdmAppConfigKeyType.class)); });
+        deserializerMap.put("appConfigKeyType", (n) -> { this.setAppConfigKeyType(n.getEnumValue(MdmAppConfigKeyType::forValue)); });
         deserializerMap.put("appConfigKeyValue", (n) -> { this.setAppConfigKeyValue(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;

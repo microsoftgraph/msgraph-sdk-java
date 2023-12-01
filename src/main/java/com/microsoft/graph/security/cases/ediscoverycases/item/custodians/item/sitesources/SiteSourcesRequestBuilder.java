@@ -79,7 +79,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SiteSourceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SiteSourceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new siteSource object associated with an eDiscovery custodian. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SiteSource::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SiteSource::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the siteSource objects associated with an ediscoveryCustodian. This API is available in the following national cloud deployments.

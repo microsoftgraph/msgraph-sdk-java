@@ -79,7 +79,7 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseR
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, MdmWindowsInformationProtectionPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, MdmWindowsInformationProtectionPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new mdmWindowsInformationProtectionPolicy object.
@@ -105,7 +105,7 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseR
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, MdmWindowsInformationProtectionPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, MdmWindowsInformationProtectionPolicy::createFromDiscriminatorValue);
     }
     /**
      * List properties and relationships of the mdmWindowsInformationProtectionPolicy objects.

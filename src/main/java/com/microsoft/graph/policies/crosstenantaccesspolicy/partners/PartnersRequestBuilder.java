@@ -79,7 +79,7 @@ public class PartnersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, CrossTenantAccessPolicyConfigurationPartnerCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, CrossTenantAccessPolicyConfigurationPartnerCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new partner configuration in a cross-tenant access policy. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class PartnersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue);
     }
     /**
      * Get a list of all partner configurations within a cross-tenant access policy. You can also use the $expand parameter to list the user synchronization policy for all partner configurations. This API is available in the following national cloud deployments.

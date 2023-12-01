@@ -96,7 +96,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         deserializerMap.put("deviceOSVersion", (n) -> { this.setDeviceOSVersion(n.getStringValue()); });
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("recordedDateTime", (n) -> { this.setRecordedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AgreementAcceptanceState.class)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AgreementAcceptanceState::forValue)); });
         deserializerMap.put("userDisplayName", (n) -> { this.setUserDisplayName(n.getStringValue()); });
         deserializerMap.put("userEmail", (n) -> { this.setUserEmail(n.getStringValue()); });
         deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });

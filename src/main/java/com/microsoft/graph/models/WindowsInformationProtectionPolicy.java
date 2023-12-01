@@ -49,10 +49,10 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
         deserializerMap.put("numberOfPastPinsRemembered", (n) -> { this.setNumberOfPastPinsRemembered(n.getIntegerValue()); });
         deserializerMap.put("passwordMaximumAttemptCount", (n) -> { this.setPasswordMaximumAttemptCount(n.getIntegerValue()); });
         deserializerMap.put("pinExpirationDays", (n) -> { this.setPinExpirationDays(n.getIntegerValue()); });
-        deserializerMap.put("pinLowercaseLetters", (n) -> { this.setPinLowercaseLetters(n.getEnumValue(WindowsInformationProtectionPinCharacterRequirements.class)); });
+        deserializerMap.put("pinLowercaseLetters", (n) -> { this.setPinLowercaseLetters(n.getEnumValue(WindowsInformationProtectionPinCharacterRequirements::forValue)); });
         deserializerMap.put("pinMinimumLength", (n) -> { this.setPinMinimumLength(n.getIntegerValue()); });
-        deserializerMap.put("pinSpecialCharacters", (n) -> { this.setPinSpecialCharacters(n.getEnumValue(WindowsInformationProtectionPinCharacterRequirements.class)); });
-        deserializerMap.put("pinUppercaseLetters", (n) -> { this.setPinUppercaseLetters(n.getEnumValue(WindowsInformationProtectionPinCharacterRequirements.class)); });
+        deserializerMap.put("pinSpecialCharacters", (n) -> { this.setPinSpecialCharacters(n.getEnumValue(WindowsInformationProtectionPinCharacterRequirements::forValue)); });
+        deserializerMap.put("pinUppercaseLetters", (n) -> { this.setPinUppercaseLetters(n.getEnumValue(WindowsInformationProtectionPinCharacterRequirements::forValue)); });
         deserializerMap.put("revokeOnMdmHandoffDisabled", (n) -> { this.setRevokeOnMdmHandoffDisabled(n.getBooleanValue()); });
         deserializerMap.put("windowsHelloForBusinessBlocked", (n) -> { this.setWindowsHelloForBusinessBlocked(n.getBooleanValue()); });
         return deserializerMap;

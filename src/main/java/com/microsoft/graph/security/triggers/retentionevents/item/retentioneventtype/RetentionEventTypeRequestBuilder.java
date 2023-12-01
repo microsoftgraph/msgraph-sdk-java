@@ -55,7 +55,7 @@ public class RetentionEventTypeRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, RetentionEventType::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, RetentionEventType::createFromDiscriminatorValue);
     }
     /**
      * Specifies the event that will start the retention period for labels that use this event type when an event is created.

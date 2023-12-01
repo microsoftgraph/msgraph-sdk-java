@@ -102,7 +102,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accountManagerPolicy", (n) -> { this.setAccountManagerPolicy(n.getObjectValue(SharedPCAccountManagerPolicy::createFromDiscriminatorValue)); });
-        deserializerMap.put("allowedAccounts", (n) -> { this.setAllowedAccounts(n.getEnumSetValue(SharedPCAllowedAccountType.class)); });
+        deserializerMap.put("allowedAccounts", (n) -> { this.setAllowedAccounts(n.getEnumSetValue(SharedPCAllowedAccountType::forValue)); });
         deserializerMap.put("allowLocalStorage", (n) -> { this.setAllowLocalStorage(n.getBooleanValue()); });
         deserializerMap.put("disableAccountManager", (n) -> { this.setDisableAccountManager(n.getBooleanValue()); });
         deserializerMap.put("disableEduPolicies", (n) -> { this.setDisableEduPolicies(n.getBooleanValue()); });

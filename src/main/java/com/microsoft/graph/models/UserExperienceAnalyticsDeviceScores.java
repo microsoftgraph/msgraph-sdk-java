@@ -70,7 +70,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
         deserializerMap.put("batteryHealthScore", (n) -> { this.setBatteryHealthScore(n.getDoubleValue()); });
         deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
         deserializerMap.put("endpointAnalyticsScore", (n) -> { this.setEndpointAnalyticsScore(n.getDoubleValue()); });
-        deserializerMap.put("healthStatus", (n) -> { this.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState.class)); });
+        deserializerMap.put("healthStatus", (n) -> { this.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState::forValue)); });
         deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
         deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
         deserializerMap.put("startupPerformanceScore", (n) -> { this.setStartupPerformanceScore(n.getDoubleValue()); });

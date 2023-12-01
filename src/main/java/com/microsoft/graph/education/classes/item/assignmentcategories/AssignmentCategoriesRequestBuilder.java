@@ -87,7 +87,7 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, EducationCategoryCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, EducationCategoryCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new educationCategory on an educationClass. Only teachers can perform this operation. This API is available in the following national cloud deployments.
@@ -113,7 +113,7 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, EducationCategory::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, EducationCategory::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of educationCategory objects. Only teachers can perform this operation. This API is available in the following national cloud deployments.

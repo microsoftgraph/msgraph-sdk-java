@@ -70,7 +70,7 @@ public class LearningCourseActivity extends Entity implements Parsable {
         deserializerMap.put("learnerUserId", (n) -> { this.setLearnerUserId(n.getStringValue()); });
         deserializerMap.put("learningContentId", (n) -> { this.setLearningContentId(n.getStringValue()); });
         deserializerMap.put("learningProviderId", (n) -> { this.setLearningProviderId(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CourseStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CourseStatus::forValue)); });
         return deserializerMap;
     }
     /**

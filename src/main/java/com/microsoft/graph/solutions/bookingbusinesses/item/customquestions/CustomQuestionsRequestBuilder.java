@@ -79,7 +79,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, BookingCustomQuestionCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, BookingCustomQuestionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new bookingCustomQuestion object. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, BookingCustomQuestion::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, BookingCustomQuestion::createFromDiscriminatorValue);
     }
     /**
      * Get the bookingCustomQuestion resources associated with a bookingBusiness. This API is available in the following national cloud deployments.

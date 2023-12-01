@@ -55,7 +55,7 @@ public class AgreementAcceptanceItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AgreementAcceptance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AgreementAcceptance::createFromDiscriminatorValue);
     }
     /**
      * The user's terms of use acceptance statuses. Read-only. Nullable.

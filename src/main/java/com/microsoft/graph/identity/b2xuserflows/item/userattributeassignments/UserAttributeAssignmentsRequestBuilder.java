@@ -95,7 +95,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, IdentityUserFlowAttributeAssignmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, IdentityUserFlowAttributeAssignmentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow. This API is available in the following national cloud deployments.
@@ -121,7 +121,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, IdentityUserFlowAttributeAssignment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, IdentityUserFlowAttributeAssignment::createFromDiscriminatorValue);
     }
     /**
      * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow. This API is available in the following national cloud deployments.

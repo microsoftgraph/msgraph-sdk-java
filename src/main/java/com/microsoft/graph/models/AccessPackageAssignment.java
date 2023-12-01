@@ -69,7 +69,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
         deserializerMap.put("customExtensionCalloutInstances", (n) -> { this.setCustomExtensionCalloutInstances(n.getCollectionOfObjectValues(CustomExtensionCalloutInstance::createFromDiscriminatorValue)); });
         deserializerMap.put("expiredDateTime", (n) -> { this.setExpiredDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("schedule", (n) -> { this.setSchedule(n.getObjectValue(EntitlementManagementSchedule::createFromDiscriminatorValue)); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AccessPackageAssignmentState.class)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AccessPackageAssignmentState::forValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getStringValue()); });
         deserializerMap.put("target", (n) -> { this.setTarget(n.getObjectValue(AccessPackageSubject::createFromDiscriminatorValue)); });
         return deserializerMap;

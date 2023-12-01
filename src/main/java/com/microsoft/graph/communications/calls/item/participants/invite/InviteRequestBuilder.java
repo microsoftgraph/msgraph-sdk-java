@@ -36,21 +36,21 @@ public class InviteRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/participants/invite", rawUrl);
     }
     /**
-     * Delete a specific participant in a call. In some situations, it is appropriate for an application to remove a participant from an active call. This action can be done before or after the participant answers the call. When an active caller is removed, they are immediately dropped from the call with no pre- or post-removal notification. When an invited participant is removed, any outstanding add participant request is canceled.  This API is available in the following national cloud deployments.
+     * Invite participants to the active call. For more information about how to handle operations, see commsOperation. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a InviteParticipantsOperation
-     * @see <a href="https://learn.microsoft.com/graph/api/participant-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/participant-invite?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InviteParticipantsOperation post(@jakarta.annotation.Nonnull final InvitePostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Delete a specific participant in a call. In some situations, it is appropriate for an application to remove a participant from an active call. This action can be done before or after the participant answers the call. When an active caller is removed, they are immediately dropped from the call with no pre- or post-removal notification. When an invited participant is removed, any outstanding add participant request is canceled.  This API is available in the following national cloud deployments.
+     * Invite participants to the active call. For more information about how to handle operations, see commsOperation. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a InviteParticipantsOperation
-     * @see <a href="https://learn.microsoft.com/graph/api/participant-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/participant-invite?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InviteParticipantsOperation post(@jakarta.annotation.Nonnull final InvitePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -59,10 +59,10 @@ public class InviteRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, InviteParticipantsOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, InviteParticipantsOperation::createFromDiscriminatorValue);
     }
     /**
-     * Delete a specific participant in a call. In some situations, it is appropriate for an application to remove a participant from an active call. This action can be done before or after the participant answers the call. When an active caller is removed, they are immediately dropped from the call with no pre- or post-removal notification. When an invited participant is removed, any outstanding add participant request is canceled.  This API is available in the following national cloud deployments.
+     * Invite participants to the active call. For more information about how to handle operations, see commsOperation. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class InviteRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Delete a specific participant in a call. In some situations, it is appropriate for an application to remove a participant from an active call. This action can be done before or after the participant answers the call. When an active caller is removed, they are immediately dropped from the call with no pre- or post-removal notification. When an invited participant is removed, any outstanding add participant request is canceled.  This API is available in the following national cloud deployments.
+     * Invite participants to the active call. For more information about how to handle operations, see commsOperation. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

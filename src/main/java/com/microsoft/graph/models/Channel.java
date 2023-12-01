@@ -71,7 +71,7 @@ public class Channel extends Entity implements Parsable {
         deserializerMap.put("filesFolder", (n) -> { this.setFilesFolder(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
         deserializerMap.put("isFavoriteByDefault", (n) -> { this.setIsFavoriteByDefault(n.getBooleanValue()); });
         deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
-        deserializerMap.put("membershipType", (n) -> { this.setMembershipType(n.getEnumValue(ChannelMembershipType.class)); });
+        deserializerMap.put("membershipType", (n) -> { this.setMembershipType(n.getEnumValue(ChannelMembershipType::forValue)); });
         deserializerMap.put("messages", (n) -> { this.setMessages(n.getCollectionOfObjectValues(ChatMessage::createFromDiscriminatorValue)); });
         deserializerMap.put("sharedWithTeams", (n) -> { this.setSharedWithTeams(n.getCollectionOfObjectValues(SharedWithChannelTeamInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("summary", (n) -> { this.setSummary(n.getObjectValue(ChannelSummary::createFromDiscriminatorValue)); });

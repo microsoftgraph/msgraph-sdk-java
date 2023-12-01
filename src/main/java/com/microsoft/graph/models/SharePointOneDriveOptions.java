@@ -63,7 +63,7 @@ public class SharePointOneDriveOptions implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("includeContent", (n) -> { this.setIncludeContent(n.getEnumSetValue(SearchContent.class)); });
+        deserializerMap.put("includeContent", (n) -> { this.setIncludeContent(n.getEnumSetValue(SearchContent::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }

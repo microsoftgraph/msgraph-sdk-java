@@ -77,7 +77,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve the app installed in the personal scope of the specified user. This API is available in the following national cloud deployments.
@@ -100,7 +100,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserScopeTeamsAppInstallation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserScopeTeamsAppInstallation::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property installedApps in users
@@ -124,7 +124,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserScopeTeamsAppInstallation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserScopeTeamsAppInstallation::createFromDiscriminatorValue);
     }
     /**
      * Uninstall an app from the personal scope of the specified user. This API is available in the following national cloud deployments.

@@ -68,7 +68,7 @@ public class EdiscoverySearch extends Search implements Parsable {
         deserializerMap.put("additionalSources", (n) -> { this.setAdditionalSources(n.getCollectionOfObjectValues(DataSource::createFromDiscriminatorValue)); });
         deserializerMap.put("addToReviewSetOperation", (n) -> { this.setAddToReviewSetOperation(n.getObjectValue(EdiscoveryAddToReviewSetOperation::createFromDiscriminatorValue)); });
         deserializerMap.put("custodianSources", (n) -> { this.setCustodianSources(n.getCollectionOfObjectValues(DataSource::createFromDiscriminatorValue)); });
-        deserializerMap.put("dataSourceScopes", (n) -> { this.setDataSourceScopes(n.getEnumSetValue(DataSourceScopes.class)); });
+        deserializerMap.put("dataSourceScopes", (n) -> { this.setDataSourceScopes(n.getEnumSetValue(DataSourceScopes::forValue)); });
         deserializerMap.put("lastEstimateStatisticsOperation", (n) -> { this.setLastEstimateStatisticsOperation(n.getObjectValue(EdiscoveryEstimateOperation::createFromDiscriminatorValue)); });
         deserializerMap.put("noncustodialSources", (n) -> { this.setNoncustodialSources(n.getCollectionOfObjectValues(EdiscoveryNoncustodialDataSource::createFromDiscriminatorValue)); });
         return deserializerMap;

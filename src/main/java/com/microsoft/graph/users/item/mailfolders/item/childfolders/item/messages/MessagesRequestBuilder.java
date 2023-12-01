@@ -87,7 +87,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, MessageCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, MessageCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Use this API to create a new Message in a mailfolder. This API is available in the following national cloud deployments.
@@ -113,7 +113,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, Message::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, Message::createFromDiscriminatorValue);
     }
     /**
      * Get all the messages in the specified user's mailbox, or those messages in a specified folder in the mailbox. This API is available in the following national cloud deployments.

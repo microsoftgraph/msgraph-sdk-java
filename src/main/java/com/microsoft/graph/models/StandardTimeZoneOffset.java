@@ -87,7 +87,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("dayOccurrence", (n) -> { this.setDayOccurrence(n.getIntegerValue()); });
-        deserializerMap.put("dayOfWeek", (n) -> { this.setDayOfWeek(n.getEnumValue(DayOfWeek.class)); });
+        deserializerMap.put("dayOfWeek", (n) -> { this.setDayOfWeek(n.getEnumValue(DayOfWeek::forValue)); });
         deserializerMap.put("month", (n) -> { this.setMonth(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("time", (n) -> { this.setTime(n.getLocalTimeValue()); });

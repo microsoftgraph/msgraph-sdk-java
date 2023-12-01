@@ -49,7 +49,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("discoverabilities", (n) -> { this.setDiscoverabilities(n.getEnumSetValue(DirectoryDefinitionDiscoverabilities.class)); });
+        deserializerMap.put("discoverabilities", (n) -> { this.setDiscoverabilities(n.getEnumSetValue(DirectoryDefinitionDiscoverabilities::forValue)); });
         deserializerMap.put("discoveryDateTime", (n) -> { this.setDiscoveryDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("objects", (n) -> { this.setObjects(n.getCollectionOfObjectValues(ObjectDefinition::createFromDiscriminatorValue)); });

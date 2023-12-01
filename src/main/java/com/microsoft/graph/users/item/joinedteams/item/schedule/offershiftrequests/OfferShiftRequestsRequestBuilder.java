@@ -79,7 +79,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, OfferShiftRequestCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, OfferShiftRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create an instance of an offerShiftRequest. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, OfferShiftRequest::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, OfferShiftRequest::createFromDiscriminatorValue);
     }
     /**
      * Retrieve the properties and relationships of all offerShiftRequest objects in a team. This API is available in the following national cloud deployments.

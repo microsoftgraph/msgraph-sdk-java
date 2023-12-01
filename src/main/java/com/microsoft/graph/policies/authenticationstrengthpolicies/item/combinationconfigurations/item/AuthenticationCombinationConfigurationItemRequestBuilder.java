@@ -53,7 +53,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read the properties and relationships of an authenticationCombinationConfiguration object. This API is available in the following national cloud deployments.
@@ -76,7 +76,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AuthenticationCombinationConfiguration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationCombinationConfiguration::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they're the only type of authenticationCombinationConfiguration that may be created. This API is available in the following national cloud deployments.
@@ -102,7 +102,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AuthenticationCombinationConfiguration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationCombinationConfiguration::createFromDiscriminatorValue);
     }
     /**
      * Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object. This API is available in the following national cloud deployments.

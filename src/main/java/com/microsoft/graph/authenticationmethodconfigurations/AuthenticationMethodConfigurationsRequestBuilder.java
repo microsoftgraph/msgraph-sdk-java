@@ -77,7 +77,7 @@ public class AuthenticationMethodConfigurationsRequestBuilder extends BaseReques
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AuthenticationMethodConfigurationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationMethodConfigurationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Add new entity to authenticationMethodConfigurations
@@ -101,7 +101,7 @@ public class AuthenticationMethodConfigurationsRequestBuilder extends BaseReques
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AuthenticationMethodConfiguration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationMethodConfiguration::createFromDiscriminatorValue);
     }
     /**
      * Get entities from authenticationMethodConfigurations

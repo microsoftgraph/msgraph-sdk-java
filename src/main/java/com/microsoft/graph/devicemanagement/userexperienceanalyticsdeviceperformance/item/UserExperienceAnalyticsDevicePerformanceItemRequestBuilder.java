@@ -51,7 +51,7 @@ public class UserExperienceAnalyticsDevicePerformanceItemRequestBuilder extends 
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * User experience analytics device performance
@@ -72,7 +72,7 @@ public class UserExperienceAnalyticsDevicePerformanceItemRequestBuilder extends 
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsDevicePerformance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsDevicePerformance::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property userExperienceAnalyticsDevicePerformance in deviceManagement
@@ -96,7 +96,7 @@ public class UserExperienceAnalyticsDevicePerformanceItemRequestBuilder extends 
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsDevicePerformance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsDevicePerformance::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property userExperienceAnalyticsDevicePerformance for deviceManagement

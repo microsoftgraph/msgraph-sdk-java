@@ -71,7 +71,7 @@ public class GraphAndroidStoreAppRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AndroidStoreApp::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AndroidStoreApp::createFromDiscriminatorValue);
     }
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.androidStoreApp

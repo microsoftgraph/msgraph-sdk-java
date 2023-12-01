@@ -73,7 +73,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
         deserializerMap.put("excludeTarget", (n) -> { this.setExcludeTarget(n.getObjectValue(FeatureTarget::createFromDiscriminatorValue)); });
         deserializerMap.put("includeTarget", (n) -> { this.setIncludeTarget(n.getObjectValue(FeatureTarget::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AdvancedConfigState.class)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AdvancedConfigState::forValue)); });
         return deserializerMap;
     }
     /**

@@ -91,7 +91,7 @@ public class Process implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("commandLine", (n) -> { this.setCommandLine(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("fileHash", (n) -> { this.setFileHash(n.getObjectValue(FileHash::createFromDiscriminatorValue)); });
-        deserializerMap.put("integrityLevel", (n) -> { this.setIntegrityLevel(n.getEnumValue(ProcessIntegrityLevel.class)); });
+        deserializerMap.put("integrityLevel", (n) -> { this.setIntegrityLevel(n.getEnumValue(ProcessIntegrityLevel::forValue)); });
         deserializerMap.put("isElevated", (n) -> { this.setIsElevated(n.getBooleanValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });

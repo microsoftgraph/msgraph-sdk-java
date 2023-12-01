@@ -66,14 +66,14 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("decisions", (n) -> { this.setDecisions(n.getCollectionOfEnumValues(AccessReviewHistoryDecisionFilter.class)); });
+        deserializerMap.put("decisions", (n) -> { this.setDecisions(n.getCollectionOfEnumValues(AccessReviewHistoryDecisionFilter::forValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("instances", (n) -> { this.setInstances(n.getCollectionOfObjectValues(AccessReviewHistoryInstance::createFromDiscriminatorValue)); });
         deserializerMap.put("reviewHistoryPeriodEndDateTime", (n) -> { this.setReviewHistoryPeriodEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("reviewHistoryPeriodStartDateTime", (n) -> { this.setReviewHistoryPeriodStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("scheduleSettings", (n) -> { this.setScheduleSettings(n.getObjectValue(AccessReviewHistoryScheduleSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("scopes", (n) -> { this.setScopes(n.getCollectionOfObjectValues(AccessReviewScope::createFromDiscriminatorValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AccessReviewHistoryStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AccessReviewHistoryStatus::forValue)); });
         return deserializerMap;
     }
     /**

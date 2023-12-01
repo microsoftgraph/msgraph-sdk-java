@@ -79,13 +79,13 @@ public class RecurrencePattern implements AdditionalDataHolder, BackedModel, Par
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("dayOfMonth", (n) -> { this.setDayOfMonth(n.getIntegerValue()); });
-        deserializerMap.put("daysOfWeek", (n) -> { this.setDaysOfWeek(n.getCollectionOfEnumValues(DayOfWeek.class)); });
-        deserializerMap.put("firstDayOfWeek", (n) -> { this.setFirstDayOfWeek(n.getEnumValue(DayOfWeek.class)); });
-        deserializerMap.put("index", (n) -> { this.setIndex(n.getEnumValue(WeekIndex.class)); });
+        deserializerMap.put("daysOfWeek", (n) -> { this.setDaysOfWeek(n.getCollectionOfEnumValues(DayOfWeek::forValue)); });
+        deserializerMap.put("firstDayOfWeek", (n) -> { this.setFirstDayOfWeek(n.getEnumValue(DayOfWeek::forValue)); });
+        deserializerMap.put("index", (n) -> { this.setIndex(n.getEnumValue(WeekIndex::forValue)); });
         deserializerMap.put("interval", (n) -> { this.setInterval(n.getIntegerValue()); });
         deserializerMap.put("month", (n) -> { this.setMonth(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(RecurrencePatternType.class)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(RecurrencePatternType::forValue)); });
         return deserializerMap;
     }
     /**

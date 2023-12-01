@@ -79,7 +79,7 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserFlowLanguageConfigurationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserFlowLanguageConfigurationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to languages for identity
@@ -103,7 +103,7 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserFlowLanguageConfiguration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserFlowLanguageConfiguration::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of languages supported for customization in a B2X user flow. This API is available in the following national cloud deployments.

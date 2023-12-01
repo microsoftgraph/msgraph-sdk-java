@@ -60,7 +60,7 @@ public class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalGetResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalGetResponse::createFromDiscriminatorValue);
     }
     /**
      * Invoke function getActivitiesByInterval

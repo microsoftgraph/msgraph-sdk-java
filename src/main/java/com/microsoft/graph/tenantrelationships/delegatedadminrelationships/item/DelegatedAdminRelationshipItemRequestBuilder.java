@@ -77,7 +77,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read the properties of a delegatedAdminRelationship object. This API is available in the following national cloud deployments.
@@ -100,7 +100,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DelegatedAdminRelationship::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminRelationship::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of a delegatedAdminRelationship object. You can only update a relationship when it's in the created status. However, you can update the autoExtendDuration property when the relationship is in either the created or active status. This API is available in the following national cloud deployments.
@@ -126,7 +126,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DelegatedAdminRelationship::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminRelationship::createFromDiscriminatorValue);
     }
     /**
      * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status.  This API is available in the following national cloud deployments.

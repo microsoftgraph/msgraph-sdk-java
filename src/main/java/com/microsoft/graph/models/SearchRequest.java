@@ -115,7 +115,7 @@ public class SearchRequest implements AdditionalDataHolder, BackedModel, Parsabl
         deserializerMap.put("collapseProperties", (n) -> { this.setCollapseProperties(n.getCollectionOfObjectValues(CollapseProperty::createFromDiscriminatorValue)); });
         deserializerMap.put("contentSources", (n) -> { this.setContentSources(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("enableTopResults", (n) -> { this.setEnableTopResults(n.getBooleanValue()); });
-        deserializerMap.put("entityTypes", (n) -> { this.setEntityTypes(n.getCollectionOfEnumValues(EntityType.class)); });
+        deserializerMap.put("entityTypes", (n) -> { this.setEntityTypes(n.getCollectionOfEnumValues(EntityType::forValue)); });
         deserializerMap.put("fields", (n) -> { this.setFields(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("from", (n) -> { this.setFrom(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });

@@ -74,7 +74,7 @@ public class ExternalConnection extends Entity implements Parsable {
         deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(ConnectionOperation::createFromDiscriminatorValue)); });
         deserializerMap.put("schema", (n) -> { this.setSchema(n.getObjectValue(Schema::createFromDiscriminatorValue)); });
         deserializerMap.put("searchSettings", (n) -> { this.setSearchSettings(n.getObjectValue(SearchSettings::createFromDiscriminatorValue)); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ConnectionState.class)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ConnectionState::forValue)); });
         return deserializerMap;
     }
     /**

@@ -79,7 +79,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SettingStateDeviceSummaryCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SettingStateDeviceSummaryCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new settingStateDeviceSummary object.
@@ -105,7 +105,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SettingStateDeviceSummary::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SettingStateDeviceSummary::createFromDiscriminatorValue);
     }
     /**
      * List properties and relationships of the settingStateDeviceSummary objects.

@@ -55,7 +55,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements Parsable
         deserializerMap.put("namespace", (n) -> { this.setNamespace(n.getObjectValue(KubernetesNamespaceEvidence::createFromDiscriminatorValue)); });
         deserializerMap.put("selector", (n) -> { this.setSelector(n.getObjectValue(Dictionary::createFromDiscriminatorValue)); });
         deserializerMap.put("servicePorts", (n) -> { this.setServicePorts(n.getCollectionOfObjectValues(KubernetesServicePort::createFromDiscriminatorValue)); });
-        deserializerMap.put("serviceType", (n) -> { this.setServiceType(n.getEnumValue(KubernetesServiceType.class)); });
+        deserializerMap.put("serviceType", (n) -> { this.setServiceType(n.getEnumValue(KubernetesServiceType::forValue)); });
         return deserializerMap;
     }
     /**

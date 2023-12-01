@@ -51,7 +51,7 @@ public class MicrosoftGraphSecurityReopenRequestBuilder extends BaseRequestBuild
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case. This API is available in the following national cloud deployments.

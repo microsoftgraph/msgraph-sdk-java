@@ -97,12 +97,12 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
         deserializerMap.put("archiveFolder", (n) -> { this.setArchiveFolder(n.getStringValue()); });
         deserializerMap.put("automaticRepliesSetting", (n) -> { this.setAutomaticRepliesSetting(n.getObjectValue(AutomaticRepliesSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("dateFormat", (n) -> { this.setDateFormat(n.getStringValue()); });
-        deserializerMap.put("delegateMeetingMessageDeliveryOptions", (n) -> { this.setDelegateMeetingMessageDeliveryOptions(n.getEnumValue(DelegateMeetingMessageDeliveryOptions.class)); });
+        deserializerMap.put("delegateMeetingMessageDeliveryOptions", (n) -> { this.setDelegateMeetingMessageDeliveryOptions(n.getEnumValue(DelegateMeetingMessageDeliveryOptions::forValue)); });
         deserializerMap.put("language", (n) -> { this.setLanguage(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("timeFormat", (n) -> { this.setTimeFormat(n.getStringValue()); });
         deserializerMap.put("timeZone", (n) -> { this.setTimeZone(n.getStringValue()); });
-        deserializerMap.put("userPurpose", (n) -> { this.setUserPurpose(n.getEnumValue(UserPurpose.class)); });
+        deserializerMap.put("userPurpose", (n) -> { this.setUserPurpose(n.getEnumValue(UserPurpose::forValue)); });
         deserializerMap.put("workingHours", (n) -> { this.setWorkingHours(n.getObjectValue(WorkingHours::createFromDiscriminatorValue)); });
         return deserializerMap;
     }

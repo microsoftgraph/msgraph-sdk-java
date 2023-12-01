@@ -59,10 +59,10 @@ public class DataSourceContainer extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("holdStatus", (n) -> { this.setHoldStatus(n.getEnumValue(DataSourceHoldStatus.class)); });
+        deserializerMap.put("holdStatus", (n) -> { this.setHoldStatus(n.getEnumValue(DataSourceHoldStatus::forValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("releasedDateTime", (n) -> { this.setReleasedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(DataSourceContainerStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(DataSourceContainerStatus::forValue)); });
         return deserializerMap;
     }
     /**

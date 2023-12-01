@@ -37,7 +37,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("productCode", (n) -> { this.setProductCode(n.getStringValue()); });
         deserializerMap.put("productVersion", (n) -> { this.setProductVersion(n.getStringValue()); });
-        deserializerMap.put("productVersionOperator", (n) -> { this.setProductVersionOperator(n.getEnumValue(Win32LobAppRuleOperator.class)); });
+        deserializerMap.put("productVersionOperator", (n) -> { this.setProductVersionOperator(n.getEnumValue(Win32LobAppRuleOperator::forValue)); });
         return deserializerMap;
     }
     /**

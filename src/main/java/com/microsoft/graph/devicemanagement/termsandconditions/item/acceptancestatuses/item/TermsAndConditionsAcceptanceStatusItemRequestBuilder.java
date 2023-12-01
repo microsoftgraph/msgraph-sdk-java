@@ -61,7 +61,7 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRe
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read properties and relationships of the termsAndConditionsAcceptanceStatus object.
@@ -84,7 +84,7 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRe
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TermsAndConditionsAcceptanceStatus::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TermsAndConditionsAcceptanceStatus::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of a termsAndConditionsAcceptanceStatus object.
@@ -110,7 +110,7 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRe
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TermsAndConditionsAcceptanceStatus::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TermsAndConditionsAcceptanceStatus::createFromDiscriminatorValue);
     }
     /**
      * Deletes a termsAndConditionsAcceptanceStatus.

@@ -78,7 +78,7 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SoftwareOathAuthenticationMethodCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SoftwareOathAuthenticationMethodCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of a user's software OATH token authentication method objects and their properties. This API is available in the following national cloud deployments.

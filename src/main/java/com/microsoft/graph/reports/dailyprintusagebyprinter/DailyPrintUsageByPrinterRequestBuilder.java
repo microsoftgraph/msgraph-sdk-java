@@ -79,7 +79,7 @@ public class DailyPrintUsageByPrinterRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PrintUsageByPrinterCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PrintUsageByPrinterCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to dailyPrintUsageByPrinter for reports
@@ -103,7 +103,7 @@ public class DailyPrintUsageByPrinterRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PrintUsageByPrinter::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PrintUsageByPrinter::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of daily print usage summaries, grouped by printer. This API is available in the following national cloud deployments.

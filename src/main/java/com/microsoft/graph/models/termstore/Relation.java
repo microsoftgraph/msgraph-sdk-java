@@ -33,7 +33,7 @@ public class Relation extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("fromTerm", (n) -> { this.setFromTerm(n.getObjectValue(Term::createFromDiscriminatorValue)); });
-        deserializerMap.put("relationship", (n) -> { this.setRelationship(n.getEnumValue(RelationType.class)); });
+        deserializerMap.put("relationship", (n) -> { this.setRelationship(n.getEnumValue(RelationType::forValue)); });
         deserializerMap.put("set", (n) -> { this.setSet(n.getObjectValue(Set::createFromDiscriminatorValue)); });
         deserializerMap.put("toTerm", (n) -> { this.setToTerm(n.getObjectValue(Term::createFromDiscriminatorValue)); });
         return deserializerMap;

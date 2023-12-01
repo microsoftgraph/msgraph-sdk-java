@@ -72,7 +72,7 @@ public class ChatMessageHistoryItem implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("actions", (n) -> { this.setActions(n.getEnumSetValue(ChatMessageActions.class)); });
+        deserializerMap.put("actions", (n) -> { this.setActions(n.getEnumSetValue(ChatMessageActions::forValue)); });
         deserializerMap.put("modifiedDateTime", (n) -> { this.setModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("reaction", (n) -> { this.setReaction(n.getObjectValue(ChatMessageReaction::createFromDiscriminatorValue)); });

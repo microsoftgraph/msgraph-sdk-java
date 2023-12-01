@@ -79,7 +79,7 @@ public class TemporaryAccessPassMethodsRequestBuilder extends BaseRequestBuilder
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TemporaryAccessPassAuthenticationMethodCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TemporaryAccessPassAuthenticationMethodCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new temporaryAccessPassAuthenticationMethod object on a user. A user can only have one Temporary Access Pass that's usable within its specified lifetime. If the user requires a new Temporary Access Pass while the current Temporary Access Pass is valid, the admin can create a new Temporary Access Pass for the user, the previous Temporary Access Pass will be deleted, and a new Temporary Access Pass will be created. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class TemporaryAccessPassMethodsRequestBuilder extends BaseRequestBuilder
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TemporaryAccessPassAuthenticationMethod::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TemporaryAccessPassAuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of a user's temporaryAccessPassAuthenticationMethod objects and their properties. This API will only return a single object in the collection as a user can have only one Temporary Access Pass method. This API is available in the following national cloud deployments.

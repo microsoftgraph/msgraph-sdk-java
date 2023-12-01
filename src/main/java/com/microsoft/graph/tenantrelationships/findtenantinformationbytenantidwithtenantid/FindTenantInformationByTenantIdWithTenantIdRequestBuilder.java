@@ -56,7 +56,7 @@ public class FindTenantInformationByTenantIdWithTenantIdRequestBuilder extends B
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TenantInformation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TenantInformation::createFromDiscriminatorValue);
     }
     /**
      * Invoke function findTenantInformationByTenantId

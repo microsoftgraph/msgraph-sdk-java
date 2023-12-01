@@ -90,7 +90,7 @@ public class RoleAssignmentSchedulesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UnifiedRoleAssignmentScheduleCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleAssignmentScheduleCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to roleAssignmentSchedules for roleManagement
@@ -114,7 +114,7 @@ public class RoleAssignmentSchedulesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UnifiedRoleAssignmentSchedule::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleAssignmentSchedule::createFromDiscriminatorValue);
     }
     /**
      * Get the schedules for active role assignment operations. This API is available in the following national cloud deployments.

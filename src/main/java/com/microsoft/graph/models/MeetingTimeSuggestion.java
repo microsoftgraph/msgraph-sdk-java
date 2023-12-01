@@ -84,7 +84,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, BackedModel,
         deserializerMap.put("meetingTimeSlot", (n) -> { this.setMeetingTimeSlot(n.getObjectValue(TimeSlot::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("order", (n) -> { this.setOrder(n.getIntegerValue()); });
-        deserializerMap.put("organizerAvailability", (n) -> { this.setOrganizerAvailability(n.getEnumValue(FreeBusyStatus.class)); });
+        deserializerMap.put("organizerAvailability", (n) -> { this.setOrganizerAvailability(n.getEnumValue(FreeBusyStatus::forValue)); });
         deserializerMap.put("suggestionReason", (n) -> { this.setSuggestionReason(n.getStringValue()); });
         return deserializerMap;
     }

@@ -79,7 +79,7 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ActivityBasedTimeoutPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ActivityBasedTimeoutPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new activityBasedTimeoutPolicy object. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ActivityBasedTimeoutPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ActivityBasedTimeoutPolicy::createFromDiscriminatorValue);
     }
     /**
      * Get a list of activityBasedTimeoutPolicy objects. This API is available in the following national cloud deployments.

@@ -79,7 +79,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, EdiscoveryReviewSetQueryCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryReviewSetQueryCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new ediscoveryReviewSetQuery object. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, EdiscoveryReviewSetQuery::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryReviewSetQuery::createFromDiscriminatorValue);
     }
     /**
      * Get the list of queries associated with an eDiscovery review set. This API is available in the following national cloud deployments.

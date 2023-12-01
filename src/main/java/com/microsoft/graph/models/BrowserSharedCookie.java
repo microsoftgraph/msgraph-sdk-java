@@ -74,8 +74,8 @@ public class BrowserSharedCookie extends Entity implements Parsable {
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("path", (n) -> { this.setPath(n.getStringValue()); });
-        deserializerMap.put("sourceEnvironment", (n) -> { this.setSourceEnvironment(n.getEnumValue(BrowserSharedCookieSourceEnvironment.class)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(BrowserSharedCookieStatus.class)); });
+        deserializerMap.put("sourceEnvironment", (n) -> { this.setSourceEnvironment(n.getEnumValue(BrowserSharedCookieSourceEnvironment::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(BrowserSharedCookieStatus::forValue)); });
         return deserializerMap;
     }
     /**

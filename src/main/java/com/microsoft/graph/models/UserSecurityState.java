@@ -98,17 +98,17 @@ public class UserSecurityState implements AdditionalDataHolder, BackedModel, Par
         deserializerMap.put("aadUserId", (n) -> { this.setAadUserId(n.getStringValue()); });
         deserializerMap.put("accountName", (n) -> { this.setAccountName(n.getStringValue()); });
         deserializerMap.put("domainName", (n) -> { this.setDomainName(n.getStringValue()); });
-        deserializerMap.put("emailRole", (n) -> { this.setEmailRole(n.getEnumValue(EmailRole.class)); });
+        deserializerMap.put("emailRole", (n) -> { this.setEmailRole(n.getEnumValue(EmailRole::forValue)); });
         deserializerMap.put("isVpn", (n) -> { this.setIsVpn(n.getBooleanValue()); });
         deserializerMap.put("logonDateTime", (n) -> { this.setLogonDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("logonId", (n) -> { this.setLogonId(n.getStringValue()); });
         deserializerMap.put("logonIp", (n) -> { this.setLogonIp(n.getStringValue()); });
         deserializerMap.put("logonLocation", (n) -> { this.setLogonLocation(n.getStringValue()); });
-        deserializerMap.put("logonType", (n) -> { this.setLogonType(n.getEnumValue(LogonType.class)); });
+        deserializerMap.put("logonType", (n) -> { this.setLogonType(n.getEnumValue(LogonType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("onPremisesSecurityIdentifier", (n) -> { this.setOnPremisesSecurityIdentifier(n.getStringValue()); });
         deserializerMap.put("riskScore", (n) -> { this.setRiskScore(n.getStringValue()); });
-        deserializerMap.put("userAccountType", (n) -> { this.setUserAccountType(n.getEnumValue(UserAccountSecurityType.class)); });
+        deserializerMap.put("userAccountType", (n) -> { this.setUserAccountType(n.getEnumValue(UserAccountSecurityType::forValue)); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         return deserializerMap;
     }

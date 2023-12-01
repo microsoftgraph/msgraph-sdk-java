@@ -65,7 +65,7 @@ public class Parameter implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("values", (n) -> { this.setValues(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("valueType", (n) -> { this.setValueType(n.getEnumValue(ValueType.class)); });
+        deserializerMap.put("valueType", (n) -> { this.setValueType(n.getEnumValue(ValueType::forValue)); });
         return deserializerMap;
     }
     /**

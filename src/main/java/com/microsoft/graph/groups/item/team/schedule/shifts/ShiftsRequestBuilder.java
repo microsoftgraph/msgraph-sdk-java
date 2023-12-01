@@ -79,7 +79,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ShiftCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ShiftCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new shift instance in a schedule. The duration of a shift cannot be less than 1 minute or longer than 24 hours. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, Shift::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, Shift::createFromDiscriminatorValue);
     }
     /**
      * Get the list of shift instances in a schedule. This API is available in the following national cloud deployments.

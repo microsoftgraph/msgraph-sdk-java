@@ -78,10 +78,10 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
-        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(OnenotePatchActionType.class)); });
+        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(OnenotePatchActionType::forValue)); });
         deserializerMap.put("content", (n) -> { this.setContent(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("position", (n) -> { this.setPosition(n.getEnumValue(OnenotePatchInsertPosition.class)); });
+        deserializerMap.put("position", (n) -> { this.setPosition(n.getEnumValue(OnenotePatchInsertPosition::forValue)); });
         deserializerMap.put("target", (n) -> { this.setTarget(n.getStringValue()); });
         return deserializerMap;
     }

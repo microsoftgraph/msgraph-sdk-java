@@ -68,10 +68,10 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
         deserializerMap.put("deviceDisplayName", (n) -> { this.setDeviceDisplayName(n.getStringValue()); });
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
         deserializerMap.put("deviceModel", (n) -> { this.setDeviceModel(n.getStringValue()); });
-        deserializerMap.put("installStatus", (n) -> { this.setInstallStatus(n.getEnumValue(IosUpdatesInstallStatus.class)); });
+        deserializerMap.put("installStatus", (n) -> { this.setInstallStatus(n.getEnumValue(IosUpdatesInstallStatus::forValue)); });
         deserializerMap.put("lastReportedDateTime", (n) -> { this.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("osVersion", (n) -> { this.setOsVersion(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ComplianceStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ComplianceStatus::forValue)); });
         deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
         deserializerMap.put("userName", (n) -> { this.setUserName(n.getStringValue()); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });

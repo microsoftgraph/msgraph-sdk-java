@@ -76,7 +76,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
         deserializerMap.put("callId", (n) -> { this.setCallId(n.getStringValue()); });
         deserializerMap.put("callRecordingDisplayName", (n) -> { this.setCallRecordingDisplayName(n.getStringValue()); });
         deserializerMap.put("callRecordingDuration", (n) -> { this.setCallRecordingDuration(n.getPeriodAndDurationValue()); });
-        deserializerMap.put("callRecordingStatus", (n) -> { this.setCallRecordingStatus(n.getEnumValue(CallRecordingStatus.class)); });
+        deserializerMap.put("callRecordingStatus", (n) -> { this.setCallRecordingStatus(n.getEnumValue(CallRecordingStatus::forValue)); });
         deserializerMap.put("callRecordingUrl", (n) -> { this.setCallRecordingUrl(n.getStringValue()); });
         deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("meetingOrganizer", (n) -> { this.setMeetingOrganizer(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });

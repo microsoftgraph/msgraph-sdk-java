@@ -79,7 +79,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ExtensionPropertyCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ExtensionPropertyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new directory extension definition, represented by an extensionProperty object. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ExtensionProperty::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ExtensionProperty::createFromDiscriminatorValue);
     }
     /**
      * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application. This API is available in the following national cloud deployments.

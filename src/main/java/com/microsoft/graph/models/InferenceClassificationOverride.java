@@ -39,7 +39,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("classifyAs", (n) -> { this.setClassifyAs(n.getEnumValue(InferenceClassificationType.class)); });
+        deserializerMap.put("classifyAs", (n) -> { this.setClassifyAs(n.getEnumValue(InferenceClassificationType::forValue)); });
         deserializerMap.put("senderEmailAddress", (n) -> { this.setSenderEmailAddress(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
         return deserializerMap;
     }

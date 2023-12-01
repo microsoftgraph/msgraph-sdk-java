@@ -79,7 +79,7 @@ public class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, FeatureRolloutPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, FeatureRolloutPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new featureRolloutPolicy object. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, FeatureRolloutPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, FeatureRolloutPolicy::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of featureRolloutPolicy objects. This API is available in the following national cloud deployments.

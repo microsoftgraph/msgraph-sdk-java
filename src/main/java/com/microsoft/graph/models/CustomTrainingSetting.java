@@ -64,7 +64,7 @@ public class CustomTrainingSetting extends TrainingSetting implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getCollectionOfEnumValues(TrainingAssignedTo.class)); });
+        deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getCollectionOfEnumValues(TrainingAssignedTo::forValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("durationInMinutes", (n) -> { this.setDurationInMinutes(n.getIntegerValue()); });

@@ -78,7 +78,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("publishingState", (n) -> { this.setPublishingState(n.getEnumValue(TeamsAppPublishingState.class)); });
+        deserializerMap.put("publishingState", (n) -> { this.setPublishingState(n.getEnumValue(TeamsAppPublishingState::forValue)); });
         deserializerMap.put("shortDescription", (n) -> { this.setShortDescription(n.getStringValue()); });
         deserializerMap.put("teamsAppId", (n) -> { this.setTeamsAppId(n.getStringValue()); });
         deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });

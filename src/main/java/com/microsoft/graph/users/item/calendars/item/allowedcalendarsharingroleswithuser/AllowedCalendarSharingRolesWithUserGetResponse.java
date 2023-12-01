@@ -33,7 +33,7 @@ public class AllowedCalendarSharingRolesWithUserGetResponse extends BaseCollecti
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfEnumValues(CalendarRoleType.class)); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfEnumValues(CalendarRoleType::forValue)); });
         return deserializerMap;
     }
     /**

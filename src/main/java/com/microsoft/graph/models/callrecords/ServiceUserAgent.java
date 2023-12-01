@@ -32,7 +32,7 @@ public class ServiceUserAgent extends UserAgent implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("role", (n) -> { this.setRole(n.getEnumValue(ServiceRole.class)); });
+        deserializerMap.put("role", (n) -> { this.setRole(n.getEnumValue(ServiceRole::forValue)); });
         return deserializerMap;
     }
     /**

@@ -79,7 +79,7 @@ public class PasswordMethodsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PasswordAuthenticationMethodCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PasswordAuthenticationMethodCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to passwordMethods for users
@@ -103,7 +103,7 @@ public class PasswordMethodsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PasswordAuthenticationMethod::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PasswordAuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of the passwords registered to a user, represented by a passwordAuthenticationMethod object. This API returns exactly one object, as a user can have exactly one password. For security, the password itself will never be returned in the object and the password property is always null. This API is available in the following national cloud deployments.

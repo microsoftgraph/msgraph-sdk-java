@@ -33,7 +33,7 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("location", (n) -> { this.setLocation(n.getStringValue()); });
-        deserializerMap.put("locationType", (n) -> { this.setLocationType(n.getEnumValue(GoogleCloudLocationType.class)); });
+        deserializerMap.put("locationType", (n) -> { this.setLocationType(n.getEnumValue(GoogleCloudLocationType::forValue)); });
         deserializerMap.put("projectId", (n) -> { this.setProjectId(n.getStringValue()); });
         deserializerMap.put("projectNumber", (n) -> { this.setProjectNumber(n.getLongValue()); });
         deserializerMap.put("resourceName", (n) -> { this.setResourceName(n.getStringValue()); });

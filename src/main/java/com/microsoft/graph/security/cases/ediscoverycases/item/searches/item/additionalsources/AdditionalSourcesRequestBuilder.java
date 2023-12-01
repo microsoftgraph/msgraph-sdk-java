@@ -79,7 +79,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DataSourceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DataSourceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new additional source associated with an eDiscovery search. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DataSource::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DataSource::createFromDiscriminatorValue);
     }
     /**
      * Get the list of additional sources associated with an eDiscovery search. This API is available in the following national cloud deployments.

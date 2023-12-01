@@ -59,19 +59,19 @@ public class ManagedAppPoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/managedAppPolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the targetedManagedAppProtection objects.
+     * List properties and relationships of the windowsInformationProtection objects.
      * @return a ManagedAppPolicyCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedappprotection-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedAppPolicyCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the targetedManagedAppProtection objects.
+     * List properties and relationships of the windowsInformationProtection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ManagedAppPolicyCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedappprotection-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedAppPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ManagedAppPoliciesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ManagedAppPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ManagedAppPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to managedAppPolicies for deviceAppManagement
@@ -103,10 +103,10 @@ public class ManagedAppPoliciesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ManagedAppPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ManagedAppPolicy::createFromDiscriminatorValue);
     }
     /**
-     * List properties and relationships of the targetedManagedAppProtection objects.
+     * List properties and relationships of the windowsInformationProtection objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class ManagedAppPoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the targetedManagedAppProtection objects.
+     * List properties and relationships of the windowsInformationProtection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class ManagedAppPoliciesRequestBuilder extends BaseRequestBuilder {
         return new ManagedAppPoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the targetedManagedAppProtection objects.
+     * List properties and relationships of the windowsInformationProtection objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -77,7 +77,7 @@ public class FilesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AgreementFileLocalizationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AgreementFileLocalizationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new localized agreement file. This API is available in the following national cloud deployments.
@@ -103,7 +103,7 @@ public class FilesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AgreementFileLocalization::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AgreementFileLocalization::createFromDiscriminatorValue);
     }
     /**
      * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.

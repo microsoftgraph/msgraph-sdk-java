@@ -82,7 +82,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Back
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("blockCrossOrganizationWriteAccess", (n) -> { this.setBlockCrossOrganizationWriteAccess(n.getBooleanValue()); });
-        deserializerMap.put("encryptionMethod", (n) -> { this.setEncryptionMethod(n.getEnumValue(BitLockerEncryptionMethod.class)); });
+        deserializerMap.put("encryptionMethod", (n) -> { this.setEncryptionMethod(n.getEnumValue(BitLockerEncryptionMethod::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("requireEncryptionForWriteAccess", (n) -> { this.setRequireEncryptionForWriteAccess(n.getBooleanValue()); });
         return deserializerMap;

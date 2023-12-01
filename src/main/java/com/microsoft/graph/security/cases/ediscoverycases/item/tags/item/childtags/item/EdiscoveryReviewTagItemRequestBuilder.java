@@ -55,7 +55,7 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, EdiscoveryReviewTag::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryReviewTag::createFromDiscriminatorValue);
     }
     /**
      * Returns the tags that are a child of a tag.

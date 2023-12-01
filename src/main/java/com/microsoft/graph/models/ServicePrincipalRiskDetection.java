@@ -88,26 +88,26 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("activity", (n) -> { this.setActivity(n.getEnumValue(ActivityType.class)); });
+        deserializerMap.put("activity", (n) -> { this.setActivity(n.getEnumValue(ActivityType::forValue)); });
         deserializerMap.put("activityDateTime", (n) -> { this.setActivityDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("additionalInfo", (n) -> { this.setAdditionalInfo(n.getStringValue()); });
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
         deserializerMap.put("correlationId", (n) -> { this.setCorrelationId(n.getStringValue()); });
         deserializerMap.put("detectedDateTime", (n) -> { this.setDetectedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("detectionTimingType", (n) -> { this.setDetectionTimingType(n.getEnumValue(RiskDetectionTimingType.class)); });
+        deserializerMap.put("detectionTimingType", (n) -> { this.setDetectionTimingType(n.getEnumValue(RiskDetectionTimingType::forValue)); });
         deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
         deserializerMap.put("keyIds", (n) -> { this.setKeyIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("location", (n) -> { this.setLocation(n.getObjectValue(SignInLocation::createFromDiscriminatorValue)); });
         deserializerMap.put("requestId", (n) -> { this.setRequestId(n.getStringValue()); });
-        deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(RiskDetail.class)); });
+        deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(RiskDetail::forValue)); });
         deserializerMap.put("riskEventType", (n) -> { this.setRiskEventType(n.getStringValue()); });
-        deserializerMap.put("riskLevel", (n) -> { this.setRiskLevel(n.getEnumValue(RiskLevel.class)); });
-        deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(RiskState.class)); });
+        deserializerMap.put("riskLevel", (n) -> { this.setRiskLevel(n.getEnumValue(RiskLevel::forValue)); });
+        deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(RiskState::forValue)); });
         deserializerMap.put("servicePrincipalDisplayName", (n) -> { this.setServicePrincipalDisplayName(n.getStringValue()); });
         deserializerMap.put("servicePrincipalId", (n) -> { this.setServicePrincipalId(n.getStringValue()); });
         deserializerMap.put("source", (n) -> { this.setSource(n.getStringValue()); });
-        deserializerMap.put("tokenIssuerType", (n) -> { this.setTokenIssuerType(n.getEnumValue(TokenIssuerType.class)); });
+        deserializerMap.put("tokenIssuerType", (n) -> { this.setTokenIssuerType(n.getEnumValue(TokenIssuerType::forValue)); });
         return deserializerMap;
     }
     /**

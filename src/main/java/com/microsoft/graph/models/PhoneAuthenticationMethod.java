@@ -33,8 +33,8 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("phoneNumber", (n) -> { this.setPhoneNumber(n.getStringValue()); });
-        deserializerMap.put("phoneType", (n) -> { this.setPhoneType(n.getEnumValue(AuthenticationPhoneType.class)); });
-        deserializerMap.put("smsSignInState", (n) -> { this.setSmsSignInState(n.getEnumValue(AuthenticationMethodSignInState.class)); });
+        deserializerMap.put("phoneType", (n) -> { this.setPhoneType(n.getEnumValue(AuthenticationPhoneType::forValue)); });
+        deserializerMap.put("smsSignInState", (n) -> { this.setSmsSignInState(n.getEnumValue(AuthenticationMethodSignInState::forValue)); });
         return deserializerMap;
     }
     /**

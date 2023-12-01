@@ -48,7 +48,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("childSelectability", (n) -> { this.setChildSelectability(n.getEnumValue(ChildSelectability.class)); });
+        deserializerMap.put("childSelectability", (n) -> { this.setChildSelectability(n.getEnumValue(ChildSelectability::forValue)); });
         deserializerMap.put("childTags", (n) -> { this.setChildTags(n.getCollectionOfObjectValues(EdiscoveryReviewTag::createFromDiscriminatorValue)); });
         deserializerMap.put("parent", (n) -> { this.setParent(n.getObjectValue(EdiscoveryReviewTag::createFromDiscriminatorValue)); });
         return deserializerMap;

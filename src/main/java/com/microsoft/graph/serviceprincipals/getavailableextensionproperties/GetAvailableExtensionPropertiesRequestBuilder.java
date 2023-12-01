@@ -58,7 +58,7 @@ public class GetAvailableExtensionPropertiesRequestBuilder extends BaseRequestBu
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, GetAvailableExtensionPropertiesPostResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, GetAvailableExtensionPropertiesPostResponse::createFromDiscriminatorValue);
     }
     /**
      * Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties: This API is available in the following national cloud deployments.

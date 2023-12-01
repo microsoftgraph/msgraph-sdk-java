@@ -65,7 +65,7 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendCollection(requestInfo, SynchronizationSecretKeyStringValuePair::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendCollection(requestInfo, errorMapping, SynchronizationSecretKeyStringValuePair::createFromDiscriminatorValue);
     }
     /**
      * Update property secrets value.

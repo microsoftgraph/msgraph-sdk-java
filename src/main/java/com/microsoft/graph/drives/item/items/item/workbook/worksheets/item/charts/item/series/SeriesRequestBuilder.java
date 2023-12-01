@@ -62,7 +62,7 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of chartseries objects. This API is available in the following national cloud deployments.
      * @return a WorkbookChartSeriesCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/chartseries-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chart-list-series?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookChartSeriesCollectionResponse get() {
@@ -72,7 +72,7 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of chartseries objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookChartSeriesCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/chartseries-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chart-list-series?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookChartSeriesCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -80,7 +80,7 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, WorkbookChartSeriesCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, WorkbookChartSeriesCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Provides operations to call the itemAt method.
@@ -116,7 +116,7 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, WorkbookChartSeries::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, WorkbookChartSeries::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of chartseries objects. This API is available in the following national cloud deployments.

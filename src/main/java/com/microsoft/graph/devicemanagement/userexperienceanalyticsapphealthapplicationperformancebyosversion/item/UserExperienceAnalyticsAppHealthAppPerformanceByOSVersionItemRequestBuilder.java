@@ -51,7 +51,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionItemReques
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * User experience analytics appHealth Application Performance by OS Version
@@ -72,7 +72,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionItemReques
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion in deviceManagement
@@ -96,7 +96,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionItemReques
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion for deviceManagement

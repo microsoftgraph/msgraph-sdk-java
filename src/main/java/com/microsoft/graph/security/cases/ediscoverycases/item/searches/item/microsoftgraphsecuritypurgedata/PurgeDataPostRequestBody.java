@@ -65,8 +65,8 @@ public class PurgeDataPostRequestBody implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("purgeAreas", (n) -> { this.setPurgeAreas(n.getEnumSetValue(PurgeAreas.class)); });
-        deserializerMap.put("purgeType", (n) -> { this.setPurgeType(n.getEnumValue(PurgeType.class)); });
+        deserializerMap.put("purgeAreas", (n) -> { this.setPurgeAreas(n.getEnumSetValue(PurgeAreas::forValue)); });
+        deserializerMap.put("purgeType", (n) -> { this.setPurgeType(n.getEnumValue(PurgeType::forValue)); });
         return deserializerMap;
     }
     /**

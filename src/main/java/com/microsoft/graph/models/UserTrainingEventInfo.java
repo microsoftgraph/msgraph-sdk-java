@@ -71,7 +71,7 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel,
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("latestTrainingStatus", (n) -> { this.setLatestTrainingStatus(n.getEnumValue(TrainingStatus.class)); });
+        deserializerMap.put("latestTrainingStatus", (n) -> { this.setLatestTrainingStatus(n.getEnumValue(TrainingStatus::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("trainingAssignedProperties", (n) -> { this.setTrainingAssignedProperties(n.getObjectValue(UserTrainingContentEventInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("trainingCompletedProperties", (n) -> { this.setTrainingCompletedProperties(n.getObjectValue(UserTrainingContentEventInfo::createFromDiscriminatorValue)); });

@@ -63,7 +63,7 @@ public class ChangeScreenSharingRolePostRequestBody implements AdditionalDataHol
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
-        deserializerMap.put("role", (n) -> { this.setRole(n.getEnumValue(ScreenSharingRole.class)); });
+        deserializerMap.put("role", (n) -> { this.setRole(n.getEnumValue(ScreenSharingRole::forValue)); });
         return deserializerMap;
     }
     /**

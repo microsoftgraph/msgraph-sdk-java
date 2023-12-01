@@ -79,7 +79,7 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, NamedLocationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, NamedLocationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new namedLocation object. Named locations can be either ipNamedLocation or countryNamedLocation objects. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, NamedLocation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, NamedLocation::createFromDiscriminatorValue);
     }
     /**
      * Get a list of namedLocation objects. This API is available in the following national cloud deployments.

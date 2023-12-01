@@ -86,7 +86,7 @@ public class OAuthConsentAppDetail implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("appScope", (n) -> { this.setAppScope(n.getEnumValue(OAuthAppScope.class)); });
+        deserializerMap.put("appScope", (n) -> { this.setAppScope(n.getEnumValue(OAuthAppScope::forValue)); });
         deserializerMap.put("displayLogo", (n) -> { this.setDisplayLogo(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });

@@ -62,7 +62,7 @@ public class AttributeDefinitionMetadataEntry implements AdditionalDataHolder, B
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("key", (n) -> { this.setKey(n.getEnumValue(AttributeDefinitionMetadata.class)); });
+        deserializerMap.put("key", (n) -> { this.setKey(n.getEnumValue(AttributeDefinitionMetadata::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("value", (n) -> { this.setValue(n.getStringValue()); });
         return deserializerMap;

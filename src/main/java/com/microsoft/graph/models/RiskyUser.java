@@ -42,10 +42,10 @@ public class RiskyUser extends Entity implements Parsable {
         deserializerMap.put("history", (n) -> { this.setHistory(n.getCollectionOfObjectValues(RiskyUserHistoryItem::createFromDiscriminatorValue)); });
         deserializerMap.put("isDeleted", (n) -> { this.setIsDeleted(n.getBooleanValue()); });
         deserializerMap.put("isProcessing", (n) -> { this.setIsProcessing(n.getBooleanValue()); });
-        deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(RiskDetail.class)); });
+        deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(RiskDetail::forValue)); });
         deserializerMap.put("riskLastUpdatedDateTime", (n) -> { this.setRiskLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("riskLevel", (n) -> { this.setRiskLevel(n.getEnumValue(RiskLevel.class)); });
-        deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(RiskState.class)); });
+        deserializerMap.put("riskLevel", (n) -> { this.setRiskLevel(n.getEnumValue(RiskLevel::forValue)); });
+        deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(RiskState::forValue)); });
         deserializerMap.put("userDisplayName", (n) -> { this.setUserDisplayName(n.getStringValue()); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         return deserializerMap;

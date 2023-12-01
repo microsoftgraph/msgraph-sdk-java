@@ -59,7 +59,7 @@ public class UpdateRecordingStatusRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UpdateRecordingStatusOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UpdateRecordingStatusOperation::createFromDiscriminatorValue);
     }
     /**
      * Update the application's recording status associated with a call. This requires the use of the Teams policy-based recording solution. This API is available in the following national cloud deployments.

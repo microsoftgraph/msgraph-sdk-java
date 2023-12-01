@@ -71,9 +71,9 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("contentSharingDisabled", (n) -> { this.setContentSharingDisabled(n.getEnumSetValue(OnlineMeetingContentSharingDisabledReason.class)); });
+        deserializerMap.put("contentSharingDisabled", (n) -> { this.setContentSharingDisabled(n.getEnumSetValue(OnlineMeetingContentSharingDisabledReason::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("videoDisabled", (n) -> { this.setVideoDisabled(n.getEnumSetValue(OnlineMeetingVideoDisabledReason.class)); });
+        deserializerMap.put("videoDisabled", (n) -> { this.setVideoDisabled(n.getEnumSetValue(OnlineMeetingVideoDisabledReason::forValue)); });
         return deserializerMap;
     }
     /**

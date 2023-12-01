@@ -65,7 +65,7 @@ public class CallRoute implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("final", (n) -> { this.setFinal(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("original", (n) -> { this.setOriginal(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-        deserializerMap.put("routingType", (n) -> { this.setRoutingType(n.getEnumValue(RoutingType.class)); });
+        deserializerMap.put("routingType", (n) -> { this.setRoutingType(n.getEnumValue(RoutingType::forValue)); });
         return deserializerMap;
     }
     /**

@@ -83,7 +83,7 @@ public class ScheduleEntity implements AdditionalDataHolder, BackedModel, Parsab
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("theme", (n) -> { this.setTheme(n.getEnumValue(ScheduleEntityTheme.class)); });
+        deserializerMap.put("theme", (n) -> { this.setTheme(n.getEnumValue(ScheduleEntityTheme::forValue)); });
         return deserializerMap;
     }
     /**

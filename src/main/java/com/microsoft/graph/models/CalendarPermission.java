@@ -47,11 +47,11 @@ public class CalendarPermission extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("allowedRoles", (n) -> { this.setAllowedRoles(n.getCollectionOfEnumValues(CalendarRoleType.class)); });
+        deserializerMap.put("allowedRoles", (n) -> { this.setAllowedRoles(n.getCollectionOfEnumValues(CalendarRoleType::forValue)); });
         deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
         deserializerMap.put("isInsideOrganization", (n) -> { this.setIsInsideOrganization(n.getBooleanValue()); });
         deserializerMap.put("isRemovable", (n) -> { this.setIsRemovable(n.getBooleanValue()); });
-        deserializerMap.put("role", (n) -> { this.setRole(n.getEnumValue(CalendarRoleType.class)); });
+        deserializerMap.put("role", (n) -> { this.setRole(n.getEnumValue(CalendarRoleType::forValue)); });
         return deserializerMap;
     }
     /**

@@ -53,7 +53,7 @@ public class DeviceConfigurationUserStatusItemRequestBuilder extends BaseRequest
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read properties and relationships of the deviceConfigurationUserStatus object.
@@ -76,7 +76,7 @@ public class DeviceConfigurationUserStatusItemRequestBuilder extends BaseRequest
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceConfigurationUserStatus::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceConfigurationUserStatus::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of a deviceConfigurationUserStatus object.
@@ -102,7 +102,7 @@ public class DeviceConfigurationUserStatusItemRequestBuilder extends BaseRequest
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceConfigurationUserStatus::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceConfigurationUserStatus::createFromDiscriminatorValue);
     }
     /**
      * Deletes a deviceConfigurationUserStatus.

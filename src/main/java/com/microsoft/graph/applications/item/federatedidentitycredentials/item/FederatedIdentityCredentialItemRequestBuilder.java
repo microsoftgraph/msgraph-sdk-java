@@ -53,7 +53,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read the properties and relationships of a federatedIdentityCredential object. This API is available in the following national cloud deployments.
@@ -76,7 +76,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, FederatedIdentityCredential::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, FederatedIdentityCredential::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of a federatedIdentityCredential object. This API is available in the following national cloud deployments.
@@ -102,7 +102,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, FederatedIdentityCredential::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, FederatedIdentityCredential::createFromDiscriminatorValue);
     }
     /**
      * Delete a federatedIdentityCredential object from an application. This API is available in the following national cloud deployments.

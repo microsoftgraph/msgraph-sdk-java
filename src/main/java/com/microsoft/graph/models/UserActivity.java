@@ -115,7 +115,7 @@ public class UserActivity extends Entity implements Parsable {
         deserializerMap.put("fallbackUrl", (n) -> { this.setFallbackUrl(n.getStringValue()); });
         deserializerMap.put("historyItems", (n) -> { this.setHistoryItems(n.getCollectionOfObjectValues(ActivityHistoryItem::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(Status.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(Status::forValue)); });
         deserializerMap.put("userTimezone", (n) -> { this.setUserTimezone(n.getStringValue()); });
         deserializerMap.put("visualElements", (n) -> { this.setVisualElements(n.getObjectValue(VisualInfo::createFromDiscriminatorValue)); });
         return deserializerMap;

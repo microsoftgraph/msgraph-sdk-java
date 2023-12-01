@@ -77,7 +77,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read the properties and relationships of an authenticationStrengthPolicy object. This API is available in the following national cloud deployments.
@@ -100,7 +100,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AuthenticationStrengthPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationStrengthPolicy::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of an authenticationStrengthPolicy object. You cannot update the allowed auth method combinations using this request. To do so, use the Update allowed combinations action. This API is available in the following national cloud deployments.
@@ -126,7 +126,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AuthenticationStrengthPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationStrengthPolicy::createFromDiscriminatorValue);
     }
     /**
      * Delete a custom authenticationStrengthPolicy object. This API is available in the following national cloud deployments.

@@ -107,7 +107,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
         deserializerMap.put("deviceManufacturer", (n) -> { this.setDeviceManufacturer(n.getStringValue()); });
         deserializerMap.put("deviceModel", (n) -> { this.setDeviceModel(n.getStringValue()); });
-        deserializerMap.put("healthStatus", (n) -> { this.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState.class)); });
+        deserializerMap.put("healthStatus", (n) -> { this.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState::forValue)); });
         deserializerMap.put("meanTimeToFailureInMinutes", (n) -> { this.setMeanTimeToFailureInMinutes(n.getIntegerValue()); });
         deserializerMap.put("processedDateTime", (n) -> { this.setProcessedDateTime(n.getOffsetDateTimeValue()); });
         return deserializerMap;

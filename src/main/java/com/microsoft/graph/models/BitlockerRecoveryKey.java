@@ -51,7 +51,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
         deserializerMap.put("key", (n) -> { this.setKey(n.getStringValue()); });
-        deserializerMap.put("volumeType", (n) -> { this.setVolumeType(n.getEnumValue(VolumeType.class)); });
+        deserializerMap.put("volumeType", (n) -> { this.setVolumeType(n.getEnumValue(VolumeType::forValue)); });
         return deserializerMap;
     }
     /**

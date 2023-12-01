@@ -79,7 +79,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, FederatedIdentityCredentialCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, FederatedIdentityCredentialCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new federatedIdentityCredential object for an application. By configuring a trust relationship between your Microsoft Entra application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, FederatedIdentityCredential::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, FederatedIdentityCredential::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the federatedIdentityCredential objects and their properties. This API is available in the following national cloud deployments.

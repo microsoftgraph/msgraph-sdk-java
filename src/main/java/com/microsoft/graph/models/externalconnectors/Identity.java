@@ -32,7 +32,7 @@ public class Identity extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(IdentityType.class)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(IdentityType::forValue)); });
         return deserializerMap;
     }
     /**

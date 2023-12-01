@@ -159,7 +159,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Read properties and relationships of the deviceAppManagement object.
      * @return a DeviceAppManagement
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-deviceappmanagement-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceappmanagement-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceAppManagement get() {
@@ -169,7 +169,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
      * Read properties and relationships of the deviceAppManagement object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DeviceAppManagement
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-deviceappmanagement-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceappmanagement-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceAppManagement get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -177,13 +177,13 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceAppManagement::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceAppManagement::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of a deviceAppManagement object.
      * @param body The request body
      * @return a DeviceAppManagement
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-unlock-deviceappmanagement-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-deviceappmanagement-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceAppManagement patch(@jakarta.annotation.Nonnull final DeviceAppManagement body) {
@@ -194,7 +194,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DeviceAppManagement
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-unlock-deviceappmanagement-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-deviceappmanagement-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceAppManagement patch(@jakarta.annotation.Nonnull final DeviceAppManagement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -203,7 +203,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceAppManagement::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceAppManagement::createFromDiscriminatorValue);
     }
     /**
      * Read properties and relationships of the deviceAppManagement object.

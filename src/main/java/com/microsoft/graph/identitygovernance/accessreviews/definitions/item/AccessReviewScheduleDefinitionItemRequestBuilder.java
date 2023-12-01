@@ -69,7 +69,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API. This API is available in the following national cloud deployments.
@@ -92,7 +92,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AccessReviewScheduleDefinition::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewScheduleDefinition::createFromDiscriminatorValue);
     }
     /**
      * Update an existing accessReviewScheduleDefinition object to change one or more of its properties.
@@ -118,7 +118,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AccessReviewScheduleDefinition::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewScheduleDefinition::createFromDiscriminatorValue);
     }
     /**
      * Deletes an accessReviewScheduleDefinition object. This API is available in the following national cloud deployments.

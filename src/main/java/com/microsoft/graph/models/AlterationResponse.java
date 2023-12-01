@@ -65,7 +65,7 @@ public class AlterationResponse implements AdditionalDataHolder, BackedModel, Pa
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("originalQueryString", (n) -> { this.setOriginalQueryString(n.getStringValue()); });
         deserializerMap.put("queryAlteration", (n) -> { this.setQueryAlteration(n.getObjectValue(SearchAlteration::createFromDiscriminatorValue)); });
-        deserializerMap.put("queryAlterationType", (n) -> { this.setQueryAlterationType(n.getEnumValue(SearchAlterationType.class)); });
+        deserializerMap.put("queryAlterationType", (n) -> { this.setQueryAlterationType(n.getEnumValue(SearchAlterationType::forValue)); });
         return deserializerMap;
     }
     /**

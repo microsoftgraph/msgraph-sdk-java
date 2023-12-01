@@ -79,7 +79,7 @@ public class AuthenticationContextClassReferencesRequestBuilder extends BaseRequ
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AuthenticationContextClassReferenceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationContextClassReferenceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to authenticationContextClassReferences for identity
@@ -103,7 +103,7 @@ public class AuthenticationContextClassReferencesRequestBuilder extends BaseRequ
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AuthenticationContextClassReference::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationContextClassReference::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of authenticationContextClassReference objects. This API is available in the following national cloud deployments.

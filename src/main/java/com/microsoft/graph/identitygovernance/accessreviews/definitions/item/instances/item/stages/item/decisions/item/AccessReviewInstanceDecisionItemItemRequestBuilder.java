@@ -59,7 +59,7 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read the properties and relationships of an accessReviewInstanceDecisionItem object. This API is available in the following national cloud deployments.
@@ -82,7 +82,7 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AccessReviewInstanceDecisionItem::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewInstanceDecisionItem::createFromDiscriminatorValue);
     }
     /**
      * Update access decisions, known as accessReviewInstanceDecisionItems, for which the user is the reviewer. This API is available in the following national cloud deployments.
@@ -108,7 +108,7 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AccessReviewInstanceDecisionItem::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewInstanceDecisionItem::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property decisions for identityGovernance

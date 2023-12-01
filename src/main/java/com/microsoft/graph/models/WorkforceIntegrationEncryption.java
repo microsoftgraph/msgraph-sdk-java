@@ -63,7 +63,7 @@ public class WorkforceIntegrationEncryption implements AdditionalDataHolder, Bac
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("protocol", (n) -> { this.setProtocol(n.getEnumValue(WorkforceIntegrationEncryptionProtocol.class)); });
+        deserializerMap.put("protocol", (n) -> { this.setProtocol(n.getEnumValue(WorkforceIntegrationEncryptionProtocol::forValue)); });
         deserializerMap.put("secret", (n) -> { this.setSecret(n.getStringValue()); });
         return deserializerMap;
     }

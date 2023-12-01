@@ -53,7 +53,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve the properties and relationships of a conditionalAccessPolicy object. This API is available in the following national cloud deployments.
@@ -76,7 +76,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ConditionalAccessPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ConditionalAccessPolicy::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of a conditionalAccessPolicy object. This API is available in the following national cloud deployments.
@@ -102,7 +102,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ConditionalAccessPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ConditionalAccessPolicy::createFromDiscriminatorValue);
     }
     /**
      * Delete a conditionalAccessPolicy object. This API is available in the following national cloud deployments.

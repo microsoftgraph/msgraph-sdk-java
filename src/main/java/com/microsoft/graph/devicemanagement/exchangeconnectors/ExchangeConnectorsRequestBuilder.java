@@ -79,7 +79,7 @@ public class ExchangeConnectorsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceManagementExchangeConnectorCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementExchangeConnectorCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new deviceManagementExchangeConnector object.
@@ -105,7 +105,7 @@ public class ExchangeConnectorsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceManagementExchangeConnector::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementExchangeConnector::createFromDiscriminatorValue);
     }
     /**
      * List properties and relationships of the deviceManagementExchangeConnector objects.

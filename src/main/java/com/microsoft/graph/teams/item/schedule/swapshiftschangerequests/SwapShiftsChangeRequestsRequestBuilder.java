@@ -79,7 +79,7 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SwapShiftsChangeRequestCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SwapShiftsChangeRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create an instance of a swapShiftsChangeRequest object. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SwapShiftsChangeRequest::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SwapShiftsChangeRequest::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of swapShiftsChangeRequest objects in the team. This API is available in the following national cloud deployments.

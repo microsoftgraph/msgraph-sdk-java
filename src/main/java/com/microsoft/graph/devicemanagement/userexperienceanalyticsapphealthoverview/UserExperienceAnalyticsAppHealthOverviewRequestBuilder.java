@@ -59,7 +59,7 @@ public class UserExperienceAnalyticsAppHealthOverviewRequestBuilder extends Base
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * User experience analytics appHealth overview
@@ -80,7 +80,7 @@ public class UserExperienceAnalyticsAppHealthOverviewRequestBuilder extends Base
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsCategory::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsCategory::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property userExperienceAnalyticsAppHealthOverview in deviceManagement
@@ -104,7 +104,7 @@ public class UserExperienceAnalyticsAppHealthOverviewRequestBuilder extends Base
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsCategory::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsCategory::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property userExperienceAnalyticsAppHealthOverview for deviceManagement

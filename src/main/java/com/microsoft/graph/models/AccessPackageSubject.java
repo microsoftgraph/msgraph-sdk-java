@@ -61,7 +61,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
         deserializerMap.put("objectId", (n) -> { this.setObjectId(n.getStringValue()); });
         deserializerMap.put("onPremisesSecurityIdentifier", (n) -> { this.setOnPremisesSecurityIdentifier(n.getStringValue()); });
         deserializerMap.put("principalName", (n) -> { this.setPrincipalName(n.getStringValue()); });
-        deserializerMap.put("subjectType", (n) -> { this.setSubjectType(n.getEnumValue(AccessPackageSubjectType.class)); });
+        deserializerMap.put("subjectType", (n) -> { this.setSubjectType(n.getEnumValue(AccessPackageSubjectType::forValue)); });
         return deserializerMap;
     }
     /**

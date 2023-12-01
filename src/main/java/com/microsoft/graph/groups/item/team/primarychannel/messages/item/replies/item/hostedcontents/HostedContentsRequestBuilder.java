@@ -59,7 +59,7 @@ public class HostedContentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/primaryChannel/messages/{chatMessage%2Did}/replies/{chatMessage%2Did1}/hostedContents{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the list of chatMessageHostedContent objects from a message. This API only lists the hosted content objects. To get the content bytes, see get chatmessage hosted content This API is available in the following national cloud deployments. The following tables show the least privileged permission or permissions required to call this API on each supported resource type. Follow best practices to request least privileged permissions. For details about delegated and application permissions, see Permission types. To learn more about these permissions, see thepermissions reference.
+     * Retrieve the list of chatMessageHostedContent objects from a message. This API only lists the hosted content objects. To get the content bytes, see get chatmessage hosted content This API is available in the following national cloud deployments.
      * @return a ChatMessageHostedContentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-list-hostedcontents?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class HostedContentsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the list of chatMessageHostedContent objects from a message. This API only lists the hosted content objects. To get the content bytes, see get chatmessage hosted content This API is available in the following national cloud deployments. The following tables show the least privileged permission or permissions required to call this API on each supported resource type. Follow best practices to request least privileged permissions. For details about delegated and application permissions, see Permission types. To learn more about these permissions, see thepermissions reference.
+     * Retrieve the list of chatMessageHostedContent objects from a message. This API only lists the hosted content objects. To get the content bytes, see get chatmessage hosted content This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ChatMessageHostedContentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-list-hostedcontents?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class HostedContentsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ChatMessageHostedContentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ChatMessageHostedContentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to hostedContents for groups
@@ -103,10 +103,10 @@ public class HostedContentsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ChatMessageHostedContent::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ChatMessageHostedContent::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the list of chatMessageHostedContent objects from a message. This API only lists the hosted content objects. To get the content bytes, see get chatmessage hosted content This API is available in the following national cloud deployments. The following tables show the least privileged permission or permissions required to call this API on each supported resource type. Follow best practices to request least privileged permissions. For details about delegated and application permissions, see Permission types. To learn more about these permissions, see thepermissions reference.
+     * Retrieve the list of chatMessageHostedContent objects from a message. This API only lists the hosted content objects. To get the content bytes, see get chatmessage hosted content This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class HostedContentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the list of chatMessageHostedContent objects from a message. This API only lists the hosted content objects. To get the content bytes, see get chatmessage hosted content This API is available in the following national cloud deployments. The following tables show the least privileged permission or permissions required to call this API on each supported resource type. Follow best practices to request least privileged permissions. For details about delegated and application permissions, see Permission types. To learn more about these permissions, see thepermissions reference.
+     * Retrieve the list of chatMessageHostedContent objects from a message. This API only lists the hosted content objects. To get the content bytes, see get chatmessage hosted content This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class HostedContentsRequestBuilder extends BaseRequestBuilder {
         return new HostedContentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the list of chatMessageHostedContent objects from a message. This API only lists the hosted content objects. To get the content bytes, see get chatmessage hosted content This API is available in the following national cloud deployments. The following tables show the least privileged permission or permissions required to call this API on each supported resource type. Follow best practices to request least privileged permissions. For details about delegated and application permissions, see Permission types. To learn more about these permissions, see thepermissions reference.
+     * Retrieve the list of chatMessageHostedContent objects from a message. This API only lists the hosted content objects. To get the content bytes, see get chatmessage hosted content This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

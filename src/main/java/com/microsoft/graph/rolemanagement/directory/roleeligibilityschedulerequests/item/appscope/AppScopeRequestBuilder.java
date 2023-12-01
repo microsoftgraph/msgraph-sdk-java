@@ -55,7 +55,7 @@ public class AppScopeRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AppScope::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AppScope::createFromDiscriminatorValue);
     }
     /**
      * Read-only property with details of the app-specific scope when the role eligibility is scoped to an app. Nullable. Supports $expand.

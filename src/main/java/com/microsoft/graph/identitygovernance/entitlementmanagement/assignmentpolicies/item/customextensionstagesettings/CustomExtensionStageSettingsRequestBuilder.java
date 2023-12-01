@@ -77,7 +77,7 @@ public class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuild
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, CustomExtensionStageSettingCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, CustomExtensionStageSettingCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to customExtensionStageSettings for identityGovernance
@@ -101,7 +101,7 @@ public class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuild
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, CustomExtensionStageSetting::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, CustomExtensionStageSetting::createFromDiscriminatorValue);
     }
     /**
      * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.

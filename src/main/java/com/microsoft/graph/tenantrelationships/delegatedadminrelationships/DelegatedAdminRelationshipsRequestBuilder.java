@@ -79,7 +79,7 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DelegatedAdminRelationshipCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminRelationshipCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new delegatedAdminRelationship object. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DelegatedAdminRelationship::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminRelationship::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the delegatedAdminRelationship objects and their properties. This API is available in the following national cloud deployments.

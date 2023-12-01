@@ -79,7 +79,7 @@ public class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, EdiscoveryCaseCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryCaseCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new ediscoveryCase object. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, EdiscoveryCase::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryCase::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the ediscoveryCase objects and their properties. This API is available in the following national cloud deployments.

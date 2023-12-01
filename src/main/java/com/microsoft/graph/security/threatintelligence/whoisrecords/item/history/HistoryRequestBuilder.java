@@ -78,7 +78,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, WhoisHistoryRecordCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, WhoisHistoryRecordCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Get the history for a whoisRecord, as represented by a collection of whoisHistoryRecord resources. This API is available in the following national cloud deployments.

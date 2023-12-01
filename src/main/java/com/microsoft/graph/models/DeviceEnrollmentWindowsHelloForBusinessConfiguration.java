@@ -43,17 +43,17 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("enhancedBiometricsState", (n) -> { this.setEnhancedBiometricsState(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("enhancedBiometricsState", (n) -> { this.setEnhancedBiometricsState(n.getEnumValue(Enablement::forValue)); });
         deserializerMap.put("pinExpirationInDays", (n) -> { this.setPinExpirationInDays(n.getIntegerValue()); });
-        deserializerMap.put("pinLowercaseCharactersUsage", (n) -> { this.setPinLowercaseCharactersUsage(n.getEnumValue(WindowsHelloForBusinessPinUsage.class)); });
+        deserializerMap.put("pinLowercaseCharactersUsage", (n) -> { this.setPinLowercaseCharactersUsage(n.getEnumValue(WindowsHelloForBusinessPinUsage::forValue)); });
         deserializerMap.put("pinMaximumLength", (n) -> { this.setPinMaximumLength(n.getIntegerValue()); });
         deserializerMap.put("pinMinimumLength", (n) -> { this.setPinMinimumLength(n.getIntegerValue()); });
         deserializerMap.put("pinPreviousBlockCount", (n) -> { this.setPinPreviousBlockCount(n.getIntegerValue()); });
-        deserializerMap.put("pinSpecialCharactersUsage", (n) -> { this.setPinSpecialCharactersUsage(n.getEnumValue(WindowsHelloForBusinessPinUsage.class)); });
-        deserializerMap.put("pinUppercaseCharactersUsage", (n) -> { this.setPinUppercaseCharactersUsage(n.getEnumValue(WindowsHelloForBusinessPinUsage.class)); });
+        deserializerMap.put("pinSpecialCharactersUsage", (n) -> { this.setPinSpecialCharactersUsage(n.getEnumValue(WindowsHelloForBusinessPinUsage::forValue)); });
+        deserializerMap.put("pinUppercaseCharactersUsage", (n) -> { this.setPinUppercaseCharactersUsage(n.getEnumValue(WindowsHelloForBusinessPinUsage::forValue)); });
         deserializerMap.put("remotePassportEnabled", (n) -> { this.setRemotePassportEnabled(n.getBooleanValue()); });
         deserializerMap.put("securityDeviceRequired", (n) -> { this.setSecurityDeviceRequired(n.getBooleanValue()); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(Enablement::forValue)); });
         deserializerMap.put("unlockWithBiometricsEnabled", (n) -> { this.setUnlockWithBiometricsEnabled(n.getBooleanValue()); });
         return deserializerMap;
     }

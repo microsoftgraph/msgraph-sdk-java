@@ -77,7 +77,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformanceRequestBuilde
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to userExperienceAnalyticsAppHealthDeviceModelPerformance for deviceManagement
@@ -101,7 +101,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformanceRequestBuilde
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsAppHealthDeviceModelPerformance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsAppHealthDeviceModelPerformance::createFromDiscriminatorValue);
     }
     /**
      * User experience analytics appHealth Model Performance

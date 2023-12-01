@@ -83,7 +83,7 @@ public class ExpirationPattern implements AdditionalDataHolder, BackedModel, Par
         deserializerMap.put("duration", (n) -> { this.setDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(ExpirationPatternType.class)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(ExpirationPatternType::forValue)); });
         return deserializerMap;
     }
     /**

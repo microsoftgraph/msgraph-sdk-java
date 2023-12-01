@@ -79,7 +79,7 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DelegatedAdminAccessAssignmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminAccessAssignmentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new delegatedAdminAccessAssignment object. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DelegatedAdminAccessAssignment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminAccessAssignment::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the delegatedAdminAccessAssignment objects and their properties. This API is available in the following national cloud deployments.

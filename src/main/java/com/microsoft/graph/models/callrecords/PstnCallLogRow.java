@@ -168,7 +168,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsab
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(24);
-        deserializerMap.put("callDurationSource", (n) -> { this.setCallDurationSource(n.getEnumValue(PstnCallDurationSource.class)); });
+        deserializerMap.put("callDurationSource", (n) -> { this.setCallDurationSource(n.getEnumValue(PstnCallDurationSource::forValue)); });
         deserializerMap.put("calleeNumber", (n) -> { this.setCalleeNumber(n.getStringValue()); });
         deserializerMap.put("callerNumber", (n) -> { this.setCallerNumber(n.getStringValue()); });
         deserializerMap.put("callId", (n) -> { this.setCallId(n.getStringValue()); });

@@ -51,7 +51,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformanceItemRequestBu
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * User experience analytics appHealth Model Performance
@@ -72,7 +72,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformanceItemRequestBu
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsAppHealthDeviceModelPerformance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsAppHealthDeviceModelPerformance::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property userExperienceAnalyticsAppHealthDeviceModelPerformance in deviceManagement
@@ -96,7 +96,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformanceItemRequestBu
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsAppHealthDeviceModelPerformance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsAppHealthDeviceModelPerformance::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property userExperienceAnalyticsAppHealthDeviceModelPerformance for deviceManagement

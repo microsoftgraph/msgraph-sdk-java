@@ -79,7 +79,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AudioRoutingGroupCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AudioRoutingGroupCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new audioRoutingGroup. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AudioRoutingGroup::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AudioRoutingGroup::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of audioRoutingGroup objects. This API is available in the following national cloud deployments.

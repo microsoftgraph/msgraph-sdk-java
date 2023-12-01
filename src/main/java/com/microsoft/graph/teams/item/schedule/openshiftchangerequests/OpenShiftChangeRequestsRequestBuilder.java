@@ -79,7 +79,7 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, OpenShiftChangeRequestCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, OpenShiftChangeRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create instance of an openShiftChangeRequest object. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, OpenShiftChangeRequest::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, OpenShiftChangeRequest::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of openShiftChangeRequest objects in a team. This API is available in the following national cloud deployments.

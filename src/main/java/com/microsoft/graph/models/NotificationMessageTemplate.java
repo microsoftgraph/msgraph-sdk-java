@@ -60,7 +60,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("brandingOptions", (n) -> { this.setBrandingOptions(n.getEnumSetValue(NotificationTemplateBrandingOptions.class)); });
+        deserializerMap.put("brandingOptions", (n) -> { this.setBrandingOptions(n.getEnumSetValue(NotificationTemplateBrandingOptions::forValue)); });
         deserializerMap.put("defaultLocale", (n) -> { this.setDefaultLocale(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });

@@ -75,7 +75,7 @@ public class KubernetesServicePort implements AdditionalDataHolder, BackedModel,
         deserializerMap.put("nodePort", (n) -> { this.setNodePort(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("port", (n) -> { this.setPort(n.getIntegerValue()); });
-        deserializerMap.put("protocol", (n) -> { this.setProtocol(n.getEnumValue(ContainerPortProtocol.class)); });
+        deserializerMap.put("protocol", (n) -> { this.setProtocol(n.getEnumValue(ContainerPortProtocol::forValue)); });
         deserializerMap.put("targetPort", (n) -> { this.setTargetPort(n.getStringValue()); });
         return deserializerMap;
     }

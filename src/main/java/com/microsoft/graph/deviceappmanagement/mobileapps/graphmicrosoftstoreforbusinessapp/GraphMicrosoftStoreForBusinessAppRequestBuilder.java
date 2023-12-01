@@ -63,7 +63,7 @@ public class GraphMicrosoftStoreForBusinessAppRequestBuilder extends BaseRequest
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, MicrosoftStoreForBusinessAppCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, MicrosoftStoreForBusinessAppCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Get the items of type microsoft.graph.microsoftStoreForBusinessApp in the microsoft.graph.mobileApp collection

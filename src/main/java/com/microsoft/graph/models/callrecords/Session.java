@@ -70,7 +70,7 @@ public class Session extends Entity implements Parsable {
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("failureInfo", (n) -> { this.setFailureInfo(n.getObjectValue(FailureInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("isTest", (n) -> { this.setIsTest(n.getBooleanValue()); });
-        deserializerMap.put("modalities", (n) -> { this.setModalities(n.getCollectionOfEnumValues(Modality.class)); });
+        deserializerMap.put("modalities", (n) -> { this.setModalities(n.getCollectionOfEnumValues(Modality::forValue)); });
         deserializerMap.put("segments", (n) -> { this.setSegments(n.getCollectionOfObjectValues(Segment::createFromDiscriminatorValue)); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
         return deserializerMap;

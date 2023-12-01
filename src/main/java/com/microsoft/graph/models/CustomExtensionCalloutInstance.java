@@ -91,7 +91,7 @@ public class CustomExtensionCalloutInstance implements AdditionalDataHolder, Bac
         deserializerMap.put("externalCorrelationId", (n) -> { this.setExternalCorrelationId(n.getStringValue()); });
         deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CustomExtensionCalloutInstanceStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CustomExtensionCalloutInstanceStatus::forValue)); });
         return deserializerMap;
     }
     /**

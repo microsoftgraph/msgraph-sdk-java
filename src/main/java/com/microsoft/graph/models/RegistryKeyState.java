@@ -62,17 +62,17 @@ public class RegistryKeyState implements AdditionalDataHolder, BackedModel, Pars
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
-        deserializerMap.put("hive", (n) -> { this.setHive(n.getEnumValue(RegistryHive.class)); });
+        deserializerMap.put("hive", (n) -> { this.setHive(n.getEnumValue(RegistryHive::forValue)); });
         deserializerMap.put("key", (n) -> { this.setKey(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("oldKey", (n) -> { this.setOldKey(n.getStringValue()); });
         deserializerMap.put("oldValueData", (n) -> { this.setOldValueData(n.getStringValue()); });
         deserializerMap.put("oldValueName", (n) -> { this.setOldValueName(n.getStringValue()); });
-        deserializerMap.put("operation", (n) -> { this.setOperation(n.getEnumValue(RegistryOperation.class)); });
+        deserializerMap.put("operation", (n) -> { this.setOperation(n.getEnumValue(RegistryOperation::forValue)); });
         deserializerMap.put("processId", (n) -> { this.setProcessId(n.getIntegerValue()); });
         deserializerMap.put("valueData", (n) -> { this.setValueData(n.getStringValue()); });
         deserializerMap.put("valueName", (n) -> { this.setValueName(n.getStringValue()); });
-        deserializerMap.put("valueType", (n) -> { this.setValueType(n.getEnumValue(RegistryValueType.class)); });
+        deserializerMap.put("valueType", (n) -> { this.setValueType(n.getEnumValue(RegistryValueType::forValue)); });
         return deserializerMap;
     }
     /**

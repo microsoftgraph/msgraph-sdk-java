@@ -65,7 +65,7 @@ public class CoachmarkLocation implements AdditionalDataHolder, BackedModel, Par
         deserializerMap.put("length", (n) -> { this.setLength(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("offset", (n) -> { this.setOffset(n.getIntegerValue()); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(CoachmarkLocationType.class)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(CoachmarkLocationType::forValue)); });
         return deserializerMap;
     }
     /**

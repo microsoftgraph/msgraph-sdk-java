@@ -78,7 +78,7 @@ public class MicrosoftAuthenticatorMethodsRequestBuilder extends BaseRequestBuil
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, MicrosoftAuthenticatorAuthenticationMethodCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, MicrosoftAuthenticatorAuthenticationMethodCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the microsoftAuthenticatorAuthenticationMethod objects and their properties. This API is available in the following national cloud deployments.

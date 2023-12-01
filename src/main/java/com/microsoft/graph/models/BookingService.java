@@ -112,7 +112,7 @@ public class BookingService extends Entity implements Parsable {
         deserializerMap.put("defaultDuration", (n) -> { this.setDefaultDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("defaultLocation", (n) -> { this.setDefaultLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
         deserializerMap.put("defaultPrice", (n) -> { this.setDefaultPrice(n.getDoubleValue()); });
-        deserializerMap.put("defaultPriceType", (n) -> { this.setDefaultPriceType(n.getEnumValue(BookingPriceType.class)); });
+        deserializerMap.put("defaultPriceType", (n) -> { this.setDefaultPriceType(n.getEnumValue(BookingPriceType::forValue)); });
         deserializerMap.put("defaultReminders", (n) -> { this.setDefaultReminders(n.getCollectionOfObjectValues(BookingReminder::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });

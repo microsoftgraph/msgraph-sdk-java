@@ -49,7 +49,7 @@ public class AuthenticationStrengthRoot extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationMethodModes", (n) -> { this.setAuthenticationMethodModes(n.getCollectionOfObjectValues(AuthenticationMethodModeDetail::createFromDiscriminatorValue)); });
-        deserializerMap.put("combinations", (n) -> { this.setCombinations(n.getCollectionOfEnumValues(AuthenticationMethodModes.class)); });
+        deserializerMap.put("combinations", (n) -> { this.setCombinations(n.getCollectionOfEnumValues(AuthenticationMethodModes::forValue)); });
         deserializerMap.put("policies", (n) -> { this.setPolicies(n.getCollectionOfObjectValues(AuthenticationStrengthPolicy::createFromDiscriminatorValue)); });
         return deserializerMap;
     }

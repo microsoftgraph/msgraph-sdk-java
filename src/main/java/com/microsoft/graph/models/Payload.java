@@ -88,14 +88,14 @@ public class Payload extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("brand", (n) -> { this.setBrand(n.getEnumValue(PayloadBrand.class)); });
-        deserializerMap.put("complexity", (n) -> { this.setComplexity(n.getEnumValue(PayloadComplexity.class)); });
+        deserializerMap.put("brand", (n) -> { this.setBrand(n.getEnumValue(PayloadBrand::forValue)); });
+        deserializerMap.put("complexity", (n) -> { this.setComplexity(n.getEnumValue(PayloadComplexity::forValue)); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(EmailIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("detail", (n) -> { this.setDetail(n.getObjectValue(PayloadDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("industry", (n) -> { this.setIndustry(n.getEnumValue(PayloadIndustry.class)); });
+        deserializerMap.put("industry", (n) -> { this.setIndustry(n.getEnumValue(PayloadIndustry::forValue)); });
         deserializerMap.put("isAutomated", (n) -> { this.setIsAutomated(n.getBooleanValue()); });
         deserializerMap.put("isControversial", (n) -> { this.setIsControversial(n.getBooleanValue()); });
         deserializerMap.put("isCurrentEvent", (n) -> { this.setIsCurrentEvent(n.getBooleanValue()); });
@@ -103,13 +103,13 @@ public class Payload extends Entity implements Parsable {
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(EmailIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("payloadTags", (n) -> { this.setPayloadTags(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getEnumValue(PayloadDeliveryPlatform.class)); });
+        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getEnumValue(PayloadDeliveryPlatform::forValue)); });
         deserializerMap.put("predictedCompromiseRate", (n) -> { this.setPredictedCompromiseRate(n.getDoubleValue()); });
-        deserializerMap.put("simulationAttackType", (n) -> { this.setSimulationAttackType(n.getEnumValue(SimulationAttackType.class)); });
-        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(SimulationContentSource.class)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(SimulationContentStatus.class)); });
-        deserializerMap.put("technique", (n) -> { this.setTechnique(n.getEnumValue(SimulationAttackTechnique.class)); });
-        deserializerMap.put("theme", (n) -> { this.setTheme(n.getEnumValue(PayloadTheme.class)); });
+        deserializerMap.put("simulationAttackType", (n) -> { this.setSimulationAttackType(n.getEnumValue(SimulationAttackType::forValue)); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(SimulationContentSource::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(SimulationContentStatus::forValue)); });
+        deserializerMap.put("technique", (n) -> { this.setTechnique(n.getEnumValue(SimulationAttackTechnique::forValue)); });
+        deserializerMap.put("theme", (n) -> { this.setTheme(n.getEnumValue(PayloadTheme::forValue)); });
         return deserializerMap;
     }
     /**

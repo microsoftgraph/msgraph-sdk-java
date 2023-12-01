@@ -63,7 +63,7 @@ public class TeamsAppResourceSpecificPermission implements AdditionalDataHolder,
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("permissionType", (n) -> { this.setPermissionType(n.getEnumValue(TeamsAppResourceSpecificPermissionType.class)); });
+        deserializerMap.put("permissionType", (n) -> { this.setPermissionType(n.getEnumValue(TeamsAppResourceSpecificPermissionType::forValue)); });
         deserializerMap.put("permissionValue", (n) -> { this.setPermissionValue(n.getStringValue()); });
         return deserializerMap;
     }

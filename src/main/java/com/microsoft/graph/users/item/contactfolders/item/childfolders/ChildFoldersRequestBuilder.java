@@ -87,7 +87,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ContactFolderCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ContactFolderCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new contactFolder as a child of a specified folder.  You can also create a new contactFolder under the user's default contact folder. This API is available in the following national cloud deployments.
@@ -113,7 +113,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ContactFolder::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ContactFolder::createFromDiscriminatorValue);
     }
     /**
      * Get a collection of child folders under the specified contact folder. This API is available in the following national cloud deployments.

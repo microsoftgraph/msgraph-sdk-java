@@ -79,7 +79,7 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, GroupLifecyclePolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, GroupLifecyclePolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to groupLifecyclePolicies for groups
@@ -103,7 +103,7 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, GroupLifecyclePolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, GroupLifecyclePolicy::createFromDiscriminatorValue);
     }
     /**
      * Retrieves a list of groupLifecyclePolicy objects to which a group belongs. This API is available in the following national cloud deployments.

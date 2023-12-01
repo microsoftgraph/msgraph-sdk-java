@@ -75,7 +75,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("aaGuid", (n) -> { this.setAaGuid(n.getStringValue()); });
         deserializerMap.put("attestationCertificates", (n) -> { this.setAttestationCertificates(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("attestationLevel", (n) -> { this.setAttestationLevel(n.getEnumValue(AttestationLevel.class)); });
+        deserializerMap.put("attestationLevel", (n) -> { this.setAttestationLevel(n.getEnumValue(AttestationLevel::forValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });

@@ -79,7 +79,7 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TimeOffReasonCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TimeOffReasonCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new timeOffReason. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TimeOffReason::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TimeOffReason::createFromDiscriminatorValue);
     }
     /**
      * Get the list of timeOffReasons in a schedule. This API is available in the following national cloud deployments.

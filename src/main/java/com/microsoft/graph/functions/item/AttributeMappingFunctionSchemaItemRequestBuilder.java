@@ -51,7 +51,7 @@ public class AttributeMappingFunctionSchemaItemRequestBuilder extends BaseReques
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get entity from functions by key
@@ -72,7 +72,7 @@ public class AttributeMappingFunctionSchemaItemRequestBuilder extends BaseReques
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AttributeMappingFunctionSchema::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AttributeMappingFunctionSchema::createFromDiscriminatorValue);
     }
     /**
      * Update entity in functions
@@ -96,7 +96,7 @@ public class AttributeMappingFunctionSchemaItemRequestBuilder extends BaseReques
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AttributeMappingFunctionSchema::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AttributeMappingFunctionSchema::createFromDiscriminatorValue);
     }
     /**
      * Delete entity from functions

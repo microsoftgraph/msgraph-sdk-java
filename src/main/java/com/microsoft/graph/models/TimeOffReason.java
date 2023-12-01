@@ -41,7 +41,7 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("iconType", (n) -> { this.setIconType(n.getEnumValue(TimeOffReasonIconType.class)); });
+        deserializerMap.put("iconType", (n) -> { this.setIconType(n.getEnumValue(TimeOffReasonIconType::forValue)); });
         deserializerMap.put("isActive", (n) -> { this.setIsActive(n.getBooleanValue()); });
         return deserializerMap;
     }

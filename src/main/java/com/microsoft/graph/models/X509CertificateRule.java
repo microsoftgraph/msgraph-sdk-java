@@ -64,8 +64,8 @@ public class X509CertificateRule implements AdditionalDataHolder, BackedModel, P
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("x509CertificateAuthenticationMode", (n) -> { this.setX509CertificateAuthenticationMode(n.getEnumValue(X509CertificateAuthenticationMode.class)); });
-        deserializerMap.put("x509CertificateRuleType", (n) -> { this.setX509CertificateRuleType(n.getEnumValue(X509CertificateRuleType.class)); });
+        deserializerMap.put("x509CertificateAuthenticationMode", (n) -> { this.setX509CertificateAuthenticationMode(n.getEnumValue(X509CertificateAuthenticationMode::forValue)); });
+        deserializerMap.put("x509CertificateRuleType", (n) -> { this.setX509CertificateRuleType(n.getEnumValue(X509CertificateRuleType::forValue)); });
         return deserializerMap;
     }
     /**

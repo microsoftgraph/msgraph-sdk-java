@@ -69,7 +69,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * The resource roles and scopes in this access package.
@@ -90,7 +90,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AccessPackageResourceRoleScope::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageResourceRoleScope::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property resourceRoleScopes in identityGovernance
@@ -114,7 +114,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AccessPackageResourceRoleScope::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageResourceRoleScope::createFromDiscriminatorValue);
     }
     /**
      * Remove a accessPackageResourceRoleScope from an accessPackage list of resource role scopes. This API is available in the following national cloud deployments.

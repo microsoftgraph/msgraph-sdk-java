@@ -36,9 +36,9 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("license", (n) -> { this.setLicense(n.getStringValue()); });
-        deserializerMap.put("licenseType", (n) -> { this.setLicenseType(n.getEnumValue(EditionUpgradeLicenseType.class)); });
+        deserializerMap.put("licenseType", (n) -> { this.setLicenseType(n.getEnumValue(EditionUpgradeLicenseType::forValue)); });
         deserializerMap.put("productKey", (n) -> { this.setProductKey(n.getStringValue()); });
-        deserializerMap.put("targetEdition", (n) -> { this.setTargetEdition(n.getEnumValue(Windows10EditionType.class)); });
+        deserializerMap.put("targetEdition", (n) -> { this.setTargetEdition(n.getEnumValue(Windows10EditionType::forValue)); });
         return deserializerMap;
     }
     /**

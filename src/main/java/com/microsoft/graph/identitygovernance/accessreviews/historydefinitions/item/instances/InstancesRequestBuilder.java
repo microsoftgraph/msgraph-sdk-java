@@ -79,7 +79,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AccessReviewHistoryInstanceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewHistoryInstanceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to instances for identityGovernance
@@ -103,7 +103,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, AccessReviewHistoryInstance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewHistoryInstance::createFromDiscriminatorValue);
     }
     /**
      * Retrieve the instances of an access review history definition created in the last 30 days. This API is available in the following national cloud deployments.

@@ -41,7 +41,7 @@ public class WorkbookOperation extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(WorkbookOperationError::createFromDiscriminatorValue)); });
         deserializerMap.put("resourceLocation", (n) -> { this.setResourceLocation(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(WorkbookOperationStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(WorkbookOperationStatus::forValue)); });
         return deserializerMap;
     }
     /**

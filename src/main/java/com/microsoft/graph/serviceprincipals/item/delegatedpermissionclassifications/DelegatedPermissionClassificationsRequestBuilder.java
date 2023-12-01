@@ -79,7 +79,7 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DelegatedPermissionClassificationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DelegatedPermissionClassificationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Classify a delegated permission by adding a delegatedPermissionClassification to the servicePrincipal representing the API. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DelegatedPermissionClassification::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DelegatedPermissionClassification::createFromDiscriminatorValue);
     }
     /**
      * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API. This API is available in the following national cloud deployments.

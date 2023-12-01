@@ -79,7 +79,7 @@ public class DelegatedAdminCustomersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DelegatedAdminCustomerCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminCustomerCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to delegatedAdminCustomers for tenantRelationships
@@ -103,7 +103,7 @@ public class DelegatedAdminCustomersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DelegatedAdminCustomer::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminCustomer::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the delegatedAdminCustomer objects and their properties. This API is available in the following national cloud deployments.

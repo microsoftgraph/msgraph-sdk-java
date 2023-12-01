@@ -101,22 +101,22 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read properties and relationships of the iosMobileAppConfiguration object.
+     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
      * @return a ManagedDeviceMobileAppConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosmobileappconfiguration-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceMobileAppConfiguration get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the iosMobileAppConfiguration object.
+     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ManagedDeviceMobileAppConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosmobileappconfiguration-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceMobileAppConfiguration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -124,7 +124,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ManagedDeviceMobileAppConfiguration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ManagedDeviceMobileAppConfiguration::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of a iosMobileAppConfiguration object.
@@ -150,7 +150,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ManagedDeviceMobileAppConfiguration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ManagedDeviceMobileAppConfiguration::createFromDiscriminatorValue);
     }
     /**
      * Deletes a iosMobileAppConfiguration.
@@ -173,7 +173,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the iosMobileAppConfiguration object.
+     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -181,7 +181,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the iosMobileAppConfiguration object.
+     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -233,7 +233,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the iosMobileAppConfiguration object.
+     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

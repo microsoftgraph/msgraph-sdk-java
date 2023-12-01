@@ -80,13 +80,13 @@ public class CaseOperation extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(CaseAction.class)); });
+        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(CaseAction::forValue)); });
         deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("percentProgress", (n) -> { this.setPercentProgress(n.getIntegerValue()); });
         deserializerMap.put("resultInfo", (n) -> { this.setResultInfo(n.getObjectValue(ResultInfo::createFromDiscriminatorValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CaseOperationStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CaseOperationStatus::forValue)); });
         return deserializerMap;
     }
     /**

@@ -91,7 +91,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleRequest object. This API is available in the following national cloud deployments.
@@ -114,7 +114,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PrivilegedAccessGroupAssignmentScheduleRequest::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedAccessGroupAssignmentScheduleRequest::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property assignmentScheduleRequests in identityGovernance
@@ -138,7 +138,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PrivilegedAccessGroupAssignmentScheduleRequest::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedAccessGroupAssignmentScheduleRequest::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property assignmentScheduleRequests for identityGovernance

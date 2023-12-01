@@ -69,7 +69,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
         deserializerMap.put("clientApplicationTenantIds", (n) -> { this.setClientApplicationTenantIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("permissionClassification", (n) -> { this.setPermissionClassification(n.getStringValue()); });
         deserializerMap.put("permissions", (n) -> { this.setPermissions(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("permissionType", (n) -> { this.setPermissionType(n.getEnumValue(PermissionType.class)); });
+        deserializerMap.put("permissionType", (n) -> { this.setPermissionType(n.getEnumValue(PermissionType::forValue)); });
         deserializerMap.put("resourceApplication", (n) -> { this.setResourceApplication(n.getStringValue()); });
         return deserializerMap;
     }

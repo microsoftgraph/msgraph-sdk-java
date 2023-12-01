@@ -51,7 +51,7 @@ public class LongRunningOperation extends Entity implements Parsable {
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastActionDateTime", (n) -> { this.setLastActionDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("resourceLocation", (n) -> { this.setResourceLocation(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(LongRunningOperationStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(LongRunningOperationStatus::forValue)); });
         deserializerMap.put("statusDetail", (n) -> { this.setStatusDetail(n.getStringValue()); });
         return deserializerMap;
     }

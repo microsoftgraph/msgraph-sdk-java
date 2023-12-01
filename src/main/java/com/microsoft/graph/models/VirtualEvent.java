@@ -76,7 +76,7 @@ public class VirtualEvent extends Entity implements Parsable {
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         deserializerMap.put("sessions", (n) -> { this.setSessions(n.getCollectionOfObjectValues(VirtualEventSession::createFromDiscriminatorValue)); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(VirtualEventStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(VirtualEventStatus::forValue)); });
         return deserializerMap;
     }
     /**

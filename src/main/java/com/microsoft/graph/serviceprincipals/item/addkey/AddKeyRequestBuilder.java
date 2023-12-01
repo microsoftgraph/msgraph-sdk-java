@@ -59,7 +59,7 @@ public class AddKeyRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, KeyCredential::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, KeyCredential::createFromDiscriminatorValue);
     }
     /**
      * Adds a key credential to a servicePrincipal. This method along with removeKey can be used by a servicePrincipal to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.  ServicePrincipals that dont have any existing valid certificates (i.e.: no certificates have been added yet, or all certificates have expired), wont be able to use this service action. Update servicePrincipal can be used to perform an update instead. This API is available in the following national cloud deployments.

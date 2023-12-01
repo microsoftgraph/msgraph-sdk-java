@@ -40,7 +40,7 @@ public class CustomExtensionStageSetting extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("customExtension", (n) -> { this.setCustomExtension(n.getObjectValue(CustomCalloutExtension::createFromDiscriminatorValue)); });
-        deserializerMap.put("stage", (n) -> { this.setStage(n.getEnumValue(AccessPackageCustomExtensionStage.class)); });
+        deserializerMap.put("stage", (n) -> { this.setStage(n.getEnumValue(AccessPackageCustomExtensionStage::forValue)); });
         return deserializerMap;
     }
     /**

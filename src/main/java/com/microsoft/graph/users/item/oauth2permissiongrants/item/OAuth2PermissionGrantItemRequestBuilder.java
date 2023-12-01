@@ -55,7 +55,7 @@ public class OAuth2PermissionGrantItemRequestBuilder extends BaseRequestBuilder 
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, OAuth2PermissionGrant::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, OAuth2PermissionGrant::createFromDiscriminatorValue);
     }
     /**
      * Get oauth2PermissionGrants from users

@@ -79,7 +79,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TeamsTabCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TeamsTabCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Adds (pins) a tab to the specified channel within a team. The corresponding app must already be installed in the team. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TeamsTab::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TeamsTab::createFromDiscriminatorValue);
     }
     /**
      * Retrieve the list of tabs in the specified channel within a team.  This API is available in the following national cloud deployments.

@@ -51,8 +51,8 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("data", (n) -> { this.setData(n.getStringValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("operationType", (n) -> { this.setOperationType(n.getEnumValue(DelegatedAdminRelationshipOperationType.class)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(LongRunningOperationStatus.class)); });
+        deserializerMap.put("operationType", (n) -> { this.setOperationType(n.getEnumValue(DelegatedAdminRelationshipOperationType::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(LongRunningOperationStatus::forValue)); });
         return deserializerMap;
     }
     /**

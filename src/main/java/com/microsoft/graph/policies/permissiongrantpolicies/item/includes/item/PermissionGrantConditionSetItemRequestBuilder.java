@@ -53,7 +53,7 @@ public class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBu
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Condition sets which are included in this permission grant policy. Automatically expanded on GET.
@@ -74,7 +74,7 @@ public class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBu
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PermissionGrantConditionSet::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PermissionGrantConditionSet::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property includes in policies
@@ -98,7 +98,7 @@ public class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBu
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, PermissionGrantConditionSet::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PermissionGrantConditionSet::createFromDiscriminatorValue);
     }
     /**
      * Deletes a permissionGrantConditionSet from the includes collection of a permissionGrantPolicy. This API is available in the following national cloud deployments.

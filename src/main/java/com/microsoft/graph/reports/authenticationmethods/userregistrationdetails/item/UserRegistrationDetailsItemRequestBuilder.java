@@ -51,7 +51,7 @@ public class UserRegistrationDetailsItemRequestBuilder extends BaseRequestBuilde
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read the properties and relationships of a userRegistrationDetails object. This API is available in the following national cloud deployments.
@@ -74,7 +74,7 @@ public class UserRegistrationDetailsItemRequestBuilder extends BaseRequestBuilde
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserRegistrationDetails::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserRegistrationDetails::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property userRegistrationDetails in reports
@@ -98,7 +98,7 @@ public class UserRegistrationDetailsItemRequestBuilder extends BaseRequestBuilde
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UserRegistrationDetails::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserRegistrationDetails::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property userRegistrationDetails for reports

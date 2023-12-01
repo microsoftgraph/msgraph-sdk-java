@@ -214,14 +214,14 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
         deserializerMap.put("browserBlockSendingDoNotTrackHeader", (n) -> { this.setBrowserBlockSendingDoNotTrackHeader(n.getBooleanValue()); });
         deserializerMap.put("browserBlockSingleWordEntryOnIntranetSites", (n) -> { this.setBrowserBlockSingleWordEntryOnIntranetSites(n.getBooleanValue()); });
         deserializerMap.put("browserEnterpriseModeSiteListLocation", (n) -> { this.setBrowserEnterpriseModeSiteListLocation(n.getStringValue()); });
-        deserializerMap.put("browserInternetSecurityLevel", (n) -> { this.setBrowserInternetSecurityLevel(n.getEnumValue(InternetSiteSecurityLevel.class)); });
-        deserializerMap.put("browserIntranetSecurityLevel", (n) -> { this.setBrowserIntranetSecurityLevel(n.getEnumValue(SiteSecurityLevel.class)); });
+        deserializerMap.put("browserInternetSecurityLevel", (n) -> { this.setBrowserInternetSecurityLevel(n.getEnumValue(InternetSiteSecurityLevel::forValue)); });
+        deserializerMap.put("browserIntranetSecurityLevel", (n) -> { this.setBrowserIntranetSecurityLevel(n.getEnumValue(SiteSecurityLevel::forValue)); });
         deserializerMap.put("browserLoggingReportLocation", (n) -> { this.setBrowserLoggingReportLocation(n.getStringValue()); });
         deserializerMap.put("browserRequireFirewall", (n) -> { this.setBrowserRequireFirewall(n.getBooleanValue()); });
         deserializerMap.put("browserRequireFraudWarning", (n) -> { this.setBrowserRequireFraudWarning(n.getBooleanValue()); });
         deserializerMap.put("browserRequireHighSecurityForRestrictedSites", (n) -> { this.setBrowserRequireHighSecurityForRestrictedSites(n.getBooleanValue()); });
         deserializerMap.put("browserRequireSmartScreen", (n) -> { this.setBrowserRequireSmartScreen(n.getBooleanValue()); });
-        deserializerMap.put("browserTrustedSitesSecurityLevel", (n) -> { this.setBrowserTrustedSitesSecurityLevel(n.getEnumValue(SiteSecurityLevel.class)); });
+        deserializerMap.put("browserTrustedSitesSecurityLevel", (n) -> { this.setBrowserTrustedSitesSecurityLevel(n.getEnumValue(SiteSecurityLevel::forValue)); });
         deserializerMap.put("cellularBlockDataRoaming", (n) -> { this.setCellularBlockDataRoaming(n.getBooleanValue()); });
         deserializerMap.put("diagnosticsBlockDataSubmission", (n) -> { this.setDiagnosticsBlockDataSubmission(n.getBooleanValue()); });
         deserializerMap.put("passwordBlockPicturePasswordAndPin", (n) -> { this.setPasswordBlockPicturePasswordAndPin(n.getBooleanValue()); });
@@ -230,11 +230,11 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
         deserializerMap.put("passwordMinimumLength", (n) -> { this.setPasswordMinimumLength(n.getIntegerValue()); });
         deserializerMap.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { this.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
         deserializerMap.put("passwordPreviousPasswordBlockCount", (n) -> { this.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
-        deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
+        deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(RequiredPasswordType::forValue)); });
         deserializerMap.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { this.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
         deserializerMap.put("storageRequireDeviceEncryption", (n) -> { this.setStorageRequireDeviceEncryption(n.getBooleanValue()); });
         deserializerMap.put("updatesRequireAutomaticUpdates", (n) -> { this.setUpdatesRequireAutomaticUpdates(n.getBooleanValue()); });
-        deserializerMap.put("userAccountControlSettings", (n) -> { this.setUserAccountControlSettings(n.getEnumValue(WindowsUserAccountControlSettings.class)); });
+        deserializerMap.put("userAccountControlSettings", (n) -> { this.setUserAccountControlSettings(n.getEnumValue(WindowsUserAccountControlSettings::forValue)); });
         deserializerMap.put("workFoldersUrl", (n) -> { this.setWorkFoldersUrl(n.getStringValue()); });
         return deserializerMap;
     }

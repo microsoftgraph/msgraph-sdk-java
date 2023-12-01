@@ -81,7 +81,7 @@ public class Website implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("address", (n) -> { this.setAddress(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(WebsiteType.class)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(WebsiteType::forValue)); });
         return deserializerMap;
     }
     /**

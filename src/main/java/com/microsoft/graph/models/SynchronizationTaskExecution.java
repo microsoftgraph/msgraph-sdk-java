@@ -163,7 +163,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Backe
         deserializerMap.put("countImportedReferenceDeltas", (n) -> { this.setCountImportedReferenceDeltas(n.getLongValue()); });
         deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(SynchronizationError::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(SynchronizationTaskExecutionResult.class)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(SynchronizationTaskExecutionResult::forValue)); });
         deserializerMap.put("timeBegan", (n) -> { this.setTimeBegan(n.getOffsetDateTimeValue()); });
         deserializerMap.put("timeEnded", (n) -> { this.setTimeEnded(n.getOffsetDateTimeValue()); });
         return deserializerMap;

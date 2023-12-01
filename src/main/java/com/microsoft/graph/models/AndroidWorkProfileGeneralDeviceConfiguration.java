@@ -41,7 +41,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
         deserializerMap.put("passwordMinimumLength", (n) -> { this.setPasswordMinimumLength(n.getIntegerValue()); });
         deserializerMap.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { this.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
         deserializerMap.put("passwordPreviousPasswordBlockCount", (n) -> { this.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
-        deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(AndroidWorkProfileRequiredPasswordType.class)); });
+        deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(AndroidWorkProfileRequiredPasswordType::forValue)); });
         deserializerMap.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { this.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
         deserializerMap.put("securityRequireVerifyApps", (n) -> { this.setSecurityRequireVerifyApps(n.getBooleanValue()); });
         deserializerMap.put("workProfileBlockAddingAccounts", (n) -> { this.setWorkProfileBlockAddingAccounts(n.getBooleanValue()); });
@@ -52,8 +52,8 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
         deserializerMap.put("workProfileBlockNotificationsWhileDeviceLocked", (n) -> { this.setWorkProfileBlockNotificationsWhileDeviceLocked(n.getBooleanValue()); });
         deserializerMap.put("workProfileBlockScreenCapture", (n) -> { this.setWorkProfileBlockScreenCapture(n.getBooleanValue()); });
         deserializerMap.put("workProfileBluetoothEnableContactSharing", (n) -> { this.setWorkProfileBluetoothEnableContactSharing(n.getBooleanValue()); });
-        deserializerMap.put("workProfileDataSharingType", (n) -> { this.setWorkProfileDataSharingType(n.getEnumValue(AndroidWorkProfileCrossProfileDataSharingType.class)); });
-        deserializerMap.put("workProfileDefaultAppPermissionPolicy", (n) -> { this.setWorkProfileDefaultAppPermissionPolicy(n.getEnumValue(AndroidWorkProfileDefaultAppPermissionPolicyType.class)); });
+        deserializerMap.put("workProfileDataSharingType", (n) -> { this.setWorkProfileDataSharingType(n.getEnumValue(AndroidWorkProfileCrossProfileDataSharingType::forValue)); });
+        deserializerMap.put("workProfileDefaultAppPermissionPolicy", (n) -> { this.setWorkProfileDefaultAppPermissionPolicy(n.getEnumValue(AndroidWorkProfileDefaultAppPermissionPolicyType::forValue)); });
         deserializerMap.put("workProfilePasswordBlockFingerprintUnlock", (n) -> { this.setWorkProfilePasswordBlockFingerprintUnlock(n.getBooleanValue()); });
         deserializerMap.put("workProfilePasswordBlockTrustAgents", (n) -> { this.setWorkProfilePasswordBlockTrustAgents(n.getBooleanValue()); });
         deserializerMap.put("workProfilePasswordExpirationDays", (n) -> { this.setWorkProfilePasswordExpirationDays(n.getIntegerValue()); });
@@ -66,7 +66,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
         deserializerMap.put("workProfilePasswordMinUpperCaseCharacters", (n) -> { this.setWorkProfilePasswordMinUpperCaseCharacters(n.getIntegerValue()); });
         deserializerMap.put("workProfilePasswordMinutesOfInactivityBeforeScreenTimeout", (n) -> { this.setWorkProfilePasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
         deserializerMap.put("workProfilePasswordPreviousPasswordBlockCount", (n) -> { this.setWorkProfilePasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
-        deserializerMap.put("workProfilePasswordRequiredType", (n) -> { this.setWorkProfilePasswordRequiredType(n.getEnumValue(AndroidWorkProfileRequiredPasswordType.class)); });
+        deserializerMap.put("workProfilePasswordRequiredType", (n) -> { this.setWorkProfilePasswordRequiredType(n.getEnumValue(AndroidWorkProfileRequiredPasswordType::forValue)); });
         deserializerMap.put("workProfilePasswordSignInFailureCountBeforeFactoryReset", (n) -> { this.setWorkProfilePasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
         deserializerMap.put("workProfileRequirePassword", (n) -> { this.setWorkProfileRequirePassword(n.getBooleanValue()); });
         return deserializerMap;

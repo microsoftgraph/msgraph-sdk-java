@@ -60,8 +60,8 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("applicableArchitectures", (n) -> { this.setApplicableArchitectures(n.getEnumSetValue(WindowsArchitecture.class)); });
-        deserializerMap.put("applicableDeviceTypes", (n) -> { this.setApplicableDeviceTypes(n.getEnumSetValue(WindowsDeviceType.class)); });
+        deserializerMap.put("applicableArchitectures", (n) -> { this.setApplicableArchitectures(n.getEnumSetValue(WindowsArchitecture::forValue)); });
+        deserializerMap.put("applicableDeviceTypes", (n) -> { this.setApplicableDeviceTypes(n.getEnumSetValue(WindowsDeviceType::forValue)); });
         deserializerMap.put("committedContainedApps", (n) -> { this.setCommittedContainedApps(n.getCollectionOfObjectValues(MobileContainedApp::createFromDiscriminatorValue)); });
         deserializerMap.put("identityName", (n) -> { this.setIdentityName(n.getStringValue()); });
         deserializerMap.put("identityPublisherHash", (n) -> { this.setIdentityPublisherHash(n.getStringValue()); });

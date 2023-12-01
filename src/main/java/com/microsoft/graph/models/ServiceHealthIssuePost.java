@@ -82,7 +82,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("postType", (n) -> { this.setPostType(n.getEnumValue(PostType.class)); });
+        deserializerMap.put("postType", (n) -> { this.setPostType(n.getEnumValue(PostType::forValue)); });
         return deserializerMap;
     }
     /**

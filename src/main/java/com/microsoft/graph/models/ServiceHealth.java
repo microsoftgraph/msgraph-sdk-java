@@ -33,7 +33,7 @@ public class ServiceHealth extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("issues", (n) -> { this.setIssues(n.getCollectionOfObjectValues(ServiceHealthIssue::createFromDiscriminatorValue)); });
         deserializerMap.put("service", (n) -> { this.setService(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ServiceHealthStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ServiceHealthStatus::forValue)); });
         return deserializerMap;
     }
     /**

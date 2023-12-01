@@ -90,7 +90,7 @@ public class RoleEligibilitySchedulesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UnifiedRoleEligibilityScheduleCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleEligibilityScheduleCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to roleEligibilitySchedules for roleManagement
@@ -114,7 +114,7 @@ public class RoleEligibilitySchedulesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, UnifiedRoleEligibilitySchedule::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleEligibilitySchedule::createFromDiscriminatorValue);
     }
     /**
      * Get the unifiedRoleEligibilitySchedule resources from the roleEligibilitySchedules navigation property. This API is available in the following national cloud deployments.

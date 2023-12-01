@@ -78,7 +78,7 @@ public class FollowingRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DriveItemCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DriveItemCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * List the items that have been followed by the signed in user.This collection includes items that are in the user's drive as well as items they have access to from other drives. This API is available in the following national cloud deployments.

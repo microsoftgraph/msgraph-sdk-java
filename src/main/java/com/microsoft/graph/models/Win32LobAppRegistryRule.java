@@ -54,8 +54,8 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
         deserializerMap.put("check32BitOn64System", (n) -> { this.setCheck32BitOn64System(n.getBooleanValue()); });
         deserializerMap.put("comparisonValue", (n) -> { this.setComparisonValue(n.getStringValue()); });
         deserializerMap.put("keyPath", (n) -> { this.setKeyPath(n.getStringValue()); });
-        deserializerMap.put("operationType", (n) -> { this.setOperationType(n.getEnumValue(Win32LobAppRegistryRuleOperationType.class)); });
-        deserializerMap.put("operator", (n) -> { this.setOperator(n.getEnumValue(Win32LobAppRuleOperator.class)); });
+        deserializerMap.put("operationType", (n) -> { this.setOperationType(n.getEnumValue(Win32LobAppRegistryRuleOperationType::forValue)); });
+        deserializerMap.put("operator", (n) -> { this.setOperator(n.getEnumValue(Win32LobAppRuleOperator::forValue)); });
         deserializerMap.put("valueName", (n) -> { this.setValueName(n.getStringValue()); });
         return deserializerMap;
     }

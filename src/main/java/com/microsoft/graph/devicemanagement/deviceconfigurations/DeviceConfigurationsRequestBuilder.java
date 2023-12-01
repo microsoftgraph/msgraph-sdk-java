@@ -59,19 +59,19 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceConfigurations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the macOSGeneralDeviceConfiguration objects.
+     * List properties and relationships of the iosUpdateConfiguration objects.
      * @return a DeviceConfigurationCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-macosgeneraldeviceconfiguration-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-iosupdateconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceConfigurationCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the macOSGeneralDeviceConfiguration objects.
+     * List properties and relationships of the iosUpdateConfiguration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DeviceConfigurationCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-macosgeneraldeviceconfiguration-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-iosupdateconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceConfigurationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceConfigurationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceConfigurationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new androidGeneralDeviceConfiguration object.
@@ -105,10 +105,10 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceConfiguration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * List properties and relationships of the macOSGeneralDeviceConfiguration objects.
+     * List properties and relationships of the iosUpdateConfiguration objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the macOSGeneralDeviceConfiguration objects.
+     * List properties and relationships of the iosUpdateConfiguration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -162,7 +162,7 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
         return new DeviceConfigurationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the macOSGeneralDeviceConfiguration objects.
+     * List properties and relationships of the iosUpdateConfiguration objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

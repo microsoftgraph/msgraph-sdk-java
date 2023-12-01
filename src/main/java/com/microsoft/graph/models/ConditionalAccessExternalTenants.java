@@ -70,7 +70,7 @@ public class ConditionalAccessExternalTenants implements AdditionalDataHolder, B
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("membershipKind", (n) -> { this.setMembershipKind(n.getEnumValue(ConditionalAccessExternalTenantsMembershipKind.class)); });
+        deserializerMap.put("membershipKind", (n) -> { this.setMembershipKind(n.getEnumValue(ConditionalAccessExternalTenantsMembershipKind::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }

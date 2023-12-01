@@ -79,7 +79,7 @@ public class ContentSharingSessionsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ContentSharingSessionCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ContentSharingSessionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to contentSharingSessions for communications
@@ -103,7 +103,7 @@ public class ContentSharingSessionsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ContentSharingSession::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ContentSharingSession::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of contentSharingSession objects in a call. This API is available in the following national cloud deployments.

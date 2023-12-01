@@ -85,7 +85,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
         deserializerMap.put("iosMobileApplicationManagementEnabled", (n) -> { this.setIosMobileApplicationManagementEnabled(n.getBooleanValue()); });
         deserializerMap.put("lastHeartbeatDateTime", (n) -> { this.setLastHeartbeatDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("microsoftDefenderForEndpointAttachEnabled", (n) -> { this.setMicrosoftDefenderForEndpointAttachEnabled(n.getBooleanValue()); });
-        deserializerMap.put("partnerState", (n) -> { this.setPartnerState(n.getEnumValue(MobileThreatPartnerTenantState.class)); });
+        deserializerMap.put("partnerState", (n) -> { this.setPartnerState(n.getEnumValue(MobileThreatPartnerTenantState::forValue)); });
         deserializerMap.put("partnerUnresponsivenessThresholdInDays", (n) -> { this.setPartnerUnresponsivenessThresholdInDays(n.getIntegerValue()); });
         deserializerMap.put("partnerUnsupportedOsVersionBlocked", (n) -> { this.setPartnerUnsupportedOsVersionBlocked(n.getBooleanValue()); });
         deserializerMap.put("windowsDeviceBlockedOnMissingPartnerData", (n) -> { this.setWindowsDeviceBlockedOnMissingPartnerData(n.getBooleanValue()); });

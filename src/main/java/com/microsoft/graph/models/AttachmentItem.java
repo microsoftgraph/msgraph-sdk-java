@@ -86,7 +86,7 @@ public class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsab
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
-        deserializerMap.put("attachmentType", (n) -> { this.setAttachmentType(n.getEnumValue(AttachmentType.class)); });
+        deserializerMap.put("attachmentType", (n) -> { this.setAttachmentType(n.getEnumValue(AttachmentType::forValue)); });
         deserializerMap.put("contentId", (n) -> { this.setContentId(n.getStringValue()); });
         deserializerMap.put("contentType", (n) -> { this.setContentType(n.getStringValue()); });
         deserializerMap.put("isInline", (n) -> { this.setIsInline(n.getBooleanValue()); });

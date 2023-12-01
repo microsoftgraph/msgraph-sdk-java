@@ -55,7 +55,7 @@ public class TaskDefinitionRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TaskDefinition::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TaskDefinition::createFromDiscriminatorValue);
     }
     /**
      * The taskDefinition associated with the related lifecycle workflow task.Supports $filter(eq, ne) and $expand.

@@ -79,7 +79,7 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SchedulingGroupCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SchedulingGroupCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new schedulingGroup. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, SchedulingGroup::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SchedulingGroup::createFromDiscriminatorValue);
     }
     /**
      * Get the list of schedulingGroups in this schedule. This API is available in the following national cloud deployments.

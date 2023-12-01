@@ -63,7 +63,7 @@ public class GraphOrgContactRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, OrgContactCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, OrgContactCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Get the items of type microsoft.graph.orgContact in the microsoft.graph.directoryObject collection

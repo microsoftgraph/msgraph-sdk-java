@@ -59,7 +59,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
         deserializerMap.put("receivedDateTimeUTC", (n) -> { this.setReceivedDateTimeUTC(n.getOffsetDateTimeValue()); });
         deserializerMap.put("requestedDateTimeUTC", (n) -> { this.setRequestedDateTimeUTC(n.getOffsetDateTimeValue()); });
         deserializerMap.put("sizeInKB", (n) -> { this.setSizeInKB(n.getDoubleValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AppLogUploadState.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AppLogUploadState::forValue)); });
         return deserializerMap;
     }
     /**

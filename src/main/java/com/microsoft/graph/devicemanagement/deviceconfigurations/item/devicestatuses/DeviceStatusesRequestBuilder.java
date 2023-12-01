@@ -79,7 +79,7 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceConfigurationDeviceStatusCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceConfigurationDeviceStatusCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new deviceConfigurationDeviceStatus object.
@@ -105,7 +105,7 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, DeviceConfigurationDeviceStatus::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceConfigurationDeviceStatus::createFromDiscriminatorValue);
     }
     /**
      * List properties and relationships of the deviceConfigurationDeviceStatus objects.

@@ -93,7 +93,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read properties and relationships of the targetedManagedAppConfiguration object.
@@ -116,7 +116,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TargetedManagedAppConfiguration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TargetedManagedAppConfiguration::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of a targetedManagedAppConfiguration object.
@@ -142,7 +142,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TargetedManagedAppConfiguration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TargetedManagedAppConfiguration::createFromDiscriminatorValue);
     }
     /**
      * Deletes a targetedManagedAppConfiguration.

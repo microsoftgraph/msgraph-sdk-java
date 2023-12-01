@@ -72,7 +72,7 @@ public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHol
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("alertThreshold", (n) -> { this.setAlertThreshold(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("synchronizationPreventionType", (n) -> { this.setSynchronizationPreventionType(n.getEnumValue(OnPremisesDirectorySynchronizationDeletionPreventionType.class)); });
+        deserializerMap.put("synchronizationPreventionType", (n) -> { this.setSynchronizationPreventionType(n.getEnumValue(OnPremisesDirectorySynchronizationDeletionPreventionType::forValue)); });
         return deserializerMap;
     }
     /**

@@ -82,8 +82,8 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Backed
         deserializerMap.put("changedBy", (n) -> { this.setChangedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("eventDateTime", (n) -> { this.setEventDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("stage", (n) -> { this.setStage(n.getEnumValue(SubjectRightsRequestStage.class)); });
-        deserializerMap.put("stageStatus", (n) -> { this.setStageStatus(n.getEnumValue(SubjectRightsRequestStageStatus.class)); });
+        deserializerMap.put("stage", (n) -> { this.setStage(n.getEnumValue(SubjectRightsRequestStage::forValue)); });
+        deserializerMap.put("stageStatus", (n) -> { this.setStageStatus(n.getEnumValue(SubjectRightsRequestStageStatus::forValue)); });
         deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
         return deserializerMap;
     }

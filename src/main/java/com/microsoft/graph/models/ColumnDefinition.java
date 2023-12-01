@@ -149,7 +149,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         deserializerMap.put("term", (n) -> { this.setTerm(n.getObjectValue(TermColumn::createFromDiscriminatorValue)); });
         deserializerMap.put("text", (n) -> { this.setText(n.getObjectValue(TextColumn::createFromDiscriminatorValue)); });
         deserializerMap.put("thumbnail", (n) -> { this.setThumbnail(n.getObjectValue(ThumbnailColumn::createFromDiscriminatorValue)); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(ColumnTypes.class)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(ColumnTypes::forValue)); });
         deserializerMap.put("validation", (n) -> { this.setValidation(n.getObjectValue(ColumnValidation::createFromDiscriminatorValue)); });
         return deserializerMap;
     }

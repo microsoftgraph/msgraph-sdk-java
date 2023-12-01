@@ -33,7 +33,7 @@ public class AttackSimulationOperation extends LongRunningOperation implements P
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("percentageCompleted", (n) -> { this.setPercentageCompleted(n.getIntegerValue()); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(AttackSimulationOperationType.class)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(AttackSimulationOperationType::forValue)); });
         return deserializerMap;
     }
     /**

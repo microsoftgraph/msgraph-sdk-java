@@ -71,7 +71,7 @@ public class FormattedContent implements AdditionalDataHolder, BackedModel, Pars
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("content", (n) -> { this.setContent(n.getStringValue()); });
-        deserializerMap.put("format", (n) -> { this.setFormat(n.getEnumValue(ContentFormat.class)); });
+        deserializerMap.put("format", (n) -> { this.setFormat(n.getEnumValue(ContentFormat::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }

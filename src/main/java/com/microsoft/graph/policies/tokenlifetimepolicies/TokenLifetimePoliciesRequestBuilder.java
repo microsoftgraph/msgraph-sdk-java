@@ -79,7 +79,7 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TokenLifetimePolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TokenLifetimePolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new tokenLifetimePolicy object. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, TokenLifetimePolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TokenLifetimePolicy::createFromDiscriminatorValue);
     }
     /**
      * Get a list of tokenLifetimePolicy objects. This API is available in the following national cloud deployments.

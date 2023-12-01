@@ -64,7 +64,7 @@ public class ToneInfo implements AdditionalDataHolder, BackedModel, Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("sequenceId", (n) -> { this.setSequenceId(n.getLongValue()); });
-        deserializerMap.put("tone", (n) -> { this.setTone(n.getEnumValue(Tone.class)); });
+        deserializerMap.put("tone", (n) -> { this.setTone(n.getEnumValue(Tone::forValue)); });
         return deserializerMap;
     }
     /**

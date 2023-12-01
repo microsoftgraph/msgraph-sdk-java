@@ -79,7 +79,7 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, LearningProviderCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, LearningProviderCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new learningProvider object and register it with Viva Learning using the specified display name and logos for different themes. This API is available in the following national cloud deployments.
@@ -105,7 +105,7 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, LearningProvider::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, LearningProvider::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the learningProvider resources registered in Viva Learning for a tenant. This API is available in the following national cloud deployments.

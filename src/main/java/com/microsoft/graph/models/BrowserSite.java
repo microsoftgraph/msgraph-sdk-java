@@ -77,15 +77,15 @@ public class BrowserSite extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowRedirect", (n) -> { this.setAllowRedirect(n.getBooleanValue()); });
         deserializerMap.put("comment", (n) -> { this.setComment(n.getStringValue()); });
-        deserializerMap.put("compatibilityMode", (n) -> { this.setCompatibilityMode(n.getEnumValue(BrowserSiteCompatibilityMode.class)); });
+        deserializerMap.put("compatibilityMode", (n) -> { this.setCompatibilityMode(n.getEnumValue(BrowserSiteCompatibilityMode::forValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("deletedDateTime", (n) -> { this.setDeletedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("history", (n) -> { this.setHistory(n.getCollectionOfObjectValues(BrowserSiteHistory::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("mergeType", (n) -> { this.setMergeType(n.getEnumValue(BrowserSiteMergeType.class)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(BrowserSiteStatus.class)); });
-        deserializerMap.put("targetEnvironment", (n) -> { this.setTargetEnvironment(n.getEnumValue(BrowserSiteTargetEnvironment.class)); });
+        deserializerMap.put("mergeType", (n) -> { this.setMergeType(n.getEnumValue(BrowserSiteMergeType::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(BrowserSiteStatus::forValue)); });
+        deserializerMap.put("targetEnvironment", (n) -> { this.setTargetEnvironment(n.getEnumValue(BrowserSiteTargetEnvironment::forValue)); });
         deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
         return deserializerMap;
     }

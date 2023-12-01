@@ -77,7 +77,7 @@ public class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRe
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read properties and relationships of the windowsInformationProtectionPolicy object.
@@ -100,7 +100,7 @@ public class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRe
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, WindowsInformationProtectionPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, WindowsInformationProtectionPolicy::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of a windowsInformationProtectionPolicy object.
@@ -126,7 +126,7 @@ public class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRe
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, WindowsInformationProtectionPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, WindowsInformationProtectionPolicy::createFromDiscriminatorValue);
     }
     /**
      * Deletes a windowsInformationProtectionPolicy.

@@ -79,7 +79,7 @@ public class ComplianceManagementPartnersRequestBuilder extends BaseRequestBuild
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ComplianceManagementPartnerCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ComplianceManagementPartnerCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new complianceManagementPartner object.
@@ -105,7 +105,7 @@ public class ComplianceManagementPartnersRequestBuilder extends BaseRequestBuild
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, ComplianceManagementPartner::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ComplianceManagementPartner::createFromDiscriminatorValue);
     }
     /**
      * List properties and relationships of the complianceManagementPartner objects.
