@@ -6,7 +6,7 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
     testImplementation 'org.mockito:mockito-inline:5.2.0'
     
-    implementation 'com.squareup.okhttp3:okhttp:4.11.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
     implementation 'jakarta.annotation:jakarta.annotation-api:2.1.1'
 
     // Core Http library 
