@@ -87,7 +87,7 @@ publishing {
         	customizePom(pom)
         	groupId project.property('mavenGroupId')
         	artifactId project.property('mavenArtifactId')
-        	version "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}${mavenCentralSnapshotArtifactSuffix}"
+        	version "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}${mavenArtifactSuffix}"
         	from components.java
         	pom.withXml {
         		def pomFile = file("${project.buildDir}/generated-pom.xml")
