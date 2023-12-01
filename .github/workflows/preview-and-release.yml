@@ -22,9 +22,9 @@ jobs:
       name: maven_central_snapshot
     runs-on: ubuntu-latest
     steps: 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set up JDK
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: 18
           distribution: 'adopt'
@@ -69,9 +69,9 @@ jobs:
       name: maven_central_release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set up JDK
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: 18
           distribution: 'adopt'
@@ -116,7 +116,7 @@ jobs:
     env:
       RELEASE_TAG: ""
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Get Version
         id: GetVersion
         run: .\Scripts\getLatestVersion.ps1
@@ -126,7 +126,7 @@ jobs:
         with:
           tag: ${{ steps.GetVersion.outputs.tag }}
       - name: Queue Git Release
-        uses: benc-uk/workflow-dispatch@v1
+        uses: benc-uk/workflow-dispatch@v121
         with:
           workflow: Git Release
           token: ${{ secrets.PERSONAL_TOKEN }}
