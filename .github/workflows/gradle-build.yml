@@ -17,7 +17,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
@@ -61,7 +61,7 @@ jobs:
       CURRENT_PKG_DIFF: ./artifacts/current-kiota/build/libs/msgraph-sdk-java.jar 
       PRIOR_PKG_DIFF: ./artifacts/previous-kiota/build/libs/msgraph-sdk-java.jar
     steps: 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
