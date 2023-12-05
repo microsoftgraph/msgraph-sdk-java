@@ -59,7 +59,7 @@ public class DailyPrintUsageByPrinterRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/dailyPrintUsageByPrinter{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of daily print usage summaries, grouped by printer. This API is available in the following national cloud deployments.
+     * Retrieve a list of daily print usage summaries, grouped by printer.
      * @return a PrintUsageByPrinterCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-dailyprintusagebyprinter?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class DailyPrintUsageByPrinterRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of daily print usage summaries, grouped by printer. This API is available in the following national cloud deployments.
+     * Retrieve a list of daily print usage summaries, grouped by printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PrintUsageByPrinterCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-dailyprintusagebyprinter?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class DailyPrintUsageByPrinterRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PrintUsageByPrinter::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of daily print usage summaries, grouped by printer. This API is available in the following national cloud deployments.
+     * Retrieve a list of daily print usage summaries, grouped by printer.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class DailyPrintUsageByPrinterRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of daily print usage summaries, grouped by printer. This API is available in the following national cloud deployments.
+     * Retrieve a list of daily print usage summaries, grouped by printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class DailyPrintUsageByPrinterRequestBuilder extends BaseRequestBuilder {
         return new DailyPrintUsageByPrinterRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of daily print usage summaries, grouped by printer. This API is available in the following national cloud deployments.
+     * Retrieve a list of daily print usage summaries, grouped by printer.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

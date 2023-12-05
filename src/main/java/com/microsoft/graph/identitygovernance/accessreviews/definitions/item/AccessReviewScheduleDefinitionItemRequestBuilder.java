@@ -53,14 +53,14 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/identityGovernance/accessReviews/definitions/{accessReviewScheduleDefinition%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes an accessReviewScheduleDefinition object. This API is available in the following national cloud deployments.
+     * Deletes an accessReviewScheduleDefinition object.
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes an accessReviewScheduleDefinition object. This API is available in the following national cloud deployments.
+     * Deletes an accessReviewScheduleDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -72,7 +72,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API.
      * @return a AccessReviewScheduleDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -81,7 +81,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
         return get(null);
     }
     /**
-     * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AccessReviewScheduleDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-get?view=graph-rest-1.0">Find more info here</a>
@@ -121,7 +121,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
         return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewScheduleDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Deletes an accessReviewScheduleDefinition object. This API is available in the following national cloud deployments.
+     * Deletes an accessReviewScheduleDefinition object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes an accessReviewScheduleDefinition object. This API is available in the following national cloud deployments.
+     * Deletes an accessReviewScheduleDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -141,7 +141,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -149,7 +149,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +201,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

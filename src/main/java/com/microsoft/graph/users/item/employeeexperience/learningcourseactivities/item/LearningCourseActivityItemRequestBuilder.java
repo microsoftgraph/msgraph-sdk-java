@@ -37,7 +37,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/employeeExperience/learningCourseActivities/{learningCourseActivity%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the specified learningCourseActivity object using either an ID or an externalCourseActivityId of the learning provider, or a courseActivityId of a user. This API is available in the following national cloud deployments.
+     * Get the specified learningCourseActivity object using either an ID or an externalCourseActivityId of the learning provider, or a courseActivityId of a user.
      * @return a LearningCourseActivity
      * @see <a href="https://learn.microsoft.com/graph/api/learningcourseactivity-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -46,7 +46,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
         return get(null);
     }
     /**
-     * Get the specified learningCourseActivity object using either an ID or an externalCourseActivityId of the learning provider, or a courseActivityId of a user. This API is available in the following national cloud deployments.
+     * Get the specified learningCourseActivity object using either an ID or an externalCourseActivityId of the learning provider, or a courseActivityId of a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a LearningCourseActivity
      * @see <a href="https://learn.microsoft.com/graph/api/learningcourseactivity-get?view=graph-rest-1.0">Find more info here</a>
@@ -60,7 +60,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, LearningCourseActivity::createFromDiscriminatorValue);
     }
     /**
-     * Get the specified learningCourseActivity object using either an ID or an externalCourseActivityId of the learning provider, or a courseActivityId of a user. This API is available in the following national cloud deployments.
+     * Get the specified learningCourseActivity object using either an ID or an externalCourseActivityId of the learning provider, or a courseActivityId of a user.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Get the specified learningCourseActivity object using either an ID or an externalCourseActivityId of the learning provider, or a courseActivityId of a user. This API is available in the following national cloud deployments.
+     * Get the specified learningCourseActivity object using either an ID or an externalCourseActivityId of the learning provider, or a courseActivityId of a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -90,7 +90,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
         return new LearningCourseActivityItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the specified learningCourseActivity object using either an ID or an externalCourseActivityId of the learning provider, or a courseActivityId of a user. This API is available in the following national cloud deployments.
+     * Get the specified learningCourseActivity object using either an ID or an externalCourseActivityId of the learning provider, or a courseActivityId of a user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

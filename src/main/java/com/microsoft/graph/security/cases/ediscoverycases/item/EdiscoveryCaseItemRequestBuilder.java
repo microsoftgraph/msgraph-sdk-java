@@ -109,14 +109,14 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an ediscoveryCase object. This API is available in the following national cloud deployments.
+     * Delete an ediscoveryCase object.
      * @see <a href="https://learn.microsoft.com/graph/api/security-casesroot-delete-ediscoverycases?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an ediscoveryCase object. This API is available in the following national cloud deployments.
+     * Delete an ediscoveryCase object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/security-casesroot-delete-ediscoverycases?view=graph-rest-1.0">Find more info here</a>
      */
@@ -128,7 +128,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an ediscoveryCase object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an ediscoveryCase object.
      * @return a EdiscoveryCase
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -137,7 +137,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an ediscoveryCase object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an ediscoveryCase object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EdiscoveryCase
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-get?view=graph-rest-1.0">Find more info here</a>
@@ -151,7 +151,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryCase::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an ediscoveryCase object. This API is available in the following national cloud deployments.
+     * Update the properties of an ediscoveryCase object.
      * @param body The request body
      * @return a EdiscoveryCase
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-update?view=graph-rest-1.0">Find more info here</a>
@@ -161,7 +161,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of an ediscoveryCase object. This API is available in the following national cloud deployments.
+     * Update the properties of an ediscoveryCase object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EdiscoveryCase
@@ -177,7 +177,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryCase::createFromDiscriminatorValue);
     }
     /**
-     * Delete an ediscoveryCase object. This API is available in the following national cloud deployments.
+     * Delete an ediscoveryCase object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -185,7 +185,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an ediscoveryCase object. This API is available in the following national cloud deployments.
+     * Delete an ediscoveryCase object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -197,7 +197,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an ediscoveryCase object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an ediscoveryCase object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -205,7 +205,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an ediscoveryCase object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an ediscoveryCase object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +217,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an ediscoveryCase object. This API is available in the following national cloud deployments.
+     * Update the properties of an ediscoveryCase object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +226,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an ediscoveryCase object. This API is available in the following national cloud deployments.
+     * Update the properties of an ediscoveryCase object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -257,7 +257,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an ediscoveryCase object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an ediscoveryCase object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

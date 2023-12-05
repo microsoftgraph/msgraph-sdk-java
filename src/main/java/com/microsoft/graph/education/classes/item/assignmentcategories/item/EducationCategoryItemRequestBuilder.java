@@ -37,14 +37,14 @@ public class EducationCategoryItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignmentCategories/{educationCategory%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an existing category. Only teachers can perform this operation. This API is available in the following national cloud deployments.
+     * Delete an existing category. Only teachers can perform this operation.
      * @see <a href="https://learn.microsoft.com/graph/api/educationcategory-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an existing category. Only teachers can perform this operation. This API is available in the following national cloud deployments.
+     * Delete an existing category. Only teachers can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/educationcategory-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class EducationCategoryItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve an educationCategory object. Only teachers, students, and applications with application permissions can perform this operation. This API is available in the following national cloud deployments.
+     * Retrieve an educationCategory object. Only teachers, students, and applications with application permissions can perform this operation.
      * @return a EducationCategory
      * @see <a href="https://learn.microsoft.com/graph/api/educationcategory-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class EducationCategoryItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve an educationCategory object. Only teachers, students, and applications with application permissions can perform this operation. This API is available in the following national cloud deployments.
+     * Retrieve an educationCategory object. Only teachers, students, and applications with application permissions can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EducationCategory
      * @see <a href="https://learn.microsoft.com/graph/api/educationcategory-get?view=graph-rest-1.0">Find more info here</a>
@@ -103,7 +103,7 @@ public class EducationCategoryItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationCategory::createFromDiscriminatorValue);
     }
     /**
-     * Delete an existing category. Only teachers can perform this operation. This API is available in the following national cloud deployments.
+     * Delete an existing category. Only teachers can perform this operation.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -111,7 +111,7 @@ public class EducationCategoryItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an existing category. Only teachers can perform this operation. This API is available in the following national cloud deployments.
+     * Delete an existing category. Only teachers can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -123,7 +123,7 @@ public class EducationCategoryItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve an educationCategory object. Only teachers, students, and applications with application permissions can perform this operation. This API is available in the following national cloud deployments.
+     * Retrieve an educationCategory object. Only teachers, students, and applications with application permissions can perform this operation.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class EducationCategoryItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve an educationCategory object. Only teachers, students, and applications with application permissions can perform this operation. This API is available in the following national cloud deployments.
+     * Retrieve an educationCategory object. Only teachers, students, and applications with application permissions can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -183,7 +183,7 @@ public class EducationCategoryItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve an educationCategory object. Only teachers, students, and applications with application permissions can perform this operation. This API is available in the following national cloud deployments.
+     * Retrieve an educationCategory object. Only teachers, students, and applications with application permissions can perform this operation.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

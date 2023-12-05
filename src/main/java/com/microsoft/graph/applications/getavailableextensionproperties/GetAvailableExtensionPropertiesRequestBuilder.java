@@ -35,7 +35,7 @@ public class GetAvailableExtensionPropertiesRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/applications/getAvailableExtensionProperties", rawUrl);
     }
     /**
-     * Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties: This API is available in the following national cloud deployments.
+     * Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties:
      * @param body The request body
      * @return a GetAvailableExtensionPropertiesPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directoryobject-getavailableextensionproperties?view=graph-rest-1.0">Find more info here</a>
@@ -45,7 +45,7 @@ public class GetAvailableExtensionPropertiesRequestBuilder extends BaseRequestBu
         return post(body, null);
     }
     /**
-     * Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties: This API is available in the following national cloud deployments.
+     * Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a GetAvailableExtensionPropertiesPostResponse
@@ -61,7 +61,7 @@ public class GetAvailableExtensionPropertiesRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, GetAvailableExtensionPropertiesPostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties: This API is available in the following national cloud deployments.
+     * Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties:
      * @param body The request body
      * @return a RequestInformation
      */
@@ -70,7 +70,7 @@ public class GetAvailableExtensionPropertiesRequestBuilder extends BaseRequestBu
         return toPostRequestInformation(body, null);
     }
     /**
-     * Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties: This API is available in the following national cloud deployments.
+     * Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

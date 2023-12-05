@@ -35,7 +35,7 @@ public class SetSolidColorRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/legend/format/fill/setSolidColor", rawUrl);
     }
     /**
-     * Sets the fill formatting of a chart element to a uniform color. This API is available in the following national cloud deployments.
+     * Sets the fill formatting of a chart element to a uniform color.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/chartfill-setsolidcolor?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class SetSolidColorRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Sets the fill formatting of a chart element to a uniform color. This API is available in the following national cloud deployments.
+     * Sets the fill formatting of a chart element to a uniform color.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/chartfill-setsolidcolor?view=graph-rest-1.0">Find more info here</a>
@@ -57,7 +57,7 @@ public class SetSolidColorRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Sets the fill formatting of a chart element to a uniform color. This API is available in the following national cloud deployments.
+     * Sets the fill formatting of a chart element to a uniform color.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -66,7 +66,7 @@ public class SetSolidColorRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Sets the fill formatting of a chart element to a uniform color. This API is available in the following national cloud deployments.
+     * Sets the fill formatting of a chart element to a uniform color.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

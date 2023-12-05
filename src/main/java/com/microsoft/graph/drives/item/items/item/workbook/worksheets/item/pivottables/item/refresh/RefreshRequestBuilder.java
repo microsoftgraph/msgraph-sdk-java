@@ -35,14 +35,14 @@ public class RefreshRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/pivotTables/{workbookPivotTable%2Did}/refresh", rawUrl);
     }
     /**
-     * Refreshes the PivotTable. This API is available in the following national cloud deployments.
+     * Refreshes the PivotTable.
      * @see <a href="https://learn.microsoft.com/graph/api/workbookpivottable-refresh?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Refreshes the PivotTable. This API is available in the following national cloud deployments.
+     * Refreshes the PivotTable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/workbookpivottable-refresh?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class RefreshRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Refreshes the PivotTable. This API is available in the following national cloud deployments.
+     * Refreshes the PivotTable.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class RefreshRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Refreshes the PivotTable. This API is available in the following national cloud deployments.
+     * Refreshes the PivotTable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

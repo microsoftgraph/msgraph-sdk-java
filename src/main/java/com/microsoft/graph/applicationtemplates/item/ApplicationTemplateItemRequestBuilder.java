@@ -45,7 +45,7 @@ public class ApplicationTemplateItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applicationTemplates/{applicationTemplate%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties of an applicationTemplate object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an applicationTemplate object.
      * @return a ApplicationTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/applicationtemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class ApplicationTemplateItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties of an applicationTemplate object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an applicationTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ApplicationTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/applicationtemplate-get?view=graph-rest-1.0">Find more info here</a>
@@ -68,7 +68,7 @@ public class ApplicationTemplateItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ApplicationTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the properties of an applicationTemplate object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an applicationTemplate object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +76,7 @@ public class ApplicationTemplateItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of an applicationTemplate object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an applicationTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -98,7 +98,7 @@ public class ApplicationTemplateItemRequestBuilder extends BaseRequestBuilder {
         return new ApplicationTemplateItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties of an applicationTemplate object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an applicationTemplate object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

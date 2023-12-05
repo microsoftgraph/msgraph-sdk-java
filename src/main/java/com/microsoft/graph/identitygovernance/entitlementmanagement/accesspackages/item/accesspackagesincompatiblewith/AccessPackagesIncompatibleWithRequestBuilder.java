@@ -58,7 +58,7 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/accessPackagesIncompatibleWith{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible. This API is available in the following national cloud deployments.
+     * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
      * @return a AccessPackageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-list-accesspackagesincompatiblewith?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
         return get(null);
     }
     /**
-     * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible. This API is available in the following national cloud deployments.
+     * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AccessPackageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-list-accesspackagesincompatiblewith?view=graph-rest-1.0">Find more info here</a>
@@ -81,7 +81,7 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible. This API is available in the following national cloud deployments.
+     * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible. This API is available in the following national cloud deployments.
+     * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -111,7 +111,7 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
         return new AccessPackagesIncompatibleWithRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible. This API is available in the following national cloud deployments.
+     * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -54,7 +54,7 @@ public class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of an openShiftChangeRequest object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an openShiftChangeRequest object.
      * @return a OpenShiftChangeRequest
      * @see <a href="https://learn.microsoft.com/graph/api/openshiftchangerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of an openShiftChangeRequest object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an openShiftChangeRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a OpenShiftChangeRequest
      * @see <a href="https://learn.microsoft.com/graph/api/openshiftchangerequest-get?view=graph-rest-1.0">Find more info here</a>
@@ -121,7 +121,7 @@ public class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of an openShiftChangeRequest object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an openShiftChangeRequest object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an openShiftChangeRequest object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an openShiftChangeRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -181,7 +181,7 @@ public class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of an openShiftChangeRequest object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an openShiftChangeRequest object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

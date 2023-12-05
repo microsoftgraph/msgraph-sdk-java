@@ -35,14 +35,14 @@ public class CloseSessionRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/closeSession", rawUrl);
     }
     /**
-     * Use this API to close an existing workbook session. This API is available in the following national cloud deployments.
+     * Use this API to close an existing workbook session.
      * @see <a href="https://learn.microsoft.com/graph/api/workbook-closesession?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Use this API to close an existing workbook session. This API is available in the following national cloud deployments.
+     * Use this API to close an existing workbook session.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/workbook-closesession?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class CloseSessionRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Use this API to close an existing workbook session. This API is available in the following national cloud deployments.
+     * Use this API to close an existing workbook session.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class CloseSessionRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Use this API to close an existing workbook session. This API is available in the following national cloud deployments.
+     * Use this API to close an existing workbook session.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

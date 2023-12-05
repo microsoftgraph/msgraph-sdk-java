@@ -37,7 +37,7 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/schools/{educationSchool%2Did}/administrativeUnit{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of administrativeUnits associated with an educationSchool object. This API is available in the following national cloud deployments.
+     * Get a list of administrativeUnits associated with an educationSchool object.
      * @return a AdministrativeUnit
      * @see <a href="https://learn.microsoft.com/graph/api/educationschool-list-administrativeunit?view=graph-rest-1.0">Find more info here</a>
      */
@@ -46,7 +46,7 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of administrativeUnits associated with an educationSchool object. This API is available in the following national cloud deployments.
+     * Get a list of administrativeUnits associated with an educationSchool object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AdministrativeUnit
      * @see <a href="https://learn.microsoft.com/graph/api/educationschool-list-administrativeunit?view=graph-rest-1.0">Find more info here</a>
@@ -84,7 +84,7 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AdministrativeUnit::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of administrativeUnits associated with an educationSchool object. This API is available in the following national cloud deployments.
+     * Get a list of administrativeUnits associated with an educationSchool object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of administrativeUnits associated with an educationSchool object. This API is available in the following national cloud deployments.
+     * Get a list of administrativeUnits associated with an educationSchool object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -138,7 +138,7 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder {
         return new AdministrativeUnitRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of administrativeUnits associated with an educationSchool object. This API is available in the following national cloud deployments.
+     * Get a list of administrativeUnits associated with an educationSchool object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

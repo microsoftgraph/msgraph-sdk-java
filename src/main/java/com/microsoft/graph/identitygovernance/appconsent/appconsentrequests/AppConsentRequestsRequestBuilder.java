@@ -70,7 +70,7 @@ public class AppConsentRequestsRequestBuilder extends BaseRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Retrieve appConsentRequest objects and their properties. This API is available in the following national cloud deployments.
+     * Retrieve appConsentRequest objects and their properties.
      * @return a AppConsentRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/appconsentapprovalroute-list-appconsentrequests?view=graph-rest-1.0">Find more info here</a>
      */
@@ -79,7 +79,7 @@ public class AppConsentRequestsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve appConsentRequest objects and their properties. This API is available in the following national cloud deployments.
+     * Retrieve appConsentRequest objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AppConsentRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/appconsentapprovalroute-list-appconsentrequests?view=graph-rest-1.0">Find more info here</a>
@@ -117,7 +117,7 @@ public class AppConsentRequestsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AppConsentRequest::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve appConsentRequest objects and their properties. This API is available in the following national cloud deployments.
+     * Retrieve appConsentRequest objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +125,7 @@ public class AppConsentRequestsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve appConsentRequest objects and their properties. This API is available in the following national cloud deployments.
+     * Retrieve appConsentRequest objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +171,7 @@ public class AppConsentRequestsRequestBuilder extends BaseRequestBuilder {
         return new AppConsentRequestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve appConsentRequest objects and their properties. This API is available in the following national cloud deployments.
+     * Retrieve appConsentRequest objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

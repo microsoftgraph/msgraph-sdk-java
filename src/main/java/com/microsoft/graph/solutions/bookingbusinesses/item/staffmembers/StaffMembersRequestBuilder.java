@@ -59,7 +59,7 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/staffMembers{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of bookingStaffMember objects in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Get a list of bookingStaffMember objects in the specified bookingBusiness.
      * @return a BookingStaffMemberBaseCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-staffmembers?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of bookingStaffMember objects in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Get a list of bookingStaffMember objects in the specified bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a BookingStaffMemberBaseCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-staffmembers?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BookingStaffMemberBaseCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Create a new bookingStaffMember in the specified bookingBusiness.
      * @param body The request body
      * @return a BookingStaffMemberBase
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-post-staffmembers?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Create a new bookingStaffMember in the specified bookingBusiness.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a BookingStaffMemberBase
@@ -108,7 +108,7 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BookingStaffMemberBase::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of bookingStaffMember objects in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Get a list of bookingStaffMember objects in the specified bookingBusiness.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of bookingStaffMember objects in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Get a list of bookingStaffMember objects in the specified bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Create a new bookingStaffMember in the specified bookingBusiness.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Create a new bookingStaffMember in the specified bookingBusiness.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         return new StaffMembersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of bookingStaffMember objects in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Get a list of bookingStaffMember objects in the specified bookingBusiness.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

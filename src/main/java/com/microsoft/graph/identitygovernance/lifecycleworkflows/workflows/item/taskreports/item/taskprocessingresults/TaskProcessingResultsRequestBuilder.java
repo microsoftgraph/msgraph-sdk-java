@@ -58,7 +58,7 @@ public class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/taskReports/{taskReport%2Did}/taskProcessingResults{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the task processing result resources from the taskReport. This API is available in the following national cloud deployments.
+     * Get the task processing result resources from the taskReport.
      * @return a TaskProcessingResultCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-taskreport-list-taskprocessingresults?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the task processing result resources from the taskReport. This API is available in the following national cloud deployments.
+     * Get the task processing result resources from the taskReport.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TaskProcessingResultCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-taskreport-list-taskprocessingresults?view=graph-rest-1.0">Find more info here</a>
@@ -81,7 +81,7 @@ public class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TaskProcessingResultCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the task processing result resources from the taskReport. This API is available in the following national cloud deployments.
+     * Get the task processing result resources from the taskReport.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the task processing result resources from the taskReport. This API is available in the following national cloud deployments.
+     * Get the task processing result resources from the taskReport.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -111,7 +111,7 @@ public class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return new TaskProcessingResultsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the task processing result resources from the taskReport. This API is available in the following national cloud deployments.
+     * Get the task processing result resources from the taskReport.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

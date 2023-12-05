@@ -37,14 +37,14 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders/{mailFolder%2Did}/messageRules/{messageRule%2Did}{?%24select}", rawUrl);
     }
     /**
-     * Delete the specified messageRule object. This API is available in the following national cloud deployments.
+     * Delete the specified messageRule object.
      * @see <a href="https://learn.microsoft.com/graph/api/messagerule-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete the specified messageRule object. This API is available in the following national cloud deployments.
+     * Delete the specified messageRule object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/messagerule-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the properties and relationships of a messageRule object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a messageRule object.
      * @return a MessageRule
      * @see <a href="https://learn.microsoft.com/graph/api/messagerule-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the properties and relationships of a messageRule object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a messageRule object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a MessageRule
      * @see <a href="https://learn.microsoft.com/graph/api/messagerule-get?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MessageRule::createFromDiscriminatorValue);
     }
     /**
-     * Change writable properties on a messageRule object and save the changes. This API is available in the following national cloud deployments.
+     * Change writable properties on a messageRule object and save the changes.
      * @param body The request body
      * @return a MessageRule
      * @see <a href="https://learn.microsoft.com/graph/api/messagerule-update?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Change writable properties on a messageRule object and save the changes. This API is available in the following national cloud deployments.
+     * Change writable properties on a messageRule object and save the changes.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a MessageRule
@@ -105,7 +105,7 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MessageRule::createFromDiscriminatorValue);
     }
     /**
-     * Delete the specified messageRule object. This API is available in the following national cloud deployments.
+     * Delete the specified messageRule object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete the specified messageRule object. This API is available in the following national cloud deployments.
+     * Delete the specified messageRule object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -125,7 +125,7 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the properties and relationships of a messageRule object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a messageRule object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of a messageRule object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a messageRule object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Change writable properties on a messageRule object and save the changes. This API is available in the following national cloud deployments.
+     * Change writable properties on a messageRule object and save the changes.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Change writable properties on a messageRule object and save the changes. This API is available in the following national cloud deployments.
+     * Change writable properties on a messageRule object and save the changes.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -185,7 +185,7 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties and relationships of a messageRule object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a messageRule object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

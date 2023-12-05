@@ -59,7 +59,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/operations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of a printOperation object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a printOperation object.
      * @return a PrintOperationCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a printOperation object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a printOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PrintOperationCollectionResponse
      */
@@ -104,7 +104,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PrintOperation::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the properties and relationships of a printOperation object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a printOperation object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a printOperation object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a printOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return new OperationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties and relationships of a printOperation object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a printOperation object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

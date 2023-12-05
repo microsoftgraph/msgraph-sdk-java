@@ -36,7 +36,7 @@ public class MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder exte
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow%2Did}/microsoft.graph.identityGovernance.createNewVersion", rawUrl);
     }
     /**
-     * Create a new version of the workflow object. This API is available in the following national cloud deployments.
+     * Create a new version of the workflow object.
      * @param body The request body
      * @return a Workflow
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-createnewversion?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder exte
         return post(body, null);
     }
     /**
-     * Create a new version of the workflow object. This API is available in the following national cloud deployments.
+     * Create a new version of the workflow object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Workflow
@@ -62,7 +62,7 @@ public class MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder exte
         return this.requestAdapter.send(requestInfo, errorMapping, Workflow::createFromDiscriminatorValue);
     }
     /**
-     * Create a new version of the workflow object. This API is available in the following national cloud deployments.
+     * Create a new version of the workflow object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder exte
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new version of the workflow object. This API is available in the following national cloud deployments.
+     * Create a new version of the workflow object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

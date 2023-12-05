@@ -35,7 +35,7 @@ public class SendActivityNotificationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/chats/{chat%2Did}/sendActivityNotification", rawUrl);
     }
     /**
-     * Send an activity feed notification in scope of a chat. For more details about sending notifications and the requirements for doing so, see sending Teams activity notifications. This API is available in the following national cloud deployments.
+     * Send an activity feed notification in scope of a chat. For more details about sending notifications and the requirements for doing so, see sending Teams activity notifications.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/chat-sendactivitynotification?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class SendActivityNotificationRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Send an activity feed notification in scope of a chat. For more details about sending notifications and the requirements for doing so, see sending Teams activity notifications. This API is available in the following national cloud deployments.
+     * Send an activity feed notification in scope of a chat. For more details about sending notifications and the requirements for doing so, see sending Teams activity notifications.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/chat-sendactivitynotification?view=graph-rest-1.0">Find more info here</a>
@@ -57,7 +57,7 @@ public class SendActivityNotificationRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Send an activity feed notification in scope of a chat. For more details about sending notifications and the requirements for doing so, see sending Teams activity notifications. This API is available in the following national cloud deployments.
+     * Send an activity feed notification in scope of a chat. For more details about sending notifications and the requirements for doing so, see sending Teams activity notifications.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -66,7 +66,7 @@ public class SendActivityNotificationRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Send an activity feed notification in scope of a chat. For more details about sending notifications and the requirements for doing so, see sending Teams activity notifications. This API is available in the following national cloud deployments.
+     * Send an activity feed notification in scope of a chat. For more details about sending notifications and the requirements for doing so, see sending Teams activity notifications.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

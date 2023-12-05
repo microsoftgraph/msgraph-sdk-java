@@ -35,14 +35,14 @@ public class UnprotectRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/protection/unprotect", rawUrl);
     }
     /**
-     * Unprotect a worksheet This API is available in the following national cloud deployments.
+     * Unprotect a worksheet
      * @see <a href="https://learn.microsoft.com/graph/api/worksheetprotection-unprotect?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Unprotect a worksheet This API is available in the following national cloud deployments.
+     * Unprotect a worksheet
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/worksheetprotection-unprotect?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class UnprotectRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Unprotect a worksheet This API is available in the following national cloud deployments.
+     * Unprotect a worksheet
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class UnprotectRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Unprotect a worksheet This API is available in the following national cloud deployments.
+     * Unprotect a worksheet
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

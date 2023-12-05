@@ -35,7 +35,7 @@ public class SetDataRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/setData", rawUrl);
     }
     /**
-     * Resets the source data for the chart. This API is available in the following national cloud deployments.
+     * Resets the source data for the chart.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/chart-setdata?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class SetDataRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Resets the source data for the chart. This API is available in the following national cloud deployments.
+     * Resets the source data for the chart.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/chart-setdata?view=graph-rest-1.0">Find more info here</a>
@@ -57,7 +57,7 @@ public class SetDataRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Resets the source data for the chart. This API is available in the following national cloud deployments.
+     * Resets the source data for the chart.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -66,7 +66,7 @@ public class SetDataRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Resets the source data for the chart. This API is available in the following national cloud deployments.
+     * Resets the source data for the chart.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

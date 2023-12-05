@@ -83,7 +83,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, SynchronizationTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Update (override) the synchronization template associated with a given application. This API is available in the following national cloud deployments.
+     * Update (override) the synchronization template associated with a given application.
      * @param body The request body
      * @return a SynchronizationTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationtemplate-update?view=graph-rest-1.0">Find more info here</a>
@@ -93,7 +93,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         return patch(body, null);
     }
     /**
-     * Update (override) the synchronization template associated with a given application. This API is available in the following national cloud deployments.
+     * Update (override) the synchronization template associated with a given application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SynchronizationTemplate
@@ -149,7 +149,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Update (override) the synchronization template associated with a given application. This API is available in the following national cloud deployments.
+     * Update (override) the synchronization template associated with a given application.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update (override) the synchronization template associated with a given application. This API is available in the following national cloud deployments.
+     * Update (override) the synchronization template associated with a given application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

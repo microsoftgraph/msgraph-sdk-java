@@ -59,7 +59,7 @@ public class VulnerabilitiesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/vulnerabilities{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a vulnerability object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a vulnerability object.
      * @return a VulnerabilityCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class VulnerabilitiesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a vulnerability object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a vulnerability object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a VulnerabilityCollectionResponse
      */
@@ -104,7 +104,7 @@ public class VulnerabilitiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Vulnerability::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of a vulnerability object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a vulnerability object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class VulnerabilitiesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a vulnerability object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a vulnerability object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class VulnerabilitiesRequestBuilder extends BaseRequestBuilder {
         return new VulnerabilitiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a vulnerability object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a vulnerability object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

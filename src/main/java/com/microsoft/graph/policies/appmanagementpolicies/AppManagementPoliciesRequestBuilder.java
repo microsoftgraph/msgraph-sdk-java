@@ -59,7 +59,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/appManagementPolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of appManagementPolicy objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of appManagementPolicy objects.
      * @return a AppManagementPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/appmanagementpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of appManagementPolicy objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of appManagementPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AppManagementPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/appmanagementpolicy-list?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AppManagementPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create an appManagementPolicy object. This API is available in the following national cloud deployments.
+     * Create an appManagementPolicy object.
      * @param body The request body
      * @return a AppManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/appmanagementpolicy-post?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create an appManagementPolicy object. This API is available in the following national cloud deployments.
+     * Create an appManagementPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AppManagementPolicy
@@ -108,7 +108,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AppManagementPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of appManagementPolicy objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of appManagementPolicy objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of appManagementPolicy objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of appManagementPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create an appManagementPolicy object. This API is available in the following national cloud deployments.
+     * Create an appManagementPolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create an appManagementPolicy object. This API is available in the following national cloud deployments.
+     * Create an appManagementPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         return new AppManagementPoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of appManagementPolicy objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of appManagementPolicy objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

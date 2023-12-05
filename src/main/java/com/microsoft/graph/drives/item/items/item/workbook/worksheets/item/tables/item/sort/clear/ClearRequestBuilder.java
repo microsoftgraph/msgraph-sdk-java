@@ -35,14 +35,14 @@ public class ClearRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/tables/{workbookTable%2Did}/sort/clear", rawUrl);
     }
     /**
-     * Clears the sorting that is currently on the table. While this doesn't modify the table's ordering, it clears the state of the header buttons. This API is available in the following national cloud deployments.
+     * Clears the sorting that is currently on the table. While this doesn't modify the table's ordering, it clears the state of the header buttons.
      * @see <a href="https://learn.microsoft.com/graph/api/tablesort-clear?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Clears the sorting that is currently on the table. While this doesn't modify the table's ordering, it clears the state of the header buttons. This API is available in the following national cloud deployments.
+     * Clears the sorting that is currently on the table. While this doesn't modify the table's ordering, it clears the state of the header buttons.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/tablesort-clear?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class ClearRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Clears the sorting that is currently on the table. While this doesn't modify the table's ordering, it clears the state of the header buttons. This API is available in the following national cloud deployments.
+     * Clears the sorting that is currently on the table. While this doesn't modify the table's ordering, it clears the state of the header buttons.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class ClearRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Clears the sorting that is currently on the table. While this doesn't modify the table's ordering, it clears the state of the header buttons. This API is available in the following national cloud deployments.
+     * Clears the sorting that is currently on the table. While this doesn't modify the table's ordering, it clears the state of the header buttons.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

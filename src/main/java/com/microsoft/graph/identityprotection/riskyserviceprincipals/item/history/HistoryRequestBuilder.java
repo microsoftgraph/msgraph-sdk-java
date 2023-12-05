@@ -59,7 +59,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityProtection/riskyServicePrincipals/{riskyServicePrincipal%2Did}/history{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the risk history of a riskyServicePrincipal object. This API is available in the following national cloud deployments.
+     * Get the risk history of a riskyServicePrincipal object.
      * @return a RiskyServicePrincipalHistoryItemCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/riskyserviceprincipal-list-history?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the risk history of a riskyServicePrincipal object. This API is available in the following national cloud deployments.
+     * Get the risk history of a riskyServicePrincipal object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RiskyServicePrincipalHistoryItemCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/riskyserviceprincipal-list-history?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RiskyServicePrincipalHistoryItem::createFromDiscriminatorValue);
     }
     /**
-     * Get the risk history of a riskyServicePrincipal object. This API is available in the following national cloud deployments.
+     * Get the risk history of a riskyServicePrincipal object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the risk history of a riskyServicePrincipal object. This API is available in the following national cloud deployments.
+     * Get the risk history of a riskyServicePrincipal object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         return new HistoryRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the risk history of a riskyServicePrincipal object. This API is available in the following national cloud deployments.
+     * Get the risk history of a riskyServicePrincipal object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

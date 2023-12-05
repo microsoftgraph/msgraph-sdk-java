@@ -37,14 +37,14 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/identity/userFlowAttributes/{identityUserFlowAttribute%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a custom identityUserFlowAttribute. This API is available in the following national cloud deployments.
+     * Delete a custom identityUserFlowAttribute.
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a custom identityUserFlowAttribute. This API is available in the following national cloud deployments.
+     * Delete a custom identityUserFlowAttribute.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a identityUserFlowAttribute object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a identityUserFlowAttribute object.
      * @return a IdentityUserFlowAttribute
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a identityUserFlowAttribute object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a identityUserFlowAttribute object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a IdentityUserFlowAttribute
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-get?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityUserFlowAttribute::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a custom identityUserFlowAttribute object. This API is available in the following national cloud deployments.
+     * Update the properties of a custom identityUserFlowAttribute object.
      * @param body The request body
      * @return a IdentityUserFlowAttribute
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-update?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return patch(body, null);
     }
     /**
-     * Update the properties of a custom identityUserFlowAttribute object. This API is available in the following national cloud deployments.
+     * Update the properties of a custom identityUserFlowAttribute object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a IdentityUserFlowAttribute
@@ -105,7 +105,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityUserFlowAttribute::createFromDiscriminatorValue);
     }
     /**
-     * Delete a custom identityUserFlowAttribute. This API is available in the following national cloud deployments.
+     * Delete a custom identityUserFlowAttribute.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a custom identityUserFlowAttribute. This API is available in the following national cloud deployments.
+     * Delete a custom identityUserFlowAttribute.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -125,7 +125,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a identityUserFlowAttribute object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a identityUserFlowAttribute object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a identityUserFlowAttribute object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a identityUserFlowAttribute object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Update the properties of a custom identityUserFlowAttribute object. This API is available in the following national cloud deployments.
+     * Update the properties of a custom identityUserFlowAttribute object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a custom identityUserFlowAttribute object. This API is available in the following national cloud deployments.
+     * Update the properties of a custom identityUserFlowAttribute object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -185,7 +185,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a identityUserFlowAttribute object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a identityUserFlowAttribute object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -37,14 +37,14 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/softwareOathMethods/{softwareOathAuthenticationMethod%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a user's Software OATH token authentication method object. This API is available in the following national cloud deployments.
+     * Delete a user's Software OATH token authentication method object.
      * @see <a href="https://learn.microsoft.com/graph/api/softwareoathauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a user's Software OATH token authentication method object. This API is available in the following national cloud deployments.
+     * Delete a user's Software OATH token authentication method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/softwareoathauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve a user's single Software OATH token authentication method object and its properties. This API is available in the following national cloud deployments.
+     * Retrieve a user's single Software OATH token authentication method object and its properties.
      * @return a SoftwareOathAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/softwareoathauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return get(null);
     }
     /**
-     * Retrieve a user's single Software OATH token authentication method object and its properties. This API is available in the following national cloud deployments.
+     * Retrieve a user's single Software OATH token authentication method object and its properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SoftwareOathAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/softwareoathauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return this.requestAdapter.send(requestInfo, errorMapping, SoftwareOathAuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
-     * Delete a user's Software OATH token authentication method object. This API is available in the following national cloud deployments.
+     * Delete a user's Software OATH token authentication method object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -87,7 +87,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a user's Software OATH token authentication method object. This API is available in the following national cloud deployments.
+     * Delete a user's Software OATH token authentication method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -99,7 +99,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return requestInfo;
     }
     /**
-     * Retrieve a user's single Software OATH token authentication method object and its properties. This API is available in the following national cloud deployments.
+     * Retrieve a user's single Software OATH token authentication method object and its properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a user's single Software OATH token authentication method object and its properties. This API is available in the following national cloud deployments.
+     * Retrieve a user's single Software OATH token authentication method object and its properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -135,7 +135,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve a user's single Software OATH token authentication method object and its properties. This API is available in the following national cloud deployments.
+     * Retrieve a user's single Software OATH token authentication method object and its properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

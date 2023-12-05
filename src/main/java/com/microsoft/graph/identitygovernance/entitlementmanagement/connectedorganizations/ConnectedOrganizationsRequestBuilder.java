@@ -59,7 +59,7 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/connectedOrganizations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of connectedOrganization objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of connectedOrganization objects.
      * @return a ConnectedOrganizationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-connectedorganizations?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of connectedOrganization objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of connectedOrganization objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ConnectedOrganizationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-connectedorganizations?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConnectedOrganizationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new connectedOrganization object. This API is available in the following national cloud deployments.
+     * Create a new connectedOrganization object.
      * @param body The request body
      * @return a ConnectedOrganization
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-post-connectedorganizations?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new connectedOrganization object. This API is available in the following national cloud deployments.
+     * Create a new connectedOrganization object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ConnectedOrganization
@@ -108,7 +108,7 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConnectedOrganization::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of connectedOrganization objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of connectedOrganization objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of connectedOrganization objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of connectedOrganization objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new connectedOrganization object. This API is available in the following national cloud deployments.
+     * Create a new connectedOrganization object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new connectedOrganization object. This API is available in the following national cloud deployments.
+     * Create a new connectedOrganization object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         return new ConnectedOrganizationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of connectedOrganization objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of connectedOrganization objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -35,7 +35,7 @@ public class ApplyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/{workbookTable%2Did}/columns/{workbookTableColumn%2Did}/filter/apply", rawUrl);
     }
     /**
-     * Apply the given filter criteria on the given column. This API is available in the following national cloud deployments.
+     * Apply the given filter criteria on the given column.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/filter-apply?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class ApplyRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Apply the given filter criteria on the given column. This API is available in the following national cloud deployments.
+     * Apply the given filter criteria on the given column.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/filter-apply?view=graph-rest-1.0">Find more info here</a>
@@ -57,7 +57,7 @@ public class ApplyRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Apply the given filter criteria on the given column. This API is available in the following national cloud deployments.
+     * Apply the given filter criteria on the given column.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -66,7 +66,7 @@ public class ApplyRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Apply the given filter criteria on the given column. This API is available in the following national cloud deployments.
+     * Apply the given filter criteria on the given column.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

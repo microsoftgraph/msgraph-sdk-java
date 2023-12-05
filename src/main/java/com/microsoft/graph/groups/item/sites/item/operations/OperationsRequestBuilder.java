@@ -59,7 +59,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/operations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of rich long-running operations associated with a site. This API is available in the following national cloud deployments.
+     * Get a list of rich long-running operations associated with a site.
      * @return a RichLongRunningOperationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/site-list-operations?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of rich long-running operations associated with a site. This API is available in the following national cloud deployments.
+     * Get a list of rich long-running operations associated with a site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RichLongRunningOperationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/site-list-operations?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RichLongRunningOperation::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of rich long-running operations associated with a site. This API is available in the following national cloud deployments.
+     * Get a list of rich long-running operations associated with a site.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of rich long-running operations associated with a site. This API is available in the following national cloud deployments.
+     * Get a list of rich long-running operations associated with a site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return new OperationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of rich long-running operations associated with a site. This API is available in the following national cloud deployments.
+     * Get a list of rich long-running operations associated with a site.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

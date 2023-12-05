@@ -62,7 +62,7 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseReq
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a customSecurityAttributeDefinition object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a customSecurityAttributeDefinition object.
      * @return a CustomSecurityAttributeDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/customsecurityattributedefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -71,7 +71,7 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseReq
         return get(null);
     }
     /**
-     * Read the properties and relationships of a customSecurityAttributeDefinition object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a customSecurityAttributeDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CustomSecurityAttributeDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/customsecurityattributedefinition-get?view=graph-rest-1.0">Find more info here</a>
@@ -85,7 +85,7 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseReq
         return this.requestAdapter.send(requestInfo, errorMapping, CustomSecurityAttributeDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a customSecurityAttributeDefinition object. This API is available in the following national cloud deployments.
+     * Update the properties of a customSecurityAttributeDefinition object.
      * @param body The request body
      * @return a CustomSecurityAttributeDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/customsecurityattributedefinition-update?view=graph-rest-1.0">Find more info here</a>
@@ -95,7 +95,7 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseReq
         return patch(body, null);
     }
     /**
-     * Update the properties of a customSecurityAttributeDefinition object. This API is available in the following national cloud deployments.
+     * Update the properties of a customSecurityAttributeDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CustomSecurityAttributeDefinition
@@ -131,7 +131,7 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a customSecurityAttributeDefinition object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a customSecurityAttributeDefinition object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseReq
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a customSecurityAttributeDefinition object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a customSecurityAttributeDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -151,7 +151,7 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
-     * Update the properties of a customSecurityAttributeDefinition object. This API is available in the following national cloud deployments.
+     * Update the properties of a customSecurityAttributeDefinition object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseReq
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a customSecurityAttributeDefinition object. This API is available in the following national cloud deployments.
+     * Update the properties of a customSecurityAttributeDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -191,7 +191,7 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseReq
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a customSecurityAttributeDefinition object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a customSecurityAttributeDefinition object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

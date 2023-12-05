@@ -59,7 +59,7 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/tenantRelationships/delegatedAdminRelationships{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the delegatedAdminRelationship objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the delegatedAdminRelationship objects and their properties.
      * @return a DelegatedAdminRelationshipCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/tenantrelationship-list-delegatedadminrelationships?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
         return get(null);
     }
     /**
-     * Get a list of the delegatedAdminRelationship objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the delegatedAdminRelationship objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DelegatedAdminRelationshipCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/tenantrelationship-list-delegatedadminrelationships?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminRelationshipCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new delegatedAdminRelationship object. This API is available in the following national cloud deployments.
+     * Create a new delegatedAdminRelationship object.
      * @param body The request body
      * @return a DelegatedAdminRelationship
      * @see <a href="https://learn.microsoft.com/graph/api/tenantrelationship-post-delegatedadminrelationships?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
         return post(body, null);
     }
     /**
-     * Create a new delegatedAdminRelationship object. This API is available in the following national cloud deployments.
+     * Create a new delegatedAdminRelationship object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DelegatedAdminRelationship
@@ -108,7 +108,7 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminRelationship::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the delegatedAdminRelationship objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the delegatedAdminRelationship objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the delegatedAdminRelationship objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the delegatedAdminRelationship objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Create a new delegatedAdminRelationship object. This API is available in the following national cloud deployments.
+     * Create a new delegatedAdminRelationship object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new delegatedAdminRelationship object. This API is available in the following national cloud deployments.
+     * Create a new delegatedAdminRelationship object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
         return new DelegatedAdminRelationshipsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the delegatedAdminRelationship objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the delegatedAdminRelationship objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -62,7 +62,7 @@ public class PrintServiceItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a print service. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a print service.
      * @return a PrintService
      * @see <a href="https://learn.microsoft.com/graph/api/printservice-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -71,7 +71,7 @@ public class PrintServiceItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a print service. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a print service.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PrintService
      * @see <a href="https://learn.microsoft.com/graph/api/printservice-get?view=graph-rest-1.0">Find more info here</a>
@@ -129,7 +129,7 @@ public class PrintServiceItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a print service. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a print service.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +137,7 @@ public class PrintServiceItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a print service. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a print service.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -189,7 +189,7 @@ public class PrintServiceItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a print service. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a print service.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

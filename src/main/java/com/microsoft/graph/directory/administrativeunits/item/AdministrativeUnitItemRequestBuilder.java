@@ -61,14 +61,14 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/administrativeUnits/{administrativeUnit%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an administrativeUnit. This API is available in the following national cloud deployments.
+     * Delete an administrativeUnit.
      * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an administrativeUnit. This API is available in the following national cloud deployments.
+     * Delete an administrativeUnit.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -80,7 +80,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of an administrativeUnit object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an administrativeUnit object.
      * @return a AdministrativeUnit
      * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -89,7 +89,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of an administrativeUnit object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an administrativeUnit object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AdministrativeUnit
      * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-get?view=graph-rest-1.0">Find more info here</a>
@@ -103,7 +103,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AdministrativeUnit::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an administrativeUnit object. This API is available in the following national cloud deployments.
+     * Update the properties of an administrativeUnit object.
      * @param body The request body
      * @return a AdministrativeUnit
      * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-update?view=graph-rest-1.0">Find more info here</a>
@@ -113,7 +113,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of an administrativeUnit object. This API is available in the following national cloud deployments.
+     * Update the properties of an administrativeUnit object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AdministrativeUnit
@@ -129,7 +129,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AdministrativeUnit::createFromDiscriminatorValue);
     }
     /**
-     * Delete an administrativeUnit. This API is available in the following national cloud deployments.
+     * Delete an administrativeUnit.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +137,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an administrativeUnit. This API is available in the following national cloud deployments.
+     * Delete an administrativeUnit.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -149,7 +149,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of an administrativeUnit object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an administrativeUnit object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -157,7 +157,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an administrativeUnit object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an administrativeUnit object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an administrativeUnit object. This API is available in the following national cloud deployments.
+     * Update the properties of an administrativeUnit object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +178,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an administrativeUnit object. This API is available in the following national cloud deployments.
+     * Update the properties of an administrativeUnit object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -209,7 +209,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of an administrativeUnit object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an administrativeUnit object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

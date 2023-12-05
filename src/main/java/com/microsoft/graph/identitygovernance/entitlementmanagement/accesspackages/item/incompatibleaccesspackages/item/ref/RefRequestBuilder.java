@@ -36,14 +36,14 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/incompatibleAccessPackages/{accessPackage%2Did1}/$ref{?%40id*}", rawUrl);
     }
     /**
-     * Remove an access package from the list of access packages that have been marked as incompatible on an accessPackage.   This API is available in the following national cloud deployments.
+     * Remove an access package from the list of access packages that have been marked as incompatible on an accessPackage.  
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-delete-incompatibleaccesspackage?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Remove an access package from the list of access packages that have been marked as incompatible on an accessPackage.   This API is available in the following national cloud deployments.
+     * Remove an access package from the list of access packages that have been marked as incompatible on an accessPackage.  
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-delete-incompatibleaccesspackage?view=graph-rest-1.0">Find more info here</a>
      */
@@ -55,7 +55,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Remove an access package from the list of access packages that have been marked as incompatible on an accessPackage.   This API is available in the following national cloud deployments.
+     * Remove an access package from the list of access packages that have been marked as incompatible on an accessPackage.  
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Remove an access package from the list of access packages that have been marked as incompatible on an accessPackage.   This API is available in the following national cloud deployments.
+     * Remove an access package from the list of access packages that have been marked as incompatible on an accessPackage.  
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -85,7 +85,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Remove an access package from the list of access packages that have been marked as incompatible on an accessPackage.   This API is available in the following national cloud deployments.
+     * Remove an access package from the list of access packages that have been marked as incompatible on an accessPackage.  
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteQueryParameters {

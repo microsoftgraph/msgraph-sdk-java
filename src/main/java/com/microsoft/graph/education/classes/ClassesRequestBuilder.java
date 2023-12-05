@@ -67,7 +67,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the educationClass objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the educationClass objects and their properties.
      * @return a EducationClassCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -76,7 +76,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the educationClass objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the educationClass objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EducationClassCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-list?view=graph-rest-1.0">Find more info here</a>
@@ -90,7 +90,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationClassCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new educationClass object. This API is available in the following national cloud deployments.
+     * Create a new educationClass object.
      * @param body The request body
      * @return a EducationClass
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-post?view=graph-rest-1.0">Find more info here</a>
@@ -100,7 +100,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new educationClass object. This API is available in the following national cloud deployments.
+     * Create a new educationClass object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EducationClass
@@ -116,7 +116,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationClass::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the educationClass objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the educationClass objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the educationClass objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the educationClass objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -136,7 +136,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new educationClass object. This API is available in the following national cloud deployments.
+     * Create a new educationClass object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new educationClass object. This API is available in the following national cloud deployments.
+     * Create a new educationClass object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -170,7 +170,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         return new ClassesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the educationClass objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the educationClass objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

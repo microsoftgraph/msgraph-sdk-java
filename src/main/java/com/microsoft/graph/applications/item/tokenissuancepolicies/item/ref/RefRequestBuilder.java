@@ -36,14 +36,14 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/tokenIssuancePolicies/{tokenIssuancePolicy%2Did}/$ref{?%40id*}", rawUrl);
     }
     /**
-     * Remove a tokenIssuancePolicy from an application. This API is available in the following national cloud deployments.
+     * Remove a tokenIssuancePolicy from an application.
      * @see <a href="https://learn.microsoft.com/graph/api/application-delete-tokenissuancepolicies?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Remove a tokenIssuancePolicy from an application. This API is available in the following national cloud deployments.
+     * Remove a tokenIssuancePolicy from an application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/application-delete-tokenissuancepolicies?view=graph-rest-1.0">Find more info here</a>
      */
@@ -55,7 +55,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Remove a tokenIssuancePolicy from an application. This API is available in the following national cloud deployments.
+     * Remove a tokenIssuancePolicy from an application.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Remove a tokenIssuancePolicy from an application. This API is available in the following national cloud deployments.
+     * Remove a tokenIssuancePolicy from an application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -85,7 +85,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Remove a tokenIssuancePolicy from an application. This API is available in the following national cloud deployments.
+     * Remove a tokenIssuancePolicy from an application.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteQueryParameters {

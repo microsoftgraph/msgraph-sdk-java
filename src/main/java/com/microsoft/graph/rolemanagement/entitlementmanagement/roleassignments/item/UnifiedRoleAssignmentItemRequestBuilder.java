@@ -69,14 +69,14 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/roleManagement/entitlementManagement/roleAssignments/{unifiedRoleAssignment%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a unifiedRoleAssignment object. This API is available in the following national cloud deployments.
+     * Delete a unifiedRoleAssignment object.
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a unifiedRoleAssignment object. This API is available in the following national cloud deployments.
+     * Delete a unifiedRoleAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -88,7 +88,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a unifiedRoleAssignment object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a unifiedRoleAssignment object.
      * @return a UnifiedRoleAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -97,7 +97,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a unifiedRoleAssignment object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a unifiedRoleAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UnifiedRoleAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignment-get?view=graph-rest-1.0">Find more info here</a>
@@ -135,7 +135,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Delete a unifiedRoleAssignment object. This API is available in the following national cloud deployments.
+     * Delete a unifiedRoleAssignment object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -143,7 +143,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a unifiedRoleAssignment object. This API is available in the following national cloud deployments.
+     * Delete a unifiedRoleAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -155,7 +155,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a unifiedRoleAssignment object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a unifiedRoleAssignment object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -163,7 +163,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a unifiedRoleAssignment object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a unifiedRoleAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -215,7 +215,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a unifiedRoleAssignment object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a unifiedRoleAssignment object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

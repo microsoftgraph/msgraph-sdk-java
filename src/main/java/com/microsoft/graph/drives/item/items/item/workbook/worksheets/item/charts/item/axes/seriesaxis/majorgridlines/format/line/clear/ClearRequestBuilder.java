@@ -35,14 +35,14 @@ public class ClearRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/axes/seriesAxis/majorGridlines/format/line/clear", rawUrl);
     }
     /**
-     * Clear the line format of a chart element. This API is available in the following national cloud deployments.
+     * Clear the line format of a chart element.
      * @see <a href="https://learn.microsoft.com/graph/api/chartlineformat-clear?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Clear the line format of a chart element. This API is available in the following national cloud deployments.
+     * Clear the line format of a chart element.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/chartlineformat-clear?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class ClearRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Clear the line format of a chart element. This API is available in the following national cloud deployments.
+     * Clear the line format of a chart element.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class ClearRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Clear the line format of a chart element. This API is available in the following national cloud deployments.
+     * Clear the line format of a chart element.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

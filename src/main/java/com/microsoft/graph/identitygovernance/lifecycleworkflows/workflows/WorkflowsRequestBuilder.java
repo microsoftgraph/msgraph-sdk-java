@@ -59,7 +59,7 @@ public class WorkflowsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of workflow resources that are associated with lifecycle workflows. This API is available in the following national cloud deployments.
+     * Get a list of workflow resources that are associated with lifecycle workflows.
      * @return a WorkflowCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecycleworkflowscontainer-list-workflows?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class WorkflowsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of workflow resources that are associated with lifecycle workflows. This API is available in the following national cloud deployments.
+     * Get a list of workflow resources that are associated with lifecycle workflows.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkflowCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecycleworkflowscontainer-list-workflows?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class WorkflowsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkflowCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new workflow object. You can create up to 50 workflows in a tenant. This API is available in the following national cloud deployments.
+     * Create a new workflow object. You can create up to 50 workflows in a tenant.
      * @param body The request body
      * @return a Workflow
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecycleworkflowscontainer-post-workflows?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class WorkflowsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new workflow object. You can create up to 50 workflows in a tenant. This API is available in the following national cloud deployments.
+     * Create a new workflow object. You can create up to 50 workflows in a tenant.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Workflow
@@ -108,7 +108,7 @@ public class WorkflowsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Workflow::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of workflow resources that are associated with lifecycle workflows. This API is available in the following national cloud deployments.
+     * Get a list of workflow resources that are associated with lifecycle workflows.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class WorkflowsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of workflow resources that are associated with lifecycle workflows. This API is available in the following national cloud deployments.
+     * Get a list of workflow resources that are associated with lifecycle workflows.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class WorkflowsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new workflow object. You can create up to 50 workflows in a tenant. This API is available in the following national cloud deployments.
+     * Create a new workflow object. You can create up to 50 workflows in a tenant.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class WorkflowsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new workflow object. You can create up to 50 workflows in a tenant. This API is available in the following national cloud deployments.
+     * Create a new workflow object. You can create up to 50 workflows in a tenant.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class WorkflowsRequestBuilder extends BaseRequestBuilder {
         return new WorkflowsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of workflow resources that are associated with lifecycle workflows. This API is available in the following national cloud deployments.
+     * Get a list of workflow resources that are associated with lifecycle workflows.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -70,7 +70,7 @@ public class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Get a list of the privilegedAccessGroupAssignmentScheduleRequest objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the privilegedAccessGroupAssignmentScheduleRequest objects and their properties.
      * @return a PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-assignmentschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
@@ -79,7 +79,7 @@ public class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
         return get(null);
     }
     /**
-     * Get a list of the privilegedAccessGroupAssignmentScheduleRequest objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the privilegedAccessGroupAssignmentScheduleRequest objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-assignmentschedulerequests?view=graph-rest-1.0">Find more info here</a>
@@ -93,7 +93,7 @@ public class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new privilegedAccessGroupAssignmentScheduleRequest object. This API is available in the following national cloud deployments.
+     * Create a new privilegedAccessGroupAssignmentScheduleRequest object.
      * @param body The request body
      * @return a PrivilegedAccessGroupAssignmentScheduleRequest
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-post-assignmentschedulerequests?view=graph-rest-1.0">Find more info here</a>
@@ -103,7 +103,7 @@ public class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
         return post(body, null);
     }
     /**
-     * Create a new privilegedAccessGroupAssignmentScheduleRequest object. This API is available in the following national cloud deployments.
+     * Create a new privilegedAccessGroupAssignmentScheduleRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PrivilegedAccessGroupAssignmentScheduleRequest
@@ -119,7 +119,7 @@ public class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedAccessGroupAssignmentScheduleRequest::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the privilegedAccessGroupAssignmentScheduleRequest objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the privilegedAccessGroupAssignmentScheduleRequest objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -127,7 +127,7 @@ public class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the privilegedAccessGroupAssignmentScheduleRequest objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the privilegedAccessGroupAssignmentScheduleRequest objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -139,7 +139,7 @@ public class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Create a new privilegedAccessGroupAssignmentScheduleRequest object. This API is available in the following national cloud deployments.
+     * Create a new privilegedAccessGroupAssignmentScheduleRequest object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -148,7 +148,7 @@ public class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new privilegedAccessGroupAssignmentScheduleRequest object. This API is available in the following national cloud deployments.
+     * Create a new privilegedAccessGroupAssignmentScheduleRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -173,7 +173,7 @@ public class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
         return new AssignmentScheduleRequestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the privilegedAccessGroupAssignmentScheduleRequest objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the privilegedAccessGroupAssignmentScheduleRequest objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

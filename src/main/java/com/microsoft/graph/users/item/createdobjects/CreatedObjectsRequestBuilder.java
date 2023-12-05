@@ -66,7 +66,7 @@ public class CreatedObjectsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/createdObjects{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of directory objects that were created by the user. This API returns only those directory objects that were created by a user who isn't in any administrator role; otherwise, it returns an empty object. This API is available in the following national cloud deployments.
+     * Get a list of directory objects that were created by the user. This API returns only those directory objects that were created by a user who isn't in any administrator role; otherwise, it returns an empty object.
      * @return a DirectoryObjectCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-createdobjects?view=graph-rest-1.0">Find more info here</a>
      */
@@ -75,7 +75,7 @@ public class CreatedObjectsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of directory objects that were created by the user. This API returns only those directory objects that were created by a user who isn't in any administrator role; otherwise, it returns an empty object. This API is available in the following national cloud deployments.
+     * Get a list of directory objects that were created by the user. This API returns only those directory objects that were created by a user who isn't in any administrator role; otherwise, it returns an empty object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DirectoryObjectCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-createdobjects?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class CreatedObjectsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObjectCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of directory objects that were created by the user. This API returns only those directory objects that were created by a user who isn't in any administrator role; otherwise, it returns an empty object. This API is available in the following national cloud deployments.
+     * Get a list of directory objects that were created by the user. This API returns only those directory objects that were created by a user who isn't in any administrator role; otherwise, it returns an empty object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class CreatedObjectsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of directory objects that were created by the user. This API returns only those directory objects that were created by a user who isn't in any administrator role; otherwise, it returns an empty object. This API is available in the following national cloud deployments.
+     * Get a list of directory objects that were created by the user. This API returns only those directory objects that were created by a user who isn't in any administrator role; otherwise, it returns an empty object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -119,7 +119,7 @@ public class CreatedObjectsRequestBuilder extends BaseRequestBuilder {
         return new CreatedObjectsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of directory objects that were created by the user. This API returns only those directory objects that were created by a user who isn't in any administrator role; otherwise, it returns an empty object. This API is available in the following national cloud deployments.
+     * Get a list of directory objects that were created by the user. This API returns only those directory objects that were created by a user who isn't in any administrator role; otherwise, it returns an empty object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

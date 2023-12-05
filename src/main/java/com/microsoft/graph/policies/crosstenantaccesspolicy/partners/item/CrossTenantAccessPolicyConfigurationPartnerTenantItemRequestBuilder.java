@@ -45,14 +45,14 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         super(requestAdapter, "{+baseurl}/policies/crossTenantAccessPolicy/partners/{crossTenantAccessPolicyConfigurationPartner%2DtenantId}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a partner-specific configuration in a cross-tenant access policy. If a configuration includes a user synchronization policy, you must first delete the user synchronization policy before you can delete the partner-specific configuration. This API is available in the following national cloud deployments.
+     * Delete a partner-specific configuration in a cross-tenant access policy. If a configuration includes a user synchronization policy, you must first delete the user synchronization policy before you can delete the partner-specific configuration.
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a partner-specific configuration in a cross-tenant access policy. If a configuration includes a user synchronization policy, you must first delete the user synchronization policy before you can delete the partner-specific configuration. This API is available in the following national cloud deployments.
+     * Delete a partner-specific configuration in a cross-tenant access policy. If a configuration includes a user synchronization policy, you must first delete the user synchronization policy before you can delete the partner-specific configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -64,7 +64,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a partner-specific configuration. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a partner-specific configuration.
      * @return a CrossTenantAccessPolicyConfigurationPartner
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -73,7 +73,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         return get(null);
     }
     /**
-     * Read the properties and relationships of a partner-specific configuration. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a partner-specific configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CrossTenantAccessPolicyConfigurationPartner
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-get?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a partner-specific configuration. This API is available in the following national cloud deployments.
+     * Update the properties of a partner-specific configuration.
      * @param body The request body
      * @return a CrossTenantAccessPolicyConfigurationPartner
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-update?view=graph-rest-1.0">Find more info here</a>
@@ -97,7 +97,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         return patch(body, null);
     }
     /**
-     * Update the properties of a partner-specific configuration. This API is available in the following national cloud deployments.
+     * Update the properties of a partner-specific configuration.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CrossTenantAccessPolicyConfigurationPartner
@@ -113,7 +113,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue);
     }
     /**
-     * Delete a partner-specific configuration in a cross-tenant access policy. If a configuration includes a user synchronization policy, you must first delete the user synchronization policy before you can delete the partner-specific configuration. This API is available in the following national cloud deployments.
+     * Delete a partner-specific configuration in a cross-tenant access policy. If a configuration includes a user synchronization policy, you must first delete the user synchronization policy before you can delete the partner-specific configuration.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a partner-specific configuration in a cross-tenant access policy. If a configuration includes a user synchronization policy, you must first delete the user synchronization policy before you can delete the partner-specific configuration. This API is available in the following national cloud deployments.
+     * Delete a partner-specific configuration in a cross-tenant access policy. If a configuration includes a user synchronization policy, you must first delete the user synchronization policy before you can delete the partner-specific configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -133,7 +133,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a partner-specific configuration. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a partner-specific configuration.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +141,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a partner-specific configuration. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a partner-specific configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -153,7 +153,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         return requestInfo;
     }
     /**
-     * Update the properties of a partner-specific configuration. This API is available in the following national cloud deployments.
+     * Update the properties of a partner-specific configuration.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -162,7 +162,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a partner-specific configuration. This API is available in the following national cloud deployments.
+     * Update the properties of a partner-specific configuration.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -193,7 +193,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a partner-specific configuration. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a partner-specific configuration.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

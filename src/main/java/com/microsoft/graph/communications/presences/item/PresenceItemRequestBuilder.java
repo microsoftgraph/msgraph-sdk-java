@@ -94,7 +94,7 @@ public class PresenceItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get a user's presence information. This API is available in the following national cloud deployments.
+     * Get a user's presence information.
      * @return a Presence
      * @see <a href="https://learn.microsoft.com/graph/api/presence-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -103,7 +103,7 @@ public class PresenceItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a user's presence information. This API is available in the following national cloud deployments.
+     * Get a user's presence information.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Presence
      * @see <a href="https://learn.microsoft.com/graph/api/presence-get?view=graph-rest-1.0">Find more info here</a>
@@ -161,7 +161,7 @@ public class PresenceItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a user's presence information. This API is available in the following national cloud deployments.
+     * Get a user's presence information.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -169,7 +169,7 @@ public class PresenceItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a user's presence information. This API is available in the following national cloud deployments.
+     * Get a user's presence information.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -221,7 +221,7 @@ public class PresenceItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get a user's presence information. This API is available in the following national cloud deployments.
+     * Get a user's presence information.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

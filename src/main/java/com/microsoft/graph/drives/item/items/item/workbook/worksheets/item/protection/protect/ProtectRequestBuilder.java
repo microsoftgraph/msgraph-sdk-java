@@ -35,7 +35,7 @@ public class ProtectRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/protection/protect", rawUrl);
     }
     /**
-     * Protect a worksheet. It throws if the worksheet has been protected. This API is available in the following national cloud deployments.
+     * Protect a worksheet. It throws if the worksheet has been protected.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/worksheetprotection-protect?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class ProtectRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Protect a worksheet. It throws if the worksheet has been protected. This API is available in the following national cloud deployments.
+     * Protect a worksheet. It throws if the worksheet has been protected.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/worksheetprotection-protect?view=graph-rest-1.0">Find more info here</a>
@@ -57,7 +57,7 @@ public class ProtectRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Protect a worksheet. It throws if the worksheet has been protected. This API is available in the following national cloud deployments.
+     * Protect a worksheet. It throws if the worksheet has been protected.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -66,7 +66,7 @@ public class ProtectRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Protect a worksheet. It throws if the worksheet has been protected. This API is available in the following national cloud deployments.
+     * Protect a worksheet. It throws if the worksheet has been protected.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

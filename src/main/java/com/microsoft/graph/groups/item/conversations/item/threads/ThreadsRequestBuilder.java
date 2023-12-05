@@ -59,7 +59,7 @@ public class ThreadsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/conversations/{conversation%2Did}/threads{?%24top,%24skip,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get all the threads in a group conversation. Note: You can also get all the threads of a group. This API is available in the following national cloud deployments.
+     * Get all the threads in a group conversation. Note: You can also get all the threads of a group.
      * @return a ConversationThreadCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/conversation-list-threads?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ThreadsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get all the threads in a group conversation. Note: You can also get all the threads of a group. This API is available in the following national cloud deployments.
+     * Get all the threads in a group conversation. Note: You can also get all the threads of a group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ConversationThreadCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/conversation-list-threads?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class ThreadsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConversationThreadCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new thread in the specified conversation.  A thread and post are created as specified. Use reply thread to further post to that thread. Or, if you get the post ID, you can also reply to that post in that thread. Note: You can also start a new conversation by first creating a thread. This API is available in the following national cloud deployments.
+     * Create a new thread in the specified conversation.  A thread and post are created as specified. Use reply thread to further post to that thread. Or, if you get the post ID, you can also reply to that post in that thread. Note: You can also start a new conversation by first creating a thread.
      * @param body The request body
      * @return a ConversationThread
      * @see <a href="https://learn.microsoft.com/graph/api/conversation-post-threads?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class ThreadsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new thread in the specified conversation.  A thread and post are created as specified. Use reply thread to further post to that thread. Or, if you get the post ID, you can also reply to that post in that thread. Note: You can also start a new conversation by first creating a thread. This API is available in the following national cloud deployments.
+     * Create a new thread in the specified conversation.  A thread and post are created as specified. Use reply thread to further post to that thread. Or, if you get the post ID, you can also reply to that post in that thread. Note: You can also start a new conversation by first creating a thread.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ConversationThread
@@ -108,7 +108,7 @@ public class ThreadsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConversationThread::createFromDiscriminatorValue);
     }
     /**
-     * Get all the threads in a group conversation. Note: You can also get all the threads of a group. This API is available in the following national cloud deployments.
+     * Get all the threads in a group conversation. Note: You can also get all the threads of a group.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ThreadsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get all the threads in a group conversation. Note: You can also get all the threads of a group. This API is available in the following national cloud deployments.
+     * Get all the threads in a group conversation. Note: You can also get all the threads of a group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class ThreadsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new thread in the specified conversation.  A thread and post are created as specified. Use reply thread to further post to that thread. Or, if you get the post ID, you can also reply to that post in that thread. Note: You can also start a new conversation by first creating a thread. This API is available in the following national cloud deployments.
+     * Create a new thread in the specified conversation.  A thread and post are created as specified. Use reply thread to further post to that thread. Or, if you get the post ID, you can also reply to that post in that thread. Note: You can also start a new conversation by first creating a thread.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class ThreadsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new thread in the specified conversation.  A thread and post are created as specified. Use reply thread to further post to that thread. Or, if you get the post ID, you can also reply to that post in that thread. Note: You can also start a new conversation by first creating a thread. This API is available in the following national cloud deployments.
+     * Create a new thread in the specified conversation.  A thread and post are created as specified. Use reply thread to further post to that thread. Or, if you get the post ID, you can also reply to that post in that thread. Note: You can also start a new conversation by first creating a thread.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class ThreadsRequestBuilder extends BaseRequestBuilder {
         return new ThreadsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get all the threads in a group conversation. Note: You can also get all the threads of a group. This API is available in the following national cloud deployments.
+     * Get all the threads in a group conversation. Note: You can also get all the threads of a group.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

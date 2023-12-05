@@ -35,14 +35,14 @@ public class RemoveFavoriteRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/removeFavorite", rawUrl);
     }
     /**
-     * Remove the group from the list of the current user's favorite groups. Supported for Microsoft 365 groups only. This API is available in the following national cloud deployments.
+     * Remove the group from the list of the current user's favorite groups. Supported for Microsoft 365 groups only.
      * @see <a href="https://learn.microsoft.com/graph/api/group-removefavorite?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Remove the group from the list of the current user's favorite groups. Supported for Microsoft 365 groups only. This API is available in the following national cloud deployments.
+     * Remove the group from the list of the current user's favorite groups. Supported for Microsoft 365 groups only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/group-removefavorite?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class RemoveFavoriteRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Remove the group from the list of the current user's favorite groups. Supported for Microsoft 365 groups only. This API is available in the following national cloud deployments.
+     * Remove the group from the list of the current user's favorite groups. Supported for Microsoft 365 groups only.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class RemoveFavoriteRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Remove the group from the list of the current user's favorite groups. Supported for Microsoft 365 groups only. This API is available in the following national cloud deployments.
+     * Remove the group from the list of the current user's favorite groups. Supported for Microsoft 365 groups only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

@@ -37,7 +37,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/connections/{externalConnection%2Did}/schema{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a schema object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a schema object.
      * @return a Schema
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-schema-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -46,7 +46,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a schema object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a schema object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Schema
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-schema-get?view=graph-rest-1.0">Find more info here</a>
@@ -60,7 +60,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Schema::createFromDiscriminatorValue);
     }
     /**
-     * Create a new schema object. This API is available in the following national cloud deployments.
+     * Create a new schema object.
      * @param body The request body
      * @return a Schema
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-patch-schema?view=graph-rest-1.0">Find more info here</a>
@@ -70,7 +70,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Create a new schema object. This API is available in the following national cloud deployments.
+     * Create a new schema object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Schema
@@ -86,7 +86,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Schema::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of a schema object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a schema object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a schema object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a schema object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -106,7 +106,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new schema object. This API is available in the following national cloud deployments.
+     * Create a new schema object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -115,7 +115,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Create a new schema object. This API is available in the following national cloud deployments.
+     * Create a new schema object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -140,7 +140,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return new SchemaRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a schema object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a schema object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

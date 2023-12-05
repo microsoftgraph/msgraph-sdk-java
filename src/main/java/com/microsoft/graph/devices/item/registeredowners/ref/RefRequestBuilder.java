@@ -61,7 +61,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, StringCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Add a user as a registered owner of the device. This API is available in the following national cloud deployments.
+     * Add a user as a registered owner of the device.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/device-post-registeredowners?view=graph-rest-1.0">Find more info here</a>
      */
@@ -69,7 +69,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Add a user as a registered owner of the device. This API is available in the following national cloud deployments.
+     * Add a user as a registered owner of the device.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/device-post-registeredowners?view=graph-rest-1.0">Find more info here</a>
@@ -103,7 +103,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add a user as a registered owner of the device. This API is available in the following national cloud deployments.
+     * Add a user as a registered owner of the device.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -112,7 +112,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add a user as a registered owner of the device. This API is available in the following national cloud deployments.
+     * Add a user as a registered owner of the device.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

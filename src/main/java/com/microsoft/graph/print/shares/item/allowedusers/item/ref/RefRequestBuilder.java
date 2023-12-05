@@ -36,14 +36,14 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/shares/{printerShare%2Did}/allowedUsers/{user%2Did}/$ref{?%40id*}", rawUrl);
     }
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare. This API is available in the following national cloud deployments.
+     * Revoke the specified user's access to submit print jobs to the associated printerShare.
      * @see <a href="https://learn.microsoft.com/graph/api/printershare-delete-alloweduser?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare. This API is available in the following national cloud deployments.
+     * Revoke the specified user's access to submit print jobs to the associated printerShare.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/printershare-delete-alloweduser?view=graph-rest-1.0">Find more info here</a>
      */
@@ -55,7 +55,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare. This API is available in the following national cloud deployments.
+     * Revoke the specified user's access to submit print jobs to the associated printerShare.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare. This API is available in the following national cloud deployments.
+     * Revoke the specified user's access to submit print jobs to the associated printerShare.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -85,7 +85,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare. This API is available in the following national cloud deployments.
+     * Revoke the specified user's access to submit print jobs to the associated printerShare.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteQueryParameters {

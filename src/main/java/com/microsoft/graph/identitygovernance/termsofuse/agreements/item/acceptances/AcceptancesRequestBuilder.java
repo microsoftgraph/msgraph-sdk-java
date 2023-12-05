@@ -59,7 +59,7 @@ public class AcceptancesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/termsOfUse/agreements/{agreement%2Did}/acceptances{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the details about the acceptance records for a specific agreement. This API is available in the following national cloud deployments.
+     * Get the details about the acceptance records for a specific agreement.
      * @return a AgreementAcceptanceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/agreement-list-acceptances?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class AcceptancesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the details about the acceptance records for a specific agreement. This API is available in the following national cloud deployments.
+     * Get the details about the acceptance records for a specific agreement.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AgreementAcceptanceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/agreement-list-acceptances?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class AcceptancesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AgreementAcceptance::createFromDiscriminatorValue);
     }
     /**
-     * Get the details about the acceptance records for a specific agreement. This API is available in the following national cloud deployments.
+     * Get the details about the acceptance records for a specific agreement.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class AcceptancesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the details about the acceptance records for a specific agreement. This API is available in the following national cloud deployments.
+     * Get the details about the acceptance records for a specific agreement.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class AcceptancesRequestBuilder extends BaseRequestBuilder {
         return new AcceptancesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the details about the acceptance records for a specific agreement. This API is available in the following national cloud deployments.
+     * Get the details about the acceptance records for a specific agreement.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

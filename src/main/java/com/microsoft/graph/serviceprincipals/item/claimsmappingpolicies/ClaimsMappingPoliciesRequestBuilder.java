@@ -66,7 +66,7 @@ public class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/claimsMappingPolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal. This API is available in the following national cloud deployments.
+     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
      * @return a ClaimsMappingPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-claimsmappingpolicies?view=graph-rest-1.0">Find more info here</a>
      */
@@ -75,7 +75,7 @@ public class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal. This API is available in the following national cloud deployments.
+     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ClaimsMappingPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-claimsmappingpolicies?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ClaimsMappingPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal. This API is available in the following national cloud deployments.
+     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal. This API is available in the following national cloud deployments.
+     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -119,7 +119,7 @@ public class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder {
         return new ClaimsMappingPoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal. This API is available in the following national cloud deployments.
+     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

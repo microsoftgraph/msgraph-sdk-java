@@ -35,7 +35,7 @@ public class ApplyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/tables/{workbookTable%2Did}/sort/apply", rawUrl);
     }
     /**
-     * Perform a sort operation. This API is available in the following national cloud deployments.
+     * Perform a sort operation.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/tablesort-apply?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class ApplyRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Perform a sort operation. This API is available in the following national cloud deployments.
+     * Perform a sort operation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/tablesort-apply?view=graph-rest-1.0">Find more info here</a>
@@ -57,7 +57,7 @@ public class ApplyRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Perform a sort operation. This API is available in the following national cloud deployments.
+     * Perform a sort operation.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -66,7 +66,7 @@ public class ApplyRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Perform a sort operation. This API is available in the following national cloud deployments.
+     * Perform a sort operation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

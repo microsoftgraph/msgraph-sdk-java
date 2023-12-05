@@ -53,14 +53,14 @@ public class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/list/items/{listItem%2Did}/documentSetVersions/{documentSetVersion%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a version of a document set in a list. This API is available in the following national cloud deployments.
+     * Delete a version of a document set in a list.
      * @see <a href="https://learn.microsoft.com/graph/api/documentsetversion-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a version of a document set in a list. This API is available in the following national cloud deployments.
+     * Delete a version of a document set in a list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/documentsetversion-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -72,7 +72,7 @@ public class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a documentSetVersion object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a documentSetVersion object.
      * @return a DocumentSetVersion
      * @see <a href="https://learn.microsoft.com/graph/api/documentsetversion-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -81,7 +81,7 @@ public class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a documentSetVersion object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a documentSetVersion object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DocumentSetVersion
      * @see <a href="https://learn.microsoft.com/graph/api/documentsetversion-get?view=graph-rest-1.0">Find more info here</a>
@@ -119,7 +119,7 @@ public class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DocumentSetVersion::createFromDiscriminatorValue);
     }
     /**
-     * Delete a version of a document set in a list. This API is available in the following national cloud deployments.
+     * Delete a version of a document set in a list.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -127,7 +127,7 @@ public class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a version of a document set in a list. This API is available in the following national cloud deployments.
+     * Delete a version of a document set in a list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -139,7 +139,7 @@ public class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a documentSetVersion object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a documentSetVersion object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -147,7 +147,7 @@ public class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a documentSetVersion object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a documentSetVersion object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a documentSetVersion object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a documentSetVersion object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

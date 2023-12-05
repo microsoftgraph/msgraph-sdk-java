@@ -59,7 +59,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/customQuestions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the bookingCustomQuestion resources associated with a bookingBusiness. This API is available in the following national cloud deployments.
+     * Get the bookingCustomQuestion resources associated with a bookingBusiness.
      * @return a BookingCustomQuestionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-customquestions?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the bookingCustomQuestion resources associated with a bookingBusiness. This API is available in the following national cloud deployments.
+     * Get the bookingCustomQuestion resources associated with a bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a BookingCustomQuestionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-customquestions?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BookingCustomQuestionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new bookingCustomQuestion object. This API is available in the following national cloud deployments.
+     * Create a new bookingCustomQuestion object.
      * @param body The request body
      * @return a BookingCustomQuestion
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-post-customquestions?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new bookingCustomQuestion object. This API is available in the following national cloud deployments.
+     * Create a new bookingCustomQuestion object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a BookingCustomQuestion
@@ -108,7 +108,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BookingCustomQuestion::createFromDiscriminatorValue);
     }
     /**
-     * Get the bookingCustomQuestion resources associated with a bookingBusiness. This API is available in the following national cloud deployments.
+     * Get the bookingCustomQuestion resources associated with a bookingBusiness.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the bookingCustomQuestion resources associated with a bookingBusiness. This API is available in the following national cloud deployments.
+     * Get the bookingCustomQuestion resources associated with a bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new bookingCustomQuestion object. This API is available in the following national cloud deployments.
+     * Create a new bookingCustomQuestion object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new bookingCustomQuestion object. This API is available in the following national cloud deployments.
+     * Create a new bookingCustomQuestion object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return new CustomQuestionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the bookingCustomQuestion resources associated with a bookingBusiness. This API is available in the following national cloud deployments.
+     * Get the bookingCustomQuestion resources associated with a bookingBusiness.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

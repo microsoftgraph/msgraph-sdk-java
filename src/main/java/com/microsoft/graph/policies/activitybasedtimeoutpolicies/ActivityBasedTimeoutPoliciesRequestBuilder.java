@@ -59,7 +59,7 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/policies/activityBasedTimeoutPolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of activityBasedTimeoutPolicy objects. This API is available in the following national cloud deployments.
+     * Get a list of activityBasedTimeoutPolicy objects.
      * @return a ActivityBasedTimeoutPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
         return get(null);
     }
     /**
-     * Get a list of activityBasedTimeoutPolicy objects. This API is available in the following national cloud deployments.
+     * Get a list of activityBasedTimeoutPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ActivityBasedTimeoutPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-list?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, ActivityBasedTimeoutPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new activityBasedTimeoutPolicy object. This API is available in the following national cloud deployments.
+     * Create a new activityBasedTimeoutPolicy object.
      * @param body The request body
      * @return a ActivityBasedTimeoutPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-post-activitybasedtimeoutpolicies?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
         return post(body, null);
     }
     /**
-     * Create a new activityBasedTimeoutPolicy object. This API is available in the following national cloud deployments.
+     * Create a new activityBasedTimeoutPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ActivityBasedTimeoutPolicy
@@ -108,7 +108,7 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, ActivityBasedTimeoutPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of activityBasedTimeoutPolicy objects. This API is available in the following national cloud deployments.
+     * Get a list of activityBasedTimeoutPolicy objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of activityBasedTimeoutPolicy objects. This API is available in the following national cloud deployments.
+     * Get a list of activityBasedTimeoutPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Create a new activityBasedTimeoutPolicy object. This API is available in the following national cloud deployments.
+     * Create a new activityBasedTimeoutPolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new activityBasedTimeoutPolicy object. This API is available in the following national cloud deployments.
+     * Create a new activityBasedTimeoutPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
         return new ActivityBasedTimeoutPoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of activityBasedTimeoutPolicy objects. This API is available in the following national cloud deployments.
+     * Get a list of activityBasedTimeoutPolicy objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

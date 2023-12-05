@@ -61,14 +61,14 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/chats/{chat%2Did}/installedApps/{teamsAppInstallation%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Uninstall an app installed within a chat. This API is available in the following national cloud deployments.
+     * Uninstall an app installed within a chat.
      * @see <a href="https://learn.microsoft.com/graph/api/chat-delete-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Uninstall an app installed within a chat. This API is available in the following national cloud deployments.
+     * Uninstall an app installed within a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/chat-delete-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
@@ -80,7 +80,7 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get an app installed in a chat. This API is available in the following national cloud deployments.
+     * Get an app installed in a chat.
      * @return a TeamsAppInstallation
      * @see <a href="https://learn.microsoft.com/graph/api/chat-get-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
@@ -89,7 +89,7 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get an app installed in a chat. This API is available in the following national cloud deployments.
+     * Get an app installed in a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TeamsAppInstallation
      * @see <a href="https://learn.microsoft.com/graph/api/chat-get-installedapps?view=graph-rest-1.0">Find more info here</a>
@@ -127,7 +127,7 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamsAppInstallation::createFromDiscriminatorValue);
     }
     /**
-     * Uninstall an app installed within a chat. This API is available in the following national cloud deployments.
+     * Uninstall an app installed within a chat.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -135,7 +135,7 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Uninstall an app installed within a chat. This API is available in the following national cloud deployments.
+     * Uninstall an app installed within a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -147,7 +147,7 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get an app installed in a chat. This API is available in the following national cloud deployments.
+     * Get an app installed in a chat.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -155,7 +155,7 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get an app installed in a chat. This API is available in the following national cloud deployments.
+     * Get an app installed in a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -207,7 +207,7 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get an app installed in a chat. This API is available in the following national cloud deployments.
+     * Get an app installed in a chat.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -36,7 +36,7 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/copy", rawUrl);
     }
     /**
-     * Asynchronously creates a copy of an driveItem][item-resource] (including any children), under a new parent item or with a new name. This API is available in the following [national cloud deployments.
+     * Asynchronously creates a copy of an [driveItem][item-resource] (including any children), under a new parent item or with a new name.
      * @param body The request body
      * @return a DriveItem
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-copy?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Asynchronously creates a copy of an driveItem][item-resource] (including any children), under a new parent item or with a new name. This API is available in the following [national cloud deployments.
+     * Asynchronously creates a copy of an [driveItem][item-resource] (including any children), under a new parent item or with a new name.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DriveItem
@@ -62,7 +62,7 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DriveItem::createFromDiscriminatorValue);
     }
     /**
-     * Asynchronously creates a copy of an driveItem][item-resource] (including any children), under a new parent item or with a new name. This API is available in the following [national cloud deployments.
+     * Asynchronously creates a copy of an [driveItem][item-resource] (including any children), under a new parent item or with a new name.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Asynchronously creates a copy of an driveItem][item-resource] (including any children), under a new parent item or with a new name. This API is available in the following [national cloud deployments.
+     * Asynchronously creates a copy of an [driveItem][item-resource] (including any children), under a new parent item or with a new name.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

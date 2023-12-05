@@ -125,14 +125,14 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/events/{event%2Did}{?%24select}", rawUrl);
     }
     /**
-     * Delete an event object. This API is available in the following national cloud deployments.
+     * Delete an event object.
      * @see <a href="https://learn.microsoft.com/graph/api/group-delete-event?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an event object. This API is available in the following national cloud deployments.
+     * Delete an event object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/group-delete-event?view=graph-rest-1.0">Find more info here</a>
      */
@@ -144,7 +144,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get an event object. This API is available in the following national cloud deployments.
+     * Get an event object.
      * @return a Event
      * @see <a href="https://learn.microsoft.com/graph/api/group-get-event?view=graph-rest-1.0">Find more info here</a>
      */
@@ -153,7 +153,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get an event object. This API is available in the following national cloud deployments.
+     * Get an event object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Event
      * @see <a href="https://learn.microsoft.com/graph/api/group-get-event?view=graph-rest-1.0">Find more info here</a>
@@ -191,7 +191,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Event::createFromDiscriminatorValue);
     }
     /**
-     * Delete an event object. This API is available in the following national cloud deployments.
+     * Delete an event object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -199,7 +199,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an event object. This API is available in the following national cloud deployments.
+     * Delete an event object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +211,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get an event object. This API is available in the following national cloud deployments.
+     * Get an event object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -219,7 +219,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get an event object. This API is available in the following national cloud deployments.
+     * Get an event object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -271,7 +271,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get an event object. This API is available in the following national cloud deployments.
+     * Get an event object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

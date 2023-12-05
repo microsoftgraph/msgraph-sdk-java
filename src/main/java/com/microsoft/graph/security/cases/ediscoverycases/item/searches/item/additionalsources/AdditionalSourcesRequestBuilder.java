@@ -59,7 +59,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/searches/{ediscoverySearch%2Did}/additionalSources{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the list of additional sources associated with an eDiscovery search. This API is available in the following national cloud deployments.
+     * Get the list of additional sources associated with an eDiscovery search.
      * @return a DataSourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-list-additionalsources?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of additional sources associated with an eDiscovery search. This API is available in the following national cloud deployments.
+     * Get the list of additional sources associated with an eDiscovery search.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DataSourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-list-additionalsources?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DataSourceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new additional source associated with an eDiscovery search. This API is available in the following national cloud deployments.
+     * Create a new additional source associated with an eDiscovery search.
      * @param body The request body
      * @return a DataSource
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-post-additionalsources?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new additional source associated with an eDiscovery search. This API is available in the following national cloud deployments.
+     * Create a new additional source associated with an eDiscovery search.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DataSource
@@ -108,7 +108,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DataSource::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of additional sources associated with an eDiscovery search. This API is available in the following national cloud deployments.
+     * Get the list of additional sources associated with an eDiscovery search.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of additional sources associated with an eDiscovery search. This API is available in the following national cloud deployments.
+     * Get the list of additional sources associated with an eDiscovery search.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new additional source associated with an eDiscovery search. This API is available in the following national cloud deployments.
+     * Create a new additional source associated with an eDiscovery search.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new additional source associated with an eDiscovery search. This API is available in the following national cloud deployments.
+     * Create a new additional source associated with an eDiscovery search.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         return new AdditionalSourcesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of additional sources associated with an eDiscovery search. This API is available in the following national cloud deployments.
+     * Get the list of additional sources associated with an eDiscovery search.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

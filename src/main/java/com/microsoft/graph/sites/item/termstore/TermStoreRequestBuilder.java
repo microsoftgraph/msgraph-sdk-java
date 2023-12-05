@@ -70,7 +70,7 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a store object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a store object.
      * @return a Store
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-store-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -79,7 +79,7 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a store object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a store object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Store
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-store-get?view=graph-rest-1.0">Find more info here</a>
@@ -93,7 +93,7 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Store::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a store object. This API is available in the following national cloud deployments.
+     * Update the properties of a store object.
      * @param body The request body
      * @return a Store
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-store-update?view=graph-rest-1.0">Find more info here</a>
@@ -103,7 +103,7 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a store object. This API is available in the following national cloud deployments.
+     * Update the properties of a store object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Store
@@ -139,7 +139,7 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a store object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a store object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -147,7 +147,7 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a store object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a store object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -159,7 +159,7 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a store object. This API is available in the following national cloud deployments.
+     * Update the properties of a store object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -168,7 +168,7 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a store object. This API is available in the following national cloud deployments.
+     * Update the properties of a store object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +199,7 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a store object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a store object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

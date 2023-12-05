@@ -53,14 +53,14 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/connectedOrganizations/{connectedOrganization%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a connectedOrganization object. This API is available in the following national cloud deployments.
+     * Delete a connectedOrganization object.
      * @see <a href="https://learn.microsoft.com/graph/api/connectedorganization-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a connectedOrganization object. This API is available in the following national cloud deployments.
+     * Delete a connectedOrganization object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/connectedorganization-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -72,7 +72,7 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a connectedOrganization object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a connectedOrganization object.
      * @return a ConnectedOrganization
      * @see <a href="https://learn.microsoft.com/graph/api/connectedorganization-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -81,7 +81,7 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a connectedOrganization object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a connectedOrganization object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ConnectedOrganization
      * @see <a href="https://learn.microsoft.com/graph/api/connectedorganization-get?view=graph-rest-1.0">Find more info here</a>
@@ -95,7 +95,7 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, ConnectedOrganization::createFromDiscriminatorValue);
     }
     /**
-     * Update a connectedOrganization object to change one or more of its properties. This API is available in the following national cloud deployments.
+     * Update a connectedOrganization object to change one or more of its properties.
      * @param body The request body
      * @return a ConnectedOrganization
      * @see <a href="https://learn.microsoft.com/graph/api/connectedorganization-update?view=graph-rest-1.0">Find more info here</a>
@@ -105,7 +105,7 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         return patch(body, null);
     }
     /**
-     * Update a connectedOrganization object to change one or more of its properties. This API is available in the following national cloud deployments.
+     * Update a connectedOrganization object to change one or more of its properties.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ConnectedOrganization
@@ -121,7 +121,7 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, ConnectedOrganization::createFromDiscriminatorValue);
     }
     /**
-     * Delete a connectedOrganization object. This API is available in the following national cloud deployments.
+     * Delete a connectedOrganization object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a connectedOrganization object. This API is available in the following national cloud deployments.
+     * Delete a connectedOrganization object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -141,7 +141,7 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a connectedOrganization object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a connectedOrganization object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -149,7 +149,7 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a connectedOrganization object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a connectedOrganization object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -161,7 +161,7 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Update a connectedOrganization object to change one or more of its properties. This API is available in the following national cloud deployments.
+     * Update a connectedOrganization object to change one or more of its properties.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -170,7 +170,7 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update a connectedOrganization object to change one or more of its properties. This API is available in the following national cloud deployments.
+     * Update a connectedOrganization object to change one or more of its properties.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +201,7 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a connectedOrganization object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a connectedOrganization object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

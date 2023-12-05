@@ -62,7 +62,7 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Microsoft Entra ID (isServiceDefault is true) or may be customized in your tenant (isServiceDefault is false). This API is available in the following national cloud deployments.
+     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Microsoft Entra ID (isServiceDefault is true) or may be customized in your tenant (isServiceDefault is false).
      * @return a CrossTenantAccessPolicyConfigurationDefault
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationdefault-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -71,7 +71,7 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Microsoft Entra ID (isServiceDefault is true) or may be customized in your tenant (isServiceDefault is false). This API is available in the following national cloud deployments.
+     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Microsoft Entra ID (isServiceDefault is true) or may be customized in your tenant (isServiceDefault is false).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CrossTenantAccessPolicyConfigurationDefault
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationdefault-get?view=graph-rest-1.0">Find more info here</a>
@@ -85,7 +85,7 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CrossTenantAccessPolicyConfigurationDefault::createFromDiscriminatorValue);
     }
     /**
-     * Update the default configuration of a cross-tenant access policy. This API is available in the following national cloud deployments.
+     * Update the default configuration of a cross-tenant access policy.
      * @param body The request body
      * @return a CrossTenantAccessPolicyConfigurationDefault
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationdefault-update?view=graph-rest-1.0">Find more info here</a>
@@ -95,7 +95,7 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the default configuration of a cross-tenant access policy. This API is available in the following national cloud deployments.
+     * Update the default configuration of a cross-tenant access policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CrossTenantAccessPolicyConfigurationDefault
@@ -131,7 +131,7 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Microsoft Entra ID (isServiceDefault is true) or may be customized in your tenant (isServiceDefault is false). This API is available in the following national cloud deployments.
+     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Microsoft Entra ID (isServiceDefault is true) or may be customized in your tenant (isServiceDefault is false).
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Microsoft Entra ID (isServiceDefault is true) or may be customized in your tenant (isServiceDefault is false). This API is available in the following national cloud deployments.
+     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Microsoft Entra ID (isServiceDefault is true) or may be customized in your tenant (isServiceDefault is false).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -151,7 +151,7 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the default configuration of a cross-tenant access policy. This API is available in the following national cloud deployments.
+     * Update the default configuration of a cross-tenant access policy.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the default configuration of a cross-tenant access policy. This API is available in the following national cloud deployments.
+     * Update the default configuration of a cross-tenant access policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -191,7 +191,7 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Microsoft Entra ID (isServiceDefault is true) or may be customized in your tenant (isServiceDefault is false). This API is available in the following national cloud deployments.
+     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Microsoft Entra ID (isServiceDefault is true) or may be customized in your tenant (isServiceDefault is false).
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

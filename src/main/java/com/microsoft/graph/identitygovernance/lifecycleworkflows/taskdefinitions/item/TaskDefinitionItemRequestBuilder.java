@@ -37,7 +37,7 @@ public class TaskDefinitionItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/taskDefinitions/{taskDefinition%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the details of a built-in workflow task. This API is available in the following national cloud deployments.
+     * Read the details of a built-in workflow task.
      * @return a TaskDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-taskdefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -46,7 +46,7 @@ public class TaskDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the details of a built-in workflow task. This API is available in the following national cloud deployments.
+     * Read the details of a built-in workflow task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TaskDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-taskdefinition-get?view=graph-rest-1.0">Find more info here</a>
@@ -60,7 +60,7 @@ public class TaskDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TaskDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Read the details of a built-in workflow task. This API is available in the following national cloud deployments.
+     * Read the details of a built-in workflow task.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class TaskDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the details of a built-in workflow task. This API is available in the following national cloud deployments.
+     * Read the details of a built-in workflow task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -90,7 +90,7 @@ public class TaskDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return new TaskDefinitionItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the details of a built-in workflow task. This API is available in the following national cloud deployments.
+     * Read the details of a built-in workflow task.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

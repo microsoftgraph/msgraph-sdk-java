@@ -59,7 +59,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/onenote/notebooks/{notebook%2Did}/sectionGroups/{sectionGroup%2Did}/sections{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of onenoteSection objects from the specified section group. This API is available in the following national cloud deployments.
+     * Retrieve a list of onenoteSection objects from the specified section group.
      * @return a OnenoteSectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/sectiongroup-list-sections?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of onenoteSection objects from the specified section group. This API is available in the following national cloud deployments.
+     * Retrieve a list of onenoteSection objects from the specified section group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a OnenoteSectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/sectiongroup-list-sections?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OnenoteSectionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new onenoteSection in the specified section group. This API is available in the following national cloud deployments.
+     * Create a new onenoteSection in the specified section group.
      * @param body The request body
      * @return a OnenoteSection
      * @see <a href="https://learn.microsoft.com/graph/api/sectiongroup-post-sections?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new onenoteSection in the specified section group. This API is available in the following national cloud deployments.
+     * Create a new onenoteSection in the specified section group.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a OnenoteSection
@@ -108,7 +108,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OnenoteSection::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of onenoteSection objects from the specified section group. This API is available in the following national cloud deployments.
+     * Retrieve a list of onenoteSection objects from the specified section group.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of onenoteSection objects from the specified section group. This API is available in the following national cloud deployments.
+     * Retrieve a list of onenoteSection objects from the specified section group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new onenoteSection in the specified section group. This API is available in the following national cloud deployments.
+     * Create a new onenoteSection in the specified section group.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new onenoteSection in the specified section group. This API is available in the following national cloud deployments.
+     * Create a new onenoteSection in the specified section group.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return new SectionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of onenoteSection objects from the specified section group. This API is available in the following national cloud deployments.
+     * Retrieve a list of onenoteSection objects from the specified section group.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

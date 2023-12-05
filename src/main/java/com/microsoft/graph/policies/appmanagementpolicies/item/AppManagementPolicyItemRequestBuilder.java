@@ -45,14 +45,14 @@ public class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/appManagementPolicies/{appManagementPolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an appManagementPolicy object. This API is available in the following national cloud deployments.
+     * Delete an appManagementPolicy object.
      * @see <a href="https://learn.microsoft.com/graph/api/appmanagementpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an appManagementPolicy object. This API is available in the following national cloud deployments.
+     * Delete an appManagementPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/appmanagementpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -64,7 +64,7 @@ public class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties of an appManagementPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties of an appManagementPolicy object.
      * @return a AppManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/appmanagementpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -73,7 +73,7 @@ public class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties of an appManagementPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties of an appManagementPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AppManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/appmanagementpolicy-get?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AppManagementPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update an appManagementPolicy object. This API is available in the following national cloud deployments.
+     * Update an appManagementPolicy object.
      * @param body The request body
      * @return a AppManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/appmanagementpolicy-update?view=graph-rest-1.0">Find more info here</a>
@@ -97,7 +97,7 @@ public class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update an appManagementPolicy object. This API is available in the following national cloud deployments.
+     * Update an appManagementPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AppManagementPolicy
@@ -113,7 +113,7 @@ public class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AppManagementPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Delete an appManagementPolicy object. This API is available in the following national cloud deployments.
+     * Delete an appManagementPolicy object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an appManagementPolicy object. This API is available in the following national cloud deployments.
+     * Delete an appManagementPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -133,7 +133,7 @@ public class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties of an appManagementPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties of an appManagementPolicy object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +141,7 @@ public class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties of an appManagementPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties of an appManagementPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -153,7 +153,7 @@ public class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update an appManagementPolicy object. This API is available in the following national cloud deployments.
+     * Update an appManagementPolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -162,7 +162,7 @@ public class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update an appManagementPolicy object. This API is available in the following national cloud deployments.
+     * Update an appManagementPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -193,7 +193,7 @@ public class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties of an appManagementPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties of an appManagementPolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

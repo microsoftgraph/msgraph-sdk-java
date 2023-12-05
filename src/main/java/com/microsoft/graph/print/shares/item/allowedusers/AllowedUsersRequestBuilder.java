@@ -66,7 +66,7 @@ public class AllowedUsersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/shares/{printerShare%2Did}/allowedUsers{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare. This API is available in the following national cloud deployments.
+     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
      * @return a UserCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/printershare-list-allowedusers?view=graph-rest-1.0">Find more info here</a>
      */
@@ -75,7 +75,7 @@ public class AllowedUsersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare. This API is available in the following national cloud deployments.
+     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UserCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/printershare-list-allowedusers?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class AllowedUsersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare. This API is available in the following national cloud deployments.
+     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class AllowedUsersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare. This API is available in the following national cloud deployments.
+     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -119,7 +119,7 @@ public class AllowedUsersRequestBuilder extends BaseRequestBuilder {
         return new AllowedUsersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare. This API is available in the following national cloud deployments.
+     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

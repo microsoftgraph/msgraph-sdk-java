@@ -59,7 +59,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/termsOfUse/agreements{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of agreement objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of agreement objects.
      * @return a AgreementCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/termsofusecontainer-list-agreements?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of agreement objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of agreement objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AgreementCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/termsofusecontainer-list-agreements?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AgreementCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new agreement object. This API is available in the following national cloud deployments.
+     * Create a new agreement object.
      * @param body The request body
      * @return a Agreement
      * @see <a href="https://learn.microsoft.com/graph/api/termsofusecontainer-post-agreements?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new agreement object. This API is available in the following national cloud deployments.
+     * Create a new agreement object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Agreement
@@ -108,7 +108,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Agreement::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of agreement objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of agreement objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of agreement objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of agreement objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new agreement object. This API is available in the following national cloud deployments.
+     * Create a new agreement object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new agreement object. This API is available in the following national cloud deployments.
+     * Create a new agreement object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
         return new AgreementsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of agreement objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of agreement objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

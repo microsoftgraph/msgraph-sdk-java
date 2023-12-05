@@ -94,7 +94,7 @@ public class GroupSettingTemplateItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * A group setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the groupSettingTemplate object, including the available settings and their defaults. This API is available in the following national cloud deployments.
+     * A group setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the groupSettingTemplate object, including the available settings and their defaults.
      * @return a GroupSettingTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/groupsettingtemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -103,7 +103,7 @@ public class GroupSettingTemplateItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * A group setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the groupSettingTemplate object, including the available settings and their defaults. This API is available in the following national cloud deployments.
+     * A group setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the groupSettingTemplate object, including the available settings and their defaults.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a GroupSettingTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/groupsettingtemplate-get?view=graph-rest-1.0">Find more info here</a>
@@ -161,7 +161,7 @@ public class GroupSettingTemplateItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A group setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the groupSettingTemplate object, including the available settings and their defaults. This API is available in the following national cloud deployments.
+     * A group setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the groupSettingTemplate object, including the available settings and their defaults.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -169,7 +169,7 @@ public class GroupSettingTemplateItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A group setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the groupSettingTemplate object, including the available settings and their defaults. This API is available in the following national cloud deployments.
+     * A group setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the groupSettingTemplate object, including the available settings and their defaults.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -221,7 +221,7 @@ public class GroupSettingTemplateItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A group setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the groupSettingTemplate object, including the available settings and their defaults. This API is available in the following national cloud deployments.
+     * A group setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the groupSettingTemplate object, including the available settings and their defaults.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

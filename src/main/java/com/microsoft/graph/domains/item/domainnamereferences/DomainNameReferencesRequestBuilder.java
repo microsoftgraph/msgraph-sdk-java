@@ -58,7 +58,7 @@ public class DomainNameReferencesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/domains/{domain%2Did}/domainNameReferences{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of directoryObject with a reference to the domain. The returned list will contain all directory objects that have a dependency on the domain. This API is available in the following national cloud deployments.
+     * Retrieve a list of directoryObject with a reference to the domain. The returned list will contain all directory objects that have a dependency on the domain.
      * @return a DirectoryObjectCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/domain-list-domainnamereferences?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class DomainNameReferencesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of directoryObject with a reference to the domain. The returned list will contain all directory objects that have a dependency on the domain. This API is available in the following national cloud deployments.
+     * Retrieve a list of directoryObject with a reference to the domain. The returned list will contain all directory objects that have a dependency on the domain.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DirectoryObjectCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/domain-list-domainnamereferences?view=graph-rest-1.0">Find more info here</a>
@@ -81,7 +81,7 @@ public class DomainNameReferencesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObjectCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of directoryObject with a reference to the domain. The returned list will contain all directory objects that have a dependency on the domain. This API is available in the following national cloud deployments.
+     * Retrieve a list of directoryObject with a reference to the domain. The returned list will contain all directory objects that have a dependency on the domain.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class DomainNameReferencesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of directoryObject with a reference to the domain. The returned list will contain all directory objects that have a dependency on the domain. This API is available in the following national cloud deployments.
+     * Retrieve a list of directoryObject with a reference to the domain. The returned list will contain all directory objects that have a dependency on the domain.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -111,7 +111,7 @@ public class DomainNameReferencesRequestBuilder extends BaseRequestBuilder {
         return new DomainNameReferencesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of directoryObject with a reference to the domain. The returned list will contain all directory objects that have a dependency on the domain. This API is available in the following national cloud deployments.
+     * Retrieve a list of directoryObject with a reference to the domain. The returned list will contain all directory objects that have a dependency on the domain.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

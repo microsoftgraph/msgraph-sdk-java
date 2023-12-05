@@ -36,14 +36,14 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/members/{educationUser%2Did}/$ref{?%40id*}", rawUrl);
     }
     /**
-     * Remove an educationUser from an educationClass. This API is available in the following national cloud deployments.
+     * Remove an educationUser from an educationClass.
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-delete-members?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Remove an educationUser from an educationClass. This API is available in the following national cloud deployments.
+     * Remove an educationUser from an educationClass.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-delete-members?view=graph-rest-1.0">Find more info here</a>
      */
@@ -55,7 +55,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Remove an educationUser from an educationClass. This API is available in the following national cloud deployments.
+     * Remove an educationUser from an educationClass.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Remove an educationUser from an educationClass. This API is available in the following national cloud deployments.
+     * Remove an educationUser from an educationClass.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -85,7 +85,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Remove an educationUser from an educationClass. This API is available in the following national cloud deployments.
+     * Remove an educationUser from an educationClass.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteQueryParameters {

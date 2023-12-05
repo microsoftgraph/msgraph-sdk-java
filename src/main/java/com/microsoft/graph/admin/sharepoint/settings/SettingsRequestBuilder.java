@@ -54,7 +54,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the tenant-level settings for SharePoint and OneDrive. This API is available in the following national cloud deployments.
+     * Get the tenant-level settings for SharePoint and OneDrive.
      * @return a SharepointSettings
      * @see <a href="https://learn.microsoft.com/graph/api/sharepointsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the tenant-level settings for SharePoint and OneDrive. This API is available in the following national cloud deployments.
+     * Get the tenant-level settings for SharePoint and OneDrive.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SharepointSettings
      * @see <a href="https://learn.microsoft.com/graph/api/sharepointsettings-get?view=graph-rest-1.0">Find more info here</a>
@@ -77,7 +77,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SharepointSettings::createFromDiscriminatorValue);
     }
     /**
-     * Update one or more tenant-level settings for SharePoint and OneDrive. This API is available in the following national cloud deployments.
+     * Update one or more tenant-level settings for SharePoint and OneDrive.
      * @param body The request body
      * @return a SharepointSettings
      * @see <a href="https://learn.microsoft.com/graph/api/sharepointsettings-update?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update one or more tenant-level settings for SharePoint and OneDrive. This API is available in the following national cloud deployments.
+     * Update one or more tenant-level settings for SharePoint and OneDrive.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SharepointSettings
@@ -123,7 +123,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the tenant-level settings for SharePoint and OneDrive. This API is available in the following national cloud deployments.
+     * Get the tenant-level settings for SharePoint and OneDrive.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the tenant-level settings for SharePoint and OneDrive. This API is available in the following national cloud deployments.
+     * Get the tenant-level settings for SharePoint and OneDrive.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -143,7 +143,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update one or more tenant-level settings for SharePoint and OneDrive. This API is available in the following national cloud deployments.
+     * Update one or more tenant-level settings for SharePoint and OneDrive.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -152,7 +152,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update one or more tenant-level settings for SharePoint and OneDrive. This API is available in the following national cloud deployments.
+     * Update one or more tenant-level settings for SharePoint and OneDrive.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -183,7 +183,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the tenant-level settings for SharePoint and OneDrive. This API is available in the following national cloud deployments.
+     * Get the tenant-level settings for SharePoint and OneDrive.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

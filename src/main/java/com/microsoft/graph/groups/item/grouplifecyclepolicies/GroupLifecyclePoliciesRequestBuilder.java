@@ -59,7 +59,7 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/groupLifecyclePolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieves a list of groupLifecyclePolicy objects to which a group belongs. This API is available in the following national cloud deployments.
+     * Retrieves a list of groupLifecyclePolicy objects to which a group belongs.
      * @return a GroupLifecyclePolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-grouplifecyclepolicies?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieves a list of groupLifecyclePolicy objects to which a group belongs. This API is available in the following national cloud deployments.
+     * Retrieves a list of groupLifecyclePolicy objects to which a group belongs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a GroupLifecyclePolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-grouplifecyclepolicies?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GroupLifecyclePolicy::createFromDiscriminatorValue);
     }
     /**
-     * Retrieves a list of groupLifecyclePolicy objects to which a group belongs. This API is available in the following national cloud deployments.
+     * Retrieves a list of groupLifecyclePolicy objects to which a group belongs.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieves a list of groupLifecyclePolicy objects to which a group belongs. This API is available in the following national cloud deployments.
+     * Retrieves a list of groupLifecyclePolicy objects to which a group belongs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
         return new GroupLifecyclePoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieves a list of groupLifecyclePolicy objects to which a group belongs. This API is available in the following national cloud deployments.
+     * Retrieves a list of groupLifecyclePolicy objects to which a group belongs.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

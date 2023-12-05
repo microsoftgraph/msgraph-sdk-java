@@ -36,7 +36,7 @@ public class AddCopyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/lists/{list%2Did}/contentTypes/addCopy", rawUrl);
     }
     /**
-     * Add a copy of a content type][contentType] from a [site][site] to a [list][list]. This API is available in the following [national cloud deployments.
+     * Add a copy of a [content type][contentType] from a [site][site] to a [list][list].
      * @param body The request body
      * @return a ContentType
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-addcopy?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class AddCopyRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Add a copy of a content type][contentType] from a [site][site] to a [list][list]. This API is available in the following [national cloud deployments.
+     * Add a copy of a [content type][contentType] from a [site][site] to a [list][list].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ContentType
@@ -62,7 +62,7 @@ public class AddCopyRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ContentType::createFromDiscriminatorValue);
     }
     /**
-     * Add a copy of a content type][contentType] from a [site][site] to a [list][list]. This API is available in the following [national cloud deployments.
+     * Add a copy of a [content type][contentType] from a [site][site] to a [list][list].
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class AddCopyRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add a copy of a content type][contentType] from a [site][site] to a [list][list]. This API is available in the following [national cloud deployments.
+     * Add a copy of a [content type][contentType] from a [site][site] to a [list][list].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

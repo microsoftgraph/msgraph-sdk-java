@@ -59,7 +59,7 @@ public class DomainsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/domains{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of domain objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of domain objects.
      * @return a DomainCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/domain-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class DomainsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of domain objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of domain objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DomainCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/domain-list?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class DomainsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DomainCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Adds a domain to the tenant. Important: You cannot use an associated domain with your Microsoft Entra tenant until ownership is verified. See List verificationDnsRecords for details. Root domains require verification. For example, contoso.com requires verification. If a root domain is verified, subdomains of the root domain are automatically verified. For example, subdomain.contoso.com is automatically be verified if contoso.com has been verified. This API is available in the following national cloud deployments.
+     * Adds a domain to the tenant. Important: You cannot use an associated domain with your Microsoft Entra tenant until ownership is verified. See List verificationDnsRecords for details. Root domains require verification. For example, contoso.com requires verification. If a root domain is verified, subdomains of the root domain are automatically verified. For example, subdomain.contoso.com is automatically be verified if contoso.com has been verified.
      * @param body The request body
      * @return a Domain
      * @see <a href="https://learn.microsoft.com/graph/api/domain-post-domains?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class DomainsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Adds a domain to the tenant. Important: You cannot use an associated domain with your Microsoft Entra tenant until ownership is verified. See List verificationDnsRecords for details. Root domains require verification. For example, contoso.com requires verification. If a root domain is verified, subdomains of the root domain are automatically verified. For example, subdomain.contoso.com is automatically be verified if contoso.com has been verified. This API is available in the following national cloud deployments.
+     * Adds a domain to the tenant. Important: You cannot use an associated domain with your Microsoft Entra tenant until ownership is verified. See List verificationDnsRecords for details. Root domains require verification. For example, contoso.com requires verification. If a root domain is verified, subdomains of the root domain are automatically verified. For example, subdomain.contoso.com is automatically be verified if contoso.com has been verified.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Domain
@@ -108,7 +108,7 @@ public class DomainsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Domain::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of domain objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of domain objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class DomainsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of domain objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of domain objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class DomainsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Adds a domain to the tenant. Important: You cannot use an associated domain with your Microsoft Entra tenant until ownership is verified. See List verificationDnsRecords for details. Root domains require verification. For example, contoso.com requires verification. If a root domain is verified, subdomains of the root domain are automatically verified. For example, subdomain.contoso.com is automatically be verified if contoso.com has been verified. This API is available in the following national cloud deployments.
+     * Adds a domain to the tenant. Important: You cannot use an associated domain with your Microsoft Entra tenant until ownership is verified. See List verificationDnsRecords for details. Root domains require verification. For example, contoso.com requires verification. If a root domain is verified, subdomains of the root domain are automatically verified. For example, subdomain.contoso.com is automatically be verified if contoso.com has been verified.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class DomainsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Adds a domain to the tenant. Important: You cannot use an associated domain with your Microsoft Entra tenant until ownership is verified. See List verificationDnsRecords for details. Root domains require verification. For example, contoso.com requires verification. If a root domain is verified, subdomains of the root domain are automatically verified. For example, subdomain.contoso.com is automatically be verified if contoso.com has been verified. This API is available in the following national cloud deployments.
+     * Adds a domain to the tenant. Important: You cannot use an associated domain with your Microsoft Entra tenant until ownership is verified. See List verificationDnsRecords for details. Root domains require verification. For example, contoso.com requires verification. If a root domain is verified, subdomains of the root domain are automatically verified. For example, subdomain.contoso.com is automatically be verified if contoso.com has been verified.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class DomainsRequestBuilder extends BaseRequestBuilder {
         return new DomainsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of domain objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of domain objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

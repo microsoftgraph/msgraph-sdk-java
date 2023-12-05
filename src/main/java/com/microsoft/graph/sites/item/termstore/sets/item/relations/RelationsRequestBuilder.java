@@ -59,7 +59,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/termStore/sets/{set%2Did}/relations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the different relation of a term] or [set] from the relations navigation property. This API is available in the following [national cloud deployments.
+     * Get the different relation of a [term] or [set] from the relations navigation property.
      * @return a RelationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-term-list-relations?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the different relation of a term] or [set] from the relations navigation property. This API is available in the following [national cloud deployments.
+     * Get the different relation of a [term] or [set] from the relations navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RelationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-term-list-relations?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Relation::createFromDiscriminatorValue);
     }
     /**
-     * Get the different relation of a term] or [set] from the relations navigation property. This API is available in the following [national cloud deployments.
+     * Get the different relation of a [term] or [set] from the relations navigation property.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the different relation of a term] or [set] from the relations navigation property. This API is available in the following [national cloud deployments.
+     * Get the different relation of a [term] or [set] from the relations navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
         return new RelationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the different relation of a term] or [set] from the relations navigation property. This API is available in the following [national cloud deployments.
+     * Get the different relation of a [term] or [set] from the relations navigation property.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

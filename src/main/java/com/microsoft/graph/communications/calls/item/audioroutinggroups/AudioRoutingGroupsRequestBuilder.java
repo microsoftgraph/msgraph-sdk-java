@@ -59,7 +59,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/audioRoutingGroups{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of audioRoutingGroup objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of audioRoutingGroup objects.
      * @return a AudioRoutingGroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/call-list-audioroutinggroups?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of audioRoutingGroup objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of audioRoutingGroup objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AudioRoutingGroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/call-list-audioroutinggroups?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AudioRoutingGroupCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new audioRoutingGroup. This API is available in the following national cloud deployments.
+     * Create a new audioRoutingGroup.
      * @param body The request body
      * @return a AudioRoutingGroup
      * @see <a href="https://learn.microsoft.com/graph/api/call-post-audioroutinggroups?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new audioRoutingGroup. This API is available in the following national cloud deployments.
+     * Create a new audioRoutingGroup.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AudioRoutingGroup
@@ -108,7 +108,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AudioRoutingGroup::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of audioRoutingGroup objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of audioRoutingGroup objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of audioRoutingGroup objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of audioRoutingGroup objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new audioRoutingGroup. This API is available in the following national cloud deployments.
+     * Create a new audioRoutingGroup.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new audioRoutingGroup. This API is available in the following national cloud deployments.
+     * Create a new audioRoutingGroup.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         return new AudioRoutingGroupsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of audioRoutingGroup objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of audioRoutingGroup objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

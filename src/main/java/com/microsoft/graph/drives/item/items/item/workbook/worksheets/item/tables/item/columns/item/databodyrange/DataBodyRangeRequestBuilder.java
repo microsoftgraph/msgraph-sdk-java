@@ -36,7 +36,7 @@ public class DataBodyRangeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/tables/{workbookTable%2Did}/columns/{workbookTableColumn%2Did}/dataBodyRange()", rawUrl);
     }
     /**
-     * Gets the range object associated with the data body of the column. This API is available in the following national cloud deployments.
+     * Gets the range object associated with the data body of the column.
      * @return a WorkbookRange
      * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-databodyrange?view=graph-rest-1.0">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class DataBodyRangeRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Gets the range object associated with the data body of the column. This API is available in the following national cloud deployments.
+     * Gets the range object associated with the data body of the column.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookRange
      * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-databodyrange?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class DataBodyRangeRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookRange::createFromDiscriminatorValue);
     }
     /**
-     * Gets the range object associated with the data body of the column. This API is available in the following national cloud deployments.
+     * Gets the range object associated with the data body of the column.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class DataBodyRangeRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Gets the range object associated with the data body of the column. This API is available in the following national cloud deployments.
+     * Gets the range object associated with the data body of the column.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

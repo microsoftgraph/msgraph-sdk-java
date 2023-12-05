@@ -58,7 +58,7 @@ public class SectionGroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/onenote/sectionGroups/{sectionGroup%2Did}/sectionGroups{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of section groups from the specified section group. This API is available in the following national cloud deployments.
+     * Retrieve a list of section groups from the specified section group.
      * @return a SectionGroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/sectiongroup-list-sectiongroups?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class SectionGroupsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of section groups from the specified section group. This API is available in the following national cloud deployments.
+     * Retrieve a list of section groups from the specified section group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SectionGroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/sectiongroup-list-sectiongroups?view=graph-rest-1.0">Find more info here</a>
@@ -81,7 +81,7 @@ public class SectionGroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SectionGroupCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of section groups from the specified section group. This API is available in the following national cloud deployments.
+     * Retrieve a list of section groups from the specified section group.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class SectionGroupsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of section groups from the specified section group. This API is available in the following national cloud deployments.
+     * Retrieve a list of section groups from the specified section group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -111,7 +111,7 @@ public class SectionGroupsRequestBuilder extends BaseRequestBuilder {
         return new SectionGroupsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of section groups from the specified section group. This API is available in the following national cloud deployments.
+     * Retrieve a list of section groups from the specified section group.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -59,7 +59,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/domains/{domain%2Did}/federationConfiguration{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties of the internalDomainFederation objects for the domain. This API returns only one object in the collection. This API is available in the following national cloud deployments.
+     * Read the properties of the internalDomainFederation objects for the domain. This API returns only one object in the collection.
      * @return a InternalDomainFederationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/domain-list-federationconfiguration?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties of the internalDomainFederation objects for the domain. This API returns only one object in the collection. This API is available in the following national cloud deployments.
+     * Read the properties of the internalDomainFederation objects for the domain. This API returns only one object in the collection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a InternalDomainFederationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/domain-list-federationconfiguration?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, InternalDomainFederationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Create a new internalDomainFederation object.
      * @param body The request body
      * @return a InternalDomainFederation
      * @see <a href="https://learn.microsoft.com/graph/api/domain-post-federationconfiguration?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Create a new internalDomainFederation object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a InternalDomainFederation
@@ -108,7 +108,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, InternalDomainFederation::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties of the internalDomainFederation objects for the domain. This API returns only one object in the collection. This API is available in the following national cloud deployments.
+     * Read the properties of the internalDomainFederation objects for the domain. This API returns only one object in the collection.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties of the internalDomainFederation objects for the domain. This API returns only one object in the collection. This API is available in the following national cloud deployments.
+     * Read the properties of the internalDomainFederation objects for the domain. This API returns only one object in the collection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Create a new internalDomainFederation object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Create a new internalDomainFederation object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         return new FederationConfigurationRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties of the internalDomainFederation objects for the domain. This API returns only one object in the collection. This API is available in the following national cloud deployments.
+     * Read the properties of the internalDomainFederation objects for the domain. This API returns only one object in the collection.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

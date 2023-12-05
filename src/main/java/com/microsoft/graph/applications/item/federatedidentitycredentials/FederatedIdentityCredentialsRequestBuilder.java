@@ -59,7 +59,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/federatedIdentityCredentials{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the federatedIdentityCredential objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the federatedIdentityCredential objects and their properties.
      * @return a FederatedIdentityCredentialCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/application-list-federatedidentitycredentials?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         return get(null);
     }
     /**
-     * Get a list of the federatedIdentityCredential objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the federatedIdentityCredential objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a FederatedIdentityCredentialCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/application-list-federatedidentitycredentials?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, FederatedIdentityCredentialCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new federatedIdentityCredential object for an application. By configuring a trust relationship between your Microsoft Entra application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application. This API is available in the following national cloud deployments.
+     * Create a new federatedIdentityCredential object for an application. By configuring a trust relationship between your Microsoft Entra application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application.
      * @param body The request body
      * @return a FederatedIdentityCredential
      * @see <a href="https://learn.microsoft.com/graph/api/application-post-federatedidentitycredentials?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         return post(body, null);
     }
     /**
-     * Create a new federatedIdentityCredential object for an application. By configuring a trust relationship between your Microsoft Entra application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application. This API is available in the following national cloud deployments.
+     * Create a new federatedIdentityCredential object for an application. By configuring a trust relationship between your Microsoft Entra application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a FederatedIdentityCredential
@@ -108,7 +108,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, FederatedIdentityCredential::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the federatedIdentityCredential objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the federatedIdentityCredential objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the federatedIdentityCredential objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the federatedIdentityCredential objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Create a new federatedIdentityCredential object for an application. By configuring a trust relationship between your Microsoft Entra application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application. This API is available in the following national cloud deployments.
+     * Create a new federatedIdentityCredential object for an application. By configuring a trust relationship between your Microsoft Entra application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new federatedIdentityCredential object for an application. By configuring a trust relationship between your Microsoft Entra application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application. This API is available in the following national cloud deployments.
+     * Create a new federatedIdentityCredential object for an application. By configuring a trust relationship between your Microsoft Entra application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         return new FederatedIdentityCredentialsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the federatedIdentityCredential objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the federatedIdentityCredential objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

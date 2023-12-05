@@ -35,7 +35,7 @@ public class MicrosoftGraphSecurityApplyTagsRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/reviewSets/{ediscoveryReviewSet%2Did}/queries/{ediscoveryReviewSetQuery%2Did}/microsoft.graph.security.applyTags", rawUrl);
     }
     /**
-     * Apply tags to files in an eDiscovery review set. For details, see Tag documents in a review set in eDiscovery. This API is available in the following national cloud deployments.
+     * Apply tags to files in an eDiscovery review set. For details, see Tag documents in a review set in eDiscovery.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewsetquery-applytags?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class MicrosoftGraphSecurityApplyTagsRequestBuilder extends BaseRequestBu
         post(body, null);
     }
     /**
-     * Apply tags to files in an eDiscovery review set. For details, see Tag documents in a review set in eDiscovery. This API is available in the following national cloud deployments.
+     * Apply tags to files in an eDiscovery review set. For details, see Tag documents in a review set in eDiscovery.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewsetquery-applytags?view=graph-rest-1.0">Find more info here</a>
@@ -57,7 +57,7 @@ public class MicrosoftGraphSecurityApplyTagsRequestBuilder extends BaseRequestBu
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Apply tags to files in an eDiscovery review set. For details, see Tag documents in a review set in eDiscovery. This API is available in the following national cloud deployments.
+     * Apply tags to files in an eDiscovery review set. For details, see Tag documents in a review set in eDiscovery.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -66,7 +66,7 @@ public class MicrosoftGraphSecurityApplyTagsRequestBuilder extends BaseRequestBu
         return toPostRequestInformation(body, null);
     }
     /**
-     * Apply tags to files in an eDiscovery review set. For details, see Tag documents in a review set in eDiscovery. This API is available in the following national cloud deployments.
+     * Apply tags to files in an eDiscovery review set. For details, see Tag documents in a review set in eDiscovery.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

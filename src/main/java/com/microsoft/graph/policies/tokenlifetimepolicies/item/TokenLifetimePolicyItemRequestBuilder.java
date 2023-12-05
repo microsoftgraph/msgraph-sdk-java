@@ -45,14 +45,14 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/tokenLifetimePolicies/{tokenLifetimePolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a tokenLifetimePolicy object. This API is available in the following national cloud deployments.
+     * Delete a tokenLifetimePolicy object.
      * @see <a href="https://learn.microsoft.com/graph/api/tokenlifetimepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a tokenLifetimePolicy object. This API is available in the following national cloud deployments.
+     * Delete a tokenLifetimePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/tokenlifetimepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -64,7 +64,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a tokenLifetimePolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a tokenLifetimePolicy object.
      * @return a TokenLifetimePolicy
      * @see <a href="https://learn.microsoft.com/graph/api/tokenlifetimepolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -73,7 +73,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a tokenLifetimePolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a tokenLifetimePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TokenLifetimePolicy
      * @see <a href="https://learn.microsoft.com/graph/api/tokenlifetimepolicy-get?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TokenLifetimePolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a tokenLifetimePolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a tokenLifetimePolicy object.
      * @param body The request body
      * @return a TokenLifetimePolicy
      * @see <a href="https://learn.microsoft.com/graph/api/tokenlifetimepolicy-update?view=graph-rest-1.0">Find more info here</a>
@@ -97,7 +97,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a tokenLifetimePolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a tokenLifetimePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TokenLifetimePolicy
@@ -113,7 +113,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TokenLifetimePolicy::createFromDiscriminatorValue);
     }
     /**
-     * Delete a tokenLifetimePolicy object. This API is available in the following national cloud deployments.
+     * Delete a tokenLifetimePolicy object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a tokenLifetimePolicy object. This API is available in the following national cloud deployments.
+     * Delete a tokenLifetimePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -133,7 +133,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a tokenLifetimePolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a tokenLifetimePolicy object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +141,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a tokenLifetimePolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a tokenLifetimePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -153,7 +153,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a tokenLifetimePolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a tokenLifetimePolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -162,7 +162,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a tokenLifetimePolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a tokenLifetimePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -193,7 +193,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a tokenLifetimePolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a tokenLifetimePolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -45,14 +45,14 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         super(requestAdapter, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/userAttributeAssignments/{identityUserFlowAttributeAssignment%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Delete an identityUserFlowAttributeAssignment object.
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Delete an identityUserFlowAttributeAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -64,7 +64,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an identityUserFlowAttributeAssignment object.
      * @return a IdentityUserFlowAttributeAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -73,7 +73,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         return get(null);
     }
     /**
-     * Read the properties and relationships of an identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an identityUserFlowAttributeAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a IdentityUserFlowAttributeAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-get?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityUserFlowAttributeAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Update the properties of a identityUserFlowAttributeAssignment object.
      * @param body The request body
      * @return a IdentityUserFlowAttributeAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-update?view=graph-rest-1.0">Find more info here</a>
@@ -97,7 +97,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         return patch(body, null);
     }
     /**
-     * Update the properties of a identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Update the properties of a identityUserFlowAttributeAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a IdentityUserFlowAttributeAssignment
@@ -113,7 +113,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityUserFlowAttributeAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Delete an identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Delete an identityUserFlowAttributeAssignment object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Delete an identityUserFlowAttributeAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -133,7 +133,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an identityUserFlowAttributeAssignment object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +141,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an identityUserFlowAttributeAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -153,7 +153,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * Update the properties of a identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Update the properties of a identityUserFlowAttributeAssignment object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -162,7 +162,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Update the properties of a identityUserFlowAttributeAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -193,7 +193,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an identityUserFlowAttributeAssignment object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

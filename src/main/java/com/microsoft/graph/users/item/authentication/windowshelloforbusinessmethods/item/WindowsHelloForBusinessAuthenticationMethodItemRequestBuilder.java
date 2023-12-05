@@ -45,14 +45,14 @@ public class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder exten
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a windowsHelloForBusinessAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Deletes a windowsHelloForBusinessAuthenticationMethod object.
      * @see <a href="https://learn.microsoft.com/graph/api/windowshelloforbusinessauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a windowsHelloForBusinessAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Deletes a windowsHelloForBusinessAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/windowshelloforbusinessauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -64,7 +64,7 @@ public class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder exten
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a windowsHelloForBusinessAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a windowsHelloForBusinessAuthenticationMethod object.
      * @return a WindowsHelloForBusinessAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/windowshelloforbusinessauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -73,7 +73,7 @@ public class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder exten
         return get(null);
     }
     /**
-     * Read the properties and relationships of a windowsHelloForBusinessAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a windowsHelloForBusinessAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WindowsHelloForBusinessAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/windowshelloforbusinessauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder exten
         return this.requestAdapter.send(requestInfo, errorMapping, WindowsHelloForBusinessAuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a windowsHelloForBusinessAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Deletes a windowsHelloForBusinessAuthenticationMethod object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder exten
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a windowsHelloForBusinessAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Deletes a windowsHelloForBusinessAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -107,7 +107,7 @@ public class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder exten
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a windowsHelloForBusinessAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a windowsHelloForBusinessAuthenticationMethod object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder exten
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a windowsHelloForBusinessAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a windowsHelloForBusinessAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -143,7 +143,7 @@ public class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder exten
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a windowsHelloForBusinessAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a windowsHelloForBusinessAuthenticationMethod object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

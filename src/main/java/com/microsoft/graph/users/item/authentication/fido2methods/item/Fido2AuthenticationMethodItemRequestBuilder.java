@@ -37,14 +37,14 @@ public class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/fido2Methods/{fido2AuthenticationMethod%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a user's FIDO2 Security Key Authentication Method object. This API is available in the following national cloud deployments.
+     * Deletes a user's FIDO2 Security Key Authentication Method object.
      * @see <a href="https://learn.microsoft.com/graph/api/fido2authenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a user's FIDO2 Security Key Authentication Method object. This API is available in the following national cloud deployments.
+     * Deletes a user's FIDO2 Security Key Authentication Method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/fido2authenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve a user's single FIDO2 Security Key Authentication Method object. This API is available in the following national cloud deployments.
+     * Retrieve a user's single FIDO2 Security Key Authentication Method object.
      * @return a Fido2AuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/fido2authenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return get(null);
     }
     /**
-     * Retrieve a user's single FIDO2 Security Key Authentication Method object. This API is available in the following national cloud deployments.
+     * Retrieve a user's single FIDO2 Security Key Authentication Method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Fido2AuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/fido2authenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, Fido2AuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a user's FIDO2 Security Key Authentication Method object. This API is available in the following national cloud deployments.
+     * Deletes a user's FIDO2 Security Key Authentication Method object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -87,7 +87,7 @@ public class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a user's FIDO2 Security Key Authentication Method object. This API is available in the following national cloud deployments.
+     * Deletes a user's FIDO2 Security Key Authentication Method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -99,7 +99,7 @@ public class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Retrieve a user's single FIDO2 Security Key Authentication Method object. This API is available in the following national cloud deployments.
+     * Retrieve a user's single FIDO2 Security Key Authentication Method object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a user's single FIDO2 Security Key Authentication Method object. This API is available in the following national cloud deployments.
+     * Retrieve a user's single FIDO2 Security Key Authentication Method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -135,7 +135,7 @@ public class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuil
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve a user's single FIDO2 Security Key Authentication Method object. This API is available in the following national cloud deployments.
+     * Retrieve a user's single FIDO2 Security Key Authentication Method object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

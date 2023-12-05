@@ -59,7 +59,7 @@ public class TermsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/termStore/groups/{group%2Did}/sets/{set%2Did}/terms{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a term object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a term object.
      * @return a TermCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class TermsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a term object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a term object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TermCollectionResponse
      */
@@ -104,7 +104,7 @@ public class TermsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Term::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of a term object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a term object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class TermsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a term object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a term object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class TermsRequestBuilder extends BaseRequestBuilder {
         return new TermsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a term object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a term object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

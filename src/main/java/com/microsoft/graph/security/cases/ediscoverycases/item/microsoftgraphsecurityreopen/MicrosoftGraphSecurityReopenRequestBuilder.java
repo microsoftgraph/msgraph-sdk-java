@@ -35,14 +35,14 @@ public class MicrosoftGraphSecurityReopenRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/microsoft.graph.security.reopen", rawUrl);
     }
     /**
-     * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case. This API is available in the following national cloud deployments.
+     * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case.
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-reopen?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case. This API is available in the following national cloud deployments.
+     * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-reopen?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class MicrosoftGraphSecurityReopenRequestBuilder extends BaseRequestBuild
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case. This API is available in the following national cloud deployments.
+     * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class MicrosoftGraphSecurityReopenRequestBuilder extends BaseRequestBuild
         return toPostRequestInformation(null);
     }
     /**
-     * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case. This API is available in the following national cloud deployments.
+     * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

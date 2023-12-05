@@ -67,7 +67,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/todo/lists/{todoTaskList%2Did}/tasks{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the todoTask resources from the tasks navigation property of a specified todoTaskList. This API is available in the following national cloud deployments.
+     * Get the todoTask resources from the tasks navigation property of a specified todoTaskList.
      * @return a TodoTaskCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/todotasklist-list-tasks?view=graph-rest-1.0">Find more info here</a>
      */
@@ -76,7 +76,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the todoTask resources from the tasks navigation property of a specified todoTaskList. This API is available in the following national cloud deployments.
+     * Get the todoTask resources from the tasks navigation property of a specified todoTaskList.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TodoTaskCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/todotasklist-list-tasks?view=graph-rest-1.0">Find more info here</a>
@@ -90,7 +90,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TodoTaskCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new task object in a specified todoTaskList. This API is available in the following national cloud deployments.
+     * Create a new task object in a specified todoTaskList.
      * @param body The request body
      * @return a TodoTask
      * @see <a href="https://learn.microsoft.com/graph/api/todotasklist-post-tasks?view=graph-rest-1.0">Find more info here</a>
@@ -100,7 +100,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new task object in a specified todoTaskList. This API is available in the following national cloud deployments.
+     * Create a new task object in a specified todoTaskList.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TodoTask
@@ -116,7 +116,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TodoTask::createFromDiscriminatorValue);
     }
     /**
-     * Get the todoTask resources from the tasks navigation property of a specified todoTaskList. This API is available in the following national cloud deployments.
+     * Get the todoTask resources from the tasks navigation property of a specified todoTaskList.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the todoTask resources from the tasks navigation property of a specified todoTaskList. This API is available in the following national cloud deployments.
+     * Get the todoTask resources from the tasks navigation property of a specified todoTaskList.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -136,7 +136,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new task object in a specified todoTaskList. This API is available in the following national cloud deployments.
+     * Create a new task object in a specified todoTaskList.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new task object in a specified todoTaskList. This API is available in the following national cloud deployments.
+     * Create a new task object in a specified todoTaskList.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -170,7 +170,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return new TasksRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the todoTask resources from the tasks navigation property of a specified todoTaskList. This API is available in the following national cloud deployments.
+     * Get the todoTask resources from the tasks navigation property of a specified todoTaskList.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

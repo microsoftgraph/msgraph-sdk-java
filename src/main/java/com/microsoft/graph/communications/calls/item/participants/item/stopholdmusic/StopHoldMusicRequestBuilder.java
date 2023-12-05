@@ -36,7 +36,7 @@ public class StopHoldMusicRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/participants/{participant%2Did}/stopHoldMusic", rawUrl);
     }
     /**
-     * Reincorporate a participant previously put on hold to the call. This API is available in the following national cloud deployments.
+     * Reincorporate a participant previously put on hold to the call.
      * @param body The request body
      * @return a StopHoldMusicOperation
      * @see <a href="https://learn.microsoft.com/graph/api/participant-stopholdmusic?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class StopHoldMusicRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Reincorporate a participant previously put on hold to the call. This API is available in the following national cloud deployments.
+     * Reincorporate a participant previously put on hold to the call.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a StopHoldMusicOperation
@@ -62,7 +62,7 @@ public class StopHoldMusicRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, StopHoldMusicOperation::createFromDiscriminatorValue);
     }
     /**
-     * Reincorporate a participant previously put on hold to the call. This API is available in the following national cloud deployments.
+     * Reincorporate a participant previously put on hold to the call.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class StopHoldMusicRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Reincorporate a participant previously put on hold to the call. This API is available in the following national cloud deployments.
+     * Reincorporate a participant previously put on hold to the call.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

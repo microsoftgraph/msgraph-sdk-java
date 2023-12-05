@@ -94,7 +94,7 @@ public class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder extends Bas
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the instance of an active role assignment. This API is available in the following national cloud deployments.
+     * Get the instance of an active role assignment.
      * @return a UnifiedRoleAssignmentScheduleInstance
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentscheduleinstance-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -103,7 +103,7 @@ public class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder extends Bas
         return get(null);
     }
     /**
-     * Get the instance of an active role assignment. This API is available in the following national cloud deployments.
+     * Get the instance of an active role assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UnifiedRoleAssignmentScheduleInstance
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentscheduleinstance-get?view=graph-rest-1.0">Find more info here</a>
@@ -161,7 +161,7 @@ public class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder extends Bas
         return requestInfo;
     }
     /**
-     * Get the instance of an active role assignment. This API is available in the following national cloud deployments.
+     * Get the instance of an active role assignment.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -169,7 +169,7 @@ public class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder extends Bas
         return toGetRequestInformation(null);
     }
     /**
-     * Get the instance of an active role assignment. This API is available in the following national cloud deployments.
+     * Get the instance of an active role assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -221,7 +221,7 @@ public class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder extends Bas
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the instance of an active role assignment. This API is available in the following national cloud deployments.
+     * Get the instance of an active role assignment.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

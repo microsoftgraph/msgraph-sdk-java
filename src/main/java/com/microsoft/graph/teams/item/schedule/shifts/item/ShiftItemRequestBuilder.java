@@ -37,14 +37,14 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/schedule/shifts/{shift%2Did}{?%24select}", rawUrl);
     }
     /**
-     * Delete a shift from the schedule. This API is available in the following national cloud deployments.
+     * Delete a shift from the schedule.
      * @see <a href="https://learn.microsoft.com/graph/api/shift-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a shift from the schedule. This API is available in the following national cloud deployments.
+     * Delete a shift from the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/shift-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a shift object by ID. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a shift object by ID.
      * @return a Shift
      * @see <a href="https://learn.microsoft.com/graph/api/shift-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a shift object by ID. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a shift object by ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Shift
      * @see <a href="https://learn.microsoft.com/graph/api/shift-get?view=graph-rest-1.0">Find more info here</a>
@@ -105,7 +105,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Shift::createFromDiscriminatorValue);
     }
     /**
-     * Delete a shift from the schedule. This API is available in the following national cloud deployments.
+     * Delete a shift from the schedule.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a shift from the schedule. This API is available in the following national cloud deployments.
+     * Delete a shift from the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -125,7 +125,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a shift object by ID. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a shift object by ID.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a shift object by ID. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a shift object by ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -185,7 +185,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a shift object by ID. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a shift object by ID.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

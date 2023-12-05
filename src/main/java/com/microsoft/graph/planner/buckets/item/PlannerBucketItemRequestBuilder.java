@@ -45,14 +45,14 @@ public class PlannerBucketItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/buckets/{plannerBucket%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete plannerBucket. This API is available in the following national cloud deployments.
+     * Delete plannerBucket.
      * @see <a href="https://learn.microsoft.com/graph/api/plannerbucket-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete plannerBucket. This API is available in the following national cloud deployments.
+     * Delete plannerBucket.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/plannerbucket-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -64,7 +64,7 @@ public class PlannerBucketItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a plannerBucket object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a plannerBucket object.
      * @return a PlannerBucket
      * @see <a href="https://learn.microsoft.com/graph/api/plannerbucket-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -73,7 +73,7 @@ public class PlannerBucketItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a plannerBucket object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a plannerBucket object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PlannerBucket
      * @see <a href="https://learn.microsoft.com/graph/api/plannerbucket-get?view=graph-rest-1.0">Find more info here</a>
@@ -113,7 +113,7 @@ public class PlannerBucketItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerBucket::createFromDiscriminatorValue);
     }
     /**
-     * Delete plannerBucket. This API is available in the following national cloud deployments.
+     * Delete plannerBucket.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class PlannerBucketItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete plannerBucket. This API is available in the following national cloud deployments.
+     * Delete plannerBucket.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -133,7 +133,7 @@ public class PlannerBucketItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a plannerBucket object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a plannerBucket object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +141,7 @@ public class PlannerBucketItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a plannerBucket object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a plannerBucket object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class PlannerBucketItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a plannerBucket object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a plannerBucket object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -58,7 +58,7 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/intelProfiles/{intelligenceProfile%2Did}/indicators{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile. This API is available in the following national cloud deployments.
+     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile.
      * @return a IntelligenceProfileIndicatorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-intelligenceprofile-list-indicators?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile. This API is available in the following national cloud deployments.
+     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a IntelligenceProfileIndicatorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-intelligenceprofile-list-indicators?view=graph-rest-1.0">Find more info here</a>
@@ -81,7 +81,7 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IntelligenceProfileIndicatorCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile. This API is available in the following national cloud deployments.
+     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile. This API is available in the following national cloud deployments.
+     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -111,7 +111,7 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
         return new IndicatorsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile. This API is available in the following national cloud deployments.
+     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

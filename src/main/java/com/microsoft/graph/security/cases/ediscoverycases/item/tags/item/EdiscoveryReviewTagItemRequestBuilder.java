@@ -53,14 +53,14 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/tags/{ediscoveryReviewTag%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Remove an ediscoveryReviewTag object. This API is available in the following national cloud deployments.
+     * Remove an ediscoveryReviewTag object.
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-delete-tags?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Remove an ediscoveryReviewTag object. This API is available in the following national cloud deployments.
+     * Remove an ediscoveryReviewTag object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-delete-tags?view=graph-rest-1.0">Find more info here</a>
      */
@@ -72,7 +72,7 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an ediscoveryReviewTag object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an ediscoveryReviewTag object.
      * @return a EdiscoveryReviewTag
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewtag-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -81,7 +81,7 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an ediscoveryReviewTag object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an ediscoveryReviewTag object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EdiscoveryReviewTag
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewtag-get?view=graph-rest-1.0">Find more info here</a>
@@ -95,7 +95,7 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryReviewTag::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an ediscoveryReviewTag object. This API is available in the following national cloud deployments.
+     * Update the properties of an ediscoveryReviewTag object.
      * @param body The request body
      * @return a EdiscoveryReviewTag
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewtag-update?view=graph-rest-1.0">Find more info here</a>
@@ -105,7 +105,7 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of an ediscoveryReviewTag object. This API is available in the following national cloud deployments.
+     * Update the properties of an ediscoveryReviewTag object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EdiscoveryReviewTag
@@ -121,7 +121,7 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryReviewTag::createFromDiscriminatorValue);
     }
     /**
-     * Remove an ediscoveryReviewTag object. This API is available in the following national cloud deployments.
+     * Remove an ediscoveryReviewTag object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Remove an ediscoveryReviewTag object. This API is available in the following national cloud deployments.
+     * Remove an ediscoveryReviewTag object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -141,7 +141,7 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an ediscoveryReviewTag object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an ediscoveryReviewTag object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -149,7 +149,7 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an ediscoveryReviewTag object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an ediscoveryReviewTag object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -161,7 +161,7 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an ediscoveryReviewTag object. This API is available in the following national cloud deployments.
+     * Update the properties of an ediscoveryReviewTag object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -170,7 +170,7 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an ediscoveryReviewTag object. This API is available in the following national cloud deployments.
+     * Update the properties of an ediscoveryReviewTag object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +201,7 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an ediscoveryReviewTag object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an ediscoveryReviewTag object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

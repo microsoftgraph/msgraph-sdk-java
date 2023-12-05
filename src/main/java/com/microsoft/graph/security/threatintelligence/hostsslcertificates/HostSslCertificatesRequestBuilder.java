@@ -59,7 +59,7 @@ public class HostSslCertificatesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hostSslCertificates{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the properties and relationships of a hostSslCertificate object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a hostSslCertificate object.
      * @return a HostSslCertificateCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class HostSslCertificatesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the properties and relationships of a hostSslCertificate object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a hostSslCertificate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a HostSslCertificateCollectionResponse
      */
@@ -104,7 +104,7 @@ public class HostSslCertificatesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, HostSslCertificate::createFromDiscriminatorValue);
     }
     /**
-     * Get the properties and relationships of a hostSslCertificate object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a hostSslCertificate object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class HostSslCertificatesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of a hostSslCertificate object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a hostSslCertificate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class HostSslCertificatesRequestBuilder extends BaseRequestBuilder {
         return new HostSslCertificatesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the properties and relationships of a hostSslCertificate object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a hostSslCertificate object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -37,14 +37,14 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/domains/{domain%2Did}/federationConfiguration/{internalDomainFederation%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Delete an internalDomainFederation object.
      * @see <a href="https://learn.microsoft.com/graph/api/internaldomainfederation-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Delete an internalDomainFederation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/internaldomainfederation-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an internalDomainFederation object.
      * @return a InternalDomainFederation
      * @see <a href="https://learn.microsoft.com/graph/api/internaldomainfederation-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         return get(null);
     }
     /**
-     * Read the properties and relationships of an internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an internalDomainFederation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a InternalDomainFederation
      * @see <a href="https://learn.microsoft.com/graph/api/internaldomainfederation-get?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, InternalDomainFederation::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Update the properties of an internalDomainFederation object.
      * @param body The request body
      * @return a InternalDomainFederation
      * @see <a href="https://learn.microsoft.com/graph/api/internaldomainfederation-update?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         return patch(body, null);
     }
     /**
-     * Update the properties of an internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Update the properties of an internalDomainFederation object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a InternalDomainFederation
@@ -105,7 +105,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, InternalDomainFederation::createFromDiscriminatorValue);
     }
     /**
-     * Delete an internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Delete an internalDomainFederation object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Delete an internalDomainFederation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -125,7 +125,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an internalDomainFederation object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an internalDomainFederation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Update the properties of an internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Update the properties of an internalDomainFederation object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Update the properties of an internalDomainFederation object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -185,7 +185,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an internalDomainFederation object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

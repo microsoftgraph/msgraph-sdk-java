@@ -53,7 +53,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/runs/{run%2Did}/userProcessingResults/{userProcessingResult%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the user processing result of a user processing result of a run. This API is available in the following national cloud deployments.
+     * Get the user processing result of a user processing result of a run.
      * @return a UserProcessingResult
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-userprocessingresult-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -62,7 +62,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the user processing result of a user processing result of a run. This API is available in the following national cloud deployments.
+     * Get the user processing result of a user processing result of a run.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UserProcessingResult
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-userprocessingresult-get?view=graph-rest-1.0">Find more info here</a>
@@ -76,7 +76,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserProcessingResult::createFromDiscriminatorValue);
     }
     /**
-     * Get the user processing result of a user processing result of a run. This API is available in the following national cloud deployments.
+     * Get the user processing result of a user processing result of a run.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the user processing result of a user processing result of a run. This API is available in the following national cloud deployments.
+     * Get the user processing result of a user processing result of a run.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -106,7 +106,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
         return new UserProcessingResultItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the user processing result of a user processing result of a run. This API is available in the following national cloud deployments.
+     * Get the user processing result of a user processing result of a run.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

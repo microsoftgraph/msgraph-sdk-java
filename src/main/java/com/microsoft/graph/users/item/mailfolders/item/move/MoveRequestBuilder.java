@@ -36,7 +36,7 @@ public class MoveRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders/{mailFolder%2Did}/move", rawUrl);
     }
     /**
-     * Move a mailfolder and its contents to another mailfolder. This API is available in the following national cloud deployments.
+     * Move a mailfolder and its contents to another mailfolder.
      * @param body The request body
      * @return a MailFolder
      * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-move?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class MoveRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Move a mailfolder and its contents to another mailfolder. This API is available in the following national cloud deployments.
+     * Move a mailfolder and its contents to another mailfolder.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a MailFolder
@@ -62,7 +62,7 @@ public class MoveRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MailFolder::createFromDiscriminatorValue);
     }
     /**
-     * Move a mailfolder and its contents to another mailfolder. This API is available in the following national cloud deployments.
+     * Move a mailfolder and its contents to another mailfolder.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class MoveRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Move a mailfolder and its contents to another mailfolder. This API is available in the following national cloud deployments.
+     * Move a mailfolder and its contents to another mailfolder.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

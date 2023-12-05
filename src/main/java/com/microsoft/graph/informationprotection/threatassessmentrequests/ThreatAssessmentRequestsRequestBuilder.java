@@ -59,7 +59,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/informationProtection/threatAssessmentRequests{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types: This API is available in the following national cloud deployments.
+     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types:
      * @return a ThreatAssessmentRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/informationprotection-list-threatassessmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types: This API is available in the following national cloud deployments.
+     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ThreatAssessmentRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/informationprotection-list-threatassessmentrequests?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ThreatAssessmentRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new threat assessment request. A threat assessment request can be one of the following types: This API is available in the following national cloud deployments.
+     * Create a new threat assessment request. A threat assessment request can be one of the following types:
      * @param body The request body
      * @return a ThreatAssessmentRequest
      * @see <a href="https://learn.microsoft.com/graph/api/informationprotection-post-threatassessmentrequests?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new threat assessment request. A threat assessment request can be one of the following types: This API is available in the following national cloud deployments.
+     * Create a new threat assessment request. A threat assessment request can be one of the following types:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ThreatAssessmentRequest
@@ -108,7 +108,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ThreatAssessmentRequest::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types: This API is available in the following national cloud deployments.
+     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types:
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types: This API is available in the following national cloud deployments.
+     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new threat assessment request. A threat assessment request can be one of the following types: This API is available in the following national cloud deployments.
+     * Create a new threat assessment request. A threat assessment request can be one of the following types:
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new threat assessment request. A threat assessment request can be one of the following types: This API is available in the following national cloud deployments.
+     * Create a new threat assessment request. A threat assessment request can be one of the following types:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         return new ThreatAssessmentRequestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types: This API is available in the following national cloud deployments.
+     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types:
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

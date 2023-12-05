@@ -62,7 +62,7 @@ public class SslCertificateItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the properties and relationships of an sslCertificate object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of an sslCertificate object.
      * @return a SslCertificate
      * @see <a href="https://learn.microsoft.com/graph/api/security-sslcertificate-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -71,7 +71,7 @@ public class SslCertificateItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the properties and relationships of an sslCertificate object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of an sslCertificate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SslCertificate
      * @see <a href="https://learn.microsoft.com/graph/api/security-sslcertificate-get?view=graph-rest-1.0">Find more info here</a>
@@ -129,7 +129,7 @@ public class SslCertificateItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the properties and relationships of an sslCertificate object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of an sslCertificate object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +137,7 @@ public class SslCertificateItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of an sslCertificate object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of an sslCertificate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -189,7 +189,7 @@ public class SslCertificateItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties and relationships of an sslCertificate object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of an sslCertificate object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

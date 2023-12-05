@@ -38,7 +38,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/incompatibleGroups/$ref{?%24top,%24skip,%24search,%24filter,%24count,%24orderby}", rawUrl);
     }
     /**
-     * Retrieve a list of the group objects that have been marked as incompatible on an accessPackage.   This API is available in the following national cloud deployments.
+     * Retrieve a list of the group objects that have been marked as incompatible on an accessPackage.  
      * @return a StringCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-list-incompatiblegroups?view=graph-rest-1.0">Find more info here</a>
      */
@@ -47,7 +47,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of the group objects that have been marked as incompatible on an accessPackage.   This API is available in the following national cloud deployments.
+     * Retrieve a list of the group objects that have been marked as incompatible on an accessPackage.  
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a StringCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-list-incompatiblegroups?view=graph-rest-1.0">Find more info here</a>
@@ -61,7 +61,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, StringCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Add a group to the list of groups that have been marked as incompatible on an accessPackage.   This API is available in the following national cloud deployments.
+     * Add a group to the list of groups that have been marked as incompatible on an accessPackage.  
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-post-incompatiblegroup?view=graph-rest-1.0">Find more info here</a>
      */
@@ -69,7 +69,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Add a group to the list of groups that have been marked as incompatible on an accessPackage.   This API is available in the following national cloud deployments.
+     * Add a group to the list of groups that have been marked as incompatible on an accessPackage.  
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-post-incompatiblegroup?view=graph-rest-1.0">Find more info here</a>
@@ -83,7 +83,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve a list of the group objects that have been marked as incompatible on an accessPackage.   This API is available in the following national cloud deployments.
+     * Retrieve a list of the group objects that have been marked as incompatible on an accessPackage.  
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of the group objects that have been marked as incompatible on an accessPackage.   This API is available in the following national cloud deployments.
+     * Retrieve a list of the group objects that have been marked as incompatible on an accessPackage.  
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -103,7 +103,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add a group to the list of groups that have been marked as incompatible on an accessPackage.   This API is available in the following national cloud deployments.
+     * Add a group to the list of groups that have been marked as incompatible on an accessPackage.  
      * @param body The request body
      * @return a RequestInformation
      */
@@ -112,7 +112,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add a group to the list of groups that have been marked as incompatible on an accessPackage.   This API is available in the following national cloud deployments.
+     * Add a group to the list of groups that have been marked as incompatible on an accessPackage.  
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -137,7 +137,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of the group objects that have been marked as incompatible on an accessPackage.   This API is available in the following national cloud deployments.
+     * Retrieve a list of the group objects that have been marked as incompatible on an accessPackage.  
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

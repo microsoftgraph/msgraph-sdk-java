@@ -54,7 +54,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties of an identitySecurityDefaultsEnforcementPolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an identitySecurityDefaultsEnforcementPolicy object.
      * @return a IdentitySecurityDefaultsEnforcementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/identitysecuritydefaultsenforcementpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
         return get(null);
     }
     /**
-     * Retrieve the properties of an identitySecurityDefaultsEnforcementPolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an identitySecurityDefaultsEnforcementPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a IdentitySecurityDefaultsEnforcementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/identitysecuritydefaultsenforcementpolicy-get?view=graph-rest-1.0">Find more info here</a>
@@ -77,7 +77,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
         return this.requestAdapter.send(requestInfo, errorMapping, IdentitySecurityDefaultsEnforcementPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an identitySecurityDefaultsEnforcementPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of an identitySecurityDefaultsEnforcementPolicy object.
      * @param body The request body
      * @return a IdentitySecurityDefaultsEnforcementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/identitysecuritydefaultsenforcementpolicy-update?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
         return patch(body, null);
     }
     /**
-     * Update the properties of an identitySecurityDefaultsEnforcementPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of an identitySecurityDefaultsEnforcementPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a IdentitySecurityDefaultsEnforcementPolicy
@@ -123,7 +123,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
         return requestInfo;
     }
     /**
-     * Retrieve the properties of an identitySecurityDefaultsEnforcementPolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an identitySecurityDefaultsEnforcementPolicy object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of an identitySecurityDefaultsEnforcementPolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an identitySecurityDefaultsEnforcementPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -143,7 +143,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
         return requestInfo;
     }
     /**
-     * Update the properties of an identitySecurityDefaultsEnforcementPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of an identitySecurityDefaultsEnforcementPolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -152,7 +152,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an identitySecurityDefaultsEnforcementPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of an identitySecurityDefaultsEnforcementPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -183,7 +183,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties of an identitySecurityDefaultsEnforcementPolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an identitySecurityDefaultsEnforcementPolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

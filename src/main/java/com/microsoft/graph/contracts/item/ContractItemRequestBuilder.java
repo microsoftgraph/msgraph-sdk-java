@@ -94,7 +94,7 @@ public class ContractItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of contract object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of contract object.
      * @return a Contract
      * @see <a href="https://learn.microsoft.com/graph/api/contract-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -103,7 +103,7 @@ public class ContractItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of contract object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of contract object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Contract
      * @see <a href="https://learn.microsoft.com/graph/api/contract-get?view=graph-rest-1.0">Find more info here</a>
@@ -161,7 +161,7 @@ public class ContractItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of contract object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of contract object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -169,7 +169,7 @@ public class ContractItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of contract object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of contract object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -221,7 +221,7 @@ public class ContractItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of contract object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of contract object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

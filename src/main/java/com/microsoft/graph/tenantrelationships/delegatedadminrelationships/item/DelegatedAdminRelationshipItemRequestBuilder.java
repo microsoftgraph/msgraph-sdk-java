@@ -61,14 +61,14 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/tenantRelationships/delegatedAdminRelationships/{delegatedAdminRelationship%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status.  This API is available in the following national cloud deployments.
+     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status. 
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status.  This API is available in the following national cloud deployments.
+     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -80,7 +80,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties of a delegatedAdminRelationship object. This API is available in the following national cloud deployments.
+     * Read the properties of a delegatedAdminRelationship object.
      * @return a DelegatedAdminRelationship
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -89,7 +89,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         return get(null);
     }
     /**
-     * Read the properties of a delegatedAdminRelationship object. This API is available in the following national cloud deployments.
+     * Read the properties of a delegatedAdminRelationship object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DelegatedAdminRelationship
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-get?view=graph-rest-1.0">Find more info here</a>
@@ -103,7 +103,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminRelationship::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a delegatedAdminRelationship object. You can only update a relationship when it's in the created status. However, you can update the autoExtendDuration property when the relationship is in either the created or active status. This API is available in the following national cloud deployments.
+     * Update the properties of a delegatedAdminRelationship object. You can only update a relationship when it's in the created status. However, you can update the autoExtendDuration property when the relationship is in either the created or active status.
      * @param body The request body
      * @return a DelegatedAdminRelationship
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-update?view=graph-rest-1.0">Find more info here</a>
@@ -113,7 +113,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         return patch(body, null);
     }
     /**
-     * Update the properties of a delegatedAdminRelationship object. You can only update a relationship when it's in the created status. However, you can update the autoExtendDuration property when the relationship is in either the created or active status. This API is available in the following national cloud deployments.
+     * Update the properties of a delegatedAdminRelationship object. You can only update a relationship when it's in the created status. However, you can update the autoExtendDuration property when the relationship is in either the created or active status.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DelegatedAdminRelationship
@@ -129,7 +129,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminRelationship::createFromDiscriminatorValue);
     }
     /**
-     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status.  This API is available in the following national cloud deployments.
+     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status. 
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +137,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status.  This API is available in the following national cloud deployments.
+     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -149,7 +149,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Read the properties of a delegatedAdminRelationship object. This API is available in the following national cloud deployments.
+     * Read the properties of a delegatedAdminRelationship object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -157,7 +157,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties of a delegatedAdminRelationship object. This API is available in the following national cloud deployments.
+     * Read the properties of a delegatedAdminRelationship object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Update the properties of a delegatedAdminRelationship object. You can only update a relationship when it's in the created status. However, you can update the autoExtendDuration property when the relationship is in either the created or active status. This API is available in the following national cloud deployments.
+     * Update the properties of a delegatedAdminRelationship object. You can only update a relationship when it's in the created status. However, you can update the autoExtendDuration property when the relationship is in either the created or active status.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +178,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a delegatedAdminRelationship object. You can only update a relationship when it's in the created status. However, you can update the autoExtendDuration property when the relationship is in either the created or active status. This API is available in the following national cloud deployments.
+     * Update the properties of a delegatedAdminRelationship object. You can only update a relationship when it's in the created status. However, you can update the autoExtendDuration property when the relationship is in either the created or active status.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -209,7 +209,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties of a delegatedAdminRelationship object. This API is available in the following national cloud deployments.
+     * Read the properties of a delegatedAdminRelationship object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

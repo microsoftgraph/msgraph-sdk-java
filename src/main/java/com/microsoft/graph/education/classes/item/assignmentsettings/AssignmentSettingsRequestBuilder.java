@@ -75,7 +75,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationAssignmentSettings::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings. This API is available in the following national cloud deployments.
+     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings.
      * @param body The request body
      * @return a EducationAssignmentSettings
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentsettings-update?view=graph-rest-1.0">Find more info here</a>
@@ -85,7 +85,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings. This API is available in the following national cloud deployments.
+     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EducationAssignmentSettings
@@ -141,7 +141,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings. This API is available in the following national cloud deployments.
+     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -150,7 +150,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings. This API is available in the following national cloud deployments.
+     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

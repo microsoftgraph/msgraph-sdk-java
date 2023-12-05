@@ -35,7 +35,7 @@ public class SetVerifiedPublisherRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/setVerifiedPublisher", rawUrl);
     }
     /**
-     * Set the verifiedPublisher on an application. For more information, including prerequisites to setting a verified publisher, see Publisher verification. This API is available in the following national cloud deployments.
+     * Set the verifiedPublisher on an application. For more information, including prerequisites to setting a verified publisher, see Publisher verification.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/application-setverifiedpublisher?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class SetVerifiedPublisherRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Set the verifiedPublisher on an application. For more information, including prerequisites to setting a verified publisher, see Publisher verification. This API is available in the following national cloud deployments.
+     * Set the verifiedPublisher on an application. For more information, including prerequisites to setting a verified publisher, see Publisher verification.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/application-setverifiedpublisher?view=graph-rest-1.0">Find more info here</a>
@@ -57,7 +57,7 @@ public class SetVerifiedPublisherRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Set the verifiedPublisher on an application. For more information, including prerequisites to setting a verified publisher, see Publisher verification. This API is available in the following national cloud deployments.
+     * Set the verifiedPublisher on an application. For more information, including prerequisites to setting a verified publisher, see Publisher verification.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -66,7 +66,7 @@ public class SetVerifiedPublisherRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Set the verifiedPublisher on an application. For more information, including prerequisites to setting a verified publisher, see Publisher verification. This API is available in the following national cloud deployments.
+     * Set the verifiedPublisher on an application. For more information, including prerequisites to setting a verified publisher, see Publisher verification.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

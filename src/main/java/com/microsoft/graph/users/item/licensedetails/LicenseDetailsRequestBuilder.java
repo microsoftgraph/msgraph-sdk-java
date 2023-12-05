@@ -59,7 +59,7 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/licenseDetails{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of licenseDetails objects for enterprise users. This API returns details for licenses that are directly assigned and those transitively assigned through memberships in licensed groups. This API is available in the following national cloud deployments.
+     * Retrieve a list of licenseDetails objects for enterprise users. This API returns details for licenses that are directly assigned and those transitively assigned through memberships in licensed groups.
      * @return a LicenseDetailsCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-licensedetails?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of licenseDetails objects for enterprise users. This API returns details for licenses that are directly assigned and those transitively assigned through memberships in licensed groups. This API is available in the following national cloud deployments.
+     * Retrieve a list of licenseDetails objects for enterprise users. This API returns details for licenses that are directly assigned and those transitively assigned through memberships in licensed groups.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a LicenseDetailsCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-licensedetails?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, LicenseDetails::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of licenseDetails objects for enterprise users. This API returns details for licenses that are directly assigned and those transitively assigned through memberships in licensed groups. This API is available in the following national cloud deployments.
+     * Retrieve a list of licenseDetails objects for enterprise users. This API returns details for licenses that are directly assigned and those transitively assigned through memberships in licensed groups.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of licenseDetails objects for enterprise users. This API returns details for licenses that are directly assigned and those transitively assigned through memberships in licensed groups. This API is available in the following national cloud deployments.
+     * Retrieve a list of licenseDetails objects for enterprise users. This API returns details for licenses that are directly assigned and those transitively assigned through memberships in licensed groups.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
         return new LicenseDetailsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of licenseDetails objects for enterprise users. This API returns details for licenses that are directly assigned and those transitively assigned through memberships in licensed groups. This API is available in the following national cloud deployments.
+     * Retrieve a list of licenseDetails objects for enterprise users. This API returns details for licenses that are directly assigned and those transitively assigned through memberships in licensed groups.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

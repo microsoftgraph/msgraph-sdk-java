@@ -59,7 +59,7 @@ public class AuthenticationContextClassReferencesRequestBuilder extends BaseRequ
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/authenticationContextClassReferences{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of authenticationContextClassReference objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of authenticationContextClassReference objects.
      * @return a AuthenticationContextClassReferenceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccessroot-list-authenticationcontextclassreferences?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class AuthenticationContextClassReferencesRequestBuilder extends BaseRequ
         return get(null);
     }
     /**
-     * Retrieve a list of authenticationContextClassReference objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of authenticationContextClassReference objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AuthenticationContextClassReferenceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccessroot-list-authenticationcontextclassreferences?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class AuthenticationContextClassReferencesRequestBuilder extends BaseRequ
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationContextClassReference::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of authenticationContextClassReference objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of authenticationContextClassReference objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class AuthenticationContextClassReferencesRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of authenticationContextClassReference objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of authenticationContextClassReference objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class AuthenticationContextClassReferencesRequestBuilder extends BaseRequ
         return new AuthenticationContextClassReferencesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of authenticationContextClassReference objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of authenticationContextClassReference objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

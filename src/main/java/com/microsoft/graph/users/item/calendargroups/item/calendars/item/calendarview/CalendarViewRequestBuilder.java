@@ -66,7 +66,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendarGroups/{calendarGroup%2Did}/calendars/{calendar%2Did}/calendarView{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
-     * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar (../me/calendarView) or some other calendar of the user's. This API is available in the following national cloud deployments.
+     * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar (../me/calendarView) or some other calendar of the user's.
      * @return a EventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/calendar-list-calendarview?view=graph-rest-1.0">Find more info here</a>
      */
@@ -75,7 +75,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar (../me/calendarView) or some other calendar of the user's. This API is available in the following national cloud deployments.
+     * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar (../me/calendarView) or some other calendar of the user's.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/calendar-list-calendarview?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EventCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar (../me/calendarView) or some other calendar of the user's. This API is available in the following national cloud deployments.
+     * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar (../me/calendarView) or some other calendar of the user's.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar (../me/calendarView) or some other calendar of the user's. This API is available in the following national cloud deployments.
+     * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar (../me/calendarView) or some other calendar of the user's.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -119,7 +119,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
         return new CalendarViewRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar (../me/calendarView) or some other calendar of the user's. This API is available in the following national cloud deployments.
+     * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar (../me/calendarView) or some other calendar of the user's.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

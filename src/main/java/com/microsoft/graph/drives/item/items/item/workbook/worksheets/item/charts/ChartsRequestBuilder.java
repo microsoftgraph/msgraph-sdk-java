@@ -69,19 +69,19 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of chart objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of chart objects.
      * @return a WorkbookChartCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-list-charts?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chart-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookChartCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of chart objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of chart objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookChartCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-list-charts?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chart-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookChartCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -112,7 +112,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         return new ItemWithNameRequestBuilder(pathParameters, requestAdapter, name);
     }
     /**
-     * Use this API to create a new Chart. This API is available in the following national cloud deployments.
+     * Use this API to create a new Chart.
      * @param body The request body
      * @return a WorkbookChart
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-post-charts?view=graph-rest-1.0">Find more info here</a>
@@ -122,7 +122,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Use this API to create a new Chart. This API is available in the following national cloud deployments.
+     * Use this API to create a new Chart.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookChart
@@ -138,7 +138,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookChart::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of chart objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of chart objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +146,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of chart objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of chart objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new Chart. This API is available in the following national cloud deployments.
+     * Use this API to create a new Chart.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -167,7 +167,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new Chart. This API is available in the following national cloud deployments.
+     * Use this API to create a new Chart.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -192,7 +192,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         return new ChartsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of chart objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of chart objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

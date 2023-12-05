@@ -59,7 +59,7 @@ public class MonthlyPrintUsageByUserRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/monthlyPrintUsageByUser{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of monthly print usage summaries, grouped by user. This API is available in the following national cloud deployments.
+     * Retrieve a list of monthly print usage summaries, grouped by user.
      * @return a PrintUsageByUserCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-monthlyprintusagebyuser?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class MonthlyPrintUsageByUserRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of monthly print usage summaries, grouped by user. This API is available in the following national cloud deployments.
+     * Retrieve a list of monthly print usage summaries, grouped by user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PrintUsageByUserCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-monthlyprintusagebyuser?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class MonthlyPrintUsageByUserRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PrintUsageByUser::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of monthly print usage summaries, grouped by user. This API is available in the following national cloud deployments.
+     * Retrieve a list of monthly print usage summaries, grouped by user.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class MonthlyPrintUsageByUserRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of monthly print usage summaries, grouped by user. This API is available in the following national cloud deployments.
+     * Retrieve a list of monthly print usage summaries, grouped by user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class MonthlyPrintUsageByUserRequestBuilder extends BaseRequestBuilder {
         return new MonthlyPrintUsageByUserRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of monthly print usage summaries, grouped by user. This API is available in the following national cloud deployments.
+     * Retrieve a list of monthly print usage summaries, grouped by user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

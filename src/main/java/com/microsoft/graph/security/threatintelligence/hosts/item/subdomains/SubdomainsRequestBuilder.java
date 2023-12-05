@@ -58,7 +58,7 @@ public class SubdomainsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hosts/{host%2Did}/subdomains{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the list of subdomain resources associated with a host. This API is available in the following national cloud deployments.
+     * Get the list of subdomain resources associated with a host.
      * @return a SubdomainCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-subdomains?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class SubdomainsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of subdomain resources associated with a host. This API is available in the following national cloud deployments.
+     * Get the list of subdomain resources associated with a host.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SubdomainCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-subdomains?view=graph-rest-1.0">Find more info here</a>
@@ -81,7 +81,7 @@ public class SubdomainsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SubdomainCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of subdomain resources associated with a host. This API is available in the following national cloud deployments.
+     * Get the list of subdomain resources associated with a host.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class SubdomainsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of subdomain resources associated with a host. This API is available in the following national cloud deployments.
+     * Get the list of subdomain resources associated with a host.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -111,7 +111,7 @@ public class SubdomainsRequestBuilder extends BaseRequestBuilder {
         return new SubdomainsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of subdomain resources associated with a host. This API is available in the following national cloud deployments.
+     * Get the list of subdomain resources associated with a host.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

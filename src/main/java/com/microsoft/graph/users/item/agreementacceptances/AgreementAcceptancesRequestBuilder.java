@@ -58,7 +58,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/agreementAcceptances{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the signed-in user's agreementAcceptance objects. This API is available in the following national cloud deployments.
+     * Retrieve the signed-in user's agreementAcceptance objects.
      * @return a AgreementAcceptanceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-agreementacceptances?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the signed-in user's agreementAcceptance objects. This API is available in the following national cloud deployments.
+     * Retrieve the signed-in user's agreementAcceptance objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AgreementAcceptanceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-agreementacceptances?view=graph-rest-1.0">Find more info here</a>
@@ -81,7 +81,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AgreementAcceptanceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the signed-in user's agreementAcceptance objects. This API is available in the following national cloud deployments.
+     * Retrieve the signed-in user's agreementAcceptance objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the signed-in user's agreementAcceptance objects. This API is available in the following national cloud deployments.
+     * Retrieve the signed-in user's agreementAcceptance objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -111,7 +111,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
         return new AgreementAcceptancesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the signed-in user's agreementAcceptance objects. This API is available in the following national cloud deployments.
+     * Retrieve the signed-in user's agreementAcceptance objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

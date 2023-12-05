@@ -37,7 +37,7 @@ public class ManagerRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/contacts/{orgContact%2Did}/manager{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get this organizational contact's manager. This API is available in the following national cloud deployments.
+     * Get this organizational contact's manager.
      * @return a DirectoryObject
      * @see <a href="https://learn.microsoft.com/graph/api/orgcontact-get-manager?view=graph-rest-1.0">Find more info here</a>
      */
@@ -46,7 +46,7 @@ public class ManagerRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get this organizational contact's manager. This API is available in the following national cloud deployments.
+     * Get this organizational contact's manager.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DirectoryObject
      * @see <a href="https://learn.microsoft.com/graph/api/orgcontact-get-manager?view=graph-rest-1.0">Find more info here</a>
@@ -60,7 +60,7 @@ public class ManagerRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObject::createFromDiscriminatorValue);
     }
     /**
-     * Get this organizational contact's manager. This API is available in the following national cloud deployments.
+     * Get this organizational contact's manager.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class ManagerRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get this organizational contact's manager. This API is available in the following national cloud deployments.
+     * Get this organizational contact's manager.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -90,7 +90,7 @@ public class ManagerRequestBuilder extends BaseRequestBuilder {
         return new ManagerRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get this organizational contact's manager. This API is available in the following national cloud deployments.
+     * Get this organizational contact's manager.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

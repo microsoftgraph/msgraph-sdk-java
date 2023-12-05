@@ -142,7 +142,7 @@ public class OrgContactItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the properties and relationships of an organizational contact. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of an organizational contact.
      * @return a OrgContact
      * @see <a href="https://learn.microsoft.com/graph/api/orgcontact-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -151,7 +151,7 @@ public class OrgContactItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the properties and relationships of an organizational contact. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of an organizational contact.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a OrgContact
      * @see <a href="https://learn.microsoft.com/graph/api/orgcontact-get?view=graph-rest-1.0">Find more info here</a>
@@ -209,7 +209,7 @@ public class OrgContactItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the properties and relationships of an organizational contact. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of an organizational contact.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -217,7 +217,7 @@ public class OrgContactItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of an organizational contact. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of an organizational contact.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -269,7 +269,7 @@ public class OrgContactItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties and relationships of an organizational contact. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of an organizational contact.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

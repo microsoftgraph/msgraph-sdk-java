@@ -68,19 +68,19 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/tables/{workbookTable%2Did}/columns{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of tablecolumn objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of tablecolumn objects.
      * @return a WorkbookTableColumnCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/table-list-columns?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookTableColumnCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of tablecolumn objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of tablecolumn objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookTableColumnCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/table-list-columns?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookTableColumnCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -101,7 +101,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return new ItemAtWithIndexRequestBuilder(pathParameters, requestAdapter, index);
     }
     /**
-     * Use this API to create a new TableColumn. This API is available in the following national cloud deployments.
+     * Use this API to create a new TableColumn.
      * @param body The request body
      * @return a WorkbookTableColumn
      * @see <a href="https://learn.microsoft.com/graph/api/table-post-columns?view=graph-rest-1.0">Find more info here</a>
@@ -111,7 +111,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Use this API to create a new TableColumn. This API is available in the following national cloud deployments.
+     * Use this API to create a new TableColumn.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookTableColumn
@@ -127,7 +127,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookTableColumn::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of tablecolumn objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of tablecolumn objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -135,7 +135,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of tablecolumn objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of tablecolumn objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -147,7 +147,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new TableColumn. This API is available in the following national cloud deployments.
+     * Use this API to create a new TableColumn.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -156,7 +156,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new TableColumn. This API is available in the following national cloud deployments.
+     * Use this API to create a new TableColumn.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -181,7 +181,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return new ColumnsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of tablecolumn objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of tablecolumn objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

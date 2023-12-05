@@ -75,7 +75,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the identitySources property value. The identity sources in this connected organization, one of azureActiveDirectoryTenant, domainIdentitySource, externalDomainFederation or crossCloudAzureActiveDirectoryTenant. Nullable.
+     * Gets the identitySources property value. The identity sources in this connected organization, one of azureActiveDirectoryTenant, crossCloudAzureActiveDirectoryTenant, domainIdentitySource, externalDomainFederation, or socialIdentitySource. Nullable.
      * @return a java.util.List<IdentitySource>
      */
     @jakarta.annotation.Nullable
@@ -151,7 +151,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
         this.backingStore.set("externalSponsors", value);
     }
     /**
-     * Sets the identitySources property value. The identity sources in this connected organization, one of azureActiveDirectoryTenant, domainIdentitySource, externalDomainFederation or crossCloudAzureActiveDirectoryTenant. Nullable.
+     * Sets the identitySources property value. The identity sources in this connected organization, one of azureActiveDirectoryTenant, crossCloudAzureActiveDirectoryTenant, domainIdentitySource, externalDomainFederation, or socialIdentitySource. Nullable.
      * @param value Value to set for the identitySources property.
      */
     public void setIdentitySources(@jakarta.annotation.Nullable final java.util.List<IdentitySource> value) {

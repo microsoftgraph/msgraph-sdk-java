@@ -35,14 +35,14 @@ public class AddFavoriteRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/addFavorite", rawUrl);
     }
     /**
-     * Add the group to the list of the current user's favorite groups. Supported for Microsoft 365 groups only. This API is available in the following national cloud deployments.
+     * Add the group to the list of the current user's favorite groups. Supported for Microsoft 365 groups only.
      * @see <a href="https://learn.microsoft.com/graph/api/group-addfavorite?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Add the group to the list of the current user's favorite groups. Supported for Microsoft 365 groups only. This API is available in the following national cloud deployments.
+     * Add the group to the list of the current user's favorite groups. Supported for Microsoft 365 groups only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/group-addfavorite?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class AddFavoriteRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Add the group to the list of the current user's favorite groups. Supported for Microsoft 365 groups only. This API is available in the following national cloud deployments.
+     * Add the group to the list of the current user's favorite groups. Supported for Microsoft 365 groups only.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class AddFavoriteRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Add the group to the list of the current user's favorite groups. Supported for Microsoft 365 groups only. This API is available in the following national cloud deployments.
+     * Add the group to the list of the current user's favorite groups. Supported for Microsoft 365 groups only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

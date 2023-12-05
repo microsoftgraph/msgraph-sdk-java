@@ -35,14 +35,14 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/privilegedAccess/group/eligibilityScheduleRequests/{privilegedAccessGroupEligibilityScheduleRequest%2Did}/cancel", rawUrl);
     }
     /**
-     * Cancel an eligibility assignment request to a group whose membership and ownership are governed by PIM. This API is available in the following national cloud deployments.
+     * Cancel an eligibility assignment request to a group whose membership and ownership are governed by PIM.
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroupeligibilityschedulerequest-cancel?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Cancel an eligibility assignment request to a group whose membership and ownership are governed by PIM. This API is available in the following national cloud deployments.
+     * Cancel an eligibility assignment request to a group whose membership and ownership are governed by PIM.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroupeligibilityschedulerequest-cancel?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Cancel an eligibility assignment request to a group whose membership and ownership are governed by PIM. This API is available in the following national cloud deployments.
+     * Cancel an eligibility assignment request to a group whose membership and ownership are governed by PIM.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Cancel an eligibility assignment request to a group whose membership and ownership are governed by PIM. This API is available in the following national cloud deployments.
+     * Cancel an eligibility assignment request to a group whose membership and ownership are governed by PIM.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

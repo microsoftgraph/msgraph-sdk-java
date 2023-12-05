@@ -59,7 +59,7 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/directory/customSecurityAttributeDefinitions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the customSecurityAttributeDefinition objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the customSecurityAttributeDefinition objects and their properties.
      * @return a CustomSecurityAttributeDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-customsecurityattributedefinitions?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
         return get(null);
     }
     /**
-     * Get a list of the customSecurityAttributeDefinition objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the customSecurityAttributeDefinition objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CustomSecurityAttributeDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-customsecurityattributedefinitions?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
         return this.requestAdapter.send(requestInfo, errorMapping, CustomSecurityAttributeDefinitionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new customSecurityAttributeDefinition object. This API is available in the following national cloud deployments.
+     * Create a new customSecurityAttributeDefinition object.
      * @param body The request body
      * @return a CustomSecurityAttributeDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/directory-post-customsecurityattributedefinitions?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
         return post(body, null);
     }
     /**
-     * Create a new customSecurityAttributeDefinition object. This API is available in the following national cloud deployments.
+     * Create a new customSecurityAttributeDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CustomSecurityAttributeDefinition
@@ -108,7 +108,7 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
         return this.requestAdapter.send(requestInfo, errorMapping, CustomSecurityAttributeDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the customSecurityAttributeDefinition objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the customSecurityAttributeDefinition objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the customSecurityAttributeDefinition objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the customSecurityAttributeDefinition objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Create a new customSecurityAttributeDefinition object. This API is available in the following national cloud deployments.
+     * Create a new customSecurityAttributeDefinition object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new customSecurityAttributeDefinition object. This API is available in the following national cloud deployments.
+     * Create a new customSecurityAttributeDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
         return new CustomSecurityAttributeDefinitionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the customSecurityAttributeDefinition objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the customSecurityAttributeDefinition objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

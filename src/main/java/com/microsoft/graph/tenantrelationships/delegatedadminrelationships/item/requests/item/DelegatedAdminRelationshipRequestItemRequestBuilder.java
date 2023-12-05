@@ -54,7 +54,7 @@ public class DelegatedAdminRelationshipRequestItemRequestBuilder extends BaseReq
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a delegatedAdminRelationshipRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a delegatedAdminRelationshipRequest object.
      * @return a DelegatedAdminRelationshipRequest
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationshiprequest-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class DelegatedAdminRelationshipRequestItemRequestBuilder extends BaseReq
         return get(null);
     }
     /**
-     * Read the properties and relationships of a delegatedAdminRelationshipRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a delegatedAdminRelationshipRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DelegatedAdminRelationshipRequest
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationshiprequest-get?view=graph-rest-1.0">Find more info here</a>
@@ -121,7 +121,7 @@ public class DelegatedAdminRelationshipRequestItemRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a delegatedAdminRelationshipRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a delegatedAdminRelationshipRequest object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class DelegatedAdminRelationshipRequestItemRequestBuilder extends BaseReq
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a delegatedAdminRelationshipRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a delegatedAdminRelationshipRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -181,7 +181,7 @@ public class DelegatedAdminRelationshipRequestItemRequestBuilder extends BaseReq
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a delegatedAdminRelationshipRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a delegatedAdminRelationshipRequest object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

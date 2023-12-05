@@ -59,7 +59,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/lists{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the collection of [lists][] for a [site][]. Lists with the [system][] facet are hidden by default.To list them, include system in your $select statement. This API is available in the following national cloud deployments.
+     * Get the collection of [lists][] for a [site][]. Lists with the [system][] facet are hidden by default.To list them, include system in your $select statement.
      * @return a ListCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/list-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the collection of [lists][] for a [site][]. Lists with the [system][] facet are hidden by default.To list them, include system in your $select statement. This API is available in the following national cloud deployments.
+     * Get the collection of [lists][] for a [site][]. Lists with the [system][] facet are hidden by default.To list them, include system in your $select statement.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ListCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/list-list?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ListCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new list][] in a [site][]. This API is available in the following [national cloud deployments.
+     * Create a new [list][] in a [site][].
      * @param body The request body
      * @return a List
      * @see <a href="https://learn.microsoft.com/graph/api/list-create?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new list][] in a [site][]. This API is available in the following [national cloud deployments.
+     * Create a new [list][] in a [site][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a List
@@ -108,7 +108,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, List::createFromDiscriminatorValue);
     }
     /**
-     * Get the collection of [lists][] for a [site][]. Lists with the [system][] facet are hidden by default.To list them, include system in your $select statement. This API is available in the following national cloud deployments.
+     * Get the collection of [lists][] for a [site][]. Lists with the [system][] facet are hidden by default.To list them, include system in your $select statement.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the collection of [lists][] for a [site][]. Lists with the [system][] facet are hidden by default.To list them, include system in your $select statement. This API is available in the following national cloud deployments.
+     * Get the collection of [lists][] for a [site][]. Lists with the [system][] facet are hidden by default.To list them, include system in your $select statement.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new list][] in a [site][]. This API is available in the following [national cloud deployments.
+     * Create a new [list][] in a [site][].
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new list][] in a [site][]. This API is available in the following [national cloud deployments.
+     * Create a new [list][] in a [site][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         return new ListsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the collection of [lists][] for a [site][]. Lists with the [system][] facet are hidden by default.To list them, include system in your $select statement. This API is available in the following national cloud deployments.
+     * Get the collection of [lists][] for a [site][]. Lists with the [system][] facet are hidden by default.To list them, include system in your $select statement.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

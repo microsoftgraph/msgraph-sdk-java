@@ -37,14 +37,14 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groupSettings/{groupSetting%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a tenant-level or group-specific groupSetting object. This API is available in the following national cloud deployments.
+     * Delete a tenant-level or group-specific groupSetting object.
      * @see <a href="https://learn.microsoft.com/graph/api/groupsetting-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a tenant-level or group-specific groupSetting object. This API is available in the following national cloud deployments.
+     * Delete a tenant-level or group-specific groupSetting object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/groupsetting-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting. This API is available in the following national cloud deployments.
+     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting.
      * @return a GroupSetting
      * @see <a href="https://learn.microsoft.com/graph/api/groupsetting-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting. This API is available in the following national cloud deployments.
+     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a GroupSetting
      * @see <a href="https://learn.microsoft.com/graph/api/groupsetting-get?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GroupSetting::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting. This API is available in the following national cloud deployments.
+     * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting.
      * @param body The request body
      * @return a GroupSetting
      * @see <a href="https://learn.microsoft.com/graph/api/groupsetting-update?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting. This API is available in the following national cloud deployments.
+     * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a GroupSetting
@@ -105,7 +105,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GroupSetting::createFromDiscriminatorValue);
     }
     /**
-     * Delete a tenant-level or group-specific groupSetting object. This API is available in the following national cloud deployments.
+     * Delete a tenant-level or group-specific groupSetting object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a tenant-level or group-specific groupSetting object. This API is available in the following national cloud deployments.
+     * Delete a tenant-level or group-specific groupSetting object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -125,7 +125,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting. This API is available in the following national cloud deployments.
+     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting. This API is available in the following national cloud deployments.
+     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting. This API is available in the following national cloud deployments.
+     * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting. This API is available in the following national cloud deployments.
+     * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -185,7 +185,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting. This API is available in the following national cloud deployments.
+     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

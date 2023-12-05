@@ -125,14 +125,14 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/{workbookTable%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes the table. This API is available in the following national cloud deployments.
+     * Deletes the table.
      * @see <a href="https://learn.microsoft.com/graph/api/table-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes the table. This API is available in the following national cloud deployments.
+     * Deletes the table.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/table-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -144,7 +144,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of table object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of table object.
      * @return a WorkbookTable
      * @see <a href="https://learn.microsoft.com/graph/api/table-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -153,7 +153,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of table object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of table object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookTable
      * @see <a href="https://learn.microsoft.com/graph/api/table-get?view=graph-rest-1.0">Find more info here</a>
@@ -167,7 +167,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookTable::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of table object. This API is available in the following national cloud deployments.
+     * Update the properties of table object.
      * @param body The request body
      * @return a WorkbookTable
      * @see <a href="https://learn.microsoft.com/graph/api/table-update?view=graph-rest-1.0">Find more info here</a>
@@ -177,7 +177,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of table object. This API is available in the following national cloud deployments.
+     * Update the properties of table object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookTable
@@ -193,7 +193,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookTable::createFromDiscriminatorValue);
     }
     /**
-     * Deletes the table. This API is available in the following national cloud deployments.
+     * Deletes the table.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -201,7 +201,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes the table. This API is available in the following national cloud deployments.
+     * Deletes the table.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -213,7 +213,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of table object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of table object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -221,7 +221,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of table object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of table object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -233,7 +233,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of table object. This API is available in the following national cloud deployments.
+     * Update the properties of table object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -242,7 +242,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of table object. This API is available in the following national cloud deployments.
+     * Update the properties of table object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -273,7 +273,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of table object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of table object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -36,7 +36,7 @@ public class UpdateRecordingStatusRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/updateRecordingStatus", rawUrl);
     }
     /**
-     * Update the application's recording status associated with a call. This requires the use of the Teams policy-based recording solution. This API is available in the following national cloud deployments.
+     * Update the application's recording status associated with a call. This requires the use of the Teams policy-based recording solution.
      * @param body The request body
      * @return a UpdateRecordingStatusOperation
      * @see <a href="https://learn.microsoft.com/graph/api/call-updaterecordingstatus?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class UpdateRecordingStatusRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Update the application's recording status associated with a call. This requires the use of the Teams policy-based recording solution. This API is available in the following national cloud deployments.
+     * Update the application's recording status associated with a call. This requires the use of the Teams policy-based recording solution.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UpdateRecordingStatusOperation
@@ -62,7 +62,7 @@ public class UpdateRecordingStatusRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UpdateRecordingStatusOperation::createFromDiscriminatorValue);
     }
     /**
-     * Update the application's recording status associated with a call. This requires the use of the Teams policy-based recording solution. This API is available in the following national cloud deployments.
+     * Update the application's recording status associated with a call. This requires the use of the Teams policy-based recording solution.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class UpdateRecordingStatusRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Update the application's recording status associated with a call. This requires the use of the Teams policy-based recording solution. This API is available in the following national cloud deployments.
+     * Update the application's recording status associated with a call. This requires the use of the Teams policy-based recording solution.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -110,7 +110,7 @@ public class UnifiedRoleAssignmentScheduleRequestItemRequestBuilder extends Base
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * In PIM, read the details of a request for an active and persistent role assignment made through the unifiedRoleAssignmentScheduleRequest object. This API is available in the following national cloud deployments.
+     * In PIM, read the details of a request for an active and persistent role assignment made through the unifiedRoleAssignmentScheduleRequest object.
      * @return a UnifiedRoleAssignmentScheduleRequest
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentschedulerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -119,7 +119,7 @@ public class UnifiedRoleAssignmentScheduleRequestItemRequestBuilder extends Base
         return get(null);
     }
     /**
-     * In PIM, read the details of a request for an active and persistent role assignment made through the unifiedRoleAssignmentScheduleRequest object. This API is available in the following national cloud deployments.
+     * In PIM, read the details of a request for an active and persistent role assignment made through the unifiedRoleAssignmentScheduleRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UnifiedRoleAssignmentScheduleRequest
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentschedulerequest-get?view=graph-rest-1.0">Find more info here</a>
@@ -177,7 +177,7 @@ public class UnifiedRoleAssignmentScheduleRequestItemRequestBuilder extends Base
         return requestInfo;
     }
     /**
-     * In PIM, read the details of a request for an active and persistent role assignment made through the unifiedRoleAssignmentScheduleRequest object. This API is available in the following national cloud deployments.
+     * In PIM, read the details of a request for an active and persistent role assignment made through the unifiedRoleAssignmentScheduleRequest object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -185,7 +185,7 @@ public class UnifiedRoleAssignmentScheduleRequestItemRequestBuilder extends Base
         return toGetRequestInformation(null);
     }
     /**
-     * In PIM, read the details of a request for an active and persistent role assignment made through the unifiedRoleAssignmentScheduleRequest object. This API is available in the following national cloud deployments.
+     * In PIM, read the details of a request for an active and persistent role assignment made through the unifiedRoleAssignmentScheduleRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -237,7 +237,7 @@ public class UnifiedRoleAssignmentScheduleRequestItemRequestBuilder extends Base
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * In PIM, read the details of a request for an active and persistent role assignment made through the unifiedRoleAssignmentScheduleRequest object. This API is available in the following national cloud deployments.
+     * In PIM, read the details of a request for an active and persistent role assignment made through the unifiedRoleAssignmentScheduleRequest object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

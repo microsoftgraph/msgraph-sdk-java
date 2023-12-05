@@ -59,7 +59,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/extensionProperties{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application. This API is available in the following national cloud deployments.
+     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
      * @return a ExtensionPropertyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/application-list-extensionproperty?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application. This API is available in the following national cloud deployments.
+     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ExtensionPropertyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/application-list-extensionproperty?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ExtensionPropertyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new directory extension definition, represented by an extensionProperty object. This API is available in the following national cloud deployments.
+     * Create a new directory extension definition, represented by an extensionProperty object.
      * @param body The request body
      * @return a ExtensionProperty
      * @see <a href="https://learn.microsoft.com/graph/api/application-post-extensionproperty?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new directory extension definition, represented by an extensionProperty object. This API is available in the following national cloud deployments.
+     * Create a new directory extension definition, represented by an extensionProperty object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ExtensionProperty
@@ -108,7 +108,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ExtensionProperty::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application. This API is available in the following national cloud deployments.
+     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application. This API is available in the following national cloud deployments.
+     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new directory extension definition, represented by an extensionProperty object. This API is available in the following national cloud deployments.
+     * Create a new directory extension definition, represented by an extensionProperty object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new directory extension definition, represented by an extensionProperty object. This API is available in the following national cloud deployments.
+     * Create a new directory extension definition, represented by an extensionProperty object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         return new ExtensionPropertiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application. This API is available in the following national cloud deployments.
+     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

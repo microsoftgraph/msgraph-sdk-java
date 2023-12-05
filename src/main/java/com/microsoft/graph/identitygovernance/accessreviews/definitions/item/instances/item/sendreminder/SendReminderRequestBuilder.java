@@ -35,14 +35,14 @@ public class SendReminderRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/accessReviews/definitions/{accessReviewScheduleDefinition%2Did}/instances/{accessReviewInstance%2Did}/sendReminder", rawUrl);
     }
     /**
-     * Send a reminder to the reviewers of an active accessReviewInstance. This API is available in the following national cloud deployments.
+     * Send a reminder to the reviewers of an active accessReviewInstance.
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-sendreminder?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Send a reminder to the reviewers of an active accessReviewInstance. This API is available in the following national cloud deployments.
+     * Send a reminder to the reviewers of an active accessReviewInstance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-sendreminder?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class SendReminderRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Send a reminder to the reviewers of an active accessReviewInstance. This API is available in the following national cloud deployments.
+     * Send a reminder to the reviewers of an active accessReviewInstance.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class SendReminderRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Send a reminder to the reviewers of an active accessReviewInstance. This API is available in the following national cloud deployments.
+     * Send a reminder to the reviewers of an active accessReviewInstance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

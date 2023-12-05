@@ -37,14 +37,14 @@ public class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/schedule/timeOffRequests/{timeOffRequest%2Did}{?%24select}", rawUrl);
     }
     /**
-     * Delete a timeOffRequest object. This API is available in the following national cloud deployments.
+     * Delete a timeOffRequest object.
      * @see <a href="https://learn.microsoft.com/graph/api/timeoffrequest-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a timeOffRequest object. This API is available in the following national cloud deployments.
+     * Delete a timeOffRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/timeoffrequest-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a timeoffrequest object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a timeoffrequest object.
      * @return a TimeOffRequest
      * @see <a href="https://learn.microsoft.com/graph/api/timeoffrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a timeoffrequest object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a timeoffrequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TimeOffRequest
      * @see <a href="https://learn.microsoft.com/graph/api/timeoffrequest-get?view=graph-rest-1.0">Find more info here</a>
@@ -103,7 +103,7 @@ public class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TimeOffRequest::createFromDiscriminatorValue);
     }
     /**
-     * Delete a timeOffRequest object. This API is available in the following national cloud deployments.
+     * Delete a timeOffRequest object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -111,7 +111,7 @@ public class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a timeOffRequest object. This API is available in the following national cloud deployments.
+     * Delete a timeOffRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -123,7 +123,7 @@ public class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a timeoffrequest object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a timeoffrequest object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a timeoffrequest object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a timeoffrequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -183,7 +183,7 @@ public class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a timeoffrequest object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a timeoffrequest object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

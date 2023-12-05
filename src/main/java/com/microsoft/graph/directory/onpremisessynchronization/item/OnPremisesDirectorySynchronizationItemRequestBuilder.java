@@ -54,7 +54,7 @@ public class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRe
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an onPremisesDirectorySynchronization object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an onPremisesDirectorySynchronization object.
      * @return a OnPremisesDirectorySynchronization
      * @see <a href="https://learn.microsoft.com/graph/api/onpremisesdirectorysynchronization-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRe
         return get(null);
     }
     /**
-     * Read the properties and relationships of an onPremisesDirectorySynchronization object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an onPremisesDirectorySynchronization object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a OnPremisesDirectorySynchronization
      * @see <a href="https://learn.microsoft.com/graph/api/onpremisesdirectorysynchronization-get?view=graph-rest-1.0">Find more info here</a>
@@ -77,7 +77,7 @@ public class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRe
         return this.requestAdapter.send(requestInfo, errorMapping, OnPremisesDirectorySynchronization::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an onPremisesDirectorySynchronization object. This API is available in the following national cloud deployments.
+     * Update the properties of an onPremisesDirectorySynchronization object.
      * @param body The request body
      * @return a OnPremisesDirectorySynchronization
      * @see <a href="https://learn.microsoft.com/graph/api/onpremisesdirectorysynchronization-update?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRe
         return patch(body, null);
     }
     /**
-     * Update the properties of an onPremisesDirectorySynchronization object. This API is available in the following national cloud deployments.
+     * Update the properties of an onPremisesDirectorySynchronization object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a OnPremisesDirectorySynchronization
@@ -123,7 +123,7 @@ public class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRe
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an onPremisesDirectorySynchronization object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an onPremisesDirectorySynchronization object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRe
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an onPremisesDirectorySynchronization object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an onPremisesDirectorySynchronization object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -143,7 +143,7 @@ public class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRe
         return requestInfo;
     }
     /**
-     * Update the properties of an onPremisesDirectorySynchronization object. This API is available in the following national cloud deployments.
+     * Update the properties of an onPremisesDirectorySynchronization object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -152,7 +152,7 @@ public class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRe
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an onPremisesDirectorySynchronization object. This API is available in the following national cloud deployments.
+     * Update the properties of an onPremisesDirectorySynchronization object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -183,7 +183,7 @@ public class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRe
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an onPremisesDirectorySynchronization object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an onPremisesDirectorySynchronization object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -54,7 +54,7 @@ public class DetailsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a plannerTaskDetails object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a plannerTaskDetails object.
      * @return a PlannerTaskDetails
      * @see <a href="https://learn.microsoft.com/graph/api/plannertaskdetails-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class DetailsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a plannerTaskDetails object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a plannerTaskDetails object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PlannerTaskDetails
      * @see <a href="https://learn.microsoft.com/graph/api/plannertaskdetails-get?view=graph-rest-1.0">Find more info here</a>
@@ -123,7 +123,7 @@ public class DetailsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a plannerTaskDetails object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a plannerTaskDetails object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class DetailsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a plannerTaskDetails object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a plannerTaskDetails object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -183,7 +183,7 @@ public class DetailsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a plannerTaskDetails object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a plannerTaskDetails object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

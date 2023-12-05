@@ -36,7 +36,7 @@ public class PublishRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/edge/internetExplorerMode/siteLists/{browserSiteList%2Did}/publish", rawUrl);
     }
     /**
-     * Publish the specified browserSiteList for devices to download. This API is available in the following national cloud deployments.
+     * Publish the specified browserSiteList for devices to download.
      * @param body The request body
      * @return a BrowserSiteList
      * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-publish?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class PublishRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Publish the specified browserSiteList for devices to download. This API is available in the following national cloud deployments.
+     * Publish the specified browserSiteList for devices to download.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a BrowserSiteList
@@ -62,7 +62,7 @@ public class PublishRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BrowserSiteList::createFromDiscriminatorValue);
     }
     /**
-     * Publish the specified browserSiteList for devices to download. This API is available in the following national cloud deployments.
+     * Publish the specified browserSiteList for devices to download.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class PublishRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Publish the specified browserSiteList for devices to download. This API is available in the following national cloud deployments.
+     * Publish the specified browserSiteList for devices to download.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -59,7 +59,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/me/rubrics{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of educationRubric objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of educationRubric objects.
      * @return a EducationRubricCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationuser-list-rubrics?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of educationRubric objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of educationRubric objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EducationRubricCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationuser-list-rubrics?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationRubricCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new educationRubric object. This API is available in the following national cloud deployments.
+     * Create a new educationRubric object.
      * @param body The request body
      * @return a EducationRubric
      * @see <a href="https://learn.microsoft.com/graph/api/educationuser-post-rubrics?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new educationRubric object. This API is available in the following national cloud deployments.
+     * Create a new educationRubric object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EducationRubric
@@ -108,7 +108,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationRubric::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of educationRubric objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of educationRubric objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of educationRubric objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of educationRubric objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new educationRubric object. This API is available in the following national cloud deployments.
+     * Create a new educationRubric object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new educationRubric object. This API is available in the following national cloud deployments.
+     * Create a new educationRubric object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
         return new RubricsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of educationRubric objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of educationRubric objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

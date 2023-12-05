@@ -54,7 +54,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties of a tenantAppManagementPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties of a tenantAppManagementPolicy object.
      * @return a TenantAppManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/tenantappmanagementpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         return get(null);
     }
     /**
-     * Read the properties of a tenantAppManagementPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties of a tenantAppManagementPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TenantAppManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/tenantappmanagementpolicy-get?view=graph-rest-1.0">Find more info here</a>
@@ -77,7 +77,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, TenantAppManagementPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a tenantAppManagementPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a tenantAppManagementPolicy object.
      * @param body The request body
      * @return a TenantAppManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/tenantappmanagementpolicy-update?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         return patch(body, null);
     }
     /**
-     * Update the properties of a tenantAppManagementPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a tenantAppManagementPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TenantAppManagementPolicy
@@ -123,7 +123,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Read the properties of a tenantAppManagementPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties of a tenantAppManagementPolicy object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties of a tenantAppManagementPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties of a tenantAppManagementPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -143,7 +143,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Update the properties of a tenantAppManagementPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a tenantAppManagementPolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -152,7 +152,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a tenantAppManagementPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a tenantAppManagementPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -183,7 +183,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties of a tenantAppManagementPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties of a tenantAppManagementPolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

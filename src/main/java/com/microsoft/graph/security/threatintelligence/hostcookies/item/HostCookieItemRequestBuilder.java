@@ -62,7 +62,7 @@ public class HostCookieItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a hostCookie object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a hostCookie object.
      * @return a HostCookie
      * @see <a href="https://learn.microsoft.com/graph/api/security-hostcookie-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -71,7 +71,7 @@ public class HostCookieItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a hostCookie object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a hostCookie object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a HostCookie
      * @see <a href="https://learn.microsoft.com/graph/api/security-hostcookie-get?view=graph-rest-1.0">Find more info here</a>
@@ -129,7 +129,7 @@ public class HostCookieItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a hostCookie object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a hostCookie object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +137,7 @@ public class HostCookieItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a hostCookie object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a hostCookie object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -189,7 +189,7 @@ public class HostCookieItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a hostCookie object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a hostCookie object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

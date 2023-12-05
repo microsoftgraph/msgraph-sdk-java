@@ -35,7 +35,7 @@ public class GetMemberObjectsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/permissionGrants/{resourceSpecificPermissionGrant%2Did}/getMemberObjects", rawUrl);
     }
     /**
-     * Return all IDs for the groups, administrative units, and directory roles that a user, group, service principal, organizational contact, device, or directory object is a member of. This function is transitive. Note: Only users and role-enabled groups can be members of directory roles. This API is available in the following national cloud deployments.
+     * Return all IDs for the groups, administrative units, and directory roles that a user, group, service principal, organizational contact, device, or directory object is a member of. This function is transitive. Note: Only users and role-enabled groups can be members of directory roles.
      * @param body The request body
      * @return a GetMemberObjectsPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directoryobject-getmemberobjects?view=graph-rest-1.0">Find more info here</a>
@@ -45,7 +45,7 @@ public class GetMemberObjectsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Return all IDs for the groups, administrative units, and directory roles that a user, group, service principal, organizational contact, device, or directory object is a member of. This function is transitive. Note: Only users and role-enabled groups can be members of directory roles. This API is available in the following national cloud deployments.
+     * Return all IDs for the groups, administrative units, and directory roles that a user, group, service principal, organizational contact, device, or directory object is a member of. This function is transitive. Note: Only users and role-enabled groups can be members of directory roles.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a GetMemberObjectsPostResponse
@@ -61,7 +61,7 @@ public class GetMemberObjectsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GetMemberObjectsPostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Return all IDs for the groups, administrative units, and directory roles that a user, group, service principal, organizational contact, device, or directory object is a member of. This function is transitive. Note: Only users and role-enabled groups can be members of directory roles. This API is available in the following national cloud deployments.
+     * Return all IDs for the groups, administrative units, and directory roles that a user, group, service principal, organizational contact, device, or directory object is a member of. This function is transitive. Note: Only users and role-enabled groups can be members of directory roles.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -70,7 +70,7 @@ public class GetMemberObjectsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Return all IDs for the groups, administrative units, and directory roles that a user, group, service principal, organizational contact, device, or directory object is a member of. This function is transitive. Note: Only users and role-enabled groups can be members of directory roles. This API is available in the following national cloud deployments.
+     * Return all IDs for the groups, administrative units, and directory roles that a user, group, service principal, organizational contact, device, or directory object is a member of. This function is transitive. Note: Only users and role-enabled groups can be members of directory roles.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -35,14 +35,14 @@ public class MicrosoftGraphSecurityResetToDefaultRequestBuilder extends BaseRequ
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/settings/microsoft.graph.security.resetToDefault", rawUrl);
     }
     /**
-     * Reset a caseSettings object to the default values. This API is available in the following national cloud deployments.
+     * Reset a caseSettings object to the default values.
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycasesettings-resettodefault?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Reset a caseSettings object to the default values. This API is available in the following national cloud deployments.
+     * Reset a caseSettings object to the default values.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycasesettings-resettodefault?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class MicrosoftGraphSecurityResetToDefaultRequestBuilder extends BaseRequ
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Reset a caseSettings object to the default values. This API is available in the following national cloud deployments.
+     * Reset a caseSettings object to the default values.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class MicrosoftGraphSecurityResetToDefaultRequestBuilder extends BaseRequ
         return toPostRequestInformation(null);
     }
     /**
-     * Reset a caseSettings object to the default values. This API is available in the following national cloud deployments.
+     * Reset a caseSettings object to the default values.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

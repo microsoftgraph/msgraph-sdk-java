@@ -58,7 +58,7 @@ public class ApplicationTemplatesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applicationTemplates{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of applicationTemplate objects from the Microsoft Entra application gallery. This API is available in the following national cloud deployments.
+     * Retrieve a list of applicationTemplate objects from the Microsoft Entra application gallery.
      * @return a ApplicationTemplateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/applicationtemplate-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class ApplicationTemplatesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of applicationTemplate objects from the Microsoft Entra application gallery. This API is available in the following national cloud deployments.
+     * Retrieve a list of applicationTemplate objects from the Microsoft Entra application gallery.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ApplicationTemplateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/applicationtemplate-list?view=graph-rest-1.0">Find more info here</a>
@@ -81,7 +81,7 @@ public class ApplicationTemplatesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ApplicationTemplateCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of applicationTemplate objects from the Microsoft Entra application gallery. This API is available in the following national cloud deployments.
+     * Retrieve a list of applicationTemplate objects from the Microsoft Entra application gallery.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class ApplicationTemplatesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of applicationTemplate objects from the Microsoft Entra application gallery. This API is available in the following national cloud deployments.
+     * Retrieve a list of applicationTemplate objects from the Microsoft Entra application gallery.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -111,7 +111,7 @@ public class ApplicationTemplatesRequestBuilder extends BaseRequestBuilder {
         return new ApplicationTemplatesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of applicationTemplate objects from the Microsoft Entra application gallery. This API is available in the following national cloud deployments.
+     * Retrieve a list of applicationTemplate objects from the Microsoft Entra application gallery.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

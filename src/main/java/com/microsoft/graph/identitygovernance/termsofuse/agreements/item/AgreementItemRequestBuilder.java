@@ -61,14 +61,14 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/termsOfUse/agreements/{agreement%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an agreement object. This API is available in the following national cloud deployments.
+     * Delete an agreement object.
      * @see <a href="https://learn.microsoft.com/graph/api/agreement-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an agreement object. This API is available in the following national cloud deployments.
+     * Delete an agreement object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/agreement-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -80,19 +80,19 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of an agreement object. This API is available in the following national cloud deployments.
+     * Retrieve all files related to an agreement. This includes the default file and all localized files.
      * @return a Agreement
-     * @see <a href="https://learn.microsoft.com/graph/api/agreement-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agreement-list-files?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Agreement get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of an agreement object. This API is available in the following national cloud deployments.
+     * Retrieve all files related to an agreement. This includes the default file and all localized files.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Agreement
-     * @see <a href="https://learn.microsoft.com/graph/api/agreement-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agreement-list-files?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Agreement get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Agreement::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an agreement object. This API is available in the following national cloud deployments.
+     * Update the properties of an agreement object.
      * @param body The request body
      * @return a Agreement
      * @see <a href="https://learn.microsoft.com/graph/api/agreement-update?view=graph-rest-1.0">Find more info here</a>
@@ -113,7 +113,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of an agreement object. This API is available in the following national cloud deployments.
+     * Update the properties of an agreement object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Agreement
@@ -129,7 +129,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Agreement::createFromDiscriminatorValue);
     }
     /**
-     * Delete an agreement object. This API is available in the following national cloud deployments.
+     * Delete an agreement object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +137,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an agreement object. This API is available in the following national cloud deployments.
+     * Delete an agreement object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -149,7 +149,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of an agreement object. This API is available in the following national cloud deployments.
+     * Retrieve all files related to an agreement. This includes the default file and all localized files.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -157,7 +157,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an agreement object. This API is available in the following national cloud deployments.
+     * Retrieve all files related to an agreement. This includes the default file and all localized files.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an agreement object. This API is available in the following national cloud deployments.
+     * Update the properties of an agreement object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +178,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an agreement object. This API is available in the following national cloud deployments.
+     * Update the properties of an agreement object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -209,7 +209,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of an agreement object. This API is available in the following national cloud deployments.
+     * Retrieve all files related to an agreement. This includes the default file and all localized files.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

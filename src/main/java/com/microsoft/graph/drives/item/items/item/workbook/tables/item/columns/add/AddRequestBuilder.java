@@ -36,7 +36,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/{workbookTable%2Did}/columns/add", rawUrl);
     }
     /**
-     * Adds a new column to the table. This API is available in the following national cloud deployments.
+     * Adds a new column to the table.
      * @param body The request body
      * @return a WorkbookTableColumn
      * @see <a href="https://learn.microsoft.com/graph/api/tablecolumncollection-add?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Adds a new column to the table. This API is available in the following national cloud deployments.
+     * Adds a new column to the table.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookTableColumn
@@ -62,7 +62,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookTableColumn::createFromDiscriminatorValue);
     }
     /**
-     * Adds a new column to the table. This API is available in the following national cloud deployments.
+     * Adds a new column to the table.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Adds a new column to the table. This API is available in the following national cloud deployments.
+     * Adds a new column to the table.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -37,14 +37,14 @@ public class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/administrativeUnits/{administrativeUnit%2Did}/scopedRoleMembers/{scopedRoleMembership%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Remove a Microsoft Entra role assignment with administrative unit scope. This API is available in the following national cloud deployments.
+     * Remove a Microsoft Entra role assignment with administrative unit scope.
      * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-delete-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Remove a Microsoft Entra role assignment with administrative unit scope. This API is available in the following national cloud deployments.
+     * Remove a Microsoft Entra role assignment with administrative unit scope.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-delete-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get a Microsoft Entra role assignment with administrative unit scope. This API is available in the following national cloud deployments.
+     * Get a Microsoft Entra role assignment with administrative unit scope.
      * @return a ScopedRoleMembership
      * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-get-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a Microsoft Entra role assignment with administrative unit scope. This API is available in the following national cloud deployments.
+     * Get a Microsoft Entra role assignment with administrative unit scope.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ScopedRoleMembership
      * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-get-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
@@ -103,7 +103,7 @@ public class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ScopedRoleMembership::createFromDiscriminatorValue);
     }
     /**
-     * Remove a Microsoft Entra role assignment with administrative unit scope. This API is available in the following national cloud deployments.
+     * Remove a Microsoft Entra role assignment with administrative unit scope.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -111,7 +111,7 @@ public class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Remove a Microsoft Entra role assignment with administrative unit scope. This API is available in the following national cloud deployments.
+     * Remove a Microsoft Entra role assignment with administrative unit scope.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -123,7 +123,7 @@ public class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a Microsoft Entra role assignment with administrative unit scope. This API is available in the following national cloud deployments.
+     * Get a Microsoft Entra role assignment with administrative unit scope.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a Microsoft Entra role assignment with administrative unit scope. This API is available in the following national cloud deployments.
+     * Get a Microsoft Entra role assignment with administrative unit scope.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -183,7 +183,7 @@ public class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get a Microsoft Entra role assignment with administrative unit scope. This API is available in the following national cloud deployments.
+     * Get a Microsoft Entra role assignment with administrative unit scope.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

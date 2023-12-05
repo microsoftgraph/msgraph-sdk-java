@@ -64,7 +64,7 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/identityProviders{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the identity providers in a b2xIdentityUserFlow object. This API is available in the following national cloud deployments.
+     * Get the identity providers in a b2xIdentityUserFlow object.
      * @return a IdentityProviderCollectionResponse
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
@@ -76,7 +76,7 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the identity providers in a b2xIdentityUserFlow object. This API is available in the following national cloud deployments.
+     * Get the identity providers in a b2xIdentityUserFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a IdentityProviderCollectionResponse
      * @deprecated
@@ -93,7 +93,7 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityProviderCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the identity providers in a b2xIdentityUserFlow object. This API is available in the following national cloud deployments.
+     * Get the identity providers in a b2xIdentityUserFlow object.
      * @return a RequestInformation
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
@@ -104,7 +104,7 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the identity providers in a b2xIdentityUserFlow object. This API is available in the following national cloud deployments.
+     * Get the identity providers in a b2xIdentityUserFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -132,7 +132,7 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
         return new IdentityProvidersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the identity providers in a b2xIdentityUserFlow object. This API is available in the following national cloud deployments.
+     * Get the identity providers in a b2xIdentityUserFlow object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

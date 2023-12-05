@@ -62,7 +62,7 @@ public class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilde
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a specified threatAssessmentRequest object. A threat assessment request can be one of the following types: This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a specified threatAssessmentRequest object. A threat assessment request can be one of the following types:
      * @return a ThreatAssessmentRequest
      * @see <a href="https://learn.microsoft.com/graph/api/threatassessmentrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -71,7 +71,7 @@ public class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilde
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a specified threatAssessmentRequest object. A threat assessment request can be one of the following types: This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a specified threatAssessmentRequest object. A threat assessment request can be one of the following types:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ThreatAssessmentRequest
      * @see <a href="https://learn.microsoft.com/graph/api/threatassessmentrequest-get?view=graph-rest-1.0">Find more info here</a>
@@ -129,7 +129,7 @@ public class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a specified threatAssessmentRequest object. A threat assessment request can be one of the following types: This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a specified threatAssessmentRequest object. A threat assessment request can be one of the following types:
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +137,7 @@ public class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a specified threatAssessmentRequest object. A threat assessment request can be one of the following types: This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a specified threatAssessmentRequest object. A threat assessment request can be one of the following types:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -189,7 +189,7 @@ public class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a specified threatAssessmentRequest object. A threat assessment request can be one of the following types: This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a specified threatAssessmentRequest object. A threat assessment request can be one of the following types:
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

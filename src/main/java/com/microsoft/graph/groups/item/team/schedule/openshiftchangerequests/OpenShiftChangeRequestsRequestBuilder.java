@@ -59,7 +59,7 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/schedule/openShiftChangeRequests{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of openShiftChangeRequest objects in a team. This API is available in the following national cloud deployments.
+     * Retrieve a list of openShiftChangeRequest objects in a team.
      * @return a OpenShiftChangeRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/openshiftchangerequest-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of openShiftChangeRequest objects in a team. This API is available in the following national cloud deployments.
+     * Retrieve a list of openShiftChangeRequest objects in a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a OpenShiftChangeRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/openshiftchangerequest-list?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OpenShiftChangeRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create instance of an openShiftChangeRequest object. This API is available in the following national cloud deployments.
+     * Create instance of an openShiftChangeRequest object.
      * @param body The request body
      * @return a OpenShiftChangeRequest
      * @see <a href="https://learn.microsoft.com/graph/api/openshiftchangerequest-post?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create instance of an openShiftChangeRequest object. This API is available in the following national cloud deployments.
+     * Create instance of an openShiftChangeRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a OpenShiftChangeRequest
@@ -108,7 +108,7 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OpenShiftChangeRequest::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of openShiftChangeRequest objects in a team. This API is available in the following national cloud deployments.
+     * Retrieve a list of openShiftChangeRequest objects in a team.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of openShiftChangeRequest objects in a team. This API is available in the following national cloud deployments.
+     * Retrieve a list of openShiftChangeRequest objects in a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create instance of an openShiftChangeRequest object. This API is available in the following national cloud deployments.
+     * Create instance of an openShiftChangeRequest object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create instance of an openShiftChangeRequest object. This API is available in the following national cloud deployments.
+     * Create instance of an openShiftChangeRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return new OpenShiftChangeRequestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of openShiftChangeRequest objects in a team. This API is available in the following national cloud deployments.
+     * Retrieve a list of openShiftChangeRequest objects in a team.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

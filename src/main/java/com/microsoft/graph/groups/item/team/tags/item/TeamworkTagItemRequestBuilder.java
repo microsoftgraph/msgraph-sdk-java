@@ -45,14 +45,14 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/tags/{teamworkTag%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a tag object permanently. This API is available in the following national cloud deployments.
+     * Delete a tag object permanently.
      * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a tag object permanently. This API is available in the following national cloud deployments.
+     * Delete a tag object permanently.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -64,7 +64,7 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a tag object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a tag object.
      * @return a TeamworkTag
      * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -73,7 +73,7 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a tag object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a tag object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TeamworkTag
      * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-get?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamworkTag::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a tag object. This API is available in the following national cloud deployments.
+     * Update the properties of a tag object.
      * @param body The request body
      * @return a TeamworkTag
      * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-update?view=graph-rest-1.0">Find more info here</a>
@@ -97,7 +97,7 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a tag object. This API is available in the following national cloud deployments.
+     * Update the properties of a tag object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TeamworkTag
@@ -113,7 +113,7 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamworkTag::createFromDiscriminatorValue);
     }
     /**
-     * Delete a tag object permanently. This API is available in the following national cloud deployments.
+     * Delete a tag object permanently.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a tag object permanently. This API is available in the following national cloud deployments.
+     * Delete a tag object permanently.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -133,7 +133,7 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a tag object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a tag object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +141,7 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a tag object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a tag object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -153,7 +153,7 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a tag object. This API is available in the following national cloud deployments.
+     * Update the properties of a tag object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -162,7 +162,7 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a tag object. This API is available in the following national cloud deployments.
+     * Update the properties of a tag object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -193,7 +193,7 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a tag object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a tag object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

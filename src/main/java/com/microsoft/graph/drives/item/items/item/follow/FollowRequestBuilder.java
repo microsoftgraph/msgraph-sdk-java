@@ -36,7 +36,7 @@ public class FollowRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/follow", rawUrl);
     }
     /**
-     * Follow a driveItem. This API is available in the following national cloud deployments.
+     * Follow a driveItem.
      * @return a DriveItem
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-follow?view=graph-rest-1.0">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class FollowRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Follow a driveItem. This API is available in the following national cloud deployments.
+     * Follow a driveItem.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DriveItem
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-follow?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class FollowRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DriveItem::createFromDiscriminatorValue);
     }
     /**
-     * Follow a driveItem. This API is available in the following national cloud deployments.
+     * Follow a driveItem.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class FollowRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Follow a driveItem. This API is available in the following national cloud deployments.
+     * Follow a driveItem.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
