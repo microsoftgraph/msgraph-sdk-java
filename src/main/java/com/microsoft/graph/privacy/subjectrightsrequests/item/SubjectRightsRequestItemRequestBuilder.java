@@ -126,7 +126,7 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a subjectRightsRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a subjectRightsRequest object.
      * @return a SubjectRightsRequest
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
@@ -138,7 +138,7 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a subjectRightsRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a subjectRightsRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SubjectRightsRequest
      * @deprecated
@@ -155,7 +155,7 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SubjectRightsRequest::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a subjectRightsRequest object. This API is available in the following national cloud deployments.
+     * Update the properties of a subjectRightsRequest object.
      * @param body The request body
      * @return a SubjectRightsRequest
      * @deprecated
@@ -168,7 +168,7 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a subjectRightsRequest object. This API is available in the following national cloud deployments.
+     * Update the properties of a subjectRightsRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SubjectRightsRequest
@@ -213,7 +213,7 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a subjectRightsRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a subjectRightsRequest object.
      * @return a RequestInformation
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
@@ -224,7 +224,7 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a subjectRightsRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a subjectRightsRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -239,7 +239,7 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a subjectRightsRequest object. This API is available in the following national cloud deployments.
+     * Update the properties of a subjectRightsRequest object.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -251,7 +251,7 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a subjectRightsRequest object. This API is available in the following national cloud deployments.
+     * Update the properties of a subjectRightsRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -288,7 +288,7 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a subjectRightsRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a subjectRightsRequest object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

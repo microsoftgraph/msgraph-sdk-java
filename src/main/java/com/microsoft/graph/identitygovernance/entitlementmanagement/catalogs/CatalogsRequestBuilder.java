@@ -59,7 +59,7 @@ public class CatalogsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/catalogs{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of accessPackageCatalog objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of accessPackageCatalog objects.
      * @return a AccessPackageCatalogCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-catalogs?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class CatalogsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of accessPackageCatalog objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of accessPackageCatalog objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AccessPackageCatalogCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-catalogs?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class CatalogsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageCatalogCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new accessPackageCatalog object. This API is available in the following national cloud deployments.
+     * Create a new accessPackageCatalog object.
      * @param body The request body
      * @return a AccessPackageCatalog
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-post-catalogs?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class CatalogsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new accessPackageCatalog object. This API is available in the following national cloud deployments.
+     * Create a new accessPackageCatalog object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AccessPackageCatalog
@@ -108,7 +108,7 @@ public class CatalogsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageCatalog::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of accessPackageCatalog objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of accessPackageCatalog objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class CatalogsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of accessPackageCatalog objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of accessPackageCatalog objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class CatalogsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new accessPackageCatalog object. This API is available in the following national cloud deployments.
+     * Create a new accessPackageCatalog object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class CatalogsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new accessPackageCatalog object. This API is available in the following national cloud deployments.
+     * Create a new accessPackageCatalog object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class CatalogsRequestBuilder extends BaseRequestBuilder {
         return new CatalogsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of accessPackageCatalog objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of accessPackageCatalog objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

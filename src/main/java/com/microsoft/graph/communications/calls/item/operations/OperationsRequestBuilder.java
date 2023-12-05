@@ -59,7 +59,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/operations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the status of an operation that adds the large gallery view to a call. This API is available in the following national cloud deployments.
+     * Get the status of an operation that adds the large gallery view to a call.
      * @return a CommsOperationCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the status of an operation that adds the large gallery view to a call. This API is available in the following national cloud deployments.
+     * Get the status of an operation that adds the large gallery view to a call.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CommsOperationCollectionResponse
      */
@@ -104,7 +104,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CommsOperation::createFromDiscriminatorValue);
     }
     /**
-     * Get the status of an operation that adds the large gallery view to a call. This API is available in the following national cloud deployments.
+     * Get the status of an operation that adds the large gallery view to a call.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the status of an operation that adds the large gallery view to a call. This API is available in the following national cloud deployments.
+     * Get the status of an operation that adds the large gallery view to a call.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return new OperationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the status of an operation that adds the large gallery view to a call. This API is available in the following national cloud deployments.
+     * Get the status of an operation that adds the large gallery view to a call.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

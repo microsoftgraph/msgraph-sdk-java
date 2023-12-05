@@ -91,7 +91,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the list of applications in this organization. This API is available in the following national cloud deployments.
+     * Get the list of applications in this organization.
      * @return a ApplicationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/application-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -100,7 +100,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of applications in this organization. This API is available in the following national cloud deployments.
+     * Get the list of applications in this organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ApplicationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/application-list?view=graph-rest-1.0">Find more info here</a>
@@ -114,7 +114,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ApplicationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new application object. This API is available in the following national cloud deployments.
+     * Create a new application object.
      * @param body The request body
      * @return a Application
      * @see <a href="https://learn.microsoft.com/graph/api/application-post-applications?view=graph-rest-1.0">Find more info here</a>
@@ -124,7 +124,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new application object. This API is available in the following national cloud deployments.
+     * Create a new application object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Application
@@ -140,7 +140,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Application::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of applications in this organization. This API is available in the following national cloud deployments.
+     * Get the list of applications in this organization.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of applications in this organization. This API is available in the following national cloud deployments.
+     * Get the list of applications in this organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new application object. This API is available in the following national cloud deployments.
+     * Create a new application object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new application object. This API is available in the following national cloud deployments.
+     * Create a new application object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -194,7 +194,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         return new ApplicationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of applications in this organization. This API is available in the following national cloud deployments.
+     * Get the list of applications in this organization.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

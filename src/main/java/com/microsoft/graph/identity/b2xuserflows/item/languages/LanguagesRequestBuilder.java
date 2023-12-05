@@ -59,7 +59,7 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/languages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of languages supported for customization in a B2X user flow. This API is available in the following national cloud deployments.
+     * Retrieve a list of languages supported for customization in a B2X user flow.
      * @return a UserFlowLanguageConfigurationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-list-languages?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of languages supported for customization in a B2X user flow. This API is available in the following national cloud deployments.
+     * Retrieve a list of languages supported for customization in a B2X user flow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UserFlowLanguageConfigurationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-list-languages?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserFlowLanguageConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of languages supported for customization in a B2X user flow. This API is available in the following national cloud deployments.
+     * Retrieve a list of languages supported for customization in a B2X user flow.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of languages supported for customization in a B2X user flow. This API is available in the following national cloud deployments.
+     * Retrieve a list of languages supported for customization in a B2X user flow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
         return new LanguagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of languages supported for customization in a B2X user flow. This API is available in the following national cloud deployments.
+     * Retrieve a list of languages supported for customization in a B2X user flow.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

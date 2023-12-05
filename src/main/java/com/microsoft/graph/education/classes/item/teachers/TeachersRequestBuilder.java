@@ -66,7 +66,7 @@ public class TeachersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/teachers{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of teachers for a class. Delegated tokens must be members of the class to get the teacher list. This API is available in the following national cloud deployments.
+     * Retrieve a list of teachers for a class. Delegated tokens must be members of the class to get the teacher list.
      * @return a EducationUserCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-list-teachers?view=graph-rest-1.0">Find more info here</a>
      */
@@ -75,7 +75,7 @@ public class TeachersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of teachers for a class. Delegated tokens must be members of the class to get the teacher list. This API is available in the following national cloud deployments.
+     * Retrieve a list of teachers for a class. Delegated tokens must be members of the class to get the teacher list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EducationUserCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-list-teachers?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class TeachersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationUserCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of teachers for a class. Delegated tokens must be members of the class to get the teacher list. This API is available in the following national cloud deployments.
+     * Retrieve a list of teachers for a class. Delegated tokens must be members of the class to get the teacher list.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class TeachersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of teachers for a class. Delegated tokens must be members of the class to get the teacher list. This API is available in the following national cloud deployments.
+     * Retrieve a list of teachers for a class. Delegated tokens must be members of the class to get the teacher list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -119,7 +119,7 @@ public class TeachersRequestBuilder extends BaseRequestBuilder {
         return new TeachersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of teachers for a class. Delegated tokens must be members of the class to get the teacher list. This API is available in the following national cloud deployments.
+     * Retrieve a list of teachers for a class. Delegated tokens must be members of the class to get the teacher list.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

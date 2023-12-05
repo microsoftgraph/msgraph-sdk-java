@@ -80,7 +80,7 @@ public class FilesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AgreementFileLocalizationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new localized agreement file. This API is available in the following national cloud deployments.
+     * Create a new localized agreement file.
      * @param body The request body
      * @return a AgreementFileLocalization
      * @see <a href="https://learn.microsoft.com/graph/api/agreement-post-files?view=graph-rest-1.0">Find more info here</a>
@@ -90,7 +90,7 @@ public class FilesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new localized agreement file. This API is available in the following national cloud deployments.
+     * Create a new localized agreement file.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AgreementFileLocalization
@@ -126,7 +126,7 @@ public class FilesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new localized agreement file. This API is available in the following national cloud deployments.
+     * Create a new localized agreement file.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -135,7 +135,7 @@ public class FilesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new localized agreement file. This API is available in the following national cloud deployments.
+     * Create a new localized agreement file.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

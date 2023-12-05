@@ -58,7 +58,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/sites{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a collection of subsites defined for a site][]. This API is available in the following [national cloud deployments.
+     * Get a collection of subsites defined for a [site][].
      * @return a SiteCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/site-list-subsites?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a collection of subsites defined for a site][]. This API is available in the following [national cloud deployments.
+     * Get a collection of subsites defined for a [site][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SiteCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/site-list-subsites?view=graph-rest-1.0">Find more info here</a>
@@ -81,7 +81,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SiteCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get a collection of subsites defined for a site][]. This API is available in the following [national cloud deployments.
+     * Get a collection of subsites defined for a [site][].
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a collection of subsites defined for a site][]. This API is available in the following [national cloud deployments.
+     * Get a collection of subsites defined for a [site][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -111,7 +111,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         return new SitesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a collection of subsites defined for a site][]. This API is available in the following [national cloud deployments.
+     * Get a collection of subsites defined for a [site][].
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -59,7 +59,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/searches{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the list of ediscoverySearch resources from an eDiscoveryCase object. This API is available in the following national cloud deployments.
+     * Get the list of ediscoverySearch resources from an eDiscoveryCase object.
      * @return a EdiscoverySearchCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-searches?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of ediscoverySearch resources from an eDiscoveryCase object. This API is available in the following national cloud deployments.
+     * Get the list of ediscoverySearch resources from an eDiscoveryCase object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EdiscoverySearchCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-searches?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoverySearchCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new ediscoverySearch object. This API is available in the following national cloud deployments.
+     * Create a new ediscoverySearch object.
      * @param body The request body
      * @return a EdiscoverySearch
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-post-searches?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new ediscoverySearch object. This API is available in the following national cloud deployments.
+     * Create a new ediscoverySearch object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EdiscoverySearch
@@ -108,7 +108,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoverySearch::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of ediscoverySearch resources from an eDiscoveryCase object. This API is available in the following national cloud deployments.
+     * Get the list of ediscoverySearch resources from an eDiscoveryCase object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of ediscoverySearch resources from an eDiscoveryCase object. This API is available in the following national cloud deployments.
+     * Get the list of ediscoverySearch resources from an eDiscoveryCase object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new ediscoverySearch object. This API is available in the following national cloud deployments.
+     * Create a new ediscoverySearch object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new ediscoverySearch object. This API is available in the following national cloud deployments.
+     * Create a new ediscoverySearch object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return new SearchesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of ediscoverySearch resources from an eDiscoveryCase object. This API is available in the following national cloud deployments.
+     * Get the list of ediscoverySearch resources from an eDiscoveryCase object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

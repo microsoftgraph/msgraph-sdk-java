@@ -35,14 +35,14 @@ public class UnpublishRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/unpublish", rawUrl);
     }
     /**
-     * Make the scheduling page of this business not available to external customers. Set the isPublished property to false, and the publicUrl property to null. This API is available in the following national cloud deployments.
+     * Make the scheduling page of this business not available to external customers. Set the isPublished property to false, and the publicUrl property to null.
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-unpublish?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Make the scheduling page of this business not available to external customers. Set the isPublished property to false, and the publicUrl property to null. This API is available in the following national cloud deployments.
+     * Make the scheduling page of this business not available to external customers. Set the isPublished property to false, and the publicUrl property to null.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-unpublish?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class UnpublishRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Make the scheduling page of this business not available to external customers. Set the isPublished property to false, and the publicUrl property to null. This API is available in the following national cloud deployments.
+     * Make the scheduling page of this business not available to external customers. Set the isPublished property to false, and the publicUrl property to null.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class UnpublishRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Make the scheduling page of this business not available to external customers. Set the isPublished property to false, and the publicUrl property to null. This API is available in the following national cloud deployments.
+     * Make the scheduling page of this business not available to external customers. Set the isPublished property to false, and the publicUrl property to null.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

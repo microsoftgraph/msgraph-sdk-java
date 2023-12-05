@@ -59,7 +59,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/tags{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the tag objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the tag objects and their properties.
      * @return a TeamworkTagCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the tag objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the tag objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TeamworkTagCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-list?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamworkTagCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a standard tag for members in a team. This API is available in the following national cloud deployments.
+     * Create a standard tag for members in a team.
      * @param body The request body
      * @return a TeamworkTag
      * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-post?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a standard tag for members in a team. This API is available in the following national cloud deployments.
+     * Create a standard tag for members in a team.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TeamworkTag
@@ -108,7 +108,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamworkTag::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the tag objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the tag objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the tag objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the tag objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a standard tag for members in a team. This API is available in the following national cloud deployments.
+     * Create a standard tag for members in a team.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a standard tag for members in a team. This API is available in the following national cloud deployments.
+     * Create a standard tag for members in a team.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return new TagsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the tag objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the tag objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -59,7 +59,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/teamwork/installedApps{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the list of apps installed in the personal scope of the specified user. This API is available in the following national cloud deployments.
+     * Retrieve the list of apps installed in the personal scope of the specified user.
      * @return a UserScopeTeamsAppInstallationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-list-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the list of apps installed in the personal scope of the specified user. This API is available in the following national cloud deployments.
+     * Retrieve the list of apps installed in the personal scope of the specified user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UserScopeTeamsAppInstallationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-list-installedapps?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserScopeTeamsAppInstallationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Install an app in the personal scope of the specified user. This API is available in the following national cloud deployments.
+     * Install an app in the personal scope of the specified user.
      * @param body The request body
      * @return a UserScopeTeamsAppInstallation
      * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Install an app in the personal scope of the specified user. This API is available in the following national cloud deployments.
+     * Install an app in the personal scope of the specified user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UserScopeTeamsAppInstallation
@@ -108,7 +108,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserScopeTeamsAppInstallation::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the list of apps installed in the personal scope of the specified user. This API is available in the following national cloud deployments.
+     * Retrieve the list of apps installed in the personal scope of the specified user.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the list of apps installed in the personal scope of the specified user. This API is available in the following national cloud deployments.
+     * Retrieve the list of apps installed in the personal scope of the specified user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Install an app in the personal scope of the specified user. This API is available in the following national cloud deployments.
+     * Install an app in the personal scope of the specified user.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Install an app in the personal scope of the specified user. This API is available in the following national cloud deployments.
+     * Install an app in the personal scope of the specified user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return new InstalledAppsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the list of apps installed in the personal scope of the specified user. This API is available in the following national cloud deployments.
+     * Retrieve the list of apps installed in the personal scope of the specified user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

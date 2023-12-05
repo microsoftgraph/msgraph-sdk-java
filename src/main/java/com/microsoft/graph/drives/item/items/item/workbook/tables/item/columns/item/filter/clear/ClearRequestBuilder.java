@@ -35,14 +35,14 @@ public class ClearRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/{workbookTable%2Did}/columns/{workbookTableColumn%2Did}/filter/clear", rawUrl);
     }
     /**
-     * Clear the filter on the given column. This API is available in the following national cloud deployments.
+     * Clear the filter on the given column.
      * @see <a href="https://learn.microsoft.com/graph/api/filter-clear?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Clear the filter on the given column. This API is available in the following national cloud deployments.
+     * Clear the filter on the given column.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/filter-clear?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class ClearRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Clear the filter on the given column. This API is available in the following national cloud deployments.
+     * Clear the filter on the given column.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class ClearRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Clear the filter on the given column. This API is available in the following national cloud deployments.
+     * Clear the filter on the given column.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

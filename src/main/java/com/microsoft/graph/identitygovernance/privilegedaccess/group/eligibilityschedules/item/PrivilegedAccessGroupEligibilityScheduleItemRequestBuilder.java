@@ -70,7 +70,7 @@ public class PrivilegedAccessGroupEligibilityScheduleItemRequestBuilder extends 
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupEligibilitySchedule object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a privilegedAccessGroupEligibilitySchedule object.
      * @return a PrivilegedAccessGroupEligibilitySchedule
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroupeligibilityschedule-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -79,7 +79,7 @@ public class PrivilegedAccessGroupEligibilityScheduleItemRequestBuilder extends 
         return get(null);
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupEligibilitySchedule object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a privilegedAccessGroupEligibilitySchedule object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PrivilegedAccessGroupEligibilitySchedule
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroupeligibilityschedule-get?view=graph-rest-1.0">Find more info here</a>
@@ -137,7 +137,7 @@ public class PrivilegedAccessGroupEligibilityScheduleItemRequestBuilder extends 
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupEligibilitySchedule object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a privilegedAccessGroupEligibilitySchedule object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -145,7 +145,7 @@ public class PrivilegedAccessGroupEligibilityScheduleItemRequestBuilder extends 
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupEligibilitySchedule object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a privilegedAccessGroupEligibilitySchedule object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -197,7 +197,7 @@ public class PrivilegedAccessGroupEligibilityScheduleItemRequestBuilder extends 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupEligibilitySchedule object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a privilegedAccessGroupEligibilitySchedule object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

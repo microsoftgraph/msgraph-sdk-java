@@ -70,7 +70,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBu
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the details of a role management policy. This API is available in the following national cloud deployments.
+     * Retrieve the details of a role management policy.
      * @return a UnifiedRoleManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrolemanagementpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -79,7 +79,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * Retrieve the details of a role management policy. This API is available in the following national cloud deployments.
+     * Retrieve the details of a role management policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UnifiedRoleManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrolemanagementpolicy-get?view=graph-rest-1.0">Find more info here</a>
@@ -137,7 +137,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Retrieve the details of a role management policy. This API is available in the following national cloud deployments.
+     * Retrieve the details of a role management policy.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -145,7 +145,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the details of a role management policy. This API is available in the following national cloud deployments.
+     * Retrieve the details of a role management policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -197,7 +197,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the details of a role management policy. This API is available in the following national cloud deployments.
+     * Retrieve the details of a role management policy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

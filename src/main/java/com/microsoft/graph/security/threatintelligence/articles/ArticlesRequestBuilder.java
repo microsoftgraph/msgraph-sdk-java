@@ -59,7 +59,7 @@ public class ArticlesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/articles{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of article objects, including their properties and relationships. This API is available in the following national cloud deployments.
+     * Get a list of article objects, including their properties and relationships.
      * @return a ArticleCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-threatintelligence-list-articles?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ArticlesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of article objects, including their properties and relationships. This API is available in the following national cloud deployments.
+     * Get a list of article objects, including their properties and relationships.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ArticleCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-threatintelligence-list-articles?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class ArticlesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Article::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of article objects, including their properties and relationships. This API is available in the following national cloud deployments.
+     * Get a list of article objects, including their properties and relationships.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class ArticlesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of article objects, including their properties and relationships. This API is available in the following national cloud deployments.
+     * Get a list of article objects, including their properties and relationships.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class ArticlesRequestBuilder extends BaseRequestBuilder {
         return new ArticlesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of article objects, including their properties and relationships. This API is available in the following national cloud deployments.
+     * Get a list of article objects, including their properties and relationships.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

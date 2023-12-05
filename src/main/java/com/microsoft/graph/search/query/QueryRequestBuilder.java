@@ -35,7 +35,7 @@ public class QueryRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/search/query", rawUrl);
     }
     /**
-     * Runs the query specified in the request body. Search results are provided in the response. This API is available in the following national cloud deployments.
+     * Runs the query specified in the request body. Search results are provided in the response.
      * @param body The request body
      * @return a QueryPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/search-query?view=graph-rest-1.0">Find more info here</a>
@@ -45,7 +45,7 @@ public class QueryRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Runs the query specified in the request body. Search results are provided in the response. This API is available in the following national cloud deployments.
+     * Runs the query specified in the request body. Search results are provided in the response.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a QueryPostResponse
@@ -61,7 +61,7 @@ public class QueryRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, QueryPostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Runs the query specified in the request body. Search results are provided in the response. This API is available in the following national cloud deployments.
+     * Runs the query specified in the request body. Search results are provided in the response.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -70,7 +70,7 @@ public class QueryRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Runs the query specified in the request body. Search results are provided in the response. This API is available in the following national cloud deployments.
+     * Runs the query specified in the request body. Search results are provided in the response.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

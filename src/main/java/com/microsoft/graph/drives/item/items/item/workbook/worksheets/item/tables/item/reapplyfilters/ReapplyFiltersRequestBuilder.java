@@ -35,14 +35,14 @@ public class ReapplyFiltersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/tables/{workbookTable%2Did}/reapplyFilters", rawUrl);
     }
     /**
-     * Reapplies all the filters currently on the table. This API is available in the following national cloud deployments.
+     * Reapplies all the filters currently on the table.
      * @see <a href="https://learn.microsoft.com/graph/api/table-reapplyfilters?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Reapplies all the filters currently on the table. This API is available in the following national cloud deployments.
+     * Reapplies all the filters currently on the table.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/table-reapplyfilters?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class ReapplyFiltersRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Reapplies all the filters currently on the table. This API is available in the following national cloud deployments.
+     * Reapplies all the filters currently on the table.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class ReapplyFiltersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Reapplies all the filters currently on the table. This API is available in the following national cloud deployments.
+     * Reapplies all the filters currently on the table.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

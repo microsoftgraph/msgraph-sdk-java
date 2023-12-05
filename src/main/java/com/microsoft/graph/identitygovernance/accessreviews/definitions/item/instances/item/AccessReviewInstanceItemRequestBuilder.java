@@ -126,7 +126,7 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an accessReviewInstance object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an accessReviewInstance object.
      * @return a AccessReviewInstance
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -135,7 +135,7 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an accessReviewInstance object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an accessReviewInstance object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AccessReviewInstance
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-get?view=graph-rest-1.0">Find more info here</a>
@@ -195,7 +195,7 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an accessReviewInstance object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an accessReviewInstance object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -203,7 +203,7 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an accessReviewInstance object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an accessReviewInstance object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -255,7 +255,7 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an accessReviewInstance object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an accessReviewInstance object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

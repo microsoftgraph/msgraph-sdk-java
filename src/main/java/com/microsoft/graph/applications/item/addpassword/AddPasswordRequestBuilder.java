@@ -36,7 +36,7 @@ public class AddPasswordRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/addPassword", rawUrl);
     }
     /**
-     * Adds a strong password or secret to an application. This API is available in the following national cloud deployments.
+     * Adds a strong password or secret to an application.
      * @param body The request body
      * @return a PasswordCredential
      * @see <a href="https://learn.microsoft.com/graph/api/application-addpassword?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class AddPasswordRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Adds a strong password or secret to an application. This API is available in the following national cloud deployments.
+     * Adds a strong password or secret to an application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PasswordCredential
@@ -62,7 +62,7 @@ public class AddPasswordRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PasswordCredential::createFromDiscriminatorValue);
     }
     /**
-     * Adds a strong password or secret to an application. This API is available in the following national cloud deployments.
+     * Adds a strong password or secret to an application.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class AddPasswordRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Adds a strong password or secret to an application. This API is available in the following national cloud deployments.
+     * Adds a strong password or secret to an application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

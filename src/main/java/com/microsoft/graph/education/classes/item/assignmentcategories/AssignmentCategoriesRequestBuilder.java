@@ -67,7 +67,7 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignmentCategories{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of educationCategory objects. Only teachers can perform this operation. This API is available in the following national cloud deployments.
+     * Retrieve a list of educationCategory objects. Only teachers can perform this operation.
      * @return a EducationCategoryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-list-categories?view=graph-rest-1.0">Find more info here</a>
      */
@@ -76,7 +76,7 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of educationCategory objects. Only teachers can perform this operation. This API is available in the following national cloud deployments.
+     * Retrieve a list of educationCategory objects. Only teachers can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EducationCategoryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-list-categories?view=graph-rest-1.0">Find more info here</a>
@@ -90,7 +90,7 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationCategoryCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new educationCategory on an educationClass. Only teachers can perform this operation. This API is available in the following national cloud deployments.
+     * Create a new educationCategory on an educationClass. Only teachers can perform this operation.
      * @param body The request body
      * @return a EducationCategory
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-post-category?view=graph-rest-1.0">Find more info here</a>
@@ -100,7 +100,7 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new educationCategory on an educationClass. Only teachers can perform this operation. This API is available in the following national cloud deployments.
+     * Create a new educationCategory on an educationClass. Only teachers can perform this operation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EducationCategory
@@ -116,7 +116,7 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationCategory::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of educationCategory objects. Only teachers can perform this operation. This API is available in the following national cloud deployments.
+     * Retrieve a list of educationCategory objects. Only teachers can perform this operation.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of educationCategory objects. Only teachers can perform this operation. This API is available in the following national cloud deployments.
+     * Retrieve a list of educationCategory objects. Only teachers can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -136,7 +136,7 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new educationCategory on an educationClass. Only teachers can perform this operation. This API is available in the following national cloud deployments.
+     * Create a new educationCategory on an educationClass. Only teachers can perform this operation.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new educationCategory on an educationClass. Only teachers can perform this operation. This API is available in the following national cloud deployments.
+     * Create a new educationCategory on an educationClass. Only teachers can perform this operation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -170,7 +170,7 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         return new AssignmentCategoriesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of educationCategory objects. Only teachers can perform this operation. This API is available in the following national cloud deployments.
+     * Retrieve a list of educationCategory objects. Only teachers can perform this operation.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

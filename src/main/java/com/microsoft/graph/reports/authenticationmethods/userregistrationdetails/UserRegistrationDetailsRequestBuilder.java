@@ -59,7 +59,7 @@ public class UserRegistrationDetailsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/authenticationMethods/userRegistrationDetails{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the authentication methods registered for a user as defined in the userRegistrationDetails object. This API is available in the following national cloud deployments.
+     * Get a list of the authentication methods registered for a user as defined in the userRegistrationDetails object.
      * @return a UserRegistrationDetailsCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethodsroot-list-userregistrationdetails?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class UserRegistrationDetailsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the authentication methods registered for a user as defined in the userRegistrationDetails object. This API is available in the following national cloud deployments.
+     * Get a list of the authentication methods registered for a user as defined in the userRegistrationDetails object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UserRegistrationDetailsCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethodsroot-list-userregistrationdetails?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class UserRegistrationDetailsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserRegistrationDetails::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the authentication methods registered for a user as defined in the userRegistrationDetails object. This API is available in the following national cloud deployments.
+     * Get a list of the authentication methods registered for a user as defined in the userRegistrationDetails object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class UserRegistrationDetailsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the authentication methods registered for a user as defined in the userRegistrationDetails object. This API is available in the following national cloud deployments.
+     * Get a list of the authentication methods registered for a user as defined in the userRegistrationDetails object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class UserRegistrationDetailsRequestBuilder extends BaseRequestBuilder {
         return new UserRegistrationDetailsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the authentication methods registered for a user as defined in the userRegistrationDetails object. This API is available in the following national cloud deployments.
+     * Get a list of the authentication methods registered for a user as defined in the userRegistrationDetails object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -35,14 +35,14 @@ public class ClearFiltersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/tables/{workbookTable%2Did}/clearFilters", rawUrl);
     }
     /**
-     * Clears all the filters currently applied on the table. This API is available in the following national cloud deployments.
+     * Clears all the filters currently applied on the table.
      * @see <a href="https://learn.microsoft.com/graph/api/table-clearfilters?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Clears all the filters currently applied on the table. This API is available in the following national cloud deployments.
+     * Clears all the filters currently applied on the table.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/table-clearfilters?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class ClearFiltersRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Clears all the filters currently applied on the table. This API is available in the following national cloud deployments.
+     * Clears all the filters currently applied on the table.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class ClearFiltersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Clears all the filters currently applied on the table. This API is available in the following national cloud deployments.
+     * Clears all the filters currently applied on the table.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

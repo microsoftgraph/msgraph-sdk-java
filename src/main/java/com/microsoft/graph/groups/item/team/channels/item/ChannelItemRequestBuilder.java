@@ -109,14 +109,14 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/channels/{channel%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete the channel. This API is available in the following national cloud deployments.
+     * Delete the channel.
      * @see <a href="https://learn.microsoft.com/graph/api/channel-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete the channel. This API is available in the following national cloud deployments.
+     * Delete the channel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/channel-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -128,7 +128,7 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve channel information. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve channel information.
      * @return a Channel
      * @see <a href="https://learn.microsoft.com/graph/api/channel-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -137,7 +137,7 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve channel information. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve channel information.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Channel
      * @see <a href="https://learn.microsoft.com/graph/api/channel-get?view=graph-rest-1.0">Find more info here</a>
@@ -151,7 +151,7 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Channel::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of the specified channel. This API is available in the following national cloud deployments.
+     * Update the properties of the specified channel.
      * @param body The request body
      * @return a Channel
      * @see <a href="https://learn.microsoft.com/graph/api/channel-patch?view=graph-rest-1.0">Find more info here</a>
@@ -161,7 +161,7 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of the specified channel. This API is available in the following national cloud deployments.
+     * Update the properties of the specified channel.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Channel
@@ -177,7 +177,7 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Channel::createFromDiscriminatorValue);
     }
     /**
-     * Delete the channel. This API is available in the following national cloud deployments.
+     * Delete the channel.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -185,7 +185,7 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete the channel. This API is available in the following national cloud deployments.
+     * Delete the channel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -197,7 +197,7 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve channel information. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve channel information.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -205,7 +205,7 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve channel information. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve channel information.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +217,7 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of the specified channel. This API is available in the following national cloud deployments.
+     * Update the properties of the specified channel.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +226,7 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of the specified channel. This API is available in the following national cloud deployments.
+     * Update the properties of the specified channel.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -257,7 +257,7 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve channel information. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve channel information.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

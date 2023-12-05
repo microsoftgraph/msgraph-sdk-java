@@ -59,7 +59,7 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/schedule/schedulingGroups{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
-     * Get the list of schedulingGroups in this schedule. This API is available in the following national cloud deployments.
+     * Get the list of schedulingGroups in this schedule.
      * @return a SchedulingGroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-schedulinggroups?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of schedulingGroups in this schedule. This API is available in the following national cloud deployments.
+     * Get the list of schedulingGroups in this schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SchedulingGroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-schedulinggroups?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SchedulingGroupCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new schedulingGroup. This API is available in the following national cloud deployments.
+     * Create a new schedulingGroup.
      * @param body The request body
      * @return a SchedulingGroup
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-schedulinggroups?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new schedulingGroup. This API is available in the following national cloud deployments.
+     * Create a new schedulingGroup.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SchedulingGroup
@@ -108,7 +108,7 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SchedulingGroup::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of schedulingGroups in this schedule. This API is available in the following national cloud deployments.
+     * Get the list of schedulingGroups in this schedule.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of schedulingGroups in this schedule. This API is available in the following national cloud deployments.
+     * Get the list of schedulingGroups in this schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new schedulingGroup. This API is available in the following national cloud deployments.
+     * Create a new schedulingGroup.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new schedulingGroup. This API is available in the following national cloud deployments.
+     * Create a new schedulingGroup.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         return new SchedulingGroupsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of schedulingGroups in this schedule. This API is available in the following national cloud deployments.
+     * Get the list of schedulingGroups in this schedule.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

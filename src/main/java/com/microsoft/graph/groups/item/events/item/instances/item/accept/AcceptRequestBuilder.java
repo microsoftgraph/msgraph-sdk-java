@@ -35,7 +35,7 @@ public class AcceptRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/events/{event%2Did}/instances/{event%2Did1}/accept", rawUrl);
     }
     /**
-     * Accept the specified event in a user calendar. This API is available in the following national cloud deployments.
+     * Accept the specified event in a user calendar.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/event-accept?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class AcceptRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Accept the specified event in a user calendar. This API is available in the following national cloud deployments.
+     * Accept the specified event in a user calendar.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/event-accept?view=graph-rest-1.0">Find more info here</a>
@@ -57,7 +57,7 @@ public class AcceptRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Accept the specified event in a user calendar. This API is available in the following national cloud deployments.
+     * Accept the specified event in a user calendar.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -66,7 +66,7 @@ public class AcceptRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Accept the specified event in a user calendar. This API is available in the following national cloud deployments.
+     * Accept the specified event in a user calendar.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

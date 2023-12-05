@@ -59,7 +59,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/schedule/offerShiftRequests{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of all offerShiftRequest objects in a team. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of all offerShiftRequest objects in a team.
      * @return a OfferShiftRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/offershiftrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of all offerShiftRequest objects in a team. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of all offerShiftRequest objects in a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a OfferShiftRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/offershiftrequest-list?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OfferShiftRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create an instance of an offerShiftRequest. This API is available in the following national cloud deployments.
+     * Create an instance of an offerShiftRequest.
      * @param body The request body
      * @return a OfferShiftRequest
      * @see <a href="https://learn.microsoft.com/graph/api/offershiftrequest-post?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create an instance of an offerShiftRequest. This API is available in the following national cloud deployments.
+     * Create an instance of an offerShiftRequest.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a OfferShiftRequest
@@ -108,7 +108,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OfferShiftRequest::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the properties and relationships of all offerShiftRequest objects in a team. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of all offerShiftRequest objects in a team.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of all offerShiftRequest objects in a team. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of all offerShiftRequest objects in a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create an instance of an offerShiftRequest. This API is available in the following national cloud deployments.
+     * Create an instance of an offerShiftRequest.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create an instance of an offerShiftRequest. This API is available in the following national cloud deployments.
+     * Create an instance of an offerShiftRequest.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
         return new OfferShiftRequestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties and relationships of all offerShiftRequest objects in a team. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of all offerShiftRequest objects in a team.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

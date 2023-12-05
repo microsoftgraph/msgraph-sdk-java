@@ -45,14 +45,14 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/policies/homeRealmDiscoveryPolicies/{homeRealmDiscoveryPolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a homeRealmDiscoveryPolicy object. This API is available in the following national cloud deployments.
+     * Delete a homeRealmDiscoveryPolicy object.
      * @see <a href="https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a homeRealmDiscoveryPolicy object. This API is available in the following national cloud deployments.
+     * Delete a homeRealmDiscoveryPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -64,7 +64,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object.
      * @return a HomeRealmDiscoveryPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -73,7 +73,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a HomeRealmDiscoveryPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-get?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, HomeRealmDiscoveryPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a homeRealmDiscoveryPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a homeRealmDiscoveryPolicy object.
      * @param body The request body
      * @return a HomeRealmDiscoveryPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-update?view=graph-rest-1.0">Find more info here</a>
@@ -97,7 +97,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
         return patch(body, null);
     }
     /**
-     * Update the properties of a homeRealmDiscoveryPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a homeRealmDiscoveryPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a HomeRealmDiscoveryPolicy
@@ -113,7 +113,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, HomeRealmDiscoveryPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Delete a homeRealmDiscoveryPolicy object. This API is available in the following national cloud deployments.
+     * Delete a homeRealmDiscoveryPolicy object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a homeRealmDiscoveryPolicy object. This API is available in the following national cloud deployments.
+     * Delete a homeRealmDiscoveryPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -133,7 +133,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +141,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -153,7 +153,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Update the properties of a homeRealmDiscoveryPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a homeRealmDiscoveryPolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -162,7 +162,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a homeRealmDiscoveryPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a homeRealmDiscoveryPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -193,7 +193,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

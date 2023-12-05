@@ -75,7 +75,7 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityProtection/riskyServicePrincipals{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of riskyServicePrincipal objects. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of riskyServicePrincipal objects.
      * @return a RiskyServicePrincipalCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identityprotectionroot-list-riskyserviceprincipals?view=graph-rest-1.0">Find more info here</a>
      */
@@ -84,7 +84,7 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of riskyServicePrincipal objects. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of riskyServicePrincipal objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RiskyServicePrincipalCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identityprotectionroot-list-riskyserviceprincipals?view=graph-rest-1.0">Find more info here</a>
@@ -122,7 +122,7 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RiskyServicePrincipal::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the properties and relationships of riskyServicePrincipal objects. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of riskyServicePrincipal objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of riskyServicePrincipal objects. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of riskyServicePrincipal objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -176,7 +176,7 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         return new RiskyServicePrincipalsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties and relationships of riskyServicePrincipal objects. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of riskyServicePrincipal objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -59,7 +59,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendarGroups/{calendarGroup%2Did}/calendars{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
-     * Retrieve a list of calendars belonging to a calendar group. This API is available in the following national cloud deployments.
+     * Retrieve a list of calendars belonging to a calendar group.
      * @return a CalendarCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/calendargroup-list-calendars?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of calendars belonging to a calendar group. This API is available in the following national cloud deployments.
+     * Retrieve a list of calendars belonging to a calendar group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CalendarCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/calendargroup-list-calendars?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CalendarCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Use this API to create a new calendar in a calendar group for a user. This API is available in the following national cloud deployments.
+     * Use this API to create a new calendar in a calendar group for a user.
      * @param body The request body
      * @return a Calendar
      * @see <a href="https://learn.microsoft.com/graph/api/calendargroup-post-calendars?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Use this API to create a new calendar in a calendar group for a user. This API is available in the following national cloud deployments.
+     * Use this API to create a new calendar in a calendar group for a user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Calendar
@@ -108,7 +108,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Calendar::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of calendars belonging to a calendar group. This API is available in the following national cloud deployments.
+     * Retrieve a list of calendars belonging to a calendar group.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of calendars belonging to a calendar group. This API is available in the following national cloud deployments.
+     * Retrieve a list of calendars belonging to a calendar group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new calendar in a calendar group for a user. This API is available in the following national cloud deployments.
+     * Use this API to create a new calendar in a calendar group for a user.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new calendar in a calendar group for a user. This API is available in the following national cloud deployments.
+     * Use this API to create a new calendar in a calendar group for a user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
         return new CalendarsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of calendars belonging to a calendar group. This API is available in the following national cloud deployments.
+     * Retrieve a list of calendars belonging to a calendar group.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

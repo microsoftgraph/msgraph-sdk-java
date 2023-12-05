@@ -58,7 +58,7 @@ public class CookiesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hosts/{host%2Did}/cookies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of hostCookie resources. This API is available in the following national cloud deployments.
+     * Get a list of hostCookie resources.
      * @return a HostCookieCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-cookies?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class CookiesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of hostCookie resources. This API is available in the following national cloud deployments.
+     * Get a list of hostCookie resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a HostCookieCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-cookies?view=graph-rest-1.0">Find more info here</a>
@@ -81,7 +81,7 @@ public class CookiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, HostCookieCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of hostCookie resources. This API is available in the following national cloud deployments.
+     * Get a list of hostCookie resources.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class CookiesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of hostCookie resources. This API is available in the following national cloud deployments.
+     * Get a list of hostCookie resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -111,7 +111,7 @@ public class CookiesRequestBuilder extends BaseRequestBuilder {
         return new CookiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of hostCookie resources. This API is available in the following national cloud deployments.
+     * Get a list of hostCookie resources.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

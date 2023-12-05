@@ -35,7 +35,7 @@ public class FavoriteRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/serviceAnnouncement/messages/favorite", rawUrl);
     }
     /**
-     * Change the status of a list of serviceUpdateMessages to favorite for the signed in user. This API is available in the following national cloud deployments.
+     * Change the status of a list of serviceUpdateMessages to favorite for the signed in user.
      * @param body The request body
      * @return a FavoritePostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-favorite?view=graph-rest-1.0">Find more info here</a>
@@ -45,7 +45,7 @@ public class FavoriteRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Change the status of a list of serviceUpdateMessages to favorite for the signed in user. This API is available in the following national cloud deployments.
+     * Change the status of a list of serviceUpdateMessages to favorite for the signed in user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a FavoritePostResponse
@@ -61,7 +61,7 @@ public class FavoriteRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, FavoritePostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Change the status of a list of serviceUpdateMessages to favorite for the signed in user. This API is available in the following national cloud deployments.
+     * Change the status of a list of serviceUpdateMessages to favorite for the signed in user.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -70,7 +70,7 @@ public class FavoriteRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Change the status of a list of serviceUpdateMessages to favorite for the signed in user. This API is available in the following national cloud deployments.
+     * Change the status of a list of serviceUpdateMessages to favorite for the signed in user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

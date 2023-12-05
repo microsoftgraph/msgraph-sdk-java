@@ -37,14 +37,14 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/audioRoutingGroups/{audioRoutingGroup%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete the specified audioRoutingGroup. This API is available in the following national cloud deployments.
+     * Delete the specified audioRoutingGroup.
      * @see <a href="https://learn.microsoft.com/graph/api/audioroutinggroup-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete the specified audioRoutingGroup. This API is available in the following national cloud deployments.
+     * Delete the specified audioRoutingGroup.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/audioroutinggroup-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of an audioRoutingGroup object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an audioRoutingGroup object.
      * @return a AudioRoutingGroup
      * @see <a href="https://learn.microsoft.com/graph/api/audioroutinggroup-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of an audioRoutingGroup object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an audioRoutingGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AudioRoutingGroup
      * @see <a href="https://learn.microsoft.com/graph/api/audioroutinggroup-get?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AudioRoutingGroup::createFromDiscriminatorValue);
     }
     /**
-     * Modify sources and receivers of an audioRoutingGroup. This API is available in the following national cloud deployments.
+     * Modify sources and receivers of an audioRoutingGroup.
      * @param body The request body
      * @return a AudioRoutingGroup
      * @see <a href="https://learn.microsoft.com/graph/api/audioroutinggroup-update?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Modify sources and receivers of an audioRoutingGroup. This API is available in the following national cloud deployments.
+     * Modify sources and receivers of an audioRoutingGroup.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AudioRoutingGroup
@@ -105,7 +105,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AudioRoutingGroup::createFromDiscriminatorValue);
     }
     /**
-     * Delete the specified audioRoutingGroup. This API is available in the following national cloud deployments.
+     * Delete the specified audioRoutingGroup.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete the specified audioRoutingGroup. This API is available in the following national cloud deployments.
+     * Delete the specified audioRoutingGroup.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -125,7 +125,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of an audioRoutingGroup object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an audioRoutingGroup object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an audioRoutingGroup object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an audioRoutingGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Modify sources and receivers of an audioRoutingGroup. This API is available in the following national cloud deployments.
+     * Modify sources and receivers of an audioRoutingGroup.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Modify sources and receivers of an audioRoutingGroup. This API is available in the following national cloud deployments.
+     * Modify sources and receivers of an audioRoutingGroup.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -185,7 +185,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of an audioRoutingGroup object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an audioRoutingGroup object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

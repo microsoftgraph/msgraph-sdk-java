@@ -35,7 +35,7 @@ public class GetPresencesByUserIdRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/getPresencesByUserId", rawUrl);
     }
     /**
-     * Get the presence information for multiple users. This API is available in the following national cloud deployments.
+     * Get the presence information for multiple users.
      * @param body The request body
      * @return a GetPresencesByUserIdPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/cloudcommunications-getpresencesbyuserid?view=graph-rest-1.0">Find more info here</a>
@@ -45,7 +45,7 @@ public class GetPresencesByUserIdRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Get the presence information for multiple users. This API is available in the following national cloud deployments.
+     * Get the presence information for multiple users.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a GetPresencesByUserIdPostResponse
@@ -61,7 +61,7 @@ public class GetPresencesByUserIdRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GetPresencesByUserIdPostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the presence information for multiple users. This API is available in the following national cloud deployments.
+     * Get the presence information for multiple users.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -70,7 +70,7 @@ public class GetPresencesByUserIdRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Get the presence information for multiple users. This API is available in the following national cloud deployments.
+     * Get the presence information for multiple users.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

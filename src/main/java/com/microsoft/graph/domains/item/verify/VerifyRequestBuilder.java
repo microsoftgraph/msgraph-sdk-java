@@ -36,7 +36,7 @@ public class VerifyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/domains/{domain%2Did}/verify", rawUrl);
     }
     /**
-     * Validates the ownership of the domain. This API is available in the following national cloud deployments.
+     * Validates the ownership of the domain.
      * @return a Domain
      * @see <a href="https://learn.microsoft.com/graph/api/domain-verify?view=graph-rest-1.0">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class VerifyRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Validates the ownership of the domain. This API is available in the following national cloud deployments.
+     * Validates the ownership of the domain.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Domain
      * @see <a href="https://learn.microsoft.com/graph/api/domain-verify?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class VerifyRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Domain::createFromDiscriminatorValue);
     }
     /**
-     * Validates the ownership of the domain. This API is available in the following national cloud deployments.
+     * Validates the ownership of the domain.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class VerifyRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Validates the ownership of the domain. This API is available in the following national cloud deployments.
+     * Validates the ownership of the domain.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

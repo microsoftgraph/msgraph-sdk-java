@@ -35,14 +35,14 @@ public class RenewRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/renew", rawUrl);
     }
     /**
-     * Renews a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy. This API is available in the following national cloud deployments.
+     * Renews a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy.
      * @see <a href="https://learn.microsoft.com/graph/api/group-renew?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Renews a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy. This API is available in the following national cloud deployments.
+     * Renews a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/group-renew?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class RenewRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Renews a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy. This API is available in the following national cloud deployments.
+     * Renews a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class RenewRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Renews a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy. This API is available in the following national cloud deployments.
+     * Renews a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

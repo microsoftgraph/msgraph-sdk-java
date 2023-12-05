@@ -37,14 +37,14 @@ public class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/policies/permissionGrantPolicies/{permissionGrantPolicy%2Did}/includes/{permissionGrantConditionSet%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a permissionGrantConditionSet from the includes collection of a permissionGrantPolicy. This API is available in the following national cloud deployments.
+     * Deletes a permissionGrantConditionSet from the includes collection of a permissionGrantPolicy.
      * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-delete-includes?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a permissionGrantConditionSet from the includes collection of a permissionGrantPolicy. This API is available in the following national cloud deployments.
+     * Deletes a permissionGrantConditionSet from the includes collection of a permissionGrantPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-delete-includes?view=graph-rest-1.0">Find more info here</a>
      */
@@ -101,7 +101,7 @@ public class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, PermissionGrantConditionSet::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a permissionGrantConditionSet from the includes collection of a permissionGrantPolicy. This API is available in the following national cloud deployments.
+     * Deletes a permissionGrantConditionSet from the includes collection of a permissionGrantPolicy.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -109,7 +109,7 @@ public class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBu
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a permissionGrantConditionSet from the includes collection of a permissionGrantPolicy. This API is available in the following national cloud deployments.
+     * Deletes a permissionGrantConditionSet from the includes collection of a permissionGrantPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

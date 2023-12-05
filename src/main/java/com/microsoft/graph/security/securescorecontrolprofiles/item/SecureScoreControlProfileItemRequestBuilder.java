@@ -54,7 +54,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of an securescorecontrolprofile object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an securescorecontrolprofile object.
      * @return a SecureScoreControlProfile
      * @see <a href="https://learn.microsoft.com/graph/api/securescorecontrolprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of an securescorecontrolprofile object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an securescorecontrolprofile object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SecureScoreControlProfile
      * @see <a href="https://learn.microsoft.com/graph/api/securescorecontrolprofile-get?view=graph-rest-1.0">Find more info here</a>
@@ -77,7 +77,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, SecureScoreControlProfile::createFromDiscriminatorValue);
     }
     /**
-     * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as assignedTo or tenantNote. This API is available in the following national cloud deployments.
+     * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as assignedTo or tenantNote.
      * @param body The request body
      * @return a SecureScoreControlProfile
      * @see <a href="https://learn.microsoft.com/graph/api/securescorecontrolprofile-update?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
         return patch(body, null);
     }
     /**
-     * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as assignedTo or tenantNote. This API is available in the following national cloud deployments.
+     * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as assignedTo or tenantNote.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SecureScoreControlProfile
@@ -123,7 +123,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of an securescorecontrolprofile object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an securescorecontrolprofile object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an securescorecontrolprofile object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an securescorecontrolprofile object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -143,7 +143,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as assignedTo or tenantNote. This API is available in the following national cloud deployments.
+     * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as assignedTo or tenantNote.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -152,7 +152,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as assignedTo or tenantNote. This API is available in the following national cloud deployments.
+     * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as assignedTo or tenantNote.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -183,7 +183,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of an securescorecontrolprofile object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an securescorecontrolprofile object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

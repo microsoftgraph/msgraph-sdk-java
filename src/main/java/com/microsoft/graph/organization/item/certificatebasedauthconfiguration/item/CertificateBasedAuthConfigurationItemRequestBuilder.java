@@ -37,14 +37,14 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/certificateBasedAuthConfiguration/{certificateBasedAuthConfiguration%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a certificateBasedAuthConfiguration object. This API is available in the following national cloud deployments.
+     * Delete a certificateBasedAuthConfiguration object.
      * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a certificateBasedAuthConfiguration object. This API is available in the following national cloud deployments.
+     * Delete a certificateBasedAuthConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the properties of a certificateBasedAuthConfiguration object. This API is available in the following national cloud deployments.
+     * Get the properties of a certificateBasedAuthConfiguration object.
      * @return a CertificateBasedAuthConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
         return get(null);
     }
     /**
-     * Get the properties of a certificateBasedAuthConfiguration object. This API is available in the following national cloud deployments.
+     * Get the properties of a certificateBasedAuthConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CertificateBasedAuthConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-get?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
         return this.requestAdapter.send(requestInfo, errorMapping, CertificateBasedAuthConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Delete a certificateBasedAuthConfiguration object. This API is available in the following national cloud deployments.
+     * Delete a certificateBasedAuthConfiguration object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -87,7 +87,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a certificateBasedAuthConfiguration object. This API is available in the following national cloud deployments.
+     * Delete a certificateBasedAuthConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -99,7 +99,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
-     * Get the properties of a certificateBasedAuthConfiguration object. This API is available in the following national cloud deployments.
+     * Get the properties of a certificateBasedAuthConfiguration object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties of a certificateBasedAuthConfiguration object. This API is available in the following national cloud deployments.
+     * Get the properties of a certificateBasedAuthConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -135,7 +135,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties of a certificateBasedAuthConfiguration object. This API is available in the following national cloud deployments.
+     * Get the properties of a certificateBasedAuthConfiguration object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

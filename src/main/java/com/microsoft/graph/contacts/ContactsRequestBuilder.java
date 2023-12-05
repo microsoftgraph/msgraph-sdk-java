@@ -91,7 +91,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/contacts{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the list of organizational contacts for this organization. This API is available in the following national cloud deployments.
+     * Get the list of organizational contacts for this organization.
      * @return a OrgContactCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/orgcontact-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -100,7 +100,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of organizational contacts for this organization. This API is available in the following national cloud deployments.
+     * Get the list of organizational contacts for this organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a OrgContactCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/orgcontact-list?view=graph-rest-1.0">Find more info here</a>
@@ -138,7 +138,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OrgContact::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of organizational contacts for this organization. This API is available in the following national cloud deployments.
+     * Get the list of organizational contacts for this organization.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +146,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of organizational contacts for this organization. This API is available in the following national cloud deployments.
+     * Get the list of organizational contacts for this organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -192,7 +192,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return new ContactsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of organizational contacts for this organization. This API is available in the following national cloud deployments.
+     * Get the list of organizational contacts for this organization.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

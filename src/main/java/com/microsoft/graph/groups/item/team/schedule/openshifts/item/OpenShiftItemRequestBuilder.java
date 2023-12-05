@@ -37,14 +37,14 @@ public class OpenShiftItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/schedule/openShifts/{openShift%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an openShift object. This API is available in the following national cloud deployments.
+     * Delete an openShift object.
      * @see <a href="https://learn.microsoft.com/graph/api/openshift-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an openShift object. This API is available in the following national cloud deployments.
+     * Delete an openShift object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/openshift-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class OpenShiftItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of an openshift object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an openshift object.
      * @return a OpenShift
      * @see <a href="https://learn.microsoft.com/graph/api/openshift-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class OpenShiftItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of an openshift object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an openshift object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a OpenShift
      * @see <a href="https://learn.microsoft.com/graph/api/openshift-get?view=graph-rest-1.0">Find more info here</a>
@@ -105,7 +105,7 @@ public class OpenShiftItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OpenShift::createFromDiscriminatorValue);
     }
     /**
-     * Delete an openShift object. This API is available in the following national cloud deployments.
+     * Delete an openShift object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class OpenShiftItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an openShift object. This API is available in the following national cloud deployments.
+     * Delete an openShift object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -125,7 +125,7 @@ public class OpenShiftItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of an openshift object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an openshift object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class OpenShiftItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an openshift object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an openshift object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -185,7 +185,7 @@ public class OpenShiftItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of an openshift object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an openshift object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

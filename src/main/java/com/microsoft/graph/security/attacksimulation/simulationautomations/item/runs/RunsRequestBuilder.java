@@ -59,7 +59,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/simulationAutomations/{simulationAutomation%2Did}/runs{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the attack simulation automation runs for a tenant. This API is available in the following national cloud deployments.
+     * Get a list of the attack simulation automation runs for a tenant.
      * @return a SimulationAutomationRunCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/simulationautomation-list-runs?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the attack simulation automation runs for a tenant. This API is available in the following national cloud deployments.
+     * Get a list of the attack simulation automation runs for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SimulationAutomationRunCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/simulationautomation-list-runs?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SimulationAutomationRun::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the attack simulation automation runs for a tenant. This API is available in the following national cloud deployments.
+     * Get a list of the attack simulation automation runs for a tenant.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the attack simulation automation runs for a tenant. This API is available in the following national cloud deployments.
+     * Get a list of the attack simulation automation runs for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
         return new RunsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the attack simulation automation runs for a tenant. This API is available in the following national cloud deployments.
+     * Get a list of the attack simulation automation runs for a tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

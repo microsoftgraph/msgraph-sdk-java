@@ -94,7 +94,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a onenoteSection object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a onenoteSection object.
      * @return a OnenoteSection
      * @see <a href="https://learn.microsoft.com/graph/api/section-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -103,7 +103,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a onenoteSection object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a onenoteSection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a OnenoteSection
      * @see <a href="https://learn.microsoft.com/graph/api/section-get?view=graph-rest-1.0">Find more info here</a>
@@ -161,7 +161,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a onenoteSection object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a onenoteSection object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -169,7 +169,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a onenoteSection object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a onenoteSection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -221,7 +221,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a onenoteSection object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a onenoteSection object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

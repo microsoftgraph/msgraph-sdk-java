@@ -58,7 +58,7 @@ public class IncomingChannelsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/incomingChannels{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the list of incoming channels (channels shared with a team). This API is available in the following national cloud deployments.
+     * Get the list of incoming channels (channels shared with a team).
      * @return a ChannelCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/team-list-incomingchannels?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class IncomingChannelsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of incoming channels (channels shared with a team). This API is available in the following national cloud deployments.
+     * Get the list of incoming channels (channels shared with a team).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ChannelCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/team-list-incomingchannels?view=graph-rest-1.0">Find more info here</a>
@@ -81,7 +81,7 @@ public class IncomingChannelsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ChannelCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of incoming channels (channels shared with a team). This API is available in the following national cloud deployments.
+     * Get the list of incoming channels (channels shared with a team).
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class IncomingChannelsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of incoming channels (channels shared with a team). This API is available in the following national cloud deployments.
+     * Get the list of incoming channels (channels shared with a team).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -111,7 +111,7 @@ public class IncomingChannelsRequestBuilder extends BaseRequestBuilder {
         return new IncomingChannelsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of incoming channels (channels shared with a team). This API is available in the following national cloud deployments.
+     * Get the list of incoming channels (channels shared with a team).
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

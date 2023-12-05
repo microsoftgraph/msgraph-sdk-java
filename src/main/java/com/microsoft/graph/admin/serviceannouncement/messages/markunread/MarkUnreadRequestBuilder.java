@@ -35,7 +35,7 @@ public class MarkUnreadRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/serviceAnnouncement/messages/markUnread", rawUrl);
     }
     /**
-     * Mark a list of serviceUpdateMessages as unread for the signed in user. This API is available in the following national cloud deployments.
+     * Mark a list of serviceUpdateMessages as unread for the signed in user.
      * @param body The request body
      * @return a MarkUnreadPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-markunread?view=graph-rest-1.0">Find more info here</a>
@@ -45,7 +45,7 @@ public class MarkUnreadRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Mark a list of serviceUpdateMessages as unread for the signed in user. This API is available in the following national cloud deployments.
+     * Mark a list of serviceUpdateMessages as unread for the signed in user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a MarkUnreadPostResponse
@@ -61,7 +61,7 @@ public class MarkUnreadRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MarkUnreadPostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Mark a list of serviceUpdateMessages as unread for the signed in user. This API is available in the following national cloud deployments.
+     * Mark a list of serviceUpdateMessages as unread for the signed in user.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -70,7 +70,7 @@ public class MarkUnreadRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Mark a list of serviceUpdateMessages as unread for the signed in user. This API is available in the following national cloud deployments.
+     * Mark a list of serviceUpdateMessages as unread for the signed in user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

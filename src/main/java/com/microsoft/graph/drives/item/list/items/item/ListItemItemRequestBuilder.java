@@ -102,14 +102,14 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/list/items/{listItem%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Removes an item from a list][]. This API is available in the following [national cloud deployments.
+     * Removes an item from a [list][].
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Removes an item from a list][]. This API is available in the following [national cloud deployments.
+     * Removes an item from a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -121,7 +121,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Returns the metadata for an item][] in a [list][]. This API is available in the following [national cloud deployments.
+     * Returns the metadata for an [item][] in a [list][].
      * @return a ListItem
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -130,7 +130,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Returns the metadata for an item][] in a [list][]. This API is available in the following [national cloud deployments.
+     * Returns the metadata for an [item][] in a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ListItem
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-get?view=graph-rest-1.0">Find more info here</a>
@@ -182,7 +182,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ListItem::createFromDiscriminatorValue);
     }
     /**
-     * Removes an item from a list][]. This API is available in the following [national cloud deployments.
+     * Removes an item from a [list][].
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -190,7 +190,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Removes an item from a list][]. This API is available in the following [national cloud deployments.
+     * Removes an item from a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -202,7 +202,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Returns the metadata for an item][] in a [list][]. This API is available in the following [national cloud deployments.
+     * Returns the metadata for an [item][] in a [list][].
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -210,7 +210,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns the metadata for an item][] in a [list][]. This API is available in the following [national cloud deployments.
+     * Returns the metadata for an [item][] in a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -262,7 +262,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Returns the metadata for an item][] in a [list][]. This API is available in the following [national cloud deployments.
+     * Returns the metadata for an [item][] in a [list][].
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

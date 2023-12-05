@@ -53,14 +53,14 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groupLifecyclePolicies/{groupLifecyclePolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a groupLifecyclePolicy. This API is available in the following national cloud deployments.
+     * Delete a groupLifecyclePolicy.
      * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a groupLifecyclePolicy. This API is available in the following national cloud deployments.
+     * Delete a groupLifecyclePolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -72,7 +72,7 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a groupLifecyclePolicies object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a groupLifecyclePolicies object.
      * @return a GroupLifecyclePolicy
      * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -81,7 +81,7 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a groupLifecyclePolicies object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a groupLifecyclePolicies object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a GroupLifecyclePolicy
      * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-get?view=graph-rest-1.0">Find more info here</a>
@@ -95,7 +95,7 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GroupLifecyclePolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object. This API is available in the following national cloud deployments.
+     * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object.
      * @param body The request body
      * @return a GroupLifecyclePolicy
      * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-update?view=graph-rest-1.0">Find more info here</a>
@@ -105,7 +105,7 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object. This API is available in the following national cloud deployments.
+     * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a GroupLifecyclePolicy
@@ -121,7 +121,7 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GroupLifecyclePolicy::createFromDiscriminatorValue);
     }
     /**
-     * Delete a groupLifecyclePolicy. This API is available in the following national cloud deployments.
+     * Delete a groupLifecyclePolicy.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a groupLifecyclePolicy. This API is available in the following national cloud deployments.
+     * Delete a groupLifecyclePolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -141,7 +141,7 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a groupLifecyclePolicies object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a groupLifecyclePolicies object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -149,7 +149,7 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a groupLifecyclePolicies object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a groupLifecyclePolicies object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -161,7 +161,7 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object. This API is available in the following national cloud deployments.
+     * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -170,7 +170,7 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object. This API is available in the following national cloud deployments.
+     * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +201,7 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a groupLifecyclePolicies object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a groupLifecyclePolicies object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

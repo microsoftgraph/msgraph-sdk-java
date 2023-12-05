@@ -59,7 +59,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/termStore/groups/{group%2Did1}/sets/{set%2Did}/children{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the first level children of a set] or [term] resource using the children navigation property. This API is available in the following [national cloud deployments.
+     * Get the first level children of a [set] or [term] resource using the children navigation property.
      * @return a TermCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-term-list-children?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the first level children of a set] or [term] resource using the children navigation property. This API is available in the following [national cloud deployments.
+     * Get the first level children of a [set] or [term] resource using the children navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TermCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-term-list-children?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TermCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new term object. This API is available in the following national cloud deployments.
+     * Create a new term object.
      * @param body The request body
      * @return a Term
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-term-post?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new term object. This API is available in the following national cloud deployments.
+     * Create a new term object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Term
@@ -108,7 +108,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Term::createFromDiscriminatorValue);
     }
     /**
-     * Get the first level children of a set] or [term] resource using the children navigation property. This API is available in the following [national cloud deployments.
+     * Get the first level children of a [set] or [term] resource using the children navigation property.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the first level children of a set] or [term] resource using the children navigation property. This API is available in the following [national cloud deployments.
+     * Get the first level children of a [set] or [term] resource using the children navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new term object. This API is available in the following national cloud deployments.
+     * Create a new term object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new term object. This API is available in the following national cloud deployments.
+     * Create a new term object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         return new ChildrenRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the first level children of a set] or [term] resource using the children navigation property. This API is available in the following [national cloud deployments.
+     * Get the first level children of a [set] or [term] resource using the children navigation property.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

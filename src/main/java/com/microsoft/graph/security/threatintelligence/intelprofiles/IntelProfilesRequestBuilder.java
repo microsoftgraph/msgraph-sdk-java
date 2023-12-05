@@ -59,7 +59,7 @@ public class IntelProfilesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/intelProfiles{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the intelligenceProfile objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the intelligenceProfile objects and their properties.
      * @return a IntelligenceProfileCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-threatintelligence-list-intelprofiles?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class IntelProfilesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the intelligenceProfile objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the intelligenceProfile objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a IntelligenceProfileCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-threatintelligence-list-intelprofiles?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class IntelProfilesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IntelligenceProfile::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the intelligenceProfile objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the intelligenceProfile objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class IntelProfilesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the intelligenceProfile objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the intelligenceProfile objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class IntelProfilesRequestBuilder extends BaseRequestBuilder {
         return new IntelProfilesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the intelligenceProfile objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the intelligenceProfile objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -38,7 +38,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/tokenIssuancePolicies/$ref{?%24top,%24skip,%24search,%24filter,%24count,%24orderby}", rawUrl);
     }
     /**
-     * List the tokenIssuancePolicy objects that are assigned to an application. This API is available in the following national cloud deployments.
+     * List the tokenIssuancePolicy objects that are assigned to an application.
      * @return a StringCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/application-list-tokenissuancepolicies?view=graph-rest-1.0">Find more info here</a>
      */
@@ -47,7 +47,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List the tokenIssuancePolicy objects that are assigned to an application. This API is available in the following national cloud deployments.
+     * List the tokenIssuancePolicy objects that are assigned to an application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a StringCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/application-list-tokenissuancepolicies?view=graph-rest-1.0">Find more info here</a>
@@ -61,7 +61,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, StringCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Assign a tokenIssuancePolicy to an application. This API is available in the following national cloud deployments.
+     * Assign a tokenIssuancePolicy to an application.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/application-post-tokenissuancepolicies?view=graph-rest-1.0">Find more info here</a>
      */
@@ -69,7 +69,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Assign a tokenIssuancePolicy to an application. This API is available in the following national cloud deployments.
+     * Assign a tokenIssuancePolicy to an application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/application-post-tokenissuancepolicies?view=graph-rest-1.0">Find more info here</a>
@@ -83,7 +83,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * List the tokenIssuancePolicy objects that are assigned to an application. This API is available in the following national cloud deployments.
+     * List the tokenIssuancePolicy objects that are assigned to an application.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List the tokenIssuancePolicy objects that are assigned to an application. This API is available in the following national cloud deployments.
+     * List the tokenIssuancePolicy objects that are assigned to an application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -103,7 +103,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Assign a tokenIssuancePolicy to an application. This API is available in the following national cloud deployments.
+     * Assign a tokenIssuancePolicy to an application.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -112,7 +112,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Assign a tokenIssuancePolicy to an application. This API is available in the following national cloud deployments.
+     * Assign a tokenIssuancePolicy to an application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -137,7 +137,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the tokenIssuancePolicy objects that are assigned to an application. This API is available in the following national cloud deployments.
+     * List the tokenIssuancePolicy objects that are assigned to an application.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

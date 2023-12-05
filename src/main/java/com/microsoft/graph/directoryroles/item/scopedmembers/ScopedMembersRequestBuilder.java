@@ -59,7 +59,7 @@ public class ScopedMembersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directoryRoles/{directoryRole%2Did}/scopedMembers{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of scopedRoleMembership objects for a directory role. This API is available in the following national cloud deployments.
+     * Retrieve a list of scopedRoleMembership objects for a directory role.
      * @return a ScopedRoleMembershipCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directoryrole-list-scopedmembers?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ScopedMembersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of scopedRoleMembership objects for a directory role. This API is available in the following national cloud deployments.
+     * Retrieve a list of scopedRoleMembership objects for a directory role.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ScopedRoleMembershipCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directoryrole-list-scopedmembers?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class ScopedMembersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ScopedRoleMembership::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of scopedRoleMembership objects for a directory role. This API is available in the following national cloud deployments.
+     * Retrieve a list of scopedRoleMembership objects for a directory role.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class ScopedMembersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of scopedRoleMembership objects for a directory role. This API is available in the following national cloud deployments.
+     * Retrieve a list of scopedRoleMembership objects for a directory role.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class ScopedMembersRequestBuilder extends BaseRequestBuilder {
         return new ScopedMembersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of scopedRoleMembership objects for a directory role. This API is available in the following national cloud deployments.
+     * Retrieve a list of scopedRoleMembership objects for a directory role.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -67,7 +67,7 @@ public class ParticipantsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/participants{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of participant objects in the call. This API is available in the following national cloud deployments.
+     * Retrieve a list of participant objects in the call.
      * @return a ParticipantCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/call-list-participants?view=graph-rest-1.0">Find more info here</a>
      */
@@ -76,7 +76,7 @@ public class ParticipantsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of participant objects in the call. This API is available in the following national cloud deployments.
+     * Retrieve a list of participant objects in the call.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ParticipantCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/call-list-participants?view=graph-rest-1.0">Find more info here</a>
@@ -114,7 +114,7 @@ public class ParticipantsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Participant::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of participant objects in the call. This API is available in the following national cloud deployments.
+     * Retrieve a list of participant objects in the call.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -122,7 +122,7 @@ public class ParticipantsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of participant objects in the call. This API is available in the following national cloud deployments.
+     * Retrieve a list of participant objects in the call.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -168,7 +168,7 @@ public class ParticipantsRequestBuilder extends BaseRequestBuilder {
         return new ParticipantsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of participant objects in the call. This API is available in the following national cloud deployments.
+     * Retrieve a list of participant objects in the call.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

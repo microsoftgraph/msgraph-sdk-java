@@ -67,7 +67,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List all teams in an organization. This API is available in the following national cloud deployments.
+     * List all teams in an organization.
      * @return a TeamCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/teams-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -76,7 +76,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List all teams in an organization. This API is available in the following national cloud deployments.
+     * List all teams in an organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TeamCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/teams-list?view=graph-rest-1.0">Find more info here</a>
@@ -90,7 +90,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new team. This API is available in the following national cloud deployments.
+     * Create a new team.
      * @param body The request body
      * @return a Team
      * @see <a href="https://learn.microsoft.com/graph/api/team-post?view=graph-rest-1.0">Find more info here</a>
@@ -100,7 +100,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new team. This API is available in the following national cloud deployments.
+     * Create a new team.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Team
@@ -116,7 +116,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Team::createFromDiscriminatorValue);
     }
     /**
-     * List all teams in an organization. This API is available in the following national cloud deployments.
+     * List all teams in an organization.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List all teams in an organization. This API is available in the following national cloud deployments.
+     * List all teams in an organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -136,7 +136,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new team. This API is available in the following national cloud deployments.
+     * Create a new team.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new team. This API is available in the following national cloud deployments.
+     * Create a new team.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -170,7 +170,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return new TeamsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List all teams in an organization. This API is available in the following national cloud deployments.
+     * List all teams in an organization.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

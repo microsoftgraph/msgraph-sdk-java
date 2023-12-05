@@ -36,7 +36,7 @@ public class AddFormulaLocalRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/names/addFormulaLocal", rawUrl);
     }
     /**
-     * Adds a new name to the collection of the given scope using the user's locale for the formula. This API is available in the following national cloud deployments.
+     * Adds a new name to the collection of the given scope using the user's locale for the formula.
      * @param body The request body
      * @return a WorkbookNamedItem
      * @see <a href="https://learn.microsoft.com/graph/api/nameditem-addformulalocal?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class AddFormulaLocalRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Adds a new name to the collection of the given scope using the user's locale for the formula. This API is available in the following national cloud deployments.
+     * Adds a new name to the collection of the given scope using the user's locale for the formula.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookNamedItem
@@ -62,7 +62,7 @@ public class AddFormulaLocalRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookNamedItem::createFromDiscriminatorValue);
     }
     /**
-     * Adds a new name to the collection of the given scope using the user's locale for the formula. This API is available in the following national cloud deployments.
+     * Adds a new name to the collection of the given scope using the user's locale for the formula.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class AddFormulaLocalRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Adds a new name to the collection of the given scope using the user's locale for the formula. This API is available in the following national cloud deployments.
+     * Adds a new name to the collection of the given scope using the user's locale for the formula.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

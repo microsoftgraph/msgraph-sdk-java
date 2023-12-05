@@ -59,7 +59,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/plans{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of plannerPlan objects. This API is available in the following national cloud deployments.
+     * Get a list of plannerPlan objects.
      * @return a PlannerPlanCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/planner-list-plans?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of plannerPlan objects. This API is available in the following national cloud deployments.
+     * Get a list of plannerPlan objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PlannerPlanCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/planner-list-plans?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerPlanCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Use this API to create a new plannerPlan. This API is available in the following national cloud deployments.
+     * Use this API to create a new plannerPlan.
      * @param body The request body
      * @return a PlannerPlan
      * @see <a href="https://learn.microsoft.com/graph/api/planner-post-plans?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Use this API to create a new plannerPlan. This API is available in the following national cloud deployments.
+     * Use this API to create a new plannerPlan.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PlannerPlan
@@ -108,7 +108,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerPlan::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of plannerPlan objects. This API is available in the following national cloud deployments.
+     * Get a list of plannerPlan objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of plannerPlan objects. This API is available in the following national cloud deployments.
+     * Get a list of plannerPlan objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new plannerPlan. This API is available in the following national cloud deployments.
+     * Use this API to create a new plannerPlan.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new plannerPlan. This API is available in the following national cloud deployments.
+     * Use this API to create a new plannerPlan.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return new PlansRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of plannerPlan objects. This API is available in the following national cloud deployments.
+     * Get a list of plannerPlan objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

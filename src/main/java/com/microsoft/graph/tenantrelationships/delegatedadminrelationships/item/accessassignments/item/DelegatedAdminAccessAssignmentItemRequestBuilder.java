@@ -37,14 +37,14 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/tenantRelationships/delegatedAdminRelationships/{delegatedAdminRelationship%2Did}/accessAssignments/{delegatedAdminAccessAssignment%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a delegatedAdminAccessAssignment object. This API is available in the following national cloud deployments.
+     * Delete a delegatedAdminAccessAssignment object.
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a delegatedAdminAccessAssignment object. This API is available in the following national cloud deployments.
+     * Delete a delegatedAdminAccessAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties of a delegatedAdminAccessAssignment object. This API is available in the following national cloud deployments.
+     * Read the properties of a delegatedAdminAccessAssignment object.
      * @return a DelegatedAdminAccessAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
         return get(null);
     }
     /**
-     * Read the properties of a delegatedAdminAccessAssignment object. This API is available in the following national cloud deployments.
+     * Read the properties of a delegatedAdminAccessAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DelegatedAdminAccessAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-get?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
         return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminAccessAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a delegatedAdminAccessAssignment object. This API is available in the following national cloud deployments.
+     * Update the properties of a delegatedAdminAccessAssignment object.
      * @param body The request body
      * @return a DelegatedAdminAccessAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-update?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
         return patch(body, null);
     }
     /**
-     * Update the properties of a delegatedAdminAccessAssignment object. This API is available in the following national cloud deployments.
+     * Update the properties of a delegatedAdminAccessAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DelegatedAdminAccessAssignment
@@ -105,7 +105,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
         return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminAccessAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Delete a delegatedAdminAccessAssignment object. This API is available in the following national cloud deployments.
+     * Delete a delegatedAdminAccessAssignment object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a delegatedAdminAccessAssignment object. This API is available in the following national cloud deployments.
+     * Delete a delegatedAdminAccessAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -125,7 +125,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Read the properties of a delegatedAdminAccessAssignment object. This API is available in the following national cloud deployments.
+     * Read the properties of a delegatedAdminAccessAssignment object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties of a delegatedAdminAccessAssignment object. This API is available in the following national cloud deployments.
+     * Read the properties of a delegatedAdminAccessAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Update the properties of a delegatedAdminAccessAssignment object. This API is available in the following national cloud deployments.
+     * Update the properties of a delegatedAdminAccessAssignment object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a delegatedAdminAccessAssignment object. This API is available in the following national cloud deployments.
+     * Update the properties of a delegatedAdminAccessAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -185,7 +185,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties of a delegatedAdminAccessAssignment object. This API is available in the following national cloud deployments.
+     * Read the properties of a delegatedAdminAccessAssignment object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

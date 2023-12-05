@@ -35,14 +35,14 @@ public class ClearUserPreferredPresenceRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/presence/clearUserPreferredPresence", rawUrl);
     }
     /**
-     * Clear the preferred availability and activity status for a user. This API is available in the following national cloud deployments.
+     * Clear the preferred availability and activity status for a user.
      * @see <a href="https://learn.microsoft.com/graph/api/presence-clearuserpreferredpresence?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Clear the preferred availability and activity status for a user. This API is available in the following national cloud deployments.
+     * Clear the preferred availability and activity status for a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/presence-clearuserpreferredpresence?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class ClearUserPreferredPresenceRequestBuilder extends BaseRequestBuilder
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Clear the preferred availability and activity status for a user. This API is available in the following national cloud deployments.
+     * Clear the preferred availability and activity status for a user.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class ClearUserPreferredPresenceRequestBuilder extends BaseRequestBuilder
         return toPostRequestInformation(null);
     }
     /**
-     * Clear the preferred availability and activity status for a user. This API is available in the following national cloud deployments.
+     * Clear the preferred availability and activity status for a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

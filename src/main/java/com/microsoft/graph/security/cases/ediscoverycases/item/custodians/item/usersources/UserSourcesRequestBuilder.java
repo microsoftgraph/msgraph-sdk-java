@@ -59,7 +59,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/{ediscoveryCustodian%2Did}/userSources{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the userSource objects associated with an ediscoveryCustodian. This API is available in the following national cloud deployments.
+     * Get a list of the userSource objects associated with an ediscoveryCustodian.
      * @return a UserSourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-usersources?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the userSource objects associated with an ediscoveryCustodian. This API is available in the following national cloud deployments.
+     * Get a list of the userSource objects associated with an ediscoveryCustodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UserSourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-usersources?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserSourceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new userSource object associated with an eDiscovery custodian. This API is available in the following national cloud deployments.
+     * Create a new userSource object associated with an eDiscovery custodian.
      * @param body The request body
      * @return a UserSource
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-post-usersources?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new userSource object associated with an eDiscovery custodian. This API is available in the following national cloud deployments.
+     * Create a new userSource object associated with an eDiscovery custodian.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UserSource
@@ -108,7 +108,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserSource::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the userSource objects associated with an ediscoveryCustodian. This API is available in the following national cloud deployments.
+     * Get a list of the userSource objects associated with an ediscoveryCustodian.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the userSource objects associated with an ediscoveryCustodian. This API is available in the following national cloud deployments.
+     * Get a list of the userSource objects associated with an ediscoveryCustodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new userSource object associated with an eDiscovery custodian. This API is available in the following national cloud deployments.
+     * Create a new userSource object associated with an eDiscovery custodian.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new userSource object associated with an eDiscovery custodian. This API is available in the following national cloud deployments.
+     * Create a new userSource object associated with an eDiscovery custodian.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return new UserSourcesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the userSource objects associated with an ediscoveryCustodian. This API is available in the following national cloud deployments.
+     * Get a list of the userSource objects associated with an ediscoveryCustodian.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

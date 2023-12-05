@@ -59,7 +59,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/termStore/groups/{group%2Did}/sets{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the set objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the set objects and their properties.
      * @return a SetCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-group-list-sets?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the set objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the set objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SetCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-group-list-sets?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Set::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the set objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the set objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the set objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the set objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         return new SetsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the set objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the set objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -35,14 +35,14 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/shares/{printerShare%2Did}/jobs/{printJob%2Did}/cancel", rawUrl);
     }
     /**
-     * Cancel a print job. Print jobs can be canceled only on behalf of a user, using delegated permissions. This API is available in the following national cloud deployments.
+     * Cancel a print job. Print jobs can be canceled only on behalf of a user, using delegated permissions.
      * @see <a href="https://learn.microsoft.com/graph/api/printjob-cancel?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Cancel a print job. Print jobs can be canceled only on behalf of a user, using delegated permissions. This API is available in the following national cloud deployments.
+     * Cancel a print job. Print jobs can be canceled only on behalf of a user, using delegated permissions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/printjob-cancel?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Cancel a print job. Print jobs can be canceled only on behalf of a user, using delegated permissions. This API is available in the following national cloud deployments.
+     * Cancel a print job. Print jobs can be canceled only on behalf of a user, using delegated permissions.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Cancel a print job. Print jobs can be canceled only on behalf of a user, using delegated permissions. This API is available in the following national cloud deployments.
+     * Cancel a print job. Print jobs can be canceled only on behalf of a user, using delegated permissions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

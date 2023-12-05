@@ -59,7 +59,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/accessReviews/historyDefinitions/{accessReviewHistoryDefinition%2Did}/instances{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the instances of an access review history definition created in the last 30 days. This API is available in the following national cloud deployments.
+     * Retrieve the instances of an access review history definition created in the last 30 days.
      * @return a AccessReviewHistoryInstanceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewhistorydefinition-list-instances?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the instances of an access review history definition created in the last 30 days. This API is available in the following national cloud deployments.
+     * Retrieve the instances of an access review history definition created in the last 30 days.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AccessReviewHistoryInstanceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewhistorydefinition-list-instances?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewHistoryInstance::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the instances of an access review history definition created in the last 30 days. This API is available in the following national cloud deployments.
+     * Retrieve the instances of an access review history definition created in the last 30 days.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the instances of an access review history definition created in the last 30 days. This API is available in the following national cloud deployments.
+     * Retrieve the instances of an access review history definition created in the last 30 days.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
         return new InstancesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the instances of an access review history definition created in the last 30 days. This API is available in the following national cloud deployments.
+     * Retrieve the instances of an access review history definition created in the last 30 days.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

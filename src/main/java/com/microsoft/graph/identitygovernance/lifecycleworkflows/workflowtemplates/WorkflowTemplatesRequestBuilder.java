@@ -58,7 +58,7 @@ public class WorkflowTemplatesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflowTemplates{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the workflowTemplate objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the workflowTemplate objects and their properties.
      * @return a WorkflowTemplateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecycleworkflowscontainer-list-workflowtemplates?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class WorkflowTemplatesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the workflowTemplate objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the workflowTemplate objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkflowTemplateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecycleworkflowscontainer-list-workflowtemplates?view=graph-rest-1.0">Find more info here</a>
@@ -81,7 +81,7 @@ public class WorkflowTemplatesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkflowTemplateCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the workflowTemplate objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the workflowTemplate objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class WorkflowTemplatesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the workflowTemplate objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the workflowTemplate objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -111,7 +111,7 @@ public class WorkflowTemplatesRequestBuilder extends BaseRequestBuilder {
         return new WorkflowTemplatesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the workflowTemplate objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the workflowTemplate objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

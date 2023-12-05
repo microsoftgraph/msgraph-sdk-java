@@ -35,7 +35,7 @@ public class ArchiveRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/serviceAnnouncement/messages/archive", rawUrl);
     }
     /**
-     * Archive a list of serviceUpdateMessages for the signed in user. This API is available in the following national cloud deployments.
+     * Archive a list of serviceUpdateMessages for the signed in user.
      * @param body The request body
      * @return a ArchivePostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-archive?view=graph-rest-1.0">Find more info here</a>
@@ -45,7 +45,7 @@ public class ArchiveRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Archive a list of serviceUpdateMessages for the signed in user. This API is available in the following national cloud deployments.
+     * Archive a list of serviceUpdateMessages for the signed in user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ArchivePostResponse
@@ -61,7 +61,7 @@ public class ArchiveRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ArchivePostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Archive a list of serviceUpdateMessages for the signed in user. This API is available in the following national cloud deployments.
+     * Archive a list of serviceUpdateMessages for the signed in user.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -70,7 +70,7 @@ public class ArchiveRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Archive a list of serviceUpdateMessages for the signed in user. This API is available in the following national cloud deployments.
+     * Archive a list of serviceUpdateMessages for the signed in user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

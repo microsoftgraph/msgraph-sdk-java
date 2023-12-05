@@ -59,7 +59,7 @@ public class BookingCurrenciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/bookingCurrencies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of bookingCurrency objects available to a Microsoft Bookings business. This API is available in the following national cloud deployments.
+     * Get a list of bookingCurrency objects available to a Microsoft Bookings business.
      * @return a BookingCurrencyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/bookingcurrency-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class BookingCurrenciesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of bookingCurrency objects available to a Microsoft Bookings business. This API is available in the following national cloud deployments.
+     * Get a list of bookingCurrency objects available to a Microsoft Bookings business.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a BookingCurrencyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/bookingcurrency-list?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class BookingCurrenciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BookingCurrency::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of bookingCurrency objects available to a Microsoft Bookings business. This API is available in the following national cloud deployments.
+     * Get a list of bookingCurrency objects available to a Microsoft Bookings business.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class BookingCurrenciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of bookingCurrency objects available to a Microsoft Bookings business. This API is available in the following national cloud deployments.
+     * Get a list of bookingCurrency objects available to a Microsoft Bookings business.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class BookingCurrenciesRequestBuilder extends BaseRequestBuilder {
         return new BookingCurrenciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of bookingCurrency objects available to a Microsoft Bookings business. This API is available in the following national cloud deployments.
+     * Get a list of bookingCurrency objects available to a Microsoft Bookings business.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

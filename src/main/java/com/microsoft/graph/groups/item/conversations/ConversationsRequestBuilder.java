@@ -59,7 +59,7 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/conversations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
-     * Retrieve the list of conversations in this group. This API is available in the following national cloud deployments.
+     * Retrieve the list of conversations in this group.
      * @return a ConversationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-conversations?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the list of conversations in this group. This API is available in the following national cloud deployments.
+     * Retrieve the list of conversations in this group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ConversationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-conversations?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConversationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Use reply thread or reply post to further post to that conversation. This API is available in the following national cloud deployments.
+     * Use reply thread or reply post to further post to that conversation.
      * @param body The request body
      * @return a Conversation
      * @see <a href="https://learn.microsoft.com/graph/api/group-post-conversations?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Use reply thread or reply post to further post to that conversation. This API is available in the following national cloud deployments.
+     * Use reply thread or reply post to further post to that conversation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Conversation
@@ -108,7 +108,7 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Conversation::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the list of conversations in this group. This API is available in the following national cloud deployments.
+     * Retrieve the list of conversations in this group.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the list of conversations in this group. This API is available in the following national cloud deployments.
+     * Retrieve the list of conversations in this group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use reply thread or reply post to further post to that conversation. This API is available in the following national cloud deployments.
+     * Use reply thread or reply post to further post to that conversation.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use reply thread or reply post to further post to that conversation. This API is available in the following national cloud deployments.
+     * Use reply thread or reply post to further post to that conversation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
         return new ConversationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the list of conversations in this group. This API is available in the following national cloud deployments.
+     * Retrieve the list of conversations in this group.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

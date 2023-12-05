@@ -36,7 +36,7 @@ public class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/synchronization/jobs/{synchronizationJob%2Did}/provisionOnDemand", rawUrl);
     }
     /**
-     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds.  This API is available in the following national cloud deployments.
+     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
      * @param body The request body
      * @return a StringKeyStringValuePair
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-provisionondemand?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds.  This API is available in the following national cloud deployments.
+     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a StringKeyStringValuePair
@@ -62,7 +62,7 @@ public class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, StringKeyStringValuePair::createFromDiscriminatorValue);
     }
     /**
-     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds.  This API is available in the following national cloud deployments.
+     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds.  This API is available in the following national cloud deployments.
+     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

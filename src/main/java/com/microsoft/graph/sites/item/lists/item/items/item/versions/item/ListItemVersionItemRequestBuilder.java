@@ -70,7 +70,7 @@ public class ListItemVersionItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the metadata for a specific version of a ListItem. This API is available in the following national cloud deployments.
+     * Retrieve the metadata for a specific version of a ListItem.
      * @return a ListItemVersion
      * @see <a href="https://learn.microsoft.com/graph/api/listitemversion-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -79,7 +79,7 @@ public class ListItemVersionItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the metadata for a specific version of a ListItem. This API is available in the following national cloud deployments.
+     * Retrieve the metadata for a specific version of a ListItem.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ListItemVersion
      * @see <a href="https://learn.microsoft.com/graph/api/listitemversion-get?view=graph-rest-1.0">Find more info here</a>
@@ -137,7 +137,7 @@ public class ListItemVersionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the metadata for a specific version of a ListItem. This API is available in the following national cloud deployments.
+     * Retrieve the metadata for a specific version of a ListItem.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -145,7 +145,7 @@ public class ListItemVersionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the metadata for a specific version of a ListItem. This API is available in the following national cloud deployments.
+     * Retrieve the metadata for a specific version of a ListItem.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -197,7 +197,7 @@ public class ListItemVersionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the metadata for a specific version of a ListItem. This API is available in the following national cloud deployments.
+     * Retrieve the metadata for a specific version of a ListItem.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

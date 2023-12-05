@@ -59,7 +59,7 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/alerts{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of alert objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of alert objects.
      * @return a AlertCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/alert-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of alert objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of alert objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AlertCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/alert-list?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Alert::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of alert objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of alert objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of alert objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of alert objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
         return new AlertsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of alert objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of alert objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

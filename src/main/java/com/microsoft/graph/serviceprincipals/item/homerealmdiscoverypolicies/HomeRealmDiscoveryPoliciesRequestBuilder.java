@@ -66,7 +66,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/homeRealmDiscoveryPolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List the homeRealmDiscoveryPolicy objects that are assigned to a servicePrincipal. This API is available in the following national cloud deployments.
+     * List the homeRealmDiscoveryPolicy objects that are assigned to a servicePrincipal.
      * @return a HomeRealmDiscoveryPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-homerealmdiscoverypolicies?view=graph-rest-1.0">Find more info here</a>
      */
@@ -75,7 +75,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
         return get(null);
     }
     /**
-     * List the homeRealmDiscoveryPolicy objects that are assigned to a servicePrincipal. This API is available in the following national cloud deployments.
+     * List the homeRealmDiscoveryPolicy objects that are assigned to a servicePrincipal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a HomeRealmDiscoveryPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-homerealmdiscoverypolicies?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, HomeRealmDiscoveryPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * List the homeRealmDiscoveryPolicy objects that are assigned to a servicePrincipal. This API is available in the following national cloud deployments.
+     * List the homeRealmDiscoveryPolicy objects that are assigned to a servicePrincipal.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * List the homeRealmDiscoveryPolicy objects that are assigned to a servicePrincipal. This API is available in the following national cloud deployments.
+     * List the homeRealmDiscoveryPolicy objects that are assigned to a servicePrincipal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -119,7 +119,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
         return new HomeRealmDiscoveryPoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the homeRealmDiscoveryPolicy objects that are assigned to a servicePrincipal. This API is available in the following national cloud deployments.
+     * List the homeRealmDiscoveryPolicy objects that are assigned to a servicePrincipal.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

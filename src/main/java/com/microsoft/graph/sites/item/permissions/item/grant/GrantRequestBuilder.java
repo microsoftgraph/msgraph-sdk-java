@@ -35,7 +35,7 @@ public class GrantRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/permissions/{permission%2Did}/grant", rawUrl);
     }
     /**
-     * Grant users access to a link represented by a permission][]. This API is available in the following [national cloud deployments.
+     * Grant users access to a link represented by a [permission][].
      * @param body The request body
      * @return a GrantPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/permission-grant?view=graph-rest-1.0">Find more info here</a>
@@ -45,7 +45,7 @@ public class GrantRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Grant users access to a link represented by a permission][]. This API is available in the following [national cloud deployments.
+     * Grant users access to a link represented by a [permission][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a GrantPostResponse
@@ -61,7 +61,7 @@ public class GrantRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GrantPostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Grant users access to a link represented by a permission][]. This API is available in the following [national cloud deployments.
+     * Grant users access to a link represented by a [permission][].
      * @param body The request body
      * @return a RequestInformation
      */
@@ -70,7 +70,7 @@ public class GrantRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Grant users access to a link represented by a permission][]. This API is available in the following [national cloud deployments.
+     * Grant users access to a link represented by a [permission][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -36,7 +36,7 @@ public class AddPasswordRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/addPassword", rawUrl);
     }
     /**
-     * Add a strong password or secret to a servicePrincipal object. This API is available in the following national cloud deployments.
+     * Add a strong password or secret to a servicePrincipal object.
      * @param body The request body
      * @return a PasswordCredential
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-addpassword?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class AddPasswordRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Add a strong password or secret to a servicePrincipal object. This API is available in the following national cloud deployments.
+     * Add a strong password or secret to a servicePrincipal object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PasswordCredential
@@ -62,7 +62,7 @@ public class AddPasswordRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PasswordCredential::createFromDiscriminatorValue);
     }
     /**
-     * Add a strong password or secret to a servicePrincipal object. This API is available in the following national cloud deployments.
+     * Add a strong password or secret to a servicePrincipal object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class AddPasswordRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add a strong password or secret to a servicePrincipal object. This API is available in the following national cloud deployments.
+     * Add a strong password or secret to a servicePrincipal object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -37,14 +37,14 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/outlook/masterCategories/{outlookCategory%2Did}{?%24select}", rawUrl);
     }
     /**
-     * Delete the specified outlookCategory object. This API is available in the following national cloud deployments.
+     * Delete the specified outlookCategory object.
      * @see <a href="https://learn.microsoft.com/graph/api/outlookcategory-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete the specified outlookCategory object. This API is available in the following national cloud deployments.
+     * Delete the specified outlookCategory object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/outlookcategory-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the properties and relationships of the specified outlookCategory object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of the specified outlookCategory object.
      * @return a OutlookCategory
      * @see <a href="https://learn.microsoft.com/graph/api/outlookcategory-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the properties and relationships of the specified outlookCategory object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of the specified outlookCategory object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a OutlookCategory
      * @see <a href="https://learn.microsoft.com/graph/api/outlookcategory-get?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OutlookCategory::createFromDiscriminatorValue);
     }
     /**
-     * Update the writable property, color, of the specified outlookCategory object. You can't modify the displayName propertyonce you have created the category. This API is available in the following national cloud deployments.
+     * Update the writable property, color, of the specified outlookCategory object. You can't modify the displayName propertyonce you have created the category.
      * @param body The request body
      * @return a OutlookCategory
      * @see <a href="https://learn.microsoft.com/graph/api/outlookcategory-update?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the writable property, color, of the specified outlookCategory object. You can't modify the displayName propertyonce you have created the category. This API is available in the following national cloud deployments.
+     * Update the writable property, color, of the specified outlookCategory object. You can't modify the displayName propertyonce you have created the category.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a OutlookCategory
@@ -105,7 +105,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OutlookCategory::createFromDiscriminatorValue);
     }
     /**
-     * Delete the specified outlookCategory object. This API is available in the following national cloud deployments.
+     * Delete the specified outlookCategory object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete the specified outlookCategory object. This API is available in the following national cloud deployments.
+     * Delete the specified outlookCategory object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -125,7 +125,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the properties and relationships of the specified outlookCategory object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of the specified outlookCategory object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of the specified outlookCategory object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of the specified outlookCategory object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the writable property, color, of the specified outlookCategory object. You can't modify the displayName propertyonce you have created the category. This API is available in the following national cloud deployments.
+     * Update the writable property, color, of the specified outlookCategory object. You can't modify the displayName propertyonce you have created the category.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the writable property, color, of the specified outlookCategory object. You can't modify the displayName propertyonce you have created the category. This API is available in the following national cloud deployments.
+     * Update the writable property, color, of the specified outlookCategory object. You can't modify the displayName propertyonce you have created the category.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -185,7 +185,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties and relationships of the specified outlookCategory object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of the specified outlookCategory object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

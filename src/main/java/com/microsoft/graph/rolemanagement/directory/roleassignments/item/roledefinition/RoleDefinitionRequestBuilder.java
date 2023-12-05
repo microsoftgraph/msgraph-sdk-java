@@ -37,7 +37,7 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/roleManagement/directory/roleAssignments/{unifiedRoleAssignment%2Did}/roleDefinition{?%24select,%24expand}", rawUrl);
     }
     /**
-     * The roleDefinition the assignment is for.  Supports $expand. roleDefinition.Id will be auto expanded.
+     * The roleDefinition the assignment is for.  Supports $expand.
      * @return a UnifiedRoleDefinition
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The roleDefinition the assignment is for.  Supports $expand. roleDefinition.Id will be auto expanded.
+     * The roleDefinition the assignment is for.  Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UnifiedRoleDefinition
      */
@@ -58,7 +58,7 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleDefinition::createFromDiscriminatorValue);
     }
     /**
-     * The roleDefinition the assignment is for.  Supports $expand. roleDefinition.Id will be auto expanded.
+     * The roleDefinition the assignment is for.  Supports $expand.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The roleDefinition the assignment is for.  Supports $expand. roleDefinition.Id will be auto expanded.
+     * The roleDefinition the assignment is for.  Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -88,7 +88,7 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
         return new RoleDefinitionRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The roleDefinition the assignment is for.  Supports $expand. roleDefinition.Id will be auto expanded.
+     * The roleDefinition the assignment is for.  Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

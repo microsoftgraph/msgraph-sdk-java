@@ -59,7 +59,7 @@ public class IntelligenceProfileIndicatorsRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/intelligenceProfileIndicators{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a intelligenceProfileIndicator object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a intelligenceProfileIndicator object.
      * @return a IntelligenceProfileIndicatorCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class IntelligenceProfileIndicatorsRequestBuilder extends BaseRequestBuil
         return get(null);
     }
     /**
-     * Read the properties and relationships of a intelligenceProfileIndicator object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a intelligenceProfileIndicator object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a IntelligenceProfileIndicatorCollectionResponse
      */
@@ -104,7 +104,7 @@ public class IntelligenceProfileIndicatorsRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, IntelligenceProfileIndicator::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of a intelligenceProfileIndicator object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a intelligenceProfileIndicator object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class IntelligenceProfileIndicatorsRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a intelligenceProfileIndicator object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a intelligenceProfileIndicator object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class IntelligenceProfileIndicatorsRequestBuilder extends BaseRequestBuil
         return new IntelligenceProfileIndicatorsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a intelligenceProfileIndicator object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a intelligenceProfileIndicator object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

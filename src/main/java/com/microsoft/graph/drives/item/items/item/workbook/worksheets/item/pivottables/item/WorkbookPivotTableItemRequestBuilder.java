@@ -70,7 +70,7 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of workbookPivotTable object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of workbookPivotTable object.
      * @return a WorkbookPivotTable
      * @see <a href="https://learn.microsoft.com/graph/api/workbookpivottable-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -79,7 +79,7 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of workbookPivotTable object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of workbookPivotTable object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookPivotTable
      * @see <a href="https://learn.microsoft.com/graph/api/workbookpivottable-get?view=graph-rest-1.0">Find more info here</a>
@@ -137,7 +137,7 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of workbookPivotTable object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of workbookPivotTable object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -145,7 +145,7 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of workbookPivotTable object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of workbookPivotTable object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -197,7 +197,7 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of workbookPivotTable object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of workbookPivotTable object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

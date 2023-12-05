@@ -60,7 +60,7 @@ public class UserProcessingResultsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow%2Did}/runs/{run%2Did}/userProcessingResults{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get user processing results of a workflow run object. This API is available in the following national cloud deployments.
+     * Get user processing results of a workflow run object.
      * @return a UserProcessingResultCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-run-list-userprocessingresults?view=graph-rest-1.0">Find more info here</a>
      */
@@ -69,7 +69,7 @@ public class UserProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get user processing results of a workflow run object. This API is available in the following national cloud deployments.
+     * Get user processing results of a workflow run object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UserProcessingResultCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-run-list-userprocessingresults?view=graph-rest-1.0">Find more info here</a>
@@ -95,7 +95,7 @@ public class UserProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return new MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
     }
     /**
-     * Get user processing results of a workflow run object. This API is available in the following national cloud deployments.
+     * Get user processing results of a workflow run object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +103,7 @@ public class UserProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get user processing results of a workflow run object. This API is available in the following national cloud deployments.
+     * Get user processing results of a workflow run object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -125,7 +125,7 @@ public class UserProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return new UserProcessingResultsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get user processing results of a workflow run object. This API is available in the following national cloud deployments.
+     * Get user processing results of a workflow run object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

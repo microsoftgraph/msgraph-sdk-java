@@ -86,7 +86,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the schema for a given synchronization job or template. This API is available in the following national cloud deployments.
+     * Retrieve the schema for a given synchronization job or template.
      * @return a SynchronizationSchema
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -95,7 +95,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the schema for a given synchronization job or template. This API is available in the following national cloud deployments.
+     * Retrieve the schema for a given synchronization job or template.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SynchronizationSchema
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-get?view=graph-rest-1.0">Find more info here</a>
@@ -155,7 +155,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the schema for a given synchronization job or template. This API is available in the following national cloud deployments.
+     * Retrieve the schema for a given synchronization job or template.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -163,7 +163,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the schema for a given synchronization job or template. This API is available in the following national cloud deployments.
+     * Retrieve the schema for a given synchronization job or template.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -215,7 +215,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the schema for a given synchronization job or template. This API is available in the following national cloud deployments.
+     * Retrieve the schema for a given synchronization job or template.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -67,7 +67,7 @@ public class PivotTablesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/pivotTables{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of workbookpivottable objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of workbookpivottable objects.
      * @return a WorkbookPivotTableCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/workbookworksheet-list-pivottables?view=graph-rest-1.0">Find more info here</a>
      */
@@ -76,7 +76,7 @@ public class PivotTablesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of workbookpivottable objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of workbookpivottable objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookPivotTableCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/workbookworksheet-list-pivottables?view=graph-rest-1.0">Find more info here</a>
@@ -114,7 +114,7 @@ public class PivotTablesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookPivotTable::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of workbookpivottable objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of workbookpivottable objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -122,7 +122,7 @@ public class PivotTablesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of workbookpivottable objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of workbookpivottable objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -168,7 +168,7 @@ public class PivotTablesRequestBuilder extends BaseRequestBuilder {
         return new PivotTablesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of workbookpivottable objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of workbookpivottable objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -67,7 +67,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/threads/{conversationThread%2Did}/posts/{post%2Did}/attachments{?%24top,%24skip,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of attachment objects attached to a post. This API is available in the following national cloud deployments.
+     * Retrieve a list of attachment objects attached to a post.
      * @return a AttachmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/post-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
@@ -76,7 +76,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of attachment objects attached to a post. This API is available in the following national cloud deployments.
+     * Retrieve a list of attachment objects attached to a post.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AttachmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/post-list-attachments?view=graph-rest-1.0">Find more info here</a>
@@ -114,7 +114,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Attachment::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of attachment objects attached to a post. This API is available in the following national cloud deployments.
+     * Retrieve a list of attachment objects attached to a post.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -122,7 +122,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of attachment objects attached to a post. This API is available in the following national cloud deployments.
+     * Retrieve a list of attachment objects attached to a post.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -168,7 +168,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return new AttachmentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of attachment objects attached to a post. This API is available in the following national cloud deployments.
+     * Retrieve a list of attachment objects attached to a post.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

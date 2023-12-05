@@ -54,7 +54,7 @@ public class BotRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the bot associated with a specific definition of the  TeamsApp. This API is available in the following national cloud deployments.
+     * Get the bot associated with a specific definition of the  TeamsApp.
      * @return a TeamworkBot
      * @see <a href="https://learn.microsoft.com/graph/api/teamworkbot-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class BotRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the bot associated with a specific definition of the  TeamsApp. This API is available in the following national cloud deployments.
+     * Get the bot associated with a specific definition of the  TeamsApp.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TeamworkBot
      * @see <a href="https://learn.microsoft.com/graph/api/teamworkbot-get?view=graph-rest-1.0">Find more info here</a>
@@ -121,7 +121,7 @@ public class BotRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the bot associated with a specific definition of the  TeamsApp. This API is available in the following national cloud deployments.
+     * Get the bot associated with a specific definition of the  TeamsApp.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class BotRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the bot associated with a specific definition of the  TeamsApp. This API is available in the following national cloud deployments.
+     * Get the bot associated with a specific definition of the  TeamsApp.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -181,7 +181,7 @@ public class BotRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the bot associated with a specific definition of the  TeamsApp. This API is available in the following national cloud deployments.
+     * Get the bot associated with a specific definition of the  TeamsApp.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

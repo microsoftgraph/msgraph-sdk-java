@@ -37,14 +37,14 @@ public class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/appRoleAssignments/{appRoleAssignment%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an appRoleAssignment that has been granted to a user. This API is available in the following national cloud deployments.
+     * Delete an appRoleAssignment that has been granted to a user.
      * @see <a href="https://learn.microsoft.com/graph/api/user-delete-approleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an appRoleAssignment that has been granted to a user. This API is available in the following national cloud deployments.
+     * Delete an appRoleAssignment that has been granted to a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/user-delete-approleassignments?view=graph-rest-1.0">Find more info here</a>
      */
@@ -101,7 +101,7 @@ public class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AppRoleAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Delete an appRoleAssignment that has been granted to a user. This API is available in the following national cloud deployments.
+     * Delete an appRoleAssignment that has been granted to a user.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -109,7 +109,7 @@ public class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an appRoleAssignment that has been granted to a user. This API is available in the following national cloud deployments.
+     * Delete an appRoleAssignment that has been granted to a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

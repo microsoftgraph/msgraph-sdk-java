@@ -35,14 +35,14 @@ public class DismissReminderRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendars/{calendar%2Did}/calendarView/{event%2Did}/instances/{event%2Did1}/dismissReminder", rawUrl);
     }
     /**
-     * Dismiss a reminder that has been triggered for an event in a user calendar. This API is available in the following national cloud deployments.
+     * Dismiss a reminder that has been triggered for an event in a user calendar.
      * @see <a href="https://learn.microsoft.com/graph/api/event-dismissreminder?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Dismiss a reminder that has been triggered for an event in a user calendar. This API is available in the following national cloud deployments.
+     * Dismiss a reminder that has been triggered for an event in a user calendar.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/event-dismissreminder?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class DismissReminderRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Dismiss a reminder that has been triggered for an event in a user calendar. This API is available in the following national cloud deployments.
+     * Dismiss a reminder that has been triggered for an event in a user calendar.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class DismissReminderRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Dismiss a reminder that has been triggered for an event in a user calendar. This API is available in the following national cloud deployments.
+     * Dismiss a reminder that has been triggered for an event in a user calendar.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

@@ -59,7 +59,7 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/employeeExperience/learningProviders{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the learningProvider resources registered in Viva Learning for a tenant. This API is available in the following national cloud deployments.
+     * Get a list of the learningProvider resources registered in Viva Learning for a tenant.
      * @return a LearningProviderCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/employeeexperience-list-learningproviders?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the learningProvider resources registered in Viva Learning for a tenant. This API is available in the following national cloud deployments.
+     * Get a list of the learningProvider resources registered in Viva Learning for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a LearningProviderCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/employeeexperience-list-learningproviders?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, LearningProviderCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new learningProvider object and register it with Viva Learning using the specified display name and logos for different themes. This API is available in the following national cloud deployments.
+     * Create a new learningProvider object and register it with Viva Learning using the specified display name and logos for different themes.
      * @param body The request body
      * @return a LearningProvider
      * @see <a href="https://learn.microsoft.com/graph/api/employeeexperience-post-learningproviders?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new learningProvider object and register it with Viva Learning using the specified display name and logos for different themes. This API is available in the following national cloud deployments.
+     * Create a new learningProvider object and register it with Viva Learning using the specified display name and logos for different themes.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a LearningProvider
@@ -108,7 +108,7 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, LearningProvider::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the learningProvider resources registered in Viva Learning for a tenant. This API is available in the following national cloud deployments.
+     * Get a list of the learningProvider resources registered in Viva Learning for a tenant.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the learningProvider resources registered in Viva Learning for a tenant. This API is available in the following national cloud deployments.
+     * Get a list of the learningProvider resources registered in Viva Learning for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new learningProvider object and register it with Viva Learning using the specified display name and logos for different themes. This API is available in the following national cloud deployments.
+     * Create a new learningProvider object and register it with Viva Learning using the specified display name and logos for different themes.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new learningProvider object and register it with Viva Learning using the specified display name and logos for different themes. This API is available in the following national cloud deployments.
+     * Create a new learningProvider object and register it with Viva Learning using the specified display name and logos for different themes.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
         return new LearningProvidersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the learningProvider resources registered in Viva Learning for a tenant. This API is available in the following national cloud deployments.
+     * Get a list of the learningProvider resources registered in Viva Learning for a tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

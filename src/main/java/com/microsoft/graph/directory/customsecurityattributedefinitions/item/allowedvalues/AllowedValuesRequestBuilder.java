@@ -59,7 +59,7 @@ public class AllowedValuesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/customSecurityAttributeDefinitions/{customSecurityAttributeDefinition%2Did}/allowedValues{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the allowedValue objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the allowedValue objects and their properties.
      * @return a AllowedValueCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/customsecurityattributedefinition-list-allowedvalues?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class AllowedValuesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the allowedValue objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the allowedValue objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AllowedValueCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/customsecurityattributedefinition-list-allowedvalues?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class AllowedValuesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AllowedValueCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new allowedValue object. This API is available in the following national cloud deployments.
+     * Create a new allowedValue object.
      * @param body The request body
      * @return a AllowedValue
      * @see <a href="https://learn.microsoft.com/graph/api/customsecurityattributedefinition-post-allowedvalues?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class AllowedValuesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new allowedValue object. This API is available in the following national cloud deployments.
+     * Create a new allowedValue object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AllowedValue
@@ -108,7 +108,7 @@ public class AllowedValuesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AllowedValue::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the allowedValue objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the allowedValue objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class AllowedValuesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the allowedValue objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the allowedValue objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class AllowedValuesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new allowedValue object. This API is available in the following national cloud deployments.
+     * Create a new allowedValue object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class AllowedValuesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new allowedValue object. This API is available in the following national cloud deployments.
+     * Create a new allowedValue object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class AllowedValuesRequestBuilder extends BaseRequestBuilder {
         return new AllowedValuesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the allowedValue objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the allowedValue objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

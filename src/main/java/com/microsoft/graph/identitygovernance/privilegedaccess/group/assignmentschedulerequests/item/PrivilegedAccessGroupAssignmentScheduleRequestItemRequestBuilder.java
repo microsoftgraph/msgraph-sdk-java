@@ -94,7 +94,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleRequest object.
      * @return a PrivilegedAccessGroupAssignmentScheduleRequest
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroupassignmentschedulerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -103,7 +103,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
         return get(null);
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PrivilegedAccessGroupAssignmentScheduleRequest
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroupassignmentschedulerequest-get?view=graph-rest-1.0">Find more info here</a>
@@ -161,7 +161,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleRequest object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -169,7 +169,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -221,7 +221,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleRequest object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

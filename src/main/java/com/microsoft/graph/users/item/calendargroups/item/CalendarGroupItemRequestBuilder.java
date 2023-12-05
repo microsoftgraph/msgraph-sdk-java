@@ -45,14 +45,14 @@ public class CalendarGroupItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendarGroups/{calendarGroup%2Did}{?%24select}", rawUrl);
     }
     /**
-     * Delete a calendar group other than the default calendar group. This API is available in the following national cloud deployments.
+     * Delete a calendar group other than the default calendar group.
      * @see <a href="https://learn.microsoft.com/graph/api/calendargroup-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a calendar group other than the default calendar group. This API is available in the following national cloud deployments.
+     * Delete a calendar group other than the default calendar group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/calendargroup-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -64,7 +64,7 @@ public class CalendarGroupItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a calendar group object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a calendar group object.
      * @return a CalendarGroup
      * @see <a href="https://learn.microsoft.com/graph/api/calendargroup-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -73,7 +73,7 @@ public class CalendarGroupItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a calendar group object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a calendar group object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CalendarGroup
      * @see <a href="https://learn.microsoft.com/graph/api/calendargroup-get?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class CalendarGroupItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CalendarGroup::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of calendargroup object. This API is available in the following national cloud deployments.
+     * Update the properties of calendargroup object.
      * @param body The request body
      * @return a CalendarGroup
      * @see <a href="https://learn.microsoft.com/graph/api/calendargroup-update?view=graph-rest-1.0">Find more info here</a>
@@ -97,7 +97,7 @@ public class CalendarGroupItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of calendargroup object. This API is available in the following national cloud deployments.
+     * Update the properties of calendargroup object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CalendarGroup
@@ -113,7 +113,7 @@ public class CalendarGroupItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CalendarGroup::createFromDiscriminatorValue);
     }
     /**
-     * Delete a calendar group other than the default calendar group. This API is available in the following national cloud deployments.
+     * Delete a calendar group other than the default calendar group.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class CalendarGroupItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a calendar group other than the default calendar group. This API is available in the following national cloud deployments.
+     * Delete a calendar group other than the default calendar group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -133,7 +133,7 @@ public class CalendarGroupItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a calendar group object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a calendar group object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +141,7 @@ public class CalendarGroupItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a calendar group object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a calendar group object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -153,7 +153,7 @@ public class CalendarGroupItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of calendargroup object. This API is available in the following national cloud deployments.
+     * Update the properties of calendargroup object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -162,7 +162,7 @@ public class CalendarGroupItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of calendargroup object. This API is available in the following national cloud deployments.
+     * Update the properties of calendargroup object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -193,7 +193,7 @@ public class CalendarGroupItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a calendar group object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a calendar group object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

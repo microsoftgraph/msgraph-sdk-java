@@ -67,7 +67,7 @@ public class PrintersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printers{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the list of printers that are registered in the tenant. This API is available in the following national cloud deployments.
+     * Retrieve the list of printers that are registered in the tenant.
      * @return a PrinterCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/print-list-printers?view=graph-rest-1.0">Find more info here</a>
      */
@@ -76,7 +76,7 @@ public class PrintersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the list of printers that are registered in the tenant. This API is available in the following national cloud deployments.
+     * Retrieve the list of printers that are registered in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PrinterCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/print-list-printers?view=graph-rest-1.0">Find more info here</a>
@@ -114,7 +114,7 @@ public class PrintersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Printer::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the list of printers that are registered in the tenant. This API is available in the following national cloud deployments.
+     * Retrieve the list of printers that are registered in the tenant.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -122,7 +122,7 @@ public class PrintersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the list of printers that are registered in the tenant. This API is available in the following national cloud deployments.
+     * Retrieve the list of printers that are registered in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -168,7 +168,7 @@ public class PrintersRequestBuilder extends BaseRequestBuilder {
         return new PrintersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the list of printers that are registered in the tenant. This API is available in the following national cloud deployments.
+     * Retrieve the list of printers that are registered in the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

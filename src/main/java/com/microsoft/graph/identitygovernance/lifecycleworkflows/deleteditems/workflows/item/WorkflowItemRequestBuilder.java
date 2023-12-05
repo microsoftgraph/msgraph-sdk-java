@@ -125,14 +125,14 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a workflow object. This API is available in the following national cloud deployments.
+     * Delete a workflow object.
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-deletedItemcontainer-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a workflow object. This API is available in the following national cloud deployments.
+     * Delete a workflow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-deletedItemcontainer-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -144,7 +144,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve a deleted workflow object. This API is available in the following national cloud deployments.
+     * Retrieve a deleted workflow object.
      * @return a Workflow
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-deleteditemcontainer-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -153,7 +153,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a deleted workflow object. This API is available in the following national cloud deployments.
+     * Retrieve a deleted workflow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Workflow
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-deleteditemcontainer-get?view=graph-rest-1.0">Find more info here</a>
@@ -167,7 +167,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Workflow::createFromDiscriminatorValue);
     }
     /**
-     * Delete a workflow object. This API is available in the following national cloud deployments.
+     * Delete a workflow object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -175,7 +175,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a workflow object. This API is available in the following national cloud deployments.
+     * Delete a workflow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -187,7 +187,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a deleted workflow object. This API is available in the following national cloud deployments.
+     * Retrieve a deleted workflow object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -195,7 +195,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a deleted workflow object. This API is available in the following national cloud deployments.
+     * Retrieve a deleted workflow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -223,7 +223,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve a deleted workflow object. This API is available in the following national cloud deployments.
+     * Retrieve a deleted workflow object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

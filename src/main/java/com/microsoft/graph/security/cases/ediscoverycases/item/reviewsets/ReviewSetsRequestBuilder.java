@@ -59,7 +59,7 @@ public class ReviewSetsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/reviewSets{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of ediscoveryReviewSet objects associated with an eDiscovery case. This API is available in the following national cloud deployments.
+     * Get a list of ediscoveryReviewSet objects associated with an eDiscovery case.
      * @return a EdiscoveryReviewSetCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-reviewsets?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ReviewSetsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of ediscoveryReviewSet objects associated with an eDiscovery case. This API is available in the following national cloud deployments.
+     * Get a list of ediscoveryReviewSet objects associated with an eDiscovery case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EdiscoveryReviewSetCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-reviewsets?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class ReviewSetsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryReviewSetCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new ediscoveryReviewSet object. This API is available in the following national cloud deployments.
+     * Create a new ediscoveryReviewSet object.
      * @param body The request body
      * @return a EdiscoveryReviewSet
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-post-reviewsets?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class ReviewSetsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new ediscoveryReviewSet object. This API is available in the following national cloud deployments.
+     * Create a new ediscoveryReviewSet object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EdiscoveryReviewSet
@@ -108,7 +108,7 @@ public class ReviewSetsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryReviewSet::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of ediscoveryReviewSet objects associated with an eDiscovery case. This API is available in the following national cloud deployments.
+     * Get a list of ediscoveryReviewSet objects associated with an eDiscovery case.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ReviewSetsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of ediscoveryReviewSet objects associated with an eDiscovery case. This API is available in the following national cloud deployments.
+     * Get a list of ediscoveryReviewSet objects associated with an eDiscovery case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class ReviewSetsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new ediscoveryReviewSet object. This API is available in the following national cloud deployments.
+     * Create a new ediscoveryReviewSet object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class ReviewSetsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new ediscoveryReviewSet object. This API is available in the following national cloud deployments.
+     * Create a new ediscoveryReviewSet object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class ReviewSetsRequestBuilder extends BaseRequestBuilder {
         return new ReviewSetsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of ediscoveryReviewSet objects associated with an eDiscovery case. This API is available in the following national cloud deployments.
+     * Get a list of ediscoveryReviewSet objects associated with an eDiscovery case.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

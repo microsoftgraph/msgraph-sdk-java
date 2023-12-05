@@ -59,7 +59,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/userFlowAttributes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of identityUserFlowAttribute objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of identityUserFlowAttribute objects.
      * @return a IdentityUserFlowAttributeCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of identityUserFlowAttribute objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of identityUserFlowAttribute objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a IdentityUserFlowAttributeCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-list?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityUserFlowAttributeCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new custom identityUserFlowAttribute object. This API is available in the following national cloud deployments.
+     * Create a new custom identityUserFlowAttribute object.
      * @param body The request body
      * @return a IdentityUserFlowAttribute
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-post?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new custom identityUserFlowAttribute object. This API is available in the following national cloud deployments.
+     * Create a new custom identityUserFlowAttribute object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a IdentityUserFlowAttribute
@@ -108,7 +108,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityUserFlowAttribute::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of identityUserFlowAttribute objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of identityUserFlowAttribute objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of identityUserFlowAttribute objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of identityUserFlowAttribute objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new custom identityUserFlowAttribute object. This API is available in the following national cloud deployments.
+     * Create a new custom identityUserFlowAttribute object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new custom identityUserFlowAttribute object. This API is available in the following national cloud deployments.
+     * Create a new custom identityUserFlowAttribute object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         return new UserFlowAttributesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of identityUserFlowAttribute objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of identityUserFlowAttribute objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -36,7 +36,7 @@ public class ConvertToRangeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/{workbookTable%2Did}/convertToRange", rawUrl);
     }
     /**
-     * Converts the table into a normal range of cells. All data is preserved. This API is available in the following national cloud deployments.
+     * Converts the table into a normal range of cells. All data is preserved.
      * @return a WorkbookRange
      * @see <a href="https://learn.microsoft.com/graph/api/table-converttorange?view=graph-rest-1.0">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class ConvertToRangeRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Converts the table into a normal range of cells. All data is preserved. This API is available in the following national cloud deployments.
+     * Converts the table into a normal range of cells. All data is preserved.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookRange
      * @see <a href="https://learn.microsoft.com/graph/api/table-converttorange?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class ConvertToRangeRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookRange::createFromDiscriminatorValue);
     }
     /**
-     * Converts the table into a normal range of cells. All data is preserved. This API is available in the following national cloud deployments.
+     * Converts the table into a normal range of cells. All data is preserved.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ConvertToRangeRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Converts the table into a normal range of cells. All data is preserved. This API is available in the following national cloud deployments.
+     * Converts the table into a normal range of cells. All data is preserved.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

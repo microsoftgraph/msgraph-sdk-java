@@ -66,7 +66,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/schools/{educationSchool%2Did}/users{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the educationUser resources associated with an educationSchool. This API is available in the following national cloud deployments.
+     * Get the educationUser resources associated with an educationSchool.
      * @return a EducationUserCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationschool-list-users?view=graph-rest-1.0">Find more info here</a>
      */
@@ -75,7 +75,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the educationUser resources associated with an educationSchool. This API is available in the following national cloud deployments.
+     * Get the educationUser resources associated with an educationSchool.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EducationUserCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationschool-list-users?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationUserCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the educationUser resources associated with an educationSchool. This API is available in the following national cloud deployments.
+     * Get the educationUser resources associated with an educationSchool.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the educationUser resources associated with an educationSchool. This API is available in the following national cloud deployments.
+     * Get the educationUser resources associated with an educationSchool.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -119,7 +119,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return new UsersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the educationUser resources associated with an educationSchool. This API is available in the following national cloud deployments.
+     * Get the educationUser resources associated with an educationSchool.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

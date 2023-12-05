@@ -45,14 +45,14 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/claimsMappingPolicies/{claimsMappingPolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a claimsMappingPolicy object. This API is available in the following national cloud deployments.
+     * Delete a claimsMappingPolicy object.
      * @see <a href="https://learn.microsoft.com/graph/api/claimsmappingpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a claimsMappingPolicy object. This API is available in the following national cloud deployments.
+     * Delete a claimsMappingPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/claimsmappingpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -64,7 +64,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a claimsMappingPolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a claimsMappingPolicy object.
      * @return a ClaimsMappingPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/claimsmappingpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -73,7 +73,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a claimsMappingPolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a claimsMappingPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ClaimsMappingPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/claimsmappingpolicy-get?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ClaimsMappingPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a claimsMappingPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a claimsMappingPolicy object.
      * @param body The request body
      * @return a ClaimsMappingPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/claimsmappingpolicy-update?view=graph-rest-1.0">Find more info here</a>
@@ -97,7 +97,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a claimsMappingPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a claimsMappingPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ClaimsMappingPolicy
@@ -113,7 +113,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ClaimsMappingPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Delete a claimsMappingPolicy object. This API is available in the following national cloud deployments.
+     * Delete a claimsMappingPolicy object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a claimsMappingPolicy object. This API is available in the following national cloud deployments.
+     * Delete a claimsMappingPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -133,7 +133,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a claimsMappingPolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a claimsMappingPolicy object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +141,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a claimsMappingPolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a claimsMappingPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -153,7 +153,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a claimsMappingPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a claimsMappingPolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -162,7 +162,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a claimsMappingPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a claimsMappingPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -193,7 +193,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a claimsMappingPolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a claimsMappingPolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

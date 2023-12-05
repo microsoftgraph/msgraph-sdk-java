@@ -126,7 +126,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an ediscoveryCustodian object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an ediscoveryCustodian object.
      * @return a EdiscoveryCustodian
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -135,7 +135,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an ediscoveryCustodian object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an ediscoveryCustodian object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EdiscoveryCustodian
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-get?view=graph-rest-1.0">Find more info here</a>
@@ -193,7 +193,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an ediscoveryCustodian object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an ediscoveryCustodian object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -201,7 +201,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an ediscoveryCustodian object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an ediscoveryCustodian object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -253,7 +253,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an ediscoveryCustodian object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an ediscoveryCustodian object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

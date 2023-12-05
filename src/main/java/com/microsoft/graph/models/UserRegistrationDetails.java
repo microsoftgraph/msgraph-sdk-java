@@ -122,7 +122,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
         return this.backingStore.get("lastUpdatedDateTime");
     }
     /**
-     * Gets the methodsRegistered property value. Collection of authentication methods registered, such as mobilePhone, email, fido2. Supports $filter (any with eq).
+     * Gets the methodsRegistered property value. Collection of authentication methods registered, such as mobilePhone, email, passKeyDeviceBound. Supports $filter (any with eq).
      * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
@@ -256,7 +256,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
         this.backingStore.set("lastUpdatedDateTime", value);
     }
     /**
-     * Sets the methodsRegistered property value. Collection of authentication methods registered, such as mobilePhone, email, fido2. Supports $filter (any with eq).
+     * Sets the methodsRegistered property value. Collection of authentication methods registered, such as mobilePhone, email, passKeyDeviceBound. Supports $filter (any with eq).
      * @param value Value to set for the methodsRegistered property.
      */
     public void setMethodsRegistered(@jakarta.annotation.Nullable final java.util.List<String> value) {

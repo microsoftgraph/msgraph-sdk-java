@@ -58,7 +58,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/appManagementPolicies/{appManagementPolicy%2Did}/appliesTo{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List application and service principal objects that are assigned an appManagementPolicy policy object. This API is available in the following national cloud deployments.
+     * List application and service principal objects that are assigned an appManagementPolicy policy object.
      * @return a DirectoryObjectCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/appmanagementpolicy-list-appliesto?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List application and service principal objects that are assigned an appManagementPolicy policy object. This API is available in the following national cloud deployments.
+     * List application and service principal objects that are assigned an appManagementPolicy policy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DirectoryObjectCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/appmanagementpolicy-list-appliesto?view=graph-rest-1.0">Find more info here</a>
@@ -81,7 +81,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObjectCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * List application and service principal objects that are assigned an appManagementPolicy policy object. This API is available in the following national cloud deployments.
+     * List application and service principal objects that are assigned an appManagementPolicy policy object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List application and service principal objects that are assigned an appManagementPolicy policy object. This API is available in the following national cloud deployments.
+     * List application and service principal objects that are assigned an appManagementPolicy policy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -111,7 +111,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
         return new AppliesToRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List application and service principal objects that are assigned an appManagementPolicy policy object. This API is available in the following national cloud deployments.
+     * List application and service principal objects that are assigned an appManagementPolicy policy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

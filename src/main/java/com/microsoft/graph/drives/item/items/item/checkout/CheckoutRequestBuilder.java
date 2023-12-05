@@ -35,14 +35,14 @@ public class CheckoutRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/checkout", rawUrl);
     }
     /**
-     * Check out a driveItem resource to prevent others from editing the document, and prevent your changes from being visible until the documented is checked in. This API is available in the following national cloud deployments.
+     * Check out a driveItem resource to prevent others from editing the document, and prevent your changes from being visible until the documented is checked in.
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-checkout?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Check out a driveItem resource to prevent others from editing the document, and prevent your changes from being visible until the documented is checked in. This API is available in the following national cloud deployments.
+     * Check out a driveItem resource to prevent others from editing the document, and prevent your changes from being visible until the documented is checked in.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-checkout?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class CheckoutRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Check out a driveItem resource to prevent others from editing the document, and prevent your changes from being visible until the documented is checked in. This API is available in the following national cloud deployments.
+     * Check out a driveItem resource to prevent others from editing the document, and prevent your changes from being visible until the documented is checked in.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class CheckoutRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Check out a driveItem resource to prevent others from editing the document, and prevent your changes from being visible until the documented is checked in. This API is available in the following national cloud deployments.
+     * Check out a driveItem resource to prevent others from editing the document, and prevent your changes from being visible until the documented is checked in.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

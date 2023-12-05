@@ -58,7 +58,7 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/softwareOathMethods{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of a user's software OATH token authentication method objects and their properties. This API is available in the following national cloud deployments.
+     * Retrieve a list of a user's software OATH token authentication method objects and their properties.
      * @return a SoftwareOathAuthenticationMethodCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/authentication-list-softwareoathmethods?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of a user's software OATH token authentication method objects and their properties. This API is available in the following national cloud deployments.
+     * Retrieve a list of a user's software OATH token authentication method objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SoftwareOathAuthenticationMethodCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/authentication-list-softwareoathmethods?view=graph-rest-1.0">Find more info here</a>
@@ -81,7 +81,7 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SoftwareOathAuthenticationMethodCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of a user's software OATH token authentication method objects and their properties. This API is available in the following national cloud deployments.
+     * Retrieve a list of a user's software OATH token authentication method objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of a user's software OATH token authentication method objects and their properties. This API is available in the following national cloud deployments.
+     * Retrieve a list of a user's software OATH token authentication method objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -111,7 +111,7 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
         return new SoftwareOathMethodsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of a user's software OATH token authentication method objects and their properties. This API is available in the following national cloud deployments.
+     * Retrieve a list of a user's software OATH token authentication method objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

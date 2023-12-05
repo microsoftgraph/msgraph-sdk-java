@@ -37,14 +37,14 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/temporaryAccessPassMethods/{temporaryAccessPassAuthenticationMethod%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a users's temporaryAccessPassAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Delete a users's temporaryAccessPassAuthenticationMethod object.
      * @see <a href="https://learn.microsoft.com/graph/api/temporaryaccesspassauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a users's temporaryAccessPassAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Delete a users's temporaryAccessPassAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/temporaryaccesspassauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object.
      * @return a TemporaryAccessPassAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/temporaryaccesspassauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
         return get(null);
     }
     /**
-     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TemporaryAccessPassAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/temporaryaccesspassauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
         return this.requestAdapter.send(requestInfo, errorMapping, TemporaryAccessPassAuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
-     * Delete a users's temporaryAccessPassAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Delete a users's temporaryAccessPassAuthenticationMethod object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -87,7 +87,7 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a users's temporaryAccessPassAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Delete a users's temporaryAccessPassAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -99,7 +99,7 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
         return requestInfo;
     }
     /**
-     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -135,7 +135,7 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

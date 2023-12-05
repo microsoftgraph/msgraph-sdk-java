@@ -62,7 +62,7 @@ public class UserConsentRequestItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a userConsentRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a userConsentRequest object.
      * @return a UserConsentRequest
      * @see <a href="https://learn.microsoft.com/graph/api/userconsentrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -71,7 +71,7 @@ public class UserConsentRequestItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a userConsentRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a userConsentRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UserConsentRequest
      * @see <a href="https://learn.microsoft.com/graph/api/userconsentrequest-get?view=graph-rest-1.0">Find more info here</a>
@@ -129,7 +129,7 @@ public class UserConsentRequestItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a userConsentRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a userConsentRequest object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +137,7 @@ public class UserConsentRequestItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a userConsentRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a userConsentRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -189,7 +189,7 @@ public class UserConsentRequestItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a userConsentRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a userConsentRequest object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

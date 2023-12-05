@@ -59,7 +59,7 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/schedule/timeOffReasons{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
-     * Get the list of timeOffReasons in a schedule. This API is available in the following national cloud deployments.
+     * Get the list of timeOffReasons in a schedule.
      * @return a TimeOffReasonCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-timeoffreasons?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of timeOffReasons in a schedule. This API is available in the following national cloud deployments.
+     * Get the list of timeOffReasons in a schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TimeOffReasonCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-timeoffreasons?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TimeOffReasonCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new timeOffReason. This API is available in the following national cloud deployments.
+     * Create a new timeOffReason.
      * @param body The request body
      * @return a TimeOffReason
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-timeoffreasons?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new timeOffReason. This API is available in the following national cloud deployments.
+     * Create a new timeOffReason.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TimeOffReason
@@ -108,7 +108,7 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TimeOffReason::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of timeOffReasons in a schedule. This API is available in the following national cloud deployments.
+     * Get the list of timeOffReasons in a schedule.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of timeOffReasons in a schedule. This API is available in the following national cloud deployments.
+     * Get the list of timeOffReasons in a schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new timeOffReason. This API is available in the following national cloud deployments.
+     * Create a new timeOffReason.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new timeOffReason. This API is available in the following national cloud deployments.
+     * Create a new timeOffReason.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         return new TimeOffReasonsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of timeOffReasons in a schedule. This API is available in the following national cloud deployments.
+     * Get the list of timeOffReasons in a schedule.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

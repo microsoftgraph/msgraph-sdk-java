@@ -59,7 +59,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/policies/homeRealmDiscoveryPolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of homeRealmDiscoveryPolicy objects. This API is available in the following national cloud deployments.
+     * Get a list of homeRealmDiscoveryPolicy objects.
      * @return a HomeRealmDiscoveryPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
         return get(null);
     }
     /**
-     * Get a list of homeRealmDiscoveryPolicy objects. This API is available in the following national cloud deployments.
+     * Get a list of homeRealmDiscoveryPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a HomeRealmDiscoveryPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-list?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, HomeRealmDiscoveryPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new homeRealmDiscoveryPolicy object. This API is available in the following national cloud deployments.
+     * Create a new homeRealmDiscoveryPolicy object.
      * @param body The request body
      * @return a HomeRealmDiscoveryPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-post-homerealmdiscoverypolicies?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
         return post(body, null);
     }
     /**
-     * Create a new homeRealmDiscoveryPolicy object. This API is available in the following national cloud deployments.
+     * Create a new homeRealmDiscoveryPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a HomeRealmDiscoveryPolicy
@@ -108,7 +108,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, HomeRealmDiscoveryPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of homeRealmDiscoveryPolicy objects. This API is available in the following national cloud deployments.
+     * Get a list of homeRealmDiscoveryPolicy objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of homeRealmDiscoveryPolicy objects. This API is available in the following national cloud deployments.
+     * Get a list of homeRealmDiscoveryPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Create a new homeRealmDiscoveryPolicy object. This API is available in the following national cloud deployments.
+     * Create a new homeRealmDiscoveryPolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new homeRealmDiscoveryPolicy object. This API is available in the following national cloud deployments.
+     * Create a new homeRealmDiscoveryPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
         return new HomeRealmDiscoveryPoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of homeRealmDiscoveryPolicy objects. This API is available in the following national cloud deployments.
+     * Get a list of homeRealmDiscoveryPolicy objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

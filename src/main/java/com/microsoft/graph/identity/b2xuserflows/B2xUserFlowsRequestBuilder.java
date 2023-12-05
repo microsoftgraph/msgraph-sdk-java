@@ -59,7 +59,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/b2xUserFlows{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of b2xIdentityUserFlow objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of b2xIdentityUserFlow objects.
      * @return a B2xIdentityUserFlowCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-b2xuserflows?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of b2xIdentityUserFlow objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of b2xIdentityUserFlow objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a B2xIdentityUserFlowCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-b2xuserflows?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, B2xIdentityUserFlowCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new b2xIdentityUserFlow object. This API is available in the following national cloud deployments.
+     * Create a new b2xIdentityUserFlow object.
      * @param body The request body
      * @return a B2xIdentityUserFlow
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-b2xuserflows?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new b2xIdentityUserFlow object. This API is available in the following national cloud deployments.
+     * Create a new b2xIdentityUserFlow object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a B2xIdentityUserFlow
@@ -108,7 +108,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, B2xIdentityUserFlow::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of b2xIdentityUserFlow objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of b2xIdentityUserFlow objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of b2xIdentityUserFlow objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of b2xIdentityUserFlow objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new b2xIdentityUserFlow object. This API is available in the following national cloud deployments.
+     * Create a new b2xIdentityUserFlow object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new b2xIdentityUserFlow object. This API is available in the following national cloud deployments.
+     * Create a new b2xIdentityUserFlow object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
         return new B2xUserFlowsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of b2xIdentityUserFlow objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of b2xIdentityUserFlow objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

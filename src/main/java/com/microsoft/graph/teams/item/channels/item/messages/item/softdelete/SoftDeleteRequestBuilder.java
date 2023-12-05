@@ -35,14 +35,14 @@ public class SoftDeleteRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/channels/{channel%2Did}/messages/{chatMessage%2Did}/softDelete", rawUrl);
     }
     /**
-     * Delete a single chatMessage or a chat message reply in a channel or a chat. This API is available in the following national cloud deployments.
+     * Delete a single chatMessage or a chat message reply in a channel or a chat.
      * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-softdelete?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Delete a single chatMessage or a chat message reply in a channel or a chat. This API is available in the following national cloud deployments.
+     * Delete a single chatMessage or a chat message reply in a channel or a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-softdelete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class SoftDeleteRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Delete a single chatMessage or a chat message reply in a channel or a chat. This API is available in the following national cloud deployments.
+     * Delete a single chatMessage or a chat message reply in a channel or a chat.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class SoftDeleteRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Delete a single chatMessage or a chat message reply in a channel or a chat. This API is available in the following national cloud deployments.
+     * Delete a single chatMessage or a chat message reply in a channel or a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

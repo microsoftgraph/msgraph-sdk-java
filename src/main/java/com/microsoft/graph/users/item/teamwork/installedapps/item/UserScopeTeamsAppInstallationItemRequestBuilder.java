@@ -61,14 +61,14 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/teamwork/installedApps/{userScopeTeamsAppInstallation%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Uninstall an app from the personal scope of the specified user. This API is available in the following national cloud deployments.
+     * Uninstall an app from the personal scope of the specified user.
      * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-delete-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Uninstall an app from the personal scope of the specified user. This API is available in the following national cloud deployments.
+     * Uninstall an app from the personal scope of the specified user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-delete-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
@@ -80,7 +80,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the app installed in the personal scope of the specified user. This API is available in the following national cloud deployments.
+     * Retrieve the app installed in the personal scope of the specified user.
      * @return a UserScopeTeamsAppInstallation
      * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-get-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
@@ -89,7 +89,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
         return get(null);
     }
     /**
-     * Retrieve the app installed in the personal scope of the specified user. This API is available in the following national cloud deployments.
+     * Retrieve the app installed in the personal scope of the specified user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UserScopeTeamsAppInstallation
      * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-get-installedapps?view=graph-rest-1.0">Find more info here</a>
@@ -127,7 +127,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, UserScopeTeamsAppInstallation::createFromDiscriminatorValue);
     }
     /**
-     * Uninstall an app from the personal scope of the specified user. This API is available in the following national cloud deployments.
+     * Uninstall an app from the personal scope of the specified user.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -135,7 +135,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
         return toDeleteRequestInformation(null);
     }
     /**
-     * Uninstall an app from the personal scope of the specified user. This API is available in the following national cloud deployments.
+     * Uninstall an app from the personal scope of the specified user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -147,7 +147,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Retrieve the app installed in the personal scope of the specified user. This API is available in the following national cloud deployments.
+     * Retrieve the app installed in the personal scope of the specified user.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -155,7 +155,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the app installed in the personal scope of the specified user. This API is available in the following national cloud deployments.
+     * Retrieve the app installed in the personal scope of the specified user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -207,7 +207,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the app installed in the personal scope of the specified user. This API is available in the following national cloud deployments.
+     * Retrieve the app installed in the personal scope of the specified user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

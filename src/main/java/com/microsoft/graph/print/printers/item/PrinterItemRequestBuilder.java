@@ -77,14 +77,14 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printers/{printer%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete (unregister) a printer. This API is available in the following national cloud deployments.
+     * Delete (unregister) a printer.
      * @see <a href="https://learn.microsoft.com/graph/api/printer-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete (unregister) a printer. This API is available in the following national cloud deployments.
+     * Delete (unregister) a printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/printer-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -96,7 +96,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a printer object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a printer object.
      * @return a Printer
      * @see <a href="https://learn.microsoft.com/graph/api/printer-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -105,7 +105,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a printer object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a printer object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Printer
      * @see <a href="https://learn.microsoft.com/graph/api/printer-get?view=graph-rest-1.0">Find more info here</a>
@@ -119,7 +119,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Printer::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a printer object. This API is available in the following national cloud deployments.
+     * Update the properties of a printer object.
      * @param body The request body
      * @return a Printer
      * @see <a href="https://learn.microsoft.com/graph/api/printer-update?view=graph-rest-1.0">Find more info here</a>
@@ -129,7 +129,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a printer object. This API is available in the following national cloud deployments.
+     * Update the properties of a printer object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Printer
@@ -145,7 +145,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Printer::createFromDiscriminatorValue);
     }
     /**
-     * Delete (unregister) a printer. This API is available in the following national cloud deployments.
+     * Delete (unregister) a printer.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -153,7 +153,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete (unregister) a printer. This API is available in the following national cloud deployments.
+     * Delete (unregister) a printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -165,7 +165,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a printer object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a printer object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -173,7 +173,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a printer object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a printer object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -185,7 +185,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a printer object. This API is available in the following national cloud deployments.
+     * Update the properties of a printer object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -194,7 +194,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a printer object. This API is available in the following national cloud deployments.
+     * Update the properties of a printer object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -225,7 +225,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a printer object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a printer object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

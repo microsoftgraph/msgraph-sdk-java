@@ -62,7 +62,7 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of chartlegend object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of chartlegend object.
      * @return a WorkbookChartLegend
      * @see <a href="https://learn.microsoft.com/graph/api/chartlegend-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -71,7 +71,7 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of chartlegend object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of chartlegend object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookChartLegend
      * @see <a href="https://learn.microsoft.com/graph/api/chartlegend-get?view=graph-rest-1.0">Find more info here</a>
@@ -85,7 +85,7 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookChartLegend::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of chartlegend object. This API is available in the following national cloud deployments.
+     * Update the properties of chartlegend object.
      * @param body The request body
      * @return a WorkbookChartLegend
      * @see <a href="https://learn.microsoft.com/graph/api/chartlegend-update?view=graph-rest-1.0">Find more info here</a>
@@ -95,7 +95,7 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of chartlegend object. This API is available in the following national cloud deployments.
+     * Update the properties of chartlegend object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookChartLegend
@@ -131,7 +131,7 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of chartlegend object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of chartlegend object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of chartlegend object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of chartlegend object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -151,7 +151,7 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of chartlegend object. This API is available in the following national cloud deployments.
+     * Update the properties of chartlegend object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of chartlegend object. This API is available in the following national cloud deployments.
+     * Update the properties of chartlegend object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -191,7 +191,7 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of chartlegend object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of chartlegend object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -37,14 +37,14 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/members/{conversationMember%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Remove a conversationMember from a team. This API is available in the following national cloud deployments.
+     * Remove a conversationMember from a team.
      * @see <a href="https://learn.microsoft.com/graph/api/team-delete-members?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Remove a conversationMember from a team. This API is available in the following national cloud deployments.
+     * Remove a conversationMember from a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/team-delete-members?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get a conversationMember from a team. This API is available in the following national cloud deployments.
+     * Get a conversationMember from a team.
      * @return a ConversationMember
      * @see <a href="https://learn.microsoft.com/graph/api/team-get-members?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a conversationMember from a team. This API is available in the following national cloud deployments.
+     * Get a conversationMember from a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ConversationMember
      * @see <a href="https://learn.microsoft.com/graph/api/team-get-members?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConversationMember::createFromDiscriminatorValue);
     }
     /**
-     * Update the role of a conversationMember in a team. This API is available in the following national cloud deployments.
+     * Update the role of a conversationMember in a team.
      * @param body The request body
      * @return a ConversationMember
      * @see <a href="https://learn.microsoft.com/graph/api/team-update-members?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the role of a conversationMember in a team. This API is available in the following national cloud deployments.
+     * Update the role of a conversationMember in a team.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ConversationMember
@@ -105,7 +105,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConversationMember::createFromDiscriminatorValue);
     }
     /**
-     * Remove a conversationMember from a team. This API is available in the following national cloud deployments.
+     * Remove a conversationMember from a team.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Remove a conversationMember from a team. This API is available in the following national cloud deployments.
+     * Remove a conversationMember from a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -125,7 +125,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a conversationMember from a team. This API is available in the following national cloud deployments.
+     * Get a conversationMember from a team.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a conversationMember from a team. This API is available in the following national cloud deployments.
+     * Get a conversationMember from a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the role of a conversationMember in a team. This API is available in the following national cloud deployments.
+     * Update the role of a conversationMember in a team.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the role of a conversationMember in a team. This API is available in the following national cloud deployments.
+     * Update the role of a conversationMember in a team.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -185,7 +185,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get a conversationMember from a team. This API is available in the following national cloud deployments.
+     * Get a conversationMember from a team.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

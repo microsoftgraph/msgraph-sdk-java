@@ -59,7 +59,7 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/tenantRelationships/delegatedAdminRelationships/{delegatedAdminRelationship%2Did}/accessAssignments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the delegatedAdminAccessAssignment objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the delegatedAdminAccessAssignment objects and their properties.
      * @return a DelegatedAdminAccessAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-list-accessassignments?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the delegatedAdminAccessAssignment objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the delegatedAdminAccessAssignment objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DelegatedAdminAccessAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-list-accessassignments?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminAccessAssignmentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new delegatedAdminAccessAssignment object. This API is available in the following national cloud deployments.
+     * Create a new delegatedAdminAccessAssignment object.
      * @param body The request body
      * @return a DelegatedAdminAccessAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-post-accessassignments?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new delegatedAdminAccessAssignment object. This API is available in the following national cloud deployments.
+     * Create a new delegatedAdminAccessAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DelegatedAdminAccessAssignment
@@ -108,7 +108,7 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminAccessAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the delegatedAdminAccessAssignment objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the delegatedAdminAccessAssignment objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the delegatedAdminAccessAssignment objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the delegatedAdminAccessAssignment objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new delegatedAdminAccessAssignment object. This API is available in the following national cloud deployments.
+     * Create a new delegatedAdminAccessAssignment object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new delegatedAdminAccessAssignment object. This API is available in the following national cloud deployments.
+     * Create a new delegatedAdminAccessAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         return new AccessAssignmentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the delegatedAdminAccessAssignment objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the delegatedAdminAccessAssignment objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

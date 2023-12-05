@@ -59,7 +59,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/planner/plans{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of plannerPlan objects owned by a group object. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannerPlan objects owned by a group object.
      * @return a PlannerPlanCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/plannergroup-list-plans?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of plannerPlan objects owned by a group object. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannerPlan objects owned by a group object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PlannerPlanCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/plannergroup-list-plans?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerPlan::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of plannerPlan objects owned by a group object. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannerPlan objects owned by a group object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of plannerPlan objects owned by a group object. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannerPlan objects owned by a group object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return new PlansRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of plannerPlan objects owned by a group object. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannerPlan objects owned by a group object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

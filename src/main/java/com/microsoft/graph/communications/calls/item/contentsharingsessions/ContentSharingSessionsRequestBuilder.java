@@ -59,7 +59,7 @@ public class ContentSharingSessionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/contentSharingSessions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of contentSharingSession objects in a call. This API is available in the following national cloud deployments.
+     * Retrieve a list of contentSharingSession objects in a call.
      * @return a ContentSharingSessionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/call-list-contentsharingsessions?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ContentSharingSessionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of contentSharingSession objects in a call. This API is available in the following national cloud deployments.
+     * Retrieve a list of contentSharingSession objects in a call.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ContentSharingSessionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/call-list-contentsharingsessions?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class ContentSharingSessionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ContentSharingSession::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of contentSharingSession objects in a call. This API is available in the following national cloud deployments.
+     * Retrieve a list of contentSharingSession objects in a call.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class ContentSharingSessionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of contentSharingSession objects in a call. This API is available in the following national cloud deployments.
+     * Retrieve a list of contentSharingSession objects in a call.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class ContentSharingSessionsRequestBuilder extends BaseRequestBuilder {
         return new ContentSharingSessionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of contentSharingSession objects in a call. This API is available in the following national cloud deployments.
+     * Retrieve a list of contentSharingSession objects in a call.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
