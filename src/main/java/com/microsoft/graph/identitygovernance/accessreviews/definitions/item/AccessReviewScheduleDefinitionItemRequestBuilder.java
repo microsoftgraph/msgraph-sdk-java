@@ -95,26 +95,24 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
         return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewScheduleDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Update an existing accessReviewScheduleDefinition object to change one or more of its properties.
+     * Update the navigation property definitions in identityGovernance
      * @param body The request body
      * @return a AccessReviewScheduleDefinition
-     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public AccessReviewScheduleDefinition patch(@jakarta.annotation.Nonnull final AccessReviewScheduleDefinition body) {
-        return patch(body, null);
+    public AccessReviewScheduleDefinition put(@jakarta.annotation.Nonnull final AccessReviewScheduleDefinition body) {
+        return put(body, null);
     }
     /**
-     * Update an existing accessReviewScheduleDefinition object to change one or more of its properties.
+     * Update the navigation property definitions in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AccessReviewScheduleDefinition
-     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public AccessReviewScheduleDefinition patch(@jakarta.annotation.Nonnull final AccessReviewScheduleDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public AccessReviewScheduleDefinition put(@jakarta.annotation.Nonnull final AccessReviewScheduleDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
+        final RequestInformation requestInfo = toPutRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -161,25 +159,25 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Update an existing accessReviewScheduleDefinition object to change one or more of its properties.
+     * Update the navigation property definitions in identityGovernance
      * @param body The request body
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AccessReviewScheduleDefinition body) {
-        return toPatchRequestInformation(body, null);
+    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final AccessReviewScheduleDefinition body) {
+        return toPutRequestInformation(body, null);
     }
     /**
-     * Update an existing accessReviewScheduleDefinition object to change one or more of its properties.
+     * Update the navigation property definitions in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AccessReviewScheduleDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final AccessReviewScheduleDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
-        requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PUT, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PutRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
@@ -233,6 +231,6 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class PatchRequestConfiguration extends BaseRequestConfiguration {
+    public class PutRequestConfiguration extends BaseRequestConfiguration {
     }
 }

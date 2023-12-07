@@ -1,6 +1,7 @@
 package com.microsoft.graph.admin.people;
 
 import com.microsoft.graph.admin.people.profilecardproperties.ProfileCardPropertiesRequestBuilder;
+import com.microsoft.graph.admin.people.pronouns.PronounsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PeopleAdminSettings;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -27,6 +28,13 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ProfileCardPropertiesRequestBuilder profileCardProperties() {
         return new ProfileCardPropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the pronouns property of the microsoft.graph.peopleAdminSettings entity.
+     */
+    @jakarta.annotation.Nonnull
+    public PronounsRequestBuilder pronouns() {
+        return new PronounsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new PeopleRequestBuilder and sets the default values.
@@ -68,30 +76,6 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PeopleAdminSettings::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property people in admin
-     * @param body The request body
-     * @return a PeopleAdminSettings
-     */
-    @jakarta.annotation.Nullable
-    public PeopleAdminSettings patch(@jakarta.annotation.Nonnull final PeopleAdminSettings body) {
-        return patch(body, null);
-    }
-    /**
-     * Update the navigation property people in admin
-     * @param body The request body
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PeopleAdminSettings
-     */
-    @jakarta.annotation.Nullable
-    public PeopleAdminSettings patch(@jakarta.annotation.Nonnull final PeopleAdminSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
-        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, PeopleAdminSettings::createFromDiscriminatorValue);
-    }
-    /**
      * Retrieve the properties and relationships of a peopleAdminSettings object.
      * @return a RequestInformation
      */
@@ -109,30 +93,6 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
-        return requestInfo;
-    }
-    /**
-     * Update the navigation property people in admin
-     * @param body The request body
-     * @return a RequestInformation
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final PeopleAdminSettings body) {
-        return toPatchRequestInformation(body, null);
-    }
-    /**
-     * Update the navigation property people in admin
-     * @param body The request body
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final PeopleAdminSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
-        requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
-        requestInfo.headers.tryAdd("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
@@ -173,11 +133,5 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
          */
         @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
-    }
-    /**
-     * Configuration for the request such as headers, query parameters, and middleware options.
-     */
-    @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class PatchRequestConfiguration extends BaseRequestConfiguration {
     }
 }
