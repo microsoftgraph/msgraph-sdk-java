@@ -1,6 +1,6 @@
 {
   "descriptionHash": "2AE191309E6F039F7F78B8E1B78F7A4A7198834C0DFBFD25DC4CE8D4785B5CB823040D19B3597CB637268BB38B155BB79118F6BBA3E62B203BDC3669C478C072",
-  "descriptionLocation": "../../msgraph-metadata/clean_v10_openapi/openapi.yaml",
+  "descriptionLocation": "https://raw.githubusercontent.com/microsoftgraph/msgraph-metadata/master/openapi/v1.0/openapi.yaml",
   "lockFileVersion": "1.0.0",
   "kiotaVersion": "1.9.0",
   "clientClassName": "BaseGraphServiceClient",
