@@ -32,6 +32,7 @@ public class PeopleAdminSettings extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("profileCardProperties", (n) -> { this.setProfileCardProperties(n.getCollectionOfObjectValues(ProfileCardProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("pronouns", (n) -> { this.setPronouns(n.getObjectValue(PronounsSettings::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -43,6 +44,14 @@ public class PeopleAdminSettings extends Entity implements Parsable {
         return this.backingStore.get("profileCardProperties");
     }
     /**
+     * Gets the pronouns property value. The pronouns property
+     * @return a PronounsSettings
+     */
+    @jakarta.annotation.Nullable
+    public PronounsSettings getPronouns() {
+        return this.backingStore.get("pronouns");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -50,6 +59,7 @@ public class PeopleAdminSettings extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("profileCardProperties", this.getProfileCardProperties());
+        writer.writeObjectValue("pronouns", this.getPronouns());
     }
     /**
      * Sets the profileCardProperties property value. Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card.
@@ -57,5 +67,12 @@ public class PeopleAdminSettings extends Entity implements Parsable {
      */
     public void setProfileCardProperties(@jakarta.annotation.Nullable final java.util.List<ProfileCardProperty> value) {
         this.backingStore.set("profileCardProperties", value);
+    }
+    /**
+     * Sets the pronouns property value. The pronouns property
+     * @param value Value to set for the pronouns property.
+     */
+    public void setPronouns(@jakarta.annotation.Nullable final PronounsSettings value) {
+        this.backingStore.set("pronouns", value);
     }
 }

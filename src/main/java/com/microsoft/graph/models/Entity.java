@@ -633,11 +633,11 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.privilegedAccessScheduleRequest": return new PrivilegedAccessScheduleRequest();
             case "#microsoft.graph.profileCardProperty": return new ProfileCardProperty();
             case "#microsoft.graph.profilePhoto": return new ProfilePhoto();
+            case "#microsoft.graph.pronounsSettings": return new PronounsSettings();
             case "#microsoft.graph.provisioningObjectSummary": return new ProvisioningObjectSummary();
             case "#microsoft.graph.rbacApplication": return new RbacApplication();
             case "#microsoft.graph.recordOperation": return new RecordOperation();
             case "#microsoft.graph.referenceAttachment": return new ReferenceAttachment();
-            case "#microsoft.graph.remoteAssistancePartner": return new RemoteAssistancePartner();
         }
         return null;
     }
@@ -649,6 +649,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.remoteAssistancePartner": return new RemoteAssistancePartner();
             case "#microsoft.graph.remoteDesktopSecurityConfiguration": return new RemoteDesktopSecurityConfiguration();
             case "#microsoft.graph.request": return new Request();
             case "#microsoft.graph.resellerDelegatedAdminRelationship": return new ResellerDelegatedAdminRelationship();

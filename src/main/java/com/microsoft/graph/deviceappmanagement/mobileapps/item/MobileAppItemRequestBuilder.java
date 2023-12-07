@@ -189,16 +189,16 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps/{mobileApp%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a iosVppApp.
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosvppapp-delete?view=graph-rest-1.0">Find more info here</a>
+     * Deletes a iosLobApp.
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-ioslobapp-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a iosVppApp.
+     * Deletes a iosLobApp.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosvppapp-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-ioslobapp-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -208,19 +208,19 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read properties and relationships of the mobileLobApp object.
+     * Read properties and relationships of the iosLobApp object.
      * @return a MobileApp
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobilelobapp-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-ioslobapp-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MobileApp get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the mobileLobApp object.
+     * Read properties and relationships of the iosLobApp object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a MobileApp
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobilelobapp-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-ioslobapp-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MobileApp get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -231,21 +231,21 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MobileApp::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a managedAndroidLobApp object.
+     * Update the properties of a macOSOfficeSuiteApp object.
      * @param body The request body
      * @return a MobileApp
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-managedandroidlobapp-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macosofficesuiteapp-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MobileApp patch(@jakarta.annotation.Nonnull final MobileApp body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a managedAndroidLobApp object.
+     * Update the properties of a macOSOfficeSuiteApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a MobileApp
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-managedandroidlobapp-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macosofficesuiteapp-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MobileApp patch(@jakarta.annotation.Nonnull final MobileApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -257,7 +257,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MobileApp::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a iosVppApp.
+     * Deletes a iosLobApp.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -265,7 +265,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a iosVppApp.
+     * Deletes a iosLobApp.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -277,7 +277,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the mobileLobApp object.
+     * Read properties and relationships of the iosLobApp object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -285,7 +285,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the mobileLobApp object.
+     * Read properties and relationships of the iosLobApp object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -297,7 +297,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a managedAndroidLobApp object.
+     * Update the properties of a macOSOfficeSuiteApp object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -306,7 +306,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a managedAndroidLobApp object.
+     * Update the properties of a macOSOfficeSuiteApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -337,7 +337,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the mobileLobApp object.
+     * Read properties and relationships of the iosLobApp object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
