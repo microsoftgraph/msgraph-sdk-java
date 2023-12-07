@@ -13,7 +13,7 @@ dependencies {
     api 'com.microsoft.graph:microsoft-graph-core:3.0.10-SNAPSHOT'
     implementation 'com.microsoft.kiota:microsoft-kiota-authentication-azure:0.10.0'
     implementation 'com.microsoft.kiota:microsoft-kiota-http-okHttp:0.10.0'
-    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-json:0.10.0'
+    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-json:0.11.0'
     implementation 'com.microsoft.kiota:microsoft-kiota-serialization-text:0.10.0'
     implementation 'com.microsoft.kiota:microsoft-kiota-serialization-form:0.10.0'
     implementation 'com.microsoft.kiota:microsoft-kiota-serialization-multipart:0.10.0'
