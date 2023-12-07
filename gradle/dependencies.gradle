@@ -16,5 +16,5 @@ dependencies {
     implementation 'com.microsoft.kiota:microsoft-kiota-serialization-json:0.10.0'
     implementation 'com.microsoft.kiota:microsoft-kiota-serialization-text:0.10.0'
     implementation 'com.microsoft.kiota:microsoft-kiota-serialization-form:0.10.0'
-    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-multipart:0.10.0'
+    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-multipart:0.11.0'
 }
