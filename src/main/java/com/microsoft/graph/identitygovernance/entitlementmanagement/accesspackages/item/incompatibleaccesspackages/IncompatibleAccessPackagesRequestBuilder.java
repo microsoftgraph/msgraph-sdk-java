@@ -39,7 +39,7 @@ public class IncompatibleAccessPackagesRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackages.item.incompatibleAccessPackages.item collection
-     * @param accessPackageId1 Unique identifier of the item
+     * @param accessPackageId1 The unique identifier of accessPackage
      * @return a AccessPackageItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

@@ -39,7 +39,7 @@ public class UserFlowIdentityProvidersRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Gets an item from the com.Microsoft.Graph.identity.b2xUserFlows.item.userFlowIdentityProviders.item collection
-     * @param identityProviderBaseId Unique identifier of the item
+     * @param identityProviderBaseId The unique identifier of identityProviderBase
      * @return a IdentityProviderBaseItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

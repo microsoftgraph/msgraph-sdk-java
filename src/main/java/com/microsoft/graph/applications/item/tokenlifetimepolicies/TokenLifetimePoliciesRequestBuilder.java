@@ -39,7 +39,7 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Gets an item from the com.Microsoft.Graph.applications.item.tokenLifetimePolicies.item collection
-     * @param tokenLifetimePolicyId Unique identifier of the item
+     * @param tokenLifetimePolicyId The unique identifier of tokenLifetimePolicy
      * @return a TokenLifetimePolicyItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

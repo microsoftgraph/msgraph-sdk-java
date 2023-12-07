@@ -87,7 +87,7 @@ public class OwnersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Gets an item from the com.Microsoft.Graph.groups.item.owners.item collection
-     * @param directoryObjectId Unique identifier of the item
+     * @param directoryObjectId The unique identifier of directoryObject
      * @return a DirectoryObjectItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

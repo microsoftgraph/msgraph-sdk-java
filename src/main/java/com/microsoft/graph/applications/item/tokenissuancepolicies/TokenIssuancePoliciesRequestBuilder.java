@@ -39,7 +39,7 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Gets an item from the com.Microsoft.Graph.applications.item.tokenIssuancePolicies.item collection
-     * @param tokenIssuancePolicyId Unique identifier of the item
+     * @param tokenIssuancePolicyId The unique identifier of tokenIssuancePolicy
      * @return a TokenIssuancePolicyItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

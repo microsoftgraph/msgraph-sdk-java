@@ -39,7 +39,7 @@ public class IncompatibleGroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackages.item.incompatibleGroups.item collection
-     * @param groupId Unique identifier of the item
+     * @param groupId The unique identifier of group
      * @return a GroupItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

@@ -39,7 +39,7 @@ public class AllowedGroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Gets an item from the com.Microsoft.Graph.print.shares.item.allowedGroups.item collection
-     * @param groupId Unique identifier of the item
+     * @param groupId The unique identifier of group
      * @return a GroupItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

@@ -39,7 +39,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Gets an item from the com.Microsoft.Graph.servicePrincipals.item.homeRealmDiscoveryPolicies.item collection
-     * @param homeRealmDiscoveryPolicyId Unique identifier of the item
+     * @param homeRealmDiscoveryPolicyId The unique identifier of homeRealmDiscoveryPolicy
      * @return a HomeRealmDiscoveryPolicyItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

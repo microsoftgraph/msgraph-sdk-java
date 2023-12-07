@@ -39,7 +39,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Gets an item from the com.Microsoft.Graph.applications.item.appManagementPolicies.item collection
-     * @param appManagementPolicyId Unique identifier of the item
+     * @param appManagementPolicyId The unique identifier of appManagementPolicy
      * @return a AppManagementPolicyItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

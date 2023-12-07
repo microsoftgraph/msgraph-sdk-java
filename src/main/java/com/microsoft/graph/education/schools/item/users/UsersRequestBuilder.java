@@ -39,7 +39,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Gets an item from the com.Microsoft.Graph.education.schools.item.users.item collection
-     * @param educationUserId Unique identifier of the item
+     * @param educationUserId The unique identifier of educationUser
      * @return a EducationUserItemRequestBuilder
      */
     @jakarta.annotation.Nonnull
