@@ -5,16 +5,28 @@ updates:
   schedule:
     interval: daily
   open-pull-requests-limit: 10
+  groups:
+    kiota-dependencies:
+      patterns:
+        - "*kiota*"
 - package-ecosystem: gradle
   directory: "/android"
   schedule:
     interval: daily
   open-pull-requests-limit: 10
+  groups:
+    kiota-dependencies:
+      patterns:
+        - "*kiota*"
 - package-ecosystem: maven
   directory: "/"
   schedule:
     interval: daily
   open-pull-requests-limit: 10
+  groups:
+    kiota-dependencies:
+      patterns:
+        - "*kiota*"
 - package-ecosystem: github-actions
   directory: "/"
   schedule:
@@ -28,18 +40,30 @@ updates:
     interval: daily
   open-pull-requests-limit: 10
   target-branch: feature/6.0
+  groups:
+    kiota-dependencies:
+      patterns:
+        - "*kiota*"
 - package-ecosystem: gradle
   directory: "/android"
   schedule:
     interval: daily
   open-pull-requests-limit: 10
   target-branch: feature/6.0
+  groups:
+    kiota-dependencies:
+      patterns:
+        - "*kiota*"
 - package-ecosystem: maven
   directory: "/"
   schedule:
     interval: daily
   open-pull-requests-limit: 10
   target-branch: feature/6.0
+  groups:
+    kiota-dependencies:
+      patterns:
+        - "*kiota*"
 - package-ecosystem: github-actions
   directory: "/"
   schedule:
