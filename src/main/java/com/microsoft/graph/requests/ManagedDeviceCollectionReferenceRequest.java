@@ -53,7 +53,7 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionWithR
     @Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDevice> postAsync(@Nonnull final ManagedDevice newManagedDevice) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/me/managedDevices/" + newManagedDevice.id);
+        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceManagement/managedDevices/" + newManagedDevice.id);
         return new ManagedDeviceWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .postAsync(newManagedDevice, body);
@@ -67,7 +67,7 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionWithR
     @Nonnull
     public ManagedDevice post(@Nonnull final ManagedDevice newManagedDevice) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/me/managedDevices/" + newManagedDevice.id);
+        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceManagement/managedDevices/" + newManagedDevice.id);
         return new ManagedDeviceWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
                 .buildRequest(getBaseRequest().getHeaders())
                 .post(newManagedDevice, body);

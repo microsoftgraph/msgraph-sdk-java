@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ParticipantInfo;
 import com.microsoft.graph.models.MediaStream;
 import com.microsoft.graph.models.RecordingInfo;
+import com.microsoft.graph.models.RemovedState;
 import com.microsoft.graph.models.OnlineMeetingRestricted;
 import com.microsoft.graph.models.Entity;
 
@@ -85,6 +86,15 @@ public class Participant extends Entity implements IJsonBackedObject {
     public RecordingInfo recordingInfo;
 
     /**
+     * The Removed State.
+     * 
+     */
+    @SerializedName(value = "removedState", alternate = {"RemovedState"})
+    @Expose
+	@Nullable
+    public RemovedState removedState;
+
+    /**
      * The Restricted Experience.
      * Indicates the reason or reasons media content from this participant is restricted.
      */
@@ -92,6 +102,15 @@ public class Participant extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public OnlineMeetingRestricted restrictedExperience;
+
+    /**
+     * The Roster Sequence Number.
+     * 
+     */
+    @SerializedName(value = "rosterSequenceNumber", alternate = {"RosterSequenceNumber"})
+    @Expose
+	@Nullable
+    public Long rosterSequenceNumber;
 
 
     /**

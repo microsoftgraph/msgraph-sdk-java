@@ -15,6 +15,7 @@ import com.microsoft.graph.models.DeviceProtectionOverview;
 import com.microsoft.graph.models.DeviceManagementSubscriptionState;
 import com.microsoft.graph.models.UserExperienceAnalyticsSettings;
 import com.microsoft.graph.models.WindowsMalwareOverview;
+import com.microsoft.graph.models.VirtualEndpoint;
 import com.microsoft.graph.models.DeviceCompliancePolicyDeviceStateSummary;
 import com.microsoft.graph.models.DeviceConfigurationDeviceStateSummary;
 import com.microsoft.graph.models.SoftwareUpdateStatusSummary;
@@ -26,8 +27,8 @@ import com.microsoft.graph.models.UserExperienceAnalyticsOverview;
 import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric;
 import com.microsoft.graph.models.DeviceManagementReports;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.TermsAndConditionsCollectionPage;
 import com.microsoft.graph.requests.AuditEventCollectionPage;
+import com.microsoft.graph.requests.TermsAndConditionsCollectionPage;
 import com.microsoft.graph.requests.DeviceCompliancePolicyCollectionPage;
 import com.microsoft.graph.requests.DeviceCompliancePolicySettingStateSummaryCollectionPage;
 import com.microsoft.graph.requests.DeviceConfigurationCollectionPage;
@@ -152,15 +153,6 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public WindowsMalwareOverview windowsMalwareOverview;
 
     /**
-     * The Terms And Conditions.
-     * The terms and conditions associated with device management of the company.
-     */
-    @SerializedName(value = "termsAndConditions", alternate = {"TermsAndConditions"})
-    @Expose
-	@Nullable
-    public com.microsoft.graph.requests.TermsAndConditionsCollectionPage termsAndConditions;
-
-    /**
      * The Audit Events.
      * The Audit Events
      */
@@ -168,6 +160,24 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.AuditEventCollectionPage auditEvents;
+
+    /**
+     * The Virtual Endpoint.
+     * 
+     */
+    @SerializedName(value = "virtualEndpoint", alternate = {"VirtualEndpoint"})
+    @Expose
+	@Nullable
+    public VirtualEndpoint virtualEndpoint;
+
+    /**
+     * The Terms And Conditions.
+     * The terms and conditions associated with device management of the company.
+     */
+    @SerializedName(value = "termsAndConditions", alternate = {"TermsAndConditions"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.TermsAndConditionsCollectionPage termsAndConditions;
 
     /**
      * The Device Compliance Policies.
@@ -674,12 +684,12 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
 
-        if (json.has("termsAndConditions")) {
-            termsAndConditions = serializer.deserializeObject(json.get("termsAndConditions"), com.microsoft.graph.requests.TermsAndConditionsCollectionPage.class);
-        }
-
         if (json.has("auditEvents")) {
             auditEvents = serializer.deserializeObject(json.get("auditEvents"), com.microsoft.graph.requests.AuditEventCollectionPage.class);
+        }
+
+        if (json.has("termsAndConditions")) {
+            termsAndConditions = serializer.deserializeObject(json.get("termsAndConditions"), com.microsoft.graph.requests.TermsAndConditionsCollectionPage.class);
         }
 
         if (json.has("deviceCompliancePolicies")) {

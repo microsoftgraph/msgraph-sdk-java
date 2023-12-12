@@ -61,26 +61,6 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
 
 
     /**
-     *  Gets a request builder for the TermsAndConditions collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.TermsAndConditionsCollectionRequestBuilder termsAndConditions() {
-        return new com.microsoft.graph.requests.TermsAndConditionsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("termsAndConditions"), getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the TermsAndConditions item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.TermsAndConditionsRequestBuilder termsAndConditions(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.TermsAndConditionsRequestBuilder(getRequestUrlWithAdditionalSegment("termsAndConditions") + "/" + id, getClient(), null);
-    }
-    /**
      *  Gets a request builder for the AuditEvent collection
      *
      * @return the collection request builder
@@ -99,6 +79,36 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     @Nonnull
     public com.microsoft.graph.requests.AuditEventRequestBuilder auditEvents(@Nonnull final String id) {
         return new com.microsoft.graph.requests.AuditEventRequestBuilder(getRequestUrlWithAdditionalSegment("auditEvents") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for VirtualEndpoint
+     *
+     * @return the VirtualEndpointRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.VirtualEndpointRequestBuilder virtualEndpoint() {
+        return new com.microsoft.graph.requests.VirtualEndpointRequestBuilder(getRequestUrlWithAdditionalSegment("virtualEndpoint"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the TermsAndConditions collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.TermsAndConditionsCollectionRequestBuilder termsAndConditions() {
+        return new com.microsoft.graph.requests.TermsAndConditionsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("termsAndConditions"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the TermsAndConditions item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.TermsAndConditionsRequestBuilder termsAndConditions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TermsAndConditionsRequestBuilder(getRequestUrlWithAdditionalSegment("termsAndConditions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceCompliancePolicy collection

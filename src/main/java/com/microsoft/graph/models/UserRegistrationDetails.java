@@ -111,7 +111,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The Methods Registered.
-     * Collection of authentication methods registered, such as mobilePhone, email, fido2. Supports $filter (any with eq).
+     * Collection of authentication methods registered, such as mobilePhone, email, passKeyDeviceBound. Supports $filter (any with eq).
      */
     @SerializedName(value = "methodsRegistered", alternate = {"MethodsRegistered"})
     @Expose

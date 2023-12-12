@@ -36,6 +36,22 @@ public enum AppliedConditionalAccessPolicyResult
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * report Only Success
+    */
+    REPORT_ONLY_SUCCESS,
+    /**
+    * report Only Failure
+    */
+    REPORT_ONLY_FAILURE,
+    /**
+    * report Only Not Applied
+    */
+    REPORT_ONLY_NOT_APPLIED,
+    /**
+    * report Only Interrupted
+    */
+    REPORT_ONLY_INTERRUPTED,
+    /**
     * For AppliedConditionalAccessPolicyResult values that were not expected from the service
     */
     UNEXPECTED_VALUE
