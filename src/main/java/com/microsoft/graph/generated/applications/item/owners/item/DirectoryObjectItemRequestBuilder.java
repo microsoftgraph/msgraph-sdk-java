@@ -8,7 +8,7 @@ import com.microsoft.graph.applications.item.owners.item.ref.RefRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
-
+import java.util.Objects;
 /**
  * Builds and executes requests for operations under /applications/{application-id}/owners/{directoryObject-id}
  */

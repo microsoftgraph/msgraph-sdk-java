@@ -10,7 +10,7 @@ import com.microsoft.graph.groups.item.owners.item.ref.RefRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
-
+import java.util.Objects;
 /**
  * Builds and executes requests for operations under /groups/{group-id}/owners/{directoryObject-id}
  */

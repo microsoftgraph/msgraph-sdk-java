@@ -35,7 +35,7 @@ public class PronounsSettings extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isEnabledInOrganization property value. The isEnabledInOrganization property
+     * Gets the isEnabledInOrganization property value. true to enable pronouns in the organization; otherwise, false. The default value is false, and pronouns are disabled.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class PronounsSettings extends Entity implements Parsable {
         writer.writeBooleanValue("isEnabledInOrganization", this.getIsEnabledInOrganization());
     }
     /**
-     * Sets the isEnabledInOrganization property value. The isEnabledInOrganization property
+     * Sets the isEnabledInOrganization property value. true to enable pronouns in the organization; otherwise, false. The default value is false, and pronouns are disabled.
      * @param value Value to set for the isEnabledInOrganization property.
      */
     public void setIsEnabledInOrganization(@jakarta.annotation.Nullable final Boolean value) {

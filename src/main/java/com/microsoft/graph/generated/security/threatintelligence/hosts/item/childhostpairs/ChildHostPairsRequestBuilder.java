@@ -10,10 +10,12 @@ import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
+import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 /**
  * Provides operations to manage the childHostPairs property of the microsoft.graph.security.host entity.
@@ -56,7 +58,7 @@ public class ChildHostPairsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hosts/{host%2Did}/childHostPairs{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the list of hostPair resources associated with a host, where that host is the *parent* and has an outgoing pairing to a *child*.
+     * Get the list of hostPair resources associated with a host, where that host is the *parent* and has an outgoing pairing to a *child*. 
      * @return a HostPairCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-childhostpairs?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +67,7 @@ public class ChildHostPairsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of hostPair resources associated with a host, where that host is the *parent* and has an outgoing pairing to a *child*.
+     * Get the list of hostPair resources associated with a host, where that host is the *parent* and has an outgoing pairing to a *child*. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a HostPairCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-childhostpairs?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +81,7 @@ public class ChildHostPairsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, HostPairCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of hostPair resources associated with a host, where that host is the *parent* and has an outgoing pairing to a *child*.
+     * Get the list of hostPair resources associated with a host, where that host is the *parent* and has an outgoing pairing to a *child*. 
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -87,7 +89,7 @@ public class ChildHostPairsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of hostPair resources associated with a host, where that host is the *parent* and has an outgoing pairing to a *child*.
+     * Get the list of hostPair resources associated with a host, where that host is the *parent* and has an outgoing pairing to a *child*. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -109,7 +111,7 @@ public class ChildHostPairsRequestBuilder extends BaseRequestBuilder {
         return new ChildHostPairsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of hostPair resources associated with a host, where that host is the *parent* and has an outgoing pairing to a *child*.
+     * Get the list of hostPair resources associated with a host, where that host is the *parent* and has an outgoing pairing to a *child*. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

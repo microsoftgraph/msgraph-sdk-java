@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * This is the base class for Compliance policy. Compliance policies are platform specific and individual per-platform compliance policies inherit from here.
+ * This is the base class for Compliance policy. Compliance policies are platform specific and individual per-platform compliance policies inherit from here. 
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceCompliancePolicy extends Entity implements Parsable {

@@ -16,10 +16,12 @@ import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
+import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 /**
  * Provides operations to manage the lists property of the microsoft.graph.site entity.
@@ -116,19 +118,19 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Returns the metadata for a [list][].
+     * Get a list of rich long-running operations associated with a list.
      * @return a List
-     * @see <a href="https://learn.microsoft.com/graph/api/list-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/list-list-operations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public List get() {
         return get(null);
     }
     /**
-     * Returns the metadata for a [list][].
+     * Get a list of rich long-running operations associated with a list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a List
-     * @see <a href="https://learn.microsoft.com/graph/api/list-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/list-list-operations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public List get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -183,7 +185,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Returns the metadata for a [list][].
+     * Get a list of rich long-running operations associated with a list.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -191,7 +193,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns the metadata for a [list][].
+     * Get a list of rich long-running operations associated with a list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -243,7 +245,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Returns the metadata for a [list][].
+     * Get a list of rich long-running operations associated with a list.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

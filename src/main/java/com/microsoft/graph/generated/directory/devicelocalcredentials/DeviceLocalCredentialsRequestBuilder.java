@@ -11,10 +11,12 @@ import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
+import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 /**
  * Provides operations to manage the deviceLocalCredentials property of the microsoft.graph.directory entity.
@@ -57,7 +59,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/deviceLocalCredentials{?%24top,%24search,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
-     * Get a list of the deviceLocalCredentialInfo objects and their properties, excluding the credentials property.
+     * Get a list of the deviceLocalCredentialInfo objects and their properties, excluding the credentials property. 
      * @return a DeviceLocalCredentialInfoCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-devicelocalcredentials?view=graph-rest-1.0">Find more info here</a>
      */
@@ -66,7 +68,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the deviceLocalCredentialInfo objects and their properties, excluding the credentials property.
+     * Get a list of the deviceLocalCredentialInfo objects and their properties, excluding the credentials property. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DeviceLocalCredentialInfoCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-devicelocalcredentials?view=graph-rest-1.0">Find more info here</a>
@@ -104,7 +106,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceLocalCredentialInfo::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the deviceLocalCredentialInfo objects and their properties, excluding the credentials property.
+     * Get a list of the deviceLocalCredentialInfo objects and their properties, excluding the credentials property. 
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +114,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the deviceLocalCredentialInfo objects and their properties, excluding the credentials property.
+     * Get a list of the deviceLocalCredentialInfo objects and their properties, excluding the credentials property. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -158,7 +160,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
         return new DeviceLocalCredentialsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the deviceLocalCredentialInfo objects and their properties, excluding the credentials property.
+     * Get a list of the deviceLocalCredentialInfo objects and their properties, excluding the credentials property. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
