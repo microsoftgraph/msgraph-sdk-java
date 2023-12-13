@@ -10,10 +10,12 @@ import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
+import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 /**
  * Provides operations to manage the passiveDns property of the microsoft.graph.security.host entity.
@@ -56,7 +58,7 @@ public class PassiveDnsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hosts/{host%2Did}/passiveDns{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname.
+     * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname. 
      * @return a PassiveDnsRecordCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-passivedns?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +67,7 @@ public class PassiveDnsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname.
+     * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PassiveDnsRecordCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-passivedns?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +81,7 @@ public class PassiveDnsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PassiveDnsRecordCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname.
+     * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname. 
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -87,7 +89,7 @@ public class PassiveDnsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname.
+     * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -109,7 +111,7 @@ public class PassiveDnsRequestBuilder extends BaseRequestBuilder {
         return new PassiveDnsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname.
+     * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

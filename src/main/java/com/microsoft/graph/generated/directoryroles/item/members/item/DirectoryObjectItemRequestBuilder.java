@@ -10,7 +10,7 @@ import com.microsoft.graph.directoryroles.item.members.item.ref.RefRequestBuilde
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
-
+import java.util.Objects;
 /**
  * Builds and executes requests for operations under /directoryRoles/{directoryRole-id}/members/{directoryObject-id}
  */

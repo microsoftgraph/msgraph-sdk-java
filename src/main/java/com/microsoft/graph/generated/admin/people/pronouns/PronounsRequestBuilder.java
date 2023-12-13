@@ -8,10 +8,12 @@ import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
+import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 /**
  * Provides operations to manage the pronouns property of the microsoft.graph.peopleAdminSettings entity.
@@ -35,17 +37,19 @@ public class PronounsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/people/pronouns{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get pronouns from admin
+     * Get the properties of the pronounsSettings resource for an organization.  For more information on settings to manage pronouns support, see Manage pronouns settings for an organization using the Microsoft Graph API.
      * @return a PronounsSettings
+     * @see <a href="https://learn.microsoft.com/graph/api/peopleadminsettings-list-pronouns?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PronounsSettings get() {
         return get(null);
     }
     /**
-     * Get pronouns from admin
+     * Get the properties of the pronounsSettings resource for an organization.  For more information on settings to manage pronouns support, see Manage pronouns settings for an organization using the Microsoft Graph API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PronounsSettings
+     * @see <a href="https://learn.microsoft.com/graph/api/peopleadminsettings-list-pronouns?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PronounsSettings get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -56,19 +60,21 @@ public class PronounsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PronounsSettings::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property pronouns in admin
+     * Update the properties of a pronounsSettings object in an organization. For more information on settings to manage pronouns support, see Manage pronouns settings for an organization using the Microsoft Graph API.
      * @param body The request body
      * @return a PronounsSettings
+     * @see <a href="https://learn.microsoft.com/graph/api/pronounssettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PronounsSettings patch(@jakarta.annotation.Nonnull final PronounsSettings body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property pronouns in admin
+     * Update the properties of a pronounsSettings object in an organization. For more information on settings to manage pronouns support, see Manage pronouns settings for an organization using the Microsoft Graph API.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PronounsSettings
+     * @see <a href="https://learn.microsoft.com/graph/api/pronounssettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PronounsSettings patch(@jakarta.annotation.Nonnull final PronounsSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -80,7 +86,7 @@ public class PronounsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PronounsSettings::createFromDiscriminatorValue);
     }
     /**
-     * Get pronouns from admin
+     * Get the properties of the pronounsSettings resource for an organization.  For more information on settings to manage pronouns support, see Manage pronouns settings for an organization using the Microsoft Graph API.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -88,7 +94,7 @@ public class PronounsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get pronouns from admin
+     * Get the properties of the pronounsSettings resource for an organization.  For more information on settings to manage pronouns support, see Manage pronouns settings for an organization using the Microsoft Graph API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -100,7 +106,7 @@ public class PronounsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property pronouns in admin
+     * Update the properties of a pronounsSettings object in an organization. For more information on settings to manage pronouns support, see Manage pronouns settings for an organization using the Microsoft Graph API.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -109,7 +115,7 @@ public class PronounsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property pronouns in admin
+     * Update the properties of a pronounsSettings object in an organization. For more information on settings to manage pronouns support, see Manage pronouns settings for an organization using the Microsoft Graph API.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -134,7 +140,7 @@ public class PronounsRequestBuilder extends BaseRequestBuilder {
         return new PronounsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get pronouns from admin
+     * Get the properties of the pronounsSettings resource for an organization.  For more information on settings to manage pronouns support, see Manage pronouns settings for an organization using the Microsoft Graph API.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

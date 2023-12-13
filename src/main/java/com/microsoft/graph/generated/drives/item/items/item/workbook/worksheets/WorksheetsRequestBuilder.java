@@ -12,10 +12,12 @@ import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
+import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 /**
  * Provides operations to manage the worksheets property of the microsoft.graph.workbook entity.
@@ -67,7 +69,7 @@ public class WorksheetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of worksheet objects.
      * @return a WorkbookWorksheetCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/workbook-list-worksheets?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookWorksheetCollectionResponse get() {
@@ -77,7 +79,7 @@ public class WorksheetsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of worksheet objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookWorksheetCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/workbook-list-worksheets?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookWorksheetCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

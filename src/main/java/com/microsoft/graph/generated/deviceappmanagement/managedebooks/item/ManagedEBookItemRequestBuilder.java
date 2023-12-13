@@ -13,10 +13,12 @@ import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
+import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 /**
  * Provides operations to manage the managedEBooks property of the microsoft.graph.deviceAppManagement entity.
@@ -94,19 +96,19 @@ public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read properties and relationships of the iosVppEBook object.
+     * Read properties and relationships of the managedEBook object.
      * @return a ManagedEBook
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-iosvppebook-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-managedebook-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedEBook get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the iosVppEBook object.
+     * Read properties and relationships of the managedEBook object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ManagedEBook
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-iosvppebook-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-managedebook-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedEBook get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -163,7 +165,7 @@ public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the iosVppEBook object.
+     * Read properties and relationships of the managedEBook object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +173,7 @@ public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the iosVppEBook object.
+     * Read properties and relationships of the managedEBook object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -223,7 +225,7 @@ public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the iosVppEBook object.
+     * Read properties and relationships of the managedEBook object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

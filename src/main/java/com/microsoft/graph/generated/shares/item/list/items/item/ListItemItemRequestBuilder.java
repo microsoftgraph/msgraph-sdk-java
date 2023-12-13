@@ -4,6 +4,7 @@ import com.microsoft.graph.models.ListItem;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.shares.item.list.items.item.analytics.AnalyticsRequestBuilder;
 import com.microsoft.graph.shares.item.list.items.item.createdbyuser.CreatedByUserRequestBuilder;
+import com.microsoft.graph.shares.item.list.items.item.createlink.CreateLinkRequestBuilder;
 import com.microsoft.graph.shares.item.list.items.item.documentsetversions.DocumentSetVersionsRequestBuilder;
 import com.microsoft.graph.shares.item.list.items.item.driveitem.DriveItemRequestBuilder;
 import com.microsoft.graph.shares.item.list.items.item.fields.FieldsRequestBuilder;
@@ -17,10 +18,12 @@ import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
+import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 /**
  * Provides operations to manage the items property of the microsoft.graph.list entity.
@@ -40,6 +43,13 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CreatedByUserRequestBuilder createdByUser() {
         return new CreatedByUserRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the createLink method.
+     */
+    @jakarta.annotation.Nonnull
+    public CreateLinkRequestBuilder createLink() {
+        return new CreateLinkRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the documentSetVersions property of the microsoft.graph.listItem entity.

@@ -11,10 +11,12 @@ import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
+import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 /**
  * Provides operations to manage the appManagementPolicies property of the microsoft.graph.application entity.
@@ -37,7 +39,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Gets an item from the com.Microsoft.Graph.applications.item.appManagementPolicies.item collection
-     * @param appManagementPolicyId Unique identifier of the item
+     * @param appManagementPolicyId The unique identifier of appManagementPolicy
      * @return a AppManagementPolicyItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

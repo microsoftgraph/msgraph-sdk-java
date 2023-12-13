@@ -8,7 +8,7 @@ import com.microsoft.graph.devices.item.registeredowners.item.ref.RefRequestBuil
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
-
+import java.util.Objects;
 /**
  * Builds and executes requests for operations under /devices/{device-id}/registeredOwners/{directoryObject-id}
  */

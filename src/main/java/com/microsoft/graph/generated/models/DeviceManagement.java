@@ -214,6 +214,7 @@ public class DeviceManagement extends Entity implements Parsable {
         deserializerMap.put("userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric", (n) -> { this.setUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric(n.getObjectValue(UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric::createFromDiscriminatorValue)); });
         deserializerMap.put("userExperienceAnalyticsWorkFromAnywhereMetrics", (n) -> { this.setUserExperienceAnalyticsWorkFromAnywhereMetrics(n.getCollectionOfObjectValues(UserExperienceAnalyticsWorkFromAnywhereMetric::createFromDiscriminatorValue)); });
         deserializerMap.put("userExperienceAnalyticsWorkFromAnywhereModelPerformance", (n) -> { this.setUserExperienceAnalyticsWorkFromAnywhereModelPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsWorkFromAnywhereModelPerformance::createFromDiscriminatorValue)); });
+        deserializerMap.put("virtualEndpoint", (n) -> { this.setVirtualEndpoint(n.getObjectValue(VirtualEndpoint::createFromDiscriminatorValue)); });
         deserializerMap.put("windowsAutopilotDeviceIdentities", (n) -> { this.setWindowsAutopilotDeviceIdentities(n.getCollectionOfObjectValues(WindowsAutopilotDeviceIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("windowsInformationProtectionAppLearningSummaries", (n) -> { this.setWindowsInformationProtectionAppLearningSummaries(n.getCollectionOfObjectValues(WindowsInformationProtectionAppLearningSummary::createFromDiscriminatorValue)); });
         deserializerMap.put("windowsInformationProtectionNetworkLearningSummaries", (n) -> { this.setWindowsInformationProtectionNetworkLearningSummaries(n.getCollectionOfObjectValues(WindowsInformationProtectionNetworkLearningSummary::createFromDiscriminatorValue)); });
@@ -574,6 +575,14 @@ public class DeviceManagement extends Entity implements Parsable {
         return this.backingStore.get("userExperienceAnalyticsWorkFromAnywhereModelPerformance");
     }
     /**
+     * Gets the virtualEndpoint property value. The virtualEndpoint property
+     * @return a VirtualEndpoint
+     */
+    @jakarta.annotation.Nullable
+    public VirtualEndpoint getVirtualEndpoint() {
+        return this.backingStore.get("virtualEndpoint");
+    }
+    /**
      * Gets the windowsAutopilotDeviceIdentities property value. The Windows autopilot device identities contained collection.
      * @return a java.util.List<WindowsAutopilotDeviceIdentity>
      */
@@ -679,6 +688,7 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeObjectValue("userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric", this.getUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric());
         writer.writeCollectionOfObjectValues("userExperienceAnalyticsWorkFromAnywhereMetrics", this.getUserExperienceAnalyticsWorkFromAnywhereMetrics());
         writer.writeCollectionOfObjectValues("userExperienceAnalyticsWorkFromAnywhereModelPerformance", this.getUserExperienceAnalyticsWorkFromAnywhereModelPerformance());
+        writer.writeObjectValue("virtualEndpoint", this.getVirtualEndpoint());
         writer.writeCollectionOfObjectValues("windowsAutopilotDeviceIdentities", this.getWindowsAutopilotDeviceIdentities());
         writer.writeCollectionOfObjectValues("windowsInformationProtectionAppLearningSummaries", this.getWindowsInformationProtectionAppLearningSummaries());
         writer.writeCollectionOfObjectValues("windowsInformationProtectionNetworkLearningSummaries", this.getWindowsInformationProtectionNetworkLearningSummaries());
@@ -1097,6 +1107,13 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     public void setUserExperienceAnalyticsWorkFromAnywhereModelPerformance(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsWorkFromAnywhereModelPerformance> value) {
         this.backingStore.set("userExperienceAnalyticsWorkFromAnywhereModelPerformance", value);
+    }
+    /**
+     * Sets the virtualEndpoint property value. The virtualEndpoint property
+     * @param value Value to set for the virtualEndpoint property.
+     */
+    public void setVirtualEndpoint(@jakarta.annotation.Nullable final VirtualEndpoint value) {
+        this.backingStore.set("virtualEndpoint", value);
     }
     /**
      * Sets the windowsAutopilotDeviceIdentities property value. The Windows autopilot device identities contained collection.

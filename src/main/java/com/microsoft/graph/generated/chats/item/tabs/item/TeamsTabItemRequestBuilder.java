@@ -9,10 +9,12 @@ import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
+import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 /**
  * Provides operations to manage the tabs property of the microsoft.graph.chat entity.
@@ -43,14 +45,14 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/chats/{chat%2Did}/tabs/{teamsTab%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Remove (unpin) a tab from the specified chat.
+     * Remove (unpin) a tab from the specified chat. 
      * @see <a href="https://learn.microsoft.com/graph/api/chat-delete-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Remove (unpin) a tab from the specified chat.
+     * Remove (unpin) a tab from the specified chat. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/chat-delete-tabs?view=graph-rest-1.0">Find more info here</a>
      */
@@ -62,7 +64,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of the specified tab in a chat.
+     * Retrieve the properties and relationships of the specified tab in a chat. 
      * @return a TeamsTab
      * @see <a href="https://learn.microsoft.com/graph/api/chat-get-tabs?view=graph-rest-1.0">Find more info here</a>
      */
@@ -71,7 +73,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of the specified tab in a chat.
+     * Retrieve the properties and relationships of the specified tab in a chat. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TeamsTab
      * @see <a href="https://learn.microsoft.com/graph/api/chat-get-tabs?view=graph-rest-1.0">Find more info here</a>
@@ -111,7 +113,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamsTab::createFromDiscriminatorValue);
     }
     /**
-     * Remove (unpin) a tab from the specified chat.
+     * Remove (unpin) a tab from the specified chat. 
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +121,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Remove (unpin) a tab from the specified chat.
+     * Remove (unpin) a tab from the specified chat. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -131,7 +133,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of the specified tab in a chat.
+     * Retrieve the properties and relationships of the specified tab in a chat. 
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +141,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of the specified tab in a chat.
+     * Retrieve the properties and relationships of the specified tab in a chat. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -191,7 +193,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of the specified tab in a chat.
+     * Retrieve the properties and relationships of the specified tab in a chat. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

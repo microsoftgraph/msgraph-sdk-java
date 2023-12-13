@@ -7,10 +7,12 @@ import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
+import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 /**
  * Provides operations to call the provisionOnDemand method.
@@ -34,7 +36,7 @@ public class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/synchronization/jobs/{synchronizationJob%2Did}/provisionOnDemand", rawUrl);
     }
     /**
-     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds.
+     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
      * @param body The request body
      * @return a StringKeyStringValuePair
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-provisionondemand?view=graph-rest-1.0">Find more info here</a>
@@ -44,7 +46,7 @@ public class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds.
+     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a StringKeyStringValuePair
@@ -60,7 +62,7 @@ public class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, StringKeyStringValuePair::createFromDiscriminatorValue);
     }
     /**
-     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds.
+     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
      * @param body The request body
      * @return a RequestInformation
      */
@@ -69,7 +71,7 @@ public class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds.
+     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

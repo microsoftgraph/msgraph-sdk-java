@@ -4,7 +4,7 @@ import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorg
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
-
+import java.util.Objects;
 /**
  * Builds and executes requests for operations under /identityGovernance/entitlementManagement/connectedOrganizations/{connectedOrganization-id}/internalSponsors/{directoryObject-id}
  */

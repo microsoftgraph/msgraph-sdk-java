@@ -79,10 +79,12 @@ import com.microsoft.kiota.serialization.FormSerializationWriterFactory;
 import com.microsoft.kiota.serialization.JsonParseNodeFactory;
 import com.microsoft.kiota.serialization.JsonSerializationWriterFactory;
 import com.microsoft.kiota.serialization.MultipartSerializationWriterFactory;
+import com.microsoft.kiota.serialization.ParseNodeFactoryRegistry;
+import com.microsoft.kiota.serialization.SerializationWriterFactoryRegistry;
 import com.microsoft.kiota.serialization.TextParseNodeFactory;
 import com.microsoft.kiota.serialization.TextSerializationWriterFactory;
 import com.microsoft.kiota.store.BackingStoreFactory;
-
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Objects;
 /**

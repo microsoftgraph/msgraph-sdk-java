@@ -10,7 +10,11 @@ public enum AppliedConditionalAccessPolicyResult implements ValuedEnum {
     NotApplied("notApplied"),
     NotEnabled("notEnabled"),
     Unknown("unknown"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    ReportOnlySuccess("reportOnlySuccess"),
+    ReportOnlyFailure("reportOnlyFailure"),
+    ReportOnlyNotApplied("reportOnlyNotApplied"),
+    ReportOnlyInterrupted("reportOnlyInterrupted");
     public final String value;
     AppliedConditionalAccessPolicyResult(final String value) {
         this.value = value;
@@ -27,6 +31,10 @@ public enum AppliedConditionalAccessPolicyResult implements ValuedEnum {
             case "notEnabled": return NotEnabled;
             case "unknown": return Unknown;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "reportOnlySuccess": return ReportOnlySuccess;
+            case "reportOnlyFailure": return ReportOnlyFailure;
+            case "reportOnlyNotApplied": return ReportOnlyNotApplied;
+            case "reportOnlyInterrupted": return ReportOnlyInterrupted;
             default: return null;
         }
     }

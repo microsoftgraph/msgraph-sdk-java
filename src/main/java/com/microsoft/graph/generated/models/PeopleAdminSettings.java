@@ -44,7 +44,7 @@ public class PeopleAdminSettings extends Entity implements Parsable {
         return this.backingStore.get("profileCardProperties");
     }
     /**
-     * Gets the pronouns property value. The pronouns property
+     * Gets the pronouns property value. Represents administrator settings that manage the support of pronouns in an organization.
      * @return a PronounsSettings
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class PeopleAdminSettings extends Entity implements Parsable {
         this.backingStore.set("profileCardProperties", value);
     }
     /**
-     * Sets the pronouns property value. The pronouns property
+     * Sets the pronouns property value. Represents administrator settings that manage the support of pronouns in an organization.
      * @param value Value to set for the pronouns property.
      */
     public void setPronouns(@jakarta.annotation.Nullable final PronounsSettings value) {

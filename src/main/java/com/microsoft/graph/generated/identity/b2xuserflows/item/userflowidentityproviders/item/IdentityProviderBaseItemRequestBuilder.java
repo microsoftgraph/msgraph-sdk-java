@@ -4,7 +4,7 @@ import com.microsoft.graph.identity.b2xuserflows.item.userflowidentityproviders.
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
-
+import java.util.Objects;
 /**
  * Builds and executes requests for operations under /identity/b2xUserFlows/{b2xIdentityUserFlow-id}/userFlowIdentityProviders/{identityProviderBase-id}
  */
