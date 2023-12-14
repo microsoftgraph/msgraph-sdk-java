@@ -44,7 +44,7 @@ public class WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Category.
-     * The category of the workflow. The possible values are: joiner, leaver, unknownFutureValue.
+     * The category of the workflow. The possible values are: joiner, leaver, mover, unknownFutureValue.
      */
     @SerializedName(value = "category", alternate = {"Category"})
     @Expose

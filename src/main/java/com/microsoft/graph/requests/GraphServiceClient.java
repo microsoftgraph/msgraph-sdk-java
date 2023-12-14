@@ -1051,6 +1051,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the DeviceManagement
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DeviceManagementRequestBuilder deviceManagement() {
+        return new com.microsoft.graph.requests.DeviceManagementRequestBuilder(getServiceRoot() + "/deviceManagement", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the Privacy
      */
     @Nonnull
@@ -1196,16 +1206,6 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public com.microsoft.graph.requests.DeviceAppManagementRequestBuilder deviceAppManagement() {
         return new com.microsoft.graph.requests.DeviceAppManagementRequestBuilder(getServiceRoot() + "/deviceAppManagement", this, null);
-    }
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
-     * @return the DeviceManagement
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.DeviceManagementRequestBuilder deviceManagement() {
-        return new com.microsoft.graph.requests.DeviceManagementRequestBuilder(getServiceRoot() + "/deviceManagement", this, null);
     }
 
     /**

@@ -11,6 +11,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.78.0] - 2023-12-14
+
+### Added 
+
+- DeltaParticipants model and derived requests.
+- ListItemCreateLinkParameterSet model and derived requests.
+- PronounsSettings model and derived requests.
+- RemovedState model.
+- VirtualEndpoint model and derived requests.
+
+### Changed 
+
+- AppliedConditionalAccessPolicyResult model.
+- DeviceManagement model and request builder.
+- DriveItemCreateLinkParameterSet model and builder.
+- Participant model.
+- PeopleAdminSettings model and request builder.
+- ListItem request builder.
+
 ## [5.77.0] - 2023-11-17
 
 ### Added

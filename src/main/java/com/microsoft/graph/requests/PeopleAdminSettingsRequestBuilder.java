@@ -76,4 +76,14 @@ public class PeopleAdminSettingsRequestBuilder extends BaseRequestBuilder<People
     public com.microsoft.graph.requests.ProfileCardPropertyRequestBuilder profileCardProperties(@Nonnull final String id) {
         return new com.microsoft.graph.requests.ProfileCardPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("profileCardProperties") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Gets the request builder for PronounsSettings
+     *
+     * @return the PronounsSettingsRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.PronounsSettingsRequestBuilder pronouns() {
+        return new com.microsoft.graph.requests.PronounsSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("pronouns"), getClient(), null);
+    }
 }

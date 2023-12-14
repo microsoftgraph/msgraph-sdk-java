@@ -57,7 +57,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
 
     /**
      * The Identity Sources.
-     * The identity sources in this connected organization, one of azureActiveDirectoryTenant, domainIdentitySource, externalDomainFederation or crossCloudAzureActiveDirectoryTenant. Nullable.
+     * The identity sources in this connected organization, one of azureActiveDirectoryTenant, crossCloudAzureActiveDirectoryTenant, domainIdentitySource, externalDomainFederation, or socialIdentitySource. Nullable.
      */
     @SerializedName(value = "identitySources", alternate = {"IdentitySources"})
     @Expose
