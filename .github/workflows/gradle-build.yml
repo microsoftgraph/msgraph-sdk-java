@@ -74,7 +74,7 @@ jobs:
           name: kiota-drop
           path: artifacts/current-kiota/
       - name: Download Last Successful Build
-        uses: dawidd6/action-download-artifact@v2.28.1
+        uses: dawidd6/action-download-artifact@v3.0.0
         with: 
           workflow: preview-and-release.yml
           workflow_conclusion: success
