@@ -73,7 +73,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IBaseC
      */
     @SuppressWarnings("LambdaLast")
     public GraphServiceClient(@Nonnull TokenCredential tokenCredential, @Nullable String... scopes) {
-        this(new AzureIdentityAuthenticationProvider(tokenCredential, null, scopes));
+        this(new AzureIdentityAuthenticationProvider(tokenCredential, new String[] {}, scopes));
     }
     /**
      * Sets the RequestAdapter for the GraphServiceClient.
