@@ -32,14 +32,14 @@ jobs:
         run: ./gradlew build
       - name: Upload Unit Test Results
         if: ${{ always() }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: UnitTests
           path: |
             build/reports/tests/test/**
             build/test-results/**
       - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: drop
           path: |
@@ -89,7 +89,7 @@ jobs:
             pkgdiff -hide-unchanged ${{ env.PRIOR_PKG_DIFF }} ${{ env.CURRENT_PKG_DIFF }}
       - name: Upload Diff Artifact
         if: ${{ always() }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: diff
           path: |
