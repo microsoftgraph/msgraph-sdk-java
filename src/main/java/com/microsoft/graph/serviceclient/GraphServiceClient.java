@@ -12,8 +12,7 @@ import com.microsoft.graph.info.Constants;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.authentication.AnonymousAuthenticationProvider;
 import com.microsoft.kiota.authentication.AuthenticationProvider;
-import com.microsoft.kiota.authentication.AzureIdentityAuthenticationProvider;
-import com.microsoft.kiota.store.BackingStoreFactory;
+import com.microsoft.graph.core.authentication.AzureIdentityAuthenticationProvider;
 import com.microsoft.kiota.store.InMemoryBackingStoreFactory;
 
 import com.azure.core.credential.TokenCredential;
@@ -41,7 +40,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IBaseC
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GraphServiceClient(@Nonnull RequestAdapter requestAdapter) {
-        this(requestAdapter, new InMemoryBackingStoreFactory());
+        super(requestAdapter, new InMemoryBackingStoreFactory());
         this.graphServiceClientRequestAdapter = requestAdapter;
     }
     /**
@@ -75,51 +74,6 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IBaseC
     @SuppressWarnings("LambdaLast")
     public GraphServiceClient(@Nonnull TokenCredential tokenCredential, @Nullable String... scopes) {
         this(new AzureIdentityAuthenticationProvider(tokenCredential, null, scopes));
-    }
-    /**
-     * Instantiates a new GraphServiceClient and sets the default values.
-     * @param requestAdapter The request adapter to use to execute the requests.
-     * @param backingStoreFactory The backing store factory to use to create backing stores.
-     */
-    public GraphServiceClient(@Nonnull RequestAdapter requestAdapter, @Nonnull BackingStoreFactory backingStoreFactory) {
-        super(requestAdapter, backingStoreFactory);
-        this.graphServiceClientRequestAdapter = requestAdapter;
-    }
-    /**
-     * Instantiate the GraphServiceClient using an AuthenticationProvider and BackingStoreFactory.
-     * @param authenticationProvider The AuthenticationProvider for this GraphServiceClient.
-     * @param backingStoreFactory The backing store factory to use to create backing stores.
-     */
-    public GraphServiceClient(@Nonnull AuthenticationProvider authenticationProvider, @Nonnull BackingStoreFactory backingStoreFactory) {
-        this(new BaseGraphRequestAdapter(authenticationProvider, null, "v1.0" , getGraphClientOptions()), backingStoreFactory);
-    }
-    /**
-     * Instantiate the GraphServiceClient using an AuthenticationProvider, OkHttpClient, and BackingStoreFactory.
-     * @param authenticationProvider The AuthenticationProvider for this GraphServiceClient.
-     * @param client The OkHttpClient for the GraphServiceClient.
-     * @param backingStoreFactory The backing store factory to use to create backing stores.
-     */
-    @SuppressWarnings("LambdaLast")
-    public GraphServiceClient(@Nonnull AuthenticationProvider authenticationProvider, @Nonnull OkHttpClient client, @Nonnull BackingStoreFactory backingStoreFactory) {
-        this(new BaseGraphRequestAdapter(authenticationProvider, null, "v1.0", client), backingStoreFactory);
-    }
-    /**
-     * Instantiate the GraphServiceClient using an OkHttpClient and BackingStoreFactory.
-     * @param client The OkHttpClient for the GraphServiceClient.
-     * @param backingStoreFactory The backing store factory to use to create backing stores.
-     */
-    public GraphServiceClient(@Nonnull OkHttpClient client, @Nonnull BackingStoreFactory backingStoreFactory) {
-        this(new AnonymousAuthenticationProvider(), client, backingStoreFactory);
-    }
-    /**
-     * Instantiate the GraphServiceClient using a TokenCredential, Scopes, and BackingStoreFactory.
-     * @param tokenCredential The TokenCredential for this GraphServiceClient.
-     * @param backingStoreFactory The backing store factory to use to create backing stores.
-     * @param scopes The Scopes for this GraphServiceClient.
-     */
-    @SuppressWarnings("LambdaLast")
-    public GraphServiceClient(@Nonnull TokenCredential tokenCredential, @Nonnull BackingStoreFactory backingStoreFactory,  @Nullable String... scopes) {
-        this(new AzureIdentityAuthenticationProvider(tokenCredential, null, scopes), backingStoreFactory);
     }
     /**
      * Sets the RequestAdapter for the GraphServiceClient.
