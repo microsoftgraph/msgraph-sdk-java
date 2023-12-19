@@ -61,16 +61,16 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceEnrollmentConfigurations/{deviceEnrollmentConfiguration%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a deviceEnrollmentLimitConfiguration.
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentlimitconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
+     * Deletes a deviceEnrollmentPlatformRestrictionsConfiguration.
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a deviceEnrollmentLimitConfiguration.
+     * Deletes a deviceEnrollmentPlatformRestrictionsConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentlimitconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -80,19 +80,19 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration object.
+     * Read properties and relationships of the deviceEnrollmentConfiguration object.
      * @return a DeviceEnrollmentConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceEnrollmentConfiguration get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration object.
+     * Read properties and relationships of the deviceEnrollmentConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DeviceEnrollmentConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceEnrollmentConfiguration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -129,7 +129,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceEnrollmentConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a deviceEnrollmentLimitConfiguration.
+     * Deletes a deviceEnrollmentPlatformRestrictionsConfiguration.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +137,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a deviceEnrollmentLimitConfiguration.
+     * Deletes a deviceEnrollmentPlatformRestrictionsConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -149,7 +149,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration object.
+     * Read properties and relationships of the deviceEnrollmentConfiguration object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -157,7 +157,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration object.
+     * Read properties and relationships of the deviceEnrollmentConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -209,7 +209,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration object.
+     * Read properties and relationships of the deviceEnrollmentConfiguration object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

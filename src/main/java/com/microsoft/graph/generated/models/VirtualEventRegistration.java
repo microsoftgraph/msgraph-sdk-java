@@ -26,7 +26,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         return new VirtualEventRegistration();
     }
     /**
-     * Gets the cancelationDateTime property value. The cancelationDateTime property
+     * Gets the cancelationDateTime property value. Date and time when the registrant cancels their registration for the virtual event. Only appears when applicable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         return this.backingStore.get("cancelationDateTime");
     }
     /**
-     * Gets the email property value. The email property
+     * Gets the email property value. Email address of the registrant.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the firstName property value. The firstName property
+     * Gets the firstName property value. First name of the registrant.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         return this.backingStore.get("firstName");
     }
     /**
-     * Gets the lastName property value. The lastName property
+     * Gets the lastName property value. Last name of the registrant.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -75,7 +75,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         return this.backingStore.get("lastName");
     }
     /**
-     * Gets the registrationDateTime property value. The registrationDateTime property
+     * Gets the registrationDateTime property value. Date and time when the registrant registers for the virtual event. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         return this.backingStore.get("registrationDateTime");
     }
     /**
-     * Gets the registrationQuestionAnswers property value. The registrationQuestionAnswers property
+     * Gets the registrationQuestionAnswers property value. The registrant's answer to the registration questions.
      * @return a java.util.List<VirtualEventRegistrationQuestionAnswer>
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         return this.backingStore.get("registrationQuestionAnswers");
     }
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. Registration status of the registrant. Read-only.
      * @return a VirtualEventAttendeeRegistrationStatus
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the userId property value. The userId property
+     * Gets the userId property value. The registrant's ID in Microsoft Entra ID. Only appears when the registrant is registered in Microsoft Entra ID.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -123,56 +123,56 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         writer.writeStringValue("userId", this.getUserId());
     }
     /**
-     * Sets the cancelationDateTime property value. The cancelationDateTime property
+     * Sets the cancelationDateTime property value. Date and time when the registrant cancels their registration for the virtual event. Only appears when applicable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the cancelationDateTime property.
      */
     public void setCancelationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("cancelationDateTime", value);
     }
     /**
-     * Sets the email property value. The email property
+     * Sets the email property value. Email address of the registrant.
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("email", value);
     }
     /**
-     * Sets the firstName property value. The firstName property
+     * Sets the firstName property value. First name of the registrant.
      * @param value Value to set for the firstName property.
      */
     public void setFirstName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("firstName", value);
     }
     /**
-     * Sets the lastName property value. The lastName property
+     * Sets the lastName property value. Last name of the registrant.
      * @param value Value to set for the lastName property.
      */
     public void setLastName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("lastName", value);
     }
     /**
-     * Sets the registrationDateTime property value. The registrationDateTime property
+     * Sets the registrationDateTime property value. Date and time when the registrant registers for the virtual event. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the registrationDateTime property.
      */
     public void setRegistrationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("registrationDateTime", value);
     }
     /**
-     * Sets the registrationQuestionAnswers property value. The registrationQuestionAnswers property
+     * Sets the registrationQuestionAnswers property value. The registrant's answer to the registration questions.
      * @param value Value to set for the registrationQuestionAnswers property.
      */
     public void setRegistrationQuestionAnswers(@jakarta.annotation.Nullable final java.util.List<VirtualEventRegistrationQuestionAnswer> value) {
         this.backingStore.set("registrationQuestionAnswers", value);
     }
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. Registration status of the registrant. Read-only.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final VirtualEventAttendeeRegistrationStatus value) {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the userId property value. The userId property
+     * Sets the userId property value. The registrant's ID in Microsoft Entra ID. Only appears when the registrant is registered in Microsoft Entra ID.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {

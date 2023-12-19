@@ -59,7 +59,7 @@ public class AttendanceReportsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/onlineMeetings/{onlineMeeting%2Did}/attendanceReports{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get attendanceReports from users
+     * The attendance reports of an online meeting. Read-only.
      * @return a MeetingAttendanceReportCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class AttendanceReportsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get attendanceReports from users
+     * The attendance reports of an online meeting. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a MeetingAttendanceReportCollectionResponse
      */
@@ -104,7 +104,7 @@ public class AttendanceReportsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MeetingAttendanceReport::createFromDiscriminatorValue);
     }
     /**
-     * Get attendanceReports from users
+     * The attendance reports of an online meeting. Read-only.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class AttendanceReportsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get attendanceReports from users
+     * The attendance reports of an online meeting. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class AttendanceReportsRequestBuilder extends BaseRequestBuilder {
         return new AttendanceReportsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get attendanceReports from users
+     * The attendance reports of an online meeting. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

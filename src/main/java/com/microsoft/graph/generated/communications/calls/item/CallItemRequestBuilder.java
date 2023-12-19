@@ -14,6 +14,7 @@ import com.microsoft.graph.communications.calls.item.playprompt.PlayPromptReques
 import com.microsoft.graph.communications.calls.item.recordresponse.RecordResponseRequestBuilder;
 import com.microsoft.graph.communications.calls.item.redirect.RedirectRequestBuilder;
 import com.microsoft.graph.communications.calls.item.reject.RejectRequestBuilder;
+import com.microsoft.graph.communications.calls.item.senddtmftones.SendDtmfTonesRequestBuilder;
 import com.microsoft.graph.communications.calls.item.subscribetotone.SubscribeToToneRequestBuilder;
 import com.microsoft.graph.communications.calls.item.transfer.TransferRequestBuilder;
 import com.microsoft.graph.communications.calls.item.unmute.UnmuteRequestBuilder;
@@ -135,6 +136,13 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RejectRequestBuilder reject() {
         return new RejectRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the sendDtmfTones method.
+     */
+    @jakarta.annotation.Nonnull
+    public SendDtmfTonesRequestBuilder sendDtmfTones() {
+        return new SendDtmfTonesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the subscribeToTone method.

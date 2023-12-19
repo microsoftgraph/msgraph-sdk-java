@@ -94,7 +94,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         return this.backingStore.get("isBroadcast");
     }
     /**
-     * Gets the participants property value. The participants associated with the online meeting.  This includes the organizer and the attendees.
+     * Gets the participants property value. The participants associated with the online meeting, including the organizer and the attendees.
      * @return a MeetingParticipants
      */
     @jakarta.annotation.Nullable
@@ -186,7 +186,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         this.backingStore.set("isBroadcast", value);
     }
     /**
-     * Sets the participants property value. The participants associated with the online meeting.  This includes the organizer and the attendees.
+     * Sets the participants property value. The participants associated with the online meeting, including the organizer and the attendees.
      * @param value Value to set for the participants property.
      */
     public void setParticipants(@jakarta.annotation.Nullable final MeetingParticipants value) {
