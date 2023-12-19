@@ -149,7 +149,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         deserializerMap.put("term", (n) -> { this.setTerm(n.getObjectValue(TermColumn::createFromDiscriminatorValue)); });
         deserializerMap.put("text", (n) -> { this.setText(n.getObjectValue(TextColumn::createFromDiscriminatorValue)); });
         deserializerMap.put("thumbnail", (n) -> { this.setThumbnail(n.getObjectValue(ThumbnailColumn::createFromDiscriminatorValue)); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(ColumnTypes::forValue)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(ColumnDefinitionType::forValue)); });
         deserializerMap.put("validation", (n) -> { this.setValidation(n.getObjectValue(ColumnValidation::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -307,10 +307,10 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the type property value. For site columns, the type of column. Read-only.
-     * @return a ColumnTypes
+     * @return a ColumnDefinitionType
      */
     @jakarta.annotation.Nullable
-    public ColumnTypes getType() {
+    public ColumnDefinitionType getType() {
         return this.backingStore.get("type");
     }
     /**
@@ -575,7 +575,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * Sets the type property value. For site columns, the type of column. Read-only.
      * @param value Value to set for the type property.
      */
-    public void setType(@jakarta.annotation.Nullable final ColumnTypes value) {
+    public void setType(@jakarta.annotation.Nullable final ColumnDefinitionType value) {
         this.backingStore.set("type", value);
     }
     /**

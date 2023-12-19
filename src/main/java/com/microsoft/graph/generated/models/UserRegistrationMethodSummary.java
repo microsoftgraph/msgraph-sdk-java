@@ -65,8 +65,8 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Back
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("totalUserCount", (n) -> { this.setTotalUserCount(n.getLongValue()); });
         deserializerMap.put("userRegistrationMethodCounts", (n) -> { this.setUserRegistrationMethodCounts(n.getCollectionOfObjectValues(UserRegistrationMethodCount::createFromDiscriminatorValue)); });
-        deserializerMap.put("userRoles", (n) -> { this.setUserRoles(n.getEnumValue(IncludedUserRoles::forValue)); });
-        deserializerMap.put("userTypes", (n) -> { this.setUserTypes(n.getEnumValue(IncludedUserTypes::forValue)); });
+        deserializerMap.put("userRoles", (n) -> { this.setUserRoles(n.getEnumValue(UserRegistrationMethodSummaryUserRoles::forValue)); });
+        deserializerMap.put("userTypes", (n) -> { this.setUserTypes(n.getEnumValue(UserRegistrationMethodSummaryUserTypes::forValue)); });
         return deserializerMap;
     }
     /**
@@ -95,18 +95,18 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Back
     }
     /**
      * Gets the userRoles property value. The role type of the user. Possible values are: all, privilegedAdmin, admin, user, unknownFutureValue.
-     * @return a IncludedUserRoles
+     * @return a UserRegistrationMethodSummaryUserRoles
      */
     @jakarta.annotation.Nullable
-    public IncludedUserRoles getUserRoles() {
+    public UserRegistrationMethodSummaryUserRoles getUserRoles() {
         return this.backingStore.get("userRoles");
     }
     /**
      * Gets the userTypes property value. User type. Possible values are: all, member, guest, unknownFutureValue.
-     * @return a IncludedUserTypes
+     * @return a UserRegistrationMethodSummaryUserTypes
      */
     @jakarta.annotation.Nullable
-    public IncludedUserTypes getUserTypes() {
+    public UserRegistrationMethodSummaryUserTypes getUserTypes() {
         return this.backingStore.get("userTypes");
     }
     /**
@@ -162,14 +162,14 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Back
      * Sets the userRoles property value. The role type of the user. Possible values are: all, privilegedAdmin, admin, user, unknownFutureValue.
      * @param value Value to set for the userRoles property.
      */
-    public void setUserRoles(@jakarta.annotation.Nullable final IncludedUserRoles value) {
+    public void setUserRoles(@jakarta.annotation.Nullable final UserRegistrationMethodSummaryUserRoles value) {
         this.backingStore.set("userRoles", value);
     }
     /**
      * Sets the userTypes property value. User type. Possible values are: all, member, guest, unknownFutureValue.
      * @param value Value to set for the userTypes property.
      */
-    public void setUserTypes(@jakarta.annotation.Nullable final IncludedUserTypes value) {
+    public void setUserTypes(@jakarta.annotation.Nullable final UserRegistrationMethodSummaryUserTypes value) {
         this.backingStore.set("userTypes", value);
     }
 }

@@ -27,10 +27,10 @@ public class PrivilegedAccessGroupEligibilityScheduleInstance extends Privileged
     }
     /**
      * Gets the accessId property value. The identifier of the membership or ownership eligibility relationship to the group. Required. The possible values are: owner, member. Supports $filter (eq).
-     * @return a PrivilegedAccessGroupRelationships
+     * @return a PrivilegedAccessGroupEligibilityScheduleInstanceAccessId
      */
     @jakarta.annotation.Nullable
-    public PrivilegedAccessGroupRelationships getAccessId() {
+    public PrivilegedAccessGroupEligibilityScheduleInstanceAccessId getAccessId() {
         return this.backingStore.get("accessId");
     }
     /**
@@ -48,11 +48,11 @@ public class PrivilegedAccessGroupEligibilityScheduleInstance extends Privileged
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("accessId", (n) -> { this.setAccessId(n.getEnumValue(PrivilegedAccessGroupRelationships::forValue)); });
+        deserializerMap.put("accessId", (n) -> { this.setAccessId(n.getEnumValue(PrivilegedAccessGroupEligibilityScheduleInstanceAccessId::forValue)); });
         deserializerMap.put("eligibilityScheduleId", (n) -> { this.setEligibilityScheduleId(n.getStringValue()); });
         deserializerMap.put("group", (n) -> { this.setGroup(n.getObjectValue(Group::createFromDiscriminatorValue)); });
         deserializerMap.put("groupId", (n) -> { this.setGroupId(n.getStringValue()); });
-        deserializerMap.put("memberType", (n) -> { this.setMemberType(n.getEnumValue(PrivilegedAccessGroupMemberType::forValue)); });
+        deserializerMap.put("memberType", (n) -> { this.setMemberType(n.getEnumValue(PrivilegedAccessGroupEligibilityScheduleInstanceMemberType::forValue)); });
         deserializerMap.put("principal", (n) -> { this.setPrincipal(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("principalId", (n) -> { this.setPrincipalId(n.getStringValue()); });
         return deserializerMap;
@@ -75,10 +75,10 @@ public class PrivilegedAccessGroupEligibilityScheduleInstance extends Privileged
     }
     /**
      * Gets the memberType property value. Indicates whether the assignment is derived from a group assignment. It can further imply whether the calling principal can manage the assignment schedule. Required. The possible values are: direct, group, unknownFutureValue. Supports $filter (eq).
-     * @return a PrivilegedAccessGroupMemberType
+     * @return a PrivilegedAccessGroupEligibilityScheduleInstanceMemberType
      */
     @jakarta.annotation.Nullable
-    public PrivilegedAccessGroupMemberType getMemberType() {
+    public PrivilegedAccessGroupEligibilityScheduleInstanceMemberType getMemberType() {
         return this.backingStore.get("memberType");
     }
     /**
@@ -116,7 +116,7 @@ public class PrivilegedAccessGroupEligibilityScheduleInstance extends Privileged
      * Sets the accessId property value. The identifier of the membership or ownership eligibility relationship to the group. Required. The possible values are: owner, member. Supports $filter (eq).
      * @param value Value to set for the accessId property.
      */
-    public void setAccessId(@jakarta.annotation.Nullable final PrivilegedAccessGroupRelationships value) {
+    public void setAccessId(@jakarta.annotation.Nullable final PrivilegedAccessGroupEligibilityScheduleInstanceAccessId value) {
         this.backingStore.set("accessId", value);
     }
     /**
@@ -144,7 +144,7 @@ public class PrivilegedAccessGroupEligibilityScheduleInstance extends Privileged
      * Sets the memberType property value. Indicates whether the assignment is derived from a group assignment. It can further imply whether the calling principal can manage the assignment schedule. Required. The possible values are: direct, group, unknownFutureValue. Supports $filter (eq).
      * @param value Value to set for the memberType property.
      */
-    public void setMemberType(@jakarta.annotation.Nullable final PrivilegedAccessGroupMemberType value) {
+    public void setMemberType(@jakarta.annotation.Nullable final PrivilegedAccessGroupEligibilityScheduleInstanceMemberType value) {
         this.backingStore.set("memberType", value);
     }
     /**

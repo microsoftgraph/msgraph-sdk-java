@@ -62,17 +62,17 @@ public class SynchronizationMetadataEntry implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("key", (n) -> { this.setKey(n.getEnumValue(SynchronizationMetadata::forValue)); });
+        deserializerMap.put("key", (n) -> { this.setKey(n.getEnumValue(SynchronizationMetadataEntryKey::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("value", (n) -> { this.setValue(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the key property value. Possible values are: GalleryApplicationIdentifier, GalleryApplicationKey, IsOAuthEnabled, IsSynchronizationAgentAssignmentRequired, IsSynchronizationAgentRequired, IsSynchronizationInPreview, OAuthSettings, SynchronizationLearnMoreIbizaFwLink, ConfigurationFields.
-     * @return a SynchronizationMetadata
+     * @return a SynchronizationMetadataEntryKey
      */
     @jakarta.annotation.Nullable
-    public SynchronizationMetadata getKey() {
+    public SynchronizationMetadataEntryKey getKey() {
         return this.backingStore.get("key");
     }
     /**
@@ -121,7 +121,7 @@ public class SynchronizationMetadataEntry implements AdditionalDataHolder, Backe
      * Sets the key property value. Possible values are: GalleryApplicationIdentifier, GalleryApplicationKey, IsOAuthEnabled, IsSynchronizationAgentAssignmentRequired, IsSynchronizationAgentRequired, IsSynchronizationInPreview, OAuthSettings, SynchronizationLearnMoreIbizaFwLink, ConfigurationFields.
      * @param value Value to set for the key property.
      */
-    public void setKey(@jakarta.annotation.Nullable final SynchronizationMetadata value) {
+    public void setKey(@jakarta.annotation.Nullable final SynchronizationMetadataEntryKey value) {
         this.backingStore.set("key", value);
     }
     /**

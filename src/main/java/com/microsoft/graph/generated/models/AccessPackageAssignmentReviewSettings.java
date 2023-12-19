@@ -57,10 +57,10 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     }
     /**
      * Gets the expirationBehavior property value. The default decision to apply if the access is not reviewed. The possible values are: keepAccess, removeAccess, acceptAccessRecommendation, unknownFutureValue.
-     * @return a AccessReviewExpirationBehavior
+     * @return a AccessPackageAssignmentReviewSettingsExpirationBehavior
      */
     @jakarta.annotation.Nullable
-    public AccessReviewExpirationBehavior getExpirationBehavior() {
+    public AccessPackageAssignmentReviewSettingsExpirationBehavior getExpirationBehavior() {
         return this.backingStore.get("expirationBehavior");
     }
     /**
@@ -78,7 +78,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
-        deserializerMap.put("expirationBehavior", (n) -> { this.setExpirationBehavior(n.getEnumValue(AccessReviewExpirationBehavior::forValue)); });
+        deserializerMap.put("expirationBehavior", (n) -> { this.setExpirationBehavior(n.getEnumValue(AccessPackageAssignmentReviewSettingsExpirationBehavior::forValue)); });
         deserializerMap.put("fallbackReviewers", (n) -> { this.setFallbackReviewers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
         deserializerMap.put("isRecommendationEnabled", (n) -> { this.setIsRecommendationEnabled(n.getBooleanValue()); });
@@ -181,7 +181,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * Sets the expirationBehavior property value. The default decision to apply if the access is not reviewed. The possible values are: keepAccess, removeAccess, acceptAccessRecommendation, unknownFutureValue.
      * @param value Value to set for the expirationBehavior property.
      */
-    public void setExpirationBehavior(@jakarta.annotation.Nullable final AccessReviewExpirationBehavior value) {
+    public void setExpirationBehavior(@jakarta.annotation.Nullable final AccessPackageAssignmentReviewSettingsExpirationBehavior value) {
         this.backingStore.set("expirationBehavior", value);
     }
     /**

@@ -102,7 +102,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Par
         deserializerMap.put("sectionGroupsUrl", (n) -> { this.setSectionGroupsUrl(n.getStringValue()); });
         deserializerMap.put("sectionsUrl", (n) -> { this.setSectionsUrl(n.getStringValue()); });
         deserializerMap.put("self", (n) -> { this.setSelf(n.getStringValue()); });
-        deserializerMap.put("userRole", (n) -> { this.setUserRole(n.getEnumValue(OnenoteUserRole::forValue)); });
+        deserializerMap.put("userRole", (n) -> { this.setUserRole(n.getEnumValue(CopyNotebookModelUserRole::forValue)); });
         return deserializerMap;
     }
     /**
@@ -203,10 +203,10 @@ public class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the userRole property value. The userRole property
-     * @return a OnenoteUserRole
+     * @return a CopyNotebookModelUserRole
      */
     @jakarta.annotation.Nullable
-    public OnenoteUserRole getUserRole() {
+    public CopyNotebookModelUserRole getUserRole() {
         return this.backingStore.get("userRole");
     }
     /**
@@ -357,7 +357,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Par
      * Sets the userRole property value. The userRole property
      * @param value Value to set for the userRole property.
      */
-    public void setUserRole(@jakarta.annotation.Nullable final OnenoteUserRole value) {
+    public void setUserRole(@jakarta.annotation.Nullable final CopyNotebookModelUserRole value) {
         this.backingStore.set("userRole", value);
     }
 }

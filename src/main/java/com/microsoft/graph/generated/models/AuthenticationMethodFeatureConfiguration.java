@@ -73,7 +73,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
         deserializerMap.put("excludeTarget", (n) -> { this.setExcludeTarget(n.getObjectValue(FeatureTarget::createFromDiscriminatorValue)); });
         deserializerMap.put("includeTarget", (n) -> { this.setIncludeTarget(n.getObjectValue(FeatureTarget::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AdvancedConfigState::forValue)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AuthenticationMethodFeatureConfigurationState::forValue)); });
         return deserializerMap;
     }
     /**
@@ -94,10 +94,10 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
     }
     /**
      * Gets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
-     * @return a AdvancedConfigState
+     * @return a AuthenticationMethodFeatureConfigurationState
      */
     @jakarta.annotation.Nullable
-    public AdvancedConfigState getState() {
+    public AuthenticationMethodFeatureConfigurationState getState() {
         return this.backingStore.get("state");
     }
     /**
@@ -152,7 +152,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      * Sets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
      * @param value Value to set for the state property.
      */
-    public void setState(@jakarta.annotation.Nullable final AdvancedConfigState value) {
+    public void setState(@jakarta.annotation.Nullable final AuthenticationMethodFeatureConfigurationState value) {
         this.backingStore.set("state", value);
     }
 }

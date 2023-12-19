@@ -64,7 +64,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Backe
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("isFooterShown", (n) -> { this.setIsFooterShown(n.getBooleanValue()); });
         deserializerMap.put("isHeaderShown", (n) -> { this.setIsHeaderShown(n.getBooleanValue()); });
-        deserializerMap.put("layoutTemplateType", (n) -> { this.setLayoutTemplateType(n.getEnumValue(LayoutTemplateType::forValue)); });
+        deserializerMap.put("layoutTemplateType", (n) -> { this.setLayoutTemplateType(n.getEnumValue(LoginPageLayoutConfigurationLayoutTemplateType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -86,10 +86,10 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the layoutTemplateType property value. Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a background on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Don't use.
-     * @return a LayoutTemplateType
+     * @return a LoginPageLayoutConfigurationLayoutTemplateType
      */
     @jakarta.annotation.Nullable
-    public LayoutTemplateType getLayoutTemplateType() {
+    public LoginPageLayoutConfigurationLayoutTemplateType getLayoutTemplateType() {
         return this.backingStore.get("layoutTemplateType");
     }
     /**
@@ -145,7 +145,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Backe
      * Sets the layoutTemplateType property value. Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a background on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Don't use.
      * @param value Value to set for the layoutTemplateType property.
      */
-    public void setLayoutTemplateType(@jakarta.annotation.Nullable final LayoutTemplateType value) {
+    public void setLayoutTemplateType(@jakarta.annotation.Nullable final LoginPageLayoutConfigurationLayoutTemplateType value) {
         this.backingStore.set("layoutTemplateType", value);
     }
     /**

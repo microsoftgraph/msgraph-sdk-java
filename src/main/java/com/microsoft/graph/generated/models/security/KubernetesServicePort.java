@@ -75,7 +75,7 @@ public class KubernetesServicePort implements AdditionalDataHolder, BackedModel,
         deserializerMap.put("nodePort", (n) -> { this.setNodePort(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("port", (n) -> { this.setPort(n.getIntegerValue()); });
-        deserializerMap.put("protocol", (n) -> { this.setProtocol(n.getEnumValue(ContainerPortProtocol::forValue)); });
+        deserializerMap.put("protocol", (n) -> { this.setProtocol(n.getEnumValue(KubernetesServicePortProtocol::forValue)); });
         deserializerMap.put("targetPort", (n) -> { this.setTargetPort(n.getStringValue()); });
         return deserializerMap;
     }
@@ -113,10 +113,10 @@ public class KubernetesServicePort implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the protocol property value. The protocol name. Possible values are: udp, tcp, sctp, unknownFutureValue.
-     * @return a ContainerPortProtocol
+     * @return a KubernetesServicePortProtocol
      */
     @jakarta.annotation.Nullable
-    public ContainerPortProtocol getProtocol() {
+    public KubernetesServicePortProtocol getProtocol() {
         return this.backingStore.get("protocol");
     }
     /**
@@ -196,7 +196,7 @@ public class KubernetesServicePort implements AdditionalDataHolder, BackedModel,
      * Sets the protocol property value. The protocol name. Possible values are: udp, tcp, sctp, unknownFutureValue.
      * @param value Value to set for the protocol property.
      */
-    public void setProtocol(@jakarta.annotation.Nullable final ContainerPortProtocol value) {
+    public void setProtocol(@jakarta.annotation.Nullable final KubernetesServicePortProtocol value) {
         this.backingStore.set("protocol", value);
     }
     /**

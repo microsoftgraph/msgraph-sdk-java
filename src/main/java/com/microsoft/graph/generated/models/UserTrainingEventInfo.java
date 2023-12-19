@@ -71,7 +71,7 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel,
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("latestTrainingStatus", (n) -> { this.setLatestTrainingStatus(n.getEnumValue(TrainingStatus::forValue)); });
+        deserializerMap.put("latestTrainingStatus", (n) -> { this.setLatestTrainingStatus(n.getEnumValue(UserTrainingEventInfoLatestTrainingStatus::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("trainingAssignedProperties", (n) -> { this.setTrainingAssignedProperties(n.getObjectValue(UserTrainingContentEventInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("trainingCompletedProperties", (n) -> { this.setTrainingCompletedProperties(n.getObjectValue(UserTrainingContentEventInfo::createFromDiscriminatorValue)); });
@@ -80,10 +80,10 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the latestTrainingStatus property value. Latest status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
-     * @return a TrainingStatus
+     * @return a UserTrainingEventInfoLatestTrainingStatus
      */
     @jakarta.annotation.Nullable
-    public TrainingStatus getLatestTrainingStatus() {
+    public UserTrainingEventInfoLatestTrainingStatus getLatestTrainingStatus() {
         return this.backingStore.get("latestTrainingStatus");
     }
     /**
@@ -158,7 +158,7 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel,
      * Sets the latestTrainingStatus property value. Latest status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
      * @param value Value to set for the latestTrainingStatus property.
      */
-    public void setLatestTrainingStatus(@jakarta.annotation.Nullable final TrainingStatus value) {
+    public void setLatestTrainingStatus(@jakarta.annotation.Nullable final UserTrainingEventInfoLatestTrainingStatus value) {
         this.backingStore.set("latestTrainingStatus", value);
     }
     /**

@@ -72,8 +72,8 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Ba
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("stage", (n) -> { this.setStage(n.getEnumValue(SubjectRightsRequestStage::forValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(SubjectRightsRequestStageStatus::forValue)); });
+        deserializerMap.put("stage", (n) -> { this.setStage(n.getEnumValue(SubjectRightsRequestStageDetailStage::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(SubjectRightsRequestStageDetailStatus::forValue)); });
         return deserializerMap;
     }
     /**
@@ -86,18 +86,18 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the stage property value. The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. You must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: approval.
-     * @return a SubjectRightsRequestStage
+     * @return a SubjectRightsRequestStageDetailStage
      */
     @jakarta.annotation.Nullable
-    public SubjectRightsRequestStage getStage() {
+    public SubjectRightsRequestStageDetailStage getStage() {
         return this.backingStore.get("stage");
     }
     /**
      * Gets the status property value. Status of the current stage. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
-     * @return a SubjectRightsRequestStageStatus
+     * @return a SubjectRightsRequestStageDetailStatus
      */
     @jakarta.annotation.Nullable
-    public SubjectRightsRequestStageStatus getStatus() {
+    public SubjectRightsRequestStageDetailStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -145,14 +145,14 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Ba
      * Sets the stage property value. The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. You must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: approval.
      * @param value Value to set for the stage property.
      */
-    public void setStage(@jakarta.annotation.Nullable final SubjectRightsRequestStage value) {
+    public void setStage(@jakarta.annotation.Nullable final SubjectRightsRequestStageDetailStage value) {
         this.backingStore.set("stage", value);
     }
     /**
      * Sets the status property value. Status of the current stage. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final SubjectRightsRequestStageStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final SubjectRightsRequestStageDetailStatus value) {
         this.backingStore.set("status", value);
     }
 }

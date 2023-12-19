@@ -27,10 +27,10 @@ public class MicrosoftTrainingAssignmentMapping extends TrainingSetting implemen
     }
     /**
      * Gets the assignedTo property value. A user collection that specifies to whom the training should be assigned. Possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
-     * @return a java.util.List<TrainingAssignedTo>
+     * @return a java.util.List<MicrosoftTrainingAssignmentMappingAssignedTo>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<TrainingAssignedTo> getAssignedTo() {
+    public java.util.List<MicrosoftTrainingAssignmentMappingAssignedTo> getAssignedTo() {
         return this.backingStore.get("assignedTo");
     }
     /**
@@ -40,7 +40,7 @@ public class MicrosoftTrainingAssignmentMapping extends TrainingSetting implemen
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getCollectionOfEnumValues(TrainingAssignedTo::forValue)); });
+        deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getCollectionOfEnumValues(MicrosoftTrainingAssignmentMappingAssignedTo::forValue)); });
         deserializerMap.put("training", (n) -> { this.setTraining(n.getObjectValue(Training::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -66,7 +66,7 @@ public class MicrosoftTrainingAssignmentMapping extends TrainingSetting implemen
      * Sets the assignedTo property value. A user collection that specifies to whom the training should be assigned. Possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
      * @param value Value to set for the assignedTo property.
      */
-    public void setAssignedTo(@jakarta.annotation.Nullable final java.util.List<TrainingAssignedTo> value) {
+    public void setAssignedTo(@jakarta.annotation.Nullable final java.util.List<MicrosoftTrainingAssignmentMappingAssignedTo> value) {
         this.backingStore.set("assignedTo", value);
     }
     /**

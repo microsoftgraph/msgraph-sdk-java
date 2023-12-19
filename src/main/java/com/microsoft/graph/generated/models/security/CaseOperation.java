@@ -43,10 +43,10 @@ public class CaseOperation extends Entity implements Parsable {
     }
     /**
      * Gets the action property value. The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics, purgeData
-     * @return a CaseAction
+     * @return a CaseOperationAction
      */
     @jakarta.annotation.Nullable
-    public CaseAction getAction() {
+    public CaseOperationAction getAction() {
         return this.backingStore.get("action");
     }
     /**
@@ -80,7 +80,7 @@ public class CaseOperation extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(CaseAction::forValue)); });
+        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(CaseOperationAction::forValue)); });
         deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -132,7 +132,7 @@ public class CaseOperation extends Entity implements Parsable {
      * Sets the action property value. The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics, purgeData
      * @param value Value to set for the action property.
      */
-    public void setAction(@jakarta.annotation.Nullable final CaseAction value) {
+    public void setAction(@jakarta.annotation.Nullable final CaseOperationAction value) {
         this.backingStore.set("action", value);
     }
     /**

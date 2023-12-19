@@ -44,10 +44,10 @@ public class Incident extends Entity implements Parsable {
     }
     /**
      * Gets the classification property value. The specification for the incident. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
-     * @return a AlertClassification
+     * @return a IncidentClassification
      */
     @jakarta.annotation.Nullable
-    public AlertClassification getClassification() {
+    public IncidentClassification getClassification() {
         return this.backingStore.get("classification");
     }
     /**
@@ -84,10 +84,10 @@ public class Incident extends Entity implements Parsable {
     }
     /**
      * Gets the determination property value. Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
-     * @return a AlertDetermination
+     * @return a IncidentDetermination
      */
     @jakarta.annotation.Nullable
-    public AlertDetermination getDetermination() {
+    public IncidentDetermination getDetermination() {
         return this.backingStore.get("determination");
     }
     /**
@@ -107,12 +107,12 @@ public class Incident extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("alerts", (n) -> { this.setAlerts(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getStringValue()); });
-        deserializerMap.put("classification", (n) -> { this.setClassification(n.getEnumValue(AlertClassification::forValue)); });
+        deserializerMap.put("classification", (n) -> { this.setClassification(n.getEnumValue(IncidentClassification::forValue)); });
         deserializerMap.put("comments", (n) -> { this.setComments(n.getCollectionOfObjectValues(AlertComment::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("customTags", (n) -> { this.setCustomTags(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
-        deserializerMap.put("determination", (n) -> { this.setDetermination(n.getEnumValue(AlertDetermination::forValue)); });
+        deserializerMap.put("determination", (n) -> { this.setDetermination(n.getEnumValue(IncidentDetermination::forValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("incidentWebUrl", (n) -> { this.setIncidentWebUrl(n.getStringValue()); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getStringValue()); });
@@ -231,7 +231,7 @@ public class Incident extends Entity implements Parsable {
      * Sets the classification property value. The specification for the incident. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
      * @param value Value to set for the classification property.
      */
-    public void setClassification(@jakarta.annotation.Nullable final AlertClassification value) {
+    public void setClassification(@jakarta.annotation.Nullable final IncidentClassification value) {
         this.backingStore.set("classification", value);
     }
     /**
@@ -266,7 +266,7 @@ public class Incident extends Entity implements Parsable {
      * Sets the determination property value. Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
      * @param value Value to set for the determination property.
      */
-    public void setDetermination(@jakarta.annotation.Nullable final AlertDetermination value) {
+    public void setDetermination(@jakarta.annotation.Nullable final IncidentDetermination value) {
         this.backingStore.set("determination", value);
     }
     /**

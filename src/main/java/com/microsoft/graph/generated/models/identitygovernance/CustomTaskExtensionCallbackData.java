@@ -33,15 +33,15 @@ public class CustomTaskExtensionCallbackData extends CustomExtensionData impleme
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("operationStatus", (n) -> { this.setOperationStatus(n.getEnumValue(CustomTaskExtensionOperationStatus::forValue)); });
+        deserializerMap.put("operationStatus", (n) -> { this.setOperationStatus(n.getEnumValue(CustomTaskExtensionCallbackDataOperationStatus::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the operationStatus property value. Operation status that's provided by the Azure Logic App indicating whenever the Azure Logic App has run successfully or not. Supported values: completed, failed, unknownFutureValue.
-     * @return a CustomTaskExtensionOperationStatus
+     * @return a CustomTaskExtensionCallbackDataOperationStatus
      */
     @jakarta.annotation.Nullable
-    public CustomTaskExtensionOperationStatus getOperationStatus() {
+    public CustomTaskExtensionCallbackDataOperationStatus getOperationStatus() {
         return this.backingStore.get("operationStatus");
     }
     /**
@@ -57,7 +57,7 @@ public class CustomTaskExtensionCallbackData extends CustomExtensionData impleme
      * Sets the operationStatus property value. Operation status that's provided by the Azure Logic App indicating whenever the Azure Logic App has run successfully or not. Supported values: completed, failed, unknownFutureValue.
      * @param value Value to set for the operationStatus property.
      */
-    public void setOperationStatus(@jakarta.annotation.Nullable final CustomTaskExtensionOperationStatus value) {
+    public void setOperationStatus(@jakarta.annotation.Nullable final CustomTaskExtensionCallbackDataOperationStatus value) {
         this.backingStore.set("operationStatus", value);
     }
 }

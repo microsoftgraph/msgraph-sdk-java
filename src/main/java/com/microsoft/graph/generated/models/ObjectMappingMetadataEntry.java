@@ -62,17 +62,17 @@ public class ObjectMappingMetadataEntry implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("key", (n) -> { this.setKey(n.getEnumValue(ObjectMappingMetadata::forValue)); });
+        deserializerMap.put("key", (n) -> { this.setKey(n.getEnumValue(ObjectMappingMetadataEntryKey::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("value", (n) -> { this.setValue(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the key property value. Possible values are: EscrowBehavior, DisableMonitoringForChanges, OriginalJoiningProperty, Disposition, IsCustomerDefined, ExcludeFromReporting, Unsynchronized.
-     * @return a ObjectMappingMetadata
+     * @return a ObjectMappingMetadataEntryKey
      */
     @jakarta.annotation.Nullable
-    public ObjectMappingMetadata getKey() {
+    public ObjectMappingMetadataEntryKey getKey() {
         return this.backingStore.get("key");
     }
     /**
@@ -121,7 +121,7 @@ public class ObjectMappingMetadataEntry implements AdditionalDataHolder, BackedM
      * Sets the key property value. Possible values are: EscrowBehavior, DisableMonitoringForChanges, OriginalJoiningProperty, Disposition, IsCustomerDefined, ExcludeFromReporting, Unsynchronized.
      * @param value Value to set for the key property.
      */
-    public void setKey(@jakarta.annotation.Nullable final ObjectMappingMetadata value) {
+    public void setKey(@jakarta.annotation.Nullable final ObjectMappingMetadataEntryKey value) {
         this.backingStore.set("key", value);
     }
     /**

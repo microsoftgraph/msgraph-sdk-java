@@ -82,8 +82,8 @@ public class ProvisioningStep implements AdditionalDataHolder, BackedModel, Pars
         deserializerMap.put("details", (n) -> { this.setDetails(n.getObjectValue(DetailsInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("provisioningStepType", (n) -> { this.setProvisioningStepType(n.getEnumValue(ProvisioningStepType::forValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ProvisioningResult::forValue)); });
+        deserializerMap.put("provisioningStepType", (n) -> { this.setProvisioningStepType(n.getEnumValue(ProvisioningStepProvisioningStepType::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ProvisioningStepStatus::forValue)); });
         return deserializerMap;
     }
     /**
@@ -104,18 +104,18 @@ public class ProvisioningStep implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the provisioningStepType property value. Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.
-     * @return a ProvisioningStepType
+     * @return a ProvisioningStepProvisioningStepType
      */
     @jakarta.annotation.Nullable
-    public ProvisioningStepType getProvisioningStepType() {
+    public ProvisioningStepProvisioningStepType getProvisioningStepType() {
         return this.backingStore.get("provisioningStepType");
     }
     /**
      * Gets the status property value. Status of the step. Possible values are: success, warning,  failure, skipped, unknownFutureValue.
-     * @return a ProvisioningResult
+     * @return a ProvisioningStepStatus
      */
     @jakarta.annotation.Nullable
-    public ProvisioningResult getStatus() {
+    public ProvisioningStepStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -179,14 +179,14 @@ public class ProvisioningStep implements AdditionalDataHolder, BackedModel, Pars
      * Sets the provisioningStepType property value. Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.
      * @param value Value to set for the provisioningStepType property.
      */
-    public void setProvisioningStepType(@jakarta.annotation.Nullable final ProvisioningStepType value) {
+    public void setProvisioningStepType(@jakarta.annotation.Nullable final ProvisioningStepProvisioningStepType value) {
         this.backingStore.set("provisioningStepType", value);
     }
     /**
      * Sets the status property value. Status of the step. Possible values are: success, warning,  failure, skipped, unknownFutureValue.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final ProvisioningResult value) {
+    public void setStatus(@jakarta.annotation.Nullable final ProvisioningStepStatus value) {
         this.backingStore.set("status", value);
     }
 }

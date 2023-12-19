@@ -64,7 +64,7 @@ public class ResponseStatus implements AdditionalDataHolder, BackedModel, Parsab
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("response", (n) -> { this.setResponse(n.getEnumValue(ResponseType::forValue)); });
+        deserializerMap.put("response", (n) -> { this.setResponse(n.getEnumValue(ResponseStatusResponse::forValue)); });
         deserializerMap.put("time", (n) -> { this.setTime(n.getOffsetDateTimeValue()); });
         return deserializerMap;
     }
@@ -78,10 +78,10 @@ public class ResponseStatus implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the response property value. The response type. Possible values are: none, organizer, tentativelyAccepted, accepted, declined, notResponded.To differentiate between none and notResponded:  none  from organizer's perspective. This value is used when the status of an attendee/participant is reported to the organizer of a meeting.  notResponded  from attendee's perspective. Indicates the attendee has not responded to the meeting request.  Clients can treat notResponded == none.  As an example, if attendee Alex hasn't responded to a meeting request, getting Alex' response status for that event in Alex' calendar returns notResponded. Getting Alex' response from the calendar of any other attendee or the organizer's returns none. Getting the organizer's response for the event in anybody's calendar also returns none.
-     * @return a ResponseType
+     * @return a ResponseStatusResponse
      */
     @jakarta.annotation.Nullable
-    public ResponseType getResponse() {
+    public ResponseStatusResponse getResponse() {
         return this.backingStore.get("response");
     }
     /**
@@ -129,7 +129,7 @@ public class ResponseStatus implements AdditionalDataHolder, BackedModel, Parsab
      * Sets the response property value. The response type. Possible values are: none, organizer, tentativelyAccepted, accepted, declined, notResponded.To differentiate between none and notResponded:  none  from organizer's perspective. This value is used when the status of an attendee/participant is reported to the organizer of a meeting.  notResponded  from attendee's perspective. Indicates the attendee has not responded to the meeting request.  Clients can treat notResponded == none.  As an example, if attendee Alex hasn't responded to a meeting request, getting Alex' response status for that event in Alex' calendar returns notResponded. Getting Alex' response from the calendar of any other attendee or the organizer's returns none. Getting the organizer's response for the event in anybody's calendar also returns none.
      * @param value Value to set for the response property.
      */
-    public void setResponse(@jakarta.annotation.Nullable final ResponseType value) {
+    public void setResponse(@jakarta.annotation.Nullable final ResponseStatusResponse value) {
         this.backingStore.set("response", value);
     }
     /**

@@ -35,10 +35,10 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
     }
     /**
      * Gets the federatedIdpMfaBehavior property value. Determines whether Microsoft Entra ID accepts the MFA performed by the federated IdP when a federated user accesses an application that is governed by a conditional access policy that requires MFA. The possible values are: acceptIfMfaDoneByFederatedIdp, enforceMfaByFederatedIdp, rejectMfaByFederatedIdp, unknownFutureValue. For more information, see federatedIdpMfaBehavior values.
-     * @return a FederatedIdpMfaBehavior
+     * @return a InternalDomainFederationFederatedIdpMfaBehavior
      */
     @jakarta.annotation.Nullable
-    public FederatedIdpMfaBehavior getFederatedIdpMfaBehavior() {
+    public InternalDomainFederationFederatedIdpMfaBehavior getFederatedIdpMfaBehavior() {
         return this.backingStore.get("federatedIdpMfaBehavior");
     }
     /**
@@ -49,10 +49,10 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activeSignInUri", (n) -> { this.setActiveSignInUri(n.getStringValue()); });
-        deserializerMap.put("federatedIdpMfaBehavior", (n) -> { this.setFederatedIdpMfaBehavior(n.getEnumValue(FederatedIdpMfaBehavior::forValue)); });
+        deserializerMap.put("federatedIdpMfaBehavior", (n) -> { this.setFederatedIdpMfaBehavior(n.getEnumValue(InternalDomainFederationFederatedIdpMfaBehavior::forValue)); });
         deserializerMap.put("isSignedAuthenticationRequestRequired", (n) -> { this.setIsSignedAuthenticationRequestRequired(n.getBooleanValue()); });
         deserializerMap.put("nextSigningCertificate", (n) -> { this.setNextSigningCertificate(n.getStringValue()); });
-        deserializerMap.put("promptLoginBehavior", (n) -> { this.setPromptLoginBehavior(n.getEnumValue(PromptLoginBehavior::forValue)); });
+        deserializerMap.put("promptLoginBehavior", (n) -> { this.setPromptLoginBehavior(n.getEnumValue(InternalDomainFederationPromptLoginBehavior::forValue)); });
         deserializerMap.put("signingCertificateUpdateStatus", (n) -> { this.setSigningCertificateUpdateStatus(n.getObjectValue(SigningCertificateUpdateStatus::createFromDiscriminatorValue)); });
         deserializerMap.put("signOutUri", (n) -> { this.setSignOutUri(n.getStringValue()); });
         return deserializerMap;
@@ -75,10 +75,10 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
     }
     /**
      * Gets the promptLoginBehavior property value. Sets the preferred behavior for the sign-in prompt. The possible values are: translateToFreshPasswordAuthentication, nativeSupport, disabled, unknownFutureValue.
-     * @return a PromptLoginBehavior
+     * @return a InternalDomainFederationPromptLoginBehavior
      */
     @jakarta.annotation.Nullable
-    public PromptLoginBehavior getPromptLoginBehavior() {
+    public InternalDomainFederationPromptLoginBehavior getPromptLoginBehavior() {
         return this.backingStore.get("promptLoginBehavior");
     }
     /**
@@ -123,7 +123,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
      * Sets the federatedIdpMfaBehavior property value. Determines whether Microsoft Entra ID accepts the MFA performed by the federated IdP when a federated user accesses an application that is governed by a conditional access policy that requires MFA. The possible values are: acceptIfMfaDoneByFederatedIdp, enforceMfaByFederatedIdp, rejectMfaByFederatedIdp, unknownFutureValue. For more information, see federatedIdpMfaBehavior values.
      * @param value Value to set for the federatedIdpMfaBehavior property.
      */
-    public void setFederatedIdpMfaBehavior(@jakarta.annotation.Nullable final FederatedIdpMfaBehavior value) {
+    public void setFederatedIdpMfaBehavior(@jakarta.annotation.Nullable final InternalDomainFederationFederatedIdpMfaBehavior value) {
         this.backingStore.set("federatedIdpMfaBehavior", value);
     }
     /**
@@ -144,7 +144,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
      * Sets the promptLoginBehavior property value. Sets the preferred behavior for the sign-in prompt. The possible values are: translateToFreshPasswordAuthentication, nativeSupport, disabled, unknownFutureValue.
      * @param value Value to set for the promptLoginBehavior property.
      */
-    public void setPromptLoginBehavior(@jakarta.annotation.Nullable final PromptLoginBehavior value) {
+    public void setPromptLoginBehavior(@jakarta.annotation.Nullable final InternalDomainFederationPromptLoginBehavior value) {
         this.backingStore.set("promptLoginBehavior", value);
     }
     /**

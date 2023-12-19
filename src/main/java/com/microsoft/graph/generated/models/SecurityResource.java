@@ -64,7 +64,7 @@ public class SecurityResource implements AdditionalDataHolder, BackedModel, Pars
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("resource", (n) -> { this.setResource(n.getStringValue()); });
-        deserializerMap.put("resourceType", (n) -> { this.setResourceType(n.getEnumValue(SecurityResourceType::forValue)); });
+        deserializerMap.put("resourceType", (n) -> { this.setResourceType(n.getEnumValue(SecurityResourceResourceType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -85,10 +85,10 @@ public class SecurityResource implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the resourceType property value. Represents type of security resources related to an alert. Possible values are: attacked, related.
-     * @return a SecurityResourceType
+     * @return a SecurityResourceResourceType
      */
     @jakarta.annotation.Nullable
-    public SecurityResourceType getResourceType() {
+    public SecurityResourceResourceType getResourceType() {
         return this.backingStore.get("resourceType");
     }
     /**
@@ -135,7 +135,7 @@ public class SecurityResource implements AdditionalDataHolder, BackedModel, Pars
      * Sets the resourceType property value. Represents type of security resources related to an alert. Possible values are: attacked, related.
      * @param value Value to set for the resourceType property.
      */
-    public void setResourceType(@jakarta.annotation.Nullable final SecurityResourceType value) {
+    public void setResourceType(@jakarta.annotation.Nullable final SecurityResourceResourceType value) {
         this.backingStore.set("resourceType", value);
     }
 }

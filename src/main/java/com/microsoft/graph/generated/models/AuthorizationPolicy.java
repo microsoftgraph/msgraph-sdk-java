@@ -52,10 +52,10 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the allowInvitesFrom property value. Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. For more information, see allowInvitesFrom values.
-     * @return a AllowInvitesFrom
+     * @return a AuthorizationPolicyAllowInvitesFrom
      */
     @jakarta.annotation.Nullable
-    public AllowInvitesFrom getAllowInvitesFrom() {
+    public AuthorizationPolicyAllowInvitesFrom getAllowInvitesFrom() {
         return this.backingStore.get("allowInvitesFrom");
     }
     /**
@@ -92,7 +92,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         deserializerMap.put("allowedToSignUpEmailBasedSubscriptions", (n) -> { this.setAllowedToSignUpEmailBasedSubscriptions(n.getBooleanValue()); });
         deserializerMap.put("allowedToUseSSPR", (n) -> { this.setAllowedToUseSSPR(n.getBooleanValue()); });
         deserializerMap.put("allowEmailVerifiedUsersToJoinOrganization", (n) -> { this.setAllowEmailVerifiedUsersToJoinOrganization(n.getBooleanValue()); });
-        deserializerMap.put("allowInvitesFrom", (n) -> { this.setAllowInvitesFrom(n.getEnumValue(AllowInvitesFrom::forValue)); });
+        deserializerMap.put("allowInvitesFrom", (n) -> { this.setAllowInvitesFrom(n.getEnumValue(AuthorizationPolicyAllowInvitesFrom::forValue)); });
         deserializerMap.put("allowUserConsentForRiskyApps", (n) -> { this.setAllowUserConsentForRiskyApps(n.getBooleanValue()); });
         deserializerMap.put("blockMsolPowerShell", (n) -> { this.setBlockMsolPowerShell(n.getBooleanValue()); });
         deserializerMap.put("defaultUserRolePermissions", (n) -> { this.setDefaultUserRolePermissions(n.getObjectValue(DefaultUserRolePermissions::createFromDiscriminatorValue)); });
@@ -148,7 +148,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      * Sets the allowInvitesFrom property value. Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. For more information, see allowInvitesFrom values.
      * @param value Value to set for the allowInvitesFrom property.
      */
-    public void setAllowInvitesFrom(@jakarta.annotation.Nullable final AllowInvitesFrom value) {
+    public void setAllowInvitesFrom(@jakarta.annotation.Nullable final AuthorizationPolicyAllowInvitesFrom value) {
         this.backingStore.set("allowInvitesFrom", value);
     }
     /**

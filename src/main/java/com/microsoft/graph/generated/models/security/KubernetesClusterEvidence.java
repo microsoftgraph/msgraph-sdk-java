@@ -51,7 +51,7 @@ public class KubernetesClusterEvidence extends AlertEvidence implements Parsable
         deserializerMap.put("cloudResource", (n) -> { this.setCloudResource(n.getObjectValue(AlertEvidence::createFromDiscriminatorValue)); });
         deserializerMap.put("distribution", (n) -> { this.setDistribution(n.getStringValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
-        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getEnumValue(KubernetesPlatform::forValue)); });
+        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getEnumValue(KubernetesClusterEvidencePlatform::forValue)); });
         deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
         return deserializerMap;
     }
@@ -65,10 +65,10 @@ public class KubernetesClusterEvidence extends AlertEvidence implements Parsable
     }
     /**
      * Gets the platform property value. The platform the cluster runs on. Possible values are: unknown, aks, eks, gke, arc, unknownFutureValue.
-     * @return a KubernetesPlatform
+     * @return a KubernetesClusterEvidencePlatform
      */
     @jakarta.annotation.Nullable
-    public KubernetesPlatform getPlatform() {
+    public KubernetesClusterEvidencePlatform getPlatform() {
         return this.backingStore.get("platform");
     }
     /**
@@ -117,7 +117,7 @@ public class KubernetesClusterEvidence extends AlertEvidence implements Parsable
      * Sets the platform property value. The platform the cluster runs on. Possible values are: unknown, aks, eks, gke, arc, unknownFutureValue.
      * @param value Value to set for the platform property.
      */
-    public void setPlatform(@jakarta.annotation.Nullable final KubernetesPlatform value) {
+    public void setPlatform(@jakarta.annotation.Nullable final KubernetesClusterEvidencePlatform value) {
         this.backingStore.set("platform", value);
     }
     /**

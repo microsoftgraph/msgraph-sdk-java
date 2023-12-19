@@ -80,17 +80,17 @@ public class FollowupFlag implements AdditionalDataHolder, BackedModel, Parsable
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         deserializerMap.put("dueDateTime", (n) -> { this.setDueDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-        deserializerMap.put("flagStatus", (n) -> { this.setFlagStatus(n.getEnumValue(FollowupFlagStatus::forValue)); });
+        deserializerMap.put("flagStatus", (n) -> { this.setFlagStatus(n.getEnumValue(FollowupFlagFlagStatus::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the flagStatus property value. The status for follow-up for an item. Possible values are notFlagged, complete, and flagged.
-     * @return a FollowupFlagStatus
+     * @return a FollowupFlagFlagStatus
      */
     @jakarta.annotation.Nullable
-    public FollowupFlagStatus getFlagStatus() {
+    public FollowupFlagFlagStatus getFlagStatus() {
         return this.backingStore.get("flagStatus");
     }
     /**
@@ -155,7 +155,7 @@ public class FollowupFlag implements AdditionalDataHolder, BackedModel, Parsable
      * Sets the flagStatus property value. The status for follow-up for an item. Possible values are notFlagged, complete, and flagged.
      * @param value Value to set for the flagStatus property.
      */
-    public void setFlagStatus(@jakarta.annotation.Nullable final FollowupFlagStatus value) {
+    public void setFlagStatus(@jakarta.annotation.Nullable final FollowupFlagFlagStatus value) {
         this.backingStore.set("flagStatus", value);
     }
     /**

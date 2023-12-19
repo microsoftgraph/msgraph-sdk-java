@@ -41,15 +41,15 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("feedbackResource", (n) -> { this.setFeedbackResource(n.getObjectValue(EducationResource::createFromDiscriminatorValue)); });
-        deserializerMap.put("resourceStatus", (n) -> { this.setResourceStatus(n.getEnumValue(EducationFeedbackResourceOutcomeStatus::forValue)); });
+        deserializerMap.put("resourceStatus", (n) -> { this.setResourceStatus(n.getEnumValue(EducationFeedbackResourceOutcomeResourceStatus::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the resourceStatus property value. The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, unknownFutureValue.
-     * @return a EducationFeedbackResourceOutcomeStatus
+     * @return a EducationFeedbackResourceOutcomeResourceStatus
      */
     @jakarta.annotation.Nullable
-    public EducationFeedbackResourceOutcomeStatus getResourceStatus() {
+    public EducationFeedbackResourceOutcomeResourceStatus getResourceStatus() {
         return this.backingStore.get("resourceStatus");
     }
     /**
@@ -73,7 +73,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      * Sets the resourceStatus property value. The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, unknownFutureValue.
      * @param value Value to set for the resourceStatus property.
      */
-    public void setResourceStatus(@jakarta.annotation.Nullable final EducationFeedbackResourceOutcomeStatus value) {
+    public void setResourceStatus(@jakarta.annotation.Nullable final EducationFeedbackResourceOutcomeResourceStatus value) {
         this.backingStore.set("resourceStatus", value);
     }
 }

@@ -51,7 +51,7 @@ public class TeamworkTag extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("memberCount", (n) -> { this.setMemberCount(n.getIntegerValue()); });
         deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(TeamworkTagMember::createFromDiscriminatorValue)); });
-        deserializerMap.put("tagType", (n) -> { this.setTagType(n.getEnumValue(TeamworkTagType::forValue)); });
+        deserializerMap.put("tagType", (n) -> { this.setTagType(n.getEnumValue(TeamworkTagTagType::forValue)); });
         deserializerMap.put("teamId", (n) -> { this.setTeamId(n.getStringValue()); });
         return deserializerMap;
     }
@@ -73,10 +73,10 @@ public class TeamworkTag extends Entity implements Parsable {
     }
     /**
      * Gets the tagType property value. The type of the tag. Default is standard.
-     * @return a TeamworkTagType
+     * @return a TeamworkTagTagType
      */
     @jakarta.annotation.Nullable
-    public TeamworkTagType getTagType() {
+    public TeamworkTagTagType getTagType() {
         return this.backingStore.get("tagType");
     }
     /**
@@ -133,7 +133,7 @@ public class TeamworkTag extends Entity implements Parsable {
      * Sets the tagType property value. The type of the tag. Default is standard.
      * @param value Value to set for the tagType property.
      */
-    public void setTagType(@jakarta.annotation.Nullable final TeamworkTagType value) {
+    public void setTagType(@jakarta.annotation.Nullable final TeamworkTagTagType value) {
         this.backingStore.set("tagType", value);
     }
     /**

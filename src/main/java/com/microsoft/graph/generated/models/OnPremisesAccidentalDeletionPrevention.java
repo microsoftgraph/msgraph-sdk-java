@@ -72,7 +72,7 @@ public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHol
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("alertThreshold", (n) -> { this.setAlertThreshold(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("synchronizationPreventionType", (n) -> { this.setSynchronizationPreventionType(n.getEnumValue(OnPremisesDirectorySynchronizationDeletionPreventionType::forValue)); });
+        deserializerMap.put("synchronizationPreventionType", (n) -> { this.setSynchronizationPreventionType(n.getEnumValue(OnPremisesAccidentalDeletionPreventionSynchronizationPreventionType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -85,10 +85,10 @@ public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHol
     }
     /**
      * Gets the synchronizationPreventionType property value. The status of the accidental deletion prevention feature. The possible values are: disabled, enabledForCount, enabledForPercentage, unknownFutureValue.
-     * @return a OnPremisesDirectorySynchronizationDeletionPreventionType
+     * @return a OnPremisesAccidentalDeletionPreventionSynchronizationPreventionType
      */
     @jakarta.annotation.Nullable
-    public OnPremisesDirectorySynchronizationDeletionPreventionType getSynchronizationPreventionType() {
+    public OnPremisesAccidentalDeletionPreventionSynchronizationPreventionType getSynchronizationPreventionType() {
         return this.backingStore.get("synchronizationPreventionType");
     }
     /**
@@ -135,7 +135,7 @@ public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHol
      * Sets the synchronizationPreventionType property value. The status of the accidental deletion prevention feature. The possible values are: disabled, enabledForCount, enabledForPercentage, unknownFutureValue.
      * @param value Value to set for the synchronizationPreventionType property.
      */
-    public void setSynchronizationPreventionType(@jakarta.annotation.Nullable final OnPremisesDirectorySynchronizationDeletionPreventionType value) {
+    public void setSynchronizationPreventionType(@jakarta.annotation.Nullable final OnPremisesAccidentalDeletionPreventionSynchronizationPreventionType value) {
         this.backingStore.set("synchronizationPreventionType", value);
     }
 }

@@ -51,10 +51,10 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the audioCodec property value. Codec name used to encode audio for transmission on the network. Possible values are: unknown, invalid, cn, pcma, pcmu, amrWide, g722, g7221, g7221c, g729, multiChannelAudio, muchv2, opus, satin, satinFullband, rtAudio8, rtAudio16, silk, silkNarrow, silkWide, siren, xmsRta, unknownFutureValue.
-     * @return a AudioCodec
+     * @return a MediaStreamAudioCodec
      */
     @jakarta.annotation.Nullable
-    public AudioCodec getAudioCodec() {
+    public MediaStreamAudioCodec getAudioCodec() {
         return this.backingStore.get("audioCodec");
     }
     /**
@@ -176,7 +176,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(31);
-        deserializerMap.put("audioCodec", (n) -> { this.setAudioCodec(n.getEnumValue(AudioCodec::forValue)); });
+        deserializerMap.put("audioCodec", (n) -> { this.setAudioCodec(n.getEnumValue(MediaStreamAudioCodec::forValue)); });
         deserializerMap.put("averageAudioDegradation", (n) -> { this.setAverageAudioDegradation(n.getFloatValue()); });
         deserializerMap.put("averageAudioNetworkJitter", (n) -> { this.setAverageAudioNetworkJitter(n.getPeriodAndDurationValue()); });
         deserializerMap.put("averageBandwidthEstimate", (n) -> { this.setAverageBandwidthEstimate(n.getLongValue()); });
@@ -205,7 +205,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("streamDirection", (n) -> { this.setStreamDirection(n.getEnumValue(MediaStreamDirection::forValue)); });
         deserializerMap.put("streamId", (n) -> { this.setStreamId(n.getStringValue()); });
-        deserializerMap.put("videoCodec", (n) -> { this.setVideoCodec(n.getEnumValue(VideoCodec::forValue)); });
+        deserializerMap.put("videoCodec", (n) -> { this.setVideoCodec(n.getEnumValue(MediaStreamVideoCodec::forValue)); });
         deserializerMap.put("wasMediaBypassed", (n) -> { this.setWasMediaBypassed(n.getBooleanValue()); });
         return deserializerMap;
     }
@@ -331,10 +331,10 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the videoCodec property value. Codec name used to encode video for transmission on the network. Possible values are: unknown, invalid, av1, h263, h264, h264s, h264uc, h265, rtvc1, rtVideo, xrtvc1, unknownFutureValue.
-     * @return a VideoCodec
+     * @return a MediaStreamVideoCodec
      */
     @jakarta.annotation.Nullable
-    public VideoCodec getVideoCodec() {
+    public MediaStreamVideoCodec getVideoCodec() {
         return this.backingStore.get("videoCodec");
     }
     /**
@@ -395,7 +395,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
      * Sets the audioCodec property value. Codec name used to encode audio for transmission on the network. Possible values are: unknown, invalid, cn, pcma, pcmu, amrWide, g722, g7221, g7221c, g729, multiChannelAudio, muchv2, opus, satin, satinFullband, rtAudio8, rtAudio16, silk, silkNarrow, silkWide, siren, xmsRta, unknownFutureValue.
      * @param value Value to set for the audioCodec property.
      */
-    public void setAudioCodec(@jakarta.annotation.Nullable final AudioCodec value) {
+    public void setAudioCodec(@jakarta.annotation.Nullable final MediaStreamAudioCodec value) {
         this.backingStore.set("audioCodec", value);
     }
     /**
@@ -606,7 +606,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
      * Sets the videoCodec property value. Codec name used to encode video for transmission on the network. Possible values are: unknown, invalid, av1, h263, h264, h264s, h264uc, h265, rtvc1, rtVideo, xrtvc1, unknownFutureValue.
      * @param value Value to set for the videoCodec property.
      */
-    public void setVideoCodec(@jakarta.annotation.Nullable final VideoCodec value) {
+    public void setVideoCodec(@jakarta.annotation.Nullable final MediaStreamVideoCodec value) {
         this.backingStore.set("videoCodec", value);
     }
     /**

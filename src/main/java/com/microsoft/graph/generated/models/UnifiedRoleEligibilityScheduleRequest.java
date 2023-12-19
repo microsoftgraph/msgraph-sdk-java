@@ -26,10 +26,10 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     }
     /**
      * Gets the action property value. Represents the type of operation on the role eligibility request. The possible values are: adminAssign, adminUpdate, adminRemove, selfActivate, selfDeactivate, adminExtend, adminRenew, selfExtend, selfRenew, unknownFutureValue. adminAssign: For administrators to assign eligible roles to principals.adminRemove: For administrators to remove eligible roles from principals. adminUpdate: For administrators to change existing role eligibilities.adminExtend: For administrators to extend expiring role eligibilities.adminRenew: For administrators to renew expired eligibilities.selfActivate: For users to activate their assignments.selfDeactivate: For users to deactivate their active assignments.selfExtend: For users to request to extend their expiring assignments.selfRenew: For users to request to renew their expired assignments.
-     * @return a UnifiedRoleScheduleRequestActions
+     * @return a UnifiedRoleEligibilityScheduleRequestAction
      */
     @jakarta.annotation.Nullable
-    public UnifiedRoleScheduleRequestActions getAction() {
+    public UnifiedRoleEligibilityScheduleRequestAction getAction() {
         return this.backingStore.get("action");
     }
     /**
@@ -71,7 +71,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(UnifiedRoleScheduleRequestActions::forValue)); });
+        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(UnifiedRoleEligibilityScheduleRequestAction::forValue)); });
         deserializerMap.put("appScope", (n) -> { this.setAppScope(n.getObjectValue(AppScope::createFromDiscriminatorValue)); });
         deserializerMap.put("appScopeId", (n) -> { this.setAppScopeId(n.getStringValue()); });
         deserializerMap.put("directoryScope", (n) -> { this.setDirectoryScope(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
@@ -195,7 +195,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * Sets the action property value. Represents the type of operation on the role eligibility request. The possible values are: adminAssign, adminUpdate, adminRemove, selfActivate, selfDeactivate, adminExtend, adminRenew, selfExtend, selfRenew, unknownFutureValue. adminAssign: For administrators to assign eligible roles to principals.adminRemove: For administrators to remove eligible roles from principals. adminUpdate: For administrators to change existing role eligibilities.adminExtend: For administrators to extend expiring role eligibilities.adminRenew: For administrators to renew expired eligibilities.selfActivate: For users to activate their assignments.selfDeactivate: For users to deactivate their active assignments.selfExtend: For users to request to extend their expiring assignments.selfRenew: For users to request to renew their expired assignments.
      * @param value Value to set for the action property.
      */
-    public void setAction(@jakarta.annotation.Nullable final UnifiedRoleScheduleRequestActions value) {
+    public void setAction(@jakarta.annotation.Nullable final UnifiedRoleEligibilityScheduleRequestAction value) {
         this.backingStore.set("action", value);
     }
     /**

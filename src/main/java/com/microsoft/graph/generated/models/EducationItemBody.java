@@ -65,10 +65,10 @@ public class EducationItemBody implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the contentType property value. The contentType property
-     * @return a BodyType
+     * @return a EducationItemBodyContentType
      */
     @jakarta.annotation.Nullable
-    public BodyType getContentType() {
+    public EducationItemBodyContentType getContentType() {
         return this.backingStore.get("contentType");
     }
     /**
@@ -79,7 +79,7 @@ public class EducationItemBody implements AdditionalDataHolder, BackedModel, Par
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("content", (n) -> { this.setContent(n.getStringValue()); });
-        deserializerMap.put("contentType", (n) -> { this.setContentType(n.getEnumValue(BodyType::forValue)); });
+        deserializerMap.put("contentType", (n) -> { this.setContentType(n.getEnumValue(EducationItemBodyContentType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -128,7 +128,7 @@ public class EducationItemBody implements AdditionalDataHolder, BackedModel, Par
      * Sets the contentType property value. The contentType property
      * @param value Value to set for the contentType property.
      */
-    public void setContentType(@jakarta.annotation.Nullable final BodyType value) {
+    public void setContentType(@jakarta.annotation.Nullable final EducationItemBodyContentType value) {
         this.backingStore.set("contentType", value);
     }
     /**

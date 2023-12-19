@@ -65,7 +65,7 @@ public class AlterationResponse implements AdditionalDataHolder, BackedModel, Pa
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("originalQueryString", (n) -> { this.setOriginalQueryString(n.getStringValue()); });
         deserializerMap.put("queryAlteration", (n) -> { this.setQueryAlteration(n.getObjectValue(SearchAlteration::createFromDiscriminatorValue)); });
-        deserializerMap.put("queryAlterationType", (n) -> { this.setQueryAlterationType(n.getEnumValue(SearchAlterationType::forValue)); });
+        deserializerMap.put("queryAlterationType", (n) -> { this.setQueryAlterationType(n.getEnumValue(AlterationResponseQueryAlterationType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -94,10 +94,10 @@ public class AlterationResponse implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the queryAlterationType property value. Defines the type of the spelling correction. Possible values are: suggestion, modification.
-     * @return a SearchAlterationType
+     * @return a AlterationResponseQueryAlterationType
      */
     @jakarta.annotation.Nullable
-    public SearchAlterationType getQueryAlterationType() {
+    public AlterationResponseQueryAlterationType getQueryAlterationType() {
         return this.backingStore.get("queryAlterationType");
     }
     /**
@@ -152,7 +152,7 @@ public class AlterationResponse implements AdditionalDataHolder, BackedModel, Pa
      * Sets the queryAlterationType property value. Defines the type of the spelling correction. Possible values are: suggestion, modification.
      * @param value Value to set for the queryAlterationType property.
      */
-    public void setQueryAlterationType(@jakarta.annotation.Nullable final SearchAlterationType value) {
+    public void setQueryAlterationType(@jakarta.annotation.Nullable final AlterationResponseQueryAlterationType value) {
         this.backingStore.set("queryAlterationType", value);
     }
 }

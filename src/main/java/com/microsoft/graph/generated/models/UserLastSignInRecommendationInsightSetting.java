@@ -34,7 +34,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("recommendationLookBackDuration", (n) -> { this.setRecommendationLookBackDuration(n.getPeriodAndDurationValue()); });
-        deserializerMap.put("signInScope", (n) -> { this.setSignInScope(n.getEnumValue(UserSignInRecommendationScope::forValue)); });
+        deserializerMap.put("signInScope", (n) -> { this.setSignInScope(n.getEnumValue(UserLastSignInRecommendationInsightSettingSignInScope::forValue)); });
         return deserializerMap;
     }
     /**
@@ -47,10 +47,10 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
     }
     /**
      * Gets the signInScope property value. Indicates whether inactivity is calculated based on the user's inactivity in the tenant or in the application. The possible values are tenant, application, unknownFutureValue. application is only relevant when the access review is a review of an assignment to an application.
-     * @return a UserSignInRecommendationScope
+     * @return a UserLastSignInRecommendationInsightSettingSignInScope
      */
     @jakarta.annotation.Nullable
-    public UserSignInRecommendationScope getSignInScope() {
+    public UserLastSignInRecommendationInsightSettingSignInScope getSignInScope() {
         return this.backingStore.get("signInScope");
     }
     /**
@@ -74,7 +74,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
      * Sets the signInScope property value. Indicates whether inactivity is calculated based on the user's inactivity in the tenant or in the application. The possible values are tenant, application, unknownFutureValue. application is only relevant when the access review is a review of an assignment to an application.
      * @param value Value to set for the signInScope property.
      */
-    public void setSignInScope(@jakarta.annotation.Nullable final UserSignInRecommendationScope value) {
+    public void setSignInScope(@jakarta.annotation.Nullable final UserLastSignInRecommendationInsightSettingSignInScope value) {
         this.backingStore.set("signInScope", value);
     }
 }

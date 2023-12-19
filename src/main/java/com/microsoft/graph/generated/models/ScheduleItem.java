@@ -75,7 +75,7 @@ public class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
         deserializerMap.put("location", (n) -> { this.setLocation(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("start", (n) -> { this.setStart(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(FreeBusyStatus::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ScheduleItemStatus::forValue)); });
         deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
         return deserializerMap;
     }
@@ -113,10 +113,10 @@ public class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the status property value. The availability status of the user or resource during the corresponding event. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
-     * @return a FreeBusyStatus
+     * @return a ScheduleItemStatus
      */
     @jakarta.annotation.Nullable
-    public FreeBusyStatus getStatus() {
+    public ScheduleItemStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -196,7 +196,7 @@ public class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
      * Sets the status property value. The availability status of the user or resource during the corresponding event. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final FreeBusyStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final ScheduleItemStatus value) {
         this.backingStore.set("status", value);
     }
     /**

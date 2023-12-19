@@ -64,7 +64,7 @@ public class CrossTenantAccessPolicyTarget implements AdditionalDataHolder, Back
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("target", (n) -> { this.setTarget(n.getStringValue()); });
-        deserializerMap.put("targetType", (n) -> { this.setTargetType(n.getEnumValue(CrossTenantAccessPolicyTargetType::forValue)); });
+        deserializerMap.put("targetType", (n) -> { this.setTargetType(n.getEnumValue(CrossTenantAccessPolicyTargetTargetType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -85,10 +85,10 @@ public class CrossTenantAccessPolicyTarget implements AdditionalDataHolder, Back
     }
     /**
      * Gets the targetType property value. The type of resource that you want to target. The possible values are: user, group, application, unknownFutureValue.
-     * @return a CrossTenantAccessPolicyTargetType
+     * @return a CrossTenantAccessPolicyTargetTargetType
      */
     @jakarta.annotation.Nullable
-    public CrossTenantAccessPolicyTargetType getTargetType() {
+    public CrossTenantAccessPolicyTargetTargetType getTargetType() {
         return this.backingStore.get("targetType");
     }
     /**
@@ -135,7 +135,7 @@ public class CrossTenantAccessPolicyTarget implements AdditionalDataHolder, Back
      * Sets the targetType property value. The type of resource that you want to target. The possible values are: user, group, application, unknownFutureValue.
      * @param value Value to set for the targetType property.
      */
-    public void setTargetType(@jakarta.annotation.Nullable final CrossTenantAccessPolicyTargetType value) {
+    public void setTargetType(@jakarta.annotation.Nullable final CrossTenantAccessPolicyTargetTargetType value) {
         this.backingStore.set("targetType", value);
     }
 }

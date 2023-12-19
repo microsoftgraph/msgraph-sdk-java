@@ -32,15 +32,15 @@ public class SimulationNotification extends BaseEndUserNotification implements P
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("targettedUserType", (n) -> { this.setTargettedUserType(n.getEnumValue(TargettedUserType::forValue)); });
+        deserializerMap.put("targettedUserType", (n) -> { this.setTargettedUserType(n.getEnumValue(SimulationNotificationTargettedUserType::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the targettedUserType property value. Target user type. Possible values are: unknown, clicked, compromised, allUsers, unknownFutureValue.
-     * @return a TargettedUserType
+     * @return a SimulationNotificationTargettedUserType
      */
     @jakarta.annotation.Nullable
-    public TargettedUserType getTargettedUserType() {
+    public SimulationNotificationTargettedUserType getTargettedUserType() {
         return this.backingStore.get("targettedUserType");
     }
     /**
@@ -56,7 +56,7 @@ public class SimulationNotification extends BaseEndUserNotification implements P
      * Sets the targettedUserType property value. Target user type. Possible values are: unknown, clicked, compromised, allUsers, unknownFutureValue.
      * @param value Value to set for the targettedUserType property.
      */
-    public void setTargettedUserType(@jakarta.annotation.Nullable final TargettedUserType value) {
+    public void setTargettedUserType(@jakarta.annotation.Nullable final SimulationNotificationTargettedUserType value) {
         this.backingStore.set("targettedUserType", value);
     }
 }

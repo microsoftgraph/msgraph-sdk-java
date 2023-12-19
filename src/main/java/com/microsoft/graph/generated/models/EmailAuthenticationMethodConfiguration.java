@@ -27,10 +27,10 @@ public class EmailAuthenticationMethodConfiguration extends AuthenticationMethod
     }
     /**
      * Gets the allowExternalIdToUseEmailOtp property value. Determines whether email OTP is usable by external users for authentication. Possible values are: default, enabled, disabled, unknownFutureValue. Tenants in the default state who didn't use public preview have email OTP enabled beginning in October 2021.
-     * @return a ExternalEmailOtpState
+     * @return a EmailAuthenticationMethodConfigurationAllowExternalIdToUseEmailOtp
      */
     @jakarta.annotation.Nullable
-    public ExternalEmailOtpState getAllowExternalIdToUseEmailOtp() {
+    public EmailAuthenticationMethodConfigurationAllowExternalIdToUseEmailOtp getAllowExternalIdToUseEmailOtp() {
         return this.backingStore.get("allowExternalIdToUseEmailOtp");
     }
     /**
@@ -40,7 +40,7 @@ public class EmailAuthenticationMethodConfiguration extends AuthenticationMethod
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("allowExternalIdToUseEmailOtp", (n) -> { this.setAllowExternalIdToUseEmailOtp(n.getEnumValue(ExternalEmailOtpState::forValue)); });
+        deserializerMap.put("allowExternalIdToUseEmailOtp", (n) -> { this.setAllowExternalIdToUseEmailOtp(n.getEnumValue(EmailAuthenticationMethodConfigurationAllowExternalIdToUseEmailOtp::forValue)); });
         deserializerMap.put("includeTargets", (n) -> { this.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodTarget::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -66,7 +66,7 @@ public class EmailAuthenticationMethodConfiguration extends AuthenticationMethod
      * Sets the allowExternalIdToUseEmailOtp property value. Determines whether email OTP is usable by external users for authentication. Possible values are: default, enabled, disabled, unknownFutureValue. Tenants in the default state who didn't use public preview have email OTP enabled beginning in October 2021.
      * @param value Value to set for the allowExternalIdToUseEmailOtp property.
      */
-    public void setAllowExternalIdToUseEmailOtp(@jakarta.annotation.Nullable final ExternalEmailOtpState value) {
+    public void setAllowExternalIdToUseEmailOtp(@jakarta.annotation.Nullable final EmailAuthenticationMethodConfigurationAllowExternalIdToUseEmailOtp value) {
         this.backingStore.set("allowExternalIdToUseEmailOtp", value);
     }
     /**

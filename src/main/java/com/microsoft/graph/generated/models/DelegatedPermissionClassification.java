@@ -26,10 +26,10 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
     }
     /**
      * Gets the classification property value. The classification value being given. Possible value: low. Doesn't support $filter.
-     * @return a PermissionClassificationType
+     * @return a DelegatedPermissionClassificationClassification
      */
     @jakarta.annotation.Nullable
-    public PermissionClassificationType getClassification() {
+    public DelegatedPermissionClassificationClassification getClassification() {
         return this.backingStore.get("classification");
     }
     /**
@@ -39,7 +39,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("classification", (n) -> { this.setClassification(n.getEnumValue(PermissionClassificationType::forValue)); });
+        deserializerMap.put("classification", (n) -> { this.setClassification(n.getEnumValue(DelegatedPermissionClassificationClassification::forValue)); });
         deserializerMap.put("permissionId", (n) -> { this.setPermissionId(n.getStringValue()); });
         deserializerMap.put("permissionName", (n) -> { this.setPermissionName(n.getStringValue()); });
         return deserializerMap;
@@ -75,7 +75,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
      * Sets the classification property value. The classification value being given. Possible value: low. Doesn't support $filter.
      * @param value Value to set for the classification property.
      */
-    public void setClassification(@jakarta.annotation.Nullable final PermissionClassificationType value) {
+    public void setClassification(@jakarta.annotation.Nullable final DelegatedPermissionClassificationClassification value) {
         this.backingStore.set("classification", value);
     }
     /**

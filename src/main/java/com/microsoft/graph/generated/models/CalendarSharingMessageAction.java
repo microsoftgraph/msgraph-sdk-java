@@ -36,18 +36,18 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the action property value. The action property
-     * @return a CalendarSharingAction
+     * @return a CalendarSharingMessageActionAction
      */
     @jakarta.annotation.Nullable
-    public CalendarSharingAction getAction() {
+    public CalendarSharingMessageActionAction getAction() {
         return this.backingStore.get("action");
     }
     /**
      * Gets the actionType property value. The actionType property
-     * @return a CalendarSharingActionType
+     * @return a CalendarSharingMessageActionActionType
      */
     @jakarta.annotation.Nullable
-    public CalendarSharingActionType getActionType() {
+    public CalendarSharingMessageActionActionType getActionType() {
         return this.backingStore.get("actionType");
     }
     /**
@@ -78,18 +78,18 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(CalendarSharingAction::forValue)); });
-        deserializerMap.put("actionType", (n) -> { this.setActionType(n.getEnumValue(CalendarSharingActionType::forValue)); });
-        deserializerMap.put("importance", (n) -> { this.setImportance(n.getEnumValue(CalendarSharingActionImportance::forValue)); });
+        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(CalendarSharingMessageActionAction::forValue)); });
+        deserializerMap.put("actionType", (n) -> { this.setActionType(n.getEnumValue(CalendarSharingMessageActionActionType::forValue)); });
+        deserializerMap.put("importance", (n) -> { this.setImportance(n.getEnumValue(CalendarSharingMessageActionImportance::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the importance property value. The importance property
-     * @return a CalendarSharingActionImportance
+     * @return a CalendarSharingMessageActionImportance
      */
     @jakarta.annotation.Nullable
-    public CalendarSharingActionImportance getImportance() {
+    public CalendarSharingMessageActionImportance getImportance() {
         return this.backingStore.get("importance");
     }
     /**
@@ -116,14 +116,14 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Backe
      * Sets the action property value. The action property
      * @param value Value to set for the action property.
      */
-    public void setAction(@jakarta.annotation.Nullable final CalendarSharingAction value) {
+    public void setAction(@jakarta.annotation.Nullable final CalendarSharingMessageActionAction value) {
         this.backingStore.set("action", value);
     }
     /**
      * Sets the actionType property value. The actionType property
      * @param value Value to set for the actionType property.
      */
-    public void setActionType(@jakarta.annotation.Nullable final CalendarSharingActionType value) {
+    public void setActionType(@jakarta.annotation.Nullable final CalendarSharingMessageActionActionType value) {
         this.backingStore.set("actionType", value);
     }
     /**
@@ -145,7 +145,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Backe
      * Sets the importance property value. The importance property
      * @param value Value to set for the importance property.
      */
-    public void setImportance(@jakarta.annotation.Nullable final CalendarSharingActionImportance value) {
+    public void setImportance(@jakarta.annotation.Nullable final CalendarSharingMessageActionImportance value) {
         this.backingStore.set("importance", value);
     }
     /**

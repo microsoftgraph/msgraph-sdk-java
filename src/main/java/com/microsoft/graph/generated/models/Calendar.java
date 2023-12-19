@@ -26,10 +26,10 @@ public class Calendar extends Entity implements Parsable {
     }
     /**
      * Gets the allowedOnlineMeetingProviders property value. Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
-     * @return a java.util.List<OnlineMeetingProviderType>
+     * @return a java.util.List<CalendarAllowedOnlineMeetingProviders>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<OnlineMeetingProviderType> getAllowedOnlineMeetingProviders() {
+    public java.util.List<CalendarAllowedOnlineMeetingProviders> getAllowedOnlineMeetingProviders() {
         return this.backingStore.get("allowedOnlineMeetingProviders");
     }
     /**
@@ -90,10 +90,10 @@ public class Calendar extends Entity implements Parsable {
     }
     /**
      * Gets the defaultOnlineMeetingProvider property value. The default online meeting provider for meetings sent from this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
-     * @return a OnlineMeetingProviderType
+     * @return a CalendarDefaultOnlineMeetingProvider
      */
     @jakarta.annotation.Nullable
-    public OnlineMeetingProviderType getDefaultOnlineMeetingProvider() {
+    public CalendarDefaultOnlineMeetingProvider getDefaultOnlineMeetingProvider() {
         return this.backingStore.get("defaultOnlineMeetingProvider");
     }
     /**
@@ -111,7 +111,7 @@ public class Calendar extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("allowedOnlineMeetingProviders", (n) -> { this.setAllowedOnlineMeetingProviders(n.getCollectionOfEnumValues(OnlineMeetingProviderType::forValue)); });
+        deserializerMap.put("allowedOnlineMeetingProviders", (n) -> { this.setAllowedOnlineMeetingProviders(n.getCollectionOfEnumValues(CalendarAllowedOnlineMeetingProviders::forValue)); });
         deserializerMap.put("calendarPermissions", (n) -> { this.setCalendarPermissions(n.getCollectionOfObjectValues(CalendarPermission::createFromDiscriminatorValue)); });
         deserializerMap.put("calendarView", (n) -> { this.setCalendarView(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
         deserializerMap.put("canEdit", (n) -> { this.setCanEdit(n.getBooleanValue()); });
@@ -119,7 +119,7 @@ public class Calendar extends Entity implements Parsable {
         deserializerMap.put("canViewPrivateItems", (n) -> { this.setCanViewPrivateItems(n.getBooleanValue()); });
         deserializerMap.put("changeKey", (n) -> { this.setChangeKey(n.getStringValue()); });
         deserializerMap.put("color", (n) -> { this.setColor(n.getEnumValue(CalendarColor::forValue)); });
-        deserializerMap.put("defaultOnlineMeetingProvider", (n) -> { this.setDefaultOnlineMeetingProvider(n.getEnumValue(OnlineMeetingProviderType::forValue)); });
+        deserializerMap.put("defaultOnlineMeetingProvider", (n) -> { this.setDefaultOnlineMeetingProvider(n.getEnumValue(CalendarDefaultOnlineMeetingProvider::forValue)); });
         deserializerMap.put("events", (n) -> { this.setEvents(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
         deserializerMap.put("hexColor", (n) -> { this.setHexColor(n.getStringValue()); });
         deserializerMap.put("isDefaultCalendar", (n) -> { this.setIsDefaultCalendar(n.getBooleanValue()); });
@@ -225,7 +225,7 @@ public class Calendar extends Entity implements Parsable {
      * Sets the allowedOnlineMeetingProviders property value. Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
      * @param value Value to set for the allowedOnlineMeetingProviders property.
      */
-    public void setAllowedOnlineMeetingProviders(@jakarta.annotation.Nullable final java.util.List<OnlineMeetingProviderType> value) {
+    public void setAllowedOnlineMeetingProviders(@jakarta.annotation.Nullable final java.util.List<CalendarAllowedOnlineMeetingProviders> value) {
         this.backingStore.set("allowedOnlineMeetingProviders", value);
     }
     /**
@@ -281,7 +281,7 @@ public class Calendar extends Entity implements Parsable {
      * Sets the defaultOnlineMeetingProvider property value. The default online meeting provider for meetings sent from this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
      * @param value Value to set for the defaultOnlineMeetingProvider property.
      */
-    public void setDefaultOnlineMeetingProvider(@jakarta.annotation.Nullable final OnlineMeetingProviderType value) {
+    public void setDefaultOnlineMeetingProvider(@jakarta.annotation.Nullable final CalendarDefaultOnlineMeetingProvider value) {
         this.backingStore.set("defaultOnlineMeetingProvider", value);
     }
     /**

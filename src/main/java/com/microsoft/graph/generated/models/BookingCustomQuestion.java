@@ -29,10 +29,10 @@ public class BookingCustomQuestion extends Entity implements Parsable {
     }
     /**
      * Gets the answerInputType property value. The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
-     * @return a AnswerInputType
+     * @return a BookingCustomQuestionAnswerInputType
      */
     @jakarta.annotation.Nullable
-    public AnswerInputType getAnswerInputType() {
+    public BookingCustomQuestionAnswerInputType getAnswerInputType() {
         return this.backingStore.get("answerInputType");
     }
     /**
@@ -58,7 +58,7 @@ public class BookingCustomQuestion extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("answerInputType", (n) -> { this.setAnswerInputType(n.getEnumValue(AnswerInputType::forValue)); });
+        deserializerMap.put("answerInputType", (n) -> { this.setAnswerInputType(n.getEnumValue(BookingCustomQuestionAnswerInputType::forValue)); });
         deserializerMap.put("answerOptions", (n) -> { this.setAnswerOptions(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         return deserializerMap;
@@ -78,7 +78,7 @@ public class BookingCustomQuestion extends Entity implements Parsable {
      * Sets the answerInputType property value. The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
      * @param value Value to set for the answerInputType property.
      */
-    public void setAnswerInputType(@jakarta.annotation.Nullable final AnswerInputType value) {
+    public void setAnswerInputType(@jakarta.annotation.Nullable final BookingCustomQuestionAnswerInputType value) {
         this.backingStore.set("answerInputType", value);
     }
     /**

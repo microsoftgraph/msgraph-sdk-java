@@ -71,7 +71,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
         deserializerMap.put("lastActiveDateTime", (n) -> { this.setLastActiveDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("startedDateTime", (n) -> { this.setStartedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(Status::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ActivityHistoryItemStatus::forValue)); });
         deserializerMap.put("userTimezone", (n) -> { this.setUserTimezone(n.getStringValue()); });
         return deserializerMap;
     }
@@ -101,10 +101,10 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
-     * @return a Status
+     * @return a ActivityHistoryItemStatus
      */
     @jakarta.annotation.Nullable
-    public Status getStatus() {
+    public ActivityHistoryItemStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -185,7 +185,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      * Sets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final Status value) {
+    public void setStatus(@jakarta.annotation.Nullable final ActivityHistoryItemStatus value) {
         this.backingStore.set("status", value);
     }
     /**

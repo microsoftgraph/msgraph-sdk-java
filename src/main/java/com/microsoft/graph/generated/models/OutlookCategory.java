@@ -26,10 +26,10 @@ public class OutlookCategory extends Entity implements Parsable {
     }
     /**
      * Gets the color property value. A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. For more details, see the following note.
-     * @return a CategoryColor
+     * @return a OutlookCategoryColor
      */
     @jakarta.annotation.Nullable
-    public CategoryColor getColor() {
+    public OutlookCategoryColor getColor() {
         return this.backingStore.get("color");
     }
     /**
@@ -47,7 +47,7 @@ public class OutlookCategory extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("color", (n) -> { this.setColor(n.getEnumValue(CategoryColor::forValue)); });
+        deserializerMap.put("color", (n) -> { this.setColor(n.getEnumValue(OutlookCategoryColor::forValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         return deserializerMap;
     }
@@ -65,7 +65,7 @@ public class OutlookCategory extends Entity implements Parsable {
      * Sets the color property value. A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. For more details, see the following note.
      * @param value Value to set for the color property.
      */
-    public void setColor(@jakarta.annotation.Nullable final CategoryColor value) {
+    public void setColor(@jakarta.annotation.Nullable final OutlookCategoryColor value) {
         this.backingStore.set("color", value);
     }
     /**

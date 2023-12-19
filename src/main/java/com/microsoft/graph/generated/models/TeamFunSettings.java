@@ -89,16 +89,16 @@ public class TeamFunSettings implements AdditionalDataHolder, BackedModel, Parsa
         deserializerMap.put("allowCustomMemes", (n) -> { this.setAllowCustomMemes(n.getBooleanValue()); });
         deserializerMap.put("allowGiphy", (n) -> { this.setAllowGiphy(n.getBooleanValue()); });
         deserializerMap.put("allowStickersAndMemes", (n) -> { this.setAllowStickersAndMemes(n.getBooleanValue()); });
-        deserializerMap.put("giphyContentRating", (n) -> { this.setGiphyContentRating(n.getEnumValue(GiphyRatingType::forValue)); });
+        deserializerMap.put("giphyContentRating", (n) -> { this.setGiphyContentRating(n.getEnumValue(TeamFunSettingsGiphyContentRating::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the giphyContentRating property value. Giphy content rating. Possible values are: moderate, strict.
-     * @return a GiphyRatingType
+     * @return a TeamFunSettingsGiphyContentRating
      */
     @jakarta.annotation.Nullable
-    public GiphyRatingType getGiphyContentRating() {
+    public TeamFunSettingsGiphyContentRating getGiphyContentRating() {
         return this.backingStore.get("giphyContentRating");
     }
     /**
@@ -162,7 +162,7 @@ public class TeamFunSettings implements AdditionalDataHolder, BackedModel, Parsa
      * Sets the giphyContentRating property value. Giphy content rating. Possible values are: moderate, strict.
      * @param value Value to set for the giphyContentRating property.
      */
-    public void setGiphyContentRating(@jakarta.annotation.Nullable final GiphyRatingType value) {
+    public void setGiphyContentRating(@jakarta.annotation.Nullable final TeamFunSettingsGiphyContentRating value) {
         this.backingStore.set("giphyContentRating", value);
     }
     /**

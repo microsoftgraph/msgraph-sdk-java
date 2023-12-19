@@ -99,10 +99,10 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the externalSource property value. Where this user was created from. Possible values are: sis, manual.
-     * @return a EducationExternalSource
+     * @return a EducationUserExternalSource
      */
     @jakarta.annotation.Nullable
-    public EducationExternalSource getExternalSource() {
+    public EducationUserExternalSource getExternalSource() {
         return this.backingStore.get("externalSource");
     }
     /**
@@ -129,7 +129,7 @@ public class EducationUser extends Entity implements Parsable {
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("department", (n) -> { this.setDepartment(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("externalSource", (n) -> { this.setExternalSource(n.getEnumValue(EducationExternalSource::forValue)); });
+        deserializerMap.put("externalSource", (n) -> { this.setExternalSource(n.getEnumValue(EducationUserExternalSource::forValue)); });
         deserializerMap.put("externalSourceDetail", (n) -> { this.setExternalSourceDetail(n.getStringValue()); });
         deserializerMap.put("givenName", (n) -> { this.setGivenName(n.getStringValue()); });
         deserializerMap.put("mail", (n) -> { this.setMail(n.getStringValue()); });
@@ -489,7 +489,7 @@ public class EducationUser extends Entity implements Parsable {
      * Sets the externalSource property value. Where this user was created from. Possible values are: sis, manual.
      * @param value Value to set for the externalSource property.
      */
-    public void setExternalSource(@jakarta.annotation.Nullable final EducationExternalSource value) {
+    public void setExternalSource(@jakarta.annotation.Nullable final EducationUserExternalSource value) {
         this.backingStore.set("externalSource", value);
     }
     /**

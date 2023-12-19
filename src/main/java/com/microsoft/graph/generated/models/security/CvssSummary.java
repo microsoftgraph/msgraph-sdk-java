@@ -64,7 +64,7 @@ public class CvssSummary implements AdditionalDataHolder, BackedModel, Parsable 
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("score", (n) -> { this.setScore(n.getDoubleValue()); });
-        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(VulnerabilitySeverity::forValue)); });
+        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(CvssSummarySeverity::forValue)); });
         deserializerMap.put("vectorString", (n) -> { this.setVectorString(n.getStringValue()); });
         return deserializerMap;
     }
@@ -86,10 +86,10 @@ public class CvssSummary implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the severity property value. The CVSS severity rating for this vulnerability. The possible values are: none, low, medium, high, critical, unknownFutureValue.
-     * @return a VulnerabilitySeverity
+     * @return a CvssSummarySeverity
      */
     @jakarta.annotation.Nullable
-    public VulnerabilitySeverity getSeverity() {
+    public CvssSummarySeverity getSeverity() {
         return this.backingStore.get("severity");
     }
     /**
@@ -145,7 +145,7 @@ public class CvssSummary implements AdditionalDataHolder, BackedModel, Parsable 
      * Sets the severity property value. The CVSS severity rating for this vulnerability. The possible values are: none, low, medium, high, critical, unknownFutureValue.
      * @param value Value to set for the severity property.
      */
-    public void setSeverity(@jakarta.annotation.Nullable final VulnerabilitySeverity value) {
+    public void setSeverity(@jakarta.annotation.Nullable final CvssSummarySeverity value) {
         this.backingStore.set("severity", value);
     }
     /**

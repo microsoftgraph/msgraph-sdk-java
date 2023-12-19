@@ -73,10 +73,10 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the dayOfWeek property value. Represents the day of the week when the transition from daylight saving time to standard time.
-     * @return a DayOfWeek
+     * @return a StandardTimeZoneOffsetDayOfWeek
      */
     @jakarta.annotation.Nullable
-    public DayOfWeek getDayOfWeek() {
+    public StandardTimeZoneOffsetDayOfWeek getDayOfWeek() {
         return this.backingStore.get("dayOfWeek");
     }
     /**
@@ -87,7 +87,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("dayOccurrence", (n) -> { this.setDayOccurrence(n.getIntegerValue()); });
-        deserializerMap.put("dayOfWeek", (n) -> { this.setDayOfWeek(n.getEnumValue(DayOfWeek::forValue)); });
+        deserializerMap.put("dayOfWeek", (n) -> { this.setDayOfWeek(n.getEnumValue(StandardTimeZoneOffsetDayOfWeek::forValue)); });
         deserializerMap.put("month", (n) -> { this.setMonth(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("time", (n) -> { this.setTime(n.getLocalTimeValue()); });
@@ -166,7 +166,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel
      * Sets the dayOfWeek property value. Represents the day of the week when the transition from daylight saving time to standard time.
      * @param value Value to set for the dayOfWeek property.
      */
-    public void setDayOfWeek(@jakarta.annotation.Nullable final DayOfWeek value) {
+    public void setDayOfWeek(@jakarta.annotation.Nullable final StandardTimeZoneOffsetDayOfWeek value) {
         this.backingStore.set("dayOfWeek", value);
     }
     /**

@@ -34,10 +34,10 @@ public class PrivilegedAccessScheduleRequest extends Request implements Parsable
     }
     /**
      * Gets the action property value. Represents the type of operation on the group membership or ownership assignment request. The possible values are: adminAssign, adminUpdate, adminRemove, selfActivate, selfDeactivate, adminExtend, adminRenew. adminAssign: For administrators to assign group membership or ownership to principals.adminRemove: For administrators to remove principals from group membership or ownership. adminUpdate: For administrators to change existing group membership or ownership assignments.adminExtend: For administrators to extend expiring assignments.adminRenew: For administrators to renew expired assignments.selfActivate: For principals to activate their assignments.selfDeactivate: For principals to deactivate their active assignments.
-     * @return a ScheduleRequestActions
+     * @return a PrivilegedAccessScheduleRequestAction
      */
     @jakarta.annotation.Nullable
-    public ScheduleRequestActions getAction() {
+    public PrivilegedAccessScheduleRequestAction getAction() {
         return this.backingStore.get("action");
     }
     /**
@@ -47,7 +47,7 @@ public class PrivilegedAccessScheduleRequest extends Request implements Parsable
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(ScheduleRequestActions::forValue)); });
+        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(PrivilegedAccessScheduleRequestAction::forValue)); });
         deserializerMap.put("isValidationOnly", (n) -> { this.setIsValidationOnly(n.getBooleanValue()); });
         deserializerMap.put("justification", (n) -> { this.setJustification(n.getStringValue()); });
         deserializerMap.put("scheduleInfo", (n) -> { this.setScheduleInfo(n.getObjectValue(RequestSchedule::createFromDiscriminatorValue)); });
@@ -103,7 +103,7 @@ public class PrivilegedAccessScheduleRequest extends Request implements Parsable
      * Sets the action property value. Represents the type of operation on the group membership or ownership assignment request. The possible values are: adminAssign, adminUpdate, adminRemove, selfActivate, selfDeactivate, adminExtend, adminRenew. adminAssign: For administrators to assign group membership or ownership to principals.adminRemove: For administrators to remove principals from group membership or ownership. adminUpdate: For administrators to change existing group membership or ownership assignments.adminExtend: For administrators to extend expiring assignments.adminRenew: For administrators to renew expired assignments.selfActivate: For principals to activate their assignments.selfDeactivate: For principals to deactivate their active assignments.
      * @param value Value to set for the action property.
      */
-    public void setAction(@jakarta.annotation.Nullable final ScheduleRequestActions value) {
+    public void setAction(@jakarta.annotation.Nullable final PrivilegedAccessScheduleRequestAction value) {
         this.backingStore.set("action", value);
     }
     /**

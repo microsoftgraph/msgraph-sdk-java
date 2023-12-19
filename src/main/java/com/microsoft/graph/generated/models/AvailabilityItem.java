@@ -74,7 +74,7 @@ public class AvailabilityItem implements AdditionalDataHolder, BackedModel, Pars
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("serviceId", (n) -> { this.setServiceId(n.getStringValue()); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(BookingsAvailabilityStatus::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AvailabilityItemStatus::forValue)); });
         return deserializerMap;
     }
     /**
@@ -103,10 +103,10 @@ public class AvailabilityItem implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the status property value. The status of the staff member. Possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue.
-     * @return a BookingsAvailabilityStatus
+     * @return a AvailabilityItemStatus
      */
     @jakarta.annotation.Nullable
-    public BookingsAvailabilityStatus getStatus() {
+    public AvailabilityItemStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -169,7 +169,7 @@ public class AvailabilityItem implements AdditionalDataHolder, BackedModel, Pars
      * Sets the status property value. The status of the staff member. Possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final BookingsAvailabilityStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final AvailabilityItemStatus value) {
         this.backingStore.set("status", value);
     }
 }

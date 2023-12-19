@@ -5,7 +5,6 @@ import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -223,7 +222,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         deserializerMap.put("scheduleRestartWarningInHours", (n) -> { this.setScheduleRestartWarningInHours(n.getIntegerValue()); });
         deserializerMap.put("skipChecksBeforeRestart", (n) -> { this.setSkipChecksBeforeRestart(n.getBooleanValue()); });
         deserializerMap.put("updateNotificationLevel", (n) -> { this.setUpdateNotificationLevel(n.getEnumValue(WindowsUpdateNotificationDisplayOption::forValue)); });
-        deserializerMap.put("updateWeeks", (n) -> { this.setUpdateWeeks(n.getEnumSetValue(WindowsUpdateForBusinessUpdateWeeks::forValue)); });
+        deserializerMap.put("updateWeeks", (n) -> { this.setUpdateWeeks(n.getEnumValue(WindowsUpdateForBusinessConfigurationUpdateWeeks::forValue)); });
         deserializerMap.put("userPauseAccess", (n) -> { this.setUserPauseAccess(n.getEnumValue(Enablement::forValue)); });
         deserializerMap.put("userWindowsUpdateScanAccess", (n) -> { this.setUserWindowsUpdateScanAccess(n.getEnumValue(Enablement::forValue)); });
         return deserializerMap;
@@ -342,10 +341,10 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     }
     /**
      * Gets the updateWeeks property value. Schedule the update installation on the weeks of the month. Possible values are: UserDefined, FirstWeek, SecondWeek, ThirdWeek, FourthWeek, EveryWeek. Returned by default. Query parameters are not supported. Possible values are: userDefined, firstWeek, secondWeek, thirdWeek, fourthWeek, everyWeek, unknownFutureValue.
-     * @return a EnumSet<WindowsUpdateForBusinessUpdateWeeks>
+     * @return a WindowsUpdateForBusinessConfigurationUpdateWeeks
      */
     @jakarta.annotation.Nullable
-    public EnumSet<WindowsUpdateForBusinessUpdateWeeks> getUpdateWeeks() {
+    public WindowsUpdateForBusinessConfigurationUpdateWeeks getUpdateWeeks() {
         return this.backingStore.get("updateWeeks");
     }
     /**
@@ -402,7 +401,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         writer.writeIntegerValue("scheduleRestartWarningInHours", this.getScheduleRestartWarningInHours());
         writer.writeBooleanValue("skipChecksBeforeRestart", this.getSkipChecksBeforeRestart());
         writer.writeEnumValue("updateNotificationLevel", this.getUpdateNotificationLevel());
-        writer.writeEnumSetValue("updateWeeks", this.getUpdateWeeks());
+        writer.writeEnumValue("updateWeeks", this.getUpdateWeeks());
         writer.writeEnumValue("userPauseAccess", this.getUserPauseAccess());
         writer.writeEnumValue("userWindowsUpdateScanAccess", this.getUserWindowsUpdateScanAccess());
     }
@@ -641,7 +640,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Sets the updateWeeks property value. Schedule the update installation on the weeks of the month. Possible values are: UserDefined, FirstWeek, SecondWeek, ThirdWeek, FourthWeek, EveryWeek. Returned by default. Query parameters are not supported. Possible values are: userDefined, firstWeek, secondWeek, thirdWeek, fourthWeek, everyWeek, unknownFutureValue.
      * @param value Value to set for the updateWeeks property.
      */
-    public void setUpdateWeeks(@jakarta.annotation.Nullable final EnumSet<WindowsUpdateForBusinessUpdateWeeks> value) {
+    public void setUpdateWeeks(@jakarta.annotation.Nullable final WindowsUpdateForBusinessConfigurationUpdateWeeks value) {
         this.backingStore.set("updateWeeks", value);
     }
     /**

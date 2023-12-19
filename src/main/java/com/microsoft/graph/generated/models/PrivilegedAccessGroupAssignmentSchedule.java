@@ -27,10 +27,10 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
     }
     /**
      * Gets the accessId property value. The identifier of the membership or ownership assignment to the group that is governed by PIM. Required. The possible values are: owner, member, unknownFutureValue. Supports $filter (eq).
-     * @return a PrivilegedAccessGroupRelationships
+     * @return a PrivilegedAccessGroupAssignmentScheduleAccessId
      */
     @jakarta.annotation.Nullable
-    public PrivilegedAccessGroupRelationships getAccessId() {
+    public PrivilegedAccessGroupAssignmentScheduleAccessId getAccessId() {
         return this.backingStore.get("accessId");
     }
     /**
@@ -43,10 +43,10 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
     }
     /**
      * Gets the assignmentType property value. Indicates whether the membership or ownership assignment for the principal is granted through activation or direct assignment. Required. The possible values are: assigned, activated, unknownFutureValue. Supports $filter (eq).
-     * @return a PrivilegedAccessGroupAssignmentType
+     * @return a PrivilegedAccessGroupAssignmentScheduleAssignmentType
      */
     @jakarta.annotation.Nullable
-    public PrivilegedAccessGroupAssignmentType getAssignmentType() {
+    public PrivilegedAccessGroupAssignmentScheduleAssignmentType getAssignmentType() {
         return this.backingStore.get("assignmentType");
     }
     /**
@@ -56,12 +56,12 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("accessId", (n) -> { this.setAccessId(n.getEnumValue(PrivilegedAccessGroupRelationships::forValue)); });
+        deserializerMap.put("accessId", (n) -> { this.setAccessId(n.getEnumValue(PrivilegedAccessGroupAssignmentScheduleAccessId::forValue)); });
         deserializerMap.put("activatedUsing", (n) -> { this.setActivatedUsing(n.getObjectValue(PrivilegedAccessGroupEligibilitySchedule::createFromDiscriminatorValue)); });
-        deserializerMap.put("assignmentType", (n) -> { this.setAssignmentType(n.getEnumValue(PrivilegedAccessGroupAssignmentType::forValue)); });
+        deserializerMap.put("assignmentType", (n) -> { this.setAssignmentType(n.getEnumValue(PrivilegedAccessGroupAssignmentScheduleAssignmentType::forValue)); });
         deserializerMap.put("group", (n) -> { this.setGroup(n.getObjectValue(Group::createFromDiscriminatorValue)); });
         deserializerMap.put("groupId", (n) -> { this.setGroupId(n.getStringValue()); });
-        deserializerMap.put("memberType", (n) -> { this.setMemberType(n.getEnumValue(PrivilegedAccessGroupMemberType::forValue)); });
+        deserializerMap.put("memberType", (n) -> { this.setMemberType(n.getEnumValue(PrivilegedAccessGroupAssignmentScheduleMemberType::forValue)); });
         deserializerMap.put("principal", (n) -> { this.setPrincipal(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("principalId", (n) -> { this.setPrincipalId(n.getStringValue()); });
         return deserializerMap;
@@ -84,10 +84,10 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
     }
     /**
      * Gets the memberType property value. Indicates whether the assignment is derived from a direct group assignment or through a transitive assignment. The possible values are: direct, group, unknownFutureValue. Supports $filter (eq).
-     * @return a PrivilegedAccessGroupMemberType
+     * @return a PrivilegedAccessGroupAssignmentScheduleMemberType
      */
     @jakarta.annotation.Nullable
-    public PrivilegedAccessGroupMemberType getMemberType() {
+    public PrivilegedAccessGroupAssignmentScheduleMemberType getMemberType() {
         return this.backingStore.get("memberType");
     }
     /**
@@ -126,7 +126,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
      * Sets the accessId property value. The identifier of the membership or ownership assignment to the group that is governed by PIM. Required. The possible values are: owner, member, unknownFutureValue. Supports $filter (eq).
      * @param value Value to set for the accessId property.
      */
-    public void setAccessId(@jakarta.annotation.Nullable final PrivilegedAccessGroupRelationships value) {
+    public void setAccessId(@jakarta.annotation.Nullable final PrivilegedAccessGroupAssignmentScheduleAccessId value) {
         this.backingStore.set("accessId", value);
     }
     /**
@@ -140,7 +140,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
      * Sets the assignmentType property value. Indicates whether the membership or ownership assignment for the principal is granted through activation or direct assignment. Required. The possible values are: assigned, activated, unknownFutureValue. Supports $filter (eq).
      * @param value Value to set for the assignmentType property.
      */
-    public void setAssignmentType(@jakarta.annotation.Nullable final PrivilegedAccessGroupAssignmentType value) {
+    public void setAssignmentType(@jakarta.annotation.Nullable final PrivilegedAccessGroupAssignmentScheduleAssignmentType value) {
         this.backingStore.set("assignmentType", value);
     }
     /**
@@ -161,7 +161,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
      * Sets the memberType property value. Indicates whether the assignment is derived from a direct group assignment or through a transitive assignment. The possible values are: direct, group, unknownFutureValue. Supports $filter (eq).
      * @param value Value to set for the memberType property.
      */
-    public void setMemberType(@jakarta.annotation.Nullable final PrivilegedAccessGroupMemberType value) {
+    public void setMemberType(@jakarta.annotation.Nullable final PrivilegedAccessGroupAssignmentScheduleMemberType value) {
         this.backingStore.set("memberType", value);
     }
     /**

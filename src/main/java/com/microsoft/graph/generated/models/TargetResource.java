@@ -71,7 +71,7 @@ public class TargetResource implements AdditionalDataHolder, BackedModel, Parsab
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("groupType", (n) -> { this.setGroupType(n.getEnumValue(GroupType::forValue)); });
+        deserializerMap.put("groupType", (n) -> { this.setGroupType(n.getEnumValue(TargetResourceGroupType::forValue)); });
         deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
         deserializerMap.put("modifiedProperties", (n) -> { this.setModifiedProperties(n.getCollectionOfObjectValues(ModifiedProperty::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -81,10 +81,10 @@ public class TargetResource implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the groupType property value. When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue
-     * @return a GroupType
+     * @return a TargetResourceGroupType
      */
     @jakarta.annotation.Nullable
-    public GroupType getGroupType() {
+    public TargetResourceGroupType getGroupType() {
         return this.backingStore.get("groupType");
     }
     /**
@@ -168,7 +168,7 @@ public class TargetResource implements AdditionalDataHolder, BackedModel, Parsab
      * Sets the groupType property value. When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue
      * @param value Value to set for the groupType property.
      */
-    public void setGroupType(@jakarta.annotation.Nullable final GroupType value) {
+    public void setGroupType(@jakarta.annotation.Nullable final TargetResourceGroupType value) {
         this.backingStore.set("groupType", value);
     }
     /**

@@ -28,10 +28,10 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the detectionStatus property value. The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
-     * @return a DetectionStatus
+     * @return a ProcessEvidenceDetectionStatus
      */
     @jakarta.annotation.Nullable
-    public DetectionStatus getDetectionStatus() {
+    public ProcessEvidenceDetectionStatus getDetectionStatus() {
         return this.backingStore.get("detectionStatus");
     }
     /**
@@ -41,7 +41,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("detectionStatus", (n) -> { this.setDetectionStatus(n.getEnumValue(DetectionStatus::forValue)); });
+        deserializerMap.put("detectionStatus", (n) -> { this.setDetectionStatus(n.getEnumValue(ProcessEvidenceDetectionStatus::forValue)); });
         deserializerMap.put("imageFile", (n) -> { this.setImageFile(n.getObjectValue(FileDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("mdeDeviceId", (n) -> { this.setMdeDeviceId(n.getStringValue()); });
         deserializerMap.put("parentProcessCreationDateTime", (n) -> { this.setParentProcessCreationDateTime(n.getOffsetDateTimeValue()); });
@@ -147,7 +147,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
      * Sets the detectionStatus property value. The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
      * @param value Value to set for the detectionStatus property.
      */
-    public void setDetectionStatus(@jakarta.annotation.Nullable final DetectionStatus value) {
+    public void setDetectionStatus(@jakarta.annotation.Nullable final ProcessEvidenceDetectionStatus value) {
         this.backingStore.set("detectionStatus", value);
     }
     /**

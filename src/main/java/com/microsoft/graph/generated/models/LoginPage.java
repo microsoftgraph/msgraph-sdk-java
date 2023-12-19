@@ -80,8 +80,8 @@ public class LoginPage extends Entity implements Parsable {
         deserializerMap.put("language", (n) -> { this.setLanguage(n.getStringValue()); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(EmailIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(SimulationContentSource::forValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(SimulationContentStatus::forValue)); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(LoginPageSource::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(LoginPageStatus::forValue)); });
         return deserializerMap;
     }
     /**
@@ -110,18 +110,18 @@ public class LoginPage extends Entity implements Parsable {
     }
     /**
      * Gets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
-     * @return a SimulationContentSource
+     * @return a LoginPageSource
      */
     @jakarta.annotation.Nullable
-    public SimulationContentSource getSource() {
+    public LoginPageSource getSource() {
         return this.backingStore.get("source");
     }
     /**
      * Gets the status property value. The login page status. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
-     * @return a SimulationContentStatus
+     * @return a LoginPageStatus
      */
     @jakarta.annotation.Nullable
-    public SimulationContentStatus getStatus() {
+    public LoginPageStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -202,14 +202,14 @@ public class LoginPage extends Entity implements Parsable {
      * Sets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
      * @param value Value to set for the source property.
      */
-    public void setSource(@jakarta.annotation.Nullable final SimulationContentSource value) {
+    public void setSource(@jakarta.annotation.Nullable final LoginPageSource value) {
         this.backingStore.set("source", value);
     }
     /**
      * Sets the status property value. The login page status. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final SimulationContentStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final LoginPageStatus value) {
         this.backingStore.set("status", value);
     }
 }

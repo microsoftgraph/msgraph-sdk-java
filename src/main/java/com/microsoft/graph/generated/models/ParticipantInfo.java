@@ -65,10 +65,10 @@ public class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
-     * @return a EndpointType
+     * @return a ParticipantInfoEndpointType
      */
     @jakarta.annotation.Nullable
-    public EndpointType getEndpointType() {
+    public ParticipantInfoEndpointType getEndpointType() {
         return this.backingStore.get("endpointType");
     }
     /**
@@ -79,7 +79,7 @@ public class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("countryCode", (n) -> { this.setCountryCode(n.getStringValue()); });
-        deserializerMap.put("endpointType", (n) -> { this.setEndpointType(n.getEnumValue(EndpointType::forValue)); });
+        deserializerMap.put("endpointType", (n) -> { this.setEndpointType(n.getEnumValue(ParticipantInfoEndpointType::forValue)); });
         deserializerMap.put("identity", (n) -> { this.setIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("languageId", (n) -> { this.setLanguageId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -168,7 +168,7 @@ public class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
      * Sets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
      * @param value Value to set for the endpointType property.
      */
-    public void setEndpointType(@jakarta.annotation.Nullable final EndpointType value) {
+    public void setEndpointType(@jakarta.annotation.Nullable final ParticipantInfoEndpointType value) {
         this.backingStore.set("endpointType", value);
     }
     /**

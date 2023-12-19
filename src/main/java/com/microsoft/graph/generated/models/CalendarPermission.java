@@ -26,10 +26,10 @@ public class CalendarPermission extends Entity implements Parsable {
     }
     /**
      * Gets the allowedRoles property value. List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
-     * @return a java.util.List<CalendarRoleType>
+     * @return a java.util.List<CalendarPermissionAllowedRoles>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<CalendarRoleType> getAllowedRoles() {
+    public java.util.List<CalendarPermissionAllowedRoles> getAllowedRoles() {
         return this.backingStore.get("allowedRoles");
     }
     /**
@@ -47,11 +47,11 @@ public class CalendarPermission extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("allowedRoles", (n) -> { this.setAllowedRoles(n.getCollectionOfEnumValues(CalendarRoleType::forValue)); });
+        deserializerMap.put("allowedRoles", (n) -> { this.setAllowedRoles(n.getCollectionOfEnumValues(CalendarPermissionAllowedRoles::forValue)); });
         deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
         deserializerMap.put("isInsideOrganization", (n) -> { this.setIsInsideOrganization(n.getBooleanValue()); });
         deserializerMap.put("isRemovable", (n) -> { this.setIsRemovable(n.getBooleanValue()); });
-        deserializerMap.put("role", (n) -> { this.setRole(n.getEnumValue(CalendarRoleType::forValue)); });
+        deserializerMap.put("role", (n) -> { this.setRole(n.getEnumValue(CalendarPermissionRole::forValue)); });
         return deserializerMap;
     }
     /**
@@ -72,10 +72,10 @@ public class CalendarPermission extends Entity implements Parsable {
     }
     /**
      * Gets the role property value. Current permission level of the calendar share recipient or delegate.
-     * @return a CalendarRoleType
+     * @return a CalendarPermissionRole
      */
     @jakarta.annotation.Nullable
-    public CalendarRoleType getRole() {
+    public CalendarPermissionRole getRole() {
         return this.backingStore.get("role");
     }
     /**
@@ -95,7 +95,7 @@ public class CalendarPermission extends Entity implements Parsable {
      * Sets the allowedRoles property value. List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
      * @param value Value to set for the allowedRoles property.
      */
-    public void setAllowedRoles(@jakarta.annotation.Nullable final java.util.List<CalendarRoleType> value) {
+    public void setAllowedRoles(@jakarta.annotation.Nullable final java.util.List<CalendarPermissionAllowedRoles> value) {
         this.backingStore.set("allowedRoles", value);
     }
     /**
@@ -123,7 +123,7 @@ public class CalendarPermission extends Entity implements Parsable {
      * Sets the role property value. Current permission level of the calendar share recipient or delegate.
      * @param value Value to set for the role property.
      */
-    public void setRole(@jakarta.annotation.Nullable final CalendarRoleType value) {
+    public void setRole(@jakarta.annotation.Nullable final CalendarPermissionRole value) {
         this.backingStore.set("role", value);
     }
 }

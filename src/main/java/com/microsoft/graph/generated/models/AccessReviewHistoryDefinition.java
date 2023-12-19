@@ -43,10 +43,10 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the decisions property value. Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions are included by default if no decisions are provided on create. Possible values are: approve, deny, dontKnow, notReviewed, and notNotified.
-     * @return a java.util.List<AccessReviewHistoryDecisionFilter>
+     * @return a java.util.List<AccessReviewHistoryDefinitionDecisions>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<AccessReviewHistoryDecisionFilter> getDecisions() {
+    public java.util.List<AccessReviewHistoryDefinitionDecisions> getDecisions() {
         return this.backingStore.get("decisions");
     }
     /**
@@ -66,14 +66,14 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("decisions", (n) -> { this.setDecisions(n.getCollectionOfEnumValues(AccessReviewHistoryDecisionFilter::forValue)); });
+        deserializerMap.put("decisions", (n) -> { this.setDecisions(n.getCollectionOfEnumValues(AccessReviewHistoryDefinitionDecisions::forValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("instances", (n) -> { this.setInstances(n.getCollectionOfObjectValues(AccessReviewHistoryInstance::createFromDiscriminatorValue)); });
         deserializerMap.put("reviewHistoryPeriodEndDateTime", (n) -> { this.setReviewHistoryPeriodEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("reviewHistoryPeriodStartDateTime", (n) -> { this.setReviewHistoryPeriodStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("scheduleSettings", (n) -> { this.setScheduleSettings(n.getObjectValue(AccessReviewHistoryScheduleSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("scopes", (n) -> { this.setScopes(n.getCollectionOfObjectValues(AccessReviewScope::createFromDiscriminatorValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AccessReviewHistoryStatus::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AccessReviewHistoryDefinitionStatus::forValue)); });
         return deserializerMap;
     }
     /**
@@ -118,10 +118,10 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue.
-     * @return a AccessReviewHistoryStatus
+     * @return a AccessReviewHistoryDefinitionStatus
      */
     @jakarta.annotation.Nullable
-    public AccessReviewHistoryStatus getStatus() {
+    public AccessReviewHistoryDefinitionStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -160,7 +160,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * Sets the decisions property value. Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions are included by default if no decisions are provided on create. Possible values are: approve, deny, dontKnow, notReviewed, and notNotified.
      * @param value Value to set for the decisions property.
      */
-    public void setDecisions(@jakarta.annotation.Nullable final java.util.List<AccessReviewHistoryDecisionFilter> value) {
+    public void setDecisions(@jakarta.annotation.Nullable final java.util.List<AccessReviewHistoryDefinitionDecisions> value) {
         this.backingStore.set("decisions", value);
     }
     /**
@@ -209,7 +209,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * Sets the status property value. Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final AccessReviewHistoryStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final AccessReviewHistoryDefinitionStatus value) {
         this.backingStore.set("status", value);
     }
 }

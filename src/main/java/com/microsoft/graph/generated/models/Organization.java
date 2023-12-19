@@ -136,7 +136,7 @@ public class Organization extends DirectoryObject implements Parsable {
         deserializerMap.put("mobileDeviceManagementAuthority", (n) -> { this.setMobileDeviceManagementAuthority(n.getEnumValue(MdmAuthority::forValue)); });
         deserializerMap.put("onPremisesLastSyncDateTime", (n) -> { this.setOnPremisesLastSyncDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("onPremisesSyncEnabled", (n) -> { this.setOnPremisesSyncEnabled(n.getBooleanValue()); });
-        deserializerMap.put("partnerTenantType", (n) -> { this.setPartnerTenantType(n.getEnumValue(PartnerTenantType::forValue)); });
+        deserializerMap.put("partnerTenantType", (n) -> { this.setPartnerTenantType(n.getEnumValue(OrganizationPartnerTenantType::forValue)); });
         deserializerMap.put("postalCode", (n) -> { this.setPostalCode(n.getStringValue()); });
         deserializerMap.put("preferredLanguage", (n) -> { this.setPreferredLanguage(n.getStringValue()); });
         deserializerMap.put("privacyProfile", (n) -> { this.setPrivacyProfile(n.getObjectValue(PrivacyProfile::createFromDiscriminatorValue)); });
@@ -184,10 +184,10 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the partnerTenantType property value. The type of partnership this tenant has with Microsoft. The possible values are: microsoftSupport, syndicatePartner, breadthPartner, breadthPartnerDelegatedAdmin, resellerPartnerDelegatedAdmin, valueAddedResellerPartnerDelegatedAdmin, unknownFutureValue. Nullable. For more information about the possible types, see partnerTenantType values.
-     * @return a PartnerTenantType
+     * @return a OrganizationPartnerTenantType
      */
     @jakarta.annotation.Nullable
-    public PartnerTenantType getPartnerTenantType() {
+    public OrganizationPartnerTenantType getPartnerTenantType() {
         return this.backingStore.get("partnerTenantType");
     }
     /**
@@ -422,7 +422,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Sets the partnerTenantType property value. The type of partnership this tenant has with Microsoft. The possible values are: microsoftSupport, syndicatePartner, breadthPartner, breadthPartnerDelegatedAdmin, resellerPartnerDelegatedAdmin, valueAddedResellerPartnerDelegatedAdmin, unknownFutureValue. Nullable. For more information about the possible types, see partnerTenantType values.
      * @param value Value to set for the partnerTenantType property.
      */
-    public void setPartnerTenantType(@jakarta.annotation.Nullable final PartnerTenantType value) {
+    public void setPartnerTenantType(@jakarta.annotation.Nullable final OrganizationPartnerTenantType value) {
         this.backingStore.set("partnerTenantType", value);
     }
     /**

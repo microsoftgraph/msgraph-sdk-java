@@ -81,10 +81,10 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the delegateMeetingMessageDeliveryOptions property value. If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
-     * @return a DelegateMeetingMessageDeliveryOptions
+     * @return a MailboxSettingsDelegateMeetingMessageDeliveryOptions
      */
     @jakarta.annotation.Nullable
-    public DelegateMeetingMessageDeliveryOptions getDelegateMeetingMessageDeliveryOptions() {
+    public MailboxSettingsDelegateMeetingMessageDeliveryOptions getDelegateMeetingMessageDeliveryOptions() {
         return this.backingStore.get("delegateMeetingMessageDeliveryOptions");
     }
     /**
@@ -97,12 +97,12 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
         deserializerMap.put("archiveFolder", (n) -> { this.setArchiveFolder(n.getStringValue()); });
         deserializerMap.put("automaticRepliesSetting", (n) -> { this.setAutomaticRepliesSetting(n.getObjectValue(AutomaticRepliesSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("dateFormat", (n) -> { this.setDateFormat(n.getStringValue()); });
-        deserializerMap.put("delegateMeetingMessageDeliveryOptions", (n) -> { this.setDelegateMeetingMessageDeliveryOptions(n.getEnumValue(DelegateMeetingMessageDeliveryOptions::forValue)); });
+        deserializerMap.put("delegateMeetingMessageDeliveryOptions", (n) -> { this.setDelegateMeetingMessageDeliveryOptions(n.getEnumValue(MailboxSettingsDelegateMeetingMessageDeliveryOptions::forValue)); });
         deserializerMap.put("language", (n) -> { this.setLanguage(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("timeFormat", (n) -> { this.setTimeFormat(n.getStringValue()); });
         deserializerMap.put("timeZone", (n) -> { this.setTimeZone(n.getStringValue()); });
-        deserializerMap.put("userPurpose", (n) -> { this.setUserPurpose(n.getEnumValue(UserPurpose::forValue)); });
+        deserializerMap.put("userPurpose", (n) -> { this.setUserPurpose(n.getEnumValue(MailboxSettingsUserPurpose::forValue)); });
         deserializerMap.put("workingHours", (n) -> { this.setWorkingHours(n.getObjectValue(WorkingHours::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -140,10 +140,10 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the userPurpose property value. The purpose of the mailbox. Differentiates a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. Possible values are: user, linked, shared, room, equipment, others, unknownFutureValue. Read-only.
-     * @return a UserPurpose
+     * @return a MailboxSettingsUserPurpose
      */
     @jakarta.annotation.Nullable
-    public UserPurpose getUserPurpose() {
+    public MailboxSettingsUserPurpose getUserPurpose() {
         return this.backingStore.get("userPurpose");
     }
     /**
@@ -212,7 +212,7 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
      * Sets the delegateMeetingMessageDeliveryOptions property value. If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
      * @param value Value to set for the delegateMeetingMessageDeliveryOptions property.
      */
-    public void setDelegateMeetingMessageDeliveryOptions(@jakarta.annotation.Nullable final DelegateMeetingMessageDeliveryOptions value) {
+    public void setDelegateMeetingMessageDeliveryOptions(@jakarta.annotation.Nullable final MailboxSettingsDelegateMeetingMessageDeliveryOptions value) {
         this.backingStore.set("delegateMeetingMessageDeliveryOptions", value);
     }
     /**
@@ -247,7 +247,7 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
      * Sets the userPurpose property value. The purpose of the mailbox. Differentiates a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. Possible values are: user, linked, shared, room, equipment, others, unknownFutureValue. Read-only.
      * @param value Value to set for the userPurpose property.
      */
-    public void setUserPurpose(@jakarta.annotation.Nullable final UserPurpose value) {
+    public void setUserPurpose(@jakarta.annotation.Nullable final MailboxSettingsUserPurpose value) {
         this.backingStore.set("userPurpose", value);
     }
     /**

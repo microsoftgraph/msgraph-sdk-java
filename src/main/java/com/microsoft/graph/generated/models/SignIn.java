@@ -59,10 +59,10 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the conditionalAccessStatus property value. Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue.  Supports $filter (eq).
-     * @return a ConditionalAccessStatus
+     * @return a SignInConditionalAccessStatus
      */
     @jakarta.annotation.Nullable
-    public ConditionalAccessStatus getConditionalAccessStatus() {
+    public SignInConditionalAccessStatus getConditionalAccessStatus() {
         return this.backingStore.get("conditionalAccessStatus");
     }
     /**
@@ -100,7 +100,7 @@ public class SignIn extends Entity implements Parsable {
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
         deserializerMap.put("appliedConditionalAccessPolicies", (n) -> { this.setAppliedConditionalAccessPolicies(n.getCollectionOfObjectValues(AppliedConditionalAccessPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("clientAppUsed", (n) -> { this.setClientAppUsed(n.getStringValue()); });
-        deserializerMap.put("conditionalAccessStatus", (n) -> { this.setConditionalAccessStatus(n.getEnumValue(ConditionalAccessStatus::forValue)); });
+        deserializerMap.put("conditionalAccessStatus", (n) -> { this.setConditionalAccessStatus(n.getEnumValue(SignInConditionalAccessStatus::forValue)); });
         deserializerMap.put("correlationId", (n) -> { this.setCorrelationId(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("deviceDetail", (n) -> { this.setDeviceDetail(n.getObjectValue(DeviceDetail::createFromDiscriminatorValue)); });
@@ -109,12 +109,12 @@ public class SignIn extends Entity implements Parsable {
         deserializerMap.put("location", (n) -> { this.setLocation(n.getObjectValue(SignInLocation::createFromDiscriminatorValue)); });
         deserializerMap.put("resourceDisplayName", (n) -> { this.setResourceDisplayName(n.getStringValue()); });
         deserializerMap.put("resourceId", (n) -> { this.setResourceId(n.getStringValue()); });
-        deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(RiskDetail::forValue)); });
-        deserializerMap.put("riskEventTypes", (n) -> { this.setRiskEventTypes(n.getCollectionOfEnumValues(RiskEventType::forValue)); });
+        deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(SignInRiskDetail::forValue)); });
+        deserializerMap.put("riskEventTypes", (n) -> { this.setRiskEventTypes(n.getCollectionOfEnumValues(SignInRiskEventTypes::forValue)); });
         deserializerMap.put("riskEventTypes_v2", (n) -> { this.setRiskEventTypesV2(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("riskLevelAggregated", (n) -> { this.setRiskLevelAggregated(n.getEnumValue(RiskLevel::forValue)); });
-        deserializerMap.put("riskLevelDuringSignIn", (n) -> { this.setRiskLevelDuringSignIn(n.getEnumValue(RiskLevel::forValue)); });
-        deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(RiskState::forValue)); });
+        deserializerMap.put("riskLevelAggregated", (n) -> { this.setRiskLevelAggregated(n.getEnumValue(SignInRiskLevelAggregated::forValue)); });
+        deserializerMap.put("riskLevelDuringSignIn", (n) -> { this.setRiskLevelDuringSignIn(n.getEnumValue(SignInRiskLevelDuringSignIn::forValue)); });
+        deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(SignInRiskState::forValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getObjectValue(SignInStatus::createFromDiscriminatorValue)); });
         deserializerMap.put("userDisplayName", (n) -> { this.setUserDisplayName(n.getStringValue()); });
         deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
@@ -163,18 +163,18 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the riskDetail property value. Provides the 'reason' behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq).Note: Details for this property require a Microsoft Entra ID P2 license. Other licenses return the value hidden.
-     * @return a RiskDetail
+     * @return a SignInRiskDetail
      */
     @jakarta.annotation.Nullable
-    public RiskDetail getRiskDetail() {
+    public SignInRiskDetail getRiskDetail() {
         return this.backingStore.get("riskDetail");
     }
     /**
      * Gets the riskEventTypes property value. Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue.  Supports $filter (eq).
-     * @return a java.util.List<RiskEventType>
+     * @return a java.util.List<SignInRiskEventTypes>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<RiskEventType> getRiskEventTypes() {
+    public java.util.List<SignInRiskEventTypes> getRiskEventTypes() {
         return this.backingStore.get("riskEventTypes");
     }
     /**
@@ -187,26 +187,26 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the riskLevelAggregated property value. Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq).  Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
-     * @return a RiskLevel
+     * @return a SignInRiskLevelAggregated
      */
     @jakarta.annotation.Nullable
-    public RiskLevel getRiskLevelAggregated() {
+    public SignInRiskLevelAggregated getRiskLevelAggregated() {
         return this.backingStore.get("riskLevelAggregated");
     }
     /**
      * Gets the riskLevelDuringSignIn property value. Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq).  Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
-     * @return a RiskLevel
+     * @return a SignInRiskLevelDuringSignIn
      */
     @jakarta.annotation.Nullable
-    public RiskLevel getRiskLevelDuringSignIn() {
+    public SignInRiskLevelDuringSignIn getRiskLevelDuringSignIn() {
         return this.backingStore.get("riskLevelDuringSignIn");
     }
     /**
      * Gets the riskState property value. Reports status of the risky user, sign-in, or a risk event. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.  Supports $filter (eq).
-     * @return a RiskState
+     * @return a SignInRiskState
      */
     @jakarta.annotation.Nullable
-    public RiskState getRiskState() {
+    public SignInRiskState getRiskState() {
         return this.backingStore.get("riskState");
     }
     /**
@@ -304,7 +304,7 @@ public class SignIn extends Entity implements Parsable {
      * Sets the conditionalAccessStatus property value. Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue.  Supports $filter (eq).
      * @param value Value to set for the conditionalAccessStatus property.
      */
-    public void setConditionalAccessStatus(@jakarta.annotation.Nullable final ConditionalAccessStatus value) {
+    public void setConditionalAccessStatus(@jakarta.annotation.Nullable final SignInConditionalAccessStatus value) {
         this.backingStore.set("conditionalAccessStatus", value);
     }
     /**
@@ -367,14 +367,14 @@ public class SignIn extends Entity implements Parsable {
      * Sets the riskDetail property value. Provides the 'reason' behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq).Note: Details for this property require a Microsoft Entra ID P2 license. Other licenses return the value hidden.
      * @param value Value to set for the riskDetail property.
      */
-    public void setRiskDetail(@jakarta.annotation.Nullable final RiskDetail value) {
+    public void setRiskDetail(@jakarta.annotation.Nullable final SignInRiskDetail value) {
         this.backingStore.set("riskDetail", value);
     }
     /**
      * Sets the riskEventTypes property value. Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue.  Supports $filter (eq).
      * @param value Value to set for the riskEventTypes property.
      */
-    public void setRiskEventTypes(@jakarta.annotation.Nullable final java.util.List<RiskEventType> value) {
+    public void setRiskEventTypes(@jakarta.annotation.Nullable final java.util.List<SignInRiskEventTypes> value) {
         this.backingStore.set("riskEventTypes", value);
     }
     /**
@@ -388,21 +388,21 @@ public class SignIn extends Entity implements Parsable {
      * Sets the riskLevelAggregated property value. Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq).  Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
      * @param value Value to set for the riskLevelAggregated property.
      */
-    public void setRiskLevelAggregated(@jakarta.annotation.Nullable final RiskLevel value) {
+    public void setRiskLevelAggregated(@jakarta.annotation.Nullable final SignInRiskLevelAggregated value) {
         this.backingStore.set("riskLevelAggregated", value);
     }
     /**
      * Sets the riskLevelDuringSignIn property value. Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq).  Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
      * @param value Value to set for the riskLevelDuringSignIn property.
      */
-    public void setRiskLevelDuringSignIn(@jakarta.annotation.Nullable final RiskLevel value) {
+    public void setRiskLevelDuringSignIn(@jakarta.annotation.Nullable final SignInRiskLevelDuringSignIn value) {
         this.backingStore.set("riskLevelDuringSignIn", value);
     }
     /**
      * Sets the riskState property value. Reports status of the risky user, sign-in, or a risk event. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.  Supports $filter (eq).
      * @param value Value to set for the riskState property.
      */
-    public void setRiskState(@jakarta.annotation.Nullable final RiskState value) {
+    public void setRiskState(@jakarta.annotation.Nullable final SignInRiskState value) {
         this.backingStore.set("riskState", value);
     }
     /**

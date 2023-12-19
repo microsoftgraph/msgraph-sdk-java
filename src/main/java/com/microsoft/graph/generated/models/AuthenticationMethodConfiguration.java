@@ -54,15 +54,15 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("excludeTargets", (n) -> { this.setExcludeTargets(n.getCollectionOfObjectValues(ExcludeTarget::createFromDiscriminatorValue)); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AuthenticationMethodState::forValue)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AuthenticationMethodConfigurationState::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the state property value. The state of the policy. Possible values are: enabled, disabled.
-     * @return a AuthenticationMethodState
+     * @return a AuthenticationMethodConfigurationState
      */
     @jakarta.annotation.Nullable
-    public AuthenticationMethodState getState() {
+    public AuthenticationMethodConfigurationState getState() {
         return this.backingStore.get("state");
     }
     /**
@@ -86,7 +86,7 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
      * Sets the state property value. The state of the policy. Possible values are: enabled, disabled.
      * @param value Value to set for the state property.
      */
-    public void setState(@jakarta.annotation.Nullable final AuthenticationMethodState value) {
+    public void setState(@jakarta.annotation.Nullable final AuthenticationMethodConfigurationState value) {
         this.backingStore.set("state", value);
     }
 }

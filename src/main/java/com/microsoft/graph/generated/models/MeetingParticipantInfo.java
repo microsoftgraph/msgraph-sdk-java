@@ -64,7 +64,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("identity", (n) -> { this.setIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("role", (n) -> { this.setRole(n.getEnumValue(OnlineMeetingRole::forValue)); });
+        deserializerMap.put("role", (n) -> { this.setRole(n.getEnumValue(MeetingParticipantInfoRole::forValue)); });
         deserializerMap.put("upn", (n) -> { this.setUpn(n.getStringValue()); });
         return deserializerMap;
     }
@@ -86,10 +86,10 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the role property value. Specifies the participant's role in the meeting.
-     * @return a OnlineMeetingRole
+     * @return a MeetingParticipantInfoRole
      */
     @jakarta.annotation.Nullable
-    public OnlineMeetingRole getRole() {
+    public MeetingParticipantInfoRole getRole() {
         return this.backingStore.get("role");
     }
     /**
@@ -145,7 +145,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel
      * Sets the role property value. Specifies the participant's role in the meeting.
      * @param value Value to set for the role property.
      */
-    public void setRole(@jakarta.annotation.Nullable final OnlineMeetingRole value) {
+    public void setRole(@jakarta.annotation.Nullable final MeetingParticipantInfoRole value) {
         this.backingStore.set("role", value);
     }
     /**

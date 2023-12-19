@@ -81,7 +81,7 @@ public class EducationStudent implements AdditionalDataHolder, BackedModel, Pars
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("birthDate", (n) -> { this.setBirthDate(n.getLocalDateValue()); });
         deserializerMap.put("externalId", (n) -> { this.setExternalId(n.getStringValue()); });
-        deserializerMap.put("gender", (n) -> { this.setGender(n.getEnumValue(EducationGender::forValue)); });
+        deserializerMap.put("gender", (n) -> { this.setGender(n.getEnumValue(EducationStudentGender::forValue)); });
         deserializerMap.put("grade", (n) -> { this.setGrade(n.getStringValue()); });
         deserializerMap.put("graduationYear", (n) -> { this.setGraduationYear(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -90,10 +90,10 @@ public class EducationStudent implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the gender property value. The possible values are: female, male, other, unknownFutureValue.
-     * @return a EducationGender
+     * @return a EducationStudentGender
      */
     @jakarta.annotation.Nullable
-    public EducationGender getGender() {
+    public EducationStudentGender getGender() {
         return this.backingStore.get("gender");
     }
     /**
@@ -176,7 +176,7 @@ public class EducationStudent implements AdditionalDataHolder, BackedModel, Pars
      * Sets the gender property value. The possible values are: female, male, other, unknownFutureValue.
      * @param value Value to set for the gender property.
      */
-    public void setGender(@jakarta.annotation.Nullable final EducationGender value) {
+    public void setGender(@jakarta.annotation.Nullable final EducationStudentGender value) {
         this.backingStore.set("gender", value);
     }
     /**

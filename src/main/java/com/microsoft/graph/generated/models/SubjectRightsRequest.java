@@ -91,10 +91,10 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     }
     /**
      * Gets the dataSubjectType property value. The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
-     * @return a DataSubjectType
+     * @return a SubjectRightsRequestDataSubjectType
      */
     @jakarta.annotation.Nullable
-    public DataSubjectType getDataSubjectType() {
+    public SubjectRightsRequestDataSubjectType getDataSubjectType() {
         return this.backingStore.get("dataSubjectType");
     }
     /**
@@ -136,7 +136,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("dataSubject", (n) -> { this.setDataSubject(n.getObjectValue(DataSubject::createFromDiscriminatorValue)); });
-        deserializerMap.put("dataSubjectType", (n) -> { this.setDataSubjectType(n.getEnumValue(DataSubjectType::forValue)); });
+        deserializerMap.put("dataSubjectType", (n) -> { this.setDataSubjectType(n.getEnumValue(SubjectRightsRequestDataSubjectType::forValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("externalId", (n) -> { this.setExternalId(n.getStringValue()); });
@@ -382,7 +382,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Sets the dataSubjectType property value. The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
      * @param value Value to set for the dataSubjectType property.
      */
-    public void setDataSubjectType(@jakarta.annotation.Nullable final DataSubjectType value) {
+    public void setDataSubjectType(@jakarta.annotation.Nullable final SubjectRightsRequestDataSubjectType value) {
         this.backingStore.set("dataSubjectType", value);
     }
     /**

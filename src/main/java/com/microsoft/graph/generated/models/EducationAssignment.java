@@ -27,18 +27,18 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the addedStudentAction property value. Optional field to control the assignment behavior for students who are added after the assignment is published. If not specified, defaults to none. Supported values are: none, assignIfOpen. For example, a teacher can use assignIfOpen to indicate that an assignment should be assigned to any new student who joins the class while the assignment is still open, and none to indicate that an assignment should not be assigned to new students.
-     * @return a EducationAddedStudentAction
+     * @return a EducationAssignmentAddedStudentAction
      */
     @jakarta.annotation.Nullable
-    public EducationAddedStudentAction getAddedStudentAction() {
+    public EducationAssignmentAddedStudentAction getAddedStudentAction() {
         return this.backingStore.get("addedStudentAction");
     }
     /**
      * Gets the addToCalendarAction property value. Optional field to control the assignment behavior  for adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none.
-     * @return a EducationAddToCalendarOptions
+     * @return a EducationAssignmentAddToCalendarAction
      */
     @jakarta.annotation.Nullable
-    public EducationAddToCalendarOptions getAddToCalendarAction() {
+    public EducationAssignmentAddToCalendarAction getAddToCalendarAction() {
         return this.backingStore.get("addToCalendarAction");
     }
     /**
@@ -152,8 +152,8 @@ public class EducationAssignment extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("addedStudentAction", (n) -> { this.setAddedStudentAction(n.getEnumValue(EducationAddedStudentAction::forValue)); });
-        deserializerMap.put("addToCalendarAction", (n) -> { this.setAddToCalendarAction(n.getEnumValue(EducationAddToCalendarOptions::forValue)); });
+        deserializerMap.put("addedStudentAction", (n) -> { this.setAddedStudentAction(n.getEnumValue(EducationAssignmentAddedStudentAction::forValue)); });
+        deserializerMap.put("addToCalendarAction", (n) -> { this.setAddToCalendarAction(n.getEnumValue(EducationAssignmentAddToCalendarAction::forValue)); });
         deserializerMap.put("allowLateSubmissions", (n) -> { this.setAllowLateSubmissions(n.getBooleanValue()); });
         deserializerMap.put("allowStudentsToAddResourcesToSubmission", (n) -> { this.setAllowStudentsToAddResourcesToSubmission(n.getBooleanValue()); });
         deserializerMap.put("assignDateTime", (n) -> { this.setAssignDateTime(n.getOffsetDateTimeValue()); });
@@ -296,14 +296,14 @@ public class EducationAssignment extends Entity implements Parsable {
      * Sets the addedStudentAction property value. Optional field to control the assignment behavior for students who are added after the assignment is published. If not specified, defaults to none. Supported values are: none, assignIfOpen. For example, a teacher can use assignIfOpen to indicate that an assignment should be assigned to any new student who joins the class while the assignment is still open, and none to indicate that an assignment should not be assigned to new students.
      * @param value Value to set for the addedStudentAction property.
      */
-    public void setAddedStudentAction(@jakarta.annotation.Nullable final EducationAddedStudentAction value) {
+    public void setAddedStudentAction(@jakarta.annotation.Nullable final EducationAssignmentAddedStudentAction value) {
         this.backingStore.set("addedStudentAction", value);
     }
     /**
      * Sets the addToCalendarAction property value. Optional field to control the assignment behavior  for adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none.
      * @param value Value to set for the addToCalendarAction property.
      */
-    public void setAddToCalendarAction(@jakarta.annotation.Nullable final EducationAddToCalendarOptions value) {
+    public void setAddToCalendarAction(@jakarta.annotation.Nullable final EducationAssignmentAddToCalendarAction value) {
         this.backingStore.set("addToCalendarAction", value);
     }
     /**

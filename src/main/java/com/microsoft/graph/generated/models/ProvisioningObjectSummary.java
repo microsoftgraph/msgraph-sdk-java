@@ -71,7 +71,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         deserializerMap.put("initiatedBy", (n) -> { this.setInitiatedBy(n.getObjectValue(Initiator::createFromDiscriminatorValue)); });
         deserializerMap.put("jobId", (n) -> { this.setJobId(n.getStringValue()); });
         deserializerMap.put("modifiedProperties", (n) -> { this.setModifiedProperties(n.getCollectionOfObjectValues(ModifiedProperty::createFromDiscriminatorValue)); });
-        deserializerMap.put("provisioningAction", (n) -> { this.setProvisioningAction(n.getEnumValue(ProvisioningAction::forValue)); });
+        deserializerMap.put("provisioningAction", (n) -> { this.setProvisioningAction(n.getEnumValue(ProvisioningObjectSummaryProvisioningAction::forValue)); });
         deserializerMap.put("provisioningStatusInfo", (n) -> { this.setProvisioningStatusInfo(n.getObjectValue(ProvisioningStatusInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("provisioningSteps", (n) -> { this.setProvisioningSteps(n.getCollectionOfObjectValues(ProvisioningStep::createFromDiscriminatorValue)); });
         deserializerMap.put("servicePrincipal", (n) -> { this.setServicePrincipal(n.getObjectValue(ProvisioningServicePrincipal::createFromDiscriminatorValue)); });
@@ -108,10 +108,10 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Microsoft Entra activity list. Supports $filter (eq, contains).
-     * @return a ProvisioningAction
+     * @return a ProvisioningObjectSummaryProvisioningAction
      */
     @jakarta.annotation.Nullable
-    public ProvisioningAction getProvisioningAction() {
+    public ProvisioningObjectSummaryProvisioningAction getProvisioningAction() {
         return this.backingStore.get("provisioningAction");
     }
     /**
@@ -255,7 +255,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * Sets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Microsoft Entra activity list. Supports $filter (eq, contains).
      * @param value Value to set for the provisioningAction property.
      */
-    public void setProvisioningAction(@jakarta.annotation.Nullable final ProvisioningAction value) {
+    public void setProvisioningAction(@jakarta.annotation.Nullable final ProvisioningObjectSummaryProvisioningAction value) {
         this.backingStore.set("provisioningAction", value);
     }
     /**

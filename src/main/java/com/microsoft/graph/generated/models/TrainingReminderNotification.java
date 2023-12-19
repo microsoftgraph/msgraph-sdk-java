@@ -27,10 +27,10 @@ public class TrainingReminderNotification extends BaseEndUserNotification implem
     }
     /**
      * Gets the deliveryFrequency property value. Configurable frequency for the reminder email introduced during simulation creation. Possible values are: unknown, weekly, biWeekly, unknownFutureValue.
-     * @return a NotificationDeliveryFrequency
+     * @return a TrainingReminderNotificationDeliveryFrequency
      */
     @jakarta.annotation.Nullable
-    public NotificationDeliveryFrequency getDeliveryFrequency() {
+    public TrainingReminderNotificationDeliveryFrequency getDeliveryFrequency() {
         return this.backingStore.get("deliveryFrequency");
     }
     /**
@@ -40,7 +40,7 @@ public class TrainingReminderNotification extends BaseEndUserNotification implem
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("deliveryFrequency", (n) -> { this.setDeliveryFrequency(n.getEnumValue(NotificationDeliveryFrequency::forValue)); });
+        deserializerMap.put("deliveryFrequency", (n) -> { this.setDeliveryFrequency(n.getEnumValue(TrainingReminderNotificationDeliveryFrequency::forValue)); });
         return deserializerMap;
     }
     /**
@@ -56,7 +56,7 @@ public class TrainingReminderNotification extends BaseEndUserNotification implem
      * Sets the deliveryFrequency property value. Configurable frequency for the reminder email introduced during simulation creation. Possible values are: unknown, weekly, biWeekly, unknownFutureValue.
      * @param value Value to set for the deliveryFrequency property.
      */
-    public void setDeliveryFrequency(@jakarta.annotation.Nullable final NotificationDeliveryFrequency value) {
+    public void setDeliveryFrequency(@jakarta.annotation.Nullable final TrainingReminderNotificationDeliveryFrequency value) {
         this.backingStore.set("deliveryFrequency", value);
     }
 }

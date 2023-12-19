@@ -1,6 +1,5 @@
 package com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.microsoftgraphsecurityaddtoreviewset;
 
-import com.microsoft.graph.models.security.AdditionalDataOptions;
 import com.microsoft.graph.models.security.EdiscoverySearch;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
@@ -9,7 +8,6 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -52,10 +50,10 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Back
     }
     /**
      * Gets the additionalDataOptions property value. The additionalDataOptions property
-     * @return a EnumSet<AdditionalDataOptions>
+     * @return a AddToReviewSetPostRequestBodyAdditionalDataOptions
      */
     @jakarta.annotation.Nullable
-    public EnumSet<AdditionalDataOptions> getAdditionalDataOptions() {
+    public AddToReviewSetPostRequestBodyAdditionalDataOptions getAdditionalDataOptions() {
         return this.backingStore.get("additionalDataOptions");
     }
     /**
@@ -73,7 +71,7 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Back
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("additionalDataOptions", (n) -> { this.setAdditionalDataOptions(n.getEnumSetValue(AdditionalDataOptions::forValue)); });
+        deserializerMap.put("additionalDataOptions", (n) -> { this.setAdditionalDataOptions(n.getEnumValue(AddToReviewSetPostRequestBodyAdditionalDataOptions::forValue)); });
         deserializerMap.put("search", (n) -> { this.setSearch(n.getObjectValue(EdiscoverySearch::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -91,7 +89,7 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Back
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeEnumSetValue("additionalDataOptions", this.getAdditionalDataOptions());
+        writer.writeEnumValue("additionalDataOptions", this.getAdditionalDataOptions());
         writer.writeObjectValue("search", this.getSearch());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -106,7 +104,7 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Back
      * Sets the additionalDataOptions property value. The additionalDataOptions property
      * @param value Value to set for the additionalDataOptions property.
      */
-    public void setAdditionalDataOptions(@jakarta.annotation.Nullable final EnumSet<AdditionalDataOptions> value) {
+    public void setAdditionalDataOptions(@jakarta.annotation.Nullable final AddToReviewSetPostRequestBodyAdditionalDataOptions value) {
         this.backingStore.set("additionalDataOptions", value);
     }
     /**

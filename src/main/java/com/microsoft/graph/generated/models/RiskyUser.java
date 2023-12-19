@@ -42,10 +42,10 @@ public class RiskyUser extends Entity implements Parsable {
         deserializerMap.put("history", (n) -> { this.setHistory(n.getCollectionOfObjectValues(RiskyUserHistoryItem::createFromDiscriminatorValue)); });
         deserializerMap.put("isDeleted", (n) -> { this.setIsDeleted(n.getBooleanValue()); });
         deserializerMap.put("isProcessing", (n) -> { this.setIsProcessing(n.getBooleanValue()); });
-        deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(RiskDetail::forValue)); });
+        deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(RiskyUserRiskDetail::forValue)); });
         deserializerMap.put("riskLastUpdatedDateTime", (n) -> { this.setRiskLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("riskLevel", (n) -> { this.setRiskLevel(n.getEnumValue(RiskLevel::forValue)); });
-        deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(RiskState::forValue)); });
+        deserializerMap.put("riskLevel", (n) -> { this.setRiskLevel(n.getEnumValue(RiskyUserRiskLevel::forValue)); });
+        deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(RiskyUserRiskState::forValue)); });
         deserializerMap.put("userDisplayName", (n) -> { this.setUserDisplayName(n.getStringValue()); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         return deserializerMap;
@@ -76,10 +76,10 @@ public class RiskyUser extends Entity implements Parsable {
     }
     /**
      * Gets the riskDetail property value. Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
-     * @return a RiskDetail
+     * @return a RiskyUserRiskDetail
      */
     @jakarta.annotation.Nullable
-    public RiskDetail getRiskDetail() {
+    public RiskyUserRiskDetail getRiskDetail() {
         return this.backingStore.get("riskDetail");
     }
     /**
@@ -92,18 +92,18 @@ public class RiskyUser extends Entity implements Parsable {
     }
     /**
      * Gets the riskLevel property value. Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
-     * @return a RiskLevel
+     * @return a RiskyUserRiskLevel
      */
     @jakarta.annotation.Nullable
-    public RiskLevel getRiskLevel() {
+    public RiskyUserRiskLevel getRiskLevel() {
         return this.backingStore.get("riskLevel");
     }
     /**
      * Gets the riskState property value. State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
-     * @return a RiskState
+     * @return a RiskyUserRiskState
      */
     @jakarta.annotation.Nullable
-    public RiskState getRiskState() {
+    public RiskyUserRiskState getRiskState() {
         return this.backingStore.get("riskState");
     }
     /**
@@ -164,7 +164,7 @@ public class RiskyUser extends Entity implements Parsable {
      * Sets the riskDetail property value. Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
      * @param value Value to set for the riskDetail property.
      */
-    public void setRiskDetail(@jakarta.annotation.Nullable final RiskDetail value) {
+    public void setRiskDetail(@jakarta.annotation.Nullable final RiskyUserRiskDetail value) {
         this.backingStore.set("riskDetail", value);
     }
     /**
@@ -178,14 +178,14 @@ public class RiskyUser extends Entity implements Parsable {
      * Sets the riskLevel property value. Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
      * @param value Value to set for the riskLevel property.
      */
-    public void setRiskLevel(@jakarta.annotation.Nullable final RiskLevel value) {
+    public void setRiskLevel(@jakarta.annotation.Nullable final RiskyUserRiskLevel value) {
         this.backingStore.set("riskLevel", value);
     }
     /**
      * Sets the riskState property value. State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
      * @param value Value to set for the riskState property.
      */
-    public void setRiskState(@jakarta.annotation.Nullable final RiskState value) {
+    public void setRiskState(@jakarta.annotation.Nullable final RiskyUserRiskState value) {
         this.backingStore.set("riskState", value);
     }
     /**

@@ -103,12 +103,12 @@ public class Payload extends Entity implements Parsable {
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(EmailIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("payloadTags", (n) -> { this.setPayloadTags(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getEnumValue(PayloadDeliveryPlatform::forValue)); });
+        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getEnumValue(PayloadPlatform::forValue)); });
         deserializerMap.put("predictedCompromiseRate", (n) -> { this.setPredictedCompromiseRate(n.getDoubleValue()); });
-        deserializerMap.put("simulationAttackType", (n) -> { this.setSimulationAttackType(n.getEnumValue(SimulationAttackType::forValue)); });
+        deserializerMap.put("simulationAttackType", (n) -> { this.setSimulationAttackType(n.getEnumValue(PayloadSimulationAttackType::forValue)); });
         deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(SimulationContentSource::forValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(SimulationContentStatus::forValue)); });
-        deserializerMap.put("technique", (n) -> { this.setTechnique(n.getEnumValue(SimulationAttackTechnique::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(PayloadStatus::forValue)); });
+        deserializerMap.put("technique", (n) -> { this.setTechnique(n.getEnumValue(PayloadTechnique::forValue)); });
         deserializerMap.put("theme", (n) -> { this.setTheme(n.getEnumValue(PayloadTheme::forValue)); });
         return deserializerMap;
     }
@@ -178,10 +178,10 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * Gets the platform property value. The payload delivery platform for a simulation. Possible values are: unknown, sms, email, teams, unknownFutureValue.
-     * @return a PayloadDeliveryPlatform
+     * @return a PayloadPlatform
      */
     @jakarta.annotation.Nullable
-    public PayloadDeliveryPlatform getPlatform() {
+    public PayloadPlatform getPlatform() {
         return this.backingStore.get("platform");
     }
     /**
@@ -194,10 +194,10 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * Gets the simulationAttackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
-     * @return a SimulationAttackType
+     * @return a PayloadSimulationAttackType
      */
     @jakarta.annotation.Nullable
-    public SimulationAttackType getSimulationAttackType() {
+    public PayloadSimulationAttackType getSimulationAttackType() {
         return this.backingStore.get("simulationAttackType");
     }
     /**
@@ -210,18 +210,18 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
-     * @return a SimulationContentStatus
+     * @return a PayloadStatus
      */
     @jakarta.annotation.Nullable
-    public SimulationContentStatus getStatus() {
+    public PayloadStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
      * Gets the technique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
-     * @return a SimulationAttackTechnique
+     * @return a PayloadTechnique
      */
     @jakarta.annotation.Nullable
-    public SimulationAttackTechnique getTechnique() {
+    public PayloadTechnique getTechnique() {
         return this.backingStore.get("technique");
     }
     /**
@@ -371,7 +371,7 @@ public class Payload extends Entity implements Parsable {
      * Sets the platform property value. The payload delivery platform for a simulation. Possible values are: unknown, sms, email, teams, unknownFutureValue.
      * @param value Value to set for the platform property.
      */
-    public void setPlatform(@jakarta.annotation.Nullable final PayloadDeliveryPlatform value) {
+    public void setPlatform(@jakarta.annotation.Nullable final PayloadPlatform value) {
         this.backingStore.set("platform", value);
     }
     /**
@@ -385,7 +385,7 @@ public class Payload extends Entity implements Parsable {
      * Sets the simulationAttackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
      * @param value Value to set for the simulationAttackType property.
      */
-    public void setSimulationAttackType(@jakarta.annotation.Nullable final SimulationAttackType value) {
+    public void setSimulationAttackType(@jakarta.annotation.Nullable final PayloadSimulationAttackType value) {
         this.backingStore.set("simulationAttackType", value);
     }
     /**
@@ -399,14 +399,14 @@ public class Payload extends Entity implements Parsable {
      * Sets the status property value. Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final SimulationContentStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final PayloadStatus value) {
         this.backingStore.set("status", value);
     }
     /**
      * Sets the technique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
      * @param value Value to set for the technique property.
      */
-    public void setTechnique(@jakarta.annotation.Nullable final SimulationAttackTechnique value) {
+    public void setTechnique(@jakarta.annotation.Nullable final PayloadTechnique value) {
         this.backingStore.set("technique", value);
     }
     /**

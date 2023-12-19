@@ -49,10 +49,10 @@ public class CallMediaState implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the audio property value. The audio media state. Possible values are: active, inactive, unknownFutureValue.
-     * @return a MediaState
+     * @return a CallMediaStateAudio
      */
     @jakarta.annotation.Nullable
-    public MediaState getAudio() {
+    public CallMediaStateAudio getAudio() {
         return this.backingStore.get("audio");
     }
     /**
@@ -70,7 +70,7 @@ public class CallMediaState implements AdditionalDataHolder, BackedModel, Parsab
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("audio", (n) -> { this.setAudio(n.getEnumValue(MediaState::forValue)); });
+        deserializerMap.put("audio", (n) -> { this.setAudio(n.getEnumValue(CallMediaStateAudio::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -103,7 +103,7 @@ public class CallMediaState implements AdditionalDataHolder, BackedModel, Parsab
      * Sets the audio property value. The audio media state. Possible values are: active, inactive, unknownFutureValue.
      * @param value Value to set for the audio property.
      */
-    public void setAudio(@jakarta.annotation.Nullable final MediaState value) {
+    public void setAudio(@jakarta.annotation.Nullable final CallMediaStateAudio value) {
         this.backingStore.set("audio", value);
     }
     /**

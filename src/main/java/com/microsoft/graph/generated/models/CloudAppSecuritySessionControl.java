@@ -27,10 +27,10 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
     }
     /**
      * Gets the cloudAppSecurityType property value. Possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps.
-     * @return a CloudAppSecuritySessionControlType
+     * @return a CloudAppSecuritySessionControlCloudAppSecurityType
      */
     @jakarta.annotation.Nullable
-    public CloudAppSecuritySessionControlType getCloudAppSecurityType() {
+    public CloudAppSecuritySessionControlCloudAppSecurityType getCloudAppSecurityType() {
         return this.backingStore.get("cloudAppSecurityType");
     }
     /**
@@ -40,7 +40,7 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("cloudAppSecurityType", (n) -> { this.setCloudAppSecurityType(n.getEnumValue(CloudAppSecuritySessionControlType::forValue)); });
+        deserializerMap.put("cloudAppSecurityType", (n) -> { this.setCloudAppSecurityType(n.getEnumValue(CloudAppSecuritySessionControlCloudAppSecurityType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -56,7 +56,7 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
      * Sets the cloudAppSecurityType property value. Possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps.
      * @param value Value to set for the cloudAppSecurityType property.
      */
-    public void setCloudAppSecurityType(@jakarta.annotation.Nullable final CloudAppSecuritySessionControlType value) {
+    public void setCloudAppSecurityType(@jakarta.annotation.Nullable final CloudAppSecuritySessionControlCloudAppSecurityType value) {
         this.backingStore.set("cloudAppSecurityType", value);
     }
 }

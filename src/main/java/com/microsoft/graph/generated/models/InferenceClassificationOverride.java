@@ -26,10 +26,10 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
     }
     /**
      * Gets the classifyAs property value. Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other.
-     * @return a InferenceClassificationType
+     * @return a InferenceClassificationOverrideClassifyAs
      */
     @jakarta.annotation.Nullable
-    public InferenceClassificationType getClassifyAs() {
+    public InferenceClassificationOverrideClassifyAs getClassifyAs() {
         return this.backingStore.get("classifyAs");
     }
     /**
@@ -39,7 +39,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("classifyAs", (n) -> { this.setClassifyAs(n.getEnumValue(InferenceClassificationType::forValue)); });
+        deserializerMap.put("classifyAs", (n) -> { this.setClassifyAs(n.getEnumValue(InferenceClassificationOverrideClassifyAs::forValue)); });
         deserializerMap.put("senderEmailAddress", (n) -> { this.setSenderEmailAddress(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -65,7 +65,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
      * Sets the classifyAs property value. Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other.
      * @param value Value to set for the classifyAs property.
      */
-    public void setClassifyAs(@jakarta.annotation.Nullable final InferenceClassificationType value) {
+    public void setClassifyAs(@jakarta.annotation.Nullable final InferenceClassificationOverrideClassifyAs value) {
         this.backingStore.set("classifyAs", value);
     }
     /**

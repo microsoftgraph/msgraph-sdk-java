@@ -68,10 +68,10 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Back
     }
     /**
      * Gets the encryptionMethod property value. Select the encryption method for removable  drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
-     * @return a BitLockerEncryptionMethod
+     * @return a BitLockerRemovableDrivePolicyEncryptionMethod
      */
     @jakarta.annotation.Nullable
-    public BitLockerEncryptionMethod getEncryptionMethod() {
+    public BitLockerRemovableDrivePolicyEncryptionMethod getEncryptionMethod() {
         return this.backingStore.get("encryptionMethod");
     }
     /**
@@ -82,7 +82,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Back
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("blockCrossOrganizationWriteAccess", (n) -> { this.setBlockCrossOrganizationWriteAccess(n.getBooleanValue()); });
-        deserializerMap.put("encryptionMethod", (n) -> { this.setEncryptionMethod(n.getEnumValue(BitLockerEncryptionMethod::forValue)); });
+        deserializerMap.put("encryptionMethod", (n) -> { this.setEncryptionMethod(n.getEnumValue(BitLockerRemovableDrivePolicyEncryptionMethod::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("requireEncryptionForWriteAccess", (n) -> { this.setRequireEncryptionForWriteAccess(n.getBooleanValue()); });
         return deserializerMap;
@@ -141,7 +141,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Back
      * Sets the encryptionMethod property value. Select the encryption method for removable  drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
      * @param value Value to set for the encryptionMethod property.
      */
-    public void setEncryptionMethod(@jakarta.annotation.Nullable final BitLockerEncryptionMethod value) {
+    public void setEncryptionMethod(@jakarta.annotation.Nullable final BitLockerRemovableDrivePolicyEncryptionMethod value) {
         this.backingStore.set("encryptionMethod", value);
     }
     /**

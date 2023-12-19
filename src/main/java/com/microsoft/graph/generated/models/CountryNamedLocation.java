@@ -34,10 +34,10 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
     }
     /**
      * Gets the countryLookupMethod property value. Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress(default) and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.
-     * @return a CountryLookupMethodType
+     * @return a CountryNamedLocationCountryLookupMethod
      */
     @jakarta.annotation.Nullable
-    public CountryLookupMethodType getCountryLookupMethod() {
+    public CountryNamedLocationCountryLookupMethod getCountryLookupMethod() {
         return this.backingStore.get("countryLookupMethod");
     }
     /**
@@ -48,7 +48,7 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("countriesAndRegions", (n) -> { this.setCountriesAndRegions(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("countryLookupMethod", (n) -> { this.setCountryLookupMethod(n.getEnumValue(CountryLookupMethodType::forValue)); });
+        deserializerMap.put("countryLookupMethod", (n) -> { this.setCountryLookupMethod(n.getEnumValue(CountryNamedLocationCountryLookupMethod::forValue)); });
         deserializerMap.put("includeUnknownCountriesAndRegions", (n) -> { this.setIncludeUnknownCountriesAndRegions(n.getBooleanValue()); });
         return deserializerMap;
     }
@@ -82,7 +82,7 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
      * Sets the countryLookupMethod property value. Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress(default) and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.
      * @param value Value to set for the countryLookupMethod property.
      */
-    public void setCountryLookupMethod(@jakarta.annotation.Nullable final CountryLookupMethodType value) {
+    public void setCountryLookupMethod(@jakarta.annotation.Nullable final CountryNamedLocationCountryLookupMethod value) {
         this.backingStore.set("countryLookupMethod", value);
     }
     /**

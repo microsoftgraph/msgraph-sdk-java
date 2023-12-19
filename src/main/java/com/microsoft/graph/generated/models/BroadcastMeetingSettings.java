@@ -49,10 +49,10 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the allowedAudience property value. Defines who can join the Teams live event. Possible values are listed in the following table.
-     * @return a BroadcastMeetingAudience
+     * @return a BroadcastMeetingSettingsAllowedAudience
      */
     @jakarta.annotation.Nullable
-    public BroadcastMeetingAudience getAllowedAudience() {
+    public BroadcastMeetingSettingsAllowedAudience getAllowedAudience() {
         return this.backingStore.get("allowedAudience");
     }
     /**
@@ -78,7 +78,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
-        deserializerMap.put("allowedAudience", (n) -> { this.setAllowedAudience(n.getEnumValue(BroadcastMeetingAudience::forValue)); });
+        deserializerMap.put("allowedAudience", (n) -> { this.setAllowedAudience(n.getEnumValue(BroadcastMeetingSettingsAllowedAudience::forValue)); });
         deserializerMap.put("captions", (n) -> { this.setCaptions(n.getObjectValue(BroadcastMeetingCaptionSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("isAttendeeReportEnabled", (n) -> { this.setIsAttendeeReportEnabled(n.getBooleanValue()); });
         deserializerMap.put("isQuestionAndAnswerEnabled", (n) -> { this.setIsQuestionAndAnswerEnabled(n.getBooleanValue()); });
@@ -153,7 +153,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, BackedMod
      * Sets the allowedAudience property value. Defines who can join the Teams live event. Possible values are listed in the following table.
      * @param value Value to set for the allowedAudience property.
      */
-    public void setAllowedAudience(@jakarta.annotation.Nullable final BroadcastMeetingAudience value) {
+    public void setAllowedAudience(@jakarta.annotation.Nullable final BroadcastMeetingSettingsAllowedAudience value) {
         this.backingStore.set("allowedAudience", value);
     }
     /**

@@ -27,18 +27,18 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
     }
     /**
      * Gets the addedStudentAction property value. Class-level default behavior for handling students who are added after the assignment is published. Possible values are: none, assignIfOpen.
-     * @return a EducationAddedStudentAction
+     * @return a EducationAssignmentDefaultsAddedStudentAction
      */
     @jakarta.annotation.Nullable
-    public EducationAddedStudentAction getAddedStudentAction() {
+    public EducationAssignmentDefaultsAddedStudentAction getAddedStudentAction() {
         return this.backingStore.get("addedStudentAction");
     }
     /**
      * Gets the addToCalendarAction property value. Optional field to control adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none.
-     * @return a EducationAddToCalendarOptions
+     * @return a EducationAssignmentDefaultsAddToCalendarAction
      */
     @jakarta.annotation.Nullable
-    public EducationAddToCalendarOptions getAddToCalendarAction() {
+    public EducationAssignmentDefaultsAddToCalendarAction getAddToCalendarAction() {
         return this.backingStore.get("addToCalendarAction");
     }
     /**
@@ -56,8 +56,8 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("addedStudentAction", (n) -> { this.setAddedStudentAction(n.getEnumValue(EducationAddedStudentAction::forValue)); });
-        deserializerMap.put("addToCalendarAction", (n) -> { this.setAddToCalendarAction(n.getEnumValue(EducationAddToCalendarOptions::forValue)); });
+        deserializerMap.put("addedStudentAction", (n) -> { this.setAddedStudentAction(n.getEnumValue(EducationAssignmentDefaultsAddedStudentAction::forValue)); });
+        deserializerMap.put("addToCalendarAction", (n) -> { this.setAddToCalendarAction(n.getEnumValue(EducationAssignmentDefaultsAddToCalendarAction::forValue)); });
         deserializerMap.put("dueTime", (n) -> { this.setDueTime(n.getLocalTimeValue()); });
         deserializerMap.put("notificationChannelUrl", (n) -> { this.setNotificationChannelUrl(n.getStringValue()); });
         return deserializerMap;
@@ -86,14 +86,14 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      * Sets the addedStudentAction property value. Class-level default behavior for handling students who are added after the assignment is published. Possible values are: none, assignIfOpen.
      * @param value Value to set for the addedStudentAction property.
      */
-    public void setAddedStudentAction(@jakarta.annotation.Nullable final EducationAddedStudentAction value) {
+    public void setAddedStudentAction(@jakarta.annotation.Nullable final EducationAssignmentDefaultsAddedStudentAction value) {
         this.backingStore.set("addedStudentAction", value);
     }
     /**
      * Sets the addToCalendarAction property value. Optional field to control adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none.
      * @param value Value to set for the addToCalendarAction property.
      */
-    public void setAddToCalendarAction(@jakarta.annotation.Nullable final EducationAddToCalendarOptions value) {
+    public void setAddToCalendarAction(@jakarta.annotation.Nullable final EducationAssignmentDefaultsAddToCalendarAction value) {
         this.backingStore.set("addToCalendarAction", value);
     }
     /**

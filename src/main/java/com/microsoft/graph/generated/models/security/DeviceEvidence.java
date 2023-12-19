@@ -36,10 +36,10 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the defenderAvStatus property value. State of the Defender AntiMalware engine. The possible values are: notReporting, disabled, notUpdated, updated, unknown, notSupported, unknownFutureValue.
-     * @return a DefenderAvStatus
+     * @return a DeviceEvidenceDefenderAvStatus
      */
     @jakarta.annotation.Nullable
-    public DefenderAvStatus getDefenderAvStatus() {
+    public DeviceEvidenceDefenderAvStatus getDefenderAvStatus() {
         return this.backingStore.get("defenderAvStatus");
     }
     /**
@@ -58,19 +58,19 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("azureAdDeviceId", (n) -> { this.setAzureAdDeviceId(n.getStringValue()); });
-        deserializerMap.put("defenderAvStatus", (n) -> { this.setDefenderAvStatus(n.getEnumValue(DefenderAvStatus::forValue)); });
+        deserializerMap.put("defenderAvStatus", (n) -> { this.setDefenderAvStatus(n.getEnumValue(DeviceEvidenceDefenderAvStatus::forValue)); });
         deserializerMap.put("deviceDnsName", (n) -> { this.setDeviceDnsName(n.getStringValue()); });
         deserializerMap.put("firstSeenDateTime", (n) -> { this.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("healthStatus", (n) -> { this.setHealthStatus(n.getEnumValue(DeviceHealthStatus::forValue)); });
+        deserializerMap.put("healthStatus", (n) -> { this.setHealthStatus(n.getEnumValue(DeviceEvidenceHealthStatus::forValue)); });
         deserializerMap.put("ipInterfaces", (n) -> { this.setIpInterfaces(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("loggedOnUsers", (n) -> { this.setLoggedOnUsers(n.getCollectionOfObjectValues(LoggedOnUser::createFromDiscriminatorValue)); });
         deserializerMap.put("mdeDeviceId", (n) -> { this.setMdeDeviceId(n.getStringValue()); });
-        deserializerMap.put("onboardingStatus", (n) -> { this.setOnboardingStatus(n.getEnumValue(OnboardingStatus::forValue)); });
+        deserializerMap.put("onboardingStatus", (n) -> { this.setOnboardingStatus(n.getEnumValue(DeviceEvidenceOnboardingStatus::forValue)); });
         deserializerMap.put("osBuild", (n) -> { this.setOsBuild(n.getLongValue()); });
         deserializerMap.put("osPlatform", (n) -> { this.setOsPlatform(n.getStringValue()); });
         deserializerMap.put("rbacGroupId", (n) -> { this.setRbacGroupId(n.getIntegerValue()); });
         deserializerMap.put("rbacGroupName", (n) -> { this.setRbacGroupName(n.getStringValue()); });
-        deserializerMap.put("riskScore", (n) -> { this.setRiskScore(n.getEnumValue(DeviceRiskScore::forValue)); });
+        deserializerMap.put("riskScore", (n) -> { this.setRiskScore(n.getEnumValue(DeviceEvidenceRiskScore::forValue)); });
         deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
         deserializerMap.put("vmMetadata", (n) -> { this.setVmMetadata(n.getObjectValue(VmMetadata::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -85,10 +85,10 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the healthStatus property value. The health state of the device. The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
-     * @return a DeviceHealthStatus
+     * @return a DeviceEvidenceHealthStatus
      */
     @jakarta.annotation.Nullable
-    public DeviceHealthStatus getHealthStatus() {
+    public DeviceEvidenceHealthStatus getHealthStatus() {
         return this.backingStore.get("healthStatus");
     }
     /**
@@ -117,10 +117,10 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the onboardingStatus property value. The status of the machine onboarding to Microsoft Defender for Endpoint. The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
-     * @return a OnboardingStatus
+     * @return a DeviceEvidenceOnboardingStatus
      */
     @jakarta.annotation.Nullable
-    public OnboardingStatus getOnboardingStatus() {
+    public DeviceEvidenceOnboardingStatus getOnboardingStatus() {
         return this.backingStore.get("onboardingStatus");
     }
     /**
@@ -157,10 +157,10 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the riskScore property value. Risk score as evaluated by Microsoft Defender for Endpoint. The possible values are: none, informational, low, medium, high, unknownFutureValue.
-     * @return a DeviceRiskScore
+     * @return a DeviceEvidenceRiskScore
      */
     @jakarta.annotation.Nullable
-    public DeviceRiskScore getRiskScore() {
+    public DeviceEvidenceRiskScore getRiskScore() {
         return this.backingStore.get("riskScore");
     }
     /**
@@ -214,7 +214,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * Sets the defenderAvStatus property value. State of the Defender AntiMalware engine. The possible values are: notReporting, disabled, notUpdated, updated, unknown, notSupported, unknownFutureValue.
      * @param value Value to set for the defenderAvStatus property.
      */
-    public void setDefenderAvStatus(@jakarta.annotation.Nullable final DefenderAvStatus value) {
+    public void setDefenderAvStatus(@jakarta.annotation.Nullable final DeviceEvidenceDefenderAvStatus value) {
         this.backingStore.set("defenderAvStatus", value);
     }
     /**
@@ -235,7 +235,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * Sets the healthStatus property value. The health state of the device. The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
      * @param value Value to set for the healthStatus property.
      */
-    public void setHealthStatus(@jakarta.annotation.Nullable final DeviceHealthStatus value) {
+    public void setHealthStatus(@jakarta.annotation.Nullable final DeviceEvidenceHealthStatus value) {
         this.backingStore.set("healthStatus", value);
     }
     /**
@@ -263,7 +263,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * Sets the onboardingStatus property value. The status of the machine onboarding to Microsoft Defender for Endpoint. The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
      * @param value Value to set for the onboardingStatus property.
      */
-    public void setOnboardingStatus(@jakarta.annotation.Nullable final OnboardingStatus value) {
+    public void setOnboardingStatus(@jakarta.annotation.Nullable final DeviceEvidenceOnboardingStatus value) {
         this.backingStore.set("onboardingStatus", value);
     }
     /**
@@ -298,7 +298,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * Sets the riskScore property value. Risk score as evaluated by Microsoft Defender for Endpoint. The possible values are: none, informational, low, medium, high, unknownFutureValue.
      * @param value Value to set for the riskScore property.
      */
-    public void setRiskScore(@jakarta.annotation.Nullable final DeviceRiskScore value) {
+    public void setRiskScore(@jakarta.annotation.Nullable final DeviceEvidenceRiskScore value) {
         this.backingStore.set("riskScore", value);
     }
     /**

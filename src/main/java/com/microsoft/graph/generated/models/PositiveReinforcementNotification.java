@@ -27,10 +27,10 @@ public class PositiveReinforcementNotification extends BaseEndUserNotification i
     }
     /**
      * Gets the deliveryPreference property value. Delivery preference. Possible values are: unknown, deliverImmedietly, deliverAfterCampaignEnd, unknownFutureValue.
-     * @return a NotificationDeliveryPreference
+     * @return a PositiveReinforcementNotificationDeliveryPreference
      */
     @jakarta.annotation.Nullable
-    public NotificationDeliveryPreference getDeliveryPreference() {
+    public PositiveReinforcementNotificationDeliveryPreference getDeliveryPreference() {
         return this.backingStore.get("deliveryPreference");
     }
     /**
@@ -40,7 +40,7 @@ public class PositiveReinforcementNotification extends BaseEndUserNotification i
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("deliveryPreference", (n) -> { this.setDeliveryPreference(n.getEnumValue(NotificationDeliveryPreference::forValue)); });
+        deserializerMap.put("deliveryPreference", (n) -> { this.setDeliveryPreference(n.getEnumValue(PositiveReinforcementNotificationDeliveryPreference::forValue)); });
         return deserializerMap;
     }
     /**
@@ -56,7 +56,7 @@ public class PositiveReinforcementNotification extends BaseEndUserNotification i
      * Sets the deliveryPreference property value. Delivery preference. Possible values are: unknown, deliverImmedietly, deliverAfterCampaignEnd, unknownFutureValue.
      * @param value Value to set for the deliveryPreference property.
      */
-    public void setDeliveryPreference(@jakarta.annotation.Nullable final NotificationDeliveryPreference value) {
+    public void setDeliveryPreference(@jakarta.annotation.Nullable final PositiveReinforcementNotificationDeliveryPreference value) {
         this.backingStore.set("deliveryPreference", value);
     }
 }

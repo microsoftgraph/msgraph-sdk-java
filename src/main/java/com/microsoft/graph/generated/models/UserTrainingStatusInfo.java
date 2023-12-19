@@ -91,7 +91,7 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, BackedModel
         deserializerMap.put("completionDateTime", (n) -> { this.setCompletionDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("trainingStatus", (n) -> { this.setTrainingStatus(n.getEnumValue(TrainingStatus::forValue)); });
+        deserializerMap.put("trainingStatus", (n) -> { this.setTrainingStatus(n.getEnumValue(UserTrainingStatusInfoTrainingStatus::forValue)); });
         return deserializerMap;
     }
     /**
@@ -104,10 +104,10 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the trainingStatus property value. The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
-     * @return a TrainingStatus
+     * @return a UserTrainingStatusInfoTrainingStatus
      */
     @jakarta.annotation.Nullable
-    public TrainingStatus getTrainingStatus() {
+    public UserTrainingStatusInfoTrainingStatus getTrainingStatus() {
         return this.backingStore.get("trainingStatus");
     }
     /**
@@ -170,7 +170,7 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, BackedModel
      * Sets the trainingStatus property value. The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
      * @param value Value to set for the trainingStatus property.
      */
-    public void setTrainingStatus(@jakarta.annotation.Nullable final TrainingStatus value) {
+    public void setTrainingStatus(@jakarta.annotation.Nullable final UserTrainingStatusInfoTrainingStatus value) {
         this.backingStore.set("trainingStatus", value);
     }
 }

@@ -69,7 +69,7 @@ public class SharepointSettings extends Entity implements Parsable {
         deserializerMap.put("deletedUserPersonalSiteRetentionPeriodInDays", (n) -> { this.setDeletedUserPersonalSiteRetentionPeriodInDays(n.getIntegerValue()); });
         deserializerMap.put("excludedFileExtensionsForSyncApp", (n) -> { this.setExcludedFileExtensionsForSyncApp(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("idleSessionSignOut", (n) -> { this.setIdleSessionSignOut(n.getObjectValue(IdleSessionSignOut::createFromDiscriminatorValue)); });
-        deserializerMap.put("imageTaggingOption", (n) -> { this.setImageTaggingOption(n.getEnumValue(ImageTaggingChoice::forValue)); });
+        deserializerMap.put("imageTaggingOption", (n) -> { this.setImageTaggingOption(n.getEnumValue(SharepointSettingsImageTaggingOption::forValue)); });
         deserializerMap.put("isCommentingOnSitePagesEnabled", (n) -> { this.setIsCommentingOnSitePagesEnabled(n.getBooleanValue()); });
         deserializerMap.put("isFileActivityNotificationEnabled", (n) -> { this.setIsFileActivityNotificationEnabled(n.getBooleanValue()); });
         deserializerMap.put("isLegacyAuthProtocolsEnabled", (n) -> { this.setIsLegacyAuthProtocolsEnabled(n.getBooleanValue()); });
@@ -88,8 +88,8 @@ public class SharepointSettings extends Entity implements Parsable {
         deserializerMap.put("personalSiteDefaultStorageLimitInMB", (n) -> { this.setPersonalSiteDefaultStorageLimitInMB(n.getLongValue()); });
         deserializerMap.put("sharingAllowedDomainList", (n) -> { this.setSharingAllowedDomainList(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("sharingBlockedDomainList", (n) -> { this.setSharingBlockedDomainList(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("sharingCapability", (n) -> { this.setSharingCapability(n.getEnumValue(SharingCapabilities::forValue)); });
-        deserializerMap.put("sharingDomainRestrictionMode", (n) -> { this.setSharingDomainRestrictionMode(n.getEnumValue(SharingDomainRestrictionMode::forValue)); });
+        deserializerMap.put("sharingCapability", (n) -> { this.setSharingCapability(n.getEnumValue(SharepointSettingsSharingCapability::forValue)); });
+        deserializerMap.put("sharingDomainRestrictionMode", (n) -> { this.setSharingDomainRestrictionMode(n.getEnumValue(SharepointSettingsSharingDomainRestrictionMode::forValue)); });
         deserializerMap.put("siteCreationDefaultManagedPath", (n) -> { this.setSiteCreationDefaultManagedPath(n.getStringValue()); });
         deserializerMap.put("siteCreationDefaultStorageLimitInMB", (n) -> { this.setSiteCreationDefaultStorageLimitInMB(n.getIntegerValue()); });
         deserializerMap.put("tenantDefaultTimezone", (n) -> { this.setTenantDefaultTimezone(n.getStringValue()); });
@@ -105,10 +105,10 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the imageTaggingOption property value. Specifies the image tagging option for the tenant. Possible values are: disabled, basic, enhanced.
-     * @return a ImageTaggingChoice
+     * @return a SharepointSettingsImageTaggingOption
      */
     @jakarta.annotation.Nullable
-    public ImageTaggingChoice getImageTaggingOption() {
+    public SharepointSettingsImageTaggingOption getImageTaggingOption() {
         return this.backingStore.get("imageTaggingOption");
     }
     /**
@@ -257,18 +257,18 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the sharingCapability property value. Sharing capability for the tenant. Possible values are: disabled, externalUserSharingOnly, externalUserAndGuestSharing, existingExternalUserSharingOnly.
-     * @return a SharingCapabilities
+     * @return a SharepointSettingsSharingCapability
      */
     @jakarta.annotation.Nullable
-    public SharingCapabilities getSharingCapability() {
+    public SharepointSettingsSharingCapability getSharingCapability() {
         return this.backingStore.get("sharingCapability");
     }
     /**
      * Gets the sharingDomainRestrictionMode property value. Specifies the external sharing mode for domains. Possible values are: none, allowList, blockList.
-     * @return a SharingDomainRestrictionMode
+     * @return a SharepointSettingsSharingDomainRestrictionMode
      */
     @jakarta.annotation.Nullable
-    public SharingDomainRestrictionMode getSharingDomainRestrictionMode() {
+    public SharepointSettingsSharingDomainRestrictionMode getSharingDomainRestrictionMode() {
         return this.backingStore.get("sharingDomainRestrictionMode");
     }
     /**
@@ -371,7 +371,7 @@ public class SharepointSettings extends Entity implements Parsable {
      * Sets the imageTaggingOption property value. Specifies the image tagging option for the tenant. Possible values are: disabled, basic, enhanced.
      * @param value Value to set for the imageTaggingOption property.
      */
-    public void setImageTaggingOption(@jakarta.annotation.Nullable final ImageTaggingChoice value) {
+    public void setImageTaggingOption(@jakarta.annotation.Nullable final SharepointSettingsImageTaggingOption value) {
         this.backingStore.set("imageTaggingOption", value);
     }
     /**
@@ -504,14 +504,14 @@ public class SharepointSettings extends Entity implements Parsable {
      * Sets the sharingCapability property value. Sharing capability for the tenant. Possible values are: disabled, externalUserSharingOnly, externalUserAndGuestSharing, existingExternalUserSharingOnly.
      * @param value Value to set for the sharingCapability property.
      */
-    public void setSharingCapability(@jakarta.annotation.Nullable final SharingCapabilities value) {
+    public void setSharingCapability(@jakarta.annotation.Nullable final SharepointSettingsSharingCapability value) {
         this.backingStore.set("sharingCapability", value);
     }
     /**
      * Sets the sharingDomainRestrictionMode property value. Specifies the external sharing mode for domains. Possible values are: none, allowList, blockList.
      * @param value Value to set for the sharingDomainRestrictionMode property.
      */
-    public void setSharingDomainRestrictionMode(@jakarta.annotation.Nullable final SharingDomainRestrictionMode value) {
+    public void setSharingDomainRestrictionMode(@jakarta.annotation.Nullable final SharepointSettingsSharingDomainRestrictionMode value) {
         this.backingStore.set("sharingDomainRestrictionMode", value);
     }
     /**

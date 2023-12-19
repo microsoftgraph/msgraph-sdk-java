@@ -3,7 +3,6 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -42,16 +41,16 @@ public class UserSource extends DataSource implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
-        deserializerMap.put("includedSources", (n) -> { this.setIncludedSources(n.getEnumSetValue(SourceType::forValue)); });
+        deserializerMap.put("includedSources", (n) -> { this.setIncludedSources(n.getEnumValue(UserSourceIncludedSources::forValue)); });
         deserializerMap.put("siteWebUrl", (n) -> { this.setSiteWebUrl(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
-     * @return a EnumSet<SourceType>
+     * @return a UserSourceIncludedSources
      */
     @jakarta.annotation.Nullable
-    public EnumSet<SourceType> getIncludedSources() {
+    public UserSourceIncludedSources getIncludedSources() {
         return this.backingStore.get("includedSources");
     }
     /**
@@ -70,7 +69,7 @@ public class UserSource extends DataSource implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("email", this.getEmail());
-        writer.writeEnumSetValue("includedSources", this.getIncludedSources());
+        writer.writeEnumValue("includedSources", this.getIncludedSources());
         writer.writeStringValue("siteWebUrl", this.getSiteWebUrl());
     }
     /**
@@ -84,7 +83,7 @@ public class UserSource extends DataSource implements Parsable {
      * Sets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
      * @param value Value to set for the includedSources property.
      */
-    public void setIncludedSources(@jakarta.annotation.Nullable final EnumSet<SourceType> value) {
+    public void setIncludedSources(@jakarta.annotation.Nullable final UserSourceIncludedSources value) {
         this.backingStore.set("includedSources", value);
     }
     /**

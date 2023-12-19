@@ -78,7 +78,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("publishingState", (n) -> { this.setPublishingState(n.getEnumValue(TeamsAppPublishingState::forValue)); });
+        deserializerMap.put("publishingState", (n) -> { this.setPublishingState(n.getEnumValue(TeamsAppDefinitionPublishingState::forValue)); });
         deserializerMap.put("shortDescription", (n) -> { this.setShortDescription(n.getStringValue()); });
         deserializerMap.put("teamsAppId", (n) -> { this.setTeamsAppId(n.getStringValue()); });
         deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
@@ -94,10 +94,10 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submittedThe specific version of the Teams app has been submitted and is under review. publishedThe request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejectedThe admin rejected the request to publish the specific version of the Teams app.
-     * @return a TeamsAppPublishingState
+     * @return a TeamsAppDefinitionPublishingState
      */
     @jakarta.annotation.Nullable
-    public TeamsAppPublishingState getPublishingState() {
+    public TeamsAppDefinitionPublishingState getPublishingState() {
         return this.backingStore.get("publishingState");
     }
     /**
@@ -188,7 +188,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * Sets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submittedThe specific version of the Teams app has been submitted and is under review. publishedThe request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejectedThe admin rejected the request to publish the specific version of the Teams app.
      * @param value Value to set for the publishingState property.
      */
-    public void setPublishingState(@jakarta.annotation.Nullable final TeamsAppPublishingState value) {
+    public void setPublishingState(@jakarta.annotation.Nullable final TeamsAppDefinitionPublishingState value) {
         this.backingStore.set("publishingState", value);
     }
     /**

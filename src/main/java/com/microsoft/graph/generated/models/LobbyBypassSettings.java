@@ -64,7 +64,7 @@ public class LobbyBypassSettings implements AdditionalDataHolder, BackedModel, P
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("isDialInBypassEnabled", (n) -> { this.setIsDialInBypassEnabled(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("scope", (n) -> { this.setScope(n.getEnumValue(LobbyBypassScope::forValue)); });
+        deserializerMap.put("scope", (n) -> { this.setScope(n.getEnumValue(LobbyBypassSettingsScope::forValue)); });
         return deserializerMap;
     }
     /**
@@ -85,10 +85,10 @@ public class LobbyBypassSettings implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the scope property value. Specifies the type of participants that are automatically admitted into a meeting, bypassing the lobby. Optional.
-     * @return a LobbyBypassScope
+     * @return a LobbyBypassSettingsScope
      */
     @jakarta.annotation.Nullable
-    public LobbyBypassScope getScope() {
+    public LobbyBypassSettingsScope getScope() {
         return this.backingStore.get("scope");
     }
     /**
@@ -135,7 +135,7 @@ public class LobbyBypassSettings implements AdditionalDataHolder, BackedModel, P
      * Sets the scope property value. Specifies the type of participants that are automatically admitted into a meeting, bypassing the lobby. Optional.
      * @param value Value to set for the scope property.
      */
-    public void setScope(@jakarta.annotation.Nullable final LobbyBypassScope value) {
+    public void setScope(@jakarta.annotation.Nullable final LobbyBypassSettingsScope value) {
         this.backingStore.set("scope", value);
     }
 }

@@ -50,16 +50,16 @@ public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionD
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("customExtensionStageInstanceDetail", (n) -> { this.setCustomExtensionStageInstanceDetail(n.getStringValue()); });
         deserializerMap.put("customExtensionStageInstanceId", (n) -> { this.setCustomExtensionStageInstanceId(n.getStringValue()); });
-        deserializerMap.put("stage", (n) -> { this.setStage(n.getEnumValue(AccessPackageCustomExtensionStage::forValue)); });
+        deserializerMap.put("stage", (n) -> { this.setStage(n.getEnumValue(AccessPackageAssignmentRequestCallbackDataStage::forValue)); });
         deserializerMap.put("state", (n) -> { this.setState(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the stage property value. Indicates the stage at which the custom callout extension is executed. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
-     * @return a AccessPackageCustomExtensionStage
+     * @return a AccessPackageAssignmentRequestCallbackDataStage
      */
     @jakarta.annotation.Nullable
-    public AccessPackageCustomExtensionStage getStage() {
+    public AccessPackageAssignmentRequestCallbackDataStage getStage() {
         return this.backingStore.get("stage");
     }
     /**
@@ -100,7 +100,7 @@ public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionD
      * Sets the stage property value. Indicates the stage at which the custom callout extension is executed. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
      * @param value Value to set for the stage property.
      */
-    public void setStage(@jakarta.annotation.Nullable final AccessPackageCustomExtensionStage value) {
+    public void setStage(@jakarta.annotation.Nullable final AccessPackageAssignmentRequestCallbackDataStage value) {
         this.backingStore.set("stage", value);
     }
     /**

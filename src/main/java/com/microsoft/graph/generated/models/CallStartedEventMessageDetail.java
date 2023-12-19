@@ -27,10 +27,10 @@ public class CallStartedEventMessageDetail extends EventMessageDetail implements
     }
     /**
      * Gets the callEventType property value. Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
-     * @return a TeamworkCallEventType
+     * @return a CallStartedEventMessageDetailCallEventType
      */
     @jakarta.annotation.Nullable
-    public TeamworkCallEventType getCallEventType() {
+    public CallStartedEventMessageDetailCallEventType getCallEventType() {
         return this.backingStore.get("callEventType");
     }
     /**
@@ -48,7 +48,7 @@ public class CallStartedEventMessageDetail extends EventMessageDetail implements
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("callEventType", (n) -> { this.setCallEventType(n.getEnumValue(TeamworkCallEventType::forValue)); });
+        deserializerMap.put("callEventType", (n) -> { this.setCallEventType(n.getEnumValue(CallStartedEventMessageDetailCallEventType::forValue)); });
         deserializerMap.put("callId", (n) -> { this.setCallId(n.getStringValue()); });
         deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -76,7 +76,7 @@ public class CallStartedEventMessageDetail extends EventMessageDetail implements
      * Sets the callEventType property value. Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
      * @param value Value to set for the callEventType property.
      */
-    public void setCallEventType(@jakarta.annotation.Nullable final TeamworkCallEventType value) {
+    public void setCallEventType(@jakarta.annotation.Nullable final CallStartedEventMessageDetailCallEventType value) {
         this.backingStore.set("callEventType", value);
     }
     /**

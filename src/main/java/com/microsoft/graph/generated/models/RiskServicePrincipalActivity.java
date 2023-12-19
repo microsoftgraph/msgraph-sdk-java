@@ -57,10 +57,10 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the detail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
-     * @return a RiskDetail
+     * @return a RiskServicePrincipalActivityDetail
      */
     @jakarta.annotation.Nullable
-    public RiskDetail getDetail() {
+    public RiskServicePrincipalActivityDetail getDetail() {
         return this.backingStore.get("detail");
     }
     /**
@@ -70,7 +70,7 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("detail", (n) -> { this.setDetail(n.getEnumValue(RiskDetail::forValue)); });
+        deserializerMap.put("detail", (n) -> { this.setDetail(n.getEnumValue(RiskServicePrincipalActivityDetail::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("riskEventTypes", (n) -> { this.setRiskEventTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
@@ -121,7 +121,7 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Backe
      * Sets the detail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
      * @param value Value to set for the detail property.
      */
-    public void setDetail(@jakarta.annotation.Nullable final RiskDetail value) {
+    public void setDetail(@jakarta.annotation.Nullable final RiskServicePrincipalActivityDetail value) {
         this.backingStore.set("detail", value);
     }
     /**

@@ -79,9 +79,9 @@ public class EndUserNotification extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(EmailIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("notificationType", (n) -> { this.setNotificationType(n.getEnumValue(EndUserNotificationType::forValue)); });
-        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(SimulationContentSource::forValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(SimulationContentStatus::forValue)); });
+        deserializerMap.put("notificationType", (n) -> { this.setNotificationType(n.getEnumValue(EndUserNotificationNotificationType::forValue)); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(EndUserNotificationSource::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(EndUserNotificationStatus::forValue)); });
         deserializerMap.put("supportedLocales", (n) -> { this.setSupportedLocales(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
     }
@@ -103,26 +103,26 @@ public class EndUserNotification extends Entity implements Parsable {
     }
     /**
      * Gets the notificationType property value. Type of notification. Possible values are: unknown, positiveReinforcement, noTraining, trainingAssignment, trainingReminder, unknownFutureValue.
-     * @return a EndUserNotificationType
+     * @return a EndUserNotificationNotificationType
      */
     @jakarta.annotation.Nullable
-    public EndUserNotificationType getNotificationType() {
+    public EndUserNotificationNotificationType getNotificationType() {
         return this.backingStore.get("notificationType");
     }
     /**
      * Gets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
-     * @return a SimulationContentSource
+     * @return a EndUserNotificationSource
      */
     @jakarta.annotation.Nullable
-    public SimulationContentSource getSource() {
+    public EndUserNotificationSource getSource() {
         return this.backingStore.get("source");
     }
     /**
      * Gets the status property value. The status of the notification. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
-     * @return a SimulationContentStatus
+     * @return a EndUserNotificationStatus
      */
     @jakarta.annotation.Nullable
-    public SimulationContentStatus getStatus() {
+    public EndUserNotificationStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -205,21 +205,21 @@ public class EndUserNotification extends Entity implements Parsable {
      * Sets the notificationType property value. Type of notification. Possible values are: unknown, positiveReinforcement, noTraining, trainingAssignment, trainingReminder, unknownFutureValue.
      * @param value Value to set for the notificationType property.
      */
-    public void setNotificationType(@jakarta.annotation.Nullable final EndUserNotificationType value) {
+    public void setNotificationType(@jakarta.annotation.Nullable final EndUserNotificationNotificationType value) {
         this.backingStore.set("notificationType", value);
     }
     /**
      * Sets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
      * @param value Value to set for the source property.
      */
-    public void setSource(@jakarta.annotation.Nullable final SimulationContentSource value) {
+    public void setSource(@jakarta.annotation.Nullable final EndUserNotificationSource value) {
         this.backingStore.set("source", value);
     }
     /**
      * Sets the status property value. The status of the notification. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final SimulationContentStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final EndUserNotificationStatus value) {
         this.backingStore.set("status", value);
     }
     /**

@@ -64,8 +64,8 @@ public class X509CertificateRule implements AdditionalDataHolder, BackedModel, P
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("x509CertificateAuthenticationMode", (n) -> { this.setX509CertificateAuthenticationMode(n.getEnumValue(X509CertificateAuthenticationMode::forValue)); });
-        deserializerMap.put("x509CertificateRuleType", (n) -> { this.setX509CertificateRuleType(n.getEnumValue(X509CertificateRuleType::forValue)); });
+        deserializerMap.put("x509CertificateAuthenticationMode", (n) -> { this.setX509CertificateAuthenticationMode(n.getEnumValue(X509CertificateRuleX509CertificateAuthenticationMode::forValue)); });
+        deserializerMap.put("x509CertificateRuleType", (n) -> { this.setX509CertificateRuleType(n.getEnumValue(X509CertificateRuleX509CertificateRuleType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -86,18 +86,18 @@ public class X509CertificateRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the x509CertificateAuthenticationMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue. Required.
-     * @return a X509CertificateAuthenticationMode
+     * @return a X509CertificateRuleX509CertificateAuthenticationMode
      */
     @jakarta.annotation.Nullable
-    public X509CertificateAuthenticationMode getX509CertificateAuthenticationMode() {
+    public X509CertificateRuleX509CertificateAuthenticationMode getX509CertificateAuthenticationMode() {
         return this.backingStore.get("x509CertificateAuthenticationMode");
     }
     /**
      * Gets the x509CertificateRuleType property value. The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue. Required.
-     * @return a X509CertificateRuleType
+     * @return a X509CertificateRuleX509CertificateRuleType
      */
     @jakarta.annotation.Nullable
-    public X509CertificateRuleType getX509CertificateRuleType() {
+    public X509CertificateRuleX509CertificateRuleType getX509CertificateRuleType() {
         return this.backingStore.get("x509CertificateRuleType");
     }
     /**
@@ -145,14 +145,14 @@ public class X509CertificateRule implements AdditionalDataHolder, BackedModel, P
      * Sets the x509CertificateAuthenticationMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue. Required.
      * @param value Value to set for the x509CertificateAuthenticationMode property.
      */
-    public void setX509CertificateAuthenticationMode(@jakarta.annotation.Nullable final X509CertificateAuthenticationMode value) {
+    public void setX509CertificateAuthenticationMode(@jakarta.annotation.Nullable final X509CertificateRuleX509CertificateAuthenticationMode value) {
         this.backingStore.set("x509CertificateAuthenticationMode", value);
     }
     /**
      * Sets the x509CertificateRuleType property value. The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue. Required.
      * @param value Value to set for the x509CertificateRuleType property.
      */
-    public void setX509CertificateRuleType(@jakarta.annotation.Nullable final X509CertificateRuleType value) {
+    public void setX509CertificateRuleType(@jakarta.annotation.Nullable final X509CertificateRuleX509CertificateRuleType value) {
         this.backingStore.set("x509CertificateRuleType", value);
     }
 }

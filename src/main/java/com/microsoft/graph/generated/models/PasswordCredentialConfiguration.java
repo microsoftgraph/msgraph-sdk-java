@@ -67,7 +67,7 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Ba
         deserializerMap.put("maxLifetime", (n) -> { this.setMaxLifetime(n.getPeriodAndDurationValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("restrictForAppsCreatedAfterDateTime", (n) -> { this.setRestrictForAppsCreatedAfterDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("restrictionType", (n) -> { this.setRestrictionType(n.getEnumValue(AppCredentialRestrictionType::forValue)); });
+        deserializerMap.put("restrictionType", (n) -> { this.setRestrictionType(n.getEnumValue(PasswordCredentialConfigurationRestrictionType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -96,10 +96,10 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the restrictionType property value. The type of restriction being applied. The possible values are: passwordAddition, passwordLifetime, symmetricKeyAddition, symmetricKeyLifetime,customPasswordAddition, unknownFutureValue. Each value of restrictionType can be used only once per policy.
-     * @return a AppCredentialRestrictionType
+     * @return a PasswordCredentialConfigurationRestrictionType
      */
     @jakarta.annotation.Nullable
-    public AppCredentialRestrictionType getRestrictionType() {
+    public PasswordCredentialConfigurationRestrictionType getRestrictionType() {
         return this.backingStore.get("restrictionType");
     }
     /**
@@ -154,7 +154,7 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Ba
      * Sets the restrictionType property value. The type of restriction being applied. The possible values are: passwordAddition, passwordLifetime, symmetricKeyAddition, symmetricKeyLifetime,customPasswordAddition, unknownFutureValue. Each value of restrictionType can be used only once per policy.
      * @param value Value to set for the restrictionType property.
      */
-    public void setRestrictionType(@jakarta.annotation.Nullable final AppCredentialRestrictionType value) {
+    public void setRestrictionType(@jakarta.annotation.Nullable final PasswordCredentialConfigurationRestrictionType value) {
         this.backingStore.set("restrictionType", value);
     }
 }

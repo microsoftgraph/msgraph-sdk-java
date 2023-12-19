@@ -27,10 +27,10 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
     }
     /**
      * Gets the conversationIdentityType property value. Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue.
-     * @return a TeamworkConversationIdentityType
+     * @return a TeamworkConversationIdentityConversationIdentityType
      */
     @jakarta.annotation.Nullable
-    public TeamworkConversationIdentityType getConversationIdentityType() {
+    public TeamworkConversationIdentityConversationIdentityType getConversationIdentityType() {
         return this.backingStore.get("conversationIdentityType");
     }
     /**
@@ -40,7 +40,7 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("conversationIdentityType", (n) -> { this.setConversationIdentityType(n.getEnumValue(TeamworkConversationIdentityType::forValue)); });
+        deserializerMap.put("conversationIdentityType", (n) -> { this.setConversationIdentityType(n.getEnumValue(TeamworkConversationIdentityConversationIdentityType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -56,7 +56,7 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
      * Sets the conversationIdentityType property value. Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue.
      * @param value Value to set for the conversationIdentityType property.
      */
-    public void setConversationIdentityType(@jakarta.annotation.Nullable final TeamworkConversationIdentityType value) {
+    public void setConversationIdentityType(@jakarta.annotation.Nullable final TeamworkConversationIdentityConversationIdentityType value) {
         this.backingStore.set("conversationIdentityType", value);
     }
 }

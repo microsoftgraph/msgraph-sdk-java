@@ -82,8 +82,8 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Backed
         deserializerMap.put("changedBy", (n) -> { this.setChangedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("eventDateTime", (n) -> { this.setEventDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("stage", (n) -> { this.setStage(n.getEnumValue(SubjectRightsRequestStage::forValue)); });
-        deserializerMap.put("stageStatus", (n) -> { this.setStageStatus(n.getEnumValue(SubjectRightsRequestStageStatus::forValue)); });
+        deserializerMap.put("stage", (n) -> { this.setStage(n.getEnumValue(SubjectRightsRequestHistoryStage::forValue)); });
+        deserializerMap.put("stageStatus", (n) -> { this.setStageStatus(n.getEnumValue(SubjectRightsRequestHistoryStageStatus::forValue)); });
         deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -97,18 +97,18 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the stage property value. The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: approval.
-     * @return a SubjectRightsRequestStage
+     * @return a SubjectRightsRequestHistoryStage
      */
     @jakarta.annotation.Nullable
-    public SubjectRightsRequestStage getStage() {
+    public SubjectRightsRequestHistoryStage getStage() {
         return this.backingStore.get("stage");
     }
     /**
      * Gets the stageStatus property value. The status of the stage when the entity was changed. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
-     * @return a SubjectRightsRequestStageStatus
+     * @return a SubjectRightsRequestHistoryStageStatus
      */
     @jakarta.annotation.Nullable
-    public SubjectRightsRequestStageStatus getStageStatus() {
+    public SubjectRightsRequestHistoryStageStatus getStageStatus() {
         return this.backingStore.get("stageStatus");
     }
     /**
@@ -173,14 +173,14 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Backed
      * Sets the stage property value. The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: approval.
      * @param value Value to set for the stage property.
      */
-    public void setStage(@jakarta.annotation.Nullable final SubjectRightsRequestStage value) {
+    public void setStage(@jakarta.annotation.Nullable final SubjectRightsRequestHistoryStage value) {
         this.backingStore.set("stage", value);
     }
     /**
      * Sets the stageStatus property value. The status of the stage when the entity was changed. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
      * @param value Value to set for the stageStatus property.
      */
-    public void setStageStatus(@jakarta.annotation.Nullable final SubjectRightsRequestStageStatus value) {
+    public void setStageStatus(@jakarta.annotation.Nullable final SubjectRightsRequestHistoryStageStatus value) {
         this.backingStore.set("stageStatus", value);
     }
     /**

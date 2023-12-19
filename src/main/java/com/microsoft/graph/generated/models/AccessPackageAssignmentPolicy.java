@@ -35,10 +35,10 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the allowedTargetScope property value. Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, unknownFutureValue.
-     * @return a AllowedTargetScope
+     * @return a AccessPackageAssignmentPolicyAllowedTargetScope
      */
     @jakarta.annotation.Nullable
-    public AllowedTargetScope getAllowedTargetScope() {
+    public AccessPackageAssignmentPolicyAllowedTargetScope getAllowedTargetScope() {
         return this.backingStore.get("allowedTargetScope");
     }
     /**
@@ -105,7 +105,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessPackage", (n) -> { this.setAccessPackage(n.getObjectValue(AccessPackage::createFromDiscriminatorValue)); });
-        deserializerMap.put("allowedTargetScope", (n) -> { this.setAllowedTargetScope(n.getEnumValue(AllowedTargetScope::forValue)); });
+        deserializerMap.put("allowedTargetScope", (n) -> { this.setAllowedTargetScope(n.getEnumValue(AccessPackageAssignmentPolicyAllowedTargetScope::forValue)); });
         deserializerMap.put("automaticRequestSettings", (n) -> { this.setAutomaticRequestSettings(n.getObjectValue(AccessPackageAutomaticRequestSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("catalog", (n) -> { this.setCatalog(n.getObjectValue(AccessPackageCatalog::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -203,7 +203,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * Sets the allowedTargetScope property value. Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, unknownFutureValue.
      * @param value Value to set for the allowedTargetScope property.
      */
-    public void setAllowedTargetScope(@jakarta.annotation.Nullable final AllowedTargetScope value) {
+    public void setAllowedTargetScope(@jakarta.annotation.Nullable final AccessPackageAssignmentPolicyAllowedTargetScope value) {
         this.backingStore.set("allowedTargetScope", value);
     }
     /**

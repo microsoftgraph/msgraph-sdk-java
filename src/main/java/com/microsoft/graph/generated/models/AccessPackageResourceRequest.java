@@ -50,17 +50,17 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("catalog", (n) -> { this.setCatalog(n.getObjectValue(AccessPackageCatalog::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("requestType", (n) -> { this.setRequestType(n.getEnumValue(AccessPackageRequestType::forValue)); });
+        deserializerMap.put("requestType", (n) -> { this.setRequestType(n.getEnumValue(AccessPackageResourceRequestRequestType::forValue)); });
         deserializerMap.put("resource", (n) -> { this.setResource(n.getObjectValue(AccessPackageResource::createFromDiscriminatorValue)); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AccessPackageRequestState::forValue)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AccessPackageResourceRequestState::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the requestType property value. The type of the request. Use adminAdd to add a resource, if the caller is an administrator or resource owner, adminUpdate to update a resource, or adminRemove to remove a resource.
-     * @return a AccessPackageRequestType
+     * @return a AccessPackageResourceRequestRequestType
      */
     @jakarta.annotation.Nullable
-    public AccessPackageRequestType getRequestType() {
+    public AccessPackageResourceRequestRequestType getRequestType() {
         return this.backingStore.get("requestType");
     }
     /**
@@ -73,10 +73,10 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed, and deliveryFailed if it could not be added or removed. Read-only.
-     * @return a AccessPackageRequestState
+     * @return a AccessPackageResourceRequestState
      */
     @jakarta.annotation.Nullable
-    public AccessPackageRequestState getState() {
+    public AccessPackageResourceRequestState getState() {
         return this.backingStore.get("state");
     }
     /**
@@ -110,7 +110,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      * Sets the requestType property value. The type of the request. Use adminAdd to add a resource, if the caller is an administrator or resource owner, adminUpdate to update a resource, or adminRemove to remove a resource.
      * @param value Value to set for the requestType property.
      */
-    public void setRequestType(@jakarta.annotation.Nullable final AccessPackageRequestType value) {
+    public void setRequestType(@jakarta.annotation.Nullable final AccessPackageResourceRequestRequestType value) {
         this.backingStore.set("requestType", value);
     }
     /**
@@ -124,7 +124,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      * Sets the state property value. The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed, and deliveryFailed if it could not be added or removed. Read-only.
      * @param value Value to set for the state property.
      */
-    public void setState(@jakarta.annotation.Nullable final AccessPackageRequestState value) {
+    public void setState(@jakarta.annotation.Nullable final AccessPackageResourceRequestState value) {
         this.backingStore.set("state", value);
     }
 }

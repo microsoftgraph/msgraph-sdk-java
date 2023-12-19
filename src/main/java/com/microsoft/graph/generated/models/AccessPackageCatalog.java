@@ -35,10 +35,10 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     }
     /**
      * Gets the catalogType property value. Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue.
-     * @return a AccessPackageCatalogType
+     * @return a AccessPackageCatalogCatalogType
      */
     @jakarta.annotation.Nullable
-    public AccessPackageCatalogType getCatalogType() {
+    public AccessPackageCatalogCatalogType getCatalogType() {
         return this.backingStore.get("catalogType");
     }
     /**
@@ -81,7 +81,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessPackages", (n) -> { this.setAccessPackages(n.getCollectionOfObjectValues(AccessPackage::createFromDiscriminatorValue)); });
-        deserializerMap.put("catalogType", (n) -> { this.setCatalogType(n.getEnumValue(AccessPackageCatalogType::forValue)); });
+        deserializerMap.put("catalogType", (n) -> { this.setCatalogType(n.getEnumValue(AccessPackageCatalogCatalogType::forValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("customWorkflowExtensions", (n) -> { this.setCustomWorkflowExtensions(n.getCollectionOfObjectValues(CustomCalloutExtension::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -173,7 +173,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * Sets the catalogType property value. Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue.
      * @param value Value to set for the catalogType property.
      */
-    public void setCatalogType(@jakarta.annotation.Nullable final AccessPackageCatalogType value) {
+    public void setCatalogType(@jakarta.annotation.Nullable final AccessPackageCatalogCatalogType value) {
         this.backingStore.set("catalogType", value);
     }
     /**

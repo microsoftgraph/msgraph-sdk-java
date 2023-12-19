@@ -62,25 +62,25 @@ public class RegistryKeyState implements AdditionalDataHolder, BackedModel, Pars
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
-        deserializerMap.put("hive", (n) -> { this.setHive(n.getEnumValue(RegistryHive::forValue)); });
+        deserializerMap.put("hive", (n) -> { this.setHive(n.getEnumValue(RegistryKeyStateHive::forValue)); });
         deserializerMap.put("key", (n) -> { this.setKey(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("oldKey", (n) -> { this.setOldKey(n.getStringValue()); });
         deserializerMap.put("oldValueData", (n) -> { this.setOldValueData(n.getStringValue()); });
         deserializerMap.put("oldValueName", (n) -> { this.setOldValueName(n.getStringValue()); });
-        deserializerMap.put("operation", (n) -> { this.setOperation(n.getEnumValue(RegistryOperation::forValue)); });
+        deserializerMap.put("operation", (n) -> { this.setOperation(n.getEnumValue(RegistryKeyStateOperation::forValue)); });
         deserializerMap.put("processId", (n) -> { this.setProcessId(n.getIntegerValue()); });
         deserializerMap.put("valueData", (n) -> { this.setValueData(n.getStringValue()); });
         deserializerMap.put("valueName", (n) -> { this.setValueName(n.getStringValue()); });
-        deserializerMap.put("valueType", (n) -> { this.setValueType(n.getEnumValue(RegistryValueType::forValue)); });
+        deserializerMap.put("valueType", (n) -> { this.setValueType(n.getEnumValue(RegistryKeyStateValueType::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the hive property value. A Windows registry hive : HKEYCURRENTCONFIG HKEYCURRENTUSER HKEYLOCALMACHINE/SAM HKEYLOCALMACHINE/Security HKEYLOCALMACHINE/Software HKEYLOCALMACHINE/System HKEY_USERS/.Default. Possible values are: unknown, currentConfig, currentUser, localMachineSam, localMachineSecurity, localMachineSoftware, localMachineSystem, usersDefault.
-     * @return a RegistryHive
+     * @return a RegistryKeyStateHive
      */
     @jakarta.annotation.Nullable
-    public RegistryHive getHive() {
+    public RegistryKeyStateHive getHive() {
         return this.backingStore.get("hive");
     }
     /**
@@ -125,10 +125,10 @@ public class RegistryKeyState implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the operation property value. Operation that changed the registry key name and/or value. Possible values are: unknown, create, modify, delete.
-     * @return a RegistryOperation
+     * @return a RegistryKeyStateOperation
      */
     @jakarta.annotation.Nullable
-    public RegistryOperation getOperation() {
+    public RegistryKeyStateOperation getOperation() {
         return this.backingStore.get("operation");
     }
     /**
@@ -157,10 +157,10 @@ public class RegistryKeyState implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the valueType property value. Registry key value type REGBINARY REGDWORD REGDWORDLITTLEENDIAN REGDWORDBIGENDIANREGEXPANDSZ REGLINK REGMULTISZ REGNONE REGQWORD REGQWORDLITTLEENDIAN REG_SZ Possible values are: unknown, binary, dword, dwordLittleEndian, dwordBigEndian, expandSz, link, multiSz, none, qword, qwordlittleEndian, sz.
-     * @return a RegistryValueType
+     * @return a RegistryKeyStateValueType
      */
     @jakarta.annotation.Nullable
-    public RegistryValueType getValueType() {
+    public RegistryKeyStateValueType getValueType() {
         return this.backingStore.get("valueType");
     }
     /**
@@ -201,7 +201,7 @@ public class RegistryKeyState implements AdditionalDataHolder, BackedModel, Pars
      * Sets the hive property value. A Windows registry hive : HKEYCURRENTCONFIG HKEYCURRENTUSER HKEYLOCALMACHINE/SAM HKEYLOCALMACHINE/Security HKEYLOCALMACHINE/Software HKEYLOCALMACHINE/System HKEY_USERS/.Default. Possible values are: unknown, currentConfig, currentUser, localMachineSam, localMachineSecurity, localMachineSoftware, localMachineSystem, usersDefault.
      * @param value Value to set for the hive property.
      */
-    public void setHive(@jakarta.annotation.Nullable final RegistryHive value) {
+    public void setHive(@jakarta.annotation.Nullable final RegistryKeyStateHive value) {
         this.backingStore.set("hive", value);
     }
     /**
@@ -243,7 +243,7 @@ public class RegistryKeyState implements AdditionalDataHolder, BackedModel, Pars
      * Sets the operation property value. Operation that changed the registry key name and/or value. Possible values are: unknown, create, modify, delete.
      * @param value Value to set for the operation property.
      */
-    public void setOperation(@jakarta.annotation.Nullable final RegistryOperation value) {
+    public void setOperation(@jakarta.annotation.Nullable final RegistryKeyStateOperation value) {
         this.backingStore.set("operation", value);
     }
     /**
@@ -271,7 +271,7 @@ public class RegistryKeyState implements AdditionalDataHolder, BackedModel, Pars
      * Sets the valueType property value. Registry key value type REGBINARY REGDWORD REGDWORDLITTLEENDIAN REGDWORDBIGENDIANREGEXPANDSZ REGLINK REGMULTISZ REGNONE REGQWORD REGQWORDLITTLEENDIAN REG_SZ Possible values are: unknown, binary, dword, dwordLittleEndian, dwordBigEndian, expandSz, link, multiSz, none, qword, qwordlittleEndian, sz.
      * @param value Value to set for the valueType property.
      */
-    public void setValueType(@jakarta.annotation.Nullable final RegistryValueType value) {
+    public void setValueType(@jakarta.annotation.Nullable final RegistryKeyStateValueType value) {
         this.backingStore.set("valueType", value);
     }
 }

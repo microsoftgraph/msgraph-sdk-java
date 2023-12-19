@@ -71,16 +71,16 @@ public class FormattedContent implements AdditionalDataHolder, BackedModel, Pars
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("content", (n) -> { this.setContent(n.getStringValue()); });
-        deserializerMap.put("format", (n) -> { this.setFormat(n.getEnumValue(ContentFormat::forValue)); });
+        deserializerMap.put("format", (n) -> { this.setFormat(n.getEnumValue(FormattedContentFormat::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the format property value. The format of the content. The possible values are: text, html, markdown, unknownFutureValue.
-     * @return a ContentFormat
+     * @return a FormattedContentFormat
      */
     @jakarta.annotation.Nullable
-    public ContentFormat getFormat() {
+    public FormattedContentFormat getFormat() {
         return this.backingStore.get("format");
     }
     /**
@@ -128,7 +128,7 @@ public class FormattedContent implements AdditionalDataHolder, BackedModel, Pars
      * Sets the format property value. The format of the content. The possible values are: text, html, markdown, unknownFutureValue.
      * @param value Value to set for the format property.
      */
-    public void setFormat(@jakarta.annotation.Nullable final ContentFormat value) {
+    public void setFormat(@jakarta.annotation.Nullable final FormattedContentFormat value) {
         this.backingStore.set("format", value);
     }
     /**

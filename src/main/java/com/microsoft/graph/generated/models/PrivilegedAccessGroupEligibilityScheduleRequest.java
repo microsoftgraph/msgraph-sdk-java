@@ -27,10 +27,10 @@ public class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedA
     }
     /**
      * Gets the accessId property value. The identifier of membership or ownership eligibility relationship to the group. Required. The possible values are: owner, member, unknownFutureValue.
-     * @return a PrivilegedAccessGroupRelationships
+     * @return a PrivilegedAccessGroupEligibilityScheduleRequestAccessId
      */
     @jakarta.annotation.Nullable
-    public PrivilegedAccessGroupRelationships getAccessId() {
+    public PrivilegedAccessGroupEligibilityScheduleRequestAccessId getAccessId() {
         return this.backingStore.get("accessId");
     }
     /**
@@ -40,7 +40,7 @@ public class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedA
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("accessId", (n) -> { this.setAccessId(n.getEnumValue(PrivilegedAccessGroupRelationships::forValue)); });
+        deserializerMap.put("accessId", (n) -> { this.setAccessId(n.getEnumValue(PrivilegedAccessGroupEligibilityScheduleRequestAccessId::forValue)); });
         deserializerMap.put("group", (n) -> { this.setGroup(n.getObjectValue(Group::createFromDiscriminatorValue)); });
         deserializerMap.put("groupId", (n) -> { this.setGroupId(n.getStringValue()); });
         deserializerMap.put("principal", (n) -> { this.setPrincipal(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
@@ -116,7 +116,7 @@ public class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedA
      * Sets the accessId property value. The identifier of membership or ownership eligibility relationship to the group. Required. The possible values are: owner, member, unknownFutureValue.
      * @param value Value to set for the accessId property.
      */
-    public void setAccessId(@jakarta.annotation.Nullable final PrivilegedAccessGroupRelationships value) {
+    public void setAccessId(@jakarta.annotation.Nullable final PrivilegedAccessGroupEligibilityScheduleRequestAccessId value) {
         this.backingStore.set("accessId", value);
     }
     /**

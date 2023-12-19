@@ -38,10 +38,10 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
     }
     /**
      * Gets the assignedTo property value. The assignedTo property
-     * @return a ScheduleChangeRequestActor
+     * @return a ScheduleChangeRequestAssignedTo
      */
     @jakarta.annotation.Nullable
-    public ScheduleChangeRequestActor getAssignedTo() {
+    public ScheduleChangeRequestAssignedTo getAssignedTo() {
         return this.backingStore.get("assignedTo");
     }
     /**
@@ -51,14 +51,14 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getEnumValue(ScheduleChangeRequestActor::forValue)); });
+        deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getEnumValue(ScheduleChangeRequestAssignedTo::forValue)); });
         deserializerMap.put("managerActionDateTime", (n) -> { this.setManagerActionDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("managerActionMessage", (n) -> { this.setManagerActionMessage(n.getStringValue()); });
         deserializerMap.put("managerUserId", (n) -> { this.setManagerUserId(n.getStringValue()); });
         deserializerMap.put("senderDateTime", (n) -> { this.setSenderDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("senderMessage", (n) -> { this.setSenderMessage(n.getStringValue()); });
         deserializerMap.put("senderUserId", (n) -> { this.setSenderUserId(n.getStringValue()); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ScheduleChangeState::forValue)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ScheduleChangeRequestState::forValue)); });
         return deserializerMap;
     }
     /**
@@ -111,10 +111,10 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
     }
     /**
      * Gets the state property value. The state property
-     * @return a ScheduleChangeState
+     * @return a ScheduleChangeRequestState
      */
     @jakarta.annotation.Nullable
-    public ScheduleChangeState getState() {
+    public ScheduleChangeRequestState getState() {
         return this.backingStore.get("state");
     }
     /**
@@ -133,7 +133,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      * Sets the assignedTo property value. The assignedTo property
      * @param value Value to set for the assignedTo property.
      */
-    public void setAssignedTo(@jakarta.annotation.Nullable final ScheduleChangeRequestActor value) {
+    public void setAssignedTo(@jakarta.annotation.Nullable final ScheduleChangeRequestAssignedTo value) {
         this.backingStore.set("assignedTo", value);
     }
     /**
@@ -182,7 +182,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      */
-    public void setState(@jakarta.annotation.Nullable final ScheduleChangeState value) {
+    public void setState(@jakarta.annotation.Nullable final ScheduleChangeRequestState value) {
         this.backingStore.set("state", value);
     }
 }

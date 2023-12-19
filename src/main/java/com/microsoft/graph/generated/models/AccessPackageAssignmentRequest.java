@@ -87,9 +87,9 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("customExtensionCalloutInstances", (n) -> { this.setCustomExtensionCalloutInstances(n.getCollectionOfObjectValues(CustomExtensionCalloutInstance::createFromDiscriminatorValue)); });
         deserializerMap.put("requestor", (n) -> { this.setRequestor(n.getObjectValue(AccessPackageSubject::createFromDiscriminatorValue)); });
-        deserializerMap.put("requestType", (n) -> { this.setRequestType(n.getEnumValue(AccessPackageRequestType::forValue)); });
+        deserializerMap.put("requestType", (n) -> { this.setRequestType(n.getEnumValue(AccessPackageAssignmentRequestRequestType::forValue)); });
         deserializerMap.put("schedule", (n) -> { this.setSchedule(n.getObjectValue(EntitlementManagementSchedule::createFromDiscriminatorValue)); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AccessPackageRequestState::forValue)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AccessPackageAssignmentRequestState::forValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getStringValue()); });
         return deserializerMap;
     }
@@ -103,10 +103,10 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, UserExtend, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd (not supported), unknownFutureValue. A request from the user themselves would have requestType of userAdd, userUpdate or userRemove. This property can't be changed once set.
-     * @return a AccessPackageRequestType
+     * @return a AccessPackageAssignmentRequestRequestType
      */
     @jakarta.annotation.Nullable
-    public AccessPackageRequestType getRequestType() {
+    public AccessPackageAssignmentRequestRequestType getRequestType() {
         return this.backingStore.get("requestType");
     }
     /**
@@ -119,10 +119,10 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only. Supports $filter (eq).
-     * @return a AccessPackageRequestState
+     * @return a AccessPackageAssignmentRequestState
      */
     @jakarta.annotation.Nullable
-    public AccessPackageRequestState getState() {
+    public AccessPackageAssignmentRequestState getState() {
         return this.backingStore.get("state");
     }
     /**
@@ -205,7 +205,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * Sets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, UserExtend, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd (not supported), unknownFutureValue. A request from the user themselves would have requestType of userAdd, userUpdate or userRemove. This property can't be changed once set.
      * @param value Value to set for the requestType property.
      */
-    public void setRequestType(@jakarta.annotation.Nullable final AccessPackageRequestType value) {
+    public void setRequestType(@jakarta.annotation.Nullable final AccessPackageAssignmentRequestRequestType value) {
         this.backingStore.set("requestType", value);
     }
     /**
@@ -219,7 +219,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * Sets the state property value. The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only. Supports $filter (eq).
      * @param value Value to set for the state property.
      */
-    public void setState(@jakarta.annotation.Nullable final AccessPackageRequestState value) {
+    public void setState(@jakarta.annotation.Nullable final AccessPackageAssignmentRequestState value) {
         this.backingStore.set("state", value);
     }
     /**

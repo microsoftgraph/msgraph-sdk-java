@@ -80,7 +80,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         deserializerMap.put("initiatedBy", (n) -> { this.setInitiatedBy(n.getObjectValue(AuditActivityInitiator::createFromDiscriminatorValue)); });
         deserializerMap.put("loggedByService", (n) -> { this.setLoggedByService(n.getStringValue()); });
         deserializerMap.put("operationType", (n) -> { this.setOperationType(n.getStringValue()); });
-        deserializerMap.put("result", (n) -> { this.setResult(n.getEnumValue(OperationResult::forValue)); });
+        deserializerMap.put("result", (n) -> { this.setResult(n.getEnumValue(DirectoryAuditResult::forValue)); });
         deserializerMap.put("resultReason", (n) -> { this.setResultReason(n.getStringValue()); });
         deserializerMap.put("targetResources", (n) -> { this.setTargetResources(n.getCollectionOfObjectValues(TargetResource::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -111,10 +111,10 @@ public class DirectoryAudit extends Entity implements Parsable {
     }
     /**
      * Gets the result property value. Indicates the result of the activity. Possible values are: success, failure, timeout, unknownFutureValue.
-     * @return a OperationResult
+     * @return a DirectoryAuditResult
      */
     @jakarta.annotation.Nullable
-    public OperationResult getResult() {
+    public DirectoryAuditResult getResult() {
         return this.backingStore.get("result");
     }
     /**
@@ -212,7 +212,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * Sets the result property value. Indicates the result of the activity. Possible values are: success, failure, timeout, unknownFutureValue.
      * @param value Value to set for the result property.
      */
-    public void setResult(@jakarta.annotation.Nullable final OperationResult value) {
+    public void setResult(@jakarta.annotation.Nullable final DirectoryAuditResult value) {
         this.backingStore.set("result", value);
     }
     /**

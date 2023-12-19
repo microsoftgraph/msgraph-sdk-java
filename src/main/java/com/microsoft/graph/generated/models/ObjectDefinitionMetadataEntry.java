@@ -62,17 +62,17 @@ public class ObjectDefinitionMetadataEntry implements AdditionalDataHolder, Back
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("key", (n) -> { this.setKey(n.getEnumValue(ObjectDefinitionMetadata::forValue)); });
+        deserializerMap.put("key", (n) -> { this.setKey(n.getEnumValue(ObjectDefinitionMetadataEntryKey::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("value", (n) -> { this.setValue(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the key property value. Possible values are: PropertyNameAccountEnabled, PropertyNameSoftDeleted, IsSoftDeletionSupported, IsSynchronizeAllSupported, ConnectorDataStorageRequired, Extensions, LinkTypeName.
-     * @return a ObjectDefinitionMetadata
+     * @return a ObjectDefinitionMetadataEntryKey
      */
     @jakarta.annotation.Nullable
-    public ObjectDefinitionMetadata getKey() {
+    public ObjectDefinitionMetadataEntryKey getKey() {
         return this.backingStore.get("key");
     }
     /**
@@ -121,7 +121,7 @@ public class ObjectDefinitionMetadataEntry implements AdditionalDataHolder, Back
      * Sets the key property value. Possible values are: PropertyNameAccountEnabled, PropertyNameSoftDeleted, IsSoftDeletionSupported, IsSynchronizeAllSupported, ConnectorDataStorageRequired, Extensions, LinkTypeName.
      * @param value Value to set for the key property.
      */
-    public void setKey(@jakarta.annotation.Nullable final ObjectDefinitionMetadata value) {
+    public void setKey(@jakarta.annotation.Nullable final ObjectDefinitionMetadataEntryKey value) {
         this.backingStore.set("key", value);
     }
     /**

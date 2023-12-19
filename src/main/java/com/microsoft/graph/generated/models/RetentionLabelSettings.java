@@ -1,6 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.security.BehaviorDuringRetentionPeriod;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -58,10 +57,10 @@ public class RetentionLabelSettings implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the behaviorDuringRetentionPeriod property value. Describes the item behavior during retention period. Possible values are: doNotRetain, retain, retainAsRecord, retainAsRegulatoryRecord, unknownFutureValue. Read-only.
-     * @return a BehaviorDuringRetentionPeriod
+     * @return a RetentionLabelSettingsBehaviorDuringRetentionPeriod
      */
     @jakarta.annotation.Nullable
-    public BehaviorDuringRetentionPeriod getBehaviorDuringRetentionPeriod() {
+    public RetentionLabelSettingsBehaviorDuringRetentionPeriod getBehaviorDuringRetentionPeriod() {
         return this.backingStore.get("behaviorDuringRetentionPeriod");
     }
     /**
@@ -71,7 +70,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
-        deserializerMap.put("behaviorDuringRetentionPeriod", (n) -> { this.setBehaviorDuringRetentionPeriod(n.getEnumValue(BehaviorDuringRetentionPeriod::forValue)); });
+        deserializerMap.put("behaviorDuringRetentionPeriod", (n) -> { this.setBehaviorDuringRetentionPeriod(n.getEnumValue(RetentionLabelSettingsBehaviorDuringRetentionPeriod::forValue)); });
         deserializerMap.put("isContentUpdateAllowed", (n) -> { this.setIsContentUpdateAllowed(n.getBooleanValue()); });
         deserializerMap.put("isDeleteAllowed", (n) -> { this.setIsDeleteAllowed(n.getBooleanValue()); });
         deserializerMap.put("isLabelUpdateAllowed", (n) -> { this.setIsLabelUpdateAllowed(n.getBooleanValue()); });
@@ -162,7 +161,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, BackedModel
      * Sets the behaviorDuringRetentionPeriod property value. Describes the item behavior during retention period. Possible values are: doNotRetain, retain, retainAsRecord, retainAsRegulatoryRecord, unknownFutureValue. Read-only.
      * @param value Value to set for the behaviorDuringRetentionPeriod property.
      */
-    public void setBehaviorDuringRetentionPeriod(@jakarta.annotation.Nullable final BehaviorDuringRetentionPeriod value) {
+    public void setBehaviorDuringRetentionPeriod(@jakarta.annotation.Nullable final RetentionLabelSettingsBehaviorDuringRetentionPeriod value) {
         this.backingStore.set("behaviorDuringRetentionPeriod", value);
     }
     /**

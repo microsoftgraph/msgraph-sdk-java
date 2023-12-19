@@ -41,7 +41,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowNewTimeProposals", (n) -> { this.setAllowNewTimeProposals(n.getBooleanValue()); });
-        deserializerMap.put("meetingRequestType", (n) -> { this.setMeetingRequestType(n.getEnumValue(MeetingRequestType::forValue)); });
+        deserializerMap.put("meetingRequestType", (n) -> { this.setMeetingRequestType(n.getEnumValue(EventMessageRequestMeetingRequestType::forValue)); });
         deserializerMap.put("previousEndDateTime", (n) -> { this.setPreviousEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         deserializerMap.put("previousLocation", (n) -> { this.setPreviousLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
         deserializerMap.put("previousStartDateTime", (n) -> { this.setPreviousStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
@@ -50,10 +50,10 @@ public class EventMessageRequest extends EventMessage implements Parsable {
     }
     /**
      * Gets the meetingRequestType property value. The meetingRequestType property
-     * @return a MeetingRequestType
+     * @return a EventMessageRequestMeetingRequestType
      */
     @jakarta.annotation.Nullable
-    public MeetingRequestType getMeetingRequestType() {
+    public EventMessageRequestMeetingRequestType getMeetingRequestType() {
         return this.backingStore.get("meetingRequestType");
     }
     /**
@@ -113,7 +113,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      * Sets the meetingRequestType property value. The meetingRequestType property
      * @param value Value to set for the meetingRequestType property.
      */
-    public void setMeetingRequestType(@jakarta.annotation.Nullable final MeetingRequestType value) {
+    public void setMeetingRequestType(@jakarta.annotation.Nullable final EventMessageRequestMeetingRequestType value) {
         this.backingStore.set("meetingRequestType", value);
     }
     /**

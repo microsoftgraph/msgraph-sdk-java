@@ -80,8 +80,8 @@ public class LandingPage extends Entity implements Parsable {
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(EmailIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("locale", (n) -> { this.setLocale(n.getStringValue()); });
-        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(SimulationContentSource::forValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(SimulationContentStatus::forValue)); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(LandingPageSource::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(LandingPageStatus::forValue)); });
         deserializerMap.put("supportedLocales", (n) -> { this.setSupportedLocales(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
     }
@@ -111,18 +111,18 @@ public class LandingPage extends Entity implements Parsable {
     }
     /**
      * Gets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
-     * @return a SimulationContentSource
+     * @return a LandingPageSource
      */
     @jakarta.annotation.Nullable
-    public SimulationContentSource getSource() {
+    public LandingPageSource getSource() {
         return this.backingStore.get("source");
     }
     /**
      * Gets the status property value. The status of the simulation. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
-     * @return a SimulationContentStatus
+     * @return a LandingPageStatus
      */
     @jakarta.annotation.Nullable
-    public SimulationContentStatus getStatus() {
+    public LandingPageStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -212,14 +212,14 @@ public class LandingPage extends Entity implements Parsable {
      * Sets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
      * @param value Value to set for the source property.
      */
-    public void setSource(@jakarta.annotation.Nullable final SimulationContentSource value) {
+    public void setSource(@jakarta.annotation.Nullable final LandingPageSource value) {
         this.backingStore.set("source", value);
     }
     /**
      * Sets the status property value. The status of the simulation. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final SimulationContentStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final LandingPageStatus value) {
         this.backingStore.set("status", value);
     }
     /**

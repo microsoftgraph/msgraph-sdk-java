@@ -27,10 +27,10 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
     }
     /**
      * Gets the authenticationType property value. The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue.
-     * @return a SignInFrequencyAuthenticationType
+     * @return a SignInFrequencySessionControlAuthenticationType
      */
     @jakarta.annotation.Nullable
-    public SignInFrequencyAuthenticationType getAuthenticationType() {
+    public SignInFrequencySessionControlAuthenticationType getAuthenticationType() {
         return this.backingStore.get("authenticationType");
     }
     /**
@@ -40,26 +40,26 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("authenticationType", (n) -> { this.setAuthenticationType(n.getEnumValue(SignInFrequencyAuthenticationType::forValue)); });
-        deserializerMap.put("frequencyInterval", (n) -> { this.setFrequencyInterval(n.getEnumValue(SignInFrequencyInterval::forValue)); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(SigninFrequencyType::forValue)); });
+        deserializerMap.put("authenticationType", (n) -> { this.setAuthenticationType(n.getEnumValue(SignInFrequencySessionControlAuthenticationType::forValue)); });
+        deserializerMap.put("frequencyInterval", (n) -> { this.setFrequencyInterval(n.getEnumValue(SignInFrequencySessionControlFrequencyInterval::forValue)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(SignInFrequencySessionControlType::forValue)); });
         deserializerMap.put("value", (n) -> { this.setValue(n.getIntegerValue()); });
         return deserializerMap;
     }
     /**
      * Gets the frequencyInterval property value. The possible values are timeBased, everyTime, unknownFutureValue.
-     * @return a SignInFrequencyInterval
+     * @return a SignInFrequencySessionControlFrequencyInterval
      */
     @jakarta.annotation.Nullable
-    public SignInFrequencyInterval getFrequencyInterval() {
+    public SignInFrequencySessionControlFrequencyInterval getFrequencyInterval() {
         return this.backingStore.get("frequencyInterval");
     }
     /**
      * Gets the type property value. Possible values are: days, hours.
-     * @return a SigninFrequencyType
+     * @return a SignInFrequencySessionControlType
      */
     @jakarta.annotation.Nullable
-    public SigninFrequencyType getType() {
+    public SignInFrequencySessionControlType getType() {
         return this.backingStore.get("type");
     }
     /**
@@ -86,21 +86,21 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      * Sets the authenticationType property value. The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue.
      * @param value Value to set for the authenticationType property.
      */
-    public void setAuthenticationType(@jakarta.annotation.Nullable final SignInFrequencyAuthenticationType value) {
+    public void setAuthenticationType(@jakarta.annotation.Nullable final SignInFrequencySessionControlAuthenticationType value) {
         this.backingStore.set("authenticationType", value);
     }
     /**
      * Sets the frequencyInterval property value. The possible values are timeBased, everyTime, unknownFutureValue.
      * @param value Value to set for the frequencyInterval property.
      */
-    public void setFrequencyInterval(@jakarta.annotation.Nullable final SignInFrequencyInterval value) {
+    public void setFrequencyInterval(@jakarta.annotation.Nullable final SignInFrequencySessionControlFrequencyInterval value) {
         this.backingStore.set("frequencyInterval", value);
     }
     /**
      * Sets the type property value. Possible values are: days, hours.
      * @param value Value to set for the type property.
      */
-    public void setType(@jakarta.annotation.Nullable final SigninFrequencyType value) {
+    public void setType(@jakarta.annotation.Nullable final SignInFrequencySessionControlType value) {
         this.backingStore.set("type", value);
     }
     /**

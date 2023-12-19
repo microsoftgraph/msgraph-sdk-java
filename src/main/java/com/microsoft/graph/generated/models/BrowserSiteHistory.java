@@ -77,10 +77,10 @@ public class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the compatibilityMode property value. Controls what compatibility setting is used for specific sites or domains. The possible values are: default, internetExplorer8Enterprise, internetExplorer7Enterprise, internetExplorer11, internetExplorer10, internetExplorer9, internetExplorer8, internetExplorer7, internetExplorer5, unknownFutureValue.
-     * @return a BrowserSiteCompatibilityMode
+     * @return a BrowserSiteHistoryCompatibilityMode
      */
     @jakarta.annotation.Nullable
-    public BrowserSiteCompatibilityMode getCompatibilityMode() {
+    public BrowserSiteHistoryCompatibilityMode getCompatibilityMode() {
         return this.backingStore.get("compatibilityMode");
     }
     /**
@@ -92,12 +92,12 @@ public class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Pa
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("allowRedirect", (n) -> { this.setAllowRedirect(n.getBooleanValue()); });
         deserializerMap.put("comment", (n) -> { this.setComment(n.getStringValue()); });
-        deserializerMap.put("compatibilityMode", (n) -> { this.setCompatibilityMode(n.getEnumValue(BrowserSiteCompatibilityMode::forValue)); });
+        deserializerMap.put("compatibilityMode", (n) -> { this.setCompatibilityMode(n.getEnumValue(BrowserSiteHistoryCompatibilityMode::forValue)); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-        deserializerMap.put("mergeType", (n) -> { this.setMergeType(n.getEnumValue(BrowserSiteMergeType::forValue)); });
+        deserializerMap.put("mergeType", (n) -> { this.setMergeType(n.getEnumValue(BrowserSiteHistoryMergeType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("publishedDateTime", (n) -> { this.setPublishedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("targetEnvironment", (n) -> { this.setTargetEnvironment(n.getEnumValue(BrowserSiteTargetEnvironment::forValue)); });
+        deserializerMap.put("targetEnvironment", (n) -> { this.setTargetEnvironment(n.getEnumValue(BrowserSiteHistoryTargetEnvironment::forValue)); });
         return deserializerMap;
     }
     /**
@@ -110,10 +110,10 @@ public class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the mergeType property value. The merge type of the site. The possible values are: noMerge, default, unknownFutureValue.
-     * @return a BrowserSiteMergeType
+     * @return a BrowserSiteHistoryMergeType
      */
     @jakarta.annotation.Nullable
-    public BrowserSiteMergeType getMergeType() {
+    public BrowserSiteHistoryMergeType getMergeType() {
         return this.backingStore.get("mergeType");
     }
     /**
@@ -134,10 +134,10 @@ public class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the targetEnvironment property value. The target environment that the site should open in. The possible values are: internetExplorerMode, internetExplorer11, microsoftEdge, configurable, none, unknownFutureValue.Prior to June 15, 2022, the internetExplorer11 option would allow opening a site in the Internet Explorer 11 (IE11) desktop application. Following the retirement of IE11 on June 15, 2022, the internetExplorer11 option will no longer open an IE11 window and will instead behave the same as the internetExplorerMode option.
-     * @return a BrowserSiteTargetEnvironment
+     * @return a BrowserSiteHistoryTargetEnvironment
      */
     @jakarta.annotation.Nullable
-    public BrowserSiteTargetEnvironment getTargetEnvironment() {
+    public BrowserSiteHistoryTargetEnvironment getTargetEnvironment() {
         return this.backingStore.get("targetEnvironment");
     }
     /**
@@ -189,7 +189,7 @@ public class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Pa
      * Sets the compatibilityMode property value. Controls what compatibility setting is used for specific sites or domains. The possible values are: default, internetExplorer8Enterprise, internetExplorer7Enterprise, internetExplorer11, internetExplorer10, internetExplorer9, internetExplorer8, internetExplorer7, internetExplorer5, unknownFutureValue.
      * @param value Value to set for the compatibilityMode property.
      */
-    public void setCompatibilityMode(@jakarta.annotation.Nullable final BrowserSiteCompatibilityMode value) {
+    public void setCompatibilityMode(@jakarta.annotation.Nullable final BrowserSiteHistoryCompatibilityMode value) {
         this.backingStore.set("compatibilityMode", value);
     }
     /**
@@ -203,7 +203,7 @@ public class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Pa
      * Sets the mergeType property value. The merge type of the site. The possible values are: noMerge, default, unknownFutureValue.
      * @param value Value to set for the mergeType property.
      */
-    public void setMergeType(@jakarta.annotation.Nullable final BrowserSiteMergeType value) {
+    public void setMergeType(@jakarta.annotation.Nullable final BrowserSiteHistoryMergeType value) {
         this.backingStore.set("mergeType", value);
     }
     /**
@@ -224,7 +224,7 @@ public class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Pa
      * Sets the targetEnvironment property value. The target environment that the site should open in. The possible values are: internetExplorerMode, internetExplorer11, microsoftEdge, configurable, none, unknownFutureValue.Prior to June 15, 2022, the internetExplorer11 option would allow opening a site in the Internet Explorer 11 (IE11) desktop application. Following the retirement of IE11 on June 15, 2022, the internetExplorer11 option will no longer open an IE11 window and will instead behave the same as the internetExplorerMode option.
      * @param value Value to set for the targetEnvironment property.
      */
-    public void setTargetEnvironment(@jakarta.annotation.Nullable final BrowserSiteTargetEnvironment value) {
+    public void setTargetEnvironment(@jakarta.annotation.Nullable final BrowserSiteHistoryTargetEnvironment value) {
         this.backingStore.set("targetEnvironment", value);
     }
 }

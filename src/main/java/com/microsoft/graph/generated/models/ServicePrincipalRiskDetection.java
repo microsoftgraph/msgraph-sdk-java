@@ -27,10 +27,10 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the activity property value. Indicates the activity type the detected risk is linked to.  The possible values are: signin, servicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: servicePrincipal.
-     * @return a ActivityType
+     * @return a ServicePrincipalRiskDetectionActivity
      */
     @jakarta.annotation.Nullable
-    public ActivityType getActivity() {
+    public ServicePrincipalRiskDetectionActivity getActivity() {
         return this.backingStore.get("activity");
     }
     /**
@@ -75,10 +75,10 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the detectionTimingType property value. Timing of the detected risk , whether real-time or offline. The possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
-     * @return a RiskDetectionTimingType
+     * @return a ServicePrincipalRiskDetectionDetectionTimingType
      */
     @jakarta.annotation.Nullable
-    public RiskDetectionTimingType getDetectionTimingType() {
+    public ServicePrincipalRiskDetectionDetectionTimingType getDetectionTimingType() {
         return this.backingStore.get("detectionTimingType");
     }
     /**
@@ -88,26 +88,26 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("activity", (n) -> { this.setActivity(n.getEnumValue(ActivityType::forValue)); });
+        deserializerMap.put("activity", (n) -> { this.setActivity(n.getEnumValue(ServicePrincipalRiskDetectionActivity::forValue)); });
         deserializerMap.put("activityDateTime", (n) -> { this.setActivityDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("additionalInfo", (n) -> { this.setAdditionalInfo(n.getStringValue()); });
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
         deserializerMap.put("correlationId", (n) -> { this.setCorrelationId(n.getStringValue()); });
         deserializerMap.put("detectedDateTime", (n) -> { this.setDetectedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("detectionTimingType", (n) -> { this.setDetectionTimingType(n.getEnumValue(RiskDetectionTimingType::forValue)); });
+        deserializerMap.put("detectionTimingType", (n) -> { this.setDetectionTimingType(n.getEnumValue(ServicePrincipalRiskDetectionDetectionTimingType::forValue)); });
         deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
         deserializerMap.put("keyIds", (n) -> { this.setKeyIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("location", (n) -> { this.setLocation(n.getObjectValue(SignInLocation::createFromDiscriminatorValue)); });
         deserializerMap.put("requestId", (n) -> { this.setRequestId(n.getStringValue()); });
-        deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(RiskDetail::forValue)); });
+        deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(ServicePrincipalRiskDetectionRiskDetail::forValue)); });
         deserializerMap.put("riskEventType", (n) -> { this.setRiskEventType(n.getStringValue()); });
-        deserializerMap.put("riskLevel", (n) -> { this.setRiskLevel(n.getEnumValue(RiskLevel::forValue)); });
-        deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(RiskState::forValue)); });
+        deserializerMap.put("riskLevel", (n) -> { this.setRiskLevel(n.getEnumValue(ServicePrincipalRiskDetectionRiskLevel::forValue)); });
+        deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(ServicePrincipalRiskDetectionRiskState::forValue)); });
         deserializerMap.put("servicePrincipalDisplayName", (n) -> { this.setServicePrincipalDisplayName(n.getStringValue()); });
         deserializerMap.put("servicePrincipalId", (n) -> { this.setServicePrincipalId(n.getStringValue()); });
         deserializerMap.put("source", (n) -> { this.setSource(n.getStringValue()); });
-        deserializerMap.put("tokenIssuerType", (n) -> { this.setTokenIssuerType(n.getEnumValue(TokenIssuerType::forValue)); });
+        deserializerMap.put("tokenIssuerType", (n) -> { this.setTokenIssuerType(n.getEnumValue(ServicePrincipalRiskDetectionTokenIssuerType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -152,10 +152,10 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the riskDetail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
-     * @return a RiskDetail
+     * @return a ServicePrincipalRiskDetectionRiskDetail
      */
     @jakarta.annotation.Nullable
-    public RiskDetail getRiskDetail() {
+    public ServicePrincipalRiskDetectionRiskDetail getRiskDetail() {
         return this.backingStore.get("riskDetail");
     }
     /**
@@ -168,18 +168,18 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the riskLevel property value. Level of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: low, medium, high, hidden, none.
-     * @return a RiskLevel
+     * @return a ServicePrincipalRiskDetectionRiskLevel
      */
     @jakarta.annotation.Nullable
-    public RiskLevel getRiskLevel() {
+    public ServicePrincipalRiskDetectionRiskLevel getRiskLevel() {
         return this.backingStore.get("riskLevel");
     }
     /**
      * Gets the riskState property value. The state of a detected risky service principal or sign-in activity. The possible values are: none, dismissed, atRisk, confirmedCompromised.
-     * @return a RiskState
+     * @return a ServicePrincipalRiskDetectionRiskState
      */
     @jakarta.annotation.Nullable
-    public RiskState getRiskState() {
+    public ServicePrincipalRiskDetectionRiskState getRiskState() {
         return this.backingStore.get("riskState");
     }
     /**
@@ -208,10 +208,10 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. The possible values are: AzureAD.
-     * @return a TokenIssuerType
+     * @return a ServicePrincipalRiskDetectionTokenIssuerType
      */
     @jakarta.annotation.Nullable
-    public TokenIssuerType getTokenIssuerType() {
+    public ServicePrincipalRiskDetectionTokenIssuerType getTokenIssuerType() {
         return this.backingStore.get("tokenIssuerType");
     }
     /**
@@ -246,7 +246,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * Sets the activity property value. Indicates the activity type the detected risk is linked to.  The possible values are: signin, servicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: servicePrincipal.
      * @param value Value to set for the activity property.
      */
-    public void setActivity(@jakarta.annotation.Nullable final ActivityType value) {
+    public void setActivity(@jakarta.annotation.Nullable final ServicePrincipalRiskDetectionActivity value) {
         this.backingStore.set("activity", value);
     }
     /**
@@ -288,7 +288,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * Sets the detectionTimingType property value. Timing of the detected risk , whether real-time or offline. The possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
      * @param value Value to set for the detectionTimingType property.
      */
-    public void setDetectionTimingType(@jakarta.annotation.Nullable final RiskDetectionTimingType value) {
+    public void setDetectionTimingType(@jakarta.annotation.Nullable final ServicePrincipalRiskDetectionDetectionTimingType value) {
         this.backingStore.set("detectionTimingType", value);
     }
     /**
@@ -330,7 +330,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * Sets the riskDetail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
      * @param value Value to set for the riskDetail property.
      */
-    public void setRiskDetail(@jakarta.annotation.Nullable final RiskDetail value) {
+    public void setRiskDetail(@jakarta.annotation.Nullable final ServicePrincipalRiskDetectionRiskDetail value) {
         this.backingStore.set("riskDetail", value);
     }
     /**
@@ -344,14 +344,14 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * Sets the riskLevel property value. Level of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: low, medium, high, hidden, none.
      * @param value Value to set for the riskLevel property.
      */
-    public void setRiskLevel(@jakarta.annotation.Nullable final RiskLevel value) {
+    public void setRiskLevel(@jakarta.annotation.Nullable final ServicePrincipalRiskDetectionRiskLevel value) {
         this.backingStore.set("riskLevel", value);
     }
     /**
      * Sets the riskState property value. The state of a detected risky service principal or sign-in activity. The possible values are: none, dismissed, atRisk, confirmedCompromised.
      * @param value Value to set for the riskState property.
      */
-    public void setRiskState(@jakarta.annotation.Nullable final RiskState value) {
+    public void setRiskState(@jakarta.annotation.Nullable final ServicePrincipalRiskDetectionRiskState value) {
         this.backingStore.set("riskState", value);
     }
     /**
@@ -379,7 +379,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * Sets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. The possible values are: AzureAD.
      * @param value Value to set for the tokenIssuerType property.
      */
-    public void setTokenIssuerType(@jakarta.annotation.Nullable final TokenIssuerType value) {
+    public void setTokenIssuerType(@jakarta.annotation.Nullable final ServicePrincipalRiskDetectionTokenIssuerType value) {
         this.backingStore.set("tokenIssuerType", value);
     }
 }

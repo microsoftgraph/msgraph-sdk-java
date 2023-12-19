@@ -74,7 +74,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Pa
         deserializerMap.put("itemId", (n) -> { this.setItemId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("relevanceScore", (n) -> { this.setRelevanceScore(n.getDoubleValue()); });
-        deserializerMap.put("selectionLikelihood", (n) -> { this.setSelectionLikelihood(n.getEnumValue(SelectionLikelihoodInfo::forValue)); });
+        deserializerMap.put("selectionLikelihood", (n) -> { this.setSelectionLikelihood(n.getEnumValue(ScoredEmailAddressSelectionLikelihood::forValue)); });
         return deserializerMap;
     }
     /**
@@ -103,10 +103,10 @@ public class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the selectionLikelihood property value. The selectionLikelihood property
-     * @return a SelectionLikelihoodInfo
+     * @return a ScoredEmailAddressSelectionLikelihood
      */
     @jakarta.annotation.Nullable
-    public SelectionLikelihoodInfo getSelectionLikelihood() {
+    public ScoredEmailAddressSelectionLikelihood getSelectionLikelihood() {
         return this.backingStore.get("selectionLikelihood");
     }
     /**
@@ -169,7 +169,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Pa
      * Sets the selectionLikelihood property value. The selectionLikelihood property
      * @param value Value to set for the selectionLikelihood property.
      */
-    public void setSelectionLikelihood(@jakarta.annotation.Nullable final SelectionLikelihoodInfo value) {
+    public void setSelectionLikelihood(@jakarta.annotation.Nullable final ScoredEmailAddressSelectionLikelihood value) {
         this.backingStore.set("selectionLikelihood", value);
     }
 }

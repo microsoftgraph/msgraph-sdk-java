@@ -74,7 +74,7 @@ public class ExternalConnection extends Entity implements Parsable {
         deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(ConnectionOperation::createFromDiscriminatorValue)); });
         deserializerMap.put("schema", (n) -> { this.setSchema(n.getObjectValue(Schema::createFromDiscriminatorValue)); });
         deserializerMap.put("searchSettings", (n) -> { this.setSearchSettings(n.getObjectValue(SearchSettings::createFromDiscriminatorValue)); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ConnectionState::forValue)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ExternalConnectionState::forValue)); });
         return deserializerMap;
     }
     /**
@@ -127,10 +127,10 @@ public class ExternalConnection extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
-     * @return a ConnectionState
+     * @return a ExternalConnectionState
      */
     @jakarta.annotation.Nullable
-    public ConnectionState getState() {
+    public ExternalConnectionState getState() {
         return this.backingStore.get("state");
     }
     /**
@@ -225,7 +225,7 @@ public class ExternalConnection extends Entity implements Parsable {
      * Sets the state property value. Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
      * @param value Value to set for the state property.
      */
-    public void setState(@jakarta.annotation.Nullable final ConnectionState value) {
+    public void setState(@jakarta.annotation.Nullable final ExternalConnectionState value) {
         this.backingStore.set("state", value);
     }
 }

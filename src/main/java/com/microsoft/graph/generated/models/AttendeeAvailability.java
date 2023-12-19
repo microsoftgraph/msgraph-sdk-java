@@ -57,10 +57,10 @@ public class AttendeeAvailability implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the availability property value. The availability status of the attendee. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
-     * @return a FreeBusyStatus
+     * @return a AttendeeAvailabilityAvailability
      */
     @jakarta.annotation.Nullable
-    public FreeBusyStatus getAvailability() {
+    public AttendeeAvailabilityAvailability getAvailability() {
         return this.backingStore.get("availability");
     }
     /**
@@ -79,7 +79,7 @@ public class AttendeeAvailability implements AdditionalDataHolder, BackedModel, 
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("attendee", (n) -> { this.setAttendee(n.getObjectValue(AttendeeBase::createFromDiscriminatorValue)); });
-        deserializerMap.put("availability", (n) -> { this.setAvailability(n.getEnumValue(FreeBusyStatus::forValue)); });
+        deserializerMap.put("availability", (n) -> { this.setAvailability(n.getEnumValue(AttendeeAvailabilityAvailability::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -120,7 +120,7 @@ public class AttendeeAvailability implements AdditionalDataHolder, BackedModel, 
      * Sets the availability property value. The availability status of the attendee. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      * @param value Value to set for the availability property.
      */
-    public void setAvailability(@jakarta.annotation.Nullable final FreeBusyStatus value) {
+    public void setAvailability(@jakarta.annotation.Nullable final AttendeeAvailabilityAvailability value) {
         this.backingStore.set("availability", value);
     }
     /**

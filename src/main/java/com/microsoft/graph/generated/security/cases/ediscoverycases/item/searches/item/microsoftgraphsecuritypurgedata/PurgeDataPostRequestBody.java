@@ -1,7 +1,5 @@
 package com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.microsoftgraphsecuritypurgedata;
 
-import com.microsoft.graph.models.security.PurgeAreas;
-import com.microsoft.graph.models.security.PurgeType;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -9,7 +7,6 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -65,24 +62,24 @@ public class PurgeDataPostRequestBody implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("purgeAreas", (n) -> { this.setPurgeAreas(n.getEnumSetValue(PurgeAreas::forValue)); });
-        deserializerMap.put("purgeType", (n) -> { this.setPurgeType(n.getEnumValue(PurgeType::forValue)); });
+        deserializerMap.put("purgeAreas", (n) -> { this.setPurgeAreas(n.getEnumValue(PurgeDataPostRequestBodyPurgeAreas::forValue)); });
+        deserializerMap.put("purgeType", (n) -> { this.setPurgeType(n.getEnumValue(PurgeDataPostRequestBodyPurgeType::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the purgeAreas property value. The purgeAreas property
-     * @return a EnumSet<PurgeAreas>
+     * @return a PurgeDataPostRequestBodyPurgeAreas
      */
     @jakarta.annotation.Nullable
-    public EnumSet<PurgeAreas> getPurgeAreas() {
+    public PurgeDataPostRequestBodyPurgeAreas getPurgeAreas() {
         return this.backingStore.get("purgeAreas");
     }
     /**
      * Gets the purgeType property value. The purgeType property
-     * @return a PurgeType
+     * @return a PurgeDataPostRequestBodyPurgeType
      */
     @jakarta.annotation.Nullable
-    public PurgeType getPurgeType() {
+    public PurgeDataPostRequestBodyPurgeType getPurgeType() {
         return this.backingStore.get("purgeType");
     }
     /**
@@ -91,7 +88,7 @@ public class PurgeDataPostRequestBody implements AdditionalDataHolder, BackedMod
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeEnumSetValue("purgeAreas", this.getPurgeAreas());
+        writer.writeEnumValue("purgeAreas", this.getPurgeAreas());
         writer.writeEnumValue("purgeType", this.getPurgeType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -114,14 +111,14 @@ public class PurgeDataPostRequestBody implements AdditionalDataHolder, BackedMod
      * Sets the purgeAreas property value. The purgeAreas property
      * @param value Value to set for the purgeAreas property.
      */
-    public void setPurgeAreas(@jakarta.annotation.Nullable final EnumSet<PurgeAreas> value) {
+    public void setPurgeAreas(@jakarta.annotation.Nullable final PurgeDataPostRequestBodyPurgeAreas value) {
         this.backingStore.set("purgeAreas", value);
     }
     /**
      * Sets the purgeType property value. The purgeType property
      * @param value Value to set for the purgeType property.
      */
-    public void setPurgeType(@jakarta.annotation.Nullable final PurgeType value) {
+    public void setPurgeType(@jakarta.annotation.Nullable final PurgeDataPostRequestBodyPurgeType value) {
         this.backingStore.set("purgeType", value);
     }
 }

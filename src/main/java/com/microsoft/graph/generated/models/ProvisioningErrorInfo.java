@@ -65,10 +65,10 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the errorCategory property value. Categorizes the error code. Possible values are failure, nonServiceFailure, success, unknownFutureValue
-     * @return a ProvisioningStatusErrorCategory
+     * @return a ProvisioningErrorInfoErrorCategory
      */
     @jakarta.annotation.Nullable
-    public ProvisioningStatusErrorCategory getErrorCategory() {
+    public ProvisioningErrorInfoErrorCategory getErrorCategory() {
         return this.backingStore.get("errorCategory");
     }
     /**
@@ -87,7 +87,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel,
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("additionalDetails", (n) -> { this.setAdditionalDetails(n.getStringValue()); });
-        deserializerMap.put("errorCategory", (n) -> { this.setErrorCategory(n.getEnumValue(ProvisioningStatusErrorCategory::forValue)); });
+        deserializerMap.put("errorCategory", (n) -> { this.setErrorCategory(n.getEnumValue(ProvisioningErrorInfoErrorCategory::forValue)); });
         deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("reason", (n) -> { this.setReason(n.getStringValue()); });
@@ -158,7 +158,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel,
      * Sets the errorCategory property value. Categorizes the error code. Possible values are failure, nonServiceFailure, success, unknownFutureValue
      * @param value Value to set for the errorCategory property.
      */
-    public void setErrorCategory(@jakarta.annotation.Nullable final ProvisioningStatusErrorCategory value) {
+    public void setErrorCategory(@jakarta.annotation.Nullable final ProvisioningErrorInfoErrorCategory value) {
         this.backingStore.set("errorCategory", value);
     }
     /**

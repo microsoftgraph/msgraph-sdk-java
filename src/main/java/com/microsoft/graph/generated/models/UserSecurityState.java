@@ -82,10 +82,10 @@ public class UserSecurityState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the emailRole property value. For email-related alerts - user account's email 'role'. Possible values are: unknown, sender, recipient.
-     * @return a EmailRole
+     * @return a UserSecurityStateEmailRole
      */
     @jakarta.annotation.Nullable
-    public EmailRole getEmailRole() {
+    public UserSecurityStateEmailRole getEmailRole() {
         return this.backingStore.get("emailRole");
     }
     /**
@@ -98,17 +98,17 @@ public class UserSecurityState implements AdditionalDataHolder, BackedModel, Par
         deserializerMap.put("aadUserId", (n) -> { this.setAadUserId(n.getStringValue()); });
         deserializerMap.put("accountName", (n) -> { this.setAccountName(n.getStringValue()); });
         deserializerMap.put("domainName", (n) -> { this.setDomainName(n.getStringValue()); });
-        deserializerMap.put("emailRole", (n) -> { this.setEmailRole(n.getEnumValue(EmailRole::forValue)); });
+        deserializerMap.put("emailRole", (n) -> { this.setEmailRole(n.getEnumValue(UserSecurityStateEmailRole::forValue)); });
         deserializerMap.put("isVpn", (n) -> { this.setIsVpn(n.getBooleanValue()); });
         deserializerMap.put("logonDateTime", (n) -> { this.setLogonDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("logonId", (n) -> { this.setLogonId(n.getStringValue()); });
         deserializerMap.put("logonIp", (n) -> { this.setLogonIp(n.getStringValue()); });
         deserializerMap.put("logonLocation", (n) -> { this.setLogonLocation(n.getStringValue()); });
-        deserializerMap.put("logonType", (n) -> { this.setLogonType(n.getEnumValue(LogonType::forValue)); });
+        deserializerMap.put("logonType", (n) -> { this.setLogonType(n.getEnumValue(UserSecurityStateLogonType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("onPremisesSecurityIdentifier", (n) -> { this.setOnPremisesSecurityIdentifier(n.getStringValue()); });
         deserializerMap.put("riskScore", (n) -> { this.setRiskScore(n.getStringValue()); });
-        deserializerMap.put("userAccountType", (n) -> { this.setUserAccountType(n.getEnumValue(UserAccountSecurityType::forValue)); });
+        deserializerMap.put("userAccountType", (n) -> { this.setUserAccountType(n.getEnumValue(UserSecurityStateUserAccountType::forValue)); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         return deserializerMap;
     }
@@ -154,10 +154,10 @@ public class UserSecurityState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the logonType property value. Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
-     * @return a LogonType
+     * @return a UserSecurityStateLogonType
      */
     @jakarta.annotation.Nullable
-    public LogonType getLogonType() {
+    public UserSecurityStateLogonType getLogonType() {
         return this.backingStore.get("logonType");
     }
     /**
@@ -186,10 +186,10 @@ public class UserSecurityState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the userAccountType property value. User account type (group membership), per Windows definition. Possible values are: unknown, standard, power, administrator.
-     * @return a UserAccountSecurityType
+     * @return a UserSecurityStateUserAccountType
      */
     @jakarta.annotation.Nullable
-    public UserAccountSecurityType getUserAccountType() {
+    public UserSecurityStateUserAccountType getUserAccountType() {
         return this.backingStore.get("userAccountType");
     }
     /**
@@ -263,7 +263,7 @@ public class UserSecurityState implements AdditionalDataHolder, BackedModel, Par
      * Sets the emailRole property value. For email-related alerts - user account's email 'role'. Possible values are: unknown, sender, recipient.
      * @param value Value to set for the emailRole property.
      */
-    public void setEmailRole(@jakarta.annotation.Nullable final EmailRole value) {
+    public void setEmailRole(@jakarta.annotation.Nullable final UserSecurityStateEmailRole value) {
         this.backingStore.set("emailRole", value);
     }
     /**
@@ -305,7 +305,7 @@ public class UserSecurityState implements AdditionalDataHolder, BackedModel, Par
      * Sets the logonType property value. Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
      * @param value Value to set for the logonType property.
      */
-    public void setLogonType(@jakarta.annotation.Nullable final LogonType value) {
+    public void setLogonType(@jakarta.annotation.Nullable final UserSecurityStateLogonType value) {
         this.backingStore.set("logonType", value);
     }
     /**
@@ -333,7 +333,7 @@ public class UserSecurityState implements AdditionalDataHolder, BackedModel, Par
      * Sets the userAccountType property value. User account type (group membership), per Windows definition. Possible values are: unknown, standard, power, administrator.
      * @param value Value to set for the userAccountType property.
      */
-    public void setUserAccountType(@jakarta.annotation.Nullable final UserAccountSecurityType value) {
+    public void setUserAccountType(@jakarta.annotation.Nullable final UserSecurityStateUserAccountType value) {
         this.backingStore.set("userAccountType", value);
     }
     /**

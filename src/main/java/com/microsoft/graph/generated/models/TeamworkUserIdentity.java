@@ -32,15 +32,15 @@ public class TeamworkUserIdentity extends Identity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("userIdentityType", (n) -> { this.setUserIdentityType(n.getEnumValue(TeamworkUserIdentityType::forValue)); });
+        deserializerMap.put("userIdentityType", (n) -> { this.setUserIdentityType(n.getEnumValue(TeamworkUserIdentityUserIdentityType::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the userIdentityType property value. Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, unknownFutureValue and emailUser.
-     * @return a TeamworkUserIdentityType
+     * @return a TeamworkUserIdentityUserIdentityType
      */
     @jakarta.annotation.Nullable
-    public TeamworkUserIdentityType getUserIdentityType() {
+    public TeamworkUserIdentityUserIdentityType getUserIdentityType() {
         return this.backingStore.get("userIdentityType");
     }
     /**
@@ -56,7 +56,7 @@ public class TeamworkUserIdentity extends Identity implements Parsable {
      * Sets the userIdentityType property value. Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, unknownFutureValue and emailUser.
      * @param value Value to set for the userIdentityType property.
      */
-    public void setUserIdentityType(@jakarta.annotation.Nullable final TeamworkUserIdentityType value) {
+    public void setUserIdentityType(@jakarta.annotation.Nullable final TeamworkUserIdentityUserIdentityType value) {
         this.backingStore.set("userIdentityType", value);
     }
 }

@@ -64,7 +64,7 @@ public class EventQuery implements AdditionalDataHolder, BackedModel, Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("query", (n) -> { this.setQuery(n.getStringValue()); });
-        deserializerMap.put("queryType", (n) -> { this.setQueryType(n.getEnumValue(QueryType::forValue)); });
+        deserializerMap.put("queryType", (n) -> { this.setQueryType(n.getEnumValue(EventQueryQueryType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -85,10 +85,10 @@ public class EventQuery implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the queryType property value. Represents the type of query associated with an event. 'files' for SPO and ODB and 'messages' for EXO.The possible values are: files, messages, unknownFutureValue.
-     * @return a QueryType
+     * @return a EventQueryQueryType
      */
     @jakarta.annotation.Nullable
-    public QueryType getQueryType() {
+    public EventQueryQueryType getQueryType() {
         return this.backingStore.get("queryType");
     }
     /**
@@ -135,7 +135,7 @@ public class EventQuery implements AdditionalDataHolder, BackedModel, Parsable {
      * Sets the queryType property value. Represents the type of query associated with an event. 'files' for SPO and ODB and 'messages' for EXO.The possible values are: files, messages, unknownFutureValue.
      * @param value Value to set for the queryType property.
      */
-    public void setQueryType(@jakarta.annotation.Nullable final QueryType value) {
+    public void setQueryType(@jakarta.annotation.Nullable final EventQueryQueryType value) {
         this.backingStore.set("queryType", value);
     }
 }

@@ -35,10 +35,10 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
     }
     /**
      * Gets the externalUserLifecycleAction property value. Automatic action that the service should take when an external user's last access package assignment is removed. The possible values are: none, blockSignIn, blockSignInAndDelete, unknownFutureValue.
-     * @return a AccessPackageExternalUserLifecycleAction
+     * @return a EntitlementManagementSettingsExternalUserLifecycleAction
      */
     @jakarta.annotation.Nullable
-    public AccessPackageExternalUserLifecycleAction getExternalUserLifecycleAction() {
+    public EntitlementManagementSettingsExternalUserLifecycleAction getExternalUserLifecycleAction() {
         return this.backingStore.get("externalUserLifecycleAction");
     }
     /**
@@ -49,7 +49,7 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("durationUntilExternalUserDeletedAfterBlocked", (n) -> { this.setDurationUntilExternalUserDeletedAfterBlocked(n.getPeriodAndDurationValue()); });
-        deserializerMap.put("externalUserLifecycleAction", (n) -> { this.setExternalUserLifecycleAction(n.getEnumValue(AccessPackageExternalUserLifecycleAction::forValue)); });
+        deserializerMap.put("externalUserLifecycleAction", (n) -> { this.setExternalUserLifecycleAction(n.getEnumValue(EntitlementManagementSettingsExternalUserLifecycleAction::forValue)); });
         return deserializerMap;
     }
     /**
@@ -73,7 +73,7 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
      * Sets the externalUserLifecycleAction property value. Automatic action that the service should take when an external user's last access package assignment is removed. The possible values are: none, blockSignIn, blockSignInAndDelete, unknownFutureValue.
      * @param value Value to set for the externalUserLifecycleAction property.
      */
-    public void setExternalUserLifecycleAction(@jakarta.annotation.Nullable final AccessPackageExternalUserLifecycleAction value) {
+    public void setExternalUserLifecycleAction(@jakarta.annotation.Nullable final EntitlementManagementSettingsExternalUserLifecycleAction value) {
         this.backingStore.set("externalUserLifecycleAction", value);
     }
 }

@@ -110,7 +110,7 @@ public class Call extends Entity implements Parsable {
         deserializerMap.put("myParticipantId", (n) -> { this.setMyParticipantId(n.getStringValue()); });
         deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(CommsOperation::createFromDiscriminatorValue)); });
         deserializerMap.put("participants", (n) -> { this.setParticipants(n.getCollectionOfObjectValues(Participant::createFromDiscriminatorValue)); });
-        deserializerMap.put("requestedModalities", (n) -> { this.setRequestedModalities(n.getCollectionOfEnumValues(Modality::forValue)); });
+        deserializerMap.put("requestedModalities", (n) -> { this.setRequestedModalities(n.getCollectionOfEnumValues(CallRequestedModalities::forValue)); });
         deserializerMap.put("resultInfo", (n) -> { this.setResultInfo(n.getObjectValue(ResultInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("source", (n) -> { this.setSource(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(CallState::forValue)); });
@@ -179,10 +179,10 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the requestedModalities property value. The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data.
-     * @return a java.util.List<Modality>
+     * @return a java.util.List<CallRequestedModalities>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<Modality> getRequestedModalities() {
+    public java.util.List<CallRequestedModalities> getRequestedModalities() {
         return this.backingStore.get("requestedModalities");
     }
     /**
@@ -390,7 +390,7 @@ public class Call extends Entity implements Parsable {
      * Sets the requestedModalities property value. The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data.
      * @param value Value to set for the requestedModalities property.
      */
-    public void setRequestedModalities(@jakarta.annotation.Nullable final java.util.List<Modality> value) {
+    public void setRequestedModalities(@jakarta.annotation.Nullable final java.util.List<CallRequestedModalities> value) {
         this.backingStore.set("requestedModalities", value);
     }
     /**

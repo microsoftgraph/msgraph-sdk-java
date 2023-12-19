@@ -97,7 +97,7 @@ public class Location implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("coordinates", (n) -> { this.setCoordinates(n.getObjectValue(OutlookGeoCoordinates::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("locationEmailAddress", (n) -> { this.setLocationEmailAddress(n.getStringValue()); });
-        deserializerMap.put("locationType", (n) -> { this.setLocationType(n.getEnumValue(LocationType::forValue)); });
+        deserializerMap.put("locationType", (n) -> { this.setLocationType(n.getEnumValue(LocationLocationType::forValue)); });
         deserializerMap.put("locationUri", (n) -> { this.setLocationUri(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("uniqueId", (n) -> { this.setUniqueId(n.getStringValue()); });
@@ -114,10 +114,10 @@ public class Location implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the locationType property value. The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
-     * @return a LocationType
+     * @return a LocationLocationType
      */
     @jakarta.annotation.Nullable
-    public LocationType getLocationType() {
+    public LocationLocationType getLocationType() {
         return this.backingStore.get("locationType");
     }
     /**
@@ -216,7 +216,7 @@ public class Location implements AdditionalDataHolder, BackedModel, Parsable {
      * Sets the locationType property value. The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
      * @param value Value to set for the locationType property.
      */
-    public void setLocationType(@jakarta.annotation.Nullable final LocationType value) {
+    public void setLocationType(@jakarta.annotation.Nullable final LocationLocationType value) {
         this.backingStore.set("locationType", value);
     }
     /**

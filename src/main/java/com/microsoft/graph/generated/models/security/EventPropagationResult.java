@@ -65,7 +65,7 @@ public class EventPropagationResult implements AdditionalDataHolder, BackedModel
         deserializerMap.put("location", (n) -> { this.setLocation(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("serviceName", (n) -> { this.setServiceName(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(EventPropagationStatus::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(EventPropagationResultStatus::forValue)); });
         deserializerMap.put("statusInformation", (n) -> { this.setStatusInformation(n.getStringValue()); });
         return deserializerMap;
     }
@@ -95,10 +95,10 @@ public class EventPropagationResult implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the status property value. Indicates the status of the event creation request. The possible values are: none, inProcessing, failed, success, unknownFutureValue.
-     * @return a EventPropagationStatus
+     * @return a EventPropagationResultStatus
      */
     @jakarta.annotation.Nullable
-    public EventPropagationStatus getStatus() {
+    public EventPropagationResultStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -162,7 +162,7 @@ public class EventPropagationResult implements AdditionalDataHolder, BackedModel
      * Sets the status property value. Indicates the status of the event creation request. The possible values are: none, inProcessing, failed, success, unknownFutureValue.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final EventPropagationStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final EventPropagationResultStatus value) {
         this.backingStore.set("status", value);
     }
     /**

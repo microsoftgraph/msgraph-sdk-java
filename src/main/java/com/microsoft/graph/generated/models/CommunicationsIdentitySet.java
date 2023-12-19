@@ -59,10 +59,10 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
     }
     /**
      * Gets the endpointType property value. Type of endpoint that the participant uses. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone, unknownFutureValue.
-     * @return a EndpointType
+     * @return a CommunicationsIdentitySetEndpointType
      */
     @jakarta.annotation.Nullable
-    public EndpointType getEndpointType() {
+    public CommunicationsIdentitySetEndpointType getEndpointType() {
         return this.backingStore.get("endpointType");
     }
     /**
@@ -76,7 +76,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
         deserializerMap.put("assertedIdentity", (n) -> { this.setAssertedIdentity(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
         deserializerMap.put("azureCommunicationServicesUser", (n) -> { this.setAzureCommunicationServicesUser(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
         deserializerMap.put("encrypted", (n) -> { this.setEncrypted(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-        deserializerMap.put("endpointType", (n) -> { this.setEndpointType(n.getEnumValue(EndpointType::forValue)); });
+        deserializerMap.put("endpointType", (n) -> { this.setEndpointType(n.getEnumValue(CommunicationsIdentitySetEndpointType::forValue)); });
         deserializerMap.put("guest", (n) -> { this.setGuest(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremises", (n) -> { this.setOnPremises(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
         deserializerMap.put("phone", (n) -> { this.setPhone(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
@@ -154,7 +154,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * Sets the endpointType property value. Type of endpoint that the participant uses. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone, unknownFutureValue.
      * @param value Value to set for the endpointType property.
      */
-    public void setEndpointType(@jakarta.annotation.Nullable final EndpointType value) {
+    public void setEndpointType(@jakarta.annotation.Nullable final CommunicationsIdentitySetEndpointType value) {
         this.backingStore.set("endpointType", value);
     }
     /**

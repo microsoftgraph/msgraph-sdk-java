@@ -59,7 +59,7 @@ public class DataSourceContainer extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("holdStatus", (n) -> { this.setHoldStatus(n.getEnumValue(DataSourceHoldStatus::forValue)); });
+        deserializerMap.put("holdStatus", (n) -> { this.setHoldStatus(n.getEnumValue(DataSourceContainerHoldStatus::forValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("releasedDateTime", (n) -> { this.setReleasedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(DataSourceContainerStatus::forValue)); });
@@ -67,10 +67,10 @@ public class DataSourceContainer extends Entity implements Parsable {
     }
     /**
      * Gets the holdStatus property value. The hold status of the dataSourceContainer. The possible values are: notApplied, applied, applying, removing, partial
-     * @return a DataSourceHoldStatus
+     * @return a DataSourceContainerHoldStatus
      */
     @jakarta.annotation.Nullable
-    public DataSourceHoldStatus getHoldStatus() {
+    public DataSourceContainerHoldStatus getHoldStatus() {
         return this.backingStore.get("holdStatus");
     }
     /**
@@ -129,7 +129,7 @@ public class DataSourceContainer extends Entity implements Parsable {
      * Sets the holdStatus property value. The hold status of the dataSourceContainer. The possible values are: notApplied, applied, applying, removing, partial
      * @param value Value to set for the holdStatus property.
      */
-    public void setHoldStatus(@jakarta.annotation.Nullable final DataSourceHoldStatus value) {
+    public void setHoldStatus(@jakarta.annotation.Nullable final DataSourceContainerHoldStatus value) {
         this.backingStore.set("holdStatus", value);
     }
     /**

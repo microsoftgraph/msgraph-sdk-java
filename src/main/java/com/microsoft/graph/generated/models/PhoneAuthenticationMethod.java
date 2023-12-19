@@ -33,8 +33,8 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("phoneNumber", (n) -> { this.setPhoneNumber(n.getStringValue()); });
-        deserializerMap.put("phoneType", (n) -> { this.setPhoneType(n.getEnumValue(AuthenticationPhoneType::forValue)); });
-        deserializerMap.put("smsSignInState", (n) -> { this.setSmsSignInState(n.getEnumValue(AuthenticationMethodSignInState::forValue)); });
+        deserializerMap.put("phoneType", (n) -> { this.setPhoneType(n.getEnumValue(PhoneAuthenticationMethodPhoneType::forValue)); });
+        deserializerMap.put("smsSignInState", (n) -> { this.setSmsSignInState(n.getEnumValue(PhoneAuthenticationMethodSmsSignInState::forValue)); });
         return deserializerMap;
     }
     /**
@@ -47,18 +47,18 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
     }
     /**
      * Gets the phoneType property value. The type of this phone. Possible values are: mobile, alternateMobile, or office.
-     * @return a AuthenticationPhoneType
+     * @return a PhoneAuthenticationMethodPhoneType
      */
     @jakarta.annotation.Nullable
-    public AuthenticationPhoneType getPhoneType() {
+    public PhoneAuthenticationMethodPhoneType getPhoneType() {
         return this.backingStore.get("phoneType");
     }
     /**
      * Gets the smsSignInState property value. Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
-     * @return a AuthenticationMethodSignInState
+     * @return a PhoneAuthenticationMethodSmsSignInState
      */
     @jakarta.annotation.Nullable
-    public AuthenticationMethodSignInState getSmsSignInState() {
+    public PhoneAuthenticationMethodSmsSignInState getSmsSignInState() {
         return this.backingStore.get("smsSignInState");
     }
     /**
@@ -83,14 +83,14 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
      * Sets the phoneType property value. The type of this phone. Possible values are: mobile, alternateMobile, or office.
      * @param value Value to set for the phoneType property.
      */
-    public void setPhoneType(@jakarta.annotation.Nullable final AuthenticationPhoneType value) {
+    public void setPhoneType(@jakarta.annotation.Nullable final PhoneAuthenticationMethodPhoneType value) {
         this.backingStore.set("phoneType", value);
     }
     /**
      * Sets the smsSignInState property value. Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
      * @param value Value to set for the smsSignInState property.
      */
-    public void setSmsSignInState(@jakarta.annotation.Nullable final AuthenticationMethodSignInState value) {
+    public void setSmsSignInState(@jakarta.annotation.Nullable final PhoneAuthenticationMethodSmsSignInState value) {
         this.backingStore.set("smsSignInState", value);
     }
 }

@@ -81,7 +81,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, BackedM
         deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(OnenotePatchActionType::forValue)); });
         deserializerMap.put("content", (n) -> { this.setContent(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("position", (n) -> { this.setPosition(n.getEnumValue(OnenotePatchInsertPosition::forValue)); });
+        deserializerMap.put("position", (n) -> { this.setPosition(n.getEnumValue(OnenotePatchContentCommandPosition::forValue)); });
         deserializerMap.put("target", (n) -> { this.setTarget(n.getStringValue()); });
         return deserializerMap;
     }
@@ -95,10 +95,10 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the position property value. The location to add the supplied content, relative to the target element. The possible values are: after (default) or before.
-     * @return a OnenotePatchInsertPosition
+     * @return a OnenotePatchContentCommandPosition
      */
     @jakarta.annotation.Nullable
-    public OnenotePatchInsertPosition getPosition() {
+    public OnenotePatchContentCommandPosition getPosition() {
         return this.backingStore.get("position");
     }
     /**
@@ -162,7 +162,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, BackedM
      * Sets the position property value. The location to add the supplied content, relative to the target element. The possible values are: after (default) or before.
      * @param value Value to set for the position property.
      */
-    public void setPosition(@jakarta.annotation.Nullable final OnenotePatchInsertPosition value) {
+    public void setPosition(@jakarta.annotation.Nullable final OnenotePatchContentCommandPosition value) {
         this.backingStore.set("position", value);
     }
     /**

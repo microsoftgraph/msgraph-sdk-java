@@ -64,7 +64,7 @@ public class FeatureTarget implements AdditionalDataHolder, BackedModel, Parsabl
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("targetType", (n) -> { this.setTargetType(n.getEnumValue(FeatureTargetType::forValue)); });
+        deserializerMap.put("targetType", (n) -> { this.setTargetType(n.getEnumValue(FeatureTargetTargetType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -85,10 +85,10 @@ public class FeatureTarget implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the targetType property value. The kind of entity that's targeted. The possible values are: group, administrativeUnit, role, unknownFutureValue.
-     * @return a FeatureTargetType
+     * @return a FeatureTargetTargetType
      */
     @jakarta.annotation.Nullable
-    public FeatureTargetType getTargetType() {
+    public FeatureTargetTargetType getTargetType() {
         return this.backingStore.get("targetType");
     }
     /**
@@ -135,7 +135,7 @@ public class FeatureTarget implements AdditionalDataHolder, BackedModel, Parsabl
      * Sets the targetType property value. The kind of entity that's targeted. The possible values are: group, administrativeUnit, role, unknownFutureValue.
      * @param value Value to set for the targetType property.
      */
-    public void setTargetType(@jakarta.annotation.Nullable final FeatureTargetType value) {
+    public void setTargetType(@jakarta.annotation.Nullable final FeatureTargetTargetType value) {
         this.backingStore.set("targetType", value);
     }
 }

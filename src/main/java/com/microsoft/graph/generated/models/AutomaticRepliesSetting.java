@@ -57,10 +57,10 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the externalAudience property value. The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
-     * @return a ExternalAudienceScope
+     * @return a AutomaticRepliesSettingExternalAudience
      */
     @jakarta.annotation.Nullable
-    public ExternalAudienceScope getExternalAudience() {
+    public AutomaticRepliesSettingExternalAudience getExternalAudience() {
         return this.backingStore.get("externalAudience");
     }
     /**
@@ -78,13 +78,13 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
-        deserializerMap.put("externalAudience", (n) -> { this.setExternalAudience(n.getEnumValue(ExternalAudienceScope::forValue)); });
+        deserializerMap.put("externalAudience", (n) -> { this.setExternalAudience(n.getEnumValue(AutomaticRepliesSettingExternalAudience::forValue)); });
         deserializerMap.put("externalReplyMessage", (n) -> { this.setExternalReplyMessage(n.getStringValue()); });
         deserializerMap.put("internalReplyMessage", (n) -> { this.setInternalReplyMessage(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("scheduledEndDateTime", (n) -> { this.setScheduledEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         deserializerMap.put("scheduledStartDateTime", (n) -> { this.setScheduledStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AutomaticRepliesStatus::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AutomaticRepliesSettingStatus::forValue)); });
         return deserializerMap;
     }
     /**
@@ -121,10 +121,10 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the status property value. Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
-     * @return a AutomaticRepliesStatus
+     * @return a AutomaticRepliesSettingStatus
      */
     @jakarta.annotation.Nullable
-    public AutomaticRepliesStatus getStatus() {
+    public AutomaticRepliesSettingStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -161,7 +161,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
      * Sets the externalAudience property value. The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
      * @param value Value to set for the externalAudience property.
      */
-    public void setExternalAudience(@jakarta.annotation.Nullable final ExternalAudienceScope value) {
+    public void setExternalAudience(@jakarta.annotation.Nullable final AutomaticRepliesSettingExternalAudience value) {
         this.backingStore.set("externalAudience", value);
     }
     /**
@@ -203,7 +203,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
      * Sets the status property value. Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final AutomaticRepliesStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final AutomaticRepliesSettingStatus value) {
         this.backingStore.set("status", value);
     }
 }

@@ -171,7 +171,7 @@ public class PlannerTask extends Entity implements Parsable {
         deserializerMap.put("orderHint", (n) -> { this.setOrderHint(n.getStringValue()); });
         deserializerMap.put("percentComplete", (n) -> { this.setPercentComplete(n.getIntegerValue()); });
         deserializerMap.put("planId", (n) -> { this.setPlanId(n.getStringValue()); });
-        deserializerMap.put("previewType", (n) -> { this.setPreviewType(n.getEnumValue(PlannerPreviewType::forValue)); });
+        deserializerMap.put("previewType", (n) -> { this.setPreviewType(n.getEnumValue(PlannerTaskPreviewType::forValue)); });
         deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
         deserializerMap.put("progressTaskBoardFormat", (n) -> { this.setProgressTaskBoardFormat(n.getObjectValue(PlannerProgressTaskBoardTaskFormat::createFromDiscriminatorValue)); });
         deserializerMap.put("referenceCount", (n) -> { this.setReferenceCount(n.getIntegerValue()); });
@@ -213,10 +213,10 @@ public class PlannerTask extends Entity implements Parsable {
     }
     /**
      * Gets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
-     * @return a PlannerPreviewType
+     * @return a PlannerTaskPreviewType
      */
     @jakarta.annotation.Nullable
-    public PlannerPreviewType getPreviewType() {
+    public PlannerTaskPreviewType getPreviewType() {
         return this.backingStore.get("previewType");
     }
     /**
@@ -429,7 +429,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Sets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
      * @param value Value to set for the previewType property.
      */
-    public void setPreviewType(@jakarta.annotation.Nullable final PlannerPreviewType value) {
+    public void setPreviewType(@jakarta.annotation.Nullable final PlannerTaskPreviewType value) {
         this.backingStore.set("previewType", value);
     }
     /**

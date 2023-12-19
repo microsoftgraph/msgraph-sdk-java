@@ -106,7 +106,7 @@ public class Team extends Entity implements Parsable {
         deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfObjectValues(TeamworkTag::createFromDiscriminatorValue)); });
         deserializerMap.put("template", (n) -> { this.setTemplate(n.getObjectValue(TeamsTemplate::createFromDiscriminatorValue)); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
-        deserializerMap.put("visibility", (n) -> { this.setVisibility(n.getEnumValue(TeamVisibilityType::forValue)); });
+        deserializerMap.put("visibility", (n) -> { this.setVisibility(n.getEnumValue(TeamVisibility::forValue)); });
         deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
         return deserializerMap;
     }
@@ -272,10 +272,10 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the visibility property value. The visibility of the group and team. Defaults to Public.
-     * @return a TeamVisibilityType
+     * @return a TeamVisibility
      */
     @jakarta.annotation.Nullable
-    public TeamVisibilityType getVisibility() {
+    public TeamVisibility getVisibility() {
         return this.backingStore.get("visibility");
     }
     /**
@@ -508,7 +508,7 @@ public class Team extends Entity implements Parsable {
      * Sets the visibility property value. The visibility of the group and team. Defaults to Public.
      * @param value Value to set for the visibility property.
      */
-    public void setVisibility(@jakarta.annotation.Nullable final TeamVisibilityType value) {
+    public void setVisibility(@jakarta.annotation.Nullable final TeamVisibility value) {
         this.backingStore.set("visibility", value);
     }
     /**

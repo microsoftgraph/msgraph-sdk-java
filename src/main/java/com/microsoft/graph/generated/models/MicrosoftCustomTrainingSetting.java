@@ -43,7 +43,7 @@ public class MicrosoftCustomTrainingSetting extends TrainingSetting implements P
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("completionDateTime", (n) -> { this.setCompletionDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("trainingAssignmentMappings", (n) -> { this.setTrainingAssignmentMappings(n.getCollectionOfObjectValues(MicrosoftTrainingAssignmentMapping::createFromDiscriminatorValue)); });
-        deserializerMap.put("trainingCompletionDuration", (n) -> { this.setTrainingCompletionDuration(n.getEnumValue(TrainingCompletionDuration::forValue)); });
+        deserializerMap.put("trainingCompletionDuration", (n) -> { this.setTrainingCompletionDuration(n.getEnumValue(MicrosoftCustomTrainingSettingTrainingCompletionDuration::forValue)); });
         return deserializerMap;
     }
     /**
@@ -56,10 +56,10 @@ public class MicrosoftCustomTrainingSetting extends TrainingSetting implements P
     }
     /**
      * Gets the trainingCompletionDuration property value. The training completion duration that needs to be provided before scheduling the training. Possible values are: week, fortnite, month, unknownFutureValue.
-     * @return a TrainingCompletionDuration
+     * @return a MicrosoftCustomTrainingSettingTrainingCompletionDuration
      */
     @jakarta.annotation.Nullable
-    public TrainingCompletionDuration getTrainingCompletionDuration() {
+    public MicrosoftCustomTrainingSettingTrainingCompletionDuration getTrainingCompletionDuration() {
         return this.backingStore.get("trainingCompletionDuration");
     }
     /**
@@ -91,7 +91,7 @@ public class MicrosoftCustomTrainingSetting extends TrainingSetting implements P
      * Sets the trainingCompletionDuration property value. The training completion duration that needs to be provided before scheduling the training. Possible values are: week, fortnite, month, unknownFutureValue.
      * @param value Value to set for the trainingCompletionDuration property.
      */
-    public void setTrainingCompletionDuration(@jakarta.annotation.Nullable final TrainingCompletionDuration value) {
+    public void setTrainingCompletionDuration(@jakarta.annotation.Nullable final MicrosoftCustomTrainingSettingTrainingCompletionDuration value) {
         this.backingStore.set("trainingCompletionDuration", value);
     }
 }

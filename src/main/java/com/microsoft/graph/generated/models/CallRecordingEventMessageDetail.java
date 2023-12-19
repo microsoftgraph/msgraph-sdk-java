@@ -52,10 +52,10 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
     }
     /**
      * Gets the callRecordingStatus property value. Status of the call recording. Possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
-     * @return a CallRecordingStatus
+     * @return a CallRecordingEventMessageDetailCallRecordingStatus
      */
     @jakarta.annotation.Nullable
-    public CallRecordingStatus getCallRecordingStatus() {
+    public CallRecordingEventMessageDetailCallRecordingStatus getCallRecordingStatus() {
         return this.backingStore.get("callRecordingStatus");
     }
     /**
@@ -76,7 +76,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
         deserializerMap.put("callId", (n) -> { this.setCallId(n.getStringValue()); });
         deserializerMap.put("callRecordingDisplayName", (n) -> { this.setCallRecordingDisplayName(n.getStringValue()); });
         deserializerMap.put("callRecordingDuration", (n) -> { this.setCallRecordingDuration(n.getPeriodAndDurationValue()); });
-        deserializerMap.put("callRecordingStatus", (n) -> { this.setCallRecordingStatus(n.getEnumValue(CallRecordingStatus::forValue)); });
+        deserializerMap.put("callRecordingStatus", (n) -> { this.setCallRecordingStatus(n.getEnumValue(CallRecordingEventMessageDetailCallRecordingStatus::forValue)); });
         deserializerMap.put("callRecordingUrl", (n) -> { this.setCallRecordingUrl(n.getStringValue()); });
         deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("meetingOrganizer", (n) -> { this.setMeetingOrganizer(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -138,7 +138,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      * Sets the callRecordingStatus property value. Status of the call recording. Possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
      * @param value Value to set for the callRecordingStatus property.
      */
-    public void setCallRecordingStatus(@jakarta.annotation.Nullable final CallRecordingStatus value) {
+    public void setCallRecordingStatus(@jakarta.annotation.Nullable final CallRecordingEventMessageDetailCallRecordingStatus value) {
         this.backingStore.set("callRecordingStatus", value);
     }
     /**

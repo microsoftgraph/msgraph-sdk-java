@@ -106,10 +106,10 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the direction property value. Network connection direction. Possible values are: unknown, inbound, outbound.
-     * @return a ConnectionDirection
+     * @return a NetworkConnectionDirection
      */
     @jakarta.annotation.Nullable
-    public ConnectionDirection getDirection() {
+    public NetworkConnectionDirection getDirection() {
         return this.backingStore.get("direction");
     }
     /**
@@ -133,7 +133,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
         deserializerMap.put("destinationLocation", (n) -> { this.setDestinationLocation(n.getStringValue()); });
         deserializerMap.put("destinationPort", (n) -> { this.setDestinationPort(n.getStringValue()); });
         deserializerMap.put("destinationUrl", (n) -> { this.setDestinationUrl(n.getStringValue()); });
-        deserializerMap.put("direction", (n) -> { this.setDirection(n.getEnumValue(ConnectionDirection::forValue)); });
+        deserializerMap.put("direction", (n) -> { this.setDirection(n.getEnumValue(NetworkConnectionDirection::forValue)); });
         deserializerMap.put("domainRegisteredDateTime", (n) -> { this.setDomainRegisteredDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("localDnsName", (n) -> { this.setLocalDnsName(n.getStringValue()); });
         deserializerMap.put("natDestinationAddress", (n) -> { this.setNatDestinationAddress(n.getStringValue()); });
@@ -141,12 +141,12 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
         deserializerMap.put("natSourceAddress", (n) -> { this.setNatSourceAddress(n.getStringValue()); });
         deserializerMap.put("natSourcePort", (n) -> { this.setNatSourcePort(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("protocol", (n) -> { this.setProtocol(n.getEnumValue(SecurityNetworkProtocol::forValue)); });
+        deserializerMap.put("protocol", (n) -> { this.setProtocol(n.getEnumValue(NetworkConnectionProtocol::forValue)); });
         deserializerMap.put("riskScore", (n) -> { this.setRiskScore(n.getStringValue()); });
         deserializerMap.put("sourceAddress", (n) -> { this.setSourceAddress(n.getStringValue()); });
         deserializerMap.put("sourceLocation", (n) -> { this.setSourceLocation(n.getStringValue()); });
         deserializerMap.put("sourcePort", (n) -> { this.setSourcePort(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ConnectionStatus::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(NetworkConnectionStatus::forValue)); });
         deserializerMap.put("urlParameters", (n) -> { this.setUrlParameters(n.getStringValue()); });
         return deserializerMap;
     }
@@ -200,10 +200,10 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the protocol property value. Network protocol. Possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII.
-     * @return a SecurityNetworkProtocol
+     * @return a NetworkConnectionProtocol
      */
     @jakarta.annotation.Nullable
-    public SecurityNetworkProtocol getProtocol() {
+    public NetworkConnectionProtocol getProtocol() {
         return this.backingStore.get("protocol");
     }
     /**
@@ -240,10 +240,10 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the status property value. Network connection status. Possible values are: unknown, attempted, succeeded, blocked, failed.
-     * @return a ConnectionStatus
+     * @return a NetworkConnectionStatus
      */
     @jakarta.annotation.Nullable
-    public ConnectionStatus getStatus() {
+    public NetworkConnectionStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -344,7 +344,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
      * Sets the direction property value. Network connection direction. Possible values are: unknown, inbound, outbound.
      * @param value Value to set for the direction property.
      */
-    public void setDirection(@jakarta.annotation.Nullable final ConnectionDirection value) {
+    public void setDirection(@jakarta.annotation.Nullable final NetworkConnectionDirection value) {
         this.backingStore.set("direction", value);
     }
     /**
@@ -400,7 +400,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
      * Sets the protocol property value. Network protocol. Possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII.
      * @param value Value to set for the protocol property.
      */
-    public void setProtocol(@jakarta.annotation.Nullable final SecurityNetworkProtocol value) {
+    public void setProtocol(@jakarta.annotation.Nullable final NetworkConnectionProtocol value) {
         this.backingStore.set("protocol", value);
     }
     /**
@@ -435,7 +435,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
      * Sets the status property value. Network connection status. Possible values are: unknown, attempted, succeeded, blocked, failed.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final ConnectionStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final NetworkConnectionStatus value) {
         this.backingStore.set("status", value);
     }
     /**

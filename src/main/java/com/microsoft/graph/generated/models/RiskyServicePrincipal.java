@@ -60,10 +60,10 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
         deserializerMap.put("history", (n) -> { this.setHistory(n.getCollectionOfObjectValues(RiskyServicePrincipalHistoryItem::createFromDiscriminatorValue)); });
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
         deserializerMap.put("isProcessing", (n) -> { this.setIsProcessing(n.getBooleanValue()); });
-        deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(RiskDetail::forValue)); });
+        deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(RiskyServicePrincipalRiskDetail::forValue)); });
         deserializerMap.put("riskLastUpdatedDateTime", (n) -> { this.setRiskLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("riskLevel", (n) -> { this.setRiskLevel(n.getEnumValue(RiskLevel::forValue)); });
-        deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(RiskState::forValue)); });
+        deserializerMap.put("riskLevel", (n) -> { this.setRiskLevel(n.getEnumValue(RiskyServicePrincipalRiskLevel::forValue)); });
+        deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(RiskyServicePrincipalRiskState::forValue)); });
         deserializerMap.put("servicePrincipalType", (n) -> { this.setServicePrincipalType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -93,10 +93,10 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
     }
     /**
      * Gets the riskDetail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden,  unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
-     * @return a RiskDetail
+     * @return a RiskyServicePrincipalRiskDetail
      */
     @jakarta.annotation.Nullable
-    public RiskDetail getRiskDetail() {
+    public RiskyServicePrincipalRiskDetail getRiskDetail() {
         return this.backingStore.get("riskDetail");
     }
     /**
@@ -109,18 +109,18 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
     }
     /**
      * Gets the riskLevel property value. Level of the detected risky workload identity. The possible values are: low, medium, high, hidden, none, unknownFutureValue. Supports $filter (eq).
-     * @return a RiskLevel
+     * @return a RiskyServicePrincipalRiskLevel
      */
     @jakarta.annotation.Nullable
-    public RiskLevel getRiskLevel() {
+    public RiskyServicePrincipalRiskLevel getRiskLevel() {
         return this.backingStore.get("riskLevel");
     }
     /**
      * Gets the riskState property value. State of the service principal's risk. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
-     * @return a RiskState
+     * @return a RiskyServicePrincipalRiskState
      */
     @jakarta.annotation.Nullable
-    public RiskState getRiskState() {
+    public RiskyServicePrincipalRiskState getRiskState() {
         return this.backingStore.get("riskState");
     }
     /**
@@ -188,7 +188,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      * Sets the riskDetail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden,  unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
      * @param value Value to set for the riskDetail property.
      */
-    public void setRiskDetail(@jakarta.annotation.Nullable final RiskDetail value) {
+    public void setRiskDetail(@jakarta.annotation.Nullable final RiskyServicePrincipalRiskDetail value) {
         this.backingStore.set("riskDetail", value);
     }
     /**
@@ -202,14 +202,14 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      * Sets the riskLevel property value. Level of the detected risky workload identity. The possible values are: low, medium, high, hidden, none, unknownFutureValue. Supports $filter (eq).
      * @param value Value to set for the riskLevel property.
      */
-    public void setRiskLevel(@jakarta.annotation.Nullable final RiskLevel value) {
+    public void setRiskLevel(@jakarta.annotation.Nullable final RiskyServicePrincipalRiskLevel value) {
         this.backingStore.set("riskLevel", value);
     }
     /**
      * Sets the riskState property value. State of the service principal's risk. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
      * @param value Value to set for the riskState property.
      */
-    public void setRiskState(@jakarta.annotation.Nullable final RiskState value) {
+    public void setRiskState(@jakarta.annotation.Nullable final RiskyServicePrincipalRiskState value) {
         this.backingStore.set("riskState", value);
     }
     /**

@@ -73,10 +73,10 @@ public class PrinterCapabilities implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the colorModes property value. The color modes supported by the printer. Valid values are described in the following table.
-     * @return a java.util.List<PrintColorMode>
+     * @return a java.util.List<PrinterCapabilitiesColorModes>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<PrintColorMode> getColorModes() {
+    public java.util.List<PrinterCapabilitiesColorModes> getColorModes() {
         return this.backingStore.get("colorModes");
     }
     /**
@@ -105,18 +105,18 @@ public class PrinterCapabilities implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the duplexModes property value. The list of duplex modes that are supported by the printer. Valid values are described in the following table.
-     * @return a java.util.List<PrintDuplexMode>
+     * @return a java.util.List<PrinterCapabilitiesDuplexModes>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<PrintDuplexMode> getDuplexModes() {
+    public java.util.List<PrinterCapabilitiesDuplexModes> getDuplexModes() {
         return this.backingStore.get("duplexModes");
     }
     /**
      * Gets the feedOrientations property value. The list of feed orientations that are supported by the printer.
-     * @return a java.util.List<PrinterFeedOrientation>
+     * @return a java.util.List<PrinterCapabilitiesFeedOrientations>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<PrinterFeedOrientation> getFeedOrientations() {
+    public java.util.List<PrinterCapabilitiesFeedOrientations> getFeedOrientations() {
         return this.backingStore.get("feedOrientations");
     }
     /**
@@ -128,13 +128,13 @@ public class PrinterCapabilities implements AdditionalDataHolder, BackedModel, P
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(26);
         deserializerMap.put("bottomMargins", (n) -> { this.setBottomMargins(n.getCollectionOfPrimitiveValues(Integer.class)); });
         deserializerMap.put("collation", (n) -> { this.setCollation(n.getBooleanValue()); });
-        deserializerMap.put("colorModes", (n) -> { this.setColorModes(n.getCollectionOfEnumValues(PrintColorMode::forValue)); });
+        deserializerMap.put("colorModes", (n) -> { this.setColorModes(n.getCollectionOfEnumValues(PrinterCapabilitiesColorModes::forValue)); });
         deserializerMap.put("contentTypes", (n) -> { this.setContentTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("copiesPerJob", (n) -> { this.setCopiesPerJob(n.getObjectValue(IntegerRange::createFromDiscriminatorValue)); });
         deserializerMap.put("dpis", (n) -> { this.setDpis(n.getCollectionOfPrimitiveValues(Integer.class)); });
-        deserializerMap.put("duplexModes", (n) -> { this.setDuplexModes(n.getCollectionOfEnumValues(PrintDuplexMode::forValue)); });
-        deserializerMap.put("feedOrientations", (n) -> { this.setFeedOrientations(n.getCollectionOfEnumValues(PrinterFeedOrientation::forValue)); });
-        deserializerMap.put("finishings", (n) -> { this.setFinishings(n.getCollectionOfEnumValues(PrintFinishing::forValue)); });
+        deserializerMap.put("duplexModes", (n) -> { this.setDuplexModes(n.getCollectionOfEnumValues(PrinterCapabilitiesDuplexModes::forValue)); });
+        deserializerMap.put("feedOrientations", (n) -> { this.setFeedOrientations(n.getCollectionOfEnumValues(PrinterCapabilitiesFeedOrientations::forValue)); });
+        deserializerMap.put("finishings", (n) -> { this.setFinishings(n.getCollectionOfEnumValues(PrinterCapabilitiesFinishings::forValue)); });
         deserializerMap.put("inputBins", (n) -> { this.setInputBins(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("isColorPrintingSupported", (n) -> { this.setIsColorPrintingSupported(n.getBooleanValue()); });
         deserializerMap.put("isPageRangeSupported", (n) -> { this.setIsPageRangeSupported(n.getBooleanValue()); });
@@ -142,24 +142,24 @@ public class PrinterCapabilities implements AdditionalDataHolder, BackedModel, P
         deserializerMap.put("mediaColors", (n) -> { this.setMediaColors(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("mediaSizes", (n) -> { this.setMediaSizes(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("mediaTypes", (n) -> { this.setMediaTypes(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("multipageLayouts", (n) -> { this.setMultipageLayouts(n.getCollectionOfEnumValues(PrintMultipageLayout::forValue)); });
+        deserializerMap.put("multipageLayouts", (n) -> { this.setMultipageLayouts(n.getCollectionOfEnumValues(PrinterCapabilitiesMultipageLayouts::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("orientations", (n) -> { this.setOrientations(n.getCollectionOfEnumValues(PrintOrientation::forValue)); });
+        deserializerMap.put("orientations", (n) -> { this.setOrientations(n.getCollectionOfEnumValues(PrinterCapabilitiesOrientations::forValue)); });
         deserializerMap.put("outputBins", (n) -> { this.setOutputBins(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("pagesPerSheet", (n) -> { this.setPagesPerSheet(n.getCollectionOfPrimitiveValues(Integer.class)); });
-        deserializerMap.put("qualities", (n) -> { this.setQualities(n.getCollectionOfEnumValues(PrintQuality::forValue)); });
+        deserializerMap.put("qualities", (n) -> { this.setQualities(n.getCollectionOfEnumValues(PrinterCapabilitiesQualities::forValue)); });
         deserializerMap.put("rightMargins", (n) -> { this.setRightMargins(n.getCollectionOfPrimitiveValues(Integer.class)); });
-        deserializerMap.put("scalings", (n) -> { this.setScalings(n.getCollectionOfEnumValues(PrintScaling::forValue)); });
+        deserializerMap.put("scalings", (n) -> { this.setScalings(n.getCollectionOfEnumValues(PrinterCapabilitiesScalings::forValue)); });
         deserializerMap.put("supportsFitPdfToPage", (n) -> { this.setSupportsFitPdfToPage(n.getBooleanValue()); });
         deserializerMap.put("topMargins", (n) -> { this.setTopMargins(n.getCollectionOfPrimitiveValues(Integer.class)); });
         return deserializerMap;
     }
     /**
      * Gets the finishings property value. Finishing processes the printer supports for a printed document.
-     * @return a java.util.List<PrintFinishing>
+     * @return a java.util.List<PrinterCapabilitiesFinishings>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<PrintFinishing> getFinishings() {
+    public java.util.List<PrinterCapabilitiesFinishings> getFinishings() {
         return this.backingStore.get("finishings");
     }
     /**
@@ -220,10 +220,10 @@ public class PrinterCapabilities implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the multipageLayouts property value. The presentation directions supported by the printer. Supported values are described in the following table.
-     * @return a java.util.List<PrintMultipageLayout>
+     * @return a java.util.List<PrinterCapabilitiesMultipageLayouts>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<PrintMultipageLayout> getMultipageLayouts() {
+    public java.util.List<PrinterCapabilitiesMultipageLayouts> getMultipageLayouts() {
         return this.backingStore.get("multipageLayouts");
     }
     /**
@@ -236,10 +236,10 @@ public class PrinterCapabilities implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the orientations property value. The print orientations supported by the printer. Valid values are described in the following table.
-     * @return a java.util.List<PrintOrientation>
+     * @return a java.util.List<PrinterCapabilitiesOrientations>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<PrintOrientation> getOrientations() {
+    public java.util.List<PrinterCapabilitiesOrientations> getOrientations() {
         return this.backingStore.get("orientations");
     }
     /**
@@ -260,10 +260,10 @@ public class PrinterCapabilities implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the qualities property value. The print qualities supported by the printer.
-     * @return a java.util.List<PrintQuality>
+     * @return a java.util.List<PrinterCapabilitiesQualities>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<PrintQuality> getQualities() {
+    public java.util.List<PrinterCapabilitiesQualities> getQualities() {
         return this.backingStore.get("qualities");
     }
     /**
@@ -276,10 +276,10 @@ public class PrinterCapabilities implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the scalings property value. Supported print scalings.
-     * @return a java.util.List<PrintScaling>
+     * @return a java.util.List<PrinterCapabilitiesScalings>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<PrintScaling> getScalings() {
+    public java.util.List<PrinterCapabilitiesScalings> getScalings() {
         return this.backingStore.get("scalings");
     }
     /**
@@ -365,7 +365,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, BackedModel, P
      * Sets the colorModes property value. The color modes supported by the printer. Valid values are described in the following table.
      * @param value Value to set for the colorModes property.
      */
-    public void setColorModes(@jakarta.annotation.Nullable final java.util.List<PrintColorMode> value) {
+    public void setColorModes(@jakarta.annotation.Nullable final java.util.List<PrinterCapabilitiesColorModes> value) {
         this.backingStore.set("colorModes", value);
     }
     /**
@@ -393,21 +393,21 @@ public class PrinterCapabilities implements AdditionalDataHolder, BackedModel, P
      * Sets the duplexModes property value. The list of duplex modes that are supported by the printer. Valid values are described in the following table.
      * @param value Value to set for the duplexModes property.
      */
-    public void setDuplexModes(@jakarta.annotation.Nullable final java.util.List<PrintDuplexMode> value) {
+    public void setDuplexModes(@jakarta.annotation.Nullable final java.util.List<PrinterCapabilitiesDuplexModes> value) {
         this.backingStore.set("duplexModes", value);
     }
     /**
      * Sets the feedOrientations property value. The list of feed orientations that are supported by the printer.
      * @param value Value to set for the feedOrientations property.
      */
-    public void setFeedOrientations(@jakarta.annotation.Nullable final java.util.List<PrinterFeedOrientation> value) {
+    public void setFeedOrientations(@jakarta.annotation.Nullable final java.util.List<PrinterCapabilitiesFeedOrientations> value) {
         this.backingStore.set("feedOrientations", value);
     }
     /**
      * Sets the finishings property value. Finishing processes the printer supports for a printed document.
      * @param value Value to set for the finishings property.
      */
-    public void setFinishings(@jakarta.annotation.Nullable final java.util.List<PrintFinishing> value) {
+    public void setFinishings(@jakarta.annotation.Nullable final java.util.List<PrinterCapabilitiesFinishings> value) {
         this.backingStore.set("finishings", value);
     }
     /**
@@ -463,7 +463,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, BackedModel, P
      * Sets the multipageLayouts property value. The presentation directions supported by the printer. Supported values are described in the following table.
      * @param value Value to set for the multipageLayouts property.
      */
-    public void setMultipageLayouts(@jakarta.annotation.Nullable final java.util.List<PrintMultipageLayout> value) {
+    public void setMultipageLayouts(@jakarta.annotation.Nullable final java.util.List<PrinterCapabilitiesMultipageLayouts> value) {
         this.backingStore.set("multipageLayouts", value);
     }
     /**
@@ -477,7 +477,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, BackedModel, P
      * Sets the orientations property value. The print orientations supported by the printer. Valid values are described in the following table.
      * @param value Value to set for the orientations property.
      */
-    public void setOrientations(@jakarta.annotation.Nullable final java.util.List<PrintOrientation> value) {
+    public void setOrientations(@jakarta.annotation.Nullable final java.util.List<PrinterCapabilitiesOrientations> value) {
         this.backingStore.set("orientations", value);
     }
     /**
@@ -498,7 +498,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, BackedModel, P
      * Sets the qualities property value. The print qualities supported by the printer.
      * @param value Value to set for the qualities property.
      */
-    public void setQualities(@jakarta.annotation.Nullable final java.util.List<PrintQuality> value) {
+    public void setQualities(@jakarta.annotation.Nullable final java.util.List<PrinterCapabilitiesQualities> value) {
         this.backingStore.set("qualities", value);
     }
     /**
@@ -512,7 +512,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, BackedModel, P
      * Sets the scalings property value. Supported print scalings.
      * @param value Value to set for the scalings property.
      */
-    public void setScalings(@jakarta.annotation.Nullable final java.util.List<PrintScaling> value) {
+    public void setScalings(@jakarta.annotation.Nullable final java.util.List<PrinterCapabilitiesScalings> value) {
         this.backingStore.set("scalings", value);
     }
     /**

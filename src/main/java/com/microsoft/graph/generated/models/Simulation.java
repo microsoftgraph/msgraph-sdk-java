@@ -140,7 +140,7 @@ public class Simulation extends Entity implements Parsable {
         deserializerMap.put("loginPage", (n) -> { this.setLoginPage(n.getObjectValue(LoginPage::createFromDiscriminatorValue)); });
         deserializerMap.put("oAuthConsentAppDetail", (n) -> { this.setOAuthConsentAppDetail(n.getObjectValue(OAuthConsentAppDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("payload", (n) -> { this.setPayload(n.getObjectValue(Payload::createFromDiscriminatorValue)); });
-        deserializerMap.put("payloadDeliveryPlatform", (n) -> { this.setPayloadDeliveryPlatform(n.getEnumValue(PayloadDeliveryPlatform::forValue)); });
+        deserializerMap.put("payloadDeliveryPlatform", (n) -> { this.setPayloadDeliveryPlatform(n.getEnumValue(SimulationPayloadDeliveryPlatform::forValue)); });
         deserializerMap.put("report", (n) -> { this.setReport(n.getObjectValue(SimulationReport::createFromDiscriminatorValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(SimulationStatus::forValue)); });
         deserializerMap.put("trainingSetting", (n) -> { this.setTrainingSetting(n.getObjectValue(TrainingSetting::createFromDiscriminatorValue)); });
@@ -220,10 +220,10 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the payloadDeliveryPlatform property value. Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue.
-     * @return a PayloadDeliveryPlatform
+     * @return a SimulationPayloadDeliveryPlatform
      */
     @jakarta.annotation.Nullable
-    public PayloadDeliveryPlatform getPayloadDeliveryPlatform() {
+    public SimulationPayloadDeliveryPlatform getPayloadDeliveryPlatform() {
         return this.backingStore.get("payloadDeliveryPlatform");
     }
     /**
@@ -426,7 +426,7 @@ public class Simulation extends Entity implements Parsable {
      * Sets the payloadDeliveryPlatform property value. Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue.
      * @param value Value to set for the payloadDeliveryPlatform property.
      */
-    public void setPayloadDeliveryPlatform(@jakarta.annotation.Nullable final PayloadDeliveryPlatform value) {
+    public void setPayloadDeliveryPlatform(@jakarta.annotation.Nullable final SimulationPayloadDeliveryPlatform value) {
         this.backingStore.set("payloadDeliveryPlatform", value);
     }
     /**

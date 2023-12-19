@@ -54,7 +54,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
         deserializerMap.put("reviewHistoryPeriodEndDateTime", (n) -> { this.setReviewHistoryPeriodEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("reviewHistoryPeriodStartDateTime", (n) -> { this.setReviewHistoryPeriodStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("runDateTime", (n) -> { this.setRunDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AccessReviewHistoryStatus::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AccessReviewHistoryInstanceStatus::forValue)); });
         return deserializerMap;
     }
     /**
@@ -91,10 +91,10 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue. Once the status has been marked as done, a link can be generated to retrieve the instance's data by calling generateDownloadUri method.
-     * @return a AccessReviewHistoryStatus
+     * @return a AccessReviewHistoryInstanceStatus
      */
     @jakarta.annotation.Nullable
-    public AccessReviewHistoryStatus getStatus() {
+    public AccessReviewHistoryInstanceStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -158,7 +158,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
      * Sets the status property value. Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue. Once the status has been marked as done, a link can be generated to retrieve the instance's data by calling generateDownloadUri method.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final AccessReviewHistoryStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final AccessReviewHistoryInstanceStatus value) {
         this.backingStore.set("status", value);
     }
 }

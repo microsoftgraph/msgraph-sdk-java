@@ -59,10 +59,10 @@ public class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the callDurationSource property value. The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator can provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft.
-     * @return a PstnCallDurationSource
+     * @return a PstnCallLogRowCallDurationSource
      */
     @jakarta.annotation.Nullable
-    public PstnCallDurationSource getCallDurationSource() {
+    public PstnCallLogRowCallDurationSource getCallDurationSource() {
         return this.backingStore.get("callDurationSource");
     }
     /**
@@ -168,7 +168,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsab
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(24);
-        deserializerMap.put("callDurationSource", (n) -> { this.setCallDurationSource(n.getEnumValue(PstnCallDurationSource::forValue)); });
+        deserializerMap.put("callDurationSource", (n) -> { this.setCallDurationSource(n.getEnumValue(PstnCallLogRowCallDurationSource::forValue)); });
         deserializerMap.put("calleeNumber", (n) -> { this.setCalleeNumber(n.getStringValue()); });
         deserializerMap.put("callerNumber", (n) -> { this.setCallerNumber(n.getStringValue()); });
         deserializerMap.put("callId", (n) -> { this.setCallId(n.getStringValue()); });
@@ -333,7 +333,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsab
      * Sets the callDurationSource property value. The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator can provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft.
      * @param value Value to set for the callDurationSource property.
      */
-    public void setCallDurationSource(@jakarta.annotation.Nullable final PstnCallDurationSource value) {
+    public void setCallDurationSource(@jakarta.annotation.Nullable final PstnCallLogRowCallDurationSource value) {
         this.backingStore.set("callDurationSource", value);
     }
     /**

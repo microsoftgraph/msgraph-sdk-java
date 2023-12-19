@@ -62,17 +62,17 @@ public class FileHash implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("hashType", (n) -> { this.setHashType(n.getEnumValue(FileHashType::forValue)); });
+        deserializerMap.put("hashType", (n) -> { this.setHashType(n.getEnumValue(FileHashHashType::forValue)); });
         deserializerMap.put("hashValue", (n) -> { this.setHashValue(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the hashType property value. File hash type. Possible values are: unknown, sha1, sha256, md5, authenticodeHash256, lsHash, ctph, peSha1, peSha256.
-     * @return a FileHashType
+     * @return a FileHashHashType
      */
     @jakarta.annotation.Nullable
-    public FileHashType getHashType() {
+    public FileHashHashType getHashType() {
         return this.backingStore.get("hashType");
     }
     /**
@@ -121,7 +121,7 @@ public class FileHash implements AdditionalDataHolder, BackedModel, Parsable {
      * Sets the hashType property value. File hash type. Possible values are: unknown, sha1, sha256, md5, authenticodeHash256, lsHash, ctph, peSha1, peSha256.
      * @param value Value to set for the hashType property.
      */
-    public void setHashType(@jakarta.annotation.Nullable final FileHashType value) {
+    public void setHashType(@jakarta.annotation.Nullable final FileHashHashType value) {
         this.backingStore.set("hashType", value);
     }
     /**

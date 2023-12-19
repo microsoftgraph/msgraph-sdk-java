@@ -92,7 +92,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, BackedModel,
         deserializerMap.put("fromAddresses", (n) -> { this.setFromAddresses(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
         deserializerMap.put("hasAttachments", (n) -> { this.setHasAttachments(n.getBooleanValue()); });
         deserializerMap.put("headerContains", (n) -> { this.setHeaderContains(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("importance", (n) -> { this.setImportance(n.getEnumValue(Importance::forValue)); });
+        deserializerMap.put("importance", (n) -> { this.setImportance(n.getEnumValue(MessageRulePredicatesImportance::forValue)); });
         deserializerMap.put("isApprovalRequest", (n) -> { this.setIsApprovalRequest(n.getBooleanValue()); });
         deserializerMap.put("isAutomaticForward", (n) -> { this.setIsAutomaticForward(n.getBooleanValue()); });
         deserializerMap.put("isAutomaticReply", (n) -> { this.setIsAutomaticReply(n.getBooleanValue()); });
@@ -104,12 +104,12 @@ public class MessageRulePredicates implements AdditionalDataHolder, BackedModel,
         deserializerMap.put("isReadReceipt", (n) -> { this.setIsReadReceipt(n.getBooleanValue()); });
         deserializerMap.put("isSigned", (n) -> { this.setIsSigned(n.getBooleanValue()); });
         deserializerMap.put("isVoicemail", (n) -> { this.setIsVoicemail(n.getBooleanValue()); });
-        deserializerMap.put("messageActionFlag", (n) -> { this.setMessageActionFlag(n.getEnumValue(MessageActionFlag::forValue)); });
+        deserializerMap.put("messageActionFlag", (n) -> { this.setMessageActionFlag(n.getEnumValue(MessageRulePredicatesMessageActionFlag::forValue)); });
         deserializerMap.put("notSentToMe", (n) -> { this.setNotSentToMe(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("recipientContains", (n) -> { this.setRecipientContains(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("senderContains", (n) -> { this.setSenderContains(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("sensitivity", (n) -> { this.setSensitivity(n.getEnumValue(Sensitivity::forValue)); });
+        deserializerMap.put("sensitivity", (n) -> { this.setSensitivity(n.getEnumValue(MessageRulePredicatesSensitivity::forValue)); });
         deserializerMap.put("sentCcMe", (n) -> { this.setSentCcMe(n.getBooleanValue()); });
         deserializerMap.put("sentOnlyToMe", (n) -> { this.setSentOnlyToMe(n.getBooleanValue()); });
         deserializerMap.put("sentToAddresses", (n) -> { this.setSentToAddresses(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
@@ -145,10 +145,10 @@ public class MessageRulePredicates implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the importance property value. The importance that is stamped on an incoming message in order for the condition or exception to apply: low, normal, high.
-     * @return a Importance
+     * @return a MessageRulePredicatesImportance
      */
     @jakarta.annotation.Nullable
-    public Importance getImportance() {
+    public MessageRulePredicatesImportance getImportance() {
         return this.backingStore.get("importance");
     }
     /**
@@ -241,10 +241,10 @@ public class MessageRulePredicates implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the messageActionFlag property value. Represents the flag-for-action value that appears on an incoming message in order for the condition or exception to apply. The possible values are: any, call, doNotForward, followUp, fyi, forward, noResponseNecessary, read, reply, replyToAll, review.
-     * @return a MessageActionFlag
+     * @return a MessageRulePredicatesMessageActionFlag
      */
     @jakarta.annotation.Nullable
-    public MessageActionFlag getMessageActionFlag() {
+    public MessageRulePredicatesMessageActionFlag getMessageActionFlag() {
         return this.backingStore.get("messageActionFlag");
     }
     /**
@@ -281,10 +281,10 @@ public class MessageRulePredicates implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the sensitivity property value. Represents the sensitivity level that must be stamped on an incoming message in order for the condition or exception to apply. The possible values are: normal, personal, private, confidential.
-     * @return a Sensitivity
+     * @return a MessageRulePredicatesSensitivity
      */
     @jakarta.annotation.Nullable
-    public Sensitivity getSensitivity() {
+    public MessageRulePredicatesSensitivity getSensitivity() {
         return this.backingStore.get("sensitivity");
     }
     /**
@@ -443,7 +443,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, BackedModel,
      * Sets the importance property value. The importance that is stamped on an incoming message in order for the condition or exception to apply: low, normal, high.
      * @param value Value to set for the importance property.
      */
-    public void setImportance(@jakarta.annotation.Nullable final Importance value) {
+    public void setImportance(@jakarta.annotation.Nullable final MessageRulePredicatesImportance value) {
         this.backingStore.set("importance", value);
     }
     /**
@@ -527,7 +527,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, BackedModel,
      * Sets the messageActionFlag property value. Represents the flag-for-action value that appears on an incoming message in order for the condition or exception to apply. The possible values are: any, call, doNotForward, followUp, fyi, forward, noResponseNecessary, read, reply, replyToAll, review.
      * @param value Value to set for the messageActionFlag property.
      */
-    public void setMessageActionFlag(@jakarta.annotation.Nullable final MessageActionFlag value) {
+    public void setMessageActionFlag(@jakarta.annotation.Nullable final MessageRulePredicatesMessageActionFlag value) {
         this.backingStore.set("messageActionFlag", value);
     }
     /**
@@ -562,7 +562,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, BackedModel,
      * Sets the sensitivity property value. Represents the sensitivity level that must be stamped on an incoming message in order for the condition or exception to apply. The possible values are: normal, personal, private, confidential.
      * @param value Value to set for the sensitivity property.
      */
-    public void setSensitivity(@jakarta.annotation.Nullable final Sensitivity value) {
+    public void setSensitivity(@jakarta.annotation.Nullable final MessageRulePredicatesSensitivity value) {
         this.backingStore.set("sensitivity", value);
     }
     /**

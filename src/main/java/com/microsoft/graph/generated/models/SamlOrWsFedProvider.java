@@ -43,7 +43,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
         deserializerMap.put("issuerUri", (n) -> { this.setIssuerUri(n.getStringValue()); });
         deserializerMap.put("metadataExchangeUri", (n) -> { this.setMetadataExchangeUri(n.getStringValue()); });
         deserializerMap.put("passiveSignInUri", (n) -> { this.setPassiveSignInUri(n.getStringValue()); });
-        deserializerMap.put("preferredAuthenticationProtocol", (n) -> { this.setPreferredAuthenticationProtocol(n.getEnumValue(AuthenticationProtocol::forValue)); });
+        deserializerMap.put("preferredAuthenticationProtocol", (n) -> { this.setPreferredAuthenticationProtocol(n.getEnumValue(SamlOrWsFedProviderPreferredAuthenticationProtocol::forValue)); });
         deserializerMap.put("signingCertificate", (n) -> { this.setSigningCertificate(n.getStringValue()); });
         return deserializerMap;
     }
@@ -73,10 +73,10 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
     }
     /**
      * Gets the preferredAuthenticationProtocol property value. Preferred authentication protocol. The possible values are: wsFed, saml, unknownFutureValue.
-     * @return a AuthenticationProtocol
+     * @return a SamlOrWsFedProviderPreferredAuthenticationProtocol
      */
     @jakarta.annotation.Nullable
-    public AuthenticationProtocol getPreferredAuthenticationProtocol() {
+    public SamlOrWsFedProviderPreferredAuthenticationProtocol getPreferredAuthenticationProtocol() {
         return this.backingStore.get("preferredAuthenticationProtocol");
     }
     /**
@@ -125,7 +125,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      * Sets the preferredAuthenticationProtocol property value. Preferred authentication protocol. The possible values are: wsFed, saml, unknownFutureValue.
      * @param value Value to set for the preferredAuthenticationProtocol property.
      */
-    public void setPreferredAuthenticationProtocol(@jakarta.annotation.Nullable final AuthenticationProtocol value) {
+    public void setPreferredAuthenticationProtocol(@jakarta.annotation.Nullable final SamlOrWsFedProviderPreferredAuthenticationProtocol value) {
         this.backingStore.set("preferredAuthenticationProtocol", value);
     }
     /**

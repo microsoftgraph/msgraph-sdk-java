@@ -70,7 +70,7 @@ public class LearningCourseActivity extends Entity implements Parsable {
         deserializerMap.put("learnerUserId", (n) -> { this.setLearnerUserId(n.getStringValue()); });
         deserializerMap.put("learningContentId", (n) -> { this.setLearningContentId(n.getStringValue()); });
         deserializerMap.put("learningProviderId", (n) -> { this.setLearningProviderId(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CourseStatus::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(LearningCourseActivityStatus::forValue)); });
         return deserializerMap;
     }
     /**
@@ -99,10 +99,10 @@ public class LearningCourseActivity extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status of the course activity. Possible values are: notStarted, inProgress, completed. Required.
-     * @return a CourseStatus
+     * @return a LearningCourseActivityStatus
      */
     @jakarta.annotation.Nullable
-    public CourseStatus getStatus() {
+    public LearningCourseActivityStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -166,7 +166,7 @@ public class LearningCourseActivity extends Entity implements Parsable {
      * Sets the status property value. The status of the course activity. Possible values are: notStarted, inProgress, completed. Required.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final CourseStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final LearningCourseActivityStatus value) {
         this.backingStore.set("status", value);
     }
 }

@@ -57,10 +57,10 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the answerInputType property value. The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
-     * @return a AnswerInputType
+     * @return a BookingQuestionAnswerAnswerInputType
      */
     @jakarta.annotation.Nullable
-    public AnswerInputType getAnswerInputType() {
+    public BookingQuestionAnswerAnswerInputType getAnswerInputType() {
         return this.backingStore.get("answerInputType");
     }
     /**
@@ -87,7 +87,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel,
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("answer", (n) -> { this.setAnswer(n.getStringValue()); });
-        deserializerMap.put("answerInputType", (n) -> { this.setAnswerInputType(n.getEnumValue(AnswerInputType::forValue)); });
+        deserializerMap.put("answerInputType", (n) -> { this.setAnswerInputType(n.getEnumValue(BookingQuestionAnswerAnswerInputType::forValue)); });
         deserializerMap.put("answerOptions", (n) -> { this.setAnswerOptions(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("isRequired", (n) -> { this.setIsRequired(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -170,7 +170,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel,
      * Sets the answerInputType property value. The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
      * @param value Value to set for the answerInputType property.
      */
-    public void setAnswerInputType(@jakarta.annotation.Nullable final AnswerInputType value) {
+    public void setAnswerInputType(@jakarta.annotation.Nullable final BookingQuestionAnswerAnswerInputType value) {
         this.backingStore.set("answerInputType", value);
     }
     /**

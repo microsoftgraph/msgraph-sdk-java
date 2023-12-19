@@ -75,7 +75,7 @@ public class RecentNotebook implements AdditionalDataHolder, BackedModel, Parsab
         deserializerMap.put("lastAccessedTime", (n) -> { this.setLastAccessedTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("links", (n) -> { this.setLinks(n.getObjectValue(RecentNotebookLinks::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("sourceService", (n) -> { this.setSourceService(n.getEnumValue(OnenoteSourceService::forValue)); });
+        deserializerMap.put("sourceService", (n) -> { this.setSourceService(n.getEnumValue(RecentNotebookSourceService::forValue)); });
         return deserializerMap;
     }
     /**
@@ -104,10 +104,10 @@ public class RecentNotebook implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the sourceService property value. The backend store where the Notebook resides, either OneDriveForBusiness or OneDrive.
-     * @return a OnenoteSourceService
+     * @return a RecentNotebookSourceService
      */
     @jakarta.annotation.Nullable
-    public OnenoteSourceService getSourceService() {
+    public RecentNotebookSourceService getSourceService() {
         return this.backingStore.get("sourceService");
     }
     /**
@@ -170,7 +170,7 @@ public class RecentNotebook implements AdditionalDataHolder, BackedModel, Parsab
      * Sets the sourceService property value. The backend store where the Notebook resides, either OneDriveForBusiness or OneDrive.
      * @param value Value to set for the sourceService property.
      */
-    public void setSourceService(@jakarta.annotation.Nullable final OnenoteSourceService value) {
+    public void setSourceService(@jakarta.annotation.Nullable final RecentNotebookSourceService value) {
         this.backingStore.set("sourceService", value);
     }
 }

@@ -32,15 +32,15 @@ public class Initiator extends Identity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("initiatorType", (n) -> { this.setInitiatorType(n.getEnumValue(InitiatorType::forValue)); });
+        deserializerMap.put("initiatorType", (n) -> { this.setInitiatorType(n.getEnumValue(InitiatorInitiatorType::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the initiatorType property value. Type of initiator. Possible values are: user, application, system, unknownFutureValue.
-     * @return a InitiatorType
+     * @return a InitiatorInitiatorType
      */
     @jakarta.annotation.Nullable
-    public InitiatorType getInitiatorType() {
+    public InitiatorInitiatorType getInitiatorType() {
         return this.backingStore.get("initiatorType");
     }
     /**
@@ -56,7 +56,7 @@ public class Initiator extends Identity implements Parsable {
      * Sets the initiatorType property value. Type of initiator. Possible values are: user, application, system, unknownFutureValue.
      * @param value Value to set for the initiatorType property.
      */
-    public void setInitiatorType(@jakarta.annotation.Nullable final InitiatorType value) {
+    public void setInitiatorType(@jakarta.annotation.Nullable final InitiatorInitiatorType value) {
         this.backingStore.set("initiatorType", value);
     }
 }

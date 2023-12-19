@@ -60,15 +60,15 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("device", (n) -> { this.setDevice(n.getObjectValue(Device::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("keyStrength", (n) -> { this.setKeyStrength(n.getEnumValue(AuthenticationMethodKeyStrength::forValue)); });
+        deserializerMap.put("keyStrength", (n) -> { this.setKeyStrength(n.getEnumValue(WindowsHelloForBusinessAuthenticationMethodKeyStrength::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the keyStrength property value. Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.
-     * @return a AuthenticationMethodKeyStrength
+     * @return a WindowsHelloForBusinessAuthenticationMethodKeyStrength
      */
     @jakarta.annotation.Nullable
-    public AuthenticationMethodKeyStrength getKeyStrength() {
+    public WindowsHelloForBusinessAuthenticationMethodKeyStrength getKeyStrength() {
         return this.backingStore.get("keyStrength");
     }
     /**
@@ -108,7 +108,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      * Sets the keyStrength property value. Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.
      * @param value Value to set for the keyStrength property.
      */
-    public void setKeyStrength(@jakarta.annotation.Nullable final AuthenticationMethodKeyStrength value) {
+    public void setKeyStrength(@jakarta.annotation.Nullable final WindowsHelloForBusinessAuthenticationMethodKeyStrength value) {
         this.backingStore.set("keyStrength", value);
     }
 }

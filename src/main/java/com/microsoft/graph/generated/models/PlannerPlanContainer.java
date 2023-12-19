@@ -72,7 +72,7 @@ public class PlannerPlanContainer implements AdditionalDataHolder, BackedModel, 
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("containerId", (n) -> { this.setContainerId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(PlannerContainerType::forValue)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(PlannerPlanContainerType::forValue)); });
         deserializerMap.put("url", (n) -> { this.setUrl(n.getStringValue()); });
         return deserializerMap;
     }
@@ -86,10 +86,10 @@ public class PlannerPlanContainer implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the type property value. The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster. Optional.
-     * @return a PlannerContainerType
+     * @return a PlannerPlanContainerType
      */
     @jakarta.annotation.Nullable
-    public PlannerContainerType getType() {
+    public PlannerPlanContainerType getType() {
         return this.backingStore.get("type");
     }
     /**
@@ -145,7 +145,7 @@ public class PlannerPlanContainer implements AdditionalDataHolder, BackedModel, 
      * Sets the type property value. The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster. Optional.
      * @param value Value to set for the type property.
      */
-    public void setType(@jakarta.annotation.Nullable final PlannerContainerType value) {
+    public void setType(@jakarta.annotation.Nullable final PlannerPlanContainerType value) {
         this.backingStore.set("type", value);
     }
     /**

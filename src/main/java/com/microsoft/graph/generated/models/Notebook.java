@@ -39,7 +39,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
         deserializerMap.put("sectionGroupsUrl", (n) -> { this.setSectionGroupsUrl(n.getStringValue()); });
         deserializerMap.put("sections", (n) -> { this.setSections(n.getCollectionOfObjectValues(OnenoteSection::createFromDiscriminatorValue)); });
         deserializerMap.put("sectionsUrl", (n) -> { this.setSectionsUrl(n.getStringValue()); });
-        deserializerMap.put("userRole", (n) -> { this.setUserRole(n.getEnumValue(OnenoteUserRole::forValue)); });
+        deserializerMap.put("userRole", (n) -> { this.setUserRole(n.getEnumValue(NotebookUserRole::forValue)); });
         return deserializerMap;
     }
     /**
@@ -100,10 +100,10 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
     }
     /**
      * Gets the userRole property value. Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
-     * @return a OnenoteUserRole
+     * @return a NotebookUserRole
      */
     @jakarta.annotation.Nullable
-    public OnenoteUserRole getUserRole() {
+    public NotebookUserRole getUserRole() {
         return this.backingStore.get("userRole");
     }
     /**
@@ -175,7 +175,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
      * Sets the userRole property value. Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
      * @param value Value to set for the userRole property.
      */
-    public void setUserRole(@jakarta.annotation.Nullable final OnenoteUserRole value) {
+    public void setUserRole(@jakarta.annotation.Nullable final NotebookUserRole value) {
         this.backingStore.set("userRole", value);
     }
 }

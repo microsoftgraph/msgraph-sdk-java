@@ -92,7 +92,7 @@ public class MessageRuleActions implements AdditionalDataHolder, BackedModel, Pa
         deserializerMap.put("forwardAsAttachmentTo", (n) -> { this.setForwardAsAttachmentTo(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
         deserializerMap.put("forwardTo", (n) -> { this.setForwardTo(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
         deserializerMap.put("markAsRead", (n) -> { this.setMarkAsRead(n.getBooleanValue()); });
-        deserializerMap.put("markImportance", (n) -> { this.setMarkImportance(n.getEnumValue(Importance::forValue)); });
+        deserializerMap.put("markImportance", (n) -> { this.setMarkImportance(n.getEnumValue(MessageRuleActionsMarkImportance::forValue)); });
         deserializerMap.put("moveToFolder", (n) -> { this.setMoveToFolder(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("permanentDelete", (n) -> { this.setPermanentDelete(n.getBooleanValue()); });
@@ -126,10 +126,10 @@ public class MessageRuleActions implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the markImportance property value. Sets the importance of the message, which can be: low, normal, high.
-     * @return a Importance
+     * @return a MessageRuleActionsMarkImportance
      */
     @jakarta.annotation.Nullable
-    public Importance getMarkImportance() {
+    public MessageRuleActionsMarkImportance getMarkImportance() {
         return this.backingStore.get("markImportance");
     }
     /**
@@ -253,7 +253,7 @@ public class MessageRuleActions implements AdditionalDataHolder, BackedModel, Pa
      * Sets the markImportance property value. Sets the importance of the message, which can be: low, normal, high.
      * @param value Value to set for the markImportance property.
      */
-    public void setMarkImportance(@jakarta.annotation.Nullable final Importance value) {
+    public void setMarkImportance(@jakarta.annotation.Nullable final MessageRuleActionsMarkImportance value) {
         this.backingStore.set("markImportance", value);
     }
     /**

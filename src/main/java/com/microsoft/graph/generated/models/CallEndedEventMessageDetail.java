@@ -36,10 +36,10 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
     }
     /**
      * Gets the callEventType property value. Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
-     * @return a TeamworkCallEventType
+     * @return a CallEndedEventMessageDetailCallEventType
      */
     @jakarta.annotation.Nullable
-    public TeamworkCallEventType getCallEventType() {
+    public CallEndedEventMessageDetailCallEventType getCallEventType() {
         return this.backingStore.get("callEventType");
     }
     /**
@@ -66,7 +66,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("callDuration", (n) -> { this.setCallDuration(n.getPeriodAndDurationValue()); });
-        deserializerMap.put("callEventType", (n) -> { this.setCallEventType(n.getEnumValue(TeamworkCallEventType::forValue)); });
+        deserializerMap.put("callEventType", (n) -> { this.setCallEventType(n.getEnumValue(CallEndedEventMessageDetailCallEventType::forValue)); });
         deserializerMap.put("callId", (n) -> { this.setCallId(n.getStringValue()); });
         deserializerMap.put("callParticipants", (n) -> { this.setCallParticipants(n.getCollectionOfObjectValues(CallParticipantInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -104,7 +104,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
      * Sets the callEventType property value. Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
      * @param value Value to set for the callEventType property.
      */
-    public void setCallEventType(@jakarta.annotation.Nullable final TeamworkCallEventType value) {
+    public void setCallEventType(@jakarta.annotation.Nullable final CallEndedEventMessageDetailCallEventType value) {
         this.backingStore.set("callEventType", value);
     }
     /**

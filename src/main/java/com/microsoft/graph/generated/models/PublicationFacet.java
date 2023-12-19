@@ -56,7 +56,7 @@ public class PublicationFacet implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore;
     }
     /**
-     * Gets the checkedOutBy property value. User who has checked out the file.
+     * Gets the checkedOutBy property value. The user who checked out the file.
      * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class PublicationFacet implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore = value;
     }
     /**
-     * Sets the checkedOutBy property value. User who has checked out the file.
+     * Sets the checkedOutBy property value. The user who checked out the file.
      * @param value Value to set for the checkedOutBy property.
      */
     public void setCheckedOutBy(@jakarta.annotation.Nullable final IdentitySet value) {

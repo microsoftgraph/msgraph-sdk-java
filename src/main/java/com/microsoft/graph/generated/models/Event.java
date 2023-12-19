@@ -108,7 +108,7 @@ public class Event extends OutlookItem implements Parsable {
         deserializerMap.put("hasAttachments", (n) -> { this.setHasAttachments(n.getBooleanValue()); });
         deserializerMap.put("hideAttendees", (n) -> { this.setHideAttendees(n.getBooleanValue()); });
         deserializerMap.put("iCalUId", (n) -> { this.setICalUId(n.getStringValue()); });
-        deserializerMap.put("importance", (n) -> { this.setImportance(n.getEnumValue(Importance::forValue)); });
+        deserializerMap.put("importance", (n) -> { this.setImportance(n.getEnumValue(EventImportance::forValue)); });
         deserializerMap.put("instances", (n) -> { this.setInstances(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
         deserializerMap.put("isAllDay", (n) -> { this.setIsAllDay(n.getBooleanValue()); });
         deserializerMap.put("isCancelled", (n) -> { this.setIsCancelled(n.getBooleanValue()); });
@@ -120,7 +120,7 @@ public class Event extends OutlookItem implements Parsable {
         deserializerMap.put("locations", (n) -> { this.setLocations(n.getCollectionOfObjectValues(Location::createFromDiscriminatorValue)); });
         deserializerMap.put("multiValueExtendedProperties", (n) -> { this.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
         deserializerMap.put("onlineMeeting", (n) -> { this.setOnlineMeeting(n.getObjectValue(OnlineMeetingInfo::createFromDiscriminatorValue)); });
-        deserializerMap.put("onlineMeetingProvider", (n) -> { this.setOnlineMeetingProvider(n.getEnumValue(OnlineMeetingProviderType::forValue)); });
+        deserializerMap.put("onlineMeetingProvider", (n) -> { this.setOnlineMeetingProvider(n.getEnumValue(EventOnlineMeetingProvider::forValue)); });
         deserializerMap.put("onlineMeetingUrl", (n) -> { this.setOnlineMeetingUrl(n.getStringValue()); });
         deserializerMap.put("organizer", (n) -> { this.setOrganizer(n.getObjectValue(Recipient::createFromDiscriminatorValue)); });
         deserializerMap.put("originalEndTimeZone", (n) -> { this.setOriginalEndTimeZone(n.getStringValue()); });
@@ -130,9 +130,9 @@ public class Event extends OutlookItem implements Parsable {
         deserializerMap.put("reminderMinutesBeforeStart", (n) -> { this.setReminderMinutesBeforeStart(n.getIntegerValue()); });
         deserializerMap.put("responseRequested", (n) -> { this.setResponseRequested(n.getBooleanValue()); });
         deserializerMap.put("responseStatus", (n) -> { this.setResponseStatus(n.getObjectValue(ResponseStatus::createFromDiscriminatorValue)); });
-        deserializerMap.put("sensitivity", (n) -> { this.setSensitivity(n.getEnumValue(Sensitivity::forValue)); });
+        deserializerMap.put("sensitivity", (n) -> { this.setSensitivity(n.getEnumValue(EventSensitivity::forValue)); });
         deserializerMap.put("seriesMasterId", (n) -> { this.setSeriesMasterId(n.getStringValue()); });
-        deserializerMap.put("showAs", (n) -> { this.setShowAs(n.getEnumValue(FreeBusyStatus::forValue)); });
+        deserializerMap.put("showAs", (n) -> { this.setShowAs(n.getEnumValue(EventShowAs::forValue)); });
         deserializerMap.put("singleValueExtendedProperties", (n) -> { this.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
         deserializerMap.put("start", (n) -> { this.setStart(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
@@ -167,10 +167,10 @@ public class Event extends OutlookItem implements Parsable {
     }
     /**
      * Gets the importance property value. The importance property
-     * @return a Importance
+     * @return a EventImportance
      */
     @jakarta.annotation.Nullable
-    public Importance getImportance() {
+    public EventImportance getImportance() {
         return this.backingStore.get("importance");
     }
     /**
@@ -263,10 +263,10 @@ public class Event extends OutlookItem implements Parsable {
     }
     /**
      * Gets the onlineMeetingProvider property value. The onlineMeetingProvider property
-     * @return a OnlineMeetingProviderType
+     * @return a EventOnlineMeetingProvider
      */
     @jakarta.annotation.Nullable
-    public OnlineMeetingProviderType getOnlineMeetingProvider() {
+    public EventOnlineMeetingProvider getOnlineMeetingProvider() {
         return this.backingStore.get("onlineMeetingProvider");
     }
     /**
@@ -343,10 +343,10 @@ public class Event extends OutlookItem implements Parsable {
     }
     /**
      * Gets the sensitivity property value. The sensitivity property
-     * @return a Sensitivity
+     * @return a EventSensitivity
      */
     @jakarta.annotation.Nullable
-    public Sensitivity getSensitivity() {
+    public EventSensitivity getSensitivity() {
         return this.backingStore.get("sensitivity");
     }
     /**
@@ -359,10 +359,10 @@ public class Event extends OutlookItem implements Parsable {
     }
     /**
      * Gets the showAs property value. The showAs property
-     * @return a FreeBusyStatus
+     * @return a EventShowAs
      */
     @jakarta.annotation.Nullable
-    public FreeBusyStatus getShowAs() {
+    public EventShowAs getShowAs() {
         return this.backingStore.get("showAs");
     }
     /**
@@ -544,7 +544,7 @@ public class Event extends OutlookItem implements Parsable {
      * Sets the importance property value. The importance property
      * @param value Value to set for the importance property.
      */
-    public void setImportance(@jakarta.annotation.Nullable final Importance value) {
+    public void setImportance(@jakarta.annotation.Nullable final EventImportance value) {
         this.backingStore.set("importance", value);
     }
     /**
@@ -628,7 +628,7 @@ public class Event extends OutlookItem implements Parsable {
      * Sets the onlineMeetingProvider property value. The onlineMeetingProvider property
      * @param value Value to set for the onlineMeetingProvider property.
      */
-    public void setOnlineMeetingProvider(@jakarta.annotation.Nullable final OnlineMeetingProviderType value) {
+    public void setOnlineMeetingProvider(@jakarta.annotation.Nullable final EventOnlineMeetingProvider value) {
         this.backingStore.set("onlineMeetingProvider", value);
     }
     /**
@@ -698,7 +698,7 @@ public class Event extends OutlookItem implements Parsable {
      * Sets the sensitivity property value. The sensitivity property
      * @param value Value to set for the sensitivity property.
      */
-    public void setSensitivity(@jakarta.annotation.Nullable final Sensitivity value) {
+    public void setSensitivity(@jakarta.annotation.Nullable final EventSensitivity value) {
         this.backingStore.set("sensitivity", value);
     }
     /**
@@ -712,7 +712,7 @@ public class Event extends OutlookItem implements Parsable {
      * Sets the showAs property value. The showAs property
      * @param value Value to set for the showAs property.
      */
-    public void setShowAs(@jakarta.annotation.Nullable final FreeBusyStatus value) {
+    public void setShowAs(@jakarta.annotation.Nullable final EventShowAs value) {
         this.backingStore.set("showAs", value);
     }
     /**

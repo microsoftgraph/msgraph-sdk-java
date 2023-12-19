@@ -1,7 +1,6 @@
 package com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.targetapps;
 
 import com.microsoft.graph.models.ManagedMobileApp;
-import com.microsoft.graph.models.TargetedManagedAppGroupType;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -51,10 +50,10 @@ public class TargetAppsPostRequestBody implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the appGroupType property value. The appGroupType property
-     * @return a TargetedManagedAppGroupType
+     * @return a TargetAppsPostRequestBodyAppGroupType
      */
     @jakarta.annotation.Nullable
-    public TargetedManagedAppGroupType getAppGroupType() {
+    public TargetAppsPostRequestBodyAppGroupType getAppGroupType() {
         return this.backingStore.get("appGroupType");
     }
     /**
@@ -80,7 +79,7 @@ public class TargetAppsPostRequestBody implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("appGroupType", (n) -> { this.setAppGroupType(n.getEnumValue(TargetedManagedAppGroupType::forValue)); });
+        deserializerMap.put("appGroupType", (n) -> { this.setAppGroupType(n.getEnumValue(TargetAppsPostRequestBodyAppGroupType::forValue)); });
         deserializerMap.put("apps", (n) -> { this.setApps(n.getCollectionOfObjectValues(ManagedMobileApp::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -105,7 +104,7 @@ public class TargetAppsPostRequestBody implements AdditionalDataHolder, BackedMo
      * Sets the appGroupType property value. The appGroupType property
      * @param value Value to set for the appGroupType property.
      */
-    public void setAppGroupType(@jakarta.annotation.Nullable final TargetedManagedAppGroupType value) {
+    public void setAppGroupType(@jakarta.annotation.Nullable final TargetAppsPostRequestBodyAppGroupType value) {
         this.backingStore.set("appGroupType", value);
     }
     /**

@@ -61,7 +61,7 @@ public class Group extends Entity implements Parsable {
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("parentSiteId", (n) -> { this.setParentSiteId(n.getStringValue()); });
-        deserializerMap.put("scope", (n) -> { this.setScope(n.getEnumValue(TermGroupScope::forValue)); });
+        deserializerMap.put("scope", (n) -> { this.setScope(n.getEnumValue(GroupScope::forValue)); });
         deserializerMap.put("sets", (n) -> { this.setSets(n.getCollectionOfObjectValues(Set::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -75,10 +75,10 @@ public class Group extends Entity implements Parsable {
     }
     /**
      * Gets the scope property value. Returns the type of the group. Possible values are: global, system, and siteCollection.
-     * @return a TermGroupScope
+     * @return a GroupScope
      */
     @jakarta.annotation.Nullable
-    public TermGroupScope getScope() {
+    public GroupScope getScope() {
         return this.backingStore.get("scope");
     }
     /**
@@ -135,7 +135,7 @@ public class Group extends Entity implements Parsable {
      * Sets the scope property value. Returns the type of the group. Possible values are: global, system, and siteCollection.
      * @param value Value to set for the scope property.
      */
-    public void setScope(@jakarta.annotation.Nullable final TermGroupScope value) {
+    public void setScope(@jakarta.annotation.Nullable final GroupScope value) {
         this.backingStore.set("scope", value);
     }
     /**

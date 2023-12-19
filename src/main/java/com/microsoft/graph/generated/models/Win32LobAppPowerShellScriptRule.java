@@ -65,7 +65,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
         deserializerMap.put("operationType", (n) -> { this.setOperationType(n.getEnumValue(Win32LobAppPowerShellScriptRuleOperationType::forValue)); });
         deserializerMap.put("operator", (n) -> { this.setOperator(n.getEnumValue(Win32LobAppRuleOperator::forValue)); });
         deserializerMap.put("runAs32Bit", (n) -> { this.setRunAs32Bit(n.getBooleanValue()); });
-        deserializerMap.put("runAsAccount", (n) -> { this.setRunAsAccount(n.getEnumValue(RunAsAccountType::forValue)); });
+        deserializerMap.put("runAsAccount", (n) -> { this.setRunAsAccount(n.getEnumValue(Win32LobAppPowerShellScriptRuleRunAsAccount::forValue)); });
         deserializerMap.put("scriptContent", (n) -> { this.setScriptContent(n.getStringValue()); });
         return deserializerMap;
     }
@@ -95,10 +95,10 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
     }
     /**
      * Gets the runAsAccount property value. The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context. Possible values are: system, user.
-     * @return a RunAsAccountType
+     * @return a Win32LobAppPowerShellScriptRuleRunAsAccount
      */
     @jakarta.annotation.Nullable
-    public RunAsAccountType getRunAsAccount() {
+    public Win32LobAppPowerShellScriptRuleRunAsAccount getRunAsAccount() {
         return this.backingStore.get("runAsAccount");
     }
     /**
@@ -171,7 +171,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      * Sets the runAsAccount property value. The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context. Possible values are: system, user.
      * @param value Value to set for the runAsAccount property.
      */
-    public void setRunAsAccount(@jakarta.annotation.Nullable final RunAsAccountType value) {
+    public void setRunAsAccount(@jakarta.annotation.Nullable final Win32LobAppPowerShellScriptRuleRunAsAccount value) {
         this.backingStore.set("runAsAccount", value);
     }
     /**

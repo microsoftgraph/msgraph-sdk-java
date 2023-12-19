@@ -49,10 +49,10 @@ public class OAuthConsentAppDetail implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the appScope property value. App scope. Possible values are: unknown, readCalendar, readContact, readMail, readAllChat, readAllFile, readAndWriteMail, sendMail, unknownFutureValue.
-     * @return a OAuthAppScope
+     * @return a OAuthConsentAppDetailAppScope
      */
     @jakarta.annotation.Nullable
-    public OAuthAppScope getAppScope() {
+    public OAuthConsentAppDetailAppScope getAppScope() {
         return this.backingStore.get("appScope");
     }
     /**
@@ -86,7 +86,7 @@ public class OAuthConsentAppDetail implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("appScope", (n) -> { this.setAppScope(n.getEnumValue(OAuthAppScope::forValue)); });
+        deserializerMap.put("appScope", (n) -> { this.setAppScope(n.getEnumValue(OAuthConsentAppDetailAppScope::forValue)); });
         deserializerMap.put("displayLogo", (n) -> { this.setDisplayLogo(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -123,7 +123,7 @@ public class OAuthConsentAppDetail implements AdditionalDataHolder, BackedModel,
      * Sets the appScope property value. App scope. Possible values are: unknown, readCalendar, readContact, readMail, readAllChat, readAllFile, readAndWriteMail, sendMail, unknownFutureValue.
      * @param value Value to set for the appScope property.
      */
-    public void setAppScope(@jakarta.annotation.Nullable final OAuthAppScope value) {
+    public void setAppScope(@jakarta.annotation.Nullable final OAuthConsentAppDetailAppScope value) {
         this.backingStore.set("appScope", value);
     }
     /**

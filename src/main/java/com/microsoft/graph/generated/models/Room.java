@@ -35,10 +35,10 @@ public class Room extends Place implements Parsable {
     }
     /**
      * Gets the bookingType property value. Type of room. Possible values are standard, and reserved.
-     * @return a BookingType
+     * @return a RoomBookingType
      */
     @jakarta.annotation.Nullable
-    public BookingType getBookingType() {
+    public RoomBookingType getBookingType() {
         return this.backingStore.get("bookingType");
     }
     /**
@@ -81,7 +81,7 @@ public class Room extends Place implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("audioDeviceName", (n) -> { this.setAudioDeviceName(n.getStringValue()); });
-        deserializerMap.put("bookingType", (n) -> { this.setBookingType(n.getEnumValue(BookingType::forValue)); });
+        deserializerMap.put("bookingType", (n) -> { this.setBookingType(n.getEnumValue(RoomBookingType::forValue)); });
         deserializerMap.put("building", (n) -> { this.setBuilding(n.getStringValue()); });
         deserializerMap.put("capacity", (n) -> { this.setCapacity(n.getIntegerValue()); });
         deserializerMap.put("displayDeviceName", (n) -> { this.setDisplayDeviceName(n.getStringValue()); });
@@ -183,7 +183,7 @@ public class Room extends Place implements Parsable {
      * Sets the bookingType property value. Type of room. Possible values are standard, and reserved.
      * @param value Value to set for the bookingType property.
      */
-    public void setBookingType(@jakarta.annotation.Nullable final BookingType value) {
+    public void setBookingType(@jakarta.annotation.Nullable final RoomBookingType value) {
         this.backingStore.set("bookingType", value);
     }
     /**

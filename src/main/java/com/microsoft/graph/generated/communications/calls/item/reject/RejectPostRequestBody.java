@@ -1,6 +1,5 @@
 package com.microsoft.graph.communications.calls.item.reject;
 
-import com.microsoft.graph.models.RejectReason;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -72,15 +71,15 @@ public class RejectPostRequestBody implements AdditionalDataHolder, BackedModel,
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("callbackUri", (n) -> { this.setCallbackUri(n.getStringValue()); });
-        deserializerMap.put("reason", (n) -> { this.setReason(n.getEnumValue(RejectReason::forValue)); });
+        deserializerMap.put("reason", (n) -> { this.setReason(n.getEnumValue(RejectPostRequestBodyReason::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the reason property value. The reason property
-     * @return a RejectReason
+     * @return a RejectPostRequestBodyReason
      */
     @jakarta.annotation.Nullable
-    public RejectReason getReason() {
+    public RejectPostRequestBodyReason getReason() {
         return this.backingStore.get("reason");
     }
     /**
@@ -119,7 +118,7 @@ public class RejectPostRequestBody implements AdditionalDataHolder, BackedModel,
      * Sets the reason property value. The reason property
      * @param value Value to set for the reason property.
      */
-    public void setReason(@jakarta.annotation.Nullable final RejectReason value) {
+    public void setReason(@jakarta.annotation.Nullable final RejectPostRequestBodyReason value) {
         this.backingStore.set("reason", value);
     }
 }

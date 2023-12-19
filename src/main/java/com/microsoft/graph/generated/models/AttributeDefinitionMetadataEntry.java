@@ -62,17 +62,17 @@ public class AttributeDefinitionMetadataEntry implements AdditionalDataHolder, B
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("key", (n) -> { this.setKey(n.getEnumValue(AttributeDefinitionMetadata::forValue)); });
+        deserializerMap.put("key", (n) -> { this.setKey(n.getEnumValue(AttributeDefinitionMetadataEntryKey::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("value", (n) -> { this.setValue(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the key property value. Possible values are: BaseAttributeName, ComplexObjectDefinition, IsContainer, IsCustomerDefined, IsDomainQualified, LinkPropertyNames, LinkTypeName, MaximumLength, ReferencedProperty.
-     * @return a AttributeDefinitionMetadata
+     * @return a AttributeDefinitionMetadataEntryKey
      */
     @jakarta.annotation.Nullable
-    public AttributeDefinitionMetadata getKey() {
+    public AttributeDefinitionMetadataEntryKey getKey() {
         return this.backingStore.get("key");
     }
     /**
@@ -121,7 +121,7 @@ public class AttributeDefinitionMetadataEntry implements AdditionalDataHolder, B
      * Sets the key property value. Possible values are: BaseAttributeName, ComplexObjectDefinition, IsContainer, IsCustomerDefined, IsDomainQualified, LinkPropertyNames, LinkTypeName, MaximumLength, ReferencedProperty.
      * @param value Value to set for the key property.
      */
-    public void setKey(@jakarta.annotation.Nullable final AttributeDefinitionMetadata value) {
+    public void setKey(@jakarta.annotation.Nullable final AttributeDefinitionMetadataEntryKey value) {
         this.backingStore.set("key", value);
     }
     /**

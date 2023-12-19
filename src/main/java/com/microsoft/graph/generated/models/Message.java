@@ -118,8 +118,8 @@ public class Message extends OutlookItem implements Parsable {
         deserializerMap.put("flag", (n) -> { this.setFlag(n.getObjectValue(FollowupFlag::createFromDiscriminatorValue)); });
         deserializerMap.put("from", (n) -> { this.setFrom(n.getObjectValue(Recipient::createFromDiscriminatorValue)); });
         deserializerMap.put("hasAttachments", (n) -> { this.setHasAttachments(n.getBooleanValue()); });
-        deserializerMap.put("importance", (n) -> { this.setImportance(n.getEnumValue(Importance::forValue)); });
-        deserializerMap.put("inferenceClassification", (n) -> { this.setInferenceClassification(n.getEnumValue(InferenceClassificationType::forValue)); });
+        deserializerMap.put("importance", (n) -> { this.setImportance(n.getEnumValue(MessageImportance::forValue)); });
+        deserializerMap.put("inferenceClassification", (n) -> { this.setInferenceClassification(n.getEnumValue(MessageInferenceClassification::forValue)); });
         deserializerMap.put("internetMessageHeaders", (n) -> { this.setInternetMessageHeaders(n.getCollectionOfObjectValues(InternetMessageHeader::createFromDiscriminatorValue)); });
         deserializerMap.put("internetMessageId", (n) -> { this.setInternetMessageId(n.getStringValue()); });
         deserializerMap.put("isDeliveryReceiptRequested", (n) -> { this.setIsDeliveryReceiptRequested(n.getBooleanValue()); });
@@ -165,18 +165,18 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the importance property value. The importance property
-     * @return a Importance
+     * @return a MessageImportance
      */
     @jakarta.annotation.Nullable
-    public Importance getImportance() {
+    public MessageImportance getImportance() {
         return this.backingStore.get("importance");
     }
     /**
      * Gets the inferenceClassification property value. The inferenceClassification property
-     * @return a InferenceClassificationType
+     * @return a MessageInferenceClassification
      */
     @jakarta.annotation.Nullable
-    public InferenceClassificationType getInferenceClassification() {
+    public MessageInferenceClassification getInferenceClassification() {
         return this.backingStore.get("inferenceClassification");
     }
     /**
@@ -434,14 +434,14 @@ public class Message extends OutlookItem implements Parsable {
      * Sets the importance property value. The importance property
      * @param value Value to set for the importance property.
      */
-    public void setImportance(@jakarta.annotation.Nullable final Importance value) {
+    public void setImportance(@jakarta.annotation.Nullable final MessageImportance value) {
         this.backingStore.set("importance", value);
     }
     /**
      * Sets the inferenceClassification property value. The inferenceClassification property
      * @param value Value to set for the inferenceClassification property.
      */
-    public void setInferenceClassification(@jakarta.annotation.Nullable final InferenceClassificationType value) {
+    public void setInferenceClassification(@jakarta.annotation.Nullable final MessageInferenceClassification value) {
         this.backingStore.set("inferenceClassification", value);
     }
     /**

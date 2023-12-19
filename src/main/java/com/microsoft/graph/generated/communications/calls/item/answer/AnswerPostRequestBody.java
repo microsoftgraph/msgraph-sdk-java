@@ -2,7 +2,6 @@ package com.microsoft.graph.communications.calls.item.answer;
 
 import com.microsoft.graph.models.IncomingCallOptions;
 import com.microsoft.graph.models.MediaConfig;
-import com.microsoft.graph.models.Modality;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -39,10 +38,10 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the acceptedModalities property value. The acceptedModalities property
-     * @return a java.util.List<Modality>
+     * @return a java.util.List<AnswerPostRequestBodyAcceptedModalities>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<Modality> getAcceptedModalities() {
+    public java.util.List<AnswerPostRequestBodyAcceptedModalities> getAcceptedModalities() {
         return this.backingStore.get("acceptedModalities");
     }
     /**
@@ -89,7 +88,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
-        deserializerMap.put("acceptedModalities", (n) -> { this.setAcceptedModalities(n.getCollectionOfEnumValues(Modality::forValue)); });
+        deserializerMap.put("acceptedModalities", (n) -> { this.setAcceptedModalities(n.getCollectionOfEnumValues(AnswerPostRequestBodyAcceptedModalities::forValue)); });
         deserializerMap.put("callbackUri", (n) -> { this.setCallbackUri(n.getStringValue()); });
         deserializerMap.put("callOptions", (n) -> { this.setCallOptions(n.getObjectValue(IncomingCallOptions::createFromDiscriminatorValue)); });
         deserializerMap.put("mediaConfig", (n) -> { this.setMediaConfig(n.getObjectValue(MediaConfig::createFromDiscriminatorValue)); });
@@ -129,7 +128,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel,
      * Sets the acceptedModalities property value. The acceptedModalities property
      * @param value Value to set for the acceptedModalities property.
      */
-    public void setAcceptedModalities(@jakarta.annotation.Nullable final java.util.List<Modality> value) {
+    public void setAcceptedModalities(@jakarta.annotation.Nullable final java.util.List<AnswerPostRequestBodyAcceptedModalities> value) {
         this.backingStore.set("acceptedModalities", value);
     }
     /**

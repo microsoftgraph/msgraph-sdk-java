@@ -32,15 +32,15 @@ public class PersistentBrowserSessionControl extends ConditionalAccessSessionCon
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("mode", (n) -> { this.setMode(n.getEnumValue(PersistentBrowserSessionMode::forValue)); });
+        deserializerMap.put("mode", (n) -> { this.setMode(n.getEnumValue(PersistentBrowserSessionControlMode::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the mode property value. Possible values are: always, never.
-     * @return a PersistentBrowserSessionMode
+     * @return a PersistentBrowserSessionControlMode
      */
     @jakarta.annotation.Nullable
-    public PersistentBrowserSessionMode getMode() {
+    public PersistentBrowserSessionControlMode getMode() {
         return this.backingStore.get("mode");
     }
     /**
@@ -56,7 +56,7 @@ public class PersistentBrowserSessionControl extends ConditionalAccessSessionCon
      * Sets the mode property value. Possible values are: always, never.
      * @param value Value to set for the mode property.
      */
-    public void setMode(@jakarta.annotation.Nullable final PersistentBrowserSessionMode value) {
+    public void setMode(@jakarta.annotation.Nullable final PersistentBrowserSessionControlMode value) {
         this.backingStore.set("mode", value);
     }
 }

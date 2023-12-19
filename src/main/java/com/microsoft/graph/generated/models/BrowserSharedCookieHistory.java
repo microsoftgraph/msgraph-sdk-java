@@ -87,7 +87,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedM
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("path", (n) -> { this.setPath(n.getStringValue()); });
         deserializerMap.put("publishedDateTime", (n) -> { this.setPublishedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("sourceEnvironment", (n) -> { this.setSourceEnvironment(n.getEnumValue(BrowserSharedCookieSourceEnvironment::forValue)); });
+        deserializerMap.put("sourceEnvironment", (n) -> { this.setSourceEnvironment(n.getEnumValue(BrowserSharedCookieHistorySourceEnvironment::forValue)); });
         return deserializerMap;
     }
     /**
@@ -140,10 +140,10 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the sourceEnvironment property value. Specifies how the cookies are shared between Microsoft Edge and Internet Explorer. The possible values are: microsoftEdge, internetExplorer11, both, unknownFutureValue.
-     * @return a BrowserSharedCookieSourceEnvironment
+     * @return a BrowserSharedCookieHistorySourceEnvironment
      */
     @jakarta.annotation.Nullable
-    public BrowserSharedCookieSourceEnvironment getSourceEnvironment() {
+    public BrowserSharedCookieHistorySourceEnvironment getSourceEnvironment() {
         return this.backingStore.get("sourceEnvironment");
     }
     /**
@@ -238,7 +238,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedM
      * Sets the sourceEnvironment property value. Specifies how the cookies are shared between Microsoft Edge and Internet Explorer. The possible values are: microsoftEdge, internetExplorer11, both, unknownFutureValue.
      * @param value Value to set for the sourceEnvironment property.
      */
-    public void setSourceEnvironment(@jakarta.annotation.Nullable final BrowserSharedCookieSourceEnvironment value) {
+    public void setSourceEnvironment(@jakarta.annotation.Nullable final BrowserSharedCookieHistorySourceEnvironment value) {
         this.backingStore.set("sourceEnvironment", value);
     }
 }

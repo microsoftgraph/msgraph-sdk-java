@@ -82,7 +82,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("postType", (n) -> { this.setPostType(n.getEnumValue(PostType::forValue)); });
+        deserializerMap.put("postType", (n) -> { this.setPostType(n.getEnumValue(ServiceHealthIssuePostPostType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -95,10 +95,10 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the postType property value. The post type of the service issue historical post. Possible values are: regular, quick, strategic, unknownFutureValue.
-     * @return a PostType
+     * @return a ServiceHealthIssuePostPostType
      */
     @jakarta.annotation.Nullable
-    public PostType getPostType() {
+    public ServiceHealthIssuePostPostType getPostType() {
         return this.backingStore.get("postType");
     }
     /**
@@ -153,7 +153,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel
      * Sets the postType property value. The post type of the service issue historical post. Possible values are: regular, quick, strategic, unknownFutureValue.
      * @param value Value to set for the postType property.
      */
-    public void setPostType(@jakarta.annotation.Nullable final PostType value) {
+    public void setPostType(@jakarta.annotation.Nullable final ServiceHealthIssuePostPostType value) {
         this.backingStore.set("postType", value);
     }
 }

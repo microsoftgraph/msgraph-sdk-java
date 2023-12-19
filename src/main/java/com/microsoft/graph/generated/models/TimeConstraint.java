@@ -36,10 +36,10 @@ public class TimeConstraint implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the activityDomain property value. The nature of the activity, optional. The possible values are: work, personal, unrestricted, or unknown.
-     * @return a ActivityDomain
+     * @return a TimeConstraintActivityDomain
      */
     @jakarta.annotation.Nullable
-    public ActivityDomain getActivityDomain() {
+    public TimeConstraintActivityDomain getActivityDomain() {
         return this.backingStore.get("activityDomain");
     }
     /**
@@ -70,7 +70,7 @@ public class TimeConstraint implements AdditionalDataHolder, BackedModel, Parsab
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("activityDomain", (n) -> { this.setActivityDomain(n.getEnumValue(ActivityDomain::forValue)); });
+        deserializerMap.put("activityDomain", (n) -> { this.setActivityDomain(n.getEnumValue(TimeConstraintActivityDomain::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("timeSlots", (n) -> { this.setTimeSlots(n.getCollectionOfObjectValues(TimeSlot::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -106,7 +106,7 @@ public class TimeConstraint implements AdditionalDataHolder, BackedModel, Parsab
      * Sets the activityDomain property value. The nature of the activity, optional. The possible values are: work, personal, unrestricted, or unknown.
      * @param value Value to set for the activityDomain property.
      */
-    public void setActivityDomain(@jakarta.annotation.Nullable final ActivityDomain value) {
+    public void setActivityDomain(@jakarta.annotation.Nullable final TimeConstraintActivityDomain value) {
         this.backingStore.set("activityDomain", value);
     }
     /**

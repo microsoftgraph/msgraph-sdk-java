@@ -27,10 +27,10 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
     }
     /**
      * Gets the childSelectability property value. Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
-     * @return a ChildSelectability
+     * @return a EdiscoveryReviewTagChildSelectability
      */
     @jakarta.annotation.Nullable
-    public ChildSelectability getChildSelectability() {
+    public EdiscoveryReviewTagChildSelectability getChildSelectability() {
         return this.backingStore.get("childSelectability");
     }
     /**
@@ -48,7 +48,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("childSelectability", (n) -> { this.setChildSelectability(n.getEnumValue(ChildSelectability::forValue)); });
+        deserializerMap.put("childSelectability", (n) -> { this.setChildSelectability(n.getEnumValue(EdiscoveryReviewTagChildSelectability::forValue)); });
         deserializerMap.put("childTags", (n) -> { this.setChildTags(n.getCollectionOfObjectValues(EdiscoveryReviewTag::createFromDiscriminatorValue)); });
         deserializerMap.put("parent", (n) -> { this.setParent(n.getObjectValue(EdiscoveryReviewTag::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -76,7 +76,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
      * Sets the childSelectability property value. Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
      * @param value Value to set for the childSelectability property.
      */
-    public void setChildSelectability(@jakarta.annotation.Nullable final ChildSelectability value) {
+    public void setChildSelectability(@jakarta.annotation.Nullable final EdiscoveryReviewTagChildSelectability value) {
         this.backingStore.set("childSelectability", value);
     }
     /**

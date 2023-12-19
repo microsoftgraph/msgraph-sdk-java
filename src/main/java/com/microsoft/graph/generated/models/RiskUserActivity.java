@@ -57,10 +57,10 @@ public class RiskUserActivity implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the detail property value. Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
-     * @return a RiskDetail
+     * @return a RiskUserActivityDetail
      */
     @jakarta.annotation.Nullable
-    public RiskDetail getDetail() {
+    public RiskUserActivityDetail getDetail() {
         return this.backingStore.get("detail");
     }
     /**
@@ -70,7 +70,7 @@ public class RiskUserActivity implements AdditionalDataHolder, BackedModel, Pars
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("detail", (n) -> { this.setDetail(n.getEnumValue(RiskDetail::forValue)); });
+        deserializerMap.put("detail", (n) -> { this.setDetail(n.getEnumValue(RiskUserActivityDetail::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("riskEventTypes", (n) -> { this.setRiskEventTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
@@ -121,7 +121,7 @@ public class RiskUserActivity implements AdditionalDataHolder, BackedModel, Pars
      * Sets the detail property value. Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
      * @param value Value to set for the detail property.
      */
-    public void setDetail(@jakarta.annotation.Nullable final RiskDetail value) {
+    public void setDetail(@jakarta.annotation.Nullable final RiskUserActivityDetail value) {
         this.backingStore.set("detail", value);
     }
     /**

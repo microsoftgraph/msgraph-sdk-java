@@ -69,7 +69,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
         deserializerMap.put("clientApplicationTenantIds", (n) -> { this.setClientApplicationTenantIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("permissionClassification", (n) -> { this.setPermissionClassification(n.getStringValue()); });
         deserializerMap.put("permissions", (n) -> { this.setPermissions(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("permissionType", (n) -> { this.setPermissionType(n.getEnumValue(PermissionType::forValue)); });
+        deserializerMap.put("permissionType", (n) -> { this.setPermissionType(n.getEnumValue(PermissionGrantConditionSetPermissionType::forValue)); });
         deserializerMap.put("resourceApplication", (n) -> { this.setResourceApplication(n.getStringValue()); });
         return deserializerMap;
     }
@@ -91,10 +91,10 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
     }
     /**
      * Gets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (for example app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions that haven't been configured by the API publisher to require admin consentthis value may be used in built-in permission grant policies, but can't be used in custom permission grant policies. Required.
-     * @return a PermissionType
+     * @return a PermissionGrantConditionSetPermissionType
      */
     @jakarta.annotation.Nullable
-    public PermissionType getPermissionType() {
+    public PermissionGrantConditionSetPermissionType getPermissionType() {
         return this.backingStore.get("permissionType");
     }
     /**
@@ -167,7 +167,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * Sets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (for example app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions that haven't been configured by the API publisher to require admin consentthis value may be used in built-in permission grant policies, but can't be used in custom permission grant policies. Required.
      * @param value Value to set for the permissionType property.
      */
-    public void setPermissionType(@jakarta.annotation.Nullable final PermissionType value) {
+    public void setPermissionType(@jakarta.annotation.Nullable final PermissionGrantConditionSetPermissionType value) {
         this.backingStore.set("permissionType", value);
     }
     /**

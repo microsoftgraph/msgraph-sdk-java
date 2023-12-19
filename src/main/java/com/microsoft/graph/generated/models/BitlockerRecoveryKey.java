@@ -51,7 +51,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
         deserializerMap.put("key", (n) -> { this.setKey(n.getStringValue()); });
-        deserializerMap.put("volumeType", (n) -> { this.setVolumeType(n.getEnumValue(VolumeType::forValue)); });
+        deserializerMap.put("volumeType", (n) -> { this.setVolumeType(n.getEnumValue(BitlockerRecoveryKeyVolumeType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -64,10 +64,10 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
     }
     /**
      * Gets the volumeType property value. Indicates the type of volume the BitLocker key is associated with. The possible values are: 1 (for operatingSystemVolume), 2 (for fixedDataVolume), 3 (for removableDataVolume), and 4 (for unknownFutureValue).
-     * @return a VolumeType
+     * @return a BitlockerRecoveryKeyVolumeType
      */
     @jakarta.annotation.Nullable
-    public VolumeType getVolumeType() {
+    public BitlockerRecoveryKeyVolumeType getVolumeType() {
         return this.backingStore.get("volumeType");
     }
     /**
@@ -107,7 +107,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      * Sets the volumeType property value. Indicates the type of volume the BitLocker key is associated with. The possible values are: 1 (for operatingSystemVolume), 2 (for fixedDataVolume), 3 (for removableDataVolume), and 4 (for unknownFutureValue).
      * @param value Value to set for the volumeType property.
      */
-    public void setVolumeType(@jakarta.annotation.Nullable final VolumeType value) {
+    public void setVolumeType(@jakarta.annotation.Nullable final BitlockerRecoveryKeyVolumeType value) {
         this.backingStore.set("volumeType", value);
     }
 }

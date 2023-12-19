@@ -7,7 +7,6 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -58,10 +57,10 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the contentSharingDisabled property value. Specifies the reason shared content from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
-     * @return a EnumSet<OnlineMeetingContentSharingDisabledReason>
+     * @return a OnlineMeetingRestrictedContentSharingDisabled
      */
     @jakarta.annotation.Nullable
-    public EnumSet<OnlineMeetingContentSharingDisabledReason> getContentSharingDisabled() {
+    public OnlineMeetingRestrictedContentSharingDisabled getContentSharingDisabled() {
         return this.backingStore.get("contentSharingDisabled");
     }
     /**
@@ -71,9 +70,9 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("contentSharingDisabled", (n) -> { this.setContentSharingDisabled(n.getEnumSetValue(OnlineMeetingContentSharingDisabledReason::forValue)); });
+        deserializerMap.put("contentSharingDisabled", (n) -> { this.setContentSharingDisabled(n.getEnumValue(OnlineMeetingRestrictedContentSharingDisabled::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("videoDisabled", (n) -> { this.setVideoDisabled(n.getEnumSetValue(OnlineMeetingVideoDisabledReason::forValue)); });
+        deserializerMap.put("videoDisabled", (n) -> { this.setVideoDisabled(n.getEnumValue(OnlineMeetingRestrictedVideoDisabled::forValue)); });
         return deserializerMap;
     }
     /**
@@ -86,10 +85,10 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the videoDisabled property value. Specifies the reason video from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
-     * @return a EnumSet<OnlineMeetingVideoDisabledReason>
+     * @return a OnlineMeetingRestrictedVideoDisabled
      */
     @jakarta.annotation.Nullable
-    public EnumSet<OnlineMeetingVideoDisabledReason> getVideoDisabled() {
+    public OnlineMeetingRestrictedVideoDisabled getVideoDisabled() {
         return this.backingStore.get("videoDisabled");
     }
     /**
@@ -98,9 +97,9 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, BackedMode
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeEnumSetValue("contentSharingDisabled", this.getContentSharingDisabled());
+        writer.writeEnumValue("contentSharingDisabled", this.getContentSharingDisabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeEnumSetValue("videoDisabled", this.getVideoDisabled());
+        writer.writeEnumValue("videoDisabled", this.getVideoDisabled());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -122,7 +121,7 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, BackedMode
      * Sets the contentSharingDisabled property value. Specifies the reason shared content from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
      * @param value Value to set for the contentSharingDisabled property.
      */
-    public void setContentSharingDisabled(@jakarta.annotation.Nullable final EnumSet<OnlineMeetingContentSharingDisabledReason> value) {
+    public void setContentSharingDisabled(@jakarta.annotation.Nullable final OnlineMeetingRestrictedContentSharingDisabled value) {
         this.backingStore.set("contentSharingDisabled", value);
     }
     /**
@@ -136,7 +135,7 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, BackedMode
      * Sets the videoDisabled property value. Specifies the reason video from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
      * @param value Value to set for the videoDisabled property.
      */
-    public void setVideoDisabled(@jakarta.annotation.Nullable final EnumSet<OnlineMeetingVideoDisabledReason> value) {
+    public void setVideoDisabled(@jakarta.annotation.Nullable final OnlineMeetingRestrictedVideoDisabled value) {
         this.backingStore.set("videoDisabled", value);
     }
 }

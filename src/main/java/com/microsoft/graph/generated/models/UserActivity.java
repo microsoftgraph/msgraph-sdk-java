@@ -115,7 +115,7 @@ public class UserActivity extends Entity implements Parsable {
         deserializerMap.put("fallbackUrl", (n) -> { this.setFallbackUrl(n.getStringValue()); });
         deserializerMap.put("historyItems", (n) -> { this.setHistoryItems(n.getCollectionOfObjectValues(ActivityHistoryItem::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(Status::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(UserActivityStatus::forValue)); });
         deserializerMap.put("userTimezone", (n) -> { this.setUserTimezone(n.getStringValue()); });
         deserializerMap.put("visualElements", (n) -> { this.setVisualElements(n.getObjectValue(VisualInfo::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -138,10 +138,10 @@ public class UserActivity extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
-     * @return a Status
+     * @return a UserActivityStatus
      */
     @jakarta.annotation.Nullable
-    public Status getStatus() {
+    public UserActivityStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -263,7 +263,7 @@ public class UserActivity extends Entity implements Parsable {
      * Sets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final Status value) {
+    public void setStatus(@jakarta.annotation.Nullable final UserActivityStatus value) {
         this.backingStore.set("status", value);
     }
     /**

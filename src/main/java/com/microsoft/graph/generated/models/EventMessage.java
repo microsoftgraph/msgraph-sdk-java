@@ -62,10 +62,10 @@ public class EventMessage extends Message implements Parsable {
         deserializerMap.put("isDelegated", (n) -> { this.setIsDelegated(n.getBooleanValue()); });
         deserializerMap.put("isOutOfDate", (n) -> { this.setIsOutOfDate(n.getBooleanValue()); });
         deserializerMap.put("location", (n) -> { this.setLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
-        deserializerMap.put("meetingMessageType", (n) -> { this.setMeetingMessageType(n.getEnumValue(MeetingMessageType::forValue)); });
+        deserializerMap.put("meetingMessageType", (n) -> { this.setMeetingMessageType(n.getEnumValue(EventMessageMeetingMessageType::forValue)); });
         deserializerMap.put("recurrence", (n) -> { this.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(EventType::forValue)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(EventMessageType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -102,10 +102,10 @@ public class EventMessage extends Message implements Parsable {
     }
     /**
      * Gets the meetingMessageType property value. The meetingMessageType property
-     * @return a MeetingMessageType
+     * @return a EventMessageMeetingMessageType
      */
     @jakarta.annotation.Nullable
-    public MeetingMessageType getMeetingMessageType() {
+    public EventMessageMeetingMessageType getMeetingMessageType() {
         return this.backingStore.get("meetingMessageType");
     }
     /**
@@ -126,10 +126,10 @@ public class EventMessage extends Message implements Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a EventType
+     * @return a EventMessageType
      */
     @jakarta.annotation.Nullable
-    public EventType getType() {
+    public EventMessageType getType() {
         return this.backingStore.get("type");
     }
     /**
@@ -196,7 +196,7 @@ public class EventMessage extends Message implements Parsable {
      * Sets the meetingMessageType property value. The meetingMessageType property
      * @param value Value to set for the meetingMessageType property.
      */
-    public void setMeetingMessageType(@jakarta.annotation.Nullable final MeetingMessageType value) {
+    public void setMeetingMessageType(@jakarta.annotation.Nullable final EventMessageMeetingMessageType value) {
         this.backingStore.set("meetingMessageType", value);
     }
     /**
@@ -217,7 +217,7 @@ public class EventMessage extends Message implements Parsable {
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
-    public void setType(@jakarta.annotation.Nullable final EventType value) {
+    public void setType(@jakarta.annotation.Nullable final EventMessageType value) {
         this.backingStore.set("type", value);
     }
 }

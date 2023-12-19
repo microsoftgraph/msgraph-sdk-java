@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.assignsensitivitylabel;
 
-import com.microsoft.graph.models.SensitivityLabelAssignmentMethod;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -50,10 +49,10 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the assignmentMethod property value. The assignmentMethod property
-     * @return a SensitivityLabelAssignmentMethod
+     * @return a AssignSensitivityLabelPostRequestBodyAssignmentMethod
      */
     @jakarta.annotation.Nullable
-    public SensitivityLabelAssignmentMethod getAssignmentMethod() {
+    public AssignSensitivityLabelPostRequestBodyAssignmentMethod getAssignmentMethod() {
         return this.backingStore.get("assignmentMethod");
     }
     /**
@@ -71,7 +70,7 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("assignmentMethod", (n) -> { this.setAssignmentMethod(n.getEnumValue(SensitivityLabelAssignmentMethod::forValue)); });
+        deserializerMap.put("assignmentMethod", (n) -> { this.setAssignmentMethod(n.getEnumValue(AssignSensitivityLabelPostRequestBodyAssignmentMethod::forValue)); });
         deserializerMap.put("justificationText", (n) -> { this.setJustificationText(n.getStringValue()); });
         deserializerMap.put("sensitivityLabelId", (n) -> { this.setSensitivityLabelId(n.getStringValue()); });
         return deserializerMap;
@@ -114,7 +113,7 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
      * Sets the assignmentMethod property value. The assignmentMethod property
      * @param value Value to set for the assignmentMethod property.
      */
-    public void setAssignmentMethod(@jakarta.annotation.Nullable final SensitivityLabelAssignmentMethod value) {
+    public void setAssignmentMethod(@jakarta.annotation.Nullable final AssignSensitivityLabelPostRequestBodyAssignmentMethod value) {
         this.backingStore.set("assignmentMethod", value);
     }
     /**

@@ -7,7 +7,6 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -121,7 +120,7 @@ public class MailTips implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("mailboxFull", (n) -> { this.setMailboxFull(n.getBooleanValue()); });
         deserializerMap.put("maxMessageSize", (n) -> { this.setMaxMessageSize(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("recipientScope", (n) -> { this.setRecipientScope(n.getEnumSetValue(RecipientScopeType::forValue)); });
+        deserializerMap.put("recipientScope", (n) -> { this.setRecipientScope(n.getEnumValue(MailTipsRecipientScope::forValue)); });
         deserializerMap.put("recipientSuggestions", (n) -> { this.setRecipientSuggestions(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
         deserializerMap.put("totalMemberCount", (n) -> { this.setTotalMemberCount(n.getIntegerValue()); });
         return deserializerMap;
@@ -160,10 +159,10 @@ public class MailTips implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the recipientScope property value. The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
-     * @return a EnumSet<RecipientScopeType>
+     * @return a MailTipsRecipientScope
      */
     @jakarta.annotation.Nullable
-    public EnumSet<RecipientScopeType> getRecipientScope() {
+    public MailTipsRecipientScope getRecipientScope() {
         return this.backingStore.get("recipientScope");
     }
     /**
@@ -198,7 +197,7 @@ public class MailTips implements AdditionalDataHolder, BackedModel, Parsable {
         writer.writeBooleanValue("mailboxFull", this.getMailboxFull());
         writer.writeIntegerValue("maxMessageSize", this.getMaxMessageSize());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeEnumSetValue("recipientScope", this.getRecipientScope());
+        writer.writeEnumValue("recipientScope", this.getRecipientScope());
         writer.writeCollectionOfObjectValues("recipientSuggestions", this.getRecipientSuggestions());
         writer.writeIntegerValue("totalMemberCount", this.getTotalMemberCount());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -292,7 +291,7 @@ public class MailTips implements AdditionalDataHolder, BackedModel, Parsable {
      * Sets the recipientScope property value. The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
      * @param value Value to set for the recipientScope property.
      */
-    public void setRecipientScope(@jakarta.annotation.Nullable final EnumSet<RecipientScopeType> value) {
+    public void setRecipientScope(@jakarta.annotation.Nullable final MailTipsRecipientScope value) {
         this.backingStore.set("recipientScope", value);
     }
     /**

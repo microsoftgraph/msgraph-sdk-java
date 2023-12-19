@@ -27,10 +27,10 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the activity property value. Indicates the activity type the detected risk is linked to. Possible values are: signin, user, unknownFutureValue.
-     * @return a ActivityType
+     * @return a RiskDetectionActivity
      */
     @jakarta.annotation.Nullable
-    public ActivityType getActivity() {
+    public RiskDetectionActivity getActivity() {
         return this.backingStore.get("activity");
     }
     /**
@@ -67,10 +67,10 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the detectionTimingType property value. Timing of the detected risk (real-time/offline). Possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
-     * @return a RiskDetectionTimingType
+     * @return a RiskDetectionDetectionTimingType
      */
     @jakarta.annotation.Nullable
-    public RiskDetectionTimingType getDetectionTimingType() {
+    public RiskDetectionDetectionTimingType getDetectionTimingType() {
         return this.backingStore.get("detectionTimingType");
     }
     /**
@@ -80,22 +80,22 @@ public class RiskDetection extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("activity", (n) -> { this.setActivity(n.getEnumValue(ActivityType::forValue)); });
+        deserializerMap.put("activity", (n) -> { this.setActivity(n.getEnumValue(RiskDetectionActivity::forValue)); });
         deserializerMap.put("activityDateTime", (n) -> { this.setActivityDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("additionalInfo", (n) -> { this.setAdditionalInfo(n.getStringValue()); });
         deserializerMap.put("correlationId", (n) -> { this.setCorrelationId(n.getStringValue()); });
         deserializerMap.put("detectedDateTime", (n) -> { this.setDetectedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("detectionTimingType", (n) -> { this.setDetectionTimingType(n.getEnumValue(RiskDetectionTimingType::forValue)); });
+        deserializerMap.put("detectionTimingType", (n) -> { this.setDetectionTimingType(n.getEnumValue(RiskDetectionDetectionTimingType::forValue)); });
         deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
         deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("location", (n) -> { this.setLocation(n.getObjectValue(SignInLocation::createFromDiscriminatorValue)); });
         deserializerMap.put("requestId", (n) -> { this.setRequestId(n.getStringValue()); });
-        deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(RiskDetail::forValue)); });
+        deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(RiskDetectionRiskDetail::forValue)); });
         deserializerMap.put("riskEventType", (n) -> { this.setRiskEventType(n.getStringValue()); });
-        deserializerMap.put("riskLevel", (n) -> { this.setRiskLevel(n.getEnumValue(RiskLevel::forValue)); });
-        deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(RiskState::forValue)); });
+        deserializerMap.put("riskLevel", (n) -> { this.setRiskLevel(n.getEnumValue(RiskDetectionRiskLevel::forValue)); });
+        deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(RiskDetectionRiskState::forValue)); });
         deserializerMap.put("source", (n) -> { this.setSource(n.getStringValue()); });
-        deserializerMap.put("tokenIssuerType", (n) -> { this.setTokenIssuerType(n.getEnumValue(TokenIssuerType::forValue)); });
+        deserializerMap.put("tokenIssuerType", (n) -> { this.setTokenIssuerType(n.getEnumValue(RiskDetectionTokenIssuerType::forValue)); });
         deserializerMap.put("userDisplayName", (n) -> { this.setUserDisplayName(n.getStringValue()); });
         deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
@@ -135,10 +135,10 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the riskDetail property value. Details of the detected risk. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue, m365DAdminDismissedDetection. Note that you must use the Prefer: include - unknown -enum-members request header to get the following value(s) in this evolvable enum: m365DAdminDismissedDetection.
-     * @return a RiskDetail
+     * @return a RiskDetectionRiskDetail
      */
     @jakarta.annotation.Nullable
-    public RiskDetail getRiskDetail() {
+    public RiskDetectionRiskDetail getRiskDetail() {
         return this.backingStore.get("riskDetail");
     }
     /**
@@ -151,18 +151,18 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the riskLevel property value. Level of the detected risk. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
-     * @return a RiskLevel
+     * @return a RiskDetectionRiskLevel
      */
     @jakarta.annotation.Nullable
-    public RiskLevel getRiskLevel() {
+    public RiskDetectionRiskLevel getRiskLevel() {
         return this.backingStore.get("riskLevel");
     }
     /**
      * Gets the riskState property value. The state of a detected risky user or sign-in. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
-     * @return a RiskState
+     * @return a RiskDetectionRiskState
      */
     @jakarta.annotation.Nullable
-    public RiskState getRiskState() {
+    public RiskDetectionRiskState getRiskState() {
         return this.backingStore.get("riskState");
     }
     /**
@@ -175,10 +175,10 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. Possible values are: AzureAD, ADFederationServices, UnknownFutureValue.
-     * @return a TokenIssuerType
+     * @return a RiskDetectionTokenIssuerType
      */
     @jakarta.annotation.Nullable
-    public TokenIssuerType getTokenIssuerType() {
+    public RiskDetectionTokenIssuerType getTokenIssuerType() {
         return this.backingStore.get("tokenIssuerType");
     }
     /**
@@ -236,7 +236,7 @@ public class RiskDetection extends Entity implements Parsable {
      * Sets the activity property value. Indicates the activity type the detected risk is linked to. Possible values are: signin, user, unknownFutureValue.
      * @param value Value to set for the activity property.
      */
-    public void setActivity(@jakarta.annotation.Nullable final ActivityType value) {
+    public void setActivity(@jakarta.annotation.Nullable final RiskDetectionActivity value) {
         this.backingStore.set("activity", value);
     }
     /**
@@ -271,7 +271,7 @@ public class RiskDetection extends Entity implements Parsable {
      * Sets the detectionTimingType property value. Timing of the detected risk (real-time/offline). Possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
      * @param value Value to set for the detectionTimingType property.
      */
-    public void setDetectionTimingType(@jakarta.annotation.Nullable final RiskDetectionTimingType value) {
+    public void setDetectionTimingType(@jakarta.annotation.Nullable final RiskDetectionDetectionTimingType value) {
         this.backingStore.set("detectionTimingType", value);
     }
     /**
@@ -306,7 +306,7 @@ public class RiskDetection extends Entity implements Parsable {
      * Sets the riskDetail property value. Details of the detected risk. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue, m365DAdminDismissedDetection. Note that you must use the Prefer: include - unknown -enum-members request header to get the following value(s) in this evolvable enum: m365DAdminDismissedDetection.
      * @param value Value to set for the riskDetail property.
      */
-    public void setRiskDetail(@jakarta.annotation.Nullable final RiskDetail value) {
+    public void setRiskDetail(@jakarta.annotation.Nullable final RiskDetectionRiskDetail value) {
         this.backingStore.set("riskDetail", value);
     }
     /**
@@ -320,14 +320,14 @@ public class RiskDetection extends Entity implements Parsable {
      * Sets the riskLevel property value. Level of the detected risk. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
      * @param value Value to set for the riskLevel property.
      */
-    public void setRiskLevel(@jakarta.annotation.Nullable final RiskLevel value) {
+    public void setRiskLevel(@jakarta.annotation.Nullable final RiskDetectionRiskLevel value) {
         this.backingStore.set("riskLevel", value);
     }
     /**
      * Sets the riskState property value. The state of a detected risky user or sign-in. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
      * @param value Value to set for the riskState property.
      */
-    public void setRiskState(@jakarta.annotation.Nullable final RiskState value) {
+    public void setRiskState(@jakarta.annotation.Nullable final RiskDetectionRiskState value) {
         this.backingStore.set("riskState", value);
     }
     /**
@@ -341,7 +341,7 @@ public class RiskDetection extends Entity implements Parsable {
      * Sets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. Possible values are: AzureAD, ADFederationServices, UnknownFutureValue.
      * @param value Value to set for the tokenIssuerType property.
      */
-    public void setTokenIssuerType(@jakarta.annotation.Nullable final TokenIssuerType value) {
+    public void setTokenIssuerType(@jakarta.annotation.Nullable final RiskDetectionTokenIssuerType value) {
         this.backingStore.set("tokenIssuerType", value);
     }
     /**

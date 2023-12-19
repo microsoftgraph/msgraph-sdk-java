@@ -67,7 +67,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
         deserializerMap.put("maxLifetime", (n) -> { this.setMaxLifetime(n.getPeriodAndDurationValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("restrictForAppsCreatedAfterDateTime", (n) -> { this.setRestrictForAppsCreatedAfterDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("restrictionType", (n) -> { this.setRestrictionType(n.getEnumValue(AppKeyCredentialRestrictionType::forValue)); });
+        deserializerMap.put("restrictionType", (n) -> { this.setRestrictionType(n.getEnumValue(KeyCredentialConfigurationRestrictionType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -96,10 +96,10 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the restrictionType property value. The type of restriction being applied. Possible values are asymmetricKeyLifetime, unknownFutureValue. Each value of restrictionType can be used only once per policy.
-     * @return a AppKeyCredentialRestrictionType
+     * @return a KeyCredentialConfigurationRestrictionType
      */
     @jakarta.annotation.Nullable
-    public AppKeyCredentialRestrictionType getRestrictionType() {
+    public KeyCredentialConfigurationRestrictionType getRestrictionType() {
         return this.backingStore.get("restrictionType");
     }
     /**
@@ -154,7 +154,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
      * Sets the restrictionType property value. The type of restriction being applied. Possible values are asymmetricKeyLifetime, unknownFutureValue. Each value of restrictionType can be used only once per policy.
      * @param value Value to set for the restrictionType property.
      */
-    public void setRestrictionType(@jakarta.annotation.Nullable final AppKeyCredentialRestrictionType value) {
+    public void setRestrictionType(@jakarta.annotation.Nullable final KeyCredentialConfigurationRestrictionType value) {
         this.backingStore.set("restrictionType", value);
     }
 }

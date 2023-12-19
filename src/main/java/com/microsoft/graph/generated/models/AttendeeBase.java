@@ -39,15 +39,15 @@ public class AttendeeBase extends Recipient implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(AttendeeType::forValue)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(AttendeeBaseType::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the type property value. The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
-     * @return a AttendeeType
+     * @return a AttendeeBaseType
      */
     @jakarta.annotation.Nullable
-    public AttendeeType getType() {
+    public AttendeeBaseType getType() {
         return this.backingStore.get("type");
     }
     /**
@@ -63,7 +63,7 @@ public class AttendeeBase extends Recipient implements Parsable {
      * Sets the type property value. The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
      * @param value Value to set for the type property.
      */
-    public void setType(@jakarta.annotation.Nullable final AttendeeType value) {
+    public void setType(@jakarta.annotation.Nullable final AttendeeBaseType value) {
         this.backingStore.set("type", value);
     }
 }

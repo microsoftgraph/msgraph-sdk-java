@@ -44,10 +44,10 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
     }
     /**
      * Gets the attestationLevel property value. The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
-     * @return a AttestationLevel
+     * @return a Fido2AuthenticationMethodAttestationLevel
      */
     @jakarta.annotation.Nullable
-    public AttestationLevel getAttestationLevel() {
+    public Fido2AuthenticationMethodAttestationLevel getAttestationLevel() {
         return this.backingStore.get("attestationLevel");
     }
     /**
@@ -75,7 +75,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("aaGuid", (n) -> { this.setAaGuid(n.getStringValue()); });
         deserializerMap.put("attestationCertificates", (n) -> { this.setAttestationCertificates(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("attestationLevel", (n) -> { this.setAttestationLevel(n.getEnumValue(AttestationLevel::forValue)); });
+        deserializerMap.put("attestationLevel", (n) -> { this.setAttestationLevel(n.getEnumValue(Fido2AuthenticationMethodAttestationLevel::forValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
@@ -121,7 +121,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      * Sets the attestationLevel property value. The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
      * @param value Value to set for the attestationLevel property.
      */
-    public void setAttestationLevel(@jakarta.annotation.Nullable final AttestationLevel value) {
+    public void setAttestationLevel(@jakarta.annotation.Nullable final Fido2AuthenticationMethodAttestationLevel value) {
         this.backingStore.set("attestationLevel", value);
     }
     /**

@@ -63,7 +63,7 @@ public class TeamsAppResourceSpecificPermission implements AdditionalDataHolder,
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("permissionType", (n) -> { this.setPermissionType(n.getEnumValue(TeamsAppResourceSpecificPermissionType::forValue)); });
+        deserializerMap.put("permissionType", (n) -> { this.setPermissionType(n.getEnumValue(TeamsAppResourceSpecificPermissionPermissionType::forValue)); });
         deserializerMap.put("permissionValue", (n) -> { this.setPermissionValue(n.getStringValue()); });
         return deserializerMap;
     }
@@ -77,10 +77,10 @@ public class TeamsAppResourceSpecificPermission implements AdditionalDataHolder,
     }
     /**
      * Gets the permissionType property value. The type of resource-specific permission.
-     * @return a TeamsAppResourceSpecificPermissionType
+     * @return a TeamsAppResourceSpecificPermissionPermissionType
      */
     @jakarta.annotation.Nullable
-    public TeamsAppResourceSpecificPermissionType getPermissionType() {
+    public TeamsAppResourceSpecificPermissionPermissionType getPermissionType() {
         return this.backingStore.get("permissionType");
     }
     /**
@@ -128,7 +128,7 @@ public class TeamsAppResourceSpecificPermission implements AdditionalDataHolder,
      * Sets the permissionType property value. The type of resource-specific permission.
      * @param value Value to set for the permissionType property.
      */
-    public void setPermissionType(@jakarta.annotation.Nullable final TeamsAppResourceSpecificPermissionType value) {
+    public void setPermissionType(@jakarta.annotation.Nullable final TeamsAppResourceSpecificPermissionPermissionType value) {
         this.backingStore.set("permissionType", value);
     }
     /**

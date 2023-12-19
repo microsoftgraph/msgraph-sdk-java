@@ -4,7 +4,6 @@ import com.microsoft.graph.models.Group;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -35,7 +34,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("group", (n) -> { this.setGroup(n.getObjectValue(Group::createFromDiscriminatorValue)); });
-        deserializerMap.put("includedSources", (n) -> { this.setIncludedSources(n.getEnumSetValue(SourceType::forValue)); });
+        deserializerMap.put("includedSources", (n) -> { this.setIncludedSources(n.getEnumValue(UnifiedGroupSourceIncludedSources::forValue)); });
         return deserializerMap;
     }
     /**
@@ -48,10 +47,10 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
     }
     /**
      * Gets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
-     * @return a EnumSet<SourceType>
+     * @return a UnifiedGroupSourceIncludedSources
      */
     @jakarta.annotation.Nullable
-    public EnumSet<SourceType> getIncludedSources() {
+    public UnifiedGroupSourceIncludedSources getIncludedSources() {
         return this.backingStore.get("includedSources");
     }
     /**
@@ -62,7 +61,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("group", this.getGroup());
-        writer.writeEnumSetValue("includedSources", this.getIncludedSources());
+        writer.writeEnumValue("includedSources", this.getIncludedSources());
     }
     /**
      * Sets the group property value. The group property
@@ -75,7 +74,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
      * Sets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
      * @param value Value to set for the includedSources property.
      */
-    public void setIncludedSources(@jakarta.annotation.Nullable final EnumSet<SourceType> value) {
+    public void setIncludedSources(@jakarta.annotation.Nullable final UnifiedGroupSourceIncludedSources value) {
         this.backingStore.set("includedSources", value);
     }
 }

@@ -73,7 +73,7 @@ public class RetentionEventStatus implements AdditionalDataHolder, BackedModel, 
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(EventStatusType::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(RetentionEventStatusStatus::forValue)); });
         return deserializerMap;
     }
     /**
@@ -86,10 +86,10 @@ public class RetentionEventStatus implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the status property value. The status of the distribution. The possible values are: pending, error, success, notAvaliable.
-     * @return a EventStatusType
+     * @return a RetentionEventStatusStatus
      */
     @jakarta.annotation.Nullable
-    public EventStatusType getStatus() {
+    public RetentionEventStatusStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -136,7 +136,7 @@ public class RetentionEventStatus implements AdditionalDataHolder, BackedModel, 
      * Sets the status property value. The status of the distribution. The possible values are: pending, error, success, notAvaliable.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final EventStatusType value) {
+    public void setStatus(@jakarta.annotation.Nullable final RetentionEventStatusStatus value) {
         this.backingStore.set("status", value);
     }
 }

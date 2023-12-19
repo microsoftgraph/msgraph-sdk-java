@@ -65,10 +65,10 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the enforcementType property value. Enforcement type. Possible values are: allow, block.
-     * @return a Fido2RestrictionEnforcementType
+     * @return a Fido2KeyRestrictionsEnforcementType
      */
     @jakarta.annotation.Nullable
-    public Fido2RestrictionEnforcementType getEnforcementType() {
+    public Fido2KeyRestrictionsEnforcementType getEnforcementType() {
         return this.backingStore.get("enforcementType");
     }
     /**
@@ -79,7 +79,7 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, 
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("aaGuids", (n) -> { this.setAaGuids(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("enforcementType", (n) -> { this.setEnforcementType(n.getEnumValue(Fido2RestrictionEnforcementType::forValue)); });
+        deserializerMap.put("enforcementType", (n) -> { this.setEnforcementType(n.getEnumValue(Fido2KeyRestrictionsEnforcementType::forValue)); });
         deserializerMap.put("isEnforced", (n) -> { this.setIsEnforced(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
@@ -138,7 +138,7 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, 
      * Sets the enforcementType property value. Enforcement type. Possible values are: allow, block.
      * @param value Value to set for the enforcementType property.
      */
-    public void setEnforcementType(@jakarta.annotation.Nullable final Fido2RestrictionEnforcementType value) {
+    public void setEnforcementType(@jakarta.annotation.Nullable final Fido2KeyRestrictionsEnforcementType value) {
         this.backingStore.set("enforcementType", value);
     }
     /**

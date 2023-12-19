@@ -90,7 +90,7 @@ public class Training extends Entity implements Parsable {
         deserializerMap.put("languageDetails", (n) -> { this.setLanguageDetails(n.getCollectionOfObjectValues(TrainingLanguageDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(EmailIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(SimulationContentSource::forValue)); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(TrainingSource::forValue)); });
         deserializerMap.put("supportedLocales", (n) -> { this.setSupportedLocales(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(TrainingType::forValue)); });
@@ -130,10 +130,10 @@ public class Training extends Entity implements Parsable {
     }
     /**
      * Gets the source property value. Training content source. Possible values are: unknown, global, tenant, unknownFutureValue.
-     * @return a SimulationContentSource
+     * @return a TrainingSource
      */
     @jakarta.annotation.Nullable
-    public SimulationContentSource getSource() {
+    public TrainingSource getSource() {
         return this.backingStore.get("source");
     }
     /**
@@ -256,7 +256,7 @@ public class Training extends Entity implements Parsable {
      * Sets the source property value. Training content source. Possible values are: unknown, global, tenant, unknownFutureValue.
      * @param value Value to set for the source property.
      */
-    public void setSource(@jakarta.annotation.Nullable final SimulationContentSource value) {
+    public void setSource(@jakarta.annotation.Nullable final TrainingSource value) {
         this.backingStore.set("source", value);
     }
     /**

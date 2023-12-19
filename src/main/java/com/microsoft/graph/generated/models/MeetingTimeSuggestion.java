@@ -84,7 +84,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, BackedModel,
         deserializerMap.put("meetingTimeSlot", (n) -> { this.setMeetingTimeSlot(n.getObjectValue(TimeSlot::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("order", (n) -> { this.setOrder(n.getIntegerValue()); });
-        deserializerMap.put("organizerAvailability", (n) -> { this.setOrganizerAvailability(n.getEnumValue(FreeBusyStatus::forValue)); });
+        deserializerMap.put("organizerAvailability", (n) -> { this.setOrganizerAvailability(n.getEnumValue(MeetingTimeSuggestionOrganizerAvailability::forValue)); });
         deserializerMap.put("suggestionReason", (n) -> { this.setSuggestionReason(n.getStringValue()); });
         return deserializerMap;
     }
@@ -122,10 +122,10 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the organizerAvailability property value. Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
-     * @return a FreeBusyStatus
+     * @return a MeetingTimeSuggestionOrganizerAvailability
      */
     @jakarta.annotation.Nullable
-    public FreeBusyStatus getOrganizerAvailability() {
+    public MeetingTimeSuggestionOrganizerAvailability getOrganizerAvailability() {
         return this.backingStore.get("organizerAvailability");
     }
     /**
@@ -213,7 +213,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, BackedModel,
      * Sets the organizerAvailability property value. Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      * @param value Value to set for the organizerAvailability property.
      */
-    public void setOrganizerAvailability(@jakarta.annotation.Nullable final FreeBusyStatus value) {
+    public void setOrganizerAvailability(@jakarta.annotation.Nullable final MeetingTimeSuggestionOrganizerAvailability value) {
         this.backingStore.set("organizerAvailability", value);
     }
     /**

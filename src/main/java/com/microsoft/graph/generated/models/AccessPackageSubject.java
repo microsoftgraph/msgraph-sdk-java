@@ -61,7 +61,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
         deserializerMap.put("objectId", (n) -> { this.setObjectId(n.getStringValue()); });
         deserializerMap.put("onPremisesSecurityIdentifier", (n) -> { this.setOnPremisesSecurityIdentifier(n.getStringValue()); });
         deserializerMap.put("principalName", (n) -> { this.setPrincipalName(n.getStringValue()); });
-        deserializerMap.put("subjectType", (n) -> { this.setSubjectType(n.getEnumValue(AccessPackageSubjectType::forValue)); });
+        deserializerMap.put("subjectType", (n) -> { this.setSubjectType(n.getEnumValue(AccessPackageSubjectSubjectType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -90,10 +90,10 @@ public class AccessPackageSubject extends Entity implements Parsable {
     }
     /**
      * Gets the subjectType property value. The resource type of the subject. The possible values are: notSpecified, user, servicePrincipal, unknownFutureValue.
-     * @return a AccessPackageSubjectType
+     * @return a AccessPackageSubjectSubjectType
      */
     @jakarta.annotation.Nullable
-    public AccessPackageSubjectType getSubjectType() {
+    public AccessPackageSubjectSubjectType getSubjectType() {
         return this.backingStore.get("subjectType");
     }
     /**
@@ -157,7 +157,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * Sets the subjectType property value. The resource type of the subject. The possible values are: notSpecified, user, servicePrincipal, unknownFutureValue.
      * @param value Value to set for the subjectType property.
      */
-    public void setSubjectType(@jakarta.annotation.Nullable final AccessPackageSubjectType value) {
+    public void setSubjectType(@jakarta.annotation.Nullable final AccessPackageSubjectSubjectType value) {
         this.backingStore.set("subjectType", value);
     }
 }

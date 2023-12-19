@@ -33,7 +33,7 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("location", (n) -> { this.setLocation(n.getStringValue()); });
-        deserializerMap.put("locationType", (n) -> { this.setLocationType(n.getEnumValue(GoogleCloudLocationType::forValue)); });
+        deserializerMap.put("locationType", (n) -> { this.setLocationType(n.getEnumValue(GoogleCloudResourceEvidenceLocationType::forValue)); });
         deserializerMap.put("projectId", (n) -> { this.setProjectId(n.getStringValue()); });
         deserializerMap.put("projectNumber", (n) -> { this.setProjectNumber(n.getLongValue()); });
         deserializerMap.put("resourceName", (n) -> { this.setResourceName(n.getStringValue()); });
@@ -50,10 +50,10 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
     }
     /**
      * Gets the locationType property value. The type of location. Possible values are: unknown, regional, zonal, global, unknownFutureValue.
-     * @return a GoogleCloudLocationType
+     * @return a GoogleCloudResourceEvidenceLocationType
      */
     @jakarta.annotation.Nullable
-    public GoogleCloudLocationType getLocationType() {
+    public GoogleCloudResourceEvidenceLocationType getLocationType() {
         return this.backingStore.get("locationType");
     }
     /**
@@ -113,7 +113,7 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
      * Sets the locationType property value. The type of location. Possible values are: unknown, regional, zonal, global, unknownFutureValue.
      * @param value Value to set for the locationType property.
      */
-    public void setLocationType(@jakarta.annotation.Nullable final GoogleCloudLocationType value) {
+    public void setLocationType(@jakarta.annotation.Nullable final GoogleCloudResourceEvidenceLocationType value) {
         this.backingStore.set("locationType", value);
     }
     /**

@@ -49,10 +49,10 @@ public class EducationOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the externalSource property value. Source where this organization was created from. Possible values are: sis, manual.
-     * @return a EducationExternalSource
+     * @return a EducationOrganizationExternalSource
      */
     @jakarta.annotation.Nullable
-    public EducationExternalSource getExternalSource() {
+    public EducationOrganizationExternalSource getExternalSource() {
         return this.backingStore.get("externalSource");
     }
     /**
@@ -72,7 +72,7 @@ public class EducationOrganization extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("externalSource", (n) -> { this.setExternalSource(n.getEnumValue(EducationExternalSource::forValue)); });
+        deserializerMap.put("externalSource", (n) -> { this.setExternalSource(n.getEnumValue(EducationOrganizationExternalSource::forValue)); });
         deserializerMap.put("externalSourceDetail", (n) -> { this.setExternalSourceDetail(n.getStringValue()); });
         return deserializerMap;
     }
@@ -106,7 +106,7 @@ public class EducationOrganization extends Entity implements Parsable {
      * Sets the externalSource property value. Source where this organization was created from. Possible values are: sis, manual.
      * @param value Value to set for the externalSource property.
      */
-    public void setExternalSource(@jakarta.annotation.Nullable final EducationExternalSource value) {
+    public void setExternalSource(@jakarta.annotation.Nullable final EducationOrganizationExternalSource value) {
         this.backingStore.set("externalSource", value);
     }
     /**

@@ -74,7 +74,7 @@ public class TrainingSetting implements AdditionalDataHolder, BackedModel, Parsa
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("settingType", (n) -> { this.setSettingType(n.getEnumValue(TrainingSettingType::forValue)); });
+        deserializerMap.put("settingType", (n) -> { this.setSettingType(n.getEnumValue(TrainingSettingSettingType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -87,10 +87,10 @@ public class TrainingSetting implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the settingType property value. Type of setting. Possible values are: microsoftCustom, microsoftManaged, noTraining, custom, unknownFutureValue.
-     * @return a TrainingSettingType
+     * @return a TrainingSettingSettingType
      */
     @jakarta.annotation.Nullable
-    public TrainingSettingType getSettingType() {
+    public TrainingSettingSettingType getSettingType() {
         return this.backingStore.get("settingType");
     }
     /**
@@ -129,7 +129,7 @@ public class TrainingSetting implements AdditionalDataHolder, BackedModel, Parsa
      * Sets the settingType property value. Type of setting. Possible values are: microsoftCustom, microsoftManaged, noTraining, custom, unknownFutureValue.
      * @param value Value to set for the settingType property.
      */
-    public void setSettingType(@jakarta.annotation.Nullable final TrainingSettingType value) {
+    public void setSettingType(@jakarta.annotation.Nullable final TrainingSettingSettingType value) {
         this.backingStore.set("settingType", value);
     }
 }

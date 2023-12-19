@@ -35,10 +35,10 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
     }
     /**
      * Gets the destinationRoutingReason property value. The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
-     * @return a MailDestinationRoutingReason
+     * @return a EmailFileAssessmentRequestDestinationRoutingReason
      */
     @jakarta.annotation.Nullable
-    public MailDestinationRoutingReason getDestinationRoutingReason() {
+    public EmailFileAssessmentRequestDestinationRoutingReason getDestinationRoutingReason() {
         return this.backingStore.get("destinationRoutingReason");
     }
     /**
@@ -49,7 +49,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("contentData", (n) -> { this.setContentData(n.getStringValue()); });
-        deserializerMap.put("destinationRoutingReason", (n) -> { this.setDestinationRoutingReason(n.getEnumValue(MailDestinationRoutingReason::forValue)); });
+        deserializerMap.put("destinationRoutingReason", (n) -> { this.setDestinationRoutingReason(n.getEnumValue(EmailFileAssessmentRequestDestinationRoutingReason::forValue)); });
         deserializerMap.put("recipientEmail", (n) -> { this.setRecipientEmail(n.getStringValue()); });
         return deserializerMap;
     }
@@ -83,7 +83,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      * Sets the destinationRoutingReason property value. The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
      * @param value Value to set for the destinationRoutingReason property.
      */
-    public void setDestinationRoutingReason(@jakarta.annotation.Nullable final MailDestinationRoutingReason value) {
+    public void setDestinationRoutingReason(@jakarta.annotation.Nullable final EmailFileAssessmentRequestDestinationRoutingReason value) {
         this.backingStore.set("destinationRoutingReason", value);
     }
     /**

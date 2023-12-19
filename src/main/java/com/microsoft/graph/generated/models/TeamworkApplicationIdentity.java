@@ -27,10 +27,10 @@ public class TeamworkApplicationIdentity extends Identity implements Parsable {
     }
     /**
      * Gets the applicationIdentityType property value. Type of application that is referenced. Possible values are: aadApplication, bot, tenantBot, office365Connector, outgoingWebhook, and unknownFutureValue.
-     * @return a TeamworkApplicationIdentityType
+     * @return a TeamworkApplicationIdentityApplicationIdentityType
      */
     @jakarta.annotation.Nullable
-    public TeamworkApplicationIdentityType getApplicationIdentityType() {
+    public TeamworkApplicationIdentityApplicationIdentityType getApplicationIdentityType() {
         return this.backingStore.get("applicationIdentityType");
     }
     /**
@@ -40,7 +40,7 @@ public class TeamworkApplicationIdentity extends Identity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("applicationIdentityType", (n) -> { this.setApplicationIdentityType(n.getEnumValue(TeamworkApplicationIdentityType::forValue)); });
+        deserializerMap.put("applicationIdentityType", (n) -> { this.setApplicationIdentityType(n.getEnumValue(TeamworkApplicationIdentityApplicationIdentityType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -56,7 +56,7 @@ public class TeamworkApplicationIdentity extends Identity implements Parsable {
      * Sets the applicationIdentityType property value. Type of application that is referenced. Possible values are: aadApplication, bot, tenantBot, office365Connector, outgoingWebhook, and unknownFutureValue.
      * @param value Value to set for the applicationIdentityType property.
      */
-    public void setApplicationIdentityType(@jakarta.annotation.Nullable final TeamworkApplicationIdentityType value) {
+    public void setApplicationIdentityType(@jakarta.annotation.Nullable final TeamworkApplicationIdentityApplicationIdentityType value) {
         this.backingStore.set("applicationIdentityType", value);
     }
 }

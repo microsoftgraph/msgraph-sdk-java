@@ -33,7 +33,7 @@ public class EventMessageResponse extends EventMessage implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("proposedNewTime", (n) -> { this.setProposedNewTime(n.getObjectValue(TimeSlot::createFromDiscriminatorValue)); });
-        deserializerMap.put("responseType", (n) -> { this.setResponseType(n.getEnumValue(ResponseType::forValue)); });
+        deserializerMap.put("responseType", (n) -> { this.setResponseType(n.getEnumValue(EventMessageResponseResponseType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -46,10 +46,10 @@ public class EventMessageResponse extends EventMessage implements Parsable {
     }
     /**
      * Gets the responseType property value. The responseType property
-     * @return a ResponseType
+     * @return a EventMessageResponseResponseType
      */
     @jakarta.annotation.Nullable
-    public ResponseType getResponseType() {
+    public EventMessageResponseResponseType getResponseType() {
         return this.backingStore.get("responseType");
     }
     /**
@@ -73,7 +73,7 @@ public class EventMessageResponse extends EventMessage implements Parsable {
      * Sets the responseType property value. The responseType property
      * @param value Value to set for the responseType property.
      */
-    public void setResponseType(@jakarta.annotation.Nullable final ResponseType value) {
+    public void setResponseType(@jakarta.annotation.Nullable final EventMessageResponseResponseType value) {
         this.backingStore.set("responseType", value);
     }
 }

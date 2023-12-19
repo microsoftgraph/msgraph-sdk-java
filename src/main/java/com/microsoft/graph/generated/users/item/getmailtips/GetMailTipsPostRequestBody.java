@@ -1,6 +1,5 @@
 package com.microsoft.graph.users.item.getmailtips;
 
-import com.microsoft.graph.models.MailTipsType;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +7,6 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -73,15 +71,15 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedM
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("EmailAddresses", (n) -> { this.setEmailAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("MailTipsOptions", (n) -> { this.setMailTipsOptions(n.getEnumSetValue(MailTipsType::forValue)); });
+        deserializerMap.put("MailTipsOptions", (n) -> { this.setMailTipsOptions(n.getEnumValue(GetMailTipsPostRequestBodyMailTipsOptions::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the MailTipsOptions property value. The MailTipsOptions property
-     * @return a EnumSet<MailTipsType>
+     * @return a GetMailTipsPostRequestBodyMailTipsOptions
      */
     @jakarta.annotation.Nullable
-    public EnumSet<MailTipsType> getMailTipsOptions() {
+    public GetMailTipsPostRequestBodyMailTipsOptions getMailTipsOptions() {
         return this.backingStore.get("mailTipsOptions");
     }
     /**
@@ -91,7 +89,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedM
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("EmailAddresses", this.getEmailAddresses());
-        writer.writeEnumSetValue("MailTipsOptions", this.getMailTipsOptions());
+        writer.writeEnumValue("MailTipsOptions", this.getMailTipsOptions());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -120,7 +118,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedM
      * Sets the MailTipsOptions property value. The MailTipsOptions property
      * @param value Value to set for the MailTipsOptions property.
      */
-    public void setMailTipsOptions(@jakarta.annotation.Nullable final EnumSet<MailTipsType> value) {
+    public void setMailTipsOptions(@jakarta.annotation.Nullable final GetMailTipsPostRequestBodyMailTipsOptions value) {
         this.backingStore.set("mailTipsOptions", value);
     }
 }

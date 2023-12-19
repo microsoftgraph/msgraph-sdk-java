@@ -49,10 +49,10 @@ public class AttachmentInfo implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the attachmentType property value. The type of the attachment. The possible values are: file, item, reference. Required.
-     * @return a AttachmentType
+     * @return a AttachmentInfoAttachmentType
      */
     @jakarta.annotation.Nullable
-    public AttachmentType getAttachmentType() {
+    public AttachmentInfoAttachmentType getAttachmentType() {
         return this.backingStore.get("attachmentType");
     }
     /**
@@ -78,7 +78,7 @@ public class AttachmentInfo implements AdditionalDataHolder, BackedModel, Parsab
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
-        deserializerMap.put("attachmentType", (n) -> { this.setAttachmentType(n.getEnumValue(AttachmentType::forValue)); });
+        deserializerMap.put("attachmentType", (n) -> { this.setAttachmentType(n.getEnumValue(AttachmentInfoAttachmentType::forValue)); });
         deserializerMap.put("contentType", (n) -> { this.setContentType(n.getStringValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -133,7 +133,7 @@ public class AttachmentInfo implements AdditionalDataHolder, BackedModel, Parsab
      * Sets the attachmentType property value. The type of the attachment. The possible values are: file, item, reference. Required.
      * @param value Value to set for the attachmentType property.
      */
-    public void setAttachmentType(@jakarta.annotation.Nullable final AttachmentType value) {
+    public void setAttachmentType(@jakarta.annotation.Nullable final AttachmentInfoAttachmentType value) {
         this.backingStore.set("attachmentType", value);
     }
     /**

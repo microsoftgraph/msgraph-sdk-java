@@ -33,7 +33,7 @@ public class Relation extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("fromTerm", (n) -> { this.setFromTerm(n.getObjectValue(Term::createFromDiscriminatorValue)); });
-        deserializerMap.put("relationship", (n) -> { this.setRelationship(n.getEnumValue(RelationType::forValue)); });
+        deserializerMap.put("relationship", (n) -> { this.setRelationship(n.getEnumValue(RelationRelationship::forValue)); });
         deserializerMap.put("set", (n) -> { this.setSet(n.getObjectValue(Set::createFromDiscriminatorValue)); });
         deserializerMap.put("toTerm", (n) -> { this.setToTerm(n.getObjectValue(Term::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -48,10 +48,10 @@ public class Relation extends Entity implements Parsable {
     }
     /**
      * Gets the relationship property value. The type of relation. Possible values are: pin, reuse.
-     * @return a RelationType
+     * @return a RelationRelationship
      */
     @jakarta.annotation.Nullable
-    public RelationType getRelationship() {
+    public RelationRelationship getRelationship() {
         return this.backingStore.get("relationship");
     }
     /**
@@ -93,7 +93,7 @@ public class Relation extends Entity implements Parsable {
      * Sets the relationship property value. The type of relation. Possible values are: pin, reuse.
      * @param value Value to set for the relationship property.
      */
-    public void setRelationship(@jakarta.annotation.Nullable final RelationType value) {
+    public void setRelationship(@jakarta.annotation.Nullable final RelationRelationship value) {
         this.backingStore.set("relationship", value);
     }
     /**

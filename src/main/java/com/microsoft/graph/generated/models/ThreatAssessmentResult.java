@@ -42,7 +42,7 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("message", (n) -> { this.setMessage(n.getStringValue()); });
-        deserializerMap.put("resultType", (n) -> { this.setResultType(n.getEnumValue(ThreatAssessmentResultType::forValue)); });
+        deserializerMap.put("resultType", (n) -> { this.setResultType(n.getEnumValue(ThreatAssessmentResultResultType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -55,10 +55,10 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
     }
     /**
      * Gets the resultType property value. The threat assessment result type. Possible values are: checkPolicy, rescan.
-     * @return a ThreatAssessmentResultType
+     * @return a ThreatAssessmentResultResultType
      */
     @jakarta.annotation.Nullable
-    public ThreatAssessmentResultType getResultType() {
+    public ThreatAssessmentResultResultType getResultType() {
         return this.backingStore.get("resultType");
     }
     /**
@@ -90,7 +90,7 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
      * Sets the resultType property value. The threat assessment result type. Possible values are: checkPolicy, rescan.
      * @param value Value to set for the resultType property.
      */
-    public void setResultType(@jakarta.annotation.Nullable final ThreatAssessmentResultType value) {
+    public void setResultType(@jakarta.annotation.Nullable final ThreatAssessmentResultResultType value) {
         this.backingStore.set("resultType", value);
     }
 }
