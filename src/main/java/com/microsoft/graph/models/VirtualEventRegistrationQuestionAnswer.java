@@ -40,7 +40,7 @@ public class VirtualEventRegistrationQuestionAnswer implements IJsonBackedObject
 
     /**
      * The Boolean Value.
-     * 
+     * Boolean answer of the virtual event registration question. Only appears when answerInputType is boolean.
      */
     @SerializedName(value = "booleanValue", alternate = {"BooleanValue"})
     @Expose
@@ -49,7 +49,7 @@ public class VirtualEventRegistrationQuestionAnswer implements IJsonBackedObject
 
     /**
      * The Display Name.
-     * 
+     * Display name of the registration question.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -58,7 +58,7 @@ public class VirtualEventRegistrationQuestionAnswer implements IJsonBackedObject
 
     /**
      * The Multi Choice Values.
-     * 
+     * Collection of text answer of the virtual event registration question. Only appears when answerInputType is multiChoice.
      */
     @SerializedName(value = "multiChoiceValues", alternate = {"MultiChoiceValues"})
     @Expose
@@ -67,7 +67,7 @@ public class VirtualEventRegistrationQuestionAnswer implements IJsonBackedObject
 
     /**
      * The Question Id.
-     * 
+     * id of the virtual event registration question.
      */
     @SerializedName(value = "questionId", alternate = {"QuestionId"})
     @Expose
@@ -76,7 +76,7 @@ public class VirtualEventRegistrationQuestionAnswer implements IJsonBackedObject
 
     /**
      * The Value.
-     * 
+     * Text answer of the virtual event registration question. Appears when answerInputType is text, multilineText or singleChoice.
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose
