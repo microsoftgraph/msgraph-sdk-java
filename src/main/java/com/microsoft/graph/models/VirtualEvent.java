@@ -33,7 +33,7 @@ public class VirtualEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * 
+     * Identity information for the creator of the virtual event. Inherited from virtualEvent.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -42,7 +42,7 @@ public class VirtualEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * Description of the virtual event.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -51,7 +51,7 @@ public class VirtualEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Display name of the virtual event.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -60,7 +60,7 @@ public class VirtualEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The End Date Time.
-     * 
+     * End time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows.
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -69,7 +69,7 @@ public class VirtualEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * 
+     * Start time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows.
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -78,7 +78,7 @@ public class VirtualEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * Status of the virtual event. The possible values are: draft, published, canceled, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -87,7 +87,7 @@ public class VirtualEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Sessions.
-     * 
+     * Sessions for the virtual event.
      */
     @SerializedName(value = "sessions", alternate = {"Sessions"})
     @Expose

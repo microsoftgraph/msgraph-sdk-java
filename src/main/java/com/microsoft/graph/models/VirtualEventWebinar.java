@@ -31,7 +31,7 @@ public class VirtualEventWebinar extends VirtualEvent implements IJsonBackedObje
 
     /**
      * The Audience.
-     * 
+     * To whom the webinar is visible.
      */
     @SerializedName(value = "audience", alternate = {"Audience"})
     @Expose
@@ -40,7 +40,7 @@ public class VirtualEventWebinar extends VirtualEvent implements IJsonBackedObje
 
     /**
      * The Co Organizers.
-     * 
+     * Identity information of coorganizers of the webinar.
      */
     @SerializedName(value = "coOrganizers", alternate = {"CoOrganizers"})
     @Expose
@@ -49,7 +49,7 @@ public class VirtualEventWebinar extends VirtualEvent implements IJsonBackedObje
 
     /**
      * The Registrations.
-     * 
+     * Registration records of the webinar.
      */
     @SerializedName(value = "registrations", alternate = {"Registrations"})
     @Expose

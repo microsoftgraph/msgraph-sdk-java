@@ -40,7 +40,7 @@ public class PublicationFacet implements IJsonBackedObject {
 
     /**
      * The Checked Out By.
-     * User who has checked out the file.
+     * The user who checked out the file.
      */
     @SerializedName(value = "checkedOutBy", alternate = {"CheckedOutBy"})
     @Expose

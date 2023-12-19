@@ -38,7 +38,7 @@ public class OnlineMeetingBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Allow Attendee To Enable Camera.
-     * 
+     * Indicates whether attendees can turn on their camera.
      */
     @SerializedName(value = "allowAttendeeToEnableCamera", alternate = {"AllowAttendeeToEnableCamera"})
     @Expose
@@ -47,7 +47,7 @@ public class OnlineMeetingBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Allow Attendee To Enable Mic.
-     * 
+     * Indicates whether attendees can turn on their microphone.
      */
     @SerializedName(value = "allowAttendeeToEnableMic", alternate = {"AllowAttendeeToEnableMic"})
     @Expose
@@ -56,7 +56,7 @@ public class OnlineMeetingBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Allowed Presenters.
-     * 
+     * Specifies who can be a presenter in a meeting.
      */
     @SerializedName(value = "allowedPresenters", alternate = {"AllowedPresenters"})
     @Expose
@@ -65,7 +65,7 @@ public class OnlineMeetingBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Allow Meeting Chat.
-     * 
+     * Specifies the mode of the meeting chat.
      */
     @SerializedName(value = "allowMeetingChat", alternate = {"AllowMeetingChat"})
     @Expose
@@ -74,7 +74,7 @@ public class OnlineMeetingBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Allow Participants To Change Name.
-     * 
+     * Specifies if participants are allowed to rename themselves in an instance of the meeting.
      */
     @SerializedName(value = "allowParticipantsToChangeName", alternate = {"AllowParticipantsToChangeName"})
     @Expose
@@ -83,7 +83,7 @@ public class OnlineMeetingBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Allow Teamwork Reactions.
-     * 
+     * Indicates if Teams reactions are enabled for the meeting.
      */
     @SerializedName(value = "allowTeamworkReactions", alternate = {"AllowTeamworkReactions"})
     @Expose
@@ -92,7 +92,7 @@ public class OnlineMeetingBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Audio Conferencing.
-     * 
+     * The phone access (dial-in) information for an online meeting. Read-only.
      */
     @SerializedName(value = "audioConferencing", alternate = {"AudioConferencing"})
     @Expose
@@ -101,7 +101,7 @@ public class OnlineMeetingBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Chat Info.
-     * 
+     * The chat information associated with this online meeting.
      */
     @SerializedName(value = "chatInfo", alternate = {"ChatInfo"})
     @Expose
@@ -110,7 +110,7 @@ public class OnlineMeetingBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Entry Exit Announced.
-     * 
+     * Indicates whether to announce when callers join or leave.
      */
     @SerializedName(value = "isEntryExitAnnounced", alternate = {"IsEntryExitAnnounced"})
     @Expose
@@ -119,7 +119,7 @@ public class OnlineMeetingBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Join Information.
-     * 
+     * The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only.
      */
     @SerializedName(value = "joinInformation", alternate = {"JoinInformation"})
     @Expose
@@ -128,7 +128,7 @@ public class OnlineMeetingBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Join Meeting Id Settings.
-     * 
+     * Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode. Once an onlineMeeting is created, the joinMeetingIdSettings can't be modified. To make any changes to this property, you must cancel this meeting and create a new one.
      */
     @SerializedName(value = "joinMeetingIdSettings", alternate = {"JoinMeetingIdSettings"})
     @Expose
@@ -137,7 +137,7 @@ public class OnlineMeetingBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Join Web Url.
-     * 
+     * The join URL of the online meeting. Read-only.
      */
     @SerializedName(value = "joinWebUrl", alternate = {"JoinWebUrl"})
     @Expose
@@ -146,7 +146,7 @@ public class OnlineMeetingBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Lobby Bypass Settings.
-     * 
+     * Specifies which participants can bypass the meeting lobby.
      */
     @SerializedName(value = "lobbyBypassSettings", alternate = {"LobbyBypassSettings"})
     @Expose
@@ -155,7 +155,7 @@ public class OnlineMeetingBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Record Automatically.
-     * 
+     * Indicates whether to record the meeting automatically.
      */
     @SerializedName(value = "recordAutomatically", alternate = {"RecordAutomatically"})
     @Expose
@@ -173,7 +173,7 @@ public class OnlineMeetingBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Subject.
-     * 
+     * The subject of the online meeting.
      */
     @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
@@ -182,7 +182,7 @@ public class OnlineMeetingBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Video Teleconference Id.
-     * 
+     * The video teleconferencing ID. Read-only.
      */
     @SerializedName(value = "videoTeleconferenceId", alternate = {"VideoTeleconferenceId"})
     @Expose
@@ -191,7 +191,7 @@ public class OnlineMeetingBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Watermark Protection.
-     * 
+     * Specifies whether the client application should apply a watermark to a content type.
      */
     @SerializedName(value = "watermarkProtection", alternate = {"WatermarkProtection"})
     @Expose
@@ -200,7 +200,7 @@ public class OnlineMeetingBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Attendance Reports.
-     * 
+     * The attendance reports of an online meeting. Read-only.
      */
     @SerializedName(value = "attendanceReports", alternate = {"AttendanceReports"})
     @Expose
