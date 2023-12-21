@@ -62,7 +62,7 @@ public class MeetingAttendanceReportItemRequestBuilder extends BaseRequestBuilde
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get attendanceReports from users
+     * The attendance reports of an online meeting. Read-only.
      * @return a MeetingAttendanceReport
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class MeetingAttendanceReportItemRequestBuilder extends BaseRequestBuilde
         return get(null);
     }
     /**
-     * Get attendanceReports from users
+     * The attendance reports of an online meeting. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a MeetingAttendanceReport
      */
@@ -127,7 +127,7 @@ public class MeetingAttendanceReportItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Get attendanceReports from users
+     * The attendance reports of an online meeting. Read-only.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -135,7 +135,7 @@ public class MeetingAttendanceReportItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Get attendanceReports from users
+     * The attendance reports of an online meeting. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -187,7 +187,7 @@ public class MeetingAttendanceReportItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get attendanceReports from users
+     * The attendance reports of an online meeting. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -32,7 +32,7 @@ public class VirtualEvent extends Entity implements Parsable {
         return new VirtualEvent();
     }
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. Identity information for the creator of the virtual event. Inherited from virtualEvent.
      * @return a CommunicationsIdentitySet
      */
     @jakarta.annotation.Nullable
@@ -40,7 +40,7 @@ public class VirtualEvent extends Entity implements Parsable {
         return this.backingStore.get("createdBy");
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Description of the virtual event.
      * @return a ItemBody
      */
     @jakarta.annotation.Nullable
@@ -48,7 +48,7 @@ public class VirtualEvent extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Display name of the virtual event.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class VirtualEvent extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the endDateTime property value. The endDateTime property
+     * Gets the endDateTime property value. End time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows.
      * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class VirtualEvent extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the sessions property value. The sessions property
+     * Gets the sessions property value. Sessions for the virtual event.
      * @return a java.util.List<VirtualEventSession>
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class VirtualEvent extends Entity implements Parsable {
         return this.backingStore.get("sessions");
     }
     /**
-     * Gets the startDateTime property value. The startDateTime property
+     * Gets the startDateTime property value. Start time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows.
      * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class VirtualEvent extends Entity implements Parsable {
         return this.backingStore.get("startDateTime");
     }
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. Status of the virtual event. The possible values are: draft, published, canceled, unknownFutureValue.
      * @return a VirtualEventStatus
      */
     @jakarta.annotation.Nullable
@@ -119,49 +119,49 @@ public class VirtualEvent extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. Identity information for the creator of the virtual event. Inherited from virtualEvent.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final CommunicationsIdentitySet value) {
         this.backingStore.set("createdBy", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description of the virtual event.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final ItemBody value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Display name of the virtual event.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the endDateTime property value. The endDateTime property
+     * Sets the endDateTime property value. End time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows.
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.backingStore.set("endDateTime", value);
     }
     /**
-     * Sets the sessions property value. The sessions property
+     * Sets the sessions property value. Sessions for the virtual event.
      * @param value Value to set for the sessions property.
      */
     public void setSessions(@jakarta.annotation.Nullable final java.util.List<VirtualEventSession> value) {
         this.backingStore.set("sessions", value);
     }
     /**
-     * Sets the startDateTime property value. The startDateTime property
+     * Sets the startDateTime property value. Start time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.backingStore.set("startDateTime", value);
     }
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. Status of the virtual event. The possible values are: draft, published, canceled, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final VirtualEventStatus value) {
