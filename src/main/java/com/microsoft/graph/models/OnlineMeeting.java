@@ -77,7 +77,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements IJsonBackedObjec
 
     /**
      * The Participants.
-     * The participants associated with the online meeting.  This includes the organizer and the attendees.
+     * The participants associated with the online meeting, including the organizer and the attendees.
      */
     @SerializedName(value = "participants", alternate = {"Participants"})
     @Expose

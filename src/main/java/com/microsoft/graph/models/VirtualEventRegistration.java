@@ -30,7 +30,7 @@ public class VirtualEventRegistration extends Entity implements IJsonBackedObjec
 
     /**
      * The Cancelation Date Time.
-     * 
+     * Date and time when the registrant cancels their registration for the virtual event. Only appears when applicable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "cancelationDateTime", alternate = {"CancelationDateTime"})
     @Expose
@@ -39,7 +39,7 @@ public class VirtualEventRegistration extends Entity implements IJsonBackedObjec
 
     /**
      * The Email.
-     * 
+     * Email address of the registrant.
      */
     @SerializedName(value = "email", alternate = {"Email"})
     @Expose
@@ -48,7 +48,7 @@ public class VirtualEventRegistration extends Entity implements IJsonBackedObjec
 
     /**
      * The First Name.
-     * 
+     * First name of the registrant.
      */
     @SerializedName(value = "firstName", alternate = {"FirstName"})
     @Expose
@@ -57,7 +57,7 @@ public class VirtualEventRegistration extends Entity implements IJsonBackedObjec
 
     /**
      * The Last Name.
-     * 
+     * Last name of the registrant.
      */
     @SerializedName(value = "lastName", alternate = {"LastName"})
     @Expose
@@ -66,7 +66,7 @@ public class VirtualEventRegistration extends Entity implements IJsonBackedObjec
 
     /**
      * The Registration Date Time.
-     * 
+     * Date and time when the registrant registers for the virtual event. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "registrationDateTime", alternate = {"RegistrationDateTime"})
     @Expose
@@ -75,7 +75,7 @@ public class VirtualEventRegistration extends Entity implements IJsonBackedObjec
 
     /**
      * The Registration Question Answers.
-     * 
+     * The registrant's answer to the registration questions.
      */
     @SerializedName(value = "registrationQuestionAnswers", alternate = {"RegistrationQuestionAnswers"})
     @Expose
@@ -84,7 +84,7 @@ public class VirtualEventRegistration extends Entity implements IJsonBackedObjec
 
     /**
      * The Status.
-     * 
+     * Registration status of the registrant. Read-only.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -93,7 +93,7 @@ public class VirtualEventRegistration extends Entity implements IJsonBackedObjec
 
     /**
      * The User Id.
-     * 
+     * The registrant's ID in Microsoft Entra ID. Only appears when the registrant is registered in Microsoft Entra ID.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose

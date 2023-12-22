@@ -20,6 +20,8 @@ import com.microsoft.graph.models.Prompt;
 import com.microsoft.graph.models.PlayPromptOperation;
 import com.microsoft.graph.models.RecordOperation;
 import com.microsoft.graph.models.RejectReason;
+import com.microsoft.graph.models.Tone;
+import com.microsoft.graph.models.SendDtmfTonesOperation;
 import com.microsoft.graph.models.SubscribeToToneOperation;
 import com.microsoft.graph.models.ParticipantInfo;
 import com.microsoft.graph.models.UnmuteParticipantOperation;
@@ -41,6 +43,7 @@ import com.microsoft.graph.models.CallMuteParameterSet;
 import com.microsoft.graph.models.CallPlayPromptParameterSet;
 import com.microsoft.graph.models.CallRecordResponseParameterSet;
 import com.microsoft.graph.models.CallRejectParameterSet;
+import com.microsoft.graph.models.CallSendDtmfTonesParameterSet;
 import com.microsoft.graph.models.CallSubscribeToToneParameterSet;
 import com.microsoft.graph.models.CallTransferParameterSet;
 import com.microsoft.graph.models.CallUnmuteParameterSet;
@@ -265,6 +268,16 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
     @Nonnull
     public CallRejectRequestBuilder reject(@Nonnull final CallRejectParameterSet parameters) {
         return new CallRejectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reject"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public CallSendDtmfTonesRequestBuilder sendDtmfTones(@Nonnull final CallSendDtmfTonesParameterSet parameters) {
+        return new CallSendDtmfTonesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendDtmfTones"), getClient(), null, parameters);
     }
 
     /**

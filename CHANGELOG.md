@@ -11,6 +11,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.79.0] - 2023-12-21
+
+### Added 
+
+- CallSendDtmfTonesParameterSet model and derived requests.
+- SendDtmfCompletionReason model.
+- SendDtmfTonesOperation model and derived requests.
+
+### Changed 
+
+- CallRequestBuilder request.
+
 ## [5.78.0] - 2023-12-14
 
 ### Added 
