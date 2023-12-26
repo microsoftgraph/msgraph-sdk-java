@@ -27,7 +27,7 @@ public class ServiceProvisioningXmlError extends ServiceProvisioningError implem
 
     /**
      * The Error Detail.
-     * 
+     * Error Information published by the Federated Service as an xml string.
      */
     @SerializedName(value = "errorDetail", alternate = {"ErrorDetail"})
     @Expose

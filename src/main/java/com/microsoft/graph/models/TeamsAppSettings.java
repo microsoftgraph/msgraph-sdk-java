@@ -34,6 +34,15 @@ public class TeamsAppSettings extends Entity implements IJsonBackedObject {
 	@Nullable
     public Boolean allowUserRequestsForAppAccess;
 
+    /**
+     * The Is User Personal Scope Resource Specific Consent Enabled.
+     * Indicates whether resource-specific consent for personal scope in Teams apps is enabled for the tenant. True indicates that Teams apps that are allowed in the tenant and require resource-specific permissions can be installed in the personal scope. False blocks the installation of any Teams app that requires resource-specific permissions in the personal scope.
+     */
+    @SerializedName(value = "isUserPersonalScopeResourceSpecificConsentEnabled", alternate = {"IsUserPersonalScopeResourceSpecificConsentEnabled"})
+    @Expose
+	@Nullable
+    public Boolean isUserPersonalScopeResourceSpecificConsentEnabled;
+
 
     /**
      * Sets the raw JSON object

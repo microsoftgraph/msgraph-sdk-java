@@ -56,4 +56,24 @@ public class EducationAssignmentSettingsRequestBuilder extends BaseRequestBuilde
     }
 
 
+    /**
+     *  Gets a request builder for the EducationGradingCategory collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.EducationGradingCategoryCollectionRequestBuilder gradingCategories() {
+        return new com.microsoft.graph.requests.EducationGradingCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("gradingCategories"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the EducationGradingCategory item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.EducationGradingCategoryRequestBuilder gradingCategories(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EducationGradingCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("gradingCategories") + "/" + id, getClient(), null);
+    }
 }
