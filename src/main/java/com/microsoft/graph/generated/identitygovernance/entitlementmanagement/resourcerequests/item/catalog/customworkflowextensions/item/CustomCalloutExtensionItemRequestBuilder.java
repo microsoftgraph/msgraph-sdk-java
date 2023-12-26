@@ -37,16 +37,16 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/resourceRequests/{accessPackageResourceRequest%2Did}/catalog/customWorkflowExtensions/{customCalloutExtension%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an accessPackageAssignmentRequestWorkflowExtension object. The custom workflow extension must first be removed from any associated policies before it can be deleted. Follow these steps to remove the custom workflow extension from any associated policies:
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequestworkflowextension-delete?view=graph-rest-1.0">Find more info here</a>
+     * Delete an accessPackageAssignmentWorkflowExtension object. The custom workflow extension must first be removed from any associated policies before it can be deleted. Follow these steps to remove the custom workflow extension from any associated policies:
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentworkflowextension-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an accessPackageAssignmentRequestWorkflowExtension object. The custom workflow extension must first be removed from any associated policies before it can be deleted. Follow these steps to remove the custom workflow extension from any associated policies:
+     * Delete an accessPackageAssignmentWorkflowExtension object. The custom workflow extension must first be removed from any associated policies before it can be deleted. Follow these steps to remove the custom workflow extension from any associated policies:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequestworkflowextension-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentworkflowextension-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -79,21 +79,21 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, CustomCalloutExtension::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an accessPackageAssignmentRequestWorkflowExtension object.
+     * Update the properties of an accessPackageAssignmentWorkflowExtension object.
      * @param body The request body
      * @return a CustomCalloutExtension
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequestworkflowextension-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentworkflowextension-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomCalloutExtension patch(@jakarta.annotation.Nonnull final CustomCalloutExtension body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of an accessPackageAssignmentRequestWorkflowExtension object.
+     * Update the properties of an accessPackageAssignmentWorkflowExtension object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CustomCalloutExtension
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequestworkflowextension-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentworkflowextension-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomCalloutExtension patch(@jakarta.annotation.Nonnull final CustomCalloutExtension body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, CustomCalloutExtension::createFromDiscriminatorValue);
     }
     /**
-     * Delete an accessPackageAssignmentRequestWorkflowExtension object. The custom workflow extension must first be removed from any associated policies before it can be deleted. Follow these steps to remove the custom workflow extension from any associated policies:
+     * Delete an accessPackageAssignmentWorkflowExtension object. The custom workflow extension must first be removed from any associated policies before it can be deleted. Follow these steps to remove the custom workflow extension from any associated policies:
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an accessPackageAssignmentRequestWorkflowExtension object. The custom workflow extension must first be removed from any associated policies before it can be deleted. Follow these steps to remove the custom workflow extension from any associated policies:
+     * Delete an accessPackageAssignmentWorkflowExtension object. The custom workflow extension must first be removed from any associated policies before it can be deleted. Follow these steps to remove the custom workflow extension from any associated policies:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Update the properties of an accessPackageAssignmentRequestWorkflowExtension object.
+     * Update the properties of an accessPackageAssignmentWorkflowExtension object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an accessPackageAssignmentRequestWorkflowExtension object.
+     * Update the properties of an accessPackageAssignmentWorkflowExtension object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

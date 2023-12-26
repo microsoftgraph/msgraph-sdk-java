@@ -54,6 +54,7 @@ import com.microsoft.graph.users.item.outlook.OutlookRequestBuilder;
 import com.microsoft.graph.users.item.owneddevices.OwnedDevicesRequestBuilder;
 import com.microsoft.graph.users.item.ownedobjects.OwnedObjectsRequestBuilder;
 import com.microsoft.graph.users.item.people.PeopleRequestBuilder;
+import com.microsoft.graph.users.item.permissiongrants.PermissionGrantsRequestBuilder;
 import com.microsoft.graph.users.item.photo.PhotoRequestBuilder;
 import com.microsoft.graph.users.item.photos.PhotosRequestBuilder;
 import com.microsoft.graph.users.item.planner.PlannerRequestBuilder;
@@ -450,6 +451,13 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return new PeopleRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the permissionGrants property of the microsoft.graph.user entity.
+     */
+    @jakarta.annotation.Nonnull
+    public PermissionGrantsRequestBuilder permissionGrants() {
+        return new PermissionGrantsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the photo property of the microsoft.graph.user entity.
      */
     @jakarta.annotation.Nonnull
@@ -599,16 +607,16 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a user.
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-user-delete?view=graph-rest-1.0">Find more info here</a>
+     * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
+     * @see <a href="https://learn.microsoft.com/graph/api/user-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a user.
+     * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-user-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -691,7 +699,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return new ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, EndDateTime, StartDateTime);
     }
     /**
-     * Deletes a user.
+     * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -699,7 +707,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a user.
+     * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

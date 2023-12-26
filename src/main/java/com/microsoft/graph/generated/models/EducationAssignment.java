@@ -168,6 +168,7 @@ public class EducationAssignment extends Entity implements Parsable {
         deserializerMap.put("dueDateTime", (n) -> { this.setDueDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("feedbackResourcesFolderUrl", (n) -> { this.setFeedbackResourcesFolderUrl(n.getStringValue()); });
         deserializerMap.put("grading", (n) -> { this.setGrading(n.getObjectValue(EducationAssignmentGradeType::createFromDiscriminatorValue)); });
+        deserializerMap.put("gradingCategory", (n) -> { this.setGradingCategory(n.getObjectValue(EducationGradingCategory::createFromDiscriminatorValue)); });
         deserializerMap.put("instructions", (n) -> { this.setInstructions(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -187,6 +188,14 @@ public class EducationAssignment extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public EducationAssignmentGradeType getGrading() {
         return this.backingStore.get("grading");
+    }
+    /**
+     * Gets the gradingCategory property value. The gradingCategory property
+     * @return a EducationGradingCategory
+     */
+    @jakarta.annotation.Nullable
+    public EducationGradingCategory getGradingCategory() {
+        return this.backingStore.get("gradingCategory");
     }
     /**
      * Gets the instructions property value. Instructions for the assignment.  This along with the display name tell the student what to do.
@@ -286,6 +295,7 @@ public class EducationAssignment extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("dueDateTime", this.getDueDateTime());
         writer.writeObjectValue("grading", this.getGrading());
+        writer.writeObjectValue("gradingCategory", this.getGradingCategory());
         writer.writeObjectValue("instructions", this.getInstructions());
         writer.writeStringValue("notificationChannelUrl", this.getNotificationChannelUrl());
         writer.writeCollectionOfObjectValues("resources", this.getResources());
@@ -403,6 +413,13 @@ public class EducationAssignment extends Entity implements Parsable {
      */
     public void setGrading(@jakarta.annotation.Nullable final EducationAssignmentGradeType value) {
         this.backingStore.set("grading", value);
+    }
+    /**
+     * Sets the gradingCategory property value. The gradingCategory property
+     * @param value Value to set for the gradingCategory property.
+     */
+    public void setGradingCategory(@jakarta.annotation.Nullable final EducationGradingCategory value) {
+        this.backingStore.set("gradingCategory", value);
     }
     /**
      * Sets the instructions property value. Instructions for the assignment.  This along with the display name tell the student what to do.

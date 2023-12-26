@@ -94,19 +94,19 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Set a presence status message for a user. An optional expiration date and time can be supplied.
+     * Get a user's presence information.
      * @return a Presence
-     * @see <a href="https://learn.microsoft.com/graph/api/presence-setstatusmessage?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/presence-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Presence get() {
         return get(null);
     }
     /**
-     * Set a presence status message for a user. An optional expiration date and time can be supplied.
+     * Get a user's presence information.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Presence
-     * @see <a href="https://learn.microsoft.com/graph/api/presence-setstatusmessage?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/presence-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Presence get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -161,7 +161,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Set a presence status message for a user. An optional expiration date and time can be supplied.
+     * Get a user's presence information.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -169,7 +169,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Set a presence status message for a user. An optional expiration date and time can be supplied.
+     * Get a user's presence information.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -221,7 +221,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Set a presence status message for a user. An optional expiration date and time can be supplied.
+     * Get a user's presence information.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

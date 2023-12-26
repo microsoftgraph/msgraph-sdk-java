@@ -109,16 +109,16 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceCompliancePolicies/{deviceCompliancePolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a androidCompliancePolicy.
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-androidcompliancepolicy-delete?view=graph-rest-1.0">Find more info here</a>
+     * Deletes a windows10MobileCompliancePolicy.
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10mobilecompliancepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a androidCompliancePolicy.
+     * Deletes a windows10MobileCompliancePolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-androidcompliancepolicy-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10mobilecompliancepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -177,7 +177,7 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceCompliancePolicy::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a androidCompliancePolicy.
+     * Deletes a windows10MobileCompliancePolicy.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -185,7 +185,7 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a androidCompliancePolicy.
+     * Deletes a windows10MobileCompliancePolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
