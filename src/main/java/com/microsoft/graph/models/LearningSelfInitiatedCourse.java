@@ -27,7 +27,7 @@ public class LearningSelfInitiatedCourse extends LearningCourseActivity implemen
 
     /**
      * The Started Date Time.
-     * The date and time on which the self-initiated course was started by the learner. Optional.
+     * The date and time on which the learner started the self-initiated course. Optional.
      */
     @SerializedName(value = "startedDateTime", alternate = {"StartedDateTime"})
     @Expose
