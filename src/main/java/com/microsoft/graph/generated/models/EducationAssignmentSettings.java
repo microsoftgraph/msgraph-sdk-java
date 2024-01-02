@@ -31,8 +31,17 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("gradingCategories", (n) -> { this.setGradingCategories(n.getCollectionOfObjectValues(EducationGradingCategory::createFromDiscriminatorValue)); });
         deserializerMap.put("submissionAnimationDisabled", (n) -> { this.setSubmissionAnimationDisabled(n.getBooleanValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the gradingCategories property value. The gradingCategories property
+     * @return a java.util.List<EducationGradingCategory>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<EducationGradingCategory> getGradingCategories() {
+        return this.backingStore.get("gradingCategories");
     }
     /**
      * Gets the submissionAnimationDisabled property value. Indicates whether turn-in celebration animation is shown. A value of true indicates that the animation isn't shown. Default value is false.
@@ -49,7 +58,15 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("gradingCategories", this.getGradingCategories());
         writer.writeBooleanValue("submissionAnimationDisabled", this.getSubmissionAnimationDisabled());
+    }
+    /**
+     * Sets the gradingCategories property value. The gradingCategories property
+     * @param value Value to set for the gradingCategories property.
+     */
+    public void setGradingCategories(@jakarta.annotation.Nullable final java.util.List<EducationGradingCategory> value) {
+        this.backingStore.set("gradingCategories", value);
     }
     /**
      * Sets the submissionAnimationDisabled property value. Indicates whether turn-in celebration animation is shown. A value of true indicates that the animation isn't shown. Default value is false.

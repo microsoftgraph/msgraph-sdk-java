@@ -45,7 +45,7 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow%2Did}/versions/{workflowVersion%2DversionNumber}/createdBy/serviceProvisioningErrors{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get serviceProvisioningErrors property value
+     * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a user object .  Supports $filter (eq, not, for isResolved and serviceInstance).
      * @return a ServiceProvisioningErrorCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
         return get(null);
     }
     /**
-     * Get serviceProvisioningErrors property value
+     * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a user object .  Supports $filter (eq, not, for isResolved and serviceInstance).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ServiceProvisioningErrorCollectionResponse
      */
@@ -66,7 +66,7 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, ServiceProvisioningErrorCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get serviceProvisioningErrors property value
+     * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a user object .  Supports $filter (eq, not, for isResolved and serviceInstance).
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -74,7 +74,7 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Get serviceProvisioningErrors property value
+     * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a user object .  Supports $filter (eq, not, for isResolved and serviceInstance).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -96,7 +96,7 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
         return new ServiceProvisioningErrorsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get serviceProvisioningErrors property value
+     * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a user object .  Supports $filter (eq, not, for isResolved and serviceInstance).
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
