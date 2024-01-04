@@ -9,7 +9,7 @@ buildscript {
 
     dependencies {
         classpath "com.gradle:gradle-enterprise-gradle-plugin:3.16.1"
-        classpath "com.android.tools.build:gradle:8.2.0"
+        classpath "com.android.tools.build:gradle:8.2.1"
         classpath "com.github.ben-manes:gradle-versions-plugin:0.50.0"
     }
 }
