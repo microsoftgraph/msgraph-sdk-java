@@ -183,7 +183,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         return this.backingStore.get("proxyAddresses");
     }
     /**
-     * Gets the serviceProvisioningErrors property value. The serviceProvisioningErrors property
+     * Gets the serviceProvisioningErrors property value. Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from an organizational contact object .  Supports $filter (eq, not, for isResolved and serviceInstance).
      * @return a java.util.List<ServiceProvisioningError>
      */
     @jakarta.annotation.Nullable
@@ -346,7 +346,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         this.backingStore.set("proxyAddresses", value);
     }
     /**
-     * Sets the serviceProvisioningErrors property value. The serviceProvisioningErrors property
+     * Sets the serviceProvisioningErrors property value. Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from an organizational contact object .  Supports $filter (eq, not, for isResolved and serviceInstance).
      * @param value Value to set for the serviceProvisioningErrors property.
      */
     public void setServiceProvisioningErrors(@jakarta.annotation.Nullable final java.util.List<ServiceProvisioningError> value) {

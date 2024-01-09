@@ -1,6 +1,7 @@
 package com.microsoft.graph.education.users.item.assignments.item;
 
 import com.microsoft.graph.education.users.item.assignments.item.categories.CategoriesRequestBuilder;
+import com.microsoft.graph.education.users.item.assignments.item.gradingcategory.GradingCategoryRequestBuilder;
 import com.microsoft.graph.education.users.item.assignments.item.publish.PublishRequestBuilder;
 import com.microsoft.graph.education.users.item.assignments.item.resources.ResourcesRequestBuilder;
 import com.microsoft.graph.education.users.item.assignments.item.rubric.RubricRequestBuilder;
@@ -33,6 +34,13 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CategoriesRequestBuilder categories() {
         return new CategoriesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the gradingCategory property of the microsoft.graph.educationAssignment entity.
+     */
+    @jakarta.annotation.Nonnull
+    public GradingCategoryRequestBuilder gradingCategory() {
+        return new GradingCategoryRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the publish method.

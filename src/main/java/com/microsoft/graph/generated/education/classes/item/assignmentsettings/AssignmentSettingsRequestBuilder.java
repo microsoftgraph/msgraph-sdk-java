@@ -1,5 +1,6 @@
 package com.microsoft.graph.education.classes.item.assignmentsettings;
 
+import com.microsoft.graph.education.classes.item.assignmentsettings.gradingcategories.GradingCategoriesRequestBuilder;
 import com.microsoft.graph.models.EducationAssignmentSettings;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -20,6 +21,13 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the gradingCategories property of the microsoft.graph.educationAssignmentSettings entity.
+     */
+    @jakarta.annotation.Nonnull
+    public GradingCategoriesRequestBuilder gradingCategories() {
+        return new GradingCategoriesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new AssignmentSettingsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

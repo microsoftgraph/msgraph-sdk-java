@@ -113,19 +113,19 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read properties and relationships of the appleDeviceFeaturesConfigurationBase object.
+     * Read properties and relationships of the windowsPhone81CustomConfiguration object.
      * @return a DeviceConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-appledevicefeaturesconfigurationbase-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windowsphone81customconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceConfiguration get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the appleDeviceFeaturesConfigurationBase object.
+     * Read properties and relationships of the windowsPhone81CustomConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DeviceConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-appledevicefeaturesconfigurationbase-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windowsphone81customconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceConfiguration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -146,21 +146,21 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return new GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder(pathParameters, requestAdapter, secretReferenceValueId);
     }
     /**
-     * Update the properties of a windowsDefenderAdvancedThreatProtectionConfiguration object.
+     * Update the properties of a windows10SecureAssessmentConfiguration object.
      * @param body The request body
      * @return a DeviceConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windowsdefenderadvancedthreatprotectionconfiguration-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10secureassessmentconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceConfiguration patch(@jakarta.annotation.Nonnull final DeviceConfiguration body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a windowsDefenderAdvancedThreatProtectionConfiguration object.
+     * Update the properties of a windows10SecureAssessmentConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DeviceConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windowsdefenderadvancedthreatprotectionconfiguration-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10secureassessmentconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceConfiguration patch(@jakarta.annotation.Nonnull final DeviceConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -192,7 +192,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the appleDeviceFeaturesConfigurationBase object.
+     * Read properties and relationships of the windowsPhone81CustomConfiguration object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -200,7 +200,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the appleDeviceFeaturesConfigurationBase object.
+     * Read properties and relationships of the windowsPhone81CustomConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -212,7 +212,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a windowsDefenderAdvancedThreatProtectionConfiguration object.
+     * Update the properties of a windows10SecureAssessmentConfiguration object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -221,7 +221,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a windowsDefenderAdvancedThreatProtectionConfiguration object.
+     * Update the properties of a windows10SecureAssessmentConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -252,7 +252,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the appleDeviceFeaturesConfigurationBase object.
+     * Read properties and relationships of the windowsPhone81CustomConfiguration object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

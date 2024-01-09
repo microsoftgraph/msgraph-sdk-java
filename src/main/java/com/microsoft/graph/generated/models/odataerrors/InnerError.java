@@ -65,7 +65,7 @@ public class InnerError implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("clientRequestId");
     }
     /**
-     * Gets the Date property value. Date when the error occured.
+     * Gets the date property value. Date when the error occured.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class InnerError implements AdditionalDataHolder, BackedModel, Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("client-request-id", (n) -> { this.setClientRequestId(n.getStringValue()); });
-        deserializerMap.put("Date", (n) -> { this.setDate(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("date", (n) -> { this.setDate(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("request-id", (n) -> { this.setRequestId(n.getStringValue()); });
         return deserializerMap;
@@ -108,7 +108,7 @@ public class InnerError implements AdditionalDataHolder, BackedModel, Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("client-request-id", this.getClientRequestId());
-        writer.writeOffsetDateTimeValue("Date", this.getDate());
+        writer.writeOffsetDateTimeValue("date", this.getDate());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("request-id", this.getRequestId());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -136,8 +136,8 @@ public class InnerError implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("clientRequestId", value);
     }
     /**
-     * Sets the Date property value. Date when the error occured.
-     * @param value Value to set for the Date property.
+     * Sets the date property value. Date when the error occured.
+     * @param value Value to set for the date property.
      */
     public void setDate(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("date", value);

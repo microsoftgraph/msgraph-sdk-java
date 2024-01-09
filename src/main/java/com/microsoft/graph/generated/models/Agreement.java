@@ -34,7 +34,7 @@ public class Agreement extends Entity implements Parsable {
         return this.backingStore.get("acceptances");
     }
     /**
-     * Gets the displayName property value. Display name of the agreement. The display name is used for internal tracking of the agreement but is not shown to end users who view the agreement. Supports $filter (eq).
+     * Gets the displayName property value. Display name of the agreement. The display name is used for internal tracking of the agreement but isn't shown to end users who view the agreement. Supports $filter (eq).
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class Agreement extends Entity implements Parsable {
         return this.backingStore.get("termsExpiration");
     }
     /**
-     * Gets the userReacceptRequiredFrequency property value. The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq).
+     * Gets the userReacceptRequiredFrequency property value. The duration after which the user must reaccept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq).
      * @return a PeriodAndDuration
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class Agreement extends Entity implements Parsable {
         this.backingStore.set("acceptances", value);
     }
     /**
-     * Sets the displayName property value. Display name of the agreement. The display name is used for internal tracking of the agreement but is not shown to end users who view the agreement. Supports $filter (eq).
+     * Sets the displayName property value. Display name of the agreement. The display name is used for internal tracking of the agreement but isn't shown to end users who view the agreement. Supports $filter (eq).
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -172,7 +172,7 @@ public class Agreement extends Entity implements Parsable {
         this.backingStore.set("termsExpiration", value);
     }
     /**
-     * Sets the userReacceptRequiredFrequency property value. The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq).
+     * Sets the userReacceptRequiredFrequency property value. The duration after which the user must reaccept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq).
      * @param value Value to set for the userReacceptRequiredFrequency property.
      */
     public void setUserReacceptRequiredFrequency(@jakarta.annotation.Nullable final PeriodAndDuration value) {
