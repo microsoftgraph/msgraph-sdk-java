@@ -16,6 +16,7 @@ import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.EducationAssignmentGradeType;
 import com.microsoft.graph.models.EducationItemBody;
 import com.microsoft.graph.models.EducationAssignmentStatus;
+import com.microsoft.graph.models.EducationGradingCategory;
 import com.microsoft.graph.models.EducationRubric;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.EducationCategoryCollectionPage;
@@ -243,6 +244,15 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.EducationCategoryCollectionPage categories;
+
+    /**
+     * The Grading Category.
+     * 
+     */
+    @SerializedName(value = "gradingCategory", alternate = {"GradingCategory"})
+    @Expose
+	@Nullable
+    public EducationGradingCategory gradingCategory;
 
     /**
      * The Resources.
