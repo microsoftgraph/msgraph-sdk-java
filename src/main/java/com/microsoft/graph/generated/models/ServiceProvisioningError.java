@@ -64,7 +64,7 @@ public class ServiceProvisioningError implements AdditionalDataHolder, BackedMod
         return this.backingStore;
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time at which the error occurred.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class ServiceProvisioningError implements AdditionalDataHolder, BackedMod
         return deserializerMap;
     }
     /**
-     * Gets the isResolved property value. The isResolved property
+     * Gets the isResolved property value. Indicates whether the error has been attended to.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class ServiceProvisioningError implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the serviceInstance property value. The serviceInstance property
+     * Gets the serviceInstance property value. Qualified service instance (for example, 'SharePoint/Dublin') that published the service error information.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -136,14 +136,14 @@ public class ServiceProvisioningError implements AdditionalDataHolder, BackedMod
         this.backingStore = value;
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time at which the error occurred.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the isResolved property value. The isResolved property
+     * Sets the isResolved property value. Indicates whether the error has been attended to.
      * @param value Value to set for the isResolved property.
      */
     public void setIsResolved(@jakarta.annotation.Nullable final Boolean value) {
@@ -157,7 +157,7 @@ public class ServiceProvisioningError implements AdditionalDataHolder, BackedMod
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the serviceInstance property value. The serviceInstance property
+     * Sets the serviceInstance property value. Qualified service instance (for example, 'SharePoint/Dublin') that published the service error information.
      * @param value Value to set for the serviceInstance property.
      */
     public void setServiceInstance(@jakarta.annotation.Nullable final String value) {

@@ -4,7 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
-import com.microsoft.kiota.QueryParameter;
+import com.microsoft.kiota.QueryParameters;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
@@ -88,13 +88,22 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Remove an educationUser from an educationClass.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class DeleteQueryParameters {
+    public class DeleteQueryParameters implements QueryParameters {
         /**
          * Delete Uri
          */
-        @QueryParameter(name = "%40id")
         @jakarta.annotation.Nullable
         public String id;
+        /**
+         * Extracts the query parameters into a map for the URI template parsing.
+         * @return a Map<String, Object>
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, Object> toQueryParameters() {
+            final Map<String, Object> allQueryParams = new HashMap();
+            allQueryParams.put("%40id", id);
+            return allQueryParams;
+        }
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

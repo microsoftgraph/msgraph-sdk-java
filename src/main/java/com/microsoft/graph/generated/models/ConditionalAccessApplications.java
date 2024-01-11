@@ -64,7 +64,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Back
         return this.backingStore;
     }
     /**
-     * Gets the excludeApplications property value. Can be one of the following:  The list of client IDs (appId) explicitly excluded from the policy. Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365
+     * Gets the excludeApplications property value. Can be one of the following:  The list of client IDs (appId) explicitly excluded from the policy. Office365 - For the list of apps included in Office365, see Apps included in Conditional Access Office 365 app suite
      * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Back
         return deserializerMap;
     }
     /**
-     * Gets the includeApplications property value. Can be one of the following:  The list of client IDs (appId) the policy applies to, unless explicitly excluded (in excludeApplications)  All  Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365
+     * Gets the includeApplications property value. Can be one of the following:  The list of client IDs (appId) the policy applies to, unless explicitly excluded (in excludeApplications)  All  Office365 - For the list of apps included in Office365, see Apps included in Conditional Access Office 365 app suite
      * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
@@ -155,14 +155,14 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Back
         this.backingStore = value;
     }
     /**
-     * Sets the excludeApplications property value. Can be one of the following:  The list of client IDs (appId) explicitly excluded from the policy. Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365
+     * Sets the excludeApplications property value. Can be one of the following:  The list of client IDs (appId) explicitly excluded from the policy. Office365 - For the list of apps included in Office365, see Apps included in Conditional Access Office 365 app suite
      * @param value Value to set for the excludeApplications property.
      */
     public void setExcludeApplications(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("excludeApplications", value);
     }
     /**
-     * Sets the includeApplications property value. Can be one of the following:  The list of client IDs (appId) the policy applies to, unless explicitly excluded (in excludeApplications)  All  Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365
+     * Sets the includeApplications property value. Can be one of the following:  The list of client IDs (appId) the policy applies to, unless explicitly excluded (in excludeApplications)  All  Office365 - For the list of apps included in Office365, see Apps included in Conditional Access Office 365 app suite
      * @param value Value to set for the includeApplications property.
      */
     public void setIncludeApplications(@jakarta.annotation.Nullable final java.util.List<String> value) {

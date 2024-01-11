@@ -26,7 +26,7 @@ public class ServiceProvisioningXmlError extends ServiceProvisioningError implem
         return new ServiceProvisioningXmlError();
     }
     /**
-     * Gets the errorDetail property value. The errorDetail property
+     * Gets the errorDetail property value. Error Information published by the Federated Service as an xml string.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class ServiceProvisioningXmlError extends ServiceProvisioningError implem
         writer.writeStringValue("errorDetail", this.getErrorDetail());
     }
     /**
-     * Sets the errorDetail property value. The errorDetail property
+     * Sets the errorDetail property value. Error Information published by the Federated Service as an xml string.
      * @param value Value to set for the errorDetail property.
      */
     public void setErrorDetail(@jakarta.annotation.Nullable final String value) {

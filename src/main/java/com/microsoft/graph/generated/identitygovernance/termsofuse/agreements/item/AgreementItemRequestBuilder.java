@@ -8,7 +8,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
-import com.microsoft.kiota.QueryParameter;
+import com.microsoft.kiota.QueryParameters;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
@@ -80,19 +80,19 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of an agreement object.
+     * Retrieve all files related to an agreement. This includes the default file and all localized files.
      * @return a Agreement
-     * @see <a href="https://learn.microsoft.com/graph/api/agreement-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agreement-list-files?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Agreement get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of an agreement object.
+     * Retrieve all files related to an agreement. This includes the default file and all localized files.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Agreement
-     * @see <a href="https://learn.microsoft.com/graph/api/agreement-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agreement-list-files?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Agreement get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -149,7 +149,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of an agreement object.
+     * Retrieve all files related to an agreement. This includes the default file and all localized files.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -157,7 +157,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an agreement object.
+     * Retrieve all files related to an agreement. This includes the default file and all localized files.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -209,22 +209,31 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of an agreement object.
+     * Retrieve all files related to an agreement. This includes the default file and all localized files.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class GetQueryParameters {
+    public class GetQueryParameters implements QueryParameters {
         /**
          * Expand related entities
          */
-        @QueryParameter(name = "%24expand")
         @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
-        @QueryParameter(name = "%24select")
         @jakarta.annotation.Nullable
         public String[] select;
+        /**
+         * Extracts the query parameters into a map for the URI template parsing.
+         * @return a Map<String, Object>
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, Object> toQueryParameters() {
+            final Map<String, Object> allQueryParams = new HashMap();
+            allQueryParams.put("%24expand", expand);
+            allQueryParams.put("%24select", select);
+            return allQueryParams;
+        }
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

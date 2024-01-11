@@ -54,6 +54,7 @@ import com.microsoft.graph.users.item.outlook.OutlookRequestBuilder;
 import com.microsoft.graph.users.item.owneddevices.OwnedDevicesRequestBuilder;
 import com.microsoft.graph.users.item.ownedobjects.OwnedObjectsRequestBuilder;
 import com.microsoft.graph.users.item.people.PeopleRequestBuilder;
+import com.microsoft.graph.users.item.permissiongrants.PermissionGrantsRequestBuilder;
 import com.microsoft.graph.users.item.photo.PhotoRequestBuilder;
 import com.microsoft.graph.users.item.photos.PhotosRequestBuilder;
 import com.microsoft.graph.users.item.planner.PlannerRequestBuilder;
@@ -77,7 +78,7 @@ import com.microsoft.graph.users.item.wipemanagedappregistrationsbydevicetag.Wip
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
-import com.microsoft.kiota.QueryParameter;
+import com.microsoft.kiota.QueryParameters;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
@@ -450,6 +451,13 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return new PeopleRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the permissionGrants property of the microsoft.graph.user entity.
+     */
+    @jakarta.annotation.Nonnull
+    public PermissionGrantsRequestBuilder permissionGrants() {
+        return new PermissionGrantsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the photo property of the microsoft.graph.user entity.
      */
     @jakarta.annotation.Nonnull
@@ -632,7 +640,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read properties and relationships of the user object.
      * @return a User
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-user-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-user-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public User get() {
@@ -642,7 +650,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
      * Read properties and relationships of the user object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a User
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-user-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-user-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public User get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -656,7 +664,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a user object.
      * @param body The request body
      * @return a User
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-user-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-user-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public User patch(@jakarta.annotation.Nonnull final User body) {
@@ -667,7 +675,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a User
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-user-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-user-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public User patch(@jakarta.annotation.Nonnull final User body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -774,19 +782,28 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
      * Read properties and relationships of the user object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class GetQueryParameters {
+    public class GetQueryParameters implements QueryParameters {
         /**
          * Expand related entities
          */
-        @QueryParameter(name = "%24expand")
         @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
-        @QueryParameter(name = "%24select")
         @jakarta.annotation.Nullable
         public String[] select;
+        /**
+         * Extracts the query parameters into a map for the URI template parsing.
+         * @return a Map<String, Object>
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, Object> toQueryParameters() {
+            final Map<String, Object> allQueryParams = new HashMap();
+            allQueryParams.put("%24expand", expand);
+            allQueryParams.put("%24select", select);
+            return allQueryParams;
+        }
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

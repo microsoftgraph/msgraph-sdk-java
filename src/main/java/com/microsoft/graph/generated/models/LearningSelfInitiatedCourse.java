@@ -36,7 +36,7 @@ public class LearningSelfInitiatedCourse extends LearningCourseActivity implemen
         return deserializerMap;
     }
     /**
-     * Gets the startedDateTime property value. The date and time on which the self-initiated course was started by the learner. Optional.
+     * Gets the startedDateTime property value. The date and time on which the learner started the self-initiated course. Optional.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class LearningSelfInitiatedCourse extends LearningCourseActivity implemen
         writer.writeOffsetDateTimeValue("startedDateTime", this.getStartedDateTime());
     }
     /**
-     * Sets the startedDateTime property value. The date and time on which the self-initiated course was started by the learner. Optional.
+     * Sets the startedDateTime property value. The date and time on which the learner started the self-initiated course. Optional.
      * @param value Value to set for the startedDateTime property.
      */
     public void setStartedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

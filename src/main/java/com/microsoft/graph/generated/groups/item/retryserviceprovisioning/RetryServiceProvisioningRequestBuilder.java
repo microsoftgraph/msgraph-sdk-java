@@ -35,14 +35,16 @@ public class RetryServiceProvisioningRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/retryServiceProvisioning", rawUrl);
     }
     /**
-     * Invoke action retryServiceProvisioning
+     * Retry the group service provisioning.
+     * @see <a href="https://learn.microsoft.com/graph/api/group-retryserviceprovisioning?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Invoke action retryServiceProvisioning
+     * Retry the group service provisioning.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @see <a href="https://learn.microsoft.com/graph/api/group-retryserviceprovisioning?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
@@ -52,7 +54,7 @@ public class RetryServiceProvisioningRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Invoke action retryServiceProvisioning
+     * Retry the group service provisioning.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -60,7 +62,7 @@ public class RetryServiceProvisioningRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action retryServiceProvisioning
+     * Retry the group service provisioning.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
