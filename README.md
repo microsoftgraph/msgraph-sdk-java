@@ -1,5 +1,5 @@
 # Microsoft Graph SDK for Java
-## Version 6.0.1 now in Release Candidate stage! 
+## Version 6.0.2 now in Release Candidate stage! 
 
 [![Download](https://img.shields.io/maven-central/v/com.microsoft.graph/microsoft-graph.svg)](https://search.maven.org/artifact/com.microsoft.graph/microsoft-graph)
 
@@ -21,7 +21,7 @@ repositories {
 
 dependencies {
     // Include the sdk as a dependency
-    implementation 'com.microsoft.graph:microsoft-graph:6.0.1-SNAPSHOT'
+    implementation 'com.microsoft.graph:microsoft-graph:6.0.2-SNAPSHOT'
     // Uncomment the line below if you are building an android application
     //implementation 'com.google.guava:guava:30.1.1-android'
     // This dependency is only needed if you are using a TokenCredential object for authentication
@@ -38,7 +38,7 @@ Add the dependency in `dependencies` in pom.xml
   <!-- Include the sdk as a dependency -->
   <groupId>com.microsoft.graph</groupId>
   <artifactId>microsoft-graph</artifactId>
-  <version>6.0.1-SNAPSHOT</version>
+  <version>6.0.2-SNAPSHOT</version>
 </dependency>
 <dependency>
   <!-- This dependency is only needed if you are using a TokenCredential object for authentication -->
