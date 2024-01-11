@@ -1,6 +1,7 @@
 package com.microsoft.graph.education.classes.item.assignments.item;
 
 import com.microsoft.graph.education.classes.item.assignments.item.categories.CategoriesRequestBuilder;
+import com.microsoft.graph.education.classes.item.assignments.item.gradingcategory.GradingCategoryRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignments.item.publish.PublishRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignments.item.resources.ResourcesRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignments.item.rubric.RubricRequestBuilder;
@@ -12,7 +13,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
-import com.microsoft.kiota.QueryParameter;
+import com.microsoft.kiota.QueryParameters;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
@@ -33,6 +34,13 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CategoriesRequestBuilder categories() {
         return new CategoriesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the gradingCategory property of the microsoft.graph.educationAssignment entity.
+     */
+    @jakarta.annotation.Nonnull
+    public GradingCategoryRequestBuilder gradingCategory() {
+        return new GradingCategoryRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the publish method.
@@ -244,19 +252,28 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
      * Get the properties and relationships of an assignment. Only teachers, students, and applications with application permissions can perform this operation. Students can only see assignments assigned to them; teachers and applications with application permissions can see all assignments in a class.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class GetQueryParameters {
+    public class GetQueryParameters implements QueryParameters {
         /**
          * Expand related entities
          */
-        @QueryParameter(name = "%24expand")
         @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
-        @QueryParameter(name = "%24select")
         @jakarta.annotation.Nullable
         public String[] select;
+        /**
+         * Extracts the query parameters into a map for the URI template parsing.
+         * @return a Map<String, Object>
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, Object> toQueryParameters() {
+            final Map<String, Object> allQueryParams = new HashMap();
+            allQueryParams.put("%24expand", expand);
+            allQueryParams.put("%24select", select);
+            return allQueryParams;
+        }
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

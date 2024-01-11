@@ -33,7 +33,7 @@ public class Call extends Entity implements Parsable {
         return this.backingStore.get("audioRoutingGroups");
     }
     /**
-     * Gets the callbackUri property value. The callback URL on which callbacks will be delivered. Must be https.
+     * Gets the callbackUri property value. The callback URL on which callbacks are delivered. Must be an HTTPS URL.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -41,7 +41,7 @@ public class Call extends Entity implements Parsable {
         return this.backingStore.get("callbackUri");
     }
     /**
-     * Gets the callChainId property value. A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This needs to be copied over from Microsoft.Graph.Call.CallChainId.
+     * Gets the callChainId property value. A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This identifier must be copied over from Microsoft.Graph.Call.CallChainId.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -289,14 +289,14 @@ public class Call extends Entity implements Parsable {
         this.backingStore.set("audioRoutingGroups", value);
     }
     /**
-     * Sets the callbackUri property value. The callback URL on which callbacks will be delivered. Must be https.
+     * Sets the callbackUri property value. The callback URL on which callbacks are delivered. Must be an HTTPS URL.
      * @param value Value to set for the callbackUri property.
      */
     public void setCallbackUri(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("callbackUri", value);
     }
     /**
-     * Sets the callChainId property value. A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This needs to be copied over from Microsoft.Graph.Call.CallChainId.
+     * Sets the callChainId property value. A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This identifier must be copied over from Microsoft.Graph.Call.CallChainId.
      * @param value Value to set for the callChainId property.
      */
     public void setCallChainId(@jakarta.annotation.Nullable final String value) {

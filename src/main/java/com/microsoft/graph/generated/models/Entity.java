@@ -369,6 +369,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.educationClass": return new EducationClass();
             case "#microsoft.graph.educationFeedbackOutcome": return new EducationFeedbackOutcome();
             case "#microsoft.graph.educationFeedbackResourceOutcome": return new EducationFeedbackResourceOutcome();
+            case "#microsoft.graph.educationGradingCategory": return new EducationGradingCategory();
             case "#microsoft.graph.educationOrganization": return new EducationOrganization();
             case "#microsoft.graph.educationOutcome": return new EducationOutcome();
             case "#microsoft.graph.educationPointsOutcome": return new EducationPointsOutcome();
@@ -637,7 +638,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.provisioningObjectSummary": return new ProvisioningObjectSummary();
             case "#microsoft.graph.rbacApplication": return new RbacApplication();
             case "#microsoft.graph.recordOperation": return new RecordOperation();
-            case "#microsoft.graph.referenceAttachment": return new ReferenceAttachment();
         }
         return null;
     }
@@ -649,6 +649,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.referenceAttachment": return new ReferenceAttachment();
             case "#microsoft.graph.remoteAssistancePartner": return new RemoteAssistancePartner();
             case "#microsoft.graph.remoteDesktopSecurityConfiguration": return new RemoteDesktopSecurityConfiguration();
             case "#microsoft.graph.request": return new Request();

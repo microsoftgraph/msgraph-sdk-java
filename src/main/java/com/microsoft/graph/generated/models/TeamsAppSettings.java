@@ -40,7 +40,16 @@ public class TeamsAppSettings extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowUserRequestsForAppAccess", (n) -> { this.setAllowUserRequestsForAppAccess(n.getBooleanValue()); });
+        deserializerMap.put("isUserPersonalScopeResourceSpecificConsentEnabled", (n) -> { this.setIsUserPersonalScopeResourceSpecificConsentEnabled(n.getBooleanValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isUserPersonalScopeResourceSpecificConsentEnabled property value. Indicates whether resource-specific consent for personal scope in Teams apps is enabled for the tenant. True indicates that Teams apps that are allowed in the tenant and require resource-specific permissions can be installed in the personal scope. False blocks the installation of any Teams app that requires resource-specific permissions in the personal scope.
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsUserPersonalScopeResourceSpecificConsentEnabled() {
+        return this.backingStore.get("isUserPersonalScopeResourceSpecificConsentEnabled");
     }
     /**
      * Serializes information the current object
@@ -50,6 +59,7 @@ public class TeamsAppSettings extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("allowUserRequestsForAppAccess", this.getAllowUserRequestsForAppAccess());
+        writer.writeBooleanValue("isUserPersonalScopeResourceSpecificConsentEnabled", this.getIsUserPersonalScopeResourceSpecificConsentEnabled());
     }
     /**
      * Sets the allowUserRequestsForAppAccess property value. Indicates whether users are allowed to request access to the unavailable Teams apps.
@@ -57,5 +67,12 @@ public class TeamsAppSettings extends Entity implements Parsable {
      */
     public void setAllowUserRequestsForAppAccess(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("allowUserRequestsForAppAccess", value);
+    }
+    /**
+     * Sets the isUserPersonalScopeResourceSpecificConsentEnabled property value. Indicates whether resource-specific consent for personal scope in Teams apps is enabled for the tenant. True indicates that Teams apps that are allowed in the tenant and require resource-specific permissions can be installed in the personal scope. False blocks the installation of any Teams app that requires resource-specific permissions in the personal scope.
+     * @param value Value to set for the isUserPersonalScopeResourceSpecificConsentEnabled property.
+     */
+    public void setIsUserPersonalScopeResourceSpecificConsentEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isUserPersonalScopeResourceSpecificConsentEnabled", value);
     }
 }

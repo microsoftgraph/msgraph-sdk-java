@@ -6,7 +6,7 @@ import com.microsoft.graph.solutions.bookingbusinesses.item.calendarview.item.ca
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
-import com.microsoft.kiota.QueryParameter;
+import com.microsoft.kiota.QueryParameters;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
@@ -190,7 +190,7 @@ public class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder {
      * The set of appointments of this business in a specified date range. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class GetQueryParameters {
+    public class GetQueryParameters implements QueryParameters {
         /**
          * The end date and time of the time range, represented in ISO 8601 format. For example, 2019-11-08T20:00:00-08:00
          */
@@ -199,13 +199,11 @@ public class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder {
         /**
          * Expand related entities
          */
-        @QueryParameter(name = "%24expand")
         @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
-        @QueryParameter(name = "%24select")
         @jakarta.annotation.Nullable
         public String[] select;
         /**
@@ -213,6 +211,19 @@ public class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder {
          */
         @jakarta.annotation.Nullable
         public String start;
+        /**
+         * Extracts the query parameters into a map for the URI template parsing.
+         * @return a Map<String, Object>
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, Object> toQueryParameters() {
+            final Map<String, Object> allQueryParams = new HashMap();
+            allQueryParams.put("end", end);
+            allQueryParams.put("start", start);
+            allQueryParams.put("%24expand", expand);
+            allQueryParams.put("%24select", select);
+            return allQueryParams;
+        }
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
