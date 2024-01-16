@@ -50,7 +50,7 @@ public class ConditionalAccessApplications implements IJsonBackedObject {
 
     /**
      * The Exclude Applications.
-     * Can be one of the following:  The list of client IDs (appId) explicitly excluded from the policy. Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365
+     * Can be one of the following:  The list of client IDs (appId) explicitly excluded from the policy. Office365 - For the list of apps included in Office365, see Apps included in Conditional Access Office 365 app suite
      */
     @SerializedName(value = "excludeApplications", alternate = {"ExcludeApplications"})
     @Expose
@@ -59,7 +59,7 @@ public class ConditionalAccessApplications implements IJsonBackedObject {
 
     /**
      * The Include Applications.
-     * Can be one of the following:  The list of client IDs (appId) the policy applies to, unless explicitly excluded (in excludeApplications)  All  Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365
+     * Can be one of the following:  The list of client IDs (appId) the policy applies to, unless explicitly excluded (in excludeApplications)  All  Office365 - For the list of apps included in Office365, see Apps included in Conditional Access Office 365 app suite
      */
     @SerializedName(value = "includeApplications", alternate = {"IncludeApplications"})
     @Expose

@@ -8,7 +8,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.EducationGradingCategoryCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -27,12 +29,21 @@ public class EducationAssignmentSettings extends Entity implements IJsonBackedOb
 
     /**
      * The Submission Animation Disabled.
-     * Indicates whether turn-in celebration animation is shown. A value of true indicates that the animation isn't shown. Default value is false.
+     * Indicates whether to show the turn-in celebration animation. If true, indicates to skip the animation. The default value is false.
      */
     @SerializedName(value = "submissionAnimationDisabled", alternate = {"SubmissionAnimationDisabled"})
     @Expose
 	@Nullable
     public Boolean submissionAnimationDisabled;
+
+    /**
+     * The Grading Categories.
+     * When set, enables users to weight assignments differently when computing a class average grade.
+     */
+    @SerializedName(value = "gradingCategories", alternate = {"GradingCategories"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.EducationGradingCategoryCollectionPage gradingCategories;
 
 
     /**
@@ -43,5 +54,9 @@ public class EducationAssignmentSettings extends Entity implements IJsonBackedOb
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("gradingCategories")) {
+            gradingCategories = serializer.deserializeObject(json.get("gradingCategories"), com.microsoft.graph.requests.EducationGradingCategoryCollectionPage.class);
+        }
     }
 }

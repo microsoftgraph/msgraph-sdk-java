@@ -87,7 +87,7 @@ public class Participant extends Entity implements IJsonBackedObject {
 
     /**
      * The Removed State.
-     * 
+     * Indicates the reason why the participant was removed from the roster.
      */
     @SerializedName(value = "removedState", alternate = {"RemovedState"})
     @Expose
@@ -105,7 +105,7 @@ public class Participant extends Entity implements IJsonBackedObject {
 
     /**
      * The Roster Sequence Number.
-     * 
+     * Indicates the roster sequence number in which the participant was last updated.
      */
     @SerializedName(value = "rosterSequenceNumber", alternate = {"RosterSequenceNumber"})
     @Expose
