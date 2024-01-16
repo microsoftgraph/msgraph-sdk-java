@@ -80,10 +80,11 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("activityType", (n) -> { this.setActivityType(n.getStringValue()); });
         deserializerMap.put("chainId", (n) -> { this.setChainId(n.getLongValue()); });
         deserializerMap.put("previewText", (n) -> { this.setPreviewText(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("teamsAppId", (n) -> { this.setTeamsAppId(n.getStringValue()); });
         deserializerMap.put("templateParameters", (n) -> { this.setTemplateParameters(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
         deserializerMap.put("topic", (n) -> { this.setTopic(n.getObjectValue(TeamworkActivityTopic::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -95,6 +96,14 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
     @jakarta.annotation.Nullable
     public ItemBody getPreviewText() {
         return this.backingStore.get("previewText");
+    }
+    /**
+     * Gets the teamsAppId property value. The teamsAppId property
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getTeamsAppId() {
+        return this.backingStore.get("teamsAppId");
     }
     /**
      * Gets the templateParameters property value. The templateParameters property
@@ -121,6 +130,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
         writer.writeStringValue("activityType", this.getActivityType());
         writer.writeLongValue("chainId", this.getChainId());
         writer.writeObjectValue("previewText", this.getPreviewText());
+        writer.writeStringValue("teamsAppId", this.getTeamsAppId());
         writer.writeCollectionOfObjectValues("templateParameters", this.getTemplateParameters());
         writer.writeObjectValue("topic", this.getTopic());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -160,6 +170,13 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      */
     public void setPreviewText(@jakarta.annotation.Nullable final ItemBody value) {
         this.backingStore.set("previewText", value);
+    }
+    /**
+     * Sets the teamsAppId property value. The teamsAppId property
+     * @param value Value to set for the teamsAppId property.
+     */
+    public void setTeamsAppId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("teamsAppId", value);
     }
     /**
      * Sets the templateParameters property value. The templateParameters property

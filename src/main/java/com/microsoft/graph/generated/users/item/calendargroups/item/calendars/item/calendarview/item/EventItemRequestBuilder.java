@@ -114,7 +114,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EventItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendarGroups/{calendarGroup%2Did}/calendars/{calendar%2Did}/calendarView/{event%2Did}{?%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendarGroups/{calendarGroup%2Did}/calendars/{calendar%2Did}/calendarView/{event%2Did}{?startDateTime*,endDateTime*,%24select}", pathParameters);
     }
     /**
      * Instantiates a new EventItemRequestBuilder and sets the default values.
@@ -122,7 +122,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EventItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendarGroups/{calendarGroup%2Did}/calendars/{calendar%2Did}/calendarView/{event%2Did}{?%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendarGroups/{calendarGroup%2Did}/calendars/{calendar%2Did}/calendarView/{event%2Did}{?startDateTime*,endDateTime*,%24select}", rawUrl);
     }
     /**
      * The calendar view for the calendar. Navigation property. Read-only.
@@ -181,10 +181,20 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
         /**
+         * The end date and time of the time range, represented in ISO 8601 format. For example, 2019-11-08T20:00:00-08:00
+         */
+        @jakarta.annotation.Nullable
+        public String endDateTime;
+        /**
          * Select properties to be returned
          */
         @jakarta.annotation.Nullable
         public String[] select;
+        /**
+         * The start date and time of the time range, represented in ISO 8601 format. For example, 2019-11-08T19:00:00-08:00
+         */
+        @jakarta.annotation.Nullable
+        public String startDateTime;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a Map<String, Object>
@@ -192,6 +202,8 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {
             final Map<String, Object> allQueryParams = new HashMap();
+            allQueryParams.put("endDateTime", endDateTime);
+            allQueryParams.put("startDateTime", startDateTime);
             allQueryParams.put("%24select", select);
             return allQueryParams;
         }

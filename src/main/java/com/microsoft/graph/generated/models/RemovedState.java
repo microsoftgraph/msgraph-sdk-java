@@ -75,7 +75,7 @@ public class RemovedState implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the reason property value. The reason property
+     * Gets the reason property value. The removal reason for the participant resource.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class RemovedState implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the reason property value. The reason property
+     * Sets the reason property value. The removal reason for the participant resource.
      * @param value Value to set for the reason property.
      */
     public void setReason(@jakarta.annotation.Nullable final String value) {

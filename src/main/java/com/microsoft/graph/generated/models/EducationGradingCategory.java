@@ -25,7 +25,7 @@ public class EducationGradingCategory extends Entity implements Parsable {
         return new EducationGradingCategory();
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The name of the grading category.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class EducationGradingCategory extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the percentageWeight property value. The percentageWeight property
+     * Gets the percentageWeight property value. The weight of the category; an integer between 0 and 100.
      * @return a Integer
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class EducationGradingCategory extends Entity implements Parsable {
         writer.writeIntegerValue("percentageWeight", this.getPercentageWeight());
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The name of the grading category.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the percentageWeight property value. The percentageWeight property
+     * Sets the percentageWeight property value. The weight of the category; an integer between 0 and 100.
      * @param value Value to set for the percentageWeight property.
      */
     public void setPercentageWeight(@jakarta.annotation.Nullable final Integer value) {

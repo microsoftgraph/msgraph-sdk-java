@@ -90,21 +90,21 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConversationMemberCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Add a conversationMember to a channel. This operation is allowed only for channels with a membershipType value of private or shared.
+     * Add a conversationMember to a channel.
      * @param body The request body
      * @return a ConversationMember
-     * @see <a href="https://learn.microsoft.com/graph/api/channel-post-members?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-add?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConversationMember post(@jakarta.annotation.Nonnull final ConversationMember body) {
         return post(body, null);
     }
     /**
-     * Add a conversationMember to a channel. This operation is allowed only for channels with a membershipType value of private or shared.
+     * Add a conversationMember to a channel.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ConversationMember
-     * @see <a href="https://learn.microsoft.com/graph/api/channel-post-members?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-add?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConversationMember post(@jakarta.annotation.Nonnull final ConversationMember body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -136,7 +136,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add a conversationMember to a channel. This operation is allowed only for channels with a membershipType value of private or shared.
+     * Add a conversationMember to a channel.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add a conversationMember to a channel. This operation is allowed only for channels with a membershipType value of private or shared.
+     * Add a conversationMember to a channel.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
