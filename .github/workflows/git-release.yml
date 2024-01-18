@@ -21,7 +21,7 @@ jobs:
           name: drop
           path: drop
       - name: Github Release
-        uses: anton-yurchenko/git-release@v5.0
+        uses: anton-yurchenko/git-release@v6.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DRAFT_RELEASE: "false"
