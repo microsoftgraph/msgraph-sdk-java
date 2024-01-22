@@ -1,10 +1,40 @@
-# Microsoft Graph Java SDK v6 Changelog and Upgrade Guide 
+# Microsoft Graph Java SDK v6 Changelog and Upgrade Guide
 
 This document provides a list of changes and upgrade considerations for the Microsoft Graph Java SDK v6 release.
 
-## Overview 
+## Overview
 
 Version 6.0.0 of the Microsoft Graph Java SDK is based on the new [Kiota](https://github.com/microsoft/kiota) code generation tool. By using Kiota the SDK is now able to support a broader range of Microsoft Graph API enpoints while also being more intuitive. Furthermore, [Graph-Core](https://github.com/microsoftgraph/msgraph-sdk-java-core) has also been updated to v3 which provides a great amount of added functionality; this makes v6 of the SDK a significant upgrade from v5.
+
+## Table Of Contents
+
+- [Breaking Changes](#breaking-changes)
+  - [Namespace Changes and Disambiguation](#namespace-changes-and-disambiguation)
+  - [Authentication](#authentication)
+  - [`BaseRequest<T>` Changed to `RequestInformation`](#use-of-requestinformation-in-place-of-baserequestt)
+  - [Removal of `Async` Suffix](#removal-of-async-suffix-from-executor-methods)
+  - [Removal of `buildRequest`](#removal-of-buildrequest)
+  - [`CollectionPage` Changed to `CollectionResponse`](#collectionpage-types-changed-to-collectionresponse-types)
+  - [Private Properties](#properties-now-accessed-via-getters-and-setters)
+  - [Querying Collections](#querying-collections)
+  - [Indexing via Improved Fluent API Pattern](#change-in-indexing-via-improved-fluent-api-pattern)
+  - [Option Class Removal](#option-class-removal)
+  - [Header Options](#headers)
+  - [Query Parameter Options](#query-parameter-options)
+  - [Odata Function Parameters](#odata-function-parameters)
+  - [Odata Action Parameters](#odata-action-parameters)
+  - [Error Handling](#error-handling)
+  - [Drive Item Paths](#drive-item-paths)
+  - [Upload a Small File with conflictBehavior Set](#upload-a-small-file-with-conflictbehavior-set)
+- [New Features](#new-features)
+  - [Backing Store](#backing-store)
+  - [Page Iterator](#pageiterator)
+  - [Batch Requests](#batch-requests)
+  - [Large File Upload Enhancements](#large-file-upload-enhancements)
+  - [Per-Request Options](#per-request-options)
+  - [Native Response Object](#native-response-object)
+  - [Support for OData Casts](#support-for-odata-casts)
+
 
 ## Breaking Changes
 
@@ -20,7 +50,7 @@ This has the following implications:
 - Models types are now stored in `com.microsoft.graph.models`/`com.microsoft.graph.beta.models` for v1.0 and beta respectively.
 - RequestBuilder and RequestBody types reside in namespaces relative to the path they are calling. e.g. The `SendMailRequestBuilder` and `SendMailPostRequestBody` types will reside in the `com.microsoft.graph.users.item.sendmail`/`com.microsoft.graph.beta.users.item.sendMail` namespace if you are sending mail via `graphClient.me().sendMail().post(sendMailPostRequestBody)`. 
 
-### Authentication 
+### Authentication
 
 The `GraphServiceClient` class now accepts an instance of `TokenCredential` from AzureIdentity directly rather than an instance of `TokenCredentialAuthProvider`.
 Thus 
@@ -85,7 +115,7 @@ graphClient.directoryObjects().toPostRequestInformation(directoryObject);
 The sdk no longer provides async methods for executing requests thus the async suffix has removed from executor methods. `postAsync()` is removed and now only `post()` is available, `getAsync()` is removed and only `get()`is available, etc.
 > If users wish to execute requests asynchronusly they may choose to wrap their calls in CompleteableFutures or a separate async workflow.   
 
-### Removal of `buildRequest()` 
+### Removal of `buildRequest()`
 
 In the previous version of the SDK the `buildRequest()` method call was neccessary when building and calling requests.
 Previously a call to get the current user would look like the following: 
@@ -109,7 +139,7 @@ In v6 the same call would return:
 UserCollectionResponse users = graphClient.users().get();
 ```
 
-## Properties Now Accessed via Getters and Setters
+### Properties Now Accessed via Getters and Setters
 
 In v5 properties were accessed directly via the property name. In v6 properties are accessed via getters and setters.
 For example, in v5 a user would access the `displayName` property of a `User` object as follows:
@@ -139,7 +169,7 @@ UserCollectionResponse response = graphClient.users().get();
 List<User> usersList = response.getValue();
 ```
 
-### Change in Indexing via Improved Fluent API Pattern 
+### Change in Indexing via Improved Fluent API Pattern
 
 The fluent API pattern has changed slightly in v6. Previously the fluent API pattern would index into a collection through an overload method call in the request builder pattern. In v6 we have added the `byId` suffix to make it obvious when a user is indexing into a collection.
 For example, retrieving a message by id would look like the following in v5:
@@ -155,7 +185,7 @@ Message singleMessage = graphClient.me().messages().byMessageId("<Message Id>").
 
 The `Option` class has been removed and is no longer used to define query parameters, headers, or function parameters. These classes have been replaced with more specific and intuitive implementations. 
 
-#### Headers 
+#### Headers
 Passing headers to requests has changed in v6. The `HeaderOption` class, which extends the `Option` class,  has been removed and is no longer used to define headers. 
 Previously a user would pass headers to a request as follows:
 ```java
@@ -227,7 +257,7 @@ sendMailPostRequestBody.setSaveToSentItems(true);
 graphClient.me().sendMail().post(sendMailPostRequestBody);
 ```
 
-### Error Handling 
+### Error Handling
 
 `GraphServiceException` has been removed and is no longer used to handle errors. Instead, the SDK now throws an `ApiException` when an issue occurs with a request. The message of the `ApiException` will contain a more specific error message based on the OdataError returned from the API. `ClientException` remains, however, this is now used to handle less frequent issues with the client itself.
 In v6 a user would handle an error as follows:
@@ -285,7 +315,7 @@ DriveItemCollectionResponse response = graphClient.drives().byDriveId(groupDrive
 // See note above for using 'root' as the 'Item Id'
 ```
 
-#### Upload a Small File with conflictBehavior Set
+### Upload a Small File with conflictBehavior Set
 
 To upload a small file (size should not exceed 4mb according to the [docs](https://learn.microsoft.com/en-us/graph/api/driveitem-put-content?view=graph-rest-1.0&tabs=http)) and set the `conflictBehavior` [instance attribute](https://learn.microsoft.com/en-us/graph/api/resources/driveitem?view=graph-rest-1.0#instance-attributes) you'll need to do it this way:
 
@@ -350,7 +380,7 @@ PageIterator<Message, MessageCollectionResponse> pageIterator = new PageIterator
 pageIterator.iterate();
 ```
 
-### Batch Requests 
+### Batch Requests
 
 The Java SDK now supports Batch requests. Batching allows a user to send multiple requests in a single HTTP request which can improve performance and reduce network traffic. A user can chose to add a `RequestInformation` instance or an OkHttp3 `Request` instance to the Batch which will then be sent to the API as a single HTTP request. See here for more information on [batching](https://learn.microsoft.com/en-us/graph/json-batching).
 ```java
@@ -446,7 +476,6 @@ try{
 // If your application encounters a connection interruption or a 5.x.x HTTP status during upload, you can resume the upload.
 // Handle logic
 uploadTask.resume();
-
 ```
 
 ### Per-Request Options
