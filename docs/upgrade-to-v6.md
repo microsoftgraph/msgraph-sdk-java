@@ -155,7 +155,7 @@ Message singleMessage = graphClient.me().messages().byMessageId("<Message Id>").
 
 The `Option` class has been removed and is no longer used to define query parameters, headers, or function parameters. These classes have been replaced with more specific and intuitive implementations. 
 
-### Headers 
+#### Headers 
 Passing headers to requests has changed in v6. The `HeaderOption` class, which extends the `Option` class,  has been removed and is no longer used to define headers. 
 Previously a user would pass headers to a request as follows:
 ```java
@@ -173,7 +173,7 @@ User user = graphClient.users().byUserId("<User Id>").get(requestConfiguration -
         });
 ```
 
-### Query Parameter Options
+#### Query Parameter Options
 
 Passing query parameters to requests has changed in v6. The `QueryOption` class, which extends the `Option` class,  has been removed and is no longer used to define query parameters. 
 Previously a user would pass query parameters to a request as follows:
@@ -241,7 +241,7 @@ try {
 
 ### Drive Item Paths
 
-The current CSDL to OpenAPI conversion process avoids generation of redundant paths, which impacts request builders for driveItems. To mitigate this paths should be available through alternative paths as documented in the reference documentation as seen [here](https://learn.microsoft.com/en-us/graph/api/driveitem-list-children?view=graph-rest-1.0&tabs=http#http-request). 
+The SDK generation process avoids generation of redundant paths, which impacts request builders for driveItems. To mitigate this paths should be available through alternative paths as documented in the reference documentation as seen [here](https://learn.microsoft.com/en-us/graph/api/driveitem-list-children?view=graph-rest-1.0&tabs=http#http-request). 
 
 Examples of using alternative paths are as shown below.
 
