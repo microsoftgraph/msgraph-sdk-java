@@ -60,6 +60,15 @@ public class ChatSendActivityNotificationParameterSet {
     public ItemBody previewText;
 
     /**
+     * The teams App Id.
+     * 
+     */
+    @SerializedName(value = "teamsAppId", alternate = {"TeamsAppId"})
+    @Expose
+	@Nullable
+    public String teamsAppId;
+
+    /**
      * The template Parameters.
      * 
      */
@@ -91,6 +100,7 @@ public class ChatSendActivityNotificationParameterSet {
         this.activityType = builder.activityType;
         this.chainId = builder.chainId;
         this.previewText = builder.previewText;
+        this.teamsAppId = builder.teamsAppId;
         this.templateParameters = builder.templateParameters;
         this.recipient = builder.recipient;
     }
@@ -167,6 +177,21 @@ public class ChatSendActivityNotificationParameterSet {
             return this;
         }
         /**
+         * The teamsAppId parameter value
+         */
+        @Nullable
+        protected String teamsAppId;
+        /**
+         * Sets the TeamsAppId
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public ChatSendActivityNotificationParameterSetBuilder withTeamsAppId(@Nullable final String val) {
+            this.teamsAppId = val;
+            return this;
+        }
+        /**
          * The templateParameters parameter value
          */
         @Nullable
@@ -228,6 +253,9 @@ public class ChatSendActivityNotificationParameterSet {
         }
         if(this.previewText != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("previewText", previewText));
+        }
+        if(this.teamsAppId != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("teamsAppId", teamsAppId));
         }
         if(this.templateParameters != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("templateParameters", templateParameters));

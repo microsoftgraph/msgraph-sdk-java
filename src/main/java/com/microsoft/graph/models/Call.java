@@ -47,7 +47,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Callback Uri.
-     * The callback URL on which callbacks will be delivered. Must be https.
+     * The callback URL on which callbacks are delivered. Must be an HTTPS URL.
      */
     @SerializedName(value = "callbackUri", alternate = {"CallbackUri"})
     @Expose
@@ -56,7 +56,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Call Chain Id.
-     * A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This needs to be copied over from Microsoft.Graph.Call.CallChainId.
+     * A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This identifier must be copied over from Microsoft.Graph.Call.CallChainId.
      */
     @SerializedName(value = "callChainId", alternate = {"CallChainId"})
     @Expose

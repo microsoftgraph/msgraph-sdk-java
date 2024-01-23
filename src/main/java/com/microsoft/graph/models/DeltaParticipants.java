@@ -29,7 +29,7 @@ public class DeltaParticipants extends Entity implements IJsonBackedObject {
 
     /**
      * The Sequence Number.
-     * 
+     * The sequence number for the roster update that is used to identify the notification order.
      */
     @SerializedName(value = "sequenceNumber", alternate = {"SequenceNumber"})
     @Expose
@@ -38,7 +38,7 @@ public class DeltaParticipants extends Entity implements IJsonBackedObject {
 
     /**
      * The Participants.
-     * 
+     * The collection of participants that were updated since the last roster update.
      */
     @SerializedName(value = "participants", alternate = {"Participants"})
     @Expose

@@ -1207,6 +1207,26 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     public com.microsoft.graph.requests.TeamRequestBuilder joinedTeams(@Nonnull final String id) {
         return new com.microsoft.graph.requests.TeamRequestBuilder(getRequestUrlWithAdditionalSegment("joinedTeams") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ResourceSpecificPermissionGrant collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionRequestBuilder permissionGrants() {
+        return new com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrants"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ResourceSpecificPermissionGrant item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ResourceSpecificPermissionGrantRequestBuilder permissionGrants(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ResourceSpecificPermissionGrantRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrants") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for UserTeamwork

@@ -39,7 +39,7 @@ public class RemovedState implements IJsonBackedObject {
 
     /**
      * The Reason.
-     * 
+     * The removal reason for the participant resource.
      */
     @SerializedName(value = "reason", alternate = {"Reason"})
     @Expose

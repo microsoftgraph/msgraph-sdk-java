@@ -308,7 +308,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Service Provisioning Errors.
-     * 
+     * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a group object .  Supports $filter (eq, not, for isResolved and serviceInstance).
      */
     @SerializedName(value = "serviceProvisioningErrors", alternate = {"ServiceProvisioningErrors"})
     @Expose

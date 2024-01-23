@@ -16,6 +16,7 @@ import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.EducationAssignmentGradeType;
 import com.microsoft.graph.models.EducationItemBody;
 import com.microsoft.graph.models.EducationAssignmentStatus;
+import com.microsoft.graph.models.EducationGradingCategory;
 import com.microsoft.graph.models.EducationRubric;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.EducationCategoryCollectionPage;
@@ -39,7 +40,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Added Student Action.
-     * Optional field to control the assignment behavior for students who are added after the assignment is published. If not specified, defaults to none. Supported values are: none, assignIfOpen. For example, a teacher can use assignIfOpen to indicate that an assignment should be assigned to any new student who joins the class while the assignment is still open, and none to indicate that an assignment should not be assigned to new students.
+     * Optional field to control the assignment behavior for students who are added after the assignment is published. If not specified, defaults to none. Supported values are: none, assignIfOpen. For example, a teacher can use assignIfOpen to indicate that an assignment should be assigned to any new student who joins the class while the assignment is still open, and none to indicate that an assignment shouldn't be assigned to new students.
      */
     @SerializedName(value = "addedStudentAction", alternate = {"AddedStudentAction"})
     @Expose
@@ -48,7 +49,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Add To Calendar Action.
-     * Optional field to control the assignment behavior  for adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none.
+     * Optional field to control the assignment behavior  for adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none.
      */
     @SerializedName(value = "addToCalendarAction", alternate = {"AddToCalendarAction"})
     @Expose
@@ -102,7 +103,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Class Id.
-     * Class which this assignment belongs.
+     * Class to which this assignment belongs.
      */
     @SerializedName(value = "classId", alternate = {"ClassId"})
     @Expose
@@ -111,7 +112,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Close Date Time.
-     * Date when the assignment will be closed for submissions. This is an optional field that can be null if the assignment does not allowLateSubmissions or when the closeDateTime is the same as the dueDateTime. But if specified, then the closeDateTime must be greater than or equal to the dueDateTime. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Date when the assignment will be closed for submissions. This is an optional field that can be null if the assignment doesn't allowLateSubmissions or when the closeDateTime is the same as the dueDateTime. But if specified, then the closeDateTime must be greater than or equal to the dueDateTime. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "closeDateTime", alternate = {"CloseDateTime"})
     @Expose
@@ -174,7 +175,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Instructions.
-     * Instructions for the assignment.  This along with the display name tell the student what to do.
+     * Instructions for the assignment.  The instructsions and the display name tell the student what to do.
      */
     @SerializedName(value = "instructions", alternate = {"Instructions"})
     @Expose
@@ -245,6 +246,15 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.requests.EducationCategoryCollectionPage categories;
 
     /**
+     * The Grading Category.
+     * When set, enables users to weight assignments differently when computing a class average grade.
+     */
+    @SerializedName(value = "gradingCategory", alternate = {"GradingCategory"})
+    @Expose
+	@Nullable
+    public EducationGradingCategory gradingCategory;
+
+    /**
      * The Resources.
      * Learning objects that are associated with this assignment.  Only teachers can modify this list. Nullable.
      */
@@ -264,7 +274,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Submissions.
-     * Once published, there is a submission object for each student representing their work and grade.  Read-only. Nullable.
+     * Once published, there's a submission object for each student representing their work and grade.  Read-only. Nullable.
      */
     @SerializedName(value = "submissions", alternate = {"Submissions"})
     @Expose
