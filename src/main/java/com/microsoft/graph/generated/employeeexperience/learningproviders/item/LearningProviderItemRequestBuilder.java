@@ -1,7 +1,9 @@
 package com.microsoft.graph.employeeexperience.learningproviders.item;
 
 import com.microsoft.graph.employeeexperience.learningproviders.item.learningcontents.LearningContentsRequestBuilder;
+import com.microsoft.graph.employeeexperience.learningproviders.item.learningcontentswithexternalid.LearningContentsWithExternalIdRequestBuilder;
 import com.microsoft.graph.employeeexperience.learningproviders.item.learningcourseactivities.LearningCourseActivitiesRequestBuilder;
+import com.microsoft.graph.employeeexperience.learningproviders.item.learningcourseactivitieswithexternalcourseactivityid.LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder;
 import com.microsoft.graph.models.LearningProvider;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -93,6 +95,26 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, LearningProvider::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to manage the learningContents property of the microsoft.graph.learningProvider entity.
+     * @param externalId Alternate key of learningContent
+     * @return a LearningContentsWithExternalIdRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public LearningContentsWithExternalIdRequestBuilder learningContentsWithExternalId(@jakarta.annotation.Nonnull final String externalId) {
+        Objects.requireNonNull(externalId);
+        return new LearningContentsWithExternalIdRequestBuilder(pathParameters, requestAdapter, externalId);
+    }
+    /**
+     * Provides operations to manage the learningCourseActivities property of the microsoft.graph.learningProvider entity.
+     * @param externalcourseActivityId Alternate key of learningCourseActivity
+     * @return a LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder learningCourseActivitiesWithExternalcourseActivityId(@jakarta.annotation.Nonnull final String externalcourseActivityId) {
+        Objects.requireNonNull(externalcourseActivityId);
+        return new LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder(pathParameters, requestAdapter, externalcourseActivityId);
     }
     /**
      * Update the properties of a learningProvider object.

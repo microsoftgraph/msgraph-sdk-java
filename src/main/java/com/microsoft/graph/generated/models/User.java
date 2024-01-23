@@ -689,7 +689,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("managedDevices");
     }
     /**
-     * Gets the manager property value. The user or contact that is this user's manager. Read-only. (HTTP Methods: GET, PUT, DELETE.). Supports $expand.
+     * Gets the manager property value. The user or contact that is this user's manager. Read-only. Supports $expand.
      * @return a DirectoryObject
      */
     @jakarta.annotation.Nullable
@@ -1756,7 +1756,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("managedDevices", value);
     }
     /**
-     * Sets the manager property value. The user or contact that is this user's manager. Read-only. (HTTP Methods: GET, PUT, DELETE.). Supports $expand.
+     * Sets the manager property value. The user or contact that is this user's manager. Read-only. Supports $expand.
      * @param value Value to set for the manager property.
      */
     public void setManager(@jakarta.annotation.Nullable final DirectoryObject value) {

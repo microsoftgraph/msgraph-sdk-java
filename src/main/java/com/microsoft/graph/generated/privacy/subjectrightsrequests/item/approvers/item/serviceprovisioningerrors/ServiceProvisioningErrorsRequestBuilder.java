@@ -24,7 +24,7 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
     /**
      * Provides operations to count the resources in the collection.
      * @deprecated
-     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -51,7 +51,7 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
      * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a user object .  Supports $filter (eq, not, for isResolved and serviceInstance).
      * @return a ServiceProvisioningErrorCollectionResponse
      * @deprecated
-     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -63,7 +63,7 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ServiceProvisioningErrorCollectionResponse
      * @deprecated
-     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -78,7 +78,7 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
      * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a user object .  Supports $filter (eq, not, for isResolved and serviceInstance).
      * @return a RequestInformation
      * @deprecated
-     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -90,7 +90,7 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
-     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -105,7 +105,7 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
      * @param rawUrl The raw URL to use for the request builder.
      * @return a ServiceProvisioningErrorsRequestBuilder
      * @deprecated
-     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
     @jakarta.annotation.Nonnull
     @Deprecated

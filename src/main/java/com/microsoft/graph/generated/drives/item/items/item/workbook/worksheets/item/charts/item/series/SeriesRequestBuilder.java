@@ -62,7 +62,7 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of chartseries objects.
      * @return a WorkbookChartSeriesCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/chartseries-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chart-list-series?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookChartSeriesCollectionResponse get() {
@@ -72,7 +72,7 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of chartseries objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookChartSeriesCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/chartseries-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chart-list-series?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookChartSeriesCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

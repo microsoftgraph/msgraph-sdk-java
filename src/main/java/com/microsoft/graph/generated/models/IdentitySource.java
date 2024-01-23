@@ -40,6 +40,7 @@ public class IdentitySource implements AdditionalDataHolder, BackedModel, Parsab
                 case "#microsoft.graph.crossCloudAzureActiveDirectoryTenant": return new CrossCloudAzureActiveDirectoryTenant();
                 case "#microsoft.graph.domainIdentitySource": return new DomainIdentitySource();
                 case "#microsoft.graph.externalDomainFederation": return new ExternalDomainFederation();
+                case "#microsoft.graph.socialIdentitySource": return new SocialIdentitySource();
             }
         }
         return new IdentitySource();

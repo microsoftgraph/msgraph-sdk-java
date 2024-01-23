@@ -91,7 +91,7 @@ public class Participant extends Entity implements Parsable {
         return this.backingStore.get("recordingInfo");
     }
     /**
-     * Gets the removedState property value. The removedState property
+     * Gets the removedState property value. Indicates the reason why the participant was removed from the roster.
      * @return a RemovedState
      */
     @jakarta.annotation.Nullable
@@ -107,7 +107,7 @@ public class Participant extends Entity implements Parsable {
         return this.backingStore.get("restrictedExperience");
     }
     /**
-     * Gets the rosterSequenceNumber property value. The rosterSequenceNumber property
+     * Gets the rosterSequenceNumber property value. Indicates the roster sequence number in which the participant was last updated.
      * @return a Long
      */
     @jakarta.annotation.Nullable
@@ -174,7 +174,7 @@ public class Participant extends Entity implements Parsable {
         this.backingStore.set("recordingInfo", value);
     }
     /**
-     * Sets the removedState property value. The removedState property
+     * Sets the removedState property value. Indicates the reason why the participant was removed from the roster.
      * @param value Value to set for the removedState property.
      */
     public void setRemovedState(@jakarta.annotation.Nullable final RemovedState value) {
@@ -188,7 +188,7 @@ public class Participant extends Entity implements Parsable {
         this.backingStore.set("restrictedExperience", value);
     }
     /**
-     * Sets the rosterSequenceNumber property value. The rosterSequenceNumber property
+     * Sets the rosterSequenceNumber property value. Indicates the roster sequence number in which the participant was last updated.
      * @param value Value to set for the rosterSequenceNumber property.
      */
     public void setRosterSequenceNumber(@jakarta.annotation.Nullable final Long value) {
