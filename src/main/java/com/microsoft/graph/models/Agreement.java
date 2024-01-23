@@ -32,7 +32,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Display name of the agreement. The display name is used for internal tracking of the agreement but is not shown to end users who view the agreement. Supports $filter (eq).
+     * Display name of the agreement. The display name is used for internal tracking of the agreement but isn't shown to end users who view the agreement. Supports $filter (eq).
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -68,7 +68,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
 
     /**
      * The User Reaccept Required Frequency.
-     * The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq).
+     * The duration after which the user must reaccept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq).
      */
     @SerializedName(value = "userReacceptRequiredFrequency", alternate = {"UserReacceptRequiredFrequency"})
     @Expose

@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.AccessPackageResourceAttribute;
 import com.microsoft.graph.models.AccessPackageResourceEnvironment;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccessPackageResourceRoleCollectionPage;
@@ -28,6 +29,15 @@ import javax.annotation.Nonnull;
  */
 public class AccessPackageResource extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Attributes.
+     * Contains information about the attributes to be collected from the requestor and sent to the resource application.
+     */
+    @SerializedName(value = "attributes", alternate = {"Attributes"})
+    @Expose
+	@Nullable
+    public java.util.List<AccessPackageResourceAttribute> attributes;
 
     /**
      * The Created Date Time.

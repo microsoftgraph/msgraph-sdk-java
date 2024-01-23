@@ -28,7 +28,7 @@ public class Shift extends ChangeTrackedEntity implements IJsonBackedObject {
 
     /**
      * The Draft Shift.
-     * The draft version of this shift that is viewable by managers. Required.
+     * Draft changes in the shift. Draft changes are only visible to managers. The changes are visible to employees when they are shared, which copies the changes from the draftShift to the sharedShift property.
      */
     @SerializedName(value = "draftShift", alternate = {"DraftShift"})
     @Expose
@@ -46,7 +46,7 @@ public class Shift extends ChangeTrackedEntity implements IJsonBackedObject {
 
     /**
      * The Shared Shift.
-     * The shared version of this shift that is viewable by both employees and managers. Required.
+     * The shared version of this shift that is viewable by both employees and managers. Updates to the sharedShift property send notifications to users in the Teams client.
      */
     @SerializedName(value = "sharedShift", alternate = {"SharedShift"})
     @Expose

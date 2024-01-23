@@ -56,34 +56,4 @@ public class WorkbookTableRangeRequestBuilder extends BaseFunctionRequestBuilder
                 requestOptions);
         return request;
     }
-
-    /**
-     * Gets the request builder for WorkbookRangeFormat
-     *
-     * @return the WorkbookRangeFormatRequestBuilder instance
-     */
-    @Nonnull
-    public WorkbookRangeFormatRequestBuilder format() {
-        return new WorkbookRangeFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for WorkbookRangeSort
-     *
-     * @return the WorkbookRangeSortRequestBuilder instance
-     */
-    @Nonnull
-    public WorkbookRangeSortRequestBuilder sort() {
-        return new WorkbookRangeSortRequestBuilder(getRequestUrlWithAdditionalSegment("sort"), getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for WorkbookWorksheet
-     *
-     * @return the WorkbookWorksheetRequestBuilder instance
-     */
-    @Nonnull
-    public WorkbookWorksheetRequestBuilder worksheet() {
-        return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
-    }
 }

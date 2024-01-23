@@ -39,7 +39,7 @@ public class ServiceProvisioningError implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The date and time at which the error occurred.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -48,7 +48,7 @@ public class ServiceProvisioningError implements IJsonBackedObject {
 
     /**
      * The Is Resolved.
-     * 
+     * Indicates whether the error has been attended to.
      */
     @SerializedName(value = "isResolved", alternate = {"IsResolved"})
     @Expose
@@ -57,7 +57,7 @@ public class ServiceProvisioningError implements IJsonBackedObject {
 
     /**
      * The Service Instance.
-     * 
+     * Qualified service instance (for example, 'SharePoint/Dublin') that published the service error information.
      */
     @SerializedName(value = "serviceInstance", alternate = {"ServiceInstance"})
     @Expose

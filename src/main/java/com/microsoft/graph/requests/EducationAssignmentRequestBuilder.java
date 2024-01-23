@@ -76,6 +76,16 @@ public class EducationAssignmentRequestBuilder extends BaseRequestBuilder<Educat
     public com.microsoft.graph.requests.EducationCategoryRequestBuilder categories(@Nonnull final String id) {
         return new com.microsoft.graph.requests.EducationCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Gets the request builder for EducationGradingCategory
+     *
+     * @return the EducationGradingCategoryWithReferenceRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.EducationGradingCategoryWithReferenceRequestBuilder gradingCategory() {
+        return new com.microsoft.graph.requests.EducationGradingCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("gradingCategory"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the EducationAssignmentResource collection
      *

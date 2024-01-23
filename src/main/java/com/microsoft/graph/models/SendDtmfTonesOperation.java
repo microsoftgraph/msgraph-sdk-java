@@ -28,7 +28,7 @@ public class SendDtmfTonesOperation extends CommsOperation implements IJsonBacke
 
     /**
      * The Completion Reason.
-     * 
+     * The results of the action. Possible values are: unknown, completedSuccessfully, mediaOperationCanceled, unknownfutureValue.
      */
     @SerializedName(value = "completionReason", alternate = {"CompletionReason"})
     @Expose

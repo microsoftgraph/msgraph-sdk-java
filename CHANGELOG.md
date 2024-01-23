@@ -11,6 +11,48 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.80.0] - 2024-01-23
+
+### Added 
+
+- AccessPackageResource model and derived models and requests.
+- CallSendDtmfTonesParameterSet model and derived requests.
+- EducationGradingCategory model and derived requests.
+- SendDtmfCompletionReason model.
+- SendDtmfTonesOperation model and derived requests.
+- SocialIdentitySource model.
+- SocialIdentitySourceType model.
+- GitHubOrganizationEvidence model.
+- GitHubRepoEvidence model.
+- GitHubUserEvidence model.
+- HostLogonSessionEvidence model.
+- IoTDeviceEvidence model.
+- IoTDeviceImportanceType model.
+- MalwareEvidence model.
+- NetworkConnectionEvidence model.
+- NicEvidence model.
+- ProtocolType model.
+- SasTokenEvidence model.
+- ServicePrincipalEvidence model.
+- ServicePrincipalType model.
+- SubmissionMailEvidence model.
+
+### Changed 
+
+- AccessPackageResource model.
+- ChatSendActivityNotificationParameterSet model and derived requests.
+- EducationAssignment model and derived requests.
+- EducationAssignmentSettings model and derived requests.
+- EducationSubmission model.
+- TeamsAppSettings model.
+- TeamSendActivityNotificationParameterSet model and derived requests.
+- User model and derived requests.
+- UserTeamworkSendActivityNotificationParameterSet model and derived requests.
+- CallRequestBuilder request.
+- Workbook*Range request builders changed to remove "sort", "format", and "worksheet" functions. 
+- Sort, Format, and Worksheet properties still available via the WorkbookRange entity returned from these requests.  
+
+
 ## [5.79.0] - 2023-12-21
 
 ### Added 
