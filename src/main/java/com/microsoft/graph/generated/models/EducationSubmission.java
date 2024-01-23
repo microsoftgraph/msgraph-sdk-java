@@ -46,6 +46,7 @@ public class EducationSubmission extends Entity implements Parsable {
         deserializerMap.put("submittedResources", (n) -> { this.setSubmittedResources(n.getCollectionOfObjectValues(EducationSubmissionResource::createFromDiscriminatorValue)); });
         deserializerMap.put("unsubmittedBy", (n) -> { this.setUnsubmittedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("unsubmittedDateTime", (n) -> { this.setUnsubmittedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -161,6 +162,14 @@ public class EducationSubmission extends Entity implements Parsable {
         return this.backingStore.get("unsubmittedDateTime");
     }
     /**
+     * Gets the webUrl property value. The webUrl property
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getWebUrl() {
+        return this.backingStore.get("webUrl");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -269,5 +278,12 @@ public class EducationSubmission extends Entity implements Parsable {
      */
     public void setUnsubmittedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("unsubmittedDateTime", value);
+    }
+    /**
+     * Sets the webUrl property value. The webUrl property
+     * @param value Value to set for the webUrl property.
+     */
+    public void setWebUrl(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("webUrl", value);
     }
 }

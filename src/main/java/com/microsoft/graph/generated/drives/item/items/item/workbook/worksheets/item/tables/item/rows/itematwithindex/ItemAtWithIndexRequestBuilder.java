@@ -1,5 +1,6 @@
 package com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.tables.item.rows.itematwithindex;
 
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.tables.item.rows.itematwithindex.range.RangeRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.WorkbookTableRow;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -19,6 +20,13 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemAtWithIndexRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the range method.
+     */
+    @jakarta.annotation.Nonnull
+    public RangeRequestBuilder range() {
+        return new RangeRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new ItemAtWithIndexRequestBuilder and sets the default values.
      * @param index Usage: index={index}

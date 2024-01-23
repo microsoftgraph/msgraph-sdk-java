@@ -59,7 +59,7 @@ public class GradingCategoriesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignmentSettings/gradingCategories{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get gradingCategories from education
+     * When set, enables users to weight assignments differently when computing a class average grade.
      * @return a EducationGradingCategoryCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class GradingCategoriesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get gradingCategories from education
+     * When set, enables users to weight assignments differently when computing a class average grade.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EducationGradingCategoryCollectionResponse
      */
@@ -104,7 +104,7 @@ public class GradingCategoriesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationGradingCategory::createFromDiscriminatorValue);
     }
     /**
-     * Get gradingCategories from education
+     * When set, enables users to weight assignments differently when computing a class average grade.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class GradingCategoriesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get gradingCategories from education
+     * When set, enables users to weight assignments differently when computing a class average grade.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class GradingCategoriesRequestBuilder extends BaseRequestBuilder {
         return new GradingCategoriesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get gradingCategories from education
+     * When set, enables users to weight assignments differently when computing a class average grade.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

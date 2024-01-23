@@ -36,7 +36,7 @@ public class DeltaParticipants extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the participants property value. The participants property
+     * Gets the participants property value. The collection of participants that were updated since the last roster update.
      * @return a java.util.List<Participant>
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class DeltaParticipants extends Entity implements Parsable {
         return this.backingStore.get("participants");
     }
     /**
-     * Gets the sequenceNumber property value. The sequenceNumber property
+     * Gets the sequenceNumber property value. The sequence number for the roster update that is used to identify the notification order.
      * @return a Long
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class DeltaParticipants extends Entity implements Parsable {
         writer.writeLongValue("sequenceNumber", this.getSequenceNumber());
     }
     /**
-     * Sets the participants property value. The participants property
+     * Sets the participants property value. The collection of participants that were updated since the last roster update.
      * @param value Value to set for the participants property.
      */
     public void setParticipants(@jakarta.annotation.Nullable final java.util.List<Participant> value) {
         this.backingStore.set("participants", value);
     }
     /**
-     * Sets the sequenceNumber property value. The sequenceNumber property
+     * Sets the sequenceNumber property value. The sequence number for the roster update that is used to identify the notification order.
      * @param value Value to set for the sequenceNumber property.
      */
     public void setSequenceNumber(@jakarta.annotation.Nullable final Long value) {

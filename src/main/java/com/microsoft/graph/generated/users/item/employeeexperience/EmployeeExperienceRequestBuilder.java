@@ -3,6 +3,7 @@ package com.microsoft.graph.users.item.employeeexperience;
 import com.microsoft.graph.models.EmployeeExperienceUser;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.employeeexperience.learningcourseactivities.LearningCourseActivitiesRequestBuilder;
+import com.microsoft.graph.users.item.employeeexperience.learningcourseactivitieswithexternalcourseactivityid.LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -81,6 +82,16 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EmployeeExperienceUser::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to manage the learningCourseActivities property of the microsoft.graph.employeeExperienceUser entity.
+     * @param externalcourseActivityId Alternate key of learningCourseActivity
+     * @return a LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder learningCourseActivitiesWithExternalcourseActivityId(@jakarta.annotation.Nonnull final String externalcourseActivityId) {
+        Objects.requireNonNull(externalcourseActivityId);
+        return new LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder(pathParameters, requestAdapter, externalcourseActivityId);
     }
     /**
      * Update the navigation property employeeExperience in users

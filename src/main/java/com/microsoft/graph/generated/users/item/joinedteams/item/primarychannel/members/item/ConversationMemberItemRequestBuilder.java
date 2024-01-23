@@ -37,16 +37,16 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/primaryChannel/members/{conversationMember%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a conversationMember from a channel.
-     * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-delete?view=graph-rest-1.0">Find more info here</a>
+     * Delete a conversationMember from a channel. This operation is allowed only for channels with a membershipType value of private or shared.
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-delete-members?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a conversationMember from a channel.
+     * Delete a conversationMember from a channel. This operation is allowed only for channels with a membershipType value of private or shared.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-delete-members?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -79,21 +79,21 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConversationMember::createFromDiscriminatorValue);
     }
     /**
-     * Update the role of a conversationMember in a team or channel.
+     * Update the role of a conversationMember in a channel. This operation is allowed only for channels with a membershipType value of private or shared.
      * @param body The request body
      * @return a ConversationMember
-     * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-update-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConversationMember patch(@jakarta.annotation.Nonnull final ConversationMember body) {
         return patch(body, null);
     }
     /**
-     * Update the role of a conversationMember in a team or channel.
+     * Update the role of a conversationMember in a channel. This operation is allowed only for channels with a membershipType value of private or shared.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ConversationMember
-     * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-update-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConversationMember patch(@jakarta.annotation.Nonnull final ConversationMember body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConversationMember::createFromDiscriminatorValue);
     }
     /**
-     * Delete a conversationMember from a channel.
+     * Delete a conversationMember from a channel. This operation is allowed only for channels with a membershipType value of private or shared.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a conversationMember from a channel.
+     * Delete a conversationMember from a channel. This operation is allowed only for channels with a membershipType value of private or shared.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the role of a conversationMember in a team or channel.
+     * Update the role of a conversationMember in a channel. This operation is allowed only for channels with a membershipType value of private or shared.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the role of a conversationMember in a team or channel.
+     * Update the role of a conversationMember in a channel. This operation is allowed only for channels with a membershipType value of private or shared.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

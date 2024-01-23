@@ -36,7 +36,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the gradingCategories property value. The gradingCategories property
+     * Gets the gradingCategories property value. When set, enables users to weight assignments differently when computing a class average grade.
      * @return a java.util.List<EducationGradingCategory>
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
         return this.backingStore.get("gradingCategories");
     }
     /**
-     * Gets the submissionAnimationDisabled property value. Indicates whether turn-in celebration animation is shown. A value of true indicates that the animation isn't shown. Default value is false.
+     * Gets the submissionAnimationDisabled property value. Indicates whether to show the turn-in celebration animation. If true, indicates to skip the animation. The default value is false.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
         writer.writeBooleanValue("submissionAnimationDisabled", this.getSubmissionAnimationDisabled());
     }
     /**
-     * Sets the gradingCategories property value. The gradingCategories property
+     * Sets the gradingCategories property value. When set, enables users to weight assignments differently when computing a class average grade.
      * @param value Value to set for the gradingCategories property.
      */
     public void setGradingCategories(@jakarta.annotation.Nullable final java.util.List<EducationGradingCategory> value) {
         this.backingStore.set("gradingCategories", value);
     }
     /**
-     * Sets the submissionAnimationDisabled property value. Indicates whether turn-in celebration animation is shown. A value of true indicates that the animation isn't shown. Default value is false.
+     * Sets the submissionAnimationDisabled property value. Indicates whether to show the turn-in celebration animation. If true, indicates to skip the animation. The default value is false.
      * @param value Value to set for the submissionAnimationDisabled property.
      */
     public void setSubmissionAnimationDisabled(@jakarta.annotation.Nullable final Boolean value) {

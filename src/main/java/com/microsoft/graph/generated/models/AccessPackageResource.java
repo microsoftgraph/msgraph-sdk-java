@@ -26,6 +26,14 @@ public class AccessPackageResource extends Entity implements Parsable {
         return new AccessPackageResource();
     }
     /**
+     * Gets the attributes property value. Contains information about the attributes to be collected from the requestor and sent to the resource application.
+     * @return a java.util.List<AccessPackageResourceAttribute>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AccessPackageResourceAttribute> getAttributes() {
+        return this.backingStore.get("attributes");
+    }
+    /**
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
@@ -64,6 +72,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("attributes", (n) -> { this.setAttributes(n.getCollectionOfObjectValues(AccessPackageResourceAttribute::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -122,6 +131,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("attributes", this.getAttributes());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -131,6 +141,13 @@ public class AccessPackageResource extends Entity implements Parsable {
         writer.writeStringValue("originSystem", this.getOriginSystem());
         writer.writeCollectionOfObjectValues("roles", this.getRoles());
         writer.writeCollectionOfObjectValues("scopes", this.getScopes());
+    }
+    /**
+     * Sets the attributes property value. Contains information about the attributes to be collected from the requestor and sent to the resource application.
+     * @param value Value to set for the attributes property.
+     */
+    public void setAttributes(@jakarta.annotation.Nullable final java.util.List<AccessPackageResourceAttribute> value) {
+        this.backingStore.set("attributes", value);
     }
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.

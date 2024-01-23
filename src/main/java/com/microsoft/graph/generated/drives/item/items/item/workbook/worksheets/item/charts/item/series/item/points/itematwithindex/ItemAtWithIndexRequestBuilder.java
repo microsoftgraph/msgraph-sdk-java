@@ -1,5 +1,6 @@
 package com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.item.series.item.points.itematwithindex;
 
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.item.series.item.points.itematwithindex.format.FormatRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.WorkbookChartPoint;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -19,6 +20,13 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemAtWithIndexRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the format property of the microsoft.graph.workbookChartPoint entity.
+     */
+    @jakarta.annotation.Nonnull
+    public FormatRequestBuilder format() {
+        return new FormatRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new ItemAtWithIndexRequestBuilder and sets the default values.
      * @param index Usage: index={index}

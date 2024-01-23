@@ -26,7 +26,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         return new Shift();
     }
     /**
-     * Gets the draftShift property value. The draft version of this shift that is viewable by managers. Required.
+     * Gets the draftShift property value. Draft changes in the shift. Draft changes are only visible to managers. The changes are visible to employees when they are shared, which copies the changes from the draftShift to the sharedShift property.
      * @return a ShiftItem
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         return this.backingStore.get("schedulingGroupId");
     }
     /**
-     * Gets the sharedShift property value. The shared version of this shift that is viewable by both employees and managers. Required.
+     * Gets the sharedShift property value. The shared version of this shift that is viewable by both employees and managers. Updates to the sharedShift property send notifications to users in the Teams client.
      * @return a ShiftItem
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         writer.writeStringValue("userId", this.getUserId());
     }
     /**
-     * Sets the draftShift property value. The draft version of this shift that is viewable by managers. Required.
+     * Sets the draftShift property value. Draft changes in the shift. Draft changes are only visible to managers. The changes are visible to employees when they are shared, which copies the changes from the draftShift to the sharedShift property.
      * @param value Value to set for the draftShift property.
      */
     public void setDraftShift(@jakarta.annotation.Nullable final ShiftItem value) {
@@ -97,7 +97,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         this.backingStore.set("schedulingGroupId", value);
     }
     /**
-     * Sets the sharedShift property value. The shared version of this shift that is viewable by both employees and managers. Required.
+     * Sets the sharedShift property value. The shared version of this shift that is viewable by both employees and managers. Updates to the sharedShift property send notifications to users in the Teams client.
      * @param value Value to set for the sharedShift property.
      */
     public void setSharedShift(@jakarta.annotation.Nullable final ShiftItem value) {

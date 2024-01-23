@@ -1,5 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.tables.item.columns.itematwithindex;
 
+import com.microsoft.graph.drives.item.items.item.workbook.tables.item.columns.itematwithindex.databodyrange.DataBodyRangeRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.tables.item.columns.itematwithindex.filter.FilterRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.tables.item.columns.itematwithindex.headerrowrange.HeaderRowRangeRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.tables.item.columns.itematwithindex.range.RangeRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.tables.item.columns.itematwithindex.totalrowrange.TotalRowRangeRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.WorkbookTableColumn;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -19,6 +24,41 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemAtWithIndexRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the dataBodyRange method.
+     */
+    @jakarta.annotation.Nonnull
+    public DataBodyRangeRequestBuilder dataBodyRange() {
+        return new DataBodyRangeRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the filter property of the microsoft.graph.workbookTableColumn entity.
+     */
+    @jakarta.annotation.Nonnull
+    public FilterRequestBuilder filter() {
+        return new FilterRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the headerRowRange method.
+     */
+    @jakarta.annotation.Nonnull
+    public HeaderRowRangeRequestBuilder headerRowRange() {
+        return new HeaderRowRangeRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the range method.
+     */
+    @jakarta.annotation.Nonnull
+    public RangeRequestBuilder range() {
+        return new RangeRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the totalRowRange method.
+     */
+    @jakarta.annotation.Nonnull
+    public TotalRowRangeRequestBuilder totalRowRange() {
+        return new TotalRowRangeRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new ItemAtWithIndexRequestBuilder and sets the default values.
      * @param index Usage: index={index}

@@ -1,5 +1,18 @@
 package com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.itemwithname;
 
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.itemwithname.axes.AxesRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.itemwithname.datalabels.DataLabelsRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.itemwithname.format.FormatRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.itemwithname.image.ImageRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.itemwithname.imagewithwidth.ImageWithWidthRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.itemwithname.imagewithwidthwithheight.ImageWithWidthWithHeightRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.itemwithname.imagewithwidthwithheightwithfittingmode.ImageWithWidthWithHeightWithFittingModeRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.itemwithname.legend.LegendRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.itemwithname.series.SeriesRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.itemwithname.setdata.SetDataRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.itemwithname.setposition.SetPositionRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.itemwithname.title.TitleRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.itemwithname.worksheet.WorksheetRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.WorkbookChart;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -19,6 +32,76 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemWithNameRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the axes property of the microsoft.graph.workbookChart entity.
+     */
+    @jakarta.annotation.Nonnull
+    public AxesRequestBuilder axes() {
+        return new AxesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the dataLabels property of the microsoft.graph.workbookChart entity.
+     */
+    @jakarta.annotation.Nonnull
+    public DataLabelsRequestBuilder dataLabels() {
+        return new DataLabelsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the format property of the microsoft.graph.workbookChart entity.
+     */
+    @jakarta.annotation.Nonnull
+    public FormatRequestBuilder format() {
+        return new FormatRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the image method.
+     */
+    @jakarta.annotation.Nonnull
+    public ImageRequestBuilder image() {
+        return new ImageRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the legend property of the microsoft.graph.workbookChart entity.
+     */
+    @jakarta.annotation.Nonnull
+    public LegendRequestBuilder legend() {
+        return new LegendRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the series property of the microsoft.graph.workbookChart entity.
+     */
+    @jakarta.annotation.Nonnull
+    public SeriesRequestBuilder series() {
+        return new SeriesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the setData method.
+     */
+    @jakarta.annotation.Nonnull
+    public SetDataRequestBuilder setData() {
+        return new SetDataRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the setPosition method.
+     */
+    @jakarta.annotation.Nonnull
+    public SetPositionRequestBuilder setPosition() {
+        return new SetPositionRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the title property of the microsoft.graph.workbookChart entity.
+     */
+    @jakarta.annotation.Nonnull
+    public TitleRequestBuilder title() {
+        return new TitleRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the worksheet property of the microsoft.graph.workbookChart entity.
+     */
+    @jakarta.annotation.Nonnull
+    public WorksheetRequestBuilder worksheet() {
+        return new WorksheetRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new ItemWithNameRequestBuilder and sets the default values.
      * @param name Usage: name='{name}'
@@ -57,6 +140,42 @@ public class ItemWithNameRequestBuilder extends BaseRequestBuilder {
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookChart::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to call the image method.
+     * @param width Usage: width={width}
+     * @return a ImageWithWidthRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ImageWithWidthRequestBuilder imageWithWidth(@jakarta.annotation.Nonnull final Integer width) {
+        Objects.requireNonNull(width);
+        return new ImageWithWidthRequestBuilder(pathParameters, requestAdapter, width);
+    }
+    /**
+     * Provides operations to call the image method.
+     * @param height Usage: height={height}
+     * @param width Usage: width={width}
+     * @return a ImageWithWidthWithHeightRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ImageWithWidthWithHeightRequestBuilder imageWithWidthWithHeight(@jakarta.annotation.Nonnull final Integer height, @jakarta.annotation.Nonnull final Integer width) {
+        Objects.requireNonNull(height);
+        Objects.requireNonNull(width);
+        return new ImageWithWidthWithHeightRequestBuilder(pathParameters, requestAdapter, height, width);
+    }
+    /**
+     * Provides operations to call the image method.
+     * @param fittingMode Usage: fittingMode='{fittingMode}'
+     * @param height Usage: height={height}
+     * @param width Usage: width={width}
+     * @return a ImageWithWidthWithHeightWithFittingModeRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ImageWithWidthWithHeightWithFittingModeRequestBuilder imageWithWidthWithHeightWithFittingMode(@jakarta.annotation.Nonnull final String fittingMode, @jakarta.annotation.Nonnull final Integer height, @jakarta.annotation.Nonnull final Integer width) {
+        Objects.requireNonNull(fittingMode);
+        Objects.requireNonNull(height);
+        Objects.requireNonNull(width);
+        return new ImageWithWidthWithHeightWithFittingModeRequestBuilder(pathParameters, requestAdapter, fittingMode, height, width);
     }
     /**
      * Invoke function item

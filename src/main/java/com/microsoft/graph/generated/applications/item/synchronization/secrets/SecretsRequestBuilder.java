@@ -2,7 +2,6 @@ package com.microsoft.graph.applications.item.synchronization.secrets;
 
 import com.microsoft.graph.applications.item.synchronization.secrets.count.CountRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.models.SynchronizationSecretKeyStringValuePair;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -46,26 +45,26 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update property secrets value.
      * @param body The request body
-     * @return a java.util.List<SynchronizationSecretKeyStringValuePair>
+     * @return a SecretsPutResponse
      */
     @jakarta.annotation.Nullable
-    public java.util.List<SynchronizationSecretKeyStringValuePair> put(@jakarta.annotation.Nonnull final java.util.List<SynchronizationSecretKeyStringValuePair> body) {
+    public SecretsPutResponse put(@jakarta.annotation.Nonnull final SecretsPutRequestBody body) {
         return put(body, null);
     }
     /**
      * Update property secrets value.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a java.util.List<SynchronizationSecretKeyStringValuePair>
+     * @return a SecretsPutResponse
      */
     @jakarta.annotation.Nullable
-    public java.util.List<SynchronizationSecretKeyStringValuePair> put(@jakarta.annotation.Nonnull final java.util.List<SynchronizationSecretKeyStringValuePair> body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
+    public SecretsPutResponse put(@jakarta.annotation.Nonnull final SecretsPutRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPutRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendCollection(requestInfo, errorMapping, SynchronizationSecretKeyStringValuePair::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, SecretsPutResponse::createFromDiscriminatorValue);
     }
     /**
      * Update property secrets value.
@@ -73,7 +72,7 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final java.util.List<SynchronizationSecretKeyStringValuePair> body) {
+    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final SecretsPutRequestBody body) {
         return toPutRequestInformation(body, null);
     }
     /**
@@ -83,12 +82,12 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final java.util.List<SynchronizationSecretKeyStringValuePair> body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
+    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final SecretsPutRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PUT, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PutRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body.toArray(new SynchronizationSecretKeyStringValuePair[0]));
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**

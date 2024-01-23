@@ -55,7 +55,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CalendarViewRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendarGroups/{calendarGroup%2Did}/calendars/{calendar%2Did}/calendarView{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendarGroups/{calendarGroup%2Did}/calendars/{calendar%2Did}/calendarView{?startDateTime*,endDateTime*,%24top,%24skip,%24filter,%24count,%24orderby,%24select}", pathParameters);
     }
     /**
      * Instantiates a new CalendarViewRequestBuilder and sets the default values.
@@ -63,10 +63,10 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CalendarViewRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendarGroups/{calendarGroup%2Did}/calendars/{calendar%2Did}/calendarView{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendarGroups/{calendarGroup%2Did}/calendars/{calendar%2Did}/calendarView{?startDateTime*,endDateTime*,%24top,%24skip,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
-     * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar (../me/calendarView) or some other calendar of the user's.
+     * The calendar view for the calendar. Navigation property. Read-only.
      * @return a EventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/calendar-list-calendarview?view=graph-rest-1.0">Find more info here</a>
      */
@@ -75,7 +75,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar (../me/calendarView) or some other calendar of the user's.
+     * The calendar view for the calendar. Navigation property. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/calendar-list-calendarview?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EventCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar (../me/calendarView) or some other calendar of the user's.
+     * The calendar view for the calendar. Navigation property. Read-only.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar (../me/calendarView) or some other calendar of the user's.
+     * The calendar view for the calendar. Navigation property. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -119,7 +119,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
         return new CalendarViewRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar (../me/calendarView) or some other calendar of the user's.
+     * The calendar view for the calendar. Navigation property. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
@@ -128,6 +128,11 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
          */
         @jakarta.annotation.Nullable
         public Boolean count;
+        /**
+         * The end date and time of the time range, represented in ISO 8601 format. For example, 2019-11-08T20:00:00-08:00
+         */
+        @jakarta.annotation.Nullable
+        public String endDateTime;
         /**
          * Filter items by property values
          */
@@ -149,6 +154,11 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
         @jakarta.annotation.Nullable
         public Integer skip;
         /**
+         * The start date and time of the time range, represented in ISO 8601 format. For example, 2019-11-08T19:00:00-08:00
+         */
+        @jakarta.annotation.Nullable
+        public String startDateTime;
+        /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
@@ -161,8 +171,10 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
         public Map<String, Object> toQueryParameters() {
             final Map<String, Object> allQueryParams = new HashMap();
             allQueryParams.put("%24count", count);
+            allQueryParams.put("endDateTime", endDateTime);
             allQueryParams.put("%24filter", filter);
             allQueryParams.put("%24skip", skip);
+            allQueryParams.put("startDateTime", startDateTime);
             allQueryParams.put("%24top", top);
             allQueryParams.put("%24orderby", orderby);
             allQueryParams.put("%24select", select);
