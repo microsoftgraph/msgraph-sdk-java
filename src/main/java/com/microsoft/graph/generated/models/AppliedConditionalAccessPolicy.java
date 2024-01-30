@@ -95,7 +95,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
         return deserializerMap;
     }
     /**
-     * Gets the id property value. An identifier of the conditional access policy.
+     * Gets the id property value. An identifier of the conditional access policy. Supports $filter (eq).
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions weren't met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue.
+     * Gets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (policy isn't applied because policy conditions weren't met), notEnabled (This is due to the policy in a disabled state), unknown, unknownFutureValue, reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.  You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.
      * @return a AppliedConditionalAccessPolicyResult
      */
     @jakarta.annotation.Nullable
@@ -169,7 +169,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
         this.backingStore.set("enforcedSessionControls", value);
     }
     /**
-     * Sets the id property value. An identifier of the conditional access policy.
+     * Sets the id property value. An identifier of the conditional access policy. Supports $filter (eq).
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
@@ -183,7 +183,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions weren't met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue.
+     * Sets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (policy isn't applied because policy conditions weren't met), notEnabled (This is due to the policy in a disabled state), unknown, unknownFutureValue, reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.  You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.
      * @param value Value to set for the result property.
      */
     public void setResult(@jakarta.annotation.Nullable final AppliedConditionalAccessPolicyResult value) {
