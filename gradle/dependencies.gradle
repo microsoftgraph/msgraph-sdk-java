@@ -11,10 +11,10 @@ dependencies {
 
     // Core Http library 
     api 'com.microsoft.graph:microsoft-graph-core:3.0.12-SNAPSHOT'
-    implementation 'com.microsoft.kiota:microsoft-kiota-authentication-azure:0.12.1'
-    implementation 'com.microsoft.kiota:microsoft-kiota-http-okHttp:0.12.1'
-    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-json:0.12.1'
-    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-text:0.12.1'
-    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-form:0.12.1'
-    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-multipart:0.12.1'
+    implementation 'com.microsoft.kiota:microsoft-kiota-authentication-azure:0.12.2'
+    implementation 'com.microsoft.kiota:microsoft-kiota-http-okHttp:0.12.2'
+    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-json:0.12.2'
+    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-text:0.12.2'
+    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-form:0.12.2'
+    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-multipart:0.12.2'
 }
