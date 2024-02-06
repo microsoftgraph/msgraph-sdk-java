@@ -26,7 +26,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DefaultAppManagementPolicyRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/defaultAppManagementPolicy{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/policies/defaultAppManagementPolicy{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new DefaultAppManagementPolicyRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DefaultAppManagementPolicyRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/defaultAppManagementPolicy{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/policies/defaultAppManagementPolicy{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property defaultAppManagementPolicy for policies

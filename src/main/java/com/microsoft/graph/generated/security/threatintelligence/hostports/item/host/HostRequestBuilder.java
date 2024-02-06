@@ -26,7 +26,7 @@ public class HostRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public HostRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/threatIntelligence/hostPorts/{hostPort%2Did}/host{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/security/threatIntelligence/hostPorts/{hostPort%2Did}/host{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new HostRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class HostRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public HostRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/threatIntelligence/hostPorts/{hostPort%2Did}/host{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/security/threatIntelligence/hostPorts/{hostPort%2Did}/host{?%24expand,%24select}", rawUrl);
     }
     /**
      * The host related to this hostPort. This is a reverse navigation property. When you navigate to hostPorts from a host, assume that this is a return reference.

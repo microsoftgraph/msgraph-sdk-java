@@ -34,7 +34,7 @@ public class InvitationItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public InvitationItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/invitations/{invitation%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/invitations/{invitation%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new InvitationItemRequestBuilder and sets the default values.
@@ -42,7 +42,7 @@ public class InvitationItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public InvitationItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/invitations/{invitation%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/invitations/{invitation%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete entity from invitations

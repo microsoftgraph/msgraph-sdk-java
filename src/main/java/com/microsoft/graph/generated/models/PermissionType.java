@@ -5,9 +5,9 @@ import java.util.Objects;
 
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum PermissionType implements ValuedEnum {
-    Application("application"),
+    DelegatedUserConsentable("delegatedUserConsentable"),
     Delegated("delegated"),
-    DelegatedUserConsentable("delegatedUserConsentable");
+    Application("application");
     public final String value;
     PermissionType(final String value) {
         this.value = value;
@@ -18,9 +18,9 @@ public enum PermissionType implements ValuedEnum {
     public static PermissionType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "application": return Application;
-            case "delegated": return Delegated;
             case "delegatedUserConsentable": return DelegatedUserConsentable;
+            case "delegated": return Delegated;
+            case "application": return Application;
             default: return null;
         }
     }

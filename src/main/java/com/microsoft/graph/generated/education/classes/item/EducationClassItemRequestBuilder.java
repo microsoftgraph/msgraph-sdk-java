@@ -6,6 +6,7 @@ import com.microsoft.graph.education.classes.item.assignments.AssignmentsRequest
 import com.microsoft.graph.education.classes.item.assignmentsettings.AssignmentSettingsRequestBuilder;
 import com.microsoft.graph.education.classes.item.group.GroupRequestBuilder;
 import com.microsoft.graph.education.classes.item.members.MembersRequestBuilder;
+import com.microsoft.graph.education.classes.item.modules.ModulesRequestBuilder;
 import com.microsoft.graph.education.classes.item.schools.SchoolsRequestBuilder;
 import com.microsoft.graph.education.classes.item.teachers.TeachersRequestBuilder;
 import com.microsoft.graph.models.EducationClass;
@@ -71,6 +72,13 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
         return new MembersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the modules property of the microsoft.graph.educationClass entity.
+     */
+    @jakarta.annotation.Nonnull
+    public ModulesRequestBuilder modules() {
+        return new ModulesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the schools property of the microsoft.graph.educationClass entity.
      */
     @jakarta.annotation.Nonnull
@@ -90,7 +98,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EducationClassItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new EducationClassItemRequestBuilder and sets the default values.
@@ -98,7 +106,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EducationClassItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete an educationClass. Because a class is also a universal group, deleting a class deletes the group.

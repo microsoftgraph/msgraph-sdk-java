@@ -152,6 +152,7 @@ public class EducationClass extends Entity implements Parsable {
         deserializerMap.put("group", (n) -> { this.setGroup(n.getObjectValue(Group::createFromDiscriminatorValue)); });
         deserializerMap.put("mailNickname", (n) -> { this.setMailNickname(n.getStringValue()); });
         deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(EducationUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("modules", (n) -> { this.setModules(n.getCollectionOfObjectValues(EducationModule::createFromDiscriminatorValue)); });
         deserializerMap.put("schools", (n) -> { this.setSchools(n.getCollectionOfObjectValues(EducationSchool::createFromDiscriminatorValue)); });
         deserializerMap.put("teachers", (n) -> { this.setTeachers(n.getCollectionOfObjectValues(EducationUser::createFromDiscriminatorValue)); });
         deserializerMap.put("term", (n) -> { this.setTerm(n.getObjectValue(EducationTerm::createFromDiscriminatorValue)); });
@@ -188,6 +189,14 @@ public class EducationClass extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<EducationUser> getMembers() {
         return this.backingStore.get("members");
+    }
+    /**
+     * Gets the modules property value. The modules property
+     * @return a java.util.List<EducationModule>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<EducationModule> getModules() {
+        return this.backingStore.get("modules");
     }
     /**
      * Gets the schools property value. All schools that this class is associated with. Nullable.
@@ -237,6 +246,7 @@ public class EducationClass extends Entity implements Parsable {
         writer.writeObjectValue("group", this.getGroup());
         writer.writeStringValue("mailNickname", this.getMailNickname());
         writer.writeCollectionOfObjectValues("members", this.getMembers());
+        writer.writeCollectionOfObjectValues("modules", this.getModules());
         writer.writeCollectionOfObjectValues("schools", this.getSchools());
         writer.writeCollectionOfObjectValues("teachers", this.getTeachers());
         writer.writeObjectValue("term", this.getTerm());
@@ -359,6 +369,13 @@ public class EducationClass extends Entity implements Parsable {
      */
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<EducationUser> value) {
         this.backingStore.set("members", value);
+    }
+    /**
+     * Sets the modules property value. The modules property
+     * @param value Value to set for the modules property.
+     */
+    public void setModules(@jakarta.annotation.Nullable final java.util.List<EducationModule> value) {
+        this.backingStore.set("modules", value);
     }
     /**
      * Sets the schools property value. All schools that this class is associated with. Nullable.

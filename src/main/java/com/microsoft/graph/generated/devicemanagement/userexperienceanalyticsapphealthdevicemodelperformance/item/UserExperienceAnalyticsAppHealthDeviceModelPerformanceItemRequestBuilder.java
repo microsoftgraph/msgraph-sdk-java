@@ -26,7 +26,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformanceItemRequestBu
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UserExperienceAnalyticsAppHealthDeviceModelPerformanceItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsAppHealthDeviceModelPerformance/{userExperienceAnalyticsAppHealthDeviceModelPerformance%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsAppHealthDeviceModelPerformance/{userExperienceAnalyticsAppHealthDeviceModelPerformance%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new UserExperienceAnalyticsAppHealthDeviceModelPerformanceItemRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformanceItemRequestBu
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UserExperienceAnalyticsAppHealthDeviceModelPerformanceItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsAppHealthDeviceModelPerformance/{userExperienceAnalyticsAppHealthDeviceModelPerformance%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsAppHealthDeviceModelPerformance/{userExperienceAnalyticsAppHealthDeviceModelPerformance%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property userExperienceAnalyticsAppHealthDeviceModelPerformance for deviceManagement

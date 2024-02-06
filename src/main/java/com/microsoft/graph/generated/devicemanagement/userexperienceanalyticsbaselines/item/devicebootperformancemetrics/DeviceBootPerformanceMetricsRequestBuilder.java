@@ -26,7 +26,7 @@ public class DeviceBootPerformanceMetricsRequestBuilder extends BaseRequestBuild
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceBootPerformanceMetricsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsBaselines/{userExperienceAnalyticsBaseline%2Did}/deviceBootPerformanceMetrics{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsBaselines/{userExperienceAnalyticsBaseline%2Did}/deviceBootPerformanceMetrics{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new DeviceBootPerformanceMetricsRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class DeviceBootPerformanceMetricsRequestBuilder extends BaseRequestBuild
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceBootPerformanceMetricsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsBaselines/{userExperienceAnalyticsBaseline%2Did}/deviceBootPerformanceMetrics{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsBaselines/{userExperienceAnalyticsBaseline%2Did}/deviceBootPerformanceMetrics{?%24expand,%24select}", rawUrl);
     }
     /**
      * The scores and insights for the device boot performance metrics.

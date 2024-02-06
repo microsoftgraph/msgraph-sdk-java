@@ -27,7 +27,7 @@ public class AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdR
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String accessPackageId, @jakarta.annotation.Nullable final String incompatibleAccessPackageId) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/assignments/additionalAccess(accessPackageId='{accessPackageId}',incompatibleAccessPackageId='{incompatibleAccessPackageId}'){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/assignments/additionalAccess(accessPackageId='{accessPackageId}',incompatibleAccessPackageId='{incompatibleAccessPackageId}'){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
         this.pathParameters.put("accessPackageId", accessPackageId);
         this.pathParameters.put("incompatibleAccessPackageId", incompatibleAccessPackageId);
     }
@@ -37,7 +37,7 @@ public class AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdR
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/assignments/additionalAccess(accessPackageId='{accessPackageId}',incompatibleAccessPackageId='{incompatibleAccessPackageId}'){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/assignments/additionalAccess(accessPackageId='{accessPackageId}',incompatibleAccessPackageId='{incompatibleAccessPackageId}'){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
      * Invoke function additionalAccess
@@ -101,6 +101,11 @@ public class AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdR
         @jakarta.annotation.Nullable
         public Boolean count;
         /**
+         * Expand related entities
+         */
+        @jakarta.annotation.Nullable
+        public String[] expand;
+        /**
          * Filter items by property values
          */
         @jakarta.annotation.Nullable
@@ -142,6 +147,7 @@ public class AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdR
             allQueryParams.put("%24search", search);
             allQueryParams.put("%24skip", skip);
             allQueryParams.put("%24top", top);
+            allQueryParams.put("%24expand", expand);
             allQueryParams.put("%24orderby", orderby);
             allQueryParams.put("%24select", select);
             return allQueryParams;

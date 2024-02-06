@@ -66,7 +66,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DirectoryObjectItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directoryObjects/{directoryObject%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/directoryObjects/{directoryObject%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new DirectoryObjectItemRequestBuilder and sets the default values.
@@ -74,7 +74,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DirectoryObjectItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directoryObjects/{directoryObject%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/directoryObjects/{directoryObject%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete a directory object, for example, a group, user, application, or service principal.

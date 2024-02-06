@@ -120,7 +120,7 @@ public class Site extends BaseItem implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isPersonalSite property value. The isPersonalSite property
+     * Gets the isPersonalSite property value. Identifies whether the site is personal or not. Read-only.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -300,7 +300,7 @@ public class Site extends BaseItem implements Parsable {
         this.backingStore.set("externalColumns", value);
     }
     /**
-     * Sets the isPersonalSite property value. The isPersonalSite property
+     * Sets the isPersonalSite property value. Identifies whether the site is personal or not. Read-only.
      * @param value Value to set for the isPersonalSite property.
      */
     public void setIsPersonalSite(@jakarta.annotation.Nullable final Boolean value) {

@@ -34,7 +34,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AuthenticationMethodsPolicyRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/authenticationMethodsPolicy{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/policies/authenticationMethodsPolicy{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new AuthenticationMethodsPolicyRequestBuilder and sets the default values.
@@ -42,7 +42,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AuthenticationMethodsPolicyRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/authenticationMethodsPolicy{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/policies/authenticationMethodsPolicy{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property authenticationMethodsPolicy for policies

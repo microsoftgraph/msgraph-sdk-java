@@ -26,7 +26,7 @@ public class PrinterShareItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PrinterShareItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/print/printers/{printer%2Did}/shares/{printerShare%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/print/printers/{printer%2Did}/shares/{printerShare%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new PrinterShareItemRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class PrinterShareItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PrinterShareItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/print/printers/{printer%2Did}/shares/{printerShare%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/print/printers/{printer%2Did}/shares/{printerShare%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.

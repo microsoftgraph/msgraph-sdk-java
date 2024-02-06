@@ -4,6 +4,8 @@ import com.microsoft.graph.communications.onlinemeetings.item.attendancereports.
 import com.microsoft.graph.communications.onlinemeetings.item.attendeereport.AttendeeReportRequestBuilder;
 import com.microsoft.graph.communications.onlinemeetings.item.getvirtualappointmentjoinweburl.GetVirtualAppointmentJoinWebUrlRequestBuilder;
 import com.microsoft.graph.communications.onlinemeetings.item.recordings.RecordingsRequestBuilder;
+import com.microsoft.graph.communications.onlinemeetings.item.sendvirtualappointmentremindersms.SendVirtualAppointmentReminderSmsRequestBuilder;
+import com.microsoft.graph.communications.onlinemeetings.item.sendvirtualappointmentsms.SendVirtualAppointmentSmsRequestBuilder;
 import com.microsoft.graph.communications.onlinemeetings.item.transcripts.TranscriptsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OnlineMeeting;
@@ -54,6 +56,20 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         return new RecordingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the sendVirtualAppointmentReminderSms method.
+     */
+    @jakarta.annotation.Nonnull
+    public SendVirtualAppointmentReminderSmsRequestBuilder sendVirtualAppointmentReminderSms() {
+        return new SendVirtualAppointmentReminderSmsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the sendVirtualAppointmentSms method.
+     */
+    @jakarta.annotation.Nonnull
+    public SendVirtualAppointmentSmsRequestBuilder sendVirtualAppointmentSms() {
+        return new SendVirtualAppointmentSmsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the transcripts property of the microsoft.graph.onlineMeeting entity.
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +82,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public OnlineMeetingItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/communications/onlineMeetings/{onlineMeeting%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/communications/onlineMeetings/{onlineMeeting%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new OnlineMeetingItemRequestBuilder and sets the default values.
@@ -74,7 +90,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public OnlineMeetingItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/communications/onlineMeetings/{onlineMeeting%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/communications/onlineMeetings/{onlineMeeting%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property onlineMeetings for communications

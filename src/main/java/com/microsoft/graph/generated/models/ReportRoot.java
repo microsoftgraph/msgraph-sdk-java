@@ -85,13 +85,14 @@ public class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("authenticationMethods", (n) -> { this.setAuthenticationMethods(n.getObjectValue(AuthenticationMethodsRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("dailyPrintUsageByPrinter", (n) -> { this.setDailyPrintUsageByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
         deserializerMap.put("dailyPrintUsageByUser", (n) -> { this.setDailyPrintUsageByUser(n.getCollectionOfObjectValues(PrintUsageByUser::createFromDiscriminatorValue)); });
         deserializerMap.put("monthlyPrintUsageByPrinter", (n) -> { this.setMonthlyPrintUsageByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
         deserializerMap.put("monthlyPrintUsageByUser", (n) -> { this.setMonthlyPrintUsageByUser(n.getCollectionOfObjectValues(PrintUsageByUser::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("partners", (n) -> { this.setPartners(n.getObjectValue(Partners::createFromDiscriminatorValue)); });
         deserializerMap.put("security", (n) -> { this.setSecurity(n.getObjectValue(SecurityReportsRoot::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -120,6 +121,14 @@ public class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("odataType");
     }
     /**
+     * Gets the partners property value. Represents billing details for a Microsoft direct partner.
+     * @return a Partners
+     */
+    @jakarta.annotation.Nullable
+    public Partners getPartners() {
+        return this.backingStore.get("partners");
+    }
+    /**
      * Gets the security property value. Represents an abstract type that contains resources for attack simulation and training reports.
      * @return a SecurityReportsRoot
      */
@@ -139,6 +148,7 @@ public class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable {
         writer.writeCollectionOfObjectValues("monthlyPrintUsageByPrinter", this.getMonthlyPrintUsageByPrinter());
         writer.writeCollectionOfObjectValues("monthlyPrintUsageByUser", this.getMonthlyPrintUsageByUser());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeObjectValue("partners", this.getPartners());
         writer.writeObjectValue("security", this.getSecurity());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -198,6 +208,13 @@ public class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the partners property value. Represents billing details for a Microsoft direct partner.
+     * @param value Value to set for the partners property.
+     */
+    public void setPartners(@jakarta.annotation.Nullable final Partners value) {
+        this.backingStore.set("partners", value);
     }
     /**
      * Sets the security property value. Represents an abstract type that contains resources for attack simulation and training reports.

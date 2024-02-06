@@ -43,7 +43,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EmployeeExperienceRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/employeeExperience{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/employeeExperience{?%24select}", pathParameters);
     }
     /**
      * Instantiates a new EmployeeExperienceRequestBuilder and sets the default values.
@@ -51,7 +51,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EmployeeExperienceRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/employeeExperience{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/employeeExperience{?%24select}", rawUrl);
     }
     /**
      * Get employeeExperience
@@ -168,11 +168,6 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
         /**
-         * Expand related entities
-         */
-        @jakarta.annotation.Nullable
-        public String[] expand;
-        /**
          * Select properties to be returned
          */
         @jakarta.annotation.Nullable
@@ -184,7 +179,6 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {
             final Map<String, Object> allQueryParams = new HashMap();
-            allQueryParams.put("%24expand", expand);
             allQueryParams.put("%24select", select);
             return allQueryParams;
         }

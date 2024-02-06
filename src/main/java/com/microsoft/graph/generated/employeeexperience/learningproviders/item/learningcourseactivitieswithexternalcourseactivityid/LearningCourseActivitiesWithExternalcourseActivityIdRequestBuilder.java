@@ -27,7 +27,7 @@ public class LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder 
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String externalcourseActivityId) {
-        super(requestAdapter, "{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}/learningCourseActivities(externalcourseActivityId='{externalcourseActivityId}'){?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}/learningCourseActivities(externalcourseActivityId='{externalcourseActivityId}'){?%24expand,%24select}", pathParameters);
         this.pathParameters.put("externalcourseActivityId", externalcourseActivityId);
     }
     /**
@@ -36,7 +36,7 @@ public class LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder 
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}/learningCourseActivities(externalcourseActivityId='{externalcourseActivityId}'){?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}/learningCourseActivities(externalcourseActivityId='{externalcourseActivityId}'){?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete a learningCourseActivity object using the course activity ID of either an assignment or a self-initiated activity.
