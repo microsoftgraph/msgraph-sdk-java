@@ -6,10 +6,15 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.2'
     testImplementation 'org.mockito:mockito-inline:5.2.0'
     
-    api 'com.google.code.gson:gson:2.10.1'
-    
     implementation 'com.squareup.okhttp3:okhttp:4.12.0'
-    
+    implementation 'jakarta.annotation:jakarta.annotation-api:2.1.1'
+
     // Core Http library 
-    api 'com.microsoft.graph:microsoft-graph-core:2.0.21'
+    api 'com.microsoft.graph:microsoft-graph-core:3.1.0'
+    implementation 'com.microsoft.kiota:microsoft-kiota-authentication-azure:0.12.2'
+    implementation 'com.microsoft.kiota:microsoft-kiota-http-okHttp:0.12.2'
+    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-json:0.12.2'
+    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-text:0.12.2'
+    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-form:0.12.2'
+    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-multipart:0.12.2'
 }

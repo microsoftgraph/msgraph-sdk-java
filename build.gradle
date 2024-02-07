@@ -9,7 +9,6 @@
 plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
-    id 'java'
     id 'eclipse'
     id 'maven-publish'
     id 'signing'
@@ -51,6 +50,8 @@ def pomConfig = {
     }
 }
 
+tasks.withType(Javadoc).all { enabled = false }
+
 //Publishing tasks-
 //Maven Central Snapshot: publishSnapshotPublicationToMavenRepository
 //Maven Central Release: publishMavenCentralReleasePublicationToMaven2Repository
@@ -59,6 +60,7 @@ tasks.jar {
     manifest {
         attributes('Automatic-Module-Name': project.property('mavenGroupId'))
     }
+    zip64(true)
 }
 
 publishing {
@@ -150,8 +152,8 @@ def fixAscNames = { name ->
 
 compileJava {
   options.compilerArgs << "-parameters"
-  sourceCompatibility = 1.8
-  targetCompatibility = 1.8
+  sourceCompatibility = '1.8'
+  targetCompatibility = '1.8'
 }
 
 def getVersionCode() {
