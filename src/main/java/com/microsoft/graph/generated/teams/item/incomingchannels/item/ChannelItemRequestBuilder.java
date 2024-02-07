@@ -26,7 +26,7 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ChannelItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/teams/{team%2Did}/incomingChannels/{channel%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/teams/{team%2Did}/incomingChannels/{channel%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new ChannelItemRequestBuilder and sets the default values.
@@ -34,26 +34,7 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ChannelItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/teams/{team%2Did}/incomingChannels/{channel%2Did}{?%24select,%24expand}", rawUrl);
-    }
-    /**
-     * Remove an incoming channel (a channel shared with a team) from a team.
-     * @see <a href="https://learn.microsoft.com/graph/api/team-delete-incomingchannels?view=graph-rest-1.0">Find more info here</a>
-     */
-    public void delete() {
-        delete(null);
-    }
-    /**
-     * Remove an incoming channel (a channel shared with a team) from a team.
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/team-delete-incomingchannels?view=graph-rest-1.0">Find more info here</a>
-     */
-    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
-        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
+        super(requestAdapter, "{+baseurl}/teams/{team%2Did}/incomingChannels/{channel%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * List of channels shared with the team.
@@ -75,26 +56,6 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Channel::createFromDiscriminatorValue);
-    }
-    /**
-     * Remove an incoming channel (a channel shared with a team) from a team.
-     * @return a RequestInformation
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation() {
-        return toDeleteRequestInformation(null);
-    }
-    /**
-     * Remove an incoming channel (a channel shared with a team) from a team.
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
-        requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
-        requestInfo.headers.tryAdd("Accept", "application/json");
-        return requestInfo;
     }
     /**
      * List of channels shared with the team.
@@ -125,12 +86,6 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
     public ChannelItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ChannelItemRequestBuilder(rawUrl, requestAdapter);
-    }
-    /**
-     * Configuration for the request such as headers, query parameters, and middleware options.
-     */
-    @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
      * List of channels shared with the team.

@@ -42,7 +42,7 @@ public class WorkbookChartSeriesItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public WorkbookChartSeriesItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/series/{workbookChartSeries%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/series/{workbookChartSeries%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new WorkbookChartSeriesItemRequestBuilder and sets the default values.
@@ -50,7 +50,7 @@ public class WorkbookChartSeriesItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public WorkbookChartSeriesItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/series/{workbookChartSeries%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/series/{workbookChartSeries%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property series for drives
@@ -93,7 +93,7 @@ public class WorkbookChartSeriesItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookChartSeries::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of chartseries object.
+     * Update the properties of chartSeries object.
      * @param body The request body
      * @return a WorkbookChartSeries
      * @see <a href="https://learn.microsoft.com/graph/api/chartseries-update?view=graph-rest-1.0">Find more info here</a>
@@ -103,7 +103,7 @@ public class WorkbookChartSeriesItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of chartseries object.
+     * Update the properties of chartSeries object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookChartSeries
@@ -159,7 +159,7 @@ public class WorkbookChartSeriesItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of chartseries object.
+     * Update the properties of chartSeries object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -168,7 +168,7 @@ public class WorkbookChartSeriesItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of chartseries object.
+     * Update the properties of chartSeries object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

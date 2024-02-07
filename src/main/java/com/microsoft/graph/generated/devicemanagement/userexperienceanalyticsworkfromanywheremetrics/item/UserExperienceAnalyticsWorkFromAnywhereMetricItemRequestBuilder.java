@@ -34,7 +34,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilder ext
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsWorkFromAnywhereMetrics/{userExperienceAnalyticsWorkFromAnywhereMetric%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsWorkFromAnywhereMetrics/{userExperienceAnalyticsWorkFromAnywhereMetric%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilder and sets the default values.
@@ -42,7 +42,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilder ext
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsWorkFromAnywhereMetrics/{userExperienceAnalyticsWorkFromAnywhereMetric%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsWorkFromAnywhereMetrics/{userExperienceAnalyticsWorkFromAnywhereMetric%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property userExperienceAnalyticsWorkFromAnywhereMetrics for deviceManagement

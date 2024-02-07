@@ -82,7 +82,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public OrganizationalBrandingLocalizationItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/branding/localizations/{organizationalBrandingLocalization%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/branding/localizations/{organizationalBrandingLocalization%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new OrganizationalBrandingLocalizationItemRequestBuilder and sets the default values.
@@ -90,7 +90,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public OrganizationalBrandingLocalizationItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/branding/localizations/{organizationalBrandingLocalization%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/branding/localizations/{organizationalBrandingLocalization%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object.

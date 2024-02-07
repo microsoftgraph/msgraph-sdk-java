@@ -58,7 +58,7 @@ public class SynchronizationRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SynchronizationRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/applications/{application%2Did}/synchronization{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/applications/{application%2Did}/synchronization{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new SynchronizationRequestBuilder and sets the default values.
@@ -66,7 +66,7 @@ public class SynchronizationRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SynchronizationRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/applications/{application%2Did}/synchronization{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/applications/{application%2Did}/synchronization{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property synchronization for applications

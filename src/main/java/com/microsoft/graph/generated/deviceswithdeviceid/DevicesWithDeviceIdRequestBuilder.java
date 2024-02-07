@@ -27,7 +27,7 @@ public class DevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DevicesWithDeviceIdRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String deviceId) {
-        super(requestAdapter, "{+baseurl}/devices(deviceId='{deviceId}'){?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/devices(deviceId='{deviceId}'){?%24expand,%24select}", pathParameters);
         this.pathParameters.put("deviceId", deviceId);
     }
     /**
@@ -36,7 +36,7 @@ public class DevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DevicesWithDeviceIdRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/devices(deviceId='{deviceId}'){?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/devices(deviceId='{deviceId}'){?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete a registered device.

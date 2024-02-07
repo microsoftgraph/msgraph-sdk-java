@@ -26,7 +26,7 @@ public class TemplateRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TemplateRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/template{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/template{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new TemplateRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class TemplateRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TemplateRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/template{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/template{?%24expand,%24select}", rawUrl);
     }
     /**
      * The template this team was created from. See available templates.

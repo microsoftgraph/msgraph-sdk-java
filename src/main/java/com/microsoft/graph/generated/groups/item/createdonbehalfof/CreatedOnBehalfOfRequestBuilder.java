@@ -26,7 +26,7 @@ public class CreatedOnBehalfOfRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CreatedOnBehalfOfRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/createdOnBehalfOf{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/createdOnBehalfOf{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new CreatedOnBehalfOfRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class CreatedOnBehalfOfRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CreatedOnBehalfOfRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/createdOnBehalfOf{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/createdOnBehalfOf{?%24expand,%24select}", rawUrl);
     }
     /**
      * The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.

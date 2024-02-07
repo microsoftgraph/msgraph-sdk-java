@@ -34,7 +34,7 @@ public class RootRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public RootRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/root{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/root{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new RootRequestBuilder and sets the default values.
@@ -42,7 +42,7 @@ public class RootRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public RootRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/root{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/root{?%24expand,%24select}", rawUrl);
     }
     /**
      * Used to access the underlying driveItem. Deprecated -- use driveItem instead.

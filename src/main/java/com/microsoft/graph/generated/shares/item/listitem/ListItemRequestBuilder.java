@@ -26,7 +26,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ListItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/listItem{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/listItem{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new ListItemRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ListItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/listItem{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/listItem{?%24expand,%24select}", rawUrl);
     }
     /**
      * Used to access the underlying listItem

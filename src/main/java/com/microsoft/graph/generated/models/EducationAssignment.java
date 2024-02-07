@@ -172,6 +172,7 @@ public class EducationAssignment extends Entity implements Parsable {
         deserializerMap.put("instructions", (n) -> { this.setInstructions(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("moduleUrl", (n) -> { this.setModuleUrl(n.getStringValue()); });
         deserializerMap.put("notificationChannelUrl", (n) -> { this.setNotificationChannelUrl(n.getStringValue()); });
         deserializerMap.put("resources", (n) -> { this.setResources(n.getCollectionOfObjectValues(EducationAssignmentResource::createFromDiscriminatorValue)); });
         deserializerMap.put("resourcesFolderUrl", (n) -> { this.setResourcesFolderUrl(n.getStringValue()); });
@@ -220,6 +221,14 @@ public class EducationAssignment extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.backingStore.get("lastModifiedDateTime");
+    }
+    /**
+     * Gets the moduleUrl property value. The moduleUrl property
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getModuleUrl() {
+        return this.backingStore.get("moduleUrl");
     }
     /**
      * Gets the notificationChannelUrl property value. Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl isn't allowed after the assignment has been published.
@@ -297,6 +306,7 @@ public class EducationAssignment extends Entity implements Parsable {
         writer.writeObjectValue("grading", this.getGrading());
         writer.writeObjectValue("gradingCategory", this.getGradingCategory());
         writer.writeObjectValue("instructions", this.getInstructions());
+        writer.writeStringValue("moduleUrl", this.getModuleUrl());
         writer.writeStringValue("notificationChannelUrl", this.getNotificationChannelUrl());
         writer.writeCollectionOfObjectValues("resources", this.getResources());
         writer.writeObjectValue("rubric", this.getRubric());
@@ -441,6 +451,13 @@ public class EducationAssignment extends Entity implements Parsable {
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
+    }
+    /**
+     * Sets the moduleUrl property value. The moduleUrl property
+     * @param value Value to set for the moduleUrl property.
+     */
+    public void setModuleUrl(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("moduleUrl", value);
     }
     /**
      * Sets the notificationChannelUrl property value. Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl isn't allowed after the assignment has been published.

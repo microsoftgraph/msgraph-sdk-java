@@ -26,7 +26,7 @@ public class GraphRoomRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GraphRoomRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.room{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.room{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new GraphRoomRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class GraphRoomRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GraphRoomRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.room{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.room{?%24expand,%24select}", rawUrl);
     }
     /**
      * Get the item of type microsoft.graph.place as microsoft.graph.room

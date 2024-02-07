@@ -26,7 +26,7 @@ public class CreatedByUserRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CreatedByUserRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/sites/{site%2Did}/getByPath(path='{path}')/createdByUser{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/sites/{site%2Did}/getByPath(path='{path}')/createdByUser{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new CreatedByUserRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class CreatedByUserRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CreatedByUserRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/sites/{site%2Did}/getByPath(path='{path}')/createdByUser{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/sites/{site%2Did}/getByPath(path='{path}')/createdByUser{?%24expand,%24select}", rawUrl);
     }
     /**
      * Identity of the user who created the item. Read-only.

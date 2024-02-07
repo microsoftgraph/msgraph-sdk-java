@@ -21,6 +21,15 @@ import com.microsoft.graph.models.identitygovernance.TaskProcessingResult;
 import com.microsoft.graph.models.identitygovernance.TaskReport;
 import com.microsoft.graph.models.identitygovernance.UserProcessingResult;
 import com.microsoft.graph.models.identitygovernance.WorkflowTemplate;
+import com.microsoft.graph.models.partners.billing.AzureUsage;
+import com.microsoft.graph.models.partners.billing.BilledUsage;
+import com.microsoft.graph.models.partners.billing.Billing;
+import com.microsoft.graph.models.partners.billing.ExportSuccessOperation;
+import com.microsoft.graph.models.partners.billing.FailedOperation;
+import com.microsoft.graph.models.partners.billing.Manifest;
+import com.microsoft.graph.models.partners.billing.Operation;
+import com.microsoft.graph.models.partners.billing.RunningOperation;
+import com.microsoft.graph.models.partners.billing.UnbilledUsage;
 import com.microsoft.graph.models.security.Alert;
 import com.microsoft.graph.models.security.Article;
 import com.microsoft.graph.models.security.ArticleIndicator;
@@ -370,6 +379,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.educationFeedbackOutcome": return new EducationFeedbackOutcome();
             case "#microsoft.graph.educationFeedbackResourceOutcome": return new EducationFeedbackResourceOutcome();
             case "#microsoft.graph.educationGradingCategory": return new EducationGradingCategory();
+            case "#microsoft.graph.educationModule": return new EducationModule();
+            case "#microsoft.graph.educationModuleResource": return new EducationModuleResource();
             case "#microsoft.graph.educationOrganization": return new EducationOrganization();
             case "#microsoft.graph.educationOutcome": return new EducationOutcome();
             case "#microsoft.graph.educationPointsOutcome": return new EducationPointsOutcome();
@@ -579,6 +590,16 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.participant": return new Participant();
             case "#microsoft.graph.participantJoiningNotification": return new ParticipantJoiningNotification();
             case "#microsoft.graph.participantLeftNotification": return new ParticipantLeftNotification();
+            case "#microsoft.graph.partners": return new Partners();
+            case "#microsoft.graph.partners.billing.azureUsage": return new AzureUsage();
+            case "#microsoft.graph.partners.billing.billedUsage": return new BilledUsage();
+            case "#microsoft.graph.partners.billing.billing": return new Billing();
+            case "#microsoft.graph.partners.billing.exportSuccessOperation": return new ExportSuccessOperation();
+            case "#microsoft.graph.partners.billing.failedOperation": return new FailedOperation();
+            case "#microsoft.graph.partners.billing.manifest": return new Manifest();
+            case "#microsoft.graph.partners.billing.operation": return new Operation();
+            case "#microsoft.graph.partners.billing.runningOperation": return new RunningOperation();
+            case "#microsoft.graph.partners.billing.unbilledUsage": return new UnbilledUsage();
             case "#microsoft.graph.passwordAuthenticationMethod": return new PasswordAuthenticationMethod();
             case "#microsoft.graph.payload": return new Payload();
             case "#microsoft.graph.peopleAdminSettings": return new PeopleAdminSettings();
@@ -626,6 +647,17 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.privilegedAccessGroupAssignmentScheduleInstance": return new PrivilegedAccessGroupAssignmentScheduleInstance();
             case "#microsoft.graph.privilegedAccessGroupAssignmentScheduleRequest": return new PrivilegedAccessGroupAssignmentScheduleRequest();
             case "#microsoft.graph.privilegedAccessGroupEligibilitySchedule": return new PrivilegedAccessGroupEligibilitySchedule();
+        }
+        return null;
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param discriminatorValue Discriminator value from the payload
+     * @return a Entity
+     */
+    @jakarta.annotation.Nonnull
+    private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
+        switch (discriminatorValue) {
             case "#microsoft.graph.privilegedAccessGroupEligibilityScheduleInstance": return new PrivilegedAccessGroupEligibilityScheduleInstance();
             case "#microsoft.graph.privilegedAccessGroupEligibilityScheduleRequest": return new PrivilegedAccessGroupEligibilityScheduleRequest();
             case "#microsoft.graph.privilegedAccessRoot": return new PrivilegedAccessRoot();
@@ -638,17 +670,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.provisioningObjectSummary": return new ProvisioningObjectSummary();
             case "#microsoft.graph.rbacApplication": return new RbacApplication();
             case "#microsoft.graph.recordOperation": return new RecordOperation();
-        }
-        return null;
-    }
-    /**
-     * Creates a new instance of the appropriate class based on discriminator value
-     * @param discriminatorValue Discriminator value from the payload
-     * @return a Entity
-     */
-    @jakarta.annotation.Nonnull
-    private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
-        switch (discriminatorValue) {
             case "#microsoft.graph.referenceAttachment": return new ReferenceAttachment();
             case "#microsoft.graph.remoteAssistancePartner": return new RemoteAssistancePartner();
             case "#microsoft.graph.remoteDesktopSecurityConfiguration": return new RemoteDesktopSecurityConfiguration();

@@ -27,7 +27,7 @@ public class ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder extends 
      * @param StartDateTime Usage: StartDateTime='{StartDateTime}'
      */
     public ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String EndDateTime, @jakarta.annotation.Nullable final String StartDateTime) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}'){?%24top,%24skip,%24search,%24filter,%24count}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}'){?%24count,%24filter,%24search,%24skip,%24top}", pathParameters);
         this.pathParameters.put("EndDateTime", EndDateTime);
         this.pathParameters.put("StartDateTime", StartDateTime);
     }
@@ -37,7 +37,7 @@ public class ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder extends 
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}'){?%24top,%24skip,%24search,%24filter,%24count}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}'){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
     }
     /**
      * Invoke function reminderView

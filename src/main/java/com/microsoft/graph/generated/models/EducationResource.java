@@ -37,9 +37,11 @@ public class EducationResource implements AdditionalDataHolder, BackedModel, Par
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.educationChannelResource": return new EducationChannelResource();
                 case "#microsoft.graph.educationExcelResource": return new EducationExcelResource();
                 case "#microsoft.graph.educationExternalResource": return new EducationExternalResource();
                 case "#microsoft.graph.educationFileResource": return new EducationFileResource();
+                case "#microsoft.graph.educationLinkedAssignmentResource": return new EducationLinkedAssignmentResource();
                 case "#microsoft.graph.educationLinkResource": return new EducationLinkResource();
                 case "#microsoft.graph.educationMediaResource": return new EducationMediaResource();
                 case "#microsoft.graph.educationPowerPointResource": return new EducationPowerPointResource();

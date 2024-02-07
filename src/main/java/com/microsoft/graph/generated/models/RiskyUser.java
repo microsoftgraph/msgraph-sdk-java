@@ -67,7 +67,7 @@ public class RiskyUser extends Entity implements Parsable {
         return this.backingStore.get("isDeleted");
     }
     /**
-     * Gets the isProcessing property value. Indicates whether a user's risky state is being processed by the backend.
+     * Gets the isProcessing property value. Indicates whether a user's risky state is being processed by the backend. Supports $filter (eq).
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class RiskyUser extends Entity implements Parsable {
         return this.backingStore.get("riskDetail");
     }
     /**
-     * Gets the riskLastUpdatedDateTime property value. The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the riskLastUpdatedDateTime property value. The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, gt, lt).
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class RiskyUser extends Entity implements Parsable {
         return this.backingStore.get("riskLastUpdatedDateTime");
     }
     /**
-     * Gets the riskLevel property value. Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
+     * Gets the riskLevel property value. Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Supports $filter (eq).
      * @return a RiskLevel
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class RiskyUser extends Entity implements Parsable {
         return this.backingStore.get("riskLevel");
     }
     /**
-     * Gets the riskState property value. State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+     * Gets the riskState property value. State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue. Supports $filter (eq).
      * @return a RiskState
      */
     @jakarta.annotation.Nullable
@@ -154,7 +154,7 @@ public class RiskyUser extends Entity implements Parsable {
         this.backingStore.set("isDeleted", value);
     }
     /**
-     * Sets the isProcessing property value. Indicates whether a user's risky state is being processed by the backend.
+     * Sets the isProcessing property value. Indicates whether a user's risky state is being processed by the backend. Supports $filter (eq).
      * @param value Value to set for the isProcessing property.
      */
     public void setIsProcessing(@jakarta.annotation.Nullable final Boolean value) {
@@ -168,21 +168,21 @@ public class RiskyUser extends Entity implements Parsable {
         this.backingStore.set("riskDetail", value);
     }
     /**
-     * Sets the riskLastUpdatedDateTime property value. The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the riskLastUpdatedDateTime property value. The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, gt, lt).
      * @param value Value to set for the riskLastUpdatedDateTime property.
      */
     public void setRiskLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("riskLastUpdatedDateTime", value);
     }
     /**
-     * Sets the riskLevel property value. Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
+     * Sets the riskLevel property value. Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Supports $filter (eq).
      * @param value Value to set for the riskLevel property.
      */
     public void setRiskLevel(@jakarta.annotation.Nullable final RiskLevel value) {
         this.backingStore.set("riskLevel", value);
     }
     /**
-     * Sets the riskState property value. State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+     * Sets the riskState property value. State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue. Supports $filter (eq).
      * @param value Value to set for the riskState property.
      */
     public void setRiskState(@jakarta.annotation.Nullable final RiskState value) {

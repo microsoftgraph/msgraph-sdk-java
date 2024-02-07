@@ -25,7 +25,7 @@ public class GetManagedAppDiagnosticStatusesRequestBuilder extends BaseRequestBu
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GetManagedAppDiagnosticStatusesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/getManagedAppDiagnosticStatuses(){?%24top,%24skip,%24search,%24filter,%24count}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/getManagedAppDiagnosticStatuses(){?%24count,%24filter,%24search,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new GetManagedAppDiagnosticStatusesRequestBuilder and sets the default values.
@@ -33,7 +33,7 @@ public class GetManagedAppDiagnosticStatusesRequestBuilder extends BaseRequestBu
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GetManagedAppDiagnosticStatusesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/getManagedAppDiagnosticStatuses(){?%24top,%24skip,%24search,%24filter,%24count}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/getManagedAppDiagnosticStatuses(){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
     }
     /**
      * Gets diagnostics validation status for a given user.

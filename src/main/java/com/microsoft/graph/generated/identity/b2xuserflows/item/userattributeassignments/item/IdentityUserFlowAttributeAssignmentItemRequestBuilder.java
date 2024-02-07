@@ -34,7 +34,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public IdentityUserFlowAttributeAssignmentItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/userAttributeAssignments/{identityUserFlowAttributeAssignment%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/userAttributeAssignments/{identityUserFlowAttributeAssignment%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new IdentityUserFlowAttributeAssignmentItemRequestBuilder and sets the default values.
@@ -42,7 +42,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public IdentityUserFlowAttributeAssignmentItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/userAttributeAssignments/{identityUserFlowAttributeAssignment%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/userAttributeAssignments/{identityUserFlowAttributeAssignment%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete an identityUserFlowAttributeAssignment object.

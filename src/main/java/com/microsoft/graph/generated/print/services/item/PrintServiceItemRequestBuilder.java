@@ -34,7 +34,7 @@ public class PrintServiceItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PrintServiceItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/print/services/{printService%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/print/services/{printService%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new PrintServiceItemRequestBuilder and sets the default values.
@@ -42,7 +42,7 @@ public class PrintServiceItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PrintServiceItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/print/services/{printService%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/print/services/{printService%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property services for print

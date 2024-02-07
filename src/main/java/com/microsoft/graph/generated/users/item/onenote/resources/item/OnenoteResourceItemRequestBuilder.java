@@ -34,7 +34,7 @@ public class OnenoteResourceItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public OnenoteResourceItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/onenote/resources/{onenoteResource%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/onenote/resources/{onenoteResource%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new OnenoteResourceItemRequestBuilder and sets the default values.
@@ -42,7 +42,7 @@ public class OnenoteResourceItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public OnenoteResourceItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/onenote/resources/{onenoteResource%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/onenote/resources/{onenoteResource%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property resources for users

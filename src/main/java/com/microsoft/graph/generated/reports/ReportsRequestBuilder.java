@@ -108,6 +108,7 @@ import com.microsoft.graph.reports.manageddeviceenrollmenttopfailures.ManagedDev
 import com.microsoft.graph.reports.manageddeviceenrollmenttopfailureswithperiod.ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder;
 import com.microsoft.graph.reports.monthlyprintusagebyprinter.MonthlyPrintUsageByPrinterRequestBuilder;
 import com.microsoft.graph.reports.monthlyprintusagebyuser.MonthlyPrintUsageByUserRequestBuilder;
+import com.microsoft.graph.reports.partners.PartnersRequestBuilder;
 import com.microsoft.graph.reports.security.SecurityRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -214,6 +215,13 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return new MonthlyPrintUsageByUserRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the partners property of the microsoft.graph.reportRoot entity.
+     */
+    @jakarta.annotation.Nonnull
+    public PartnersRequestBuilder partners() {
+        return new PartnersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the security property of the microsoft.graph.reportRoot entity.
      */
     @jakarta.annotation.Nonnull
@@ -226,7 +234,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ReportsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/reports{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/reports{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new ReportsRequestBuilder and sets the default values.
@@ -234,7 +242,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ReportsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/reports{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/reports{?%24expand,%24select}", rawUrl);
     }
     /**
      * Read properties and relationships of the reportRoot object.

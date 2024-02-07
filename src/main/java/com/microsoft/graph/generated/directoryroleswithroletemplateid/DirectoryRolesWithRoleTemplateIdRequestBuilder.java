@@ -27,7 +27,7 @@ public class DirectoryRolesWithRoleTemplateIdRequestBuilder extends BaseRequestB
      * @param roleTemplateId Alternate key of directoryRole
      */
     public DirectoryRolesWithRoleTemplateIdRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String roleTemplateId) {
-        super(requestAdapter, "{+baseurl}/directoryRoles(roleTemplateId='{roleTemplateId}'){?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/directoryRoles(roleTemplateId='{roleTemplateId}'){?%24expand,%24select}", pathParameters);
         this.pathParameters.put("roleTemplateId", roleTemplateId);
     }
     /**
@@ -36,7 +36,7 @@ public class DirectoryRolesWithRoleTemplateIdRequestBuilder extends BaseRequestB
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DirectoryRolesWithRoleTemplateIdRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directoryRoles(roleTemplateId='{roleTemplateId}'){?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/directoryRoles(roleTemplateId='{roleTemplateId}'){?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete entity from directoryRoles by roleTemplateId

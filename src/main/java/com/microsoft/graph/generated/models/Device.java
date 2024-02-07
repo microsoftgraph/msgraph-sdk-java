@@ -146,6 +146,7 @@ public class Device extends DirectoryObject implements Parsable {
         deserializerMap.put("mdmAppId", (n) -> { this.setMdmAppId(n.getStringValue()); });
         deserializerMap.put("memberOf", (n) -> { this.setMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesLastSyncDateTime", (n) -> { this.setOnPremisesLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("onPremisesSecurityIdentifier", (n) -> { this.setOnPremisesSecurityIdentifier(n.getStringValue()); });
         deserializerMap.put("onPremisesSyncEnabled", (n) -> { this.setOnPremisesSyncEnabled(n.getBooleanValue()); });
         deserializerMap.put("operatingSystem", (n) -> { this.setOperatingSystem(n.getStringValue()); });
         deserializerMap.put("operatingSystemVersion", (n) -> { this.setOperatingSystemVersion(n.getStringValue()); });
@@ -198,6 +199,14 @@ public class Device extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getOnPremisesLastSyncDateTime() {
         return this.backingStore.get("onPremisesLastSyncDateTime");
+    }
+    /**
+     * Gets the onPremisesSecurityIdentifier property value. The onPremisesSecurityIdentifier property
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getOnPremisesSecurityIdentifier() {
+        return this.backingStore.get("onPremisesSecurityIdentifier");
     }
     /**
      * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
@@ -311,6 +320,7 @@ public class Device extends DirectoryObject implements Parsable {
         writer.writeStringValue("mdmAppId", this.getMdmAppId());
         writer.writeCollectionOfObjectValues("memberOf", this.getMemberOf());
         writer.writeOffsetDateTimeValue("onPremisesLastSyncDateTime", this.getOnPremisesLastSyncDateTime());
+        writer.writeStringValue("onPremisesSecurityIdentifier", this.getOnPremisesSecurityIdentifier());
         writer.writeBooleanValue("onPremisesSyncEnabled", this.getOnPremisesSyncEnabled());
         writer.writeStringValue("operatingSystem", this.getOperatingSystem());
         writer.writeStringValue("operatingSystemVersion", this.getOperatingSystemVersion());
@@ -441,6 +451,13 @@ public class Device extends DirectoryObject implements Parsable {
      */
     public void setOnPremisesLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("onPremisesLastSyncDateTime", value);
+    }
+    /**
+     * Sets the onPremisesSecurityIdentifier property value. The onPremisesSecurityIdentifier property
+     * @param value Value to set for the onPremisesSecurityIdentifier property.
+     */
+    public void setOnPremisesSecurityIdentifier(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("onPremisesSecurityIdentifier", value);
     }
     /**
      * Sets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
