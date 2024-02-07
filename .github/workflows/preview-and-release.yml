@@ -2,7 +2,7 @@ name: Maven Preview/Release and Github Release
 
 on:
   push:
-    branches: [ dev, feature/6.0 ]
+    branches: [ "dev", "feature/6.0" ]
     paths-ignore:
      - '.gradle/wrapper'
      - '.gitignore'
@@ -47,6 +47,21 @@ jobs:
         run: chmod +x gradlew
       - name: Publish
         run: ./gradlew $PREVIEW_TASK 
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: drop
+          path: |
+            **/libs/*
+            build/generated-pom.xml
+            build/generated-pom.xml.asc
+            build.gradle
+            gradlew
+            gradlew.bat
+            settings.gradle
+            gradle.properties
+            **/gradle/**
+            Scripts/**
   
   maven_Release:
     if: ${{ github.ref == 'refs/heads/dev' }}
@@ -111,7 +126,7 @@ jobs:
         with:
           tag: ${{ steps.GetVersion.outputs.tag }}
       - name: Queue Git Release
-        uses: benc-uk/workflow-dispatch@v1
+        uses: benc-uk/workflow-dispatch@v121
         with:
           workflow: Git Release
           token: ${{ secrets.PERSONAL_TOKEN }}

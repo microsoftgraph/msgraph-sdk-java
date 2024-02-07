@@ -1,4 +1,4 @@
-name: Java CI with Gradle
+name: Gradle Build and Compare Package
 
 on:
   push:
@@ -24,9 +24,9 @@ jobs:
           java-version: 18
           distribution: 'adopt'
           cache: gradle
-      - name: Easy detect-secrets
+      - name: Detect Secrets
         uses: RobertFischer/detect-secrets-action@v2.0.0
-      - name: Grant execute permission for gradlew
+      - name: Grant Execute permission for gradlew
         run: chmod +x gradlew
       - name: Build with Gradle
         run: ./gradlew build
@@ -41,7 +41,7 @@ jobs:
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: drop
+          name: kiota-drop
           path: |
             **/libs/*
             build/generated-pom.xml
@@ -58,8 +58,8 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     env: 
-      CURRENT_PKG_DIFF: ./artifacts/current/build/libs/msgraph-sdk-java.jar 
-      PRIOR_PKG_DIFF: ./artifacts/previous/build/libs/msgraph-sdk-java.jar
+      CURRENT_PKG_DIFF: ./artifacts/current-kiota/build/libs/msgraph-sdk-java.jar 
+      PRIOR_PKG_DIFF: ./artifacts/previous-kiota/build/libs/msgraph-sdk-java.jar
     steps: 
       - uses: actions/checkout@v4
       - name: Set up JDK
@@ -71,17 +71,17 @@ jobs:
       - name: Download Current Build
         uses: actions/download-artifact@v4
         with: 
-          name: drop
-          path: artifacts/current/
+          name: kiota-drop
+          path: artifacts/current-kiota/
       - name: Download Last Successful Build
         uses: dawidd6/action-download-artifact@v3.0.0
         with: 
           workflow: preview-and-release.yml
           workflow_conclusion: success
-          branch: dev
+          branch: feature/6.0
           event: push
-          name: drop
-          path: artifacts/previous/
+          name: kiota-drop
+          path: artifacts/previous-kiota/
       - name: Run PKG Diff 
         continue-on-error: true
         run: |

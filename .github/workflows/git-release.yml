@@ -23,11 +23,11 @@ jobs:
       - name: Github Release
         uses: anton-yurchenko/git-release@v6.0
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DRAFT_RELEASE: "false"
           PRE_RELEASE: "false"
           CHANGELOG_FILE: "CHANGELOG.md"
           ALLOW_EMPTY_CHANGELOG: "true"
         with:
           args: |
-              drop/build/**/*.jar
+            drop/build/**/*.jar
