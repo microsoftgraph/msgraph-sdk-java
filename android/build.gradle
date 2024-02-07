@@ -16,7 +16,6 @@ buildscript {
 repositories {
     google()
     gradlePluginPortal()
-    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
 }
 
 apply plugin: "com.android.library"
