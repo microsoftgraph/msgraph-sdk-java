@@ -36,7 +36,6 @@ sourceSets {
 repositories {
     // You can declare any Maven/Ivy/file repository here.
     mavenCentral()
-    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
 }
 
 apply from: "gradle/dependencies.gradle"

@@ -11,6 +11,230 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [6.1.0] - 2024-02-07
+
+- Major Version 6.1.0 now Generally Available.
+- See [Upgrade Guide](https://github.com/microsoftgraph/msgraph-sdk-java/blob/dev/docs/upgrade-to-v6.md) for more information. 
+
+## [5.80.0] - 2024-01-23
+
+### Added 
+
+- AccessPackageResource model and derived models and requests.
+- CallSendDtmfTonesParameterSet model and derived requests.
+- EducationGradingCategory model and derived requests.
+- SendDtmfCompletionReason model.
+- SendDtmfTonesOperation model and derived requests.
+- SocialIdentitySource model.
+- SocialIdentitySourceType model.
+- GitHubOrganizationEvidence model.
+- GitHubRepoEvidence model.
+- GitHubUserEvidence model.
+- HostLogonSessionEvidence model.
+- IoTDeviceEvidence model.
+- IoTDeviceImportanceType model.
+- MalwareEvidence model.
+- NetworkConnectionEvidence model.
+- NicEvidence model.
+- ProtocolType model.
+- SasTokenEvidence model.
+- ServicePrincipalEvidence model.
+- ServicePrincipalType model.
+- SubmissionMailEvidence model.
+
+### Changed 
+
+- AccessPackageResource model.
+- ChatSendActivityNotificationParameterSet model and derived requests.
+- EducationAssignment model and derived requests.
+- EducationAssignmentSettings model and derived requests.
+- EducationSubmission model.
+- TeamsAppSettings model.
+- TeamSendActivityNotificationParameterSet model and derived requests.
+- User model and derived requests.
+- UserTeamworkSendActivityNotificationParameterSet model and derived requests.
+- CallRequestBuilder request.
+- Workbook*Range request builders changed to remove "sort", "format", and "worksheet" functions. 
+- Sort, Format, and Worksheet properties still available via the WorkbookRange entity returned from these requests.  
+
+
+## [5.79.0] - 2023-12-21
+
+### Added 
+
+- CallSendDtmfTonesParameterSet model and derived requests.
+- SendDtmfCompletionReason model.
+- SendDtmfTonesOperation model and derived requests.
+
+### Changed 
+
+- CallRequestBuilder request.
+
+## [5.78.0] - 2023-12-14
+
+### Added 
+
+- DeltaParticipants model and derived requests.
+- ListItemCreateLinkParameterSet model and derived requests.
+- PronounsSettings model and derived requests.
+- RemovedState model.
+- VirtualEndpoint model and derived requests.
+
+### Changed 
+
+- AppliedConditionalAccessPolicyResult model.
+- DeviceManagement model and request builder.
+- DriveItemCreateLinkParameterSet model and builder.
+- Participant model.
+- PeopleAdminSettings model and request builder.
+- ListItem request builder.
+
+## [5.77.0] - 2023-11-17
+
+### Added
+
+- ItemRetentionLabel model and derived request.
+- MeetingAudience model.
+- OnlineMeetingBase model and derived request.
+- RetentionLabelSettings model.
+- VirtualEvent model and derived requests.
+- VirtualEventAttendeeRegistrationStatus model.
+- VirtualEventRegistration model and derived requests.
+- VirtualEventRegistrationQuestionAnswer model.
+- VirtualEventSession model and derived requests.
+- VirtualEventsRoot model and derived request.
+- VirtualEventStatus model.
+- VirtualEventWebinar model and derived requests.
+- VirtualEventWebinarGetByUserIdAndRoleParameterSet model and derived requests.
+- VirtualEventWebinarGetByUserRoleParameterSet model and derived requests.
+- BehaviorDuringRetentionPeriod model.
+
+### Changed
+
+- DriveItem model and derived request.
+- OnlineMeeting model.
+- SolutionsRoot model and derived request.
+
+## [5.76.0] - 2023-11-10
+
+### Added 
+
+- CallRecording model and derived requests.
+- ChannelSummary model.
+- DeviceLocalCredential and DeviceLocalCredentialInfo models and derived requests.
+- RemoteDesktopSecurityConfiguration model and derived requests.
+- SiteDeltaParameterSet model and derived requests.
+- TargetDeviceGroup model and derived requests.
+- HostPort, HostPortBanner, HostPortComponent, HostPortProtocol, and HostPortStatus models and derived requests.
+
+### Changed 
+
+- ExternalConnection model.
+- Channel model.
+- DelegatedAdminRelationship model.
+- Directory model and request builder.
+- ExtensionProperty model.
+- OnlineMeeting model and request builder.
+- ServicePrincipal model and request builder.
+- SiteCollection request builder.
+- Alert model.
+- DetectionSource model.
+- Host model and request builder.
+- ServiceSource model.
+- ThreatIntelligence model and request builder.
+- Hostname request builder.
+- IpAddress request builder.
+
+## [5.75.0] - 2023-10-20
+
+### Added 
+
+- AzureCommunicationServicesUserIdentity, CommunicationsApplicationIdentity, CommunicationsApplicationInstanceIdentity, CommunicationsEncryptedIdentity, CommunicationsGuestIdentity, CommunicationsIdentitySet, CommunicationsPhoneIdentity, and CommunicationsUserIdentity models.
+- PeopleAdminSettings model and derived request.
+- ProfileCardAnnotation and ProfileCardProperty models and derived requests.
+
+### Changed
+
+- Admin model and derived request.
+
+## [5.74.0] - 2023-10-13
+
+### Changed
+
+- External/InternalSponsors for ConnectedOrganizationRequestBuilder are accessed via DirectoryObjectWithReferenceRequestBuilder, no longer DirectoryObjectRequestBuilder.
+
+## [5.73.0] - 2023-10-06
+
+### Added
+
+- AccountTargetContent, AccountTargetContentType, AddressBookAccountTargetContent, IncludeAllAccountTargetContent models and derived requests.
+- AttackSimulationOperation, AttackSimulationOperationType, AttackSimulationRoot, SimulationContentSource, SimulationContentStatus, SimulationNotification, TargettedUserType models and derived requests.
+- BaseEndUserNotification, EndUserNotification, EndUserNotificationDetail, EndUserNotificationPreference, EndUserNotificationSetting, EndUserNotificationSettingType, EndUserNotificationType, NotificationDeliveryFrequency, NotificationDeliveryPreference, PositiveReinforcementNotification, TrainingReminderNotification models and derived requests.
+- CallTranscript, CallTranscriptContentStream, CallTranscriptMetadataContentStream models and derived requests.
+- CoachmarkLocation, CoachmarkLocationType, PayloadCoachmark models.
+- CustomTrainingSetting, MicrosoftCustomTrainingSetting, MicrosoftManagedTrainingSetting, MicrosoftTrainingAssignmentMapping, NoTrainingNotificationSetting, NoTrainingSetting, Training, TrainingAssignedTo, TrainingAvailabilityStatus, TrainingCompletionDuration, TrainingLanguageDetail, TrainingNotificationSetting, TrainingSetting, TrainingSettingType, TrainingType models and derived requests.
+- EmailPayloadDetail model.
+- LandingPage, LandingPageDetail, LoginPage models and derived requests.
+- OAuthAppScope, OAuthConsentAppDetail models.
+- Payload, PayloadBrand, PayloadComplexity, PayloadDetail, PayloadIndustry, PayloadTheme models and derived requests.
+- HostPair, HostSslCertificate, HostSslCertificatePort, SslCertificate, SslCertificateEntity, Subdomain models and derived requests.
+- WhoisBaseRecord, WhoisContact, WhoisDomainStatus, WhoisHistoryRecord, WhoisNameserver, WhoisRecord models and derived requests.
+
+### Changed
+
+- Label, OnlineMeeting, Simulation, ThreatIntelligence models and derived requests.
+- Host, Hostname, IpAddress, AttackSimulationRoot, OnlineMeeting, Simulation, ThreatIntelligence request builders.
+
+## [5.72.0] - 2023-09-29
+
+### Added 
+
+- AssignmentSchedule, EligibilitySchedule, PrivilegedAccessGroup, PrivilegedAccessRoot, ResellerDelegatedAdminRelationship models and derived requests.
+- ScheduleRequestActions model.
+
+### Changed 
+
+- DelegatedAdminRelationshipRequest, DirectoryRequestBuilder, IdentityGovernance, IdentityGovernanceRequestBuilder, Incident, SubjectRightsRequest classes.
+
+## [5.71.0] - 2023-09-22
+
+### Added 
+
+- MacOSDmgApp model and derived requests. 
+- MacOSIncludedApp model.
+- RotateBitLockerKeysDeviceActionResult model.
+- UserExperienceAnalyticsDeviceStartupProcessPerformance model and derived requests.
+
+### Removed
+
+- ManagedMobileLobApp and MobileLobApp requests.  
+
+## [5.70.0] - 2023-09-08
+
+### Added 
+
+- PresenceStatusMessage derived types and requests.
+- SubjectRightsRequest derived types. 
+
+## [5.69.0] - 2023-09-01
+
+### Added 
+
+- Action models.
+- GroupRetryServiceProvisioning derived types and requests.
+- OrgContactRetryServiceProvisioning derived types and requests.
+- ServicePrincipalLockConfiguration model.
+- ServiceProvisioningError model.
+- ServiceProvisioningXmlError model.
+- UserRetryServiceProvisioning derived types and requests.
+
+## [5.68.0] - 2023-08-18
+
+### Changed 
+
+- Added properties to the PublicationFacet model.
+- Added properties to the Alert and Incident models in the security namespace. 
+
 ## [5.67.0] - 2023-08-10
 
 ### Added 

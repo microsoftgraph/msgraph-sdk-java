@@ -50,7 +50,7 @@ jobs:
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: kiota-drop
+          name: drop
           path: |
             **/libs/*
             build/generated-pom.xml
@@ -97,7 +97,7 @@ jobs:
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: kiota-drop
+          name: drop
           path: |
             **/libs/*
             build/generated-pom.xml

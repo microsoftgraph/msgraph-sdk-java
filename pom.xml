@@ -4,11 +4,11 @@
         as the dependency graph is not compatible with gradle https://docs.github.com/en/free-pro-team@latest/github/visualizing-repository-data-with-graphs/about-the-dependency-graph#supported-package-ecosystems
         build.gradle is the source of truth
     -->
-    <modelVersion>5.0.0</modelVersion>
+    <modelVersion>6.0.0</modelVersion>
 
     <groupId>com.microsoft.graph</groupId>
     <artifactId>microsoft-graph</artifactId>
-    <version>3.3.0</version>
+    <version>6.1.0</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -35,7 +35,7 @@
         <dependency>
             <groupId>com.microsoft.graph</groupId>
             <artifactId>microsoft-graph-core</artifactId>
-            <version>2.0.21</version>
+            <version>3.1.0</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
