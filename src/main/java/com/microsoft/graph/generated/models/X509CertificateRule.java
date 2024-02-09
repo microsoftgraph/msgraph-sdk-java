@@ -18,7 +18,7 @@ public class X509CertificateRule implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new X509CertificateRule and sets the default values.
+     * Instantiates a new {@link X509CertificateRule} and sets the default values.
      */
     public X509CertificateRule() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class X509CertificateRule implements AdditionalDataHolder, BackedModel, P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a X509CertificateRule
+     * @return a {@link X509CertificateRule}
      */
     @jakarta.annotation.Nonnull
     public static X509CertificateRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class X509CertificateRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class X509CertificateRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class X509CertificateRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -70,7 +70,7 @@ public class X509CertificateRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the identifier property value. The identifier of the X.509 certificate. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIdentifier() {
@@ -78,7 +78,7 @@ public class X509CertificateRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -86,7 +86,7 @@ public class X509CertificateRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the x509CertificateAuthenticationMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue. Required.
-     * @return a X509CertificateAuthenticationMode
+     * @return a {@link X509CertificateAuthenticationMode}
      */
     @jakarta.annotation.Nullable
     public X509CertificateAuthenticationMode getX509CertificateAuthenticationMode() {
@@ -94,7 +94,7 @@ public class X509CertificateRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the x509CertificateRuleType property value. The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue. Required.
-     * @return a X509CertificateRuleType
+     * @return a {@link X509CertificateRuleType}
      */
     @jakarta.annotation.Nullable
     public X509CertificateRuleType getX509CertificateRuleType() {

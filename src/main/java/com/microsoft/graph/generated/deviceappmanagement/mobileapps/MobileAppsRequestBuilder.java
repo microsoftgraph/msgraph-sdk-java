@@ -41,6 +41,7 @@ import java.util.Objects;
 public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -48,6 +49,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to androidLobApp.
+     * @return a {@link GraphAndroidLobAppRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphAndroidLobAppRequestBuilder graphAndroidLobApp() {
@@ -55,6 +57,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to androidStoreApp.
+     * @return a {@link GraphAndroidStoreAppRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphAndroidStoreAppRequestBuilder graphAndroidStoreApp() {
@@ -62,6 +65,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to iosLobApp.
+     * @return a {@link GraphIosLobAppRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphIosLobAppRequestBuilder graphIosLobApp() {
@@ -69,6 +73,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to iosStoreApp.
+     * @return a {@link GraphIosStoreAppRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphIosStoreAppRequestBuilder graphIosStoreApp() {
@@ -76,6 +81,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to iosVppApp.
+     * @return a {@link GraphIosVppAppRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphIosVppAppRequestBuilder graphIosVppApp() {
@@ -83,6 +89,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to macOSDmgApp.
+     * @return a {@link GraphMacOSDmgAppRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphMacOSDmgAppRequestBuilder graphMacOSDmgApp() {
@@ -90,6 +97,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to macOSLobApp.
+     * @return a {@link GraphMacOSLobAppRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphMacOSLobAppRequestBuilder graphMacOSLobApp() {
@@ -97,6 +105,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to managedAndroidLobApp.
+     * @return a {@link GraphManagedAndroidLobAppRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphManagedAndroidLobAppRequestBuilder graphManagedAndroidLobApp() {
@@ -104,6 +113,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to managedIOSLobApp.
+     * @return a {@link GraphManagedIOSLobAppRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphManagedIOSLobAppRequestBuilder graphManagedIOSLobApp() {
@@ -111,6 +121,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to managedMobileLobApp.
+     * @return a {@link GraphManagedMobileLobAppRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphManagedMobileLobAppRequestBuilder graphManagedMobileLobApp() {
@@ -118,6 +129,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to microsoftStoreForBusinessApp.
+     * @return a {@link GraphMicrosoftStoreForBusinessAppRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphMicrosoftStoreForBusinessAppRequestBuilder graphMicrosoftStoreForBusinessApp() {
@@ -125,6 +137,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to win32LobApp.
+     * @return a {@link GraphWin32LobAppRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphWin32LobAppRequestBuilder graphWin32LobApp() {
@@ -132,6 +145,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to windowsAppX.
+     * @return a {@link GraphWindowsAppXRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphWindowsAppXRequestBuilder graphWindowsAppX() {
@@ -139,6 +153,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to windowsMobileMSI.
+     * @return a {@link GraphWindowsMobileMSIRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphWindowsMobileMSIRequestBuilder graphWindowsMobileMSI() {
@@ -146,6 +161,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to windowsUniversalAppX.
+     * @return a {@link GraphWindowsUniversalAppXRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphWindowsUniversalAppXRequestBuilder graphWindowsUniversalAppX() {
@@ -153,6 +169,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to windowsWebApp.
+     * @return a {@link GraphWindowsWebAppRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphWindowsWebAppRequestBuilder graphWindowsWebApp() {
@@ -161,7 +178,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the mobileApps property of the microsoft.graph.deviceAppManagement entity.
      * @param mobileAppId The unique identifier of mobileApp
-     * @return a MobileAppItemRequestBuilder
+     * @return a {@link MobileAppItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MobileAppItemRequestBuilder byMobileAppId(@jakarta.annotation.Nonnull final String mobileAppId) {
@@ -171,7 +188,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return new MobileAppItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new MobileAppsRequestBuilder and sets the default values.
+     * Instantiates a new {@link MobileAppsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -179,7 +196,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new MobileAppsRequestBuilder and sets the default values.
+     * Instantiates a new {@link MobileAppsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -187,32 +204,34 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List properties and relationships of the windowsMobileMSI objects.
-     * @return a MobileAppCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-windowsmobilemsi-list?view=graph-rest-1.0">Find more info here</a>
+     * List properties and relationships of the webApp objects.
+     * @return a {@link MobileAppCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-webapp-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MobileAppCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the windowsMobileMSI objects.
+     * List properties and relationships of the webApp objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a MobileAppCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-windowsmobilemsi-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a {@link MobileAppCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-webapp-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MobileAppCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, MobileAppCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new windowsWebApp object.
      * @param body The request body
-     * @return a MobileApp
+     * @return a {@link MobileApp}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-windowswebapp-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -223,7 +242,8 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
      * Create a new windowsWebApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a MobileApp
+     * @return a {@link MobileApp}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-windowswebapp-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -231,22 +251,21 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, MobileApp::createFromDiscriminatorValue);
     }
     /**
-     * List properties and relationships of the windowsMobileMSI objects.
-     * @return a RequestInformation
+     * List properties and relationships of the webApp objects.
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the windowsMobileMSI objects.
+     * List properties and relationships of the webApp objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -258,7 +277,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new windowsWebApp object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MobileApp body) {
@@ -268,12 +287,12 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
      * Create a new windowsWebApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MobileApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceAppManagement/mobileApps", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -282,7 +301,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a MobileAppsRequestBuilder
+     * @return a {@link MobileAppsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MobileAppsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -290,7 +309,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return new MobileAppsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the windowsMobileMSI objects.
+     * List properties and relationships of the webApp objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
@@ -336,7 +355,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

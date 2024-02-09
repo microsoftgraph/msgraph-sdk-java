@@ -28,6 +28,7 @@ import java.util.Objects;
 public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the appScope property of the microsoft.graph.unifiedRoleEligibilityScheduleRequest entity.
+     * @return a {@link AppScopeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AppScopeRequestBuilder appScope() {
@@ -35,6 +36,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
     }
     /**
      * Provides operations to call the cancel method.
+     * @return a {@link CancelRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CancelRequestBuilder cancel() {
@@ -42,6 +44,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
     }
     /**
      * Provides operations to manage the directoryScope property of the microsoft.graph.unifiedRoleEligibilityScheduleRequest entity.
+     * @return a {@link DirectoryScopeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DirectoryScopeRequestBuilder directoryScope() {
@@ -49,6 +52,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
     }
     /**
      * Provides operations to manage the principal property of the microsoft.graph.unifiedRoleEligibilityScheduleRequest entity.
+     * @return a {@link PrincipalRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PrincipalRequestBuilder principal() {
@@ -56,6 +60,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
     }
     /**
      * Provides operations to manage the roleDefinition property of the microsoft.graph.unifiedRoleEligibilityScheduleRequest entity.
+     * @return a {@link RoleDefinitionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleDefinitionRequestBuilder roleDefinition() {
@@ -63,13 +68,14 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
     }
     /**
      * Provides operations to manage the targetSchedule property of the microsoft.graph.unifiedRoleEligibilityScheduleRequest entity.
+     * @return a {@link TargetScheduleRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TargetScheduleRequestBuilder targetSchedule() {
         return new TargetScheduleRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new UnifiedRoleEligibilityScheduleRequestItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link UnifiedRoleEligibilityScheduleRequestItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -77,7 +83,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
         super(requestAdapter, "{+baseurl}/roleManagement/entitlementManagement/roleEligibilityScheduleRequests/{unifiedRoleEligibilityScheduleRequest%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new UnifiedRoleEligibilityScheduleRequestItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link UnifiedRoleEligibilityScheduleRequestItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -86,6 +92,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
     }
     /**
      * Delete navigation property roleEligibilityScheduleRequests for roleManagement
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -93,17 +100,18 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
     /**
      * Delete navigation property roleEligibilityScheduleRequests for roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * In PIM, read the details of a request for for a role eligibility request made through the unifiedRoleEligibilityScheduleRequest object.
-     * @return a UnifiedRoleEligibilityScheduleRequest
+     * @return a {@link UnifiedRoleEligibilityScheduleRequest}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityschedulerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -113,21 +121,22 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
     /**
      * In PIM, read the details of a request for for a role eligibility request made through the unifiedRoleEligibilityScheduleRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UnifiedRoleEligibilityScheduleRequest
+     * @return a {@link UnifiedRoleEligibilityScheduleRequest}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityschedulerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleEligibilityScheduleRequest get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleEligibilityScheduleRequest::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property roleEligibilityScheduleRequests in roleManagement
      * @param body The request body
-     * @return a UnifiedRoleEligibilityScheduleRequest
+     * @return a {@link UnifiedRoleEligibilityScheduleRequest}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleEligibilityScheduleRequest patch(@jakarta.annotation.Nonnull final UnifiedRoleEligibilityScheduleRequest body) {
@@ -137,20 +146,20 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
      * Update the navigation property roleEligibilityScheduleRequests in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UnifiedRoleEligibilityScheduleRequest
+     * @return a {@link UnifiedRoleEligibilityScheduleRequest}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleEligibilityScheduleRequest patch(@jakarta.annotation.Nonnull final UnifiedRoleEligibilityScheduleRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleEligibilityScheduleRequest::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property roleEligibilityScheduleRequests for roleManagement
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -159,18 +168,18 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
     /**
      * Delete navigation property roleEligibilityScheduleRequests for roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/roleManagement/entitlementManagement/roleEligibilityScheduleRequests/{unifiedRoleEligibilityScheduleRequest%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * In PIM, read the details of a request for for a role eligibility request made through the unifiedRoleEligibilityScheduleRequest object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -179,7 +188,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
     /**
      * In PIM, read the details of a request for for a role eligibility request made through the unifiedRoleEligibilityScheduleRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -191,7 +200,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
     /**
      * Update the navigation property roleEligibilityScheduleRequests in roleManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UnifiedRoleEligibilityScheduleRequest body) {
@@ -201,12 +210,12 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
      * Update the navigation property roleEligibilityScheduleRequests in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UnifiedRoleEligibilityScheduleRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/roleManagement/entitlementManagement/roleEligibilityScheduleRequests/{unifiedRoleEligibilityScheduleRequest%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -215,7 +224,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a UnifiedRoleEligibilityScheduleRequestItemRequestBuilder
+     * @return a {@link UnifiedRoleEligibilityScheduleRequestItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UnifiedRoleEligibilityScheduleRequestItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -245,7 +254,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

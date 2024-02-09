@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType implements Parsable {
     /**
-     * Instantiates a new WindowsUpdateScheduledInstall and sets the default values.
+     * Instantiates a new {@link WindowsUpdateScheduledInstall} and sets the default values.
      */
     public WindowsUpdateScheduledInstall() {
         super();
@@ -19,7 +19,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsUpdateScheduledInstall
+     * @return a {@link WindowsUpdateScheduledInstall}
      */
     @jakarta.annotation.Nonnull
     public static WindowsUpdateScheduledInstall createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -39,7 +39,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
     }
     /**
      * Gets the scheduledInstallDay property value. Possible values for a weekly schedule.
-     * @return a WeeklySchedule
+     * @return a {@link WeeklySchedule}
      */
     @jakarta.annotation.Nullable
     public WeeklySchedule getScheduledInstallDay() {
@@ -47,7 +47,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
     }
     /**
      * Gets the scheduledInstallTime property value. Scheduled Install Time during day
-     * @return a LocalTime
+     * @return a {@link LocalTime}
      */
     @jakarta.annotation.Nullable
     public LocalTime getScheduledInstallTime() {

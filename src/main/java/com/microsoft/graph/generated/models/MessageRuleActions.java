@@ -18,7 +18,7 @@ public class MessageRuleActions implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new MessageRuleActions and sets the default values.
+     * Instantiates a new {@link MessageRuleActions} and sets the default values.
      */
     public MessageRuleActions() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class MessageRuleActions implements AdditionalDataHolder, BackedModel, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MessageRuleActions
+     * @return a {@link MessageRuleActions}
      */
     @jakarta.annotation.Nonnull
     public static MessageRuleActions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class MessageRuleActions implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class MessageRuleActions implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the assignCategories property value. A list of categories to be assigned to a message.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAssignCategories() {
@@ -57,7 +57,7 @@ public class MessageRuleActions implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class MessageRuleActions implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the copyToFolder property value. The ID of a folder that a message is to be copied to.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCopyToFolder() {
@@ -73,7 +73,7 @@ public class MessageRuleActions implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the delete property value. Indicates whether a message should be moved to the Deleted Items folder.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDelete() {
@@ -81,7 +81,7 @@ public class MessageRuleActions implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -102,7 +102,7 @@ public class MessageRuleActions implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the forwardAsAttachmentTo property value. The email addresses of the recipients to which a message should be forwarded as an attachment.
-     * @return a java.util.List<Recipient>
+     * @return a {@link java.util.List<Recipient>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getForwardAsAttachmentTo() {
@@ -110,7 +110,7 @@ public class MessageRuleActions implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the forwardTo property value. The email addresses of the recipients to which a message should be forwarded.
-     * @return a java.util.List<Recipient>
+     * @return a {@link java.util.List<Recipient>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getForwardTo() {
@@ -118,7 +118,7 @@ public class MessageRuleActions implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the markAsRead property value. Indicates whether a message should be marked as read.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getMarkAsRead() {
@@ -126,7 +126,7 @@ public class MessageRuleActions implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the markImportance property value. Sets the importance of the message, which can be: low, normal, high.
-     * @return a Importance
+     * @return a {@link Importance}
      */
     @jakarta.annotation.Nullable
     public Importance getMarkImportance() {
@@ -134,7 +134,7 @@ public class MessageRuleActions implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the moveToFolder property value. The ID of the folder that a message will be moved to.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMoveToFolder() {
@@ -142,7 +142,7 @@ public class MessageRuleActions implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -150,7 +150,7 @@ public class MessageRuleActions implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the permanentDelete property value. Indicates whether a message should be permanently deleted and not saved to the Deleted Items folder.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPermanentDelete() {
@@ -158,7 +158,7 @@ public class MessageRuleActions implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the redirectTo property value. The email addresses to which a message should be redirected.
-     * @return a java.util.List<Recipient>
+     * @return a {@link java.util.List<Recipient>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getRedirectTo() {
@@ -166,7 +166,7 @@ public class MessageRuleActions implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the stopProcessingRules property value. Indicates whether subsequent rules should be evaluated.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getStopProcessingRules() {

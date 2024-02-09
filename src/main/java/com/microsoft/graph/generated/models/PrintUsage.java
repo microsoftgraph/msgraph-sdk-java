@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintUsage extends Entity implements Parsable {
     /**
-     * Instantiates a new PrintUsage and sets the default values.
+     * Instantiates a new {@link PrintUsage} and sets the default values.
      */
     public PrintUsage() {
         super();
@@ -18,7 +18,7 @@ public class PrintUsage extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrintUsage
+     * @return a {@link PrintUsage}
      */
     @jakarta.annotation.Nonnull
     public static PrintUsage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class PrintUsage extends Entity implements Parsable {
     }
     /**
      * Gets the blackAndWhitePageCount property value. The blackAndWhitePageCount property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getBlackAndWhitePageCount() {
@@ -43,7 +43,7 @@ public class PrintUsage extends Entity implements Parsable {
     }
     /**
      * Gets the colorPageCount property value. The colorPageCount property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getColorPageCount() {
@@ -51,7 +51,7 @@ public class PrintUsage extends Entity implements Parsable {
     }
     /**
      * Gets the completedBlackAndWhiteJobCount property value. The completedBlackAndWhiteJobCount property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getCompletedBlackAndWhiteJobCount() {
@@ -59,7 +59,7 @@ public class PrintUsage extends Entity implements Parsable {
     }
     /**
      * Gets the completedColorJobCount property value. The completedColorJobCount property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getCompletedColorJobCount() {
@@ -67,7 +67,7 @@ public class PrintUsage extends Entity implements Parsable {
     }
     /**
      * Gets the completedJobCount property value. The completedJobCount property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getCompletedJobCount() {
@@ -75,7 +75,7 @@ public class PrintUsage extends Entity implements Parsable {
     }
     /**
      * Gets the doubleSidedSheetCount property value. The doubleSidedSheetCount property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getDoubleSidedSheetCount() {
@@ -83,7 +83,7 @@ public class PrintUsage extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -103,7 +103,7 @@ public class PrintUsage extends Entity implements Parsable {
     }
     /**
      * Gets the incompleteJobCount property value. The incompleteJobCount property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getIncompleteJobCount() {
@@ -111,7 +111,7 @@ public class PrintUsage extends Entity implements Parsable {
     }
     /**
      * Gets the mediaSheetCount property value. The mediaSheetCount property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getMediaSheetCount() {
@@ -119,7 +119,7 @@ public class PrintUsage extends Entity implements Parsable {
     }
     /**
      * Gets the pageCount property value. The pageCount property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getPageCount() {
@@ -127,7 +127,7 @@ public class PrintUsage extends Entity implements Parsable {
     }
     /**
      * Gets the singleSidedSheetCount property value. The singleSidedSheetCount property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getSingleSidedSheetCount() {
@@ -135,7 +135,7 @@ public class PrintUsage extends Entity implements Parsable {
     }
     /**
      * Gets the usageDate property value. The usageDate property
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getUsageDate() {

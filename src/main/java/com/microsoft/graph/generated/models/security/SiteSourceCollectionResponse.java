@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SiteSourceCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new SiteSourceCollectionResponse and sets the default values.
+     * Instantiates a new {@link SiteSourceCollectionResponse} and sets the default values.
      */
     public SiteSourceCollectionResponse() {
         super();
@@ -18,7 +18,7 @@ public class SiteSourceCollectionResponse extends BaseCollectionPaginationCountR
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SiteSourceCollectionResponse
+     * @return a {@link SiteSourceCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static SiteSourceCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class SiteSourceCollectionResponse extends BaseCollectionPaginationCountR
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class SiteSourceCollectionResponse extends BaseCollectionPaginationCountR
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<SiteSource>
+     * @return a {@link java.util.List<SiteSource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SiteSource> getValue() {

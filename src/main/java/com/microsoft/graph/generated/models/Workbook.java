@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Workbook extends Entity implements Parsable {
     /**
-     * Instantiates a new Workbook and sets the default values.
+     * Instantiates a new {@link Workbook} and sets the default values.
      */
     public Workbook() {
         super();
@@ -17,7 +17,7 @@ public class Workbook extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Workbook
+     * @return a {@link Workbook}
      */
     @jakarta.annotation.Nonnull
     public static Workbook createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class Workbook extends Entity implements Parsable {
     }
     /**
      * Gets the application property value. The application property
-     * @return a WorkbookApplication
+     * @return a {@link WorkbookApplication}
      */
     @jakarta.annotation.Nullable
     public WorkbookApplication getApplication() {
@@ -34,7 +34,7 @@ public class Workbook extends Entity implements Parsable {
     }
     /**
      * Gets the comments property value. Represents a collection of comments in a workbook.
-     * @return a java.util.List<WorkbookComment>
+     * @return a {@link java.util.List<WorkbookComment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookComment> getComments() {
@@ -42,7 +42,7 @@ public class Workbook extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -58,7 +58,7 @@ public class Workbook extends Entity implements Parsable {
     }
     /**
      * Gets the functions property value. The functions property
-     * @return a WorkbookFunctions
+     * @return a {@link WorkbookFunctions}
      */
     @jakarta.annotation.Nullable
     public WorkbookFunctions getFunctions() {
@@ -66,7 +66,7 @@ public class Workbook extends Entity implements Parsable {
     }
     /**
      * Gets the names property value. Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
-     * @return a java.util.List<WorkbookNamedItem>
+     * @return a {@link java.util.List<WorkbookNamedItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookNamedItem> getNames() {
@@ -74,7 +74,7 @@ public class Workbook extends Entity implements Parsable {
     }
     /**
      * Gets the operations property value. The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
-     * @return a java.util.List<WorkbookOperation>
+     * @return a {@link java.util.List<WorkbookOperation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookOperation> getOperations() {
@@ -82,7 +82,7 @@ public class Workbook extends Entity implements Parsable {
     }
     /**
      * Gets the tables property value. Represents a collection of tables associated with the workbook. Read-only.
-     * @return a java.util.List<WorkbookTable>
+     * @return a {@link java.util.List<WorkbookTable>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookTable> getTables() {
@@ -90,7 +90,7 @@ public class Workbook extends Entity implements Parsable {
     }
     /**
      * Gets the worksheets property value. Represents a collection of worksheets associated with the workbook. Read-only.
-     * @return a java.util.List<WorkbookWorksheet>
+     * @return a {@link java.util.List<WorkbookWorksheet>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookWorksheet> getWorksheets() {

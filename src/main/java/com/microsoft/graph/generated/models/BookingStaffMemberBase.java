@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BookingStaffMemberBase extends Entity implements Parsable {
     /**
-     * Instantiates a new BookingStaffMemberBase and sets the default values.
+     * Instantiates a new {@link BookingStaffMemberBase} and sets the default values.
      */
     public BookingStaffMemberBase() {
         super();
@@ -20,7 +20,7 @@ public class BookingStaffMemberBase extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BookingStaffMemberBase
+     * @return a {@link BookingStaffMemberBase}
      */
     @jakarta.annotation.Nonnull
     public static BookingStaffMemberBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class BookingStaffMemberBase extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

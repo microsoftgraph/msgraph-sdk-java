@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AudioRoutingGroup extends Entity implements Parsable {
     /**
-     * Instantiates a new AudioRoutingGroup and sets the default values.
+     * Instantiates a new {@link AudioRoutingGroup} and sets the default values.
      */
     public AudioRoutingGroup() {
         super();
@@ -17,7 +17,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AudioRoutingGroup
+     * @return a {@link AudioRoutingGroup}
      */
     @jakarta.annotation.Nonnull
     public static AudioRoutingGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
     }
     /**
      * Gets the receivers property value. List of receiving participant ids.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getReceivers() {
@@ -46,7 +46,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
     }
     /**
      * Gets the routingMode property value. The routingMode property
-     * @return a RoutingMode
+     * @return a {@link RoutingMode}
      */
     @jakarta.annotation.Nullable
     public RoutingMode getRoutingMode() {
@@ -54,7 +54,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
     }
     /**
      * Gets the sources property value. List of source participant ids.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSources() {

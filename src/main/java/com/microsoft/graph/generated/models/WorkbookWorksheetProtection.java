@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookWorksheetProtection extends Entity implements Parsable {
     /**
-     * Instantiates a new WorkbookWorksheetProtection and sets the default values.
+     * Instantiates a new {@link WorkbookWorksheetProtection} and sets the default values.
      */
     public WorkbookWorksheetProtection() {
         super();
@@ -17,7 +17,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookWorksheetProtection
+     * @return a {@link WorkbookWorksheetProtection}
      */
     @jakarta.annotation.Nonnull
     public static WorkbookWorksheetProtection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
     }
     /**
      * Gets the options property value. Sheet protection options. Read-only.
-     * @return a WorkbookWorksheetProtectionOptions
+     * @return a {@link WorkbookWorksheetProtectionOptions}
      */
     @jakarta.annotation.Nullable
     public WorkbookWorksheetProtectionOptions getOptions() {
@@ -45,7 +45,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
     }
     /**
      * Gets the protected property value. Indicates if the worksheet is protected.  Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getProtected() {

@@ -21,7 +21,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new CertificateBasedAuthConfigurationItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link CertificateBasedAuthConfigurationItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -29,7 +29,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/certificateBasedAuthConfiguration/{certificateBasedAuthConfiguration%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new CertificateBasedAuthConfigurationItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link CertificateBasedAuthConfigurationItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -38,6 +38,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
     }
     /**
      * Delete a certificateBasedAuthConfiguration object.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -46,18 +47,19 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
     /**
      * Delete a certificateBasedAuthConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get the properties of a certificateBasedAuthConfiguration object.
-     * @return a CertificateBasedAuthConfiguration
+     * @return a {@link CertificateBasedAuthConfiguration}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -67,20 +69,20 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
     /**
      * Get the properties of a certificateBasedAuthConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CertificateBasedAuthConfiguration
+     * @return a {@link CertificateBasedAuthConfiguration}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CertificateBasedAuthConfiguration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, CertificateBasedAuthConfiguration::createFromDiscriminatorValue);
     }
     /**
      * Delete a certificateBasedAuthConfiguration object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -89,18 +91,18 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
     /**
      * Delete a certificateBasedAuthConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/organization/{organization%2Did}/certificateBasedAuthConfiguration/{certificateBasedAuthConfiguration%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Get the properties of a certificateBasedAuthConfiguration object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -109,7 +111,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
     /**
      * Get the properties of a certificateBasedAuthConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,7 +123,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a CertificateBasedAuthConfigurationItemRequestBuilder
+     * @return a {@link CertificateBasedAuthConfigurationItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CertificateBasedAuthConfigurationItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -151,7 +153,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

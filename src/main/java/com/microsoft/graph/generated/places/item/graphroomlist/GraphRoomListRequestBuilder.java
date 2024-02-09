@@ -23,13 +23,14 @@ import java.util.Objects;
 public class GraphRoomListRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the rooms property of the microsoft.graph.roomList entity.
+     * @return a {@link RoomsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoomsRequestBuilder rooms() {
         return new RoomsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new GraphRoomListRequestBuilder and sets the default values.
+     * Instantiates a new {@link GraphRoomListRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,7 +38,7 @@ public class GraphRoomListRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.roomList{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new GraphRoomListRequestBuilder and sets the default values.
+     * Instantiates a new {@link GraphRoomListRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -46,7 +47,8 @@ public class GraphRoomListRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the item of type microsoft.graph.place as microsoft.graph.roomList
-     * @return a RoomList
+     * @return a {@link RoomList}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public RoomList get() {
@@ -55,19 +57,19 @@ public class GraphRoomListRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the item of type microsoft.graph.place as microsoft.graph.roomList
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RoomList
+     * @return a {@link RoomList}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public RoomList get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, RoomList::createFromDiscriminatorValue);
     }
     /**
      * Get the item of type microsoft.graph.place as microsoft.graph.roomList
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -76,7 +78,7 @@ public class GraphRoomListRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the item of type microsoft.graph.place as microsoft.graph.roomList
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +90,7 @@ public class GraphRoomListRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GraphRoomListRequestBuilder
+     * @return a {@link GraphRoomListRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphRoomListRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -112,7 +114,7 @@ public class GraphRoomListRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

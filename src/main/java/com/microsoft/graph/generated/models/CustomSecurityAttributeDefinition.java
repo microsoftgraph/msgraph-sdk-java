@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomSecurityAttributeDefinition extends Entity implements Parsable {
     /**
-     * Instantiates a new CustomSecurityAttributeDefinition and sets the default values.
+     * Instantiates a new {@link CustomSecurityAttributeDefinition} and sets the default values.
      */
     public CustomSecurityAttributeDefinition() {
         super();
@@ -17,7 +17,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CustomSecurityAttributeDefinition
+     * @return a {@link CustomSecurityAttributeDefinition}
      */
     @jakarta.annotation.Nonnull
     public static CustomSecurityAttributeDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
     }
     /**
      * Gets the allowedValues property value. Values that are predefined for this custom security attribute. This navigation property is not returned by default and must be specified in an $expand query. For example, /directory/customSecurityAttributeDefinitions?$expand=allowedValues.
-     * @return a java.util.List<AllowedValue>
+     * @return a {@link java.util.List<AllowedValue>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AllowedValue> getAllowedValues() {
@@ -34,7 +34,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
     }
     /**
      * Gets the attributeSet property value. Name of the attribute set. Case insensitive.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAttributeSet() {
@@ -42,7 +42,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
     }
     /**
      * Gets the description property value. Description of the custom security attribute. Can be up to 128 characters long and include Unicode characters. Can be changed later.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -50,7 +50,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,7 +68,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
     }
     /**
      * Gets the isCollection property value. Indicates whether multiple values can be assigned to the custom security attribute. Cannot be changed later. If type is set to Boolean, isCollection cannot be set to true.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCollection() {
@@ -76,7 +76,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
     }
     /**
      * Gets the isSearchable property value. Indicates whether custom security attribute values are indexed for searching on objects that are assigned attribute values. Cannot be changed later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSearchable() {
@@ -84,7 +84,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
     }
     /**
      * Gets the name property value. Name of the custom security attribute. Must be unique within an attribute set. Can be up to 32 characters long and include Unicode characters. Cannot contain spaces or special characters. Cannot be changed later. Case insensitive.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -92,7 +92,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
     }
     /**
      * Gets the status property value. Specifies whether the custom security attribute is active or deactivated. Acceptable values are: Available and Deprecated. Can be changed later.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
@@ -100,7 +100,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
     }
     /**
      * Gets the type property value. Data type for the custom security attribute values. Supported types are: Boolean, Integer, and String. Cannot be changed later.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getType() {
@@ -108,7 +108,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
     }
     /**
      * Gets the usePreDefinedValuesOnly property value. Indicates whether only predefined values can be assigned to the custom security attribute. If set to false, free-form values are allowed. Can later be changed from true to false, but cannot be changed from false to true. If type is set to Boolean, usePreDefinedValuesOnly cannot be set to true.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getUsePreDefinedValuesOnly() {

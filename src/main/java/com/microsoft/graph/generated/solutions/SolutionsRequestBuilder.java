@@ -25,6 +25,7 @@ import java.util.Objects;
 public class SolutionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the bookingBusinesses property of the microsoft.graph.solutionsRoot entity.
+     * @return a {@link BookingBusinessesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BookingBusinessesRequestBuilder bookingBusinesses() {
@@ -32,6 +33,7 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the bookingCurrencies property of the microsoft.graph.solutionsRoot entity.
+     * @return a {@link BookingCurrenciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BookingCurrenciesRequestBuilder bookingCurrencies() {
@@ -39,13 +41,14 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the virtualEvents property of the microsoft.graph.solutionsRoot entity.
+     * @return a {@link VirtualEventsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public VirtualEventsRequestBuilder virtualEvents() {
         return new VirtualEventsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new SolutionsRequestBuilder and sets the default values.
+     * Instantiates a new {@link SolutionsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -53,7 +56,7 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new SolutionsRequestBuilder and sets the default values.
+     * Instantiates a new {@link SolutionsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -62,7 +65,8 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get solutions
-     * @return a SolutionsRoot
+     * @return a {@link SolutionsRoot}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SolutionsRoot get() {
@@ -71,20 +75,21 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a SolutionsRoot
+     * @return a {@link SolutionsRoot}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SolutionsRoot get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SolutionsRoot::createFromDiscriminatorValue);
     }
     /**
      * Update solutions
      * @param body The request body
-     * @return a SolutionsRoot
+     * @return a {@link SolutionsRoot}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SolutionsRoot patch(@jakarta.annotation.Nonnull final SolutionsRoot body) {
@@ -94,20 +99,20 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
      * Update solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a SolutionsRoot
+     * @return a {@link SolutionsRoot}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SolutionsRoot patch(@jakarta.annotation.Nonnull final SolutionsRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SolutionsRoot::createFromDiscriminatorValue);
     }
     /**
      * Get solutions
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -116,7 +121,7 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -128,7 +133,7 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update solutions
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SolutionsRoot body) {
@@ -138,12 +143,12 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
      * Update solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SolutionsRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/solutions", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -152,7 +157,7 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a SolutionsRequestBuilder
+     * @return a {@link SolutionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SolutionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -176,7 +181,7 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

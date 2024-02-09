@@ -19,7 +19,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SynchronizationQuarantine and sets the default values.
+     * Instantiates a new {@link SynchronizationQuarantine} and sets the default values.
      */
     public SynchronizationQuarantine() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, BackedMo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SynchronizationQuarantine
+     * @return a {@link SynchronizationQuarantine}
      */
     @jakarta.annotation.Nonnull
     public static SynchronizationQuarantine createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the currentBegan property value. Date and time when the quarantine was last evaluated and imposed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCurrentBegan() {
@@ -66,7 +66,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the error property value. Describes the error(s) that occurred when putting the synchronization job into quarantine.
-     * @return a SynchronizationError
+     * @return a {@link SynchronizationError}
      */
     @jakarta.annotation.Nullable
     public SynchronizationError getError() {
@@ -74,7 +74,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, BackedMo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -90,7 +90,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the nextAttempt property value. Date and time when the next attempt to re-evaluate the quarantine will be made. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getNextAttempt() {
@@ -98,7 +98,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -106,7 +106,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the reason property value. The reason property
-     * @return a QuarantineReason
+     * @return a {@link QuarantineReason}
      */
     @jakarta.annotation.Nullable
     public QuarantineReason getReason() {
@@ -114,7 +114,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the seriesBegan property value. Date and time when the quarantine was first imposed in this series (a series starts when a quarantine is first imposed, and is reset as soon as the quarantine is lifted). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getSeriesBegan() {
@@ -122,7 +122,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the seriesCount property value. Number of times in this series the quarantine was re-evaluated and left in effect (a series starts when quarantine is first imposed, and is reset as soon as quarantine is lifted).
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getSeriesCount() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationChannelResource extends EducationResource implements Parsable {
     /**
-     * Instantiates a new EducationChannelResource and sets the default values.
+     * Instantiates a new {@link EducationChannelResource} and sets the default values.
      */
     public EducationChannelResource() {
         super();
@@ -18,7 +18,7 @@ public class EducationChannelResource extends EducationResource implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationChannelResource
+     * @return a {@link EducationChannelResource}
      */
     @jakarta.annotation.Nonnull
     public static EducationChannelResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EducationChannelResource extends EducationResource implements Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class EducationChannelResource extends EducationResource implements Parsa
     }
     /**
      * Gets the url property value. The url property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUrl() {

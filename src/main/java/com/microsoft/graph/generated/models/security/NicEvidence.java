@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class NicEvidence extends AlertEvidence implements Parsable {
     /**
-     * Instantiates a new NicEvidence and sets the default values.
+     * Instantiates a new {@link NicEvidence} and sets the default values.
      */
     public NicEvidence() {
         super();
@@ -18,7 +18,7 @@ public class NicEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a NicEvidence
+     * @return a {@link NicEvidence}
      */
     @jakarta.annotation.Nonnull
     public static NicEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class NicEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -39,7 +39,7 @@ public class NicEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the ipAddress property value. The ipAddress property
-     * @return a IpEvidence
+     * @return a {@link IpEvidence}
      */
     @jakarta.annotation.Nullable
     public IpEvidence getIpAddress() {
@@ -47,7 +47,7 @@ public class NicEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the macAddress property value. The macAddress property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMacAddress() {
@@ -55,7 +55,7 @@ public class NicEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the vlans property value. The vlans property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getVlans() {

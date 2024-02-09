@@ -28,6 +28,7 @@ import java.util.Objects;
 public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the delta method.
+     * @return a {@link DeltaRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeltaRequestBuilder delta() {
@@ -35,6 +36,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getAvailableExtensionProperties method.
+     * @return a {@link GetAvailableExtensionPropertiesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetAvailableExtensionPropertiesRequestBuilder getAvailableExtensionProperties() {
@@ -42,6 +44,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getByIds method.
+     * @return a {@link GetByIdsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetByIdsRequestBuilder getByIds() {
@@ -49,6 +52,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the validateProperties method.
+     * @return a {@link ValidatePropertiesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
@@ -57,7 +61,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of resourceSpecificPermissionGrant entities.
      * @param resourceSpecificPermissionGrantId The unique identifier of resourceSpecificPermissionGrant
-     * @return a ResourceSpecificPermissionGrantItemRequestBuilder
+     * @return a {@link ResourceSpecificPermissionGrantItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ResourceSpecificPermissionGrantItemRequestBuilder byResourceSpecificPermissionGrantId(@jakarta.annotation.Nonnull final String resourceSpecificPermissionGrantId) {
@@ -67,7 +71,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         return new ResourceSpecificPermissionGrantItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new PermissionGrantsRequestBuilder and sets the default values.
+     * Instantiates a new {@link PermissionGrantsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -75,7 +79,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/permissionGrants{?%24expand,%24filter,%24orderby,%24search,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new PermissionGrantsRequestBuilder and sets the default values.
+     * Instantiates a new {@link PermissionGrantsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -84,7 +88,8 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from permissionGrants
-     * @return a ResourceSpecificPermissionGrantCollectionResponse
+     * @return a {@link ResourceSpecificPermissionGrantCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ResourceSpecificPermissionGrantCollectionResponse get() {
@@ -93,20 +98,21 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from permissionGrants
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ResourceSpecificPermissionGrantCollectionResponse
+     * @return a {@link ResourceSpecificPermissionGrantCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ResourceSpecificPermissionGrantCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ResourceSpecificPermissionGrantCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Add new entity to permissionGrants
      * @param body The request body
-     * @return a ResourceSpecificPermissionGrant
+     * @return a {@link ResourceSpecificPermissionGrant}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ResourceSpecificPermissionGrant post(@jakarta.annotation.Nonnull final ResourceSpecificPermissionGrant body) {
@@ -116,20 +122,20 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
      * Add new entity to permissionGrants
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ResourceSpecificPermissionGrant
+     * @return a {@link ResourceSpecificPermissionGrant}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ResourceSpecificPermissionGrant post(@jakarta.annotation.Nonnull final ResourceSpecificPermissionGrant body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ResourceSpecificPermissionGrant::createFromDiscriminatorValue);
     }
     /**
      * Get entities from permissionGrants
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -138,7 +144,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from permissionGrants
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -150,7 +156,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to permissionGrants
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ResourceSpecificPermissionGrant body) {
@@ -160,12 +166,12 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
      * Add new entity to permissionGrants
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ResourceSpecificPermissionGrant body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/permissionGrants", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -174,7 +180,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a PermissionGrantsRequestBuilder
+     * @return a {@link PermissionGrantsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PermissionGrantsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -213,7 +219,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

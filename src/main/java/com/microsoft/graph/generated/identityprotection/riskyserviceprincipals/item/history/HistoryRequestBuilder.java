@@ -25,6 +25,7 @@ import java.util.Objects;
 public class HistoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the history property of the microsoft.graph.riskyServicePrincipal entity.
      * @param riskyServicePrincipalHistoryItemId The unique identifier of riskyServicePrincipalHistoryItem
-     * @return a RiskyServicePrincipalHistoryItemItemRequestBuilder
+     * @return a {@link RiskyServicePrincipalHistoryItemItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RiskyServicePrincipalHistoryItemItemRequestBuilder byRiskyServicePrincipalHistoryItemId(@jakarta.annotation.Nonnull final String riskyServicePrincipalHistoryItemId) {
@@ -43,7 +44,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         return new RiskyServicePrincipalHistoryItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new HistoryRequestBuilder and sets the default values.
+     * Instantiates a new {@link HistoryRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityProtection/riskyServicePrincipals/{riskyServicePrincipal%2Did}/history{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new HistoryRequestBuilder and sets the default values.
+     * Instantiates a new {@link HistoryRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the risk history of a riskyServicePrincipal object.
-     * @return a RiskyServicePrincipalHistoryItemCollectionResponse
+     * @return a {@link RiskyServicePrincipalHistoryItemCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/riskyserviceprincipal-list-history?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the risk history of a riskyServicePrincipal object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RiskyServicePrincipalHistoryItemCollectionResponse
+     * @return a {@link RiskyServicePrincipalHistoryItemCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/riskyserviceprincipal-list-history?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RiskyServicePrincipalHistoryItemCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, RiskyServicePrincipalHistoryItemCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to history for identityProtection
      * @param body The request body
-     * @return a RiskyServicePrincipalHistoryItem
+     * @return a {@link RiskyServicePrincipalHistoryItem}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public RiskyServicePrincipalHistoryItem post(@jakarta.annotation.Nonnull final RiskyServicePrincipalHistoryItem body) {
@@ -94,20 +97,20 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to history for identityProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RiskyServicePrincipalHistoryItem
+     * @return a {@link RiskyServicePrincipalHistoryItem}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public RiskyServicePrincipalHistoryItem post(@jakarta.annotation.Nonnull final RiskyServicePrincipalHistoryItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, RiskyServicePrincipalHistoryItem::createFromDiscriminatorValue);
     }
     /**
      * Get the risk history of a riskyServicePrincipal object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -116,7 +119,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the risk history of a riskyServicePrincipal object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -128,7 +131,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to history for identityProtection
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final RiskyServicePrincipalHistoryItem body) {
@@ -138,12 +141,12 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to history for identityProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final RiskyServicePrincipalHistoryItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/identityProtection/riskyServicePrincipals/{riskyServicePrincipal%2Did}/history", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -152,7 +155,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a HistoryRequestBuilder
+     * @return a {@link HistoryRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public HistoryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -206,7 +209,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

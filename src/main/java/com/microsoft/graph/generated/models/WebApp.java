@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WebApp extends MobileApp implements Parsable {
     /**
-     * Instantiates a new WebApp and sets the default values.
+     * Instantiates a new {@link WebApp} and sets the default values.
      */
     public WebApp() {
         super();
@@ -21,7 +21,7 @@ public class WebApp extends MobileApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WebApp
+     * @return a {@link WebApp}
      */
     @jakarta.annotation.Nonnull
     public static WebApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class WebApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the appUrl property value. The web app URL. This property cannot be PATCHed.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppUrl() {
@@ -38,7 +38,7 @@ public class WebApp extends MobileApp implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -49,7 +49,7 @@ public class WebApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the useManagedBrowser property value. Whether or not to use managed browser. This property is only applicable for Android and IOS.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getUseManagedBrowser() {

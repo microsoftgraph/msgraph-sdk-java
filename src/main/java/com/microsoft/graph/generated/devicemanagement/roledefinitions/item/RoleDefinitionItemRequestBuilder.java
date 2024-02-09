@@ -23,13 +23,14 @@ import java.util.Objects;
 public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the roleAssignments property of the microsoft.graph.roleDefinition entity.
+     * @return a {@link RoleAssignmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleAssignmentsRequestBuilder roleAssignments() {
         return new RoleAssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new RoleDefinitionItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link RoleDefinitionItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,7 +38,7 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/roleDefinitions/{roleDefinition%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new RoleDefinitionItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link RoleDefinitionItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -45,105 +46,108 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/roleDefinitions/{roleDefinition%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes a deviceAndAppManagementRoleDefinition.
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-delete?view=graph-rest-1.0">Find more info here</a>
+     * Deletes a roleDefinition.
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roledefinition-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a deviceAndAppManagementRoleDefinition.
+     * Deletes a roleDefinition.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-delete?view=graph-rest-1.0">Find more info here</a>
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roledefinition-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read properties and relationships of the deviceAndAppManagementRoleDefinition object.
-     * @return a RoleDefinition
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-get?view=graph-rest-1.0">Find more info here</a>
+     * Read properties and relationships of the roleDefinition object.
+     * @return a {@link RoleDefinition}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roledefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RoleDefinition get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the deviceAndAppManagementRoleDefinition object.
+     * Read properties and relationships of the roleDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RoleDefinition
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-get?view=graph-rest-1.0">Find more info here</a>
+     * @return a {@link RoleDefinition}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roledefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RoleDefinition get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, RoleDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a deviceAndAppManagementRoleDefinition object.
+     * Update the properties of a roleDefinition object.
      * @param body The request body
-     * @return a RoleDefinition
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a {@link RoleDefinition}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roledefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RoleDefinition patch(@jakarta.annotation.Nonnull final RoleDefinition body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a deviceAndAppManagementRoleDefinition object.
+     * Update the properties of a roleDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RoleDefinition
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a {@link RoleDefinition}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roledefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RoleDefinition patch(@jakarta.annotation.Nonnull final RoleDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, RoleDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a deviceAndAppManagementRoleDefinition.
-     * @return a RequestInformation
+     * Deletes a roleDefinition.
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a deviceAndAppManagementRoleDefinition.
+     * Deletes a roleDefinition.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/deviceManagement/roleDefinitions/{roleDefinition%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the deviceAndAppManagementRoleDefinition object.
-     * @return a RequestInformation
+     * Read properties and relationships of the roleDefinition object.
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the deviceAndAppManagementRoleDefinition object.
+     * Read properties and relationships of the roleDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -153,24 +157,24 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a deviceAndAppManagementRoleDefinition object.
+     * Update the properties of a roleDefinition object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final RoleDefinition body) {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a deviceAndAppManagementRoleDefinition object.
+     * Update the properties of a roleDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final RoleDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/deviceManagement/roleDefinitions/{roleDefinition%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -179,7 +183,7 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a RoleDefinitionItemRequestBuilder
+     * @return a {@link RoleDefinitionItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleDefinitionItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -193,7 +197,7 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the deviceAndAppManagementRoleDefinition object.
+     * Read properties and relationships of the roleDefinition object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
@@ -209,7 +213,7 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

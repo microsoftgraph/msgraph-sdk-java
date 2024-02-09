@@ -22,7 +22,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new WindowsInformationProtectionDataRecoveryCertificate and sets the default values.
+     * Instantiates a new {@link WindowsInformationProtectionDataRecoveryCertificate} and sets the default values.
      */
     public WindowsInformationProtectionDataRecoveryCertificate() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -31,7 +31,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsInformationProtectionDataRecoveryCertificate
+     * @return a {@link WindowsInformationProtectionDataRecoveryCertificate}
      */
     @jakarta.annotation.Nonnull
     public static WindowsInformationProtectionDataRecoveryCertificate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -53,7 +53,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -61,7 +61,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
     }
     /**
      * Gets the certificate property value. Data recovery Certificate
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getCertificate() {
@@ -69,7 +69,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
     }
     /**
      * Gets the description property value. Data recovery Certificate description
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -77,7 +77,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
     }
     /**
      * Gets the expirationDateTime property value. Data recovery Certificate expiration datetime
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
@@ -85,7 +85,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -99,7 +99,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -107,7 +107,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
     }
     /**
      * Gets the subjectName property value. Data recovery Certificate subject name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubjectName() {

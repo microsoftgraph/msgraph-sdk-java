@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerBucketTaskBoardTaskFormat extends Entity implements Parsable {
     /**
-     * Instantiates a new PlannerBucketTaskBoardTaskFormat and sets the default values.
+     * Instantiates a new {@link PlannerBucketTaskBoardTaskFormat} and sets the default values.
      */
     public PlannerBucketTaskBoardTaskFormat() {
         super();
@@ -17,7 +17,7 @@ public class PlannerBucketTaskBoardTaskFormat extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PlannerBucketTaskBoardTaskFormat
+     * @return a {@link PlannerBucketTaskBoardTaskFormat}
      */
     @jakarta.annotation.Nonnull
     public static PlannerBucketTaskBoardTaskFormat createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class PlannerBucketTaskBoardTaskFormat extends Entity implements Parsable
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class PlannerBucketTaskBoardTaskFormat extends Entity implements Parsable
     }
     /**
      * Gets the orderHint property value. Hint used to order tasks in the bucket view of the task board. For details about the supported format, see Using order hints in Planner.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOrderHint() {

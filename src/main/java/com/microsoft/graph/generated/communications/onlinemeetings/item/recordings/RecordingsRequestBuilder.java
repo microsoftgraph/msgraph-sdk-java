@@ -25,6 +25,7 @@ import java.util.Objects;
 public class RecordingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class RecordingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the recordings property of the microsoft.graph.onlineMeeting entity.
      * @param callRecordingId The unique identifier of callRecording
-     * @return a CallRecordingItemRequestBuilder
+     * @return a {@link CallRecordingItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CallRecordingItemRequestBuilder byCallRecordingId(@jakarta.annotation.Nonnull final String callRecordingId) {
@@ -43,7 +44,7 @@ public class RecordingsRequestBuilder extends BaseRequestBuilder {
         return new CallRecordingItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new RecordingsRequestBuilder and sets the default values.
+     * Instantiates a new {@link RecordingsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class RecordingsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/onlineMeetings/{onlineMeeting%2Did}/recordings{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new RecordingsRequestBuilder and sets the default values.
+     * Instantiates a new {@link RecordingsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class RecordingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a callRecording object associated with a scheduled onlineMeeting. This API doesn't support getting call recordings from channel meetings. For a recording, this API returns the metadata of the single recording associated with the online meeting. For the content of a recording, this API returns the stream of bytes associated with the recording.
-     * @return a CallRecordingCollectionResponse
+     * @return a {@link CallRecordingCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public CallRecordingCollectionResponse get() {
@@ -69,20 +71,21 @@ public class RecordingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a callRecording object associated with a scheduled onlineMeeting. This API doesn't support getting call recordings from channel meetings. For a recording, this API returns the metadata of the single recording associated with the online meeting. For the content of a recording, this API returns the stream of bytes associated with the recording.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CallRecordingCollectionResponse
+     * @return a {@link CallRecordingCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public CallRecordingCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, CallRecordingCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to recordings for communications
      * @param body The request body
-     * @return a CallRecording
+     * @return a {@link CallRecording}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public CallRecording post(@jakarta.annotation.Nonnull final CallRecording body) {
@@ -92,20 +95,20 @@ public class RecordingsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to recordings for communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CallRecording
+     * @return a {@link CallRecording}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public CallRecording post(@jakarta.annotation.Nonnull final CallRecording body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, CallRecording::createFromDiscriminatorValue);
     }
     /**
      * Get a callRecording object associated with a scheduled onlineMeeting. This API doesn't support getting call recordings from channel meetings. For a recording, this API returns the metadata of the single recording associated with the online meeting. For the content of a recording, this API returns the stream of bytes associated with the recording.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -114,7 +117,7 @@ public class RecordingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a callRecording object associated with a scheduled onlineMeeting. This API doesn't support getting call recordings from channel meetings. For a recording, this API returns the metadata of the single recording associated with the online meeting. For the content of a recording, this API returns the stream of bytes associated with the recording.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -126,7 +129,7 @@ public class RecordingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to recordings for communications
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CallRecording body) {
@@ -136,12 +139,12 @@ public class RecordingsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to recordings for communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CallRecording body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/communications/onlineMeetings/{onlineMeeting%2Did}/recordings", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -150,7 +153,7 @@ public class RecordingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a RecordingsRequestBuilder
+     * @return a {@link RecordingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RecordingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -204,7 +207,7 @@ public class RecordingsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

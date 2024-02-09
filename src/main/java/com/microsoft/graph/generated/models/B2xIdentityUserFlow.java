@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
     /**
-     * Instantiates a new B2xIdentityUserFlow and sets the default values.
+     * Instantiates a new {@link B2xIdentityUserFlow} and sets the default values.
      */
     public B2xIdentityUserFlow() {
         super();
@@ -17,7 +17,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a B2xIdentityUserFlow
+     * @return a {@link B2xIdentityUserFlow}
      */
     @jakarta.annotation.Nonnull
     public static B2xIdentityUserFlow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
     }
     /**
      * Gets the apiConnectorConfiguration property value. Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
-     * @return a UserFlowApiConnectorConfiguration
+     * @return a {@link UserFlowApiConnectorConfiguration}
      */
     @jakarta.annotation.Nullable
     public UserFlowApiConnectorConfiguration getApiConnectorConfiguration() {
@@ -34,7 +34,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -48,7 +48,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
     }
     /**
      * Gets the identityProviders property value. The identity providers included in the user flow.
-     * @return a java.util.List<IdentityProvider>
+     * @return a {@link java.util.List<IdentityProvider>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityProvider> getIdentityProviders() {
@@ -56,7 +56,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
     }
     /**
      * Gets the languages property value. The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can't create custom languages in self-service sign-up user flows.
-     * @return a java.util.List<UserFlowLanguageConfiguration>
+     * @return a {@link java.util.List<UserFlowLanguageConfiguration>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserFlowLanguageConfiguration> getLanguages() {
@@ -64,7 +64,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
     }
     /**
      * Gets the userAttributeAssignments property value. The user attribute assignments included in the user flow.
-     * @return a java.util.List<IdentityUserFlowAttributeAssignment>
+     * @return a {@link java.util.List<IdentityUserFlowAttributeAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityUserFlowAttributeAssignment> getUserAttributeAssignments() {
@@ -72,7 +72,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
     }
     /**
      * Gets the userFlowIdentityProviders property value. The userFlowIdentityProviders property
-     * @return a java.util.List<IdentityProviderBase>
+     * @return a {@link java.util.List<IdentityProviderBase>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityProviderBase> getUserFlowIdentityProviders() {

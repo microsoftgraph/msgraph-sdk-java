@@ -30,6 +30,7 @@ import java.util.Objects;
 public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the categories property of the microsoft.graph.educationAssignment entity.
+     * @return a {@link CategoriesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CategoriesRequestBuilder categories() {
@@ -37,6 +38,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the gradingCategory property of the microsoft.graph.educationAssignment entity.
+     * @return a {@link GradingCategoryRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GradingCategoryRequestBuilder gradingCategory() {
@@ -44,6 +46,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the publish method.
+     * @return a {@link PublishRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PublishRequestBuilder publish() {
@@ -51,6 +54,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the resources property of the microsoft.graph.educationAssignment entity.
+     * @return a {@link ResourcesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ResourcesRequestBuilder resources() {
@@ -58,6 +62,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the rubric property of the microsoft.graph.educationAssignment entity.
+     * @return a {@link RubricRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RubricRequestBuilder rubric() {
@@ -65,6 +70,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the setUpFeedbackResourcesFolder method.
+     * @return a {@link SetUpFeedbackResourcesFolderRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SetUpFeedbackResourcesFolderRequestBuilder setUpFeedbackResourcesFolder() {
@@ -72,6 +78,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the setUpResourcesFolder method.
+     * @return a {@link SetUpResourcesFolderRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SetUpResourcesFolderRequestBuilder setUpResourcesFolder() {
@@ -79,13 +86,14 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the submissions property of the microsoft.graph.educationAssignment entity.
+     * @return a {@link SubmissionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SubmissionsRequestBuilder submissions() {
         return new SubmissionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new EducationAssignmentItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link EducationAssignmentItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -93,7 +101,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignments/{educationAssignment%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new EducationAssignmentItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link EducationAssignmentItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -102,6 +110,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete an existing assignment. Only teachers within a class can delete assignments.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -110,18 +119,19 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete an existing assignment. Only teachers within a class can delete assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get the properties and relationships of an assignment. Only teachers, students, and applications with application permissions can perform this operation. Students can only see assignments assigned to them; teachers and applications with application permissions can see all assignments in a class.
-     * @return a EducationAssignment
+     * @return a {@link EducationAssignment}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -131,21 +141,22 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of an assignment. Only teachers, students, and applications with application permissions can perform this operation. Students can only see assignments assigned to them; teachers and applications with application permissions can see all assignments in a class.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EducationAssignment
+     * @return a {@link EducationAssignment}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationAssignment get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EducationAssignment::createFromDiscriminatorValue);
     }
     /**
      * Update an educationAssignment object.  Only teachers can perform this action.  Alternatively, request to change the status of an assignment with publish action. Don't use a PATCH operation for this purpose.
      * @param body The request body
-     * @return a EducationAssignment
+     * @return a {@link EducationAssignment}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -156,7 +167,8 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
      * Update an educationAssignment object.  Only teachers can perform this action.  Alternatively, request to change the status of an assignment with publish action. Don't use a PATCH operation for this purpose.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EducationAssignment
+     * @return a {@link EducationAssignment}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -164,13 +176,12 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EducationAssignment::createFromDiscriminatorValue);
     }
     /**
      * Delete an existing assignment. Only teachers within a class can delete assignments.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -179,18 +190,18 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete an existing assignment. Only teachers within a class can delete assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/education/classes/{educationClass%2Did}/assignments/{educationAssignment%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Get the properties and relationships of an assignment. Only teachers, students, and applications with application permissions can perform this operation. Students can only see assignments assigned to them; teachers and applications with application permissions can see all assignments in a class.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -199,7 +210,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of an assignment. Only teachers, students, and applications with application permissions can perform this operation. Students can only see assignments assigned to them; teachers and applications with application permissions can see all assignments in a class.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -211,7 +222,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update an educationAssignment object.  Only teachers can perform this action.  Alternatively, request to change the status of an assignment with publish action. Don't use a PATCH operation for this purpose.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EducationAssignment body) {
@@ -221,12 +232,12 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
      * Update an educationAssignment object.  Only teachers can perform this action.  Alternatively, request to change the status of an assignment with publish action. Don't use a PATCH operation for this purpose.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EducationAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/education/classes/{educationClass%2Did}/assignments/{educationAssignment%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -235,7 +246,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a EducationAssignmentItemRequestBuilder
+     * @return a {@link EducationAssignmentItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EducationAssignmentItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -265,7 +276,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

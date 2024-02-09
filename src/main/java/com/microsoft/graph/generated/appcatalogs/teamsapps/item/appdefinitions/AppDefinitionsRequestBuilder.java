@@ -25,6 +25,7 @@ import java.util.Objects;
 public class AppDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class AppDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the appDefinitions property of the microsoft.graph.teamsApp entity.
      * @param teamsAppDefinitionId The unique identifier of teamsAppDefinition
-     * @return a TeamsAppDefinitionItemRequestBuilder
+     * @return a {@link TeamsAppDefinitionItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TeamsAppDefinitionItemRequestBuilder byTeamsAppDefinitionId(@jakarta.annotation.Nonnull final String teamsAppDefinitionId) {
@@ -43,7 +44,7 @@ public class AppDefinitionsRequestBuilder extends BaseRequestBuilder {
         return new TeamsAppDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new AppDefinitionsRequestBuilder and sets the default values.
+     * Instantiates a new {@link AppDefinitionsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class AppDefinitionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/appCatalogs/teamsApps/{teamsApp%2Did}/appDefinitions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new AppDefinitionsRequestBuilder and sets the default values.
+     * Instantiates a new {@link AppDefinitionsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class AppDefinitionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The details for each version of the app.
-     * @return a TeamsAppDefinitionCollectionResponse
+     * @return a {@link TeamsAppDefinitionCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public TeamsAppDefinitionCollectionResponse get() {
@@ -69,20 +71,21 @@ public class AppDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * The details for each version of the app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a TeamsAppDefinitionCollectionResponse
+     * @return a {@link TeamsAppDefinitionCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public TeamsAppDefinitionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, TeamsAppDefinitionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Update an app previously published to the Microsoft Teams app catalog. To update an app, the distributionMethod property for the app must be set to organization. This API specifically updates an app published to your organization's app catalog (the tenant app catalog).
      * @param body The request body
-     * @return a TeamsAppDefinition
+     * @return a {@link TeamsAppDefinition}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/teamsapp-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -93,7 +96,8 @@ public class AppDefinitionsRequestBuilder extends BaseRequestBuilder {
      * Update an app previously published to the Microsoft Teams app catalog. To update an app, the distributionMethod property for the app must be set to organization. This API specifically updates an app published to your organization's app catalog (the tenant app catalog).
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a TeamsAppDefinition
+     * @return a {@link TeamsAppDefinition}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/teamsapp-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -101,13 +105,12 @@ public class AppDefinitionsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, TeamsAppDefinition::createFromDiscriminatorValue);
     }
     /**
      * The details for each version of the app.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -116,7 +119,7 @@ public class AppDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * The details for each version of the app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -128,7 +131,7 @@ public class AppDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update an app previously published to the Microsoft Teams app catalog. To update an app, the distributionMethod property for the app must be set to organization. This API specifically updates an app published to your organization's app catalog (the tenant app catalog).
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final TeamsAppDefinition body) {
@@ -138,12 +141,12 @@ public class AppDefinitionsRequestBuilder extends BaseRequestBuilder {
      * Update an app previously published to the Microsoft Teams app catalog. To update an app, the distributionMethod property for the app must be set to organization. This API specifically updates an app published to your organization's app catalog (the tenant app catalog).
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final TeamsAppDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/appCatalogs/teamsApps/{teamsApp%2Did}/appDefinitions", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -152,7 +155,7 @@ public class AppDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AppDefinitionsRequestBuilder
+     * @return a {@link AppDefinitionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AppDefinitionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -206,7 +209,7 @@ public class AppDefinitionsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

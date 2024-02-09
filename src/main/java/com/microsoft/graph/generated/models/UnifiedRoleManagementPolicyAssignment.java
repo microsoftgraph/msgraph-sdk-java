@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable {
     /**
-     * Instantiates a new UnifiedRoleManagementPolicyAssignment and sets the default values.
+     * Instantiates a new {@link UnifiedRoleManagementPolicyAssignment} and sets the default values.
      */
     public UnifiedRoleManagementPolicyAssignment() {
         super();
@@ -17,7 +17,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnifiedRoleManagementPolicyAssignment
+     * @return a {@link UnifiedRoleManagementPolicyAssignment}
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleManagementPolicyAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
     }
     /**
      * Gets the policy property value. The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.
-     * @return a UnifiedRoleManagementPolicy
+     * @return a {@link UnifiedRoleManagementPolicy}
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleManagementPolicy getPolicy() {
@@ -48,7 +48,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
     }
     /**
      * Gets the policyId property value. The id of the policy. Inherited from entity.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPolicyId() {
@@ -56,7 +56,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
     }
     /**
      * Gets the roleDefinitionId property value. For Microsoft Entra roles policy, it's the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it's either member or owner. Supports $filter (eq).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRoleDefinitionId() {
@@ -64,7 +64,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
     }
     /**
      * Gets the scopeId property value. The identifier of the scope where the policy is assigned.  Can be / for the tenant or a group ID. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getScopeId() {
@@ -72,7 +72,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
     }
     /**
      * Gets the scopeType property value. The type of the scope where the policy is assigned. One of Directory, DirectoryRole, Group. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getScopeType() {

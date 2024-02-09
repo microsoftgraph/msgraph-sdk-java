@@ -18,7 +18,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AccessPackageAssignmentReviewSettings and sets the default values.
+     * Instantiates a new {@link AccessPackageAssignmentReviewSettings} and sets the default values.
      */
     public AccessPackageAssignmentReviewSettings() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessPackageAssignmentReviewSettings
+     * @return a {@link AccessPackageAssignmentReviewSettings}
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAssignmentReviewSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     }
     /**
      * Gets the expirationBehavior property value. The default decision to apply if the access is not reviewed. The possible values are: keepAccess, removeAccess, acceptAccessRecommendation, unknownFutureValue.
-     * @return a AccessReviewExpirationBehavior
+     * @return a {@link AccessReviewExpirationBehavior}
      */
     @jakarta.annotation.Nullable
     public AccessReviewExpirationBehavior getExpirationBehavior() {
@@ -65,7 +65,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     }
     /**
      * Gets the fallbackReviewers property value. This collection specifies the users who will be the fallback reviewers when the primary reviewers don't respond.
-     * @return a java.util.List<SubjectSet>
+     * @return a {@link java.util.List<SubjectSet>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SubjectSet> getFallbackReviewers() {
@@ -73,7 +73,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -91,7 +91,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     }
     /**
      * Gets the isEnabled property value. If true, access reviews are required for assignments through this policy.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -99,7 +99,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     }
     /**
      * Gets the isRecommendationEnabled property value. Specifies whether to display recommendations to the reviewer. The default value is true.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRecommendationEnabled() {
@@ -107,7 +107,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     }
     /**
      * Gets the isReviewerJustificationRequired property value. Specifies whether the reviewer must provide justification for the approval. The default value is true.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsReviewerJustificationRequired() {
@@ -115,7 +115,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     }
     /**
      * Gets the isSelfReview property value. Specifies whether the principals can review their own assignments.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSelfReview() {
@@ -123,7 +123,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -131,7 +131,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     }
     /**
      * Gets the primaryReviewers property value. This collection specifies the users or group of users who will review the access package assignments.
-     * @return a java.util.List<SubjectSet>
+     * @return a {@link java.util.List<SubjectSet>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SubjectSet> getPrimaryReviewers() {
@@ -139,7 +139,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     }
     /**
      * Gets the schedule property value. When the first review should start and how often it should recur.
-     * @return a EntitlementManagementSchedule
+     * @return a {@link EntitlementManagementSchedule}
      */
     @jakarta.annotation.Nullable
     public EntitlementManagementSchedule getSchedule() {

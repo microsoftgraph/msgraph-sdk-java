@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Endpoint extends DirectoryObject implements Parsable {
     /**
-     * Instantiates a new Endpoint and sets the default values.
+     * Instantiates a new {@link Endpoint} and sets the default values.
      */
     public Endpoint() {
         super();
@@ -18,7 +18,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Endpoint
+     * @return a {@link Endpoint}
      */
     @jakarta.annotation.Nonnull
     public static Endpoint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the capability property value. The capability property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCapability() {
@@ -35,7 +35,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -49,7 +49,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the providerId property value. The providerId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProviderId() {
@@ -57,7 +57,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the providerName property value. The providerName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProviderName() {
@@ -65,7 +65,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the providerResourceId property value. The providerResourceId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProviderResourceId() {
@@ -73,7 +73,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the uri property value. The uri property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUri() {

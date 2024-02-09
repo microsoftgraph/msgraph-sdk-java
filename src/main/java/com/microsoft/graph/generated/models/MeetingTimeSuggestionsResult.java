@@ -18,7 +18,7 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new MeetingTimeSuggestionsResult and sets the default values.
+     * Instantiates a new {@link MeetingTimeSuggestionsResult} and sets the default values.
      */
     public MeetingTimeSuggestionsResult() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Backe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MeetingTimeSuggestionsResult
+     * @return a {@link MeetingTimeSuggestionsResult}
      */
     @jakarta.annotation.Nonnull
     public static MeetingTimeSuggestionsResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the emptySuggestionsReason property value. A reason for not returning any meeting suggestions. The possible values are: attendeesUnavailable, attendeesUnavailableOrUnknown, locationsUnavailable, organizerUnavailable, or unknown. This property is an empty string if the meetingTimeSuggestions property does include any meeting suggestions.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmptySuggestionsReason() {
@@ -65,7 +65,7 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Backe
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the meetingTimeSuggestions property value. An array of meeting suggestions.
-     * @return a java.util.List<MeetingTimeSuggestion>
+     * @return a {@link java.util.List<MeetingTimeSuggestion>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MeetingTimeSuggestion> getMeetingTimeSuggestions() {
@@ -85,7 +85,7 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

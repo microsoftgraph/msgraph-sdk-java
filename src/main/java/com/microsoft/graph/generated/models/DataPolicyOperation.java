@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DataPolicyOperation extends Entity implements Parsable {
     /**
-     * Instantiates a new DataPolicyOperation and sets the default values.
+     * Instantiates a new {@link DataPolicyOperation} and sets the default values.
      */
     public DataPolicyOperation() {
         super();
@@ -18,7 +18,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DataPolicyOperation
+     * @return a {@link DataPolicyOperation}
      */
     @jakarta.annotation.Nonnull
     public static DataPolicyOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
     }
     /**
      * Gets the completedDateTime property value. Represents when the request for this data policy operation was completed, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Null until the operation completes.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
@@ -35,7 +35,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -50,7 +50,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
     }
     /**
      * Gets the progress property value. Specifies the progress of an operation.
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getProgress() {
@@ -58,7 +58,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Possible values are: notStarted, running, complete, failed, unknownFutureValue.
-     * @return a DataPolicyOperationStatus
+     * @return a {@link DataPolicyOperationStatus}
      */
     @jakarta.annotation.Nullable
     public DataPolicyOperationStatus getStatus() {
@@ -66,7 +66,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
     }
     /**
      * Gets the storageLocation property value. The URL location to where data is being exported for export requests.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStorageLocation() {
@@ -74,7 +74,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
     }
     /**
      * Gets the submittedDateTime property value. Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getSubmittedDateTime() {
@@ -82,7 +82,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. The id for the user on whom the operation is performed.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

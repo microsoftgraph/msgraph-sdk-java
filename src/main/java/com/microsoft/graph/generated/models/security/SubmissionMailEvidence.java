@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SubmissionMailEvidence extends AlertEvidence implements Parsable {
     /**
-     * Instantiates a new SubmissionMailEvidence and sets the default values.
+     * Instantiates a new {@link SubmissionMailEvidence} and sets the default values.
      */
     public SubmissionMailEvidence() {
         super();
@@ -19,7 +19,7 @@ public class SubmissionMailEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SubmissionMailEvidence
+     * @return a {@link SubmissionMailEvidence}
      */
     @jakarta.annotation.Nonnull
     public static SubmissionMailEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class SubmissionMailEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class SubmissionMailEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the networkMessageId property value. The networkMessageId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNetworkMessageId() {
@@ -54,7 +54,7 @@ public class SubmissionMailEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the recipient property value. The recipient property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRecipient() {
@@ -62,7 +62,7 @@ public class SubmissionMailEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the reportType property value. The reportType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getReportType() {
@@ -70,7 +70,7 @@ public class SubmissionMailEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the sender property value. The sender property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSender() {
@@ -78,7 +78,7 @@ public class SubmissionMailEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the senderIp property value. The senderIp property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSenderIp() {
@@ -86,7 +86,7 @@ public class SubmissionMailEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the subject property value. The subject property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
@@ -94,7 +94,7 @@ public class SubmissionMailEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the submissionDateTime property value. The submissionDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getSubmissionDateTime() {
@@ -102,7 +102,7 @@ public class SubmissionMailEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the submissionId property value. The submissionId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubmissionId() {
@@ -110,7 +110,7 @@ public class SubmissionMailEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the submitter property value. The submitter property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubmitter() {

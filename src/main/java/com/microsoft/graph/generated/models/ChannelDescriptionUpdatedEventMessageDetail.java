@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * Instantiates a new ChannelDescriptionUpdatedEventMessageDetail and sets the default values.
+     * Instantiates a new {@link ChannelDescriptionUpdatedEventMessageDetail} and sets the default values.
      */
     public ChannelDescriptionUpdatedEventMessageDetail() {
         super();
@@ -18,7 +18,7 @@ public class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDet
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ChannelDescriptionUpdatedEventMessageDetail
+     * @return a {@link ChannelDescriptionUpdatedEventMessageDetail}
      */
     @jakarta.annotation.Nonnull
     public static ChannelDescriptionUpdatedEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDet
     }
     /**
      * Gets the channelDescription property value. The updated description of the channel.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getChannelDescription() {
@@ -35,7 +35,7 @@ public class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDet
     }
     /**
      * Gets the channelId property value. Unique identifier of the channel.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getChannelId() {
@@ -43,7 +43,7 @@ public class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDet
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -55,7 +55,7 @@ public class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDet
     }
     /**
      * Gets the initiator property value. Initiator of the event.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {

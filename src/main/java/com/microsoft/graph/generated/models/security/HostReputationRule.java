@@ -18,7 +18,7 @@ public class HostReputationRule implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new HostReputationRule and sets the default values.
+     * Instantiates a new {@link HostReputationRule} and sets the default values.
      */
     public HostReputationRule() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class HostReputationRule implements AdditionalDataHolder, BackedModel, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a HostReputationRule
+     * @return a {@link HostReputationRule}
      */
     @jakarta.annotation.Nonnull
     public static HostReputationRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class HostReputationRule implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class HostReputationRule implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class HostReputationRule implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the description property value. The description of the rule that gives more context.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -65,7 +65,7 @@ public class HostReputationRule implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class HostReputationRule implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the name property value. The name of the rule.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -87,7 +87,7 @@ public class HostReputationRule implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -95,7 +95,7 @@ public class HostReputationRule implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the relatedDetailsUrl property value. Link to a web page with details related to this rule.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRelatedDetailsUrl() {
@@ -103,7 +103,7 @@ public class HostReputationRule implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the severity property value. The severity property
-     * @return a HostReputationRuleSeverity
+     * @return a {@link HostReputationRuleSeverity}
      */
     @jakarta.annotation.Nullable
     public HostReputationRuleSeverity getSeverity() {

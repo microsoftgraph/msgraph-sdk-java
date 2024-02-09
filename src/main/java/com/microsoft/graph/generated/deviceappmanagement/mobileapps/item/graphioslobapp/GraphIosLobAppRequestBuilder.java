@@ -25,6 +25,7 @@ import java.util.Objects;
 public class GraphIosLobAppRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.mobileApp entity.
+     * @return a {@link AssignmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
@@ -32,6 +33,7 @@ public class GraphIosLobAppRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the categories property of the microsoft.graph.mobileApp entity.
+     * @return a {@link CategoriesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CategoriesRequestBuilder categories() {
@@ -39,13 +41,14 @@ public class GraphIosLobAppRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the contentVersions property of the microsoft.graph.mobileLobApp entity.
+     * @return a {@link ContentVersionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ContentVersionsRequestBuilder contentVersions() {
         return new ContentVersionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new GraphIosLobAppRequestBuilder and sets the default values.
+     * Instantiates a new {@link GraphIosLobAppRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -53,7 +56,7 @@ public class GraphIosLobAppRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps/{mobileApp%2Did}/graph.iosLobApp{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new GraphIosLobAppRequestBuilder and sets the default values.
+     * Instantiates a new {@link GraphIosLobAppRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -62,7 +65,8 @@ public class GraphIosLobAppRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.iosLobApp
-     * @return a IosLobApp
+     * @return a {@link IosLobApp}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IosLobApp get() {
@@ -71,19 +75,19 @@ public class GraphIosLobAppRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.iosLobApp
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a IosLobApp
+     * @return a {@link IosLobApp}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IosLobApp get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, IosLobApp::createFromDiscriminatorValue);
     }
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.iosLobApp
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -92,7 +96,7 @@ public class GraphIosLobAppRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.iosLobApp
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -104,7 +108,7 @@ public class GraphIosLobAppRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GraphIosLobAppRequestBuilder
+     * @return a {@link GraphIosLobAppRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphIosLobAppRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -128,7 +132,7 @@ public class GraphIosLobAppRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

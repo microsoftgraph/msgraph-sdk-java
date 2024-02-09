@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PhoneAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /**
-     * Instantiates a new PhoneAuthenticationMethod and sets the default values.
+     * Instantiates a new {@link PhoneAuthenticationMethod} and sets the default values.
      */
     public PhoneAuthenticationMethod() {
         super();
@@ -18,7 +18,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PhoneAuthenticationMethod
+     * @return a {@link PhoneAuthenticationMethod}
      */
     @jakarta.annotation.Nonnull
     public static PhoneAuthenticationMethod createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -39,7 +39,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
     }
     /**
      * Gets the phoneNumber property value. The phone number to text or call for authentication. Phone numbers use the format +{country code} {number}x{extension}, with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating or updating if they don't match the required format.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPhoneNumber() {
@@ -47,7 +47,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
     }
     /**
      * Gets the phoneType property value. The type of this phone. Possible values are: mobile, alternateMobile, or office.
-     * @return a AuthenticationPhoneType
+     * @return a {@link AuthenticationPhoneType}
      */
     @jakarta.annotation.Nullable
     public AuthenticationPhoneType getPhoneType() {
@@ -55,7 +55,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
     }
     /**
      * Gets the smsSignInState property value. Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
-     * @return a AuthenticationMethodSignInState
+     * @return a {@link AuthenticationMethodSignInState}
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodSignInState getSmsSignInState() {

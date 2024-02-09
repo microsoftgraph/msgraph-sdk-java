@@ -18,7 +18,7 @@ public class RelatedContact implements AdditionalDataHolder, BackedModel, Parsab
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new RelatedContact and sets the default values.
+     * Instantiates a new {@link RelatedContact} and sets the default values.
      */
     public RelatedContact() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class RelatedContact implements AdditionalDataHolder, BackedModel, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RelatedContact
+     * @return a {@link RelatedContact}
      */
     @jakarta.annotation.Nonnull
     public static RelatedContact createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class RelatedContact implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the accessConsent property value. Indicates whether the user has been consented to access student data.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAccessConsent() {
@@ -44,7 +44,7 @@ public class RelatedContact implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -57,7 +57,7 @@ public class RelatedContact implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class RelatedContact implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the displayName property value. Name of the contact. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -73,7 +73,7 @@ public class RelatedContact implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the emailAddress property value. Primary email address of the contact. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmailAddress() {
@@ -81,7 +81,7 @@ public class RelatedContact implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -96,7 +96,7 @@ public class RelatedContact implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the mobilePhone property value. Mobile phone number of the contact.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMobilePhone() {
@@ -104,7 +104,7 @@ public class RelatedContact implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -112,7 +112,7 @@ public class RelatedContact implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the relationship property value. The relationship property
-     * @return a ContactRelationship
+     * @return a {@link ContactRelationship}
      */
     @jakarta.annotation.Nullable
     public ContactRelationship getRelationship() {

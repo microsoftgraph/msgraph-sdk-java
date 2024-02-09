@@ -19,7 +19,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new UserSimulationDetails and sets the default values.
+     * Instantiates a new {@link UserSimulationDetails} and sets the default values.
      */
     public UserSimulationDetails() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, BackedModel,
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserSimulationDetails
+     * @return a {@link UserSimulationDetails}
      */
     @jakarta.annotation.Nonnull
     public static UserSimulationDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the assignedTrainingsCount property value. Number of trainings assigned to a user in an attack simulation and training campaign.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getAssignedTrainingsCount() {
@@ -58,7 +58,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -66,7 +66,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the completedTrainingsCount property value. Number of trainings completed by a user in an attack simulation and training campaign.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCompletedTrainingsCount() {
@@ -74,7 +74,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the compromisedDateTime property value. Date and time of the compromising online action by a user in an attack simulation and training campaign.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompromisedDateTime() {
@@ -82,7 +82,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, BackedModel,
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -101,7 +101,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the inProgressTrainingsCount property value. Number of trainings in progress by a user in an attack simulation and training campaign.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getInProgressTrainingsCount() {
@@ -109,7 +109,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the isCompromised property value. Indicates whether a user was compromised in an attack simulation and training campaign.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCompromised() {
@@ -117,7 +117,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -125,7 +125,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the reportedPhishDateTime property value. Date and time when a user reported the delivered payload as phishing in the attack simulation and training campaign.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReportedPhishDateTime() {
@@ -133,7 +133,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the simulationEvents property value. List of simulation events of a user in the attack simulation and training campaign.
-     * @return a java.util.List<UserSimulationEventInfo>
+     * @return a {@link java.util.List<UserSimulationEventInfo>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserSimulationEventInfo> getSimulationEvents() {
@@ -141,7 +141,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the simulationUser property value. User in an attack simulation and training campaign.
-     * @return a AttackSimulationUser
+     * @return a {@link AttackSimulationUser}
      */
     @jakarta.annotation.Nullable
     public AttackSimulationUser getSimulationUser() {
@@ -149,7 +149,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the trainingEvents property value. List of training events of a user in the attack simulation and training campaign.
-     * @return a java.util.List<UserTrainingEventInfo>
+     * @return a {@link java.util.List<UserTrainingEventInfo>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserTrainingEventInfo> getTrainingEvents() {

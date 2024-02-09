@@ -25,6 +25,7 @@ import java.util.Objects;
 public class TrendingRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the trending property of the microsoft.graph.officeGraphInsights entity.
      * @param trendingId The unique identifier of trending
-     * @return a TrendingItemRequestBuilder
+     * @return a {@link TrendingItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TrendingItemRequestBuilder byTrendingId(@jakarta.annotation.Nonnull final String trendingId) {
@@ -43,7 +44,7 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
         return new TrendingItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new TrendingRequestBuilder and sets the default values.
+     * Instantiates a new {@link TrendingRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/insights/trending{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new TrendingRequestBuilder and sets the default values.
+     * Instantiates a new {@link TrendingRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Calculated insight that includes a list of documents trending around the user.
-     * @return a TrendingCollectionResponse
+     * @return a {@link TrendingCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/insights-list-trending?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
     /**
      * Calculated insight that includes a list of documents trending around the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a TrendingCollectionResponse
+     * @return a {@link TrendingCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/insights-list-trending?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TrendingCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, TrendingCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to trending for users
      * @param body The request body
-     * @return a Trending
+     * @return a {@link Trending}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Trending post(@jakarta.annotation.Nonnull final Trending body) {
@@ -94,20 +97,20 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to trending for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Trending
+     * @return a {@link Trending}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Trending post(@jakarta.annotation.Nonnull final Trending body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Trending::createFromDiscriminatorValue);
     }
     /**
      * Calculated insight that includes a list of documents trending around the user.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -116,7 +119,7 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
     /**
      * Calculated insight that includes a list of documents trending around the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -128,7 +131,7 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to trending for users
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Trending body) {
@@ -138,12 +141,12 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to trending for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Trending body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/users/{user%2Did}/insights/trending", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -152,7 +155,7 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a TrendingRequestBuilder
+     * @return a {@link TrendingRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TrendingRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -206,7 +209,7 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

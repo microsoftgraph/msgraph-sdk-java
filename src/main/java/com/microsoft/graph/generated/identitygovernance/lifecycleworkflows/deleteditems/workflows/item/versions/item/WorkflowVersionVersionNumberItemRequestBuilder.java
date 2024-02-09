@@ -25,6 +25,7 @@ import java.util.Objects;
 public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the createdBy property of the microsoft.graph.identityGovernance.workflowBase entity.
+     * @return a {@link CreatedByRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CreatedByRequestBuilder createdBy() {
@@ -32,6 +33,7 @@ public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestB
     }
     /**
      * Provides operations to manage the lastModifiedBy property of the microsoft.graph.identityGovernance.workflowBase entity.
+     * @return a {@link LastModifiedByRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LastModifiedByRequestBuilder lastModifiedBy() {
@@ -39,13 +41,14 @@ public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestB
     }
     /**
      * Provides operations to manage the tasks property of the microsoft.graph.identityGovernance.workflowBase entity.
+     * @return a {@link TasksRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TasksRequestBuilder tasks() {
         return new TasksRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new WorkflowVersionVersionNumberItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link WorkflowVersionVersionNumberItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -53,7 +56,7 @@ public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow%2Did}/versions/{workflowVersion%2DversionNumber}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new WorkflowVersionVersionNumberItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link WorkflowVersionVersionNumberItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -62,7 +65,8 @@ public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestB
     }
     /**
      * Read the properties and relationships of a workflowVersion object.
-     * @return a WorkflowVersion
+     * @return a {@link WorkflowVersion}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflowversion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -72,20 +76,20 @@ public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestB
     /**
      * Read the properties and relationships of a workflowVersion object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WorkflowVersion
+     * @return a {@link WorkflowVersion}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflowversion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkflowVersion get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WorkflowVersion::createFromDiscriminatorValue);
     }
     /**
      * Read the properties and relationships of a workflowVersion object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -94,7 +98,7 @@ public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestB
     /**
      * Read the properties and relationships of a workflowVersion object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -106,7 +110,7 @@ public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestB
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a WorkflowVersionVersionNumberItemRequestBuilder
+     * @return a {@link WorkflowVersionVersionNumberItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WorkflowVersionVersionNumberItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -130,7 +134,7 @@ public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestB
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

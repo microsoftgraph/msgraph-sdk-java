@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable {
     /**
-     * Instantiates a new OnenotePage and sets the default values.
+     * Instantiates a new {@link OnenotePage} and sets the default values.
      */
     public OnenotePage() {
         super();
@@ -19,7 +19,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnenotePage
+     * @return a {@link OnenotePage}
      */
     @jakarta.annotation.Nonnull
     public static OnenotePage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     }
     /**
      * Gets the content property value. The page's HTML content.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
@@ -36,7 +36,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     }
     /**
      * Gets the contentUrl property value. The URL for the page's HTML content.  Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContentUrl() {
@@ -44,7 +44,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     }
     /**
      * Gets the createdByAppId property value. The unique identifier of the application that created the page. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCreatedByAppId() {
@@ -52,7 +52,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -72,7 +72,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the page was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -80,7 +80,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     }
     /**
      * Gets the level property value. The indentation level of the page. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getLevel() {
@@ -88,7 +88,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     }
     /**
      * Gets the links property value. Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only.
-     * @return a PageLinks
+     * @return a {@link PageLinks}
      */
     @jakarta.annotation.Nullable
     public PageLinks getLinks() {
@@ -96,7 +96,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     }
     /**
      * Gets the order property value. The order of the page within its parent section. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getOrder() {
@@ -104,7 +104,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     }
     /**
      * Gets the parentNotebook property value. The notebook that contains the page.  Read-only.
-     * @return a Notebook
+     * @return a {@link Notebook}
      */
     @jakarta.annotation.Nullable
     public Notebook getParentNotebook() {
@@ -112,7 +112,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     }
     /**
      * Gets the parentSection property value. The section that contains the page. Read-only.
-     * @return a OnenoteSection
+     * @return a {@link OnenoteSection}
      */
     @jakarta.annotation.Nullable
     public OnenoteSection getParentSection() {
@@ -120,7 +120,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     }
     /**
      * Gets the title property value. The title of the page.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
@@ -128,7 +128,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     }
     /**
      * Gets the userTags property value. The userTags property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getUserTags() {

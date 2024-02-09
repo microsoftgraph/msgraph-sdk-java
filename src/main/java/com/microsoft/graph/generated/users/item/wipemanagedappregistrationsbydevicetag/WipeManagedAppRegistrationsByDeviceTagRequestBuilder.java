@@ -19,7 +19,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WipeManagedAppRegistrationsByDeviceTagRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new WipeManagedAppRegistrationsByDeviceTagRequestBuilder and sets the default values.
+     * Instantiates a new {@link WipeManagedAppRegistrationsByDeviceTagRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -27,7 +27,7 @@ public class WipeManagedAppRegistrationsByDeviceTagRequestBuilder extends BaseRe
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/wipeManagedAppRegistrationsByDeviceTag", pathParameters);
     }
     /**
-     * Instantiates a new WipeManagedAppRegistrationsByDeviceTagRequestBuilder and sets the default values.
+     * Instantiates a new {@link WipeManagedAppRegistrationsByDeviceTagRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,6 +37,7 @@ public class WipeManagedAppRegistrationsByDeviceTagRequestBuilder extends BaseRe
     /**
      * Issues a wipe operation on an app registration with specified device tag.
      * @param body The request body
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-user-wipemanagedappregistrationsbydevicetag?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final WipeManagedAppRegistrationsByDeviceTagPostRequestBody body) {
@@ -46,20 +47,20 @@ public class WipeManagedAppRegistrationsByDeviceTagRequestBuilder extends BaseRe
      * Issues a wipe operation on an app registration with specified device tag.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-user-wipemanagedappregistrationsbydevicetag?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final WipeManagedAppRegistrationsByDeviceTagPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Issues a wipe operation on an app registration with specified device tag.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final WipeManagedAppRegistrationsByDeviceTagPostRequestBody body) {
@@ -69,7 +70,7 @@ public class WipeManagedAppRegistrationsByDeviceTagRequestBuilder extends BaseRe
      * Issues a wipe operation on an app registration with specified device tag.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final WipeManagedAppRegistrationsByDeviceTagPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -83,7 +84,7 @@ public class WipeManagedAppRegistrationsByDeviceTagRequestBuilder extends BaseRe
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a WipeManagedAppRegistrationsByDeviceTagRequestBuilder
+     * @return a {@link WipeManagedAppRegistrationsByDeviceTagRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WipeManagedAppRegistrationsByDeviceTagRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

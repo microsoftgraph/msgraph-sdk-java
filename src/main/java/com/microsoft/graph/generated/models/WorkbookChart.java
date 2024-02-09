@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChart extends Entity implements Parsable {
     /**
-     * Instantiates a new WorkbookChart and sets the default values.
+     * Instantiates a new {@link WorkbookChart} and sets the default values.
      */
     public WorkbookChart() {
         super();
@@ -17,7 +17,7 @@ public class WorkbookChart extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookChart
+     * @return a {@link WorkbookChart}
      */
     @jakarta.annotation.Nonnull
     public static WorkbookChart createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class WorkbookChart extends Entity implements Parsable {
     }
     /**
      * Gets the axes property value. Represents chart axes. Read-only.
-     * @return a WorkbookChartAxes
+     * @return a {@link WorkbookChartAxes}
      */
     @jakarta.annotation.Nullable
     public WorkbookChartAxes getAxes() {
@@ -34,7 +34,7 @@ public class WorkbookChart extends Entity implements Parsable {
     }
     /**
      * Gets the dataLabels property value. Represents the datalabels on the chart. Read-only.
-     * @return a WorkbookChartDataLabels
+     * @return a {@link WorkbookChartDataLabels}
      */
     @jakarta.annotation.Nullable
     public WorkbookChartDataLabels getDataLabels() {
@@ -42,7 +42,7 @@ public class WorkbookChart extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -63,7 +63,7 @@ public class WorkbookChart extends Entity implements Parsable {
     }
     /**
      * Gets the format property value. Encapsulates the format properties for the chart area. Read-only.
-     * @return a WorkbookChartAreaFormat
+     * @return a {@link WorkbookChartAreaFormat}
      */
     @jakarta.annotation.Nullable
     public WorkbookChartAreaFormat getFormat() {
@@ -71,7 +71,7 @@ public class WorkbookChart extends Entity implements Parsable {
     }
     /**
      * Gets the height property value. Represents the height, in points, of the chart object.
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getHeight() {
@@ -79,7 +79,7 @@ public class WorkbookChart extends Entity implements Parsable {
     }
     /**
      * Gets the left property value. The distance, in points, from the left side of the chart to the worksheet origin.
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getLeft() {
@@ -87,7 +87,7 @@ public class WorkbookChart extends Entity implements Parsable {
     }
     /**
      * Gets the legend property value. Represents the legend for the chart. Read-only.
-     * @return a WorkbookChartLegend
+     * @return a {@link WorkbookChartLegend}
      */
     @jakarta.annotation.Nullable
     public WorkbookChartLegend getLegend() {
@@ -95,7 +95,7 @@ public class WorkbookChart extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. Represents the name of a chart object.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -103,7 +103,7 @@ public class WorkbookChart extends Entity implements Parsable {
     }
     /**
      * Gets the series property value. Represents either a single series or collection of series in the chart. Read-only.
-     * @return a java.util.List<WorkbookChartSeries>
+     * @return a {@link java.util.List<WorkbookChartSeries>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookChartSeries> getSeries() {
@@ -111,7 +111,7 @@ public class WorkbookChart extends Entity implements Parsable {
     }
     /**
      * Gets the title property value. Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
-     * @return a WorkbookChartTitle
+     * @return a {@link WorkbookChartTitle}
      */
     @jakarta.annotation.Nullable
     public WorkbookChartTitle getTitle() {
@@ -119,7 +119,7 @@ public class WorkbookChart extends Entity implements Parsable {
     }
     /**
      * Gets the top property value. Represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of the chart area (on a chart).
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getTop() {
@@ -127,7 +127,7 @@ public class WorkbookChart extends Entity implements Parsable {
     }
     /**
      * Gets the width property value. Represents the width, in points, of the chart object.
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getWidth() {
@@ -135,7 +135,7 @@ public class WorkbookChart extends Entity implements Parsable {
     }
     /**
      * Gets the worksheet property value. The worksheet containing the current chart. Read-only.
-     * @return a WorkbookWorksheet
+     * @return a {@link WorkbookWorksheet}
      */
     @jakarta.annotation.Nullable
     public WorkbookWorksheet getWorksheet() {

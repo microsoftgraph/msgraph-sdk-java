@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity implements Parsable {
     /**
-     * Instantiates a new UserExperienceAnalyticsAppHealthDevicePerformanceDetails and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsAppHealthDevicePerformanceDetails} and sets the default values.
      */
     public UserExperienceAnalyticsAppHealthDevicePerformanceDetails() {
         super();
@@ -21,7 +21,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsAppHealthDevicePerformanceDetails
+     * @return a {@link UserExperienceAnalyticsAppHealthDevicePerformanceDetails}
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsAppHealthDevicePerformanceDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
     }
     /**
      * Gets the appDisplayName property value. The friendly name of the application for which the event occurred. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
@@ -38,7 +38,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
     }
     /**
      * Gets the appPublisher property value. The publisher of the application. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppPublisher() {
@@ -46,7 +46,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
     }
     /**
      * Gets the appVersion property value. The version of the application. Possible values are: 1.0.0.1, 75.65.23.9. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppVersion() {
@@ -54,7 +54,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
     }
     /**
      * Gets the deviceDisplayName property value. The name of the device. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
@@ -62,7 +62,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
     }
     /**
      * Gets the deviceId property value. The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -70,7 +70,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
     }
     /**
      * Gets the eventDateTime property value. The time the event occurred. The value cannot be modified and is automatically populated when the statistics are computed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
@@ -78,7 +78,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
     }
     /**
      * Gets the eventType property value. The type of the event. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEventType() {
@@ -86,7 +86,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

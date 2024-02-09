@@ -19,7 +19,7 @@ public class Process implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new Process and sets the default values.
+     * Instantiates a new {@link Process} and sets the default values.
      */
     public Process() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class Process implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Process
+     * @return a {@link Process}
      */
     @jakarta.annotation.Nonnull
     public static Process createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class Process implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the accountName property value. User account identifier (user account context the process ran under) for example, AccountName, SID, and so on.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAccountName() {
@@ -45,7 +45,7 @@ public class Process implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -58,7 +58,7 @@ public class Process implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -66,7 +66,7 @@ public class Process implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the commandLine property value. The full process invocation commandline including all parameters.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCommandLine() {
@@ -74,7 +74,7 @@ public class Process implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the createdDateTime property value. Time at which the process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -82,7 +82,7 @@ public class Process implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -104,7 +104,7 @@ public class Process implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the fileHash property value. Complex type containing file hashes (cryptographic and location-sensitive).
-     * @return a FileHash
+     * @return a {@link FileHash}
      */
     @jakarta.annotation.Nullable
     public FileHash getFileHash() {
@@ -112,7 +112,7 @@ public class Process implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the integrityLevel property value. The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system.
-     * @return a ProcessIntegrityLevel
+     * @return a {@link ProcessIntegrityLevel}
      */
     @jakarta.annotation.Nullable
     public ProcessIntegrityLevel getIntegrityLevel() {
@@ -120,7 +120,7 @@ public class Process implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the isElevated property value. True if the process is elevated.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsElevated() {
@@ -128,7 +128,7 @@ public class Process implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the name property value. The name of the process' Image file.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -136,7 +136,7 @@ public class Process implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -144,7 +144,7 @@ public class Process implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the parentProcessCreatedDateTime property value. DateTime at which the parent process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getParentProcessCreatedDateTime() {
@@ -152,7 +152,7 @@ public class Process implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the parentProcessId property value. The Process ID (PID) of the parent process.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getParentProcessId() {
@@ -160,7 +160,7 @@ public class Process implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the parentProcessName property value. The name of the image file of the parent process.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getParentProcessName() {
@@ -168,7 +168,7 @@ public class Process implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the path property value. Full path, including filename.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPath() {
@@ -176,7 +176,7 @@ public class Process implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the processId property value. The Process ID (PID) of the process.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getProcessId() {

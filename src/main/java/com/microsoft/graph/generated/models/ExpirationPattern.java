@@ -20,7 +20,7 @@ public class ExpirationPattern implements AdditionalDataHolder, BackedModel, Par
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ExpirationPattern and sets the default values.
+     * Instantiates a new {@link ExpirationPattern} and sets the default values.
      */
     public ExpirationPattern() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -29,7 +29,7 @@ public class ExpirationPattern implements AdditionalDataHolder, BackedModel, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ExpirationPattern
+     * @return a {@link ExpirationPattern}
      */
     @jakarta.annotation.Nonnull
     public static ExpirationPattern createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class ExpirationPattern implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -51,7 +51,7 @@ public class ExpirationPattern implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -59,7 +59,7 @@ public class ExpirationPattern implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the duration property value. The requestor's desired duration of access represented in ISO 8601 format for durations. For example, PT3H refers to three hours.  If specified in a request, endDateTime should not be present and the type property should be set to afterDuration.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getDuration() {
@@ -67,7 +67,7 @@ public class ExpirationPattern implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the endDateTime property value. Timestamp of date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
@@ -75,7 +75,7 @@ public class ExpirationPattern implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -88,7 +88,7 @@ public class ExpirationPattern implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -96,7 +96,7 @@ public class ExpirationPattern implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the type property value. The requestor's desired expiration pattern type. The possible values are: notSpecified, noExpiration, afterDateTime, afterDuration.
-     * @return a ExpirationPatternType
+     * @return a {@link ExpirationPatternType}
      */
     @jakarta.annotation.Nullable
     public ExpirationPatternType getType() {

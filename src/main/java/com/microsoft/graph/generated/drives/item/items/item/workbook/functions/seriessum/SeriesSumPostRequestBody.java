@@ -19,7 +19,7 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SeriesSumPostRequestBody and sets the default values.
+     * Instantiates a new {@link SeriesSumPostRequestBody} and sets the default values.
      */
     public SeriesSumPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, BackedMod
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SeriesSumPostRequestBody
+     * @return a {@link SeriesSumPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static SeriesSumPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the coefficients property value. The coefficients property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getCoefficients() {
@@ -66,7 +66,7 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, BackedMod
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the m property value. The m property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getM() {
@@ -87,7 +87,7 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the n property value. The n property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getN() {
@@ -95,7 +95,7 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the x property value. The x property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getX() {

@@ -21,7 +21,7 @@ public class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHo
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ManagedAppPolicyDeploymentSummaryPerApp and sets the default values.
+     * Instantiates a new {@link ManagedAppPolicyDeploymentSummaryPerApp} and sets the default values.
      */
     public ManagedAppPolicyDeploymentSummaryPerApp() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedAppPolicyDeploymentSummaryPerApp
+     * @return a {@link ManagedAppPolicyDeploymentSummaryPerApp}
      */
     @jakarta.annotation.Nonnull
     public static ManagedAppPolicyDeploymentSummaryPerApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHo
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHo
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHo
     }
     /**
      * Gets the configurationAppliedUserCount property value. Number of users the policy is applied.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getConfigurationAppliedUserCount() {
@@ -68,7 +68,7 @@ public class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -80,7 +80,7 @@ public class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHo
     }
     /**
      * Gets the mobileAppIdentifier property value. Deployment of an app.
-     * @return a MobileAppIdentifier
+     * @return a {@link MobileAppIdentifier}
      */
     @jakarta.annotation.Nullable
     public MobileAppIdentifier getMobileAppIdentifier() {
@@ -88,7 +88,7 @@ public class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHo
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

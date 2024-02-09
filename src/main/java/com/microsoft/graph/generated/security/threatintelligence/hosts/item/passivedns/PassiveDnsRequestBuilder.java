@@ -24,6 +24,7 @@ import java.util.Objects;
 public class PassiveDnsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -32,7 +33,7 @@ public class PassiveDnsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the passiveDns property of the microsoft.graph.security.host entity.
      * @param passiveDnsRecordId The unique identifier of passiveDnsRecord
-     * @return a PassiveDnsRecordItemRequestBuilder
+     * @return a {@link PassiveDnsRecordItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PassiveDnsRecordItemRequestBuilder byPassiveDnsRecordId(@jakarta.annotation.Nonnull final String passiveDnsRecordId) {
@@ -42,7 +43,7 @@ public class PassiveDnsRequestBuilder extends BaseRequestBuilder {
         return new PassiveDnsRecordItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new PassiveDnsRequestBuilder and sets the default values.
+     * Instantiates a new {@link PassiveDnsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -50,7 +51,7 @@ public class PassiveDnsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hosts/{host%2Did}/passiveDns{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new PassiveDnsRequestBuilder and sets the default values.
+     * Instantiates a new {@link PassiveDnsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +60,8 @@ public class PassiveDnsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname. 
-     * @return a PassiveDnsRecordCollectionResponse
+     * @return a {@link PassiveDnsRecordCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-passivedns?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -69,20 +71,20 @@ public class PassiveDnsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PassiveDnsRecordCollectionResponse
+     * @return a {@link PassiveDnsRecordCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-passivedns?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PassiveDnsRecordCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PassiveDnsRecordCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname. 
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -91,7 +93,7 @@ public class PassiveDnsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +105,7 @@ public class PassiveDnsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a PassiveDnsRequestBuilder
+     * @return a {@link PassiveDnsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PassiveDnsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -157,7 +159,7 @@ public class PassiveDnsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

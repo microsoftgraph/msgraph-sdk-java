@@ -24,6 +24,7 @@ import java.util.Objects;
 public class DrivesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -32,7 +33,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the drives property of the microsoft.graph.site entity.
      * @param driveId The unique identifier of drive
-     * @return a DriveItemRequestBuilder
+     * @return a {@link DriveItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DriveItemRequestBuilder byDriveId(@jakarta.annotation.Nonnull final String driveId) {
@@ -42,7 +43,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         return new DriveItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new DrivesRequestBuilder and sets the default values.
+     * Instantiates a new {@link DrivesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -50,7 +51,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/drives{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new DrivesRequestBuilder and sets the default values.
+     * Instantiates a new {@link DrivesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +60,8 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of drives (document libraries) under this site.
-     * @return a DriveCollectionResponse
+     * @return a {@link DriveCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DriveCollectionResponse get() {
@@ -68,19 +70,19 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of drives (document libraries) under this site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DriveCollectionResponse
+     * @return a {@link DriveCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DriveCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DriveCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * The collection of drives (document libraries) under this site.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -89,7 +91,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of drives (document libraries) under this site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -101,7 +103,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DrivesRequestBuilder
+     * @return a {@link DrivesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DrivesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -155,7 +157,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

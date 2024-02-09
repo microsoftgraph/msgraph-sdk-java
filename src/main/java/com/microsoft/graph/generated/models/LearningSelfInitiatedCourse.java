@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LearningSelfInitiatedCourse extends LearningCourseActivity implements Parsable {
     /**
-     * Instantiates a new LearningSelfInitiatedCourse and sets the default values.
+     * Instantiates a new {@link LearningSelfInitiatedCourse} and sets the default values.
      */
     public LearningSelfInitiatedCourse() {
         super();
@@ -18,7 +18,7 @@ public class LearningSelfInitiatedCourse extends LearningCourseActivity implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a LearningSelfInitiatedCourse
+     * @return a {@link LearningSelfInitiatedCourse}
      */
     @jakarta.annotation.Nonnull
     public static LearningSelfInitiatedCourse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class LearningSelfInitiatedCourse extends LearningCourseActivity implemen
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class LearningSelfInitiatedCourse extends LearningCourseActivity implemen
     }
     /**
      * Gets the startedDateTime property value. The date and time on which the learner started the self-initiated course. Optional.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartedDateTime() {

@@ -18,7 +18,7 @@ public class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable 
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DocumentSet and sets the default values.
+     * Instantiates a new {@link DocumentSet} and sets the default values.
      */
     public DocumentSet() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DocumentSet
+     * @return a {@link DocumentSet}
      */
     @jakarta.annotation.Nonnull
     public static DocumentSet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the allowedContentTypes property value. Content types allowed in document set.
-     * @return a java.util.List<ContentTypeInfo>
+     * @return a {@link java.util.List<ContentTypeInfo>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ContentTypeInfo> getAllowedContentTypes() {
@@ -57,7 +57,7 @@ public class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the defaultContents property value. Default contents of document set.
-     * @return a java.util.List<DocumentSetContent>
+     * @return a {@link java.util.List<DocumentSetContent>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DocumentSetContent> getDefaultContents() {
@@ -73,7 +73,7 @@ public class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -90,7 +90,7 @@ public class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -98,7 +98,7 @@ public class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the propagateWelcomePageChanges property value. Specifies whether to push welcome page changes to inherited content types.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPropagateWelcomePageChanges() {
@@ -106,7 +106,7 @@ public class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the sharedColumns property value. The sharedColumns property
-     * @return a java.util.List<ColumnDefinition>
+     * @return a {@link java.util.List<ColumnDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ColumnDefinition> getSharedColumns() {
@@ -114,7 +114,7 @@ public class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the shouldPrefixNameToFile property value. Indicates whether to add the name of the document set to each file name.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getShouldPrefixNameToFile() {
@@ -122,7 +122,7 @@ public class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the welcomePageColumns property value. The welcomePageColumns property
-     * @return a java.util.List<ColumnDefinition>
+     * @return a {@link java.util.List<ColumnDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ColumnDefinition> getWelcomePageColumns() {
@@ -130,7 +130,7 @@ public class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the welcomePageUrl property value. Welcome page absolute URL.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWelcomePageUrl() {

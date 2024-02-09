@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemRetentionLabel extends Entity implements Parsable {
     /**
-     * Instantiates a new ItemRetentionLabel and sets the default values.
+     * Instantiates a new {@link ItemRetentionLabel} and sets the default values.
      */
     public ItemRetentionLabel() {
         super();
@@ -18,7 +18,7 @@ public class ItemRetentionLabel extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ItemRetentionLabel
+     * @return a {@link ItemRetentionLabel}
      */
     @jakarta.annotation.Nonnull
     public static ItemRetentionLabel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ItemRetentionLabel extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -41,7 +41,7 @@ public class ItemRetentionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the isLabelAppliedExplicitly property value. Specifies whether the label is applied explicitly on the item. True indicates that the label is applied explicitly; otherwise, the label is inherited from its parent. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsLabelAppliedExplicitly() {
@@ -49,7 +49,7 @@ public class ItemRetentionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the labelAppliedBy property value. Identity of the user who applied the label. Read-only.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLabelAppliedBy() {
@@ -57,7 +57,7 @@ public class ItemRetentionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the labelAppliedDateTime property value. The date and time when the label was applied on the item. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLabelAppliedDateTime() {
@@ -65,7 +65,7 @@ public class ItemRetentionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The retention label on the document. Read-write.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -73,7 +73,7 @@ public class ItemRetentionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the retentionSettings property value. The retention settings enforced on the item. Read-write.
-     * @return a RetentionLabelSettings
+     * @return a {@link RetentionLabelSettings}
      */
     @jakarta.annotation.Nullable
     public RetentionLabelSettings getRetentionSettings() {

@@ -18,7 +18,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Bac
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new UserRegistrationFeatureSummary and sets the default values.
+     * Instantiates a new {@link UserRegistrationFeatureSummary} and sets the default values.
      */
     public UserRegistrationFeatureSummary() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Bac
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserRegistrationFeatureSummary
+     * @return a {@link UserRegistrationFeatureSummary}
      */
     @jakarta.annotation.Nonnull
     public static UserRegistrationFeatureSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Bac
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -71,7 +71,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the totalUserCount property value. Total number of users accounts, excluding those that are blocked.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getTotalUserCount() {
@@ -87,7 +87,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the userRegistrationFeatureCounts property value. Number of users registered or capable for multi-factor authentication, self-service password reset, and passwordless authentication.
-     * @return a java.util.List<UserRegistrationFeatureCount>
+     * @return a {@link java.util.List<UserRegistrationFeatureCount>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserRegistrationFeatureCount> getUserRegistrationFeatureCounts() {
@@ -95,7 +95,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the userRoles property value. The role type of the user. Possible values are: all, privilegedAdmin, admin, user, unknownFutureValue.
-     * @return a IncludedUserRoles
+     * @return a {@link IncludedUserRoles}
      */
     @jakarta.annotation.Nullable
     public IncludedUserRoles getUserRoles() {
@@ -103,7 +103,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the userTypes property value. User type. Possible values are: all, member, guest, unknownFutureValue.
-     * @return a IncludedUserTypes
+     * @return a {@link IncludedUserTypes}
      */
     @jakarta.annotation.Nullable
     public IncludedUserTypes getUserTypes() {

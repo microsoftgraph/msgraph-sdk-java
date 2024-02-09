@@ -18,7 +18,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new IdentityProtectionRoot and sets the default values.
+     * Instantiates a new {@link IdentityProtectionRoot} and sets the default values.
      */
     public IdentityProtectionRoot() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IdentityProtectionRoot
+     * @return a {@link IdentityProtectionRoot}
      */
     @jakarta.annotation.Nonnull
     public static IdentityProtectionRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -71,7 +71,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the riskDetections property value. Risk detection in Microsoft Entra ID Protection and the associated information about the detection.
-     * @return a java.util.List<RiskDetection>
+     * @return a {@link java.util.List<RiskDetection>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<RiskDetection> getRiskDetections() {
@@ -87,7 +87,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the riskyServicePrincipals property value. Microsoft Entra service principals that are at risk.
-     * @return a java.util.List<RiskyServicePrincipal>
+     * @return a {@link java.util.List<RiskyServicePrincipal>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<RiskyServicePrincipal> getRiskyServicePrincipals() {
@@ -95,7 +95,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the riskyUsers property value. Users that are flagged as at-risk by Microsoft Entra ID Protection.
-     * @return a java.util.List<RiskyUser>
+     * @return a {@link java.util.List<RiskyUser>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<RiskyUser> getRiskyUsers() {
@@ -103,7 +103,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the servicePrincipalRiskDetections property value. Represents information about detected at-risk service principals in a Microsoft Entra tenant.
-     * @return a java.util.List<ServicePrincipalRiskDetection>
+     * @return a {@link java.util.List<ServicePrincipalRiskDetection>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServicePrincipalRiskDetection> getServicePrincipalRiskDetections() {

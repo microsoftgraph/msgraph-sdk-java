@@ -20,7 +20,7 @@ public class CreateForwardPostRequestBody implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new CreateForwardPostRequestBody and sets the default values.
+     * Instantiates a new {@link CreateForwardPostRequestBody} and sets the default values.
      */
     public CreateForwardPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -29,7 +29,7 @@ public class CreateForwardPostRequestBody implements AdditionalDataHolder, Backe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CreateForwardPostRequestBody
+     * @return a {@link CreateForwardPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static CreateForwardPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class CreateForwardPostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -51,7 +51,7 @@ public class CreateForwardPostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -59,7 +59,7 @@ public class CreateForwardPostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the Comment property value. The Comment property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getComment() {
@@ -67,7 +67,7 @@ public class CreateForwardPostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class CreateForwardPostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the Message property value. The Message property
-     * @return a Message
+     * @return a {@link Message}
      */
     @jakarta.annotation.Nullable
     public Message getMessage() {
@@ -87,7 +87,7 @@ public class CreateForwardPostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the ToRecipients property value. The ToRecipients property
-     * @return a java.util.List<Recipient>
+     * @return a {@link java.util.List<Recipient>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getToRecipients() {

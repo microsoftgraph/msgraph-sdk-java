@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsable {
     /**
-     * Instantiates a new IosCompliancePolicy and sets the default values.
+     * Instantiates a new {@link IosCompliancePolicy} and sets the default values.
      */
     public IosCompliancePolicy() {
         super();
@@ -21,7 +21,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosCompliancePolicy
+     * @return a {@link IosCompliancePolicy}
      */
     @jakarta.annotation.Nonnull
     public static IosCompliancePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
     }
     /**
      * Gets the deviceThreatProtectionEnabled property value. Require that devices have enabled device threat protection .
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceThreatProtectionEnabled() {
@@ -38,7 +38,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
     }
     /**
      * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
-     * @return a DeviceThreatProtectionLevel
+     * @return a {@link DeviceThreatProtectionLevel}
      */
     @jakarta.annotation.Nullable
     public DeviceThreatProtectionLevel getDeviceThreatProtectionRequiredSecurityLevel() {
@@ -46,7 +46,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
     }
     /**
      * Gets the managedEmailProfileRequired property value. Indicates whether or not to require a managed email profile.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getManagedEmailProfileRequired() {
@@ -77,7 +77,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
     }
     /**
      * Gets the osMaximumVersion property value. Maximum IOS version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsMaximumVersion() {
@@ -85,7 +85,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
     }
     /**
      * Gets the osMinimumVersion property value. Minimum IOS version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsMinimumVersion() {
@@ -93,7 +93,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
     }
     /**
      * Gets the passcodeBlockSimple property value. Indicates whether or not to block simple passcodes.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasscodeBlockSimple() {
@@ -101,7 +101,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
     }
     /**
      * Gets the passcodeExpirationDays property value. Number of days before the passcode expires. Valid values 1 to 65535
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasscodeExpirationDays() {
@@ -109,7 +109,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
     }
     /**
      * Gets the passcodeMinimumCharacterSetCount property value. The number of character sets required in the password.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasscodeMinimumCharacterSetCount() {
@@ -117,7 +117,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
     }
     /**
      * Gets the passcodeMinimumLength property value. Minimum length of passcode. Valid values 4 to 14
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasscodeMinimumLength() {
@@ -125,7 +125,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
     }
     /**
      * Gets the passcodeMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a passcode is required.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasscodeMinutesOfInactivityBeforeLock() {
@@ -133,7 +133,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
     }
     /**
      * Gets the passcodePreviousPasscodeBlockCount property value. Number of previous passcodes to block. Valid values 1 to 24
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasscodePreviousPasscodeBlockCount() {
@@ -141,7 +141,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
     }
     /**
      * Gets the passcodeRequired property value. Indicates whether or not to require a passcode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasscodeRequired() {
@@ -149,7 +149,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
     }
     /**
      * Gets the passcodeRequiredType property value. Possible values of required passwords.
-     * @return a RequiredPasswordType
+     * @return a {@link RequiredPasswordType}
      */
     @jakarta.annotation.Nullable
     public RequiredPasswordType getPasscodeRequiredType() {
@@ -157,7 +157,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
     }
     /**
      * Gets the securityBlockJailbrokenDevices property value. Devices must not be jailbroken or rooted.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityBlockJailbrokenDevices() {

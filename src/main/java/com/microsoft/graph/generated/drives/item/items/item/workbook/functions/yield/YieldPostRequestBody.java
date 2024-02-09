@@ -19,7 +19,7 @@ public class YieldPostRequestBody implements AdditionalDataHolder, BackedModel, 
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new YieldPostRequestBody and sets the default values.
+     * Instantiates a new {@link YieldPostRequestBody} and sets the default values.
      */
     public YieldPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class YieldPostRequestBody implements AdditionalDataHolder, BackedModel, 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a YieldPostRequestBody
+     * @return a {@link YieldPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static YieldPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class YieldPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class YieldPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class YieldPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the basis property value. The basis property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getBasis() {
@@ -66,7 +66,7 @@ public class YieldPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -82,7 +82,7 @@ public class YieldPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the frequency property value. The frequency property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getFrequency() {
@@ -90,7 +90,7 @@ public class YieldPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the maturity property value. The maturity property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getMaturity() {
@@ -98,7 +98,7 @@ public class YieldPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the pr property value. The pr property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getPr() {
@@ -106,7 +106,7 @@ public class YieldPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the rate property value. The rate property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getRate() {
@@ -114,7 +114,7 @@ public class YieldPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the redemption property value. The redemption property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getRedemption() {
@@ -122,7 +122,7 @@ public class YieldPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the settlement property value. The settlement property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getSettlement() {

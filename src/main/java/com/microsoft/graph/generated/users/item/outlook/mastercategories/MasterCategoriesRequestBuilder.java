@@ -25,6 +25,7 @@ import java.util.Objects;
 public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the masterCategories property of the microsoft.graph.outlookUser entity.
      * @param outlookCategoryId The unique identifier of outlookCategory
-     * @return a OutlookCategoryItemRequestBuilder
+     * @return a {@link OutlookCategoryItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OutlookCategoryItemRequestBuilder byOutlookCategoryId(@jakarta.annotation.Nonnull final String outlookCategoryId) {
@@ -43,7 +44,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         return new OutlookCategoryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new MasterCategoriesRequestBuilder and sets the default values.
+     * Instantiates a new {@link MasterCategoriesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/outlook/masterCategories{?%24count,%24filter,%24orderby,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new MasterCategoriesRequestBuilder and sets the default values.
+     * Instantiates a new {@link MasterCategoriesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get all the categories that have been defined for the user.
-     * @return a OutlookCategoryCollectionResponse
+     * @return a {@link OutlookCategoryCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-list-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get all the categories that have been defined for the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a OutlookCategoryCollectionResponse
+     * @return a {@link OutlookCategoryCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-list-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OutlookCategoryCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, OutlookCategoryCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create an outlookCategory object in the user's master list of categories.
      * @param body The request body
-     * @return a OutlookCategory
+     * @return a {@link OutlookCategory}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-post-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -95,7 +98,8 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
      * Create an outlookCategory object in the user's master list of categories.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a OutlookCategory
+     * @return a {@link OutlookCategory}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-post-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -103,13 +107,12 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, OutlookCategory::createFromDiscriminatorValue);
     }
     /**
      * Get all the categories that have been defined for the user.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -118,7 +121,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get all the categories that have been defined for the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +133,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create an outlookCategory object in the user's master list of categories.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final OutlookCategory body) {
@@ -140,12 +143,12 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
      * Create an outlookCategory object in the user's master list of categories.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final OutlookCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/users/{user%2Did}/outlook/masterCategories", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -154,7 +157,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a MasterCategoriesRequestBuilder
+     * @return a {@link MasterCategoriesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MasterCategoriesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -198,7 +201,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

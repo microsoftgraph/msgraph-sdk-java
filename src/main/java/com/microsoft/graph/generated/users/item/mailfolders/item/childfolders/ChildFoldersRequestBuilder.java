@@ -26,6 +26,7 @@ import java.util.Objects;
 public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,6 +34,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the delta method.
+     * @return a {@link DeltaRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeltaRequestBuilder delta() {
@@ -41,7 +43,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the childFolders property of the microsoft.graph.mailFolder entity.
      * @param mailFolderId1 The unique identifier of mailFolder
-     * @return a MailFolderItemRequestBuilder
+     * @return a {@link MailFolderItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MailFolderItemRequestBuilder byMailFolderId1(@jakarta.annotation.Nonnull final String mailFolderId1) {
@@ -51,7 +53,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         return new MailFolderItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new ChildFoldersRequestBuilder and sets the default values.
+     * Instantiates a new {@link ChildFoldersRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +61,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders/{mailFolder%2Did}/childFolders{?%24count,%24expand,%24filter,%24orderby,%24select,%24skip,%24top,includeHiddenFolders*}", pathParameters);
     }
     /**
-     * Instantiates a new ChildFoldersRequestBuilder and sets the default values.
+     * Instantiates a new {@link ChildFoldersRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -68,7 +70,8 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of child folders in the mailFolder.
-     * @return a MailFolderCollectionResponse
+     * @return a {@link MailFolderCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-list-childfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -78,46 +81,47 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of child folders in the mailFolder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a MailFolderCollectionResponse
+     * @return a {@link MailFolderCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-list-childfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MailFolderCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, MailFolderCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Use this API to create a new child mailFolder. If you intend a new folder to be hidden, you must set the isHidden property to true on creation.
+     * Create a new mailSearchFolder in the specified user's mailbox.
      * @param body The request body
-     * @return a MailFolder
-     * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-post-childfolders?view=graph-rest-1.0">Find more info here</a>
+     * @return a {@link MailFolder}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mailsearchfolder-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MailFolder post(@jakarta.annotation.Nonnull final MailFolder body) {
         return post(body, null);
     }
     /**
-     * Use this API to create a new child mailFolder. If you intend a new folder to be hidden, you must set the isHidden property to true on creation.
+     * Create a new mailSearchFolder in the specified user's mailbox.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a MailFolder
-     * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-post-childfolders?view=graph-rest-1.0">Find more info here</a>
+     * @return a {@link MailFolder}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mailsearchfolder-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MailFolder post(@jakarta.annotation.Nonnull final MailFolder body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, MailFolder::createFromDiscriminatorValue);
     }
     /**
      * The collection of child folders in the mailFolder.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -126,7 +130,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of child folders in the mailFolder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -136,24 +140,24 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new child mailFolder. If you intend a new folder to be hidden, you must set the isHidden property to true on creation.
+     * Create a new mailSearchFolder in the specified user's mailbox.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MailFolder body) {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new child mailFolder. If you intend a new folder to be hidden, you must set the isHidden property to true on creation.
+     * Create a new mailSearchFolder in the specified user's mailbox.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MailFolder body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/users/{user%2Did}/mailFolders/{mailFolder%2Did}/childFolders", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -162,7 +166,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ChildFoldersRequestBuilder
+     * @return a {@link ChildFoldersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ChildFoldersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -216,7 +220,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfiguration implements Parsable {
     /**
-     * Instantiates a new DeviceEnrollmentLimitConfiguration and sets the default values.
+     * Instantiates a new {@link DeviceEnrollmentLimitConfiguration} and sets the default values.
      */
     public DeviceEnrollmentLimitConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfigur
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceEnrollmentLimitConfiguration
+     * @return a {@link DeviceEnrollmentLimitConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static DeviceEnrollmentLimitConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfigur
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfigur
     }
     /**
      * Gets the limit property value. The maximum number of devices that a user can enroll
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getLimit() {

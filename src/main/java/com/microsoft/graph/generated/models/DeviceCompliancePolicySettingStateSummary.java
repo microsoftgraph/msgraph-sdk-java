@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceCompliancePolicySettingStateSummary and sets the default values.
+     * Instantiates a new {@link DeviceCompliancePolicySettingStateSummary} and sets the default values.
      */
     public DeviceCompliancePolicySettingStateSummary() {
         super();
@@ -20,7 +20,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceCompliancePolicySettingStateSummary
+     * @return a {@link DeviceCompliancePolicySettingStateSummary}
      */
     @jakarta.annotation.Nonnull
     public static DeviceCompliancePolicySettingStateSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     }
     /**
      * Gets the compliantDeviceCount property value. Number of compliant devices
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCompliantDeviceCount() {
@@ -37,7 +37,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     }
     /**
      * Gets the conflictDeviceCount property value. Number of conflict devices
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getConflictDeviceCount() {
@@ -45,7 +45,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     }
     /**
      * Gets the deviceComplianceSettingStates property value. Not yet documented
-     * @return a java.util.List<DeviceComplianceSettingState>
+     * @return a {@link java.util.List<DeviceComplianceSettingState>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceComplianceSettingState> getDeviceComplianceSettingStates() {
@@ -53,7 +53,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     }
     /**
      * Gets the errorDeviceCount property value. Number of error devices
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getErrorDeviceCount() {
@@ -61,7 +61,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -81,7 +81,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     }
     /**
      * Gets the nonCompliantDeviceCount property value. Number of NonCompliant devices
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNonCompliantDeviceCount() {
@@ -89,7 +89,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     }
     /**
      * Gets the notApplicableDeviceCount property value. Number of not applicable devices
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableDeviceCount() {
@@ -97,7 +97,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     }
     /**
      * Gets the platformType property value. Supported platform types for policies.
-     * @return a PolicyPlatformType
+     * @return a {@link PolicyPlatformType}
      */
     @jakarta.annotation.Nullable
     public PolicyPlatformType getPlatformType() {
@@ -105,7 +105,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     }
     /**
      * Gets the remediatedDeviceCount property value. Number of remediated devices
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRemediatedDeviceCount() {
@@ -113,7 +113,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     }
     /**
      * Gets the setting property value. The setting class name and property name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSetting() {
@@ -121,7 +121,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     }
     /**
      * Gets the settingName property value. Name of the setting.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSettingName() {
@@ -129,7 +129,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     }
     /**
      * Gets the unknownDeviceCount property value. Number of unknown devices
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUnknownDeviceCount() {

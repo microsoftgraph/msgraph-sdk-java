@@ -18,7 +18,7 @@ public class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new LookupColumn and sets the default values.
+     * Instantiates a new {@link LookupColumn} and sets the default values.
      */
     public LookupColumn() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a LookupColumn
+     * @return a {@link LookupColumn}
      */
     @jakarta.annotation.Nonnull
     public static LookupColumn createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the allowMultipleValues property value. Indicates whether multiple values can be selected from the source.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowMultipleValues() {
@@ -57,7 +57,7 @@ public class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the allowUnlimitedLength property value. Indicates whether values in the column should be able to exceed the standard limit of 255 characters.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowUnlimitedLength() {
@@ -65,7 +65,7 @@ public class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -73,7 +73,7 @@ public class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the columnName property value. The name of the lookup source column.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getColumnName() {
@@ -81,7 +81,7 @@ public class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -96,7 +96,7 @@ public class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the listId property value. The unique identifier of the lookup source list.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getListId() {
@@ -104,7 +104,7 @@ public class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -112,7 +112,7 @@ public class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the primaryLookupColumnId property value. If specified, this column is a secondary lookup, pulling an additional field from the list item looked up by the primary lookup. Use the list item looked up by the primary as the source for the column named here.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPrimaryLookupColumnId() {

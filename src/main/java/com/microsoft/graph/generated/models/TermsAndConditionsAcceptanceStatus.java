@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable {
     /**
-     * Instantiates a new TermsAndConditionsAcceptanceStatus and sets the default values.
+     * Instantiates a new {@link TermsAndConditionsAcceptanceStatus} and sets the default values.
      */
     public TermsAndConditionsAcceptanceStatus() {
         super();
@@ -21,7 +21,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TermsAndConditionsAcceptanceStatus
+     * @return a {@link TermsAndConditionsAcceptanceStatus}
      */
     @jakarta.annotation.Nonnull
     public static TermsAndConditionsAcceptanceStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
     }
     /**
      * Gets the acceptedDateTime property value. DateTime when the terms were last accepted by the user.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAcceptedDateTime() {
@@ -38,7 +38,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
     }
     /**
      * Gets the acceptedVersion property value. Most recent version number of the T&C accepted by the user.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getAcceptedVersion() {
@@ -46,7 +46,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -60,7 +60,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
     }
     /**
      * Gets the termsAndConditions property value. Navigation link to the terms and conditions that are assigned.
-     * @return a TermsAndConditions
+     * @return a {@link TermsAndConditions}
      */
     @jakarta.annotation.Nullable
     public TermsAndConditions getTermsAndConditions() {
@@ -68,7 +68,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
     }
     /**
      * Gets the userDisplayName property value. Display name of the user whose acceptance the entity represents.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
@@ -76,7 +76,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
     }
     /**
      * Gets the userPrincipalName property value. The userPrincipalName of the User that accepted the term.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

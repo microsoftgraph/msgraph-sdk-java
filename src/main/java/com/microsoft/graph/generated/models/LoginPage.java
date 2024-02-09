@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LoginPage extends Entity implements Parsable {
     /**
-     * Instantiates a new LoginPage and sets the default values.
+     * Instantiates a new {@link LoginPage} and sets the default values.
      */
     public LoginPage() {
         super();
@@ -18,7 +18,7 @@ public class LoginPage extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a LoginPage
+     * @return a {@link LoginPage}
      */
     @jakarta.annotation.Nonnull
     public static LoginPage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class LoginPage extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The HTML content of the login page.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContent() {
@@ -35,7 +35,7 @@ public class LoginPage extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. Identity of the user who created the login page.
-     * @return a EmailIdentity
+     * @return a {@link EmailIdentity}
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getCreatedBy() {
@@ -43,7 +43,7 @@ public class LoginPage extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Date and time when the login page was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -51,7 +51,7 @@ public class LoginPage extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description about the login page.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -59,7 +59,7 @@ public class LoginPage extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name of the login page.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -67,7 +67,7 @@ public class LoginPage extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -86,7 +86,7 @@ public class LoginPage extends Entity implements Parsable {
     }
     /**
      * Gets the language property value. The content language of the login page.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLanguage() {
@@ -94,7 +94,7 @@ public class LoginPage extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. Identity of the user who last modified the login page.
-     * @return a EmailIdentity
+     * @return a {@link EmailIdentity}
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getLastModifiedBy() {
@@ -102,7 +102,7 @@ public class LoginPage extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. Date and time when the login page was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -110,7 +110,7 @@ public class LoginPage extends Entity implements Parsable {
     }
     /**
      * Gets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
-     * @return a SimulationContentSource
+     * @return a {@link SimulationContentSource}
      */
     @jakarta.annotation.Nullable
     public SimulationContentSource getSource() {
@@ -118,7 +118,7 @@ public class LoginPage extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The login page status. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
-     * @return a SimulationContentStatus
+     * @return a {@link SimulationContentStatus}
      */
     @jakarta.annotation.Nullable
     public SimulationContentStatus getStatus() {

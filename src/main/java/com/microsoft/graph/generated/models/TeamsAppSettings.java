@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamsAppSettings extends Entity implements Parsable {
     /**
-     * Instantiates a new TeamsAppSettings and sets the default values.
+     * Instantiates a new {@link TeamsAppSettings} and sets the default values.
      */
     public TeamsAppSettings() {
         super();
@@ -17,7 +17,7 @@ public class TeamsAppSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamsAppSettings
+     * @return a {@link TeamsAppSettings}
      */
     @jakarta.annotation.Nonnull
     public static TeamsAppSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class TeamsAppSettings extends Entity implements Parsable {
     }
     /**
      * Gets the allowUserRequestsForAppAccess property value. Indicates whether users are allowed to request access to the unavailable Teams apps.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowUserRequestsForAppAccess() {
@@ -34,7 +34,7 @@ public class TeamsAppSettings extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -45,7 +45,7 @@ public class TeamsAppSettings extends Entity implements Parsable {
     }
     /**
      * Gets the isUserPersonalScopeResourceSpecificConsentEnabled property value. Indicates whether resource-specific consent for personal scope in Teams apps is enabled for the tenant. True indicates that Teams apps that are allowed in the tenant and require resource-specific permissions can be installed in the personal scope. False blocks the installation of any Teams app that requires resource-specific permissions in the personal scope.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsUserPersonalScopeResourceSpecificConsentEnabled() {

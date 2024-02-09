@@ -21,7 +21,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new IosMinimumOperatingSystem and sets the default values.
+     * Instantiates a new {@link IosMinimumOperatingSystem} and sets the default values.
      */
     public IosMinimumOperatingSystem() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosMinimumOperatingSystem
+     * @return a {@link IosMinimumOperatingSystem}
      */
     @jakarta.annotation.Nonnull
     public static IosMinimumOperatingSystem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -86,7 +86,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the v10_0 property value. When TRUE, only Version 10.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV100() {
@@ -94,7 +94,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the v11_0 property value. When TRUE, only Version 11.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV110() {
@@ -102,7 +102,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the v12_0 property value. When TRUE, only Version 12.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV120() {
@@ -110,7 +110,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the v13_0 property value. When TRUE, only Version 13.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV130() {
@@ -118,7 +118,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the v14_0 property value. When TRUE, only Version 14.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV140() {
@@ -126,7 +126,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the v15_0 property value. When TRUE, only Version 15.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV150() {
@@ -134,7 +134,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the v8_0 property value. When TRUE, only Version 8.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV80() {
@@ -142,7 +142,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the v9_0 property value. When TRUE, only Version 9.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV90() {

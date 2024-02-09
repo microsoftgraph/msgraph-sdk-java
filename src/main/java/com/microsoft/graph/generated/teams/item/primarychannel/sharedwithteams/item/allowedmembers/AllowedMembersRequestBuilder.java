@@ -24,6 +24,7 @@ import java.util.Objects;
 public class AllowedMembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -32,7 +33,7 @@ public class AllowedMembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the allowedMembers property of the microsoft.graph.sharedWithChannelTeamInfo entity.
      * @param conversationMemberId The unique identifier of conversationMember
-     * @return a ConversationMemberItemRequestBuilder
+     * @return a {@link ConversationMemberItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ConversationMemberItemRequestBuilder byConversationMemberId(@jakarta.annotation.Nonnull final String conversationMemberId) {
@@ -42,7 +43,7 @@ public class AllowedMembersRequestBuilder extends BaseRequestBuilder {
         return new ConversationMemberItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new AllowedMembersRequestBuilder and sets the default values.
+     * Instantiates a new {@link AllowedMembersRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -50,7 +51,7 @@ public class AllowedMembersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/primaryChannel/sharedWithTeams/{sharedWithChannelTeamInfo%2Did}/allowedMembers{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new AllowedMembersRequestBuilder and sets the default values.
+     * Instantiates a new {@link AllowedMembersRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +60,8 @@ public class AllowedMembersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of conversationMembers who can access a shared channel. This method does not return the following conversationMembers from the team:- Users with Guest role- Users who are externally authenticated in the tenant
-     * @return a ConversationMemberCollectionResponse
+     * @return a {@link ConversationMemberCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/sharedwithchannelteaminfo-list-allowedmembers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -69,20 +71,20 @@ public class AllowedMembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of conversationMembers who can access a shared channel. This method does not return the following conversationMembers from the team:- Users with Guest role- Users who are externally authenticated in the tenant
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ConversationMemberCollectionResponse
+     * @return a {@link ConversationMemberCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/sharedwithchannelteaminfo-list-allowedmembers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConversationMemberCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ConversationMemberCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Get the list of conversationMembers who can access a shared channel. This method does not return the following conversationMembers from the team:- Users with Guest role- Users who are externally authenticated in the tenant
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -91,7 +93,7 @@ public class AllowedMembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of conversationMembers who can access a shared channel. This method does not return the following conversationMembers from the team:- Users with Guest role- Users who are externally authenticated in the tenant
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +105,7 @@ public class AllowedMembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AllowedMembersRequestBuilder
+     * @return a {@link AllowedMembersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AllowedMembersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -157,7 +159,7 @@ public class AllowedMembersRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

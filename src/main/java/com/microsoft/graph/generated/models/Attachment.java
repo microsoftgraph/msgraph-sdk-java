@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Attachment extends Entity implements Parsable {
     /**
-     * Instantiates a new Attachment and sets the default values.
+     * Instantiates a new {@link Attachment} and sets the default values.
      */
     public Attachment() {
         super();
@@ -18,7 +18,7 @@ public class Attachment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Attachment
+     * @return a {@link Attachment}
      */
     @jakarta.annotation.Nonnull
     public static Attachment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class Attachment extends Entity implements Parsable {
     }
     /**
      * Gets the contentType property value. The MIME type.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContentType() {
@@ -44,7 +44,7 @@ public class Attachment extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -58,7 +58,7 @@ public class Attachment extends Entity implements Parsable {
     }
     /**
      * Gets the isInline property value. true if the attachment is an inline attachment; otherwise, false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsInline() {
@@ -66,7 +66,7 @@ public class Attachment extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -74,7 +74,7 @@ public class Attachment extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The attachment's file name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -82,7 +82,7 @@ public class Attachment extends Entity implements Parsable {
     }
     /**
      * Gets the size property value. The length of the attachment in bytes.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSize() {

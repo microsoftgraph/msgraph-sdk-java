@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
     /**
-     * Instantiates a new AmazonResourceEvidence and sets the default values.
+     * Instantiates a new {@link AmazonResourceEvidence} and sets the default values.
      */
     public AmazonResourceEvidence() {
         super();
@@ -18,7 +18,7 @@ public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AmazonResourceEvidence
+     * @return a {@link AmazonResourceEvidence}
      */
     @jakarta.annotation.Nonnull
     public static AmazonResourceEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the amazonAccountId property value. The unique identifier for the Amazon account.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAmazonAccountId() {
@@ -35,7 +35,7 @@ public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the amazonResourceId property value. The Amazon resource identifier (ARN) for the cloud resource.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAmazonResourceId() {
@@ -43,7 +43,7 @@ public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -56,7 +56,7 @@ public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the resourceName property value. The name of the resource.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourceName() {
@@ -64,7 +64,7 @@ public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the resourceType property value. The type of the resource.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourceType() {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsInformationProtectionNetworkLearningSummary extends Entity implements Parsable {
     /**
-     * Instantiates a new WindowsInformationProtectionNetworkLearningSummary and sets the default values.
+     * Instantiates a new {@link WindowsInformationProtectionNetworkLearningSummary} and sets the default values.
      */
     public WindowsInformationProtectionNetworkLearningSummary() {
         super();
@@ -20,7 +20,7 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsInformationProtectionNetworkLearningSummary
+     * @return a {@link WindowsInformationProtectionNetworkLearningSummary}
      */
     @jakarta.annotation.Nonnull
     public static WindowsInformationProtectionNetworkLearningSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
     }
     /**
      * Gets the deviceCount property value. Device Count
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceCount() {
@@ -37,7 +37,7 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -48,7 +48,7 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
     }
     /**
      * Gets the url property value. Website url
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUrl() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RoleDefinitionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new RoleDefinitionCollectionResponse and sets the default values.
+     * Instantiates a new {@link RoleDefinitionCollectionResponse} and sets the default values.
      */
     public RoleDefinitionCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class RoleDefinitionCollectionResponse extends BaseCollectionPaginationCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RoleDefinitionCollectionResponse
+     * @return a {@link RoleDefinitionCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static RoleDefinitionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class RoleDefinitionCollectionResponse extends BaseCollectionPaginationCo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class RoleDefinitionCollectionResponse extends BaseCollectionPaginationCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<RoleDefinition>
+     * @return a {@link java.util.List<RoleDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<RoleDefinition> getValue() {

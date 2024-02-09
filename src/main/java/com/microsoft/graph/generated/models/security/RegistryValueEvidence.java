@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RegistryValueEvidence extends AlertEvidence implements Parsable {
     /**
-     * Instantiates a new RegistryValueEvidence and sets the default values.
+     * Instantiates a new {@link RegistryValueEvidence} and sets the default values.
      */
     public RegistryValueEvidence() {
         super();
@@ -18,7 +18,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RegistryValueEvidence
+     * @return a {@link RegistryValueEvidence}
      */
     @jakarta.annotation.Nonnull
     public static RegistryValueEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -42,7 +42,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the mdeDeviceId property value. A unique identifier assigned to a device by Microsoft Defender for Endpoint.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMdeDeviceId() {
@@ -50,7 +50,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the registryHive property value. Registry hive of the key that the recorded action was applied to.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRegistryHive() {
@@ -58,7 +58,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the registryKey property value. Registry key that the recorded action was applied to.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRegistryKey() {
@@ -66,7 +66,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the registryValue property value. Data of the registry value that the recorded action was applied to.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRegistryValue() {
@@ -74,7 +74,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the registryValueName property value. Name of the registry value that the recorded action was applied to.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRegistryValueName() {
@@ -82,7 +82,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the registryValueType property value. Data type, such as binary or string, of the registry value that the recorded action was applied to.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRegistryValueType() {

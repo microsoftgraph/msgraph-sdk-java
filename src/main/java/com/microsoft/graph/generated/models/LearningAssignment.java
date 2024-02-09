@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LearningAssignment extends LearningCourseActivity implements Parsable {
     /**
-     * Instantiates a new LearningAssignment and sets the default values.
+     * Instantiates a new {@link LearningAssignment} and sets the default values.
      */
     public LearningAssignment() {
         super();
@@ -18,7 +18,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a LearningAssignment
+     * @return a {@link LearningAssignment}
      */
     @jakarta.annotation.Nonnull
     public static LearningAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
     }
     /**
      * Gets the assignedDateTime property value. Assigned date for the course activity. Optional.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAssignedDateTime() {
@@ -35,7 +35,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
     }
     /**
      * Gets the assignerUserId property value. The user ID of the assigner. Optional.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAssignerUserId() {
@@ -43,7 +43,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
     }
     /**
      * Gets the assignmentType property value. The assignmentType property
-     * @return a AssignmentType
+     * @return a {@link AssignmentType}
      */
     @jakarta.annotation.Nullable
     public AssignmentType getAssignmentType() {
@@ -51,7 +51,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
     }
     /**
      * Gets the dueDateTime property value. Due date for the course activity. Optional.
-     * @return a DateTimeTimeZone
+     * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getDueDateTime() {
@@ -59,7 +59,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -73,7 +73,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
     }
     /**
      * Gets the notes property value. Notes for the course activity. Optional.
-     * @return a ItemBody
+     * @return a {@link ItemBody}
      */
     @jakarta.annotation.Nullable
     public ItemBody getNotes() {

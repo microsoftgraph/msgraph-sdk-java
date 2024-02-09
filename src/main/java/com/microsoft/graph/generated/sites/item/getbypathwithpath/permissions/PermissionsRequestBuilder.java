@@ -22,7 +22,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PermissionsRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new PermissionsRequestBuilder and sets the default values.
+     * Instantiates a new {@link PermissionsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -30,7 +30,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/getByPath(path='{path}')/permissions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new PermissionsRequestBuilder and sets the default values.
+     * Instantiates a new {@link PermissionsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -39,7 +39,8 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the permission resources from the permissions navigation property on a site.
-     * @return a PermissionCollectionResponse
+     * @return a {@link PermissionCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/site-list-permissions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -49,21 +50,22 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the permission resources from the permissions navigation property on a site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PermissionCollectionResponse
+     * @return a {@link PermissionCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/site-list-permissions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PermissionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PermissionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new permission object on a site. 
      * @param body The request body
-     * @return a Permission
+     * @return a {@link Permission}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/site-post-permissions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -74,7 +76,8 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
      * Create a new permission object on a site. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Permission
+     * @return a {@link Permission}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/site-post-permissions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -82,13 +85,12 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Permission::createFromDiscriminatorValue);
     }
     /**
      * Get the permission resources from the permissions navigation property on a site.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -97,7 +99,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the permission resources from the permissions navigation property on a site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +111,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new permission object on a site. 
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Permission body) {
@@ -119,12 +121,12 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
      * Create a new permission object on a site. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Permission body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/sites/{site%2Did}/getByPath(path='{path}')/permissions", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -133,7 +135,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a PermissionsRequestBuilder
+     * @return a {@link PermissionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PermissionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -187,7 +189,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

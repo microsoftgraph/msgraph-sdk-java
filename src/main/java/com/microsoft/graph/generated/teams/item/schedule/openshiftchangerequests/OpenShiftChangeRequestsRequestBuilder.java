@@ -25,6 +25,7 @@ import java.util.Objects;
 public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the openShiftChangeRequests property of the microsoft.graph.schedule entity.
      * @param openShiftChangeRequestId The unique identifier of openShiftChangeRequest
-     * @return a OpenShiftChangeRequestItemRequestBuilder
+     * @return a {@link OpenShiftChangeRequestItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OpenShiftChangeRequestItemRequestBuilder byOpenShiftChangeRequestId(@jakarta.annotation.Nonnull final String openShiftChangeRequestId) {
@@ -43,7 +44,7 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return new OpenShiftChangeRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new OpenShiftChangeRequestsRequestBuilder and sets the default values.
+     * Instantiates a new {@link OpenShiftChangeRequestsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/schedule/openShiftChangeRequests{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new OpenShiftChangeRequestsRequestBuilder and sets the default values.
+     * Instantiates a new {@link OpenShiftChangeRequestsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of openShiftChangeRequest objects in a team.
-     * @return a OpenShiftChangeRequestCollectionResponse
+     * @return a {@link OpenShiftChangeRequestCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/openshiftchangerequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of openShiftChangeRequest objects in a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a OpenShiftChangeRequestCollectionResponse
+     * @return a {@link OpenShiftChangeRequestCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/openshiftchangerequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OpenShiftChangeRequestCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, OpenShiftChangeRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create instance of an openShiftChangeRequest object.
      * @param body The request body
-     * @return a OpenShiftChangeRequest
+     * @return a {@link OpenShiftChangeRequest}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/openshiftchangerequest-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -95,7 +98,8 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
      * Create instance of an openShiftChangeRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a OpenShiftChangeRequest
+     * @return a {@link OpenShiftChangeRequest}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/openshiftchangerequest-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -103,13 +107,12 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, OpenShiftChangeRequest::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of openShiftChangeRequest objects in a team.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -118,7 +121,7 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of openShiftChangeRequest objects in a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +133,7 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create instance of an openShiftChangeRequest object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final OpenShiftChangeRequest body) {
@@ -140,12 +143,12 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
      * Create instance of an openShiftChangeRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final OpenShiftChangeRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/teams/{team%2Did}/schedule/openShiftChangeRequests", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -154,7 +157,7 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a OpenShiftChangeRequestsRequestBuilder
+     * @return a {@link OpenShiftChangeRequestsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OpenShiftChangeRequestsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -208,7 +211,7 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Fido2CombinationConfiguration extends AuthenticationCombinationConfiguration implements Parsable {
     /**
-     * Instantiates a new Fido2CombinationConfiguration and sets the default values.
+     * Instantiates a new {@link Fido2CombinationConfiguration} and sets the default values.
      */
     public Fido2CombinationConfiguration() {
         super();
@@ -18,7 +18,7 @@ public class Fido2CombinationConfiguration extends AuthenticationCombinationConf
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Fido2CombinationConfiguration
+     * @return a {@link Fido2CombinationConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static Fido2CombinationConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class Fido2CombinationConfiguration extends AuthenticationCombinationConf
     }
     /**
      * Gets the allowedAAGUIDs property value. A list of AAGUIDs allowed to be used as part of the specified authentication method combinations.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedAAGUIDs() {
@@ -35,7 +35,7 @@ public class Fido2CombinationConfiguration extends AuthenticationCombinationConf
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

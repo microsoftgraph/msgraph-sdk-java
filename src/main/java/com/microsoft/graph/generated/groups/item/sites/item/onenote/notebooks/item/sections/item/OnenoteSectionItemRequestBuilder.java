@@ -27,6 +27,7 @@ import java.util.Objects;
 public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the copyToNotebook method.
+     * @return a {@link CopyToNotebookRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CopyToNotebookRequestBuilder copyToNotebook() {
@@ -34,6 +35,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the copyToSectionGroup method.
+     * @return a {@link CopyToSectionGroupRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CopyToSectionGroupRequestBuilder copyToSectionGroup() {
@@ -41,6 +43,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the pages property of the microsoft.graph.onenoteSection entity.
+     * @return a {@link PagesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PagesRequestBuilder pages() {
@@ -48,6 +51,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the parentNotebook property of the microsoft.graph.onenoteSection entity.
+     * @return a {@link ParentNotebookRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ParentNotebookRequestBuilder parentNotebook() {
@@ -55,13 +59,14 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the parentSectionGroup property of the microsoft.graph.onenoteSection entity.
+     * @return a {@link ParentSectionGroupRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ParentSectionGroupRequestBuilder parentSectionGroup() {
         return new ParentSectionGroupRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new OnenoteSectionItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link OnenoteSectionItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -69,7 +74,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/onenote/notebooks/{notebook%2Did}/sections/{onenoteSection%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new OnenoteSectionItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link OnenoteSectionItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -78,6 +83,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property sections for groups
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -85,17 +91,18 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property sections for groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * The sections in the notebook. Read-only. Nullable.
-     * @return a OnenoteSection
+     * @return a {@link OnenoteSection}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public OnenoteSection get() {
@@ -104,20 +111,21 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The sections in the notebook. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a OnenoteSection
+     * @return a {@link OnenoteSection}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public OnenoteSection get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, OnenoteSection::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property sections in groups
      * @param body The request body
-     * @return a OnenoteSection
+     * @return a {@link OnenoteSection}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public OnenoteSection patch(@jakarta.annotation.Nonnull final OnenoteSection body) {
@@ -127,20 +135,20 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property sections in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a OnenoteSection
+     * @return a {@link OnenoteSection}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public OnenoteSection patch(@jakarta.annotation.Nonnull final OnenoteSection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, OnenoteSection::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property sections for groups
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -149,18 +157,18 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property sections for groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/onenote/notebooks/{notebook%2Did}/sections/{onenoteSection%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * The sections in the notebook. Read-only. Nullable.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -169,7 +177,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The sections in the notebook. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -181,7 +189,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property sections in groups
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final OnenoteSection body) {
@@ -191,12 +199,12 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property sections in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final OnenoteSection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/onenote/notebooks/{notebook%2Did}/sections/{onenoteSection%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -205,7 +213,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a OnenoteSectionItemRequestBuilder
+     * @return a {@link OnenoteSectionItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OnenoteSectionItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -235,7 +243,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

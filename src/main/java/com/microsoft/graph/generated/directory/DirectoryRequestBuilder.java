@@ -29,6 +29,7 @@ import java.util.Objects;
 public class DirectoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the administrativeUnits property of the microsoft.graph.directory entity.
+     * @return a {@link AdministrativeUnitsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AdministrativeUnitsRequestBuilder administrativeUnits() {
@@ -36,6 +37,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the attributeSets property of the microsoft.graph.directory entity.
+     * @return a {@link AttributeSetsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AttributeSetsRequestBuilder attributeSets() {
@@ -43,6 +45,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the customSecurityAttributeDefinitions property of the microsoft.graph.directory entity.
+     * @return a {@link CustomSecurityAttributeDefinitionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CustomSecurityAttributeDefinitionsRequestBuilder customSecurityAttributeDefinitions() {
@@ -50,6 +53,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the deletedItems property of the microsoft.graph.directory entity.
+     * @return a {@link DeletedItemsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeletedItemsRequestBuilder deletedItems() {
@@ -57,6 +61,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the deviceLocalCredentials property of the microsoft.graph.directory entity.
+     * @return a {@link DeviceLocalCredentialsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceLocalCredentialsRequestBuilder deviceLocalCredentials() {
@@ -64,6 +69,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the federationConfigurations property of the microsoft.graph.directory entity.
+     * @return a {@link FederationConfigurationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FederationConfigurationsRequestBuilder federationConfigurations() {
@@ -71,13 +77,14 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the onPremisesSynchronization property of the microsoft.graph.directory entity.
+     * @return a {@link OnPremisesSynchronizationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OnPremisesSynchronizationRequestBuilder onPremisesSynchronization() {
         return new OnPremisesSynchronizationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new DirectoryRequestBuilder and sets the default values.
+     * Instantiates a new {@link DirectoryRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -85,7 +92,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new DirectoryRequestBuilder and sets the default values.
+     * Instantiates a new {@link DirectoryRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -94,7 +101,8 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get directory
-     * @return a Directory
+     * @return a {@link Directory}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Directory get() {
@@ -103,20 +111,21 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Get directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Directory
+     * @return a {@link Directory}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Directory get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Directory::createFromDiscriminatorValue);
     }
     /**
      * Update directory
      * @param body The request body
-     * @return a Directory
+     * @return a {@link Directory}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Directory patch(@jakarta.annotation.Nonnull final Directory body) {
@@ -126,20 +135,20 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
      * Update directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Directory
+     * @return a {@link Directory}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Directory patch(@jakarta.annotation.Nonnull final Directory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Directory::createFromDiscriminatorValue);
     }
     /**
      * Get directory
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -148,7 +157,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Get directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -160,7 +169,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Update directory
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Directory body) {
@@ -170,12 +179,12 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
      * Update directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Directory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/directory", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -184,7 +193,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DirectoryRequestBuilder
+     * @return a {@link DirectoryRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DirectoryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -208,7 +217,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

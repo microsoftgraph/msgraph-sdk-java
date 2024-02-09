@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AttackSimulationOperation extends LongRunningOperation implements Parsable {
     /**
-     * Instantiates a new AttackSimulationOperation and sets the default values.
+     * Instantiates a new {@link AttackSimulationOperation} and sets the default values.
      */
     public AttackSimulationOperation() {
         super();
@@ -17,7 +17,7 @@ public class AttackSimulationOperation extends LongRunningOperation implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AttackSimulationOperation
+     * @return a {@link AttackSimulationOperation}
      */
     @jakarta.annotation.Nonnull
     public static AttackSimulationOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class AttackSimulationOperation extends LongRunningOperation implements P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class AttackSimulationOperation extends LongRunningOperation implements P
     }
     /**
      * Gets the percentageCompleted property value. Percentage of completion of the respective operation.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPercentageCompleted() {
@@ -46,7 +46,7 @@ public class AttackSimulationOperation extends LongRunningOperation implements P
     }
     /**
      * Gets the tenantId property value. Tenant identifier.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -54,7 +54,7 @@ public class AttackSimulationOperation extends LongRunningOperation implements P
     }
     /**
      * Gets the type property value. The attack simulation operation type. Possible values are: createSimulation, updateSimulation, unknownFutureValue.
-     * @return a AttackSimulationOperationType
+     * @return a {@link AttackSimulationOperationType}
      */
     @jakarta.annotation.Nullable
     public AttackSimulationOperationType getType() {

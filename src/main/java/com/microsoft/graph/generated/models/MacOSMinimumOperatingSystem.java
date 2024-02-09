@@ -21,7 +21,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new MacOSMinimumOperatingSystem and sets the default values.
+     * Instantiates a new {@link MacOSMinimumOperatingSystem} and sets the default values.
      */
     public MacOSMinimumOperatingSystem() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MacOSMinimumOperatingSystem
+     * @return a {@link MacOSMinimumOperatingSystem}
      */
     @jakarta.annotation.Nonnull
     public static MacOSMinimumOperatingSystem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -82,7 +82,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -90,7 +90,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the v10_10 property value. When TRUE, indicates OS X 10.10 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV1010() {
@@ -98,7 +98,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the v10_11 property value. When TRUE, indicates OS X 10.11 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV1011() {
@@ -106,7 +106,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the v10_12 property value. When TRUE, indicates macOS 10.12 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV1012() {
@@ -114,7 +114,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the v10_13 property value. When TRUE, indicates macOS 10.13 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV1013() {
@@ -122,7 +122,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the v10_14 property value. When TRUE, indicates macOS 10.14 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV1014() {
@@ -130,7 +130,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the v10_15 property value. When TRUE, indicates macOS 10.15 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV1015() {
@@ -138,7 +138,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the v10_7 property value. When TRUE, indicates Mac OS X 10.7 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV107() {
@@ -146,7 +146,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the v10_8 property value. When TRUE, indicates OS X 10.8 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV108() {
@@ -154,7 +154,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the v10_9 property value. When TRUE, indicates OS X 10.9 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV109() {
@@ -162,7 +162,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the v11_0 property value. When TRUE, indicates macOS 11.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV110() {
@@ -170,7 +170,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the v12_0 property value. When TRUE, indicates macOS 12.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV120() {
@@ -178,7 +178,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the v13_0 property value. When TRUE, indicates macOS 13.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV130() {

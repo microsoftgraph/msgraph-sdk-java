@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ParticipantLeftNotification extends Entity implements Parsable {
     /**
-     * Instantiates a new ParticipantLeftNotification and sets the default values.
+     * Instantiates a new {@link ParticipantLeftNotification} and sets the default values.
      */
     public ParticipantLeftNotification() {
         super();
@@ -17,7 +17,7 @@ public class ParticipantLeftNotification extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ParticipantLeftNotification
+     * @return a {@link ParticipantLeftNotification}
      */
     @jakarta.annotation.Nonnull
     public static ParticipantLeftNotification createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class ParticipantLeftNotification extends Entity implements Parsable {
     }
     /**
      * Gets the call property value. The call property
-     * @return a Call
+     * @return a {@link Call}
      */
     @jakarta.annotation.Nullable
     public Call getCall() {
@@ -34,7 +34,7 @@ public class ParticipantLeftNotification extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -45,7 +45,7 @@ public class ParticipantLeftNotification extends Entity implements Parsable {
     }
     /**
      * Gets the participantId property value. ID of the participant under the policy who has left the meeting.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getParticipantId() {

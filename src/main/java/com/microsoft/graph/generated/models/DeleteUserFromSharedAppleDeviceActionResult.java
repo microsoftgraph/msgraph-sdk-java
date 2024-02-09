@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionResult implements Parsable {
     /**
-     * Instantiates a new DeleteUserFromSharedAppleDeviceActionResult and sets the default values.
+     * Instantiates a new {@link DeleteUserFromSharedAppleDeviceActionResult} and sets the default values.
      */
     public DeleteUserFromSharedAppleDeviceActionResult() {
         super();
@@ -20,7 +20,7 @@ public class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionRes
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeleteUserFromSharedAppleDeviceActionResult
+     * @return a {@link DeleteUserFromSharedAppleDeviceActionResult}
      */
     @jakarta.annotation.Nonnull
     public static DeleteUserFromSharedAppleDeviceActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionRes
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -39,7 +39,7 @@ public class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionRes
     }
     /**
      * Gets the userPrincipalName property value. User principal name of the user to be deleted
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

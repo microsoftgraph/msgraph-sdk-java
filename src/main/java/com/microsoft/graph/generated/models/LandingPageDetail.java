@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LandingPageDetail extends Entity implements Parsable {
     /**
-     * Instantiates a new LandingPageDetail and sets the default values.
+     * Instantiates a new {@link LandingPageDetail} and sets the default values.
      */
     public LandingPageDetail() {
         super();
@@ -17,7 +17,7 @@ public class LandingPageDetail extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a LandingPageDetail
+     * @return a {@link LandingPageDetail}
      */
     @jakarta.annotation.Nonnull
     public static LandingPageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class LandingPageDetail extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. Landing page detail content.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContent() {
@@ -34,7 +34,7 @@ public class LandingPageDetail extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class LandingPageDetail extends Entity implements Parsable {
     }
     /**
      * Gets the isDefaultLangauge property value. Indicates whether this language detail is default for the landing page.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefaultLangauge() {
@@ -54,7 +54,7 @@ public class LandingPageDetail extends Entity implements Parsable {
     }
     /**
      * Gets the language property value. The content language for the landing page.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLanguage() {

@@ -26,6 +26,7 @@ import java.util.Objects;
 public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the availableProviderTypes method.
+     * @return a {@link AvailableProviderTypesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AvailableProviderTypesRequestBuilder availableProviderTypes() {
@@ -33,6 +34,7 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -41,7 +43,7 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the identityProviders property of the microsoft.graph.identityContainer entity.
      * @param identityProviderBaseId The unique identifier of identityProviderBase
-     * @return a IdentityProviderBaseItemRequestBuilder
+     * @return a {@link IdentityProviderBaseItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IdentityProviderBaseItemRequestBuilder byIdentityProviderBaseId(@jakarta.annotation.Nonnull final String identityProviderBaseId) {
@@ -51,7 +53,7 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
         return new IdentityProviderBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new IdentityProvidersRequestBuilder and sets the default values.
+     * Instantiates a new {@link IdentityProvidersRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +61,7 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/identityProviders{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new IdentityProvidersRequestBuilder and sets the default values.
+     * Instantiates a new {@link IdentityProvidersRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -68,7 +70,8 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a collection of identity provider resources that are configured for a tenant, and that are derived from identityProviderBase. For a Microsoft Entra tenant, the providers can be socialIdentityProviders or builtinIdentityProviders objects. For an Azure AD B2C, the providers can be socialIdentityProvider, or appleManagedIdentityProvider objects.
-     * @return a IdentityProviderBaseCollectionResponse
+     * @return a {@link IdentityProviderBaseCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-identityproviders?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -78,21 +81,22 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a collection of identity provider resources that are configured for a tenant, and that are derived from identityProviderBase. For a Microsoft Entra tenant, the providers can be socialIdentityProviders or builtinIdentityProviders objects. For an Azure AD B2C, the providers can be socialIdentityProvider, or appleManagedIdentityProvider objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a IdentityProviderBaseCollectionResponse
+     * @return a {@link IdentityProviderBaseCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-identityproviders?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IdentityProviderBaseCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityProviderBaseCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create an identity provider object that is of the type specified in the request body. Among the types of providers derived from identityProviderBase, you can currently create a socialIdentityProvider resource in Microsoft Entra ID. In Azure AD B2C, this operation can currently create a socialIdentityProvider, or an appleManagedIdentityProvider resource.
      * @param body The request body
-     * @return a IdentityProviderBase
+     * @return a {@link IdentityProviderBase}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-identityproviders?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -103,7 +107,8 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
      * Create an identity provider object that is of the type specified in the request body. Among the types of providers derived from identityProviderBase, you can currently create a socialIdentityProvider resource in Microsoft Entra ID. In Azure AD B2C, this operation can currently create a socialIdentityProvider, or an appleManagedIdentityProvider resource.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a IdentityProviderBase
+     * @return a {@link IdentityProviderBase}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-identityproviders?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -111,13 +116,12 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityProviderBase::createFromDiscriminatorValue);
     }
     /**
      * Get a collection of identity provider resources that are configured for a tenant, and that are derived from identityProviderBase. For a Microsoft Entra tenant, the providers can be socialIdentityProviders or builtinIdentityProviders objects. For an Azure AD B2C, the providers can be socialIdentityProvider, or appleManagedIdentityProvider objects.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -126,7 +130,7 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a collection of identity provider resources that are configured for a tenant, and that are derived from identityProviderBase. For a Microsoft Entra tenant, the providers can be socialIdentityProviders or builtinIdentityProviders objects. For an Azure AD B2C, the providers can be socialIdentityProvider, or appleManagedIdentityProvider objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
     /**
      * Create an identity provider object that is of the type specified in the request body. Among the types of providers derived from identityProviderBase, you can currently create a socialIdentityProvider resource in Microsoft Entra ID. In Azure AD B2C, this operation can currently create a socialIdentityProvider, or an appleManagedIdentityProvider resource.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final IdentityProviderBase body) {
@@ -148,12 +152,12 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
      * Create an identity provider object that is of the type specified in the request body. Among the types of providers derived from identityProviderBase, you can currently create a socialIdentityProvider resource in Microsoft Entra ID. In Azure AD B2C, this operation can currently create a socialIdentityProvider, or an appleManagedIdentityProvider resource.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final IdentityProviderBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/identity/identityProviders", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -162,7 +166,7 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a IdentityProvidersRequestBuilder
+     * @return a {@link IdentityProvidersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IdentityProvidersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -216,7 +220,7 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

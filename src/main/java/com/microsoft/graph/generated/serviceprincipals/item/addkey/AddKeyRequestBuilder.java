@@ -20,7 +20,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AddKeyRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new AddKeyRequestBuilder and sets the default values.
+     * Instantiates a new {@link AddKeyRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -28,7 +28,7 @@ public class AddKeyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/addKey", pathParameters);
     }
     /**
-     * Instantiates a new AddKeyRequestBuilder and sets the default values.
+     * Instantiates a new {@link AddKeyRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -38,7 +38,8 @@ public class AddKeyRequestBuilder extends BaseRequestBuilder {
     /**
      * Adds a key credential to a servicePrincipal. This method along with removeKey can be used by a servicePrincipal to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.  ServicePrincipals that dont have any existing valid certificates (i.e.: no certificates have been added yet, or all certificates have expired), wont be able to use this service action. Update servicePrincipal can be used to perform an update instead.
      * @param body The request body
-     * @return a KeyCredential
+     * @return a {@link KeyCredential}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-addkey?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -49,7 +50,8 @@ public class AddKeyRequestBuilder extends BaseRequestBuilder {
      * Adds a key credential to a servicePrincipal. This method along with removeKey can be used by a servicePrincipal to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.  ServicePrincipals that dont have any existing valid certificates (i.e.: no certificates have been added yet, or all certificates have expired), wont be able to use this service action. Update servicePrincipal can be used to perform an update instead.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a KeyCredential
+     * @return a {@link KeyCredential}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-addkey?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -57,14 +59,13 @@ public class AddKeyRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, KeyCredential::createFromDiscriminatorValue);
     }
     /**
      * Adds a key credential to a servicePrincipal. This method along with removeKey can be used by a servicePrincipal to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.  ServicePrincipals that dont have any existing valid certificates (i.e.: no certificates have been added yet, or all certificates have expired), wont be able to use this service action. Update servicePrincipal can be used to perform an update instead.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AddKeyPostRequestBody body) {
@@ -74,7 +75,7 @@ public class AddKeyRequestBuilder extends BaseRequestBuilder {
      * Adds a key credential to a servicePrincipal. This method along with removeKey can be used by a servicePrincipal to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.  ServicePrincipals that dont have any existing valid certificates (i.e.: no certificates have been added yet, or all certificates have expired), wont be able to use this service action. Update servicePrincipal can be used to perform an update instead.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AddKeyPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -88,7 +89,7 @@ public class AddKeyRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AddKeyRequestBuilder
+     * @return a {@link AddKeyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AddKeyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

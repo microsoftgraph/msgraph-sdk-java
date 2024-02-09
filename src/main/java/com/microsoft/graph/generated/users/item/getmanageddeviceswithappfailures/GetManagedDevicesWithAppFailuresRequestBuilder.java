@@ -20,7 +20,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetManagedDevicesWithAppFailuresRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new GetManagedDevicesWithAppFailuresRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetManagedDevicesWithAppFailuresRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -28,7 +28,7 @@ public class GetManagedDevicesWithAppFailuresRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/getManagedDevicesWithAppFailures(){?%24count,%24filter,%24search,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new GetManagedDevicesWithAppFailuresRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetManagedDevicesWithAppFailuresRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,7 +37,8 @@ public class GetManagedDevicesWithAppFailuresRequestBuilder extends BaseRequestB
     }
     /**
      * Retrieves the list of devices with failed apps
-     * @return a GetManagedDevicesWithAppFailuresGetResponse
+     * @return a {@link GetManagedDevicesWithAppFailuresGetResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GetManagedDevicesWithAppFailuresGetResponse get() {
@@ -46,19 +47,19 @@ public class GetManagedDevicesWithAppFailuresRequestBuilder extends BaseRequestB
     /**
      * Retrieves the list of devices with failed apps
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a GetManagedDevicesWithAppFailuresGetResponse
+     * @return a {@link GetManagedDevicesWithAppFailuresGetResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GetManagedDevicesWithAppFailuresGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, GetManagedDevicesWithAppFailuresGetResponse::createFromDiscriminatorValue);
     }
     /**
      * Retrieves the list of devices with failed apps
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -67,7 +68,7 @@ public class GetManagedDevicesWithAppFailuresRequestBuilder extends BaseRequestB
     /**
      * Retrieves the list of devices with failed apps
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +80,7 @@ public class GetManagedDevicesWithAppFailuresRequestBuilder extends BaseRequestB
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GetManagedDevicesWithAppFailuresRequestBuilder
+     * @return a {@link GetManagedDevicesWithAppFailuresRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetManagedDevicesWithAppFailuresRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -118,7 +119,7 @@ public class GetManagedDevicesWithAppFailuresRequestBuilder extends BaseRequestB
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

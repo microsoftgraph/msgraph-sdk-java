@@ -18,7 +18,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new OnenotePatchContentCommand and sets the default values.
+     * Instantiates a new {@link OnenotePatchContentCommand} and sets the default values.
      */
     public OnenotePatchContentCommand() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, BackedM
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnenotePatchContentCommand
+     * @return a {@link OnenotePatchContentCommand}
      */
     @jakarta.annotation.Nonnull
     public static OnenotePatchContentCommand createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the action property value. The action property
-     * @return a OnenotePatchActionType
+     * @return a {@link OnenotePatchActionType}
      */
     @jakarta.annotation.Nullable
     public OnenotePatchActionType getAction() {
@@ -44,7 +44,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -57,7 +57,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the content property value. A string of well-formed HTML to add to the page, and any image or file binary data. If the content contains binary data, the request must be sent using the multipart/form-data content type with a 'Commands' part.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContent() {
@@ -73,7 +73,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, BackedM
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -87,7 +87,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -95,7 +95,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the position property value. The location to add the supplied content, relative to the target element. The possible values are: after (default) or before.
-     * @return a OnenotePatchInsertPosition
+     * @return a {@link OnenotePatchInsertPosition}
      */
     @jakarta.annotation.Nullable
     public OnenotePatchInsertPosition getPosition() {
@@ -103,7 +103,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the target property value. The element to update. Must be the #<data-id> or the generated <id> of the element, or the body or title keyword.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTarget() {

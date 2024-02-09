@@ -19,7 +19,7 @@ public class AssignedLicense implements AdditionalDataHolder, BackedModel, Parsa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AssignedLicense and sets the default values.
+     * Instantiates a new {@link AssignedLicense} and sets the default values.
      */
     public AssignedLicense() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class AssignedLicense implements AdditionalDataHolder, BackedModel, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AssignedLicense
+     * @return a {@link AssignedLicense}
      */
     @jakarta.annotation.Nonnull
     public static AssignedLicense createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class AssignedLicense implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class AssignedLicense implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class AssignedLicense implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the disabledPlans property value. A collection of the unique identifiers for plans that have been disabled.
-     * @return a java.util.List<UUID>
+     * @return a {@link java.util.List<UUID>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UUID> getDisabledPlans() {
@@ -66,7 +66,7 @@ public class AssignedLicense implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class AssignedLicense implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -86,7 +86,7 @@ public class AssignedLicense implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the skuId property value. The unique identifier for the SKU.
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getSkuId() {

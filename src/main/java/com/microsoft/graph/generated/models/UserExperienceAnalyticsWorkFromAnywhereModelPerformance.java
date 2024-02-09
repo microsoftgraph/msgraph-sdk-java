@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity implements Parsable {
     /**
-     * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereModelPerformance and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsWorkFromAnywhereModelPerformance} and sets the default values.
      */
     public UserExperienceAnalyticsWorkFromAnywhereModelPerformance() {
         super();
@@ -20,7 +20,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsWorkFromAnywhereModelPerformance
+     * @return a {@link UserExperienceAnalyticsWorkFromAnywhereModelPerformance}
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsWorkFromAnywhereModelPerformance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
     }
     /**
      * Gets the cloudIdentityScore property value. The cloud identity score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getCloudIdentityScore() {
@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
     }
     /**
      * Gets the cloudManagementScore property value. The cloud management score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getCloudManagementScore() {
@@ -45,7 +45,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
     }
     /**
      * Gets the cloudProvisioningScore property value. The cloud provisioning score of the device model.  Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getCloudProvisioningScore() {
@@ -53,7 +53,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -71,7 +71,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
     }
     /**
      * Gets the healthStatus property value. The healthStatus property
-     * @return a UserExperienceAnalyticsHealthState
+     * @return a {@link UserExperienceAnalyticsHealthState}
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsHealthState getHealthStatus() {
@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
     }
     /**
      * Gets the manufacturer property value. The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
@@ -87,7 +87,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
     }
     /**
      * Gets the model property value. The model name of the device. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getModel() {
@@ -95,7 +95,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
     }
     /**
      * Gets the modelDeviceCount property value. The devices count for the model. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getModelDeviceCount() {
@@ -103,7 +103,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
     }
     /**
      * Gets the windowsScore property value. The window score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getWindowsScore() {
@@ -111,7 +111,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
     }
     /**
      * Gets the workFromAnywhereScore property value. The work from anywhere score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getWorkFromAnywhereScore() {

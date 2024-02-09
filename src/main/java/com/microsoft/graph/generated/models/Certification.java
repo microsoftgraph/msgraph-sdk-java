@@ -19,7 +19,7 @@ public class Certification implements AdditionalDataHolder, BackedModel, Parsabl
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new Certification and sets the default values.
+     * Instantiates a new {@link Certification} and sets the default values.
      */
     public Certification() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class Certification implements AdditionalDataHolder, BackedModel, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Certification
+     * @return a {@link Certification}
      */
     @jakarta.annotation.Nonnull
     public static Certification createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class Certification implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class Certification implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class Certification implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the certificationDetailsUrl property value. URL that shows certification details for the application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCertificationDetailsUrl() {
@@ -66,7 +66,7 @@ public class Certification implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the certificationExpirationDateTime property value. The timestamp when the current certification for the application expires.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCertificationExpirationDateTime() {
@@ -74,7 +74,7 @@ public class Certification implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -89,7 +89,7 @@ public class Certification implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the isCertifiedByMicrosoft property value. Indicates whether the application is certified by Microsoft.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCertifiedByMicrosoft() {
@@ -97,7 +97,7 @@ public class Certification implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the isPublisherAttested property value. Indicates whether the application has been self-attested by the application developer or the publisher.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPublisherAttested() {
@@ -105,7 +105,7 @@ public class Certification implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the lastCertificationDateTime property value. The timestamp when the certification for the application was most recently added or updated.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastCertificationDateTime() {
@@ -113,7 +113,7 @@ public class Certification implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

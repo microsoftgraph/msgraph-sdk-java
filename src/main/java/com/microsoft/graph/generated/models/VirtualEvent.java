@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VirtualEvent extends Entity implements Parsable {
     /**
-     * Instantiates a new VirtualEvent and sets the default values.
+     * Instantiates a new {@link VirtualEvent} and sets the default values.
      */
     public VirtualEvent() {
         super();
@@ -17,7 +17,7 @@ public class VirtualEvent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a VirtualEvent
+     * @return a {@link VirtualEvent}
      */
     @jakarta.annotation.Nonnull
     public static VirtualEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -33,7 +33,7 @@ public class VirtualEvent extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. Identity information for the creator of the virtual event. Inherited from virtualEvent.
-     * @return a CommunicationsIdentitySet
+     * @return a {@link CommunicationsIdentitySet}
      */
     @jakarta.annotation.Nullable
     public CommunicationsIdentitySet getCreatedBy() {
@@ -41,7 +41,7 @@ public class VirtualEvent extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description of the virtual event.
-     * @return a ItemBody
+     * @return a {@link ItemBody}
      */
     @jakarta.annotation.Nullable
     public ItemBody getDescription() {
@@ -49,7 +49,7 @@ public class VirtualEvent extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name of the virtual event.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -57,7 +57,7 @@ public class VirtualEvent extends Entity implements Parsable {
     }
     /**
      * Gets the endDateTime property value. End time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows.
-     * @return a DateTimeTimeZone
+     * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getEndDateTime() {
@@ -65,7 +65,7 @@ public class VirtualEvent extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -81,7 +81,7 @@ public class VirtualEvent extends Entity implements Parsable {
     }
     /**
      * Gets the sessions property value. Sessions for the virtual event.
-     * @return a java.util.List<VirtualEventSession>
+     * @return a {@link java.util.List<VirtualEventSession>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<VirtualEventSession> getSessions() {
@@ -89,7 +89,7 @@ public class VirtualEvent extends Entity implements Parsable {
     }
     /**
      * Gets the startDateTime property value. Start time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows.
-     * @return a DateTimeTimeZone
+     * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getStartDateTime() {
@@ -97,7 +97,7 @@ public class VirtualEvent extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Status of the virtual event. The possible values are: draft, published, canceled, unknownFutureValue.
-     * @return a VirtualEventStatus
+     * @return a {@link VirtualEventStatus}
      */
     @jakarta.annotation.Nullable
     public VirtualEventStatus getStatus() {

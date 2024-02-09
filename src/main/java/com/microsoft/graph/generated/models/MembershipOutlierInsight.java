@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MembershipOutlierInsight extends GovernanceInsight implements Parsable {
     /**
-     * Instantiates a new MembershipOutlierInsight and sets the default values.
+     * Instantiates a new {@link MembershipOutlierInsight} and sets the default values.
      */
     public MembershipOutlierInsight() {
         super();
@@ -18,7 +18,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MembershipOutlierInsight
+     * @return a {@link MembershipOutlierInsight}
      */
     @jakarta.annotation.Nonnull
     public static MembershipOutlierInsight createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
     }
     /**
      * Gets the container property value. Navigation link to the container directory object. For example, to a group.
-     * @return a DirectoryObject
+     * @return a {@link DirectoryObject}
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getContainer() {
@@ -35,7 +35,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
     }
     /**
      * Gets the containerId property value. Indicates the identifier of the container, for example, a group ID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContainerId() {
@@ -43,7 +43,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -59,7 +59,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
     }
     /**
      * Gets the lastModifiedBy property value. Navigation link to a member object who modified the record. For example, to a user.
-     * @return a User
+     * @return a {@link User}
      */
     @jakarta.annotation.Nullable
     public User getLastModifiedBy() {
@@ -67,7 +67,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
     }
     /**
      * Gets the member property value. Navigation link to a member object. For example, to a user.
-     * @return a DirectoryObject
+     * @return a {@link DirectoryObject}
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getMember() {
@@ -75,7 +75,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
     }
     /**
      * Gets the memberId property value. Indicates the identifier of the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMemberId() {
@@ -83,7 +83,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
     }
     /**
      * Gets the outlierContainerType property value. The outlierContainerType property
-     * @return a OutlierContainerType
+     * @return a {@link OutlierContainerType}
      */
     @jakarta.annotation.Nullable
     public OutlierContainerType getOutlierContainerType() {
@@ -91,7 +91,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
     }
     /**
      * Gets the outlierMemberType property value. The outlierMemberType property
-     * @return a OutlierMemberType
+     * @return a {@link OutlierMemberType}
      */
     @jakarta.annotation.Nullable
     public OutlierMemberType getOutlierMemberType() {

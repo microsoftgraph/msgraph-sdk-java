@@ -21,7 +21,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new TeamRequestBuilder and sets the default values.
+     * Instantiates a new {@link TeamRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -29,7 +29,7 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/privacy/subjectRightsRequests/{subjectRightsRequest%2Did}/team{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new TeamRequestBuilder and sets the default values.
+     * Instantiates a new {@link TeamRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -38,7 +38,8 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Information about the Microsoft Teams team that was created for the request.
-     * @return a Team
+     * @return a {@link Team}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
@@ -50,7 +51,8 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
     /**
      * Information about the Microsoft Teams team that was created for the request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Team
+     * @return a {@link Team}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
@@ -59,13 +61,12 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
     public Team get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Team::createFromDiscriminatorValue);
     }
     /**
      * Information about the Microsoft Teams team that was created for the request.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
@@ -77,7 +78,7 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
     /**
      * Information about the Microsoft Teams team that was created for the request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
@@ -92,7 +93,7 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a TeamRequestBuilder
+     * @return a {@link TeamRequestBuilder}
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
@@ -119,7 +120,7 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

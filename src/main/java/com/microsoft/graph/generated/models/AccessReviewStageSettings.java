@@ -18,7 +18,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AccessReviewStageSettings and sets the default values.
+     * Instantiates a new {@link AccessReviewStageSettings} and sets the default values.
      */
     public AccessReviewStageSettings() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, BackedMo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessReviewStageSettings
+     * @return a {@link AccessReviewStageSettings}
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewStageSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the decisionsThatWillMoveToNextStage property value. Indicate which decisions will go to the next stage. Can be a subset of Approve, Deny, Recommendation, or NotReviewed. If not provided, all decisions will go to the next stage. Optional.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDecisionsThatWillMoveToNextStage() {
@@ -65,7 +65,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the dependsOn property value. Defines the sequential or parallel order of the stages and depends on the stageId. Only sequential stages are currently supported. For example, if stageId is 2, then dependsOn must be 1. If stageId is 1, don't specify dependsOn. Required if stageId isn't 1.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDependsOn() {
@@ -73,7 +73,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the durationInDays property value. The duration of the stage. Required.  NOTE: The cumulative value of this property across all stages  1. Will override the instanceDurationInDays setting on the accessReviewScheduleDefinition object. 2. Can't exceed the length of one recurrence. That is, if the review recurs weekly, the cumulative durationInDays can't exceed 7.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDurationInDays() {
@@ -81,7 +81,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the fallbackReviewers property value. If provided, the fallback reviewers are asked to complete a review if the primary reviewers don't exist. For example, if managers are selected as reviewers and a principal under review doesn't have a manager in Microsoft Entra ID, the fallback reviewers are asked to review that principal. NOTE: The value of this property overrides the corresponding setting on the accessReviewScheduleDefinition object.
-     * @return a java.util.List<AccessReviewReviewerScope>
+     * @return a {@link java.util.List<AccessReviewReviewerScope>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewReviewerScope> getFallbackReviewers() {
@@ -89,7 +89,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, BackedMo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -107,7 +107,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -115,7 +115,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the recommendationInsightSettings property value. The recommendationInsightSettings property
-     * @return a java.util.List<AccessReviewRecommendationInsightSetting>
+     * @return a {@link java.util.List<AccessReviewRecommendationInsightSetting>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewRecommendationInsightSetting> getRecommendationInsightSettings() {
@@ -123,7 +123,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the recommendationsEnabled property value. Indicates whether showing recommendations to reviewers is enabled. Required. NOTE: The value of this property overrides override the corresponding setting on the accessReviewScheduleDefinition object.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRecommendationsEnabled() {
@@ -131,7 +131,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the reviewers property value. Defines who the reviewers are. If none is specified, the review is a self-review (users review their own access).  For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API. NOTE: The value of this property overrides the corresponding setting on the accessReviewScheduleDefinition.
-     * @return a java.util.List<AccessReviewReviewerScope>
+     * @return a {@link java.util.List<AccessReviewReviewerScope>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewReviewerScope> getReviewers() {
@@ -139,7 +139,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the stageId property value. Unique identifier of the accessReviewStageSettings object. The stageId is used by the dependsOn property to indicate the order of the stages. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStageId() {

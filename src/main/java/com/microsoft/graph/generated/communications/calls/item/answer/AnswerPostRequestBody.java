@@ -21,7 +21,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AnswerPostRequestBody and sets the default values.
+     * Instantiates a new {@link AnswerPostRequestBody} and sets the default values.
      */
     public AnswerPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel,
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AnswerPostRequestBody
+     * @return a {@link AnswerPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static AnswerPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the acceptedModalities property value. The acceptedModalities property
-     * @return a java.util.List<Modality>
+     * @return a {@link java.util.List<Modality>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Modality> getAcceptedModalities() {
@@ -47,7 +47,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -60,7 +60,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -68,7 +68,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the callbackUri property value. The callbackUri property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCallbackUri() {
@@ -76,7 +76,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the callOptions property value. The callOptions property
-     * @return a IncomingCallOptions
+     * @return a {@link IncomingCallOptions}
      */
     @jakarta.annotation.Nullable
     public IncomingCallOptions getCallOptions() {
@@ -84,7 +84,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -98,7 +98,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the mediaConfig property value. The mediaConfig property
-     * @return a MediaConfig
+     * @return a {@link MediaConfig}
      */
     @jakarta.annotation.Nullable
     public MediaConfig getMediaConfig() {
@@ -106,7 +106,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the participantCapacity property value. The participantCapacity property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getParticipantCapacity() {

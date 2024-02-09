@@ -18,7 +18,7 @@ public class SignInStatus implements AdditionalDataHolder, BackedModel, Parsable
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SignInStatus and sets the default values.
+     * Instantiates a new {@link SignInStatus} and sets the default values.
      */
     public SignInStatus() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class SignInStatus implements AdditionalDataHolder, BackedModel, Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SignInStatus
+     * @return a {@link SignInStatus}
      */
     @jakarta.annotation.Nonnull
     public static SignInStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class SignInStatus implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class SignInStatus implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the additionalDetails property value. Provides additional details on the sign-in activity
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAdditionalDetails() {
@@ -57,7 +57,7 @@ public class SignInStatus implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class SignInStatus implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the errorCode property value. Provides the 5-6 digit error code that's generated during a sign-in failure. Check out the list of error codes and messages.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCode() {
@@ -73,7 +73,7 @@ public class SignInStatus implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the failureReason property value. Provides the error message or the reason for failure for the corresponding sign-in activity. Check out the list of error codes and messages.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFailureReason() {
@@ -81,7 +81,7 @@ public class SignInStatus implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -94,7 +94,7 @@ public class SignInStatus implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

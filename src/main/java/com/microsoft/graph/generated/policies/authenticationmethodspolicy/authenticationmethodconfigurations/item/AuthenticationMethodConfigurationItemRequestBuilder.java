@@ -21,7 +21,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new AuthenticationMethodConfigurationItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link AuthenticationMethodConfigurationItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -29,7 +29,7 @@ public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/policies/authenticationMethodsPolicy/authenticationMethodConfigurations/{authenticationMethodConfiguration%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new AuthenticationMethodConfigurationItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link AuthenticationMethodConfigurationItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -38,6 +38,7 @@ public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseReq
     }
     /**
      * Delete navigation property authenticationMethodConfigurations for policies
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -45,17 +46,18 @@ public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseReq
     /**
      * Delete navigation property authenticationMethodConfigurations for policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
-     * @return a AuthenticationMethodConfiguration
+     * @return a {@link AuthenticationMethodConfiguration}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodConfiguration get() {
@@ -64,20 +66,21 @@ public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseReq
     /**
      * Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AuthenticationMethodConfiguration
+     * @return a {@link AuthenticationMethodConfiguration}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodConfiguration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationMethodConfiguration::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property authenticationMethodConfigurations in policies
      * @param body The request body
-     * @return a AuthenticationMethodConfiguration
+     * @return a {@link AuthenticationMethodConfiguration}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodConfiguration patch(@jakarta.annotation.Nonnull final AuthenticationMethodConfiguration body) {
@@ -87,20 +90,20 @@ public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseReq
      * Update the navigation property authenticationMethodConfigurations in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AuthenticationMethodConfiguration
+     * @return a {@link AuthenticationMethodConfiguration}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodConfiguration patch(@jakarta.annotation.Nonnull final AuthenticationMethodConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationMethodConfiguration::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property authenticationMethodConfigurations for policies
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -109,18 +112,18 @@ public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseReq
     /**
      * Delete navigation property authenticationMethodConfigurations for policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/policies/authenticationMethodsPolicy/authenticationMethodConfigurations/{authenticationMethodConfiguration%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -129,7 +132,7 @@ public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseReq
     /**
      * Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -141,7 +144,7 @@ public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseReq
     /**
      * Update the navigation property authenticationMethodConfigurations in policies
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AuthenticationMethodConfiguration body) {
@@ -151,12 +154,12 @@ public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseReq
      * Update the navigation property authenticationMethodConfigurations in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AuthenticationMethodConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/policies/authenticationMethodsPolicy/authenticationMethodConfigurations/{authenticationMethodConfiguration%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -165,7 +168,7 @@ public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseReq
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AuthenticationMethodConfigurationItemRequestBuilder
+     * @return a {@link AuthenticationMethodConfigurationItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AuthenticationMethodConfigurationItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -195,7 +198,7 @@ public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseReq
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

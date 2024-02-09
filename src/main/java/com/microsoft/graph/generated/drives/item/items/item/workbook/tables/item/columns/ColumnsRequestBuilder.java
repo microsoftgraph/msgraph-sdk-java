@@ -27,6 +27,7 @@ import java.util.Objects;
 public class ColumnsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the add method.
+     * @return a {@link AddRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AddRequestBuilder add() {
@@ -34,6 +35,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the count method.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -42,7 +44,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the columns property of the microsoft.graph.workbookTable entity.
      * @param workbookTableColumnId The unique identifier of workbookTableColumn
-     * @return a WorkbookTableColumnItemRequestBuilder
+     * @return a {@link WorkbookTableColumnItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WorkbookTableColumnItemRequestBuilder byWorkbookTableColumnId(@jakarta.annotation.Nonnull final String workbookTableColumnId) {
@@ -52,7 +54,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return new WorkbookTableColumnItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new ColumnsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ColumnsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +62,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/{workbookTable%2Did}/columns{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new ColumnsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ColumnsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -69,7 +71,8 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of tablecolumn objects.
-     * @return a WorkbookTableColumnCollectionResponse
+     * @return a {@link WorkbookTableColumnCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/table-list-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -79,21 +82,21 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of tablecolumn objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WorkbookTableColumnCollectionResponse
+     * @return a {@link WorkbookTableColumnCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/table-list-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookTableColumnCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookTableColumnCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Provides operations to call the itemAt method.
      * @param index Usage: index={index}
-     * @return a ItemAtWithIndexRequestBuilder
+     * @return a {@link ItemAtWithIndexRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ItemAtWithIndexRequestBuilder itemAtWithIndex(@jakarta.annotation.Nonnull final Integer index) {
@@ -103,7 +106,8 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
     /**
      * Use this API to create a new TableColumn.
      * @param body The request body
-     * @return a WorkbookTableColumn
+     * @return a {@link WorkbookTableColumn}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/table-post-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -114,7 +118,8 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
      * Use this API to create a new TableColumn.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WorkbookTableColumn
+     * @return a {@link WorkbookTableColumn}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/table-post-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -122,13 +127,12 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookTableColumn::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of tablecolumn objects.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -137,7 +141,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of tablecolumn objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -149,7 +153,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
     /**
      * Use this API to create a new TableColumn.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final WorkbookTableColumn body) {
@@ -159,12 +163,12 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
      * Use this API to create a new TableColumn.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final WorkbookTableColumn body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/{workbookTable%2Did}/columns", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -173,7 +177,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ColumnsRequestBuilder
+     * @return a {@link ColumnsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ColumnsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -227,7 +231,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

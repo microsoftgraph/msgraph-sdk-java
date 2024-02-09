@@ -25,6 +25,7 @@ import java.util.Objects;
 public class MobileAppConfigurationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class MobileAppConfigurationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the mobileAppConfigurations property of the microsoft.graph.deviceAppManagement entity.
      * @param managedDeviceMobileAppConfigurationId The unique identifier of managedDeviceMobileAppConfiguration
-     * @return a ManagedDeviceMobileAppConfigurationItemRequestBuilder
+     * @return a {@link ManagedDeviceMobileAppConfigurationItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagedDeviceMobileAppConfigurationItemRequestBuilder byManagedDeviceMobileAppConfigurationId(@jakarta.annotation.Nonnull final String managedDeviceMobileAppConfigurationId) {
@@ -43,7 +44,7 @@ public class MobileAppConfigurationsRequestBuilder extends BaseRequestBuilder {
         return new ManagedDeviceMobileAppConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new MobileAppConfigurationsRequestBuilder and sets the default values.
+     * Instantiates a new {@link MobileAppConfigurationsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class MobileAppConfigurationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileAppConfigurations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new MobileAppConfigurationsRequestBuilder and sets the default values.
+     * Instantiates a new {@link MobileAppConfigurationsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,32 +60,34 @@ public class MobileAppConfigurationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileAppConfigurations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List properties and relationships of the managedDeviceMobileAppConfiguration objects.
-     * @return a ManagedDeviceMobileAppConfigurationCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfiguration-list?view=graph-rest-1.0">Find more info here</a>
+     * List properties and relationships of the iosMobileAppConfiguration objects.
+     * @return a {@link ManagedDeviceMobileAppConfigurationCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosmobileappconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceMobileAppConfigurationCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the managedDeviceMobileAppConfiguration objects.
+     * List properties and relationships of the iosMobileAppConfiguration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ManagedDeviceMobileAppConfigurationCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfiguration-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a {@link ManagedDeviceMobileAppConfigurationCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosmobileappconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceMobileAppConfigurationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ManagedDeviceMobileAppConfigurationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new iosMobileAppConfiguration object.
      * @param body The request body
-     * @return a ManagedDeviceMobileAppConfiguration
+     * @return a {@link ManagedDeviceMobileAppConfiguration}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosmobileappconfiguration-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -95,7 +98,8 @@ public class MobileAppConfigurationsRequestBuilder extends BaseRequestBuilder {
      * Create a new iosMobileAppConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ManagedDeviceMobileAppConfiguration
+     * @return a {@link ManagedDeviceMobileAppConfiguration}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosmobileappconfiguration-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -103,22 +107,21 @@ public class MobileAppConfigurationsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ManagedDeviceMobileAppConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * List properties and relationships of the managedDeviceMobileAppConfiguration objects.
-     * @return a RequestInformation
+     * List properties and relationships of the iosMobileAppConfiguration objects.
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the managedDeviceMobileAppConfiguration objects.
+     * List properties and relationships of the iosMobileAppConfiguration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +133,7 @@ public class MobileAppConfigurationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new iosMobileAppConfiguration object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfiguration body) {
@@ -140,12 +143,12 @@ public class MobileAppConfigurationsRequestBuilder extends BaseRequestBuilder {
      * Create a new iosMobileAppConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceAppManagement/mobileAppConfigurations", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -154,7 +157,7 @@ public class MobileAppConfigurationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a MobileAppConfigurationsRequestBuilder
+     * @return a {@link MobileAppConfigurationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MobileAppConfigurationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -162,7 +165,7 @@ public class MobileAppConfigurationsRequestBuilder extends BaseRequestBuilder {
         return new MobileAppConfigurationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the managedDeviceMobileAppConfiguration objects.
+     * List properties and relationships of the iosMobileAppConfiguration objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
@@ -208,7 +211,7 @@ public class MobileAppConfigurationsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -25,6 +25,7 @@ import java.util.Objects;
 public class TeamworkRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the associatedTeams property of the microsoft.graph.userTeamwork entity.
+     * @return a {@link AssociatedTeamsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssociatedTeamsRequestBuilder associatedTeams() {
@@ -32,6 +33,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the installedApps property of the microsoft.graph.userTeamwork entity.
+     * @return a {@link InstalledAppsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public InstalledAppsRequestBuilder installedApps() {
@@ -39,13 +41,14 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the sendActivityNotification method.
+     * @return a {@link SendActivityNotificationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SendActivityNotificationRequestBuilder sendActivityNotification() {
         return new SendActivityNotificationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new TeamworkRequestBuilder and sets the default values.
+     * Instantiates a new {@link TeamworkRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -53,7 +56,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/teamwork{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new TeamworkRequestBuilder and sets the default values.
+     * Instantiates a new {@link TeamworkRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -62,6 +65,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property teamwork for users
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -69,17 +73,18 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property teamwork for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * A container for Microsoft Teams features available for the user. Read-only. Nullable.
-     * @return a UserTeamwork
+     * @return a {@link UserTeamwork}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserTeamwork get() {
@@ -88,20 +93,21 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     /**
      * A container for Microsoft Teams features available for the user. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UserTeamwork
+     * @return a {@link UserTeamwork}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserTeamwork get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UserTeamwork::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property teamwork in users
      * @param body The request body
-     * @return a UserTeamwork
+     * @return a {@link UserTeamwork}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserTeamwork patch(@jakarta.annotation.Nonnull final UserTeamwork body) {
@@ -111,20 +117,20 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property teamwork in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UserTeamwork
+     * @return a {@link UserTeamwork}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserTeamwork patch(@jakarta.annotation.Nonnull final UserTeamwork body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UserTeamwork::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property teamwork for users
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -133,18 +139,18 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property teamwork for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/users/{user%2Did}/teamwork", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * A container for Microsoft Teams features available for the user. Read-only. Nullable.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -153,7 +159,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     /**
      * A container for Microsoft Teams features available for the user. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -165,7 +171,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property teamwork in users
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UserTeamwork body) {
@@ -175,12 +181,12 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property teamwork in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UserTeamwork body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/users/{user%2Did}/teamwork", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -189,7 +195,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a TeamworkRequestBuilder
+     * @return a {@link TeamworkRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TeamworkRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -219,7 +225,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

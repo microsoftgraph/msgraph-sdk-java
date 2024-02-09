@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PositiveReinforcementNotification extends BaseEndUserNotification implements Parsable {
     /**
-     * Instantiates a new PositiveReinforcementNotification and sets the default values.
+     * Instantiates a new {@link PositiveReinforcementNotification} and sets the default values.
      */
     public PositiveReinforcementNotification() {
         super();
@@ -18,7 +18,7 @@ public class PositiveReinforcementNotification extends BaseEndUserNotification i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PositiveReinforcementNotification
+     * @return a {@link PositiveReinforcementNotification}
      */
     @jakarta.annotation.Nonnull
     public static PositiveReinforcementNotification createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class PositiveReinforcementNotification extends BaseEndUserNotification i
     }
     /**
      * Gets the deliveryPreference property value. Delivery preference. Possible values are: unknown, deliverImmedietly, deliverAfterCampaignEnd, unknownFutureValue.
-     * @return a NotificationDeliveryPreference
+     * @return a {@link NotificationDeliveryPreference}
      */
     @jakarta.annotation.Nullable
     public NotificationDeliveryPreference getDeliveryPreference() {
@@ -35,7 +35,7 @@ public class PositiveReinforcementNotification extends BaseEndUserNotification i
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

@@ -23,13 +23,14 @@ import java.util.Objects;
 public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the sync method.
+     * @return a {@link SyncRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SyncRequestBuilder sync() {
         return new SyncRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new DeviceManagementExchangeConnectorItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link DeviceManagementExchangeConnectorItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,7 +38,7 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/deviceManagement/exchangeConnectors/{deviceManagementExchangeConnector%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new DeviceManagementExchangeConnectorItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link DeviceManagementExchangeConnectorItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -46,6 +47,7 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
     }
     /**
      * Deletes a deviceManagementExchangeConnector.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -54,18 +56,19 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
     /**
      * Deletes a deviceManagementExchangeConnector.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read properties and relationships of the deviceManagementExchangeConnector object.
-     * @return a DeviceManagementExchangeConnector
+     * @return a {@link DeviceManagementExchangeConnector}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -75,21 +78,22 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
     /**
      * Read properties and relationships of the deviceManagementExchangeConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceManagementExchangeConnector
+     * @return a {@link DeviceManagementExchangeConnector}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceManagementExchangeConnector get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementExchangeConnector::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of a deviceManagementExchangeConnector object.
      * @param body The request body
-     * @return a DeviceManagementExchangeConnector
+     * @return a {@link DeviceManagementExchangeConnector}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -100,7 +104,8 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
      * Update the properties of a deviceManagementExchangeConnector object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceManagementExchangeConnector
+     * @return a {@link DeviceManagementExchangeConnector}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -108,13 +113,12 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementExchangeConnector::createFromDiscriminatorValue);
     }
     /**
      * Deletes a deviceManagementExchangeConnector.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -123,18 +127,18 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
     /**
      * Deletes a deviceManagementExchangeConnector.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/deviceManagement/exchangeConnectors/{deviceManagementExchangeConnector%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Read properties and relationships of the deviceManagementExchangeConnector object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -143,7 +147,7 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
     /**
      * Read properties and relationships of the deviceManagementExchangeConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -155,7 +159,7 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
     /**
      * Update the properties of a deviceManagementExchangeConnector object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceManagementExchangeConnector body) {
@@ -165,12 +169,12 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
      * Update the properties of a deviceManagementExchangeConnector object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceManagementExchangeConnector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/deviceManagement/exchangeConnectors/{deviceManagementExchangeConnector%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -179,7 +183,7 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DeviceManagementExchangeConnectorItemRequestBuilder
+     * @return a {@link DeviceManagementExchangeConnectorItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceManagementExchangeConnectorItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -209,7 +213,7 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceBase implements Parsable {
     /**
-     * Instantiates a new UnifiedRoleAssignmentScheduleInstance and sets the default values.
+     * Instantiates a new {@link UnifiedRoleAssignmentScheduleInstance} and sets the default values.
      */
     public UnifiedRoleAssignmentScheduleInstance() {
         super();
@@ -18,7 +18,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnifiedRoleAssignmentScheduleInstance
+     * @return a {@link UnifiedRoleAssignmentScheduleInstance}
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleAssignmentScheduleInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
     }
     /**
      * Gets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
-     * @return a UnifiedRoleEligibilityScheduleInstance
+     * @return a {@link UnifiedRoleEligibilityScheduleInstance}
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleEligibilityScheduleInstance getActivatedUsing() {
@@ -35,7 +35,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
     }
     /**
      * Gets the assignmentType property value. Type of the assignment which can either be Assigned or Activated. Supports $filter (eq, ne).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAssignmentType() {
@@ -43,7 +43,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
     }
     /**
      * Gets the endDateTime property value. The end date of the schedule instance.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
@@ -51,7 +51,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -67,7 +67,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
     }
     /**
      * Gets the memberType property value. How the assignments is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMemberType() {
@@ -75,7 +75,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
     }
     /**
      * Gets the roleAssignmentOriginId property value. The identifier of the role assignment in Microsoft Entra. Supports $filter (eq, ne).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRoleAssignmentOriginId() {
@@ -83,7 +83,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
     }
     /**
      * Gets the roleAssignmentScheduleId property value. The identifier of the unifiedRoleAssignmentSchedule object from which this instance was created. Supports $filter (eq, ne).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRoleAssignmentScheduleId() {
@@ -91,7 +91,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
     }
     /**
      * Gets the startDateTime property value. When this instance starts.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {

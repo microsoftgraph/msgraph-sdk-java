@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class HostLogonSessionEvidence extends AlertEvidence implements Parsable {
     /**
-     * Instantiates a new HostLogonSessionEvidence and sets the default values.
+     * Instantiates a new {@link HostLogonSessionEvidence} and sets the default values.
      */
     public HostLogonSessionEvidence() {
         super();
@@ -19,7 +19,7 @@ public class HostLogonSessionEvidence extends AlertEvidence implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a HostLogonSessionEvidence
+     * @return a {@link HostLogonSessionEvidence}
      */
     @jakarta.annotation.Nonnull
     public static HostLogonSessionEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class HostLogonSessionEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * Gets the account property value. The account property
-     * @return a UserEvidence
+     * @return a {@link UserEvidence}
      */
     @jakarta.annotation.Nullable
     public UserEvidence getAccount() {
@@ -36,7 +36,7 @@ public class HostLogonSessionEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * Gets the endUtcDateTime property value. The endUtcDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndUtcDateTime() {
@@ -44,7 +44,7 @@ public class HostLogonSessionEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -58,7 +58,7 @@ public class HostLogonSessionEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * Gets the host property value. The host property
-     * @return a DeviceEvidence
+     * @return a {@link DeviceEvidence}
      */
     @jakarta.annotation.Nullable
     public DeviceEvidence getHost() {
@@ -66,7 +66,7 @@ public class HostLogonSessionEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * Gets the sessionId property value. The sessionId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSessionId() {
@@ -74,7 +74,7 @@ public class HostLogonSessionEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * Gets the startUtcDateTime property value. The startUtcDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartUtcDateTime() {

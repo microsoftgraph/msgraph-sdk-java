@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnDemandExecutionOnly extends WorkflowExecutionConditions implements Parsable {
     /**
-     * Instantiates a new OnDemandExecutionOnly and sets the default values.
+     * Instantiates a new {@link OnDemandExecutionOnly} and sets the default values.
      */
     public OnDemandExecutionOnly() {
         super();
@@ -18,7 +18,7 @@ public class OnDemandExecutionOnly extends WorkflowExecutionConditions implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnDemandExecutionOnly
+     * @return a {@link OnDemandExecutionOnly}
      */
     @jakarta.annotation.Nonnull
     public static OnDemandExecutionOnly createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class OnDemandExecutionOnly extends WorkflowExecutionConditions implement
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

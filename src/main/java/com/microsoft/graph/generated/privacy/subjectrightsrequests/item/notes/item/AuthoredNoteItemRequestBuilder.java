@@ -21,7 +21,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new AuthoredNoteItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link AuthoredNoteItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -29,7 +29,7 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/privacy/subjectRightsRequests/{subjectRightsRequest%2Did}/notes/{authoredNote%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new AuthoredNoteItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link AuthoredNoteItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -38,6 +38,7 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property notes for privacy
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
@@ -48,6 +49,7 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property notes for privacy
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
@@ -55,13 +57,13 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * List of notes associated with the request.
-     * @return a AuthoredNote
+     * @return a {@link AuthoredNote}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
@@ -73,7 +75,8 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * List of notes associated with the request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AuthoredNote
+     * @return a {@link AuthoredNote}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
@@ -82,14 +85,14 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
     public AuthoredNote get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AuthoredNote::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property notes in privacy
      * @param body The request body
-     * @return a AuthoredNote
+     * @return a {@link AuthoredNote}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
@@ -102,7 +105,8 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property notes in privacy
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AuthoredNote
+     * @return a {@link AuthoredNote}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
@@ -112,13 +116,12 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AuthoredNote::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property notes for privacy
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
@@ -130,21 +133,21 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property notes for privacy
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
     @jakarta.annotation.Nonnull
     @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/privacy/subjectRightsRequests/{subjectRightsRequest%2Did}/notes/{authoredNote%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * List of notes associated with the request.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
@@ -156,7 +159,7 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * List of notes associated with the request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
@@ -171,7 +174,7 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property notes in privacy
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
@@ -184,7 +187,7 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property notes in privacy
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
@@ -192,7 +195,7 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
     @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AuthoredNote body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/privacy/subjectRightsRequests/{subjectRightsRequest%2Did}/notes/{authoredNote%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -201,7 +204,7 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AuthoredNoteItemRequestBuilder
+     * @return a {@link AuthoredNoteItemRequestBuilder}
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
@@ -234,7 +237,7 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

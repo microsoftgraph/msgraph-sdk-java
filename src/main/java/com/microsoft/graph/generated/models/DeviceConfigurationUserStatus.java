@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceConfigurationUserStatus extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceConfigurationUserStatus and sets the default values.
+     * Instantiates a new {@link DeviceConfigurationUserStatus} and sets the default values.
      */
     public DeviceConfigurationUserStatus() {
         super();
@@ -18,7 +18,7 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceConfigurationUserStatus
+     * @return a {@link DeviceConfigurationUserStatus}
      */
     @jakarta.annotation.Nonnull
     public static DeviceConfigurationUserStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
     }
     /**
      * Gets the devicesCount property value. Devices count for that user.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDevicesCount() {
@@ -35,7 +35,7 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -49,7 +49,7 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
     }
     /**
      * Gets the lastReportedDateTime property value. Last modified date time of the policy report.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastReportedDateTime() {
@@ -57,7 +57,7 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a ComplianceStatus
+     * @return a {@link ComplianceStatus}
      */
     @jakarta.annotation.Nullable
     public ComplianceStatus getStatus() {
@@ -65,7 +65,7 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
     }
     /**
      * Gets the userDisplayName property value. User name of the DevicePolicyStatus.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
@@ -73,7 +73,7 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. UserPrincipalName.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

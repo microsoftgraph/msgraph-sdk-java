@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceCategory extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceCategory and sets the default values.
+     * Instantiates a new {@link DeviceCategory} and sets the default values.
      */
     public DeviceCategory() {
         super();
@@ -20,7 +20,7 @@ public class DeviceCategory extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceCategory
+     * @return a {@link DeviceCategory}
      */
     @jakarta.annotation.Nonnull
     public static DeviceCategory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class DeviceCategory extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Optional description for the device category.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -37,7 +37,7 @@ public class DeviceCategory extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name for the device category.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -45,7 +45,7 @@ public class DeviceCategory extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

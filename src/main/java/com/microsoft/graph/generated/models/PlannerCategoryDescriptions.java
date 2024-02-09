@@ -18,7 +18,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new PlannerCategoryDescriptions and sets the default values.
+     * Instantiates a new {@link PlannerCategoryDescriptions} and sets the default values.
      */
     public PlannerCategoryDescriptions() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PlannerCategoryDescriptions
+     * @return a {@link PlannerCategoryDescriptions}
      */
     @jakarta.annotation.Nonnull
     public static PlannerCategoryDescriptions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the category1 property value. The label associated with Category 1
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory1() {
@@ -65,7 +65,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the category10 property value. The label associated with Category 10
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory10() {
@@ -73,7 +73,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the category11 property value. The label associated with Category 11
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory11() {
@@ -81,7 +81,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the category12 property value. The label associated with Category 12
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory12() {
@@ -89,7 +89,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the category13 property value. The label associated with Category 13
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory13() {
@@ -97,7 +97,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the category14 property value. The label associated with Category 14
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory14() {
@@ -105,7 +105,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the category15 property value. The label associated with Category 15
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory15() {
@@ -113,7 +113,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the category16 property value. The label associated with Category 16
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory16() {
@@ -121,7 +121,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the category17 property value. The label associated with Category 17
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory17() {
@@ -129,7 +129,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the category18 property value. The label associated with Category 18
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory18() {
@@ -137,7 +137,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the category19 property value. The label associated with Category 19
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory19() {
@@ -145,7 +145,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the category2 property value. The label associated with Category 2
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory2() {
@@ -153,7 +153,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the category20 property value. The label associated with Category 20
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory20() {
@@ -161,7 +161,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the category21 property value. The label associated with Category 21
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory21() {
@@ -169,7 +169,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the category22 property value. The label associated with Category 22
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory22() {
@@ -177,7 +177,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the category23 property value. The label associated with Category 23
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory23() {
@@ -185,7 +185,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the category24 property value. The label associated with Category 24
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory24() {
@@ -193,7 +193,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the category25 property value. The label associated with Category 25
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory25() {
@@ -201,7 +201,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the category3 property value. The label associated with Category 3
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory3() {
@@ -209,7 +209,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the category4 property value. The label associated with Category 4
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory4() {
@@ -217,7 +217,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the category5 property value. The label associated with Category 5
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory5() {
@@ -225,7 +225,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the category6 property value. The label associated with Category 6
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory6() {
@@ -233,7 +233,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the category7 property value. The label associated with Category 7
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory7() {
@@ -241,7 +241,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the category8 property value. The label associated with Category 8
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory8() {
@@ -249,7 +249,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the category9 property value. The label associated with Category 9
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory9() {
@@ -257,7 +257,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -292,7 +292,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

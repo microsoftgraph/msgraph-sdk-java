@@ -18,7 +18,7 @@ public class Location implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new Location and sets the default values.
+     * Instantiates a new {@link Location} and sets the default values.
      */
     public Location() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class Location implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Location
+     * @return a {@link Location}
      */
     @jakarta.annotation.Nonnull
     public static Location createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class Location implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -56,7 +56,7 @@ public class Location implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the address property value. The street address of the location.
-     * @return a PhysicalAddress
+     * @return a {@link PhysicalAddress}
      */
     @jakarta.annotation.Nullable
     public PhysicalAddress getAddress() {
@@ -64,7 +64,7 @@ public class Location implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -72,7 +72,7 @@ public class Location implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the coordinates property value. The geographic coordinates and elevation of the location.
-     * @return a OutlookGeoCoordinates
+     * @return a {@link OutlookGeoCoordinates}
      */
     @jakarta.annotation.Nullable
     public OutlookGeoCoordinates getCoordinates() {
@@ -80,7 +80,7 @@ public class Location implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the displayName property value. The name associated with the location.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -88,7 +88,7 @@ public class Location implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -106,7 +106,7 @@ public class Location implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the locationEmailAddress property value. Optional email address of the location.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLocationEmailAddress() {
@@ -114,7 +114,7 @@ public class Location implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the locationType property value. The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
-     * @return a LocationType
+     * @return a {@link LocationType}
      */
     @jakarta.annotation.Nullable
     public LocationType getLocationType() {
@@ -122,7 +122,7 @@ public class Location implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the locationUri property value. Optional URI representing the location.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLocationUri() {
@@ -130,7 +130,7 @@ public class Location implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -138,7 +138,7 @@ public class Location implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the uniqueId property value. For internal use only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUniqueId() {
@@ -146,7 +146,7 @@ public class Location implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the uniqueIdType property value. For internal use only.
-     * @return a LocationUniqueIdType
+     * @return a {@link LocationUniqueIdType}
      */
     @jakarta.annotation.Nullable
     public LocationUniqueIdType getUniqueIdType() {

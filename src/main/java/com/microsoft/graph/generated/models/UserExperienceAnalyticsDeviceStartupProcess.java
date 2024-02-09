@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implements Parsable {
     /**
-     * Instantiates a new UserExperienceAnalyticsDeviceStartupProcess and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsDeviceStartupProcess} and sets the default values.
      */
     public UserExperienceAnalyticsDeviceStartupProcess() {
         super();
@@ -20,7 +20,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsDeviceStartupProcess
+     * @return a {@link UserExperienceAnalyticsDeviceStartupProcess}
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceStartupProcess createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -43,7 +43,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
     }
     /**
      * Gets the managedDeviceId property value. The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
@@ -51,7 +51,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
     }
     /**
      * Gets the processName property value. The name of the process. Examples: outlook, excel. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProcessName() {
@@ -59,7 +59,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
     }
     /**
      * Gets the productName property value. The product name of the process. Examples: Microsoft Outlook, Microsoft Excel. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProductName() {
@@ -67,7 +67,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
     }
     /**
      * Gets the publisher property value. The publisher of the process. Examples: Microsoft Corporation, Contoso Corp. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
@@ -75,7 +75,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
     }
     /**
      * Gets the startupImpactInMs property value. The impact of startup process on device boot time in milliseconds. Supports: $select, $OrderBy. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getStartupImpactInMs() {

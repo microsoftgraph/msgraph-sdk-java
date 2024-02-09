@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EndUserNotificationDetail extends Entity implements Parsable {
     /**
-     * Instantiates a new EndUserNotificationDetail and sets the default values.
+     * Instantiates a new {@link EndUserNotificationDetail} and sets the default values.
      */
     public EndUserNotificationDetail() {
         super();
@@ -17,7 +17,7 @@ public class EndUserNotificationDetail extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EndUserNotificationDetail
+     * @return a {@link EndUserNotificationDetail}
      */
     @jakarta.annotation.Nonnull
     public static EndUserNotificationDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class EndUserNotificationDetail extends Entity implements Parsable {
     }
     /**
      * Gets the emailContent property value. Email HTML content.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmailContent() {
@@ -34,7 +34,7 @@ public class EndUserNotificationDetail extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -49,7 +49,7 @@ public class EndUserNotificationDetail extends Entity implements Parsable {
     }
     /**
      * Gets the isDefaultLangauge property value. Indicates whether this language is default.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefaultLangauge() {
@@ -57,7 +57,7 @@ public class EndUserNotificationDetail extends Entity implements Parsable {
     }
     /**
      * Gets the language property value. Notification language.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLanguage() {
@@ -65,7 +65,7 @@ public class EndUserNotificationDetail extends Entity implements Parsable {
     }
     /**
      * Gets the locale property value. Notification locale.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLocale() {
@@ -73,7 +73,7 @@ public class EndUserNotificationDetail extends Entity implements Parsable {
     }
     /**
      * Gets the sentFrom property value. The sentFrom property
-     * @return a EmailIdentity
+     * @return a {@link EmailIdentity}
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getSentFrom() {
@@ -81,7 +81,7 @@ public class EndUserNotificationDetail extends Entity implements Parsable {
     }
     /**
      * Gets the subject property value. Mail subject.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubject() {

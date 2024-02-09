@@ -41,6 +41,7 @@ import java.util.Objects;
 public class CallItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the addLargeGalleryView method.
+     * @return a {@link AddLargeGalleryViewRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AddLargeGalleryViewRequestBuilder addLargeGalleryView() {
@@ -48,6 +49,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the answer method.
+     * @return a {@link AnswerRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AnswerRequestBuilder answer() {
@@ -55,6 +57,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the audioRoutingGroups property of the microsoft.graph.call entity.
+     * @return a {@link AudioRoutingGroupsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AudioRoutingGroupsRequestBuilder audioRoutingGroups() {
@@ -62,6 +65,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the cancelMediaProcessing method.
+     * @return a {@link CancelMediaProcessingRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CancelMediaProcessingRequestBuilder cancelMediaProcessing() {
@@ -69,6 +73,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the changeScreenSharingRole method.
+     * @return a {@link ChangeScreenSharingRoleRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ChangeScreenSharingRoleRequestBuilder changeScreenSharingRole() {
@@ -76,6 +81,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the contentSharingSessions property of the microsoft.graph.call entity.
+     * @return a {@link ContentSharingSessionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ContentSharingSessionsRequestBuilder contentSharingSessions() {
@@ -83,6 +89,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the keepAlive method.
+     * @return a {@link KeepAliveRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public KeepAliveRequestBuilder keepAlive() {
@@ -90,6 +97,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the mute method.
+     * @return a {@link MuteRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MuteRequestBuilder mute() {
@@ -97,6 +105,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the operations property of the microsoft.graph.call entity.
+     * @return a {@link OperationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OperationsRequestBuilder operations() {
@@ -104,6 +113,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the participants property of the microsoft.graph.call entity.
+     * @return a {@link ParticipantsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ParticipantsRequestBuilder participants() {
@@ -111,6 +121,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the playPrompt method.
+     * @return a {@link PlayPromptRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PlayPromptRequestBuilder playPrompt() {
@@ -118,6 +129,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the recordResponse method.
+     * @return a {@link RecordResponseRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RecordResponseRequestBuilder recordResponse() {
@@ -125,6 +137,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the redirect method.
+     * @return a {@link RedirectRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RedirectRequestBuilder redirect() {
@@ -132,6 +145,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the reject method.
+     * @return a {@link RejectRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RejectRequestBuilder reject() {
@@ -139,6 +153,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the sendDtmfTones method.
+     * @return a {@link SendDtmfTonesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SendDtmfTonesRequestBuilder sendDtmfTones() {
@@ -146,6 +161,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the subscribeToTone method.
+     * @return a {@link SubscribeToToneRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SubscribeToToneRequestBuilder subscribeToTone() {
@@ -153,6 +169,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the transfer method.
+     * @return a {@link TransferRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TransferRequestBuilder transfer() {
@@ -160,6 +177,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the unmute method.
+     * @return a {@link UnmuteRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UnmuteRequestBuilder unmute() {
@@ -167,13 +185,14 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the updateRecordingStatus method.
+     * @return a {@link UpdateRecordingStatusRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UpdateRecordingStatusRequestBuilder updateRecordingStatus() {
         return new UpdateRecordingStatusRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new CallItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link CallItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -181,7 +200,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new CallItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link CallItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -190,6 +209,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/call-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -198,18 +218,19 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/call-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve the properties and relationships of a call object.
-     * @return a Call
+     * @return a {@link Call}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/call-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -219,21 +240,22 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a call object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Call
+     * @return a {@link Call}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/call-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Call get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Call::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property calls in communications
      * @param body The request body
-     * @return a Call
+     * @return a {@link Call}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Call patch(@jakarta.annotation.Nonnull final Call body) {
@@ -243,20 +265,20 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property calls in communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Call
+     * @return a {@link Call}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Call patch(@jakarta.annotation.Nonnull final Call body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Call::createFromDiscriminatorValue);
     }
     /**
      * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -265,18 +287,18 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/communications/calls/{call%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Retrieve the properties and relationships of a call object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -285,7 +307,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a call object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -297,7 +319,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property calls in communications
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Call body) {
@@ -307,12 +329,12 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property calls in communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Call body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/communications/calls/{call%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -321,7 +343,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a CallItemRequestBuilder
+     * @return a {@link CallItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CallItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -351,7 +373,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

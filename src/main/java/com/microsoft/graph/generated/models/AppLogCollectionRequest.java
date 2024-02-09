@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppLogCollectionRequest extends Entity implements Parsable {
     /**
-     * Instantiates a new AppLogCollectionRequest and sets the default values.
+     * Instantiates a new {@link AppLogCollectionRequest} and sets the default values.
      */
     public AppLogCollectionRequest() {
         super();
@@ -21,7 +21,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AppLogCollectionRequest
+     * @return a {@link AppLogCollectionRequest}
      */
     @jakarta.annotation.Nonnull
     public static AppLogCollectionRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
     }
     /**
      * Gets the completedDateTime property value. Time at which the upload log request reached a completed state if not completed yet NULL will be returned.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
@@ -38,7 +38,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
     }
     /**
      * Gets the customLogFolders property value. List of log folders.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCustomLogFolders() {
@@ -46,7 +46,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
     }
     /**
      * Gets the errorMessage property value. Indicates error message if any during the upload process.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getErrorMessage() {
@@ -54,7 +54,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -67,7 +67,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. AppLogUploadStatus
-     * @return a AppLogUploadState
+     * @return a {@link AppLogUploadState}
      */
     @jakarta.annotation.Nullable
     public AppLogUploadState getStatus() {

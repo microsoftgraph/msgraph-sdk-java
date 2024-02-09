@@ -26,6 +26,7 @@ import java.util.Objects;
 public class GraphWindowsUniversalAppXRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.mobileApp entity.
+     * @return a {@link AssignmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
@@ -33,6 +34,7 @@ public class GraphWindowsUniversalAppXRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Provides operations to manage the categories property of the microsoft.graph.mobileApp entity.
+     * @return a {@link CategoriesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CategoriesRequestBuilder categories() {
@@ -40,6 +42,7 @@ public class GraphWindowsUniversalAppXRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Provides operations to manage the committedContainedApps property of the microsoft.graph.windowsUniversalAppX entity.
+     * @return a {@link CommittedContainedAppsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CommittedContainedAppsRequestBuilder committedContainedApps() {
@@ -47,13 +50,14 @@ public class GraphWindowsUniversalAppXRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Provides operations to manage the contentVersions property of the microsoft.graph.mobileLobApp entity.
+     * @return a {@link ContentVersionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ContentVersionsRequestBuilder contentVersions() {
         return new ContentVersionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new GraphWindowsUniversalAppXRequestBuilder and sets the default values.
+     * Instantiates a new {@link GraphWindowsUniversalAppXRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -61,7 +65,7 @@ public class GraphWindowsUniversalAppXRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps/{mobileApp%2Did}/graph.windowsUniversalAppX{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new GraphWindowsUniversalAppXRequestBuilder and sets the default values.
+     * Instantiates a new {@link GraphWindowsUniversalAppXRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -70,7 +74,8 @@ public class GraphWindowsUniversalAppXRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.windowsUniversalAppX
-     * @return a WindowsUniversalAppX
+     * @return a {@link WindowsUniversalAppX}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WindowsUniversalAppX get() {
@@ -79,19 +84,19 @@ public class GraphWindowsUniversalAppXRequestBuilder extends BaseRequestBuilder 
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.windowsUniversalAppX
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WindowsUniversalAppX
+     * @return a {@link WindowsUniversalAppX}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WindowsUniversalAppX get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WindowsUniversalAppX::createFromDiscriminatorValue);
     }
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.windowsUniversalAppX
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -100,7 +105,7 @@ public class GraphWindowsUniversalAppXRequestBuilder extends BaseRequestBuilder 
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.windowsUniversalAppX
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -112,7 +117,7 @@ public class GraphWindowsUniversalAppXRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GraphWindowsUniversalAppXRequestBuilder
+     * @return a {@link GraphWindowsUniversalAppXRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphWindowsUniversalAppXRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -136,7 +141,7 @@ public class GraphWindowsUniversalAppXRequestBuilder extends BaseRequestBuilder 
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

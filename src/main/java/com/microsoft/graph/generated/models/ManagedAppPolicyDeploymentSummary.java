@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable {
     /**
-     * Instantiates a new ManagedAppPolicyDeploymentSummary and sets the default values.
+     * Instantiates a new {@link ManagedAppPolicyDeploymentSummary} and sets the default values.
      */
     public ManagedAppPolicyDeploymentSummary() {
         super();
@@ -21,7 +21,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedAppPolicyDeploymentSummary
+     * @return a {@link ManagedAppPolicyDeploymentSummary}
      */
     @jakarta.annotation.Nonnull
     public static ManagedAppPolicyDeploymentSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
     }
     /**
      * Gets the configurationDeployedUserCount property value. Not yet documented
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getConfigurationDeployedUserCount() {
@@ -38,7 +38,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
     }
     /**
      * Gets the configurationDeploymentSummaryPerApp property value. Not yet documented
-     * @return a java.util.List<ManagedAppPolicyDeploymentSummaryPerApp>
+     * @return a {@link java.util.List<ManagedAppPolicyDeploymentSummaryPerApp>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAppPolicyDeploymentSummaryPerApp> getConfigurationDeploymentSummaryPerApp() {
@@ -46,7 +46,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
     }
     /**
      * Gets the displayName property value. Not yet documented
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -54,7 +54,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,7 +68,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
     }
     /**
      * Gets the lastRefreshTime property value. Not yet documented
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastRefreshTime() {
@@ -76,7 +76,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
     }
     /**
      * Gets the version property value. Version of the entity.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

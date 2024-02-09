@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementExchangeConnector extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceManagementExchangeConnector and sets the default values.
+     * Instantiates a new {@link DeviceManagementExchangeConnector} and sets the default values.
      */
     public DeviceManagementExchangeConnector() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementExchangeConnector
+     * @return a {@link DeviceManagementExchangeConnector}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementExchangeConnector createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
     }
     /**
      * Gets the connectorServerName property value. The name of the server hosting the Exchange Connector.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getConnectorServerName() {
@@ -38,7 +38,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
     }
     /**
      * Gets the exchangeAlias property value. An alias assigned to the Exchange server
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExchangeAlias() {
@@ -46,7 +46,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
     }
     /**
      * Gets the exchangeConnectorType property value. The type of Exchange Connector.
-     * @return a DeviceManagementExchangeConnectorType
+     * @return a {@link DeviceManagementExchangeConnectorType}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementExchangeConnectorType getExchangeConnectorType() {
@@ -54,7 +54,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
     }
     /**
      * Gets the exchangeOrganization property value. Exchange Organization to the Exchange server
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExchangeOrganization() {
@@ -62,7 +62,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -80,7 +80,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
     }
     /**
      * Gets the lastSyncDateTime property value. Last sync time for the Exchange Connector
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
@@ -88,7 +88,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
     }
     /**
      * Gets the primarySmtpAddress property value. Email address used to configure the Service To Service Exchange Connector.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPrimarySmtpAddress() {
@@ -96,7 +96,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
     }
     /**
      * Gets the serverName property value. The name of the Exchange server.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getServerName() {
@@ -104,7 +104,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
     }
     /**
      * Gets the status property value. The current status of the Exchange Connector.
-     * @return a DeviceManagementExchangeConnectorStatus
+     * @return a {@link DeviceManagementExchangeConnectorStatus}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementExchangeConnectorStatus getStatus() {
@@ -112,7 +112,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
     }
     /**
      * Gets the version property value. The version of the ExchangeConnectorAgent
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

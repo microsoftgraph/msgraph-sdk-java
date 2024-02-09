@@ -19,7 +19,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AttackSimulationSimulationUserCoverage and sets the default values.
+     * Instantiates a new {@link AttackSimulationSimulationUserCoverage} and sets the default values.
      */
     public AttackSimulationSimulationUserCoverage() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AttackSimulationSimulationUserCoverage
+     * @return a {@link AttackSimulationSimulationUserCoverage}
      */
     @jakarta.annotation.Nonnull
     public static AttackSimulationSimulationUserCoverage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     }
     /**
      * Gets the attackSimulationUser property value. User in an attack simulation and training campaign.
-     * @return a AttackSimulationUser
+     * @return a {@link AttackSimulationUser}
      */
     @jakarta.annotation.Nullable
     public AttackSimulationUser getAttackSimulationUser() {
@@ -58,7 +58,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -66,7 +66,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     }
     /**
      * Gets the clickCount property value. Number of link clicks in the received payloads by the user in attack simulation and training campaigns.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getClickCount() {
@@ -74,7 +74,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     }
     /**
      * Gets the compromisedCount property value. Number of compromising actions by the user in attack simulation and training campaigns.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCompromisedCount() {
@@ -82,7 +82,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -97,7 +97,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     }
     /**
      * Gets the latestSimulationDateTime property value. Date and time of the latest attack simulation and training campaign that the user was included in.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLatestSimulationDateTime() {
@@ -105,7 +105,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -113,7 +113,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     }
     /**
      * Gets the simulationCount property value. Number of attack simulation and training campaigns that the user was included in.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSimulationCount() {

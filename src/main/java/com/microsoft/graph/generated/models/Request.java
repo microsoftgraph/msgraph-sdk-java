@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Request extends Entity implements Parsable {
     /**
-     * Instantiates a new Request and sets the default values.
+     * Instantiates a new {@link Request} and sets the default values.
      */
     public Request() {
         super();
@@ -18,7 +18,7 @@ public class Request extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Request
+     * @return a {@link Request}
      */
     @jakarta.annotation.Nonnull
     public static Request createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class Request extends Entity implements Parsable {
     }
     /**
      * Gets the approvalId property value. The identifier of the approval of the request.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getApprovalId() {
@@ -47,7 +47,7 @@ public class Request extends Entity implements Parsable {
     }
     /**
      * Gets the completedDateTime property value. The request completion date time.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
@@ -55,7 +55,7 @@ public class Request extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The principal that created the request.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -63,7 +63,7 @@ public class Request extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The request creation date time.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -71,7 +71,7 @@ public class Request extends Entity implements Parsable {
     }
     /**
      * Gets the customData property value. Free text field to define any custom data for the request. Not used.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCustomData() {
@@ -79,7 +79,7 @@ public class Request extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -94,7 +94,7 @@ public class Request extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status of the request. Not nullable. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStatus() {

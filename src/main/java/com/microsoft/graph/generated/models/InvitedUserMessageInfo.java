@@ -18,7 +18,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new InvitedUserMessageInfo and sets the default values.
+     * Instantiates a new {@link InvitedUserMessageInfo} and sets the default values.
      */
     public InvitedUserMessageInfo() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, BackedModel
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a InvitedUserMessageInfo
+     * @return a {@link InvitedUserMessageInfo}
      */
     @jakarta.annotation.Nonnull
     public static InvitedUserMessageInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the ccRecipients property value. Additional recipients the invitation message should be sent to. Currently only one additional recipient is supported.
-     * @return a java.util.List<Recipient>
+     * @return a {@link java.util.List<Recipient>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getCcRecipients() {
@@ -65,7 +65,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the customizedMessageBody property value. Customized message body you want to send if you don't want the default message.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCustomizedMessageBody() {
@@ -73,7 +73,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, BackedModel
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -86,7 +86,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the messageLanguage property value. The language you want to send the default message in. If the customizedMessageBody is specified, this property is ignored, and the message is sent using the customizedMessageBody. The language format should be in ISO 639. The default is en-US.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMessageLanguage() {
@@ -94,7 +94,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

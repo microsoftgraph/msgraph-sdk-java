@@ -18,7 +18,7 @@ public class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ParticipantInfo and sets the default values.
+     * Instantiates a new {@link ParticipantInfo} and sets the default values.
      */
     public ParticipantInfo() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ParticipantInfo
+     * @return a {@link ParticipantInfo}
      */
     @jakarta.annotation.Nonnull
     public static ParticipantInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the countryCode property value. The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCountryCode() {
@@ -65,7 +65,7 @@ public class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
-     * @return a EndpointType
+     * @return a {@link EndpointType}
      */
     @jakarta.annotation.Nullable
     public EndpointType getEndpointType() {
@@ -73,7 +73,7 @@ public class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -89,7 +89,7 @@ public class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the identity property value. The identity property
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getIdentity() {
@@ -97,7 +97,7 @@ public class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the languageId property value. The language culture string. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLanguageId() {
@@ -105,7 +105,7 @@ public class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -113,7 +113,7 @@ public class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the participantId property value. The participant ID of the participant. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getParticipantId() {
@@ -121,7 +121,7 @@ public class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This doesn't change based on the participant's current physical location. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRegion() {

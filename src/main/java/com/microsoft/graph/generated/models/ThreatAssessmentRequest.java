@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ThreatAssessmentRequest extends Entity implements Parsable {
     /**
-     * Instantiates a new ThreatAssessmentRequest and sets the default values.
+     * Instantiates a new {@link ThreatAssessmentRequest} and sets the default values.
      */
     public ThreatAssessmentRequest() {
         super();
@@ -18,7 +18,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ThreatAssessmentRequest
+     * @return a {@link ThreatAssessmentRequest}
      */
     @jakarta.annotation.Nonnull
     public static ThreatAssessmentRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. The category property
-     * @return a ThreatCategory
+     * @return a {@link ThreatCategory}
      */
     @jakarta.annotation.Nullable
     public ThreatCategory getCategory() {
@@ -45,7 +45,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the contentType property value. The content type of threat assessment. Possible values are: mail, url, file.
-     * @return a ThreatAssessmentContentType
+     * @return a {@link ThreatAssessmentContentType}
      */
     @jakarta.annotation.Nullable
     public ThreatAssessmentContentType getContentType() {
@@ -53,7 +53,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The threat assessment request creator.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -61,7 +61,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -69,7 +69,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the expectedAssessment property value. The expectedAssessment property
-     * @return a ThreatExpectedAssessment
+     * @return a {@link ThreatExpectedAssessment}
      */
     @jakarta.annotation.Nullable
     public ThreatExpectedAssessment getExpectedAssessment() {
@@ -77,7 +77,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -94,7 +94,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the requestSource property value. The source of the threat assessment request. Possible values are: administrator.
-     * @return a ThreatAssessmentRequestSource
+     * @return a {@link ThreatAssessmentRequestSource}
      */
     @jakarta.annotation.Nullable
     public ThreatAssessmentRequestSource getRequestSource() {
@@ -102,7 +102,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the results property value. A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.
-     * @return a java.util.List<ThreatAssessmentResult>
+     * @return a {@link java.util.List<ThreatAssessmentResult>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ThreatAssessmentResult> getResults() {
@@ -110,7 +110,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The assessment process status. Possible values are: pending, completed.
-     * @return a ThreatAssessmentStatus
+     * @return a {@link ThreatAssessmentStatus}
      */
     @jakarta.annotation.Nullable
     public ThreatAssessmentStatus getStatus() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Printer extends PrinterBase implements Parsable {
     /**
-     * Instantiates a new Printer and sets the default values.
+     * Instantiates a new {@link Printer} and sets the default values.
      */
     public Printer() {
         super();
@@ -19,7 +19,7 @@ public class Printer extends PrinterBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Printer
+     * @return a {@link Printer}
      */
     @jakarta.annotation.Nonnull
     public static Printer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class Printer extends PrinterBase implements Parsable {
     }
     /**
      * Gets the connectors property value. The connectors that are associated with the printer.
-     * @return a java.util.List<PrintConnector>
+     * @return a {@link java.util.List<PrintConnector>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintConnector> getConnectors() {
@@ -36,7 +36,7 @@ public class Printer extends PrinterBase implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -52,7 +52,7 @@ public class Printer extends PrinterBase implements Parsable {
     }
     /**
      * Gets the hasPhysicalDevice property value. True if the printer has a physical device for printing. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHasPhysicalDevice() {
@@ -60,7 +60,7 @@ public class Printer extends PrinterBase implements Parsable {
     }
     /**
      * Gets the isShared property value. True if the printer is shared; false otherwise. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsShared() {
@@ -68,7 +68,7 @@ public class Printer extends PrinterBase implements Parsable {
     }
     /**
      * Gets the lastSeenDateTime property value. The most recent dateTimeOffset when a printer interacted with Universal Print. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
@@ -76,7 +76,7 @@ public class Printer extends PrinterBase implements Parsable {
     }
     /**
      * Gets the registeredDateTime property value. The DateTimeOffset when the printer was registered. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRegisteredDateTime() {
@@ -84,7 +84,7 @@ public class Printer extends PrinterBase implements Parsable {
     }
     /**
      * Gets the shares property value. The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
-     * @return a java.util.List<PrinterShare>
+     * @return a {@link java.util.List<PrinterShare>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrinterShare> getShares() {
@@ -92,7 +92,7 @@ public class Printer extends PrinterBase implements Parsable {
     }
     /**
      * Gets the taskTriggers property value. A list of task triggers that are associated with the printer.
-     * @return a java.util.List<PrintTaskTrigger>
+     * @return a {@link java.util.List<PrintTaskTrigger>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintTaskTrigger> getTaskTriggers() {

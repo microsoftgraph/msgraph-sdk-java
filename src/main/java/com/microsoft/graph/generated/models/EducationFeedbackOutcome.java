@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationFeedbackOutcome extends EducationOutcome implements Parsable {
     /**
-     * Instantiates a new EducationFeedbackOutcome and sets the default values.
+     * Instantiates a new {@link EducationFeedbackOutcome} and sets the default values.
      */
     public EducationFeedbackOutcome() {
         super();
@@ -18,7 +18,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationFeedbackOutcome
+     * @return a {@link EducationFeedbackOutcome}
      */
     @jakarta.annotation.Nonnull
     public static EducationFeedbackOutcome createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
     }
     /**
      * Gets the feedback property value. Teacher's written feedback to the student.
-     * @return a EducationFeedback
+     * @return a {@link EducationFeedback}
      */
     @jakarta.annotation.Nullable
     public EducationFeedback getFeedback() {
@@ -35,7 +35,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
     }
     /**
      * Gets the publishedFeedback property value. A copy of the feedback property that is made when the grade is released to the student.
-     * @return a EducationFeedback
+     * @return a {@link EducationFeedback}
      */
     @jakarta.annotation.Nullable
     public EducationFeedback getPublishedFeedback() {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSMicrosoftEdgeApp extends MobileApp implements Parsable {
     /**
-     * Instantiates a new MacOSMicrosoftEdgeApp and sets the default values.
+     * Instantiates a new {@link MacOSMicrosoftEdgeApp} and sets the default values.
      */
     public MacOSMicrosoftEdgeApp() {
         super();
@@ -21,7 +21,7 @@ public class MacOSMicrosoftEdgeApp extends MobileApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MacOSMicrosoftEdgeApp
+     * @return a {@link MacOSMicrosoftEdgeApp}
      */
     @jakarta.annotation.Nonnull
     public static MacOSMicrosoftEdgeApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class MacOSMicrosoftEdgeApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the channel property value. The enum to specify the channels for Microsoft Edge apps.
-     * @return a MicrosoftEdgeChannel
+     * @return a {@link MicrosoftEdgeChannel}
      */
     @jakarta.annotation.Nullable
     public MicrosoftEdgeChannel getChannel() {
@@ -38,7 +38,7 @@ public class MacOSMicrosoftEdgeApp extends MobileApp implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

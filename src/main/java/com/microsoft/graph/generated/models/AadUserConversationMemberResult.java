@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AadUserConversationMemberResult extends ActionResultPart implements Parsable {
     /**
-     * Instantiates a new AadUserConversationMemberResult and sets the default values.
+     * Instantiates a new {@link AadUserConversationMemberResult} and sets the default values.
      */
     public AadUserConversationMemberResult() {
         super();
@@ -18,7 +18,7 @@ public class AadUserConversationMemberResult extends ActionResultPart implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AadUserConversationMemberResult
+     * @return a {@link AadUserConversationMemberResult}
      */
     @jakarta.annotation.Nonnull
     public static AadUserConversationMemberResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AadUserConversationMemberResult extends ActionResultPart implements
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class AadUserConversationMemberResult extends ActionResultPart implements
     }
     /**
      * Gets the userId property value. The userId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

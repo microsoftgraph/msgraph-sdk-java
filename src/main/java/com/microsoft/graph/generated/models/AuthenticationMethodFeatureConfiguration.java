@@ -18,7 +18,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AuthenticationMethodFeatureConfiguration and sets the default values.
+     * Instantiates a new {@link AuthenticationMethodFeatureConfiguration} and sets the default values.
      */
     public AuthenticationMethodFeatureConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuthenticationMethodFeatureConfiguration
+     * @return a {@link AuthenticationMethodFeatureConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationMethodFeatureConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
     }
     /**
      * Gets the excludeTarget property value. A single entity that is excluded from this feature.
-     * @return a FeatureTarget
+     * @return a {@link FeatureTarget}
      */
     @jakarta.annotation.Nullable
     public FeatureTarget getExcludeTarget() {
@@ -65,7 +65,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
     }
     /**
      * Gets the includeTarget property value. A single entity that is included in this feature.
-     * @return a FeatureTarget
+     * @return a {@link FeatureTarget}
      */
     @jakarta.annotation.Nullable
     public FeatureTarget getIncludeTarget() {
@@ -86,7 +86,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -94,7 +94,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
     }
     /**
      * Gets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
-     * @return a AdvancedConfigState
+     * @return a {@link AdvancedConfigState}
      */
     @jakarta.annotation.Nullable
     public AdvancedConfigState getState() {

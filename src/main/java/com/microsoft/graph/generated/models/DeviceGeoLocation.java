@@ -22,7 +22,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Par
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DeviceGeoLocation and sets the default values.
+     * Instantiates a new {@link DeviceGeoLocation} and sets the default values.
      */
     public DeviceGeoLocation() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -31,7 +31,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceGeoLocation
+     * @return a {@link DeviceGeoLocation}
      */
     @jakarta.annotation.Nonnull
     public static DeviceGeoLocation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -53,7 +53,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the altitude property value. Altitude, given in meters above sea level
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getAltitude() {
@@ -61,7 +61,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -69,7 +69,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -87,7 +87,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the heading property value. Heading in degrees from true north
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getHeading() {
@@ -95,7 +95,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the horizontalAccuracy property value. Accuracy of longitude and latitude in meters
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getHorizontalAccuracy() {
@@ -103,7 +103,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the lastCollectedDateTime property value. Time at which location was recorded, relative to UTC
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastCollectedDateTime() {
@@ -111,7 +111,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the latitude property value. Latitude coordinate of the device's location
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getLatitude() {
@@ -119,7 +119,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the longitude property value. Longitude coordinate of the device's location
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getLongitude() {
@@ -127,7 +127,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -135,7 +135,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the speed property value. Speed the device is traveling in meters per second
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getSpeed() {
@@ -143,7 +143,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the verticalAccuracy property value. Accuracy of altitude in meters
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getVerticalAccuracy() {

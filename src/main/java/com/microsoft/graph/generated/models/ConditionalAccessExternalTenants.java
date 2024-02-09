@@ -18,7 +18,7 @@ public class ConditionalAccessExternalTenants implements AdditionalDataHolder, B
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ConditionalAccessExternalTenants and sets the default values.
+     * Instantiates a new {@link ConditionalAccessExternalTenants} and sets the default values.
      */
     public ConditionalAccessExternalTenants() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ConditionalAccessExternalTenants implements AdditionalDataHolder, B
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConditionalAccessExternalTenants
+     * @return a {@link ConditionalAccessExternalTenants}
      */
     @jakarta.annotation.Nonnull
     public static ConditionalAccessExternalTenants createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +44,7 @@ public class ConditionalAccessExternalTenants implements AdditionalDataHolder, B
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -57,7 +57,7 @@ public class ConditionalAccessExternalTenants implements AdditionalDataHolder, B
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class ConditionalAccessExternalTenants implements AdditionalDataHolder, B
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -76,7 +76,7 @@ public class ConditionalAccessExternalTenants implements AdditionalDataHolder, B
     }
     /**
      * Gets the membershipKind property value. The membership kind. Possible values are: all, enumerated, unknownFutureValue. The enumerated member references an conditionalAccessEnumeratedExternalTenants object.
-     * @return a ConditionalAccessExternalTenantsMembershipKind
+     * @return a {@link ConditionalAccessExternalTenantsMembershipKind}
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessExternalTenantsMembershipKind getMembershipKind() {
@@ -84,7 +84,7 @@ public class ConditionalAccessExternalTenants implements AdditionalDataHolder, B
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

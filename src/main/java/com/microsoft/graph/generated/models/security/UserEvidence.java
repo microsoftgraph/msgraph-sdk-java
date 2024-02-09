@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserEvidence extends AlertEvidence implements Parsable {
     /**
-     * Instantiates a new UserEvidence and sets the default values.
+     * Instantiates a new {@link UserEvidence} and sets the default values.
      */
     public UserEvidence() {
         super();
@@ -18,7 +18,7 @@ public class UserEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserEvidence
+     * @return a {@link UserEvidence}
      */
     @jakarta.annotation.Nonnull
     public static UserEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class UserEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class UserEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the userAccount property value. The user account details.
-     * @return a UserAccount
+     * @return a {@link UserAccount}
      */
     @jakarta.annotation.Nullable
     public UserAccount getUserAccount() {

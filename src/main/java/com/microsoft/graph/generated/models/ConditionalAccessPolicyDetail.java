@@ -18,7 +18,7 @@ public class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Back
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ConditionalAccessPolicyDetail and sets the default values.
+     * Instantiates a new {@link ConditionalAccessPolicyDetail} and sets the default values.
      */
     public ConditionalAccessPolicyDetail() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Back
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConditionalAccessPolicyDetail
+     * @return a {@link ConditionalAccessPolicyDetail}
      */
     @jakarta.annotation.Nonnull
     public static ConditionalAccessPolicyDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Back
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Back
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Back
     }
     /**
      * Gets the conditions property value. The conditions property
-     * @return a ConditionalAccessConditionSet
+     * @return a {@link ConditionalAccessConditionSet}
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessConditionSet getConditions() {
@@ -65,7 +65,7 @@ public class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Back
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Back
     }
     /**
      * Gets the grantControls property value. Represents grant controls that must be fulfilled for the policy.
-     * @return a ConditionalAccessGrantControls
+     * @return a {@link ConditionalAccessGrantControls}
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessGrantControls getGrantControls() {
@@ -86,7 +86,7 @@ public class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Back
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -94,7 +94,7 @@ public class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Back
     }
     /**
      * Gets the sessionControls property value. Represents a complex type of session controls that is enforced after sign-in.
-     * @return a ConditionalAccessSessionControls
+     * @return a {@link ConditionalAccessSessionControls}
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessSessionControls getSessionControls() {

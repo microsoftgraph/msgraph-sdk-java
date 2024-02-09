@@ -32,6 +32,7 @@ import java.util.Objects;
 public class ScheduleRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the offerShiftRequests property of the microsoft.graph.schedule entity.
+     * @return a {@link OfferShiftRequestsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OfferShiftRequestsRequestBuilder offerShiftRequests() {
@@ -39,6 +40,7 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the openShiftChangeRequests property of the microsoft.graph.schedule entity.
+     * @return a {@link OpenShiftChangeRequestsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OpenShiftChangeRequestsRequestBuilder openShiftChangeRequests() {
@@ -46,6 +48,7 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the openShifts property of the microsoft.graph.schedule entity.
+     * @return a {@link OpenShiftsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OpenShiftsRequestBuilder openShifts() {
@@ -53,6 +56,7 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the schedulingGroups property of the microsoft.graph.schedule entity.
+     * @return a {@link SchedulingGroupsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SchedulingGroupsRequestBuilder schedulingGroups() {
@@ -60,6 +64,7 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the share method.
+     * @return a {@link ShareRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ShareRequestBuilder share() {
@@ -67,6 +72,7 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the shifts property of the microsoft.graph.schedule entity.
+     * @return a {@link ShiftsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ShiftsRequestBuilder shifts() {
@@ -74,6 +80,7 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the swapShiftsChangeRequests property of the microsoft.graph.schedule entity.
+     * @return a {@link SwapShiftsChangeRequestsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SwapShiftsChangeRequestsRequestBuilder swapShiftsChangeRequests() {
@@ -81,6 +88,7 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the timeOffReasons property of the microsoft.graph.schedule entity.
+     * @return a {@link TimeOffReasonsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TimeOffReasonsRequestBuilder timeOffReasons() {
@@ -88,6 +96,7 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the timeOffRequests property of the microsoft.graph.schedule entity.
+     * @return a {@link TimeOffRequestsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TimeOffRequestsRequestBuilder timeOffRequests() {
@@ -95,13 +104,14 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the timesOff property of the microsoft.graph.schedule entity.
+     * @return a {@link TimesOffRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TimesOffRequestBuilder timesOff() {
         return new TimesOffRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new ScheduleRequestBuilder and sets the default values.
+     * Instantiates a new {@link ScheduleRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -109,7 +119,7 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/schedule{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new ScheduleRequestBuilder and sets the default values.
+     * Instantiates a new {@link ScheduleRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -118,6 +128,7 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property schedule for groups
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -125,17 +136,18 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property schedule for groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve the properties and relationships of a schedule object. The schedule creation process conforms to the One API guideline for resource based long running operations (RELO).When clients use the PUT method, if the schedule is provisioned, the operation updates the schedule; otherwise, the operation starts the schedule provisioning process in the background. During schedule provisioning, clients can use the GET method to get the schedule and look at the provisionStatus property for the current state of the provisioning. If the provisioning failed, clients can get additional information from the provisionStatusCode property. Clients can also inspect the configuration of the schedule.
-     * @return a Schedule
+     * @return a {@link Schedule}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -145,21 +157,22 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a schedule object. The schedule creation process conforms to the One API guideline for resource based long running operations (RELO).When clients use the PUT method, if the schedule is provisioned, the operation updates the schedule; otherwise, the operation starts the schedule provisioning process in the background. During schedule provisioning, clients can use the GET method to get the schedule and look at the provisionStatus property for the current state of the provisioning. If the provisioning failed, clients can get additional information from the provisionStatusCode property. Clients can also inspect the configuration of the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Schedule
+     * @return a {@link Schedule}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Schedule get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Schedule::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property schedule in groups
      * @param body The request body
-     * @return a Schedule
+     * @return a {@link Schedule}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Schedule put(@jakarta.annotation.Nonnull final Schedule body) {
@@ -169,20 +182,20 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property schedule in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Schedule
+     * @return a {@link Schedule}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Schedule put(@jakarta.annotation.Nonnull final Schedule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPutRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Schedule::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property schedule for groups
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -191,18 +204,18 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property schedule for groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/groups/{group%2Did}/team/schedule", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Retrieve the properties and relationships of a schedule object. The schedule creation process conforms to the One API guideline for resource based long running operations (RELO).When clients use the PUT method, if the schedule is provisioned, the operation updates the schedule; otherwise, the operation starts the schedule provisioning process in the background. During schedule provisioning, clients can use the GET method to get the schedule and look at the provisionStatus property for the current state of the provisioning. If the provisioning failed, clients can get additional information from the provisionStatusCode property. Clients can also inspect the configuration of the schedule.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -211,7 +224,7 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a schedule object. The schedule creation process conforms to the One API guideline for resource based long running operations (RELO).When clients use the PUT method, if the schedule is provisioned, the operation updates the schedule; otherwise, the operation starts the schedule provisioning process in the background. During schedule provisioning, clients can use the GET method to get the schedule and look at the provisionStatus property for the current state of the provisioning. If the provisioning failed, clients can get additional information from the provisionStatusCode property. Clients can also inspect the configuration of the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -223,7 +236,7 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property schedule in groups
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final Schedule body) {
@@ -233,12 +246,12 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property schedule in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final Schedule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PUT, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PUT, "{+baseurl}/groups/{group%2Did}/team/schedule", pathParameters);
         requestInfo.configure(requestConfiguration, PutRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -247,7 +260,7 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ScheduleRequestBuilder
+     * @return a {@link ScheduleRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ScheduleRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -277,7 +290,7 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

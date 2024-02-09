@@ -25,6 +25,7 @@ import java.util.Objects;
 public class ProtectedAppLockerFilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class ProtectedAppLockerFilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the protectedAppLockerFiles property of the microsoft.graph.windowsInformationProtection entity.
      * @param windowsInformationProtectionAppLockerFileId The unique identifier of windowsInformationProtectionAppLockerFile
-     * @return a WindowsInformationProtectionAppLockerFileItemRequestBuilder
+     * @return a {@link WindowsInformationProtectionAppLockerFileItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WindowsInformationProtectionAppLockerFileItemRequestBuilder byWindowsInformationProtectionAppLockerFileId(@jakarta.annotation.Nonnull final String windowsInformationProtectionAppLockerFileId) {
@@ -43,7 +44,7 @@ public class ProtectedAppLockerFilesRequestBuilder extends BaseRequestBuilder {
         return new WindowsInformationProtectionAppLockerFileItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new ProtectedAppLockerFilesRequestBuilder and sets the default values.
+     * Instantiates a new {@link ProtectedAppLockerFilesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class ProtectedAppLockerFilesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/windowsInformationProtectionPolicies/{windowsInformationProtectionPolicy%2Did}/protectedAppLockerFiles{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new ProtectedAppLockerFilesRequestBuilder and sets the default values.
+     * Instantiates a new {@link ProtectedAppLockerFilesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class ProtectedAppLockerFilesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Another way to input protected apps through xml files
-     * @return a WindowsInformationProtectionAppLockerFileCollectionResponse
+     * @return a {@link WindowsInformationProtectionAppLockerFileCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WindowsInformationProtectionAppLockerFileCollectionResponse get() {
@@ -69,20 +71,21 @@ public class ProtectedAppLockerFilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Another way to input protected apps through xml files
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WindowsInformationProtectionAppLockerFileCollectionResponse
+     * @return a {@link WindowsInformationProtectionAppLockerFileCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WindowsInformationProtectionAppLockerFileCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WindowsInformationProtectionAppLockerFileCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to protectedAppLockerFiles for deviceAppManagement
      * @param body The request body
-     * @return a WindowsInformationProtectionAppLockerFile
+     * @return a {@link WindowsInformationProtectionAppLockerFile}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WindowsInformationProtectionAppLockerFile post(@jakarta.annotation.Nonnull final WindowsInformationProtectionAppLockerFile body) {
@@ -92,20 +95,20 @@ public class ProtectedAppLockerFilesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to protectedAppLockerFiles for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WindowsInformationProtectionAppLockerFile
+     * @return a {@link WindowsInformationProtectionAppLockerFile}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WindowsInformationProtectionAppLockerFile post(@jakarta.annotation.Nonnull final WindowsInformationProtectionAppLockerFile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WindowsInformationProtectionAppLockerFile::createFromDiscriminatorValue);
     }
     /**
      * Another way to input protected apps through xml files
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -114,7 +117,7 @@ public class ProtectedAppLockerFilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Another way to input protected apps through xml files
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -126,7 +129,7 @@ public class ProtectedAppLockerFilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to protectedAppLockerFiles for deviceAppManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final WindowsInformationProtectionAppLockerFile body) {
@@ -136,12 +139,12 @@ public class ProtectedAppLockerFilesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to protectedAppLockerFiles for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final WindowsInformationProtectionAppLockerFile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceAppManagement/windowsInformationProtectionPolicies/{windowsInformationProtectionPolicy%2Did}/protectedAppLockerFiles", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -150,7 +153,7 @@ public class ProtectedAppLockerFilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ProtectedAppLockerFilesRequestBuilder
+     * @return a {@link ProtectedAppLockerFilesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ProtectedAppLockerFilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -204,7 +207,7 @@ public class ProtectedAppLockerFilesRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

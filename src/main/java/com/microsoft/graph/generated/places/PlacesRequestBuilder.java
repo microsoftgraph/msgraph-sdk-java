@@ -15,6 +15,7 @@ import java.util.Objects;
 public class PlacesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -22,6 +23,7 @@ public class PlacesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to room.
+     * @return a {@link GraphRoomRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphRoomRequestBuilder graphRoom() {
@@ -29,6 +31,7 @@ public class PlacesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to roomList.
+     * @return a {@link GraphRoomListRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphRoomListRequestBuilder graphRoomList() {
@@ -37,7 +40,7 @@ public class PlacesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of place entities.
      * @param placeId The unique identifier of place
-     * @return a PlaceItemRequestBuilder
+     * @return a {@link PlaceItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PlaceItemRequestBuilder byPlaceId(@jakarta.annotation.Nonnull final String placeId) {
@@ -47,7 +50,7 @@ public class PlacesRequestBuilder extends BaseRequestBuilder {
         return new PlaceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new PlacesRequestBuilder and sets the default values.
+     * Instantiates a new {@link PlacesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -55,7 +58,7 @@ public class PlacesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/places", pathParameters);
     }
     /**
-     * Instantiates a new PlacesRequestBuilder and sets the default values.
+     * Instantiates a new {@link PlacesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */

@@ -18,7 +18,7 @@ public class PrintMargin implements AdditionalDataHolder, BackedModel, Parsable 
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new PrintMargin and sets the default values.
+     * Instantiates a new {@link PrintMargin} and sets the default values.
      */
     public PrintMargin() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class PrintMargin implements AdditionalDataHolder, BackedModel, Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrintMargin
+     * @return a {@link PrintMargin}
      */
     @jakarta.annotation.Nonnull
     public static PrintMargin createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class PrintMargin implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class PrintMargin implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class PrintMargin implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the bottom property value. The margin in microns from the bottom edge.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getBottom() {
@@ -65,7 +65,7 @@ public class PrintMargin implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class PrintMargin implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the left property value. The margin in microns from the left edge.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getLeft() {
@@ -87,7 +87,7 @@ public class PrintMargin implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -95,7 +95,7 @@ public class PrintMargin implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the right property value. The margin in microns from the right edge.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRight() {
@@ -103,7 +103,7 @@ public class PrintMargin implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the top property value. The margin in microns from the top edge.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTop() {

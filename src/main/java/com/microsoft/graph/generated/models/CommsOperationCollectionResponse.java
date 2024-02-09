@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CommsOperationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new CommsOperationCollectionResponse and sets the default values.
+     * Instantiates a new {@link CommsOperationCollectionResponse} and sets the default values.
      */
     public CommsOperationCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class CommsOperationCollectionResponse extends BaseCollectionPaginationCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CommsOperationCollectionResponse
+     * @return a {@link CommsOperationCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static CommsOperationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class CommsOperationCollectionResponse extends BaseCollectionPaginationCo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class CommsOperationCollectionResponse extends BaseCollectionPaginationCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<CommsOperation>
+     * @return a {@link java.util.List<CommsOperation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CommsOperation> getValue() {

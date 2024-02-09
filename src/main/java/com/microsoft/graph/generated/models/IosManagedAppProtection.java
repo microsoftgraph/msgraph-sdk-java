@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosManagedAppProtection extends TargetedManagedAppProtection implements Parsable {
     /**
-     * Instantiates a new IosManagedAppProtection and sets the default values.
+     * Instantiates a new {@link IosManagedAppProtection} and sets the default values.
      */
     public IosManagedAppProtection() {
         super();
@@ -21,7 +21,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosManagedAppProtection
+     * @return a {@link IosManagedAppProtection}
      */
     @jakarta.annotation.Nonnull
     public static IosManagedAppProtection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the appDataEncryptionType property value. Represents the level to which app data is encrypted for managed apps
-     * @return a ManagedAppDataEncryptionType
+     * @return a {@link ManagedAppDataEncryptionType}
      */
     @jakarta.annotation.Nullable
     public ManagedAppDataEncryptionType getAppDataEncryptionType() {
@@ -38,7 +38,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the apps property value. List of apps to which the policy is deployed.
-     * @return a java.util.List<ManagedMobileApp>
+     * @return a {@link java.util.List<ManagedMobileApp>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedMobileApp> getApps() {
@@ -46,7 +46,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCustomBrowserProtocol() {
@@ -54,7 +54,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the deployedAppCount property value. Count of apps to which the current policy is deployed.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDeployedAppCount() {
@@ -62,7 +62,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
-     * @return a ManagedAppPolicyDeploymentSummary
+     * @return a {@link ManagedAppPolicyDeploymentSummary}
      */
     @jakarta.annotation.Nullable
     public ManagedAppPolicyDeploymentSummary getDeploymentSummary() {
@@ -70,7 +70,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the faceIdBlocked property value. Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFaceIdBlocked() {
@@ -78,7 +78,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -94,7 +94,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the minimumRequiredSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMinimumRequiredSdkVersion() {

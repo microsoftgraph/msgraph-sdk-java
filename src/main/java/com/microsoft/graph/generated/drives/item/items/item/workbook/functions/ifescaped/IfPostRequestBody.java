@@ -19,7 +19,7 @@ public class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new IfPostRequestBody and sets the default values.
+     * Instantiates a new {@link IfPostRequestBody} and sets the default values.
      */
     public IfPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IfPostRequestBody
+     * @return a {@link IfPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static IfPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -70,7 +70,7 @@ public class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the logicalTest property value. The logicalTest property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getLogicalTest() {
@@ -78,7 +78,7 @@ public class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the valueIfFalse property value. The valueIfFalse property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getValueIfFalse() {
@@ -86,7 +86,7 @@ public class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the valueIfTrue property value. The valueIfTrue property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getValueIfTrue() {

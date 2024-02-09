@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProfileCardProperty extends Entity implements Parsable {
     /**
-     * Instantiates a new ProfileCardProperty and sets the default values.
+     * Instantiates a new {@link ProfileCardProperty} and sets the default values.
      */
     public ProfileCardProperty() {
         super();
@@ -17,7 +17,7 @@ public class ProfileCardProperty extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ProfileCardProperty
+     * @return a {@link ProfileCardProperty}
      */
     @jakarta.annotation.Nonnull
     public static ProfileCardProperty createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class ProfileCardProperty extends Entity implements Parsable {
     }
     /**
      * Gets the annotations property value. Allows an administrator to set a custom display label for the directory property and localize it for the users in their tenant.
-     * @return a java.util.List<ProfileCardAnnotation>
+     * @return a {@link java.util.List<ProfileCardAnnotation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProfileCardAnnotation> getAnnotations() {
@@ -34,7 +34,7 @@ public class ProfileCardProperty extends Entity implements Parsable {
     }
     /**
      * Gets the directoryPropertyName property value. Identifies a profileCardProperty resource in Get, Update, or Delete operations. Allows an administrator to surface hidden Microsoft Entra ID properties on the Microsoft 365 profile card within their tenant. When present, the Microsoft Entra ID field referenced in this property is visible to all users in your tenant on the contact pane of the profile card. Allowed values for this field are: UserPrincipalName, Fax, StreetAddress, PostalCode, StateOrProvince, Alias, CustomAttribute1,  CustomAttribute2, CustomAttribute3, CustomAttribute4, CustomAttribute5, CustomAttribute6, CustomAttribute7, CustomAttribute8, CustomAttribute9, CustomAttribute10, CustomAttribute11, CustomAttribute12, CustomAttribute13, CustomAttribute14, CustomAttribute15.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDirectoryPropertyName() {
@@ -42,7 +42,7 @@ public class ProfileCardProperty extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

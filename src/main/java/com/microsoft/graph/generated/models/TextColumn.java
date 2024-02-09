@@ -18,7 +18,7 @@ public class TextColumn implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new TextColumn and sets the default values.
+     * Instantiates a new {@link TextColumn} and sets the default values.
      */
     public TextColumn() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class TextColumn implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TextColumn
+     * @return a {@link TextColumn}
      */
     @jakarta.annotation.Nonnull
     public static TextColumn createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class TextColumn implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class TextColumn implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the allowMultipleLines property value. Whether to allow multiple lines of text.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowMultipleLines() {
@@ -57,7 +57,7 @@ public class TextColumn implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the appendChangesToExistingText property value. Whether updates to this column should replace existing text, or append to it.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAppendChangesToExistingText() {
@@ -65,7 +65,7 @@ public class TextColumn implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -73,7 +73,7 @@ public class TextColumn implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -88,7 +88,7 @@ public class TextColumn implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the linesForEditing property value. The size of the text box.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getLinesForEditing() {
@@ -96,7 +96,7 @@ public class TextColumn implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the maxLength property value. The maximum number of characters for the value.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMaxLength() {
@@ -104,7 +104,7 @@ public class TextColumn implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -112,7 +112,7 @@ public class TextColumn implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the textType property value. The type of text being stored. Must be one of plain or richText
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTextType() {

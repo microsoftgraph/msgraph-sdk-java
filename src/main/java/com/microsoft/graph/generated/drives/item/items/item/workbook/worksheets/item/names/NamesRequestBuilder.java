@@ -27,6 +27,7 @@ import java.util.Objects;
 public class NamesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the add method.
+     * @return a {@link AddRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AddRequestBuilder add() {
@@ -34,6 +35,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the addFormulaLocal method.
+     * @return a {@link AddFormulaLocalRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AddFormulaLocalRequestBuilder addFormulaLocal() {
@@ -41,6 +43,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -49,7 +52,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the names property of the microsoft.graph.workbookWorksheet entity.
      * @param workbookNamedItemId The unique identifier of workbookNamedItem
-     * @return a WorkbookNamedItemItemRequestBuilder
+     * @return a {@link WorkbookNamedItemItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WorkbookNamedItemItemRequestBuilder byWorkbookNamedItemId(@jakarta.annotation.Nonnull final String workbookNamedItemId) {
@@ -59,7 +62,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
         return new WorkbookNamedItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new NamesRequestBuilder and sets the default values.
+     * Instantiates a new {@link NamesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -67,7 +70,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/names{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new NamesRequestBuilder and sets the default values.
+     * Instantiates a new {@link NamesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -76,7 +79,8 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of named item associated with the worksheet. 
-     * @return a WorkbookNamedItemCollectionResponse
+     * @return a {@link WorkbookNamedItemCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-list-names?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -86,21 +90,22 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of named item associated with the worksheet. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WorkbookNamedItemCollectionResponse
+     * @return a {@link WorkbookNamedItemCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-list-names?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookNamedItemCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookNamedItemCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to names for drives
      * @param body The request body
-     * @return a WorkbookNamedItem
+     * @return a {@link WorkbookNamedItem}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WorkbookNamedItem post(@jakarta.annotation.Nonnull final WorkbookNamedItem body) {
@@ -110,20 +115,20 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to names for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WorkbookNamedItem
+     * @return a {@link WorkbookNamedItem}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WorkbookNamedItem post(@jakarta.annotation.Nonnull final WorkbookNamedItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookNamedItem::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of named item associated with the worksheet. 
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -132,7 +137,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of named item associated with the worksheet. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -144,7 +149,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to names for drives
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final WorkbookNamedItem body) {
@@ -154,12 +159,12 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to names for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final WorkbookNamedItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/names", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -168,7 +173,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a NamesRequestBuilder
+     * @return a {@link NamesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public NamesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -222,7 +227,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrincipalResourceMembershipsScope extends AccessReviewScope implements Parsable {
     /**
-     * Instantiates a new PrincipalResourceMembershipsScope and sets the default values.
+     * Instantiates a new {@link PrincipalResourceMembershipsScope} and sets the default values.
      */
     public PrincipalResourceMembershipsScope() {
         super();
@@ -18,7 +18,7 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrincipalResourceMembershipsScope
+     * @return a {@link PrincipalResourceMembershipsScope}
      */
     @jakarta.annotation.Nonnull
     public static PrincipalResourceMembershipsScope createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
     }
     /**
      * Gets the principalScopes property value. Defines the scopes of the principals whose access to resources are reviewed in the access review.
-     * @return a java.util.List<AccessReviewScope>
+     * @return a {@link java.util.List<AccessReviewScope>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewScope> getPrincipalScopes() {
@@ -46,7 +46,7 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
     }
     /**
      * Gets the resourceScopes property value. Defines the scopes of the resources for which access is reviewed.
-     * @return a java.util.List<AccessReviewScope>
+     * @return a {@link java.util.List<AccessReviewScope>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewScope> getResourceScopes() {

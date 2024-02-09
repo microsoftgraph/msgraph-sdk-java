@@ -12,13 +12,14 @@ import java.util.Objects;
 public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of identityGovernance entities.
+     * @return a {@link RefRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new AccessPackageItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link AccessPackageItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -26,7 +27,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/incompatibleAccessPackages/{accessPackage%2Did1}", pathParameters);
     }
     /**
-     * Instantiates a new AccessPackageItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link AccessPackageItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */

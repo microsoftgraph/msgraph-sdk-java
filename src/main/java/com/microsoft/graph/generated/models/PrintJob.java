@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintJob extends Entity implements Parsable {
     /**
-     * Instantiates a new PrintJob and sets the default values.
+     * Instantiates a new {@link PrintJob} and sets the default values.
      */
     public PrintJob() {
         super();
@@ -18,7 +18,7 @@ public class PrintJob extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrintJob
+     * @return a {@link PrintJob}
      */
     @jakarta.annotation.Nonnull
     public static PrintJob createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class PrintJob extends Entity implements Parsable {
     }
     /**
      * Gets the configuration property value. The configuration property
-     * @return a PrintJobConfiguration
+     * @return a {@link PrintJobConfiguration}
      */
     @jakarta.annotation.Nullable
     public PrintJobConfiguration getConfiguration() {
@@ -35,7 +35,7 @@ public class PrintJob extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The createdBy property
-     * @return a UserIdentity
+     * @return a {@link UserIdentity}
      */
     @jakarta.annotation.Nullable
     public UserIdentity getCreatedBy() {
@@ -43,7 +43,7 @@ public class PrintJob extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The DateTimeOffset when the job was created. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -51,7 +51,7 @@ public class PrintJob extends Entity implements Parsable {
     }
     /**
      * Gets the documents property value. The documents property
-     * @return a java.util.List<PrintDocument>
+     * @return a {@link java.util.List<PrintDocument>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintDocument> getDocuments() {
@@ -59,7 +59,7 @@ public class PrintJob extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class PrintJob extends Entity implements Parsable {
     }
     /**
      * Gets the isFetchable property value. If true, document can be fetched by printer.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsFetchable() {
@@ -85,7 +85,7 @@ public class PrintJob extends Entity implements Parsable {
     }
     /**
      * Gets the redirectedFrom property value. Contains the source job URL, if the job has been redirected from another printer.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRedirectedFrom() {
@@ -93,7 +93,7 @@ public class PrintJob extends Entity implements Parsable {
     }
     /**
      * Gets the redirectedTo property value. Contains the destination job URL, if the job has been redirected to another printer.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRedirectedTo() {
@@ -101,7 +101,7 @@ public class PrintJob extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a PrintJobStatus
+     * @return a {@link PrintJobStatus}
      */
     @jakarta.annotation.Nullable
     public PrintJobStatus getStatus() {
@@ -109,7 +109,7 @@ public class PrintJob extends Entity implements Parsable {
     }
     /**
      * Gets the tasks property value. A list of printTasks that were triggered by this print job.
-     * @return a java.util.List<PrintTask>
+     * @return a {@link java.util.List<PrintTask>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintTask> getTasks() {

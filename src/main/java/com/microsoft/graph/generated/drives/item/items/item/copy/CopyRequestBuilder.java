@@ -20,7 +20,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CopyRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new CopyRequestBuilder and sets the default values.
+     * Instantiates a new {@link CopyRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -28,7 +28,7 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/copy", pathParameters);
     }
     /**
-     * Instantiates a new CopyRequestBuilder and sets the default values.
+     * Instantiates a new {@link CopyRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -38,7 +38,8 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
     /**
      * Asynchronously creates a copy of an [driveItem][item-resource] (including any children), under a new parent item or with a new name.
      * @param body The request body
-     * @return a DriveItem
+     * @return a {@link DriveItem}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-copy?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -49,7 +50,8 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
      * Asynchronously creates a copy of an [driveItem][item-resource] (including any children), under a new parent item or with a new name.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DriveItem
+     * @return a {@link DriveItem}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-copy?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -57,14 +59,13 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DriveItem::createFromDiscriminatorValue);
     }
     /**
      * Asynchronously creates a copy of an [driveItem][item-resource] (including any children), under a new parent item or with a new name.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CopyPostRequestBody body) {
@@ -74,7 +75,7 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
      * Asynchronously creates a copy of an [driveItem][item-resource] (including any children), under a new parent item or with a new name.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CopyPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -88,7 +89,7 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a CopyRequestBuilder
+     * @return a {@link CopyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CopyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

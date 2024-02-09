@@ -18,7 +18,7 @@ public class ClearPresencePostRequestBody implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ClearPresencePostRequestBody and sets the default values.
+     * Instantiates a new {@link ClearPresencePostRequestBody} and sets the default values.
      */
     public ClearPresencePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ClearPresencePostRequestBody implements AdditionalDataHolder, Backe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ClearPresencePostRequestBody
+     * @return a {@link ClearPresencePostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static ClearPresencePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ClearPresencePostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ClearPresencePostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class ClearPresencePostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -67,7 +67,7 @@ public class ClearPresencePostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the sessionId property value. The sessionId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSessionId() {

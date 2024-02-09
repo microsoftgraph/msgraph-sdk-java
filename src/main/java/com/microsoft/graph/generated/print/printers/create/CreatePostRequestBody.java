@@ -19,7 +19,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new CreatePostRequestBody and sets the default values.
+     * Instantiates a new {@link CreatePostRequestBody} and sets the default values.
      */
     public CreatePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, BackedModel,
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CreatePostRequestBody
+     * @return a {@link CreatePostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static CreatePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the certificateSigningRequest property value. The certificateSigningRequest property
-     * @return a PrintCertificateSigningRequest
+     * @return a {@link PrintCertificateSigningRequest}
      */
     @jakarta.annotation.Nullable
     public PrintCertificateSigningRequest getCertificateSigningRequest() {
@@ -66,7 +66,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the connectorId property value. The connectorId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getConnectorId() {
@@ -74,7 +74,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -82,7 +82,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -98,7 +98,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the hasPhysicalDevice property value. The hasPhysicalDevice property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHasPhysicalDevice() {
@@ -106,7 +106,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the manufacturer property value. The manufacturer property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
@@ -114,7 +114,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the model property value. The model property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getModel() {
@@ -122,7 +122,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the physicalDeviceId property value. The physicalDeviceId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPhysicalDeviceId() {

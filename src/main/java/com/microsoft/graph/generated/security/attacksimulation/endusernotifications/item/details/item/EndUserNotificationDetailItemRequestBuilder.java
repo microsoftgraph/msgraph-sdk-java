@@ -21,7 +21,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EndUserNotificationDetailItemRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new EndUserNotificationDetailItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link EndUserNotificationDetailItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -29,7 +29,7 @@ public class EndUserNotificationDetailItemRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/security/attackSimulation/endUserNotifications/{endUserNotification%2Did}/details/{endUserNotificationDetail%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new EndUserNotificationDetailItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link EndUserNotificationDetailItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -38,6 +38,7 @@ public class EndUserNotificationDetailItemRequestBuilder extends BaseRequestBuil
     }
     /**
      * Delete navigation property details for security
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -45,17 +46,18 @@ public class EndUserNotificationDetailItemRequestBuilder extends BaseRequestBuil
     /**
      * Delete navigation property details for security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get details from security
-     * @return a EndUserNotificationDetail
+     * @return a {@link EndUserNotificationDetail}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public EndUserNotificationDetail get() {
@@ -64,20 +66,21 @@ public class EndUserNotificationDetailItemRequestBuilder extends BaseRequestBuil
     /**
      * Get details from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EndUserNotificationDetail
+     * @return a {@link EndUserNotificationDetail}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public EndUserNotificationDetail get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EndUserNotificationDetail::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property details in security
      * @param body The request body
-     * @return a EndUserNotificationDetail
+     * @return a {@link EndUserNotificationDetail}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public EndUserNotificationDetail patch(@jakarta.annotation.Nonnull final EndUserNotificationDetail body) {
@@ -87,20 +90,20 @@ public class EndUserNotificationDetailItemRequestBuilder extends BaseRequestBuil
      * Update the navigation property details in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EndUserNotificationDetail
+     * @return a {@link EndUserNotificationDetail}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public EndUserNotificationDetail patch(@jakarta.annotation.Nonnull final EndUserNotificationDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EndUserNotificationDetail::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property details for security
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -109,18 +112,18 @@ public class EndUserNotificationDetailItemRequestBuilder extends BaseRequestBuil
     /**
      * Delete navigation property details for security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/security/attackSimulation/endUserNotifications/{endUserNotification%2Did}/details/{endUserNotificationDetail%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Get details from security
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -129,7 +132,7 @@ public class EndUserNotificationDetailItemRequestBuilder extends BaseRequestBuil
     /**
      * Get details from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -141,7 +144,7 @@ public class EndUserNotificationDetailItemRequestBuilder extends BaseRequestBuil
     /**
      * Update the navigation property details in security
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EndUserNotificationDetail body) {
@@ -151,12 +154,12 @@ public class EndUserNotificationDetailItemRequestBuilder extends BaseRequestBuil
      * Update the navigation property details in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EndUserNotificationDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/security/attackSimulation/endUserNotifications/{endUserNotification%2Did}/details/{endUserNotificationDetail%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -165,7 +168,7 @@ public class EndUserNotificationDetailItemRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a EndUserNotificationDetailItemRequestBuilder
+     * @return a {@link EndUserNotificationDetailItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EndUserNotificationDetailItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -195,7 +198,7 @@ public class EndUserNotificationDetailItemRequestBuilder extends BaseRequestBuil
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

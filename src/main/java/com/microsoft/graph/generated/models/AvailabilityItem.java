@@ -18,7 +18,7 @@ public class AvailabilityItem implements AdditionalDataHolder, BackedModel, Pars
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AvailabilityItem and sets the default values.
+     * Instantiates a new {@link AvailabilityItem} and sets the default values.
      */
     public AvailabilityItem() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AvailabilityItem implements AdditionalDataHolder, BackedModel, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AvailabilityItem
+     * @return a {@link AvailabilityItem}
      */
     @jakarta.annotation.Nonnull
     public static AvailabilityItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AvailabilityItem implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AvailabilityItem implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class AvailabilityItem implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the endDateTime property value. The endDateTime property
-     * @return a DateTimeTimeZone
+     * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getEndDateTime() {
@@ -65,7 +65,7 @@ public class AvailabilityItem implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class AvailabilityItem implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -87,7 +87,7 @@ public class AvailabilityItem implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the serviceId property value. Indicates the service ID for 1:n appointments. If the appointment is of type 1:n, this field is present, otherwise, null.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getServiceId() {
@@ -95,7 +95,7 @@ public class AvailabilityItem implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the startDateTime property value. The startDateTime property
-     * @return a DateTimeTimeZone
+     * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getStartDateTime() {
@@ -103,7 +103,7 @@ public class AvailabilityItem implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the status property value. The status of the staff member. Possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue.
-     * @return a BookingsAvailabilityStatus
+     * @return a {@link BookingsAvailabilityStatus}
      */
     @jakarta.annotation.Nullable
     public BookingsAvailabilityStatus getStatus() {

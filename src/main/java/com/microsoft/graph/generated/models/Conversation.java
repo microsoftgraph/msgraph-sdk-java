@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Conversation extends Entity implements Parsable {
     /**
-     * Instantiates a new Conversation and sets the default values.
+     * Instantiates a new {@link Conversation} and sets the default values.
      */
     public Conversation() {
         super();
@@ -18,7 +18,7 @@ public class Conversation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Conversation
+     * @return a {@link Conversation}
      */
     @jakarta.annotation.Nonnull
     public static Conversation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class Conversation extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -42,7 +42,7 @@ public class Conversation extends Entity implements Parsable {
     }
     /**
      * Gets the hasAttachments property value. Indicates whether any of the posts within this Conversation has at least one attachment. Supports $filter (eq, ne) and $search.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHasAttachments() {
@@ -50,7 +50,7 @@ public class Conversation extends Entity implements Parsable {
     }
     /**
      * Gets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastDeliveredDateTime() {
@@ -58,7 +58,7 @@ public class Conversation extends Entity implements Parsable {
     }
     /**
      * Gets the preview property value. A short summary from the body of the latest post in this conversation. Supports $filter (eq, ne, le, ge).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPreview() {
@@ -66,7 +66,7 @@ public class Conversation extends Entity implements Parsable {
     }
     /**
      * Gets the threads property value. A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
-     * @return a java.util.List<ConversationThread>
+     * @return a {@link java.util.List<ConversationThread>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConversationThread> getThreads() {
@@ -74,7 +74,7 @@ public class Conversation extends Entity implements Parsable {
     }
     /**
      * Gets the topic property value. The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTopic() {
@@ -82,7 +82,7 @@ public class Conversation extends Entity implements Parsable {
     }
     /**
      * Gets the uniqueSenders property value. All the users that sent a message to this Conversation.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getUniqueSenders() {

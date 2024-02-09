@@ -26,6 +26,7 @@ import java.util.Objects;
 public class RepliesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,6 +34,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the delta method.
+     * @return a {@link DeltaRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeltaRequestBuilder delta() {
@@ -41,7 +43,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the replies property of the microsoft.graph.chatMessage entity.
      * @param chatMessageId1 The unique identifier of chatMessage
-     * @return a ChatMessageItemRequestBuilder
+     * @return a {@link ChatMessageItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ChatMessageItemRequestBuilder byChatMessageId1(@jakarta.annotation.Nonnull final String chatMessageId1) {
@@ -51,7 +53,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         return new ChatMessageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new RepliesRequestBuilder and sets the default values.
+     * Instantiates a new {@link RepliesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +61,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/chats/{chat%2Did}/messages/{chatMessage%2Did}/replies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new RepliesRequestBuilder and sets the default values.
+     * Instantiates a new {@link RepliesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -68,7 +70,8 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List all the replies to a message in a channel of a team. This method lists only the replies of the specified message, if any. To get the message itself, simply call get channel message.
-     * @return a ChatMessageCollectionResponse
+     * @return a {@link ChatMessageCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-list-replies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -78,21 +81,22 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
     /**
      * List all the replies to a message in a channel of a team. This method lists only the replies of the specified message, if any. To get the message itself, simply call get channel message.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ChatMessageCollectionResponse
+     * @return a {@link ChatMessageCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-list-replies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ChatMessageCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ChatMessageCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Send a new reply to a chatMessage in a specified channel.
      * @param body The request body
-     * @return a ChatMessage
+     * @return a {@link ChatMessage}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-post-replies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -103,7 +107,8 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
      * Send a new reply to a chatMessage in a specified channel.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ChatMessage
+     * @return a {@link ChatMessage}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-post-replies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -111,13 +116,12 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ChatMessage::createFromDiscriminatorValue);
     }
     /**
      * List all the replies to a message in a channel of a team. This method lists only the replies of the specified message, if any. To get the message itself, simply call get channel message.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -126,7 +130,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
     /**
      * List all the replies to a message in a channel of a team. This method lists only the replies of the specified message, if any. To get the message itself, simply call get channel message.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
     /**
      * Send a new reply to a chatMessage in a specified channel.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ChatMessage body) {
@@ -148,12 +152,12 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
      * Send a new reply to a chatMessage in a specified channel.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ChatMessage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/users/{user%2Did}/chats/{chat%2Did}/messages/{chatMessage%2Did}/replies", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -162,7 +166,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a RepliesRequestBuilder
+     * @return a {@link RepliesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RepliesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -216,7 +220,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

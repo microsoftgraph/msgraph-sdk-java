@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftCustomTrainingSetting extends TrainingSetting implements Parsable {
     /**
-     * Instantiates a new MicrosoftCustomTrainingSetting and sets the default values.
+     * Instantiates a new {@link MicrosoftCustomTrainingSetting} and sets the default values.
      */
     public MicrosoftCustomTrainingSetting() {
         super();
@@ -19,7 +19,7 @@ public class MicrosoftCustomTrainingSetting extends TrainingSetting implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MicrosoftCustomTrainingSetting
+     * @return a {@link MicrosoftCustomTrainingSetting}
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftCustomTrainingSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class MicrosoftCustomTrainingSetting extends TrainingSetting implements P
     }
     /**
      * Gets the completionDateTime property value. The completion date and time of the training. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompletionDateTime() {
@@ -36,7 +36,7 @@ public class MicrosoftCustomTrainingSetting extends TrainingSetting implements P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -48,7 +48,7 @@ public class MicrosoftCustomTrainingSetting extends TrainingSetting implements P
     }
     /**
      * Gets the trainingAssignmentMappings property value. The mapping details of the associated training.
-     * @return a java.util.List<MicrosoftTrainingAssignmentMapping>
+     * @return a {@link java.util.List<MicrosoftTrainingAssignmentMapping>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MicrosoftTrainingAssignmentMapping> getTrainingAssignmentMappings() {
@@ -56,7 +56,7 @@ public class MicrosoftCustomTrainingSetting extends TrainingSetting implements P
     }
     /**
      * Gets the trainingCompletionDuration property value. The training completion duration that needs to be provided before scheduling the training. Possible values are: week, fortnite, month, unknownFutureValue.
-     * @return a TrainingCompletionDuration
+     * @return a {@link TrainingCompletionDuration}
      */
     @jakarta.annotation.Nullable
     public TrainingCompletionDuration getTrainingCompletionDuration() {

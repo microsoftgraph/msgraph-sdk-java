@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnPremisesDirectorySynchronization extends Entity implements Parsable {
     /**
-     * Instantiates a new OnPremisesDirectorySynchronization and sets the default values.
+     * Instantiates a new {@link OnPremisesDirectorySynchronization} and sets the default values.
      */
     public OnPremisesDirectorySynchronization() {
         super();
@@ -17,7 +17,7 @@ public class OnPremisesDirectorySynchronization extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnPremisesDirectorySynchronization
+     * @return a {@link OnPremisesDirectorySynchronization}
      */
     @jakarta.annotation.Nonnull
     public static OnPremisesDirectorySynchronization createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class OnPremisesDirectorySynchronization extends Entity implements Parsab
     }
     /**
      * Gets the configuration property value. Consists of configurations that can be fine-tuned and impact the on-premises directory synchronization process for a tenant.
-     * @return a OnPremisesDirectorySynchronizationConfiguration
+     * @return a {@link OnPremisesDirectorySynchronizationConfiguration}
      */
     @jakarta.annotation.Nullable
     public OnPremisesDirectorySynchronizationConfiguration getConfiguration() {
@@ -34,7 +34,7 @@ public class OnPremisesDirectorySynchronization extends Entity implements Parsab
     }
     /**
      * Gets the features property value. The features property
-     * @return a OnPremisesDirectorySynchronizationFeature
+     * @return a {@link OnPremisesDirectorySynchronizationFeature}
      */
     @jakarta.annotation.Nullable
     public OnPremisesDirectorySynchronizationFeature getFeatures() {
@@ -42,7 +42,7 @@ public class OnPremisesDirectorySynchronization extends Entity implements Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

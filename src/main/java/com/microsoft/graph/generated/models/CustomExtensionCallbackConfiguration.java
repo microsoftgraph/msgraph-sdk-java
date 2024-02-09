@@ -20,7 +20,7 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new CustomExtensionCallbackConfiguration and sets the default values.
+     * Instantiates a new {@link CustomExtensionCallbackConfiguration} and sets the default values.
      */
     public CustomExtensionCallbackConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -29,7 +29,7 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CustomExtensionCallbackConfiguration
+     * @return a {@link CustomExtensionCallbackConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static CustomExtensionCallbackConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -58,7 +58,7 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -66,7 +66,7 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -85,7 +85,7 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
     }
     /**
      * Gets the timeoutDuration property value. The maximum duration in ISO 8601 format that Microsoft Entra ID will wait for a resume action for the callout it sent to the logic app. The valid range for custom extensions in lifecycle workflows is five minutes to three hours. The valid range for custom extensions in entitlement management is between 5 minutes and 14 days. For example, PT3H refers to three hours, P3D refers to three days, PT10M refers to ten minutes.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getTimeoutDuration() {

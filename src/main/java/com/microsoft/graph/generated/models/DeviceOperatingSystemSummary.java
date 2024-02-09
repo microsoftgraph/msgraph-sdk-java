@@ -21,7 +21,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DeviceOperatingSystemSummary and sets the default values.
+     * Instantiates a new {@link DeviceOperatingSystemSummary} and sets the default values.
      */
     public DeviceOperatingSystemSummary() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Backe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceOperatingSystemSummary
+     * @return a {@link DeviceOperatingSystemSummary}
      */
     @jakarta.annotation.Nonnull
     public static DeviceOperatingSystemSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the androidCorporateWorkProfileCount property value. The count of Corporate work profile Android devices. Also known as Corporate Owned Personally Enabled (COPE). Valid values -1 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getAndroidCorporateWorkProfileCount() {
@@ -60,7 +60,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the androidCount property value. Number of android device count.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getAndroidCount() {
@@ -68,7 +68,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the androidDedicatedCount property value. Number of dedicated Android devices.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getAndroidDedicatedCount() {
@@ -76,7 +76,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the androidDeviceAdminCount property value. Number of device admin Android devices.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getAndroidDeviceAdminCount() {
@@ -84,7 +84,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the androidFullyManagedCount property value. Number of fully managed Android devices.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getAndroidFullyManagedCount() {
@@ -92,7 +92,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the androidWorkProfileCount property value. Number of work profile Android devices.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getAndroidWorkProfileCount() {
@@ -100,7 +100,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -108,7 +108,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the configMgrDeviceCount property value. Number of ConfigMgr managed devices.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getConfigMgrDeviceCount() {
@@ -116,7 +116,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Backe
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -138,7 +138,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the iosCount property value. Number of iOS device count.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getIosCount() {
@@ -146,7 +146,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the macOSCount property value. Number of Mac OS X device count.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMacOSCount() {
@@ -154,7 +154,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -162,7 +162,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the unknownCount property value. Number of unknown device count.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUnknownCount() {
@@ -170,7 +170,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the windowsCount property value. Number of Windows device count.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getWindowsCount() {
@@ -178,7 +178,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the windowsMobileCount property value. Number of Windows mobile device count.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getWindowsMobileCount() {

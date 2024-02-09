@@ -20,7 +20,7 @@ public class TermColumn implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new TermColumn and sets the default values.
+     * Instantiates a new {@link TermColumn} and sets the default values.
      */
     public TermColumn() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -29,7 +29,7 @@ public class TermColumn implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TermColumn
+     * @return a {@link TermColumn}
      */
     @jakarta.annotation.Nonnull
     public static TermColumn createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class TermColumn implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -51,7 +51,7 @@ public class TermColumn implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the allowMultipleValues property value. Specifies whether the column allows more than one value.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowMultipleValues() {
@@ -59,7 +59,7 @@ public class TermColumn implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -67,7 +67,7 @@ public class TermColumn implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -81,7 +81,7 @@ public class TermColumn implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -89,7 +89,7 @@ public class TermColumn implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the parentTerm property value. The parentTerm property
-     * @return a Term
+     * @return a {@link Term}
      */
     @jakarta.annotation.Nullable
     public Term getParentTerm() {
@@ -97,7 +97,7 @@ public class TermColumn implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the showFullyQualifiedName property value. Specifies whether to display the entire term path or only the term label.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getShowFullyQualifiedName() {
@@ -105,7 +105,7 @@ public class TermColumn implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the termSet property value. The termSet property
-     * @return a Set
+     * @return a {@link Set}
      */
     @jakarta.annotation.Nullable
     public Set getTermSet() {

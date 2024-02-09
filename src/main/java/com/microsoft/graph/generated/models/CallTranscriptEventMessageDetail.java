@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CallTranscriptEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * Instantiates a new CallTranscriptEventMessageDetail and sets the default values.
+     * Instantiates a new {@link CallTranscriptEventMessageDetail} and sets the default values.
      */
     public CallTranscriptEventMessageDetail() {
         super();
@@ -18,7 +18,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CallTranscriptEventMessageDetail
+     * @return a {@link CallTranscriptEventMessageDetail}
      */
     @jakarta.annotation.Nonnull
     public static CallTranscriptEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
     }
     /**
      * Gets the callId property value. Unique identifier of the call.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCallId() {
@@ -35,7 +35,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
     }
     /**
      * Gets the callTranscriptICalUid property value. Unique identifier for a call transcript.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCallTranscriptICalUid() {
@@ -43,7 +43,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -55,7 +55,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
     }
     /**
      * Gets the meetingOrganizer property value. The organizer of the meeting.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getMeetingOrganizer() {

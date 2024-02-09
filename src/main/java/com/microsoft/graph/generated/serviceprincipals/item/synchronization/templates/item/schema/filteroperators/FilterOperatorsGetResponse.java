@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class FilterOperatorsGetResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new FilterOperatorsGetResponse and sets the default values.
+     * Instantiates a new {@link FilterOperatorsGetResponse} and sets the default values.
      */
     public FilterOperatorsGetResponse() {
         super();
@@ -19,7 +19,7 @@ public class FilterOperatorsGetResponse extends BaseCollectionPaginationCountRes
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a FilterOperatorsGetResponse
+     * @return a {@link FilterOperatorsGetResponse}
      */
     @jakarta.annotation.Nonnull
     public static FilterOperatorsGetResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class FilterOperatorsGetResponse extends BaseCollectionPaginationCountRes
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class FilterOperatorsGetResponse extends BaseCollectionPaginationCountRes
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<FilterOperatorSchema>
+     * @return a {@link java.util.List<FilterOperatorSchema>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<FilterOperatorSchema> getValue() {

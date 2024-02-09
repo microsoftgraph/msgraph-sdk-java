@@ -26,6 +26,7 @@ import java.util.Objects;
 public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the appScope property of the microsoft.graph.unifiedRoleAssignment entity.
+     * @return a {@link AppScopeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AppScopeRequestBuilder appScope() {
@@ -33,6 +34,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Provides operations to manage the directoryScope property of the microsoft.graph.unifiedRoleAssignment entity.
+     * @return a {@link DirectoryScopeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DirectoryScopeRequestBuilder directoryScope() {
@@ -40,6 +42,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Provides operations to manage the principal property of the microsoft.graph.unifiedRoleAssignment entity.
+     * @return a {@link PrincipalRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PrincipalRequestBuilder principal() {
@@ -47,13 +50,14 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Provides operations to manage the roleDefinition property of the microsoft.graph.unifiedRoleAssignment entity.
+     * @return a {@link RoleDefinitionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleDefinitionRequestBuilder roleDefinition() {
         return new RoleDefinitionRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new UnifiedRoleAssignmentItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link UnifiedRoleAssignmentItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -61,7 +65,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/roleManagement/directory/roleAssignments/{unifiedRoleAssignment%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new UnifiedRoleAssignmentItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link UnifiedRoleAssignmentItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -70,6 +74,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Delete a unifiedRoleAssignment object.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -78,18 +83,19 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Delete a unifiedRoleAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve the properties and relationships of a unifiedRoleAssignment object.
-     * @return a UnifiedRoleAssignment
+     * @return a {@link UnifiedRoleAssignment}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -99,21 +105,22 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Retrieve the properties and relationships of a unifiedRoleAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UnifiedRoleAssignment
+     * @return a {@link UnifiedRoleAssignment}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleAssignment get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleAssignment::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property roleAssignments in roleManagement
      * @param body The request body
-     * @return a UnifiedRoleAssignment
+     * @return a {@link UnifiedRoleAssignment}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleAssignment patch(@jakarta.annotation.Nonnull final UnifiedRoleAssignment body) {
@@ -123,20 +130,20 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property roleAssignments in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UnifiedRoleAssignment
+     * @return a {@link UnifiedRoleAssignment}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleAssignment patch(@jakarta.annotation.Nonnull final UnifiedRoleAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleAssignment::createFromDiscriminatorValue);
     }
     /**
      * Delete a unifiedRoleAssignment object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -145,18 +152,18 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Delete a unifiedRoleAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/roleManagement/directory/roleAssignments/{unifiedRoleAssignment%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Retrieve the properties and relationships of a unifiedRoleAssignment object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -165,7 +172,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Retrieve the properties and relationships of a unifiedRoleAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -177,7 +184,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the navigation property roleAssignments in roleManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UnifiedRoleAssignment body) {
@@ -187,12 +194,12 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property roleAssignments in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UnifiedRoleAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/roleManagement/directory/roleAssignments/{unifiedRoleAssignment%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -201,7 +208,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a UnifiedRoleAssignmentItemRequestBuilder
+     * @return a {@link UnifiedRoleAssignmentItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UnifiedRoleAssignmentItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -231,7 +238,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

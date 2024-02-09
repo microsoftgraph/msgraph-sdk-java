@@ -31,6 +31,7 @@ import java.util.Objects;
 public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the assignmentCategories property of the microsoft.graph.educationClass entity.
+     * @return a {@link AssignmentCategoriesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignmentCategoriesRequestBuilder assignmentCategories() {
@@ -38,6 +39,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the assignmentDefaults property of the microsoft.graph.educationClass entity.
+     * @return a {@link AssignmentDefaultsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignmentDefaultsRequestBuilder assignmentDefaults() {
@@ -45,6 +47,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.educationClass entity.
+     * @return a {@link AssignmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
@@ -52,6 +55,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the assignmentSettings property of the microsoft.graph.educationClass entity.
+     * @return a {@link AssignmentSettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignmentSettingsRequestBuilder assignmentSettings() {
@@ -59,6 +63,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the group property of the microsoft.graph.educationClass entity.
+     * @return a {@link GroupRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GroupRequestBuilder group() {
@@ -66,6 +71,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the members property of the microsoft.graph.educationClass entity.
+     * @return a {@link MembersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MembersRequestBuilder members() {
@@ -73,6 +79,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the modules property of the microsoft.graph.educationClass entity.
+     * @return a {@link ModulesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ModulesRequestBuilder modules() {
@@ -80,6 +87,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the schools property of the microsoft.graph.educationClass entity.
+     * @return a {@link SchoolsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SchoolsRequestBuilder schools() {
@@ -87,13 +95,14 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the teachers property of the microsoft.graph.educationClass entity.
+     * @return a {@link TeachersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TeachersRequestBuilder teachers() {
         return new TeachersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new EducationClassItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link EducationClassItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -101,7 +110,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new EducationClassItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link EducationClassItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -110,6 +119,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete an educationClass. Because a class is also a universal group, deleting a class deletes the group.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -118,18 +128,19 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete an educationClass. Because a class is also a universal group, deleting a class deletes the group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve a class from the system. A class is a universal group with a special property that indicates to the system that the group is a class. Group members represent the students; group admins represent the teachers in the class. If you're using the delegated token, the user will only see classes in which they are members.
-     * @return a EducationClass
+     * @return a {@link EducationClass}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -139,21 +150,22 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a class from the system. A class is a universal group with a special property that indicates to the system that the group is a class. Group members represent the students; group admins represent the teachers in the class. If you're using the delegated token, the user will only see classes in which they are members.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EducationClass
+     * @return a {@link EducationClass}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationClass get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EducationClass::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of an educationClass object.
      * @param body The request body
-     * @return a EducationClass
+     * @return a {@link EducationClass}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -164,7 +176,8 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an educationClass object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EducationClass
+     * @return a {@link EducationClass}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -172,13 +185,12 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EducationClass::createFromDiscriminatorValue);
     }
     /**
      * Delete an educationClass. Because a class is also a universal group, deleting a class deletes the group.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -187,18 +199,18 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete an educationClass. Because a class is also a universal group, deleting a class deletes the group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/education/classes/{educationClass%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Retrieve a class from the system. A class is a universal group with a special property that indicates to the system that the group is a class. Group members represent the students; group admins represent the teachers in the class. If you're using the delegated token, the user will only see classes in which they are members.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -207,7 +219,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a class from the system. A class is a universal group with a special property that indicates to the system that the group is a class. Group members represent the students; group admins represent the teachers in the class. If you're using the delegated token, the user will only see classes in which they are members.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -219,7 +231,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of an educationClass object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EducationClass body) {
@@ -229,12 +241,12 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an educationClass object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EducationClass body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/education/classes/{educationClass%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -243,7 +255,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a EducationClassItemRequestBuilder
+     * @return a {@link EducationClassItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EducationClassItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -273,7 +285,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

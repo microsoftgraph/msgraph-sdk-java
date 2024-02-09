@@ -14,7 +14,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     /**
-     * Instantiates a new ManagedAppProtection and sets the default values.
+     * Instantiates a new {@link ManagedAppProtection} and sets the default values.
      */
     public ManagedAppProtection() {
         super();
@@ -23,7 +23,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedAppProtection
+     * @return a {@link ManagedAppProtection}
      */
     @jakarta.annotation.Nonnull
     public static ManagedAppProtection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the allowedDataStorageLocations property value. Data storage locations where a user may store managed data.
-     * @return a java.util.List<ManagedAppDataStorageLocation>
+     * @return a {@link java.util.List<ManagedAppDataStorageLocation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAppDataStorageLocation> getAllowedDataStorageLocations() {
@@ -50,7 +50,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the allowedInboundDataTransferSources property value. Data can be transferred from/to these classes of apps
-     * @return a ManagedAppDataTransferLevel
+     * @return a {@link ManagedAppDataTransferLevel}
      */
     @jakarta.annotation.Nullable
     public ManagedAppDataTransferLevel getAllowedInboundDataTransferSources() {
@@ -58,7 +58,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the allowedOutboundClipboardSharingLevel property value. Represents the level to which the device's clipboard may be shared between apps
-     * @return a ManagedAppClipboardSharingLevel
+     * @return a {@link ManagedAppClipboardSharingLevel}
      */
     @jakarta.annotation.Nullable
     public ManagedAppClipboardSharingLevel getAllowedOutboundClipboardSharingLevel() {
@@ -66,7 +66,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the allowedOutboundDataTransferDestinations property value. Data can be transferred from/to these classes of apps
-     * @return a ManagedAppDataTransferLevel
+     * @return a {@link ManagedAppDataTransferLevel}
      */
     @jakarta.annotation.Nullable
     public ManagedAppDataTransferLevel getAllowedOutboundDataTransferDestinations() {
@@ -74,7 +74,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the contactSyncBlocked property value. Indicates whether contacts can be synced to the user's device.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getContactSyncBlocked() {
@@ -82,7 +82,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the dataBackupBlocked property value. Indicates whether the backup of a managed app's data is blocked.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDataBackupBlocked() {
@@ -90,7 +90,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the deviceComplianceRequired property value. Indicates whether device compliance is required.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceComplianceRequired() {
@@ -98,7 +98,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the disableAppPinIfDevicePinIsSet property value. Indicates whether use of the app pin is required if the device pin is set.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDisableAppPinIfDevicePinIsSet() {
@@ -106,7 +106,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -142,7 +142,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the fingerprintBlocked property value. Indicates whether use of the fingerprint reader is allowed in place of a pin if PinRequired is set to True.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFingerprintBlocked() {
@@ -150,7 +150,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the managedBrowser property value. Type of managed browser
-     * @return a EnumSet<ManagedBrowserType>
+     * @return a {@link EnumSet<ManagedBrowserType>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<ManagedBrowserType> getManagedBrowser() {
@@ -158,7 +158,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the managedBrowserToOpenLinksRequired property value. Indicates whether internet links should be opened in the managed browser app, or any custom browser specified by CustomBrowserProtocol (for iOS) or CustomBrowserPackageId/CustomBrowserDisplayName (for Android)
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getManagedBrowserToOpenLinksRequired() {
@@ -166,7 +166,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the maximumPinRetries property value. Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMaximumPinRetries() {
@@ -174,7 +174,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the minimumPinLength property value. Minimum pin length required for an app-level pin if PinRequired is set to True
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMinimumPinLength() {
@@ -182,7 +182,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the minimumRequiredAppVersion property value. Versions less than the specified version will block the managed app from accessing company data.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMinimumRequiredAppVersion() {
@@ -190,7 +190,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the minimumRequiredOsVersion property value. Versions less than the specified version will block the managed app from accessing company data.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMinimumRequiredOsVersion() {
@@ -198,7 +198,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the minimumWarningAppVersion property value. Versions less than the specified version will result in warning message on the managed app.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMinimumWarningAppVersion() {
@@ -206,7 +206,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the minimumWarningOsVersion property value. Versions less than the specified version will result in warning message on the managed app from accessing company data.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMinimumWarningOsVersion() {
@@ -214,7 +214,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the organizationalCredentialsRequired property value. Indicates whether organizational credentials are required for app use.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getOrganizationalCredentialsRequired() {
@@ -222,7 +222,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the periodBeforePinReset property value. TimePeriod before the all-level pin must be reset if PinRequired is set to True.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getPeriodBeforePinReset() {
@@ -230,7 +230,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the periodOfflineBeforeAccessCheck property value. The period after which access is checked when the device is not connected to the internet.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getPeriodOfflineBeforeAccessCheck() {
@@ -238,7 +238,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the periodOfflineBeforeWipeIsEnforced property value. The amount of time an app is allowed to remain disconnected from the internet before all managed data it is wiped.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getPeriodOfflineBeforeWipeIsEnforced() {
@@ -246,7 +246,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the periodOnlineBeforeAccessCheck property value. The period after which access is checked when the device is connected to the internet.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getPeriodOnlineBeforeAccessCheck() {
@@ -254,7 +254,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the pinCharacterSet property value. Character set which is to be used for a user's app PIN
-     * @return a ManagedAppPinCharacterSet
+     * @return a {@link ManagedAppPinCharacterSet}
      */
     @jakarta.annotation.Nullable
     public ManagedAppPinCharacterSet getPinCharacterSet() {
@@ -262,7 +262,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the pinRequired property value. Indicates whether an app-level pin is required.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPinRequired() {
@@ -270,7 +270,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the printBlocked property value. Indicates whether printing is allowed from managed apps.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPrintBlocked() {
@@ -278,7 +278,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the saveAsBlocked property value. Indicates whether users may use the 'Save As' menu item to save a copy of protected files.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSaveAsBlocked() {
@@ -286,7 +286,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the simplePinBlocked property value. Indicates whether simplePin is blocked.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSimplePinBlocked() {

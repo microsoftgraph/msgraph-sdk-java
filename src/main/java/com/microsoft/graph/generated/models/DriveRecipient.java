@@ -18,7 +18,7 @@ public class DriveRecipient implements AdditionalDataHolder, BackedModel, Parsab
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DriveRecipient and sets the default values.
+     * Instantiates a new {@link DriveRecipient} and sets the default values.
      */
     public DriveRecipient() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class DriveRecipient implements AdditionalDataHolder, BackedModel, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DriveRecipient
+     * @return a {@link DriveRecipient}
      */
     @jakarta.annotation.Nonnull
     public static DriveRecipient createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class DriveRecipient implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class DriveRecipient implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the alias property value. The alias of the domain object, for cases where an email address is unavailable (e.g. security groups).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAlias() {
@@ -57,7 +57,7 @@ public class DriveRecipient implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class DriveRecipient implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the email property value. The email address for the recipient, if the recipient has an associated email address.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -73,7 +73,7 @@ public class DriveRecipient implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -86,7 +86,7 @@ public class DriveRecipient implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the objectId property value. The unique identifier for the recipient in the directory.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getObjectId() {
@@ -94,7 +94,7 @@ public class DriveRecipient implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

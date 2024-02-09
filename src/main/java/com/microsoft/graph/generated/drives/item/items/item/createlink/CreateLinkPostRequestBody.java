@@ -20,7 +20,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new CreateLinkPostRequestBody and sets the default values.
+     * Instantiates a new {@link CreateLinkPostRequestBody} and sets the default values.
      */
     public CreateLinkPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -29,7 +29,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedMo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CreateLinkPostRequestBody
+     * @return a {@link CreateLinkPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static CreateLinkPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -51,7 +51,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -59,7 +59,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the expirationDateTime property value. The expirationDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
@@ -67,7 +67,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedMo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -84,7 +84,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the message property value. The message property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMessage() {
@@ -92,7 +92,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the password property value. The password property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPassword() {
@@ -100,7 +100,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the recipients property value. The recipients property
-     * @return a java.util.List<DriveRecipient>
+     * @return a {@link java.util.List<DriveRecipient>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DriveRecipient> getRecipients() {
@@ -108,7 +108,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the retainInheritedPermissions property value. The retainInheritedPermissions property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRetainInheritedPermissions() {
@@ -116,7 +116,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the scope property value. The scope property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getScope() {
@@ -124,7 +124,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the sendNotification property value. The sendNotification property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSendNotification() {
@@ -132,7 +132,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the type property value. The type property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getType() {

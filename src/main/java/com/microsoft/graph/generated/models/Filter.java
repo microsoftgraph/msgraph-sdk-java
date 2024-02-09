@@ -18,7 +18,7 @@ public class Filter implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new Filter and sets the default values.
+     * Instantiates a new {@link Filter} and sets the default values.
      */
     public Filter() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class Filter implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Filter
+     * @return a {@link Filter}
      */
     @jakarta.annotation.Nonnull
     public static Filter createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class Filter implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class Filter implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class Filter implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the categoryFilterGroups property value. *Experimental* Filter group set used to decide whether given object belongs and should be processed as part of this object mapping. An object is considered in scope if ANY of the groups in the collection is evaluated to true.
-     * @return a java.util.List<FilterGroup>
+     * @return a {@link java.util.List<FilterGroup>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<FilterGroup> getCategoryFilterGroups() {
@@ -65,7 +65,7 @@ public class Filter implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class Filter implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the groups property value. Filter group set used to decide whether given object is in scope for provisioning. This is the filter which should be used in most cases. If an object used to satisfy this filter at a given moment, and then the object or the filter was changed so that filter isn't satisfied any longer, such object will get deprovisioned'. An object is considered in scope if ANY of the groups in the collection is evaluated to true.
-     * @return a java.util.List<FilterGroup>
+     * @return a {@link java.util.List<FilterGroup>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<FilterGroup> getGroups() {
@@ -86,7 +86,7 @@ public class Filter implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the inputFilterGroups property value. *Experimental* Filter group set used to filter out objects at the early stage of reading them from the directory. If an object doesn't satisfy this filter, then it will not be processed further. Important to understand is that if an object used to satisfy this filter at a given moment, and then the object or the filter was changed so that filter is no longer satisfied, such object will NOT get deprovisioned. An object is considered in scope if ANY of the groups in the collection is evaluated to true.
-     * @return a java.util.List<FilterGroup>
+     * @return a {@link java.util.List<FilterGroup>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<FilterGroup> getInputFilterGroups() {
@@ -94,7 +94,7 @@ public class Filter implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

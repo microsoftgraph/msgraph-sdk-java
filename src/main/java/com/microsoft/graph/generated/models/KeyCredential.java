@@ -20,7 +20,7 @@ public class KeyCredential implements AdditionalDataHolder, BackedModel, Parsabl
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new KeyCredential and sets the default values.
+     * Instantiates a new {@link KeyCredential} and sets the default values.
      */
     public KeyCredential() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -29,7 +29,7 @@ public class KeyCredential implements AdditionalDataHolder, BackedModel, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a KeyCredential
+     * @return a {@link KeyCredential}
      */
     @jakarta.annotation.Nonnull
     public static KeyCredential createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class KeyCredential implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -51,7 +51,7 @@ public class KeyCredential implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -59,7 +59,7 @@ public class KeyCredential implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the customKeyIdentifier property value. A 40-character binary type that can be used to identify the credential. Optional. When not provided in the payload, defaults to the thumbprint of the certificate.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getCustomKeyIdentifier() {
@@ -67,7 +67,7 @@ public class KeyCredential implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the displayName property value. Friendly name for the key. Optional.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -75,7 +75,7 @@ public class KeyCredential implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the endDateTime property value. The date and time at which the credential expires. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
@@ -83,7 +83,7 @@ public class KeyCredential implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -101,7 +101,7 @@ public class KeyCredential implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the key property value. The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.  From a .cer certificate, you can read the key using the Convert.ToBase64String() method. For more information, see Get the certificate key.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getKey() {
@@ -109,7 +109,7 @@ public class KeyCredential implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the keyId property value. The unique identifier (GUID) for the key.
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getKeyId() {
@@ -117,7 +117,7 @@ public class KeyCredential implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -125,7 +125,7 @@ public class KeyCredential implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the startDateTime property value. The date and time at which the credential becomes valid.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
@@ -133,7 +133,7 @@ public class KeyCredential implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the type property value. The type of key credential; for example, Symmetric, AsymmetricX509Cert.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getType() {
@@ -141,7 +141,7 @@ public class KeyCredential implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the usage property value. A string that describes the purpose for which the key can be used; for example, Verify.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUsage() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRbacResourceAction extends Entity implements Parsable {
     /**
-     * Instantiates a new UnifiedRbacResourceAction and sets the default values.
+     * Instantiates a new {@link UnifiedRbacResourceAction} and sets the default values.
      */
     public UnifiedRbacResourceAction() {
         super();
@@ -17,7 +17,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnifiedRbacResourceAction
+     * @return a {@link UnifiedRbacResourceAction}
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRbacResourceAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     }
     /**
      * Gets the actionVerb property value. The actionVerb property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getActionVerb() {
@@ -34,7 +34,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     }
     /**
      * Gets the authenticationContextId property value. The authenticationContextId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAuthenticationContextId() {
@@ -42,7 +42,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -50,7 +50,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -65,7 +65,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     }
     /**
      * Gets the isAuthenticationContextSettable property value. The isAuthenticationContextSettable property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAuthenticationContextSettable() {
@@ -73,7 +73,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The name property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -81,7 +81,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     }
     /**
      * Gets the resourceScopeId property value. The resourceScopeId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourceScopeId() {

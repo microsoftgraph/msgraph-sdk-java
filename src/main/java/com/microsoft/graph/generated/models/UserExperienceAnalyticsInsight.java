@@ -21,7 +21,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Bac
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new UserExperienceAnalyticsInsight and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsInsight} and sets the default values.
      */
     public UserExperienceAnalyticsInsight() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Bac
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsInsight
+     * @return a {@link UserExperienceAnalyticsInsight}
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsInsight createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Bac
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -74,7 +74,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the insightId property value. The unique identifier of the user experience analytics insight.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInsightId() {
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -90,7 +90,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the severity property value. Indicates severity of insights. Possible values are: None, Informational, Warning, Error.
-     * @return a UserExperienceAnalyticsInsightSeverity
+     * @return a {@link UserExperienceAnalyticsInsightSeverity}
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsInsightSeverity getSeverity() {
@@ -98,7 +98,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the userExperienceAnalyticsMetricId property value. The unique identifier of the user experience analytics metric.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserExperienceAnalyticsMetricId() {
@@ -106,7 +106,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the values property value. The value of the user experience analytics insight.
-     * @return a java.util.List<UserExperienceAnalyticsInsightValue>
+     * @return a {@link java.util.List<UserExperienceAnalyticsInsightValue>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsInsightValue> getValues() {

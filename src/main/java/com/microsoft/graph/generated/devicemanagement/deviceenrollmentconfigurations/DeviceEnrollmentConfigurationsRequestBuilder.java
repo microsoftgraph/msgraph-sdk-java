@@ -25,6 +25,7 @@ import java.util.Objects;
 public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
     /**
      * Provides operations to manage the deviceEnrollmentConfigurations property of the microsoft.graph.deviceManagement entity.
      * @param deviceEnrollmentConfigurationId The unique identifier of deviceEnrollmentConfiguration
-     * @return a DeviceEnrollmentConfigurationItemRequestBuilder
+     * @return a {@link DeviceEnrollmentConfigurationItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceEnrollmentConfigurationItemRequestBuilder byDeviceEnrollmentConfigurationId(@jakarta.annotation.Nonnull final String deviceEnrollmentConfigurationId) {
@@ -43,7 +44,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
         return new DeviceEnrollmentConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new DeviceEnrollmentConfigurationsRequestBuilder and sets the default values.
+     * Instantiates a new {@link DeviceEnrollmentConfigurationsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceEnrollmentConfigurations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new DeviceEnrollmentConfigurationsRequestBuilder and sets the default values.
+     * Instantiates a new {@link DeviceEnrollmentConfigurationsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,32 +60,34 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceEnrollmentConfigurations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration objects.
-     * @return a DeviceEnrollmentConfigurationCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-list?view=graph-rest-1.0">Find more info here</a>
+     * List properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration objects.
+     * @return a {@link DeviceEnrollmentConfigurationCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentwindowshelloforbusinessconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceEnrollmentConfigurationCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration objects.
+     * List properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceEnrollmentConfigurationCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a {@link DeviceEnrollmentConfigurationCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentwindowshelloforbusinessconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceEnrollmentConfigurationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceEnrollmentConfigurationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new deviceEnrollmentLimitConfiguration object.
      * @param body The request body
-     * @return a DeviceEnrollmentConfiguration
+     * @return a {@link DeviceEnrollmentConfiguration}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentlimitconfiguration-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -95,7 +98,8 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
      * Create a new deviceEnrollmentLimitConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceEnrollmentConfiguration
+     * @return a {@link DeviceEnrollmentConfiguration}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentlimitconfiguration-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -103,22 +107,21 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceEnrollmentConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * List properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration objects.
-     * @return a RequestInformation
+     * List properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration objects.
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration objects.
+     * List properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +133,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
     /**
      * Create a new deviceEnrollmentLimitConfiguration object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceEnrollmentConfiguration body) {
@@ -140,12 +143,12 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
      * Create a new deviceEnrollmentLimitConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceEnrollmentConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceManagement/deviceEnrollmentConfigurations", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -154,7 +157,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DeviceEnrollmentConfigurationsRequestBuilder
+     * @return a {@link DeviceEnrollmentConfigurationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceEnrollmentConfigurationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -162,7 +165,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
         return new DeviceEnrollmentConfigurationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration objects.
+     * List properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
@@ -208,7 +211,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

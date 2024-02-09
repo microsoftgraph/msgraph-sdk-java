@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AttackSimulationRoot extends Entity implements Parsable {
     /**
-     * Instantiates a new AttackSimulationRoot and sets the default values.
+     * Instantiates a new {@link AttackSimulationRoot} and sets the default values.
      */
     public AttackSimulationRoot() {
         super();
@@ -17,7 +17,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AttackSimulationRoot
+     * @return a {@link AttackSimulationRoot}
      */
     @jakarta.annotation.Nonnull
     public static AttackSimulationRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     }
     /**
      * Gets the endUserNotifications property value. Represents an end user's notification for an attack simulation training.
-     * @return a java.util.List<EndUserNotification>
+     * @return a {@link java.util.List<EndUserNotification>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EndUserNotification> getEndUserNotifications() {
@@ -34,7 +34,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -51,7 +51,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     }
     /**
      * Gets the landingPages property value. Represents an attack simulation training landing page.
-     * @return a java.util.List<LandingPage>
+     * @return a {@link java.util.List<LandingPage>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<LandingPage> getLandingPages() {
@@ -59,7 +59,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     }
     /**
      * Gets the loginPages property value. Represents an attack simulation training login page.
-     * @return a java.util.List<LoginPage>
+     * @return a {@link java.util.List<LoginPage>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<LoginPage> getLoginPages() {
@@ -67,7 +67,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     }
     /**
      * Gets the operations property value. Represents an attack simulation training operation.
-     * @return a java.util.List<AttackSimulationOperation>
+     * @return a {@link java.util.List<AttackSimulationOperation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttackSimulationOperation> getOperations() {
@@ -75,7 +75,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     }
     /**
      * Gets the payloads property value. Represents an attack simulation training campaign payload in a tenant.
-     * @return a java.util.List<Payload>
+     * @return a {@link java.util.List<Payload>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Payload> getPayloads() {
@@ -83,7 +83,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     }
     /**
      * Gets the simulationAutomations property value. Represents simulation automation created to run on a tenant.
-     * @return a java.util.List<SimulationAutomation>
+     * @return a {@link java.util.List<SimulationAutomation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SimulationAutomation> getSimulationAutomations() {
@@ -91,7 +91,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     }
     /**
      * Gets the simulations property value. Represents an attack simulation training campaign in a tenant.
-     * @return a java.util.List<Simulation>
+     * @return a {@link java.util.List<Simulation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Simulation> getSimulations() {
@@ -99,7 +99,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     }
     /**
      * Gets the trainings property value. Represents details about attack simulation trainings.
-     * @return a java.util.List<Training>
+     * @return a {@link java.util.List<Training>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Training> getTrainings() {

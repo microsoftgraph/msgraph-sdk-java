@@ -25,6 +25,7 @@ import java.util.Objects;
 public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the b2xUserFlows property of the microsoft.graph.identityContainer entity.
      * @param b2xIdentityUserFlowId The unique identifier of b2xIdentityUserFlow
-     * @return a B2xIdentityUserFlowItemRequestBuilder
+     * @return a {@link B2xIdentityUserFlowItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public B2xIdentityUserFlowItemRequestBuilder byB2xIdentityUserFlowId(@jakarta.annotation.Nonnull final String b2xIdentityUserFlowId) {
@@ -43,7 +44,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
         return new B2xIdentityUserFlowItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new B2xUserFlowsRequestBuilder and sets the default values.
+     * Instantiates a new {@link B2xUserFlowsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/b2xUserFlows{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new B2xUserFlowsRequestBuilder and sets the default values.
+     * Instantiates a new {@link B2xUserFlowsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of b2xIdentityUserFlow objects.
-     * @return a B2xIdentityUserFlowCollectionResponse
+     * @return a {@link B2xIdentityUserFlowCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-b2xuserflows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of b2xIdentityUserFlow objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a B2xIdentityUserFlowCollectionResponse
+     * @return a {@link B2xIdentityUserFlowCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-b2xuserflows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public B2xIdentityUserFlowCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, B2xIdentityUserFlowCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new b2xIdentityUserFlow object.
      * @param body The request body
-     * @return a B2xIdentityUserFlow
+     * @return a {@link B2xIdentityUserFlow}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-b2xuserflows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -95,7 +98,8 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
      * Create a new b2xIdentityUserFlow object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a B2xIdentityUserFlow
+     * @return a {@link B2xIdentityUserFlow}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-b2xuserflows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -103,13 +107,12 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, B2xIdentityUserFlow::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of b2xIdentityUserFlow objects.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -118,7 +121,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of b2xIdentityUserFlow objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +133,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new b2xIdentityUserFlow object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final B2xIdentityUserFlow body) {
@@ -140,12 +143,12 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
      * Create a new b2xIdentityUserFlow object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final B2xIdentityUserFlow body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/identity/b2xUserFlows", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -154,7 +157,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a B2xUserFlowsRequestBuilder
+     * @return a {@link B2xUserFlowsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public B2xUserFlowsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -208,7 +211,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

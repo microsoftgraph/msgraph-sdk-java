@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
     /**
-     * Instantiates a new ItemIdResolver and sets the default values.
+     * Instantiates a new {@link ItemIdResolver} and sets the default values.
      */
     public ItemIdResolver() {
         super();
@@ -18,7 +18,7 @@ public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ItemIdResolver
+     * @return a {@link ItemIdResolver}
      */
     @jakarta.annotation.Nonnull
     public static ItemIdResolver createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
     }
     /**
      * Gets the itemId property value. Pattern that specifies how to form the ID of the external item that the URL represents. The named groups from the regular expression in urlPattern within the urlMatchInfo can be referenced by inserting the group name inside curly brackets.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getItemId() {
@@ -46,7 +46,7 @@ public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
     }
     /**
      * Gets the urlMatchInfo property value. Configurations to match and resolve URL.
-     * @return a UrlMatchInfo
+     * @return a {@link UrlMatchInfo}
      */
     @jakarta.annotation.Nullable
     public UrlMatchInfo getUrlMatchInfo() {

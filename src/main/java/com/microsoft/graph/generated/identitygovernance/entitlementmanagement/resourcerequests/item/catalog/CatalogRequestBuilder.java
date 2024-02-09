@@ -27,6 +27,7 @@ import java.util.Objects;
 public class CatalogRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the accessPackages property of the microsoft.graph.accessPackageCatalog entity.
+     * @return a {@link AccessPackagesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AccessPackagesRequestBuilder accessPackages() {
@@ -34,6 +35,7 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the customWorkflowExtensions property of the microsoft.graph.accessPackageCatalog entity.
+     * @return a {@link CustomWorkflowExtensionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CustomWorkflowExtensionsRequestBuilder customWorkflowExtensions() {
@@ -41,6 +43,7 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the resourceRoles property of the microsoft.graph.accessPackageCatalog entity.
+     * @return a {@link ResourceRolesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ResourceRolesRequestBuilder resourceRoles() {
@@ -48,6 +51,7 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the resources property of the microsoft.graph.accessPackageCatalog entity.
+     * @return a {@link ResourcesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ResourcesRequestBuilder resources() {
@@ -55,13 +59,14 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the resourceScopes property of the microsoft.graph.accessPackageCatalog entity.
+     * @return a {@link ResourceScopesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ResourceScopesRequestBuilder resourceScopes() {
         return new ResourceScopesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new CatalogRequestBuilder and sets the default values.
+     * Instantiates a new {@link CatalogRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -69,7 +74,7 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/resourceRequests/{accessPackageResourceRequest%2Did}/catalog{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new CatalogRequestBuilder and sets the default values.
+     * Instantiates a new {@link CatalogRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -78,6 +83,7 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property catalog for identityGovernance
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -85,17 +91,18 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property catalog for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get catalog from identityGovernance
-     * @return a AccessPackageCatalog
+     * @return a {@link AccessPackageCatalog}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AccessPackageCatalog get() {
@@ -104,20 +111,21 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
     /**
      * Get catalog from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AccessPackageCatalog
+     * @return a {@link AccessPackageCatalog}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AccessPackageCatalog get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageCatalog::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property catalog in identityGovernance
      * @param body The request body
-     * @return a AccessPackageCatalog
+     * @return a {@link AccessPackageCatalog}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AccessPackageCatalog patch(@jakarta.annotation.Nonnull final AccessPackageCatalog body) {
@@ -127,20 +135,20 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property catalog in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AccessPackageCatalog
+     * @return a {@link AccessPackageCatalog}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AccessPackageCatalog patch(@jakarta.annotation.Nonnull final AccessPackageCatalog body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageCatalog::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property catalog for identityGovernance
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -149,18 +157,18 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property catalog for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/identityGovernance/entitlementManagement/resourceRequests/{accessPackageResourceRequest%2Did}/catalog", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Get catalog from identityGovernance
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -169,7 +177,7 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
     /**
      * Get catalog from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -181,7 +189,7 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property catalog in identityGovernance
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AccessPackageCatalog body) {
@@ -191,12 +199,12 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property catalog in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AccessPackageCatalog body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/identityGovernance/entitlementManagement/resourceRequests/{accessPackageResourceRequest%2Did}/catalog", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -205,7 +213,7 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a CatalogRequestBuilder
+     * @return a {@link CatalogRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CatalogRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -235,7 +243,7 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

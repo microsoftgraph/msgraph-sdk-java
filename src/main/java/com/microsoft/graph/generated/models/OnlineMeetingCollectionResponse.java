@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnlineMeetingCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new OnlineMeetingCollectionResponse and sets the default values.
+     * Instantiates a new {@link OnlineMeetingCollectionResponse} and sets the default values.
      */
     public OnlineMeetingCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class OnlineMeetingCollectionResponse extends BaseCollectionPaginationCou
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnlineMeetingCollectionResponse
+     * @return a {@link OnlineMeetingCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static OnlineMeetingCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class OnlineMeetingCollectionResponse extends BaseCollectionPaginationCou
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class OnlineMeetingCollectionResponse extends BaseCollectionPaginationCou
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<OnlineMeeting>
+     * @return a {@link java.util.List<OnlineMeeting>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnlineMeeting> getValue() {

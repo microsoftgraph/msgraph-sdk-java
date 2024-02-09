@@ -18,7 +18,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Par
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new OnlineMeetingInfo and sets the default values.
+     * Instantiates a new {@link OnlineMeetingInfo} and sets the default values.
      */
     public OnlineMeetingInfo() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnlineMeetingInfo
+     * @return a {@link OnlineMeetingInfo}
      */
     @jakarta.annotation.Nonnull
     public static OnlineMeetingInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the conferenceId property value. The ID of the conference.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getConferenceId() {
@@ -65,7 +65,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -81,7 +81,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the joinUrl property value. The external link that launches the online meeting. This is a URL that clients launch into a browser and will redirect the user to join the meeting.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getJoinUrl() {
@@ -89,7 +89,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,7 +97,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the phones property value. All of the phone numbers associated with this conference.
-     * @return a java.util.List<Phone>
+     * @return a {@link java.util.List<Phone>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Phone> getPhones() {
@@ -105,7 +105,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the quickDial property value. The preformatted quick dial for this call.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getQuickDial() {
@@ -113,7 +113,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the tollFreeNumbers property value. The toll free numbers that can be used to join the conference.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTollFreeNumbers() {
@@ -121,7 +121,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the tollNumber property value. The toll number that can be used to join the conference.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTollNumber() {

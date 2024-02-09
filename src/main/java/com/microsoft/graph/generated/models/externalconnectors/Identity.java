@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Identity extends Entity implements Parsable {
     /**
-     * Instantiates a new Identity and sets the default values.
+     * Instantiates a new {@link Identity} and sets the default values.
      */
     public Identity() {
         super();
@@ -18,7 +18,7 @@ public class Identity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Identity
+     * @return a {@link Identity}
      */
     @jakarta.annotation.Nonnull
     public static Identity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class Identity extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class Identity extends Entity implements Parsable {
     }
     /**
      * Gets the type property value. The type of identity. Possible values are: user or group for Microsoft Entra identities and externalgroup for groups in an external system.
-     * @return a IdentityType
+     * @return a {@link IdentityType}
      */
     @jakarta.annotation.Nullable
     public IdentityType getType() {

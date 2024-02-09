@@ -18,7 +18,7 @@ public class MediaContentRatingFrance implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new MediaContentRatingFrance and sets the default values.
+     * Instantiates a new {@link MediaContentRatingFrance} and sets the default values.
      */
     public MediaContentRatingFrance() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class MediaContentRatingFrance implements AdditionalDataHolder, BackedMod
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MediaContentRatingFrance
+     * @return a {@link MediaContentRatingFrance}
      */
     @jakarta.annotation.Nonnull
     public static MediaContentRatingFrance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class MediaContentRatingFrance implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class MediaContentRatingFrance implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class MediaContentRatingFrance implements AdditionalDataHolder, BackedMod
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class MediaContentRatingFrance implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the movieRating property value. Movies rating labels in France
-     * @return a RatingFranceMoviesType
+     * @return a {@link RatingFranceMoviesType}
      */
     @jakarta.annotation.Nullable
     public RatingFranceMoviesType getMovieRating() {
@@ -77,7 +77,7 @@ public class MediaContentRatingFrance implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -85,7 +85,7 @@ public class MediaContentRatingFrance implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the tvRating property value. TV content rating labels in France
-     * @return a RatingFranceTelevisionType
+     * @return a {@link RatingFranceTelevisionType}
      */
     @jakarta.annotation.Nullable
     public RatingFranceTelevisionType getTvRating() {

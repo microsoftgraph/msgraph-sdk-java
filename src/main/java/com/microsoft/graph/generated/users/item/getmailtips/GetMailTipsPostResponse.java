@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetMailTipsPostResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new GetMailTipsPostResponse and sets the default values.
+     * Instantiates a new {@link GetMailTipsPostResponse} and sets the default values.
      */
     public GetMailTipsPostResponse() {
         super();
@@ -19,7 +19,7 @@ public class GetMailTipsPostResponse extends BaseCollectionPaginationCountRespon
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GetMailTipsPostResponse
+     * @return a {@link GetMailTipsPostResponse}
      */
     @jakarta.annotation.Nonnull
     public static GetMailTipsPostResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class GetMailTipsPostResponse extends BaseCollectionPaginationCountRespon
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class GetMailTipsPostResponse extends BaseCollectionPaginationCountRespon
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<MailTips>
+     * @return a {@link java.util.List<MailTips>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MailTips> getValue() {

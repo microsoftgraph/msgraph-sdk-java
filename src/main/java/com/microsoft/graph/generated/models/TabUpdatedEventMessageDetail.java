@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TabUpdatedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * Instantiates a new TabUpdatedEventMessageDetail and sets the default values.
+     * Instantiates a new {@link TabUpdatedEventMessageDetail} and sets the default values.
      */
     public TabUpdatedEventMessageDetail() {
         super();
@@ -18,7 +18,7 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TabUpdatedEventMessageDetail
+     * @return a {@link TabUpdatedEventMessageDetail}
      */
     @jakarta.annotation.Nonnull
     public static TabUpdatedEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
     }
     /**
      * Gets the initiator property value. Initiator of the event.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
@@ -46,7 +46,7 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
     }
     /**
      * Gets the tabId property value. Unique identifier of the tab.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTabId() {

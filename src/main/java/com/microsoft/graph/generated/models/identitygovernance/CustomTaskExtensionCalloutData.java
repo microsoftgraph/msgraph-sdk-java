@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomTaskExtensionCalloutData extends CustomExtensionData implements Parsable {
     /**
-     * Instantiates a new CustomTaskExtensionCalloutData and sets the default values.
+     * Instantiates a new {@link CustomTaskExtensionCalloutData} and sets the default values.
      */
     public CustomTaskExtensionCalloutData() {
         super();
@@ -20,7 +20,7 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CustomTaskExtensionCalloutData
+     * @return a {@link CustomTaskExtensionCalloutData}
      */
     @jakarta.annotation.Nonnull
     public static CustomTaskExtensionCalloutData createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -42,7 +42,7 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
     }
     /**
      * Gets the subject property value. The subject property
-     * @return a User
+     * @return a {@link User}
      */
     @jakarta.annotation.Nullable
     public User getSubject() {
@@ -50,7 +50,7 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
     }
     /**
      * Gets the task property value. The task property
-     * @return a Task
+     * @return a {@link Task}
      */
     @jakarta.annotation.Nullable
     public Task getTask() {
@@ -58,7 +58,7 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
     }
     /**
      * Gets the taskProcessingresult property value. The taskProcessingresult property
-     * @return a TaskProcessingResult
+     * @return a {@link TaskProcessingResult}
      */
     @jakarta.annotation.Nullable
     public TaskProcessingResult getTaskProcessingresult() {
@@ -66,7 +66,7 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
     }
     /**
      * Gets the workflow property value. The workflow property
-     * @return a Workflow
+     * @return a {@link Workflow}
      */
     @jakarta.annotation.Nullable
     public Workflow getWorkflow() {

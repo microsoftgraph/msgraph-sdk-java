@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LocalizedNotificationMessageCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new LocalizedNotificationMessageCollectionResponse and sets the default values.
+     * Instantiates a new {@link LocalizedNotificationMessageCollectionResponse} and sets the default values.
      */
     public LocalizedNotificationMessageCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class LocalizedNotificationMessageCollectionResponse extends BaseCollecti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a LocalizedNotificationMessageCollectionResponse
+     * @return a {@link LocalizedNotificationMessageCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static LocalizedNotificationMessageCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class LocalizedNotificationMessageCollectionResponse extends BaseCollecti
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class LocalizedNotificationMessageCollectionResponse extends BaseCollecti
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<LocalizedNotificationMessage>
+     * @return a {@link java.util.List<LocalizedNotificationMessage>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<LocalizedNotificationMessage> getValue() {

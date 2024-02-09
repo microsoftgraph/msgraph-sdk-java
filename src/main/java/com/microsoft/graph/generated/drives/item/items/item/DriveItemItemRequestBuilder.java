@@ -53,6 +53,7 @@ import java.util.Objects;
 public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the analytics property of the microsoft.graph.driveItem entity.
+     * @return a {@link AnalyticsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AnalyticsRequestBuilder analytics() {
@@ -60,6 +61,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the assignSensitivityLabel method.
+     * @return a {@link AssignSensitivityLabelRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignSensitivityLabelRequestBuilder assignSensitivityLabel() {
@@ -67,6 +69,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the checkin method.
+     * @return a {@link CheckinRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CheckinRequestBuilder checkin() {
@@ -74,6 +77,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the checkout method.
+     * @return a {@link CheckoutRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CheckoutRequestBuilder checkout() {
@@ -81,6 +85,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the children property of the microsoft.graph.driveItem entity.
+     * @return a {@link ChildrenRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ChildrenRequestBuilder children() {
@@ -88,6 +93,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the media for the drive entity.
+     * @return a {@link ContentRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ContentRequestBuilder content() {
@@ -95,6 +101,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the copy method.
+     * @return a {@link CopyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CopyRequestBuilder copy() {
@@ -102,6 +109,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity.
+     * @return a {@link CreatedByUserRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CreatedByUserRequestBuilder createdByUser() {
@@ -109,6 +117,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the createLink method.
+     * @return a {@link CreateLinkRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CreateLinkRequestBuilder createLink() {
@@ -116,6 +125,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the createUploadSession method.
+     * @return a {@link CreateUploadSessionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CreateUploadSessionRequestBuilder createUploadSession() {
@@ -123,6 +133,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the delta method.
+     * @return a {@link DeltaRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeltaRequestBuilder delta() {
@@ -130,6 +141,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the extractSensitivityLabels method.
+     * @return a {@link ExtractSensitivityLabelsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExtractSensitivityLabelsRequestBuilder extractSensitivityLabels() {
@@ -137,6 +149,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the follow method.
+     * @return a {@link FollowRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FollowRequestBuilder follow() {
@@ -144,6 +157,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getActivitiesByInterval method.
+     * @return a {@link GetActivitiesByIntervalRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetActivitiesByIntervalRequestBuilder getActivitiesByInterval() {
@@ -151,6 +165,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the invite method.
+     * @return a {@link InviteRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public InviteRequestBuilder invite() {
@@ -158,6 +173,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity.
+     * @return a {@link LastModifiedByUserRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LastModifiedByUserRequestBuilder lastModifiedByUser() {
@@ -165,6 +181,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the listItem property of the microsoft.graph.driveItem entity.
+     * @return a {@link ListItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ListItemRequestBuilder listItem() {
@@ -172,6 +189,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the permanentDelete method.
+     * @return a {@link PermanentDeleteRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PermanentDeleteRequestBuilder permanentDelete() {
@@ -179,6 +197,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the permissions property of the microsoft.graph.driveItem entity.
+     * @return a {@link PermissionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PermissionsRequestBuilder permissions() {
@@ -186,6 +205,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the preview method.
+     * @return a {@link PreviewRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PreviewRequestBuilder preview() {
@@ -193,6 +213,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the restore method.
+     * @return a {@link RestoreRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RestoreRequestBuilder restore() {
@@ -200,6 +221,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the retentionLabel property of the microsoft.graph.driveItem entity.
+     * @return a {@link RetentionLabelRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RetentionLabelRequestBuilder retentionLabel() {
@@ -207,6 +229,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the subscriptions property of the microsoft.graph.driveItem entity.
+     * @return a {@link SubscriptionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SubscriptionsRequestBuilder subscriptions() {
@@ -214,6 +237,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the thumbnails property of the microsoft.graph.driveItem entity.
+     * @return a {@link ThumbnailsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ThumbnailsRequestBuilder thumbnails() {
@@ -221,6 +245,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the unfollow method.
+     * @return a {@link UnfollowRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UnfollowRequestBuilder unfollow() {
@@ -228,6 +253,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the validatePermission method.
+     * @return a {@link ValidatePermissionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ValidatePermissionRequestBuilder validatePermission() {
@@ -235,6 +261,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the versions property of the microsoft.graph.driveItem entity.
+     * @return a {@link VersionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public VersionsRequestBuilder versions() {
@@ -242,13 +269,14 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the workbook property of the microsoft.graph.driveItem entity.
+     * @return a {@link WorkbookRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WorkbookRequestBuilder workbook() {
         return new WorkbookRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new DriveItemItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link DriveItemItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -256,7 +284,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new DriveItemItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link DriveItemItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -265,6 +293,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete a DriveItem by using its ID or path.Deleting items using this method moves the items to the recycle bin instead of permanently deleting the item.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -273,19 +302,19 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a DriveItem by using its ID or path.Deleting items using this method moves the items to the recycle bin instead of permanently deleting the item.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Provides operations to call the delta method.
      * @param token Usage: token='{token}'
-     * @return a DeltaWithTokenRequestBuilder
+     * @return a {@link DeltaWithTokenRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeltaWithTokenRequestBuilder deltaWithToken(@jakarta.annotation.Nonnull final String token) {
@@ -294,7 +323,8 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * All items contained in the drive. Read-only. Nullable.
-     * @return a DriveItem
+     * @return a {@link DriveItem}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DriveItem get() {
@@ -303,14 +333,14 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * All items contained in the drive. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DriveItem
+     * @return a {@link DriveItem}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DriveItem get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DriveItem::createFromDiscriminatorValue);
     }
     /**
@@ -318,7 +348,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
      * @param endDateTime Usage: endDateTime='{endDateTime}'
      * @param interval Usage: interval='{interval}'
      * @param startDateTime Usage: startDateTime='{startDateTime}'
-     * @return a GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
+     * @return a {@link GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(@jakarta.annotation.Nonnull final String endDateTime, @jakarta.annotation.Nonnull final String interval, @jakarta.annotation.Nonnull final String startDateTime) {
@@ -328,35 +358,36 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
         return new GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder(pathParameters, requestAdapter, endDateTime, interval, startDateTime);
     }
     /**
-     * Update the metadata for a driveItem by ID or path. You can also use update to move an item to another parent by updating the item's parentReference property.
+     * To move a DriveItem to a new parent item, your app requests to update the parentReference of the DriveItem to move. This is a special case of the Update method.Your app can combine moving an item to a new container and updating other properties of the item into a single request. Items cannot be moved between Drives using this request.
      * @param body The request body
-     * @return a DriveItem
-     * @see <a href="https://learn.microsoft.com/graph/api/driveitem-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a {@link DriveItem}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/driveitem-move?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DriveItem patch(@jakarta.annotation.Nonnull final DriveItem body) {
         return patch(body, null);
     }
     /**
-     * Update the metadata for a driveItem by ID or path. You can also use update to move an item to another parent by updating the item's parentReference property.
+     * To move a DriveItem to a new parent item, your app requests to update the parentReference of the DriveItem to move. This is a special case of the Update method.Your app can combine moving an item to a new container and updating other properties of the item into a single request. Items cannot be moved between Drives using this request.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DriveItem
-     * @see <a href="https://learn.microsoft.com/graph/api/driveitem-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a {@link DriveItem}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/driveitem-move?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DriveItem patch(@jakarta.annotation.Nonnull final DriveItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DriveItem::createFromDiscriminatorValue);
     }
     /**
      * Provides operations to call the search method.
      * @param q Usage: q='{q}'
-     * @return a SearchWithQRequestBuilder
+     * @return a {@link SearchWithQRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SearchWithQRequestBuilder searchWithQ(@jakarta.annotation.Nonnull final String q) {
@@ -365,7 +396,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete a DriveItem by using its ID or path.Deleting items using this method moves the items to the recycle bin instead of permanently deleting the item.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -374,18 +405,18 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a DriveItem by using its ID or path.Deleting items using this method moves the items to the recycle bin instead of permanently deleting the item.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * All items contained in the drive. Read-only. Nullable.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -394,7 +425,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * All items contained in the drive. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -404,24 +435,24 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the metadata for a driveItem by ID or path. You can also use update to move an item to another parent by updating the item's parentReference property.
+     * To move a DriveItem to a new parent item, your app requests to update the parentReference of the DriveItem to move. This is a special case of the Update method.Your app can combine moving an item to a new container and updating other properties of the item into a single request. Items cannot be moved between Drives using this request.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DriveItem body) {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the metadata for a driveItem by ID or path. You can also use update to move an item to another parent by updating the item's parentReference property.
+     * To move a DriveItem to a new parent item, your app requests to update the parentReference of the DriveItem to move. This is a special case of the Update method.Your app can combine moving an item to a new container and updating other properties of the item into a single request. Items cannot be moved between Drives using this request.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DriveItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -430,7 +461,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DriveItemItemRequestBuilder
+     * @return a {@link DriveItemItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DriveItemItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -460,7 +491,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

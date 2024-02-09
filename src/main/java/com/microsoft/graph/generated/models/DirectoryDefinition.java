@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DirectoryDefinition extends Entity implements Parsable {
     /**
-     * Instantiates a new DirectoryDefinition and sets the default values.
+     * Instantiates a new {@link DirectoryDefinition} and sets the default values.
      */
     public DirectoryDefinition() {
         super();
@@ -19,7 +19,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DirectoryDefinition
+     * @return a {@link DirectoryDefinition}
      */
     @jakarta.annotation.Nonnull
     public static DirectoryDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the discoverabilities property value. The discoverabilities property
-     * @return a EnumSet<DirectoryDefinitionDiscoverabilities>
+     * @return a {@link EnumSet<DirectoryDefinitionDiscoverabilities>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<DirectoryDefinitionDiscoverabilities> getDiscoverabilities() {
@@ -36,7 +36,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the discoveryDateTime property value. Represents the discovery date and time using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDiscoveryDateTime() {
@@ -44,7 +44,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -59,7 +59,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. Name of the directory. Must be unique within the synchronization schema. Not nullable.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -67,7 +67,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the objects property value. Collection of objects supported by the directory.
-     * @return a java.util.List<ObjectDefinition>
+     * @return a {@link java.util.List<ObjectDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ObjectDefinition> getObjects() {
@@ -75,7 +75,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the readOnly property value. Whether this object is read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getReadOnly() {
@@ -83,7 +83,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. Read only value that indicates version discovered. null if discovery hasn't yet occurred.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

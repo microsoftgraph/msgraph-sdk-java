@@ -18,7 +18,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new X509CertificateUserBinding and sets the default values.
+     * Instantiates a new {@link X509CertificateUserBinding} and sets the default values.
      */
     public X509CertificateUserBinding() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, BackedM
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a X509CertificateUserBinding
+     * @return a {@link X509CertificateUserBinding}
      */
     @jakarta.annotation.Nonnull
     public static X509CertificateUserBinding createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, BackedM
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -70,7 +70,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -78,7 +78,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the priority property value. The priority of the binding. Microsoft Entra ID uses the binding with the highest priority. This value must be a non-negative integer and unique in the collection of objects in the certificateUserBindings property of an x509CertificateAuthenticationMethodConfiguration object. Required
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
@@ -86,7 +86,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the userProperty property value. Defines the Microsoft Entra user property of the user object to use for the binding. The possible values are: userPrincipalName, onPremisesUserPrincipalName, certificateUserIds. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserProperty() {
@@ -94,7 +94,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the x509CertificateField property value. The field on the X.509 certificate to use for the binding. The possible values are: PrincipalName, RFC822Name, SubjectKeyIdentifier, SHA1PublicKey.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getX509CertificateField() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class KubernetesClusterEvidence extends AlertEvidence implements Parsable {
     /**
-     * Instantiates a new KubernetesClusterEvidence and sets the default values.
+     * Instantiates a new {@link KubernetesClusterEvidence} and sets the default values.
      */
     public KubernetesClusterEvidence() {
         super();
@@ -18,7 +18,7 @@ public class KubernetesClusterEvidence extends AlertEvidence implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a KubernetesClusterEvidence
+     * @return a {@link KubernetesClusterEvidence}
      */
     @jakarta.annotation.Nonnull
     public static KubernetesClusterEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class KubernetesClusterEvidence extends AlertEvidence implements Parsable
     }
     /**
      * Gets the cloudResource property value. The cloud identifier of the cluster. Can be either an amazonResourceEvidence, azureResourceEvidence, or googleCloudResourceEvidence object.
-     * @return a AlertEvidence
+     * @return a {@link AlertEvidence}
      */
     @jakarta.annotation.Nullable
     public AlertEvidence getCloudResource() {
@@ -35,7 +35,7 @@ public class KubernetesClusterEvidence extends AlertEvidence implements Parsable
     }
     /**
      * Gets the distribution property value. The distribution type of the cluster.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDistribution() {
@@ -43,7 +43,7 @@ public class KubernetesClusterEvidence extends AlertEvidence implements Parsable
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class KubernetesClusterEvidence extends AlertEvidence implements Parsable
     }
     /**
      * Gets the name property value. The cluster name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -65,7 +65,7 @@ public class KubernetesClusterEvidence extends AlertEvidence implements Parsable
     }
     /**
      * Gets the platform property value. The platform the cluster runs on. Possible values are: unknown, aks, eks, gke, arc, unknownFutureValue.
-     * @return a KubernetesPlatform
+     * @return a {@link KubernetesPlatform}
      */
     @jakarta.annotation.Nullable
     public KubernetesPlatform getPlatform() {
@@ -73,7 +73,7 @@ public class KubernetesClusterEvidence extends AlertEvidence implements Parsable
     }
     /**
      * Gets the version property value. The kubernetes version of the cluster.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

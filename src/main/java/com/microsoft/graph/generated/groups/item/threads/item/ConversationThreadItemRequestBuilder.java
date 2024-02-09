@@ -24,6 +24,7 @@ import java.util.Objects;
 public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the posts property of the microsoft.graph.conversationThread entity.
+     * @return a {@link PostsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PostsRequestBuilder posts() {
@@ -31,13 +32,14 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the reply method.
+     * @return a {@link ReplyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReplyRequestBuilder reply() {
         return new ReplyRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new ConversationThreadItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link ConversationThreadItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -45,7 +47,7 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/threads/{conversationThread%2Did}{?%24select}", pathParameters);
     }
     /**
-     * Instantiates a new ConversationThreadItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link ConversationThreadItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -54,7 +56,8 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete conversationThread.
-     * @see <a href="https://learn.microsoft.com/graph/api/group-delete-thread?view=graph-rest-1.0">Find more info here</a>
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/conversationthread-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
@@ -62,42 +65,44 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete conversationThread.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/group-delete-thread?view=graph-rest-1.0">Find more info here</a>
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/conversationthread-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get a thread object.
-     * @return a ConversationThread
-     * @see <a href="https://learn.microsoft.com/graph/api/group-get-thread?view=graph-rest-1.0">Find more info here</a>
+     * Get a specific thread that belongs to a group. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation. 
+     * @return a {@link ConversationThread}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/conversationthread-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConversationThread get() {
         return get(null);
     }
     /**
-     * Get a thread object.
+     * Get a specific thread that belongs to a group. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ConversationThread
-     * @see <a href="https://learn.microsoft.com/graph/api/group-get-thread?view=graph-rest-1.0">Find more info here</a>
+     * @return a {@link ConversationThread}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/conversationthread-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConversationThread get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ConversationThread::createFromDiscriminatorValue);
     }
     /**
      * Update conversation thread
      * @param body The request body
-     * @return a ConversationThread
+     * @return a {@link ConversationThread}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/group-update-thread?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -108,7 +113,8 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
      * Update conversation thread
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ConversationThread
+     * @return a {@link ConversationThread}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/group-update-thread?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -116,13 +122,12 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ConversationThread::createFromDiscriminatorValue);
     }
     /**
      * Delete conversationThread.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -131,27 +136,27 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete conversationThread.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/groups/{group%2Did}/threads/{conversationThread%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Get a thread object.
-     * @return a RequestInformation
+     * Get a specific thread that belongs to a group. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation. 
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a thread object.
+     * Get a specific thread that belongs to a group. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -163,7 +168,7 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update conversation thread
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ConversationThread body) {
@@ -173,12 +178,12 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
      * Update conversation thread
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ConversationThread body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/groups/{group%2Did}/threads/{conversationThread%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -187,7 +192,7 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ConversationThreadItemRequestBuilder
+     * @return a {@link ConversationThreadItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ConversationThreadItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -201,7 +206,7 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get a thread object.
+     * Get a specific thread that belongs to a group. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
@@ -212,7 +217,7 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PronounsSettings extends Entity implements Parsable {
     /**
-     * Instantiates a new PronounsSettings and sets the default values.
+     * Instantiates a new {@link PronounsSettings} and sets the default values.
      */
     public PronounsSettings() {
         super();
@@ -17,7 +17,7 @@ public class PronounsSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PronounsSettings
+     * @return a {@link PronounsSettings}
      */
     @jakarta.annotation.Nonnull
     public static PronounsSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class PronounsSettings extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class PronounsSettings extends Entity implements Parsable {
     }
     /**
      * Gets the isEnabledInOrganization property value. true to enable pronouns in the organization; otherwise, false. The default value is false, and pronouns are disabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabledInOrganization() {

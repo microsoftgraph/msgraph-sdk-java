@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceAnnouncement extends Entity implements Parsable {
     /**
-     * Instantiates a new ServiceAnnouncement and sets the default values.
+     * Instantiates a new {@link ServiceAnnouncement} and sets the default values.
      */
     public ServiceAnnouncement() {
         super();
@@ -17,7 +17,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ServiceAnnouncement
+     * @return a {@link ServiceAnnouncement}
      */
     @jakarta.annotation.Nonnull
     public static ServiceAnnouncement createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
     }
     /**
      * Gets the healthOverviews property value. A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
-     * @return a java.util.List<ServiceHealth>
+     * @return a {@link java.util.List<ServiceHealth>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServiceHealth> getHealthOverviews() {
@@ -46,7 +46,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
     }
     /**
      * Gets the issues property value. A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
-     * @return a java.util.List<ServiceHealthIssue>
+     * @return a {@link java.util.List<ServiceHealthIssue>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServiceHealthIssue> getIssues() {
@@ -54,7 +54,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
     }
     /**
      * Gets the messages property value. A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
-     * @return a java.util.List<ServiceUpdateMessage>
+     * @return a {@link java.util.List<ServiceUpdateMessage>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServiceUpdateMessage> getMessages() {

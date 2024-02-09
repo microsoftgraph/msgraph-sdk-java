@@ -18,6 +18,7 @@ import java.util.Objects;
 public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Casts the previous resource to application.
+     * @return a {@link GraphApplicationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphApplicationRequestBuilder graphApplication() {
@@ -25,6 +26,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to device.
+     * @return a {@link GraphDeviceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphDeviceRequestBuilder graphDevice() {
@@ -32,6 +34,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to group.
+     * @return a {@link GraphGroupRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphGroupRequestBuilder graphGroup() {
@@ -39,6 +42,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to orgContact.
+     * @return a {@link GraphOrgContactRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphOrgContactRequestBuilder graphOrgContact() {
@@ -46,6 +50,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to servicePrincipal.
+     * @return a {@link GraphServicePrincipalRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphServicePrincipalRequestBuilder graphServicePrincipal() {
@@ -53,6 +58,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to user.
+     * @return a {@link GraphUserRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphUserRequestBuilder graphUser() {
@@ -60,13 +66,14 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of directory entities.
+     * @return a {@link RefRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new DirectoryObjectItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link DirectoryObjectItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -74,7 +81,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/administrativeUnits/{administrativeUnit%2Did}/members/{directoryObject%2Did}", pathParameters);
     }
     /**
-     * Instantiates a new DirectoryObjectItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link DirectoryObjectItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
