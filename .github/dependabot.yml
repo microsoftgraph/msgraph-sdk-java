@@ -39,7 +39,6 @@ updates:
   schedule:
     interval: daily
   open-pull-requests-limit: 10
-  target-branch: feature/6.0
   groups:
     kiota-dependencies:
       patterns:
@@ -49,7 +48,6 @@ updates:
   schedule:
     interval: daily
   open-pull-requests-limit: 10
-  target-branch: feature/6.0
   groups:
     kiota-dependencies:
       patterns:
@@ -59,7 +57,6 @@ updates:
   schedule:
     interval: daily
   open-pull-requests-limit: 10
-  target-branch: feature/6.0
   groups:
     kiota-dependencies:
       patterns:
@@ -69,4 +66,3 @@ updates:
   schedule:
     interval: daily
   open-pull-requests-limit: 10
-  target-branch: feature/6.0

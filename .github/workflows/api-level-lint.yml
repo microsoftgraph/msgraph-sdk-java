@@ -3,13 +3,9 @@ name: "Checks the SDK only using APIs from the targeted API level"
 on:
   workflow_dispatch:
   push:
-    branches:
-      - dev
-      - feature/6.0
+    branches: [ dev ]
   pull_request:
-    branches:
-      - dev
-      - feature/6.0
+    branches: [ dev ]
 
 jobs:
   lint-api-level:
