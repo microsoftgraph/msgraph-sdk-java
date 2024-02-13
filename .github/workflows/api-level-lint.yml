@@ -3,13 +3,9 @@ name: "Checks the SDK only using APIs from the targeted API level"
 on:
   workflow_dispatch:
   push:
-    branches:
-      - dev
-      - feature/6.0
+    branches: [ dev ]
   pull_request:
-    branches:
-      - dev
-      - feature/6.0
+    branches: [ dev ]
 
 jobs:
   lint-api-level:
@@ -19,7 +15,7 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: 20
+          java-version: 21
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3.2.0
       - name: Add execution right to the script

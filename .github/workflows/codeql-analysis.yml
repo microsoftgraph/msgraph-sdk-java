@@ -13,10 +13,10 @@ name: "CodeQL"
 
 on:
   push:
-    branches: [ "dev", "feature/6.0" ]
+    branches: [ dev ]
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: [ "dev", "feature/6.0" ]
+    branches: [ dev ]
   schedule:
     - cron: '0 1 * * 4'
   workflow_dispatch:
@@ -47,7 +47,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
-          java-version: 20
+          java-version: 21
           distribution: 'temurin'
           cache: gradle
 

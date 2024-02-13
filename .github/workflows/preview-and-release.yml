@@ -2,7 +2,7 @@ name: Maven Preview/Release and Github Release
 
 on:
   push:
-    branches: [ "dev", "feature/6.0" ]
+    branches: [ dev ]
     paths-ignore:
      - '.gradle/wrapper'
      - '.gitignore'
@@ -17,7 +17,7 @@ env:
 
 jobs:
   maven_Preview:
-    if: ${{ github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/feature/6.0' }}
+    if: ${{ github.ref == 'refs/heads/dev' }}
     environment: 
       name: maven_central_snapshot
     runs-on: ubuntu-latest
@@ -26,8 +26,8 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
-          java-version: 18
-          distribution: 'adopt'
+          java-version: 21
+          distribution: 'temurin'
           cache: gradle
       - name: Easy detect-secrets
         uses: RobertFischer/detect-secrets-action@v2.0.0
@@ -46,22 +46,7 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Publish
-        run: ./gradlew $PREVIEW_TASK 
-      - name: Upload Build Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: drop
-          path: |
-            **/libs/*
-            build/generated-pom.xml
-            build/generated-pom.xml.asc
-            build.gradle
-            gradlew
-            gradlew.bat
-            settings.gradle
-            gradle.properties
-            **/gradle/**
-            Scripts/**
+        run: ./gradlew $PREVIEW_TASK
   
   maven_Release:
     if: ${{ github.ref == 'refs/heads/dev' }}
@@ -73,8 +58,8 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
-          java-version: 18
-          distribution: 'adopt'
+          java-version: 21
+          distribution: 'temurin'
           cache: gradle
       - name: Easy detect-secrets
         uses: RobertFischer/detect-secrets-action@v2.0.0
@@ -113,6 +98,8 @@ jobs:
   create_Tag:
     needs: maven_Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     env:
       RELEASE_TAG: ""
     steps:
