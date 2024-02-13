@@ -19,7 +19,7 @@ public class AttendanceInterval implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AttendanceInterval and sets the default values.
+     * Instantiates a new {@link AttendanceInterval} and sets the default values.
      */
     public AttendanceInterval() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class AttendanceInterval implements AdditionalDataHolder, BackedModel, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AttendanceInterval
+     * @return a {@link AttendanceInterval}
      */
     @jakarta.annotation.Nonnull
     public static AttendanceInterval createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class AttendanceInterval implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class AttendanceInterval implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class AttendanceInterval implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the durationInSeconds property value. Duration of the meeting interval in seconds; that is, the difference between joinDateTime and leaveDateTime.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDurationInSeconds() {
@@ -66,7 +66,7 @@ public class AttendanceInterval implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class AttendanceInterval implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the joinDateTime property value. The time the attendee joined in UTC.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getJoinDateTime() {
@@ -87,7 +87,7 @@ public class AttendanceInterval implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the leaveDateTime property value. The time the attendee left in UTC.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLeaveDateTime() {
@@ -95,7 +95,7 @@ public class AttendanceInterval implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

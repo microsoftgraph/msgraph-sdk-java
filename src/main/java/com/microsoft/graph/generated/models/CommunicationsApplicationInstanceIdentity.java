@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CommunicationsApplicationInstanceIdentity extends Identity implements Parsable {
     /**
-     * Instantiates a new CommunicationsApplicationInstanceIdentity and sets the default values.
+     * Instantiates a new {@link CommunicationsApplicationInstanceIdentity} and sets the default values.
      */
     public CommunicationsApplicationInstanceIdentity() {
         super();
@@ -18,7 +18,7 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CommunicationsApplicationInstanceIdentity
+     * @return a {@link CommunicationsApplicationInstanceIdentity}
      */
     @jakarta.annotation.Nonnull
     public static CommunicationsApplicationInstanceIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
     }
     /**
      * Gets the hidden property value. True if the participant shouldn't be shown in other participants' rosters.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHidden() {
@@ -46,7 +46,7 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
     }
     /**
      * Gets the tenantId property value. The tenant ID of the application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {

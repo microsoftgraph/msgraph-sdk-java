@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookFunctionResult extends Entity implements Parsable {
     /**
-     * Instantiates a new WorkbookFunctionResult and sets the default values.
+     * Instantiates a new {@link WorkbookFunctionResult} and sets the default values.
      */
     public WorkbookFunctionResult() {
         super();
@@ -17,7 +17,7 @@ public class WorkbookFunctionResult extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookFunctionResult
+     * @return a {@link WorkbookFunctionResult}
      */
     @jakarta.annotation.Nonnull
     public static WorkbookFunctionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class WorkbookFunctionResult extends Entity implements Parsable {
     }
     /**
      * Gets the error property value. The error property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getError() {
@@ -34,7 +34,7 @@ public class WorkbookFunctionResult extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -45,7 +45,7 @@ public class WorkbookFunctionResult extends Entity implements Parsable {
     }
     /**
      * Gets the value property value. The value property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getValue() {

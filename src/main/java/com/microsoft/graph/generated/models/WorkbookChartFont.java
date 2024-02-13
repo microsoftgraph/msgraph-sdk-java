@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartFont extends Entity implements Parsable {
     /**
-     * Instantiates a new WorkbookChartFont and sets the default values.
+     * Instantiates a new {@link WorkbookChartFont} and sets the default values.
      */
     public WorkbookChartFont() {
         super();
@@ -17,7 +17,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookChartFont
+     * @return a {@link WorkbookChartFont}
      */
     @jakarta.annotation.Nonnull
     public static WorkbookChartFont createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
     }
     /**
      * Gets the bold property value. Represents the bold status of font.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getBold() {
@@ -34,7 +34,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
     }
     /**
      * Gets the color property value. HTML color code representation of the text color. for example #FF0000 represents Red.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getColor() {
@@ -42,7 +42,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
     }
     /**
      * Gets the italic property value. Represents the italic status of the font.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getItalic() {
@@ -65,7 +65,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. Font name (for example 'Calibri')
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -73,7 +73,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
     }
     /**
      * Gets the size property value. Size of the font (for example 11)
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getSize() {
@@ -81,7 +81,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
     }
     /**
      * Gets the underline property value. Type of underline applied to the font. The possible values are: None, Single.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUnderline() {

@@ -18,7 +18,7 @@ public class SelfServiceSignUpAuthenticationFlowConfiguration implements Additio
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SelfServiceSignUpAuthenticationFlowConfiguration and sets the default values.
+     * Instantiates a new {@link SelfServiceSignUpAuthenticationFlowConfiguration} and sets the default values.
      */
     public SelfServiceSignUpAuthenticationFlowConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class SelfServiceSignUpAuthenticationFlowConfiguration implements Additio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SelfServiceSignUpAuthenticationFlowConfiguration
+     * @return a {@link SelfServiceSignUpAuthenticationFlowConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static SelfServiceSignUpAuthenticationFlowConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class SelfServiceSignUpAuthenticationFlowConfiguration implements Additio
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class SelfServiceSignUpAuthenticationFlowConfiguration implements Additio
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class SelfServiceSignUpAuthenticationFlowConfiguration implements Additio
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,7 +68,7 @@ public class SelfServiceSignUpAuthenticationFlowConfiguration implements Additio
     }
     /**
      * Gets the isEnabled property value. Indicates whether self-service sign-up flow is enabled or disabled. The default value is false. This property isn't a key. Required.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -76,7 +76,7 @@ public class SelfServiceSignUpAuthenticationFlowConfiguration implements Additio
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

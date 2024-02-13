@@ -18,7 +18,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new LoginPageLayoutConfiguration and sets the default values.
+     * Instantiates a new {@link LoginPageLayoutConfiguration} and sets the default values.
      */
     public LoginPageLayoutConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Backe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a LoginPageLayoutConfiguration
+     * @return a {@link LoginPageLayoutConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static LoginPageLayoutConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -70,7 +70,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the isFooterShown property value. Option to show the footer on the sign-in page.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsFooterShown() {
@@ -78,7 +78,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the isHeaderShown property value. Option to show the header on the sign-in page.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsHeaderShown() {
@@ -86,7 +86,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the layoutTemplateType property value. Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a background on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Don't use.
-     * @return a LayoutTemplateType
+     * @return a {@link LayoutTemplateType}
      */
     @jakarta.annotation.Nullable
     public LayoutTemplateType getLayoutTemplateType() {
@@ -94,7 +94,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

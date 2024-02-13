@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageResourceRole extends Entity implements Parsable {
     /**
-     * Instantiates a new AccessPackageResourceRole and sets the default values.
+     * Instantiates a new {@link AccessPackageResourceRole} and sets the default values.
      */
     public AccessPackageResourceRole() {
         super();
@@ -17,7 +17,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessPackageResourceRole
+     * @return a {@link AccessPackageResourceRole}
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageResourceRole createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. A description for the resource role.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -34,7 +34,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the resource role such as the role defined by the application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -42,7 +42,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -56,7 +56,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
     }
     /**
      * Gets the originId property value. The unique identifier of the resource role in the origin system. For a SharePoint Online site, the originId will be the sequence number of the role in the site.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOriginId() {
@@ -64,7 +64,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
     }
     /**
      * Gets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOriginSystem() {
@@ -72,7 +72,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
     }
     /**
      * Gets the resource property value. The resource property
-     * @return a AccessPackageResource
+     * @return a {@link AccessPackageResource}
      */
     @jakarta.annotation.Nullable
     public AccessPackageResource getResource() {

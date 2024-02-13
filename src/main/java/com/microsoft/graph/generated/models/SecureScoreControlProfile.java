@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecureScoreControlProfile extends Entity implements Parsable {
     /**
-     * Instantiates a new SecureScoreControlProfile and sets the default values.
+     * Instantiates a new {@link SecureScoreControlProfile} and sets the default values.
      */
     public SecureScoreControlProfile() {
         super();
@@ -18,7 +18,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SecureScoreControlProfile
+     * @return a {@link SecureScoreControlProfile}
      */
     @jakarta.annotation.Nonnull
     public static SecureScoreControlProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     }
     /**
      * Gets the actionType property value. Control action type (Config, Review, Behavior).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getActionType() {
@@ -35,7 +35,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     }
     /**
      * Gets the actionUrl property value. URL to where the control can be actioned.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getActionUrl() {
@@ -43,7 +43,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     }
     /**
      * Gets the azureTenantId property value. GUID string for tenant ID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureTenantId() {
@@ -51,7 +51,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     }
     /**
      * Gets the complianceInformation property value. The collection of compliance information associated with secure score control
-     * @return a java.util.List<ComplianceInformation>
+     * @return a {@link java.util.List<ComplianceInformation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ComplianceInformation> getComplianceInformation() {
@@ -59,7 +59,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     }
     /**
      * Gets the controlCategory property value. Control action category (Identity, Data, Device, Apps, Infrastructure).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getControlCategory() {
@@ -67,7 +67,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     }
     /**
      * Gets the controlStateUpdates property value. Flag to indicate where the tenant has marked a control (ignored, thirdParty, reviewed) (supports update).
-     * @return a java.util.List<SecureScoreControlStateUpdate>
+     * @return a {@link java.util.List<SecureScoreControlStateUpdate>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SecureScoreControlStateUpdate> getControlStateUpdates() {
@@ -75,7 +75,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     }
     /**
      * Gets the deprecated property value. Flag to indicate if a control is depreciated.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDeprecated() {
@@ -83,7 +83,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -111,7 +111,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     }
     /**
      * Gets the implementationCost property value. Resource cost of implemmentating control (low, moderate, high).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getImplementationCost() {
@@ -119,7 +119,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. Time at which the control profile entity was last modified. The Timestamp type represents date and time
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -127,7 +127,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     }
     /**
      * Gets the maxScore property value. max attainable score for the control.
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getMaxScore() {
@@ -135,7 +135,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     }
     /**
      * Gets the rank property value. Microsoft's stack ranking of control.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRank() {
@@ -143,7 +143,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     }
     /**
      * Gets the remediation property value. Description of what the control will help remediate.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRemediation() {
@@ -151,7 +151,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     }
     /**
      * Gets the remediationImpact property value. Description of the impact on users of the remediation.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRemediationImpact() {
@@ -159,7 +159,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     }
     /**
      * Gets the service property value. Service that owns the control (Exchange, Sharepoint, Microsoft Entra ID).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getService() {
@@ -167,7 +167,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     }
     /**
      * Gets the threats property value. List of threats the control mitigates (accountBreach, dataDeletion, dataExfiltration, dataSpillage,
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getThreats() {
@@ -175,7 +175,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     }
     /**
      * Gets the tier property value. The tier property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTier() {
@@ -183,7 +183,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     }
     /**
      * Gets the title property value. The title property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
@@ -191,7 +191,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     }
     /**
      * Gets the userImpact property value. The userImpact property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserImpact() {
@@ -199,7 +199,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     }
     /**
      * Gets the vendorInformation property value. The vendorInformation property
-     * @return a SecurityVendorInformation
+     * @return a {@link SecurityVendorInformation}
      */
     @jakarta.annotation.Nullable
     public SecurityVendorInformation getVendorInformation() {

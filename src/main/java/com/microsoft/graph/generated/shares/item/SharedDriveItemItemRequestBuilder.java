@@ -31,6 +31,7 @@ import java.util.Objects;
 public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity.
+     * @return a {@link CreatedByUserRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CreatedByUserRequestBuilder createdByUser() {
@@ -38,6 +39,7 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the driveItem property of the microsoft.graph.sharedDriveItem entity.
+     * @return a {@link DriveItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DriveItemRequestBuilder driveItem() {
@@ -45,6 +47,7 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the items property of the microsoft.graph.sharedDriveItem entity.
+     * @return a {@link ItemsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ItemsRequestBuilder items() {
@@ -52,6 +55,7 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity.
+     * @return a {@link LastModifiedByUserRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LastModifiedByUserRequestBuilder lastModifiedByUser() {
@@ -59,6 +63,7 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the list property of the microsoft.graph.sharedDriveItem entity.
+     * @return a {@link ListRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ListRequestBuilder list() {
@@ -66,6 +71,7 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the listItem property of the microsoft.graph.sharedDriveItem entity.
+     * @return a {@link ListItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ListItemRequestBuilder listItem() {
@@ -73,6 +79,7 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the permission property of the microsoft.graph.sharedDriveItem entity.
+     * @return a {@link PermissionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PermissionRequestBuilder permission() {
@@ -80,6 +87,7 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the root property of the microsoft.graph.sharedDriveItem entity.
+     * @return a {@link RootRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RootRequestBuilder root() {
@@ -87,13 +95,14 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the site property of the microsoft.graph.sharedDriveItem entity.
+     * @return a {@link SiteRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SiteRequestBuilder site() {
         return new SiteRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new SharedDriveItemItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link SharedDriveItemItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -101,7 +110,7 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new SharedDriveItemItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link SharedDriveItemItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -110,6 +119,7 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete entity from shares
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -117,17 +127,18 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete entity from shares
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Access a shared DriveItem or a collection of shared items by using a shareId or sharing URL. To use a sharing URL with this API, your app needs to transform the URL into a sharing token.
-     * @return a SharedDriveItem
+     * @return a {@link SharedDriveItem}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/shares-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -137,21 +148,22 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Access a shared DriveItem or a collection of shared items by using a shareId or sharing URL. To use a sharing URL with this API, your app needs to transform the URL into a sharing token.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a SharedDriveItem
+     * @return a {@link SharedDriveItem}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/shares-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SharedDriveItem get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SharedDriveItem::createFromDiscriminatorValue);
     }
     /**
      * Update entity in shares
      * @param body The request body
-     * @return a SharedDriveItem
+     * @return a {@link SharedDriveItem}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SharedDriveItem patch(@jakarta.annotation.Nonnull final SharedDriveItem body) {
@@ -161,20 +173,20 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
      * Update entity in shares
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a SharedDriveItem
+     * @return a {@link SharedDriveItem}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SharedDriveItem patch(@jakarta.annotation.Nonnull final SharedDriveItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SharedDriveItem::createFromDiscriminatorValue);
     }
     /**
      * Delete entity from shares
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -183,18 +195,18 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete entity from shares
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/shares/{sharedDriveItem%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Access a shared DriveItem or a collection of shared items by using a shareId or sharing URL. To use a sharing URL with this API, your app needs to transform the URL into a sharing token.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -203,7 +215,7 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Access a shared DriveItem or a collection of shared items by using a shareId or sharing URL. To use a sharing URL with this API, your app needs to transform the URL into a sharing token.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -215,7 +227,7 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update entity in shares
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SharedDriveItem body) {
@@ -225,12 +237,12 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
      * Update entity in shares
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SharedDriveItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/shares/{sharedDriveItem%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -239,7 +251,7 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a SharedDriveItemItemRequestBuilder
+     * @return a {@link SharedDriveItemItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SharedDriveItemItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -269,7 +281,7 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

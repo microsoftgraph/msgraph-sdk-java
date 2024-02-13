@@ -25,6 +25,7 @@ import java.util.Objects;
 public class EventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the events property of the microsoft.graph.virtualEventsRoot entity.
      * @param virtualEventId The unique identifier of virtualEvent
-     * @return a VirtualEventItemRequestBuilder
+     * @return a {@link VirtualEventItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public VirtualEventItemRequestBuilder byVirtualEventId(@jakarta.annotation.Nonnull final String virtualEventId) {
@@ -43,7 +44,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
         return new VirtualEventItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new EventsRequestBuilder and sets the default values.
+     * Instantiates a new {@link EventsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/events{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new EventsRequestBuilder and sets the default values.
+     * Instantiates a new {@link EventsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get events from solutions
-     * @return a VirtualEventCollectionResponse
+     * @return a {@link VirtualEventCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public VirtualEventCollectionResponse get() {
@@ -69,20 +71,21 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get events from solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a VirtualEventCollectionResponse
+     * @return a {@link VirtualEventCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public VirtualEventCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to events for solutions
      * @param body The request body
-     * @return a VirtualEvent
+     * @return a {@link VirtualEvent}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public VirtualEvent post(@jakarta.annotation.Nonnull final VirtualEvent body) {
@@ -92,20 +95,20 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to events for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a VirtualEvent
+     * @return a {@link VirtualEvent}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public VirtualEvent post(@jakarta.annotation.Nonnull final VirtualEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEvent::createFromDiscriminatorValue);
     }
     /**
      * Get events from solutions
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -114,7 +117,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get events from solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -126,7 +129,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to events for solutions
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final VirtualEvent body) {
@@ -136,12 +139,12 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to events for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final VirtualEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/solutions/virtualEvents/events", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -150,7 +153,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a EventsRequestBuilder
+     * @return a {@link EventsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EventsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -204,7 +207,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

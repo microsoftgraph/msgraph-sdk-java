@@ -31,6 +31,7 @@ import java.util.Objects;
 public class MessagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the archive method.
+     * @return a {@link ArchiveRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ArchiveRequestBuilder archive() {
@@ -38,6 +39,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -45,6 +47,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the favorite method.
+     * @return a {@link FavoriteRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FavoriteRequestBuilder favorite() {
@@ -52,6 +55,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the markRead method.
+     * @return a {@link MarkReadRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MarkReadRequestBuilder markRead() {
@@ -59,6 +63,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the markUnread method.
+     * @return a {@link MarkUnreadRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MarkUnreadRequestBuilder markUnread() {
@@ -66,6 +71,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the unarchive method.
+     * @return a {@link UnarchiveRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UnarchiveRequestBuilder unarchive() {
@@ -73,6 +79,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the unfavorite method.
+     * @return a {@link UnfavoriteRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UnfavoriteRequestBuilder unfavorite() {
@@ -81,7 +88,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the messages property of the microsoft.graph.serviceAnnouncement entity.
      * @param serviceUpdateMessageId The unique identifier of serviceUpdateMessage
-     * @return a ServiceUpdateMessageItemRequestBuilder
+     * @return a {@link ServiceUpdateMessageItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ServiceUpdateMessageItemRequestBuilder byServiceUpdateMessageId(@jakarta.annotation.Nonnull final String serviceUpdateMessageId) {
@@ -91,7 +98,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return new ServiceUpdateMessageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new MessagesRequestBuilder and sets the default values.
+     * Instantiates a new {@link MessagesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -99,7 +106,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/serviceAnnouncement/messages{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new MessagesRequestBuilder and sets the default values.
+     * Instantiates a new {@link MessagesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -108,7 +115,8 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the serviceUpdateMessage resources from the messages navigation property. This operation retrieves all service update messages that exist for the tenant.
-     * @return a ServiceUpdateMessageCollectionResponse
+     * @return a {@link ServiceUpdateMessageCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceannouncement-list-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -118,21 +126,22 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the serviceUpdateMessage resources from the messages navigation property. This operation retrieves all service update messages that exist for the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ServiceUpdateMessageCollectionResponse
+     * @return a {@link ServiceUpdateMessageCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceannouncement-list-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ServiceUpdateMessageCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ServiceUpdateMessageCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to messages for admin
      * @param body The request body
-     * @return a ServiceUpdateMessage
+     * @return a {@link ServiceUpdateMessage}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ServiceUpdateMessage post(@jakarta.annotation.Nonnull final ServiceUpdateMessage body) {
@@ -142,20 +151,20 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to messages for admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ServiceUpdateMessage
+     * @return a {@link ServiceUpdateMessage}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ServiceUpdateMessage post(@jakarta.annotation.Nonnull final ServiceUpdateMessage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ServiceUpdateMessage::createFromDiscriminatorValue);
     }
     /**
      * Retrieve the serviceUpdateMessage resources from the messages navigation property. This operation retrieves all service update messages that exist for the tenant.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -164,7 +173,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the serviceUpdateMessage resources from the messages navigation property. This operation retrieves all service update messages that exist for the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -176,7 +185,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to messages for admin
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ServiceUpdateMessage body) {
@@ -186,12 +195,12 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to messages for admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ServiceUpdateMessage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/admin/serviceAnnouncement/messages", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -200,7 +209,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a MessagesRequestBuilder
+     * @return a {@link MessagesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MessagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -254,7 +263,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

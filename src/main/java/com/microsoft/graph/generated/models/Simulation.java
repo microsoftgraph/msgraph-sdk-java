@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Simulation extends Entity implements Parsable {
     /**
-     * Instantiates a new Simulation and sets the default values.
+     * Instantiates a new {@link Simulation} and sets the default values.
      */
     public Simulation() {
         super();
@@ -18,7 +18,7 @@ public class Simulation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Simulation
+     * @return a {@link Simulation}
      */
     @jakarta.annotation.Nonnull
     public static Simulation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the attackTechnique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
-     * @return a SimulationAttackTechnique
+     * @return a {@link SimulationAttackTechnique}
      */
     @jakarta.annotation.Nullable
     public SimulationAttackTechnique getAttackTechnique() {
@@ -35,7 +35,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the attackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
-     * @return a SimulationAttackType
+     * @return a {@link SimulationAttackType}
      */
     @jakarta.annotation.Nullable
     public SimulationAttackType getAttackType() {
@@ -43,7 +43,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the automationId property value. Unique identifier for the attack simulation automation.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAutomationId() {
@@ -51,7 +51,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the completionDateTime property value. Date and time of completion of the attack simulation and training campaign. Supports $filter and $orderby.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompletionDateTime() {
@@ -59,7 +59,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. Identity of the user who created the attack simulation and training campaign.
-     * @return a EmailIdentity
+     * @return a {@link EmailIdentity}
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getCreatedBy() {
@@ -67,7 +67,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Date and time of creation of the attack simulation and training campaign.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -75,7 +75,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description of the attack simulation and training campaign.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -83,7 +83,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name of the attack simulation and training campaign. Supports $filter and $orderby.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -91,7 +91,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the durationInDays property value. Simulation duration in days.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDurationInDays() {
@@ -99,7 +99,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the endUserNotificationSetting property value. Details about the end user notification setting.
-     * @return a EndUserNotificationSetting
+     * @return a {@link EndUserNotificationSetting}
      */
     @jakarta.annotation.Nullable
     public EndUserNotificationSetting getEndUserNotificationSetting() {
@@ -107,7 +107,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the excludedAccountTarget property value. Users excluded from the simulation.
-     * @return a AccountTargetContent
+     * @return a {@link AccountTargetContent}
      */
     @jakarta.annotation.Nullable
     public AccountTargetContent getExcludedAccountTarget() {
@@ -115,7 +115,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -148,7 +148,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the includedAccountTarget property value. Users targeted in the simulation.
-     * @return a AccountTargetContent
+     * @return a {@link AccountTargetContent}
      */
     @jakarta.annotation.Nullable
     public AccountTargetContent getIncludedAccountTarget() {
@@ -156,7 +156,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the isAutomated property value. Flag that represents if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAutomated() {
@@ -164,7 +164,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the landingPage property value. The landing page associated with a simulation during its creation.
-     * @return a LandingPage
+     * @return a {@link LandingPage}
      */
     @jakarta.annotation.Nullable
     public LandingPage getLandingPage() {
@@ -172,7 +172,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. Identity of the user who most recently modified the attack simulation and training campaign.
-     * @return a EmailIdentity
+     * @return a {@link EmailIdentity}
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getLastModifiedBy() {
@@ -180,7 +180,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. Date and time of the most recent modification of the attack simulation and training campaign.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -188,7 +188,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the launchDateTime property value. Date and time of the launch/start of the attack simulation and training campaign. Supports $filter and $orderby.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLaunchDateTime() {
@@ -196,7 +196,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the loginPage property value. The login page associated with a simulation during its creation.
-     * @return a LoginPage
+     * @return a {@link LoginPage}
      */
     @jakarta.annotation.Nullable
     public LoginPage getLoginPage() {
@@ -204,7 +204,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the oAuthConsentAppDetail property value. OAuth app details for the OAuth technique.
-     * @return a OAuthConsentAppDetail
+     * @return a {@link OAuthConsentAppDetail}
      */
     @jakarta.annotation.Nullable
     public OAuthConsentAppDetail getOAuthConsentAppDetail() {
@@ -212,7 +212,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the payload property value. The payload associated with a simulation during its creation.
-     * @return a Payload
+     * @return a {@link Payload}
      */
     @jakarta.annotation.Nullable
     public Payload getPayload() {
@@ -220,7 +220,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the payloadDeliveryPlatform property value. Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue.
-     * @return a PayloadDeliveryPlatform
+     * @return a {@link PayloadDeliveryPlatform}
      */
     @jakarta.annotation.Nullable
     public PayloadDeliveryPlatform getPayloadDeliveryPlatform() {
@@ -228,7 +228,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the report property value. Report of the attack simulation and training campaign.
-     * @return a SimulationReport
+     * @return a {@link SimulationReport}
      */
     @jakarta.annotation.Nullable
     public SimulationReport getReport() {
@@ -236,7 +236,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Status of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, draft, running, scheduled, succeeded, failed, cancelled, excluded, unknownFutureValue.
-     * @return a SimulationStatus
+     * @return a {@link SimulationStatus}
      */
     @jakarta.annotation.Nullable
     public SimulationStatus getStatus() {
@@ -244,7 +244,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the trainingSetting property value. Details about the training settings for a simulation.
-     * @return a TrainingSetting
+     * @return a {@link TrainingSetting}
      */
     @jakarta.annotation.Nullable
     public TrainingSetting getTrainingSetting() {

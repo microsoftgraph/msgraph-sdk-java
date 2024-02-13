@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new IosGeneralDeviceConfiguration and sets the default values.
+     * Instantiates a new {@link IosGeneralDeviceConfiguration} and sets the default values.
      */
     public IosGeneralDeviceConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosGeneralDeviceConfiguration
+     * @return a {@link IosGeneralDeviceConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static IosGeneralDeviceConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the accountBlockModification property value. Indicates whether or not to allow account modification when the device is in supervised mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAccountBlockModification() {
@@ -38,7 +38,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the activationLockAllowWhenSupervised property value. Indicates whether or not to allow activation lock when the device is in the supervised mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getActivationLockAllowWhenSupervised() {
@@ -46,7 +46,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the airDropBlocked property value. Indicates whether or not to allow AirDrop when the device is in supervised mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAirDropBlocked() {
@@ -54,7 +54,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the airDropForceUnmanagedDropTarget property value. Indicates whether or not to cause AirDrop to be considered an unmanaged drop target (iOS 9.0 and later).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAirDropForceUnmanagedDropTarget() {
@@ -62,7 +62,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the airPlayForcePairingPasswordForOutgoingRequests property value. Indicates whether or not to enforce all devices receiving AirPlay requests from this device to use a pairing password.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAirPlayForcePairingPasswordForOutgoingRequests() {
@@ -70,7 +70,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the appleNewsBlocked property value. Indicates whether or not to block the user from using News when the device is in supervised mode (iOS 9.0 and later).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAppleNewsBlocked() {
@@ -78,7 +78,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the appleWatchBlockPairing property value. Indicates whether or not to allow Apple Watch pairing when the device is in supervised mode (iOS 9.0 and later).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAppleWatchBlockPairing() {
@@ -86,7 +86,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the appleWatchForceWristDetection property value. Indicates whether or not to force a paired Apple Watch to use Wrist Detection (iOS 8.2 and later).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAppleWatchForceWristDetection() {
@@ -94,7 +94,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the appsSingleAppModeList property value. Gets or sets the list of iOS apps allowed to autonomously enter Single App Mode. Supervised only. iOS 7.0 and later. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<AppListItem>
+     * @return a {@link java.util.List<AppListItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getAppsSingleAppModeList() {
@@ -102,7 +102,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the appStoreBlockAutomaticDownloads property value. Indicates whether or not to block the automatic downloading of apps purchased on other devices when the device is in supervised mode (iOS 9.0 and later).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAppStoreBlockAutomaticDownloads() {
@@ -110,7 +110,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the appStoreBlocked property value. Indicates whether or not to block the user from using the App Store. Requires a supervised device for iOS 13 and later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAppStoreBlocked() {
@@ -118,7 +118,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the appStoreBlockInAppPurchases property value. Indicates whether or not to block the user from making in app purchases.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAppStoreBlockInAppPurchases() {
@@ -126,7 +126,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the appStoreBlockUIAppInstallation property value. Indicates whether or not to block the App Store app, not restricting installation through Host apps. Applies to supervised mode only (iOS 9.0 and later).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAppStoreBlockUIAppInstallation() {
@@ -134,7 +134,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the appStoreRequirePassword property value. Indicates whether or not to require a password when using the app store.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAppStoreRequirePassword() {
@@ -142,7 +142,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the appsVisibilityList property value. List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements.
-     * @return a java.util.List<AppListItem>
+     * @return a {@link java.util.List<AppListItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getAppsVisibilityList() {
@@ -150,7 +150,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the appsVisibilityListType property value. Possible values of the compliance app list.
-     * @return a AppListType
+     * @return a {@link AppListType}
      */
     @jakarta.annotation.Nullable
     public AppListType getAppsVisibilityListType() {
@@ -158,7 +158,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the bluetoothBlockModification property value. Indicates whether or not to allow modification of Bluetooth settings when the device is in supervised mode (iOS 10.0 and later).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getBluetoothBlockModification() {
@@ -166,7 +166,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the cameraBlocked property value. Indicates whether or not to block the user from accessing the camera of the device. Requires a supervised device for iOS 13 and later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getCameraBlocked() {
@@ -174,7 +174,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the cellularBlockDataRoaming property value. Indicates whether or not to block data roaming.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getCellularBlockDataRoaming() {
@@ -182,7 +182,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the cellularBlockGlobalBackgroundFetchWhileRoaming property value. Indicates whether or not to block global background fetch while roaming.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getCellularBlockGlobalBackgroundFetchWhileRoaming() {
@@ -190,7 +190,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the cellularBlockPerAppDataModification property value. Indicates whether or not to allow changes to cellular app data usage settings when the device is in supervised mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getCellularBlockPerAppDataModification() {
@@ -198,7 +198,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the cellularBlockPersonalHotspot property value. Indicates whether or not to block Personal Hotspot.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getCellularBlockPersonalHotspot() {
@@ -206,7 +206,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the cellularBlockVoiceRoaming property value. Indicates whether or not to block voice roaming.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getCellularBlockVoiceRoaming() {
@@ -214,7 +214,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the certificatesBlockUntrustedTlsCertificates property value. Indicates whether or not to block untrusted TLS certificates.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getCertificatesBlockUntrustedTlsCertificates() {
@@ -222,7 +222,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the classroomAppBlockRemoteScreenObservation property value. Indicates whether or not to allow remote screen observation by Classroom app when the device is in supervised mode (iOS 9.3 and later).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getClassroomAppBlockRemoteScreenObservation() {
@@ -230,7 +230,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the classroomAppForceUnpromptedScreenObservation property value. Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting when the device is in supervised mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getClassroomAppForceUnpromptedScreenObservation() {
@@ -238,7 +238,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the compliantAppListType property value. Possible values of the compliance app list.
-     * @return a AppListType
+     * @return a {@link AppListType}
      */
     @jakarta.annotation.Nullable
     public AppListType getCompliantAppListType() {
@@ -246,7 +246,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the compliantAppsList property value. List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
-     * @return a java.util.List<AppListItem>
+     * @return a {@link java.util.List<AppListItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getCompliantAppsList() {
@@ -254,7 +254,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the configurationProfileBlockChanges property value. Indicates whether or not to block the user from installing configuration profiles and certificates interactively when the device is in supervised mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getConfigurationProfileBlockChanges() {
@@ -262,7 +262,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the definitionLookupBlocked property value. Indicates whether or not to block definition lookup when the device is in supervised mode (iOS 8.1.3 and later ).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefinitionLookupBlocked() {
@@ -270,7 +270,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the deviceBlockEnableRestrictions property value. Indicates whether or not to allow the user to enables restrictions in the device settings when the device is in supervised mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceBlockEnableRestrictions() {
@@ -278,7 +278,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the deviceBlockEraseContentAndSettings property value. Indicates whether or not to allow the use of the 'Erase all content and settings' option on the device when the device is in supervised mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceBlockEraseContentAndSettings() {
@@ -286,7 +286,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the deviceBlockNameModification property value. Indicates whether or not to allow device name modification when the device is in supervised mode (iOS 9.0 and later).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceBlockNameModification() {
@@ -294,7 +294,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the diagnosticDataBlockSubmission property value. Indicates whether or not to block diagnostic data submission.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDiagnosticDataBlockSubmission() {
@@ -302,7 +302,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the diagnosticDataBlockSubmissionModification property value. Indicates whether or not to allow diagnostics submission settings modification when the device is in supervised mode (iOS 9.3.2 and later).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDiagnosticDataBlockSubmissionModification() {
@@ -310,7 +310,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the documentsBlockManagedDocumentsInUnmanagedApps property value. Indicates whether or not to block the user from viewing managed documents in unmanaged apps.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDocumentsBlockManagedDocumentsInUnmanagedApps() {
@@ -318,7 +318,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the documentsBlockUnmanagedDocumentsInManagedApps property value. Indicates whether or not to block the user from viewing unmanaged documents in managed apps.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDocumentsBlockUnmanagedDocumentsInManagedApps() {
@@ -326,7 +326,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the emailInDomainSuffixes property value. An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEmailInDomainSuffixes() {
@@ -334,7 +334,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the enterpriseAppBlockTrust property value. Indicates whether or not to block the user from trusting an enterprise app.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnterpriseAppBlockTrust() {
@@ -342,7 +342,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the enterpriseAppBlockTrustModification property value. [Deprecated] Configuring this setting and setting the value to 'true' has no effect on the device.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnterpriseAppBlockTrustModification() {
@@ -350,7 +350,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the faceTimeBlocked property value. Indicates whether or not to block the user from using FaceTime. Requires a supervised device for iOS 13 and later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFaceTimeBlocked() {
@@ -358,7 +358,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -498,7 +498,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the findMyFriendsBlocked property value. Indicates whether or not to block changes to Find My Friends when the device is in supervised mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFindMyFriendsBlocked() {
@@ -506,7 +506,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the gameCenterBlocked property value. Indicates whether or not to block the user from using Game Center when the device is in supervised mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getGameCenterBlocked() {
@@ -514,7 +514,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the gamingBlockGameCenterFriends property value. Indicates whether or not to block the user from having friends in Game Center. Requires a supervised device for iOS 13 and later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getGamingBlockGameCenterFriends() {
@@ -522,7 +522,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the gamingBlockMultiplayer property value. Indicates whether or not to block the user from using multiplayer gaming. Requires a supervised device for iOS 13 and later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getGamingBlockMultiplayer() {
@@ -530,7 +530,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the hostPairingBlocked property value. indicates whether or not to allow host pairing to control the devices an iOS device can pair with when the iOS device is in supervised mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHostPairingBlocked() {
@@ -538,7 +538,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the iBooksStoreBlocked property value. Indicates whether or not to block the user from using the iBooks Store when the device is in supervised mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIBooksStoreBlocked() {
@@ -546,7 +546,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the iBooksStoreBlockErotica property value. Indicates whether or not to block the user from downloading media from the iBookstore that has been tagged as erotica.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIBooksStoreBlockErotica() {
@@ -554,7 +554,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the iCloudBlockActivityContinuation property value. Indicates whether or not to block the user from continuing work they started on iOS device to another iOS or macOS device.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudBlockActivityContinuation() {
@@ -562,7 +562,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the iCloudBlockBackup property value. Indicates whether or not to block iCloud backup. Requires a supervised device for iOS 13 and later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudBlockBackup() {
@@ -570,7 +570,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the iCloudBlockDocumentSync property value. Indicates whether or not to block iCloud document sync. Requires a supervised device for iOS 13 and later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudBlockDocumentSync() {
@@ -578,7 +578,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the iCloudBlockManagedAppsSync property value. Indicates whether or not to block Managed Apps Cloud Sync.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudBlockManagedAppsSync() {
@@ -586,7 +586,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the iCloudBlockPhotoLibrary property value. Indicates whether or not to block iCloud Photo Library.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudBlockPhotoLibrary() {
@@ -594,7 +594,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the iCloudBlockPhotoStreamSync property value. Indicates whether or not to block iCloud Photo Stream Sync.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudBlockPhotoStreamSync() {
@@ -602,7 +602,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the iCloudBlockSharedPhotoStream property value. Indicates whether or not to block Shared Photo Stream.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudBlockSharedPhotoStream() {
@@ -610,7 +610,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the iCloudRequireEncryptedBackup property value. Indicates whether or not to require backups to iCloud be encrypted.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudRequireEncryptedBackup() {
@@ -618,7 +618,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the iTunesBlockExplicitContent property value. Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store. Requires a supervised device for iOS 13 and later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getITunesBlockExplicitContent() {
@@ -626,7 +626,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the iTunesBlockMusicService property value. Indicates whether or not to block Music service and revert Music app to classic mode when the device is in supervised mode (iOS 9.3 and later and macOS 10.12 and later).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getITunesBlockMusicService() {
@@ -634,7 +634,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the iTunesBlockRadio property value. Indicates whether or not to block the user from using iTunes Radio when the device is in supervised mode (iOS 9.3 and later).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getITunesBlockRadio() {
@@ -642,7 +642,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the keyboardBlockAutoCorrect property value. Indicates whether or not to block keyboard auto-correction when the device is in supervised mode (iOS 8.1.3 and later).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKeyboardBlockAutoCorrect() {
@@ -650,7 +650,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the keyboardBlockDictation property value. Indicates whether or not to block the user from using dictation input when the device is in supervised mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKeyboardBlockDictation() {
@@ -658,7 +658,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the keyboardBlockPredictive property value. Indicates whether or not to block predictive keyboards when device is in supervised mode (iOS 8.1.3 and later).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKeyboardBlockPredictive() {
@@ -666,7 +666,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the keyboardBlockShortcuts property value. Indicates whether or not to block keyboard shortcuts when the device is in supervised mode (iOS 9.0 and later).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKeyboardBlockShortcuts() {
@@ -674,7 +674,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the keyboardBlockSpellCheck property value. Indicates whether or not to block keyboard spell-checking when the device is in supervised mode (iOS 8.1.3 and later).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKeyboardBlockSpellCheck() {
@@ -682,7 +682,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the kioskModeAllowAssistiveSpeak property value. Indicates whether or not to allow assistive speak while in kiosk mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowAssistiveSpeak() {
@@ -690,7 +690,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the kioskModeAllowAssistiveTouchSettings property value. Indicates whether or not to allow access to the Assistive Touch Settings while in kiosk mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowAssistiveTouchSettings() {
@@ -698,7 +698,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the kioskModeAllowAutoLock property value. Indicates whether or not to allow device auto lock while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockAutoLock instead.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowAutoLock() {
@@ -706,7 +706,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the kioskModeAllowColorInversionSettings property value. Indicates whether or not to allow access to the Color Inversion Settings while in kiosk mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowColorInversionSettings() {
@@ -714,7 +714,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the kioskModeAllowRingerSwitch property value. Indicates whether or not to allow use of the ringer switch while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockRingerSwitch instead.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowRingerSwitch() {
@@ -722,7 +722,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the kioskModeAllowScreenRotation property value. Indicates whether or not to allow screen rotation while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockScreenRotation instead.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowScreenRotation() {
@@ -730,7 +730,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the kioskModeAllowSleepButton property value. Indicates whether or not to allow use of the sleep button while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockSleepButton instead.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowSleepButton() {
@@ -738,7 +738,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the kioskModeAllowTouchscreen property value. Indicates whether or not to allow use of the touchscreen while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockTouchscreen instead.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowTouchscreen() {
@@ -746,7 +746,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the kioskModeAllowVoiceOverSettings property value. Indicates whether or not to allow access to the voice over settings while in kiosk mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowVoiceOverSettings() {
@@ -754,7 +754,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the kioskModeAllowVolumeButtons property value. Indicates whether or not to allow use of the volume buttons while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockVolumeButtons instead.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowVolumeButtons() {
@@ -762,7 +762,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the kioskModeAllowZoomSettings property value. Indicates whether or not to allow access to the zoom settings while in kiosk mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowZoomSettings() {
@@ -770,7 +770,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the kioskModeAppStoreUrl property value. URL in the app store to the app to use for kiosk mode. Use if KioskModeManagedAppId is not known.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getKioskModeAppStoreUrl() {
@@ -778,7 +778,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the kioskModeBuiltInAppId property value. ID for built-in apps to use for kiosk mode. Used when KioskModeManagedAppId and KioskModeAppStoreUrl are not set.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getKioskModeBuiltInAppId() {
@@ -786,7 +786,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the kioskModeManagedAppId property value. Managed app id of the app to use for kiosk mode. If KioskModeManagedAppId is specified then KioskModeAppStoreUrl will be ignored.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getKioskModeManagedAppId() {
@@ -794,7 +794,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the kioskModeRequireAssistiveTouch property value. Indicates whether or not to require assistive touch while in kiosk mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeRequireAssistiveTouch() {
@@ -802,7 +802,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the kioskModeRequireColorInversion property value. Indicates whether or not to require color inversion while in kiosk mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeRequireColorInversion() {
@@ -810,7 +810,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the kioskModeRequireMonoAudio property value. Indicates whether or not to require mono audio while in kiosk mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeRequireMonoAudio() {
@@ -818,7 +818,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the kioskModeRequireVoiceOver property value. Indicates whether or not to require voice over while in kiosk mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeRequireVoiceOver() {
@@ -826,7 +826,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the kioskModeRequireZoom property value. Indicates whether or not to require zoom while in kiosk mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeRequireZoom() {
@@ -834,7 +834,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the lockScreenBlockControlCenter property value. Indicates whether or not to block the user from using control center on the lock screen.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLockScreenBlockControlCenter() {
@@ -842,7 +842,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the lockScreenBlockNotificationView property value. Indicates whether or not to block the user from using the notification view on the lock screen.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLockScreenBlockNotificationView() {
@@ -850,7 +850,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the lockScreenBlockPassbook property value. Indicates whether or not to block the user from using passbook when the device is locked.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLockScreenBlockPassbook() {
@@ -858,7 +858,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the lockScreenBlockTodayView property value. Indicates whether or not to block the user from using the Today View on the lock screen.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLockScreenBlockTodayView() {
@@ -866,7 +866,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the mediaContentRatingApps property value. Apps rating as in media content
-     * @return a RatingAppsType
+     * @return a {@link RatingAppsType}
      */
     @jakarta.annotation.Nullable
     public RatingAppsType getMediaContentRatingApps() {
@@ -874,7 +874,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the mediaContentRatingAustralia property value. Media content rating settings for Australia
-     * @return a MediaContentRatingAustralia
+     * @return a {@link MediaContentRatingAustralia}
      */
     @jakarta.annotation.Nullable
     public MediaContentRatingAustralia getMediaContentRatingAustralia() {
@@ -882,7 +882,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the mediaContentRatingCanada property value. Media content rating settings for Canada
-     * @return a MediaContentRatingCanada
+     * @return a {@link MediaContentRatingCanada}
      */
     @jakarta.annotation.Nullable
     public MediaContentRatingCanada getMediaContentRatingCanada() {
@@ -890,7 +890,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the mediaContentRatingFrance property value. Media content rating settings for France
-     * @return a MediaContentRatingFrance
+     * @return a {@link MediaContentRatingFrance}
      */
     @jakarta.annotation.Nullable
     public MediaContentRatingFrance getMediaContentRatingFrance() {
@@ -898,7 +898,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the mediaContentRatingGermany property value. Media content rating settings for Germany
-     * @return a MediaContentRatingGermany
+     * @return a {@link MediaContentRatingGermany}
      */
     @jakarta.annotation.Nullable
     public MediaContentRatingGermany getMediaContentRatingGermany() {
@@ -906,7 +906,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the mediaContentRatingIreland property value. Media content rating settings for Ireland
-     * @return a MediaContentRatingIreland
+     * @return a {@link MediaContentRatingIreland}
      */
     @jakarta.annotation.Nullable
     public MediaContentRatingIreland getMediaContentRatingIreland() {
@@ -914,7 +914,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the mediaContentRatingJapan property value. Media content rating settings for Japan
-     * @return a MediaContentRatingJapan
+     * @return a {@link MediaContentRatingJapan}
      */
     @jakarta.annotation.Nullable
     public MediaContentRatingJapan getMediaContentRatingJapan() {
@@ -922,7 +922,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the mediaContentRatingNewZealand property value. Media content rating settings for New Zealand
-     * @return a MediaContentRatingNewZealand
+     * @return a {@link MediaContentRatingNewZealand}
      */
     @jakarta.annotation.Nullable
     public MediaContentRatingNewZealand getMediaContentRatingNewZealand() {
@@ -930,7 +930,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the mediaContentRatingUnitedKingdom property value. Media content rating settings for United Kingdom
-     * @return a MediaContentRatingUnitedKingdom
+     * @return a {@link MediaContentRatingUnitedKingdom}
      */
     @jakarta.annotation.Nullable
     public MediaContentRatingUnitedKingdom getMediaContentRatingUnitedKingdom() {
@@ -938,7 +938,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the mediaContentRatingUnitedStates property value. Media content rating settings for United States
-     * @return a MediaContentRatingUnitedStates
+     * @return a {@link MediaContentRatingUnitedStates}
      */
     @jakarta.annotation.Nullable
     public MediaContentRatingUnitedStates getMediaContentRatingUnitedStates() {
@@ -946,7 +946,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the messagesBlocked property value. Indicates whether or not to block the user from using the Messages app on the supervised device.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getMessagesBlocked() {
@@ -954,7 +954,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the networkUsageRules property value. List of managed apps and the network rules that applies to them. This collection can contain a maximum of 1000 elements.
-     * @return a java.util.List<IosNetworkUsageRule>
+     * @return a {@link java.util.List<IosNetworkUsageRule>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IosNetworkUsageRule> getNetworkUsageRules() {
@@ -962,7 +962,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the notificationsBlockSettingsModification property value. Indicates whether or not to allow notifications settings modification (iOS 9.3 and later).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getNotificationsBlockSettingsModification() {
@@ -970,7 +970,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passcodeBlockFingerprintModification property value. Block modification of registered Touch ID fingerprints when in supervised mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasscodeBlockFingerprintModification() {
@@ -978,7 +978,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passcodeBlockFingerprintUnlock property value. Indicates whether or not to block fingerprint unlock.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasscodeBlockFingerprintUnlock() {
@@ -986,7 +986,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passcodeBlockModification property value. Indicates whether or not to allow passcode modification on the supervised device (iOS 9.0 and later).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasscodeBlockModification() {
@@ -994,7 +994,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passcodeBlockSimple property value. Indicates whether or not to block simple passcodes.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasscodeBlockSimple() {
@@ -1002,7 +1002,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passcodeExpirationDays property value. Number of days before the passcode expires. Valid values 1 to 65535
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasscodeExpirationDays() {
@@ -1010,7 +1010,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passcodeMinimumCharacterSetCount property value. Number of character sets a passcode must contain. Valid values 0 to 4
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasscodeMinimumCharacterSetCount() {
@@ -1018,7 +1018,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passcodeMinimumLength property value. Minimum length of passcode. Valid values 4 to 14
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasscodeMinimumLength() {
@@ -1026,7 +1026,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passcodeMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a passcode is required.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasscodeMinutesOfInactivityBeforeLock() {
@@ -1034,7 +1034,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passcodeMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before the screen times out.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasscodeMinutesOfInactivityBeforeScreenTimeout() {
@@ -1042,7 +1042,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passcodePreviousPasscodeBlockCount property value. Number of previous passcodes to block. Valid values 1 to 24
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasscodePreviousPasscodeBlockCount() {
@@ -1050,7 +1050,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passcodeRequired property value. Indicates whether or not to require a passcode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasscodeRequired() {
@@ -1058,7 +1058,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passcodeRequiredType property value. Possible values of required passwords.
-     * @return a RequiredPasswordType
+     * @return a {@link RequiredPasswordType}
      */
     @jakarta.annotation.Nullable
     public RequiredPasswordType getPasscodeRequiredType() {
@@ -1066,7 +1066,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passcodeSignInFailureCountBeforeWipe property value. Number of sign in failures allowed before wiping the device. Valid values 2 to 11
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasscodeSignInFailureCountBeforeWipe() {
@@ -1074,7 +1074,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the podcastsBlocked property value. Indicates whether or not to block the user from using podcasts on the supervised device (iOS 8.0 and later).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPodcastsBlocked() {
@@ -1082,7 +1082,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the safariBlockAutofill property value. Indicates whether or not to block the user from using Auto fill in Safari. Requires a supervised device for iOS 13 and later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSafariBlockAutofill() {
@@ -1090,7 +1090,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the safariBlocked property value. Indicates whether or not to block the user from using Safari. Requires a supervised device for iOS 13 and later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSafariBlocked() {
@@ -1098,7 +1098,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the safariBlockJavaScript property value. Indicates whether or not to block JavaScript in Safari.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSafariBlockJavaScript() {
@@ -1106,7 +1106,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the safariBlockPopups property value. Indicates whether or not to block popups in Safari.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSafariBlockPopups() {
@@ -1114,7 +1114,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the safariCookieSettings property value. Web Browser Cookie Settings.
-     * @return a WebBrowserCookieSettings
+     * @return a {@link WebBrowserCookieSettings}
      */
     @jakarta.annotation.Nullable
     public WebBrowserCookieSettings getSafariCookieSettings() {
@@ -1122,7 +1122,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the safariManagedDomains property value. URLs matching the patterns listed here will be considered managed.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSafariManagedDomains() {
@@ -1130,7 +1130,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the safariPasswordAutoFillDomains property value. Users can save passwords in Safari only from URLs matching the patterns listed here. Applies to devices in supervised mode (iOS 9.3 and later).
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSafariPasswordAutoFillDomains() {
@@ -1138,7 +1138,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the safariRequireFraudWarning property value. Indicates whether or not to require fraud warning in Safari.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSafariRequireFraudWarning() {
@@ -1146,7 +1146,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the screenCaptureBlocked property value. Indicates whether or not to block the user from taking Screenshots.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getScreenCaptureBlocked() {
@@ -1154,7 +1154,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the siriBlocked property value. Indicates whether or not to block the user from using Siri.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSiriBlocked() {
@@ -1162,7 +1162,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the siriBlockedWhenLocked property value. Indicates whether or not to block the user from using Siri when locked.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSiriBlockedWhenLocked() {
@@ -1170,7 +1170,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the siriBlockUserGeneratedContent property value. Indicates whether or not to block Siri from querying user-generated content when used on a supervised device.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSiriBlockUserGeneratedContent() {
@@ -1178,7 +1178,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the siriRequireProfanityFilter property value. Indicates whether or not to prevent Siri from dictating, or speaking profane language on supervised device.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSiriRequireProfanityFilter() {
@@ -1186,7 +1186,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the spotlightBlockInternetResults property value. Indicates whether or not to block Spotlight search from returning internet results on supervised device.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSpotlightBlockInternetResults() {
@@ -1194,7 +1194,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the voiceDialingBlocked property value. Indicates whether or not to block voice dialing.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getVoiceDialingBlocked() {
@@ -1202,7 +1202,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the wallpaperBlockModification property value. Indicates whether or not to allow wallpaper modification on supervised device (iOS 9.0 and later) .
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getWallpaperBlockModification() {
@@ -1210,7 +1210,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the wiFiConnectOnlyToConfiguredNetworks property value. Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, 'WiFiConnectToAllowedNetworksOnlyForced.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getWiFiConnectOnlyToConfiguredNetworks() {

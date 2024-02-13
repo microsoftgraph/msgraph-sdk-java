@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity implements Parsable {
     /**
-     * Instantiates a new UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion} and sets the default values.
      */
     public UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion() {
         super();
@@ -20,7 +20,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion
+     * @return a {@link UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion}
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
     }
     /**
      * Gets the activeDeviceCount property value. The number of devices where the application has been active. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getActiveDeviceCount() {
@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
     }
     /**
      * Gets the appCrashCount property value. The number of crashes for the application. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getAppCrashCount() {
@@ -45,7 +45,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
     }
     /**
      * Gets the appDisplayName property value. The friendly name of the application. Possible values are: Outlook, Excel. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
@@ -53,7 +53,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
     }
     /**
      * Gets the appName property value. The name of the application. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppName() {
@@ -61,7 +61,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
     }
     /**
      * Gets the appPublisher property value. The publisher of the application. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppPublisher() {
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
     }
     /**
      * Gets the appUsageDuration property value. The total usage time of the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getAppUsageDuration() {
@@ -77,7 +77,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -95,7 +95,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
     }
     /**
      * Gets the meanTimeToFailureInMinutes property value. The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMeanTimeToFailureInMinutes() {
@@ -103,7 +103,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
     }
     /**
      * Gets the osBuildNumber property value. The OS build number of the application. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsBuildNumber() {
@@ -111,7 +111,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
     }
     /**
      * Gets the osVersion property value. The OS version of the application. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {

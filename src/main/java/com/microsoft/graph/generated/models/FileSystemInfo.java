@@ -19,7 +19,7 @@ public class FileSystemInfo implements AdditionalDataHolder, BackedModel, Parsab
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new FileSystemInfo and sets the default values.
+     * Instantiates a new {@link FileSystemInfo} and sets the default values.
      */
     public FileSystemInfo() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class FileSystemInfo implements AdditionalDataHolder, BackedModel, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a FileSystemInfo
+     * @return a {@link FileSystemInfo}
      */
     @jakarta.annotation.Nonnull
     public static FileSystemInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class FileSystemInfo implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class FileSystemInfo implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class FileSystemInfo implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the createdDateTime property value. The UTC date and time the file was created on a client.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -66,7 +66,7 @@ public class FileSystemInfo implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class FileSystemInfo implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the lastAccessedDateTime property value. The UTC date and time the file was last accessed. Available for the recent file list only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastAccessedDateTime() {
@@ -87,7 +87,7 @@ public class FileSystemInfo implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the lastModifiedDateTime property value. The UTC date and time the file was last modified on a client.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -95,7 +95,7 @@ public class FileSystemInfo implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidLobApp extends MobileLobApp implements Parsable {
     /**
-     * Instantiates a new AndroidLobApp and sets the default values.
+     * Instantiates a new {@link AndroidLobApp} and sets the default values.
      */
     public AndroidLobApp() {
         super();
@@ -21,7 +21,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidLobApp
+     * @return a {@link AndroidLobApp}
      */
     @jakarta.annotation.Nonnull
     public static AndroidLobApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -43,7 +43,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
-     * @return a AndroidMinimumOperatingSystem
+     * @return a {@link AndroidMinimumOperatingSystem}
      */
     @jakarta.annotation.Nullable
     public AndroidMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
@@ -51,7 +51,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the packageId property value. The package identifier.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPackageId() {
@@ -59,7 +59,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the versionCode property value. The version code of Android Line of Business (LoB) app.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersionCode() {
@@ -67,7 +67,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the versionName property value. The version name of Android Line of Business (LoB) app.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersionName() {

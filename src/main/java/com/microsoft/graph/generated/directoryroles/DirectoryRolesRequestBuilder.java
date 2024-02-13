@@ -29,6 +29,7 @@ import java.util.Objects;
 public class DirectoryRolesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -36,6 +37,7 @@ public class DirectoryRolesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the delta method.
+     * @return a {@link DeltaRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeltaRequestBuilder delta() {
@@ -43,6 +45,7 @@ public class DirectoryRolesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getAvailableExtensionProperties method.
+     * @return a {@link GetAvailableExtensionPropertiesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetAvailableExtensionPropertiesRequestBuilder getAvailableExtensionProperties() {
@@ -50,6 +53,7 @@ public class DirectoryRolesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getByIds method.
+     * @return a {@link GetByIdsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetByIdsRequestBuilder getByIds() {
@@ -57,6 +61,7 @@ public class DirectoryRolesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the validateProperties method.
+     * @return a {@link ValidatePropertiesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
@@ -65,7 +70,7 @@ public class DirectoryRolesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of directoryRole entities.
      * @param directoryRoleId The unique identifier of directoryRole
-     * @return a DirectoryRoleItemRequestBuilder
+     * @return a {@link DirectoryRoleItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DirectoryRoleItemRequestBuilder byDirectoryRoleId(@jakarta.annotation.Nonnull final String directoryRoleId) {
@@ -75,7 +80,7 @@ public class DirectoryRolesRequestBuilder extends BaseRequestBuilder {
         return new DirectoryRoleItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new DirectoryRolesRequestBuilder and sets the default values.
+     * Instantiates a new {@link DirectoryRolesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -83,7 +88,7 @@ public class DirectoryRolesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directoryRoles{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip}", pathParameters);
     }
     /**
-     * Instantiates a new DirectoryRolesRequestBuilder and sets the default values.
+     * Instantiates a new {@link DirectoryRolesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -92,7 +97,8 @@ public class DirectoryRolesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List the directory roles that are activated in the tenant. This operation only returns roles that have been activated. A role becomes activated when an admin activates the role using the Activate directoryRole API. Not all built-in roles are initially activated.  When assigning a role using the Microsoft Entra admin center, the role activation step is implicitly done on the admin's behalf. To get the full list of roles that are available in Microsoft Entra ID, use List directoryRoleTemplates.
-     * @return a DirectoryRoleCollectionResponse
+     * @return a {@link DirectoryRoleCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/directoryrole-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -102,21 +108,22 @@ public class DirectoryRolesRequestBuilder extends BaseRequestBuilder {
     /**
      * List the directory roles that are activated in the tenant. This operation only returns roles that have been activated. A role becomes activated when an admin activates the role using the Activate directoryRole API. Not all built-in roles are initially activated.  When assigning a role using the Microsoft Entra admin center, the role activation step is implicitly done on the admin's behalf. To get the full list of roles that are available in Microsoft Entra ID, use List directoryRoleTemplates.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DirectoryRoleCollectionResponse
+     * @return a {@link DirectoryRoleCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/directoryrole-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectoryRoleCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryRoleCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Activate a directory role. To read a directory role or update its members, it must first be activated in the tenant. The Company Administrators and the implicit user directory roles (User, Guest User, and Restricted Guest User roles) are activated by default. To access and assign members to other directory roles, you must first activate it with its corresponding directory role template ID.
      * @param body The request body
-     * @return a DirectoryRole
+     * @return a {@link DirectoryRole}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/directoryrole-post-directoryroles?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -127,7 +134,8 @@ public class DirectoryRolesRequestBuilder extends BaseRequestBuilder {
      * Activate a directory role. To read a directory role or update its members, it must first be activated in the tenant. The Company Administrators and the implicit user directory roles (User, Guest User, and Restricted Guest User roles) are activated by default. To access and assign members to other directory roles, you must first activate it with its corresponding directory role template ID.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DirectoryRole
+     * @return a {@link DirectoryRole}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/directoryrole-post-directoryroles?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -135,13 +143,12 @@ public class DirectoryRolesRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryRole::createFromDiscriminatorValue);
     }
     /**
      * List the directory roles that are activated in the tenant. This operation only returns roles that have been activated. A role becomes activated when an admin activates the role using the Activate directoryRole API. Not all built-in roles are initially activated.  When assigning a role using the Microsoft Entra admin center, the role activation step is implicitly done on the admin's behalf. To get the full list of roles that are available in Microsoft Entra ID, use List directoryRoleTemplates.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -150,7 +157,7 @@ public class DirectoryRolesRequestBuilder extends BaseRequestBuilder {
     /**
      * List the directory roles that are activated in the tenant. This operation only returns roles that have been activated. A role becomes activated when an admin activates the role using the Activate directoryRole API. Not all built-in roles are initially activated.  When assigning a role using the Microsoft Entra admin center, the role activation step is implicitly done on the admin's behalf. To get the full list of roles that are available in Microsoft Entra ID, use List directoryRoleTemplates.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -162,7 +169,7 @@ public class DirectoryRolesRequestBuilder extends BaseRequestBuilder {
     /**
      * Activate a directory role. To read a directory role or update its members, it must first be activated in the tenant. The Company Administrators and the implicit user directory roles (User, Guest User, and Restricted Guest User roles) are activated by default. To access and assign members to other directory roles, you must first activate it with its corresponding directory role template ID.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DirectoryRole body) {
@@ -172,12 +179,12 @@ public class DirectoryRolesRequestBuilder extends BaseRequestBuilder {
      * Activate a directory role. To read a directory role or update its members, it must first be activated in the tenant. The Company Administrators and the implicit user directory roles (User, Guest User, and Restricted Guest User roles) are activated by default. To access and assign members to other directory roles, you must first activate it with its corresponding directory role template ID.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DirectoryRole body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/directoryRoles", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -186,7 +193,7 @@ public class DirectoryRolesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DirectoryRolesRequestBuilder
+     * @return a {@link DirectoryRolesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DirectoryRolesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -235,7 +242,7 @@ public class DirectoryRolesRequestBuilder extends BaseRequestBuilder {
         public Integer skip;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

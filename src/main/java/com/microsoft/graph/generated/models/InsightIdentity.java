@@ -18,7 +18,7 @@ public class InsightIdentity implements AdditionalDataHolder, BackedModel, Parsa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new InsightIdentity and sets the default values.
+     * Instantiates a new {@link InsightIdentity} and sets the default values.
      */
     public InsightIdentity() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class InsightIdentity implements AdditionalDataHolder, BackedModel, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a InsightIdentity
+     * @return a {@link InsightIdentity}
      */
     @jakarta.annotation.Nonnull
     public static InsightIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class InsightIdentity implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class InsightIdentity implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the address property value. The email address of the user who shared the item.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAddress() {
@@ -57,7 +57,7 @@ public class InsightIdentity implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class InsightIdentity implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the displayName property value. The display name of the user who shared the item.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -73,7 +73,7 @@ public class InsightIdentity implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -86,7 +86,7 @@ public class InsightIdentity implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the id property value. The ID of the user who shared the item.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -94,7 +94,7 @@ public class InsightIdentity implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationAssignmentResource extends Entity implements Parsable {
     /**
-     * Instantiates a new EducationAssignmentResource and sets the default values.
+     * Instantiates a new {@link EducationAssignmentResource} and sets the default values.
      */
     public EducationAssignmentResource() {
         super();
@@ -17,7 +17,7 @@ public class EducationAssignmentResource extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationAssignmentResource
+     * @return a {@link EducationAssignmentResource}
      */
     @jakarta.annotation.Nonnull
     public static EducationAssignmentResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class EducationAssignmentResource extends Entity implements Parsable {
     }
     /**
      * Gets the distributeForStudentWork property value. Indicates whether this resource should be copied to each student submission for modification and submission. Required
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDistributeForStudentWork() {
@@ -34,7 +34,7 @@ public class EducationAssignmentResource extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -45,7 +45,7 @@ public class EducationAssignmentResource extends Entity implements Parsable {
     }
     /**
      * Gets the resource property value. Resource object that has been associated with this assignment.
-     * @return a EducationResource
+     * @return a {@link EducationResource}
      */
     @jakarta.annotation.Nullable
     public EducationResource getResource() {

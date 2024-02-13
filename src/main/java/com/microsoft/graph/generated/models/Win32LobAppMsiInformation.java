@@ -21,7 +21,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new Win32LobAppMsiInformation and sets the default values.
+     * Instantiates a new {@link Win32LobAppMsiInformation} and sets the default values.
      */
     public Win32LobAppMsiInformation() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedMo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Win32LobAppMsiInformation
+     * @return a {@link Win32LobAppMsiInformation}
      */
     @jakarta.annotation.Nonnull
     public static Win32LobAppMsiInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedMo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -85,7 +85,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the packageType property value. Indicates the package type of an MSI Win32LobApp.
-     * @return a Win32LobAppMsiPackageType
+     * @return a {@link Win32LobAppMsiPackageType}
      */
     @jakarta.annotation.Nullable
     public Win32LobAppMsiPackageType getPackageType() {
@@ -93,7 +93,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the productCode property value. The MSI product code.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProductCode() {
@@ -101,7 +101,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the productName property value. The MSI product name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProductName() {
@@ -109,7 +109,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the productVersion property value. The MSI product version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProductVersion() {
@@ -117,7 +117,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the publisher property value. The MSI publisher.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
@@ -125,7 +125,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the requiresReboot property value. Whether the MSI app requires the machine to reboot to complete installation.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRequiresReboot() {
@@ -133,7 +133,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the upgradeCode property value. The MSI upgrade code.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUpgradeCode() {

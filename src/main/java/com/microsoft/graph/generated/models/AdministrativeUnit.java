@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AdministrativeUnit extends DirectoryObject implements Parsable {
     /**
-     * Instantiates a new AdministrativeUnit and sets the default values.
+     * Instantiates a new {@link AdministrativeUnit} and sets the default values.
      */
     public AdministrativeUnit() {
         super();
@@ -18,7 +18,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AdministrativeUnit
+     * @return a {@link AdministrativeUnit}
      */
     @jakarta.annotation.Nonnull
     public static AdministrativeUnit createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the description property value. An optional description for the administrative unit. Supports $filter (eq, ne, in, startsWith), $search.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -35,7 +35,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -43,7 +43,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the extensions property value. The collection of open extensions defined for this administrative unit. Nullable.
-     * @return a java.util.List<Extension>
+     * @return a {@link java.util.List<Extension>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
@@ -51,7 +51,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -66,7 +66,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the members property value. Users and groups that are members of this administrative unit. Supports $expand.
-     * @return a java.util.List<DirectoryObject>
+     * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getMembers() {
@@ -74,7 +74,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the scopedRoleMembers property value. Scoped-role members of this administrative unit.
-     * @return a java.util.List<ScopedRoleMembership>
+     * @return a {@link java.util.List<ScopedRoleMembership>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ScopedRoleMembership> getScopedRoleMembers() {
@@ -82,7 +82,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the visibility property value. Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership. If not set (value is null), the default behavior is public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVisibility() {

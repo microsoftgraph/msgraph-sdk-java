@@ -25,6 +25,7 @@ import java.util.Objects;
 public class NotesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
@@ -36,7 +37,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the notes property of the microsoft.graph.subjectRightsRequest entity.
      * @param authoredNoteId The unique identifier of authoredNote
-     * @return a AuthoredNoteItemRequestBuilder
+     * @return a {@link AuthoredNoteItemRequestBuilder}
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
@@ -49,7 +50,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return new AuthoredNoteItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new NotesRequestBuilder and sets the default values.
+     * Instantiates a new {@link NotesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -57,7 +58,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/privacy/subjectRightsRequests/{subjectRightsRequest%2Did}/notes{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new NotesRequestBuilder and sets the default values.
+     * Instantiates a new {@link NotesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -66,7 +67,8 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of authored notes assoicated with a subject rights request. 
-     * @return a AuthoredNoteCollectionResponse
+     * @return a {@link AuthoredNoteCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-list-notes?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +81,8 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of authored notes assoicated with a subject rights request. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AuthoredNoteCollectionResponse
+     * @return a {@link AuthoredNoteCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-list-notes?view=graph-rest-1.0">Find more info here</a>
@@ -89,14 +92,14 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
     public AuthoredNoteCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AuthoredNoteCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new authoredNote object.
      * @param body The request body
-     * @return a AuthoredNote
+     * @return a {@link AuthoredNote}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-post-notes?view=graph-rest-1.0">Find more info here</a>
@@ -110,7 +113,8 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
      * Create a new authoredNote object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AuthoredNote
+     * @return a {@link AuthoredNote}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-post-notes?view=graph-rest-1.0">Find more info here</a>
@@ -121,13 +125,12 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AuthoredNote::createFromDiscriminatorValue);
     }
     /**
      * Get the list of authored notes assoicated with a subject rights request. 
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
@@ -139,7 +142,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of authored notes assoicated with a subject rights request. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
@@ -154,7 +157,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new authoredNote object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
@@ -167,7 +170,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
      * Create a new authoredNote object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
@@ -175,7 +178,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
     @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AuthoredNote body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/privacy/subjectRightsRequests/{subjectRightsRequest%2Did}/notes", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -184,7 +187,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a NotesRequestBuilder
+     * @return a {@link NotesRequestBuilder}
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
      */
@@ -241,7 +244,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

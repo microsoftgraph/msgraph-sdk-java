@@ -21,7 +21,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new SoftwareOathAuthenticationMethodItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link SoftwareOathAuthenticationMethodItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -29,7 +29,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/softwareOathMethods/{softwareOathAuthenticationMethod%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new SoftwareOathAuthenticationMethodItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link SoftwareOathAuthenticationMethodItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -38,6 +38,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
     }
     /**
      * Delete a user's Software OATH token authentication method object.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/softwareoathauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -46,18 +47,19 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
     /**
      * Delete a user's Software OATH token authentication method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/softwareoathauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve a user's single Software OATH token authentication method object and its properties.
-     * @return a SoftwareOathAuthenticationMethod
+     * @return a {@link SoftwareOathAuthenticationMethod}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/softwareoathauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -67,20 +69,20 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
     /**
      * Retrieve a user's single Software OATH token authentication method object and its properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a SoftwareOathAuthenticationMethod
+     * @return a {@link SoftwareOathAuthenticationMethod}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/softwareoathauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SoftwareOathAuthenticationMethod get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SoftwareOathAuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
      * Delete a user's Software OATH token authentication method object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -89,18 +91,18 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
     /**
      * Delete a user's Software OATH token authentication method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/users/{user%2Did}/authentication/softwareOathMethods/{softwareOathAuthenticationMethod%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Retrieve a user's single Software OATH token authentication method object and its properties.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -109,7 +111,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
     /**
      * Retrieve a user's single Software OATH token authentication method object and its properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,7 +123,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a SoftwareOathAuthenticationMethodItemRequestBuilder
+     * @return a {@link SoftwareOathAuthenticationMethodItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SoftwareOathAuthenticationMethodItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -151,7 +153,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

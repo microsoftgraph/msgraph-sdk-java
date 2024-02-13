@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class KubernetesNamespaceEvidence extends AlertEvidence implements Parsable {
     /**
-     * Instantiates a new KubernetesNamespaceEvidence and sets the default values.
+     * Instantiates a new {@link KubernetesNamespaceEvidence} and sets the default values.
      */
     public KubernetesNamespaceEvidence() {
         super();
@@ -18,7 +18,7 @@ public class KubernetesNamespaceEvidence extends AlertEvidence implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a KubernetesNamespaceEvidence
+     * @return a {@link KubernetesNamespaceEvidence}
      */
     @jakarta.annotation.Nonnull
     public static KubernetesNamespaceEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class KubernetesNamespaceEvidence extends AlertEvidence implements Parsab
     }
     /**
      * Gets the cluster property value. The namespace cluster.
-     * @return a KubernetesClusterEvidence
+     * @return a {@link KubernetesClusterEvidence}
      */
     @jakarta.annotation.Nullable
     public KubernetesClusterEvidence getCluster() {
@@ -35,7 +35,7 @@ public class KubernetesNamespaceEvidence extends AlertEvidence implements Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,7 +47,7 @@ public class KubernetesNamespaceEvidence extends AlertEvidence implements Parsab
     }
     /**
      * Gets the labels property value. The labels for the Kubernetes pod.
-     * @return a Dictionary
+     * @return a {@link Dictionary}
      */
     @jakarta.annotation.Nullable
     public Dictionary getLabels() {
@@ -55,7 +55,7 @@ public class KubernetesNamespaceEvidence extends AlertEvidence implements Parsab
     }
     /**
      * Gets the name property value. The namespace name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {

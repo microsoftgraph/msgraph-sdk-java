@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ContainerImageEvidence extends AlertEvidence implements Parsable {
     /**
-     * Instantiates a new ContainerImageEvidence and sets the default values.
+     * Instantiates a new {@link ContainerImageEvidence} and sets the default values.
      */
     public ContainerImageEvidence() {
         super();
@@ -18,7 +18,7 @@ public class ContainerImageEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ContainerImageEvidence
+     * @return a {@link ContainerImageEvidence}
      */
     @jakarta.annotation.Nonnull
     public static ContainerImageEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ContainerImageEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the digestImage property value. The digest image entity, in case this is a tag image.
-     * @return a ContainerImageEvidence
+     * @return a {@link ContainerImageEvidence}
      */
     @jakarta.annotation.Nullable
     public ContainerImageEvidence getDigestImage() {
@@ -35,7 +35,7 @@ public class ContainerImageEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,7 +47,7 @@ public class ContainerImageEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the imageId property value. The unique identifier for the container image entity.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getImageId() {
@@ -55,7 +55,7 @@ public class ContainerImageEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the registry property value. The container registry for this image.
-     * @return a ContainerRegistryEvidence
+     * @return a {@link ContainerRegistryEvidence}
      */
     @jakarta.annotation.Nullable
     public ContainerRegistryEvidence getRegistry() {

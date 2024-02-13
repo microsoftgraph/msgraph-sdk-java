@@ -30,6 +30,7 @@ import java.util.Objects;
 public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the outcomes property of the microsoft.graph.educationSubmission entity.
+     * @return a {@link OutcomesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OutcomesRequestBuilder outcomes() {
@@ -37,6 +38,7 @@ public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the reassign method.
+     * @return a {@link ReassignRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReassignRequestBuilder reassign() {
@@ -44,6 +46,7 @@ public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the resources property of the microsoft.graph.educationSubmission entity.
+     * @return a {@link ResourcesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ResourcesRequestBuilder resources() {
@@ -51,6 +54,7 @@ public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the return method.
+     * @return a {@link ReturnRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReturnRequestBuilder returnEscaped() {
@@ -58,6 +62,7 @@ public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the setUpResourcesFolder method.
+     * @return a {@link SetUpResourcesFolderRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SetUpResourcesFolderRequestBuilder setUpResourcesFolder() {
@@ -65,6 +70,7 @@ public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the submit method.
+     * @return a {@link SubmitRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SubmitRequestBuilder submit() {
@@ -72,6 +78,7 @@ public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the submittedResources property of the microsoft.graph.educationSubmission entity.
+     * @return a {@link SubmittedResourcesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SubmittedResourcesRequestBuilder submittedResources() {
@@ -79,13 +86,14 @@ public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the unsubmit method.
+     * @return a {@link UnsubmitRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UnsubmitRequestBuilder unsubmit() {
         return new UnsubmitRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new EducationSubmissionItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link EducationSubmissionItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -93,7 +101,7 @@ public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/me/assignments/{educationAssignment%2Did}/submissions/{educationSubmission%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new EducationSubmissionItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link EducationSubmissionItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -102,6 +110,7 @@ public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property submissions for education
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -109,17 +118,18 @@ public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property submissions for education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve a particular submission. Only teachers, students, and applications with application permissions can perform this operation. A submission object represents a student's work for an assignment. Resources associated with the submission represent this work. Only the assignedTo student can see and modify the submission. A teacher or application with application permissions has full access to all submissions. The grade and feedback from a teacher are part of the educationOutcome associated with this object. Only teachers or applications with application permissions can add or change grades and feedback. Students will not see the grade or feedback until the assignment has been released.
-     * @return a EducationSubmission
+     * @return a {@link EducationSubmission}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationsubmission-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -129,21 +139,22 @@ public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a particular submission. Only teachers, students, and applications with application permissions can perform this operation. A submission object represents a student's work for an assignment. Resources associated with the submission represent this work. Only the assignedTo student can see and modify the submission. A teacher or application with application permissions has full access to all submissions. The grade and feedback from a teacher are part of the educationOutcome associated with this object. Only teachers or applications with application permissions can add or change grades and feedback. Students will not see the grade or feedback until the assignment has been released.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EducationSubmission
+     * @return a {@link EducationSubmission}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationsubmission-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationSubmission get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EducationSubmission::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property submissions in education
      * @param body The request body
-     * @return a EducationSubmission
+     * @return a {@link EducationSubmission}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public EducationSubmission patch(@jakarta.annotation.Nonnull final EducationSubmission body) {
@@ -153,20 +164,20 @@ public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property submissions in education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EducationSubmission
+     * @return a {@link EducationSubmission}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public EducationSubmission patch(@jakarta.annotation.Nonnull final EducationSubmission body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EducationSubmission::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property submissions for education
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -175,18 +186,18 @@ public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property submissions for education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/education/me/assignments/{educationAssignment%2Did}/submissions/{educationSubmission%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Retrieve a particular submission. Only teachers, students, and applications with application permissions can perform this operation. A submission object represents a student's work for an assignment. Resources associated with the submission represent this work. Only the assignedTo student can see and modify the submission. A teacher or application with application permissions has full access to all submissions. The grade and feedback from a teacher are part of the educationOutcome associated with this object. Only teachers or applications with application permissions can add or change grades and feedback. Students will not see the grade or feedback until the assignment has been released.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -195,7 +206,7 @@ public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a particular submission. Only teachers, students, and applications with application permissions can perform this operation. A submission object represents a student's work for an assignment. Resources associated with the submission represent this work. Only the assignedTo student can see and modify the submission. A teacher or application with application permissions has full access to all submissions. The grade and feedback from a teacher are part of the educationOutcome associated with this object. Only teachers or applications with application permissions can add or change grades and feedback. Students will not see the grade or feedback until the assignment has been released.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -207,7 +218,7 @@ public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property submissions in education
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EducationSubmission body) {
@@ -217,12 +228,12 @@ public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property submissions in education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EducationSubmission body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/education/me/assignments/{educationAssignment%2Did}/submissions/{educationSubmission%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -231,7 +242,7 @@ public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a EducationSubmissionItemRequestBuilder
+     * @return a {@link EducationSubmissionItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EducationSubmissionItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -261,7 +272,7 @@ public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -31,6 +31,7 @@ import java.util.Objects;
 public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the custodians property of the microsoft.graph.security.ediscoveryCase entity.
+     * @return a {@link CustodiansRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CustodiansRequestBuilder custodians() {
@@ -38,6 +39,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the close method.
+     * @return a {@link MicrosoftGraphSecurityCloseRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityCloseRequestBuilder microsoftGraphSecurityClose() {
@@ -45,6 +47,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the reopen method.
+     * @return a {@link MicrosoftGraphSecurityReopenRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityReopenRequestBuilder microsoftGraphSecurityReopen() {
@@ -52,6 +55,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the noncustodialDataSources property of the microsoft.graph.security.ediscoveryCase entity.
+     * @return a {@link NoncustodialDataSourcesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public NoncustodialDataSourcesRequestBuilder noncustodialDataSources() {
@@ -59,6 +63,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the operations property of the microsoft.graph.security.ediscoveryCase entity.
+     * @return a {@link OperationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OperationsRequestBuilder operations() {
@@ -66,6 +71,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the reviewSets property of the microsoft.graph.security.ediscoveryCase entity.
+     * @return a {@link ReviewSetsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReviewSetsRequestBuilder reviewSets() {
@@ -73,6 +79,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the searches property of the microsoft.graph.security.ediscoveryCase entity.
+     * @return a {@link SearchesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SearchesRequestBuilder searches() {
@@ -80,6 +87,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the settings property of the microsoft.graph.security.ediscoveryCase entity.
+     * @return a {@link SettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SettingsRequestBuilder settings() {
@@ -87,13 +95,14 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the tags property of the microsoft.graph.security.ediscoveryCase entity.
+     * @return a {@link TagsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TagsRequestBuilder tags() {
         return new TagsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new EdiscoveryCaseItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link EdiscoveryCaseItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -101,7 +110,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new EdiscoveryCaseItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link EdiscoveryCaseItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -110,6 +119,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete an ediscoveryCase object.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-casesroot-delete-ediscoverycases?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -118,18 +128,19 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete an ediscoveryCase object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-casesroot-delete-ediscoverycases?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read the properties and relationships of an ediscoveryCase object.
-     * @return a EdiscoveryCase
+     * @return a {@link EdiscoveryCase}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -139,21 +150,22 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an ediscoveryCase object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EdiscoveryCase
+     * @return a {@link EdiscoveryCase}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryCase get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryCase::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of an ediscoveryCase object.
      * @param body The request body
-     * @return a EdiscoveryCase
+     * @return a {@link EdiscoveryCase}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -164,7 +176,8 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an ediscoveryCase object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EdiscoveryCase
+     * @return a {@link EdiscoveryCase}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -172,13 +185,12 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryCase::createFromDiscriminatorValue);
     }
     /**
      * Delete an ediscoveryCase object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -187,18 +199,18 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete an ediscoveryCase object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Read the properties and relationships of an ediscoveryCase object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -207,7 +219,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an ediscoveryCase object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -219,7 +231,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of an ediscoveryCase object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EdiscoveryCase body) {
@@ -229,12 +241,12 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an ediscoveryCase object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EdiscoveryCase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -243,7 +255,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a EdiscoveryCaseItemRequestBuilder
+     * @return a {@link EdiscoveryCaseItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EdiscoveryCaseItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -273,7 +285,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

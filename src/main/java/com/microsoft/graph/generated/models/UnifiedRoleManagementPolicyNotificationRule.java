@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementPolicyRule implements Parsable {
     /**
-     * Instantiates a new UnifiedRoleManagementPolicyNotificationRule and sets the default values.
+     * Instantiates a new {@link UnifiedRoleManagementPolicyNotificationRule} and sets the default values.
      */
     public UnifiedRoleManagementPolicyNotificationRule() {
         super();
@@ -18,7 +18,7 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnifiedRoleManagementPolicyNotificationRule
+     * @return a {@link UnifiedRoleManagementPolicyNotificationRule}
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleManagementPolicyNotificationRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -41,7 +41,7 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
     }
     /**
      * Gets the isDefaultRecipientsEnabled property value. Indicates whether a default recipient will receive the notification email.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefaultRecipientsEnabled() {
@@ -49,7 +49,7 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
     }
     /**
      * Gets the notificationLevel property value. The level of notification. The possible values are None, Critical, All.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNotificationLevel() {
@@ -57,7 +57,7 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
     }
     /**
      * Gets the notificationRecipients property value. The list of recipients of the email notifications.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getNotificationRecipients() {
@@ -65,7 +65,7 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
     }
     /**
      * Gets the notificationType property value. The type of notification. Only Email is supported.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNotificationType() {
@@ -73,7 +73,7 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
     }
     /**
      * Gets the recipientType property value. The type of recipient of the notification. The possible values are Requestor, Approver, Admin.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRecipientType() {

@@ -19,7 +19,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SynchronizationStatus and sets the default values.
+     * Instantiates a new {@link SynchronizationStatus} and sets the default values.
      */
     public SynchronizationStatus() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, BackedModel,
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SynchronizationStatus
+     * @return a {@link SynchronizationStatus}
      */
     @jakarta.annotation.Nonnull
     public static SynchronizationStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the code property value. The code property
-     * @return a SynchronizationStatusCode
+     * @return a {@link SynchronizationStatusCode}
      */
     @jakarta.annotation.Nullable
     public SynchronizationStatusCode getCode() {
@@ -66,7 +66,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the countSuccessiveCompleteFailures property value. Number of consecutive times this job failed.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getCountSuccessiveCompleteFailures() {
@@ -74,7 +74,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the escrowsPruned property value. true if the job's escrows (object-level errors) were pruned during initial synchronization. Escrows can be pruned if during the initial synchronization, you reach the threshold of errors that would normally put the job in quarantine. Instead of going into quarantine, the synchronization process clears the job's errors and continues until the initial synchronization is completed. When the initial synchronization is completed, the job will pause and wait for the customer to clean up the errors.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEscrowsPruned() {
@@ -82,7 +82,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, BackedModel,
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -104,7 +104,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the lastExecution property value. Details of the last execution of the job.
-     * @return a SynchronizationTaskExecution
+     * @return a {@link SynchronizationTaskExecution}
      */
     @jakarta.annotation.Nullable
     public SynchronizationTaskExecution getLastExecution() {
@@ -112,7 +112,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the lastSuccessfulExecution property value. Details of the last execution of this job, which didn't have any errors.
-     * @return a SynchronizationTaskExecution
+     * @return a {@link SynchronizationTaskExecution}
      */
     @jakarta.annotation.Nullable
     public SynchronizationTaskExecution getLastSuccessfulExecution() {
@@ -120,7 +120,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the lastSuccessfulExecutionWithExports property value. Details of the last execution of the job, which exported objects into the target directory.
-     * @return a SynchronizationTaskExecution
+     * @return a {@link SynchronizationTaskExecution}
      */
     @jakarta.annotation.Nullable
     public SynchronizationTaskExecution getLastSuccessfulExecutionWithExports() {
@@ -128,7 +128,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -136,7 +136,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the progress property value. Details of the progress of a job toward completion.
-     * @return a java.util.List<SynchronizationProgress>
+     * @return a {@link java.util.List<SynchronizationProgress>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SynchronizationProgress> getProgress() {
@@ -144,7 +144,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the quarantine property value. If job is in quarantine, quarantine details.
-     * @return a SynchronizationQuarantine
+     * @return a {@link SynchronizationQuarantine}
      */
     @jakarta.annotation.Nullable
     public SynchronizationQuarantine getQuarantine() {
@@ -152,7 +152,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the steadyStateFirstAchievedTime property value. The time when steady state (no more changes to the process) was first achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getSteadyStateFirstAchievedTime() {
@@ -160,7 +160,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the steadyStateLastAchievedTime property value. The time when steady state (no more changes to the process) was last achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getSteadyStateLastAchievedTime() {
@@ -168,7 +168,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the synchronizedEntryCountByType property value. Count of synchronized objects, listed by object type.
-     * @return a java.util.List<StringKeyLongValuePair>
+     * @return a {@link java.util.List<StringKeyLongValuePair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<StringKeyLongValuePair> getSynchronizedEntryCountByType() {
@@ -176,7 +176,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the troubleshootingUrl property value. In the event of an error, the URL with the troubleshooting steps for the issue.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTroubleshootingUrl() {

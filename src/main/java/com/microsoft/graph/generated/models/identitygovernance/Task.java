@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Task extends Entity implements Parsable {
     /**
-     * Instantiates a new Task and sets the default values.
+     * Instantiates a new {@link Task} and sets the default values.
      */
     public Task() {
         super();
@@ -20,7 +20,7 @@ public class Task extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Task
+     * @return a {@link Task}
      */
     @jakarta.annotation.Nonnull
     public static Task createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class Task extends Entity implements Parsable {
     }
     /**
      * Gets the arguments property value. Arguments included within the task.  For guidance to configure this property, see Configure the arguments for built-in Lifecycle Workflow tasks. Required.
-     * @return a java.util.List<KeyValuePair>
+     * @return a {@link java.util.List<KeyValuePair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getArguments() {
@@ -37,7 +37,7 @@ public class Task extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. The category property
-     * @return a EnumSet<LifecycleTaskCategory>
+     * @return a {@link EnumSet<LifecycleTaskCategory>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<LifecycleTaskCategory> getCategory() {
@@ -45,7 +45,7 @@ public class Task extends Entity implements Parsable {
     }
     /**
      * Gets the continueOnError property value. A boolean value that specifies whether, if this task fails, the workflow will stop, and subsequent tasks will not run. Optional.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getContinueOnError() {
@@ -53,7 +53,7 @@ public class Task extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. A string that describes the purpose of the task for administrative use. Optional.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -61,7 +61,7 @@ public class Task extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. A unique string that identifies the task. Required.Supports $filter(eq, ne) and orderBy.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -69,7 +69,7 @@ public class Task extends Entity implements Parsable {
     }
     /**
      * Gets the executionSequence property value. An integer that states in what order the task will run in a workflow.Supports $orderby.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getExecutionSequence() {
@@ -77,7 +77,7 @@ public class Task extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -95,7 +95,7 @@ public class Task extends Entity implements Parsable {
     }
     /**
      * Gets the isEnabled property value. A boolean value that denotes whether the task is set to run or not. Optional.Supports $filter(eq, ne) and orderBy.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -103,7 +103,7 @@ public class Task extends Entity implements Parsable {
     }
     /**
      * Gets the taskDefinitionId property value. A unique template identifier for the task. For more information about the tasks that Lifecycle Workflows currently supports and their unique identifiers, see supported tasks. Required.Supports $filter(eq, ne).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTaskDefinitionId() {
@@ -111,7 +111,7 @@ public class Task extends Entity implements Parsable {
     }
     /**
      * Gets the taskProcessingResults property value. The result of processing the task.
-     * @return a java.util.List<TaskProcessingResult>
+     * @return a {@link java.util.List<TaskProcessingResult>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TaskProcessingResult> getTaskProcessingResults() {

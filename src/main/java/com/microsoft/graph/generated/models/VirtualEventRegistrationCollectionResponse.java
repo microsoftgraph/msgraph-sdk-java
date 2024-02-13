@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VirtualEventRegistrationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new VirtualEventRegistrationCollectionResponse and sets the default values.
+     * Instantiates a new {@link VirtualEventRegistrationCollectionResponse} and sets the default values.
      */
     public VirtualEventRegistrationCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class VirtualEventRegistrationCollectionResponse extends BaseCollectionPa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a VirtualEventRegistrationCollectionResponse
+     * @return a {@link VirtualEventRegistrationCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static VirtualEventRegistrationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class VirtualEventRegistrationCollectionResponse extends BaseCollectionPa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class VirtualEventRegistrationCollectionResponse extends BaseCollectionPa
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<VirtualEventRegistration>
+     * @return a {@link java.util.List<VirtualEventRegistration>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<VirtualEventRegistration> getValue() {

@@ -25,6 +25,7 @@ import java.util.Objects;
 public class LearningContentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the learningContents property of the microsoft.graph.learningProvider entity.
      * @param learningContentId The unique identifier of learningContent
-     * @return a LearningContentItemRequestBuilder
+     * @return a {@link LearningContentItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LearningContentItemRequestBuilder byLearningContentId(@jakarta.annotation.Nonnull final String learningContentId) {
@@ -43,7 +44,7 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
         return new LearningContentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new LearningContentsRequestBuilder and sets the default values.
+     * Instantiates a new {@link LearningContentsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}/learningContents{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new LearningContentsRequestBuilder and sets the default values.
+     * Instantiates a new {@link LearningContentsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning.
-     * @return a LearningContentCollectionResponse
+     * @return a {@link LearningContentCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/learningprovider-list-learningcontents?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a LearningContentCollectionResponse
+     * @return a {@link LearningContentCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/learningprovider-list-learningcontents?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LearningContentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, LearningContentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to learningContents for employeeExperience
      * @param body The request body
-     * @return a LearningContent
+     * @return a {@link LearningContent}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public LearningContent post(@jakarta.annotation.Nonnull final LearningContent body) {
@@ -94,20 +97,20 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to learningContents for employeeExperience
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a LearningContent
+     * @return a {@link LearningContent}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public LearningContent post(@jakarta.annotation.Nonnull final LearningContent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, LearningContent::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -116,7 +119,7 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -128,7 +131,7 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to learningContents for employeeExperience
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final LearningContent body) {
@@ -138,12 +141,12 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to learningContents for employeeExperience
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final LearningContent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}/learningContents", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -152,7 +155,7 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a LearningContentsRequestBuilder
+     * @return a {@link LearningContentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LearningContentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -206,7 +209,7 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

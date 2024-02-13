@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DataSourceContainer extends Entity implements Parsable {
     /**
-     * Instantiates a new DataSourceContainer and sets the default values.
+     * Instantiates a new {@link DataSourceContainer} and sets the default values.
      */
     public DataSourceContainer() {
         super();
@@ -19,7 +19,7 @@ public class DataSourceContainer extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DataSourceContainer
+     * @return a {@link DataSourceContainer}
      */
     @jakarta.annotation.Nonnull
     public static DataSourceContainer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class DataSourceContainer extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Created date and time of the dataSourceContainer entity.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -44,7 +44,7 @@ public class DataSourceContainer extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name of the dataSourceContainer entity.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -52,7 +52,7 @@ public class DataSourceContainer extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -67,7 +67,7 @@ public class DataSourceContainer extends Entity implements Parsable {
     }
     /**
      * Gets the holdStatus property value. The hold status of the dataSourceContainer. The possible values are: notApplied, applied, applying, removing, partial
-     * @return a DataSourceHoldStatus
+     * @return a {@link DataSourceHoldStatus}
      */
     @jakarta.annotation.Nullable
     public DataSourceHoldStatus getHoldStatus() {
@@ -75,7 +75,7 @@ public class DataSourceContainer extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. Last modified date and time of the dataSourceContainer.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -83,7 +83,7 @@ public class DataSourceContainer extends Entity implements Parsable {
     }
     /**
      * Gets the releasedDateTime property value. Date and time that the dataSourceContainer was released from the case.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReleasedDateTime() {
@@ -91,7 +91,7 @@ public class DataSourceContainer extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Latest status of the dataSourceContainer. Possible values are: Active, Released.
-     * @return a DataSourceContainerStatus
+     * @return a {@link DataSourceContainerStatus}
      */
     @jakarta.annotation.Nullable
     public DataSourceContainerStatus getStatus() {

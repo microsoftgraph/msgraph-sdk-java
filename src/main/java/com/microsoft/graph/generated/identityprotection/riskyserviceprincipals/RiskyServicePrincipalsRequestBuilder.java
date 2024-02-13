@@ -27,6 +27,7 @@ import java.util.Objects;
 public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the confirmCompromised method.
+     * @return a {@link ConfirmCompromisedRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ConfirmCompromisedRequestBuilder confirmCompromised() {
@@ -34,6 +35,7 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -41,6 +43,7 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the dismiss method.
+     * @return a {@link DismissRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DismissRequestBuilder dismiss() {
@@ -49,7 +52,7 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the riskyServicePrincipals property of the microsoft.graph.identityProtectionRoot entity.
      * @param riskyServicePrincipalId The unique identifier of riskyServicePrincipal
-     * @return a RiskyServicePrincipalItemRequestBuilder
+     * @return a {@link RiskyServicePrincipalItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RiskyServicePrincipalItemRequestBuilder byRiskyServicePrincipalId(@jakarta.annotation.Nonnull final String riskyServicePrincipalId) {
@@ -59,7 +62,7 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         return new RiskyServicePrincipalItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new RiskyServicePrincipalsRequestBuilder and sets the default values.
+     * Instantiates a new {@link RiskyServicePrincipalsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -67,7 +70,7 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityProtection/riskyServicePrincipals{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new RiskyServicePrincipalsRequestBuilder and sets the default values.
+     * Instantiates a new {@link RiskyServicePrincipalsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -76,7 +79,8 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of riskyServicePrincipal objects.
-     * @return a RiskyServicePrincipalCollectionResponse
+     * @return a {@link RiskyServicePrincipalCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identityprotectionroot-list-riskyserviceprincipals?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -86,21 +90,22 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of riskyServicePrincipal objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RiskyServicePrincipalCollectionResponse
+     * @return a {@link RiskyServicePrincipalCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identityprotectionroot-list-riskyserviceprincipals?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RiskyServicePrincipalCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, RiskyServicePrincipalCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to riskyServicePrincipals for identityProtection
      * @param body The request body
-     * @return a RiskyServicePrincipal
+     * @return a {@link RiskyServicePrincipal}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public RiskyServicePrincipal post(@jakarta.annotation.Nonnull final RiskyServicePrincipal body) {
@@ -110,20 +115,20 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to riskyServicePrincipals for identityProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RiskyServicePrincipal
+     * @return a {@link RiskyServicePrincipal}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public RiskyServicePrincipal post(@jakarta.annotation.Nonnull final RiskyServicePrincipal body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, RiskyServicePrincipal::createFromDiscriminatorValue);
     }
     /**
      * Retrieve the properties and relationships of riskyServicePrincipal objects.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -132,7 +137,7 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of riskyServicePrincipal objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -144,7 +149,7 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to riskyServicePrincipals for identityProtection
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final RiskyServicePrincipal body) {
@@ -154,12 +159,12 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to riskyServicePrincipals for identityProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final RiskyServicePrincipal body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/identityProtection/riskyServicePrincipals", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -168,7 +173,7 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a RiskyServicePrincipalsRequestBuilder
+     * @return a {@link RiskyServicePrincipalsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RiskyServicePrincipalsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -222,7 +227,7 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

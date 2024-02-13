@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable {
     /**
-     * Instantiates a new EdgeSearchEngine and sets the default values.
+     * Instantiates a new {@link EdgeSearchEngine} and sets the default values.
      */
     public EdgeSearchEngine() {
         super();
@@ -21,7 +21,7 @@ public class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EdgeSearchEngine
+     * @return a {@link EdgeSearchEngine}
      */
     @jakarta.annotation.Nonnull
     public static EdgeSearchEngine createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable {
     }
     /**
      * Gets the edgeSearchEngineType property value. Allows IT admind to set a predefined default search engine for MDM-Controlled devices
-     * @return a EdgeSearchEngineType
+     * @return a {@link EdgeSearchEngineType}
      */
     @jakarta.annotation.Nullable
     public EdgeSearchEngineType getEdgeSearchEngineType() {
@@ -38,7 +38,7 @@ public class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

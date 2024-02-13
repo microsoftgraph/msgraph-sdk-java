@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AllDevicesAssignmentTarget extends DeviceAndAppManagementAssignmentTarget implements Parsable {
     /**
-     * Instantiates a new AllDevicesAssignmentTarget and sets the default values.
+     * Instantiates a new {@link AllDevicesAssignmentTarget} and sets the default values.
      */
     public AllDevicesAssignmentTarget() {
         super();
@@ -21,7 +21,7 @@ public class AllDevicesAssignmentTarget extends DeviceAndAppManagementAssignment
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AllDevicesAssignmentTarget
+     * @return a {@link AllDevicesAssignmentTarget}
      */
     @jakarta.annotation.Nonnull
     public static AllDevicesAssignmentTarget createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class AllDevicesAssignmentTarget extends DeviceAndAppManagementAssignment
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

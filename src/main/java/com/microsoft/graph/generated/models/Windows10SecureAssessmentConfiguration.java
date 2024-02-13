@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new Windows10SecureAssessmentConfiguration and sets the default values.
+     * Instantiates a new {@link Windows10SecureAssessmentConfiguration} and sets the default values.
      */
     public Windows10SecureAssessmentConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Windows10SecureAssessmentConfiguration
+     * @return a {@link Windows10SecureAssessmentConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static Windows10SecureAssessmentConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the allowPrinting property value. Indicates whether or not to allow the app from printing during the test.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowPrinting() {
@@ -38,7 +38,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the allowScreenCapture property value. Indicates whether or not to allow screen capture capability during a test.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowScreenCapture() {
@@ -46,7 +46,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the allowTextSuggestion property value. Indicates whether or not to allow text suggestions during the test.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowTextSuggestion() {
@@ -54,7 +54,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the configurationAccount property value. The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user), an AAD account (username@tenant.com) or a local account (username).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getConfigurationAccount() {
@@ -62,7 +62,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -76,7 +76,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the launchUri property value. Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLaunchUri() {

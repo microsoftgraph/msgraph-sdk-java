@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationClass extends Entity implements Parsable {
     /**
-     * Instantiates a new EducationClass and sets the default values.
+     * Instantiates a new {@link EducationClass} and sets the default values.
      */
     public EducationClass() {
         super();
@@ -17,7 +17,7 @@ public class EducationClass extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationClass
+     * @return a {@link EducationClass}
      */
     @jakarta.annotation.Nonnull
     public static EducationClass createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class EducationClass extends Entity implements Parsable {
     }
     /**
      * Gets the assignmentCategories property value. All categories associated with this class. Nullable.
-     * @return a java.util.List<EducationCategory>
+     * @return a {@link java.util.List<EducationCategory>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationCategory> getAssignmentCategories() {
@@ -34,7 +34,7 @@ public class EducationClass extends Entity implements Parsable {
     }
     /**
      * Gets the assignmentDefaults property value. Specifies class-level defaults respected by new assignments created in the class.
-     * @return a EducationAssignmentDefaults
+     * @return a {@link EducationAssignmentDefaults}
      */
     @jakarta.annotation.Nullable
     public EducationAssignmentDefaults getAssignmentDefaults() {
@@ -42,7 +42,7 @@ public class EducationClass extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. All assignments associated with this class. Nullable.
-     * @return a java.util.List<EducationAssignment>
+     * @return a {@link java.util.List<EducationAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationAssignment> getAssignments() {
@@ -50,7 +50,7 @@ public class EducationClass extends Entity implements Parsable {
     }
     /**
      * Gets the assignmentSettings property value. Specifies class-level assignments settings.
-     * @return a EducationAssignmentSettings
+     * @return a {@link EducationAssignmentSettings}
      */
     @jakarta.annotation.Nullable
     public EducationAssignmentSettings getAssignmentSettings() {
@@ -58,7 +58,7 @@ public class EducationClass extends Entity implements Parsable {
     }
     /**
      * Gets the classCode property value. Class code used by the school to identify the class.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getClassCode() {
@@ -66,7 +66,7 @@ public class EducationClass extends Entity implements Parsable {
     }
     /**
      * Gets the course property value. The course property
-     * @return a EducationCourse
+     * @return a {@link EducationCourse}
      */
     @jakarta.annotation.Nullable
     public EducationCourse getCourse() {
@@ -74,7 +74,7 @@ public class EducationClass extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. Entity who created the class
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -82,7 +82,7 @@ public class EducationClass extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description of the class.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -90,7 +90,7 @@ public class EducationClass extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Name of the class.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -98,7 +98,7 @@ public class EducationClass extends Entity implements Parsable {
     }
     /**
      * Gets the externalId property value. ID of the class from the syncing system.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
@@ -106,7 +106,7 @@ public class EducationClass extends Entity implements Parsable {
     }
     /**
      * Gets the externalName property value. Name of the class in the syncing system.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalName() {
@@ -114,7 +114,7 @@ public class EducationClass extends Entity implements Parsable {
     }
     /**
      * Gets the externalSource property value. How this class was created. Possible values are: sis, manual.
-     * @return a EducationExternalSource
+     * @return a {@link EducationExternalSource}
      */
     @jakarta.annotation.Nullable
     public EducationExternalSource getExternalSource() {
@@ -122,7 +122,7 @@ public class EducationClass extends Entity implements Parsable {
     }
     /**
      * Gets the externalSourceDetail property value. The name of the external source this resources was generated from.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalSourceDetail() {
@@ -130,7 +130,7 @@ public class EducationClass extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -160,7 +160,7 @@ public class EducationClass extends Entity implements Parsable {
     }
     /**
      * Gets the grade property value. Grade level of the class.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getGrade() {
@@ -168,7 +168,7 @@ public class EducationClass extends Entity implements Parsable {
     }
     /**
      * Gets the group property value. The underlying Microsoft 365 group object.
-     * @return a Group
+     * @return a {@link Group}
      */
     @jakarta.annotation.Nullable
     public Group getGroup() {
@@ -176,7 +176,7 @@ public class EducationClass extends Entity implements Parsable {
     }
     /**
      * Gets the mailNickname property value. Mail name for sending email to all members, if this is enabled.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMailNickname() {
@@ -184,7 +184,7 @@ public class EducationClass extends Entity implements Parsable {
     }
     /**
      * Gets the members property value. All users in the class. Nullable.
-     * @return a java.util.List<EducationUser>
+     * @return a {@link java.util.List<EducationUser>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationUser> getMembers() {
@@ -192,7 +192,7 @@ public class EducationClass extends Entity implements Parsable {
     }
     /**
      * Gets the modules property value. The modules property
-     * @return a java.util.List<EducationModule>
+     * @return a {@link java.util.List<EducationModule>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationModule> getModules() {
@@ -200,7 +200,7 @@ public class EducationClass extends Entity implements Parsable {
     }
     /**
      * Gets the schools property value. All schools that this class is associated with. Nullable.
-     * @return a java.util.List<EducationSchool>
+     * @return a {@link java.util.List<EducationSchool>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationSchool> getSchools() {
@@ -208,7 +208,7 @@ public class EducationClass extends Entity implements Parsable {
     }
     /**
      * Gets the teachers property value. All teachers in the class. Nullable.
-     * @return a java.util.List<EducationUser>
+     * @return a {@link java.util.List<EducationUser>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationUser> getTeachers() {
@@ -216,7 +216,7 @@ public class EducationClass extends Entity implements Parsable {
     }
     /**
      * Gets the term property value. Term for this class.
-     * @return a EducationTerm
+     * @return a {@link EducationTerm}
      */
     @jakarta.annotation.Nullable
     public EducationTerm getTerm() {

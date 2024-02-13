@@ -25,6 +25,7 @@ import java.util.Objects;
 public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the items property of the microsoft.graph.list entity.
      * @param listItemId The unique identifier of listItem
-     * @return a ListItemItemRequestBuilder
+     * @return a {@link ListItemItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ListItemItemRequestBuilder byListItemId(@jakarta.annotation.Nonnull final String listItemId) {
@@ -43,7 +44,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return new ListItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new ItemsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ItemsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/list/items{?%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new ItemsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ItemsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the collection of [items][item] in a [list][].
-     * @return a ListItemCollectionResponse
+     * @return a {@link ListItemCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the collection of [items][item] in a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ListItemCollectionResponse
+     * @return a {@link ListItemCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ListItemCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ListItemCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new [listItem][] in a [list][].
      * @param body The request body
-     * @return a ListItem
+     * @return a {@link ListItem}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -95,7 +98,8 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
      * Create a new [listItem][] in a [list][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ListItem
+     * @return a {@link ListItem}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -103,13 +107,12 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ListItem::createFromDiscriminatorValue);
     }
     /**
      * Get the collection of [items][item] in a [list][].
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -118,7 +121,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the collection of [items][item] in a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +133,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new [listItem][] in a [list][].
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ListItem body) {
@@ -140,12 +143,12 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
      * Create a new [listItem][] in a [list][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ListItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/drives/{drive%2Did}/list/items", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -154,7 +157,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ItemsRequestBuilder
+     * @return a {@link ItemsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ItemsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -203,7 +206,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

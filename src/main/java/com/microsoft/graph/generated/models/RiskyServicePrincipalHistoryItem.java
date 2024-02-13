@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal implements Parsable {
     /**
-     * Instantiates a new RiskyServicePrincipalHistoryItem and sets the default values.
+     * Instantiates a new {@link RiskyServicePrincipalHistoryItem} and sets the default values.
      */
     public RiskyServicePrincipalHistoryItem() {
         super();
@@ -17,7 +17,7 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RiskyServicePrincipalHistoryItem
+     * @return a {@link RiskyServicePrincipalHistoryItem}
      */
     @jakarta.annotation.Nonnull
     public static RiskyServicePrincipalHistoryItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
     }
     /**
      * Gets the activity property value. The activity related to service principal risk level change.
-     * @return a RiskServicePrincipalActivity
+     * @return a {@link RiskServicePrincipalActivity}
      */
     @jakarta.annotation.Nullable
     public RiskServicePrincipalActivity getActivity() {
@@ -34,7 +34,7 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -45,7 +45,7 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
     }
     /**
      * Gets the initiatedBy property value. The identifier of the actor of the operation.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInitiatedBy() {

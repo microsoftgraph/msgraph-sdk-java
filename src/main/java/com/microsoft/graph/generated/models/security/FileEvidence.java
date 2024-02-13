@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class FileEvidence extends AlertEvidence implements Parsable {
     /**
-     * Instantiates a new FileEvidence and sets the default values.
+     * Instantiates a new {@link FileEvidence} and sets the default values.
      */
     public FileEvidence() {
         super();
@@ -18,7 +18,7 @@ public class FileEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a FileEvidence
+     * @return a {@link FileEvidence}
      */
     @jakarta.annotation.Nonnull
     public static FileEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class FileEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the detectionStatus property value. The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
-     * @return a DetectionStatus
+     * @return a {@link DetectionStatus}
      */
     @jakarta.annotation.Nullable
     public DetectionStatus getDetectionStatus() {
@@ -35,7 +35,7 @@ public class FileEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,7 +47,7 @@ public class FileEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the fileDetails property value. The file details.
-     * @return a FileDetails
+     * @return a {@link FileDetails}
      */
     @jakarta.annotation.Nullable
     public FileDetails getFileDetails() {
@@ -55,7 +55,7 @@ public class FileEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the mdeDeviceId property value. A unique identifier assigned to a device by Microsoft Defender for Endpoint.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMdeDeviceId() {

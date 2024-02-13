@@ -26,6 +26,7 @@ import java.util.Objects;
 public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -34,7 +35,7 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
     /**
      * Provides operations to manage the roleAssignmentScheduleInstances property of the microsoft.graph.rbacApplication entity.
      * @param unifiedRoleAssignmentScheduleInstanceId The unique identifier of unifiedRoleAssignmentScheduleInstance
-     * @return a UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder
+     * @return a {@link UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder byUnifiedRoleAssignmentScheduleInstanceId(@jakarta.annotation.Nonnull final String unifiedRoleAssignmentScheduleInstanceId) {
@@ -44,7 +45,7 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
         return new UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new RoleAssignmentScheduleInstancesRequestBuilder and sets the default values.
+     * Instantiates a new {@link RoleAssignmentScheduleInstancesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -52,7 +53,7 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/roleManagement/directory/roleAssignmentScheduleInstances{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new RoleAssignmentScheduleInstancesRequestBuilder and sets the default values.
+     * Instantiates a new {@link RoleAssignmentScheduleInstancesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -62,7 +63,7 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
     /**
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on='{on}'
-     * @return a FilterByCurrentUserWithOnRequestBuilder
+     * @return a {@link FilterByCurrentUserWithOnRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
@@ -71,7 +72,8 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
     }
     /**
      * Get the instances of active role assignments in your tenant. The active assignments include those made through assignments and activation requests, and directly through the role assignments API.
-     * @return a UnifiedRoleAssignmentScheduleInstanceCollectionResponse
+     * @return a {@link UnifiedRoleAssignmentScheduleInstanceCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleassignmentscheduleinstances?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -81,21 +83,22 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
     /**
      * Get the instances of active role assignments in your tenant. The active assignments include those made through assignments and activation requests, and directly through the role assignments API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UnifiedRoleAssignmentScheduleInstanceCollectionResponse
+     * @return a {@link UnifiedRoleAssignmentScheduleInstanceCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleassignmentscheduleinstances?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleAssignmentScheduleInstanceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleAssignmentScheduleInstanceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to roleAssignmentScheduleInstances for roleManagement
      * @param body The request body
-     * @return a UnifiedRoleAssignmentScheduleInstance
+     * @return a {@link UnifiedRoleAssignmentScheduleInstance}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleAssignmentScheduleInstance post(@jakarta.annotation.Nonnull final UnifiedRoleAssignmentScheduleInstance body) {
@@ -105,20 +108,20 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
      * Create new navigation property to roleAssignmentScheduleInstances for roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UnifiedRoleAssignmentScheduleInstance
+     * @return a {@link UnifiedRoleAssignmentScheduleInstance}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleAssignmentScheduleInstance post(@jakarta.annotation.Nonnull final UnifiedRoleAssignmentScheduleInstance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleAssignmentScheduleInstance::createFromDiscriminatorValue);
     }
     /**
      * Get the instances of active role assignments in your tenant. The active assignments include those made through assignments and activation requests, and directly through the role assignments API.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -127,7 +130,7 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
     /**
      * Get the instances of active role assignments in your tenant. The active assignments include those made through assignments and activation requests, and directly through the role assignments API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -139,7 +142,7 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
     /**
      * Create new navigation property to roleAssignmentScheduleInstances for roleManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UnifiedRoleAssignmentScheduleInstance body) {
@@ -149,12 +152,12 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
      * Create new navigation property to roleAssignmentScheduleInstances for roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UnifiedRoleAssignmentScheduleInstance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/roleManagement/directory/roleAssignmentScheduleInstances", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -163,7 +166,7 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a RoleAssignmentScheduleInstancesRequestBuilder
+     * @return a {@link RoleAssignmentScheduleInstancesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleAssignmentScheduleInstancesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -217,7 +220,7 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedAccessGroupEligibilityScheduleInstance extends PrivilegedAccessScheduleInstance implements Parsable {
     /**
-     * Instantiates a new PrivilegedAccessGroupEligibilityScheduleInstance and sets the default values.
+     * Instantiates a new {@link PrivilegedAccessGroupEligibilityScheduleInstance} and sets the default values.
      */
     public PrivilegedAccessGroupEligibilityScheduleInstance() {
         super();
@@ -18,7 +18,7 @@ public class PrivilegedAccessGroupEligibilityScheduleInstance extends Privileged
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrivilegedAccessGroupEligibilityScheduleInstance
+     * @return a {@link PrivilegedAccessGroupEligibilityScheduleInstance}
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedAccessGroupEligibilityScheduleInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class PrivilegedAccessGroupEligibilityScheduleInstance extends Privileged
     }
     /**
      * Gets the accessId property value. The identifier of the membership or ownership eligibility relationship to the group. Required. The possible values are: owner, member. Supports $filter (eq).
-     * @return a PrivilegedAccessGroupRelationships
+     * @return a {@link PrivilegedAccessGroupRelationships}
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupRelationships getAccessId() {
@@ -35,7 +35,7 @@ public class PrivilegedAccessGroupEligibilityScheduleInstance extends Privileged
     }
     /**
      * Gets the eligibilityScheduleId property value. The identifier of the privilegedAccessGroupEligibilitySchedule from which this instance was created. Required. Supports $filter (eq, ne).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEligibilityScheduleId() {
@@ -43,7 +43,7 @@ public class PrivilegedAccessGroupEligibilityScheduleInstance extends Privileged
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -59,7 +59,7 @@ public class PrivilegedAccessGroupEligibilityScheduleInstance extends Privileged
     }
     /**
      * Gets the group property value. References the group that is the scope of the membership or ownership eligibility through PIM for groups. Supports $expand.
-     * @return a Group
+     * @return a {@link Group}
      */
     @jakarta.annotation.Nullable
     public Group getGroup() {
@@ -67,7 +67,7 @@ public class PrivilegedAccessGroupEligibilityScheduleInstance extends Privileged
     }
     /**
      * Gets the groupId property value. The identifier of the group representing the scope of the membership or ownership eligibility through PIM for groups. Required. Supports $filter (eq).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getGroupId() {
@@ -75,7 +75,7 @@ public class PrivilegedAccessGroupEligibilityScheduleInstance extends Privileged
     }
     /**
      * Gets the memberType property value. Indicates whether the assignment is derived from a group assignment. It can further imply whether the calling principal can manage the assignment schedule. Required. The possible values are: direct, group, unknownFutureValue. Supports $filter (eq).
-     * @return a PrivilegedAccessGroupMemberType
+     * @return a {@link PrivilegedAccessGroupMemberType}
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupMemberType getMemberType() {
@@ -83,7 +83,7 @@ public class PrivilegedAccessGroupEligibilityScheduleInstance extends Privileged
     }
     /**
      * Gets the principal property value. References the principal that's in the scope of the membership or ownership eligibility request through the group that's governed by PIM. Supports $expand.
-     * @return a DirectoryObject
+     * @return a {@link DirectoryObject}
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getPrincipal() {
@@ -91,7 +91,7 @@ public class PrivilegedAccessGroupEligibilityScheduleInstance extends Privileged
     }
     /**
      * Gets the principalId property value. The identifier of the principal whose membership or ownership eligibility to the group is managed through PIM for groups. Required. Supports $filter (eq).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPrincipalId() {

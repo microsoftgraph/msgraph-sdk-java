@@ -19,7 +19,7 @@ public class AppRole implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AppRole and sets the default values.
+     * Instantiates a new {@link AppRole} and sets the default values.
      */
     public AppRole() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class AppRole implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AppRole
+     * @return a {@link AppRole}
      */
     @jakarta.annotation.Nonnull
     public static AppRole createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class AppRole implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class AppRole implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the allowedMemberTypes property value. Specifies whether this app role can be assigned to users and groups (by setting to ['User']), to other application's (by setting to ['Application'], or both (by setting to ['User', 'Application']). App roles supporting assignment to other applications' service principals are also known as application permissions. The 'Application' value is only supported for app roles defined on application entities.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedMemberTypes() {
@@ -58,7 +58,7 @@ public class AppRole implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -66,7 +66,7 @@ public class AppRole implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the description property value. The description for the app role. This is displayed when the app role is being assigned and, if the app role functions as an application permission, during  consent experiences.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -74,7 +74,7 @@ public class AppRole implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the displayName property value. Display name for the permission that appears in the app role assignment and consent experiences.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -82,7 +82,7 @@ public class AppRole implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -99,7 +99,7 @@ public class AppRole implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the id property value. Unique role identifier inside the appRoles collection. When creating a new app role, a new GUID identifier must be provided.
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getId() {
@@ -107,7 +107,7 @@ public class AppRole implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the isEnabled property value. When creating or updating an app role, this must be set to true (which is the default). To delete a role, this must first be set to false.  At that point, in a subsequent call, this role may be removed.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -115,7 +115,7 @@ public class AppRole implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -123,7 +123,7 @@ public class AppRole implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the origin property value. Specifies if the app role is defined on the application object or on the servicePrincipal entity. Must not be included in any POST or PATCH requests. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOrigin() {
@@ -131,7 +131,7 @@ public class AppRole implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the value property value. Specifies the value to include in the roles claim in ID tokens and access tokens authenticating an assigned user or service principal. Must not exceed 120 characters in length. Allowed characters are : ! # $ % & ' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, and characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, aren't allowed. May not begin with ..
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getValue() {

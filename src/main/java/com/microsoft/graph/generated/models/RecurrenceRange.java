@@ -19,7 +19,7 @@ public class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new RecurrenceRange and sets the default values.
+     * Instantiates a new {@link RecurrenceRange} and sets the default values.
      */
     public RecurrenceRange() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RecurrenceRange
+     * @return a {@link RecurrenceRange}
      */
     @jakarta.annotation.Nonnull
     public static RecurrenceRange createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the endDate property value. The date to stop applying the recurrence pattern. Depending on the recurrence pattern of the event, the last occurrence of the meeting may not be this date. Required if type is endDate.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getEndDate() {
@@ -66,7 +66,7 @@ public class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -81,7 +81,7 @@ public class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the numberOfOccurrences property value. The number of times to repeat the event. Required and must be positive if type is numbered.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfOccurrences() {
@@ -89,7 +89,7 @@ public class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,7 +97,7 @@ public class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the recurrenceTimeZone property value. Time zone for the startDate and endDate properties. Optional. If not specified, the time zone of the event is used.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRecurrenceTimeZone() {
@@ -105,7 +105,7 @@ public class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the startDate property value. The date to start applying the recurrence pattern. The first occurrence of the meeting may be this date or later, depending on the recurrence pattern of the event. Must be the same value as the start property of the recurring event. Required.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getStartDate() {
@@ -113,7 +113,7 @@ public class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the type property value. The recurrence range. The possible values are: endDate, noEnd, numbered. Required.
-     * @return a RecurrenceRangeType
+     * @return a {@link RecurrenceRangeType}
      */
     @jakarta.annotation.Nullable
     public RecurrenceRangeType getType() {

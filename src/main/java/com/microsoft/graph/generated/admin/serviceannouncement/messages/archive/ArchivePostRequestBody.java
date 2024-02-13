@@ -18,7 +18,7 @@ public class ArchivePostRequestBody implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ArchivePostRequestBody and sets the default values.
+     * Instantiates a new {@link ArchivePostRequestBody} and sets the default values.
      */
     public ArchivePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ArchivePostRequestBody implements AdditionalDataHolder, BackedModel
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ArchivePostRequestBody
+     * @return a {@link ArchivePostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static ArchivePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ArchivePostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ArchivePostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class ArchivePostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -67,7 +67,7 @@ public class ArchivePostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the messageIds property value. The messageIds property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getMessageIds() {

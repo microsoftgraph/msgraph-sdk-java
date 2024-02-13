@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ResourceOperation extends Entity implements Parsable {
     /**
-     * Instantiates a new ResourceOperation and sets the default values.
+     * Instantiates a new {@link ResourceOperation} and sets the default values.
      */
     public ResourceOperation() {
         super();
@@ -20,7 +20,7 @@ public class ResourceOperation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ResourceOperation
+     * @return a {@link ResourceOperation}
      */
     @jakarta.annotation.Nonnull
     public static ResourceOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class ResourceOperation extends Entity implements Parsable {
     }
     /**
      * Gets the actionName property value. Type of action this operation is going to perform. The actionName should be concise and limited to as few words as possible.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getActionName() {
@@ -37,7 +37,7 @@ public class ResourceOperation extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description of the resource operation. The description is used in mouse-over text for the operation when shown in the Azure Portal.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -45,7 +45,7 @@ public class ResourceOperation extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class ResourceOperation extends Entity implements Parsable {
     }
     /**
      * Gets the resourceName property value. Name of the Resource this operation is performed on.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourceName() {

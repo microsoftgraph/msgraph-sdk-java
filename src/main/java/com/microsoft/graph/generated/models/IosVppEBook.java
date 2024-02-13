@@ -13,7 +13,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosVppEBook extends ManagedEBook implements Parsable {
     /**
-     * Instantiates a new IosVppEBook and sets the default values.
+     * Instantiates a new {@link IosVppEBook} and sets the default values.
      */
     public IosVppEBook() {
         super();
@@ -22,7 +22,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosVppEBook
+     * @return a {@link IosVppEBook}
      */
     @jakarta.annotation.Nonnull
     public static IosVppEBook createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
     }
     /**
      * Gets the appleId property value. The Apple ID associated with Vpp token.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppleId() {
@@ -39,7 +39,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -56,7 +56,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
     }
     /**
      * Gets the genres property value. Genres.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getGenres() {
@@ -64,7 +64,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
     }
     /**
      * Gets the language property value. Language.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLanguage() {
@@ -72,7 +72,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
     }
     /**
      * Gets the seller property value. Seller.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSeller() {
@@ -80,7 +80,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
     }
     /**
      * Gets the totalLicenseCount property value. Total license count.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalLicenseCount() {
@@ -88,7 +88,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
     }
     /**
      * Gets the usedLicenseCount property value. Used license count.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUsedLicenseCount() {
@@ -96,7 +96,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
     }
     /**
      * Gets the vppOrganizationName property value. The Vpp token's organization name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVppOrganizationName() {
@@ -104,7 +104,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
     }
     /**
      * Gets the vppTokenId property value. The Vpp token ID.
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getVppTokenId() {

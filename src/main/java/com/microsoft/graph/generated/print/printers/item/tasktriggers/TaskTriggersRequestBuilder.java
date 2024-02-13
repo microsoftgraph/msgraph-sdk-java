@@ -25,6 +25,7 @@ import java.util.Objects;
 public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the taskTriggers property of the microsoft.graph.printer entity.
      * @param printTaskTriggerId The unique identifier of printTaskTrigger
-     * @return a PrintTaskTriggerItemRequestBuilder
+     * @return a {@link PrintTaskTriggerItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PrintTaskTriggerItemRequestBuilder byPrintTaskTriggerId(@jakarta.annotation.Nonnull final String printTaskTriggerId) {
@@ -43,7 +44,7 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
         return new PrintTaskTriggerItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new TaskTriggersRequestBuilder and sets the default values.
+     * Instantiates a new {@link TaskTriggersRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printers/{printer%2Did}/taskTriggers{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new TaskTriggersRequestBuilder and sets the default values.
+     * Instantiates a new {@link TaskTriggersRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of task triggers associated with the printer. The list of task triggers defines which tasks will be triggered as a result of events that occur during printing. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
-     * @return a PrintTaskTriggerCollectionResponse
+     * @return a {@link PrintTaskTriggerCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/printer-list-tasktriggers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of task triggers associated with the printer. The list of task triggers defines which tasks will be triggered as a result of events that occur during printing. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PrintTaskTriggerCollectionResponse
+     * @return a {@link PrintTaskTriggerCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/printer-list-tasktriggers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrintTaskTriggerCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PrintTaskTriggerCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new task trigger on the specified printer. Currently, only one task trigger can be specified per printer, but this limit might be removed in the future. 
      * @param body The request body
-     * @return a PrintTaskTrigger
+     * @return a {@link PrintTaskTrigger}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/printer-post-tasktriggers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -95,7 +98,8 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
      * Create a new task trigger on the specified printer. Currently, only one task trigger can be specified per printer, but this limit might be removed in the future. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PrintTaskTrigger
+     * @return a {@link PrintTaskTrigger}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/printer-post-tasktriggers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -103,13 +107,12 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PrintTaskTrigger::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of task triggers associated with the printer. The list of task triggers defines which tasks will be triggered as a result of events that occur during printing. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -118,7 +121,7 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of task triggers associated with the printer. The list of task triggers defines which tasks will be triggered as a result of events that occur during printing. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +133,7 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new task trigger on the specified printer. Currently, only one task trigger can be specified per printer, but this limit might be removed in the future. 
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final PrintTaskTrigger body) {
@@ -140,12 +143,12 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
      * Create a new task trigger on the specified printer. Currently, only one task trigger can be specified per printer, but this limit might be removed in the future. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final PrintTaskTrigger body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/print/printers/{printer%2Did}/taskTriggers", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -154,7 +157,7 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a TaskTriggersRequestBuilder
+     * @return a {@link TaskTriggersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TaskTriggersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -208,7 +211,7 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

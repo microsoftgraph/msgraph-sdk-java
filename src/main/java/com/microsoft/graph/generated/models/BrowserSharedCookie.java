@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BrowserSharedCookie extends Entity implements Parsable {
     /**
-     * Instantiates a new BrowserSharedCookie and sets the default values.
+     * Instantiates a new {@link BrowserSharedCookie} and sets the default values.
      */
     public BrowserSharedCookie() {
         super();
@@ -18,7 +18,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BrowserSharedCookie
+     * @return a {@link BrowserSharedCookie}
      */
     @jakarta.annotation.Nonnull
     public static BrowserSharedCookie createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the comment property value. The comment for the shared cookie.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getComment() {
@@ -35,7 +35,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time when the shared cookie was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -43,7 +43,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the deletedDateTime property value. The date and time when the shared cookie was deleted.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDeletedDateTime() {
@@ -51,7 +51,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the cookie.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -59,7 +59,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -80,7 +80,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the history property value. The history of modifications applied to the cookie.
-     * @return a java.util.List<BrowserSharedCookieHistory>
+     * @return a {@link java.util.List<BrowserSharedCookieHistory>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<BrowserSharedCookieHistory> getHistory() {
@@ -88,7 +88,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the hostOnly property value. Controls whether a cookie is a host-only or domain cookie.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHostOnly() {
@@ -96,7 +96,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the hostOrDomain property value. The URL of the cookie.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getHostOrDomain() {
@@ -104,7 +104,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The user who last modified the cookie.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -112,7 +112,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the cookie was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -120,7 +120,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the path property value. The path of the cookie.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPath() {
@@ -128,7 +128,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the sourceEnvironment property value. The sourceEnvironment property
-     * @return a BrowserSharedCookieSourceEnvironment
+     * @return a {@link BrowserSharedCookieSourceEnvironment}
      */
     @jakarta.annotation.Nullable
     public BrowserSharedCookieSourceEnvironment getSourceEnvironment() {
@@ -136,7 +136,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a BrowserSharedCookieStatus
+     * @return a {@link BrowserSharedCookieStatus}
      */
     @jakarta.annotation.Nullable
     public BrowserSharedCookieStatus getStatus() {

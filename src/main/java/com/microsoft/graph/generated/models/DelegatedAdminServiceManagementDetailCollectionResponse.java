@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DelegatedAdminServiceManagementDetailCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new DelegatedAdminServiceManagementDetailCollectionResponse and sets the default values.
+     * Instantiates a new {@link DelegatedAdminServiceManagementDetailCollectionResponse} and sets the default values.
      */
     public DelegatedAdminServiceManagementDetailCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class DelegatedAdminServiceManagementDetailCollectionResponse extends Bas
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DelegatedAdminServiceManagementDetailCollectionResponse
+     * @return a {@link DelegatedAdminServiceManagementDetailCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static DelegatedAdminServiceManagementDetailCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class DelegatedAdminServiceManagementDetailCollectionResponse extends Bas
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class DelegatedAdminServiceManagementDetailCollectionResponse extends Bas
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<DelegatedAdminServiceManagementDetail>
+     * @return a {@link java.util.List<DelegatedAdminServiceManagementDetail>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DelegatedAdminServiceManagementDetail> getValue() {

@@ -19,7 +19,7 @@ public class RequestSchedule implements AdditionalDataHolder, BackedModel, Parsa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new RequestSchedule and sets the default values.
+     * Instantiates a new {@link RequestSchedule} and sets the default values.
      */
     public RequestSchedule() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class RequestSchedule implements AdditionalDataHolder, BackedModel, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RequestSchedule
+     * @return a {@link RequestSchedule}
      */
     @jakarta.annotation.Nonnull
     public static RequestSchedule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class RequestSchedule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class RequestSchedule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class RequestSchedule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the expiration property value. When the eligible or active assignment expires.
-     * @return a ExpirationPattern
+     * @return a {@link ExpirationPattern}
      */
     @jakarta.annotation.Nullable
     public ExpirationPattern getExpiration() {
@@ -66,7 +66,7 @@ public class RequestSchedule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class RequestSchedule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -87,7 +87,7 @@ public class RequestSchedule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the recurrence property value. The frequency of the  eligible or active assignment. This property is currently unsupported in PIM.
-     * @return a PatternedRecurrence
+     * @return a {@link PatternedRecurrence}
      */
     @jakarta.annotation.Nullable
     public PatternedRecurrence getRecurrence() {
@@ -95,7 +95,7 @@ public class RequestSchedule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the startDateTime property value. When the  eligible or active assignment becomes active.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {

@@ -18,7 +18,7 @@ public class LocationConstraint implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new LocationConstraint and sets the default values.
+     * Instantiates a new {@link LocationConstraint} and sets the default values.
      */
     public LocationConstraint() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class LocationConstraint implements AdditionalDataHolder, BackedModel, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a LocationConstraint
+     * @return a {@link LocationConstraint}
      */
     @jakarta.annotation.Nonnull
     public static LocationConstraint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class LocationConstraint implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class LocationConstraint implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class LocationConstraint implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -70,7 +70,7 @@ public class LocationConstraint implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the isRequired property value. The client requests the service to include in the response a meeting location for the meeting. If this is true and all the resources are busy, findMeetingTimes won't return any meeting time suggestions. If this is false and all the resources are busy, findMeetingTimes would still look for meeting times without locations.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRequired() {
@@ -78,7 +78,7 @@ public class LocationConstraint implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the locations property value. Constraint information for one or more locations that the client requests for the meeting.
-     * @return a java.util.List<LocationConstraintItem>
+     * @return a {@link java.util.List<LocationConstraintItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<LocationConstraintItem> getLocations() {
@@ -86,7 +86,7 @@ public class LocationConstraint implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -94,7 +94,7 @@ public class LocationConstraint implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the suggestLocation property value. The client requests the service to suggest one or more meeting locations.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSuggestLocation() {

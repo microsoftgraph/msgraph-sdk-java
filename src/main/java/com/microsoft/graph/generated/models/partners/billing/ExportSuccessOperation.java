@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExportSuccessOperation extends Operation implements Parsable {
     /**
-     * Instantiates a new ExportSuccessOperation and sets the default values.
+     * Instantiates a new {@link ExportSuccessOperation} and sets the default values.
      */
     public ExportSuccessOperation() {
         super();
@@ -17,7 +17,7 @@ public class ExportSuccessOperation extends Operation implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ExportSuccessOperation
+     * @return a {@link ExportSuccessOperation}
      */
     @jakarta.annotation.Nonnull
     public static ExportSuccessOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class ExportSuccessOperation extends Operation implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class ExportSuccessOperation extends Operation implements Parsable {
     }
     /**
      * Gets the resourceLocation property value. The resourceLocation property
-     * @return a Manifest
+     * @return a {@link Manifest}
      */
     @jakarta.annotation.Nullable
     public Manifest getResourceLocation() {

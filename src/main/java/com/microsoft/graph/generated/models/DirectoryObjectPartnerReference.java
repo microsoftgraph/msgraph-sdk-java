@@ -10,7 +10,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DirectoryObjectPartnerReference extends DirectoryObject implements Parsable {
     /**
-     * Instantiates a new DirectoryObjectPartnerReference and sets the default values.
+     * Instantiates a new {@link DirectoryObjectPartnerReference} and sets the default values.
      */
     public DirectoryObjectPartnerReference() {
         super();
@@ -19,7 +19,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DirectoryObjectPartnerReference
+     * @return a {@link DirectoryObjectPartnerReference}
      */
     @jakarta.annotation.Nonnull
     public static DirectoryObjectPartnerReference createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
     }
     /**
      * Gets the description property value. Description of the object returned. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -36,7 +36,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
     }
     /**
      * Gets the displayName property value. Name of directory object being returned, like group or application. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -44,7 +44,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
     }
     /**
      * Gets the externalPartnerTenantId property value. The tenant identifier for the partner tenant. Read-only.
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getExternalPartnerTenantId() {
@@ -52,7 +52,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -65,7 +65,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
     }
     /**
      * Gets the objectType property value. The type of the referenced object in the partner tenant. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getObjectType() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AdminConsentRequestPolicy extends Entity implements Parsable {
     /**
-     * Instantiates a new AdminConsentRequestPolicy and sets the default values.
+     * Instantiates a new {@link AdminConsentRequestPolicy} and sets the default values.
      */
     public AdminConsentRequestPolicy() {
         super();
@@ -17,7 +17,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AdminConsentRequestPolicy
+     * @return a {@link AdminConsentRequestPolicy}
      */
     @jakarta.annotation.Nonnull
     public static AdminConsentRequestPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -41,7 +41,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the isEnabled property value. Specifies whether the admin consent request feature is enabled or disabled. Required.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -49,7 +49,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the notifyReviewers property value. Specifies whether reviewers will receive notifications. Required.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getNotifyReviewers() {
@@ -57,7 +57,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the remindersEnabled property value. Specifies whether reviewers will receive reminder emails. Required.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRemindersEnabled() {
@@ -65,7 +65,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the requestDurationInDays property value. Specifies the duration the request is active before it automatically expires if no decision is applied.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRequestDurationInDays() {
@@ -73,7 +73,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the reviewers property value. The list of reviewers for the admin consent. Required.
-     * @return a java.util.List<AccessReviewReviewerScope>
+     * @return a {@link java.util.List<AccessReviewReviewerScope>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewReviewerScope> getReviewers() {
@@ -81,7 +81,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. Specifies the version of this policy. When the policy is updated, this version is updated. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {

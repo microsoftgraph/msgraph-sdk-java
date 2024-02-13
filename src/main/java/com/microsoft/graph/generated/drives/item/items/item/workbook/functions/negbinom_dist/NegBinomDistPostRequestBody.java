@@ -19,7 +19,7 @@ public class NegBinomDistPostRequestBody implements AdditionalDataHolder, Backed
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new NegBinomDistPostRequestBody and sets the default values.
+     * Instantiates a new {@link NegBinomDistPostRequestBody} and sets the default values.
      */
     public NegBinomDistPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class NegBinomDistPostRequestBody implements AdditionalDataHolder, Backed
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a NegBinomDistPostRequestBody
+     * @return a {@link NegBinomDistPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static NegBinomDistPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class NegBinomDistPostRequestBody implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class NegBinomDistPostRequestBody implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class NegBinomDistPostRequestBody implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the cumulative property value. The cumulative property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getCumulative() {
@@ -66,7 +66,7 @@ public class NegBinomDistPostRequestBody implements AdditionalDataHolder, Backed
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class NegBinomDistPostRequestBody implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the numberF property value. The numberF property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getNumberF() {
@@ -87,7 +87,7 @@ public class NegBinomDistPostRequestBody implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the numberS property value. The numberS property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getNumberS() {
@@ -95,7 +95,7 @@ public class NegBinomDistPostRequestBody implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the probabilityS property value. The probabilityS property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getProbabilityS() {

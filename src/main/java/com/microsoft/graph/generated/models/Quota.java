@@ -18,7 +18,7 @@ public class Quota implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new Quota and sets the default values.
+     * Instantiates a new {@link Quota} and sets the default values.
      */
     public Quota() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class Quota implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Quota
+     * @return a {@link Quota}
      */
     @jakarta.annotation.Nonnull
     public static Quota createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class Quota implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class Quota implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class Quota implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the deleted property value. Total space consumed by files in the recycle bin, in bytes. Read-only.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getDeleted() {
@@ -65,7 +65,7 @@ public class Quota implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -81,7 +81,7 @@ public class Quota implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -89,7 +89,7 @@ public class Quota implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the remaining property value. Total space remaining before reaching the quota limit, in bytes. Read-only.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getRemaining() {
@@ -97,7 +97,7 @@ public class Quota implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the state property value. Enumeration value that indicates the state of the storage space. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getState() {
@@ -105,7 +105,7 @@ public class Quota implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the storagePlanInformation property value. Information about the drive's storage quota plans. Only in Personal OneDrive.
-     * @return a StoragePlanInformation
+     * @return a {@link StoragePlanInformation}
      */
     @jakarta.annotation.Nullable
     public StoragePlanInformation getStoragePlanInformation() {
@@ -113,7 +113,7 @@ public class Quota implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the total property value. Total allowed storage space, in bytes. Read-only.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getTotal() {
@@ -121,7 +121,7 @@ public class Quota implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the used property value. Total space used, in bytes. Read-only.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getUsed() {

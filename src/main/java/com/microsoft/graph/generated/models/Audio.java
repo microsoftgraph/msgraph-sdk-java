@@ -18,7 +18,7 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new Audio and sets the default values.
+     * Instantiates a new {@link Audio} and sets the default values.
      */
     public Audio() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Audio
+     * @return a {@link Audio}
      */
     @jakarta.annotation.Nonnull
     public static Audio createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the album property value. The title of the album for this audio file.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAlbum() {
@@ -57,7 +57,7 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the albumArtist property value. The artist named on the album for the audio file.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAlbumArtist() {
@@ -65,7 +65,7 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the artist property value. The performing artist for the audio file.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getArtist() {
@@ -73,7 +73,7 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -81,7 +81,7 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the bitrate property value. Bitrate expressed in kbps.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getBitrate() {
@@ -89,7 +89,7 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the composers property value. The name of the composer of the audio file.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getComposers() {
@@ -97,7 +97,7 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the copyright property value. Copyright information for the audio file.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCopyright() {
@@ -105,7 +105,7 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the disc property value. The number of the disc this audio file came from.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDisc() {
@@ -113,7 +113,7 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the discCount property value. The total number of discs in this album.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDiscCount() {
@@ -121,7 +121,7 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the duration property value. Duration of the audio file, expressed in milliseconds
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getDuration() {
@@ -129,7 +129,7 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -155,7 +155,7 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the genre property value. The genre of this audio file.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getGenre() {
@@ -163,7 +163,7 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the hasDrm property value. Indicates if the file is protected with digital rights management.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHasDrm() {
@@ -171,7 +171,7 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the isVariableBitrate property value. Indicates if the file is encoded with a variable bitrate.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsVariableBitrate() {
@@ -179,7 +179,7 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -187,7 +187,7 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the title property value. The title of the audio file.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
@@ -195,7 +195,7 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the track property value. The number of the track on the original disc for this audio file.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTrack() {
@@ -203,7 +203,7 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the trackCount property value. The total number of tracks on the original disc for this audio file.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTrackCount() {
@@ -211,7 +211,7 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the year property value. The year the audio file was recorded.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getYear() {

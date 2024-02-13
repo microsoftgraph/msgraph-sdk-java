@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
     /**
-     * Instantiates a new CommunicationsIdentitySet and sets the default values.
+     * Instantiates a new {@link CommunicationsIdentitySet} and sets the default values.
      */
     public CommunicationsIdentitySet() {
         super();
@@ -18,7 +18,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CommunicationsIdentitySet
+     * @return a {@link CommunicationsIdentitySet}
      */
     @jakarta.annotation.Nonnull
     public static CommunicationsIdentitySet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
     }
     /**
      * Gets the applicationInstance property value. The application instance associated with this action.
-     * @return a Identity
+     * @return a {@link Identity}
      */
     @jakarta.annotation.Nullable
     public Identity getApplicationInstance() {
@@ -35,7 +35,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
     }
     /**
      * Gets the assertedIdentity property value. An identity the participant would like to present itself as to the other participants in the call.
-     * @return a Identity
+     * @return a {@link Identity}
      */
     @jakarta.annotation.Nullable
     public Identity getAssertedIdentity() {
@@ -43,7 +43,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
     }
     /**
      * Gets the azureCommunicationServicesUser property value. The Azure Communication Services user associated with this action.
-     * @return a Identity
+     * @return a {@link Identity}
      */
     @jakarta.annotation.Nullable
     public Identity getAzureCommunicationServicesUser() {
@@ -51,7 +51,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
     }
     /**
      * Gets the encrypted property value. The encrypted user associated with this action.
-     * @return a Identity
+     * @return a {@link Identity}
      */
     @jakarta.annotation.Nullable
     public Identity getEncrypted() {
@@ -59,7 +59,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
     }
     /**
      * Gets the endpointType property value. Type of endpoint that the participant uses. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone, unknownFutureValue.
-     * @return a EndpointType
+     * @return a {@link EndpointType}
      */
     @jakarta.annotation.Nullable
     public EndpointType getEndpointType() {
@@ -67,7 +67,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -84,7 +84,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
     }
     /**
      * Gets the guest property value. The guest user associated with this action.
-     * @return a Identity
+     * @return a {@link Identity}
      */
     @jakarta.annotation.Nullable
     public Identity getGuest() {
@@ -92,7 +92,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
     }
     /**
      * Gets the onPremises property value. The Skype for Business on-premises user associated with this action.
-     * @return a Identity
+     * @return a {@link Identity}
      */
     @jakarta.annotation.Nullable
     public Identity getOnPremises() {
@@ -100,7 +100,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
     }
     /**
      * Gets the phone property value. The phone user associated with this action.
-     * @return a Identity
+     * @return a {@link Identity}
      */
     @jakarta.annotation.Nullable
     public Identity getPhone() {

@@ -19,7 +19,7 @@ public class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsabl
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AlertEvidence and sets the default values.
+     * Instantiates a new {@link AlertEvidence} and sets the default values.
      */
     public AlertEvidence() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AlertEvidence
+     * @return a {@link AlertEvidence}
      */
     @jakarta.annotation.Nonnull
     public static AlertEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -85,7 +85,7 @@ public class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -98,7 +98,7 @@ public class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -106,7 +106,7 @@ public class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the createdDateTime property value. The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -114,7 +114,7 @@ public class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the detailedRoles property value. Detailed description of the entity role/s in an alert. Values are free-form.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDetailedRoles() {
@@ -122,7 +122,7 @@ public class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -139,7 +139,7 @@ public class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -147,7 +147,7 @@ public class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the remediationStatus property value. The remediationStatus property
-     * @return a EvidenceRemediationStatus
+     * @return a {@link EvidenceRemediationStatus}
      */
     @jakarta.annotation.Nullable
     public EvidenceRemediationStatus getRemediationStatus() {
@@ -155,7 +155,7 @@ public class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the remediationStatusDetails property value. Details about the remediation status.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRemediationStatusDetails() {
@@ -163,7 +163,7 @@ public class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the roles property value. The role/s that an evidence entity represents in an alert, for example, an IP address that is associated with an attacker has the evidence role Attacker.
-     * @return a java.util.List<EvidenceRole>
+     * @return a {@link java.util.List<EvidenceRole>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EvidenceRole> getRoles() {
@@ -171,7 +171,7 @@ public class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the tags property value. Array of custom tags associated with an evidence instance, for example, to denote a group of devices, high-value assets, etc.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
@@ -179,7 +179,7 @@ public class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the verdict property value. The verdict property
-     * @return a EvidenceVerdict
+     * @return a {@link EvidenceVerdict}
      */
     @jakarta.annotation.Nullable
     public EvidenceVerdict getVerdict() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryCaseSettings extends Entity implements Parsable {
     /**
-     * Instantiates a new EdiscoveryCaseSettings and sets the default values.
+     * Instantiates a new {@link EdiscoveryCaseSettings} and sets the default values.
      */
     public EdiscoveryCaseSettings() {
         super();
@@ -18,7 +18,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EdiscoveryCaseSettings
+     * @return a {@link EdiscoveryCaseSettings}
      */
     @jakarta.annotation.Nonnull
     public static EdiscoveryCaseSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -39,7 +39,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
     }
     /**
      * Gets the ocr property value. The OCR (Optical Character Recognition) settings for the case.
-     * @return a OcrSettings
+     * @return a {@link OcrSettings}
      */
     @jakarta.annotation.Nullable
     public OcrSettings getOcr() {
@@ -47,7 +47,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
     }
     /**
      * Gets the redundancyDetection property value. The redundancy (near duplicate and email threading) detection settings for the case.
-     * @return a RedundancyDetectionSettings
+     * @return a {@link RedundancyDetectionSettings}
      */
     @jakarta.annotation.Nullable
     public RedundancyDetectionSettings getRedundancyDetection() {
@@ -55,7 +55,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
     }
     /**
      * Gets the topicModeling property value. The Topic Modeling (Themes) settings for the case.
-     * @return a TopicModelingSettings
+     * @return a {@link TopicModelingSettings}
      */
     @jakarta.annotation.Nullable
     public TopicModelingSettings getTopicModeling() {

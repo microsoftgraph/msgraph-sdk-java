@@ -23,13 +23,14 @@ import java.util.Objects;
 public class FilesFolderRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the media for the user entity.
+     * @return a {@link ContentRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ContentRequestBuilder content() {
         return new ContentRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new FilesFolderRequestBuilder and sets the default values.
+     * Instantiates a new {@link FilesFolderRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,7 +38,7 @@ public class FilesFolderRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/primaryChannel/filesFolder{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new FilesFolderRequestBuilder and sets the default values.
+     * Instantiates a new {@link FilesFolderRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -46,7 +47,8 @@ public class FilesFolderRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the metadata for the location where the files of a channel are stored. 
-     * @return a DriveItem
+     * @return a {@link DriveItem}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/channel-get-filesfolder?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -56,20 +58,20 @@ public class FilesFolderRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the metadata for the location where the files of a channel are stored. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DriveItem
+     * @return a {@link DriveItem}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/channel-get-filesfolder?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DriveItem get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DriveItem::createFromDiscriminatorValue);
     }
     /**
      * Get the metadata for the location where the files of a channel are stored. 
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -78,7 +80,7 @@ public class FilesFolderRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the metadata for the location where the files of a channel are stored. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +92,7 @@ public class FilesFolderRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a FilesFolderRequestBuilder
+     * @return a {@link FilesFolderRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FilesFolderRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -114,7 +116,7 @@ public class FilesFolderRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -18,7 +18,7 @@ public class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DeviceDetail and sets the default values.
+     * Instantiates a new {@link DeviceDetail} and sets the default values.
      */
     public DeviceDetail() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceDetail
+     * @return a {@link DeviceDetail}
      */
     @jakarta.annotation.Nonnull
     public static DeviceDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the browser property value. Indicates the browser information of the used for signing in.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBrowser() {
@@ -65,7 +65,7 @@ public class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the deviceId property value. Refers to the UniqueID of the device used for signing in.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -73,7 +73,7 @@ public class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the displayName property value. Refers to the name of the device used for signing in.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -81,7 +81,7 @@ public class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -98,7 +98,7 @@ public class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the isCompliant property value. Indicates whether the device is compliant.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCompliant() {
@@ -106,7 +106,7 @@ public class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the isManaged property value. Indicates whether the device is managed.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsManaged() {
@@ -114,7 +114,7 @@ public class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -122,7 +122,7 @@ public class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the operatingSystem property value. Indicates the operating system name and version used for signing in.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystem() {
@@ -130,7 +130,7 @@ public class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the trustType property value. Provides information about whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTrustType() {

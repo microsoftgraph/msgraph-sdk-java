@@ -10,7 +10,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SubscribedSku extends Entity implements Parsable {
     /**
-     * Instantiates a new SubscribedSku and sets the default values.
+     * Instantiates a new {@link SubscribedSku} and sets the default values.
      */
     public SubscribedSku() {
         super();
@@ -18,7 +18,7 @@ public class SubscribedSku extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SubscribedSku
+     * @return a {@link SubscribedSku}
      */
     @jakarta.annotation.Nonnull
     public static SubscribedSku createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class SubscribedSku extends Entity implements Parsable {
     }
     /**
      * Gets the accountId property value. The unique ID of the account this SKU belongs to.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAccountId() {
@@ -35,7 +35,7 @@ public class SubscribedSku extends Entity implements Parsable {
     }
     /**
      * Gets the accountName property value. The name of the account this SKU belongs to.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAccountName() {
@@ -43,7 +43,7 @@ public class SubscribedSku extends Entity implements Parsable {
     }
     /**
      * Gets the appliesTo property value. The target class for this SKU. Only SKUs with target class User are assignable. Possible values are: 'User', 'Company'.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppliesTo() {
@@ -51,7 +51,7 @@ public class SubscribedSku extends Entity implements Parsable {
     }
     /**
      * Gets the capabilityStatus property value. Enabled indicates that the prepaidUnits property has at least one unit that is enabled. LockedOut indicates that the customer canceled their subscription. Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCapabilityStatus() {
@@ -59,7 +59,7 @@ public class SubscribedSku extends Entity implements Parsable {
     }
     /**
      * Gets the consumedUnits property value. The number of licenses that have been assigned.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getConsumedUnits() {
@@ -67,7 +67,7 @@ public class SubscribedSku extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -86,7 +86,7 @@ public class SubscribedSku extends Entity implements Parsable {
     }
     /**
      * Gets the prepaidUnits property value. Information about the number and status of prepaid licenses.
-     * @return a LicenseUnitsDetail
+     * @return a {@link LicenseUnitsDetail}
      */
     @jakarta.annotation.Nullable
     public LicenseUnitsDetail getPrepaidUnits() {
@@ -94,7 +94,7 @@ public class SubscribedSku extends Entity implements Parsable {
     }
     /**
      * Gets the servicePlans property value. Information about the service plans that are available with the SKU. Not nullable.
-     * @return a java.util.List<ServicePlanInfo>
+     * @return a {@link java.util.List<ServicePlanInfo>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServicePlanInfo> getServicePlans() {
@@ -102,7 +102,7 @@ public class SubscribedSku extends Entity implements Parsable {
     }
     /**
      * Gets the skuId property value. The unique identifier (GUID) for the service SKU.
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getSkuId() {
@@ -110,7 +110,7 @@ public class SubscribedSku extends Entity implements Parsable {
     }
     /**
      * Gets the skuPartNumber property value. The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSkuPartNumber() {
@@ -118,7 +118,7 @@ public class SubscribedSku extends Entity implements Parsable {
     }
     /**
      * Gets the subscriptionIds property value. The subscriptionIds property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSubscriptionIds() {

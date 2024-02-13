@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OutlookItem extends Entity implements Parsable {
     /**
-     * Instantiates a new OutlookItem and sets the default values.
+     * Instantiates a new {@link OutlookItem} and sets the default values.
      */
     public OutlookItem() {
         super();
@@ -18,7 +18,7 @@ public class OutlookItem extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OutlookItem
+     * @return a {@link OutlookItem}
      */
     @jakarta.annotation.Nonnull
     public static OutlookItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class OutlookItem extends Entity implements Parsable {
     }
     /**
      * Gets the categories property value. The categories associated with the item
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCategories() {
@@ -49,7 +49,7 @@ public class OutlookItem extends Entity implements Parsable {
     }
     /**
      * Gets the changeKey property value. Identifies the version of the item. Every time the item is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getChangeKey() {
@@ -57,7 +57,7 @@ public class OutlookItem extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -65,7 +65,7 @@ public class OutlookItem extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class OutlookItem extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {

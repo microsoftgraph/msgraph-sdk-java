@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SmsAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
     /**
-     * Instantiates a new SmsAuthenticationMethodConfiguration and sets the default values.
+     * Instantiates a new {@link SmsAuthenticationMethodConfiguration} and sets the default values.
      */
     public SmsAuthenticationMethodConfiguration() {
         super();
@@ -18,7 +18,7 @@ public class SmsAuthenticationMethodConfiguration extends AuthenticationMethodCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SmsAuthenticationMethodConfiguration
+     * @return a {@link SmsAuthenticationMethodConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static SmsAuthenticationMethodConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class SmsAuthenticationMethodConfiguration extends AuthenticationMethodCo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class SmsAuthenticationMethodConfiguration extends AuthenticationMethodCo
     }
     /**
      * Gets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
-     * @return a java.util.List<SmsAuthenticationMethodTarget>
+     * @return a {@link java.util.List<SmsAuthenticationMethodTarget>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SmsAuthenticationMethodTarget> getIncludeTargets() {

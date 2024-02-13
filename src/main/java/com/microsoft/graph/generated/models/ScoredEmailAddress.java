@@ -18,7 +18,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ScoredEmailAddress and sets the default values.
+     * Instantiates a new {@link ScoredEmailAddress} and sets the default values.
      */
     public ScoredEmailAddress() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ScoredEmailAddress
+     * @return a {@link ScoredEmailAddress}
      */
     @jakarta.annotation.Nonnull
     public static ScoredEmailAddress createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the address property value. The email address.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAddress() {
@@ -57,7 +57,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the itemId property value. The itemId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getItemId() {
@@ -87,7 +87,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -95,7 +95,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the relevanceScore property value. The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the users communication and collaboration patterns and business relationships.
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getRelevanceScore() {
@@ -103,7 +103,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the selectionLikelihood property value. The selectionLikelihood property
-     * @return a SelectionLikelihoodInfo
+     * @return a {@link SelectionLikelihoodInfo}
      */
     @jakarta.annotation.Nullable
     public SelectionLikelihoodInfo getSelectionLikelihood() {

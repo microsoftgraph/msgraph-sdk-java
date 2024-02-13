@@ -25,6 +25,7 @@ import java.util.Objects;
 public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Casts the previous resource to administrativeUnit.
+     * @return a {@link GraphAdministrativeUnitRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphAdministrativeUnitRequestBuilder graphAdministrativeUnit() {
@@ -32,6 +33,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to directoryRole.
+     * @return a {@link GraphDirectoryRoleRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphDirectoryRoleRequestBuilder graphDirectoryRole() {
@@ -39,13 +41,14 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to group.
+     * @return a {@link GraphGroupRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphGroupRequestBuilder graphGroup() {
         return new GraphGroupRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new DirectoryObjectItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link DirectoryObjectItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -53,7 +56,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/transitiveMemberOf/{directoryObject%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new DirectoryObjectItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link DirectoryObjectItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -62,7 +65,8 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get transitiveMemberOf from servicePrincipals
-     * @return a DirectoryObject
+     * @return a {@link DirectoryObject}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DirectoryObject get() {
@@ -71,19 +75,19 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get transitiveMemberOf from servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DirectoryObject
+     * @return a {@link DirectoryObject}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DirectoryObject get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObject::createFromDiscriminatorValue);
     }
     /**
      * Get transitiveMemberOf from servicePrincipals
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -92,7 +96,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get transitiveMemberOf from servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -104,7 +108,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DirectoryObjectItemRequestBuilder
+     * @return a {@link DirectoryObjectItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DirectoryObjectItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -128,7 +132,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

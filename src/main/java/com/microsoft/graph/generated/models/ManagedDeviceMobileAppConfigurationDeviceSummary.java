@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity implements Parsable {
     /**
-     * Instantiates a new ManagedDeviceMobileAppConfigurationDeviceSummary and sets the default values.
+     * Instantiates a new {@link ManagedDeviceMobileAppConfigurationDeviceSummary} and sets the default values.
      */
     public ManagedDeviceMobileAppConfigurationDeviceSummary() {
         super();
@@ -21,7 +21,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedDeviceMobileAppConfigurationDeviceSummary
+     * @return a {@link ManagedDeviceMobileAppConfigurationDeviceSummary}
      */
     @jakarta.annotation.Nonnull
     public static ManagedDeviceMobileAppConfigurationDeviceSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
     }
     /**
      * Gets the configurationVersion property value. Version of the policy for that overview
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getConfigurationVersion() {
@@ -38,7 +38,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
     }
     /**
      * Gets the errorCount property value. Number of error devices
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCount() {
@@ -46,7 +46,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
     }
     /**
      * Gets the failedCount property value. Number of failed devices
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getFailedCount() {
@@ -54,7 +54,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -70,7 +70,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
     }
     /**
      * Gets the lastUpdateDateTime property value. Last update time
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdateDateTime() {
@@ -78,7 +78,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
     }
     /**
      * Gets the notApplicableCount property value. Number of not applicable devices
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableCount() {
@@ -86,7 +86,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
     }
     /**
      * Gets the pendingCount property value. Number of pending devices
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPendingCount() {
@@ -94,7 +94,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
     }
     /**
      * Gets the successCount property value. Number of succeeded devices
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessCount() {

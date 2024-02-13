@@ -18,7 +18,7 @@ public class EndUserNotificationSetting implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new EndUserNotificationSetting and sets the default values.
+     * Instantiates a new {@link EndUserNotificationSetting} and sets the default values.
      */
     public EndUserNotificationSetting() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class EndUserNotificationSetting implements AdditionalDataHolder, BackedM
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EndUserNotificationSetting
+     * @return a {@link EndUserNotificationSetting}
      */
     @jakarta.annotation.Nonnull
     public static EndUserNotificationSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +44,7 @@ public class EndUserNotificationSetting implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -57,7 +57,7 @@ public class EndUserNotificationSetting implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class EndUserNotificationSetting implements AdditionalDataHolder, BackedM
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class EndUserNotificationSetting implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the notificationPreference property value. Notification preference. Possible values are: unknown, microsoft, custom, unknownFutureValue.
-     * @return a EndUserNotificationPreference
+     * @return a {@link EndUserNotificationPreference}
      */
     @jakarta.annotation.Nullable
     public EndUserNotificationPreference getNotificationPreference() {
@@ -86,7 +86,7 @@ public class EndUserNotificationSetting implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -94,7 +94,7 @@ public class EndUserNotificationSetting implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the positiveReinforcement property value. Positive reinforcement detail.
-     * @return a PositiveReinforcementNotification
+     * @return a {@link PositiveReinforcementNotification}
      */
     @jakarta.annotation.Nullable
     public PositiveReinforcementNotification getPositiveReinforcement() {
@@ -102,7 +102,7 @@ public class EndUserNotificationSetting implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the settingType property value. End user notification type. Possible values are: unknown, noTraining, trainingSelected, noNotification, unknownFutureValue.
-     * @return a EndUserNotificationSettingType
+     * @return a {@link EndUserNotificationSettingType}
      */
     @jakarta.annotation.Nullable
     public EndUserNotificationSettingType getSettingType() {

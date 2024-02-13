@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implements Parsable {
     /**
-     * Instantiates a new EmailFileAssessmentRequest and sets the default values.
+     * Instantiates a new {@link EmailFileAssessmentRequest} and sets the default values.
      */
     public EmailFileAssessmentRequest() {
         super();
@@ -18,7 +18,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EmailFileAssessmentRequest
+     * @return a {@link EmailFileAssessmentRequest}
      */
     @jakarta.annotation.Nonnull
     public static EmailFileAssessmentRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
     }
     /**
      * Gets the contentData property value. Base64 encoded .eml email file content. The file content can't fetch back because it isn't stored.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContentData() {
@@ -35,7 +35,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
     }
     /**
      * Gets the destinationRoutingReason property value. The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
-     * @return a MailDestinationRoutingReason
+     * @return a {@link MailDestinationRoutingReason}
      */
     @jakarta.annotation.Nullable
     public MailDestinationRoutingReason getDestinationRoutingReason() {
@@ -43,7 +43,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -55,7 +55,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
     }
     /**
      * Gets the recipientEmail property value. The mail recipient whose policies are used to assess the mail.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRecipientEmail() {

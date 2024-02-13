@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookTable extends Entity implements Parsable {
     /**
-     * Instantiates a new WorkbookTable and sets the default values.
+     * Instantiates a new {@link WorkbookTable} and sets the default values.
      */
     public WorkbookTable() {
         super();
@@ -17,7 +17,7 @@ public class WorkbookTable extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookTable
+     * @return a {@link WorkbookTable}
      */
     @jakarta.annotation.Nonnull
     public static WorkbookTable createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class WorkbookTable extends Entity implements Parsable {
     }
     /**
      * Gets the columns property value. Represents a collection of all the columns in the table. Read-only.
-     * @return a java.util.List<WorkbookTableColumn>
+     * @return a {@link java.util.List<WorkbookTableColumn>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookTableColumn> getColumns() {
@@ -34,7 +34,7 @@ public class WorkbookTable extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class WorkbookTable extends Entity implements Parsable {
     }
     /**
      * Gets the highlightFirstColumn property value. Indicates whether the first column contains special formatting.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHighlightFirstColumn() {
@@ -65,7 +65,7 @@ public class WorkbookTable extends Entity implements Parsable {
     }
     /**
      * Gets the highlightLastColumn property value. Indicates whether the last column contains special formatting.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHighlightLastColumn() {
@@ -73,7 +73,7 @@ public class WorkbookTable extends Entity implements Parsable {
     }
     /**
      * Gets the legacyId property value. Legacy ID used in older Excel clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and shouldn't be parsed to any other type. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLegacyId() {
@@ -81,7 +81,7 @@ public class WorkbookTable extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. Name of the table.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -89,7 +89,7 @@ public class WorkbookTable extends Entity implements Parsable {
     }
     /**
      * Gets the rows property value. Represents a collection of all the rows in the table. Read-only.
-     * @return a java.util.List<WorkbookTableRow>
+     * @return a {@link java.util.List<WorkbookTableRow>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookTableRow> getRows() {
@@ -97,7 +97,7 @@ public class WorkbookTable extends Entity implements Parsable {
     }
     /**
      * Gets the showBandedColumns property value. Indicates whether the columns show banded formatting in which odd columns are highlighted differently from even ones to make reading the table easier.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getShowBandedColumns() {
@@ -105,7 +105,7 @@ public class WorkbookTable extends Entity implements Parsable {
     }
     /**
      * Gets the showBandedRows property value. Indicates whether the rows show banded formatting in which odd rows are highlighted differently from even ones to make reading the table easier.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getShowBandedRows() {
@@ -113,7 +113,7 @@ public class WorkbookTable extends Entity implements Parsable {
     }
     /**
      * Gets the showFilterButton property value. Indicates whether the filter buttons are visible at the top of each column header. Setting this is only allowed if the table contains a header row.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getShowFilterButton() {
@@ -121,7 +121,7 @@ public class WorkbookTable extends Entity implements Parsable {
     }
     /**
      * Gets the showHeaders property value. Indicates whether the header row is visible or not. This value can be set to show or remove the header row.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getShowHeaders() {
@@ -129,7 +129,7 @@ public class WorkbookTable extends Entity implements Parsable {
     }
     /**
      * Gets the showTotals property value. Indicates whether the total row is visible or not. This value can be set to show or remove the total row.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getShowTotals() {
@@ -137,7 +137,7 @@ public class WorkbookTable extends Entity implements Parsable {
     }
     /**
      * Gets the sort property value. Represents the sorting for the table. Read-only.
-     * @return a WorkbookTableSort
+     * @return a {@link WorkbookTableSort}
      */
     @jakarta.annotation.Nullable
     public WorkbookTableSort getSort() {
@@ -145,7 +145,7 @@ public class WorkbookTable extends Entity implements Parsable {
     }
     /**
      * Gets the style property value. Constant value that represents the Table style. The possible values are: TableStyleLight1 through TableStyleLight21, TableStyleMedium1 through TableStyleMedium28, TableStyleStyleDark1 through TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStyle() {
@@ -153,7 +153,7 @@ public class WorkbookTable extends Entity implements Parsable {
     }
     /**
      * Gets the worksheet property value. The worksheet containing the current table. Read-only.
-     * @return a WorkbookWorksheet
+     * @return a {@link WorkbookWorksheet}
      */
     @jakarta.annotation.Nullable
     public WorkbookWorksheet getWorksheet() {

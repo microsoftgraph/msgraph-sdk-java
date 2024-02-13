@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ActivityHistoryItem extends Entity implements Parsable {
     /**
-     * Instantiates a new ActivityHistoryItem and sets the default values.
+     * Instantiates a new {@link ActivityHistoryItem} and sets the default values.
      */
     public ActivityHistoryItem() {
         super();
@@ -18,7 +18,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ActivityHistoryItem
+     * @return a {@link ActivityHistoryItem}
      */
     @jakarta.annotation.Nonnull
     public static ActivityHistoryItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     }
     /**
      * Gets the activeDurationSeconds property value. Optional. The duration of active user engagement. if not supplied, this is calculated from the startedDateTime and lastActiveDateTime.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getActiveDurationSeconds() {
@@ -35,7 +35,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     }
     /**
      * Gets the activity property value. The activity property
-     * @return a UserActivity
+     * @return a {@link UserActivity}
      */
     @jakarta.annotation.Nullable
     public UserActivity getActivity() {
@@ -43,7 +43,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Set by the server. DateTime in UTC when the object was created on the server.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -51,7 +51,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     }
     /**
      * Gets the expirationDateTime property value. Optional. UTC DateTime when the historyItem will undergo hard-delete. Can be set by the client.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
@@ -59,7 +59,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     }
     /**
      * Gets the lastActiveDateTime property value. Optional. UTC DateTime when the historyItem (activity session) was last understood as active or finished - if null, historyItem status should be Ongoing.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActiveDateTime() {
@@ -85,7 +85,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. Set by the server. DateTime in UTC when the object was modified on the server.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -93,7 +93,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     }
     /**
      * Gets the startedDateTime property value. Required. UTC DateTime when the historyItem (activity session) was started. Required for timeline history.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartedDateTime() {
@@ -101,7 +101,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
-     * @return a Status
+     * @return a {@link Status}
      */
     @jakarta.annotation.Nullable
     public Status getStatus() {
@@ -109,7 +109,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     }
     /**
      * Gets the userTimezone property value. Optional. The timezone in which the user's device used to generate the activity was located at activity creation time. Values supplied as Olson IDs in order to support cross-platform representation.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserTimezone() {

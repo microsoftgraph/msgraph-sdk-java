@@ -18,7 +18,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Backed
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new BucketAggregationDefinition and sets the default values.
+     * Instantiates a new {@link BucketAggregationDefinition} and sets the default values.
      */
     public BucketAggregationDefinition() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Backed
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BucketAggregationDefinition
+     * @return a {@link BucketAggregationDefinition}
      */
     @jakarta.annotation.Nonnull
     public static BucketAggregationDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Backed
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -72,7 +72,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the isDescending property value. True to specify the sort order as descending. The default is false, with the sort order as ascending. Optional.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDescending() {
@@ -80,7 +80,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the minimumCount property value. The minimum number of items that should be present in the aggregation to be returned in a bucket. Optional.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMinimumCount() {
@@ -88,7 +88,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -96,7 +96,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the prefixFilter property value. A filter to define a matching criteria. The key should start with the specified prefix to be returned in the response. Optional.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPrefixFilter() {
@@ -104,7 +104,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the ranges property value. Specifies the manual ranges to compute the aggregations. This is only valid for nonstring refiners of date or numeric type. Optional.
-     * @return a java.util.List<BucketAggregationRange>
+     * @return a {@link java.util.List<BucketAggregationRange>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<BucketAggregationRange> getRanges() {
@@ -112,7 +112,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the sortBy property value. The sortBy property
-     * @return a BucketAggregationSortProperty
+     * @return a {@link BucketAggregationSortProperty}
      */
     @jakarta.annotation.Nullable
     public BucketAggregationSortProperty getSortBy() {

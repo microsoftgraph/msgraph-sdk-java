@@ -18,7 +18,7 @@ public class ItemActionStat implements AdditionalDataHolder, BackedModel, Parsab
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ItemActionStat and sets the default values.
+     * Instantiates a new {@link ItemActionStat} and sets the default values.
      */
     public ItemActionStat() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ItemActionStat implements AdditionalDataHolder, BackedModel, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ItemActionStat
+     * @return a {@link ItemActionStat}
      */
     @jakarta.annotation.Nonnull
     public static ItemActionStat createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ItemActionStat implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the actionCount property value. The number of times the action took place. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getActionCount() {
@@ -44,7 +44,7 @@ public class ItemActionStat implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the actorCount property value. The number of distinct actors that performed the action. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getActorCount() {
@@ -52,7 +52,7 @@ public class ItemActionStat implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -65,7 +65,7 @@ public class ItemActionStat implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -73,7 +73,7 @@ public class ItemActionStat implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -85,7 +85,7 @@ public class ItemActionStat implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

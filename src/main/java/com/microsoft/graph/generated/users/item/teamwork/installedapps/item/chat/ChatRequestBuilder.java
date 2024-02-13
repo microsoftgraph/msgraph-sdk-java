@@ -21,7 +21,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChatRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new ChatRequestBuilder and sets the default values.
+     * Instantiates a new {@link ChatRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -29,7 +29,7 @@ public class ChatRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/teamwork/installedApps/{userScopeTeamsAppInstallation%2Did}/chat{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new ChatRequestBuilder and sets the default values.
+     * Instantiates a new {@link ChatRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -38,7 +38,8 @@ public class ChatRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the chat of the specified user and Teams app.
-     * @return a Chat
+     * @return a {@link Chat}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/userscopeteamsappinstallation-get-chat?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -48,20 +49,20 @@ public class ChatRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the chat of the specified user and Teams app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Chat
+     * @return a {@link Chat}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/userscopeteamsappinstallation-get-chat?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Chat get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Chat::createFromDiscriminatorValue);
     }
     /**
      * Retrieve the chat of the specified user and Teams app.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -70,7 +71,7 @@ public class ChatRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the chat of the specified user and Teams app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +83,7 @@ public class ChatRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ChatRequestBuilder
+     * @return a {@link ChatRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ChatRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -106,7 +107,7 @@ public class ChatRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

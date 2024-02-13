@@ -20,7 +20,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Oct2DecRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new Oct2DecRequestBuilder and sets the default values.
+     * Instantiates a new {@link Oct2DecRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -28,7 +28,7 @@ public class Oct2DecRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/functions/oct2Dec", pathParameters);
     }
     /**
-     * Instantiates a new Oct2DecRequestBuilder and sets the default values.
+     * Instantiates a new {@link Oct2DecRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -38,7 +38,8 @@ public class Oct2DecRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action oct2Dec
      * @param body The request body
-     * @return a WorkbookFunctionResult
+     * @return a {@link WorkbookFunctionResult}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WorkbookFunctionResult post(@jakarta.annotation.Nonnull final Oct2DecPostRequestBody body) {
@@ -48,21 +49,21 @@ public class Oct2DecRequestBuilder extends BaseRequestBuilder {
      * Invoke action oct2Dec
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WorkbookFunctionResult
+     * @return a {@link WorkbookFunctionResult}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WorkbookFunctionResult post(@jakarta.annotation.Nonnull final Oct2DecPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookFunctionResult::createFromDiscriminatorValue);
     }
     /**
      * Invoke action oct2Dec
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Oct2DecPostRequestBody body) {
@@ -72,7 +73,7 @@ public class Oct2DecRequestBuilder extends BaseRequestBuilder {
      * Invoke action oct2Dec
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Oct2DecPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -86,7 +87,7 @@ public class Oct2DecRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a Oct2DecRequestBuilder
+     * @return a {@link Oct2DecRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public Oct2DecRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

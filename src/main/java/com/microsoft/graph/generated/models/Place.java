@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Place extends Entity implements Parsable {
     /**
-     * Instantiates a new Place and sets the default values.
+     * Instantiates a new {@link Place} and sets the default values.
      */
     public Place() {
         super();
@@ -17,7 +17,7 @@ public class Place extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Place
+     * @return a {@link Place}
      */
     @jakarta.annotation.Nonnull
     public static Place createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class Place extends Entity implements Parsable {
     }
     /**
      * Gets the address property value. The street address of the place.
-     * @return a PhysicalAddress
+     * @return a {@link PhysicalAddress}
      */
     @jakarta.annotation.Nullable
     public PhysicalAddress getAddress() {
@@ -42,7 +42,7 @@ public class Place extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name associated with the place.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -50,7 +50,7 @@ public class Place extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -63,7 +63,7 @@ public class Place extends Entity implements Parsable {
     }
     /**
      * Gets the geoCoordinates property value. Specifies the place location in latitude, longitude and (optionally) altitude coordinates.
-     * @return a OutlookGeoCoordinates
+     * @return a {@link OutlookGeoCoordinates}
      */
     @jakarta.annotation.Nullable
     public OutlookGeoCoordinates getGeoCoordinates() {
@@ -71,7 +71,7 @@ public class Place extends Entity implements Parsable {
     }
     /**
      * Gets the phone property value. The phone number of the place.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPhone() {

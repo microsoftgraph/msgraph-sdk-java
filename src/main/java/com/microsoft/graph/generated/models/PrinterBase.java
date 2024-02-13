@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrinterBase extends Entity implements Parsable {
     /**
-     * Instantiates a new PrinterBase and sets the default values.
+     * Instantiates a new {@link PrinterBase} and sets the default values.
      */
     public PrinterBase() {
         super();
@@ -17,7 +17,7 @@ public class PrinterBase extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrinterBase
+     * @return a {@link PrinterBase}
      */
     @jakarta.annotation.Nonnull
     public static PrinterBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class PrinterBase extends Entity implements Parsable {
     }
     /**
      * Gets the capabilities property value. The capabilities of the printer/printerShare.
-     * @return a PrinterCapabilities
+     * @return a {@link PrinterCapabilities}
      */
     @jakarta.annotation.Nullable
     public PrinterCapabilities getCapabilities() {
@@ -42,7 +42,7 @@ public class PrinterBase extends Entity implements Parsable {
     }
     /**
      * Gets the defaults property value. The default print settings of printer/printerShare.
-     * @return a PrinterDefaults
+     * @return a {@link PrinterDefaults}
      */
     @jakarta.annotation.Nullable
     public PrinterDefaults getDefaults() {
@@ -50,7 +50,7 @@ public class PrinterBase extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the printer/printerShare.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -58,7 +58,7 @@ public class PrinterBase extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -76,7 +76,7 @@ public class PrinterBase extends Entity implements Parsable {
     }
     /**
      * Gets the isAcceptingJobs property value. Specifies whether the printer/printerShare is currently accepting new print jobs.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAcceptingJobs() {
@@ -84,7 +84,7 @@ public class PrinterBase extends Entity implements Parsable {
     }
     /**
      * Gets the jobs property value. The list of jobs that are queued for printing by the printer/printerShare.
-     * @return a java.util.List<PrintJob>
+     * @return a {@link java.util.List<PrintJob>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintJob> getJobs() {
@@ -92,7 +92,7 @@ public class PrinterBase extends Entity implements Parsable {
     }
     /**
      * Gets the location property value. The physical and/or organizational location of the printer/printerShare.
-     * @return a PrinterLocation
+     * @return a {@link PrinterLocation}
      */
     @jakarta.annotation.Nullable
     public PrinterLocation getLocation() {
@@ -100,7 +100,7 @@ public class PrinterBase extends Entity implements Parsable {
     }
     /**
      * Gets the manufacturer property value. The manufacturer of the printer/printerShare.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
@@ -108,7 +108,7 @@ public class PrinterBase extends Entity implements Parsable {
     }
     /**
      * Gets the model property value. The model name of the printer/printerShare.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getModel() {
@@ -116,7 +116,7 @@ public class PrinterBase extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a PrinterStatus
+     * @return a {@link PrinterStatus}
      */
     @jakarta.annotation.Nullable
     public PrinterStatus getStatus() {

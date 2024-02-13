@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DocumentSetVersion extends ListItemVersion implements Parsable {
     /**
-     * Instantiates a new DocumentSetVersion and sets the default values.
+     * Instantiates a new {@link DocumentSetVersion} and sets the default values.
      */
     public DocumentSetVersion() {
         super();
@@ -19,7 +19,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DocumentSetVersion
+     * @return a {@link DocumentSetVersion}
      */
     @jakarta.annotation.Nonnull
     public static DocumentSetVersion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
     }
     /**
      * Gets the comment property value. Comment about the captured version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getComment() {
@@ -36,7 +36,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
     }
     /**
      * Gets the createdBy property value. User who captured the version.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -44,7 +44,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Date and time when this version was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -52,7 +52,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -66,7 +66,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
     }
     /**
      * Gets the items property value. Items within the document set that are captured as part of this version.
-     * @return a java.util.List<DocumentSetVersionItem>
+     * @return a {@link java.util.List<DocumentSetVersionItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DocumentSetVersionItem> getItems() {
@@ -74,7 +74,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
     }
     /**
      * Gets the shouldCaptureMinorVersion property value. If true, minor versions of items are also captured; otherwise, only major versions will be captured. Default value is false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getShouldCaptureMinorVersion() {

@@ -18,7 +18,7 @@ public class WorkbookSortField implements AdditionalDataHolder, BackedModel, Par
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new WorkbookSortField and sets the default values.
+     * Instantiates a new {@link WorkbookSortField} and sets the default values.
      */
     public WorkbookSortField() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class WorkbookSortField implements AdditionalDataHolder, BackedModel, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookSortField
+     * @return a {@link WorkbookSortField}
      */
     @jakarta.annotation.Nonnull
     public static WorkbookSortField createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class WorkbookSortField implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class WorkbookSortField implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the ascending property value. Represents whether the sorting is done in an ascending fashion.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAscending() {
@@ -57,7 +57,7 @@ public class WorkbookSortField implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class WorkbookSortField implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the color property value. Represents the color that is the target of the condition if the sorting is on font or cell color.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getColor() {
@@ -73,7 +73,7 @@ public class WorkbookSortField implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the dataOption property value. Represents additional sorting options for this field. The possible values are: Normal, TextAsNumber.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDataOption() {
@@ -81,7 +81,7 @@ public class WorkbookSortField implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -97,7 +97,7 @@ public class WorkbookSortField implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the icon property value. Represents the icon that is the target of the condition if the sorting is on the cell's icon.
-     * @return a WorkbookIcon
+     * @return a {@link WorkbookIcon}
      */
     @jakarta.annotation.Nullable
     public WorkbookIcon getIcon() {
@@ -105,7 +105,7 @@ public class WorkbookSortField implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the key property value. Represents the column (or row, depending on the sort orientation) that the condition is on. Represented as an offset from the first column (or row).
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getKey() {
@@ -113,7 +113,7 @@ public class WorkbookSortField implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -121,7 +121,7 @@ public class WorkbookSortField implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the sortOn property value. Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSortOn() {

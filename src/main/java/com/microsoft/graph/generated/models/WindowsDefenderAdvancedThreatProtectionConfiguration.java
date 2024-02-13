@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new WindowsDefenderAdvancedThreatProtectionConfiguration and sets the default values.
+     * Instantiates a new {@link WindowsDefenderAdvancedThreatProtectionConfiguration} and sets the default values.
      */
     public WindowsDefenderAdvancedThreatProtectionConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsDefenderAdvancedThreatProtectionConfiguration
+     * @return a {@link WindowsDefenderAdvancedThreatProtectionConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static WindowsDefenderAdvancedThreatProtectionConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
     }
     /**
      * Gets the allowSampleSharing property value. Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowSampleSharing() {
@@ -38,7 +38,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
     }
     /**
      * Gets the enableExpeditedTelemetryReporting property value. Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableExpeditedTelemetryReporting() {
@@ -46,7 +46,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

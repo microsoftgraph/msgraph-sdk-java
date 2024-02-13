@@ -26,6 +26,7 @@ import java.util.Objects;
 public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,6 +34,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the createUploadSession method.
+     * @return a {@link CreateUploadSessionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CreateUploadSessionRequestBuilder createUploadSession() {
@@ -41,7 +43,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the attachments property of the microsoft.graph.event entity.
      * @param attachmentId The unique identifier of attachment
-     * @return a AttachmentItemRequestBuilder
+     * @return a {@link AttachmentItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AttachmentItemRequestBuilder byAttachmentId(@jakarta.annotation.Nonnull final String attachmentId) {
@@ -51,7 +53,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return new AttachmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new AttachmentsRequestBuilder and sets the default values.
+     * Instantiates a new {@link AttachmentsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +61,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendarView/{event%2Did}/attachments{?%24count,%24expand,%24filter,%24orderby,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new AttachmentsRequestBuilder and sets the default values.
+     * Instantiates a new {@link AttachmentsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -68,7 +70,8 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of attachment objects attached to an event.
-     * @return a AttachmentCollectionResponse
+     * @return a {@link AttachmentCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/event-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -78,46 +81,47 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of attachment objects attached to an event.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AttachmentCollectionResponse
+     * @return a {@link AttachmentCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/event-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AttachmentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AttachmentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Use this API to create a new Attachment. An attachment can be one of the following types: All these types of attachment resources are derived from the attachmentresource.
+     * Use this API to add an attachment to an existing event. This operation limits the size of the attachment you can add to under 3 MB. If an organizer adds an attachment to a meeting event, the organizer can subsequently update the event to send the attachment and update the event for each attendee as well.
      * @param body The request body
-     * @return a Attachment
-     * @see <a href="https://learn.microsoft.com/graph/api/eventmessage-post-attachments?view=graph-rest-1.0">Find more info here</a>
+     * @return a {@link Attachment}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/event-post-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Attachment post(@jakarta.annotation.Nonnull final Attachment body) {
         return post(body, null);
     }
     /**
-     * Use this API to create a new Attachment. An attachment can be one of the following types: All these types of attachment resources are derived from the attachmentresource.
+     * Use this API to add an attachment to an existing event. This operation limits the size of the attachment you can add to under 3 MB. If an organizer adds an attachment to a meeting event, the organizer can subsequently update the event to send the attachment and update the event for each attendee as well.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Attachment
-     * @see <a href="https://learn.microsoft.com/graph/api/eventmessage-post-attachments?view=graph-rest-1.0">Find more info here</a>
+     * @return a {@link Attachment}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/event-post-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Attachment post(@jakarta.annotation.Nonnull final Attachment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Attachment::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of attachment objects attached to an event.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -126,7 +130,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of attachment objects attached to an event.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -136,24 +140,24 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new Attachment. An attachment can be one of the following types: All these types of attachment resources are derived from the attachmentresource.
+     * Use this API to add an attachment to an existing event. This operation limits the size of the attachment you can add to under 3 MB. If an organizer adds an attachment to a meeting event, the organizer can subsequently update the event to send the attachment and update the event for each attendee as well.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Attachment body) {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new Attachment. An attachment can be one of the following types: All these types of attachment resources are derived from the attachmentresource.
+     * Use this API to add an attachment to an existing event. This operation limits the size of the attachment you can add to under 3 MB. If an organizer adds an attachment to a meeting event, the organizer can subsequently update the event to send the attachment and update the event for each attendee as well.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Attachment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/users/{user%2Did}/calendarView/{event%2Did}/attachments", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -162,7 +166,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AttachmentsRequestBuilder
+     * @return a {@link AttachmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AttachmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -211,7 +215,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

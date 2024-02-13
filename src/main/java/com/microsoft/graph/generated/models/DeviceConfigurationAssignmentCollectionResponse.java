@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceConfigurationAssignmentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new DeviceConfigurationAssignmentCollectionResponse and sets the default values.
+     * Instantiates a new {@link DeviceConfigurationAssignmentCollectionResponse} and sets the default values.
      */
     public DeviceConfigurationAssignmentCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class DeviceConfigurationAssignmentCollectionResponse extends BaseCollect
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceConfigurationAssignmentCollectionResponse
+     * @return a {@link DeviceConfigurationAssignmentCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static DeviceConfigurationAssignmentCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class DeviceConfigurationAssignmentCollectionResponse extends BaseCollect
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class DeviceConfigurationAssignmentCollectionResponse extends BaseCollect
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<DeviceConfigurationAssignment>
+     * @return a {@link java.util.List<DeviceConfigurationAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceConfigurationAssignment> getValue() {

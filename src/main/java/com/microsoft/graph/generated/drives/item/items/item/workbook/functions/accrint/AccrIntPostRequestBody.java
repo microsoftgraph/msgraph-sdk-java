@@ -19,7 +19,7 @@ public class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AccrIntPostRequestBody and sets the default values.
+     * Instantiates a new {@link AccrIntPostRequestBody} and sets the default values.
      */
     public AccrIntPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccrIntPostRequestBody
+     * @return a {@link AccrIntPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static AccrIntPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the basis property value. The basis property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getBasis() {
@@ -66,7 +66,7 @@ public class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the calcMethod property value. The calcMethod property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getCalcMethod() {
@@ -74,7 +74,7 @@ public class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -91,7 +91,7 @@ public class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the firstInterest property value. The firstInterest property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getFirstInterest() {
@@ -99,7 +99,7 @@ public class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the frequency property value. The frequency property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getFrequency() {
@@ -107,7 +107,7 @@ public class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the issue property value. The issue property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getIssue() {
@@ -115,7 +115,7 @@ public class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the par property value. The par property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getPar() {
@@ -123,7 +123,7 @@ public class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the rate property value. The rate property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getRate() {
@@ -131,7 +131,7 @@ public class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the settlement property value. The settlement property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getSettlement() {

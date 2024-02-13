@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DnsEvidence extends AlertEvidence implements Parsable {
     /**
-     * Instantiates a new DnsEvidence and sets the default values.
+     * Instantiates a new {@link DnsEvidence} and sets the default values.
      */
     public DnsEvidence() {
         super();
@@ -18,7 +18,7 @@ public class DnsEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DnsEvidence
+     * @return a {@link DnsEvidence}
      */
     @jakarta.annotation.Nonnull
     public static DnsEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class DnsEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the dnsServerIp property value. The dnsServerIp property
-     * @return a IpEvidence
+     * @return a {@link IpEvidence}
      */
     @jakarta.annotation.Nullable
     public IpEvidence getDnsServerIp() {
@@ -35,7 +35,7 @@ public class DnsEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the domainName property value. The domainName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDomainName() {
@@ -43,7 +43,7 @@ public class DnsEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -56,7 +56,7 @@ public class DnsEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the hostIpAddress property value. The hostIpAddress property
-     * @return a IpEvidence
+     * @return a {@link IpEvidence}
      */
     @jakarta.annotation.Nullable
     public IpEvidence getHostIpAddress() {
@@ -64,7 +64,7 @@ public class DnsEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the ipAddresses property value. The ipAddresses property
-     * @return a java.util.List<IpEvidence>
+     * @return a {@link java.util.List<IpEvidence>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IpEvidence> getIpAddresses() {

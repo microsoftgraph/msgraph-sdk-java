@@ -31,6 +31,7 @@ import java.util.Objects;
 public class MembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -38,6 +39,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to application.
+     * @return a {@link GraphApplicationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphApplicationRequestBuilder graphApplication() {
@@ -45,6 +47,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to device.
+     * @return a {@link GraphDeviceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphDeviceRequestBuilder graphDevice() {
@@ -52,6 +55,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to group.
+     * @return a {@link GraphGroupRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphGroupRequestBuilder graphGroup() {
@@ -59,6 +63,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to orgContact.
+     * @return a {@link GraphOrgContactRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphOrgContactRequestBuilder graphOrgContact() {
@@ -66,6 +71,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to servicePrincipal.
+     * @return a {@link GraphServicePrincipalRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphServicePrincipalRequestBuilder graphServicePrincipal() {
@@ -73,6 +79,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to user.
+     * @return a {@link GraphUserRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphUserRequestBuilder graphUser() {
@@ -80,6 +87,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of group entities.
+     * @return a {@link RefRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RefRequestBuilder ref() {
@@ -88,7 +96,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Gets an item from the com.Microsoft.Graph.groups.item.members.item collection
      * @param directoryObjectId The unique identifier of directoryObject
-     * @return a DirectoryObjectItemRequestBuilder
+     * @return a {@link DirectoryObjectItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DirectoryObjectItemRequestBuilder byDirectoryObjectId(@jakarta.annotation.Nonnull final String directoryObjectId) {
@@ -98,7 +106,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new MembersRequestBuilder and sets the default values.
+     * Instantiates a new {@link MembersRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -106,7 +114,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/members{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new MembersRequestBuilder and sets the default values.
+     * Instantiates a new {@link MembersRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -115,7 +123,8 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The members of this group, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=members($select=id,userPrincipalName,displayName).
-     * @return a DirectoryObjectCollectionResponse
+     * @return a {@link DirectoryObjectCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -125,20 +134,20 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     /**
      * The members of this group, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=members($select=id,userPrincipalName,displayName).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DirectoryObjectCollectionResponse
+     * @return a {@link DirectoryObjectCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectoryObjectCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObjectCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * The members of this group, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=members($select=id,userPrincipalName,displayName).
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -147,7 +156,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     /**
      * The members of this group, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=members($select=id,userPrincipalName,displayName).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -159,7 +168,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a MembersRequestBuilder
+     * @return a {@link MembersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MembersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -213,7 +222,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

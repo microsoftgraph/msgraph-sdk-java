@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class KubernetesControllerEvidence extends AlertEvidence implements Parsable {
     /**
-     * Instantiates a new KubernetesControllerEvidence and sets the default values.
+     * Instantiates a new {@link KubernetesControllerEvidence} and sets the default values.
      */
     public KubernetesControllerEvidence() {
         super();
@@ -18,7 +18,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a KubernetesControllerEvidence
+     * @return a {@link KubernetesControllerEvidence}
      */
     @jakarta.annotation.Nonnull
     public static KubernetesControllerEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
     }
     /**
      * Gets the labels property value. The labels for the Kubernetes pod.
-     * @return a Dictionary
+     * @return a {@link Dictionary}
      */
     @jakarta.annotation.Nullable
     public Dictionary getLabels() {
@@ -48,7 +48,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
     }
     /**
      * Gets the name property value. The controller name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -56,7 +56,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
     }
     /**
      * Gets the namespace property value. The service account namespace.
-     * @return a KubernetesNamespaceEvidence
+     * @return a {@link KubernetesNamespaceEvidence}
      */
     @jakarta.annotation.Nullable
     public KubernetesNamespaceEvidence getNamespace() {
@@ -64,7 +64,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
     }
     /**
      * Gets the type property value. The controller type.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getType() {

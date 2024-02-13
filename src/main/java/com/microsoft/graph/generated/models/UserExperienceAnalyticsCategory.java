@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsCategory extends Entity implements Parsable {
     /**
-     * Instantiates a new UserExperienceAnalyticsCategory and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsCategory} and sets the default values.
      */
     public UserExperienceAnalyticsCategory() {
         super();
@@ -20,7 +20,7 @@ public class UserExperienceAnalyticsCategory extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsCategory
+     * @return a {@link UserExperienceAnalyticsCategory}
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsCategory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class UserExperienceAnalyticsCategory extends Entity implements Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class UserExperienceAnalyticsCategory extends Entity implements Parsable 
     }
     /**
      * Gets the insights property value. The insights for the category. Read-only.
-     * @return a java.util.List<UserExperienceAnalyticsInsight>
+     * @return a {@link java.util.List<UserExperienceAnalyticsInsight>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsInsight> getInsights() {
@@ -48,7 +48,7 @@ public class UserExperienceAnalyticsCategory extends Entity implements Parsable 
     }
     /**
      * Gets the metricValues property value. The metric values for the user experience analytics category. Read-only.
-     * @return a java.util.List<UserExperienceAnalyticsMetric>
+     * @return a {@link java.util.List<UserExperienceAnalyticsMetric>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsMetric> getMetricValues() {

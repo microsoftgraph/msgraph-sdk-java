@@ -19,7 +19,7 @@ public class SubstitutePostRequestBody implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SubstitutePostRequestBody and sets the default values.
+     * Instantiates a new {@link SubstitutePostRequestBody} and sets the default values.
      */
     public SubstitutePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class SubstitutePostRequestBody implements AdditionalDataHolder, BackedMo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SubstitutePostRequestBody
+     * @return a {@link SubstitutePostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static SubstitutePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class SubstitutePostRequestBody implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class SubstitutePostRequestBody implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class SubstitutePostRequestBody implements AdditionalDataHolder, BackedMo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -71,7 +71,7 @@ public class SubstitutePostRequestBody implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the instanceNum property value. The instanceNum property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getInstanceNum() {
@@ -79,7 +79,7 @@ public class SubstitutePostRequestBody implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the newText property value. The newText property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getNewText() {
@@ -87,7 +87,7 @@ public class SubstitutePostRequestBody implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the oldText property value. The oldText property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getOldText() {
@@ -95,7 +95,7 @@ public class SubstitutePostRequestBody implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the text property value. The text property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getText() {

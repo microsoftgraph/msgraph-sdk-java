@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewInstanceDecisionItemServicePrincipalResource extends AccessReviewInstanceDecisionItemResource implements Parsable {
     /**
-     * Instantiates a new AccessReviewInstanceDecisionItemServicePrincipalResource and sets the default values.
+     * Instantiates a new {@link AccessReviewInstanceDecisionItemServicePrincipalResource} and sets the default values.
      */
     public AccessReviewInstanceDecisionItemServicePrincipalResource() {
         super();
@@ -18,7 +18,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalResource extends Ac
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessReviewInstanceDecisionItemServicePrincipalResource
+     * @return a {@link AccessReviewInstanceDecisionItemServicePrincipalResource}
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewInstanceDecisionItemServicePrincipalResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalResource extends Ac
     }
     /**
      * Gets the appId property value. The globally unique identifier of the application to which access has been granted.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
@@ -35,7 +35,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalResource extends Ac
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

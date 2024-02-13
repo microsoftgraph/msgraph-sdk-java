@@ -18,7 +18,7 @@ public class ImplicitGrantSettings implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ImplicitGrantSettings and sets the default values.
+     * Instantiates a new {@link ImplicitGrantSettings} and sets the default values.
      */
     public ImplicitGrantSettings() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ImplicitGrantSettings implements AdditionalDataHolder, BackedModel,
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ImplicitGrantSettings
+     * @return a {@link ImplicitGrantSettings}
      */
     @jakarta.annotation.Nonnull
     public static ImplicitGrantSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ImplicitGrantSettings implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ImplicitGrantSettings implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class ImplicitGrantSettings implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the enableAccessTokenIssuance property value. Specifies whether this web application can request an access token using the OAuth 2.0 implicit flow.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableAccessTokenIssuance() {
@@ -65,7 +65,7 @@ public class ImplicitGrantSettings implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the enableIdTokenIssuance property value. Specifies whether this web application can request an ID token using the OAuth 2.0 implicit flow.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableIdTokenIssuance() {
@@ -73,7 +73,7 @@ public class ImplicitGrantSettings implements AdditionalDataHolder, BackedModel,
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -85,7 +85,7 @@ public class ImplicitGrantSettings implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

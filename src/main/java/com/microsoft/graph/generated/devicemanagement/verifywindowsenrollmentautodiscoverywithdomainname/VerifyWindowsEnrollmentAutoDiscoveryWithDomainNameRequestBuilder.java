@@ -19,7 +19,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder and sets the default values.
+     * Instantiates a new {@link VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder} and sets the default values.
      * @param domainName Usage: domainName='{domainName}'
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -29,7 +29,7 @@ public class VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder ex
         this.pathParameters.put("domainName", domainName);
     }
     /**
-     * Instantiates a new VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder and sets the default values.
+     * Instantiates a new {@link VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -38,7 +38,8 @@ public class VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder ex
     }
     /**
      * Invoke function verifyWindowsEnrollmentAutoDiscovery
-     * @return a VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameGetResponse
+     * @return a {@link VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameGetResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameGetResponse get() {
@@ -47,19 +48,19 @@ public class VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder ex
     /**
      * Invoke function verifyWindowsEnrollmentAutoDiscovery
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameGetResponse
+     * @return a {@link VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameGetResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameGetResponse::createFromDiscriminatorValue);
     }
     /**
      * Invoke function verifyWindowsEnrollmentAutoDiscovery
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -68,7 +69,7 @@ public class VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder ex
     /**
      * Invoke function verifyWindowsEnrollmentAutoDiscovery
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -80,7 +81,7 @@ public class VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder ex
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder
+     * @return a {@link VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

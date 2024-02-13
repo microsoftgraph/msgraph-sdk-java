@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsable {
     /**
-     * Instantiates a new OnenoteSection and sets the default values.
+     * Instantiates a new {@link OnenoteSection} and sets the default values.
      */
     public OnenoteSection() {
         super();
@@ -18,7 +18,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnenoteSection
+     * @return a {@link OnenoteSection}
      */
     @jakarta.annotation.Nonnull
     public static OnenoteSection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -42,7 +42,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
     }
     /**
      * Gets the isDefault property value. Indicates whether this is the user's default section. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
@@ -50,7 +50,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
     }
     /**
      * Gets the links property value. Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web.
-     * @return a SectionLinks
+     * @return a {@link SectionLinks}
      */
     @jakarta.annotation.Nullable
     public SectionLinks getLinks() {
@@ -58,7 +58,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
     }
     /**
      * Gets the pages property value. The collection of pages in the section.  Read-only. Nullable.
-     * @return a java.util.List<OnenotePage>
+     * @return a {@link java.util.List<OnenotePage>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnenotePage> getPages() {
@@ -66,7 +66,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
     }
     /**
      * Gets the pagesUrl property value. The pages endpoint where you can get details for all the pages in the section. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPagesUrl() {
@@ -74,7 +74,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
     }
     /**
      * Gets the parentNotebook property value. The notebook that contains the section.  Read-only.
-     * @return a Notebook
+     * @return a {@link Notebook}
      */
     @jakarta.annotation.Nullable
     public Notebook getParentNotebook() {
@@ -82,7 +82,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
     }
     /**
      * Gets the parentSectionGroup property value. The section group that contains the section.  Read-only.
-     * @return a SectionGroup
+     * @return a {@link SectionGroup}
      */
     @jakarta.annotation.Nullable
     public SectionGroup getParentSectionGroup() {

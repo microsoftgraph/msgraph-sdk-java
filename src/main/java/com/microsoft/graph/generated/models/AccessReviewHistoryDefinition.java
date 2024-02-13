@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     /**
-     * Instantiates a new AccessReviewHistoryDefinition and sets the default values.
+     * Instantiates a new {@link AccessReviewHistoryDefinition} and sets the default values.
      */
     public AccessReviewHistoryDefinition() {
         super();
@@ -18,7 +18,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessReviewHistoryDefinition
+     * @return a {@link AccessReviewHistoryDefinition}
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewHistoryDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The createdBy property
-     * @return a UserIdentity
+     * @return a {@link UserIdentity}
      */
     @jakarta.annotation.Nullable
     public UserIdentity getCreatedBy() {
@@ -35,7 +35,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Timestamp when the access review definition was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -43,7 +43,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the decisions property value. Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions are included by default if no decisions are provided on create. Possible values are: approve, deny, dontKnow, notReviewed, and notNotified.
-     * @return a java.util.List<AccessReviewHistoryDecisionFilter>
+     * @return a {@link java.util.List<AccessReviewHistoryDecisionFilter>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewHistoryDecisionFilter> getDecisions() {
@@ -51,7 +51,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Name for the access review history data collection. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -59,7 +59,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the instances property value. If the accessReviewHistoryDefinition is a recurring definition, instances represent each recurrence. A definition that doesn't recur will have exactly one instance.
-     * @return a java.util.List<AccessReviewHistoryInstance>
+     * @return a {@link java.util.List<AccessReviewHistoryInstance>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewHistoryInstance> getInstances() {
@@ -86,7 +86,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the reviewHistoryPeriodEndDateTime property value. A timestamp. Reviews ending on or before this date will be included in the fetched history data. Only required if scheduleSettings isn't defined.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReviewHistoryPeriodEndDateTime() {
@@ -94,7 +94,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the reviewHistoryPeriodStartDateTime property value. A timestamp. Reviews starting on or before this date will be included in the fetched history data. Only required if scheduleSettings isn't defined.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReviewHistoryPeriodStartDateTime() {
@@ -102,7 +102,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the scheduleSettings property value. The settings for a recurring access review history definition series. Only required if reviewHistoryPeriodStartDateTime or reviewHistoryPeriodEndDateTime aren't defined. Not supported yet.
-     * @return a AccessReviewHistoryScheduleSettings
+     * @return a {@link AccessReviewHistoryScheduleSettings}
      */
     @jakarta.annotation.Nullable
     public AccessReviewHistoryScheduleSettings getScheduleSettings() {
@@ -110,7 +110,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the scopes property value. Used to scope what reviews are included in the fetched history data. Fetches reviews whose scope matches with this provided scope. Required.
-     * @return a java.util.List<AccessReviewScope>
+     * @return a {@link java.util.List<AccessReviewScope>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewScope> getScopes() {
@@ -118,7 +118,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue.
-     * @return a AccessReviewHistoryStatus
+     * @return a {@link AccessReviewHistoryStatus}
      */
     @jakarta.annotation.Nullable
     public AccessReviewHistoryStatus getStatus() {

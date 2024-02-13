@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DomainIdentitySource extends IdentitySource implements Parsable {
     /**
-     * Instantiates a new DomainIdentitySource and sets the default values.
+     * Instantiates a new {@link DomainIdentitySource} and sets the default values.
      */
     public DomainIdentitySource() {
         super();
@@ -18,7 +18,7 @@ public class DomainIdentitySource extends IdentitySource implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DomainIdentitySource
+     * @return a {@link DomainIdentitySource}
      */
     @jakarta.annotation.Nonnull
     public static DomainIdentitySource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class DomainIdentitySource extends IdentitySource implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the identity source, typically also the domain name. Read only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -35,7 +35,7 @@ public class DomainIdentitySource extends IdentitySource implements Parsable {
     }
     /**
      * Gets the domainName property value. The domain name. Read only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDomainName() {
@@ -43,7 +43,7 @@ public class DomainIdentitySource extends IdentitySource implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

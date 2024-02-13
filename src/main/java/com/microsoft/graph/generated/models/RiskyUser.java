@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RiskyUser extends Entity implements Parsable {
     /**
-     * Instantiates a new RiskyUser and sets the default values.
+     * Instantiates a new {@link RiskyUser} and sets the default values.
      */
     public RiskyUser() {
         super();
@@ -18,7 +18,7 @@ public class RiskyUser extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RiskyUser
+     * @return a {@link RiskyUser}
      */
     @jakarta.annotation.Nonnull
     public static RiskyUser createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class RiskyUser extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -52,7 +52,7 @@ public class RiskyUser extends Entity implements Parsable {
     }
     /**
      * Gets the history property value. The activity related to user risk level change
-     * @return a java.util.List<RiskyUserHistoryItem>
+     * @return a {@link java.util.List<RiskyUserHistoryItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<RiskyUserHistoryItem> getHistory() {
@@ -60,7 +60,7 @@ public class RiskyUser extends Entity implements Parsable {
     }
     /**
      * Gets the isDeleted property value. Indicates whether the user is deleted. Possible values are: true, false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeleted() {
@@ -68,7 +68,7 @@ public class RiskyUser extends Entity implements Parsable {
     }
     /**
      * Gets the isProcessing property value. Indicates whether a user's risky state is being processed by the backend. Supports $filter (eq).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsProcessing() {
@@ -76,7 +76,7 @@ public class RiskyUser extends Entity implements Parsable {
     }
     /**
      * Gets the riskDetail property value. Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
-     * @return a RiskDetail
+     * @return a {@link RiskDetail}
      */
     @jakarta.annotation.Nullable
     public RiskDetail getRiskDetail() {
@@ -84,7 +84,7 @@ public class RiskyUser extends Entity implements Parsable {
     }
     /**
      * Gets the riskLastUpdatedDateTime property value. The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, gt, lt).
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRiskLastUpdatedDateTime() {
@@ -92,7 +92,7 @@ public class RiskyUser extends Entity implements Parsable {
     }
     /**
      * Gets the riskLevel property value. Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Supports $filter (eq).
-     * @return a RiskLevel
+     * @return a {@link RiskLevel}
      */
     @jakarta.annotation.Nullable
     public RiskLevel getRiskLevel() {
@@ -100,7 +100,7 @@ public class RiskyUser extends Entity implements Parsable {
     }
     /**
      * Gets the riskState property value. State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue. Supports $filter (eq).
-     * @return a RiskState
+     * @return a {@link RiskState}
      */
     @jakarta.annotation.Nullable
     public RiskState getRiskState() {
@@ -108,7 +108,7 @@ public class RiskyUser extends Entity implements Parsable {
     }
     /**
      * Gets the userDisplayName property value. Risky user display name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
@@ -116,7 +116,7 @@ public class RiskyUser extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. Risky user principal name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

@@ -23,13 +23,14 @@ import java.util.Objects;
 public class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the results property of the microsoft.graph.threatAssessmentRequest entity.
+     * @return a {@link ResultsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ResultsRequestBuilder results() {
         return new ResultsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new ThreatAssessmentRequestItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link ThreatAssessmentRequestItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,7 +38,7 @@ public class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/informationProtection/threatAssessmentRequests/{threatAssessmentRequest%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new ThreatAssessmentRequestItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link ThreatAssessmentRequestItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -46,6 +47,7 @@ public class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Delete navigation property threatAssessmentRequests for informationProtection
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -53,17 +55,18 @@ public class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilde
     /**
      * Delete navigation property threatAssessmentRequests for informationProtection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve the properties and relationships of a specified threatAssessmentRequest object. A threat assessment request can be one of the following types:
-     * @return a ThreatAssessmentRequest
+     * @return a {@link ThreatAssessmentRequest}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/threatassessmentrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -73,21 +76,22 @@ public class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilde
     /**
      * Retrieve the properties and relationships of a specified threatAssessmentRequest object. A threat assessment request can be one of the following types:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ThreatAssessmentRequest
+     * @return a {@link ThreatAssessmentRequest}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/threatassessmentrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ThreatAssessmentRequest get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ThreatAssessmentRequest::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property threatAssessmentRequests in informationProtection
      * @param body The request body
-     * @return a ThreatAssessmentRequest
+     * @return a {@link ThreatAssessmentRequest}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ThreatAssessmentRequest patch(@jakarta.annotation.Nonnull final ThreatAssessmentRequest body) {
@@ -97,20 +101,20 @@ public class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilde
      * Update the navigation property threatAssessmentRequests in informationProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ThreatAssessmentRequest
+     * @return a {@link ThreatAssessmentRequest}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ThreatAssessmentRequest patch(@jakarta.annotation.Nonnull final ThreatAssessmentRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ThreatAssessmentRequest::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property threatAssessmentRequests for informationProtection
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -119,18 +123,18 @@ public class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilde
     /**
      * Delete navigation property threatAssessmentRequests for informationProtection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/informationProtection/threatAssessmentRequests/{threatAssessmentRequest%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Retrieve the properties and relationships of a specified threatAssessmentRequest object. A threat assessment request can be one of the following types:
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -139,7 +143,7 @@ public class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilde
     /**
      * Retrieve the properties and relationships of a specified threatAssessmentRequest object. A threat assessment request can be one of the following types:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -151,7 +155,7 @@ public class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the navigation property threatAssessmentRequests in informationProtection
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ThreatAssessmentRequest body) {
@@ -161,12 +165,12 @@ public class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilde
      * Update the navigation property threatAssessmentRequests in informationProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ThreatAssessmentRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/informationProtection/threatAssessmentRequests/{threatAssessmentRequest%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -175,7 +179,7 @@ public class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ThreatAssessmentRequestItemRequestBuilder
+     * @return a {@link ThreatAssessmentRequestItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ThreatAssessmentRequestItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -205,7 +209,7 @@ public class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilde
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BrowserSiteList extends Entity implements Parsable {
     /**
-     * Instantiates a new BrowserSiteList and sets the default values.
+     * Instantiates a new {@link BrowserSiteList} and sets the default values.
      */
     public BrowserSiteList() {
         super();
@@ -21,7 +21,7 @@ public class BrowserSiteList extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BrowserSiteList
+     * @return a {@link BrowserSiteList}
      */
     @jakarta.annotation.Nonnull
     public static BrowserSiteList createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class BrowserSiteList extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of the site list.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -38,7 +38,7 @@ public class BrowserSiteList extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the site list.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -46,7 +46,7 @@ public class BrowserSiteList extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -65,7 +65,7 @@ public class BrowserSiteList extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The user who last modified the site list.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -73,7 +73,7 @@ public class BrowserSiteList extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the site list was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -81,7 +81,7 @@ public class BrowserSiteList extends Entity implements Parsable {
     }
     /**
      * Gets the publishedBy property value. The user who published the site list.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getPublishedBy() {
@@ -89,7 +89,7 @@ public class BrowserSiteList extends Entity implements Parsable {
     }
     /**
      * Gets the publishedDateTime property value. The date and time when the site list was published.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getPublishedDateTime() {
@@ -97,7 +97,7 @@ public class BrowserSiteList extends Entity implements Parsable {
     }
     /**
      * Gets the revision property value. The current revision of the site list.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRevision() {
@@ -105,7 +105,7 @@ public class BrowserSiteList extends Entity implements Parsable {
     }
     /**
      * Gets the sharedCookies property value. A collection of shared cookies defined for the site list.
-     * @return a java.util.List<BrowserSharedCookie>
+     * @return a {@link java.util.List<BrowserSharedCookie>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<BrowserSharedCookie> getSharedCookies() {
@@ -113,7 +113,7 @@ public class BrowserSiteList extends Entity implements Parsable {
     }
     /**
      * Gets the sites property value. A collection of sites defined for the site list.
-     * @return a java.util.List<BrowserSite>
+     * @return a {@link java.util.List<BrowserSite>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<BrowserSite> getSites() {
@@ -121,7 +121,7 @@ public class BrowserSiteList extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a BrowserSiteListStatus
+     * @return a {@link BrowserSiteListStatus}
      */
     @jakarta.annotation.Nullable
     public BrowserSiteListStatus getStatus() {

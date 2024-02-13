@@ -18,7 +18,7 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Bac
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AccessPackageResourceAttribute and sets the default values.
+     * Instantiates a new {@link AccessPackageResourceAttribute} and sets the default values.
      */
     public AccessPackageResourceAttribute() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Bac
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessPackageResourceAttribute
+     * @return a {@link AccessPackageResourceAttribute}
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageResourceAttribute createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the destination property value. Information about how to set the attribute, currently a accessPackageUserDirectoryAttributeStore type.
-     * @return a AccessPackageResourceAttributeDestination
+     * @return a {@link AccessPackageResourceAttributeDestination}
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceAttributeDestination getDestination() {
@@ -65,7 +65,7 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Bac
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the name property value. The name of the attribute in the end system. If the destination is accessPackageUserDirectoryAttributeStore, then a user property such as jobTitle or a directory schema extension for the user object type, such as extension2b676109c7c74ae2b41549205f1947edpersonalTitle.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -86,7 +86,7 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -94,7 +94,7 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the source property value. Information about how to populate the attribute value when an accessPackageAssignmentRequest is being fulfilled, currently a accessPackageResourceAttributeQuestion type.
-     * @return a AccessPackageResourceAttributeSource
+     * @return a {@link AccessPackageResourceAttributeSource}
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceAttributeSource getSource() {

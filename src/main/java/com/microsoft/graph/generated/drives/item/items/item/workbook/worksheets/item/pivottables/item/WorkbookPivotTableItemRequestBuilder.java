@@ -24,6 +24,7 @@ import java.util.Objects;
 public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the refresh method.
+     * @return a {@link RefreshRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RefreshRequestBuilder refresh() {
@@ -31,13 +32,14 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the worksheet property of the microsoft.graph.workbookPivotTable entity.
+     * @return a {@link WorksheetRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WorksheetRequestBuilder worksheet() {
         return new WorksheetRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new WorkbookPivotTableItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link WorkbookPivotTableItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -45,7 +47,7 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/pivotTables/{workbookPivotTable%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new WorkbookPivotTableItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link WorkbookPivotTableItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -54,6 +56,7 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property pivotTables for drives
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -61,17 +64,18 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property pivotTables for drives
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve the properties and relationships of workbookPivotTable object.
-     * @return a WorkbookPivotTable
+     * @return a {@link WorkbookPivotTable}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/workbookpivottable-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -81,21 +85,22 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of workbookPivotTable object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WorkbookPivotTable
+     * @return a {@link WorkbookPivotTable}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/workbookpivottable-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookPivotTable get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookPivotTable::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property pivotTables in drives
      * @param body The request body
-     * @return a WorkbookPivotTable
+     * @return a {@link WorkbookPivotTable}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WorkbookPivotTable patch(@jakarta.annotation.Nonnull final WorkbookPivotTable body) {
@@ -105,20 +110,20 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property pivotTables in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WorkbookPivotTable
+     * @return a {@link WorkbookPivotTable}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WorkbookPivotTable patch(@jakarta.annotation.Nonnull final WorkbookPivotTable body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookPivotTable::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property pivotTables for drives
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -127,18 +132,18 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property pivotTables for drives
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/pivotTables/{workbookPivotTable%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Retrieve the properties and relationships of workbookPivotTable object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -147,7 +152,7 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of workbookPivotTable object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -159,7 +164,7 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property pivotTables in drives
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final WorkbookPivotTable body) {
@@ -169,12 +174,12 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property pivotTables in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final WorkbookPivotTable body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/pivotTables/{workbookPivotTable%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -183,7 +188,7 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a WorkbookPivotTableItemRequestBuilder
+     * @return a {@link WorkbookPivotTableItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WorkbookPivotTableItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -213,7 +218,7 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

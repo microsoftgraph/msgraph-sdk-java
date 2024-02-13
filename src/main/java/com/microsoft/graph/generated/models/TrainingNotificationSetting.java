@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TrainingNotificationSetting extends EndUserNotificationSetting implements Parsable {
     /**
-     * Instantiates a new TrainingNotificationSetting and sets the default values.
+     * Instantiates a new {@link TrainingNotificationSetting} and sets the default values.
      */
     public TrainingNotificationSetting() {
         super();
@@ -18,7 +18,7 @@ public class TrainingNotificationSetting extends EndUserNotificationSetting impl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TrainingNotificationSetting
+     * @return a {@link TrainingNotificationSetting}
      */
     @jakarta.annotation.Nonnull
     public static TrainingNotificationSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class TrainingNotificationSetting extends EndUserNotificationSetting impl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class TrainingNotificationSetting extends EndUserNotificationSetting impl
     }
     /**
      * Gets the trainingAssignment property value. Training assignment details.
-     * @return a BaseEndUserNotification
+     * @return a {@link BaseEndUserNotification}
      */
     @jakarta.annotation.Nullable
     public BaseEndUserNotification getTrainingAssignment() {
@@ -46,7 +46,7 @@ public class TrainingNotificationSetting extends EndUserNotificationSetting impl
     }
     /**
      * Gets the trainingReminder property value. Training reminder details.
-     * @return a TrainingReminderNotification
+     * @return a {@link TrainingReminderNotification}
      */
     @jakarta.annotation.Nullable
     public TrainingReminderNotification getTrainingReminder() {

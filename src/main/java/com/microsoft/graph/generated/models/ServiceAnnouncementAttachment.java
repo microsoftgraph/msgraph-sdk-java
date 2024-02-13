@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceAnnouncementAttachment extends Entity implements Parsable {
     /**
-     * Instantiates a new ServiceAnnouncementAttachment and sets the default values.
+     * Instantiates a new {@link ServiceAnnouncementAttachment} and sets the default values.
      */
     public ServiceAnnouncementAttachment() {
         super();
@@ -18,7 +18,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ServiceAnnouncementAttachment
+     * @return a {@link ServiceAnnouncementAttachment}
      */
     @jakarta.annotation.Nonnull
     public static ServiceAnnouncementAttachment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The attachment content.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
@@ -35,7 +35,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
     }
     /**
      * Gets the contentType property value. The contentType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContentType() {
@@ -43,7 +43,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -65,7 +65,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The name property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -73,7 +73,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
     }
     /**
      * Gets the size property value. The size property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSize() {

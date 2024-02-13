@@ -19,7 +19,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ReprocessRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new ReprocessRequestBuilder and sets the default values.
+     * Instantiates a new {@link ReprocessRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -27,7 +27,7 @@ public class ReprocessRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/assignments/{accessPackageAssignment%2Did}/reprocess", pathParameters);
     }
     /**
-     * Instantiates a new ReprocessRequestBuilder and sets the default values.
+     * Instantiates a new {@link ReprocessRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -36,6 +36,7 @@ public class ReprocessRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * In Microsoft Entra entitlement management, callers can automatically reevaluate and enforce an accessPackageAssignment object of a users assignments for a specific access package. The state of the access package assignment must be Delivered for the administrator to reprocess the user's assignment. Only admins with the Access Package Assignment Manager role, or higher, in Microsoft Entra entitlement management can perform this action.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignment-reprocess?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
@@ -44,18 +45,18 @@ public class ReprocessRequestBuilder extends BaseRequestBuilder {
     /**
      * In Microsoft Entra entitlement management, callers can automatically reevaluate and enforce an accessPackageAssignment object of a users assignments for a specific access package. The state of the access package assignment must be Delivered for the administrator to reprocess the user's assignment. Only admins with the Access Package Assignment Manager role, or higher, in Microsoft Entra entitlement management can perform this action.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignment-reprocess?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * In Microsoft Entra entitlement management, callers can automatically reevaluate and enforce an accessPackageAssignment object of a users assignments for a specific access package. The state of the access package assignment must be Delivered for the administrator to reprocess the user's assignment. Only admins with the Access Package Assignment Manager role, or higher, in Microsoft Entra entitlement management can perform this action.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation() {
@@ -64,7 +65,7 @@ public class ReprocessRequestBuilder extends BaseRequestBuilder {
     /**
      * In Microsoft Entra entitlement management, callers can automatically reevaluate and enforce an accessPackageAssignment object of a users assignments for a specific access package. The state of the access package assignment must be Delivered for the administrator to reprocess the user's assignment. Only admins with the Access Package Assignment Manager role, or higher, in Microsoft Entra entitlement management can perform this action.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -76,7 +77,7 @@ public class ReprocessRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ReprocessRequestBuilder
+     * @return a {@link ReprocessRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReprocessRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

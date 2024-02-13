@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceCompliancePolicy extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceCompliancePolicy and sets the default values.
+     * Instantiates a new {@link DeviceCompliancePolicy} and sets the default values.
      */
     public DeviceCompliancePolicy() {
         super();
@@ -21,7 +21,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceCompliancePolicy
+     * @return a {@link DeviceCompliancePolicy}
      */
     @jakarta.annotation.Nonnull
     public static DeviceCompliancePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +44,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The collection of assignments for this compliance policy.
-     * @return a java.util.List<DeviceCompliancePolicyAssignment>
+     * @return a {@link java.util.List<DeviceCompliancePolicyAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceCompliancePolicyAssignment> getAssignments() {
@@ -52,7 +52,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. DateTime the object was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -60,7 +60,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Admin provided description of the Device Configuration.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -68,7 +68,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
     }
     /**
      * Gets the deviceSettingStateSummaries property value. Compliance Setting State Device Summary
-     * @return a java.util.List<SettingStateDeviceSummary>
+     * @return a {@link java.util.List<SettingStateDeviceSummary>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SettingStateDeviceSummary> getDeviceSettingStateSummaries() {
@@ -76,7 +76,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
     }
     /**
      * Gets the deviceStatuses property value. List of DeviceComplianceDeviceStatus.
-     * @return a java.util.List<DeviceComplianceDeviceStatus>
+     * @return a {@link java.util.List<DeviceComplianceDeviceStatus>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceComplianceDeviceStatus> getDeviceStatuses() {
@@ -84,7 +84,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
     }
     /**
      * Gets the deviceStatusOverview property value. Device compliance devices status overview
-     * @return a DeviceComplianceDeviceOverview
+     * @return a {@link DeviceComplianceDeviceOverview}
      */
     @jakarta.annotation.Nullable
     public DeviceComplianceDeviceOverview getDeviceStatusOverview() {
@@ -92,7 +92,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Admin provided name of the device configuration.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -100,7 +100,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -121,7 +121,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. DateTime the object was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -129,7 +129,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
     }
     /**
      * Gets the scheduledActionsForRule property value. The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
-     * @return a java.util.List<DeviceComplianceScheduledActionForRule>
+     * @return a {@link java.util.List<DeviceComplianceScheduledActionForRule>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceComplianceScheduledActionForRule> getScheduledActionsForRule() {
@@ -137,7 +137,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
     }
     /**
      * Gets the userStatuses property value. List of DeviceComplianceUserStatus.
-     * @return a java.util.List<DeviceComplianceUserStatus>
+     * @return a {@link java.util.List<DeviceComplianceUserStatus>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceComplianceUserStatus> getUserStatuses() {
@@ -145,7 +145,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
     }
     /**
      * Gets the userStatusOverview property value. Device compliance users status overview
-     * @return a DeviceComplianceUserOverview
+     * @return a {@link DeviceComplianceUserOverview}
      */
     @jakarta.annotation.Nullable
     public DeviceComplianceUserOverview getUserStatusOverview() {
@@ -153,7 +153,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. Version of the device configuration.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {

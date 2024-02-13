@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationRubric extends Entity implements Parsable {
     /**
-     * Instantiates a new EducationRubric and sets the default values.
+     * Instantiates a new {@link EducationRubric} and sets the default values.
      */
     public EducationRubric() {
         super();
@@ -18,7 +18,7 @@ public class EducationRubric extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationRubric
+     * @return a {@link EducationRubric}
      */
     @jakarta.annotation.Nonnull
     public static EducationRubric createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EducationRubric extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The user who created this resource.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -35,7 +35,7 @@ public class EducationRubric extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -43,7 +43,7 @@ public class EducationRubric extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of this rubric.
-     * @return a EducationItemBody
+     * @return a {@link EducationItemBody}
      */
     @jakarta.annotation.Nullable
     public EducationItemBody getDescription() {
@@ -51,7 +51,7 @@ public class EducationRubric extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of this rubric.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -59,7 +59,7 @@ public class EducationRubric extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class EducationRubric extends Entity implements Parsable {
     }
     /**
      * Gets the grading property value. The grading type of this rubric -- null for a no-points rubric, or educationAssignmentPointsGradeType for a points rubric.
-     * @return a EducationAssignmentGradeType
+     * @return a {@link EducationAssignmentGradeType}
      */
     @jakarta.annotation.Nullable
     public EducationAssignmentGradeType getGrading() {
@@ -85,7 +85,7 @@ public class EducationRubric extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The last user to modify the resource.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -93,7 +93,7 @@ public class EducationRubric extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -101,7 +101,7 @@ public class EducationRubric extends Entity implements Parsable {
     }
     /**
      * Gets the levels property value. The collection of levels making up this rubric.
-     * @return a java.util.List<RubricLevel>
+     * @return a {@link java.util.List<RubricLevel>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<RubricLevel> getLevels() {
@@ -109,7 +109,7 @@ public class EducationRubric extends Entity implements Parsable {
     }
     /**
      * Gets the qualities property value. The collection of qualities making up this rubric.
-     * @return a java.util.List<RubricQuality>
+     * @return a {@link java.util.List<RubricQuality>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<RubricQuality> getQualities() {

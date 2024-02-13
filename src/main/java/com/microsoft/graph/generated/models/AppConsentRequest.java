@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppConsentRequest extends Entity implements Parsable {
     /**
-     * Instantiates a new AppConsentRequest and sets the default values.
+     * Instantiates a new {@link AppConsentRequest} and sets the default values.
      */
     public AppConsentRequest() {
         super();
@@ -17,7 +17,7 @@ public class AppConsentRequest extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AppConsentRequest
+     * @return a {@link AppConsentRequest}
      */
     @jakarta.annotation.Nonnull
     public static AppConsentRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class AppConsentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the appDisplayName property value. The display name of the app for which consent is requested. Required. Supports $filter (eq only) and $orderby.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
@@ -34,7 +34,7 @@ public class AppConsentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the appId property value. The identifier of the application. Required. Supports $filter (eq only) and $orderby.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
@@ -42,7 +42,7 @@ public class AppConsentRequest extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -55,7 +55,7 @@ public class AppConsentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the pendingScopes property value. A list of pending scopes waiting for approval. Required.
-     * @return a java.util.List<AppConsentRequestScope>
+     * @return a {@link java.util.List<AppConsentRequestScope>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppConsentRequestScope> getPendingScopes() {
@@ -63,7 +63,7 @@ public class AppConsentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the userConsentRequests property value. A list of pending user consent requests. Supports $filter (eq).
-     * @return a java.util.List<UserConsentRequest>
+     * @return a {@link java.util.List<UserConsentRequest>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserConsentRequest> getUserConsentRequests() {

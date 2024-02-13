@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Attendee extends AttendeeBase implements Parsable {
     /**
-     * Instantiates a new Attendee and sets the default values.
+     * Instantiates a new {@link Attendee} and sets the default values.
      */
     public Attendee() {
         super();
@@ -18,7 +18,7 @@ public class Attendee extends AttendeeBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Attendee
+     * @return a {@link Attendee}
      */
     @jakarta.annotation.Nonnull
     public static Attendee createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class Attendee extends AttendeeBase implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class Attendee extends AttendeeBase implements Parsable {
     }
     /**
      * Gets the proposedNewTime property value. An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property isn't included in a response of a GET event.
-     * @return a TimeSlot
+     * @return a {@link TimeSlot}
      */
     @jakarta.annotation.Nullable
     public TimeSlot getProposedNewTime() {
@@ -46,7 +46,7 @@ public class Attendee extends AttendeeBase implements Parsable {
     }
     /**
      * Gets the status property value. The attendee's response (none, accepted, declined, etc.) for the event and date-time that the response was sent.
-     * @return a ResponseStatus
+     * @return a {@link ResponseStatus}
      */
     @jakarta.annotation.Nullable
     public ResponseStatus getStatus() {

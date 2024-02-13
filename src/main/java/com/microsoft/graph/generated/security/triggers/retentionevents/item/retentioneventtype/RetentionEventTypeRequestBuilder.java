@@ -21,7 +21,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RetentionEventTypeRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new RetentionEventTypeRequestBuilder and sets the default values.
+     * Instantiates a new {@link RetentionEventTypeRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -29,7 +29,7 @@ public class RetentionEventTypeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/triggers/retentionEvents/{retentionEvent%2Did}/retentionEventType{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new RetentionEventTypeRequestBuilder and sets the default values.
+     * Instantiates a new {@link RetentionEventTypeRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -38,7 +38,8 @@ public class RetentionEventTypeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Specifies the event that will start the retention period for labels that use this event type when an event is created.
-     * @return a RetentionEventType
+     * @return a {@link RetentionEventType}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public RetentionEventType get() {
@@ -47,19 +48,19 @@ public class RetentionEventTypeRequestBuilder extends BaseRequestBuilder {
     /**
      * Specifies the event that will start the retention period for labels that use this event type when an event is created.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RetentionEventType
+     * @return a {@link RetentionEventType}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public RetentionEventType get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, RetentionEventType::createFromDiscriminatorValue);
     }
     /**
      * Specifies the event that will start the retention period for labels that use this event type when an event is created.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -68,7 +69,7 @@ public class RetentionEventTypeRequestBuilder extends BaseRequestBuilder {
     /**
      * Specifies the event that will start the retention period for labels that use this event type when an event is created.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -80,7 +81,7 @@ public class RetentionEventTypeRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a RetentionEventTypeRequestBuilder
+     * @return a {@link RetentionEventTypeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RetentionEventTypeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -104,7 +105,7 @@ public class RetentionEventTypeRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -18,7 +18,7 @@ public class OptionalClaim implements AdditionalDataHolder, BackedModel, Parsabl
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new OptionalClaim and sets the default values.
+     * Instantiates a new {@link OptionalClaim} and sets the default values.
      */
     public OptionalClaim() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class OptionalClaim implements AdditionalDataHolder, BackedModel, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OptionalClaim
+     * @return a {@link OptionalClaim}
      */
     @jakarta.annotation.Nonnull
     public static OptionalClaim createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class OptionalClaim implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class OptionalClaim implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the additionalProperties property value. Additional properties of the claim. If a property exists in this collection, it modifies the behavior of the optional claim specified in the name property.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAdditionalProperties() {
@@ -57,7 +57,7 @@ public class OptionalClaim implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class OptionalClaim implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the essential property value. If the value is true, the claim specified by the client is necessary to ensure a smooth authorization experience for the specific task requested by the end user. The default value is false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEssential() {
@@ -73,7 +73,7 @@ public class OptionalClaim implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -87,7 +87,7 @@ public class OptionalClaim implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the name property value. The name of the optional claim.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -95,7 +95,7 @@ public class OptionalClaim implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -103,7 +103,7 @@ public class OptionalClaim implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the source property value. The source (directory object) of the claim. There are predefined claims and user-defined claims from extension properties. If the source value is null, the claim is a predefined optional claim. If the source value is user, the value in the name property is the extension property from the user object.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSource() {

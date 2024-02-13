@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceAndAppManagementRoleAssignment extends RoleAssignment implements Parsable {
     /**
-     * Instantiates a new DeviceAndAppManagementRoleAssignment and sets the default values.
+     * Instantiates a new {@link DeviceAndAppManagementRoleAssignment} and sets the default values.
      */
     public DeviceAndAppManagementRoleAssignment() {
         super();
@@ -20,7 +20,7 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceAndAppManagementRoleAssignment
+     * @return a {@link DeviceAndAppManagementRoleAssignment}
      */
     @jakarta.annotation.Nonnull
     public static DeviceAndAppManagementRoleAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -39,7 +39,7 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
     }
     /**
      * Gets the members property value. The list of ids of role member security groups. These are IDs from Azure Active Directory.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getMembers() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IpNamedLocation extends NamedLocation implements Parsable {
     /**
-     * Instantiates a new IpNamedLocation and sets the default values.
+     * Instantiates a new {@link IpNamedLocation} and sets the default values.
      */
     public IpNamedLocation() {
         super();
@@ -17,7 +17,7 @@ public class IpNamedLocation extends NamedLocation implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IpNamedLocation
+     * @return a {@link IpNamedLocation}
      */
     @jakarta.annotation.Nonnull
     public static IpNamedLocation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class IpNamedLocation extends NamedLocation implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class IpNamedLocation extends NamedLocation implements Parsable {
     }
     /**
      * Gets the ipRanges property value. List of IP address ranges in IPv4 CIDR format (for example, 1.2.3.4/32) or any allowable IPv6 format from IETF RFC5969. Required.
-     * @return a java.util.List<IpRange>
+     * @return a {@link java.util.List<IpRange>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IpRange> getIpRanges() {
@@ -45,7 +45,7 @@ public class IpNamedLocation extends NamedLocation implements Parsable {
     }
     /**
      * Gets the isTrusted property value. true if this location is explicitly trusted. Optional. Default value is false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsTrusted() {

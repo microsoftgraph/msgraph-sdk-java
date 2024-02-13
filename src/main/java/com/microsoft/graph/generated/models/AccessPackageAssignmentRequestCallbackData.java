@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionData implements Parsable {
     /**
-     * Instantiates a new AccessPackageAssignmentRequestCallbackData and sets the default values.
+     * Instantiates a new {@link AccessPackageAssignmentRequestCallbackData} and sets the default values.
      */
     public AccessPackageAssignmentRequestCallbackData() {
         super();
@@ -18,7 +18,7 @@ public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionD
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessPackageAssignmentRequestCallbackData
+     * @return a {@link AccessPackageAssignmentRequestCallbackData}
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAssignmentRequestCallbackData createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionD
     }
     /**
      * Gets the customExtensionStageInstanceDetail property value. Details for the callback.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCustomExtensionStageInstanceDetail() {
@@ -35,7 +35,7 @@ public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionD
     }
     /**
      * Gets the customExtensionStageInstanceId property value. Unique identifier of the callout to the custom extension.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCustomExtensionStageInstanceId() {
@@ -43,7 +43,7 @@ public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionD
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -56,7 +56,7 @@ public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionD
     }
     /**
      * Gets the stage property value. Indicates the stage at which the custom callout extension is executed. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
-     * @return a AccessPackageCustomExtensionStage
+     * @return a {@link AccessPackageCustomExtensionStage}
      */
     @jakarta.annotation.Nullable
     public AccessPackageCustomExtensionStage getStage() {
@@ -64,7 +64,7 @@ public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionD
     }
     /**
      * Gets the state property value. Allow the extension to be able to deny or cancel the request submitted by the requestor. The supported values are Denied and Canceled. This property can only be set for an assignmentRequestCreated stage.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getState() {

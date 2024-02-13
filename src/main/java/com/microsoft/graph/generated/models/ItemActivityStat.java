@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemActivityStat extends Entity implements Parsable {
     /**
-     * Instantiates a new ItemActivityStat and sets the default values.
+     * Instantiates a new {@link ItemActivityStat} and sets the default values.
      */
     public ItemActivityStat() {
         super();
@@ -18,7 +18,7 @@ public class ItemActivityStat extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ItemActivityStat
+     * @return a {@link ItemActivityStat}
      */
     @jakarta.annotation.Nonnull
     public static ItemActivityStat createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ItemActivityStat extends Entity implements Parsable {
     }
     /**
      * Gets the access property value. Statistics about the access actions in this interval. Read-only.
-     * @return a ItemActionStat
+     * @return a {@link ItemActionStat}
      */
     @jakarta.annotation.Nullable
     public ItemActionStat getAccess() {
@@ -35,7 +35,7 @@ public class ItemActivityStat extends Entity implements Parsable {
     }
     /**
      * Gets the activities property value. Exposes the itemActivities represented in this itemActivityStat resource.
-     * @return a java.util.List<ItemActivity>
+     * @return a {@link java.util.List<ItemActivity>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ItemActivity> getActivities() {
@@ -43,7 +43,7 @@ public class ItemActivityStat extends Entity implements Parsable {
     }
     /**
      * Gets the create property value. Statistics about the create actions in this interval. Read-only.
-     * @return a ItemActionStat
+     * @return a {@link ItemActionStat}
      */
     @jakarta.annotation.Nullable
     public ItemActionStat getCreate() {
@@ -51,7 +51,7 @@ public class ItemActivityStat extends Entity implements Parsable {
     }
     /**
      * Gets the delete property value. Statistics about the delete actions in this interval. Read-only.
-     * @return a ItemActionStat
+     * @return a {@link ItemActionStat}
      */
     @jakarta.annotation.Nullable
     public ItemActionStat getDelete() {
@@ -59,7 +59,7 @@ public class ItemActivityStat extends Entity implements Parsable {
     }
     /**
      * Gets the edit property value. Statistics about the edit actions in this interval. Read-only.
-     * @return a ItemActionStat
+     * @return a {@link ItemActionStat}
      */
     @jakarta.annotation.Nullable
     public ItemActionStat getEdit() {
@@ -67,7 +67,7 @@ public class ItemActivityStat extends Entity implements Parsable {
     }
     /**
      * Gets the endDateTime property value. When the interval ends. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
@@ -75,7 +75,7 @@ public class ItemActivityStat extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -94,7 +94,7 @@ public class ItemActivityStat extends Entity implements Parsable {
     }
     /**
      * Gets the incompleteData property value. Indicates that the statistics in this interval are based on incomplete data. Read-only.
-     * @return a IncompleteData
+     * @return a {@link IncompleteData}
      */
     @jakarta.annotation.Nullable
     public IncompleteData getIncompleteData() {
@@ -102,7 +102,7 @@ public class ItemActivityStat extends Entity implements Parsable {
     }
     /**
      * Gets the isTrending property value. Indicates whether the item is 'trending.' Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsTrending() {
@@ -110,7 +110,7 @@ public class ItemActivityStat extends Entity implements Parsable {
     }
     /**
      * Gets the move property value. Statistics about the move actions in this interval. Read-only.
-     * @return a ItemActionStat
+     * @return a {@link ItemActionStat}
      */
     @jakarta.annotation.Nullable
     public ItemActionStat getMove() {
@@ -118,7 +118,7 @@ public class ItemActivityStat extends Entity implements Parsable {
     }
     /**
      * Gets the startDateTime property value. When the interval starts. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {

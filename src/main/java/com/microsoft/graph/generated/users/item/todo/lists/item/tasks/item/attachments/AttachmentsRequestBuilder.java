@@ -26,6 +26,7 @@ import java.util.Objects;
 public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,6 +34,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the createUploadSession method.
+     * @return a {@link CreateUploadSessionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CreateUploadSessionRequestBuilder createUploadSession() {
@@ -41,7 +43,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the attachments property of the microsoft.graph.todoTask entity.
      * @param attachmentBaseId The unique identifier of attachmentBase
-     * @return a AttachmentBaseItemRequestBuilder
+     * @return a {@link AttachmentBaseItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AttachmentBaseItemRequestBuilder byAttachmentBaseId(@jakarta.annotation.Nonnull final String attachmentBaseId) {
@@ -51,7 +53,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return new AttachmentBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new AttachmentsRequestBuilder and sets the default values.
+     * Instantiates a new {@link AttachmentsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +61,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/todo/lists/{todoTaskList%2Did}/tasks/{todoTask%2Did}/attachments{?%24count,%24filter,%24orderby,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new AttachmentsRequestBuilder and sets the default values.
+     * Instantiates a new {@link AttachmentsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -68,7 +70,8 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the taskFileAttachment objects and their properties. The contentBytes property will not be returned in the response. Use the Get attachment API to view the contentBytes.
-     * @return a AttachmentBaseCollectionResponse
+     * @return a {@link AttachmentBaseCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/todotask-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -78,21 +81,22 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the taskFileAttachment objects and their properties. The contentBytes property will not be returned in the response. Use the Get attachment API to view the contentBytes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AttachmentBaseCollectionResponse
+     * @return a {@link AttachmentBaseCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/todotask-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AttachmentBaseCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AttachmentBaseCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Add a new taskFileAttachment object to a todoTask. This operation limits the size of the attachment you can add to under 3 MB. If the size of the file attachments is more than 3 MB, create an upload session to upload the attachments.
      * @param body The request body
-     * @return a AttachmentBase
+     * @return a {@link AttachmentBase}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/todotask-post-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -103,7 +107,8 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
      * Add a new taskFileAttachment object to a todoTask. This operation limits the size of the attachment you can add to under 3 MB. If the size of the file attachments is more than 3 MB, create an upload session to upload the attachments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AttachmentBase
+     * @return a {@link AttachmentBase}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/todotask-post-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -111,13 +116,12 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AttachmentBase::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the taskFileAttachment objects and their properties. The contentBytes property will not be returned in the response. Use the Get attachment API to view the contentBytes.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -126,7 +130,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the taskFileAttachment objects and their properties. The contentBytes property will not be returned in the response. Use the Get attachment API to view the contentBytes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add a new taskFileAttachment object to a todoTask. This operation limits the size of the attachment you can add to under 3 MB. If the size of the file attachments is more than 3 MB, create an upload session to upload the attachments.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AttachmentBase body) {
@@ -148,12 +152,12 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
      * Add a new taskFileAttachment object to a todoTask. This operation limits the size of the attachment you can add to under 3 MB. If the size of the file attachments is more than 3 MB, create an upload session to upload the attachments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AttachmentBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/users/{user%2Did}/todo/lists/{todoTaskList%2Did}/tasks/{todoTask%2Did}/attachments", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -162,7 +166,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AttachmentsRequestBuilder
+     * @return a {@link AttachmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AttachmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -206,7 +210,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

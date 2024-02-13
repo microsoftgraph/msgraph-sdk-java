@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     /**
-     * Instantiates a new AuthenticationStrengthPolicy and sets the default values.
+     * Instantiates a new {@link AuthenticationStrengthPolicy} and sets the default values.
      */
     public AuthenticationStrengthPolicy() {
         super();
@@ -19,7 +19,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuthenticationStrengthPolicy
+     * @return a {@link AuthenticationStrengthPolicy}
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationStrengthPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the allowedCombinations property value. A collection of authentication method modes that are required be used to satify this authentication strength.
-     * @return a java.util.List<AuthenticationMethodModes>
+     * @return a {@link java.util.List<AuthenticationMethodModes>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodModes> getAllowedCombinations() {
@@ -36,7 +36,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the combinationConfigurations property value. Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
-     * @return a java.util.List<AuthenticationCombinationConfiguration>
+     * @return a {@link java.util.List<AuthenticationCombinationConfiguration>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationCombinationConfiguration> getCombinationConfigurations() {
@@ -44,7 +44,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The datetime when this policy was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -52,7 +52,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The human-readable description of this policy.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -60,7 +60,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The human-readable display name of this policy. Supports $filter (eq, ne, not , and in).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -68,7 +68,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -85,7 +85,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the modifiedDateTime property value. The datetime when this policy was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
@@ -93,7 +93,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the policyType property value. The policyType property
-     * @return a AuthenticationStrengthPolicyType
+     * @return a {@link AuthenticationStrengthPolicyType}
      */
     @jakarta.annotation.Nullable
     public AuthenticationStrengthPolicyType getPolicyType() {
@@ -101,7 +101,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the requirementsSatisfied property value. The requirementsSatisfied property
-     * @return a EnumSet<AuthenticationStrengthRequirements>
+     * @return a {@link EnumSet<AuthenticationStrengthRequirements>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<AuthenticationStrengthRequirements> getRequirementsSatisfied() {

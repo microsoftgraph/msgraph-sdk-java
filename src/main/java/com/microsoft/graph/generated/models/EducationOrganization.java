@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationOrganization extends Entity implements Parsable {
     /**
-     * Instantiates a new EducationOrganization and sets the default values.
+     * Instantiates a new {@link EducationOrganization} and sets the default values.
      */
     public EducationOrganization() {
         super();
@@ -17,7 +17,7 @@ public class EducationOrganization extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationOrganization
+     * @return a {@link EducationOrganization}
      */
     @jakarta.annotation.Nonnull
     public static EducationOrganization createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -33,7 +33,7 @@ public class EducationOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Organization description.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -41,7 +41,7 @@ public class EducationOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Organization display name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -49,7 +49,7 @@ public class EducationOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the externalSource property value. Source where this organization was created from. Possible values are: sis, manual.
-     * @return a EducationExternalSource
+     * @return a {@link EducationExternalSource}
      */
     @jakarta.annotation.Nullable
     public EducationExternalSource getExternalSource() {
@@ -57,7 +57,7 @@ public class EducationOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the externalSourceDetail property value. The name of the external source this resource was generated from.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalSourceDetail() {
@@ -65,7 +65,7 @@ public class EducationOrganization extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

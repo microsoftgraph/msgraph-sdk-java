@@ -25,6 +25,7 @@ import java.util.Objects;
 public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the simulationAutomations property of the microsoft.graph.attackSimulationRoot entity.
      * @param simulationAutomationId The unique identifier of simulationAutomation
-     * @return a SimulationAutomationItemRequestBuilder
+     * @return a {@link SimulationAutomationItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SimulationAutomationItemRequestBuilder bySimulationAutomationId(@jakarta.annotation.Nonnull final String simulationAutomationId) {
@@ -43,7 +44,7 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
         return new SimulationAutomationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new SimulationAutomationsRequestBuilder and sets the default values.
+     * Instantiates a new {@link SimulationAutomationsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/simulationAutomations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new SimulationAutomationsRequestBuilder and sets the default values.
+     * Instantiates a new {@link SimulationAutomationsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of attack simulation automations for a tenant.
-     * @return a SimulationAutomationCollectionResponse
+     * @return a {@link SimulationAutomationCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-simulationautomations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of attack simulation automations for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a SimulationAutomationCollectionResponse
+     * @return a {@link SimulationAutomationCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-simulationautomations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SimulationAutomationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SimulationAutomationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to simulationAutomations for security
      * @param body The request body
-     * @return a SimulationAutomation
+     * @return a {@link SimulationAutomation}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SimulationAutomation post(@jakarta.annotation.Nonnull final SimulationAutomation body) {
@@ -94,20 +97,20 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to simulationAutomations for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a SimulationAutomation
+     * @return a {@link SimulationAutomation}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SimulationAutomation post(@jakarta.annotation.Nonnull final SimulationAutomation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SimulationAutomation::createFromDiscriminatorValue);
     }
     /**
      * Get a list of attack simulation automations for a tenant.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -116,7 +119,7 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of attack simulation automations for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -128,7 +131,7 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to simulationAutomations for security
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SimulationAutomation body) {
@@ -138,12 +141,12 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to simulationAutomations for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SimulationAutomation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/security/attackSimulation/simulationAutomations", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -152,7 +155,7 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a SimulationAutomationsRequestBuilder
+     * @return a {@link SimulationAutomationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SimulationAutomationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -206,7 +209,7 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

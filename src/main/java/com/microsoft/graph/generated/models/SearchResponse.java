@@ -18,7 +18,7 @@ public class SearchResponse implements AdditionalDataHolder, BackedModel, Parsab
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SearchResponse and sets the default values.
+     * Instantiates a new {@link SearchResponse} and sets the default values.
      */
     public SearchResponse() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class SearchResponse implements AdditionalDataHolder, BackedModel, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SearchResponse
+     * @return a {@link SearchResponse}
      */
     @jakarta.annotation.Nonnull
     public static SearchResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class SearchResponse implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class SearchResponse implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class SearchResponse implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -71,7 +71,7 @@ public class SearchResponse implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the hitsContainers property value. A collection of search results.
-     * @return a java.util.List<SearchHitsContainer>
+     * @return a {@link java.util.List<SearchHitsContainer>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SearchHitsContainer> getHitsContainers() {
@@ -79,7 +79,7 @@ public class SearchResponse implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -87,7 +87,7 @@ public class SearchResponse implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the queryAlterationResponse property value. Provides information related to spelling corrections in the alteration response.
-     * @return a AlterationResponse
+     * @return a {@link AlterationResponse}
      */
     @jakarta.annotation.Nullable
     public AlterationResponse getQueryAlterationResponse() {
@@ -95,7 +95,7 @@ public class SearchResponse implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the resultTemplates property value. A dictionary of resultTemplateIds and associated values, which include the name and JSON schema of the result templates.
-     * @return a ResultTemplateDictionary
+     * @return a {@link ResultTemplateDictionary}
      */
     @jakarta.annotation.Nullable
     public ResultTemplateDictionary getResultTemplates() {
@@ -103,7 +103,7 @@ public class SearchResponse implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the searchTerms property value. Contains the search terms sent in the initial search query.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSearchTerms() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BaseItem extends Entity implements Parsable {
     /**
-     * Instantiates a new BaseItem and sets the default values.
+     * Instantiates a new {@link BaseItem} and sets the default values.
      */
     public BaseItem() {
         super();
@@ -18,7 +18,7 @@ public class BaseItem extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BaseItem
+     * @return a {@link BaseItem}
      */
     @jakarta.annotation.Nonnull
     public static BaseItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class BaseItem extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. Identity of the user, device, or application that created the item. Read-only.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -47,7 +47,7 @@ public class BaseItem extends Entity implements Parsable {
     }
     /**
      * Gets the createdByUser property value. Identity of the user who created the item. Read-only.
-     * @return a User
+     * @return a {@link User}
      */
     @jakarta.annotation.Nullable
     public User getCreatedByUser() {
@@ -55,7 +55,7 @@ public class BaseItem extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Date and time of item creation. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -63,7 +63,7 @@ public class BaseItem extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Provides a user-visible description of the item. Optional.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -71,7 +71,7 @@ public class BaseItem extends Entity implements Parsable {
     }
     /**
      * Gets the eTag property value. ETag for the item. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getETag() {
@@ -79,7 +79,7 @@ public class BaseItem extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -99,7 +99,7 @@ public class BaseItem extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. Identity of the user, device, and application that last modified the item. Read-only.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -107,7 +107,7 @@ public class BaseItem extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedByUser property value. Identity of the user who last modified the item. Read-only.
-     * @return a User
+     * @return a {@link User}
      */
     @jakarta.annotation.Nullable
     public User getLastModifiedByUser() {
@@ -115,7 +115,7 @@ public class BaseItem extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. Date and time the item was last modified. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -123,7 +123,7 @@ public class BaseItem extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The name of the item. Read-write.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -131,7 +131,7 @@ public class BaseItem extends Entity implements Parsable {
     }
     /**
      * Gets the parentReference property value. Parent information, if the item has a parent. Read-write.
-     * @return a ItemReference
+     * @return a {@link ItemReference}
      */
     @jakarta.annotation.Nullable
     public ItemReference getParentReference() {
@@ -139,7 +139,7 @@ public class BaseItem extends Entity implements Parsable {
     }
     /**
      * Gets the webUrl property value. URL that either displays the resource in the browser (for Office file formats), or is a direct link to the file (for other formats). Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {

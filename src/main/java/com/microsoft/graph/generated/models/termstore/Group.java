@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Group extends Entity implements Parsable {
     /**
-     * Instantiates a new Group and sets the default values.
+     * Instantiates a new {@link Group} and sets the default values.
      */
     public Group() {
         super();
@@ -19,7 +19,7 @@ public class Group extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Group
+     * @return a {@link Group}
      */
     @jakarta.annotation.Nonnull
     public static Group createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class Group extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Date and time of the group creation. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -36,7 +36,7 @@ public class Group extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description that gives details on the term usage.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -44,7 +44,7 @@ public class Group extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Name of the group.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -52,7 +52,7 @@ public class Group extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -67,7 +67,7 @@ public class Group extends Entity implements Parsable {
     }
     /**
      * Gets the parentSiteId property value. ID of the parent site of this group.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getParentSiteId() {
@@ -75,7 +75,7 @@ public class Group extends Entity implements Parsable {
     }
     /**
      * Gets the scope property value. Returns the type of the group. Possible values are: global, system, and siteCollection.
-     * @return a TermGroupScope
+     * @return a {@link TermGroupScope}
      */
     @jakarta.annotation.Nullable
     public TermGroupScope getScope() {
@@ -83,7 +83,7 @@ public class Group extends Entity implements Parsable {
     }
     /**
      * Gets the sets property value. All sets under the group in a term [store].
-     * @return a java.util.List<Set>
+     * @return a {@link java.util.List<Set>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Set> getSets() {

@@ -18,7 +18,7 @@ public class CrossTenantUserSyncInbound implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new CrossTenantUserSyncInbound and sets the default values.
+     * Instantiates a new {@link CrossTenantUserSyncInbound} and sets the default values.
      */
     public CrossTenantUserSyncInbound() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class CrossTenantUserSyncInbound implements AdditionalDataHolder, BackedM
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CrossTenantUserSyncInbound
+     * @return a {@link CrossTenantUserSyncInbound}
      */
     @jakarta.annotation.Nonnull
     public static CrossTenantUserSyncInbound createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class CrossTenantUserSyncInbound implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class CrossTenantUserSyncInbound implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class CrossTenantUserSyncInbound implements AdditionalDataHolder, BackedM
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,7 +68,7 @@ public class CrossTenantUserSyncInbound implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the isSyncAllowed property value. Defines whether user objects should be synchronized from the partner tenant. false causes any current user synchronization from the source tenant to the target tenant to stop. This property has no impact on existing users who have already been synchronized.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSyncAllowed() {
@@ -76,7 +76,7 @@ public class CrossTenantUserSyncInbound implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

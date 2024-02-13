@@ -19,7 +19,7 @@ public class IdentityGovernance implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new IdentityGovernance and sets the default values.
+     * Instantiates a new {@link IdentityGovernance} and sets the default values.
      */
     public IdentityGovernance() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class IdentityGovernance implements AdditionalDataHolder, BackedModel, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IdentityGovernance
+     * @return a {@link IdentityGovernance}
      */
     @jakarta.annotation.Nonnull
     public static IdentityGovernance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class IdentityGovernance implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the accessReviews property value. The accessReviews property
-     * @return a AccessReviewSet
+     * @return a {@link AccessReviewSet}
      */
     @jakarta.annotation.Nullable
     public AccessReviewSet getAccessReviews() {
@@ -45,7 +45,7 @@ public class IdentityGovernance implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -58,7 +58,7 @@ public class IdentityGovernance implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the appConsent property value. The appConsent property
-     * @return a AppConsentApprovalRoute
+     * @return a {@link AppConsentApprovalRoute}
      */
     @jakarta.annotation.Nullable
     public AppConsentApprovalRoute getAppConsent() {
@@ -66,7 +66,7 @@ public class IdentityGovernance implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -74,7 +74,7 @@ public class IdentityGovernance implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the entitlementManagement property value. The entitlementManagement property
-     * @return a EntitlementManagement
+     * @return a {@link EntitlementManagement}
      */
     @jakarta.annotation.Nullable
     public EntitlementManagement getEntitlementManagement() {
@@ -82,7 +82,7 @@ public class IdentityGovernance implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -98,7 +98,7 @@ public class IdentityGovernance implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the lifecycleWorkflows property value. The lifecycleWorkflows property
-     * @return a LifecycleWorkflowsContainer
+     * @return a {@link LifecycleWorkflowsContainer}
      */
     @jakarta.annotation.Nullable
     public LifecycleWorkflowsContainer getLifecycleWorkflows() {
@@ -106,7 +106,7 @@ public class IdentityGovernance implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -114,7 +114,7 @@ public class IdentityGovernance implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the privilegedAccess property value. The privilegedAccess property
-     * @return a PrivilegedAccessRoot
+     * @return a {@link PrivilegedAccessRoot}
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessRoot getPrivilegedAccess() {
@@ -122,7 +122,7 @@ public class IdentityGovernance implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the termsOfUse property value. The termsOfUse property
-     * @return a TermsOfUseContainer
+     * @return a {@link TermsOfUseContainer}
      */
     @jakarta.annotation.Nullable
     public TermsOfUseContainer getTermsOfUse() {

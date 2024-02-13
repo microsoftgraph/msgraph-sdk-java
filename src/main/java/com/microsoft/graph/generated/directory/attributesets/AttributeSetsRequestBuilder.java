@@ -25,6 +25,7 @@ import java.util.Objects;
 public class AttributeSetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class AttributeSetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the attributeSets property of the microsoft.graph.directory entity.
      * @param attributeSetId The unique identifier of attributeSet
-     * @return a AttributeSetItemRequestBuilder
+     * @return a {@link AttributeSetItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AttributeSetItemRequestBuilder byAttributeSetId(@jakarta.annotation.Nonnull final String attributeSetId) {
@@ -43,7 +44,7 @@ public class AttributeSetsRequestBuilder extends BaseRequestBuilder {
         return new AttributeSetItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new AttributeSetsRequestBuilder and sets the default values.
+     * Instantiates a new {@link AttributeSetsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class AttributeSetsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/attributeSets{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new AttributeSetsRequestBuilder and sets the default values.
+     * Instantiates a new {@link AttributeSetsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class AttributeSetsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the attributeSet objects and their properties.
-     * @return a AttributeSetCollectionResponse
+     * @return a {@link AttributeSetCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-attributesets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class AttributeSetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the attributeSet objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AttributeSetCollectionResponse
+     * @return a {@link AttributeSetCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-attributesets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AttributeSetCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AttributeSetCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new attributeSet object.
      * @param body The request body
-     * @return a AttributeSet
+     * @return a {@link AttributeSet}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/directory-post-attributesets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -95,7 +98,8 @@ public class AttributeSetsRequestBuilder extends BaseRequestBuilder {
      * Create a new attributeSet object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AttributeSet
+     * @return a {@link AttributeSet}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/directory-post-attributesets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -103,13 +107,12 @@ public class AttributeSetsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AttributeSet::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the attributeSet objects and their properties.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -118,7 +121,7 @@ public class AttributeSetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the attributeSet objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +133,7 @@ public class AttributeSetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new attributeSet object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AttributeSet body) {
@@ -140,12 +143,12 @@ public class AttributeSetsRequestBuilder extends BaseRequestBuilder {
      * Create a new attributeSet object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AttributeSet body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/directory/attributeSets", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -154,7 +157,7 @@ public class AttributeSetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AttributeSetsRequestBuilder
+     * @return a {@link AttributeSetsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AttributeSetsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -208,7 +211,7 @@ public class AttributeSetsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

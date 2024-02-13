@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceComplianceScheduledActionForRule extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceComplianceScheduledActionForRule and sets the default values.
+     * Instantiates a new {@link DeviceComplianceScheduledActionForRule} and sets the default values.
      */
     public DeviceComplianceScheduledActionForRule() {
         super();
@@ -20,7 +20,7 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceComplianceScheduledActionForRule
+     * @return a {@link DeviceComplianceScheduledActionForRule}
      */
     @jakarta.annotation.Nonnull
     public static DeviceComplianceScheduledActionForRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements Pa
     }
     /**
      * Gets the ruleName property value. Name of the rule which this scheduled action applies to. Currently scheduled actions are created per policy instead of per rule, thus RuleName is always set to default value PasswordRequired.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRuleName() {
@@ -48,7 +48,7 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements Pa
     }
     /**
      * Gets the scheduledActionConfigurations property value. The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
-     * @return a java.util.List<DeviceComplianceActionItem>
+     * @return a {@link java.util.List<DeviceComplianceActionItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceComplianceActionItem> getScheduledActionConfigurations() {

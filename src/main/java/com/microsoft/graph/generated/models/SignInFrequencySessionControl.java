@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SignInFrequencySessionControl extends ConditionalAccessSessionControl implements Parsable {
     /**
-     * Instantiates a new SignInFrequencySessionControl and sets the default values.
+     * Instantiates a new {@link SignInFrequencySessionControl} and sets the default values.
      */
     public SignInFrequencySessionControl() {
         super();
@@ -18,7 +18,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SignInFrequencySessionControl
+     * @return a {@link SignInFrequencySessionControl}
      */
     @jakarta.annotation.Nonnull
     public static SignInFrequencySessionControl createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,8 +26,8 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
         return new SignInFrequencySessionControl();
     }
     /**
-     * Gets the authenticationType property value. The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue.
-     * @return a SignInFrequencyAuthenticationType
+     * Gets the authenticationType property value. The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue. This property isn't required when using frequencyInterval with the value of timeBased.
+     * @return a {@link SignInFrequencyAuthenticationType}
      */
     @jakarta.annotation.Nullable
     public SignInFrequencyAuthenticationType getAuthenticationType() {
@@ -35,7 +35,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,8 +47,8 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
         return deserializerMap;
     }
     /**
-     * Gets the frequencyInterval property value. The possible values are timeBased, everyTime, unknownFutureValue.
-     * @return a SignInFrequencyInterval
+     * Gets the frequencyInterval property value. The possible values are timeBased, everyTime, unknownFutureValue. Sign-in frequency of everyTime is available for risky users, risky sign-ins, and Intune device enrollment. For more information, see Require reauthentication every time.
+     * @return a {@link SignInFrequencyInterval}
      */
     @jakarta.annotation.Nullable
     public SignInFrequencyInterval getFrequencyInterval() {
@@ -56,7 +56,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
     }
     /**
      * Gets the type property value. Possible values are: days, hours.
-     * @return a SigninFrequencyType
+     * @return a {@link SigninFrequencyType}
      */
     @jakarta.annotation.Nullable
     public SigninFrequencyType getType() {
@@ -64,7 +64,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
     }
     /**
      * Gets the value property value. The number of days or hours.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getValue() {
@@ -83,14 +83,14 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
         writer.writeIntegerValue("value", this.getValue());
     }
     /**
-     * Sets the authenticationType property value. The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue.
+     * Sets the authenticationType property value. The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue. This property isn't required when using frequencyInterval with the value of timeBased.
      * @param value Value to set for the authenticationType property.
      */
     public void setAuthenticationType(@jakarta.annotation.Nullable final SignInFrequencyAuthenticationType value) {
         this.backingStore.set("authenticationType", value);
     }
     /**
-     * Sets the frequencyInterval property value. The possible values are timeBased, everyTime, unknownFutureValue.
+     * Sets the frequencyInterval property value. The possible values are timeBased, everyTime, unknownFutureValue. Sign-in frequency of everyTime is available for risky users, risky sign-ins, and Intune device enrollment. For more information, see Require reauthentication every time.
      * @param value Value to set for the frequencyInterval property.
      */
     public void setFrequencyInterval(@jakarta.annotation.Nullable final SignInFrequencyInterval value) {

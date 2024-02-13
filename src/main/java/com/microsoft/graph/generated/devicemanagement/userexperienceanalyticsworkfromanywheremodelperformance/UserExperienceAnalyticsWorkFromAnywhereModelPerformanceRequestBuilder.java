@@ -25,6 +25,7 @@ import java.util.Objects;
 public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuild
     /**
      * Provides operations to manage the userExperienceAnalyticsWorkFromAnywhereModelPerformance property of the microsoft.graph.deviceManagement entity.
      * @param userExperienceAnalyticsWorkFromAnywhereModelPerformanceId The unique identifier of userExperienceAnalyticsWorkFromAnywhereModelPerformance
-     * @return a UserExperienceAnalyticsWorkFromAnywhereModelPerformanceItemRequestBuilder
+     * @return a {@link UserExperienceAnalyticsWorkFromAnywhereModelPerformanceItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsWorkFromAnywhereModelPerformanceItemRequestBuilder byUserExperienceAnalyticsWorkFromAnywhereModelPerformanceId(@jakarta.annotation.Nonnull final String userExperienceAnalyticsWorkFromAnywhereModelPerformanceId) {
@@ -43,7 +44,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuild
         return new UserExperienceAnalyticsWorkFromAnywhereModelPerformanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuild
         super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsWorkFromAnywhereModelPerformance{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuild
     }
     /**
      * The user experience analytics work from anywhere model performance
-     * @return a UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse
+     * @return a {@link UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse get() {
@@ -69,20 +71,21 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuild
     /**
      * The user experience analytics work from anywhere model performance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse
+     * @return a {@link UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to userExperienceAnalyticsWorkFromAnywhereModelPerformance for deviceManagement
      * @param body The request body
-     * @return a UserExperienceAnalyticsWorkFromAnywhereModelPerformance
+     * @return a {@link UserExperienceAnalyticsWorkFromAnywhereModelPerformance}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsWorkFromAnywhereModelPerformance post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereModelPerformance body) {
@@ -92,20 +95,20 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuild
      * Create new navigation property to userExperienceAnalyticsWorkFromAnywhereModelPerformance for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UserExperienceAnalyticsWorkFromAnywhereModelPerformance
+     * @return a {@link UserExperienceAnalyticsWorkFromAnywhereModelPerformance}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsWorkFromAnywhereModelPerformance post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereModelPerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsWorkFromAnywhereModelPerformance::createFromDiscriminatorValue);
     }
     /**
      * The user experience analytics work from anywhere model performance
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -114,7 +117,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuild
     /**
      * The user experience analytics work from anywhere model performance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -126,7 +129,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuild
     /**
      * Create new navigation property to userExperienceAnalyticsWorkFromAnywhereModelPerformance for deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereModelPerformance body) {
@@ -136,12 +139,12 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuild
      * Create new navigation property to userExperienceAnalyticsWorkFromAnywhereModelPerformance for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereModelPerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceManagement/userExperienceAnalyticsWorkFromAnywhereModelPerformance", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -150,7 +153,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder
+     * @return a {@link UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -204,7 +207,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuild
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

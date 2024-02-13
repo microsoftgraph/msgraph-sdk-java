@@ -20,7 +20,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GenerateDownloadUriRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new GenerateDownloadUriRequestBuilder and sets the default values.
+     * Instantiates a new {@link GenerateDownloadUriRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -28,7 +28,7 @@ public class GenerateDownloadUriRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/accessReviews/historyDefinitions/{accessReviewHistoryDefinition%2Did}/instances/{accessReviewHistoryInstance%2Did}/generateDownloadUri", pathParameters);
     }
     /**
-     * Instantiates a new GenerateDownloadUriRequestBuilder and sets the default values.
+     * Instantiates a new {@link GenerateDownloadUriRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,7 +37,8 @@ public class GenerateDownloadUriRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Generates a URI for an accessReviewHistoryInstance object the status for which is done. Each URI can be used to retrieve the instance's review history data. Each URI is valid for 24 hours and can be retrieved by fetching the downloadUri property from the accessReviewHistoryInstance object.
-     * @return a AccessReviewHistoryInstance
+     * @return a {@link AccessReviewHistoryInstance}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewhistoryinstance-generatedownloaduri?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -47,20 +48,20 @@ public class GenerateDownloadUriRequestBuilder extends BaseRequestBuilder {
     /**
      * Generates a URI for an accessReviewHistoryInstance object the status for which is done. Each URI can be used to retrieve the instance's review history data. Each URI is valid for 24 hours and can be retrieved by fetching the downloadUri property from the accessReviewHistoryInstance object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AccessReviewHistoryInstance
+     * @return a {@link AccessReviewHistoryInstance}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewhistoryinstance-generatedownloaduri?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessReviewHistoryInstance post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewHistoryInstance::createFromDiscriminatorValue);
     }
     /**
      * Generates a URI for an accessReviewHistoryInstance object the status for which is done. Each URI can be used to retrieve the instance's review history data. Each URI is valid for 24 hours and can be retrieved by fetching the downloadUri property from the accessReviewHistoryInstance object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation() {
@@ -69,7 +70,7 @@ public class GenerateDownloadUriRequestBuilder extends BaseRequestBuilder {
     /**
      * Generates a URI for an accessReviewHistoryInstance object the status for which is done. Each URI can be used to retrieve the instance's review history data. Each URI is valid for 24 hours and can be retrieved by fetching the downloadUri property from the accessReviewHistoryInstance object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -81,7 +82,7 @@ public class GenerateDownloadUriRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GenerateDownloadUriRequestBuilder
+     * @return a {@link GenerateDownloadUriRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GenerateDownloadUriRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

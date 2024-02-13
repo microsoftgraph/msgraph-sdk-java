@@ -22,7 +22,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new BookingSchedulingPolicy and sets the default values.
+     * Instantiates a new {@link BookingSchedulingPolicy} and sets the default values.
      */
     public BookingSchedulingPolicy() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -31,7 +31,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, BackedMode
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BookingSchedulingPolicy
+     * @return a {@link BookingSchedulingPolicy}
      */
     @jakarta.annotation.Nonnull
     public static BookingSchedulingPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -53,7 +53,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the allowStaffSelection property value. True if to allow customers to choose a specific person for the booking.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowStaffSelection() {
@@ -61,7 +61,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -69,7 +69,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, BackedMode
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -84,7 +84,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the maximumAdvance property value. Maximum number of days in advance that a booking can be made. It follows the ISO 8601 format.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getMaximumAdvance() {
@@ -92,7 +92,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the minimumLeadTime property value. The minimum amount of time before which bookings and cancellations must be made. It follows the ISO 8601 format.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getMinimumLeadTime() {
@@ -100,7 +100,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -108,7 +108,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the sendConfirmationsToOwner property value. True to notify the business via email when a booking is created or changed. Use the email address specified in the email property of the bookingBusiness entity for the business.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSendConfirmationsToOwner() {
@@ -116,7 +116,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the timeSlotInterval property value. Duration of each time slot, denoted in ISO 8601 format.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getTimeSlotInterval() {

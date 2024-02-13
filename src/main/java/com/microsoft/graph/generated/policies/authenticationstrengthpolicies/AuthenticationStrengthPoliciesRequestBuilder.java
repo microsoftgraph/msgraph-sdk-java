@@ -25,6 +25,7 @@ import java.util.Objects;
 public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
     /**
      * Provides operations to manage the authenticationStrengthPolicies property of the microsoft.graph.policyRoot entity.
      * @param authenticationStrengthPolicyId The unique identifier of authenticationStrengthPolicy
-     * @return a AuthenticationStrengthPolicyItemRequestBuilder
+     * @return a {@link AuthenticationStrengthPolicyItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AuthenticationStrengthPolicyItemRequestBuilder byAuthenticationStrengthPolicyId(@jakarta.annotation.Nonnull final String authenticationStrengthPolicyId) {
@@ -43,7 +44,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         return new AuthenticationStrengthPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new AuthenticationStrengthPoliciesRequestBuilder and sets the default values.
+     * Instantiates a new {@link AuthenticationStrengthPoliciesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/policies/authenticationStrengthPolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new AuthenticationStrengthPoliciesRequestBuilder and sets the default values.
+     * Instantiates a new {@link AuthenticationStrengthPoliciesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
     }
     /**
      * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
-     * @return a AuthenticationStrengthPolicyCollectionResponse
+     * @return a {@link AuthenticationStrengthPolicyCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-list-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
     /**
      * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AuthenticationStrengthPolicyCollectionResponse
+     * @return a {@link AuthenticationStrengthPolicyCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-list-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationStrengthPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationStrengthPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new custom authenticationStrengthPolicy object.
      * @param body The request body
-     * @return a AuthenticationStrengthPolicy
+     * @return a {@link AuthenticationStrengthPolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-post-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -95,7 +98,8 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
      * Create a new custom authenticationStrengthPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AuthenticationStrengthPolicy
+     * @return a {@link AuthenticationStrengthPolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-post-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -103,13 +107,12 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationStrengthPolicy::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -118,7 +121,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
     /**
      * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +133,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
     /**
      * Create a new custom authenticationStrengthPolicy object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AuthenticationStrengthPolicy body) {
@@ -140,12 +143,12 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
      * Create a new custom authenticationStrengthPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AuthenticationStrengthPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/policies/authenticationStrengthPolicies", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -154,7 +157,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AuthenticationStrengthPoliciesRequestBuilder
+     * @return a {@link AuthenticationStrengthPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AuthenticationStrengthPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -208,7 +211,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

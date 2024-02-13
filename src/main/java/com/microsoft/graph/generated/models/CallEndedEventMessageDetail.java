@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * Instantiates a new CallEndedEventMessageDetail and sets the default values.
+     * Instantiates a new {@link CallEndedEventMessageDetail} and sets the default values.
      */
     public CallEndedEventMessageDetail() {
         super();
@@ -19,7 +19,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CallEndedEventMessageDetail
+     * @return a {@link CallEndedEventMessageDetail}
      */
     @jakarta.annotation.Nonnull
     public static CallEndedEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
     }
     /**
      * Gets the callDuration property value. Duration of the call.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getCallDuration() {
@@ -36,7 +36,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
     }
     /**
      * Gets the callEventType property value. Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
-     * @return a TeamworkCallEventType
+     * @return a {@link TeamworkCallEventType}
      */
     @jakarta.annotation.Nullable
     public TeamworkCallEventType getCallEventType() {
@@ -44,7 +44,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
     }
     /**
      * Gets the callId property value. Unique identifier of the call.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCallId() {
@@ -52,7 +52,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
     }
     /**
      * Gets the callParticipants property value. List of call participants.
-     * @return a java.util.List<CallParticipantInfo>
+     * @return a {@link java.util.List<CallParticipantInfo>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CallParticipantInfo> getCallParticipants() {
@@ -60,7 +60,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -74,7 +74,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
     }
     /**
      * Gets the initiator property value. Initiator of the event.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {

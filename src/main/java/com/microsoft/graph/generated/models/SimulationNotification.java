@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SimulationNotification extends BaseEndUserNotification implements Parsable {
     /**
-     * Instantiates a new SimulationNotification and sets the default values.
+     * Instantiates a new {@link SimulationNotification} and sets the default values.
      */
     public SimulationNotification() {
         super();
@@ -18,7 +18,7 @@ public class SimulationNotification extends BaseEndUserNotification implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SimulationNotification
+     * @return a {@link SimulationNotification}
      */
     @jakarta.annotation.Nonnull
     public static SimulationNotification createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class SimulationNotification extends BaseEndUserNotification implements P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class SimulationNotification extends BaseEndUserNotification implements P
     }
     /**
      * Gets the targettedUserType property value. Target user type. Possible values are: unknown, clicked, compromised, allUsers, unknownFutureValue.
-     * @return a TargettedUserType
+     * @return a {@link TargettedUserType}
      */
     @jakarta.annotation.Nullable
     public TargettedUserType getTargettedUserType() {

@@ -25,6 +25,7 @@ import java.util.Objects;
 public class BillingRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the manifests property of the microsoft.graph.partners.billing.billing entity.
+     * @return a {@link ManifestsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManifestsRequestBuilder manifests() {
@@ -32,6 +33,7 @@ public class BillingRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the operations property of the microsoft.graph.partners.billing.billing entity.
+     * @return a {@link OperationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OperationsRequestBuilder operations() {
@@ -39,13 +41,14 @@ public class BillingRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the usage property of the microsoft.graph.partners.billing.billing entity.
+     * @return a {@link UsageRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UsageRequestBuilder usage() {
         return new UsageRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new BillingRequestBuilder and sets the default values.
+     * Instantiates a new {@link BillingRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -53,7 +56,7 @@ public class BillingRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/partners/billing{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new BillingRequestBuilder and sets the default values.
+     * Instantiates a new {@link BillingRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -62,6 +65,7 @@ public class BillingRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property billing for reports
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -69,17 +73,18 @@ public class BillingRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property billing for reports
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Represents billing details for billed and unbilled data.
-     * @return a Billing
+     * @return a {@link Billing}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Billing get() {
@@ -88,20 +93,21 @@ public class BillingRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents billing details for billed and unbilled data.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Billing
+     * @return a {@link Billing}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Billing get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Billing::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property billing in reports
      * @param body The request body
-     * @return a Billing
+     * @return a {@link Billing}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Billing patch(@jakarta.annotation.Nonnull final Billing body) {
@@ -111,20 +117,20 @@ public class BillingRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property billing in reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Billing
+     * @return a {@link Billing}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Billing patch(@jakarta.annotation.Nonnull final Billing body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Billing::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property billing for reports
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -133,18 +139,18 @@ public class BillingRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property billing for reports
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/reports/partners/billing", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Represents billing details for billed and unbilled data.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -153,7 +159,7 @@ public class BillingRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents billing details for billed and unbilled data.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -165,7 +171,7 @@ public class BillingRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property billing in reports
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Billing body) {
@@ -175,12 +181,12 @@ public class BillingRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property billing in reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Billing body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/reports/partners/billing", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -189,7 +195,7 @@ public class BillingRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a BillingRequestBuilder
+     * @return a {@link BillingRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BillingRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -219,7 +225,7 @@ public class BillingRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

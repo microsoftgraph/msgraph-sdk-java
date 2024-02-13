@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse and sets the default values.
+     * Instantiates a new {@link PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse} and sets the default values.
      */
     public PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse ex
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse
+     * @return a {@link PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse ex
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse ex
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<PrivilegedAccessGroupAssignmentScheduleRequest>
+     * @return a {@link java.util.List<PrivilegedAccessGroupAssignmentScheduleRequest>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrivilegedAccessGroupAssignmentScheduleRequest> getValue() {

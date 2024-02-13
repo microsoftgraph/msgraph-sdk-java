@@ -18,7 +18,7 @@ public class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new VisualInfo and sets the default values.
+     * Instantiates a new {@link VisualInfo} and sets the default values.
      */
     public VisualInfo() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a VisualInfo
+     * @return a {@link VisualInfo}
      */
     @jakarta.annotation.Nonnull
     public static VisualInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the attribution property value. Optional. JSON object used to represent an icon which represents the application used to generate the activity
-     * @return a ImageInfo
+     * @return a {@link ImageInfo}
      */
     @jakarta.annotation.Nullable
     public ImageInfo getAttribution() {
@@ -57,7 +57,7 @@ public class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backgroundColor property value. Optional. Background color used to render the activity in the UI - brand color for the application source of the activity. Must be a valid hex color
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBackgroundColor() {
@@ -65,7 +65,7 @@ public class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -73,7 +73,7 @@ public class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the content property value. Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getContent() {
@@ -81,7 +81,7 @@ public class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the description property value. Optional. Longer text description of the user's unique activity (example: document name, first sentence, and/or metadata)
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -89,7 +89,7 @@ public class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the displayText property value. Required. Short text description of the user's unique activity (for example, document name in cases where an activity refers to document creation)
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayText() {
@@ -97,7 +97,7 @@ public class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -112,7 +112,7 @@ public class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

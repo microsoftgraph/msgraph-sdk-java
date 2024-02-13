@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceLocalCredential extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceLocalCredential and sets the default values.
+     * Instantiates a new {@link DeviceLocalCredential} and sets the default values.
      */
     public DeviceLocalCredential() {
         super();
@@ -18,7 +18,7 @@ public class DeviceLocalCredential extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceLocalCredential
+     * @return a {@link DeviceLocalCredential}
      */
     @jakarta.annotation.Nonnull
     public static DeviceLocalCredential createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class DeviceLocalCredential extends Entity implements Parsable {
     }
     /**
      * Gets the accountName property value. The name of the local admin account for which LAPS is enabled.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAccountName() {
@@ -35,7 +35,7 @@ public class DeviceLocalCredential extends Entity implements Parsable {
     }
     /**
      * Gets the accountSid property value. The SID of the local admin account for which LAPS is enabled.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAccountSid() {
@@ -43,7 +43,7 @@ public class DeviceLocalCredential extends Entity implements Parsable {
     }
     /**
      * Gets the backupDateTime property value. When the local administrator account credential for the device object was backed up to Azure Active Directory.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getBackupDateTime() {
@@ -51,7 +51,7 @@ public class DeviceLocalCredential extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -64,7 +64,7 @@ public class DeviceLocalCredential extends Entity implements Parsable {
     }
     /**
      * Gets the passwordBase64 property value. The password for the local administrator account that is backed up to Azure Active Directory and returned as a Base64 encoded value.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPasswordBase64() {

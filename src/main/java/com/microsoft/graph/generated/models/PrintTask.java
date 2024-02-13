@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintTask extends Entity implements Parsable {
     /**
-     * Instantiates a new PrintTask and sets the default values.
+     * Instantiates a new {@link PrintTask} and sets the default values.
      */
     public PrintTask() {
         super();
@@ -17,7 +17,7 @@ public class PrintTask extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrintTask
+     * @return a {@link PrintTask}
      */
     @jakarta.annotation.Nonnull
     public static PrintTask createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class PrintTask extends Entity implements Parsable {
     }
     /**
      * Gets the definition property value. The definition property
-     * @return a PrintTaskDefinition
+     * @return a {@link PrintTaskDefinition}
      */
     @jakarta.annotation.Nullable
     public PrintTaskDefinition getDefinition() {
@@ -34,7 +34,7 @@ public class PrintTask extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,7 +47,7 @@ public class PrintTask extends Entity implements Parsable {
     }
     /**
      * Gets the parentUrl property value. The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/v1.0/print/printers/{printerId}/jobs/{jobId}. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getParentUrl() {
@@ -55,7 +55,7 @@ public class PrintTask extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a PrintTaskStatus
+     * @return a {@link PrintTaskStatus}
      */
     @jakarta.annotation.Nullable
     public PrintTaskStatus getStatus() {
@@ -63,7 +63,7 @@ public class PrintTask extends Entity implements Parsable {
     }
     /**
      * Gets the trigger property value. The trigger property
-     * @return a PrintTaskTrigger
+     * @return a {@link PrintTaskTrigger}
      */
     @jakarta.annotation.Nullable
     public PrintTaskTrigger getTrigger() {

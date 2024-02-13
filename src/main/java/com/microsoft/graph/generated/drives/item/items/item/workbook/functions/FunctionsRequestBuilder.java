@@ -388,6 +388,7 @@ import java.util.Objects;
 public class FunctionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the abs method.
+     * @return a {@link AbsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AbsRequestBuilder abs() {
@@ -395,6 +396,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the accrInt method.
+     * @return a {@link AccrIntRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AccrIntRequestBuilder accrInt() {
@@ -402,6 +404,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the accrIntM method.
+     * @return a {@link AccrIntMRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AccrIntMRequestBuilder accrIntM() {
@@ -409,6 +412,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the acos method.
+     * @return a {@link AcosRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AcosRequestBuilder acos() {
@@ -416,6 +420,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the acosh method.
+     * @return a {@link AcoshRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AcoshRequestBuilder acosh() {
@@ -423,6 +428,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the acot method.
+     * @return a {@link AcotRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AcotRequestBuilder acot() {
@@ -430,6 +436,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the acoth method.
+     * @return a {@link AcothRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AcothRequestBuilder acoth() {
@@ -437,6 +444,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the amorDegrc method.
+     * @return a {@link AmorDegrcRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AmorDegrcRequestBuilder amorDegrc() {
@@ -444,6 +452,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the amorLinc method.
+     * @return a {@link AmorLincRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AmorLincRequestBuilder amorLinc() {
@@ -451,6 +460,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the and method.
+     * @return a {@link AndRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AndRequestBuilder and() {
@@ -458,6 +468,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the arabic method.
+     * @return a {@link ArabicRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ArabicRequestBuilder arabic() {
@@ -465,6 +476,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the areas method.
+     * @return a {@link AreasRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AreasRequestBuilder areas() {
@@ -472,6 +484,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the asc method.
+     * @return a {@link AscRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AscRequestBuilder asc() {
@@ -479,6 +492,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the asin method.
+     * @return a {@link AsinRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AsinRequestBuilder asin() {
@@ -486,6 +500,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the asinh method.
+     * @return a {@link AsinhRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AsinhRequestBuilder asinh() {
@@ -493,6 +508,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the atan method.
+     * @return a {@link AtanRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AtanRequestBuilder atan() {
@@ -500,6 +516,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the atan2 method.
+     * @return a {@link Atan2RequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public Atan2RequestBuilder atan2() {
@@ -507,6 +524,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the atanh method.
+     * @return a {@link AtanhRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AtanhRequestBuilder atanh() {
@@ -514,6 +532,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the aveDev method.
+     * @return a {@link AveDevRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AveDevRequestBuilder aveDev() {
@@ -521,6 +540,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the average method.
+     * @return a {@link AverageRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AverageRequestBuilder average() {
@@ -528,6 +548,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the averageA method.
+     * @return a {@link AverageARequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AverageARequestBuilder averageA() {
@@ -535,6 +556,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the averageIf method.
+     * @return a {@link AverageIfRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AverageIfRequestBuilder averageIf() {
@@ -542,6 +564,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the averageIfs method.
+     * @return a {@link AverageIfsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AverageIfsRequestBuilder averageIfs() {
@@ -549,6 +572,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the bahtText method.
+     * @return a {@link BahtTextRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BahtTextRequestBuilder bahtText() {
@@ -556,6 +580,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the base method.
+     * @return a {@link BaseRequestBuilderEscaped}
      */
     @jakarta.annotation.Nonnull
     public BaseRequestBuilderEscaped base() {
@@ -563,6 +588,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the besselI method.
+     * @return a {@link BesselIRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BesselIRequestBuilder besselI() {
@@ -570,6 +596,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the besselJ method.
+     * @return a {@link BesselJRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BesselJRequestBuilder besselJ() {
@@ -577,6 +604,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the besselK method.
+     * @return a {@link BesselKRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BesselKRequestBuilder besselK() {
@@ -584,6 +612,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the besselY method.
+     * @return a {@link BesselYRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BesselYRequestBuilder besselY() {
@@ -591,6 +620,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the beta_Dist method.
+     * @return a {@link BetaDistRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BetaDistRequestBuilder betaDist() {
@@ -598,6 +628,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the beta_Inv method.
+     * @return a {@link BetaInvRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BetaInvRequestBuilder betaInv() {
@@ -605,6 +636,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the bin2Dec method.
+     * @return a {@link Bin2DecRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public Bin2DecRequestBuilder bin2Dec() {
@@ -612,6 +644,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the bin2Hex method.
+     * @return a {@link Bin2HexRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public Bin2HexRequestBuilder bin2Hex() {
@@ -619,6 +652,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the bin2Oct method.
+     * @return a {@link Bin2OctRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public Bin2OctRequestBuilder bin2Oct() {
@@ -626,6 +660,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the binom_Dist method.
+     * @return a {@link BinomDistRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BinomDistRequestBuilder binomDist() {
@@ -633,6 +668,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the binom_Dist_Range method.
+     * @return a {@link BinomDistRangeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BinomDistRangeRequestBuilder binomDistRange() {
@@ -640,6 +676,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the binom_Inv method.
+     * @return a {@link BinomInvRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BinomInvRequestBuilder binomInv() {
@@ -647,6 +684,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the bitand method.
+     * @return a {@link BitandRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BitandRequestBuilder bitand() {
@@ -654,6 +692,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the bitlshift method.
+     * @return a {@link BitlshiftRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BitlshiftRequestBuilder bitlshift() {
@@ -661,6 +700,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the bitor method.
+     * @return a {@link BitorRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BitorRequestBuilder bitor() {
@@ -668,6 +708,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the bitrshift method.
+     * @return a {@link BitrshiftRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BitrshiftRequestBuilder bitrshift() {
@@ -675,6 +716,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the bitxor method.
+     * @return a {@link BitxorRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BitxorRequestBuilder bitxor() {
@@ -682,6 +724,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the ceiling_Math method.
+     * @return a {@link CeilingMathRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CeilingMathRequestBuilder ceilingMath() {
@@ -689,6 +732,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the ceiling_Precise method.
+     * @return a {@link CeilingPreciseRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CeilingPreciseRequestBuilder ceilingPrecise() {
@@ -696,6 +740,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the char method.
+     * @return a {@link CharRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CharRequestBuilder charEscaped() {
@@ -703,6 +748,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the chiSq_Dist method.
+     * @return a {@link ChiSqDistRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ChiSqDistRequestBuilder chiSqDist() {
@@ -710,6 +756,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the chiSq_Dist_RT method.
+     * @return a {@link ChiSqDistRTRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ChiSqDistRTRequestBuilder chiSqDistRT() {
@@ -717,6 +764,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the chiSq_Inv method.
+     * @return a {@link ChiSqInvRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ChiSqInvRequestBuilder chiSqInv() {
@@ -724,6 +772,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the chiSq_Inv_RT method.
+     * @return a {@link ChiSqInvRTRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ChiSqInvRTRequestBuilder chiSqInvRT() {
@@ -731,6 +780,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the choose method.
+     * @return a {@link ChooseRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ChooseRequestBuilder choose() {
@@ -738,6 +788,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the clean method.
+     * @return a {@link CleanRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CleanRequestBuilder clean() {
@@ -745,6 +796,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the code method.
+     * @return a {@link CodeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CodeRequestBuilder code() {
@@ -752,6 +804,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the columns method.
+     * @return a {@link ColumnsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ColumnsRequestBuilder columns() {
@@ -759,6 +812,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the combin method.
+     * @return a {@link CombinRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CombinRequestBuilder combin() {
@@ -766,6 +820,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the combina method.
+     * @return a {@link CombinaRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CombinaRequestBuilder combina() {
@@ -773,6 +828,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the complex method.
+     * @return a {@link ComplexRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ComplexRequestBuilder complex() {
@@ -780,6 +836,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the concatenate method.
+     * @return a {@link ConcatenateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ConcatenateRequestBuilder concatenate() {
@@ -787,6 +844,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the confidence_Norm method.
+     * @return a {@link ConfidenceNormRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ConfidenceNormRequestBuilder confidenceNorm() {
@@ -794,6 +852,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the confidence_T method.
+     * @return a {@link ConfidenceTRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ConfidenceTRequestBuilder confidenceT() {
@@ -801,6 +860,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the convert method.
+     * @return a {@link ConvertRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ConvertRequestBuilder convert() {
@@ -808,6 +868,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the cos method.
+     * @return a {@link CosRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CosRequestBuilder cos() {
@@ -815,6 +876,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the cosh method.
+     * @return a {@link CoshRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CoshRequestBuilder cosh() {
@@ -822,6 +884,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the cot method.
+     * @return a {@link CotRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CotRequestBuilder cot() {
@@ -829,6 +892,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the coth method.
+     * @return a {@link CothRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CothRequestBuilder coth() {
@@ -836,6 +900,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the count method.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -843,6 +908,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the countA method.
+     * @return a {@link CountARequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountARequestBuilder countA() {
@@ -850,6 +916,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the countBlank method.
+     * @return a {@link CountBlankRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountBlankRequestBuilder countBlank() {
@@ -857,6 +924,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the countIf method.
+     * @return a {@link CountIfRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountIfRequestBuilder countIf() {
@@ -864,6 +932,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the countIfs method.
+     * @return a {@link CountIfsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountIfsRequestBuilder countIfs() {
@@ -871,6 +940,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the coupDayBs method.
+     * @return a {@link CoupDayBsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CoupDayBsRequestBuilder coupDayBs() {
@@ -878,6 +948,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the coupDays method.
+     * @return a {@link CoupDaysRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CoupDaysRequestBuilder coupDays() {
@@ -885,6 +956,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the coupDaysNc method.
+     * @return a {@link CoupDaysNcRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CoupDaysNcRequestBuilder coupDaysNc() {
@@ -892,6 +964,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the coupNcd method.
+     * @return a {@link CoupNcdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CoupNcdRequestBuilder coupNcd() {
@@ -899,6 +972,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the coupNum method.
+     * @return a {@link CoupNumRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CoupNumRequestBuilder coupNum() {
@@ -906,6 +980,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the coupPcd method.
+     * @return a {@link CoupPcdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CoupPcdRequestBuilder coupPcd() {
@@ -913,6 +988,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the csc method.
+     * @return a {@link CscRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CscRequestBuilder csc() {
@@ -920,6 +996,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the csch method.
+     * @return a {@link CschRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CschRequestBuilder csch() {
@@ -927,6 +1004,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the cumIPmt method.
+     * @return a {@link CumIPmtRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CumIPmtRequestBuilder cumIPmt() {
@@ -934,6 +1012,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the cumPrinc method.
+     * @return a {@link CumPrincRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CumPrincRequestBuilder cumPrinc() {
@@ -941,6 +1020,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the date method.
+     * @return a {@link DateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DateRequestBuilder date() {
@@ -948,6 +1028,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the datevalue method.
+     * @return a {@link DatevalueRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DatevalueRequestBuilder datevalue() {
@@ -955,6 +1036,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the daverage method.
+     * @return a {@link DaverageRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DaverageRequestBuilder daverage() {
@@ -962,6 +1044,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the day method.
+     * @return a {@link DayRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DayRequestBuilder day() {
@@ -969,6 +1052,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the days method.
+     * @return a {@link DaysRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DaysRequestBuilder days() {
@@ -976,6 +1060,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the days360 method.
+     * @return a {@link Days360RequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public Days360RequestBuilder days360() {
@@ -983,6 +1068,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the db method.
+     * @return a {@link DbRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DbRequestBuilder db() {
@@ -990,6 +1076,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the dbcs method.
+     * @return a {@link DbcsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DbcsRequestBuilder dbcs() {
@@ -997,6 +1084,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the dcount method.
+     * @return a {@link DcountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DcountRequestBuilder dcount() {
@@ -1004,6 +1092,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the dcountA method.
+     * @return a {@link DcountARequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DcountARequestBuilder dcountA() {
@@ -1011,6 +1100,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the ddb method.
+     * @return a {@link DdbRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DdbRequestBuilder ddb() {
@@ -1018,6 +1108,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the dec2Bin method.
+     * @return a {@link Dec2BinRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public Dec2BinRequestBuilder dec2Bin() {
@@ -1025,6 +1116,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the dec2Hex method.
+     * @return a {@link Dec2HexRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public Dec2HexRequestBuilder dec2Hex() {
@@ -1032,6 +1124,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the dec2Oct method.
+     * @return a {@link Dec2OctRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public Dec2OctRequestBuilder dec2Oct() {
@@ -1039,6 +1132,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the decimal method.
+     * @return a {@link DecimalRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DecimalRequestBuilder decimal() {
@@ -1046,6 +1140,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the degrees method.
+     * @return a {@link DegreesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DegreesRequestBuilder degrees() {
@@ -1053,6 +1148,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the delta method.
+     * @return a {@link DeltaRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeltaRequestBuilder delta() {
@@ -1060,6 +1156,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the devSq method.
+     * @return a {@link DevSqRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DevSqRequestBuilder devSq() {
@@ -1067,6 +1164,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the dget method.
+     * @return a {@link DgetRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DgetRequestBuilder dget() {
@@ -1074,6 +1172,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the disc method.
+     * @return a {@link DiscRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DiscRequestBuilder disc() {
@@ -1081,6 +1180,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the dmax method.
+     * @return a {@link DmaxRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DmaxRequestBuilder dmax() {
@@ -1088,6 +1188,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the dmin method.
+     * @return a {@link DminRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DminRequestBuilder dmin() {
@@ -1095,6 +1196,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the dollar method.
+     * @return a {@link DollarRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DollarRequestBuilder dollar() {
@@ -1102,6 +1204,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the dollarDe method.
+     * @return a {@link DollarDeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DollarDeRequestBuilder dollarDe() {
@@ -1109,6 +1212,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the dollarFr method.
+     * @return a {@link DollarFrRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DollarFrRequestBuilder dollarFr() {
@@ -1116,6 +1220,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the dproduct method.
+     * @return a {@link DproductRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DproductRequestBuilder dproduct() {
@@ -1123,6 +1228,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the dstDev method.
+     * @return a {@link DstDevRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DstDevRequestBuilder dstDev() {
@@ -1130,6 +1236,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the dstDevP method.
+     * @return a {@link DstDevPRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DstDevPRequestBuilder dstDevP() {
@@ -1137,6 +1244,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the dsum method.
+     * @return a {@link DsumRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DsumRequestBuilder dsum() {
@@ -1144,6 +1252,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the duration method.
+     * @return a {@link DurationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DurationRequestBuilder duration() {
@@ -1151,6 +1260,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the dvar method.
+     * @return a {@link DvarRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DvarRequestBuilder dvar() {
@@ -1158,6 +1268,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the dvarP method.
+     * @return a {@link DvarPRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DvarPRequestBuilder dvarP() {
@@ -1165,6 +1276,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the ecma_Ceiling method.
+     * @return a {@link EcmaCeilingRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EcmaCeilingRequestBuilder ecmaCeiling() {
@@ -1172,6 +1284,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the edate method.
+     * @return a {@link EdateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EdateRequestBuilder edate() {
@@ -1179,6 +1292,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the effect method.
+     * @return a {@link EffectRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EffectRequestBuilder effect() {
@@ -1186,6 +1300,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the eoMonth method.
+     * @return a {@link EoMonthRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EoMonthRequestBuilder eoMonth() {
@@ -1193,6 +1308,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the erf method.
+     * @return a {@link ErfRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ErfRequestBuilder erf() {
@@ -1200,6 +1316,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the erfC method.
+     * @return a {@link ErfCRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ErfCRequestBuilder erfC() {
@@ -1207,6 +1324,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the erfC_Precise method.
+     * @return a {@link ErfCPreciseRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ErfCPreciseRequestBuilder erfCPrecise() {
@@ -1214,6 +1332,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the erf_Precise method.
+     * @return a {@link ErfPreciseRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ErfPreciseRequestBuilder erfPrecise() {
@@ -1221,6 +1340,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the error_Type method.
+     * @return a {@link ErrorTypeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ErrorTypeRequestBuilder errorType() {
@@ -1228,6 +1348,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the even method.
+     * @return a {@link EvenRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EvenRequestBuilder even() {
@@ -1235,6 +1356,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the exact method.
+     * @return a {@link ExactRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExactRequestBuilder exact() {
@@ -1242,6 +1364,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the exp method.
+     * @return a {@link ExpRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExpRequestBuilder exp() {
@@ -1249,6 +1372,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the expon_Dist method.
+     * @return a {@link ExponDistRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExponDistRequestBuilder exponDist() {
@@ -1256,6 +1380,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the fact method.
+     * @return a {@link FactRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FactRequestBuilder fact() {
@@ -1263,6 +1388,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the factDouble method.
+     * @return a {@link FactDoubleRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FactDoubleRequestBuilder factDouble() {
@@ -1270,6 +1396,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the false method.
+     * @return a {@link FalseRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FalseRequestBuilder falseEscaped() {
@@ -1277,6 +1404,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the f_Dist method.
+     * @return a {@link FDistRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FDistRequestBuilder fDist() {
@@ -1284,6 +1412,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the f_Dist_RT method.
+     * @return a {@link FDistRTRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FDistRTRequestBuilder fDistRT() {
@@ -1291,6 +1420,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the find method.
+     * @return a {@link FindRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FindRequestBuilder find() {
@@ -1298,6 +1428,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the findB method.
+     * @return a {@link FindBRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FindBRequestBuilder findB() {
@@ -1305,6 +1436,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the f_Inv method.
+     * @return a {@link FInvRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FInvRequestBuilder fInv() {
@@ -1312,6 +1444,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the f_Inv_RT method.
+     * @return a {@link FInvRTRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FInvRTRequestBuilder fInvRT() {
@@ -1319,6 +1452,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the fisher method.
+     * @return a {@link FisherRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FisherRequestBuilder fisher() {
@@ -1326,6 +1460,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the fisherInv method.
+     * @return a {@link FisherInvRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FisherInvRequestBuilder fisherInv() {
@@ -1333,6 +1468,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the fixed method.
+     * @return a {@link FixedRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FixedRequestBuilder fixed() {
@@ -1340,6 +1476,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the floor_Math method.
+     * @return a {@link FloorMathRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FloorMathRequestBuilder floorMath() {
@@ -1347,6 +1484,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the floor_Precise method.
+     * @return a {@link FloorPreciseRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FloorPreciseRequestBuilder floorPrecise() {
@@ -1354,6 +1492,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the fv method.
+     * @return a {@link FvRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FvRequestBuilder fv() {
@@ -1361,6 +1500,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the fvschedule method.
+     * @return a {@link FvscheduleRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FvscheduleRequestBuilder fvschedule() {
@@ -1368,6 +1508,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the gamma method.
+     * @return a {@link GammaRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GammaRequestBuilder gamma() {
@@ -1375,6 +1516,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the gamma_Dist method.
+     * @return a {@link GammaDistRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GammaDistRequestBuilder gammaDist() {
@@ -1382,6 +1524,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the gamma_Inv method.
+     * @return a {@link GammaInvRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GammaInvRequestBuilder gammaInv() {
@@ -1389,6 +1532,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the gammaLn method.
+     * @return a {@link GammaLnRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GammaLnRequestBuilder gammaLn() {
@@ -1396,6 +1540,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the gammaLn_Precise method.
+     * @return a {@link GammaLnPreciseRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GammaLnPreciseRequestBuilder gammaLnPrecise() {
@@ -1403,6 +1548,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the gauss method.
+     * @return a {@link GaussRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GaussRequestBuilder gauss() {
@@ -1410,6 +1556,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the gcd method.
+     * @return a {@link GcdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GcdRequestBuilder gcd() {
@@ -1417,6 +1564,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the geoMean method.
+     * @return a {@link GeoMeanRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GeoMeanRequestBuilder geoMean() {
@@ -1424,6 +1572,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the geStep method.
+     * @return a {@link GeStepRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GeStepRequestBuilder geStep() {
@@ -1431,6 +1580,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the harMean method.
+     * @return a {@link HarMeanRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public HarMeanRequestBuilder harMean() {
@@ -1438,6 +1588,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the hex2Bin method.
+     * @return a {@link Hex2BinRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public Hex2BinRequestBuilder hex2Bin() {
@@ -1445,6 +1596,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the hex2Dec method.
+     * @return a {@link Hex2DecRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public Hex2DecRequestBuilder hex2Dec() {
@@ -1452,6 +1604,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the hex2Oct method.
+     * @return a {@link Hex2OctRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public Hex2OctRequestBuilder hex2Oct() {
@@ -1459,6 +1612,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the hlookup method.
+     * @return a {@link HlookupRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public HlookupRequestBuilder hlookup() {
@@ -1466,6 +1620,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the hour method.
+     * @return a {@link HourRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public HourRequestBuilder hour() {
@@ -1473,6 +1628,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the hyperlink method.
+     * @return a {@link HyperlinkRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public HyperlinkRequestBuilder hyperlink() {
@@ -1480,6 +1636,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the hypGeom_Dist method.
+     * @return a {@link HypGeomDistRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public HypGeomDistRequestBuilder hypGeomDist() {
@@ -1487,6 +1644,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the if method.
+     * @return a {@link IfRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IfRequestBuilder ifEscaped() {
@@ -1494,6 +1652,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the imAbs method.
+     * @return a {@link ImAbsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImAbsRequestBuilder imAbs() {
@@ -1501,6 +1660,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the imaginary method.
+     * @return a {@link ImaginaryRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImaginaryRequestBuilder imaginary() {
@@ -1508,6 +1668,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the imArgument method.
+     * @return a {@link ImArgumentRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImArgumentRequestBuilder imArgument() {
@@ -1515,6 +1676,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the imConjugate method.
+     * @return a {@link ImConjugateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImConjugateRequestBuilder imConjugate() {
@@ -1522,6 +1684,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the imCos method.
+     * @return a {@link ImCosRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImCosRequestBuilder imCos() {
@@ -1529,6 +1692,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the imCosh method.
+     * @return a {@link ImCoshRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImCoshRequestBuilder imCosh() {
@@ -1536,6 +1700,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the imCot method.
+     * @return a {@link ImCotRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImCotRequestBuilder imCot() {
@@ -1543,6 +1708,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the imCsc method.
+     * @return a {@link ImCscRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImCscRequestBuilder imCsc() {
@@ -1550,6 +1716,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the imCsch method.
+     * @return a {@link ImCschRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImCschRequestBuilder imCsch() {
@@ -1557,6 +1724,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the imDiv method.
+     * @return a {@link ImDivRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImDivRequestBuilder imDiv() {
@@ -1564,6 +1732,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the imExp method.
+     * @return a {@link ImExpRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImExpRequestBuilder imExp() {
@@ -1571,6 +1740,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the imLn method.
+     * @return a {@link ImLnRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImLnRequestBuilder imLn() {
@@ -1578,6 +1748,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the imLog10 method.
+     * @return a {@link ImLog10RequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImLog10RequestBuilder imLog10() {
@@ -1585,6 +1756,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the imLog2 method.
+     * @return a {@link ImLog2RequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImLog2RequestBuilder imLog2() {
@@ -1592,6 +1764,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the imPower method.
+     * @return a {@link ImPowerRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImPowerRequestBuilder imPower() {
@@ -1599,6 +1772,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the imProduct method.
+     * @return a {@link ImProductRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImProductRequestBuilder imProduct() {
@@ -1606,6 +1780,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the imReal method.
+     * @return a {@link ImRealRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImRealRequestBuilder imReal() {
@@ -1613,6 +1788,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the imSec method.
+     * @return a {@link ImSecRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImSecRequestBuilder imSec() {
@@ -1620,6 +1796,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the imSech method.
+     * @return a {@link ImSechRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImSechRequestBuilder imSech() {
@@ -1627,6 +1804,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the imSin method.
+     * @return a {@link ImSinRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImSinRequestBuilder imSin() {
@@ -1634,6 +1812,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the imSinh method.
+     * @return a {@link ImSinhRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImSinhRequestBuilder imSinh() {
@@ -1641,6 +1820,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the imSqrt method.
+     * @return a {@link ImSqrtRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImSqrtRequestBuilder imSqrt() {
@@ -1648,6 +1828,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the imSub method.
+     * @return a {@link ImSubRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImSubRequestBuilder imSub() {
@@ -1655,6 +1836,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the imSum method.
+     * @return a {@link ImSumRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImSumRequestBuilder imSum() {
@@ -1662,6 +1844,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the imTan method.
+     * @return a {@link ImTanRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImTanRequestBuilder imTan() {
@@ -1669,6 +1852,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the int method.
+     * @return a {@link IntRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IntRequestBuilder intEscaped() {
@@ -1676,6 +1860,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the intRate method.
+     * @return a {@link IntRateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IntRateRequestBuilder intRate() {
@@ -1683,6 +1868,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the ipmt method.
+     * @return a {@link IpmtRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IpmtRequestBuilder ipmt() {
@@ -1690,6 +1876,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the irr method.
+     * @return a {@link IrrRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IrrRequestBuilder irr() {
@@ -1697,6 +1884,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the isErr method.
+     * @return a {@link IsErrRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IsErrRequestBuilder isErr() {
@@ -1704,6 +1892,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the isError method.
+     * @return a {@link IsErrorRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IsErrorRequestBuilder isError() {
@@ -1711,6 +1900,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the isEven method.
+     * @return a {@link IsEvenRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IsEvenRequestBuilder isEven() {
@@ -1718,6 +1908,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the isFormula method.
+     * @return a {@link IsFormulaRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IsFormulaRequestBuilder isFormula() {
@@ -1725,6 +1916,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the isLogical method.
+     * @return a {@link IsLogicalRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IsLogicalRequestBuilder isLogical() {
@@ -1732,6 +1924,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the isNA method.
+     * @return a {@link IsNARequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IsNARequestBuilder isNA() {
@@ -1739,6 +1932,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the isNonText method.
+     * @return a {@link IsNonTextRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IsNonTextRequestBuilder isNonText() {
@@ -1746,6 +1940,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the isNumber method.
+     * @return a {@link IsNumberRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IsNumberRequestBuilder isNumber() {
@@ -1753,6 +1948,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the iso_Ceiling method.
+     * @return a {@link IsoCeilingRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IsoCeilingRequestBuilder isoCeiling() {
@@ -1760,6 +1956,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the isOdd method.
+     * @return a {@link IsOddRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IsOddRequestBuilder isOdd() {
@@ -1767,6 +1964,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the isoWeekNum method.
+     * @return a {@link IsoWeekNumRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IsoWeekNumRequestBuilder isoWeekNum() {
@@ -1774,6 +1972,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the ispmt method.
+     * @return a {@link IspmtRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IspmtRequestBuilder ispmt() {
@@ -1781,6 +1980,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the isref method.
+     * @return a {@link IsrefRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IsrefRequestBuilder isref() {
@@ -1788,6 +1988,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the isText method.
+     * @return a {@link IsTextRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IsTextRequestBuilder isText() {
@@ -1795,6 +1996,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the kurt method.
+     * @return a {@link KurtRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public KurtRequestBuilder kurt() {
@@ -1802,6 +2004,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the large method.
+     * @return a {@link LargeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LargeRequestBuilder large() {
@@ -1809,6 +2012,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the lcm method.
+     * @return a {@link LcmRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LcmRequestBuilder lcm() {
@@ -1816,6 +2020,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the left method.
+     * @return a {@link LeftRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LeftRequestBuilder left() {
@@ -1823,6 +2028,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the leftb method.
+     * @return a {@link LeftbRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LeftbRequestBuilder leftb() {
@@ -1830,6 +2036,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the len method.
+     * @return a {@link LenRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LenRequestBuilder len() {
@@ -1837,6 +2044,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the lenb method.
+     * @return a {@link LenbRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LenbRequestBuilder lenb() {
@@ -1844,6 +2052,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the ln method.
+     * @return a {@link LnRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LnRequestBuilder ln() {
@@ -1851,6 +2060,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the log method.
+     * @return a {@link LogRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LogRequestBuilder log() {
@@ -1858,6 +2068,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the log10 method.
+     * @return a {@link Log10RequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public Log10RequestBuilder log10() {
@@ -1865,6 +2076,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the logNorm_Dist method.
+     * @return a {@link LogNormDistRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LogNormDistRequestBuilder logNormDist() {
@@ -1872,6 +2084,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the logNorm_Inv method.
+     * @return a {@link LogNormInvRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LogNormInvRequestBuilder logNormInv() {
@@ -1879,6 +2092,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the lookup method.
+     * @return a {@link LookupRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LookupRequestBuilder lookup() {
@@ -1886,6 +2100,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the lower method.
+     * @return a {@link LowerRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LowerRequestBuilder lower() {
@@ -1893,6 +2108,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the match method.
+     * @return a {@link MatchRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MatchRequestBuilder match() {
@@ -1900,6 +2116,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the max method.
+     * @return a {@link MaxRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MaxRequestBuilder max() {
@@ -1907,6 +2124,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the maxA method.
+     * @return a {@link MaxARequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MaxARequestBuilder maxA() {
@@ -1914,6 +2132,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the mduration method.
+     * @return a {@link MdurationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MdurationRequestBuilder mduration() {
@@ -1921,6 +2140,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the median method.
+     * @return a {@link MedianRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MedianRequestBuilder median() {
@@ -1928,6 +2148,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the mid method.
+     * @return a {@link MidRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MidRequestBuilder mid() {
@@ -1935,6 +2156,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the midb method.
+     * @return a {@link MidbRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MidbRequestBuilder midb() {
@@ -1942,6 +2164,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the min method.
+     * @return a {@link MinRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MinRequestBuilder min() {
@@ -1949,6 +2172,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the minA method.
+     * @return a {@link MinARequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MinARequestBuilder minA() {
@@ -1956,6 +2180,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the minute method.
+     * @return a {@link MinuteRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MinuteRequestBuilder minute() {
@@ -1963,6 +2188,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the mirr method.
+     * @return a {@link MirrRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MirrRequestBuilder mirr() {
@@ -1970,6 +2196,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the mod method.
+     * @return a {@link ModRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ModRequestBuilder mod() {
@@ -1977,6 +2204,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the month method.
+     * @return a {@link MonthRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MonthRequestBuilder month() {
@@ -1984,6 +2212,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the mround method.
+     * @return a {@link MroundRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MroundRequestBuilder mround() {
@@ -1991,6 +2220,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the multiNomial method.
+     * @return a {@link MultiNomialRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MultiNomialRequestBuilder multiNomial() {
@@ -1998,6 +2228,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the n method.
+     * @return a {@link NRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public NRequestBuilder n() {
@@ -2005,6 +2236,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the na method.
+     * @return a {@link NaRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public NaRequestBuilder na() {
@@ -2012,6 +2244,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the negBinom_Dist method.
+     * @return a {@link NegBinomDistRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public NegBinomDistRequestBuilder negBinomDist() {
@@ -2019,6 +2252,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the networkDays method.
+     * @return a {@link NetworkDaysRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public NetworkDaysRequestBuilder networkDays() {
@@ -2026,6 +2260,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the networkDays_Intl method.
+     * @return a {@link NetworkDaysIntlRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public NetworkDaysIntlRequestBuilder networkDaysIntl() {
@@ -2033,6 +2268,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the nominal method.
+     * @return a {@link NominalRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public NominalRequestBuilder nominal() {
@@ -2040,6 +2276,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the norm_Dist method.
+     * @return a {@link NormDistRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public NormDistRequestBuilder normDist() {
@@ -2047,6 +2284,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the norm_Inv method.
+     * @return a {@link NormInvRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public NormInvRequestBuilder normInv() {
@@ -2054,6 +2292,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the norm_S_Dist method.
+     * @return a {@link NormSDistRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public NormSDistRequestBuilder normSDist() {
@@ -2061,6 +2300,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the norm_S_Inv method.
+     * @return a {@link NormSInvRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public NormSInvRequestBuilder normSInv() {
@@ -2068,6 +2308,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the not method.
+     * @return a {@link NotRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public NotRequestBuilder not() {
@@ -2075,6 +2316,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the now method.
+     * @return a {@link NowRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public NowRequestBuilder now() {
@@ -2082,6 +2324,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the nper method.
+     * @return a {@link NperRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public NperRequestBuilder nper() {
@@ -2089,6 +2332,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the npv method.
+     * @return a {@link NpvRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public NpvRequestBuilder npv() {
@@ -2096,6 +2340,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the numberValue method.
+     * @return a {@link NumberValueRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public NumberValueRequestBuilder numberValue() {
@@ -2103,6 +2348,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the oct2Bin method.
+     * @return a {@link Oct2BinRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public Oct2BinRequestBuilder oct2Bin() {
@@ -2110,6 +2356,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the oct2Dec method.
+     * @return a {@link Oct2DecRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public Oct2DecRequestBuilder oct2Dec() {
@@ -2117,6 +2364,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the oct2Hex method.
+     * @return a {@link Oct2HexRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public Oct2HexRequestBuilder oct2Hex() {
@@ -2124,6 +2372,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the odd method.
+     * @return a {@link OddRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OddRequestBuilder odd() {
@@ -2131,6 +2380,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the oddFPrice method.
+     * @return a {@link OddFPriceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OddFPriceRequestBuilder oddFPrice() {
@@ -2138,6 +2388,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the oddFYield method.
+     * @return a {@link OddFYieldRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OddFYieldRequestBuilder oddFYield() {
@@ -2145,6 +2396,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the oddLPrice method.
+     * @return a {@link OddLPriceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OddLPriceRequestBuilder oddLPrice() {
@@ -2152,6 +2404,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the oddLYield method.
+     * @return a {@link OddLYieldRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OddLYieldRequestBuilder oddLYield() {
@@ -2159,6 +2412,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the or method.
+     * @return a {@link OrRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OrRequestBuilder or() {
@@ -2166,6 +2420,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the pduration method.
+     * @return a {@link PdurationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PdurationRequestBuilder pduration() {
@@ -2173,6 +2428,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the percentile_Exc method.
+     * @return a {@link PercentileExcRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PercentileExcRequestBuilder percentileExc() {
@@ -2180,6 +2436,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the percentile_Inc method.
+     * @return a {@link PercentileIncRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PercentileIncRequestBuilder percentileInc() {
@@ -2187,6 +2444,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the percentRank_Exc method.
+     * @return a {@link PercentRankExcRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PercentRankExcRequestBuilder percentRankExc() {
@@ -2194,6 +2452,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the percentRank_Inc method.
+     * @return a {@link PercentRankIncRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PercentRankIncRequestBuilder percentRankInc() {
@@ -2201,6 +2460,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the permut method.
+     * @return a {@link PermutRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PermutRequestBuilder permut() {
@@ -2208,6 +2468,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the permutationa method.
+     * @return a {@link PermutationaRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PermutationaRequestBuilder permutationa() {
@@ -2215,6 +2476,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the phi method.
+     * @return a {@link PhiRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PhiRequestBuilder phi() {
@@ -2222,6 +2484,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the pi method.
+     * @return a {@link PiRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PiRequestBuilder pi() {
@@ -2229,6 +2492,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the pmt method.
+     * @return a {@link PmtRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PmtRequestBuilder pmt() {
@@ -2236,6 +2500,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the poisson_Dist method.
+     * @return a {@link PoissonDistRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PoissonDistRequestBuilder poissonDist() {
@@ -2243,6 +2508,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the power method.
+     * @return a {@link PowerRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PowerRequestBuilder power() {
@@ -2250,6 +2516,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the ppmt method.
+     * @return a {@link PpmtRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PpmtRequestBuilder ppmt() {
@@ -2257,6 +2524,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the price method.
+     * @return a {@link PriceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PriceRequestBuilder price() {
@@ -2264,6 +2532,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the priceDisc method.
+     * @return a {@link PriceDiscRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PriceDiscRequestBuilder priceDisc() {
@@ -2271,6 +2540,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the priceMat method.
+     * @return a {@link PriceMatRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PriceMatRequestBuilder priceMat() {
@@ -2278,6 +2548,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the product method.
+     * @return a {@link ProductRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ProductRequestBuilder product() {
@@ -2285,6 +2556,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the proper method.
+     * @return a {@link ProperRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ProperRequestBuilder proper() {
@@ -2292,6 +2564,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the pv method.
+     * @return a {@link PvRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PvRequestBuilder pv() {
@@ -2299,6 +2572,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the quartile_Exc method.
+     * @return a {@link QuartileExcRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public QuartileExcRequestBuilder quartileExc() {
@@ -2306,6 +2580,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the quartile_Inc method.
+     * @return a {@link QuartileIncRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public QuartileIncRequestBuilder quartileInc() {
@@ -2313,6 +2588,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the quotient method.
+     * @return a {@link QuotientRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public QuotientRequestBuilder quotient() {
@@ -2320,6 +2596,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the radians method.
+     * @return a {@link RadiansRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RadiansRequestBuilder radians() {
@@ -2327,6 +2604,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the rand method.
+     * @return a {@link RandRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RandRequestBuilder rand() {
@@ -2334,6 +2612,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the randBetween method.
+     * @return a {@link RandBetweenRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RandBetweenRequestBuilder randBetween() {
@@ -2341,6 +2620,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the rank_Avg method.
+     * @return a {@link RankAvgRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RankAvgRequestBuilder rankAvg() {
@@ -2348,6 +2628,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the rank_Eq method.
+     * @return a {@link RankEqRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RankEqRequestBuilder rankEq() {
@@ -2355,6 +2636,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the rate method.
+     * @return a {@link RateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RateRequestBuilder rate() {
@@ -2362,6 +2644,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the received method.
+     * @return a {@link ReceivedRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReceivedRequestBuilder received() {
@@ -2369,6 +2652,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the replace method.
+     * @return a {@link ReplaceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReplaceRequestBuilder replace() {
@@ -2376,6 +2660,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the replaceB method.
+     * @return a {@link ReplaceBRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReplaceBRequestBuilder replaceB() {
@@ -2383,6 +2668,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the rept method.
+     * @return a {@link ReptRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReptRequestBuilder rept() {
@@ -2390,6 +2676,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the right method.
+     * @return a {@link RightRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RightRequestBuilder right() {
@@ -2397,6 +2684,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the rightb method.
+     * @return a {@link RightbRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RightbRequestBuilder rightb() {
@@ -2404,6 +2692,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the roman method.
+     * @return a {@link RomanRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RomanRequestBuilder roman() {
@@ -2411,6 +2700,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the round method.
+     * @return a {@link RoundRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoundRequestBuilder round() {
@@ -2418,6 +2708,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the roundDown method.
+     * @return a {@link RoundDownRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoundDownRequestBuilder roundDown() {
@@ -2425,6 +2716,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the roundUp method.
+     * @return a {@link RoundUpRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoundUpRequestBuilder roundUp() {
@@ -2432,6 +2724,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the rows method.
+     * @return a {@link RowsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RowsRequestBuilder rows() {
@@ -2439,6 +2732,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the rri method.
+     * @return a {@link RriRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RriRequestBuilder rri() {
@@ -2446,6 +2740,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the sec method.
+     * @return a {@link SecRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SecRequestBuilder sec() {
@@ -2453,6 +2748,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the sech method.
+     * @return a {@link SechRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SechRequestBuilder sech() {
@@ -2460,6 +2756,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the second method.
+     * @return a {@link SecondRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SecondRequestBuilder second() {
@@ -2467,6 +2764,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the seriesSum method.
+     * @return a {@link SeriesSumRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SeriesSumRequestBuilder seriesSum() {
@@ -2474,6 +2772,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the sheet method.
+     * @return a {@link SheetRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SheetRequestBuilder sheet() {
@@ -2481,6 +2780,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the sheets method.
+     * @return a {@link SheetsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SheetsRequestBuilder sheets() {
@@ -2488,6 +2788,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the sign method.
+     * @return a {@link SignRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SignRequestBuilder sign() {
@@ -2495,6 +2796,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the sin method.
+     * @return a {@link SinRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SinRequestBuilder sin() {
@@ -2502,6 +2804,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the sinh method.
+     * @return a {@link SinhRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SinhRequestBuilder sinh() {
@@ -2509,6 +2812,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the skew method.
+     * @return a {@link SkewRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SkewRequestBuilder skew() {
@@ -2516,6 +2820,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the skew_p method.
+     * @return a {@link SkewPRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SkewPRequestBuilder skewP() {
@@ -2523,6 +2828,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the sln method.
+     * @return a {@link SlnRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SlnRequestBuilder sln() {
@@ -2530,6 +2836,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the small method.
+     * @return a {@link SmallRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SmallRequestBuilder small() {
@@ -2537,6 +2844,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the sqrt method.
+     * @return a {@link SqrtRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SqrtRequestBuilder sqrt() {
@@ -2544,6 +2852,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the sqrtPi method.
+     * @return a {@link SqrtPiRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SqrtPiRequestBuilder sqrtPi() {
@@ -2551,6 +2860,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the standardize method.
+     * @return a {@link StandardizeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public StandardizeRequestBuilder standardize() {
@@ -2558,6 +2868,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the stDevA method.
+     * @return a {@link StDevARequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public StDevARequestBuilder stDevA() {
@@ -2565,6 +2876,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the stDev_P method.
+     * @return a {@link StDevPRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public StDevPRequestBuilder stDevP() {
@@ -2572,6 +2884,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the stDevPA method.
+     * @return a {@link StDevPARequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public StDevPARequestBuilder stDevPA() {
@@ -2579,6 +2892,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the stDev_S method.
+     * @return a {@link StDevSRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public StDevSRequestBuilder stDevS() {
@@ -2586,6 +2900,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the substitute method.
+     * @return a {@link SubstituteRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SubstituteRequestBuilder substitute() {
@@ -2593,6 +2908,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the subtotal method.
+     * @return a {@link SubtotalRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SubtotalRequestBuilder subtotal() {
@@ -2600,6 +2916,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the sum method.
+     * @return a {@link SumRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SumRequestBuilder sum() {
@@ -2607,6 +2924,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the sumIf method.
+     * @return a {@link SumIfRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SumIfRequestBuilder sumIf() {
@@ -2614,6 +2932,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the sumIfs method.
+     * @return a {@link SumIfsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SumIfsRequestBuilder sumIfs() {
@@ -2621,6 +2940,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the sumSq method.
+     * @return a {@link SumSqRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SumSqRequestBuilder sumSq() {
@@ -2628,6 +2948,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the syd method.
+     * @return a {@link SydRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SydRequestBuilder syd() {
@@ -2635,6 +2956,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the t method.
+     * @return a {@link TRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TRequestBuilder t() {
@@ -2642,6 +2964,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the tan method.
+     * @return a {@link TanRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TanRequestBuilder tan() {
@@ -2649,6 +2972,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the tanh method.
+     * @return a {@link TanhRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TanhRequestBuilder tanh() {
@@ -2656,6 +2980,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the tbillEq method.
+     * @return a {@link TbillEqRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TbillEqRequestBuilder tbillEq() {
@@ -2663,6 +2988,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the tbillPrice method.
+     * @return a {@link TbillPriceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TbillPriceRequestBuilder tbillPrice() {
@@ -2670,6 +2996,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the tbillYield method.
+     * @return a {@link TbillYieldRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TbillYieldRequestBuilder tbillYield() {
@@ -2677,6 +3004,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the t_Dist method.
+     * @return a {@link TDistRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TDistRequestBuilder tDist() {
@@ -2684,6 +3012,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the t_Dist_2T method.
+     * @return a {@link TDist2TRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TDist2TRequestBuilder tDist2T() {
@@ -2691,6 +3020,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the t_Dist_RT method.
+     * @return a {@link TDistRTRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TDistRTRequestBuilder tDistRT() {
@@ -2698,6 +3028,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the text method.
+     * @return a {@link TextRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TextRequestBuilder text() {
@@ -2705,6 +3036,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the time method.
+     * @return a {@link TimeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TimeRequestBuilder time() {
@@ -2712,6 +3044,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the timevalue method.
+     * @return a {@link TimevalueRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TimevalueRequestBuilder timevalue() {
@@ -2719,6 +3052,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the t_Inv method.
+     * @return a {@link TInvRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TInvRequestBuilder tInv() {
@@ -2726,6 +3060,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the t_Inv_2T method.
+     * @return a {@link TInv2TRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TInv2TRequestBuilder tInv2T() {
@@ -2733,6 +3068,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the today method.
+     * @return a {@link TodayRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TodayRequestBuilder today() {
@@ -2740,6 +3076,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the trim method.
+     * @return a {@link TrimRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TrimRequestBuilder trim() {
@@ -2747,6 +3084,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the trimMean method.
+     * @return a {@link TrimMeanRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TrimMeanRequestBuilder trimMean() {
@@ -2754,6 +3092,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the true method.
+     * @return a {@link TrueRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TrueRequestBuilder trueEscaped() {
@@ -2761,6 +3100,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the trunc method.
+     * @return a {@link TruncRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TruncRequestBuilder trunc() {
@@ -2768,6 +3108,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the type method.
+     * @return a {@link TypeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TypeRequestBuilder type() {
@@ -2775,6 +3116,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the unichar method.
+     * @return a {@link UnicharRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UnicharRequestBuilder unichar() {
@@ -2782,6 +3124,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the unicode method.
+     * @return a {@link UnicodeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UnicodeRequestBuilder unicode() {
@@ -2789,6 +3132,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the upper method.
+     * @return a {@link UpperRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UpperRequestBuilder upper() {
@@ -2796,6 +3140,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the usdollar method.
+     * @return a {@link UsdollarRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UsdollarRequestBuilder usdollar() {
@@ -2803,6 +3148,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the value method.
+     * @return a {@link ValueRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ValueRequestBuilder value() {
@@ -2810,6 +3156,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the varA method.
+     * @return a {@link VarARequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public VarARequestBuilder varA() {
@@ -2817,6 +3164,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the var_P method.
+     * @return a {@link VarPRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public VarPRequestBuilder varP() {
@@ -2824,6 +3172,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the varPA method.
+     * @return a {@link VarPARequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public VarPARequestBuilder varPA() {
@@ -2831,6 +3180,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the var_S method.
+     * @return a {@link VarSRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public VarSRequestBuilder varS() {
@@ -2838,6 +3188,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the vdb method.
+     * @return a {@link VdbRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public VdbRequestBuilder vdb() {
@@ -2845,6 +3196,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the vlookup method.
+     * @return a {@link VlookupRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public VlookupRequestBuilder vlookup() {
@@ -2852,6 +3204,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the weekday method.
+     * @return a {@link WeekdayRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WeekdayRequestBuilder weekday() {
@@ -2859,6 +3212,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the weekNum method.
+     * @return a {@link WeekNumRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WeekNumRequestBuilder weekNum() {
@@ -2866,6 +3220,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the weibull_Dist method.
+     * @return a {@link WeibullDistRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WeibullDistRequestBuilder weibullDist() {
@@ -2873,6 +3228,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the workDay method.
+     * @return a {@link WorkDayRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WorkDayRequestBuilder workDay() {
@@ -2880,6 +3236,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the workDay_Intl method.
+     * @return a {@link WorkDayIntlRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WorkDayIntlRequestBuilder workDayIntl() {
@@ -2887,6 +3244,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the xirr method.
+     * @return a {@link XirrRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public XirrRequestBuilder xirr() {
@@ -2894,6 +3252,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the xnpv method.
+     * @return a {@link XnpvRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public XnpvRequestBuilder xnpv() {
@@ -2901,6 +3260,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the xor method.
+     * @return a {@link XorRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public XorRequestBuilder xor() {
@@ -2908,6 +3268,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the year method.
+     * @return a {@link YearRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public YearRequestBuilder year() {
@@ -2915,6 +3276,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the yearFrac method.
+     * @return a {@link YearFracRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public YearFracRequestBuilder yearFrac() {
@@ -2922,6 +3284,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the yield method.
+     * @return a {@link YieldRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public YieldRequestBuilder yield() {
@@ -2929,6 +3292,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the yieldDisc method.
+     * @return a {@link YieldDiscRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public YieldDiscRequestBuilder yieldDisc() {
@@ -2936,6 +3300,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the yieldMat method.
+     * @return a {@link YieldMatRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public YieldMatRequestBuilder yieldMat() {
@@ -2943,13 +3308,14 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the z_Test method.
+     * @return a {@link ZTestRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ZTestRequestBuilder zTest() {
         return new ZTestRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new FunctionsRequestBuilder and sets the default values.
+     * Instantiates a new {@link FunctionsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -2957,7 +3323,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/functions{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new FunctionsRequestBuilder and sets the default values.
+     * Instantiates a new {@link FunctionsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -2966,6 +3332,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property functions for drives
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -2973,17 +3340,18 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property functions for drives
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get functions from drives
-     * @return a WorkbookFunctions
+     * @return a {@link WorkbookFunctions}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WorkbookFunctions get() {
@@ -2992,20 +3360,21 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get functions from drives
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WorkbookFunctions
+     * @return a {@link WorkbookFunctions}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WorkbookFunctions get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookFunctions::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property functions in drives
      * @param body The request body
-     * @return a WorkbookFunctions
+     * @return a {@link WorkbookFunctions}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WorkbookFunctions patch(@jakarta.annotation.Nonnull final WorkbookFunctions body) {
@@ -3015,20 +3384,20 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property functions in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WorkbookFunctions
+     * @return a {@link WorkbookFunctions}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WorkbookFunctions patch(@jakarta.annotation.Nonnull final WorkbookFunctions body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookFunctions::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property functions for drives
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -3037,18 +3406,18 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property functions for drives
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/functions", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Get functions from drives
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -3057,7 +3426,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get functions from drives
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -3069,7 +3438,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property functions in drives
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final WorkbookFunctions body) {
@@ -3079,12 +3448,12 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property functions in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final WorkbookFunctions body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/functions", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -3093,7 +3462,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a FunctionsRequestBuilder
+     * @return a {@link FunctionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FunctionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -3123,7 +3492,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

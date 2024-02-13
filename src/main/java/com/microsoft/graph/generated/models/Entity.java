@@ -111,7 +111,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new Entity and sets the default values.
+     * Instantiates a new {@link Entity} and sets the default values.
      */
     public Entity() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -120,7 +120,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Entity
+     * @return a {@link Entity}
      */
     @jakarta.annotation.Nonnull
     public static Entity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -142,7 +142,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param discriminatorValue Discriminator value from the payload
-     * @return a Entity
+     * @return a {@link Entity}
      */
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_0(@jakarta.annotation.Nonnull final String discriminatorValue) {
@@ -256,6 +256,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.browserSite": return new BrowserSite();
             case "#microsoft.graph.browserSiteList": return new BrowserSiteList();
             case "#microsoft.graph.builtInIdentityProvider": return new BuiltInIdentityProvider();
+            case "#microsoft.graph.bulkUpload": return new BulkUpload();
             case "#microsoft.graph.calendar": return new Calendar();
             case "#microsoft.graph.calendarGroup": return new CalendarGroup();
             case "#microsoft.graph.calendarPermission": return new CalendarPermission();
@@ -646,18 +647,18 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.privilegedAccessGroupAssignmentSchedule": return new PrivilegedAccessGroupAssignmentSchedule();
             case "#microsoft.graph.privilegedAccessGroupAssignmentScheduleInstance": return new PrivilegedAccessGroupAssignmentScheduleInstance();
             case "#microsoft.graph.privilegedAccessGroupAssignmentScheduleRequest": return new PrivilegedAccessGroupAssignmentScheduleRequest();
-            case "#microsoft.graph.privilegedAccessGroupEligibilitySchedule": return new PrivilegedAccessGroupEligibilitySchedule();
         }
         return null;
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param discriminatorValue Discriminator value from the payload
-     * @return a Entity
+     * @return a {@link Entity}
      */
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.privilegedAccessGroupEligibilitySchedule": return new PrivilegedAccessGroupEligibilitySchedule();
             case "#microsoft.graph.privilegedAccessGroupEligibilityScheduleInstance": return new PrivilegedAccessGroupEligibilityScheduleInstance();
             case "#microsoft.graph.privilegedAccessGroupEligibilityScheduleRequest": return new PrivilegedAccessGroupEligibilityScheduleRequest();
             case "#microsoft.graph.privilegedAccessRoot": return new PrivilegedAccessRoot();
@@ -1001,7 +1002,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -1014,7 +1015,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -1022,7 +1023,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -1033,7 +1034,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the id property value. The unique identifier for an entity. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -1041,7 +1042,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

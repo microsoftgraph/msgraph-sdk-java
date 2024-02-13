@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider implements Parsable {
     /**
-     * Instantiates a new SamlOrWsFedExternalDomainFederation and sets the default values.
+     * Instantiates a new {@link SamlOrWsFedExternalDomainFederation} and sets the default values.
      */
     public SamlOrWsFedExternalDomainFederation() {
         super();
@@ -18,7 +18,7 @@ public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SamlOrWsFedExternalDomainFederation
+     * @return a {@link SamlOrWsFedExternalDomainFederation}
      */
     @jakarta.annotation.Nonnull
     public static SamlOrWsFedExternalDomainFederation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider imp
     }
     /**
      * Gets the domains property value. Collection of domain names of the external organizations that the tenant is federating with. Supports $filter (eq).
-     * @return a java.util.List<ExternalDomainName>
+     * @return a {@link java.util.List<ExternalDomainName>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExternalDomainName> getDomains() {
@@ -35,7 +35,7 @@ public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider imp
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

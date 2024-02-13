@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VirtualEventSession extends OnlineMeetingBase implements Parsable {
     /**
-     * Instantiates a new VirtualEventSession and sets the default values.
+     * Instantiates a new {@link VirtualEventSession} and sets the default values.
      */
     public VirtualEventSession() {
         super();
@@ -18,7 +18,7 @@ public class VirtualEventSession extends OnlineMeetingBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a VirtualEventSession
+     * @return a {@link VirtualEventSession}
      */
     @jakarta.annotation.Nonnull
     public static VirtualEventSession createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class VirtualEventSession extends OnlineMeetingBase implements Parsable {
     }
     /**
      * Gets the endDateTime property value. The virtual event session end time.
-     * @return a DateTimeTimeZone
+     * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getEndDateTime() {
@@ -35,7 +35,7 @@ public class VirtualEventSession extends OnlineMeetingBase implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class VirtualEventSession extends OnlineMeetingBase implements Parsable {
     }
     /**
      * Gets the startDateTime property value. The virtual event session start time.
-     * @return a DateTimeTimeZone
+     * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getStartDateTime() {

@@ -22,7 +22,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SendActivityNotificationToRecipientsPostRequestBody and sets the default values.
+     * Instantiates a new {@link SendActivityNotificationToRecipientsPostRequestBody} and sets the default values.
      */
     public SendActivityNotificationToRecipientsPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -31,7 +31,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SendActivityNotificationToRecipientsPostRequestBody
+     * @return a {@link SendActivityNotificationToRecipientsPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static SendActivityNotificationToRecipientsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
     }
     /**
      * Gets the activityType property value. The activityType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getActivityType() {
@@ -48,7 +48,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -61,7 +61,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -69,7 +69,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
     }
     /**
      * Gets the chainId property value. The chainId property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getChainId() {
@@ -77,7 +77,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -93,7 +93,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
     }
     /**
      * Gets the previewText property value. The previewText property
-     * @return a ItemBody
+     * @return a {@link ItemBody}
      */
     @jakarta.annotation.Nullable
     public ItemBody getPreviewText() {
@@ -101,7 +101,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
     }
     /**
      * Gets the recipients property value. The recipients property
-     * @return a java.util.List<TeamworkNotificationRecipient>
+     * @return a {@link java.util.List<TeamworkNotificationRecipient>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamworkNotificationRecipient> getRecipients() {
@@ -109,7 +109,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
     }
     /**
      * Gets the teamsAppId property value. The teamsAppId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTeamsAppId() {
@@ -117,7 +117,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
     }
     /**
      * Gets the templateParameters property value. The templateParameters property
-     * @return a java.util.List<KeyValuePair>
+     * @return a {@link java.util.List<KeyValuePair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getTemplateParameters() {
@@ -125,7 +125,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
     }
     /**
      * Gets the topic property value. The topic property
-     * @return a TeamworkActivityTopic
+     * @return a {@link TeamworkActivityTopic}
      */
     @jakarta.annotation.Nullable
     public TeamworkActivityTopic getTopic() {

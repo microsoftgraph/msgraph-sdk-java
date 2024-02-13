@@ -28,6 +28,7 @@ import java.util.Objects;
 public class ChartsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the add method.
+     * @return a {@link AddRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AddRequestBuilder add() {
@@ -35,6 +36,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the count method.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -43,7 +45,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the charts property of the microsoft.graph.workbookWorksheet entity.
      * @param workbookChartId The unique identifier of workbookChart
-     * @return a WorkbookChartItemRequestBuilder
+     * @return a {@link WorkbookChartItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WorkbookChartItemRequestBuilder byWorkbookChartId(@jakarta.annotation.Nonnull final String workbookChartId) {
@@ -53,7 +55,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         return new WorkbookChartItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new ChartsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ChartsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -61,7 +63,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new ChartsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ChartsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -70,7 +72,8 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of chart objects.
-     * @return a WorkbookChartCollectionResponse
+     * @return a {@link WorkbookChartCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-list-charts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -80,21 +83,21 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of chart objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WorkbookChartCollectionResponse
+     * @return a {@link WorkbookChartCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-list-charts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookChartCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookChartCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Provides operations to call the itemAt method.
      * @param index Usage: index={index}
-     * @return a ItemAtWithIndexRequestBuilder
+     * @return a {@link ItemAtWithIndexRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ItemAtWithIndexRequestBuilder itemAtWithIndex(@jakarta.annotation.Nonnull final Integer index) {
@@ -104,7 +107,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the item method.
      * @param name Usage: name='{name}'
-     * @return a ItemWithNameRequestBuilder
+     * @return a {@link ItemWithNameRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ItemWithNameRequestBuilder itemWithName(@jakarta.annotation.Nonnull final String name) {
@@ -114,7 +117,8 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
     /**
      * Use this API to create a new Chart.
      * @param body The request body
-     * @return a WorkbookChart
+     * @return a {@link WorkbookChart}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-post-charts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -125,7 +129,8 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
      * Use this API to create a new Chart.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WorkbookChart
+     * @return a {@link WorkbookChart}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-post-charts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -133,13 +138,12 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookChart::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of chart objects.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -148,7 +152,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of chart objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -160,7 +164,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
     /**
      * Use this API to create a new Chart.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final WorkbookChart body) {
@@ -170,12 +174,12 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
      * Use this API to create a new Chart.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final WorkbookChart body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -184,7 +188,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ChartsRequestBuilder
+     * @return a {@link ChartsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ChartsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -238,7 +242,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

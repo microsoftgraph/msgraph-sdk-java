@@ -21,7 +21,7 @@ public class FileEncryptionInfo implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new FileEncryptionInfo and sets the default values.
+     * Instantiates a new {@link FileEncryptionInfo} and sets the default values.
      */
     public FileEncryptionInfo() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class FileEncryptionInfo implements AdditionalDataHolder, BackedModel, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a FileEncryptionInfo
+     * @return a {@link FileEncryptionInfo}
      */
     @jakarta.annotation.Nonnull
     public static FileEncryptionInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class FileEncryptionInfo implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class FileEncryptionInfo implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class FileEncryptionInfo implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the encryptionKey property value. The key used to encrypt the file content.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getEncryptionKey() {
@@ -68,7 +68,7 @@ public class FileEncryptionInfo implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -85,7 +85,7 @@ public class FileEncryptionInfo implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the fileDigest property value. The file digest prior to encryption. ProfileVersion1 requires a non-null FileDigest.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getFileDigest() {
@@ -93,7 +93,7 @@ public class FileEncryptionInfo implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the fileDigestAlgorithm property value. The file digest algorithm. ProfileVersion1 currently only supports SHA256 for the FileDigestAlgorithm.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFileDigestAlgorithm() {
@@ -101,7 +101,7 @@ public class FileEncryptionInfo implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the initializationVector property value. The initialization vector (IV) used for the encryption algorithm. Must be 16 bytes.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getInitializationVector() {
@@ -109,7 +109,7 @@ public class FileEncryptionInfo implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the mac property value. The hash of the concatenation of the IV and encrypted file content. Must be 32 bytes.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getMac() {
@@ -117,7 +117,7 @@ public class FileEncryptionInfo implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the macKey property value. The key used to compute the message authentication code of the concatenation of the IV and encrypted file content. Must be 32 bytes.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getMacKey() {
@@ -125,7 +125,7 @@ public class FileEncryptionInfo implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -133,7 +133,7 @@ public class FileEncryptionInfo implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the profileIdentifier property value. The profile identifier. Maps to the strategy used to encrypt the file. Currently, only ProfileVersion1 is supported.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProfileIdentifier() {

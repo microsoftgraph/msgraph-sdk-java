@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationAssignment extends Entity implements Parsable {
     /**
-     * Instantiates a new EducationAssignment and sets the default values.
+     * Instantiates a new {@link EducationAssignment} and sets the default values.
      */
     public EducationAssignment() {
         super();
@@ -18,7 +18,7 @@ public class EducationAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationAssignment
+     * @return a {@link EducationAssignment}
      */
     @jakarta.annotation.Nonnull
     public static EducationAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the addedStudentAction property value. Optional field to control the assignment behavior for students who are added after the assignment is published. If not specified, defaults to none. Supported values are: none, assignIfOpen. For example, a teacher can use assignIfOpen to indicate that an assignment should be assigned to any new student who joins the class while the assignment is still open, and none to indicate that an assignment shouldn't be assigned to new students.
-     * @return a EducationAddedStudentAction
+     * @return a {@link EducationAddedStudentAction}
      */
     @jakarta.annotation.Nullable
     public EducationAddedStudentAction getAddedStudentAction() {
@@ -35,7 +35,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the addToCalendarAction property value. Optional field to control the assignment behavior  for adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none.
-     * @return a EducationAddToCalendarOptions
+     * @return a {@link EducationAddToCalendarOptions}
      */
     @jakarta.annotation.Nullable
     public EducationAddToCalendarOptions getAddToCalendarAction() {
@@ -43,7 +43,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the allowLateSubmissions property value. Identifies whether students can submit after the due date. If this property isn't specified during create, it defaults to true.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowLateSubmissions() {
@@ -51,7 +51,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the allowStudentsToAddResourcesToSubmission property value. Identifies whether students can add their own resources to a submission or if they can only modify resources added by the teacher.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowStudentsToAddResourcesToSubmission() {
@@ -59,7 +59,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the assignDateTime property value. The date when the assignment should become active.  If in the future, the assignment isn't shown to the student until this date.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAssignDateTime() {
@@ -67,7 +67,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the assignedDateTime property value. The moment that the assignment was published to students and the assignment shows up on the students timeline.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAssignedDateTime() {
@@ -75,7 +75,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the assignTo property value. Which users, or whole class should receive a submission object once the assignment is published.
-     * @return a EducationAssignmentRecipient
+     * @return a {@link EducationAssignmentRecipient}
      */
     @jakarta.annotation.Nullable
     public EducationAssignmentRecipient getAssignTo() {
@@ -83,7 +83,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the categories property value. When set, enables users to easily find assignments of a given type.  Read-only. Nullable.
-     * @return a java.util.List<EducationCategory>
+     * @return a {@link java.util.List<EducationCategory>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationCategory> getCategories() {
@@ -91,7 +91,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the classId property value. Class to which this assignment belongs.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getClassId() {
@@ -99,7 +99,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the closeDateTime property value. Date when the assignment will be closed for submissions. This is an optional field that can be null if the assignment doesn't allowLateSubmissions or when the closeDateTime is the same as the dueDateTime. But if specified, then the closeDateTime must be greater than or equal to the dueDateTime. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCloseDateTime() {
@@ -107,7 +107,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. Who created the assignment.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -115,7 +115,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Moment when the assignment was created.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -123,7 +123,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Name of the assignment.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -131,7 +131,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the dueDateTime property value. Date when the students assignment is due.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDueDateTime() {
@@ -139,7 +139,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the feedbackResourcesFolderUrl property value. Folder URL where all the feedback file resources for this assignment are stored.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFeedbackResourcesFolderUrl() {
@@ -147,7 +147,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -184,7 +184,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the grading property value. How the assignment will be graded.
-     * @return a EducationAssignmentGradeType
+     * @return a {@link EducationAssignmentGradeType}
      */
     @jakarta.annotation.Nullable
     public EducationAssignmentGradeType getGrading() {
@@ -192,7 +192,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the gradingCategory property value. When set, enables users to weight assignments differently when computing a class average grade.
-     * @return a EducationGradingCategory
+     * @return a {@link EducationGradingCategory}
      */
     @jakarta.annotation.Nullable
     public EducationGradingCategory getGradingCategory() {
@@ -200,7 +200,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the instructions property value. Instructions for the assignment.  The instructsions and the display name tell the student what to do.
-     * @return a EducationItemBody
+     * @return a {@link EducationItemBody}
      */
     @jakarta.annotation.Nullable
     public EducationItemBody getInstructions() {
@@ -208,7 +208,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. Who last modified the assignment.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -216,7 +216,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. Moment when the assignment was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -224,7 +224,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the moduleUrl property value. The moduleUrl property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getModuleUrl() {
@@ -232,7 +232,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the notificationChannelUrl property value. Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl isn't allowed after the assignment has been published.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNotificationChannelUrl() {
@@ -240,7 +240,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the resources property value. Learning objects that are associated with this assignment.  Only teachers can modify this list. Nullable.
-     * @return a java.util.List<EducationAssignmentResource>
+     * @return a {@link java.util.List<EducationAssignmentResource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationAssignmentResource> getResources() {
@@ -248,7 +248,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the resourcesFolderUrl property value. Folder URL where all the file resources for this assignment are stored.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourcesFolderUrl() {
@@ -256,7 +256,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the rubric property value. When set, the grading rubric attached to this assignment.
-     * @return a EducationRubric
+     * @return a {@link EducationRubric}
      */
     @jakarta.annotation.Nullable
     public EducationRubric getRubric() {
@@ -264,7 +264,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Status of the Assignment.  You can't PATCH this value.  Possible values are: draft, scheduled, published, assigned.
-     * @return a EducationAssignmentStatus
+     * @return a {@link EducationAssignmentStatus}
      */
     @jakarta.annotation.Nullable
     public EducationAssignmentStatus getStatus() {
@@ -272,7 +272,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the submissions property value. Once published, there's a submission object for each student representing their work and grade.  Read-only. Nullable.
-     * @return a java.util.List<EducationSubmission>
+     * @return a {@link java.util.List<EducationSubmission>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationSubmission> getSubmissions() {
@@ -280,7 +280,7 @@ public class EducationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the webUrl property value. The deep link URL for the given assignment.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {

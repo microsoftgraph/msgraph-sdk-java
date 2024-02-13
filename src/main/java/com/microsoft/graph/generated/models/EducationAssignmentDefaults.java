@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationAssignmentDefaults extends Entity implements Parsable {
     /**
-     * Instantiates a new EducationAssignmentDefaults and sets the default values.
+     * Instantiates a new {@link EducationAssignmentDefaults} and sets the default values.
      */
     public EducationAssignmentDefaults() {
         super();
@@ -18,7 +18,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationAssignmentDefaults
+     * @return a {@link EducationAssignmentDefaults}
      */
     @jakarta.annotation.Nonnull
     public static EducationAssignmentDefaults createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
     }
     /**
      * Gets the addedStudentAction property value. Class-level default behavior for handling students who are added after the assignment is published. Possible values are: none, assignIfOpen.
-     * @return a EducationAddedStudentAction
+     * @return a {@link EducationAddedStudentAction}
      */
     @jakarta.annotation.Nullable
     public EducationAddedStudentAction getAddedStudentAction() {
@@ -35,7 +35,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
     }
     /**
      * Gets the addToCalendarAction property value. Optional field to control adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none.
-     * @return a EducationAddToCalendarOptions
+     * @return a {@link EducationAddToCalendarOptions}
      */
     @jakarta.annotation.Nullable
     public EducationAddToCalendarOptions getAddToCalendarAction() {
@@ -43,7 +43,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
     }
     /**
      * Gets the dueTime property value. Class-level default value for due time field. Default value is 23:59:00.
-     * @return a LocalTime
+     * @return a {@link LocalTime}
      */
     @jakarta.annotation.Nullable
     public LocalTime getDueTime() {
@@ -51,7 +51,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -64,7 +64,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
     }
     /**
      * Gets the notificationChannelUrl property value. Default Teams channel to which notifications will be sent. Default value is null.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNotificationChannelUrl() {

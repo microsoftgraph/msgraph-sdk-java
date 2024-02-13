@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType implements Parsable {
     /**
-     * Instantiates a new WindowsUpdateActiveHoursInstall and sets the default values.
+     * Instantiates a new {@link WindowsUpdateActiveHoursInstall} and sets the default values.
      */
     public WindowsUpdateActiveHoursInstall() {
         super();
@@ -19,7 +19,7 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsUpdateActiveHoursInstall
+     * @return a {@link WindowsUpdateActiveHoursInstall}
      */
     @jakarta.annotation.Nonnull
     public static WindowsUpdateActiveHoursInstall createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
     }
     /**
      * Gets the activeHoursEnd property value. Active Hours End
-     * @return a LocalTime
+     * @return a {@link LocalTime}
      */
     @jakarta.annotation.Nullable
     public LocalTime getActiveHoursEnd() {
@@ -36,7 +36,7 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
     }
     /**
      * Gets the activeHoursStart property value. Active Hours Start
-     * @return a LocalTime
+     * @return a {@link LocalTime}
      */
     @jakarta.annotation.Nullable
     public LocalTime getActiveHoursStart() {
@@ -44,7 +44,7 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase implements Parsable {
     /**
-     * Instantiates a new UnifiedRoleAssignmentSchedule and sets the default values.
+     * Instantiates a new {@link UnifiedRoleAssignmentSchedule} and sets the default values.
      */
     public UnifiedRoleAssignmentSchedule() {
         super();
@@ -17,7 +17,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnifiedRoleAssignmentSchedule
+     * @return a {@link UnifiedRoleAssignmentSchedule}
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleAssignmentSchedule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
     }
     /**
      * Gets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
-     * @return a UnifiedRoleEligibilitySchedule
+     * @return a {@link UnifiedRoleEligibilitySchedule}
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleEligibilitySchedule getActivatedUsing() {
@@ -34,7 +34,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
     }
     /**
      * Gets the assignmentType property value. Type of the assignment which can either be Assigned or Activated. Supports $filter (eq, ne).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAssignmentType() {
@@ -42,7 +42,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -55,7 +55,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
     }
     /**
      * Gets the memberType property value. How the assignments is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMemberType() {
@@ -63,7 +63,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
     }
     /**
      * Gets the scheduleInfo property value. The period of the role assignment. It can represent a single occurrence or multiple recurrences.
-     * @return a RequestSchedule
+     * @return a {@link RequestSchedule}
      */
     @jakarta.annotation.Nullable
     public RequestSchedule getScheduleInfo() {
