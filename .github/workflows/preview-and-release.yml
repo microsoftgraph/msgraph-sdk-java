@@ -26,7 +26,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
-          java-version: 20
+          java-version: 21
           distribution: 'temurin'
           cache: gradle
       - name: Easy detect-secrets
@@ -58,7 +58,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
-          java-version: 20
+          java-version: 21
           distribution: 'temurin'
           cache: gradle
       - name: Easy detect-secrets
@@ -98,6 +98,8 @@ jobs:
   create_Tag:
     needs: maven_Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     env:
       RELEASE_TAG: ""
     steps:
