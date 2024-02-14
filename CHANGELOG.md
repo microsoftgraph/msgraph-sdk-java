@@ -11,6 +11,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [6.2.0] - 2024-02-14
+
+### Added
+- Latest metadata updates from 13th February 2024.
+
+### Changed
+- Fixes handling of error responses from the Graph API
+- Fixes issue with `PageIterator` not fetching next pages.
+
 ## [6.1.0] - 2024-02-07
 
 - Major Version 6.1.0 now Generally Available.
