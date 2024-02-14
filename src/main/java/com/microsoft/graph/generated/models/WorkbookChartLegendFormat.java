@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartLegendFormat extends Entity implements Parsable {
     /**
-     * Instantiates a new WorkbookChartLegendFormat and sets the default values.
+     * Instantiates a new {@link WorkbookChartLegendFormat} and sets the default values.
      */
     public WorkbookChartLegendFormat() {
         super();
@@ -17,7 +17,7 @@ public class WorkbookChartLegendFormat extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookChartLegendFormat
+     * @return a {@link WorkbookChartLegendFormat}
      */
     @jakarta.annotation.Nonnull
     public static WorkbookChartLegendFormat createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class WorkbookChartLegendFormat extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class WorkbookChartLegendFormat extends Entity implements Parsable {
     }
     /**
      * Gets the fill property value. Represents the fill format of an object, which includes background formating information. Read-only.
-     * @return a WorkbookChartFill
+     * @return a {@link WorkbookChartFill}
      */
     @jakarta.annotation.Nullable
     public WorkbookChartFill getFill() {
@@ -45,7 +45,7 @@ public class WorkbookChartLegendFormat extends Entity implements Parsable {
     }
     /**
      * Gets the font property value. Represents the font attributes such as font name, font size, color, etc. of a chart legend. Read-only.
-     * @return a WorkbookChartFont
+     * @return a {@link WorkbookChartFont}
      */
     @jakarta.annotation.Nullable
     public WorkbookChartFont getFont() {

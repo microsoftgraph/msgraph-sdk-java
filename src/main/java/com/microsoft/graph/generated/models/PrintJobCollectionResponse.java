@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintJobCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new PrintJobCollectionResponse and sets the default values.
+     * Instantiates a new {@link PrintJobCollectionResponse} and sets the default values.
      */
     public PrintJobCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class PrintJobCollectionResponse extends BaseCollectionPaginationCountRes
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrintJobCollectionResponse
+     * @return a {@link PrintJobCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static PrintJobCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class PrintJobCollectionResponse extends BaseCollectionPaginationCountRes
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class PrintJobCollectionResponse extends BaseCollectionPaginationCountRes
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<PrintJob>
+     * @return a {@link java.util.List<PrintJob>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintJob> getValue() {

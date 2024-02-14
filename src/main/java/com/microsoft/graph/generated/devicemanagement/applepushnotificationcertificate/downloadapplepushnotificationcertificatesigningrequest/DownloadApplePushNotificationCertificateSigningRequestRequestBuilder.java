@@ -19,7 +19,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DownloadApplePushNotificationCertificateSigningRequestRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new DownloadApplePushNotificationCertificateSigningRequestRequestBuilder and sets the default values.
+     * Instantiates a new {@link DownloadApplePushNotificationCertificateSigningRequestRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -27,7 +27,7 @@ public class DownloadApplePushNotificationCertificateSigningRequestRequestBuilde
         super(requestAdapter, "{+baseurl}/deviceManagement/applePushNotificationCertificate/downloadApplePushNotificationCertificateSigningRequest()", pathParameters);
     }
     /**
-     * Instantiates a new DownloadApplePushNotificationCertificateSigningRequestRequestBuilder and sets the default values.
+     * Instantiates a new {@link DownloadApplePushNotificationCertificateSigningRequestRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -36,7 +36,8 @@ public class DownloadApplePushNotificationCertificateSigningRequestRequestBuilde
     }
     /**
      * Download Apple push notification certificate signing request
-     * @return a DownloadApplePushNotificationCertificateSigningRequestGetResponse
+     * @return a {@link DownloadApplePushNotificationCertificateSigningRequestGetResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DownloadApplePushNotificationCertificateSigningRequestGetResponse get() {
@@ -45,19 +46,19 @@ public class DownloadApplePushNotificationCertificateSigningRequestRequestBuilde
     /**
      * Download Apple push notification certificate signing request
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DownloadApplePushNotificationCertificateSigningRequestGetResponse
+     * @return a {@link DownloadApplePushNotificationCertificateSigningRequestGetResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DownloadApplePushNotificationCertificateSigningRequestGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DownloadApplePushNotificationCertificateSigningRequestGetResponse::createFromDiscriminatorValue);
     }
     /**
      * Download Apple push notification certificate signing request
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -66,7 +67,7 @@ public class DownloadApplePushNotificationCertificateSigningRequestRequestBuilde
     /**
      * Download Apple push notification certificate signing request
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -78,7 +79,7 @@ public class DownloadApplePushNotificationCertificateSigningRequestRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DownloadApplePushNotificationCertificateSigningRequestRequestBuilder
+     * @return a {@link DownloadApplePushNotificationCertificateSigningRequestRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DownloadApplePushNotificationCertificateSigningRequestRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

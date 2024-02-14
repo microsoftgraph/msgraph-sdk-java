@@ -41,6 +41,7 @@ import java.util.Objects;
 public class PoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the activityBasedTimeoutPolicies property of the microsoft.graph.policyRoot entity.
+     * @return a {@link ActivityBasedTimeoutPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ActivityBasedTimeoutPoliciesRequestBuilder activityBasedTimeoutPolicies() {
@@ -48,6 +49,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the adminConsentRequestPolicy property of the microsoft.graph.policyRoot entity.
+     * @return a {@link AdminConsentRequestPolicyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AdminConsentRequestPolicyRequestBuilder adminConsentRequestPolicy() {
@@ -55,6 +57,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the appManagementPolicies property of the microsoft.graph.policyRoot entity.
+     * @return a {@link AppManagementPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AppManagementPoliciesRequestBuilder appManagementPolicies() {
@@ -62,6 +65,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the authenticationFlowsPolicy property of the microsoft.graph.policyRoot entity.
+     * @return a {@link AuthenticationFlowsPolicyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AuthenticationFlowsPolicyRequestBuilder authenticationFlowsPolicy() {
@@ -69,6 +73,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the authenticationMethodsPolicy property of the microsoft.graph.policyRoot entity.
+     * @return a {@link AuthenticationMethodsPolicyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AuthenticationMethodsPolicyRequestBuilder authenticationMethodsPolicy() {
@@ -76,6 +81,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the authenticationStrengthPolicies property of the microsoft.graph.policyRoot entity.
+     * @return a {@link AuthenticationStrengthPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AuthenticationStrengthPoliciesRequestBuilder authenticationStrengthPolicies() {
@@ -83,6 +89,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the authorizationPolicy property of the microsoft.graph.policyRoot entity.
+     * @return a {@link AuthorizationPolicyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AuthorizationPolicyRequestBuilder authorizationPolicy() {
@@ -90,6 +97,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the claimsMappingPolicies property of the microsoft.graph.policyRoot entity.
+     * @return a {@link ClaimsMappingPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ClaimsMappingPoliciesRequestBuilder claimsMappingPolicies() {
@@ -97,6 +105,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the conditionalAccessPolicies property of the microsoft.graph.policyRoot entity.
+     * @return a {@link ConditionalAccessPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ConditionalAccessPoliciesRequestBuilder conditionalAccessPolicies() {
@@ -104,6 +113,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the crossTenantAccessPolicy property of the microsoft.graph.policyRoot entity.
+     * @return a {@link CrossTenantAccessPolicyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CrossTenantAccessPolicyRequestBuilder crossTenantAccessPolicy() {
@@ -111,6 +121,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the defaultAppManagementPolicy property of the microsoft.graph.policyRoot entity.
+     * @return a {@link DefaultAppManagementPolicyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DefaultAppManagementPolicyRequestBuilder defaultAppManagementPolicy() {
@@ -118,6 +129,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the featureRolloutPolicies property of the microsoft.graph.policyRoot entity.
+     * @return a {@link FeatureRolloutPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FeatureRolloutPoliciesRequestBuilder featureRolloutPolicies() {
@@ -125,6 +137,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.policyRoot entity.
+     * @return a {@link HomeRealmDiscoveryPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public HomeRealmDiscoveryPoliciesRequestBuilder homeRealmDiscoveryPolicies() {
@@ -132,6 +145,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the identitySecurityDefaultsEnforcementPolicy property of the microsoft.graph.policyRoot entity.
+     * @return a {@link IdentitySecurityDefaultsEnforcementPolicyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IdentitySecurityDefaultsEnforcementPolicyRequestBuilder identitySecurityDefaultsEnforcementPolicy() {
@@ -139,6 +153,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the permissionGrantPolicies property of the microsoft.graph.policyRoot entity.
+     * @return a {@link PermissionGrantPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PermissionGrantPoliciesRequestBuilder permissionGrantPolicies() {
@@ -146,6 +161,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the roleManagementPolicies property of the microsoft.graph.policyRoot entity.
+     * @return a {@link RoleManagementPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleManagementPoliciesRequestBuilder roleManagementPolicies() {
@@ -153,6 +169,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the roleManagementPolicyAssignments property of the microsoft.graph.policyRoot entity.
+     * @return a {@link RoleManagementPolicyAssignmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleManagementPolicyAssignmentsRequestBuilder roleManagementPolicyAssignments() {
@@ -160,6 +177,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.policyRoot entity.
+     * @return a {@link TokenIssuancePoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TokenIssuancePoliciesRequestBuilder tokenIssuancePolicies() {
@@ -167,13 +185,14 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the tokenLifetimePolicies property of the microsoft.graph.policyRoot entity.
+     * @return a {@link TokenLifetimePoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TokenLifetimePoliciesRequestBuilder tokenLifetimePolicies() {
         return new TokenLifetimePoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new PoliciesRequestBuilder and sets the default values.
+     * Instantiates a new {@link PoliciesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -181,7 +200,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new PoliciesRequestBuilder and sets the default values.
+     * Instantiates a new {@link PoliciesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -190,7 +209,8 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get policies
-     * @return a PolicyRoot
+     * @return a {@link PolicyRoot}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public PolicyRoot get() {
@@ -199,20 +219,21 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PolicyRoot
+     * @return a {@link PolicyRoot}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public PolicyRoot get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PolicyRoot::createFromDiscriminatorValue);
     }
     /**
      * Update policies
      * @param body The request body
-     * @return a PolicyRoot
+     * @return a {@link PolicyRoot}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public PolicyRoot patch(@jakarta.annotation.Nonnull final PolicyRoot body) {
@@ -222,20 +243,20 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
      * Update policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PolicyRoot
+     * @return a {@link PolicyRoot}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public PolicyRoot patch(@jakarta.annotation.Nonnull final PolicyRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PolicyRoot::createFromDiscriminatorValue);
     }
     /**
      * Get policies
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -244,7 +265,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -256,7 +277,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Update policies
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final PolicyRoot body) {
@@ -266,12 +287,12 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
      * Update policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final PolicyRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/policies", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -280,7 +301,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a PoliciesRequestBuilder
+     * @return a {@link PoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -304,7 +325,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

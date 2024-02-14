@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MembersAddedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * Instantiates a new MembersAddedEventMessageDetail and sets the default values.
+     * Instantiates a new {@link MembersAddedEventMessageDetail} and sets the default values.
      */
     public MembersAddedEventMessageDetail() {
         super();
@@ -19,7 +19,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MembersAddedEventMessageDetail
+     * @return a {@link MembersAddedEventMessageDetail}
      */
     @jakarta.annotation.Nonnull
     public static MembersAddedEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
     }
     /**
      * Gets the initiator property value. Initiator of the event.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
@@ -48,7 +48,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
     }
     /**
      * Gets the members property value. List of members added.
-     * @return a java.util.List<TeamworkUserIdentity>
+     * @return a {@link java.util.List<TeamworkUserIdentity>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamworkUserIdentity> getMembers() {
@@ -56,7 +56,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
     }
     /**
      * Gets the visibleHistoryStartDateTime property value. The timestamp that denotes how far back a conversation's history is shared with the conversation members.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getVisibleHistoryStartDateTime() {

@@ -20,7 +20,7 @@ public class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataH
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new UpdateAllowedCombinationsPostRequestBody and sets the default values.
+     * Instantiates a new {@link UpdateAllowedCombinationsPostRequestBody} and sets the default values.
      */
     public UpdateAllowedCombinationsPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -29,7 +29,7 @@ public class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataH
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UpdateAllowedCombinationsPostRequestBody
+     * @return a {@link UpdateAllowedCombinationsPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static UpdateAllowedCombinationsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataH
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -51,7 +51,7 @@ public class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataH
     }
     /**
      * Gets the allowedCombinations property value. The allowedCombinations property
-     * @return a java.util.List<AuthenticationMethodModes>
+     * @return a {@link java.util.List<AuthenticationMethodModes>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodModes> getAllowedCombinations() {
@@ -59,7 +59,7 @@ public class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataH
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -67,7 +67,7 @@ public class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataH
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

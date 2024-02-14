@@ -18,7 +18,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ServicePrincipalLockConfiguration and sets the default values.
+     * Instantiates a new {@link ServicePrincipalLockConfiguration} and sets the default values.
      */
     public ServicePrincipalLockConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ServicePrincipalLockConfiguration
+     * @return a {@link ServicePrincipalLockConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static ServicePrincipalLockConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
     }
     /**
      * Gets the allProperties property value. Enables locking all sensitive properties. The sensitive properties are keyCredentials, passwordCredentials, and tokenEncryptionKeyId.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllProperties() {
@@ -57,7 +57,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
     }
     /**
      * Gets the credentialsWithUsageSign property value. Locks the keyCredentials and passwordCredentials properties for modification where credential usage type is Sign.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getCredentialsWithUsageSign() {
@@ -73,7 +73,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
     }
     /**
      * Gets the credentialsWithUsageVerify property value. Locks the keyCredentials and passwordCredentials properties for modification where credential usage type is Verify. This locks OAuth service principals.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getCredentialsWithUsageVerify() {
@@ -81,7 +81,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -96,7 +96,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
     }
     /**
      * Gets the isEnabled property value. Enables or disables service principal lock configuration. To allow the sensitive properties to be updated, update this property to false to disable the lock on the service principal.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -104,7 +104,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -112,7 +112,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
     }
     /**
      * Gets the tokenEncryptionKeyId property value. Locks the tokenEncryptionKeyId property for modification on the service principal.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getTokenEncryptionKeyId() {

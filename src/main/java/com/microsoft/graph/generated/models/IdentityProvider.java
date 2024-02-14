@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IdentityProvider extends Entity implements Parsable {
     /**
-     * Instantiates a new IdentityProvider and sets the default values.
+     * Instantiates a new {@link IdentityProvider} and sets the default values.
      */
     public IdentityProvider() {
         super();
@@ -17,7 +17,7 @@ public class IdentityProvider extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IdentityProvider
+     * @return a {@link IdentityProvider}
      */
     @jakarta.annotation.Nonnull
     public static IdentityProvider createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class IdentityProvider extends Entity implements Parsable {
     }
     /**
      * Gets the clientId property value. The client ID for the application. This is the client ID obtained when registering the application with the identity provider. Required. Not nullable.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getClientId() {
@@ -34,7 +34,7 @@ public class IdentityProvider extends Entity implements Parsable {
     }
     /**
      * Gets the clientSecret property value. The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return .  Required. Not nullable.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getClientSecret() {
@@ -42,7 +42,7 @@ public class IdentityProvider extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -55,7 +55,7 @@ public class IdentityProvider extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The display name of the identity provider. Not nullable.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -63,7 +63,7 @@ public class IdentityProvider extends Entity implements Parsable {
     }
     /**
      * Gets the type property value. The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo, QQ, WeChat, OpenIDConnect. Not nullable.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getType() {

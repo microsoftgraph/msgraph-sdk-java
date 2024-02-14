@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BookingCustomerInformation extends BookingCustomerInformationBase implements Parsable {
     /**
-     * Instantiates a new BookingCustomerInformation and sets the default values.
+     * Instantiates a new {@link BookingCustomerInformation} and sets the default values.
      */
     public BookingCustomerInformation() {
         super();
@@ -18,7 +18,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BookingCustomerInformation
+     * @return a {@link BookingCustomerInformation}
      */
     @jakarta.annotation.Nonnull
     public static BookingCustomerInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
     }
     /**
      * Gets the customerId property value. The ID of the bookingCustomer for this appointment. If no ID is specified when an appointment is created, then a new bookingCustomer object is created. Once set, you should consider the customerId immutable.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCustomerId() {
@@ -35,7 +35,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
     }
     /**
      * Gets the customQuestionAnswers property value. It consists of the list of custom questions and answers given by the customer as part of the appointment
-     * @return a java.util.List<BookingQuestionAnswer>
+     * @return a {@link java.util.List<BookingQuestionAnswer>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingQuestionAnswer> getCustomQuestionAnswers() {
@@ -43,7 +43,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
     }
     /**
      * Gets the emailAddress property value. The SMTP address of the bookingCustomer who is booking the appointment
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmailAddress() {
@@ -51,7 +51,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,7 +68,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
     }
     /**
      * Gets the location property value. Represents location information for thebookingCustomerwho is booking the appointment.
-     * @return a Location
+     * @return a {@link Location}
      */
     @jakarta.annotation.Nullable
     public Location getLocation() {
@@ -76,7 +76,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
     }
     /**
      * Gets the name property value. The customer's name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -84,7 +84,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
     }
     /**
      * Gets the notes property value. Notes from the customer associated with this appointment. You can get the value only when reading this bookingAppointment by its ID. You can set this property only when initially creating an appointment with a new customer. After that point, the value is computed from the customer represented by the customerId.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNotes() {
@@ -92,7 +92,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
     }
     /**
      * Gets the phone property value. The customer's phone number.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPhone() {
@@ -100,7 +100,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
     }
     /**
      * Gets the timeZone property value. The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTimeZone() {

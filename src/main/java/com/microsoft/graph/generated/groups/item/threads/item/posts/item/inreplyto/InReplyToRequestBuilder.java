@@ -26,6 +26,7 @@ import java.util.Objects;
 public class InReplyToRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the attachments property of the microsoft.graph.post entity.
+     * @return a {@link AttachmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AttachmentsRequestBuilder attachments() {
@@ -33,6 +34,7 @@ public class InReplyToRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the extensions property of the microsoft.graph.post entity.
+     * @return a {@link ExtensionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
@@ -40,6 +42,7 @@ public class InReplyToRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the forward method.
+     * @return a {@link ForwardRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ForwardRequestBuilder forward() {
@@ -47,13 +50,14 @@ public class InReplyToRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the reply method.
+     * @return a {@link ReplyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReplyRequestBuilder reply() {
         return new ReplyRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new InReplyToRequestBuilder and sets the default values.
+     * Instantiates a new {@link InReplyToRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -61,7 +65,7 @@ public class InReplyToRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/threads/{conversationThread%2Did}/posts/{post%2Did}/inReplyTo{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new InReplyToRequestBuilder and sets the default values.
+     * Instantiates a new {@link InReplyToRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -70,7 +74,8 @@ public class InReplyToRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read-only. Supports $expand.
-     * @return a Post
+     * @return a {@link Post}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Post get() {
@@ -79,19 +84,19 @@ public class InReplyToRequestBuilder extends BaseRequestBuilder {
     /**
      * Read-only. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Post
+     * @return a {@link Post}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Post get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Post::createFromDiscriminatorValue);
     }
     /**
      * Read-only. Supports $expand.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -100,7 +105,7 @@ public class InReplyToRequestBuilder extends BaseRequestBuilder {
     /**
      * Read-only. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -112,7 +117,7 @@ public class InReplyToRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a InReplyToRequestBuilder
+     * @return a {@link InReplyToRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public InReplyToRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -136,7 +141,7 @@ public class InReplyToRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

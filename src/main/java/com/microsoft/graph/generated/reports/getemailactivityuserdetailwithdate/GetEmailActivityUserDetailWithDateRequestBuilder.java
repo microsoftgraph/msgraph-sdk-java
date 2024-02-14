@@ -21,7 +21,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetEmailActivityUserDetailWithDateRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new GetEmailActivityUserDetailWithDateRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetEmailActivityUserDetailWithDateRequestBuilder} and sets the default values.
      * @param date Usage: date={date}
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -31,7 +31,7 @@ public class GetEmailActivityUserDetailWithDateRequestBuilder extends BaseReques
         this.pathParameters.put("date", date);
     }
     /**
-     * Instantiates a new GetEmailActivityUserDetailWithDateRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetEmailActivityUserDetailWithDateRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -40,7 +40,8 @@ public class GetEmailActivityUserDetailWithDateRequestBuilder extends BaseReques
     }
     /**
      * Invoke function getEmailActivityUserDetail
-     * @return a InputStream
+     * @return a {@link InputStream}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public InputStream get() {
@@ -49,19 +50,19 @@ public class GetEmailActivityUserDetailWithDateRequestBuilder extends BaseReques
     /**
      * Invoke function getEmailActivityUserDetail
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a InputStream
+     * @return a {@link InputStream}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public InputStream get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
      * Invoke function getEmailActivityUserDetail
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -70,7 +71,7 @@ public class GetEmailActivityUserDetailWithDateRequestBuilder extends BaseReques
     /**
      * Invoke function getEmailActivityUserDetail
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +83,7 @@ public class GetEmailActivityUserDetailWithDateRequestBuilder extends BaseReques
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GetEmailActivityUserDetailWithDateRequestBuilder
+     * @return a {@link GetEmailActivityUserDetailWithDateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetEmailActivityUserDetailWithDateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

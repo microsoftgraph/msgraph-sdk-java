@@ -19,7 +19,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Pars
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ArchivedPrintJob and sets the default values.
+     * Instantiates a new {@link ArchivedPrintJob} and sets the default values.
      */
     public ArchivedPrintJob() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ArchivedPrintJob
+     * @return a {@link ArchivedPrintJob}
      */
     @jakarta.annotation.Nonnull
     public static ArchivedPrintJob createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the acquiredByPrinter property value. True if the job was acquired by a printer; false otherwise. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAcquiredByPrinter() {
@@ -45,7 +45,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the acquiredDateTime property value. The dateTimeOffset when the job was acquired by the printer, if any. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAcquiredDateTime() {
@@ -53,7 +53,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -66,7 +66,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -74,7 +74,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the completionDateTime property value. The dateTimeOffset when the job was completed, canceled or aborted. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompletionDateTime() {
@@ -82,7 +82,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the copiesPrinted property value. The number of copies that were printed. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCopiesPrinted() {
@@ -90,7 +90,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the createdBy property value. The user who created the print job. Read-only.
-     * @return a UserIdentity
+     * @return a {@link UserIdentity}
      */
     @jakarta.annotation.Nullable
     public UserIdentity getCreatedBy() {
@@ -98,7 +98,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the createdDateTime property value. The dateTimeOffset when the job was created. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -106,7 +106,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -126,7 +126,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the id property value. The archived print job's GUID. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -134,7 +134,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -142,7 +142,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the printerId property value. The printer ID that the job was queued for. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPrinterId() {
@@ -150,7 +150,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the printerName property value. The printer name that the job was queued for. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPrinterName() {
@@ -158,7 +158,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the processingState property value. The processingState property
-     * @return a PrintJobProcessingState
+     * @return a {@link PrintJobProcessingState}
      */
     @jakarta.annotation.Nullable
     public PrintJobProcessingState getProcessingState() {

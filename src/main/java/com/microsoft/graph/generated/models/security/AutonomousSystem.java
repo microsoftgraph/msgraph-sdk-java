@@ -18,7 +18,7 @@ public class AutonomousSystem implements AdditionalDataHolder, BackedModel, Pars
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AutonomousSystem and sets the default values.
+     * Instantiates a new {@link AutonomousSystem} and sets the default values.
      */
     public AutonomousSystem() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AutonomousSystem implements AdditionalDataHolder, BackedModel, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AutonomousSystem
+     * @return a {@link AutonomousSystem}
      */
     @jakarta.annotation.Nonnull
     public static AutonomousSystem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AutonomousSystem implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AutonomousSystem implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class AutonomousSystem implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -71,7 +71,7 @@ public class AutonomousSystem implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the name property value. The name of the autonomous system.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -79,7 +79,7 @@ public class AutonomousSystem implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the number property value. The autonomous system number, assigned by IANA.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNumber() {
@@ -87,7 +87,7 @@ public class AutonomousSystem implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -95,7 +95,7 @@ public class AutonomousSystem implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the organization property value. The name of the autonomous system organization.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOrganization() {
@@ -103,7 +103,7 @@ public class AutonomousSystem implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the value property value. A displayable value for these autonomous system details.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getValue() {

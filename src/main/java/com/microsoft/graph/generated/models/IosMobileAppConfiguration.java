@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration implements Parsable {
     /**
-     * Instantiates a new IosMobileAppConfiguration and sets the default values.
+     * Instantiates a new {@link IosMobileAppConfiguration} and sets the default values.
      */
     public IosMobileAppConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosMobileAppConfiguration
+     * @return a {@link IosMobileAppConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static IosMobileAppConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
     }
     /**
      * Gets the encodedSettingXml property value. mdm app configuration Base64 binary.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getEncodedSettingXml() {
@@ -38,7 +38,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -49,7 +49,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
     }
     /**
      * Gets the settings property value. app configuration setting items.
-     * @return a java.util.List<AppConfigurationSettingItem>
+     * @return a {@link java.util.List<AppConfigurationSettingItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppConfigurationSettingItem> getSettings() {

@@ -29,6 +29,7 @@ import java.util.Objects;
 public class ContactsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -36,6 +37,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the delta method.
+     * @return a {@link DeltaRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeltaRequestBuilder delta() {
@@ -43,6 +45,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getAvailableExtensionProperties method.
+     * @return a {@link GetAvailableExtensionPropertiesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetAvailableExtensionPropertiesRequestBuilder getAvailableExtensionProperties() {
@@ -50,6 +53,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getByIds method.
+     * @return a {@link GetByIdsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetByIdsRequestBuilder getByIds() {
@@ -57,6 +61,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the validateProperties method.
+     * @return a {@link ValidatePropertiesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
@@ -65,7 +70,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of orgContact entities.
      * @param orgContactId The unique identifier of orgContact
-     * @return a OrgContactItemRequestBuilder
+     * @return a {@link OrgContactItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OrgContactItemRequestBuilder byOrgContactId(@jakarta.annotation.Nonnull final String orgContactId) {
@@ -75,7 +80,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return new OrgContactItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new ContactsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ContactsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -83,7 +88,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/contacts{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new ContactsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ContactsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -92,7 +97,8 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of organizational contacts for this organization.
-     * @return a OrgContactCollectionResponse
+     * @return a {@link OrgContactCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/orgcontact-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -102,21 +108,22 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of organizational contacts for this organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a OrgContactCollectionResponse
+     * @return a {@link OrgContactCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/orgcontact-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OrgContactCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, OrgContactCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Add new entity to contacts
      * @param body The request body
-     * @return a OrgContact
+     * @return a {@link OrgContact}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public OrgContact post(@jakarta.annotation.Nonnull final OrgContact body) {
@@ -126,20 +133,20 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
      * Add new entity to contacts
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a OrgContact
+     * @return a {@link OrgContact}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public OrgContact post(@jakarta.annotation.Nonnull final OrgContact body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, OrgContact::createFromDiscriminatorValue);
     }
     /**
      * Get the list of organizational contacts for this organization.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -148,7 +155,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of organizational contacts for this organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -160,7 +167,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to contacts
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final OrgContact body) {
@@ -170,12 +177,12 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
      * Add new entity to contacts
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final OrgContact body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/contacts", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -184,7 +191,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ContactsRequestBuilder
+     * @return a {@link ContactsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ContactsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -238,7 +245,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

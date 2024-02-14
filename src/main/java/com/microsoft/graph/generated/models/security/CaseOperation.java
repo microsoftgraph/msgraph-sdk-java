@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CaseOperation extends Entity implements Parsable {
     /**
-     * Instantiates a new CaseOperation and sets the default values.
+     * Instantiates a new {@link CaseOperation} and sets the default values.
      */
     public CaseOperation() {
         super();
@@ -21,7 +21,7 @@ public class CaseOperation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CaseOperation
+     * @return a {@link CaseOperation}
      */
     @jakarta.annotation.Nonnull
     public static CaseOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class CaseOperation extends Entity implements Parsable {
     }
     /**
      * Gets the action property value. The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics, purgeData
-     * @return a CaseAction
+     * @return a {@link CaseAction}
      */
     @jakarta.annotation.Nullable
     public CaseAction getAction() {
@@ -51,7 +51,7 @@ public class CaseOperation extends Entity implements Parsable {
     }
     /**
      * Gets the completedDateTime property value. The date and time the operation was completed.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
@@ -59,7 +59,7 @@ public class CaseOperation extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The user that created the operation.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -67,7 +67,7 @@ public class CaseOperation extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time the operation was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -75,7 +75,7 @@ public class CaseOperation extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -91,7 +91,7 @@ public class CaseOperation extends Entity implements Parsable {
     }
     /**
      * Gets the percentProgress property value. The progress of the operation.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPercentProgress() {
@@ -99,7 +99,7 @@ public class CaseOperation extends Entity implements Parsable {
     }
     /**
      * Gets the resultInfo property value. Contains success and failure-specific result information.
-     * @return a ResultInfo
+     * @return a {@link ResultInfo}
      */
     @jakarta.annotation.Nullable
     public ResultInfo getResultInfo() {
@@ -107,7 +107,7 @@ public class CaseOperation extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status of the case operation. Possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed.
-     * @return a CaseOperationStatus
+     * @return a {@link CaseOperationStatus}
      */
     @jakarta.annotation.Nullable
     public CaseOperationStatus getStatus() {

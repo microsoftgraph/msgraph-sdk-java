@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserLastSignInRecommendationInsightSetting extends AccessReviewRecommendationInsightSetting implements Parsable {
     /**
-     * Instantiates a new UserLastSignInRecommendationInsightSetting and sets the default values.
+     * Instantiates a new {@link UserLastSignInRecommendationInsightSetting} and sets the default values.
      */
     public UserLastSignInRecommendationInsightSetting() {
         super();
@@ -19,7 +19,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserLastSignInRecommendationInsightSetting
+     * @return a {@link UserLastSignInRecommendationInsightSetting}
      */
     @jakarta.annotation.Nonnull
     public static UserLastSignInRecommendationInsightSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -39,7 +39,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
     }
     /**
      * Gets the recommendationLookBackDuration property value. Optional. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look-back duration. For reviews of groups and Microsoft Entra roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getRecommendationLookBackDuration() {
@@ -47,7 +47,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
     }
     /**
      * Gets the signInScope property value. Indicates whether inactivity is calculated based on the user's inactivity in the tenant or in the application. The possible values are tenant, application, unknownFutureValue. application is only relevant when the access review is a review of an assignment to an application.
-     * @return a UserSignInRecommendationScope
+     * @return a {@link UserSignInRecommendationScope}
      */
     @jakarta.annotation.Nullable
     public UserSignInRecommendationScope getSignInScope() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ThreatIntelligence extends Entity implements Parsable {
     /**
-     * Instantiates a new ThreatIntelligence and sets the default values.
+     * Instantiates a new {@link ThreatIntelligence} and sets the default values.
      */
     public ThreatIntelligence() {
         super();
@@ -18,7 +18,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ThreatIntelligence
+     * @return a {@link ThreatIntelligence}
      */
     @jakarta.annotation.Nonnull
     public static ThreatIntelligence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the articleIndicators property value. Refers to indicators of threat or compromise highlighted in an article.Note: List retrieval is not yet supported.
-     * @return a java.util.List<ArticleIndicator>
+     * @return a {@link java.util.List<ArticleIndicator>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ArticleIndicator> getArticleIndicators() {
@@ -35,7 +35,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the articles property value. A list of article objects.
-     * @return a java.util.List<Article>
+     * @return a {@link java.util.List<Article>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Article> getArticles() {
@@ -43,7 +43,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the hostComponents property value. Retrieve details about hostComponent objects.Note: List retrieval is not yet supported.
-     * @return a java.util.List<HostComponent>
+     * @return a {@link java.util.List<HostComponent>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostComponent> getHostComponents() {
@@ -77,7 +77,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the hostCookies property value. Retrieve details about hostCookie objects.Note: List retrieval is not yet supported.
-     * @return a java.util.List<HostCookie>
+     * @return a {@link java.util.List<HostCookie>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostCookie> getHostCookies() {
@@ -85,7 +85,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the hostPairs property value. Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
-     * @return a java.util.List<HostPair>
+     * @return a {@link java.util.List<HostPair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostPair> getHostPairs() {
@@ -93,7 +93,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the hostPorts property value. Retrieve details about hostPort objects.Note: List retrieval is not yet supported.
-     * @return a java.util.List<HostPort>
+     * @return a {@link java.util.List<HostPort>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostPort> getHostPorts() {
@@ -101,7 +101,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the hosts property value. Refers to host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
-     * @return a java.util.List<Host>
+     * @return a {@link java.util.List<Host>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Host> getHosts() {
@@ -109,7 +109,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the hostSslCertificates property value. Retrieve details about hostSslCertificate objects.Note: List retrieval is not yet supported.
-     * @return a java.util.List<HostSslCertificate>
+     * @return a {@link java.util.List<HostSslCertificate>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostSslCertificate> getHostSslCertificates() {
@@ -117,7 +117,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the hostTrackers property value. Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
-     * @return a java.util.List<HostTracker>
+     * @return a {@link java.util.List<HostTracker>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostTracker> getHostTrackers() {
@@ -125,7 +125,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the intelligenceProfileIndicators property value. The intelligenceProfileIndicators property
-     * @return a java.util.List<IntelligenceProfileIndicator>
+     * @return a {@link java.util.List<IntelligenceProfileIndicator>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IntelligenceProfileIndicator> getIntelligenceProfileIndicators() {
@@ -133,7 +133,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the intelProfiles property value. A list of intelligenceProfile objects.
-     * @return a java.util.List<IntelligenceProfile>
+     * @return a {@link java.util.List<IntelligenceProfile>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IntelligenceProfile> getIntelProfiles() {
@@ -141,7 +141,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the passiveDnsRecords property value. Retrieve details about passiveDnsRecord objects.Note: List retrieval is not yet supported.
-     * @return a java.util.List<PassiveDnsRecord>
+     * @return a {@link java.util.List<PassiveDnsRecord>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PassiveDnsRecord> getPassiveDnsRecords() {
@@ -149,7 +149,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the sslCertificates property value. Retrieve details about sslCertificate objects.Note: List retrieval is not yet supported.
-     * @return a java.util.List<SslCertificate>
+     * @return a {@link java.util.List<SslCertificate>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SslCertificate> getSslCertificates() {
@@ -157,7 +157,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the subdomains property value. Retrieve details about the subdomain.Note: List retrieval is not yet supported.
-     * @return a java.util.List<Subdomain>
+     * @return a {@link java.util.List<Subdomain>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Subdomain> getSubdomains() {
@@ -165,7 +165,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the vulnerabilities property value. Retrieve details about vulnerabilities.Note: List retrieval is not yet supported.
-     * @return a java.util.List<Vulnerability>
+     * @return a {@link java.util.List<Vulnerability>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Vulnerability> getVulnerabilities() {
@@ -173,7 +173,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the whoisHistoryRecords property value. Retrieve details about whoisHistoryRecord objects.Note: List retrieval is not yet supported.
-     * @return a java.util.List<WhoisHistoryRecord>
+     * @return a {@link java.util.List<WhoisHistoryRecord>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WhoisHistoryRecord> getWhoisHistoryRecords() {
@@ -181,7 +181,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the whoisRecords property value. A list of whoisRecord objects.
-     * @return a java.util.List<WhoisRecord>
+     * @return a {@link java.util.List<WhoisRecord>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WhoisRecord> getWhoisRecords() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChatMessageInfo extends Entity implements Parsable {
     /**
-     * Instantiates a new ChatMessageInfo and sets the default values.
+     * Instantiates a new {@link ChatMessageInfo} and sets the default values.
      */
     public ChatMessageInfo() {
         super();
@@ -18,7 +18,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ChatMessageInfo
+     * @return a {@link ChatMessageInfo}
      */
     @jakarta.annotation.Nonnull
     public static ChatMessageInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
     }
     /**
      * Gets the body property value. Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object doesn't return @mentions and attachments.
-     * @return a ItemBody
+     * @return a {@link ItemBody}
      */
     @jakarta.annotation.Nullable
     public ItemBody getBody() {
@@ -35,7 +35,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Date time object representing the time at which message was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -43,7 +43,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
     }
     /**
      * Gets the eventDetail property value. Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property is set to systemEventMessage.
-     * @return a EventMessageDetail
+     * @return a {@link EventMessageDetail}
      */
     @jakarta.annotation.Nullable
     public EventMessageDetail getEventDetail() {
@@ -51,7 +51,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -66,7 +66,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
     }
     /**
      * Gets the from property value. Information about the sender of the message.
-     * @return a ChatMessageFromIdentitySet
+     * @return a {@link ChatMessageFromIdentitySet}
      */
     @jakarta.annotation.Nullable
     public ChatMessageFromIdentitySet getFrom() {
@@ -74,7 +74,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
     }
     /**
      * Gets the isDeleted property value. If set to true, the original message has been deleted.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeleted() {
@@ -82,7 +82,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
     }
     /**
      * Gets the messageType property value. The messageType property
-     * @return a ChatMessageType
+     * @return a {@link ChatMessageType}
      */
     @jakarta.annotation.Nullable
     public ChatMessageType getMessageType() {

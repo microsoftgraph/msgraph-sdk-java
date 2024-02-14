@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookFormatProtection extends Entity implements Parsable {
     /**
-     * Instantiates a new WorkbookFormatProtection and sets the default values.
+     * Instantiates a new {@link WorkbookFormatProtection} and sets the default values.
      */
     public WorkbookFormatProtection() {
         super();
@@ -17,7 +17,7 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookFormatProtection
+     * @return a {@link WorkbookFormatProtection}
      */
     @jakarta.annotation.Nonnull
     public static WorkbookFormatProtection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
     }
     /**
      * Gets the formulaHidden property value. Indicates if Excel hides the formula for the cells in the range. A null value indicates that the entire range doesn't have uniform formula hidden setting.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFormulaHidden() {
@@ -45,7 +45,7 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
     }
     /**
      * Gets the locked property value. Indicates if Excel locks the cells in the object. A null value indicates that the entire range doesn't have uniform lock setting.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocked() {

@@ -19,7 +19,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ImageWithWidthWithHeightWithFittingModeRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new ImageWithWidthWithHeightWithFittingModeRequestBuilder and sets the default values.
+     * Instantiates a new {@link ImageWithWidthWithHeightWithFittingModeRequestBuilder} and sets the default values.
      * @param fittingMode Usage: fittingMode='{fittingMode}'
      * @param height Usage: height={height}
      * @param pathParameters Path parameters for the request
@@ -33,7 +33,7 @@ public class ImageWithWidthWithHeightWithFittingModeRequestBuilder extends BaseR
         this.pathParameters.put("width", width);
     }
     /**
-     * Instantiates a new ImageWithWidthWithHeightWithFittingModeRequestBuilder and sets the default values.
+     * Instantiates a new {@link ImageWithWidthWithHeightWithFittingModeRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -42,7 +42,8 @@ public class ImageWithWidthWithHeightWithFittingModeRequestBuilder extends BaseR
     }
     /**
      * Invoke function image
-     * @return a ImageWithWidthWithHeightWithFittingModeGetResponse
+     * @return a {@link ImageWithWidthWithHeightWithFittingModeGetResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ImageWithWidthWithHeightWithFittingModeGetResponse get() {
@@ -51,19 +52,19 @@ public class ImageWithWidthWithHeightWithFittingModeRequestBuilder extends BaseR
     /**
      * Invoke function image
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ImageWithWidthWithHeightWithFittingModeGetResponse
+     * @return a {@link ImageWithWidthWithHeightWithFittingModeGetResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ImageWithWidthWithHeightWithFittingModeGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ImageWithWidthWithHeightWithFittingModeGetResponse::createFromDiscriminatorValue);
     }
     /**
      * Invoke function image
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -72,7 +73,7 @@ public class ImageWithWidthWithHeightWithFittingModeRequestBuilder extends BaseR
     /**
      * Invoke function image
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,7 +85,7 @@ public class ImageWithWidthWithHeightWithFittingModeRequestBuilder extends BaseR
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ImageWithWidthWithHeightWithFittingModeRequestBuilder
+     * @return a {@link ImageWithWidthWithHeightWithFittingModeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImageWithWidthWithHeightWithFittingModeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

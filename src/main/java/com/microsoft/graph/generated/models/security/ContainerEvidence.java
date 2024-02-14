@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ContainerEvidence extends AlertEvidence implements Parsable {
     /**
-     * Instantiates a new ContainerEvidence and sets the default values.
+     * Instantiates a new {@link ContainerEvidence} and sets the default values.
      */
     public ContainerEvidence() {
         super();
@@ -18,7 +18,7 @@ public class ContainerEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ContainerEvidence
+     * @return a {@link ContainerEvidence}
      */
     @jakarta.annotation.Nonnull
     public static ContainerEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ContainerEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the args property value. The list of arguments.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getArgs() {
@@ -35,7 +35,7 @@ public class ContainerEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the command property value. The list of commands.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCommand() {
@@ -43,7 +43,7 @@ public class ContainerEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the containerId property value. The container ID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContainerId() {
@@ -51,7 +51,7 @@ public class ContainerEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -67,7 +67,7 @@ public class ContainerEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the image property value. The image used to run the container.
-     * @return a ContainerImageEvidence
+     * @return a {@link ContainerImageEvidence}
      */
     @jakarta.annotation.Nullable
     public ContainerImageEvidence getImage() {
@@ -75,7 +75,7 @@ public class ContainerEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the isPrivileged property value. The privileged status.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPrivileged() {
@@ -83,7 +83,7 @@ public class ContainerEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the name property value. The container name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -91,7 +91,7 @@ public class ContainerEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the pod property value. The pod this container belongs to.
-     * @return a KubernetesPodEvidence
+     * @return a {@link KubernetesPodEvidence}
      */
     @jakarta.annotation.Nullable
     public KubernetesPodEvidence getPod() {

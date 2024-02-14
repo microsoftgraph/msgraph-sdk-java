@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndAppManagementAssignmentTarget implements Parsable {
     /**
-     * Instantiates a new ConfigurationManagerCollectionAssignmentTarget and sets the default values.
+     * Instantiates a new {@link ConfigurationManagerCollectionAssignmentTarget} and sets the default values.
      */
     public ConfigurationManagerCollectionAssignmentTarget() {
         super();
@@ -21,7 +21,7 @@ public class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndApp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConfigurationManagerCollectionAssignmentTarget
+     * @return a {@link ConfigurationManagerCollectionAssignmentTarget}
      */
     @jakarta.annotation.Nonnull
     public static ConfigurationManagerCollectionAssignmentTarget createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndApp
     }
     /**
      * Gets the collectionId property value. The collection Id that is the target of the assignment.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCollectionId() {
@@ -38,7 +38,7 @@ public class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndApp
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

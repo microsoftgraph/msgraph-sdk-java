@@ -25,6 +25,7 @@ import java.util.Objects;
 public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the deviceLocalCredentials property of the microsoft.graph.directory entity.
      * @param deviceLocalCredentialInfoId The unique identifier of deviceLocalCredentialInfo
-     * @return a DeviceLocalCredentialInfoItemRequestBuilder
+     * @return a {@link DeviceLocalCredentialInfoItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceLocalCredentialInfoItemRequestBuilder byDeviceLocalCredentialInfoId(@jakarta.annotation.Nonnull final String deviceLocalCredentialInfoId) {
@@ -43,7 +44,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
         return new DeviceLocalCredentialInfoItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new DeviceLocalCredentialsRequestBuilder and sets the default values.
+     * Instantiates a new {@link DeviceLocalCredentialsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/deviceLocalCredentials{?%24count,%24filter,%24orderby,%24search,%24select,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new DeviceLocalCredentialsRequestBuilder and sets the default values.
+     * Instantiates a new {@link DeviceLocalCredentialsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the deviceLocalCredentialInfo objects and their properties, excluding the credentials property. 
-     * @return a DeviceLocalCredentialInfoCollectionResponse
+     * @return a {@link DeviceLocalCredentialInfoCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-devicelocalcredentials?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the deviceLocalCredentialInfo objects and their properties, excluding the credentials property. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceLocalCredentialInfoCollectionResponse
+     * @return a {@link DeviceLocalCredentialInfoCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-devicelocalcredentials?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceLocalCredentialInfoCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceLocalCredentialInfoCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to deviceLocalCredentials for directory
      * @param body The request body
-     * @return a DeviceLocalCredentialInfo
+     * @return a {@link DeviceLocalCredentialInfo}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceLocalCredentialInfo post(@jakarta.annotation.Nonnull final DeviceLocalCredentialInfo body) {
@@ -94,20 +97,20 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to deviceLocalCredentials for directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceLocalCredentialInfo
+     * @return a {@link DeviceLocalCredentialInfo}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceLocalCredentialInfo post(@jakarta.annotation.Nonnull final DeviceLocalCredentialInfo body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceLocalCredentialInfo::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the deviceLocalCredentialInfo objects and their properties, excluding the credentials property. 
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -116,7 +119,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the deviceLocalCredentialInfo objects and their properties, excluding the credentials property. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -128,7 +131,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to deviceLocalCredentials for directory
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceLocalCredentialInfo body) {
@@ -138,12 +141,12 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to deviceLocalCredentials for directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceLocalCredentialInfo body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/directory/deviceLocalCredentials", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -152,7 +155,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DeviceLocalCredentialsRequestBuilder
+     * @return a {@link DeviceLocalCredentialsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceLocalCredentialsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -196,7 +199,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

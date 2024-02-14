@@ -18,7 +18,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new LicenseUnitsDetail and sets the default values.
+     * Instantiates a new {@link LicenseUnitsDetail} and sets the default values.
      */
     public LicenseUnitsDetail() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a LicenseUnitsDetail
+     * @return a {@link LicenseUnitsDetail}
      */
     @jakarta.annotation.Nonnull
     public static LicenseUnitsDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the enabled property value. The number of units that are enabled for the active subscription of the service SKU.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getEnabled() {
@@ -65,7 +65,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the lockedOut property value. The number of units that are locked out because the customer canceled their subscription of the service SKU.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getLockedOut() {
@@ -87,7 +87,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -95,7 +95,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been canceled. The units can't be assigned but can still be reactivated before they're deleted.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSuspended() {
@@ -103,7 +103,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it's canceled (moved to a suspended state).
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getWarning() {

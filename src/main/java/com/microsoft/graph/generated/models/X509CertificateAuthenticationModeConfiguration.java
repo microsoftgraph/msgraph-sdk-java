@@ -18,7 +18,7 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new X509CertificateAuthenticationModeConfiguration and sets the default values.
+     * Instantiates a new {@link X509CertificateAuthenticationModeConfiguration} and sets the default values.
      */
     public X509CertificateAuthenticationModeConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a X509CertificateAuthenticationModeConfiguration
+     * @return a {@link X509CertificateAuthenticationModeConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static X509CertificateAuthenticationModeConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -77,7 +77,7 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
     }
     /**
      * Gets the rules property value. Rules are configured in addition to the authentication mode to bind a specific x509CertificateRuleType to an x509CertificateAuthenticationMode. For example, bind the policyOID with identifier 1.32.132.343 to x509CertificateMultiFactor authentication mode.
-     * @return a java.util.List<X509CertificateRule>
+     * @return a {@link java.util.List<X509CertificateRule>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<X509CertificateRule> getRules() {
@@ -85,7 +85,7 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
     }
     /**
      * Gets the x509CertificateAuthenticationDefaultMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue.
-     * @return a X509CertificateAuthenticationMode
+     * @return a {@link X509CertificateAuthenticationMode}
      */
     @jakarta.annotation.Nullable
     public X509CertificateAuthenticationMode getX509CertificateAuthenticationDefaultMode() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
     /**
-     * Instantiates a new OnlineMeeting and sets the default values.
+     * Instantiates a new {@link OnlineMeeting} and sets the default values.
      */
     public OnlineMeeting() {
         super();
@@ -19,7 +19,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnlineMeeting
+     * @return a {@link OnlineMeeting}
      */
     @jakarta.annotation.Nonnull
     public static OnlineMeeting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
     }
     /**
      * Gets the attendeeReport property value. The attendeeReport property
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getAttendeeReport() {
@@ -36,7 +36,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
     }
     /**
      * Gets the broadcastSettings property value. The broadcastSettings property
-     * @return a BroadcastMeetingSettings
+     * @return a {@link BroadcastMeetingSettings}
      */
     @jakarta.annotation.Nullable
     public BroadcastMeetingSettings getBroadcastSettings() {
@@ -44,7 +44,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
     }
     /**
      * Gets the creationDateTime property value. The meeting creation time in UTC. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreationDateTime() {
@@ -52,7 +52,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
     }
     /**
      * Gets the endDateTime property value. The meeting end time in UTC.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
@@ -60,7 +60,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
     }
     /**
      * Gets the externalId property value. The externalId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
@@ -68,7 +68,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -87,7 +87,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
     }
     /**
      * Gets the isBroadcast property value. The isBroadcast property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBroadcast() {
@@ -95,7 +95,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
     }
     /**
      * Gets the participants property value. The participants associated with the online meeting, including the organizer and the attendees.
-     * @return a MeetingParticipants
+     * @return a {@link MeetingParticipants}
      */
     @jakarta.annotation.Nullable
     public MeetingParticipants getParticipants() {
@@ -103,7 +103,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
     }
     /**
      * Gets the recordings property value. The recordings of an online meeting. Read-only.
-     * @return a java.util.List<CallRecording>
+     * @return a {@link java.util.List<CallRecording>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CallRecording> getRecordings() {
@@ -111,7 +111,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
     }
     /**
      * Gets the startDateTime property value. The meeting start time in UTC.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
@@ -119,7 +119,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
     }
     /**
      * Gets the transcripts property value. The transcripts of an online meeting. Read-only.
-     * @return a java.util.List<CallTranscript>
+     * @return a {@link java.util.List<CallTranscript>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CallTranscript> getTranscripts() {

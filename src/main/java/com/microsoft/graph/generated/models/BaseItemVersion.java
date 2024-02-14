@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BaseItemVersion extends Entity implements Parsable {
     /**
-     * Instantiates a new BaseItemVersion and sets the default values.
+     * Instantiates a new {@link BaseItemVersion} and sets the default values.
      */
     public BaseItemVersion() {
         super();
@@ -18,7 +18,7 @@ public class BaseItemVersion extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BaseItemVersion
+     * @return a {@link BaseItemVersion}
      */
     @jakarta.annotation.Nonnull
     public static BaseItemVersion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class BaseItemVersion extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -48,7 +48,7 @@ public class BaseItemVersion extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. Identity of the user which last modified the version. Read-only.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -56,7 +56,7 @@ public class BaseItemVersion extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. Date and time the version was last modified. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -64,7 +64,7 @@ public class BaseItemVersion extends Entity implements Parsable {
     }
     /**
      * Gets the publication property value. Indicates the publication status of this particular version. Read-only.
-     * @return a PublicationFacet
+     * @return a {@link PublicationFacet}
      */
     @jakarta.annotation.Nullable
     public PublicationFacet getPublication() {

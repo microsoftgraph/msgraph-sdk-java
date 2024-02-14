@@ -18,7 +18,7 @@ public class FileDetails implements AdditionalDataHolder, BackedModel, Parsable 
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new FileDetails and sets the default values.
+     * Instantiates a new {@link FileDetails} and sets the default values.
      */
     public FileDetails() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class FileDetails implements AdditionalDataHolder, BackedModel, Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a FileDetails
+     * @return a {@link FileDetails}
      */
     @jakarta.annotation.Nonnull
     public static FileDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class FileDetails implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class FileDetails implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class FileDetails implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -75,7 +75,7 @@ public class FileDetails implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the fileName property value. The name of the file.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
@@ -83,7 +83,7 @@ public class FileDetails implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the filePath property value. The file path (location) of the file instance.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFilePath() {
@@ -91,7 +91,7 @@ public class FileDetails implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the filePublisher property value. The publisher of the file.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFilePublisher() {
@@ -99,7 +99,7 @@ public class FileDetails implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the fileSize property value. The size of the file in bytes.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getFileSize() {
@@ -107,7 +107,7 @@ public class FileDetails implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the issuer property value. The certificate authority (CA) that issued the certificate.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIssuer() {
@@ -115,7 +115,7 @@ public class FileDetails implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -123,7 +123,7 @@ public class FileDetails implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the sha1 property value. The Sha1 cryptographic hash of the file content.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSha1() {
@@ -131,7 +131,7 @@ public class FileDetails implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the sha256 property value. The Sha256 cryptographic hash of the file content.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSha256() {
@@ -139,7 +139,7 @@ public class FileDetails implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the signer property value. The signer of the signed file.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSigner() {

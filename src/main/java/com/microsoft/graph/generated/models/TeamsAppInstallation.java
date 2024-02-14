@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamsAppInstallation extends Entity implements Parsable {
     /**
-     * Instantiates a new TeamsAppInstallation and sets the default values.
+     * Instantiates a new {@link TeamsAppInstallation} and sets the default values.
      */
     public TeamsAppInstallation() {
         super();
@@ -17,7 +17,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamsAppInstallation
+     * @return a {@link TeamsAppInstallation}
      */
     @jakarta.annotation.Nonnull
     public static TeamsAppInstallation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -33,7 +33,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
     }
     /**
      * Gets the consentedPermissionSet property value. The set of resource-specific permissions consented to while installing or upgrading the teamsApp.
-     * @return a TeamsAppPermissionSet
+     * @return a {@link TeamsAppPermissionSet}
      */
     @jakarta.annotation.Nullable
     public TeamsAppPermissionSet getConsentedPermissionSet() {
@@ -41,7 +41,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -53,7 +53,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
     }
     /**
      * Gets the teamsApp property value. The app that is installed.
-     * @return a TeamsApp
+     * @return a {@link TeamsApp}
      */
     @jakarta.annotation.Nullable
     public TeamsApp getTeamsApp() {
@@ -61,7 +61,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
     }
     /**
      * Gets the teamsAppDefinition property value. The details of this version of the app.
-     * @return a TeamsAppDefinition
+     * @return a {@link TeamsAppDefinition}
      */
     @jakarta.annotation.Nullable
     public TeamsAppDefinition getTeamsAppDefinition() {

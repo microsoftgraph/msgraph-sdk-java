@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LearningContent extends Entity implements Parsable {
     /**
-     * Instantiates a new LearningContent and sets the default values.
+     * Instantiates a new {@link LearningContent} and sets the default values.
      */
     public LearningContent() {
         super();
@@ -19,7 +19,7 @@ public class LearningContent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a LearningContent
+     * @return a {@link LearningContent}
      */
     @jakarta.annotation.Nonnull
     public static LearningContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class LearningContent extends Entity implements Parsable {
     }
     /**
      * Gets the additionalTags property value. Keywords, topics, and other tags associated with the learning content. Optional.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAdditionalTags() {
@@ -36,7 +36,7 @@ public class LearningContent extends Entity implements Parsable {
     }
     /**
      * Gets the contentWebUrl property value. The content web URL for the learning content. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContentWebUrl() {
@@ -44,7 +44,7 @@ public class LearningContent extends Entity implements Parsable {
     }
     /**
      * Gets the contributors property value. The authors, creators, or contributors of the learning content. Optional.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getContributors() {
@@ -52,7 +52,7 @@ public class LearningContent extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time when the learning content was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -60,7 +60,7 @@ public class LearningContent extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description or summary for the learning content. Optional.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -68,7 +68,7 @@ public class LearningContent extends Entity implements Parsable {
     }
     /**
      * Gets the duration property value. The duration of the learning content in seconds. The value is represented in ISO 8601 format for durations. Optional.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getDuration() {
@@ -76,7 +76,7 @@ public class LearningContent extends Entity implements Parsable {
     }
     /**
      * Gets the externalId property value. Unique external content ID for the learning content. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
@@ -84,7 +84,7 @@ public class LearningContent extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -111,7 +111,7 @@ public class LearningContent extends Entity implements Parsable {
     }
     /**
      * Gets the format property value. The format of the learning content. For example, Course, Video, Book, Book Summary, Audiobook Summary. Optional.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFormat() {
@@ -119,7 +119,7 @@ public class LearningContent extends Entity implements Parsable {
     }
     /**
      * Gets the isActive property value. Indicates whether the content is active or not. Inactive content doesn't show up in the UI. The default value is true. Optional.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsActive() {
@@ -127,7 +127,7 @@ public class LearningContent extends Entity implements Parsable {
     }
     /**
      * Gets the isPremium property value. Indicates whether the learning content requires the user to sign-in on the learning provider platform or not. The default value is false. Optional.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPremium() {
@@ -135,7 +135,7 @@ public class LearningContent extends Entity implements Parsable {
     }
     /**
      * Gets the isSearchable property value. Indicates whether the learning content is searchable or not. The default value is true. Optional.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSearchable() {
@@ -143,7 +143,7 @@ public class LearningContent extends Entity implements Parsable {
     }
     /**
      * Gets the languageTag property value. The language of the learning content, for example, en-us or fr-fr. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLanguageTag() {
@@ -151,7 +151,7 @@ public class LearningContent extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the learning content was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -159,7 +159,7 @@ public class LearningContent extends Entity implements Parsable {
     }
     /**
      * Gets the numberOfPages property value. The number of pages of the learning content, for example, 9. Optional.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfPages() {
@@ -167,7 +167,7 @@ public class LearningContent extends Entity implements Parsable {
     }
     /**
      * Gets the skillTags property value. The skills tags associated with the learning content. Optional.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSkillTags() {
@@ -175,7 +175,7 @@ public class LearningContent extends Entity implements Parsable {
     }
     /**
      * Gets the sourceName property value. The source name of the learning content, such as LinkedIn Learning or Coursera. Optional.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSourceName() {
@@ -183,7 +183,7 @@ public class LearningContent extends Entity implements Parsable {
     }
     /**
      * Gets the thumbnailWebUrl property value. The URL of learning content thumbnail image. Optional.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getThumbnailWebUrl() {
@@ -191,7 +191,7 @@ public class LearningContent extends Entity implements Parsable {
     }
     /**
      * Gets the title property value. The title of the learning content. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTitle() {

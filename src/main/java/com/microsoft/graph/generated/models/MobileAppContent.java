@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileAppContent extends Entity implements Parsable {
     /**
-     * Instantiates a new MobileAppContent and sets the default values.
+     * Instantiates a new {@link MobileAppContent} and sets the default values.
      */
     public MobileAppContent() {
         super();
@@ -20,7 +20,7 @@ public class MobileAppContent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MobileAppContent
+     * @return a {@link MobileAppContent}
      */
     @jakarta.annotation.Nonnull
     public static MobileAppContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class MobileAppContent extends Entity implements Parsable {
     }
     /**
      * Gets the containedApps property value. The collection of contained apps in a MobileLobApp acting as a package.
-     * @return a java.util.List<MobileContainedApp>
+     * @return a {@link java.util.List<MobileContainedApp>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileContainedApp> getContainedApps() {
@@ -37,7 +37,7 @@ public class MobileAppContent extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -48,7 +48,7 @@ public class MobileAppContent extends Entity implements Parsable {
     }
     /**
      * Gets the files property value. The list of files for this app content version.
-     * @return a java.util.List<MobileAppContentFile>
+     * @return a {@link java.util.List<MobileAppContentFile>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileAppContentFile> getFiles() {

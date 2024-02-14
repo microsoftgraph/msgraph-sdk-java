@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class StsPolicy extends PolicyBase implements Parsable {
     /**
-     * Instantiates a new StsPolicy and sets the default values.
+     * Instantiates a new {@link StsPolicy} and sets the default values.
      */
     public StsPolicy() {
         super();
@@ -18,7 +18,7 @@ public class StsPolicy extends PolicyBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a StsPolicy
+     * @return a {@link StsPolicy}
      */
     @jakarta.annotation.Nonnull
     public static StsPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class StsPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the appliesTo property value. The appliesTo property
-     * @return a java.util.List<DirectoryObject>
+     * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getAppliesTo() {
@@ -46,7 +46,7 @@ public class StsPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the definition property value. A string collection containing a JSON string that defines the rules and settings for a policy. The syntax for the definition differs for each derived policy type. Required.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDefinition() {
@@ -54,7 +54,7 @@ public class StsPolicy extends PolicyBase implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -66,7 +66,7 @@ public class StsPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the isOrganizationDefault property value. If set to true, activates this policy. There can be many policies for the same policy type, but only one can be activated as the organization default. Optional, default value is false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsOrganizationDefault() {

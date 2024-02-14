@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedDevice extends Entity implements Parsable {
     /**
-     * Instantiates a new ManagedDevice and sets the default values.
+     * Instantiates a new {@link ManagedDevice} and sets the default values.
      */
     public ManagedDevice() {
         super();
@@ -21,7 +21,7 @@ public class ManagedDevice extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedDevice
+     * @return a {@link ManagedDevice}
      */
     @jakarta.annotation.Nonnull
     public static ManagedDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the activationLockBypassCode property value. The code that allows the Activation Lock on managed device to be bypassed. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity in LIST call. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getActivationLockBypassCode() {
@@ -38,7 +38,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the androidSecurityPatchLevel property value. Android security patch level. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAndroidSecurityPatchLevel() {
@@ -46,7 +46,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the azureADDeviceId property value. The unique identifier for the Azure Active Directory device. Read only. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureADDeviceId() {
@@ -54,7 +54,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the azureADRegistered property value. Whether the device is Azure Active Directory registered. This property is read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAzureADRegistered() {
@@ -62,7 +62,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the complianceGracePeriodExpirationDateTime property value. The DateTime when device compliance grace period expires. This property is read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getComplianceGracePeriodExpirationDateTime() {
@@ -70,7 +70,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the complianceState property value. Compliance state.
-     * @return a ComplianceState
+     * @return a {@link ComplianceState}
      */
     @jakarta.annotation.Nullable
     public ComplianceState getComplianceState() {
@@ -78,7 +78,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the configurationManagerClientEnabledFeatures property value. ConfigrMgr client enabled features. This property is read-only.
-     * @return a ConfigurationManagerClientEnabledFeatures
+     * @return a {@link ConfigurationManagerClientEnabledFeatures}
      */
     @jakarta.annotation.Nullable
     public ConfigurationManagerClientEnabledFeatures getConfigurationManagerClientEnabledFeatures() {
@@ -86,7 +86,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the deviceActionResults property value. List of ComplexType deviceActionResult objects. This property is read-only.
-     * @return a java.util.List<DeviceActionResult>
+     * @return a {@link java.util.List<DeviceActionResult>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceActionResult> getDeviceActionResults() {
@@ -94,7 +94,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the deviceCategory property value. Device category
-     * @return a DeviceCategory
+     * @return a {@link DeviceCategory}
      */
     @jakarta.annotation.Nullable
     public DeviceCategory getDeviceCategory() {
@@ -102,7 +102,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the deviceCategoryDisplayName property value. Device category display name. Default is an empty string. Supports $filter operator 'eq' and 'or'. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceCategoryDisplayName() {
@@ -110,7 +110,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the deviceCompliancePolicyStates property value. Device compliance policy states for this device.
-     * @return a java.util.List<DeviceCompliancePolicyState>
+     * @return a {@link java.util.List<DeviceCompliancePolicyState>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceCompliancePolicyState> getDeviceCompliancePolicyStates() {
@@ -118,7 +118,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the deviceConfigurationStates property value. Device configuration states for this device.
-     * @return a java.util.List<DeviceConfigurationState>
+     * @return a {@link java.util.List<DeviceConfigurationState>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceConfigurationState> getDeviceConfigurationStates() {
@@ -126,7 +126,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the deviceEnrollmentType property value. Possible ways of adding a mobile device to management.
-     * @return a DeviceEnrollmentType
+     * @return a {@link DeviceEnrollmentType}
      */
     @jakarta.annotation.Nullable
     public DeviceEnrollmentType getDeviceEnrollmentType() {
@@ -134,7 +134,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the deviceHealthAttestationState property value. The device health attestation state. This property is read-only.
-     * @return a DeviceHealthAttestationState
+     * @return a {@link DeviceHealthAttestationState}
      */
     @jakarta.annotation.Nullable
     public DeviceHealthAttestationState getDeviceHealthAttestationState() {
@@ -142,7 +142,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the deviceName property value. Name of the device. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -150,7 +150,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the deviceRegistrationState property value. Device registration status.
-     * @return a DeviceRegistrationState
+     * @return a {@link DeviceRegistrationState}
      */
     @jakarta.annotation.Nullable
     public DeviceRegistrationState getDeviceRegistrationState() {
@@ -158,7 +158,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the easActivated property value. Whether the device is Exchange ActiveSync activated. This property is read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEasActivated() {
@@ -166,7 +166,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the easActivationDateTime property value. Exchange ActivationSync activation time of the device. This property is read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEasActivationDateTime() {
@@ -174,7 +174,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the easDeviceId property value. Exchange ActiveSync Id of the device. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEasDeviceId() {
@@ -182,7 +182,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the emailAddress property value. Email(s) for the user associated with the device. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmailAddress() {
@@ -190,7 +190,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the enrolledDateTime property value. Enrollment time of the device. Supports $filter operator 'lt' and 'gt'. This property is read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEnrolledDateTime() {
@@ -198,7 +198,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the ethernetMacAddress property value. Indicates Ethernet MAC Address of the device. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity. Individual get call with select query options is needed to retrieve actual values. Example: deviceManagement/managedDevices({managedDeviceId})?$select=ethernetMacAddress Supports: $select. $Search is not supported. Read-only. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEthernetMacAddress() {
@@ -206,7 +206,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the exchangeAccessState property value. Device Exchange Access State.
-     * @return a DeviceManagementExchangeAccessState
+     * @return a {@link DeviceManagementExchangeAccessState}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementExchangeAccessState getExchangeAccessState() {
@@ -214,7 +214,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the exchangeAccessStateReason property value. Device Exchange Access State Reason.
-     * @return a DeviceManagementExchangeAccessStateReason
+     * @return a {@link DeviceManagementExchangeAccessStateReason}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementExchangeAccessStateReason getExchangeAccessStateReason() {
@@ -222,7 +222,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the exchangeLastSuccessfulSyncDateTime property value. Last time the device contacted Exchange. This property is read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExchangeLastSuccessfulSyncDateTime() {
@@ -230,7 +230,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -298,7 +298,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the freeStorageSpaceInBytes property value. Free Storage in Bytes. Default value is 0. Read-only. This property is read-only.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getFreeStorageSpaceInBytes() {
@@ -306,7 +306,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIccid() {
@@ -314,7 +314,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the imei property value. IMEI. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getImei() {
@@ -322,7 +322,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the isEncrypted property value. Device encryption status. This property is read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEncrypted() {
@@ -330,7 +330,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the isSupervised property value. Device supervised status. This property is read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSupervised() {
@@ -338,7 +338,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the jailBroken property value. Whether the device is jail broken or rooted. Default is an empty string. Supports $filter operator 'eq' and 'or'. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getJailBroken() {
@@ -346,7 +346,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the lastSyncDateTime property value. The date and time that the device last completed a successful sync with Intune. Supports $filter operator 'lt' and 'gt'. This property is read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
@@ -354,7 +354,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the logCollectionRequests property value. List of log collection requests
-     * @return a java.util.List<DeviceLogCollectionResponse>
+     * @return a {@link java.util.List<DeviceLogCollectionResponse>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceLogCollectionResponse> getLogCollectionRequests() {
@@ -362,7 +362,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the managedDeviceName property value. Automatically generated name to identify a device. Can be overwritten to a user friendly name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceName() {
@@ -370,7 +370,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the managedDeviceOwnerType property value. Owner type of device.
-     * @return a ManagedDeviceOwnerType
+     * @return a {@link ManagedDeviceOwnerType}
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceOwnerType getManagedDeviceOwnerType() {
@@ -378,7 +378,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the managementAgent property value. The managementAgent property
-     * @return a ManagementAgentType
+     * @return a {@link ManagementAgentType}
      */
     @jakarta.annotation.Nullable
     public ManagementAgentType getManagementAgent() {
@@ -386,7 +386,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the managementCertificateExpirationDate property value. Reports device management certificate expiration date. This property is read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getManagementCertificateExpirationDate() {
@@ -394,7 +394,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the manufacturer property value. Manufacturer of the device. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
@@ -402,7 +402,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the meid property value. MEID. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMeid() {
@@ -410,7 +410,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the model property value. Model of the device. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getModel() {
@@ -418,7 +418,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the notes property value. Notes on the device created by IT Admin. Default is null. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNotes() {
@@ -426,7 +426,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the operatingSystem property value. Operating system of the device. Windows, iOS, etc. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystem() {
@@ -434,7 +434,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the osVersion property value. Operating system version of the device. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
@@ -442,7 +442,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the partnerReportedThreatState property value. Available health states for the Device Health API
-     * @return a ManagedDevicePartnerReportedHealthState
+     * @return a {@link ManagedDevicePartnerReportedHealthState}
      */
     @jakarta.annotation.Nullable
     public ManagedDevicePartnerReportedHealthState getPartnerReportedThreatState() {
@@ -450,7 +450,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the phoneNumber property value. Phone number of the device. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPhoneNumber() {
@@ -458,7 +458,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the physicalMemoryInBytes property value. Total Memory in Bytes. Default is 0. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. Read-only. This property is read-only.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getPhysicalMemoryInBytes() {
@@ -466,7 +466,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the remoteAssistanceSessionErrorDetails property value. An error string that identifies issues when creating Remote Assistance session objects. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRemoteAssistanceSessionErrorDetails() {
@@ -474,7 +474,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the remoteAssistanceSessionUrl property value. Url that allows a Remote Assistance session to be established with the device. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRemoteAssistanceSessionUrl() {
@@ -482,7 +482,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the requireUserEnrollmentApproval property value. Reports if the managed iOS device is user approval enrollment. This property is read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRequireUserEnrollmentApproval() {
@@ -490,7 +490,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the serialNumber property value. SerialNumber. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSerialNumber() {
@@ -498,7 +498,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the subscriberCarrier property value. Subscriber Carrier. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubscriberCarrier() {
@@ -506,7 +506,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the totalStorageSpaceInBytes property value. Total Storage in Bytes. This property is read-only.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getTotalStorageSpaceInBytes() {
@@ -514,7 +514,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the udid property value. Unique Device Identifier for iOS and macOS devices. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUdid() {
@@ -522,7 +522,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the userDisplayName property value. User display name. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
@@ -530,7 +530,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. Unique Identifier for the user associated with the device. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -538,7 +538,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. Device user principal name. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -546,7 +546,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the users property value. The primary users associated with the managed device.
-     * @return a java.util.List<User>
+     * @return a {@link java.util.List<User>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<User> getUsers() {
@@ -554,7 +554,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the wiFiMacAddress property value. Wi-Fi MAC. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWiFiMacAddress() {
@@ -562,7 +562,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the windowsProtectionState property value. The device protection status. This property is read-only.
-     * @return a WindowsProtectionState
+     * @return a {@link WindowsProtectionState}
      */
     @jakarta.annotation.Nullable
     public WindowsProtectionState getWindowsProtectionState() {

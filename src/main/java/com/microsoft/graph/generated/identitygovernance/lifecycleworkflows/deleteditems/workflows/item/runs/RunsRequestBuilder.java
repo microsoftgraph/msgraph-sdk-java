@@ -26,6 +26,7 @@ import java.util.Objects;
 public class RunsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -34,7 +35,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the runs property of the microsoft.graph.identityGovernance.workflow entity.
      * @param runId The unique identifier of run
-     * @return a RunItemRequestBuilder
+     * @return a {@link RunItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RunItemRequestBuilder byRunId(@jakarta.annotation.Nonnull final String runId) {
@@ -44,7 +45,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
         return new RunItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new RunsRequestBuilder and sets the default values.
+     * Instantiates a new {@link RunsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -52,7 +53,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow%2Did}/runs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new RunsRequestBuilder and sets the default values.
+     * Instantiates a new {@link RunsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -61,7 +62,8 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the run objects and their properties for a lifecycle workflow.
-     * @return a RunCollectionResponse
+     * @return a {@link RunCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-list-runs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -71,22 +73,22 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the run objects and their properties for a lifecycle workflow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RunCollectionResponse
+     * @return a {@link RunCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-list-runs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RunCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, RunCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Provides operations to call the summary method.
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param startDateTime Usage: startDateTime={startDateTime}
-     * @return a MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder
+     * @return a {@link MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder microsoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
@@ -96,7 +98,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the run objects and their properties for a lifecycle workflow.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -105,7 +107,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the run objects and their properties for a lifecycle workflow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -117,7 +119,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a RunsRequestBuilder
+     * @return a {@link RunsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RunsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -171,7 +173,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

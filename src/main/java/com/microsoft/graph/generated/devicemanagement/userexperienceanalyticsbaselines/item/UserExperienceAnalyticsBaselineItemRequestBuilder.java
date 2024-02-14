@@ -29,6 +29,7 @@ import java.util.Objects;
 public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the appHealthMetrics property of the microsoft.graph.userExperienceAnalyticsBaseline entity.
+     * @return a {@link AppHealthMetricsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AppHealthMetricsRequestBuilder appHealthMetrics() {
@@ -36,6 +37,7 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
     }
     /**
      * Provides operations to manage the batteryHealthMetrics property of the microsoft.graph.userExperienceAnalyticsBaseline entity.
+     * @return a {@link BatteryHealthMetricsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BatteryHealthMetricsRequestBuilder batteryHealthMetrics() {
@@ -43,6 +45,7 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
     }
     /**
      * Provides operations to manage the bestPracticesMetrics property of the microsoft.graph.userExperienceAnalyticsBaseline entity.
+     * @return a {@link BestPracticesMetricsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BestPracticesMetricsRequestBuilder bestPracticesMetrics() {
@@ -50,6 +53,7 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
     }
     /**
      * Provides operations to manage the deviceBootPerformanceMetrics property of the microsoft.graph.userExperienceAnalyticsBaseline entity.
+     * @return a {@link DeviceBootPerformanceMetricsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceBootPerformanceMetricsRequestBuilder deviceBootPerformanceMetrics() {
@@ -57,6 +61,7 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
     }
     /**
      * Provides operations to manage the rebootAnalyticsMetrics property of the microsoft.graph.userExperienceAnalyticsBaseline entity.
+     * @return a {@link RebootAnalyticsMetricsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RebootAnalyticsMetricsRequestBuilder rebootAnalyticsMetrics() {
@@ -64,6 +69,7 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
     }
     /**
      * Provides operations to manage the resourcePerformanceMetrics property of the microsoft.graph.userExperienceAnalyticsBaseline entity.
+     * @return a {@link ResourcePerformanceMetricsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ResourcePerformanceMetricsRequestBuilder resourcePerformanceMetrics() {
@@ -71,13 +77,14 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
     }
     /**
      * Provides operations to manage the workFromAnywhereMetrics property of the microsoft.graph.userExperienceAnalyticsBaseline entity.
+     * @return a {@link WorkFromAnywhereMetricsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WorkFromAnywhereMetricsRequestBuilder workFromAnywhereMetrics() {
         return new WorkFromAnywhereMetricsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new UserExperienceAnalyticsBaselineItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsBaselineItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -85,7 +92,7 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
         super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsBaselines/{userExperienceAnalyticsBaseline%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new UserExperienceAnalyticsBaselineItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsBaselineItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -94,6 +101,7 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
     }
     /**
      * Delete navigation property userExperienceAnalyticsBaselines for deviceManagement
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -101,17 +109,18 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
     /**
      * Delete navigation property userExperienceAnalyticsBaselines for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * User experience analytics baselines
-     * @return a UserExperienceAnalyticsBaseline
+     * @return a {@link UserExperienceAnalyticsBaseline}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsBaseline get() {
@@ -120,20 +129,21 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
     /**
      * User experience analytics baselines
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UserExperienceAnalyticsBaseline
+     * @return a {@link UserExperienceAnalyticsBaseline}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsBaseline get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsBaseline::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property userExperienceAnalyticsBaselines in deviceManagement
      * @param body The request body
-     * @return a UserExperienceAnalyticsBaseline
+     * @return a {@link UserExperienceAnalyticsBaseline}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsBaseline patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsBaseline body) {
@@ -143,20 +153,20 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
      * Update the navigation property userExperienceAnalyticsBaselines in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UserExperienceAnalyticsBaseline
+     * @return a {@link UserExperienceAnalyticsBaseline}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsBaseline patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsBaseline body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsBaseline::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property userExperienceAnalyticsBaselines for deviceManagement
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -165,18 +175,18 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
     /**
      * Delete navigation property userExperienceAnalyticsBaselines for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/deviceManagement/userExperienceAnalyticsBaselines/{userExperienceAnalyticsBaseline%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * User experience analytics baselines
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -185,7 +195,7 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
     /**
      * User experience analytics baselines
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -197,7 +207,7 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
     /**
      * Update the navigation property userExperienceAnalyticsBaselines in deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UserExperienceAnalyticsBaseline body) {
@@ -207,12 +217,12 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
      * Update the navigation property userExperienceAnalyticsBaselines in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UserExperienceAnalyticsBaseline body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/deviceManagement/userExperienceAnalyticsBaselines/{userExperienceAnalyticsBaseline%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -221,7 +231,7 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a UserExperienceAnalyticsBaselineItemRequestBuilder
+     * @return a {@link UserExperienceAnalyticsBaselineItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsBaselineItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -251,7 +261,7 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

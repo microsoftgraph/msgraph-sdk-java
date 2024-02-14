@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsable {
     /**
-     * Instantiates a new EdiscoveryAddToReviewSetOperation and sets the default values.
+     * Instantiates a new {@link EdiscoveryAddToReviewSetOperation} and sets the default values.
      */
     public EdiscoveryAddToReviewSetOperation() {
         super();
@@ -17,7 +17,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EdiscoveryAddToReviewSetOperation
+     * @return a {@link EdiscoveryAddToReviewSetOperation}
      */
     @jakarta.annotation.Nonnull
     public static EdiscoveryAddToReviewSetOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
     }
     /**
      * Gets the reviewSet property value. eDiscovery review set to which items matching source collection query gets added.
-     * @return a EdiscoveryReviewSet
+     * @return a {@link EdiscoveryReviewSet}
      */
     @jakarta.annotation.Nullable
     public EdiscoveryReviewSet getReviewSet() {
@@ -45,7 +45,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
     }
     /**
      * Gets the search property value. eDiscovery search that gets added to review set.
-     * @return a EdiscoverySearch
+     * @return a {@link EdiscoverySearch}
      */
     @jakarta.annotation.Nullable
     public EdiscoverySearch getSearch() {

@@ -16,6 +16,7 @@ import java.util.Objects;
 public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Casts the previous resource to appRoleAssignment.
+     * @return a {@link GraphAppRoleAssignmentRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphAppRoleAssignmentRequestBuilder graphAppRoleAssignment() {
@@ -23,6 +24,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to endpoint.
+     * @return a {@link GraphEndpointRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphEndpointRequestBuilder graphEndpoint() {
@@ -30,6 +32,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to servicePrincipal.
+     * @return a {@link GraphServicePrincipalRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphServicePrincipalRequestBuilder graphServicePrincipal() {
@@ -37,6 +40,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to user.
+     * @return a {@link GraphUserRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphUserRequestBuilder graphUser() {
@@ -44,13 +48,14 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of device entities.
+     * @return a {@link RefRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new DirectoryObjectItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link DirectoryObjectItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -58,7 +63,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/devices/{device%2Did}/registeredOwners/{directoryObject%2Did}", pathParameters);
     }
     /**
-     * Instantiates a new DirectoryObjectItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link DirectoryObjectItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */

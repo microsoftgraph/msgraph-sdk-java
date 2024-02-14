@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEvent implements Parsable {
     /**
-     * Instantiates a new EnrollmentTroubleshootingEvent and sets the default values.
+     * Instantiates a new {@link EnrollmentTroubleshootingEvent} and sets the default values.
      */
     public EnrollmentTroubleshootingEvent() {
         super();
@@ -20,7 +20,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EnrollmentTroubleshootingEvent
+     * @return a {@link EnrollmentTroubleshootingEvent}
      */
     @jakarta.annotation.Nonnull
     public static EnrollmentTroubleshootingEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
     }
     /**
      * Gets the deviceId property value. Azure AD device identifier.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -37,7 +37,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
     }
     /**
      * Gets the enrollmentType property value. Possible ways of adding a mobile device to management.
-     * @return a DeviceEnrollmentType
+     * @return a {@link DeviceEnrollmentType}
      */
     @jakarta.annotation.Nullable
     public DeviceEnrollmentType getEnrollmentType() {
@@ -45,7 +45,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
     }
     /**
      * Gets the failureCategory property value. Top level failure categories for enrollment.
-     * @return a DeviceEnrollmentFailureReason
+     * @return a {@link DeviceEnrollmentFailureReason}
      */
     @jakarta.annotation.Nullable
     public DeviceEnrollmentFailureReason getFailureCategory() {
@@ -53,7 +53,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
     }
     /**
      * Gets the failureReason property value. Detailed failure reason.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFailureReason() {
@@ -61,7 +61,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
     }
     /**
      * Gets the managedDeviceIdentifier property value. Device identifier created or collected by Intune.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceIdentifier() {
@@ -86,7 +86,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
     }
     /**
      * Gets the operatingSystem property value. Operating System.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystem() {
@@ -94,7 +94,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
     }
     /**
      * Gets the osVersion property value. OS Version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
@@ -102,7 +102,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
     }
     /**
      * Gets the userId property value. Identifier for the user that tried to enroll the device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

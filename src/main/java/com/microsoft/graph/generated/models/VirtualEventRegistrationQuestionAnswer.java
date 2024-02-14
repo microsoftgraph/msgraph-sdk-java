@@ -18,7 +18,7 @@ public class VirtualEventRegistrationQuestionAnswer implements AdditionalDataHol
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new VirtualEventRegistrationQuestionAnswer and sets the default values.
+     * Instantiates a new {@link VirtualEventRegistrationQuestionAnswer} and sets the default values.
      */
     public VirtualEventRegistrationQuestionAnswer() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class VirtualEventRegistrationQuestionAnswer implements AdditionalDataHol
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a VirtualEventRegistrationQuestionAnswer
+     * @return a {@link VirtualEventRegistrationQuestionAnswer}
      */
     @jakarta.annotation.Nonnull
     public static VirtualEventRegistrationQuestionAnswer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class VirtualEventRegistrationQuestionAnswer implements AdditionalDataHol
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class VirtualEventRegistrationQuestionAnswer implements AdditionalDataHol
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class VirtualEventRegistrationQuestionAnswer implements AdditionalDataHol
     }
     /**
      * Gets the booleanValue property value. Boolean answer of the virtual event registration question. Only appears when answerInputType is boolean.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getBooleanValue() {
@@ -65,7 +65,7 @@ public class VirtualEventRegistrationQuestionAnswer implements AdditionalDataHol
     }
     /**
      * Gets the displayName property value. Display name of the registration question.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -73,7 +73,7 @@ public class VirtualEventRegistrationQuestionAnswer implements AdditionalDataHol
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -88,7 +88,7 @@ public class VirtualEventRegistrationQuestionAnswer implements AdditionalDataHol
     }
     /**
      * Gets the multiChoiceValues property value. Collection of text answer of the virtual event registration question. Only appears when answerInputType is multiChoice.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getMultiChoiceValues() {
@@ -96,7 +96,7 @@ public class VirtualEventRegistrationQuestionAnswer implements AdditionalDataHol
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -104,7 +104,7 @@ public class VirtualEventRegistrationQuestionAnswer implements AdditionalDataHol
     }
     /**
      * Gets the questionId property value. id of the virtual event registration question.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getQuestionId() {
@@ -112,7 +112,7 @@ public class VirtualEventRegistrationQuestionAnswer implements AdditionalDataHol
     }
     /**
      * Gets the value property value. Text answer of the virtual event registration question. Appears when answerInputType is text, multilineText or singleChoice.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getValue() {

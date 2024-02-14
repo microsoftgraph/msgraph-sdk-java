@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExtensionProperty extends DirectoryObject implements Parsable {
     /**
-     * Instantiates a new ExtensionProperty and sets the default values.
+     * Instantiates a new {@link ExtensionProperty} and sets the default values.
      */
     public ExtensionProperty() {
         super();
@@ -18,7 +18,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ExtensionProperty
+     * @return a {@link ExtensionProperty}
      */
     @jakarta.annotation.Nonnull
     public static ExtensionProperty createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the appDisplayName property value. Display name of the application object on which this extension property is defined. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
@@ -35,7 +35,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the dataType property value. Specifies the data type of the value the extension property can hold. Following values are supported. Binary - 256 bytes maximumBooleanDateTime - Must be specified in ISO 8601 format. Will be stored in UTC.Integer - 32-bit value.LargeInteger - 64-bit value.String - 256 characters maximumNot nullable. For multivalued directory extensions, these limits apply per value in the collection.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDataType() {
@@ -43,7 +43,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -58,7 +58,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the isMultiValued property value. Defines the directory extension as a multi-valued property. When true, the directory extension property can store a collection of objects of the dataType; for example, a collection of string types such as 'extensionb7b1c57b532f40b8b5ed4b7a7ba67401jobGroupTracker': ['String 1', 'String 2']. The default value is false. Supports $filter (eq).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMultiValued() {
@@ -66,7 +66,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the isSyncedFromOnPremises property value. Indicates if this extension property was synced from on-premises active directory using Microsoft Entra Connect. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSyncedFromOnPremises() {
@@ -74,7 +74,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the name property value. Name of the extension property. Not nullable. Supports $filter (eq).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -82,7 +82,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the targetObjects property value. Following values are supported. Not nullable. UserGroupAdministrativeUnitApplicationDeviceOrganization
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTargetObjects() {

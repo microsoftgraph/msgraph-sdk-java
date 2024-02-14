@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CalendarSharingMessage extends Message implements Parsable {
     /**
-     * Instantiates a new CalendarSharingMessage and sets the default values.
+     * Instantiates a new {@link CalendarSharingMessage} and sets the default values.
      */
     public CalendarSharingMessage() {
         super();
@@ -18,7 +18,7 @@ public class CalendarSharingMessage extends Message implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CalendarSharingMessage
+     * @return a {@link CalendarSharingMessage}
      */
     @jakarta.annotation.Nonnull
     public static CalendarSharingMessage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class CalendarSharingMessage extends Message implements Parsable {
     }
     /**
      * Gets the canAccept property value. The canAccept property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getCanAccept() {
@@ -35,7 +35,7 @@ public class CalendarSharingMessage extends Message implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -48,7 +48,7 @@ public class CalendarSharingMessage extends Message implements Parsable {
     }
     /**
      * Gets the sharingMessageAction property value. The sharingMessageAction property
-     * @return a CalendarSharingMessageAction
+     * @return a {@link CalendarSharingMessageAction}
      */
     @jakarta.annotation.Nullable
     public CalendarSharingMessageAction getSharingMessageAction() {
@@ -56,7 +56,7 @@ public class CalendarSharingMessage extends Message implements Parsable {
     }
     /**
      * Gets the sharingMessageActions property value. The sharingMessageActions property
-     * @return a java.util.List<CalendarSharingMessageAction>
+     * @return a {@link java.util.List<CalendarSharingMessageAction>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CalendarSharingMessageAction> getSharingMessageActions() {
@@ -64,7 +64,7 @@ public class CalendarSharingMessage extends Message implements Parsable {
     }
     /**
      * Gets the suggestedCalendarName property value. The suggestedCalendarName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSuggestedCalendarName() {

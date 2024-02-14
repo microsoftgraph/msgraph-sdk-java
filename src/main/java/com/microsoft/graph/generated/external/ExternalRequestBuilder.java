@@ -23,13 +23,14 @@ import java.util.Objects;
 public class ExternalRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the connections property of the microsoft.graph.externalConnectors.external entity.
+     * @return a {@link ConnectionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ConnectionsRequestBuilder connections() {
         return new ConnectionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new ExternalRequestBuilder and sets the default values.
+     * Instantiates a new {@link ExternalRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,7 +38,7 @@ public class ExternalRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new ExternalRequestBuilder and sets the default values.
+     * Instantiates a new {@link ExternalRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -46,7 +47,8 @@ public class ExternalRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get external
-     * @return a External
+     * @return a {@link External}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public External get() {
@@ -55,20 +57,21 @@ public class ExternalRequestBuilder extends BaseRequestBuilder {
     /**
      * Get external
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a External
+     * @return a {@link External}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public External get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, External::createFromDiscriminatorValue);
     }
     /**
      * Update external
      * @param body The request body
-     * @return a External
+     * @return a {@link External}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public External patch(@jakarta.annotation.Nonnull final External body) {
@@ -78,20 +81,20 @@ public class ExternalRequestBuilder extends BaseRequestBuilder {
      * Update external
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a External
+     * @return a {@link External}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public External patch(@jakarta.annotation.Nonnull final External body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, External::createFromDiscriminatorValue);
     }
     /**
      * Get external
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -100,7 +103,7 @@ public class ExternalRequestBuilder extends BaseRequestBuilder {
     /**
      * Get external
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -112,7 +115,7 @@ public class ExternalRequestBuilder extends BaseRequestBuilder {
     /**
      * Update external
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final External body) {
@@ -122,12 +125,12 @@ public class ExternalRequestBuilder extends BaseRequestBuilder {
      * Update external
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final External body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/external", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -136,7 +139,7 @@ public class ExternalRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ExternalRequestBuilder
+     * @return a {@link ExternalRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExternalRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -160,7 +163,7 @@ public class ExternalRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

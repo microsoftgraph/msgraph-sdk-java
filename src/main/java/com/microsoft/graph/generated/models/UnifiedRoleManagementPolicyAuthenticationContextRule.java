@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementPolicyAuthenticationContextRule extends UnifiedRoleManagementPolicyRule implements Parsable {
     /**
-     * Instantiates a new UnifiedRoleManagementPolicyAuthenticationContextRule and sets the default values.
+     * Instantiates a new {@link UnifiedRoleManagementPolicyAuthenticationContextRule} and sets the default values.
      */
     public UnifiedRoleManagementPolicyAuthenticationContextRule() {
         super();
@@ -18,7 +18,7 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnifiedRoleManagementPolicyAuthenticationContextRule
+     * @return a {@link UnifiedRoleManagementPolicyAuthenticationContextRule}
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleManagementPolicyAuthenticationContextRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
     }
     /**
      * Gets the claimValue property value. The value of the authentication context claim.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getClaimValue() {
@@ -35,7 +35,7 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
     }
     /**
      * Gets the isEnabled property value. Determines whether this rule is enabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {

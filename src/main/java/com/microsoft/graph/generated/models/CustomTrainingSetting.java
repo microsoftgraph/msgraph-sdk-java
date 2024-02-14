@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomTrainingSetting extends TrainingSetting implements Parsable {
     /**
-     * Instantiates a new CustomTrainingSetting and sets the default values.
+     * Instantiates a new {@link CustomTrainingSetting} and sets the default values.
      */
     public CustomTrainingSetting() {
         super();
@@ -18,7 +18,7 @@ public class CustomTrainingSetting extends TrainingSetting implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CustomTrainingSetting
+     * @return a {@link CustomTrainingSetting}
      */
     @jakarta.annotation.Nonnull
     public static CustomTrainingSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class CustomTrainingSetting extends TrainingSetting implements Parsable {
     }
     /**
      * Gets the assignedTo property value. A user collection that specifies to whom the training should be assigned. Possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
-     * @return a java.util.List<TrainingAssignedTo>
+     * @return a {@link java.util.List<TrainingAssignedTo>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TrainingAssignedTo> getAssignedTo() {
@@ -35,7 +35,7 @@ public class CustomTrainingSetting extends TrainingSetting implements Parsable {
     }
     /**
      * Gets the description property value. The description of the custom training setting.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -43,7 +43,7 @@ public class CustomTrainingSetting extends TrainingSetting implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the custom training setting.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -51,7 +51,7 @@ public class CustomTrainingSetting extends TrainingSetting implements Parsable {
     }
     /**
      * Gets the durationInMinutes property value. Training duration.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDurationInMinutes() {
@@ -59,7 +59,7 @@ public class CustomTrainingSetting extends TrainingSetting implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -73,7 +73,7 @@ public class CustomTrainingSetting extends TrainingSetting implements Parsable {
     }
     /**
      * Gets the url property value. The training URL.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUrl() {

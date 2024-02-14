@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookTableSort extends Entity implements Parsable {
     /**
-     * Instantiates a new WorkbookTableSort and sets the default values.
+     * Instantiates a new {@link WorkbookTableSort} and sets the default values.
      */
     public WorkbookTableSort() {
         super();
@@ -17,7 +17,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookTableSort
+     * @return a {@link WorkbookTableSort}
      */
     @jakarta.annotation.Nonnull
     public static WorkbookTableSort createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
     }
     /**
      * Gets the fields property value. Represents the current conditions used to last sort the table. Read-only.
-     * @return a java.util.List<WorkbookSortField>
+     * @return a {@link java.util.List<WorkbookSortField>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookSortField> getFields() {
@@ -46,7 +46,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
     }
     /**
      * Gets the matchCase property value. Represents whether the casing impacted the last sort of the table. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getMatchCase() {
@@ -54,7 +54,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
     }
     /**
      * Gets the method property value. Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMethod() {

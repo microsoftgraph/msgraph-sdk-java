@@ -24,6 +24,7 @@ import java.util.Objects;
 public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the role property of the microsoft.graph.accessPackageResourceRoleScope entity.
+     * @return a {@link RoleRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleRequestBuilder role() {
@@ -31,13 +32,14 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
     }
     /**
      * Provides operations to manage the scope property of the microsoft.graph.accessPackageResourceRoleScope entity.
+     * @return a {@link ScopeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ScopeRequestBuilder scope() {
         return new ScopeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new AccessPackageResourceRoleScopeItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link AccessPackageResourceRoleScopeItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -45,7 +47,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/resourceRoleScopes/{accessPackageResourceRoleScope%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new AccessPackageResourceRoleScopeItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link AccessPackageResourceRoleScopeItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -54,6 +56,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
     }
     /**
      * Remove a accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-delete-resourcerolescopes?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -62,18 +65,19 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
     /**
      * Remove a accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-delete-resourcerolescopes?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * The resource roles and scopes in this access package.
-     * @return a AccessPackageResourceRoleScope
+     * @return a {@link AccessPackageResourceRoleScope}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceRoleScope get() {
@@ -82,20 +86,21 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
     /**
      * The resource roles and scopes in this access package.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AccessPackageResourceRoleScope
+     * @return a {@link AccessPackageResourceRoleScope}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceRoleScope get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageResourceRoleScope::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property resourceRoleScopes in identityGovernance
      * @param body The request body
-     * @return a AccessPackageResourceRoleScope
+     * @return a {@link AccessPackageResourceRoleScope}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceRoleScope patch(@jakarta.annotation.Nonnull final AccessPackageResourceRoleScope body) {
@@ -105,20 +110,20 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
      * Update the navigation property resourceRoleScopes in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AccessPackageResourceRoleScope
+     * @return a {@link AccessPackageResourceRoleScope}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceRoleScope patch(@jakarta.annotation.Nonnull final AccessPackageResourceRoleScope body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageResourceRoleScope::createFromDiscriminatorValue);
     }
     /**
      * Remove a accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -127,18 +132,18 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
     /**
      * Remove a accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/resourceRoleScopes/{accessPackageResourceRoleScope%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * The resource roles and scopes in this access package.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -147,7 +152,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
     /**
      * The resource roles and scopes in this access package.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -159,7 +164,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
     /**
      * Update the navigation property resourceRoleScopes in identityGovernance
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AccessPackageResourceRoleScope body) {
@@ -169,12 +174,12 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
      * Update the navigation property resourceRoleScopes in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AccessPackageResourceRoleScope body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/resourceRoleScopes/{accessPackageResourceRoleScope%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -183,7 +188,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AccessPackageResourceRoleScopeItemRequestBuilder
+     * @return a {@link AccessPackageResourceRoleScopeItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AccessPackageResourceRoleScopeItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -213,7 +218,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

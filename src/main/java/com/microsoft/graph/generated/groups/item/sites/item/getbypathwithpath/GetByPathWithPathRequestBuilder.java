@@ -41,6 +41,7 @@ import java.util.Objects;
 public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the analytics property of the microsoft.graph.site entity.
+     * @return a {@link AnalyticsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AnalyticsRequestBuilder analytics() {
@@ -48,6 +49,7 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the columns property of the microsoft.graph.site entity.
+     * @return a {@link ColumnsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ColumnsRequestBuilder columns() {
@@ -55,6 +57,7 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the contentTypes property of the microsoft.graph.site entity.
+     * @return a {@link ContentTypesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ContentTypesRequestBuilder contentTypes() {
@@ -62,6 +65,7 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity.
+     * @return a {@link CreatedByUserRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CreatedByUserRequestBuilder createdByUser() {
@@ -69,6 +73,7 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the drive property of the microsoft.graph.site entity.
+     * @return a {@link DriveRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DriveRequestBuilder drive() {
@@ -76,6 +81,7 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the drives property of the microsoft.graph.site entity.
+     * @return a {@link DrivesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DrivesRequestBuilder drives() {
@@ -83,6 +89,7 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the externalColumns property of the microsoft.graph.site entity.
+     * @return a {@link ExternalColumnsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExternalColumnsRequestBuilder externalColumns() {
@@ -90,6 +97,7 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getActivitiesByInterval method.
+     * @return a {@link GetActivitiesByIntervalRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetActivitiesByIntervalRequestBuilder getActivitiesByInterval() {
@@ -97,6 +105,7 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the items property of the microsoft.graph.site entity.
+     * @return a {@link ItemsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ItemsRequestBuilder items() {
@@ -104,6 +113,7 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity.
+     * @return a {@link LastModifiedByUserRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LastModifiedByUserRequestBuilder lastModifiedByUser() {
@@ -111,6 +121,7 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the lists property of the microsoft.graph.site entity.
+     * @return a {@link ListsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ListsRequestBuilder lists() {
@@ -118,6 +129,7 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the onenote property of the microsoft.graph.site entity.
+     * @return a {@link OnenoteRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OnenoteRequestBuilder onenote() {
@@ -125,6 +137,7 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the operations property of the microsoft.graph.site entity.
+     * @return a {@link OperationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OperationsRequestBuilder operations() {
@@ -132,6 +145,7 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the permissions property of the microsoft.graph.site entity.
+     * @return a {@link PermissionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PermissionsRequestBuilder permissions() {
@@ -139,6 +153,7 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the sites property of the microsoft.graph.site entity.
+     * @return a {@link SitesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SitesRequestBuilder sites() {
@@ -146,6 +161,7 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the termStore property of the microsoft.graph.site entity.
+     * @return a {@link TermStoreRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TermStoreRequestBuilder termStore() {
@@ -153,13 +169,14 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the termStores property of the microsoft.graph.site entity.
+     * @return a {@link TermStoresRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TermStoresRequestBuilder termStores() {
         return new TermStoresRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new GetByPathWithPathRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetByPathWithPathRequestBuilder} and sets the default values.
      * @param path Usage: path='{path}'
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -169,7 +186,7 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
         this.pathParameters.put("path", path);
     }
     /**
-     * Instantiates a new GetByPathWithPathRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetByPathWithPathRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -178,7 +195,8 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function getByPath
-     * @return a Site
+     * @return a {@link Site}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Site get() {
@@ -187,14 +205,14 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function getByPath
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Site
+     * @return a {@link Site}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Site get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Site::createFromDiscriminatorValue);
     }
     /**
@@ -202,7 +220,7 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
      * @param endDateTime Usage: endDateTime='{endDateTime}'
      * @param interval Usage: interval='{interval}'
      * @param startDateTime Usage: startDateTime='{startDateTime}'
-     * @return a GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
+     * @return a {@link GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(@jakarta.annotation.Nonnull final String endDateTime, @jakarta.annotation.Nonnull final String interval, @jakarta.annotation.Nonnull final String startDateTime) {
@@ -214,7 +232,7 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getApplicableContentTypesForList method.
      * @param listId Usage: listId='{listId}'
-     * @return a GetApplicableContentTypesForListWithListIdRequestBuilder
+     * @return a {@link GetApplicableContentTypesForListWithListIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetApplicableContentTypesForListWithListIdRequestBuilder getApplicableContentTypesForListWithListId(@jakarta.annotation.Nonnull final String listId) {
@@ -224,7 +242,7 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getByPath method.
      * @param path1 Usage: path='{path1}'
-     * @return a GetByPathWithPath1RequestBuilder
+     * @return a {@link GetByPathWithPath1RequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetByPathWithPath1RequestBuilder getByPathWithPath1(@jakarta.annotation.Nonnull final String path1) {
@@ -233,7 +251,7 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function getByPath
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -242,7 +260,7 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function getByPath
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -254,7 +272,7 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GetByPathWithPathRequestBuilder
+     * @return a {@link GetByPathWithPathRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetByPathWithPathRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

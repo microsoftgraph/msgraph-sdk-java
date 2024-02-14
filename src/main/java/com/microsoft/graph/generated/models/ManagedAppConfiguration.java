@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsable {
     /**
-     * Instantiates a new ManagedAppConfiguration and sets the default values.
+     * Instantiates a new {@link ManagedAppConfiguration} and sets the default values.
      */
     public ManagedAppConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedAppConfiguration
+     * @return a {@link ManagedAppConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static ManagedAppConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
     }
     /**
      * Gets the customSettings property value. A set of string key and string value pairs to be sent to apps for users to whom the configuration is scoped, unalterned by this service
-     * @return a java.util.List<KeyValuePair>
+     * @return a {@link java.util.List<KeyValuePair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getCustomSettings() {
@@ -45,7 +45,7 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

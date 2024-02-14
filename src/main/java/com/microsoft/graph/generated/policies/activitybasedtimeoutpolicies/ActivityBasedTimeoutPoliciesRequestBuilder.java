@@ -25,6 +25,7 @@ import java.util.Objects;
 public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
     /**
      * Provides operations to manage the activityBasedTimeoutPolicies property of the microsoft.graph.policyRoot entity.
      * @param activityBasedTimeoutPolicyId The unique identifier of activityBasedTimeoutPolicy
-     * @return a ActivityBasedTimeoutPolicyItemRequestBuilder
+     * @return a {@link ActivityBasedTimeoutPolicyItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ActivityBasedTimeoutPolicyItemRequestBuilder byActivityBasedTimeoutPolicyId(@jakarta.annotation.Nonnull final String activityBasedTimeoutPolicyId) {
@@ -43,7 +44,7 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
         return new ActivityBasedTimeoutPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new ActivityBasedTimeoutPoliciesRequestBuilder and sets the default values.
+     * Instantiates a new {@link ActivityBasedTimeoutPoliciesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/policies/activityBasedTimeoutPolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new ActivityBasedTimeoutPoliciesRequestBuilder and sets the default values.
+     * Instantiates a new {@link ActivityBasedTimeoutPoliciesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
     }
     /**
      * Get a list of activityBasedTimeoutPolicy objects.
-     * @return a ActivityBasedTimeoutPolicyCollectionResponse
+     * @return a {@link ActivityBasedTimeoutPolicyCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
     /**
      * Get a list of activityBasedTimeoutPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ActivityBasedTimeoutPolicyCollectionResponse
+     * @return a {@link ActivityBasedTimeoutPolicyCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ActivityBasedTimeoutPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ActivityBasedTimeoutPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new activityBasedTimeoutPolicy object.
      * @param body The request body
-     * @return a ActivityBasedTimeoutPolicy
+     * @return a {@link ActivityBasedTimeoutPolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-post-activitybasedtimeoutpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -95,7 +98,8 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
      * Create a new activityBasedTimeoutPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ActivityBasedTimeoutPolicy
+     * @return a {@link ActivityBasedTimeoutPolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-post-activitybasedtimeoutpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -103,13 +107,12 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ActivityBasedTimeoutPolicy::createFromDiscriminatorValue);
     }
     /**
      * Get a list of activityBasedTimeoutPolicy objects.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -118,7 +121,7 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
     /**
      * Get a list of activityBasedTimeoutPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +133,7 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
     /**
      * Create a new activityBasedTimeoutPolicy object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ActivityBasedTimeoutPolicy body) {
@@ -140,12 +143,12 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
      * Create a new activityBasedTimeoutPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ActivityBasedTimeoutPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/policies/activityBasedTimeoutPolicies", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -154,7 +157,7 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ActivityBasedTimeoutPoliciesRequestBuilder
+     * @return a {@link ActivityBasedTimeoutPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ActivityBasedTimeoutPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -208,7 +211,7 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

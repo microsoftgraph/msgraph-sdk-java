@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RoleAssignment extends Entity implements Parsable {
     /**
-     * Instantiates a new RoleAssignment and sets the default values.
+     * Instantiates a new {@link RoleAssignment} and sets the default values.
      */
     public RoleAssignment() {
         super();
@@ -20,7 +20,7 @@ public class RoleAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RoleAssignment
+     * @return a {@link RoleAssignment}
      */
     @jakarta.annotation.Nonnull
     public static RoleAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class RoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description of the Role Assignment.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -44,7 +44,7 @@ public class RoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display or friendly name of the role Assignment.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -52,7 +52,7 @@ public class RoleAssignment extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -65,7 +65,7 @@ public class RoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the resourceScopes property value. List of ids of role scope member security groups.  These are IDs from Azure Active Directory.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getResourceScopes() {
@@ -73,7 +73,7 @@ public class RoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the roleDefinition property value. Role definition this assignment is part of.
-     * @return a RoleDefinition
+     * @return a {@link RoleDefinition}
      */
     @jakarta.annotation.Nullable
     public RoleDefinition getRoleDefinition() {

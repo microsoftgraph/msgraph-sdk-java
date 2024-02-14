@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RiskyServicePrincipal extends Entity implements Parsable {
     /**
-     * Instantiates a new RiskyServicePrincipal and sets the default values.
+     * Instantiates a new {@link RiskyServicePrincipal} and sets the default values.
      */
     public RiskyServicePrincipal() {
         super();
@@ -18,7 +18,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RiskyServicePrincipal
+     * @return a {@link RiskyServicePrincipal}
      */
     @jakarta.annotation.Nonnull
     public static RiskyServicePrincipal createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
     }
     /**
      * Gets the appId property value. The globally unique identifier for the associated application (its appId property), if any.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
@@ -42,7 +42,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the service principal.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -50,7 +50,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
     }
     /**
      * Gets the history property value. Represents the risk history of Microsoft Entra service principals.
-     * @return a java.util.List<RiskyServicePrincipalHistoryItem>
+     * @return a {@link java.util.List<RiskyServicePrincipalHistoryItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<RiskyServicePrincipalHistoryItem> getHistory() {
@@ -77,7 +77,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
     }
     /**
      * Gets the isEnabled property value. true if the service principal account is enabled; otherwise, false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -85,7 +85,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
     }
     /**
      * Gets the isProcessing property value. Indicates whether Microsoft Entra ID is currently processing the service principal's risky state.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsProcessing() {
@@ -93,7 +93,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
     }
     /**
      * Gets the riskDetail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden,  unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
-     * @return a RiskDetail
+     * @return a {@link RiskDetail}
      */
     @jakarta.annotation.Nullable
     public RiskDetail getRiskDetail() {
@@ -101,7 +101,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
     }
     /**
      * Gets the riskLastUpdatedDateTime property value. The date and time that the risk state was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2021 is 2021-01-01T00:00:00Z. Supports $filter (eq).
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRiskLastUpdatedDateTime() {
@@ -109,7 +109,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
     }
     /**
      * Gets the riskLevel property value. Level of the detected risky workload identity. The possible values are: low, medium, high, hidden, none, unknownFutureValue. Supports $filter (eq).
-     * @return a RiskLevel
+     * @return a {@link RiskLevel}
      */
     @jakarta.annotation.Nullable
     public RiskLevel getRiskLevel() {
@@ -117,7 +117,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
     }
     /**
      * Gets the riskState property value. State of the service principal's risk. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
-     * @return a RiskState
+     * @return a {@link RiskState}
      */
     @jakarta.annotation.Nullable
     public RiskState getRiskState() {
@@ -125,7 +125,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
     }
     /**
      * Gets the servicePrincipalType property value. Identifies whether the service principal represents an Application, a ManagedIdentity, or a legacy application (socialIdp). This is set by Microsoft Entra ID internally and is inherited from servicePrincipal.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalType() {

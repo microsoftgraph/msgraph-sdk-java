@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AnonymousGuestConversationMember extends ConversationMember implements Parsable {
     /**
-     * Instantiates a new AnonymousGuestConversationMember and sets the default values.
+     * Instantiates a new {@link AnonymousGuestConversationMember} and sets the default values.
      */
     public AnonymousGuestConversationMember() {
         super();
@@ -18,7 +18,7 @@ public class AnonymousGuestConversationMember extends ConversationMember impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AnonymousGuestConversationMember
+     * @return a {@link AnonymousGuestConversationMember}
      */
     @jakarta.annotation.Nonnull
     public static AnonymousGuestConversationMember createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AnonymousGuestConversationMember extends ConversationMember impleme
     }
     /**
      * Gets the anonymousGuestId property value. Unique ID that represents the user. Note: This ID can change if the user leaves and rejoins the meeting, or joins from a different device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAnonymousGuestId() {
@@ -35,7 +35,7 @@ public class AnonymousGuestConversationMember extends ConversationMember impleme
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

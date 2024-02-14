@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsable {
     /**
-     * Instantiates a new ManagedDeviceMobileAppConfiguration and sets the default values.
+     * Instantiates a new {@link ManagedDeviceMobileAppConfiguration} and sets the default values.
      */
     public ManagedDeviceMobileAppConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedDeviceMobileAppConfiguration
+     * @return a {@link ManagedDeviceMobileAppConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static ManagedDeviceMobileAppConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     }
     /**
      * Gets the assignments property value. The list of group assignemenets for app configration.
-     * @return a java.util.List<ManagedDeviceMobileAppConfigurationAssignment>
+     * @return a {@link java.util.List<ManagedDeviceMobileAppConfigurationAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceMobileAppConfigurationAssignment> getAssignments() {
@@ -45,7 +45,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     }
     /**
      * Gets the createdDateTime property value. DateTime the object was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -53,7 +53,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     }
     /**
      * Gets the description property value. Admin provided description of the Device Configuration.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -61,7 +61,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     }
     /**
      * Gets the deviceStatuses property value. List of ManagedDeviceMobileAppConfigurationDeviceStatus.
-     * @return a java.util.List<ManagedDeviceMobileAppConfigurationDeviceStatus>
+     * @return a {@link java.util.List<ManagedDeviceMobileAppConfigurationDeviceStatus>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceMobileAppConfigurationDeviceStatus> getDeviceStatuses() {
@@ -69,7 +69,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     }
     /**
      * Gets the deviceStatusSummary property value. App configuration device status summary.
-     * @return a ManagedDeviceMobileAppConfigurationDeviceSummary
+     * @return a {@link ManagedDeviceMobileAppConfigurationDeviceSummary}
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceMobileAppConfigurationDeviceSummary getDeviceStatusSummary() {
@@ -77,7 +77,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     }
     /**
      * Gets the displayName property value. Admin provided name of the device configuration.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -85,7 +85,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -105,7 +105,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     }
     /**
      * Gets the lastModifiedDateTime property value. DateTime the object was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -113,7 +113,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     }
     /**
      * Gets the targetedMobileApps property value. the associated app.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTargetedMobileApps() {
@@ -121,7 +121,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     }
     /**
      * Gets the userStatuses property value. List of ManagedDeviceMobileAppConfigurationUserStatus.
-     * @return a java.util.List<ManagedDeviceMobileAppConfigurationUserStatus>
+     * @return a {@link java.util.List<ManagedDeviceMobileAppConfigurationUserStatus>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceMobileAppConfigurationUserStatus> getUserStatuses() {
@@ -129,7 +129,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     }
     /**
      * Gets the userStatusSummary property value. App configuration user status summary.
-     * @return a ManagedDeviceMobileAppConfigurationUserSummary
+     * @return a {@link ManagedDeviceMobileAppConfigurationUserSummary}
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceMobileAppConfigurationUserSummary getUserStatusSummary() {
@@ -137,7 +137,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     }
     /**
      * Gets the version property value. Version of the device configuration.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {

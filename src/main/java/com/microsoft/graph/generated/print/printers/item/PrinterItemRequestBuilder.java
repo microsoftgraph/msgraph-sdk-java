@@ -27,6 +27,7 @@ import java.util.Objects;
 public class PrinterItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the connectors property of the microsoft.graph.printer entity.
+     * @return a {@link ConnectorsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ConnectorsRequestBuilder connectors() {
@@ -34,6 +35,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the jobs property of the microsoft.graph.printerBase entity.
+     * @return a {@link JobsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public JobsRequestBuilder jobs() {
@@ -41,6 +43,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the restoreFactoryDefaults method.
+     * @return a {@link RestoreFactoryDefaultsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RestoreFactoryDefaultsRequestBuilder restoreFactoryDefaults() {
@@ -48,6 +51,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the shares property of the microsoft.graph.printer entity.
+     * @return a {@link SharesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SharesRequestBuilder shares() {
@@ -55,13 +59,14 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the taskTriggers property of the microsoft.graph.printer entity.
+     * @return a {@link TaskTriggersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TaskTriggersRequestBuilder taskTriggers() {
         return new TaskTriggersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new PrinterItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link PrinterItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -69,7 +74,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printers/{printer%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new PrinterItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link PrinterItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -78,6 +83,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete (unregister) a printer.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/printer-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -86,18 +92,19 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete (unregister) a printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/printer-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve the properties and relationships of a printer object.
-     * @return a Printer
+     * @return a {@link Printer}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/printer-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -107,21 +114,22 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a printer object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Printer
+     * @return a {@link Printer}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/printer-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Printer get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Printer::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of a printer object.
      * @param body The request body
-     * @return a Printer
+     * @return a {@link Printer}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/printer-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -132,7 +140,8 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a printer object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Printer
+     * @return a {@link Printer}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/printer-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -140,13 +149,12 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Printer::createFromDiscriminatorValue);
     }
     /**
      * Delete (unregister) a printer.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -155,18 +163,18 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete (unregister) a printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/print/printers/{printer%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Retrieve the properties and relationships of a printer object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -175,7 +183,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a printer object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -187,7 +195,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a printer object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Printer body) {
@@ -197,12 +205,12 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a printer object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Printer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/print/printers/{printer%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -211,7 +219,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a PrinterItemRequestBuilder
+     * @return a {@link PrinterItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PrinterItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -241,7 +249,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageAssignmentRequestWorkflowExtension extends CustomCalloutExtension implements Parsable {
     /**
-     * Instantiates a new AccessPackageAssignmentRequestWorkflowExtension and sets the default values.
+     * Instantiates a new {@link AccessPackageAssignmentRequestWorkflowExtension} and sets the default values.
      */
     public AccessPackageAssignmentRequestWorkflowExtension() {
         super();
@@ -19,7 +19,7 @@ public class AccessPackageAssignmentRequestWorkflowExtension extends CustomCallo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessPackageAssignmentRequestWorkflowExtension
+     * @return a {@link AccessPackageAssignmentRequestWorkflowExtension}
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAssignmentRequestWorkflowExtension createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class AccessPackageAssignmentRequestWorkflowExtension extends CustomCallo
     }
     /**
      * Gets the callbackConfiguration property value. The callback configuration for a custom extension.
-     * @return a CustomExtensionCallbackConfiguration
+     * @return a {@link CustomExtensionCallbackConfiguration}
      */
     @jakarta.annotation.Nullable
     public CustomExtensionCallbackConfiguration getCallbackConfiguration() {
@@ -36,7 +36,7 @@ public class AccessPackageAssignmentRequestWorkflowExtension extends CustomCallo
     }
     /**
      * Gets the createdBy property value. The userPrincipalName of the user or identity of the subject that created this resource. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCreatedBy() {
@@ -44,7 +44,7 @@ public class AccessPackageAssignmentRequestWorkflowExtension extends CustomCallo
     }
     /**
      * Gets the createdDateTime property value. When the object was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -52,7 +52,7 @@ public class AccessPackageAssignmentRequestWorkflowExtension extends CustomCallo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -66,7 +66,7 @@ public class AccessPackageAssignmentRequestWorkflowExtension extends CustomCallo
     }
     /**
      * Gets the lastModifiedBy property value. The userPrincipalName of the identity that last modified the object.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLastModifiedBy() {
@@ -74,7 +74,7 @@ public class AccessPackageAssignmentRequestWorkflowExtension extends CustomCallo
     }
     /**
      * Gets the lastModifiedDateTime property value. When the object was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DelegatedAdminCustomer extends Entity implements Parsable {
     /**
-     * Instantiates a new DelegatedAdminCustomer and sets the default values.
+     * Instantiates a new {@link DelegatedAdminCustomer} and sets the default values.
      */
     public DelegatedAdminCustomer() {
         super();
@@ -17,7 +17,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DelegatedAdminCustomer
+     * @return a {@link DelegatedAdminCustomer}
      */
     @jakarta.annotation.Nonnull
     public static DelegatedAdminCustomer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The Microsoft Entra ID display name of the customer tenant. Read-only. Supports $orderby.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -34,7 +34,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
     }
     /**
      * Gets the serviceManagementDetails property value. Contains the management details of a service in the customer tenant that's managed by delegated administration.
-     * @return a java.util.List<DelegatedAdminServiceManagementDetail>
+     * @return a {@link java.util.List<DelegatedAdminServiceManagementDetail>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DelegatedAdminServiceManagementDetail> getServiceManagementDetails() {
@@ -54,7 +54,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
     }
     /**
      * Gets the tenantId property value. The Microsoft Entra ID-assigned tenant ID of the customer. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {

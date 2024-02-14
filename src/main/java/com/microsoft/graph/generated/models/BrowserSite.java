@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BrowserSite extends Entity implements Parsable {
     /**
-     * Instantiates a new BrowserSite and sets the default values.
+     * Instantiates a new {@link BrowserSite} and sets the default values.
      */
     public BrowserSite() {
         super();
@@ -21,7 +21,7 @@ public class BrowserSite extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BrowserSite
+     * @return a {@link BrowserSite}
      */
     @jakarta.annotation.Nonnull
     public static BrowserSite createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the allowRedirect property value. Controls the behavior of redirected sites. If true, indicates that the site will open in Internet Explorer 11 or Microsoft Edge even if the site is navigated to as part of a HTTP or meta refresh redirection chain.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowRedirect() {
@@ -38,7 +38,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the comment property value. The comment for the site.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getComment() {
@@ -46,7 +46,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the compatibilityMode property value. The compatibilityMode property
-     * @return a BrowserSiteCompatibilityMode
+     * @return a {@link BrowserSiteCompatibilityMode}
      */
     @jakarta.annotation.Nullable
     public BrowserSiteCompatibilityMode getCompatibilityMode() {
@@ -54,7 +54,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time when the site was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -62,7 +62,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the deletedDateTime property value. The date and time when the site was deleted.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDeletedDateTime() {
@@ -70,7 +70,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -91,7 +91,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the history property value. The history of modifications applied to the site.
-     * @return a java.util.List<BrowserSiteHistory>
+     * @return a {@link java.util.List<BrowserSiteHistory>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<BrowserSiteHistory> getHistory() {
@@ -99,7 +99,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The user who last modified the site.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -107,7 +107,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the site was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -115,7 +115,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the mergeType property value. The mergeType property
-     * @return a BrowserSiteMergeType
+     * @return a {@link BrowserSiteMergeType}
      */
     @jakarta.annotation.Nullable
     public BrowserSiteMergeType getMergeType() {
@@ -123,7 +123,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a BrowserSiteStatus
+     * @return a {@link BrowserSiteStatus}
      */
     @jakarta.annotation.Nullable
     public BrowserSiteStatus getStatus() {
@@ -131,7 +131,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the targetEnvironment property value. The targetEnvironment property
-     * @return a BrowserSiteTargetEnvironment
+     * @return a {@link BrowserSiteTargetEnvironment}
      */
     @jakarta.annotation.Nullable
     public BrowserSiteTargetEnvironment getTargetEnvironment() {
@@ -139,7 +139,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the webUrl property value. The URL of the site.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {

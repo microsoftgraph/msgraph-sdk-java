@@ -18,7 +18,7 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Back
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DriveItemUploadableProperties and sets the default values.
+     * Instantiates a new {@link DriveItemUploadableProperties} and sets the default values.
      */
     public DriveItemUploadableProperties() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Back
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DriveItemUploadableProperties
+     * @return a {@link DriveItemUploadableProperties}
      */
     @jakarta.annotation.Nonnull
     public static DriveItemUploadableProperties createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Back
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Back
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Back
     }
     /**
      * Gets the description property value. Provides a user-visible description of the item. Read-write. Only on OneDrive Personal.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -65,7 +65,7 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Back
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Back
     }
     /**
      * Gets the fileSize property value. Provides an expected file size to perform a quota check prior to upload. Only on OneDrive Personal.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getFileSize() {
@@ -87,7 +87,7 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Back
     }
     /**
      * Gets the fileSystemInfo property value. File system information on client. Read-write.
-     * @return a FileSystemInfo
+     * @return a {@link FileSystemInfo}
      */
     @jakarta.annotation.Nullable
     public FileSystemInfo getFileSystemInfo() {
@@ -95,7 +95,7 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Back
     }
     /**
      * Gets the name property value. The name of the item (filename and extension). Read-write.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -103,7 +103,7 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Back
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

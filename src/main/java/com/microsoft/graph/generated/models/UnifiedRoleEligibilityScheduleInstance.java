@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstanceBase implements Parsable {
     /**
-     * Instantiates a new UnifiedRoleEligibilityScheduleInstance and sets the default values.
+     * Instantiates a new {@link UnifiedRoleEligibilityScheduleInstance} and sets the default values.
      */
     public UnifiedRoleEligibilityScheduleInstance() {
         super();
@@ -18,7 +18,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnifiedRoleEligibilityScheduleInstance
+     * @return a {@link UnifiedRoleEligibilityScheduleInstance}
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleEligibilityScheduleInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
     }
     /**
      * Gets the endDateTime property value. The end date of the schedule instance.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
@@ -35,7 +35,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -48,7 +48,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
     }
     /**
      * Gets the memberType property value. How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMemberType() {
@@ -56,7 +56,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
     }
     /**
      * Gets the roleEligibilityScheduleId property value. The identifier of the unifiedRoleEligibilitySchedule object from which this instance was created. Supports $filter (eq, ne).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRoleEligibilityScheduleId() {
@@ -64,7 +64,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
     }
     /**
      * Gets the startDateTime property value. When this instance starts.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {

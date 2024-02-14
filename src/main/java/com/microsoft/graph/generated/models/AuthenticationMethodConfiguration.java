@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationMethodConfiguration extends Entity implements Parsable {
     /**
-     * Instantiates a new AuthenticationMethodConfiguration and sets the default values.
+     * Instantiates a new {@link AuthenticationMethodConfiguration} and sets the default values.
      */
     public AuthenticationMethodConfiguration() {
         super();
@@ -17,7 +17,7 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuthenticationMethodConfiguration
+     * @return a {@link AuthenticationMethodConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationMethodConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
     }
     /**
      * Gets the excludeTargets property value. Groups of users that are excluded from a policy.
-     * @return a java.util.List<ExcludeTarget>
+     * @return a {@link java.util.List<ExcludeTarget>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExcludeTarget> getExcludeTargets() {
@@ -48,7 +48,7 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -59,7 +59,7 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
     }
     /**
      * Gets the state property value. The state of the policy. Possible values are: enabled, disabled.
-     * @return a AuthenticationMethodState
+     * @return a {@link AuthenticationMethodState}
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodState getState() {

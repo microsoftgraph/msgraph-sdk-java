@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamsAsyncOperation extends Entity implements Parsable {
     /**
-     * Instantiates a new TeamsAsyncOperation and sets the default values.
+     * Instantiates a new {@link TeamsAsyncOperation} and sets the default values.
      */
     public TeamsAsyncOperation() {
         super();
@@ -18,7 +18,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamsAsyncOperation
+     * @return a {@link TeamsAsyncOperation}
      */
     @jakarta.annotation.Nonnull
     public static TeamsAsyncOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
     }
     /**
      * Gets the attemptsCount property value. Number of times the operation was attempted before being marked successful or failed.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getAttemptsCount() {
@@ -35,7 +35,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Time when the operation was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -43,7 +43,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
     }
     /**
      * Gets the error property value. Any error that causes the async operation to fail.
-     * @return a OperationError
+     * @return a {@link OperationError}
      */
     @jakarta.annotation.Nullable
     public OperationError getError() {
@@ -51,7 +51,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,7 +68,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
     }
     /**
      * Gets the lastActionDateTime property value. Time when the async operation was last updated.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
@@ -76,7 +76,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
     }
     /**
      * Gets the operationType property value. The operationType property
-     * @return a TeamsAsyncOperationType
+     * @return a {@link TeamsAsyncOperationType}
      */
     @jakarta.annotation.Nullable
     public TeamsAsyncOperationType getOperationType() {
@@ -84,7 +84,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a TeamsAsyncOperationStatus
+     * @return a {@link TeamsAsyncOperationStatus}
      */
     @jakarta.annotation.Nullable
     public TeamsAsyncOperationStatus getStatus() {
@@ -92,7 +92,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
     }
     /**
      * Gets the targetResourceId property value. The ID of the object that's created or modified as result of this async operation, typically a team.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTargetResourceId() {
@@ -100,7 +100,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
     }
     /**
      * Gets the targetResourceLocation property value. The location of the object that's created or modified as result of this async operation. This URL should be treated as an opaque value and not parsed into its component paths.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTargetResourceLocation() {

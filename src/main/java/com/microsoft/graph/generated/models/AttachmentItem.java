@@ -18,7 +18,7 @@ public class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsab
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AttachmentItem and sets the default values.
+     * Instantiates a new {@link AttachmentItem} and sets the default values.
      */
     public AttachmentItem() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AttachmentItem
+     * @return a {@link AttachmentItem}
      */
     @jakarta.annotation.Nonnull
     public static AttachmentItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the attachmentType property value. The type of attachment. Possible values are: file, item, reference. Required.
-     * @return a AttachmentType
+     * @return a {@link AttachmentType}
      */
     @jakarta.annotation.Nullable
     public AttachmentType getAttachmentType() {
@@ -57,7 +57,7 @@ public class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the contentId property value. The CID or Content-Id of the attachment for referencing for the in-line attachments using the <img src='cid:contentId'> tag in HTML messages. Optional.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContentId() {
@@ -73,7 +73,7 @@ public class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the contentType property value. The nature of the data in the attachment. Optional.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContentType() {
@@ -81,7 +81,7 @@ public class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -97,7 +97,7 @@ public class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the isInline property value. true if the attachment is an inline attachment; otherwise, false. Optional.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsInline() {
@@ -105,7 +105,7 @@ public class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the name property value. The display name of the attachment. This can be a descriptive string and doesn't have to be the actual file name. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -113,7 +113,7 @@ public class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -121,7 +121,7 @@ public class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the size property value. The length of the attachment in bytes. Required.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getSize() {

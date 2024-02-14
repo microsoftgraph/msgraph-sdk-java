@@ -26,6 +26,7 @@ import java.util.Objects;
 public class TeamworkRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the deletedTeams property of the microsoft.graph.teamwork entity.
+     * @return a {@link DeletedTeamsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeletedTeamsRequestBuilder deletedTeams() {
@@ -33,6 +34,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the sendActivityNotificationToRecipients method.
+     * @return a {@link SendActivityNotificationToRecipientsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SendActivityNotificationToRecipientsRequestBuilder sendActivityNotificationToRecipients() {
@@ -40,6 +42,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the teamsAppSettings property of the microsoft.graph.teamwork entity.
+     * @return a {@link TeamsAppSettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TeamsAppSettingsRequestBuilder teamsAppSettings() {
@@ -47,13 +50,14 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the workforceIntegrations property of the microsoft.graph.teamwork entity.
+     * @return a {@link WorkforceIntegrationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WorkforceIntegrationsRequestBuilder workforceIntegrations() {
         return new WorkforceIntegrationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new TeamworkRequestBuilder and sets the default values.
+     * Instantiates a new {@link TeamworkRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -61,7 +65,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new TeamworkRequestBuilder and sets the default values.
+     * Instantiates a new {@link TeamworkRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -70,7 +74,8 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get teamwork
-     * @return a Teamwork
+     * @return a {@link Teamwork}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Teamwork get() {
@@ -79,20 +84,21 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     /**
      * Get teamwork
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Teamwork
+     * @return a {@link Teamwork}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Teamwork get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Teamwork::createFromDiscriminatorValue);
     }
     /**
      * Update teamwork
      * @param body The request body
-     * @return a Teamwork
+     * @return a {@link Teamwork}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Teamwork patch(@jakarta.annotation.Nonnull final Teamwork body) {
@@ -102,20 +108,20 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
      * Update teamwork
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Teamwork
+     * @return a {@link Teamwork}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Teamwork patch(@jakarta.annotation.Nonnull final Teamwork body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Teamwork::createFromDiscriminatorValue);
     }
     /**
      * Get teamwork
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -124,7 +130,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     /**
      * Get teamwork
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -136,7 +142,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     /**
      * Update teamwork
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Teamwork body) {
@@ -146,12 +152,12 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
      * Update teamwork
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Teamwork body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/teamwork", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -160,7 +166,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a TeamworkRequestBuilder
+     * @return a {@link TeamworkRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TeamworkRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -184,7 +190,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

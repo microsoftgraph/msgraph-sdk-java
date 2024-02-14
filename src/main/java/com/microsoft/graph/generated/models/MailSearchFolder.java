@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MailSearchFolder extends MailFolder implements Parsable {
     /**
-     * Instantiates a new MailSearchFolder and sets the default values.
+     * Instantiates a new {@link MailSearchFolder} and sets the default values.
      */
     public MailSearchFolder() {
         super();
@@ -18,7 +18,7 @@ public class MailSearchFolder extends MailFolder implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MailSearchFolder
+     * @return a {@link MailSearchFolder}
      */
     @jakarta.annotation.Nonnull
     public static MailSearchFolder createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class MailSearchFolder extends MailFolder implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class MailSearchFolder extends MailFolder implements Parsable {
     }
     /**
      * Gets the filterQuery property value. The OData query to filter the messages.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFilterQuery() {
@@ -48,7 +48,7 @@ public class MailSearchFolder extends MailFolder implements Parsable {
     }
     /**
      * Gets the includeNestedFolders property value. Indicates how the mailbox folder hierarchy should be traversed in the search. true means that a deep search should be done to include child folders in the hierarchy of each folder explicitly specified in sourceFolderIds. false means a shallow search of only each of the folders explicitly specified in sourceFolderIds.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIncludeNestedFolders() {
@@ -56,7 +56,7 @@ public class MailSearchFolder extends MailFolder implements Parsable {
     }
     /**
      * Gets the isSupported property value. Indicates whether a search folder is editable using REST APIs.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSupported() {
@@ -64,7 +64,7 @@ public class MailSearchFolder extends MailFolder implements Parsable {
     }
     /**
      * Gets the sourceFolderIds property value. The mailbox folders that should be mined.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSourceFolderIds() {

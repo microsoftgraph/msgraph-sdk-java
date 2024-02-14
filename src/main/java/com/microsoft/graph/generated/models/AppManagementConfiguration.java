@@ -18,7 +18,7 @@ public class AppManagementConfiguration implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AppManagementConfiguration and sets the default values.
+     * Instantiates a new {@link AppManagementConfiguration} and sets the default values.
      */
     public AppManagementConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AppManagementConfiguration implements AdditionalDataHolder, BackedM
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AppManagementConfiguration
+     * @return a {@link AppManagementConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static AppManagementConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AppManagementConfiguration implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AppManagementConfiguration implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class AppManagementConfiguration implements AdditionalDataHolder, BackedM
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class AppManagementConfiguration implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the keyCredentials property value. Collection of keyCredential restrictions settings to be applied to an application or service principal.
-     * @return a java.util.List<KeyCredentialConfiguration>
+     * @return a {@link java.util.List<KeyCredentialConfiguration>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyCredentialConfiguration> getKeyCredentials() {
@@ -77,7 +77,7 @@ public class AppManagementConfiguration implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -85,7 +85,7 @@ public class AppManagementConfiguration implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the passwordCredentials property value. Collection of password restrictions settings to be applied to an application or service principal.
-     * @return a java.util.List<PasswordCredentialConfiguration>
+     * @return a {@link java.util.List<PasswordCredentialConfiguration>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PasswordCredentialConfiguration> getPasswordCredentials() {

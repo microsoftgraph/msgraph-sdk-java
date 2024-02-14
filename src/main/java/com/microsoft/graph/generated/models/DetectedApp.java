@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DetectedApp extends Entity implements Parsable {
     /**
-     * Instantiates a new DetectedApp and sets the default values.
+     * Instantiates a new {@link DetectedApp} and sets the default values.
      */
     public DetectedApp() {
         super();
@@ -20,7 +20,7 @@ public class DetectedApp extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DetectedApp
+     * @return a {@link DetectedApp}
      */
     @jakarta.annotation.Nonnull
     public static DetectedApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class DetectedApp extends Entity implements Parsable {
     }
     /**
      * Gets the deviceCount property value. The number of devices that have installed this application
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceCount() {
@@ -37,7 +37,7 @@ public class DetectedApp extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Name of the discovered application. Read-only
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -45,7 +45,7 @@ public class DetectedApp extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -61,7 +61,7 @@ public class DetectedApp extends Entity implements Parsable {
     }
     /**
      * Gets the managedDevices property value. The devices that have the discovered application installed
-     * @return a java.util.List<ManagedDevice>
+     * @return a {@link java.util.List<ManagedDevice>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDevice> getManagedDevices() {
@@ -69,7 +69,7 @@ public class DetectedApp extends Entity implements Parsable {
     }
     /**
      * Gets the platform property value. Indicates the operating system / platform of the discovered application.  Some possible values are Windows, iOS, macOS. The default value is unknown (0).
-     * @return a DetectedAppPlatformType
+     * @return a {@link DetectedAppPlatformType}
      */
     @jakarta.annotation.Nullable
     public DetectedAppPlatformType getPlatform() {
@@ -77,7 +77,7 @@ public class DetectedApp extends Entity implements Parsable {
     }
     /**
      * Gets the publisher property value. Indicates the publisher of the discovered application. For example: 'Microsoft'.  The default value is an empty string.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
@@ -85,7 +85,7 @@ public class DetectedApp extends Entity implements Parsable {
     }
     /**
      * Gets the sizeInByte property value. Discovered application size in bytes. Read-only
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getSizeInByte() {
@@ -93,7 +93,7 @@ public class DetectedApp extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. Version of the discovered application. Read-only
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

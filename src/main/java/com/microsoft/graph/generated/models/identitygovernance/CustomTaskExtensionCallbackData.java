@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomTaskExtensionCallbackData extends CustomExtensionData implements Parsable {
     /**
-     * Instantiates a new CustomTaskExtensionCallbackData and sets the default values.
+     * Instantiates a new {@link CustomTaskExtensionCallbackData} and sets the default values.
      */
     public CustomTaskExtensionCallbackData() {
         super();
@@ -19,7 +19,7 @@ public class CustomTaskExtensionCallbackData extends CustomExtensionData impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CustomTaskExtensionCallbackData
+     * @return a {@link CustomTaskExtensionCallbackData}
      */
     @jakarta.annotation.Nonnull
     public static CustomTaskExtensionCallbackData createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class CustomTaskExtensionCallbackData extends CustomExtensionData impleme
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class CustomTaskExtensionCallbackData extends CustomExtensionData impleme
     }
     /**
      * Gets the operationStatus property value. Operation status that's provided by the Azure Logic App indicating whenever the Azure Logic App has run successfully or not. Supported values: completed, failed, unknownFutureValue.
-     * @return a CustomTaskExtensionOperationStatus
+     * @return a {@link CustomTaskExtensionOperationStatus}
      */
     @jakarta.annotation.Nullable
     public CustomTaskExtensionOperationStatus getOperationStatus() {

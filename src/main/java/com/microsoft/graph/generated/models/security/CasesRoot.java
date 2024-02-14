@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CasesRoot extends Entity implements Parsable {
     /**
-     * Instantiates a new CasesRoot and sets the default values.
+     * Instantiates a new {@link CasesRoot} and sets the default values.
      */
     public CasesRoot() {
         super();
@@ -18,7 +18,7 @@ public class CasesRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CasesRoot
+     * @return a {@link CasesRoot}
      */
     @jakarta.annotation.Nonnull
     public static CasesRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class CasesRoot extends Entity implements Parsable {
     }
     /**
      * Gets the ediscoveryCases property value. The ediscoveryCases property
-     * @return a java.util.List<EdiscoveryCase>
+     * @return a {@link java.util.List<EdiscoveryCase>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryCase> getEdiscoveryCases() {
@@ -35,7 +35,7 @@ public class CasesRoot extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

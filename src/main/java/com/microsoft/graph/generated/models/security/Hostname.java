@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Hostname extends Host implements Parsable {
     /**
-     * Instantiates a new Hostname and sets the default values.
+     * Instantiates a new {@link Hostname} and sets the default values.
      */
     public Hostname() {
         super();
@@ -18,7 +18,7 @@ public class Hostname extends Host implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Hostname
+     * @return a {@link Hostname}
      */
     @jakarta.annotation.Nonnull
     public static Hostname createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class Hostname extends Host implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class Hostname extends Host implements Parsable {
     }
     /**
      * Gets the registrant property value. The company or individual who registered this hostname, from WHOIS data.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRegistrant() {
@@ -46,7 +46,7 @@ public class Hostname extends Host implements Parsable {
     }
     /**
      * Gets the registrar property value. The registrar for this hostname, from WHOIS data.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRegistrar() {

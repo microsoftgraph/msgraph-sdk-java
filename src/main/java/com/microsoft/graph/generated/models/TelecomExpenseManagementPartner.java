@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TelecomExpenseManagementPartner extends Entity implements Parsable {
     /**
-     * Instantiates a new TelecomExpenseManagementPartner and sets the default values.
+     * Instantiates a new {@link TelecomExpenseManagementPartner} and sets the default values.
      */
     public TelecomExpenseManagementPartner() {
         super();
@@ -21,7 +21,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TelecomExpenseManagementPartner
+     * @return a {@link TelecomExpenseManagementPartner}
      */
     @jakarta.annotation.Nonnull
     public static TelecomExpenseManagementPartner createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
     }
     /**
      * Gets the appAuthorized property value. Whether the partner's AAD app has been authorized to access Intune.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAppAuthorized() {
@@ -38,7 +38,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
     }
     /**
      * Gets the displayName property value. Display name of the TEM partner.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -46,7 +46,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
     }
     /**
      * Gets the enabled property value. Whether Intune's connection to the TEM service is currently enabled or disabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnabled() {
@@ -54,7 +54,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,7 +68,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
     }
     /**
      * Gets the lastConnectionDateTime property value. Timestamp of the last request sent to Intune by the TEM partner.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastConnectionDateTime() {
@@ -76,7 +76,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
     }
     /**
      * Gets the url property value. URL of the TEM partner's administrative control panel, where an administrator can configure their TEM service.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUrl() {

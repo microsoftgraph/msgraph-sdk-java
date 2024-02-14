@@ -25,6 +25,7 @@ import java.util.Objects;
 public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the publish method.
+     * @return a {@link PublishRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PublishRequestBuilder publish() {
@@ -32,6 +33,7 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the sharedCookies property of the microsoft.graph.browserSiteList entity.
+     * @return a {@link SharedCookiesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SharedCookiesRequestBuilder sharedCookies() {
@@ -39,13 +41,14 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the sites property of the microsoft.graph.browserSiteList entity.
+     * @return a {@link SitesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SitesRequestBuilder sites() {
         return new SitesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new BrowserSiteListItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link BrowserSiteListItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -53,7 +56,7 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/edge/internetExplorerMode/siteLists/{browserSiteList%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new BrowserSiteListItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link BrowserSiteListItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -62,6 +65,7 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete a browserSiteList object.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/internetexplorermode-delete-sitelists?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -70,18 +74,19 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a browserSiteList object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/internetexplorermode-delete-sitelists?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get a browserSiteList that contains browserSite and browserSharedCookie resources.
-     * @return a BrowserSiteList
+     * @return a {@link BrowserSiteList}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -91,21 +96,22 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a browserSiteList that contains browserSite and browserSharedCookie resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a BrowserSiteList
+     * @return a {@link BrowserSiteList}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BrowserSiteList get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, BrowserSiteList::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of a browserSiteList object.
      * @param body The request body
-     * @return a BrowserSiteList
+     * @return a {@link BrowserSiteList}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -116,7 +122,8 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a browserSiteList object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a BrowserSiteList
+     * @return a {@link BrowserSiteList}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -124,13 +131,12 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, BrowserSiteList::createFromDiscriminatorValue);
     }
     /**
      * Delete a browserSiteList object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -139,18 +145,18 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a browserSiteList object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/admin/edge/internetExplorerMode/siteLists/{browserSiteList%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Get a browserSiteList that contains browserSite and browserSharedCookie resources.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -159,7 +165,7 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a browserSiteList that contains browserSite and browserSharedCookie resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -171,7 +177,7 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a browserSiteList object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final BrowserSiteList body) {
@@ -181,12 +187,12 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a browserSiteList object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final BrowserSiteList body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/admin/edge/internetExplorerMode/siteLists/{browserSiteList%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -195,7 +201,7 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a BrowserSiteListItemRequestBuilder
+     * @return a {@link BrowserSiteListItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BrowserSiteListItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -225,7 +231,7 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class HostPort extends Entity implements Parsable {
     /**
-     * Instantiates a new HostPort and sets the default values.
+     * Instantiates a new {@link HostPort} and sets the default values.
      */
     public HostPort() {
         super();
@@ -19,7 +19,7 @@ public class HostPort extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a HostPort
+     * @return a {@link HostPort}
      */
     @jakarta.annotation.Nonnull
     public static HostPort createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class HostPort extends Entity implements Parsable {
     }
     /**
      * Gets the banners property value. The hostPortBanners retrieved from scanning the port.
-     * @return a java.util.List<HostPortBanner>
+     * @return a {@link java.util.List<HostPortBanner>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostPortBanner> getBanners() {
@@ -36,7 +36,7 @@ public class HostPort extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -56,7 +56,7 @@ public class HostPort extends Entity implements Parsable {
     }
     /**
      * Gets the firstSeenDateTime property value. The first date and time when Microsoft Defender Threat Intelligence observed the hostPort. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
@@ -64,7 +64,7 @@ public class HostPort extends Entity implements Parsable {
     }
     /**
      * Gets the host property value. The host property
-     * @return a Host
+     * @return a {@link Host}
      */
     @jakarta.annotation.Nullable
     public Host getHost() {
@@ -72,7 +72,7 @@ public class HostPort extends Entity implements Parsable {
     }
     /**
      * Gets the lastScanDateTime property value. The last date and time when Microsoft Defender Threat Intelligence scanned the hostPort. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastScanDateTime() {
@@ -80,7 +80,7 @@ public class HostPort extends Entity implements Parsable {
     }
     /**
      * Gets the lastSeenDateTime property value. The last date and time when Microsoft Defender Threat Intelligence observed the hostPort. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
@@ -88,7 +88,7 @@ public class HostPort extends Entity implements Parsable {
     }
     /**
      * Gets the mostRecentSslCertificate property value. The most recent sslCertificate used to communicate on the port.
-     * @return a SslCertificate
+     * @return a {@link SslCertificate}
      */
     @jakarta.annotation.Nullable
     public SslCertificate getMostRecentSslCertificate() {
@@ -96,7 +96,7 @@ public class HostPort extends Entity implements Parsable {
     }
     /**
      * Gets the port property value. The numerical identifier of the port which is standardized across the internet.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPort() {
@@ -104,7 +104,7 @@ public class HostPort extends Entity implements Parsable {
     }
     /**
      * Gets the protocol property value. The general protocol used to scan the port. The possible values are: tcp, udp, unknownFutureValue.
-     * @return a HostPortProtocol
+     * @return a {@link HostPortProtocol}
      */
     @jakarta.annotation.Nullable
     public HostPortProtocol getProtocol() {
@@ -112,7 +112,7 @@ public class HostPort extends Entity implements Parsable {
     }
     /**
      * Gets the services property value. The hostPortComponents retrieved from scanning the port.
-     * @return a java.util.List<HostPortComponent>
+     * @return a {@link java.util.List<HostPortComponent>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostPortComponent> getServices() {
@@ -120,7 +120,7 @@ public class HostPort extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status of the port. The possible values are: open, filtered, closed, unknownFutureValue.
-     * @return a HostPortStatus
+     * @return a {@link HostPortStatus}
      */
     @jakarta.annotation.Nullable
     public HostPortStatus getStatus() {
@@ -128,7 +128,7 @@ public class HostPort extends Entity implements Parsable {
     }
     /**
      * Gets the timesObserved property value. The total amount of times that Microsoft Defender Threat Intelligence has observed the hostPort in all its scans.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTimesObserved() {

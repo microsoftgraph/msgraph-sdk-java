@@ -19,7 +19,7 @@ public class YieldMatPostRequestBody implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new YieldMatPostRequestBody and sets the default values.
+     * Instantiates a new {@link YieldMatPostRequestBody} and sets the default values.
      */
     public YieldMatPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class YieldMatPostRequestBody implements AdditionalDataHolder, BackedMode
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a YieldMatPostRequestBody
+     * @return a {@link YieldMatPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static YieldMatPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class YieldMatPostRequestBody implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class YieldMatPostRequestBody implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class YieldMatPostRequestBody implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the basis property value. The basis property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getBasis() {
@@ -66,7 +66,7 @@ public class YieldMatPostRequestBody implements AdditionalDataHolder, BackedMode
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -81,7 +81,7 @@ public class YieldMatPostRequestBody implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the issue property value. The issue property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getIssue() {
@@ -89,7 +89,7 @@ public class YieldMatPostRequestBody implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the maturity property value. The maturity property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getMaturity() {
@@ -97,7 +97,7 @@ public class YieldMatPostRequestBody implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the pr property value. The pr property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getPr() {
@@ -105,7 +105,7 @@ public class YieldMatPostRequestBody implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the rate property value. The rate property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getRate() {
@@ -113,7 +113,7 @@ public class YieldMatPostRequestBody implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the settlement property value. The settlement property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getSettlement() {

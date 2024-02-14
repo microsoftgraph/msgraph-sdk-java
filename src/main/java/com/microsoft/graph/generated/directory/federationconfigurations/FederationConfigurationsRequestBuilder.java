@@ -26,6 +26,7 @@ import java.util.Objects;
 public class FederationConfigurationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the availableProviderTypes method.
+     * @return a {@link AvailableProviderTypesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AvailableProviderTypesRequestBuilder availableProviderTypes() {
@@ -33,6 +34,7 @@ public class FederationConfigurationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -41,7 +43,7 @@ public class FederationConfigurationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the federationConfigurations property of the microsoft.graph.directory entity.
      * @param identityProviderBaseId The unique identifier of identityProviderBase
-     * @return a IdentityProviderBaseItemRequestBuilder
+     * @return a {@link IdentityProviderBaseItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IdentityProviderBaseItemRequestBuilder byIdentityProviderBaseId(@jakarta.annotation.Nonnull final String identityProviderBaseId) {
@@ -51,7 +53,7 @@ public class FederationConfigurationsRequestBuilder extends BaseRequestBuilder {
         return new IdentityProviderBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new FederationConfigurationsRequestBuilder and sets the default values.
+     * Instantiates a new {@link FederationConfigurationsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +61,7 @@ public class FederationConfigurationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/federationConfigurations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new FederationConfigurationsRequestBuilder and sets the default values.
+     * Instantiates a new {@link FederationConfigurationsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -68,7 +70,8 @@ public class FederationConfigurationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
-     * @return a IdentityProviderBaseCollectionResponse
+     * @return a {@link IdentityProviderBaseCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IdentityProviderBaseCollectionResponse get() {
@@ -77,20 +80,21 @@ public class FederationConfigurationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a IdentityProviderBaseCollectionResponse
+     * @return a {@link IdentityProviderBaseCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IdentityProviderBaseCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityProviderBaseCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to federationConfigurations for directory
      * @param body The request body
-     * @return a IdentityProviderBase
+     * @return a {@link IdentityProviderBase}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IdentityProviderBase post(@jakarta.annotation.Nonnull final IdentityProviderBase body) {
@@ -100,20 +104,20 @@ public class FederationConfigurationsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to federationConfigurations for directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a IdentityProviderBase
+     * @return a {@link IdentityProviderBase}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IdentityProviderBase post(@jakarta.annotation.Nonnull final IdentityProviderBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityProviderBase::createFromDiscriminatorValue);
     }
     /**
      * Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -122,7 +126,7 @@ public class FederationConfigurationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -134,7 +138,7 @@ public class FederationConfigurationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to federationConfigurations for directory
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final IdentityProviderBase body) {
@@ -144,12 +148,12 @@ public class FederationConfigurationsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to federationConfigurations for directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final IdentityProviderBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/directory/federationConfigurations", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -158,7 +162,7 @@ public class FederationConfigurationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a FederationConfigurationsRequestBuilder
+     * @return a {@link FederationConfigurationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FederationConfigurationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -212,7 +216,7 @@ public class FederationConfigurationsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

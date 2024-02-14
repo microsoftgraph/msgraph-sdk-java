@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Segment extends Entity implements Parsable {
     /**
-     * Instantiates a new Segment and sets the default values.
+     * Instantiates a new {@link Segment} and sets the default values.
      */
     public Segment() {
         super();
@@ -19,7 +19,7 @@ public class Segment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Segment
+     * @return a {@link Segment}
      */
     @jakarta.annotation.Nonnull
     public static Segment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class Segment extends Entity implements Parsable {
     }
     /**
      * Gets the callee property value. Endpoint that answered this segment.
-     * @return a Endpoint
+     * @return a {@link Endpoint}
      */
     @jakarta.annotation.Nullable
     public Endpoint getCallee() {
@@ -36,7 +36,7 @@ public class Segment extends Entity implements Parsable {
     }
     /**
      * Gets the caller property value. Endpoint that initiated this segment.
-     * @return a Endpoint
+     * @return a {@link Endpoint}
      */
     @jakarta.annotation.Nullable
     public Endpoint getCaller() {
@@ -44,7 +44,7 @@ public class Segment extends Entity implements Parsable {
     }
     /**
      * Gets the endDateTime property value. UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
@@ -52,7 +52,7 @@ public class Segment extends Entity implements Parsable {
     }
     /**
      * Gets the failureInfo property value. Failure information associated with the segment if it failed.
-     * @return a FailureInfo
+     * @return a {@link FailureInfo}
      */
     @jakarta.annotation.Nullable
     public FailureInfo getFailureInfo() {
@@ -60,7 +60,7 @@ public class Segment extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -75,7 +75,7 @@ public class Segment extends Entity implements Parsable {
     }
     /**
      * Gets the media property value. Media associated with this segment.
-     * @return a java.util.List<Media>
+     * @return a {@link java.util.List<Media>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Media> getMedia() {
@@ -83,7 +83,7 @@ public class Segment extends Entity implements Parsable {
     }
     /**
      * Gets the startDateTime property value. UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {

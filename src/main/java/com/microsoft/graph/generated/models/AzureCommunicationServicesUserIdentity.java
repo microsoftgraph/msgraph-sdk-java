@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AzureCommunicationServicesUserIdentity extends Identity implements Parsable {
     /**
-     * Instantiates a new AzureCommunicationServicesUserIdentity and sets the default values.
+     * Instantiates a new {@link AzureCommunicationServicesUserIdentity} and sets the default values.
      */
     public AzureCommunicationServicesUserIdentity() {
         super();
@@ -18,7 +18,7 @@ public class AzureCommunicationServicesUserIdentity extends Identity implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AzureCommunicationServicesUserIdentity
+     * @return a {@link AzureCommunicationServicesUserIdentity}
      */
     @jakarta.annotation.Nonnull
     public static AzureCommunicationServicesUserIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AzureCommunicationServicesUserIdentity extends Identity implements 
     }
     /**
      * Gets the azureCommunicationServicesResourceId property value. The Azure Communication Services resource ID associated with the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureCommunicationServicesResourceId() {
@@ -35,7 +35,7 @@ public class AzureCommunicationServicesUserIdentity extends Identity implements 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

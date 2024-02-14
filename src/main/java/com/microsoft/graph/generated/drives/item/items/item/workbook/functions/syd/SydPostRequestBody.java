@@ -19,7 +19,7 @@ public class SydPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SydPostRequestBody and sets the default values.
+     * Instantiates a new {@link SydPostRequestBody} and sets the default values.
      */
     public SydPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class SydPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SydPostRequestBody
+     * @return a {@link SydPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static SydPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class SydPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class SydPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class SydPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the cost property value. The cost property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getCost() {
@@ -66,7 +66,7 @@ public class SydPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class SydPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the life property value. The life property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getLife() {
@@ -87,7 +87,7 @@ public class SydPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the per property value. The per property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getPer() {
@@ -95,7 +95,7 @@ public class SydPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the salvage property value. The salvage property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getSalvage() {

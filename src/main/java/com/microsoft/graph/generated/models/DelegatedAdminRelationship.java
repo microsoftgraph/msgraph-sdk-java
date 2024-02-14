@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DelegatedAdminRelationship extends Entity implements Parsable {
     /**
-     * Instantiates a new DelegatedAdminRelationship and sets the default values.
+     * Instantiates a new {@link DelegatedAdminRelationship} and sets the default values.
      */
     public DelegatedAdminRelationship() {
         super();
@@ -19,7 +19,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DelegatedAdminRelationship
+     * @return a {@link DelegatedAdminRelationship}
      */
     @jakarta.annotation.Nonnull
     public static DelegatedAdminRelationship createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the accessAssignments property value. The access assignments associated with the delegated admin relationship.
-     * @return a java.util.List<DelegatedAdminAccessAssignment>
+     * @return a {@link java.util.List<DelegatedAdminAccessAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DelegatedAdminAccessAssignment> getAccessAssignments() {
@@ -43,7 +43,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the accessDetails property value. The accessDetails property
-     * @return a DelegatedAdminAccessDetails
+     * @return a {@link DelegatedAdminAccessDetails}
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminAccessDetails getAccessDetails() {
@@ -51,7 +51,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the activatedDateTime property value. The date and time in ISO 8601 format and in UTC time when the relationship became active. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getActivatedDateTime() {
@@ -59,7 +59,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the autoExtendDuration property value. The duration by which the validity of the relationship is automatically extended, denoted in ISO 8601 format. Supported values are: P0D, PT0S, P180D. The default value is PT0S. PT0S indicates that the relationship expires when the endDateTime is reached and it isn't automatically extended.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getAutoExtendDuration() {
@@ -67,7 +67,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time in ISO 8601 format and in UTC time when the relationship was created. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -75,7 +75,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the customer property value. The display name and unique identifier of the customer of the relationship. This is configured either by the partner at the time the relationship is created or by the system after the customer approves the relationship. Can't be changed by the customer.
-     * @return a DelegatedAdminRelationshipCustomerParticipant
+     * @return a {@link DelegatedAdminRelationshipCustomerParticipant}
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminRelationshipCustomerParticipant getCustomer() {
@@ -83,7 +83,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner and is set by the partner only when the relationship is in the created status and can't be changed by the customer.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -91,7 +91,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the duration property value. The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and can't be changed by the customer.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getDuration() {
@@ -99,7 +99,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the endDateTime property value. The date and time in ISO 8601 format and in UTC time when the status of relationship changes to either terminated or expired. Calculated as endDateTime = activatedDateTime + duration. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
@@ -107,7 +107,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -129,7 +129,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time in ISO 8601 format and in UTC time when the relationship was last modified. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -137,7 +137,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the operations property value. The long running operations associated with the delegated admin relationship.
-     * @return a java.util.List<DelegatedAdminRelationshipOperation>
+     * @return a {@link java.util.List<DelegatedAdminRelationshipOperation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DelegatedAdminRelationshipOperation> getOperations() {
@@ -145,7 +145,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the requests property value. The requests associated with the delegated admin relationship.
-     * @return a java.util.List<DelegatedAdminRelationshipRequest>
+     * @return a {@link java.util.List<DelegatedAdminRelationshipRequest>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DelegatedAdminRelationshipRequest> getRequests() {
@@ -153,7 +153,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderby.
-     * @return a DelegatedAdminRelationshipStatus
+     * @return a {@link DelegatedAdminRelationshipStatus}
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminRelationshipStatus getStatus() {

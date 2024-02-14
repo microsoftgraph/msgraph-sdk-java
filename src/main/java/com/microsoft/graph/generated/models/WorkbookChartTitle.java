@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartTitle extends Entity implements Parsable {
     /**
-     * Instantiates a new WorkbookChartTitle and sets the default values.
+     * Instantiates a new {@link WorkbookChartTitle} and sets the default values.
      */
     public WorkbookChartTitle() {
         super();
@@ -17,7 +17,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookChartTitle
+     * @return a {@link WorkbookChartTitle}
      */
     @jakarta.annotation.Nonnull
     public static WorkbookChartTitle createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -39,7 +39,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
     }
     /**
      * Gets the format property value. Represents the formatting of a chart title, which includes fill and font formatting. Read-only.
-     * @return a WorkbookChartTitleFormat
+     * @return a {@link WorkbookChartTitleFormat}
      */
     @jakarta.annotation.Nullable
     public WorkbookChartTitleFormat getFormat() {
@@ -47,7 +47,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
     }
     /**
      * Gets the overlay property value. Boolean value representing if the chart title will overlay the chart or not.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getOverlay() {
@@ -55,7 +55,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
     }
     /**
      * Gets the text property value. Represents the title text of a chart.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getText() {
@@ -63,7 +63,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
     }
     /**
      * Gets the visible property value. A boolean value that represents the visibility of a chart title object.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getVisible() {

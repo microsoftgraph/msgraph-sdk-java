@@ -18,7 +18,7 @@ public class AttributeMapping implements AdditionalDataHolder, BackedModel, Pars
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AttributeMapping and sets the default values.
+     * Instantiates a new {@link AttributeMapping} and sets the default values.
      */
     public AttributeMapping() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AttributeMapping implements AdditionalDataHolder, BackedModel, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AttributeMapping
+     * @return a {@link AttributeMapping}
      */
     @jakarta.annotation.Nonnull
     public static AttributeMapping createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AttributeMapping implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AttributeMapping implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class AttributeMapping implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the defaultValue property value. Default value to be used in case the source property was evaluated to null. Optional.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDefaultValue() {
@@ -65,7 +65,7 @@ public class AttributeMapping implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the exportMissingReferences property value. For internal use only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getExportMissingReferences() {
@@ -73,7 +73,7 @@ public class AttributeMapping implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -90,7 +90,7 @@ public class AttributeMapping implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the flowBehavior property value. The flowBehavior property
-     * @return a AttributeFlowBehavior
+     * @return a {@link AttributeFlowBehavior}
      */
     @jakarta.annotation.Nullable
     public AttributeFlowBehavior getFlowBehavior() {
@@ -98,7 +98,7 @@ public class AttributeMapping implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the flowType property value. The flowType property
-     * @return a AttributeFlowType
+     * @return a {@link AttributeFlowType}
      */
     @jakarta.annotation.Nullable
     public AttributeFlowType getFlowType() {
@@ -106,7 +106,7 @@ public class AttributeMapping implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the matchingPriority property value. If higher than 0, this attribute will be used to perform an initial match of the objects between source and target directories. The synchronization engine will try to find the matching object using attribute with lowest value of matching priority first. If not found, the attribute with the next matching priority will be used, and so on a until match is found or no more matching attributes are left. Only attributes that are expected to have unique values, such as email, should be used as matching attributes.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMatchingPriority() {
@@ -114,7 +114,7 @@ public class AttributeMapping implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -122,7 +122,7 @@ public class AttributeMapping implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the source property value. Defines how a value should be extracted (or transformed) from the source object.
-     * @return a AttributeMappingSource
+     * @return a {@link AttributeMappingSource}
      */
     @jakarta.annotation.Nullable
     public AttributeMappingSource getSource() {
@@ -130,7 +130,7 @@ public class AttributeMapping implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the targetAttributeName property value. Name of the attribute on the target object.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTargetAttributeName() {

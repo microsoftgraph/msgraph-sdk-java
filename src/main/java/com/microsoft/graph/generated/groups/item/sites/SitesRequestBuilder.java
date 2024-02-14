@@ -28,6 +28,7 @@ import java.util.Objects;
 public class SitesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the add method.
+     * @return a {@link AddRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AddRequestBuilder add() {
@@ -35,6 +36,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -42,6 +44,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the delta method.
+     * @return a {@link DeltaRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeltaRequestBuilder delta() {
@@ -49,6 +52,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getAllSites method.
+     * @return a {@link GetAllSitesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetAllSitesRequestBuilder getAllSites() {
@@ -56,6 +60,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the remove method.
+     * @return a {@link RemoveRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RemoveRequestBuilder remove() {
@@ -64,7 +69,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the sites property of the microsoft.graph.group entity.
      * @param siteId The unique identifier of site
-     * @return a SiteItemRequestBuilder
+     * @return a {@link SiteItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SiteItemRequestBuilder bySiteId(@jakarta.annotation.Nonnull final String siteId) {
@@ -74,7 +79,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         return new SiteItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new SitesRequestBuilder and sets the default values.
+     * Instantiates a new {@link SitesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -82,7 +87,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new SitesRequestBuilder and sets the default values.
+     * Instantiates a new {@link SitesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -91,7 +96,8 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of SharePoint sites in this group. Access the default site with /sites/root.
-     * @return a SiteCollectionResponse
+     * @return a {@link SiteCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SiteCollectionResponse get() {
@@ -100,19 +106,19 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of SharePoint sites in this group. Access the default site with /sites/root.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a SiteCollectionResponse
+     * @return a {@link SiteCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SiteCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SiteCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * The list of SharePoint sites in this group. Access the default site with /sites/root.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -121,7 +127,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of SharePoint sites in this group. Access the default site with /sites/root.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -133,7 +139,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a SitesRequestBuilder
+     * @return a {@link SitesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SitesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -187,7 +193,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SingleServicePrincipal extends SubjectSet implements Parsable {
     /**
-     * Instantiates a new SingleServicePrincipal and sets the default values.
+     * Instantiates a new {@link SingleServicePrincipal} and sets the default values.
      */
     public SingleServicePrincipal() {
         super();
@@ -18,7 +18,7 @@ public class SingleServicePrincipal extends SubjectSet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SingleServicePrincipal
+     * @return a {@link SingleServicePrincipal}
      */
     @jakarta.annotation.Nonnull
     public static SingleServicePrincipal createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class SingleServicePrincipal extends SubjectSet implements Parsable {
     }
     /**
      * Gets the description property value. Description of this service principal.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -35,7 +35,7 @@ public class SingleServicePrincipal extends SubjectSet implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class SingleServicePrincipal extends SubjectSet implements Parsable {
     }
     /**
      * Gets the servicePrincipalId property value. ID of the servicePrincipal.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalId() {

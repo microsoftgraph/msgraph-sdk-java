@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookComment extends Entity implements Parsable {
     /**
-     * Instantiates a new WorkbookComment and sets the default values.
+     * Instantiates a new {@link WorkbookComment} and sets the default values.
      */
     public WorkbookComment() {
         super();
@@ -17,7 +17,7 @@ public class WorkbookComment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookComment
+     * @return a {@link WorkbookComment}
      */
     @jakarta.annotation.Nonnull
     public static WorkbookComment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class WorkbookComment extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The content of comment.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContent() {
@@ -34,7 +34,7 @@ public class WorkbookComment extends Entity implements Parsable {
     }
     /**
      * Gets the contentType property value. Indicates the type for the comment.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContentType() {
@@ -42,7 +42,7 @@ public class WorkbookComment extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -54,7 +54,7 @@ public class WorkbookComment extends Entity implements Parsable {
     }
     /**
      * Gets the replies property value. The replies property
-     * @return a java.util.List<WorkbookCommentReply>
+     * @return a {@link java.util.List<WorkbookCommentReply>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookCommentReply> getReplies() {

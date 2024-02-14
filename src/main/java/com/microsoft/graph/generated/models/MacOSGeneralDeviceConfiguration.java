@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new MacOSGeneralDeviceConfiguration and sets the default values.
+     * Instantiates a new {@link MacOSGeneralDeviceConfiguration} and sets the default values.
      */
     public MacOSGeneralDeviceConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MacOSGeneralDeviceConfiguration
+     * @return a {@link MacOSGeneralDeviceConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static MacOSGeneralDeviceConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the compliantAppListType property value. Possible values of the compliance app list.
-     * @return a AppListType
+     * @return a {@link AppListType}
      */
     @jakarta.annotation.Nullable
     public AppListType getCompliantAppListType() {
@@ -38,7 +38,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the compliantAppsList property value. List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
-     * @return a java.util.List<AppListItem>
+     * @return a {@link java.util.List<AppListItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getCompliantAppsList() {
@@ -46,7 +46,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the emailInDomainSuffixes property value. An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEmailInDomainSuffixes() {
@@ -54,7 +54,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -75,7 +75,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordBlockSimple property value. Block simple passwords.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockSimple() {
@@ -83,7 +83,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordExpirationDays property value. Number of days before the password expires.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
@@ -91,7 +91,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordMinimumCharacterSetCount property value. Number of character sets a password must contain. Valid values 0 to 4
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumCharacterSetCount() {
@@ -99,7 +99,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordMinimumLength property value. Minimum length of passwords.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
@@ -107,7 +107,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity required before a password is required.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeLock() {
@@ -115,7 +115,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity required before the screen times out.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeScreenTimeout() {
@@ -123,7 +123,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
@@ -131,7 +131,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordRequired property value. Whether or not to require a password.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRequired() {
@@ -139,7 +139,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
-     * @return a RequiredPasswordType
+     * @return a {@link RequiredPasswordType}
      */
     @jakarta.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {

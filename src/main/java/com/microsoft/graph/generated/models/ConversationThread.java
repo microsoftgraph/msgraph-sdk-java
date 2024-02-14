@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConversationThread extends Entity implements Parsable {
     /**
-     * Instantiates a new ConversationThread and sets the default values.
+     * Instantiates a new {@link ConversationThread} and sets the default values.
      */
     public ConversationThread() {
         super();
@@ -18,7 +18,7 @@ public class ConversationThread extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConversationThread
+     * @return a {@link ConversationThread}
      */
     @jakarta.annotation.Nonnull
     public static ConversationThread createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ConversationThread extends Entity implements Parsable {
     }
     /**
      * Gets the ccRecipients property value. The Cc: recipients for the thread. Returned only on $select.
-     * @return a java.util.List<Recipient>
+     * @return a {@link java.util.List<Recipient>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getCcRecipients() {
@@ -35,7 +35,7 @@ public class ConversationThread extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -53,7 +53,7 @@ public class ConversationThread extends Entity implements Parsable {
     }
     /**
      * Gets the hasAttachments property value. Indicates whether any of the posts within this thread has at least one attachment. Returned by default.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHasAttachments() {
@@ -61,7 +61,7 @@ public class ConversationThread extends Entity implements Parsable {
     }
     /**
      * Gets the isLocked property value. Indicates if the thread is locked. Returned by default.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsLocked() {
@@ -69,7 +69,7 @@ public class ConversationThread extends Entity implements Parsable {
     }
     /**
      * Gets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Returned by default.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastDeliveredDateTime() {
@@ -77,7 +77,7 @@ public class ConversationThread extends Entity implements Parsable {
     }
     /**
      * Gets the posts property value. The posts property
-     * @return a java.util.List<Post>
+     * @return a {@link java.util.List<Post>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Post> getPosts() {
@@ -85,7 +85,7 @@ public class ConversationThread extends Entity implements Parsable {
     }
     /**
      * Gets the preview property value. A short summary from the body of the latest post in this conversation. Returned by default.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPreview() {
@@ -93,7 +93,7 @@ public class ConversationThread extends Entity implements Parsable {
     }
     /**
      * Gets the topic property value. The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated. Returned by default.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTopic() {
@@ -101,7 +101,7 @@ public class ConversationThread extends Entity implements Parsable {
     }
     /**
      * Gets the toRecipients property value. The To: recipients for the thread. Returned only on $select.
-     * @return a java.util.List<Recipient>
+     * @return a {@link java.util.List<Recipient>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getToRecipients() {
@@ -109,7 +109,7 @@ public class ConversationThread extends Entity implements Parsable {
     }
     /**
      * Gets the uniqueSenders property value. All the users that sent a message to this thread. Returned by default.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getUniqueSenders() {

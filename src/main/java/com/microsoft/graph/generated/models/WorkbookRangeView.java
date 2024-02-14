@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookRangeView extends Entity implements Parsable {
     /**
-     * Instantiates a new WorkbookRangeView and sets the default values.
+     * Instantiates a new {@link WorkbookRangeView} and sets the default values.
      */
     public WorkbookRangeView() {
         super();
@@ -17,7 +17,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookRangeView
+     * @return a {@link WorkbookRangeView}
      */
     @jakarta.annotation.Nonnull
     public static WorkbookRangeView createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
     }
     /**
      * Gets the cellAddresses property value. Represents the cell addresses
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getCellAddresses() {
@@ -34,7 +34,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
     }
     /**
      * Gets the columnCount property value. Returns the number of visible columns. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getColumnCount() {
@@ -42,7 +42,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -63,7 +63,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
     }
     /**
      * Gets the formulas property value. Represents the formula in A1-style notation.
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getFormulas() {
@@ -71,7 +71,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
     }
     /**
      * Gets the formulasLocal property value. Represents the formula in A1-style notation, in the user's language and number-formatting locale. For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getFormulasLocal() {
@@ -79,7 +79,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
     }
     /**
      * Gets the formulasR1C1 property value. Represents the formula in R1C1-style notation.
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getFormulasR1C1() {
@@ -87,7 +87,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
     }
     /**
      * Gets the index property value. Index of the range.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getIndex() {
@@ -95,7 +95,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
     }
     /**
      * Gets the numberFormat property value. Represents Excel's number format code for the given cell. Read-only.
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getNumberFormat() {
@@ -103,7 +103,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
     }
     /**
      * Gets the rowCount property value. Returns the number of visible rows. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRowCount() {
@@ -111,7 +111,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
     }
     /**
      * Gets the rows property value. Represents a collection of range views associated with the range. Read-only. Read-only.
-     * @return a java.util.List<WorkbookRangeView>
+     * @return a {@link java.util.List<WorkbookRangeView>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookRangeView> getRows() {
@@ -119,7 +119,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
     }
     /**
      * Gets the text property value. Text values of the specified range. The Text value won't depend on the cell width. The # sign substitution that happens in Excel UI won't affect the text value returned by the API. Read-only.
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getText() {
@@ -127,7 +127,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
     }
     /**
      * Gets the values property value. Represents the raw values of the specified range view. The data returned could be of type string, number, or a boolean. Cell that contains an error returns the error string.
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getValues() {
@@ -135,7 +135,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
     }
     /**
      * Gets the valueTypes property value. Represents the type of data of each cell. Read-only. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error.
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getValueTypes() {

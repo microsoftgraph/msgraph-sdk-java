@@ -25,6 +25,7 @@ import java.util.Objects;
 public class UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder 
     /**
      * Provides operations to manage the userExperienceAnalyticsAppHealthOSVersionPerformance property of the microsoft.graph.deviceManagement entity.
      * @param userExperienceAnalyticsAppHealthOSVersionPerformanceId The unique identifier of userExperienceAnalyticsAppHealthOSVersionPerformance
-     * @return a UserExperienceAnalyticsAppHealthOSVersionPerformanceItemRequestBuilder
+     * @return a {@link UserExperienceAnalyticsAppHealthOSVersionPerformanceItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsAppHealthOSVersionPerformanceItemRequestBuilder byUserExperienceAnalyticsAppHealthOSVersionPerformanceId(@jakarta.annotation.Nonnull final String userExperienceAnalyticsAppHealthOSVersionPerformanceId) {
@@ -43,7 +44,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder 
         return new UserExperienceAnalyticsAppHealthOSVersionPerformanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder 
         super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsAppHealthOSVersionPerformance{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder 
     }
     /**
      * User experience analytics appHealth OS version Performance
-     * @return a UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionResponse
+     * @return a {@link UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionResponse get() {
@@ -69,20 +71,21 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder 
     /**
      * User experience analytics appHealth OS version Performance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionResponse
+     * @return a {@link UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to userExperienceAnalyticsAppHealthOSVersionPerformance for deviceManagement
      * @param body The request body
-     * @return a UserExperienceAnalyticsAppHealthOSVersionPerformance
+     * @return a {@link UserExperienceAnalyticsAppHealthOSVersionPerformance}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAppHealthOSVersionPerformance post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthOSVersionPerformance body) {
@@ -92,20 +95,20 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder 
      * Create new navigation property to userExperienceAnalyticsAppHealthOSVersionPerformance for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UserExperienceAnalyticsAppHealthOSVersionPerformance
+     * @return a {@link UserExperienceAnalyticsAppHealthOSVersionPerformance}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAppHealthOSVersionPerformance post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthOSVersionPerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsAppHealthOSVersionPerformance::createFromDiscriminatorValue);
     }
     /**
      * User experience analytics appHealth OS version Performance
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -114,7 +117,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder 
     /**
      * User experience analytics appHealth OS version Performance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -126,7 +129,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder 
     /**
      * Create new navigation property to userExperienceAnalyticsAppHealthOSVersionPerformance for deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthOSVersionPerformance body) {
@@ -136,12 +139,12 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder 
      * Create new navigation property to userExperienceAnalyticsAppHealthOSVersionPerformance for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthOSVersionPerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceManagement/userExperienceAnalyticsAppHealthOSVersionPerformance", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -150,7 +153,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder
+     * @return a {@link UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -204,7 +207,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder 
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -25,7 +25,7 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of subscribedSku entities.
      * @param subscribedSkuId The unique identifier of subscribedSku
-     * @return a SubscribedSkuItemRequestBuilder
+     * @return a {@link SubscribedSkuItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SubscribedSkuItemRequestBuilder bySubscribedSkuId(@jakarta.annotation.Nonnull final String subscribedSkuId) {
@@ -35,7 +35,7 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
         return new SubscribedSkuItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new SubscribedSkusRequestBuilder and sets the default values.
+     * Instantiates a new {@link SubscribedSkusRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -43,7 +43,7 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/subscribedSkus{?%24orderby,%24search,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new SubscribedSkusRequestBuilder and sets the default values.
+     * Instantiates a new {@link SubscribedSkusRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -52,7 +52,8 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Microsoft Entra admin center or the Microsoft 365 admin center against their Microsoft Graph skuId and skuPartNumber properties, see Product names and service plan identifiers for licensing.
-     * @return a SubscribedSkuCollectionResponse
+     * @return a {@link SubscribedSkuCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/subscribedsku-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -62,21 +63,22 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Microsoft Entra admin center or the Microsoft 365 admin center against their Microsoft Graph skuId and skuPartNumber properties, see Product names and service plan identifiers for licensing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a SubscribedSkuCollectionResponse
+     * @return a {@link SubscribedSkuCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/subscribedsku-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SubscribedSkuCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SubscribedSkuCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Add new entity to subscribedSkus
      * @param body The request body
-     * @return a SubscribedSku
+     * @return a {@link SubscribedSku}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SubscribedSku post(@jakarta.annotation.Nonnull final SubscribedSku body) {
@@ -86,20 +88,20 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
      * Add new entity to subscribedSkus
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a SubscribedSku
+     * @return a {@link SubscribedSku}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SubscribedSku post(@jakarta.annotation.Nonnull final SubscribedSku body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SubscribedSku::createFromDiscriminatorValue);
     }
     /**
      * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Microsoft Entra admin center or the Microsoft 365 admin center against their Microsoft Graph skuId and skuPartNumber properties, see Product names and service plan identifiers for licensing.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -108,7 +110,7 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Microsoft Entra admin center or the Microsoft 365 admin center against their Microsoft Graph skuId and skuPartNumber properties, see Product names and service plan identifiers for licensing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +122,7 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to subscribedSkus
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SubscribedSku body) {
@@ -130,12 +132,12 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
      * Add new entity to subscribedSkus
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SubscribedSku body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/subscribedSkus", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -144,7 +146,7 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a SubscribedSkusRequestBuilder
+     * @return a {@link SubscribedSkusRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SubscribedSkusRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -173,7 +175,7 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

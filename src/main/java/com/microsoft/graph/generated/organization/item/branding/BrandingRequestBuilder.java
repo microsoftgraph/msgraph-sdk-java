@@ -30,6 +30,7 @@ import java.util.Objects;
 public class BrandingRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the media for the organization entity.
+     * @return a {@link BackgroundImageRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BackgroundImageRequestBuilder backgroundImage() {
@@ -37,6 +38,7 @@ public class BrandingRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the media for the organization entity.
+     * @return a {@link BannerLogoRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BannerLogoRequestBuilder bannerLogo() {
@@ -44,6 +46,7 @@ public class BrandingRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the media for the organization entity.
+     * @return a {@link CustomCSSRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CustomCSSRequestBuilder customCSS() {
@@ -51,6 +54,7 @@ public class BrandingRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the media for the organization entity.
+     * @return a {@link FaviconRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FaviconRequestBuilder favicon() {
@@ -58,6 +62,7 @@ public class BrandingRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the media for the organization entity.
+     * @return a {@link HeaderLogoRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public HeaderLogoRequestBuilder headerLogo() {
@@ -65,6 +70,7 @@ public class BrandingRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the localizations property of the microsoft.graph.organizationalBranding entity.
+     * @return a {@link LocalizationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LocalizationsRequestBuilder localizations() {
@@ -72,6 +78,7 @@ public class BrandingRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the media for the organization entity.
+     * @return a {@link SquareLogoRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SquareLogoRequestBuilder squareLogo() {
@@ -79,13 +86,14 @@ public class BrandingRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the media for the organization entity.
+     * @return a {@link SquareLogoDarkRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SquareLogoDarkRequestBuilder squareLogoDark() {
         return new SquareLogoDarkRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new BrandingRequestBuilder and sets the default values.
+     * Instantiates a new {@link BrandingRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -93,7 +101,7 @@ public class BrandingRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/branding{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new BrandingRequestBuilder and sets the default values.
+     * Instantiates a new {@link BrandingRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -102,6 +110,7 @@ public class BrandingRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete the default organizational branding object. To delete the organizationalBranding object, all images (Stream types) must first be removed from the object.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/organizationalbranding-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -110,18 +119,19 @@ public class BrandingRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete the default organizational branding object. To delete the organizationalBranding object, all images (Stream types) must first be removed from the object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/organizationalbranding-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve the default organizational branding object, if the Accept-Language header is set to 0 or default. If no default organizational branding object exists, this method returns a 404 Not Found error. If the Accept-Language header is set to an existing locale identified by the value of its id, this method retrieves the branding for the specified locale. This method retrieves only non-Stream properties, for example, usernameHintText and signInPageText. To retrieve Stream types of the default branding, for example, bannerLogo and backgroundImage, use the GET organizationalBrandingLocalization method.
-     * @return a OrganizationalBranding
+     * @return a {@link OrganizationalBranding}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/organizationalbranding-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -131,21 +141,22 @@ public class BrandingRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the default organizational branding object, if the Accept-Language header is set to 0 or default. If no default organizational branding object exists, this method returns a 404 Not Found error. If the Accept-Language header is set to an existing locale identified by the value of its id, this method retrieves the branding for the specified locale. This method retrieves only non-Stream properties, for example, usernameHintText and signInPageText. To retrieve Stream types of the default branding, for example, bannerLogo and backgroundImage, use the GET organizationalBrandingLocalization method.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a OrganizationalBranding
+     * @return a {@link OrganizationalBranding}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/organizationalbranding-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OrganizationalBranding get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, OrganizationalBranding::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of the default branding object specified by the organizationalBranding resource.
      * @param body The request body
-     * @return a OrganizationalBranding
+     * @return a {@link OrganizationalBranding}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/organizationalbranding-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -156,7 +167,8 @@ public class BrandingRequestBuilder extends BaseRequestBuilder {
      * Update the properties of the default branding object specified by the organizationalBranding resource.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a OrganizationalBranding
+     * @return a {@link OrganizationalBranding}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/organizationalbranding-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -164,13 +176,12 @@ public class BrandingRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, OrganizationalBranding::createFromDiscriminatorValue);
     }
     /**
      * Delete the default organizational branding object. To delete the organizationalBranding object, all images (Stream types) must first be removed from the object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -179,18 +190,18 @@ public class BrandingRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete the default organizational branding object. To delete the organizationalBranding object, all images (Stream types) must first be removed from the object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/organization/{organization%2Did}/branding", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Retrieve the default organizational branding object, if the Accept-Language header is set to 0 or default. If no default organizational branding object exists, this method returns a 404 Not Found error. If the Accept-Language header is set to an existing locale identified by the value of its id, this method retrieves the branding for the specified locale. This method retrieves only non-Stream properties, for example, usernameHintText and signInPageText. To retrieve Stream types of the default branding, for example, bannerLogo and backgroundImage, use the GET organizationalBrandingLocalization method.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -199,7 +210,7 @@ public class BrandingRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the default organizational branding object, if the Accept-Language header is set to 0 or default. If no default organizational branding object exists, this method returns a 404 Not Found error. If the Accept-Language header is set to an existing locale identified by the value of its id, this method retrieves the branding for the specified locale. This method retrieves only non-Stream properties, for example, usernameHintText and signInPageText. To retrieve Stream types of the default branding, for example, bannerLogo and backgroundImage, use the GET organizationalBrandingLocalization method.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -211,7 +222,7 @@ public class BrandingRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of the default branding object specified by the organizationalBranding resource.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final OrganizationalBranding body) {
@@ -221,12 +232,12 @@ public class BrandingRequestBuilder extends BaseRequestBuilder {
      * Update the properties of the default branding object specified by the organizationalBranding resource.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final OrganizationalBranding body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/organization/{organization%2Did}/branding", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -235,7 +246,7 @@ public class BrandingRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a BrandingRequestBuilder
+     * @return a {@link BrandingRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BrandingRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -265,7 +276,7 @@ public class BrandingRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

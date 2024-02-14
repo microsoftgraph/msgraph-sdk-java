@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageSubject extends Entity implements Parsable {
     /**
-     * Instantiates a new AccessPackageSubject and sets the default values.
+     * Instantiates a new {@link AccessPackageSubject} and sets the default values.
      */
     public AccessPackageSubject() {
         super();
@@ -17,7 +17,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessPackageSubject
+     * @return a {@link AccessPackageSubject}
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageSubject createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     }
     /**
      * Gets the connectedOrganization property value. The connected organization of the subject. Read-only. Nullable.
-     * @return a ConnectedOrganization
+     * @return a {@link ConnectedOrganization}
      */
     @jakarta.annotation.Nullable
     public ConnectedOrganization getConnectedOrganization() {
@@ -34,7 +34,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the subject.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -42,7 +42,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     }
     /**
      * Gets the email property value. The email address of the subject.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -50,7 +50,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -66,7 +66,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     }
     /**
      * Gets the objectId property value. The object identifier of the subject. null if the subject isn't yet a user in the tenant.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getObjectId() {
@@ -74,7 +74,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     }
     /**
      * Gets the onPremisesSecurityIdentifier property value. A string representation of the principal's security identifier, if known, or null if the subject doesn't have a security identifier.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOnPremisesSecurityIdentifier() {
@@ -82,7 +82,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     }
     /**
      * Gets the principalName property value. The principal name, if known, of the subject.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPrincipalName() {
@@ -90,7 +90,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     }
     /**
      * Gets the subjectType property value. The resource type of the subject. The possible values are: notSpecified, user, servicePrincipal, unknownFutureValue.
-     * @return a AccessPackageSubjectType
+     * @return a {@link AccessPackageSubjectType}
      */
     @jakarta.annotation.Nullable
     public AccessPackageSubjectType getSubjectType() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryCustodian extends DataSourceContainer implements Parsable {
     /**
-     * Instantiates a new EdiscoveryCustodian and sets the default values.
+     * Instantiates a new {@link EdiscoveryCustodian} and sets the default values.
      */
     public EdiscoveryCustodian() {
         super();
@@ -19,7 +19,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EdiscoveryCustodian
+     * @return a {@link EdiscoveryCustodian}
      */
     @jakarta.annotation.Nonnull
     public static EdiscoveryCustodian createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
     }
     /**
      * Gets the acknowledgedDateTime property value. Date and time the custodian acknowledged a hold notification.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAcknowledgedDateTime() {
@@ -36,7 +36,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
     }
     /**
      * Gets the email property value. Email address of the custodian.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -44,7 +44,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -59,7 +59,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
     }
     /**
      * Gets the lastIndexOperation property value. Operation entity that represents the latest indexing for the custodian.
-     * @return a EdiscoveryIndexOperation
+     * @return a {@link EdiscoveryIndexOperation}
      */
     @jakarta.annotation.Nullable
     public EdiscoveryIndexOperation getLastIndexOperation() {
@@ -67,7 +67,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
     }
     /**
      * Gets the siteSources property value. Data source entity for SharePoint sites associated with the custodian.
-     * @return a java.util.List<SiteSource>
+     * @return a {@link java.util.List<SiteSource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SiteSource> getSiteSources() {
@@ -75,7 +75,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
     }
     /**
      * Gets the unifiedGroupSources property value. Data source entity for groups associated with the custodian.
-     * @return a java.util.List<UnifiedGroupSource>
+     * @return a {@link java.util.List<UnifiedGroupSource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedGroupSource> getUnifiedGroupSources() {
@@ -83,7 +83,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
     }
     /**
      * Gets the userSources property value. Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
-     * @return a java.util.List<UserSource>
+     * @return a {@link java.util.List<UserSource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserSource> getUserSources() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Payload extends Entity implements Parsable {
     /**
-     * Instantiates a new Payload and sets the default values.
+     * Instantiates a new {@link Payload} and sets the default values.
      */
     public Payload() {
         super();
@@ -18,7 +18,7 @@ public class Payload extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Payload
+     * @return a {@link Payload}
      */
     @jakarta.annotation.Nonnull
     public static Payload createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * Gets the brand property value. The branch of a payload. Possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, sendGrid, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
-     * @return a PayloadBrand
+     * @return a {@link PayloadBrand}
      */
     @jakarta.annotation.Nullable
     public PayloadBrand getBrand() {
@@ -35,7 +35,7 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * Gets the complexity property value. The complexity of a payload. Possible values are: unknown, low, medium, high, unknownFutureValue.
-     * @return a PayloadComplexity
+     * @return a {@link PayloadComplexity}
      */
     @jakarta.annotation.Nullable
     public PayloadComplexity getComplexity() {
@@ -43,7 +43,7 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. Identity of the user who created the attack simulation and training campaign payload.
-     * @return a EmailIdentity
+     * @return a {@link EmailIdentity}
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getCreatedBy() {
@@ -51,7 +51,7 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Date and time when the attack simulation and training campaign payload. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -59,7 +59,7 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description of the attack simulation and training campaign payload.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -67,7 +67,7 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * Gets the detail property value. Additional details about the payload.
-     * @return a PayloadDetail
+     * @return a {@link PayloadDetail}
      */
     @jakarta.annotation.Nullable
     public PayloadDetail getDetail() {
@@ -75,7 +75,7 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name of the attack simulation and training campaign payload. Supports $filter and $orderby.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -83,7 +83,7 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -114,7 +114,7 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * Gets the industry property value. Industry of a payload. Possible values are: unknown, other, banking, businessServices, consumerServices, education, energy, construction, consulting, financialServices, government, hospitality, insurance, legal, courierServices, IT, healthcare, manufacturing, retail, telecom, realEstate, unknownFutureValue.
-     * @return a PayloadIndustry
+     * @return a {@link PayloadIndustry}
      */
     @jakarta.annotation.Nullable
     public PayloadIndustry getIndustry() {
@@ -122,7 +122,7 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * Gets the isAutomated property value. Indicates whether the attack simulation and training campaign payload was created from an automation flow. Supports $filter and $orderby.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAutomated() {
@@ -130,7 +130,7 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * Gets the isControversial property value. Indicates whether the payload is controversial.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsControversial() {
@@ -138,7 +138,7 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * Gets the isCurrentEvent property value. Indicates whether the payload is from any recent event.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCurrentEvent() {
@@ -146,7 +146,7 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * Gets the language property value. Payload language.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLanguage() {
@@ -154,7 +154,7 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. Identity of the user who most recently modified the attack simulation and training campaign payload.
-     * @return a EmailIdentity
+     * @return a {@link EmailIdentity}
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getLastModifiedBy() {
@@ -162,7 +162,7 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. Date and time when the attack simulation and training campaign payload was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -170,7 +170,7 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * Gets the payloadTags property value. Free text tags for a payload.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getPayloadTags() {
@@ -178,7 +178,7 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * Gets the platform property value. The payload delivery platform for a simulation. Possible values are: unknown, sms, email, teams, unknownFutureValue.
-     * @return a PayloadDeliveryPlatform
+     * @return a {@link PayloadDeliveryPlatform}
      */
     @jakarta.annotation.Nullable
     public PayloadDeliveryPlatform getPlatform() {
@@ -186,7 +186,7 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * Gets the predictedCompromiseRate property value. Predicted probability for a payload to phish a targeted user.
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getPredictedCompromiseRate() {
@@ -194,7 +194,7 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * Gets the simulationAttackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
-     * @return a SimulationAttackType
+     * @return a {@link SimulationAttackType}
      */
     @jakarta.annotation.Nullable
     public SimulationAttackType getSimulationAttackType() {
@@ -202,7 +202,7 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * Gets the source property value. The source property
-     * @return a SimulationContentSource
+     * @return a {@link SimulationContentSource}
      */
     @jakarta.annotation.Nullable
     public SimulationContentSource getSource() {
@@ -210,7 +210,7 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
-     * @return a SimulationContentStatus
+     * @return a {@link SimulationContentStatus}
      */
     @jakarta.annotation.Nullable
     public SimulationContentStatus getStatus() {
@@ -218,7 +218,7 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * Gets the technique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
-     * @return a SimulationAttackTechnique
+     * @return a {@link SimulationAttackTechnique}
      */
     @jakarta.annotation.Nullable
     public SimulationAttackTechnique getTechnique() {
@@ -226,7 +226,7 @@ public class Payload extends Entity implements Parsable {
     }
     /**
      * Gets the theme property value. The theme of a payload. Possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, fax, financeReport, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
-     * @return a PayloadTheme
+     * @return a {@link PayloadTheme}
      */
     @jakarta.annotation.Nullable
     public PayloadTheme getTheme() {

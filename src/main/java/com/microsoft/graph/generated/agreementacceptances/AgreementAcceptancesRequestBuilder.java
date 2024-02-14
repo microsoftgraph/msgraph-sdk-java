@@ -25,7 +25,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of agreementAcceptance entities.
      * @param agreementAcceptanceId The unique identifier of agreementAcceptance
-     * @return a AgreementAcceptanceItemRequestBuilder
+     * @return a {@link AgreementAcceptanceItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AgreementAcceptanceItemRequestBuilder byAgreementAcceptanceId(@jakarta.annotation.Nonnull final String agreementAcceptanceId) {
@@ -35,7 +35,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
         return new AgreementAcceptanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new AgreementAcceptancesRequestBuilder and sets the default values.
+     * Instantiates a new {@link AgreementAcceptancesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -43,7 +43,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/agreementAcceptances{?%24search,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new AgreementAcceptancesRequestBuilder and sets the default values.
+     * Instantiates a new {@link AgreementAcceptancesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -52,7 +52,8 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from agreementAcceptances
-     * @return a AgreementAcceptanceCollectionResponse
+     * @return a {@link AgreementAcceptanceCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AgreementAcceptanceCollectionResponse get() {
@@ -61,20 +62,21 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from agreementAcceptances
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AgreementAcceptanceCollectionResponse
+     * @return a {@link AgreementAcceptanceCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AgreementAcceptanceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AgreementAcceptanceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Add new entity to agreementAcceptances
      * @param body The request body
-     * @return a AgreementAcceptance
+     * @return a {@link AgreementAcceptance}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AgreementAcceptance post(@jakarta.annotation.Nonnull final AgreementAcceptance body) {
@@ -84,20 +86,20 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
      * Add new entity to agreementAcceptances
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AgreementAcceptance
+     * @return a {@link AgreementAcceptance}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AgreementAcceptance post(@jakarta.annotation.Nonnull final AgreementAcceptance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AgreementAcceptance::createFromDiscriminatorValue);
     }
     /**
      * Get entities from agreementAcceptances
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -106,7 +108,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from agreementAcceptances
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -118,7 +120,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to agreementAcceptances
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AgreementAcceptance body) {
@@ -128,12 +130,12 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
      * Add new entity to agreementAcceptances
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AgreementAcceptance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/agreementAcceptances", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -142,7 +144,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AgreementAcceptancesRequestBuilder
+     * @return a {@link AgreementAcceptancesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AgreementAcceptancesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -166,7 +168,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

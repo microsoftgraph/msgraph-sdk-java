@@ -34,6 +34,7 @@ import java.util.Objects;
 public class FilterRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the apply method.
+     * @return a {@link ApplyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ApplyRequestBuilder apply() {
@@ -41,6 +42,7 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the applyBottomItemsFilter method.
+     * @return a {@link ApplyBottomItemsFilterRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ApplyBottomItemsFilterRequestBuilder applyBottomItemsFilter() {
@@ -48,6 +50,7 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the applyBottomPercentFilter method.
+     * @return a {@link ApplyBottomPercentFilterRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ApplyBottomPercentFilterRequestBuilder applyBottomPercentFilter() {
@@ -55,6 +58,7 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the applyCellColorFilter method.
+     * @return a {@link ApplyCellColorFilterRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ApplyCellColorFilterRequestBuilder applyCellColorFilter() {
@@ -62,6 +66,7 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the applyCustomFilter method.
+     * @return a {@link ApplyCustomFilterRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ApplyCustomFilterRequestBuilder applyCustomFilter() {
@@ -69,6 +74,7 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the applyDynamicFilter method.
+     * @return a {@link ApplyDynamicFilterRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ApplyDynamicFilterRequestBuilder applyDynamicFilter() {
@@ -76,6 +82,7 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the applyFontColorFilter method.
+     * @return a {@link ApplyFontColorFilterRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ApplyFontColorFilterRequestBuilder applyFontColorFilter() {
@@ -83,6 +90,7 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the applyIconFilter method.
+     * @return a {@link ApplyIconFilterRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ApplyIconFilterRequestBuilder applyIconFilter() {
@@ -90,6 +98,7 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the applyTopItemsFilter method.
+     * @return a {@link ApplyTopItemsFilterRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ApplyTopItemsFilterRequestBuilder applyTopItemsFilter() {
@@ -97,6 +106,7 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the applyTopPercentFilter method.
+     * @return a {@link ApplyTopPercentFilterRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ApplyTopPercentFilterRequestBuilder applyTopPercentFilter() {
@@ -104,6 +114,7 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the applyValuesFilter method.
+     * @return a {@link ApplyValuesFilterRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ApplyValuesFilterRequestBuilder applyValuesFilter() {
@@ -111,13 +122,14 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the clear method.
+     * @return a {@link ClearRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ClearRequestBuilder clear() {
         return new ClearRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new FilterRequestBuilder and sets the default values.
+     * Instantiates a new {@link FilterRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -125,7 +137,7 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/{workbookTable%2Did}/columns/{workbookTableColumn%2Did}/filter{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new FilterRequestBuilder and sets the default values.
+     * Instantiates a new {@link FilterRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -134,6 +146,7 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property filter for drives
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -141,17 +154,18 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property filter for drives
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve the filter applied to the column. Read-only.
-     * @return a WorkbookFilter
+     * @return a {@link WorkbookFilter}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WorkbookFilter get() {
@@ -160,20 +174,21 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the filter applied to the column. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WorkbookFilter
+     * @return a {@link WorkbookFilter}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WorkbookFilter get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookFilter::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property filter in drives
      * @param body The request body
-     * @return a WorkbookFilter
+     * @return a {@link WorkbookFilter}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WorkbookFilter patch(@jakarta.annotation.Nonnull final WorkbookFilter body) {
@@ -183,20 +198,20 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property filter in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WorkbookFilter
+     * @return a {@link WorkbookFilter}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WorkbookFilter patch(@jakarta.annotation.Nonnull final WorkbookFilter body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookFilter::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property filter for drives
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -205,18 +220,18 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property filter for drives
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/{workbookTable%2Did}/columns/{workbookTableColumn%2Did}/filter", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Retrieve the filter applied to the column. Read-only.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -225,7 +240,7 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the filter applied to the column. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -237,7 +252,7 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property filter in drives
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final WorkbookFilter body) {
@@ -247,12 +262,12 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property filter in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final WorkbookFilter body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/{workbookTable%2Did}/columns/{workbookTableColumn%2Did}/filter", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -261,7 +276,7 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a FilterRequestBuilder
+     * @return a {@link FilterRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FilterRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -291,7 +306,7 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

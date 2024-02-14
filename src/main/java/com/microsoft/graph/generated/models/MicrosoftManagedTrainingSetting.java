@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftManagedTrainingSetting extends TrainingSetting implements Parsable {
     /**
-     * Instantiates a new MicrosoftManagedTrainingSetting and sets the default values.
+     * Instantiates a new {@link MicrosoftManagedTrainingSetting} and sets the default values.
      */
     public MicrosoftManagedTrainingSetting() {
         super();
@@ -19,7 +19,7 @@ public class MicrosoftManagedTrainingSetting extends TrainingSetting implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MicrosoftManagedTrainingSetting
+     * @return a {@link MicrosoftManagedTrainingSetting}
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftManagedTrainingSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class MicrosoftManagedTrainingSetting extends TrainingSetting implements 
     }
     /**
      * Gets the completionDateTime property value. The completion date for the training. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompletionDateTime() {
@@ -36,7 +36,7 @@ public class MicrosoftManagedTrainingSetting extends TrainingSetting implements 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,7 +47,7 @@ public class MicrosoftManagedTrainingSetting extends TrainingSetting implements 
     }
     /**
      * Gets the trainingCompletionDuration property value. The training completion duration that needs to be provided before scheduling the training. The possible values are: week, fortnite, month, unknownFutureValue.
-     * @return a TrainingCompletionDuration
+     * @return a {@link TrainingCompletionDuration}
      */
     @jakarta.annotation.Nullable
     public TrainingCompletionDuration getTrainingCompletionDuration() {

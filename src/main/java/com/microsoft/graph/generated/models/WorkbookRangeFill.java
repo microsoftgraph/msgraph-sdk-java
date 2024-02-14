@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookRangeFill extends Entity implements Parsable {
     /**
-     * Instantiates a new WorkbookRangeFill and sets the default values.
+     * Instantiates a new {@link WorkbookRangeFill} and sets the default values.
      */
     public WorkbookRangeFill() {
         super();
@@ -17,7 +17,7 @@ public class WorkbookRangeFill extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookRangeFill
+     * @return a {@link WorkbookRangeFill}
      */
     @jakarta.annotation.Nonnull
     public static WorkbookRangeFill createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class WorkbookRangeFill extends Entity implements Parsable {
     }
     /**
      * Gets the color property value. HTML color code representing the color of the border line, of the form #RRGGBB (for example 'FFA500') or as a named HTML color (for example 'orange')
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getColor() {
@@ -34,7 +34,7 @@ public class WorkbookRangeFill extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

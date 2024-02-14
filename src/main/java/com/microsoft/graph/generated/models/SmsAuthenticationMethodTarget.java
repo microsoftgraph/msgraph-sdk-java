@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget implements Parsable {
     /**
-     * Instantiates a new SmsAuthenticationMethodTarget and sets the default values.
+     * Instantiates a new {@link SmsAuthenticationMethodTarget} and sets the default values.
      */
     public SmsAuthenticationMethodTarget() {
         super();
@@ -17,7 +17,7 @@ public class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SmsAuthenticationMethodTarget
+     * @return a {@link SmsAuthenticationMethodTarget}
      */
     @jakarta.annotation.Nonnull
     public static SmsAuthenticationMethodTarget createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget im
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget im
     }
     /**
      * Gets the isUsableForSignIn property value. Determines if users can use this authentication method to sign in to Microsoft Entra ID. true if users can use this method for primary authentication, otherwise false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsUsableForSignIn() {

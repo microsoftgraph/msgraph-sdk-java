@@ -18,7 +18,7 @@ public class GetSettingNonComplianceReportPostRequestBody implements AdditionalD
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new GetSettingNonComplianceReportPostRequestBody and sets the default values.
+     * Instantiates a new {@link GetSettingNonComplianceReportPostRequestBody} and sets the default values.
      */
     public GetSettingNonComplianceReportPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class GetSettingNonComplianceReportPostRequestBody implements AdditionalD
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GetSettingNonComplianceReportPostRequestBody
+     * @return a {@link GetSettingNonComplianceReportPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static GetSettingNonComplianceReportPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class GetSettingNonComplianceReportPostRequestBody implements AdditionalD
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class GetSettingNonComplianceReportPostRequestBody implements AdditionalD
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class GetSettingNonComplianceReportPostRequestBody implements AdditionalD
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -75,7 +75,7 @@ public class GetSettingNonComplianceReportPostRequestBody implements AdditionalD
     }
     /**
      * Gets the filter property value. The filter property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFilter() {
@@ -83,7 +83,7 @@ public class GetSettingNonComplianceReportPostRequestBody implements AdditionalD
     }
     /**
      * Gets the groupBy property value. The groupBy property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getGroupBy() {
@@ -91,7 +91,7 @@ public class GetSettingNonComplianceReportPostRequestBody implements AdditionalD
     }
     /**
      * Gets the name property value. The name property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -99,7 +99,7 @@ public class GetSettingNonComplianceReportPostRequestBody implements AdditionalD
     }
     /**
      * Gets the orderBy property value. The orderBy property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getOrderBy() {
@@ -107,7 +107,7 @@ public class GetSettingNonComplianceReportPostRequestBody implements AdditionalD
     }
     /**
      * Gets the search property value. The search property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSearch() {
@@ -115,7 +115,7 @@ public class GetSettingNonComplianceReportPostRequestBody implements AdditionalD
     }
     /**
      * Gets the select property value. The select property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSelect() {
@@ -123,7 +123,7 @@ public class GetSettingNonComplianceReportPostRequestBody implements AdditionalD
     }
     /**
      * Gets the sessionId property value. The sessionId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSessionId() {
@@ -131,7 +131,7 @@ public class GetSettingNonComplianceReportPostRequestBody implements AdditionalD
     }
     /**
      * Gets the skip property value. The skip property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSkip() {
@@ -139,7 +139,7 @@ public class GetSettingNonComplianceReportPostRequestBody implements AdditionalD
     }
     /**
      * Gets the top property value. The top property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTop() {

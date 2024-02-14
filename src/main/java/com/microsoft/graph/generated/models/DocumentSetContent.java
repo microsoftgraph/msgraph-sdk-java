@@ -18,7 +18,7 @@ public class DocumentSetContent implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DocumentSetContent and sets the default values.
+     * Instantiates a new {@link DocumentSetContent} and sets the default values.
      */
     public DocumentSetContent() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class DocumentSetContent implements AdditionalDataHolder, BackedModel, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DocumentSetContent
+     * @return a {@link DocumentSetContent}
      */
     @jakarta.annotation.Nonnull
     public static DocumentSetContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class DocumentSetContent implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class DocumentSetContent implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class DocumentSetContent implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the contentType property value. Content type information of the file.
-     * @return a ContentTypeInfo
+     * @return a {@link ContentTypeInfo}
      */
     @jakarta.annotation.Nullable
     public ContentTypeInfo getContentType() {
@@ -65,7 +65,7 @@ public class DocumentSetContent implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class DocumentSetContent implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the fileName property value. Name of the file in resource folder that should be added as a default content or a template in the document set.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
@@ -86,7 +86,7 @@ public class DocumentSetContent implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the folderName property value. Folder name in which the file will be placed when a new document set is created in the library.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFolderName() {
@@ -94,7 +94,7 @@ public class DocumentSetContent implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

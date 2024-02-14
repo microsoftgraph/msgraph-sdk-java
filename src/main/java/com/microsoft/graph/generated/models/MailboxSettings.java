@@ -18,7 +18,7 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new MailboxSettings and sets the default values.
+     * Instantiates a new {@link MailboxSettings} and sets the default values.
      */
     public MailboxSettings() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MailboxSettings
+     * @return a {@link MailboxSettings}
      */
     @jakarta.annotation.Nonnull
     public static MailboxSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the archiveFolder property value. Folder ID of an archive folder for the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getArchiveFolder() {
@@ -57,7 +57,7 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the automaticRepliesSetting property value. Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user.
-     * @return a AutomaticRepliesSetting
+     * @return a {@link AutomaticRepliesSetting}
      */
     @jakarta.annotation.Nullable
     public AutomaticRepliesSetting getAutomaticRepliesSetting() {
@@ -65,7 +65,7 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -73,7 +73,7 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the dateFormat property value. The date format for the user's mailbox.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDateFormat() {
@@ -81,7 +81,7 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the delegateMeetingMessageDeliveryOptions property value. If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
-     * @return a DelegateMeetingMessageDeliveryOptions
+     * @return a {@link DelegateMeetingMessageDeliveryOptions}
      */
     @jakarta.annotation.Nullable
     public DelegateMeetingMessageDeliveryOptions getDelegateMeetingMessageDeliveryOptions() {
@@ -89,7 +89,7 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -108,7 +108,7 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the language property value. The locale information for the user, including the preferred language and country/region.
-     * @return a LocaleInfo
+     * @return a {@link LocaleInfo}
      */
     @jakarta.annotation.Nullable
     public LocaleInfo getLanguage() {
@@ -116,7 +116,7 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -124,7 +124,7 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the timeFormat property value. The time format for the user's mailbox.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTimeFormat() {
@@ -132,7 +132,7 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the timeZone property value. The default time zone for the user's mailbox.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTimeZone() {
@@ -140,7 +140,7 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the userPurpose property value. The purpose of the mailbox. Differentiates a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. Possible values are: user, linked, shared, room, equipment, others, unknownFutureValue. Read-only.
-     * @return a UserPurpose
+     * @return a {@link UserPurpose}
      */
     @jakarta.annotation.Nullable
     public UserPurpose getUserPurpose() {
@@ -148,7 +148,7 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the workingHours property value. The days of the week and hours in a specific time zone that the user works.
-     * @return a WorkingHours
+     * @return a {@link WorkingHours}
      */
     @jakarta.annotation.Nullable
     public WorkingHours getWorkingHours() {

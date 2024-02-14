@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosUpdateConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new IosUpdateConfiguration and sets the default values.
+     * Instantiates a new {@link IosUpdateConfiguration} and sets the default values.
      */
     public IosUpdateConfiguration() {
         super();
@@ -22,7 +22,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosUpdateConfiguration
+     * @return a {@link IosUpdateConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static IosUpdateConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
     }
     /**
      * Gets the activeHoursEnd property value. Active Hours End (active hours mean the time window when updates install should not happen)
-     * @return a LocalTime
+     * @return a {@link LocalTime}
      */
     @jakarta.annotation.Nullable
     public LocalTime getActiveHoursEnd() {
@@ -39,7 +39,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
     }
     /**
      * Gets the activeHoursStart property value. Active Hours Start (active hours mean the time window when updates install should not happen)
-     * @return a LocalTime
+     * @return a {@link LocalTime}
      */
     @jakarta.annotation.Nullable
     public LocalTime getActiveHoursStart() {
@@ -47,7 +47,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -60,7 +60,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
     }
     /**
      * Gets the scheduledInstallDays property value. Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
-     * @return a java.util.List<DayOfWeek>
+     * @return a {@link java.util.List<DayOfWeek>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DayOfWeek> getScheduledInstallDays() {
@@ -68,7 +68,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
     }
     /**
      * Gets the utcTimeOffsetInMinutes property value. UTC Time Offset indicated in minutes
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUtcTimeOffsetInMinutes() {

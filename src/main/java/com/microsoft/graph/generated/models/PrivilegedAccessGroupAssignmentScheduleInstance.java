@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedAccessScheduleInstance implements Parsable {
     /**
-     * Instantiates a new PrivilegedAccessGroupAssignmentScheduleInstance and sets the default values.
+     * Instantiates a new {@link PrivilegedAccessGroupAssignmentScheduleInstance} and sets the default values.
      */
     public PrivilegedAccessGroupAssignmentScheduleInstance() {
         super();
@@ -18,7 +18,7 @@ public class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedA
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrivilegedAccessGroupAssignmentScheduleInstance
+     * @return a {@link PrivilegedAccessGroupAssignmentScheduleInstance}
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedAccessGroupAssignmentScheduleInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedA
     }
     /**
      * Gets the accessId property value. The identifier of the membership or ownership assignment relationship to the group. Required. The possible values are: owner, member,  unknownFutureValue. Supports $filter (eq).
-     * @return a PrivilegedAccessGroupRelationships
+     * @return a {@link PrivilegedAccessGroupRelationships}
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupRelationships getAccessId() {
@@ -35,7 +35,7 @@ public class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedA
     }
     /**
      * Gets the activatedUsing property value. When the request activates a membership or ownership in PIM for groups, this object represents the eligibility request for the group. Otherwise, it is null.
-     * @return a PrivilegedAccessGroupEligibilityScheduleInstance
+     * @return a {@link PrivilegedAccessGroupEligibilityScheduleInstance}
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupEligibilityScheduleInstance getActivatedUsing() {
@@ -43,7 +43,7 @@ public class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedA
     }
     /**
      * Gets the assignmentScheduleId property value. The identifier of the privilegedAccessGroupAssignmentSchedule from which this instance was created. Required. Supports $filter (eq, ne).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAssignmentScheduleId() {
@@ -51,7 +51,7 @@ public class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedA
     }
     /**
      * Gets the assignmentType property value. Indicates whether the membership or ownership assignment is granted through activation of an eligibility or through direct assignment. Required. The possible values are: assigned, activated, unknownFutureValue. Supports $filter (eq).
-     * @return a PrivilegedAccessGroupAssignmentType
+     * @return a {@link PrivilegedAccessGroupAssignmentType}
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupAssignmentType getAssignmentType() {
@@ -59,7 +59,7 @@ public class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedA
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedA
     }
     /**
      * Gets the group property value. References the group that is the scope of the membership or ownership assignment through PIM for groups. Supports $expand.
-     * @return a Group
+     * @return a {@link Group}
      */
     @jakarta.annotation.Nullable
     public Group getGroup() {
@@ -85,7 +85,7 @@ public class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedA
     }
     /**
      * Gets the groupId property value. The identifier of the group representing the scope of the membership or ownership assignment through PIM for groups. Optional. Supports $filter (eq).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getGroupId() {
@@ -93,7 +93,7 @@ public class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedA
     }
     /**
      * Gets the memberType property value. Indicates whether the assignment is derived from a group assignment. It can further imply whether the caller can manage the assignment schedule. Required. The possible values are: direct, group, unknownFutureValue. Supports $filter (eq).
-     * @return a PrivilegedAccessGroupMemberType
+     * @return a {@link PrivilegedAccessGroupMemberType}
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupMemberType getMemberType() {
@@ -101,7 +101,7 @@ public class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedA
     }
     /**
      * Gets the principal property value. References the principal that's in the scope of the membership or ownership assignment request through the group that's governed by PIM. Supports $expand.
-     * @return a DirectoryObject
+     * @return a {@link DirectoryObject}
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getPrincipal() {
@@ -109,7 +109,7 @@ public class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedA
     }
     /**
      * Gets the principalId property value. The identifier of the principal whose membership or ownership assignment to the group is managed through PIM for groups. Required. Supports $filter (eq).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPrincipalId() {

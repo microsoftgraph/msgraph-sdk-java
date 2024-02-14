@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     /**
-     * Instantiates a new IoTDeviceEvidence and sets the default values.
+     * Instantiates a new {@link IoTDeviceEvidence} and sets the default values.
      */
     public IoTDeviceEvidence() {
         super();
@@ -18,7 +18,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IoTDeviceEvidence
+     * @return a {@link IoTDeviceEvidence}
      */
     @jakarta.annotation.Nonnull
     public static IoTDeviceEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the deviceId property value. The deviceId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -35,7 +35,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the deviceName property value. The deviceName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -43,7 +43,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the devicePageLink property value. The devicePageLink property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDevicePageLink() {
@@ -51,7 +51,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the deviceSubType property value. The deviceSubType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceSubType() {
@@ -59,7 +59,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the deviceType property value. The deviceType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceType() {
@@ -67,7 +67,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -102,7 +102,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the importance property value. The importance property
-     * @return a IoTDeviceImportanceType
+     * @return a {@link IoTDeviceImportanceType}
      */
     @jakarta.annotation.Nullable
     public IoTDeviceImportanceType getImportance() {
@@ -110,7 +110,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the ioTHub property value. The ioTHub property
-     * @return a AzureResourceEvidence
+     * @return a {@link AzureResourceEvidence}
      */
     @jakarta.annotation.Nullable
     public AzureResourceEvidence getIoTHub() {
@@ -118,7 +118,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the ioTSecurityAgentId property value. The ioTSecurityAgentId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIoTSecurityAgentId() {
@@ -126,7 +126,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the ipAddress property value. The ipAddress property
-     * @return a IpEvidence
+     * @return a {@link IpEvidence}
      */
     @jakarta.annotation.Nullable
     public IpEvidence getIpAddress() {
@@ -134,7 +134,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the isAuthorized property value. The isAuthorized property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAuthorized() {
@@ -142,7 +142,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the isProgramming property value. The isProgramming property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsProgramming() {
@@ -150,7 +150,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the isScanner property value. The isScanner property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsScanner() {
@@ -158,7 +158,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the macAddress property value. The macAddress property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMacAddress() {
@@ -166,7 +166,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the manufacturer property value. The manufacturer property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
@@ -174,7 +174,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the model property value. The model property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getModel() {
@@ -182,7 +182,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the nics property value. The nics property
-     * @return a NicEvidence
+     * @return a {@link NicEvidence}
      */
     @jakarta.annotation.Nullable
     public NicEvidence getNics() {
@@ -190,7 +190,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the operatingSystem property value. The operatingSystem property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystem() {
@@ -198,7 +198,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the owners property value. The owners property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getOwners() {
@@ -206,7 +206,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the protocols property value. The protocols property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getProtocols() {
@@ -214,7 +214,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the purdueLayer property value. The purdueLayer property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPurdueLayer() {
@@ -222,7 +222,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the sensor property value. The sensor property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSensor() {
@@ -230,7 +230,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the serialNumber property value. The serialNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSerialNumber() {
@@ -238,7 +238,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the site property value. The site property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSite() {
@@ -246,7 +246,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the source property value. The source property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSource() {
@@ -254,7 +254,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the sourceRef property value. The sourceRef property
-     * @return a UrlEvidence
+     * @return a {@link UrlEvidence}
      */
     @jakarta.annotation.Nullable
     public UrlEvidence getSourceRef() {
@@ -262,7 +262,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the zone property value. The zone property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getZone() {

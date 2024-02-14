@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationPointsOutcome extends EducationOutcome implements Parsable {
     /**
-     * Instantiates a new EducationPointsOutcome and sets the default values.
+     * Instantiates a new {@link EducationPointsOutcome} and sets the default values.
      */
     public EducationPointsOutcome() {
         super();
@@ -18,7 +18,7 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationPointsOutcome
+     * @return a {@link EducationPointsOutcome}
      */
     @jakarta.annotation.Nonnull
     public static EducationPointsOutcome createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
     }
     /**
      * Gets the points property value. The numeric grade the teacher has given the student for this assignment.
-     * @return a EducationAssignmentPointsGrade
+     * @return a {@link EducationAssignmentPointsGrade}
      */
     @jakarta.annotation.Nullable
     public EducationAssignmentPointsGrade getPoints() {
@@ -46,7 +46,7 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
     }
     /**
      * Gets the publishedPoints property value. A copy of the points property that is made when the grade is released to the student.
-     * @return a EducationAssignmentPointsGrade
+     * @return a {@link EducationAssignmentPointsGrade}
      */
     @jakarta.annotation.Nullable
     public EducationAssignmentPointsGrade getPublishedPoints() {

@@ -18,7 +18,7 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ChatMessagePolicyViolationPolicyTip and sets the default values.
+     * Instantiates a new {@link ChatMessagePolicyViolationPolicyTip} and sets the default values.
      */
     public ChatMessagePolicyViolationPolicyTip() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ChatMessagePolicyViolationPolicyTip
+     * @return a {@link ChatMessagePolicyViolationPolicyTip}
      */
     @jakarta.annotation.Nonnull
     public static ChatMessagePolicyViolationPolicyTip createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
     }
     /**
      * Gets the complianceUrl property value. The URL a user can visit to read about the data loss prevention policies for the organization. (ie, policies about what users shouldn't say in chats)
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getComplianceUrl() {
@@ -65,7 +65,7 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
     }
     /**
      * Gets the generalText property value. Explanatory text shown to the sender of the message.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getGeneralText() {
@@ -86,7 +86,7 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
     }
     /**
      * Gets the matchedConditionDescriptions property value. The list of improper data in the message that was detected by the data loss prevention app. Each DLP app defines its own conditions, examples include 'Credit Card Number' and 'Social Security Number'.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getMatchedConditionDescriptions() {
@@ -94,7 +94,7 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

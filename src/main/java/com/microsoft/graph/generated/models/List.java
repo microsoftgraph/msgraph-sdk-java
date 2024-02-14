@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class List extends BaseItem implements Parsable {
     /**
-     * Instantiates a new List and sets the default values.
+     * Instantiates a new {@link List} and sets the default values.
      */
     public List() {
         super();
@@ -18,7 +18,7 @@ public class List extends BaseItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a List
+     * @return a {@link List}
      */
     @jakarta.annotation.Nonnull
     public static List createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class List extends BaseItem implements Parsable {
     }
     /**
      * Gets the columns property value. The collection of field definitions for this list.
-     * @return a java.util.List<ColumnDefinition>
+     * @return a {@link java.util.List<ColumnDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ColumnDefinition> getColumns() {
@@ -35,7 +35,7 @@ public class List extends BaseItem implements Parsable {
     }
     /**
      * Gets the contentTypes property value. The collection of content types present in this list.
-     * @return a java.util.List<ContentType>
+     * @return a {@link java.util.List<ContentType>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ContentType> getContentTypes() {
@@ -43,7 +43,7 @@ public class List extends BaseItem implements Parsable {
     }
     /**
      * Gets the displayName property value. The displayable title of the list.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -51,7 +51,7 @@ public class List extends BaseItem implements Parsable {
     }
     /**
      * Gets the drive property value. Allows access to the list as a drive resource with driveItems. Only present on document libraries.
-     * @return a Drive
+     * @return a {@link Drive}
      */
     @jakarta.annotation.Nullable
     public Drive getDrive() {
@@ -59,7 +59,7 @@ public class List extends BaseItem implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class List extends BaseItem implements Parsable {
     }
     /**
      * Gets the items property value. All items contained in the list.
-     * @return a java.util.List<ListItem>
+     * @return a {@link java.util.List<ListItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ListItem> getItems() {
@@ -86,7 +86,7 @@ public class List extends BaseItem implements Parsable {
     }
     /**
      * Gets the list property value. Contains more details about the list.
-     * @return a ListInfo
+     * @return a {@link ListInfo}
      */
     @jakarta.annotation.Nullable
     public ListInfo getList() {
@@ -94,7 +94,7 @@ public class List extends BaseItem implements Parsable {
     }
     /**
      * Gets the operations property value. The collection of long-running operations on the list.
-     * @return a java.util.List<RichLongRunningOperation>
+     * @return a {@link java.util.List<RichLongRunningOperation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<RichLongRunningOperation> getOperations() {
@@ -102,7 +102,7 @@ public class List extends BaseItem implements Parsable {
     }
     /**
      * Gets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
-     * @return a SharepointIds
+     * @return a {@link SharepointIds}
      */
     @jakarta.annotation.Nullable
     public SharepointIds getSharepointIds() {
@@ -110,7 +110,7 @@ public class List extends BaseItem implements Parsable {
     }
     /**
      * Gets the subscriptions property value. The set of subscriptions on the list.
-     * @return a java.util.List<Subscription>
+     * @return a {@link java.util.List<Subscription>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Subscription> getSubscriptions() {
@@ -118,7 +118,7 @@ public class List extends BaseItem implements Parsable {
     }
     /**
      * Gets the system property value. If present, indicates that the list is system-managed. Read-only.
-     * @return a SystemFacet
+     * @return a {@link SystemFacet}
      */
     @jakarta.annotation.Nullable
     public SystemFacet getSystem() {

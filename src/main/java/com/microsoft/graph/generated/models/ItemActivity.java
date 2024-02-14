@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemActivity extends Entity implements Parsable {
     /**
-     * Instantiates a new ItemActivity and sets the default values.
+     * Instantiates a new {@link ItemActivity} and sets the default values.
      */
     public ItemActivity() {
         super();
@@ -18,7 +18,7 @@ public class ItemActivity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ItemActivity
+     * @return a {@link ItemActivity}
      */
     @jakarta.annotation.Nonnull
     public static ItemActivity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ItemActivity extends Entity implements Parsable {
     }
     /**
      * Gets the access property value. An item was accessed.
-     * @return a AccessAction
+     * @return a {@link AccessAction}
      */
     @jakarta.annotation.Nullable
     public AccessAction getAccess() {
@@ -35,7 +35,7 @@ public class ItemActivity extends Entity implements Parsable {
     }
     /**
      * Gets the activityDateTime property value. Details about when the activity took place. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getActivityDateTime() {
@@ -43,7 +43,7 @@ public class ItemActivity extends Entity implements Parsable {
     }
     /**
      * Gets the actor property value. Identity of who performed the action. Read-only.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getActor() {
@@ -51,7 +51,7 @@ public class ItemActivity extends Entity implements Parsable {
     }
     /**
      * Gets the driveItem property value. Exposes the driveItem that was the target of this activity.
-     * @return a DriveItem
+     * @return a {@link DriveItem}
      */
     @jakarta.annotation.Nullable
     public DriveItem getDriveItem() {
@@ -59,7 +59,7 @@ public class ItemActivity extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

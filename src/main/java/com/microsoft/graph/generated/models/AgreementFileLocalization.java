@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AgreementFileLocalization extends AgreementFileProperties implements Parsable {
     /**
-     * Instantiates a new AgreementFileLocalization and sets the default values.
+     * Instantiates a new {@link AgreementFileLocalization} and sets the default values.
      */
     public AgreementFileLocalization() {
         super();
@@ -17,7 +17,7 @@ public class AgreementFileLocalization extends AgreementFileProperties implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AgreementFileLocalization
+     * @return a {@link AgreementFileLocalization}
      */
     @jakarta.annotation.Nonnull
     public static AgreementFileLocalization createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class AgreementFileLocalization extends AgreementFileProperties implement
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class AgreementFileLocalization extends AgreementFileProperties implement
     }
     /**
      * Gets the versions property value. Read-only. Customized versions of the terms of use agreement in the Microsoft Entra tenant.
-     * @return a java.util.List<AgreementFileVersion>
+     * @return a {@link java.util.List<AgreementFileVersion>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AgreementFileVersion> getVersions() {

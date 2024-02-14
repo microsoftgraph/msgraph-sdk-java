@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DelegatedAdminRelationshipOperation extends Entity implements Parsable {
     /**
-     * Instantiates a new DelegatedAdminRelationshipOperation and sets the default values.
+     * Instantiates a new {@link DelegatedAdminRelationshipOperation} and sets the default values.
      */
     public DelegatedAdminRelationshipOperation() {
         super();
@@ -18,7 +18,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DelegatedAdminRelationshipOperation
+     * @return a {@link DelegatedAdminRelationshipOperation}
      */
     @jakarta.annotation.Nonnull
     public static DelegatedAdminRelationshipOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
     }
     /**
      * Gets the createdDateTime property value. The time in ISO 8601 format and in UTC time when the long-running operation was created. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -35,7 +35,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
     }
     /**
      * Gets the data property value. The data (payload) for the operation. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getData() {
@@ -43,7 +43,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
     }
     /**
      * Gets the lastModifiedDateTime property value. The time in ISO 8601 format and in UTC time when the long-running operation was last modified. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -65,7 +65,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
     }
     /**
      * Gets the operationType property value. The operationType property
-     * @return a DelegatedAdminRelationshipOperationType
+     * @return a {@link DelegatedAdminRelationshipOperationType}
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminRelationshipOperationType getOperationType() {
@@ -73,7 +73,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
     }
     /**
      * Gets the status property value. The status property
-     * @return a LongRunningOperationStatus
+     * @return a {@link LongRunningOperationStatus}
      */
     @jakarta.annotation.Nullable
     public LongRunningOperationStatus getStatus() {

@@ -19,7 +19,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Ba
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new UpdateAllowedCombinationsResult and sets the default values.
+     * Instantiates a new {@link UpdateAllowedCombinationsResult} and sets the default values.
      */
     public UpdateAllowedCombinationsResult() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Ba
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UpdateAllowedCombinationsResult
+     * @return a {@link UpdateAllowedCombinationsResult}
      */
     @jakarta.annotation.Nonnull
     public static UpdateAllowedCombinationsResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the additionalInformation property value. Information about why the updateAllowedCombinations action was successful or failed.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAdditionalInformation() {
@@ -58,7 +58,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -66,7 +66,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the conditionalAccessReferences property value. References to existing Conditional Access policies that use this authentication strength.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getConditionalAccessReferences() {
@@ -74,7 +74,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the currentCombinations property value. The list of current authentication method combinations allowed by the authentication strength.
-     * @return a java.util.List<AuthenticationMethodModes>
+     * @return a {@link java.util.List<AuthenticationMethodModes>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodModes> getCurrentCombinations() {
@@ -82,7 +82,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Ba
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -96,7 +96,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -104,7 +104,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the previousCombinations property value. The list of former authentication method combinations allowed by the authentication strength before they were updated through the updateAllowedCombinations action.
-     * @return a java.util.List<AuthenticationMethodModes>
+     * @return a {@link java.util.List<AuthenticationMethodModes>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodModes> getPreviousCombinations() {

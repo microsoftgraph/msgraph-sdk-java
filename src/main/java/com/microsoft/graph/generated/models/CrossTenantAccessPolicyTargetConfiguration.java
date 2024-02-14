@@ -18,7 +18,7 @@ public class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDat
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new CrossTenantAccessPolicyTargetConfiguration and sets the default values.
+     * Instantiates a new {@link CrossTenantAccessPolicyTargetConfiguration} and sets the default values.
      */
     public CrossTenantAccessPolicyTargetConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CrossTenantAccessPolicyTargetConfiguration
+     * @return a {@link CrossTenantAccessPolicyTargetConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static CrossTenantAccessPolicyTargetConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDat
     }
     /**
      * Gets the accessType property value. Defines whether access is allowed or blocked. The possible values are: allowed, blocked, unknownFutureValue.
-     * @return a CrossTenantAccessPolicyTargetConfigurationAccessType
+     * @return a {@link CrossTenantAccessPolicyTargetConfigurationAccessType}
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyTargetConfigurationAccessType getAccessType() {
@@ -44,7 +44,7 @@ public class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDat
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -57,7 +57,7 @@ public class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDat
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDat
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDat
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -85,7 +85,7 @@ public class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDat
     }
     /**
      * Gets the targets property value. Specifies whether to target users, groups, or applications with this rule.
-     * @return a java.util.List<CrossTenantAccessPolicyTarget>
+     * @return a {@link java.util.List<CrossTenantAccessPolicyTarget>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CrossTenantAccessPolicyTarget> getTargets() {

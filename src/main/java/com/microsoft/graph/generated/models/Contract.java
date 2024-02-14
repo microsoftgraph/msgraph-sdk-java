@@ -10,7 +10,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Contract extends DirectoryObject implements Parsable {
     /**
-     * Instantiates a new Contract and sets the default values.
+     * Instantiates a new {@link Contract} and sets the default values.
      */
     public Contract() {
         super();
@@ -19,7 +19,7 @@ public class Contract extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Contract
+     * @return a {@link Contract}
      */
     @jakarta.annotation.Nonnull
     public static Contract createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class Contract extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the contractType property value. Type of contract. Possible values are:  SyndicationPartner, BreadthPartner, ResellerPartner. See more in the table below.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContractType() {
@@ -36,7 +36,7 @@ public class Contract extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the customerId property value. The unique identifier for the customer tenant referenced by this partnership. Corresponds to the id property of the customer tenant's organization resource.
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getCustomerId() {
@@ -44,7 +44,7 @@ public class Contract extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the defaultDomainName property value. A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It isn't automatically updated if the customer tenant's default domain name changes.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDefaultDomainName() {
@@ -52,7 +52,7 @@ public class Contract extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the displayName property value. A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's display name changes.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -60,7 +60,7 @@ public class Contract extends DirectoryObject implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

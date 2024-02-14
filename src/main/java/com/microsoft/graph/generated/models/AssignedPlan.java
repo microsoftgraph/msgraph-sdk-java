@@ -20,7 +20,7 @@ public class AssignedPlan implements AdditionalDataHolder, BackedModel, Parsable
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AssignedPlan and sets the default values.
+     * Instantiates a new {@link AssignedPlan} and sets the default values.
      */
     public AssignedPlan() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -29,7 +29,7 @@ public class AssignedPlan implements AdditionalDataHolder, BackedModel, Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AssignedPlan
+     * @return a {@link AssignedPlan}
      */
     @jakarta.annotation.Nonnull
     public static AssignedPlan createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class AssignedPlan implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -51,7 +51,7 @@ public class AssignedPlan implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the assignedDateTime property value. The date and time at which the plan was assigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAssignedDateTime() {
@@ -59,7 +59,7 @@ public class AssignedPlan implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -67,7 +67,7 @@ public class AssignedPlan implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the capabilityStatus property value. Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut. See a detailed description of each value.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCapabilityStatus() {
@@ -75,7 +75,7 @@ public class AssignedPlan implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -89,7 +89,7 @@ public class AssignedPlan implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,7 +97,7 @@ public class AssignedPlan implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the service property value. The name of the service; for example, exchange.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getService() {
@@ -105,7 +105,7 @@ public class AssignedPlan implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the servicePlanId property value. A GUID that identifies the service plan. For a complete list of GUIDs and their equivalent friendly service names, see Product names and service plan identifiers for licensing.
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getServicePlanId() {

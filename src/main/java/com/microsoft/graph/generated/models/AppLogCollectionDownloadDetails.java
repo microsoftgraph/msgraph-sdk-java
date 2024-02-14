@@ -18,7 +18,7 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Ba
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AppLogCollectionDownloadDetails and sets the default values.
+     * Instantiates a new {@link AppLogCollectionDownloadDetails} and sets the default values.
      */
     public AppLogCollectionDownloadDetails() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Ba
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AppLogCollectionDownloadDetails
+     * @return a {@link AppLogCollectionDownloadDetails}
      */
     @jakarta.annotation.Nonnull
     public static AppLogCollectionDownloadDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the appLogDecryptionAlgorithm property value. The appLogDecryptionAlgorithm property
-     * @return a AppLogDecryptionAlgorithm
+     * @return a {@link AppLogDecryptionAlgorithm}
      */
     @jakarta.annotation.Nullable
     public AppLogDecryptionAlgorithm getAppLogDecryptionAlgorithm() {
@@ -57,7 +57,7 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the decryptionKey property value. Decryption key that used to decrypt the log.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDecryptionKey() {
@@ -73,7 +73,7 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the downloadUrl property value. Download SAS (Shared Access Signature) Url for completed app log request.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDownloadUrl() {
@@ -81,7 +81,7 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Ba
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -94,7 +94,7 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

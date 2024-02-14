@@ -27,6 +27,7 @@ import java.util.Objects;
 public class NotebooksRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -34,6 +35,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getNotebookFromWebUrl method.
+     * @return a {@link GetNotebookFromWebUrlRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetNotebookFromWebUrlRequestBuilder getNotebookFromWebUrl() {
@@ -42,7 +44,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the notebooks property of the microsoft.graph.onenote entity.
      * @param notebookId The unique identifier of notebook
-     * @return a NotebookItemRequestBuilder
+     * @return a {@link NotebookItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public NotebookItemRequestBuilder byNotebookId(@jakarta.annotation.Nonnull final String notebookId) {
@@ -52,7 +54,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         return new NotebookItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new NotebooksRequestBuilder and sets the default values.
+     * Instantiates a new {@link NotebooksRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +62,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/onenote/notebooks{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new NotebooksRequestBuilder and sets the default values.
+     * Instantiates a new {@link NotebooksRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -69,7 +71,8 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of notebook objects.
-     * @return a NotebookCollectionResponse
+     * @return a {@link NotebookCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/onenote-list-notebooks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -79,21 +82,21 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of notebook objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a NotebookCollectionResponse
+     * @return a {@link NotebookCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/onenote-list-notebooks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public NotebookCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, NotebookCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Provides operations to call the getRecentNotebooks method.
      * @param includePersonalNotebooks Usage: includePersonalNotebooks={includePersonalNotebooks}
-     * @return a GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder
+     * @return a {@link GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder getRecentNotebooksWithIncludePersonalNotebooks(@jakarta.annotation.Nonnull final Boolean includePersonalNotebooks) {
@@ -103,7 +106,8 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new OneNote notebook.
      * @param body The request body
-     * @return a Notebook
+     * @return a {@link Notebook}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/onenote-post-notebooks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -114,7 +118,8 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
      * Create a new OneNote notebook.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Notebook
+     * @return a {@link Notebook}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/onenote-post-notebooks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -122,13 +127,12 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Notebook::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of notebook objects.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -137,7 +141,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of notebook objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -149,7 +153,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new OneNote notebook.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Notebook body) {
@@ -159,12 +163,12 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
      * Create a new OneNote notebook.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Notebook body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/onenote/notebooks", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -173,7 +177,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a NotebooksRequestBuilder
+     * @return a {@link NotebooksRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public NotebooksRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -227,7 +231,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CallRecording extends Entity implements Parsable {
     /**
-     * Instantiates a new CallRecording and sets the default values.
+     * Instantiates a new {@link CallRecording} and sets the default values.
      */
     public CallRecording() {
         super();
@@ -18,7 +18,7 @@ public class CallRecording extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CallRecording
+     * @return a {@link CallRecording}
      */
     @jakarta.annotation.Nonnull
     public static CallRecording createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class CallRecording extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The content of the recording. Read-only.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
@@ -35,7 +35,7 @@ public class CallRecording extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Date and time at which the recording was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -43,7 +43,7 @@ public class CallRecording extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class CallRecording extends Entity implements Parsable {
     }
     /**
      * Gets the meetingId property value. The unique identifier of the onlineMeeting related to this recording. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMeetingId() {
@@ -65,7 +65,7 @@ public class CallRecording extends Entity implements Parsable {
     }
     /**
      * Gets the meetingOrganizer property value. The identity information of the organizer of the onlineMeeting related to this recording. Read-only.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getMeetingOrganizer() {
@@ -73,7 +73,7 @@ public class CallRecording extends Entity implements Parsable {
     }
     /**
      * Gets the recordingContentUrl property value. The URL that can be used to access the content of the recording. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRecordingContentUrl() {

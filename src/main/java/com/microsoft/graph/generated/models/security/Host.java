@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Host extends Artifact implements Parsable {
     /**
-     * Instantiates a new Host and sets the default values.
+     * Instantiates a new {@link Host} and sets the default values.
      */
     public Host() {
         super();
@@ -19,7 +19,7 @@ public class Host extends Artifact implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Host
+     * @return a {@link Host}
      */
     @jakarta.annotation.Nonnull
     public static Host createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the childHostPairs property value. The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
-     * @return a java.util.List<HostPair>
+     * @return a {@link java.util.List<HostPair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostPair> getChildHostPairs() {
@@ -44,7 +44,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the components property value. The hostComponents that are associated with this host.
-     * @return a java.util.List<HostComponent>
+     * @return a {@link java.util.List<HostComponent>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostComponent> getComponents() {
@@ -52,7 +52,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the cookies property value. The hostCookies that are associated with this host.
-     * @return a java.util.List<HostCookie>
+     * @return a {@link java.util.List<HostCookie>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostCookie> getCookies() {
@@ -60,7 +60,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -84,7 +84,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the firstSeenDateTime property value. The first date and time when this host was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
@@ -92,7 +92,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the hostPairs property value. The hostPairs that are associated with this host, where this host is either the parentHost or childHost.
-     * @return a java.util.List<HostPair>
+     * @return a {@link java.util.List<HostPair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostPair> getHostPairs() {
@@ -100,7 +100,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the lastSeenDateTime property value. The most recent date and time when this host was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
@@ -108,7 +108,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the parentHostPairs property value. The hostPairs that are associated with a host, where that host is the childHost and has an incoming pairing with a parentHost.
-     * @return a java.util.List<HostPair>
+     * @return a {@link java.util.List<HostPair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostPair> getParentHostPairs() {
@@ -116,7 +116,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the passiveDns property value. Passive DNS retrieval about this host.
-     * @return a java.util.List<PassiveDnsRecord>
+     * @return a {@link java.util.List<PassiveDnsRecord>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PassiveDnsRecord> getPassiveDns() {
@@ -124,7 +124,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the passiveDnsReverse property value. Reverse passive DNS retrieval about this host.
-     * @return a java.util.List<PassiveDnsRecord>
+     * @return a {@link java.util.List<PassiveDnsRecord>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PassiveDnsRecord> getPassiveDnsReverse() {
@@ -132,7 +132,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the ports property value. The hostPorts associated with a host.
-     * @return a java.util.List<HostPort>
+     * @return a {@link java.util.List<HostPort>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostPort> getPorts() {
@@ -140,7 +140,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the reputation property value. Represents a calculated reputation of this host.
-     * @return a HostReputation
+     * @return a {@link HostReputation}
      */
     @jakarta.annotation.Nullable
     public HostReputation getReputation() {
@@ -148,7 +148,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the sslCertificates property value. The hostSslCertificates that are associated with this host.
-     * @return a java.util.List<HostSslCertificate>
+     * @return a {@link java.util.List<HostSslCertificate>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostSslCertificate> getSslCertificates() {
@@ -156,7 +156,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the subdomains property value. The subdomains that are associated with this host.
-     * @return a java.util.List<Subdomain>
+     * @return a {@link java.util.List<Subdomain>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Subdomain> getSubdomains() {
@@ -164,7 +164,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the trackers property value. The hostTrackers that are associated with this host.
-     * @return a java.util.List<HostTracker>
+     * @return a {@link java.util.List<HostTracker>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostTracker> getTrackers() {
@@ -172,7 +172,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the whois property value. The most recent whoisRecord for this host.
-     * @return a WhoisRecord
+     * @return a {@link WhoisRecord}
      */
     @jakarta.annotation.Nullable
     public WhoisRecord getWhois() {

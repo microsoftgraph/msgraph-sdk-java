@@ -19,7 +19,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DeviceHealthAttestationState and sets the default values.
+     * Instantiates a new {@link DeviceHealthAttestationState} and sets the default values.
      */
     public DeviceHealthAttestationState() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceHealthAttestationState
+     * @return a {@link DeviceHealthAttestationState}
      */
     @jakarta.annotation.Nonnull
     public static DeviceHealthAttestationState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the attestationIdentityKey property value. TWhen an Attestation Identity Key (AIK) is present on a device, it indicates that the device has an endorsement key (EK) certificate.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAttestationIdentityKey() {
@@ -58,7 +58,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -66,7 +66,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the bitLockerStatus property value. On or Off of BitLocker Drive Encryption
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBitLockerStatus() {
@@ -74,7 +74,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the bootAppSecurityVersion property value. The security version number of the Boot Application
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBootAppSecurityVersion() {
@@ -82,7 +82,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the bootDebugging property value. When bootDebugging is enabled, the device is used in development and testing
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBootDebugging() {
@@ -90,7 +90,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the bootManagerSecurityVersion property value. The security version number of the Boot Application
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBootManagerSecurityVersion() {
@@ -98,7 +98,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the bootManagerVersion property value. The version of the Boot Manager
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBootManagerVersion() {
@@ -106,7 +106,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the bootRevisionListInfo property value. The Boot Revision List that was loaded during initial boot on the attested device
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBootRevisionListInfo() {
@@ -114,7 +114,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the codeIntegrity property value. When code integrity is enabled, code execution is restricted to integrity verified code
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCodeIntegrity() {
@@ -122,7 +122,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the codeIntegrityCheckVersion property value. The version of the Boot Manager
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCodeIntegrityCheckVersion() {
@@ -130,7 +130,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the codeIntegrityPolicy property value. The Code Integrity policy that is controlling the security of the boot environment
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCodeIntegrityPolicy() {
@@ -138,7 +138,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the contentNamespaceUrl property value. The DHA report version. (Namespace version)
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContentNamespaceUrl() {
@@ -146,7 +146,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the contentVersion property value. The HealthAttestation state schema version
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContentVersion() {
@@ -154,7 +154,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the dataExcutionPolicy property value. DEP Policy defines a set of hardware and software technologies that perform additional checks on memory
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDataExcutionPolicy() {
@@ -162,7 +162,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the deviceHealthAttestationStatus property value. The DHA report version. (Namespace version)
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceHealthAttestationStatus() {
@@ -170,7 +170,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the earlyLaunchAntiMalwareDriverProtection property value. ELAM provides protection for the computers in your network when they start up
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEarlyLaunchAntiMalwareDriverProtection() {
@@ -178,7 +178,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -220,7 +220,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the healthAttestationSupportedStatus property value. This attribute indicates if DHA is supported for the device
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getHealthAttestationSupportedStatus() {
@@ -228,7 +228,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the healthStatusMismatchInfo property value. This attribute appears if DHA-Service detects an integrity issue
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getHealthStatusMismatchInfo() {
@@ -236,7 +236,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the issuedDateTime property value. The DateTime when device was evaluated or issued to MDM
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getIssuedDateTime() {
@@ -244,7 +244,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the lastUpdateDateTime property value. The Timestamp of the last update.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLastUpdateDateTime() {
@@ -252,7 +252,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -260,7 +260,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the operatingSystemKernelDebugging property value. When operatingSystemKernelDebugging is enabled, the device is used in development and testing
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystemKernelDebugging() {
@@ -268,7 +268,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the operatingSystemRevListInfo property value. The Operating System Revision List that was loaded during initial boot on the attested device
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystemRevListInfo() {
@@ -276,7 +276,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the pcr0 property value. The measurement that is captured in PCR[0]
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPcr0() {
@@ -284,7 +284,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the pcrHashAlgorithm property value. Informational attribute that identifies the HASH algorithm that was used by TPM
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPcrHashAlgorithm() {
@@ -292,7 +292,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the resetCount property value. The number of times a PC device has hibernated or resumed
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getResetCount() {
@@ -300,7 +300,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the restartCount property value. The number of times a PC device has rebooted
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getRestartCount() {
@@ -308,7 +308,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the safeMode property value. Safe mode is a troubleshooting option for Windows that starts your computer in a limited state
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSafeMode() {
@@ -316,7 +316,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the secureBoot property value. When Secure Boot is enabled, the core components must have the correct cryptographic signatures
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSecureBoot() {
@@ -324,7 +324,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the secureBootConfigurationPolicyFingerPrint property value. Fingerprint of the Custom Secure Boot Configuration Policy
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSecureBootConfigurationPolicyFingerPrint() {
@@ -332,7 +332,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the testSigning property value. When test signing is allowed, the device does not enforce signature validation during boot
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTestSigning() {
@@ -340,7 +340,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the tpmVersion property value. The security version number of the Boot Application
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTpmVersion() {
@@ -348,7 +348,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the virtualSecureMode property value. VSM is a container that protects high value assets from a compromised kernel
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVirtualSecureMode() {
@@ -356,7 +356,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the windowsPE property value. Operating system running with limited services that is used to prepare a computer for Windows
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWindowsPE() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerBucket extends Entity implements Parsable {
     /**
-     * Instantiates a new PlannerBucket and sets the default values.
+     * Instantiates a new {@link PlannerBucket} and sets the default values.
      */
     public PlannerBucket() {
         super();
@@ -17,7 +17,7 @@ public class PlannerBucket extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PlannerBucket
+     * @return a {@link PlannerBucket}
      */
     @jakarta.annotation.Nonnull
     public static PlannerBucket createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class PlannerBucket extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -39,7 +39,7 @@ public class PlannerBucket extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. Name of the bucket.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -47,7 +47,7 @@ public class PlannerBucket extends Entity implements Parsable {
     }
     /**
      * Gets the orderHint property value. Hint used to order items of this type in a list view. For details about the supported format, see Using order hints in Planner.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOrderHint() {
@@ -55,7 +55,7 @@ public class PlannerBucket extends Entity implements Parsable {
     }
     /**
      * Gets the planId property value. Plan ID to which the bucket belongs.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPlanId() {
@@ -63,7 +63,7 @@ public class PlannerBucket extends Entity implements Parsable {
     }
     /**
      * Gets the tasks property value. Read-only. Nullable. The collection of tasks in the bucket.
-     * @return a java.util.List<PlannerTask>
+     * @return a {@link java.util.List<PlannerTask>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerTask> getTasks() {

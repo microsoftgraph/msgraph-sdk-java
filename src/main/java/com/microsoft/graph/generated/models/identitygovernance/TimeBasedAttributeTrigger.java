@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implements Parsable {
     /**
-     * Instantiates a new TimeBasedAttributeTrigger and sets the default values.
+     * Instantiates a new {@link TimeBasedAttributeTrigger} and sets the default values.
      */
     public TimeBasedAttributeTrigger() {
         super();
@@ -18,7 +18,7 @@ public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TimeBasedAttributeTrigger
+     * @return a {@link TimeBasedAttributeTrigger}
      */
     @jakarta.annotation.Nonnull
     public static TimeBasedAttributeTrigger createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implemen
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implemen
     }
     /**
      * Gets the offsetInDays property value. How many days before or after the time-based attribute specified the workflow should trigger. For example, if the attribute is employeeHireDate and offsetInDays is -1, then the workflow should trigger one day before the employee hire date. The value can range between -180 and 180 days.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getOffsetInDays() {
@@ -46,7 +46,7 @@ public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implemen
     }
     /**
      * Gets the timeBasedAttribute property value. The timeBasedAttribute property
-     * @return a WorkflowTriggerTimeBasedAttribute
+     * @return a {@link WorkflowTriggerTimeBasedAttribute}
      */
     @jakarta.annotation.Nullable
     public WorkflowTriggerTimeBasedAttribute getTimeBasedAttribute() {

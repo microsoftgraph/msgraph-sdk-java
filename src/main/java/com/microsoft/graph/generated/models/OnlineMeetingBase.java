@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnlineMeetingBase extends Entity implements Parsable {
     /**
-     * Instantiates a new OnlineMeetingBase and sets the default values.
+     * Instantiates a new {@link OnlineMeetingBase} and sets the default values.
      */
     public OnlineMeetingBase() {
         super();
@@ -17,7 +17,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnlineMeetingBase
+     * @return a {@link OnlineMeetingBase}
      */
     @jakarta.annotation.Nonnull
     public static OnlineMeetingBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     }
     /**
      * Gets the allowAttendeeToEnableCamera property value. Indicates whether attendees can turn on their camera.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowAttendeeToEnableCamera() {
@@ -42,7 +42,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     }
     /**
      * Gets the allowAttendeeToEnableMic property value. Indicates whether attendees can turn on their microphone.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowAttendeeToEnableMic() {
@@ -50,7 +50,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     }
     /**
      * Gets the allowedPresenters property value. Specifies who can be a presenter in a meeting.
-     * @return a OnlineMeetingPresenters
+     * @return a {@link OnlineMeetingPresenters}
      */
     @jakarta.annotation.Nullable
     public OnlineMeetingPresenters getAllowedPresenters() {
@@ -58,7 +58,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     }
     /**
      * Gets the allowMeetingChat property value. Specifies the mode of the meeting chat.
-     * @return a MeetingChatMode
+     * @return a {@link MeetingChatMode}
      */
     @jakarta.annotation.Nullable
     public MeetingChatMode getAllowMeetingChat() {
@@ -66,7 +66,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     }
     /**
      * Gets the allowParticipantsToChangeName property value. Specifies if participants are allowed to rename themselves in an instance of the meeting.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowParticipantsToChangeName() {
@@ -74,7 +74,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     }
     /**
      * Gets the allowTeamworkReactions property value. Indicates if Teams reactions are enabled for the meeting.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowTeamworkReactions() {
@@ -82,7 +82,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     }
     /**
      * Gets the attendanceReports property value. The attendance reports of an online meeting. Read-only.
-     * @return a java.util.List<MeetingAttendanceReport>
+     * @return a {@link java.util.List<MeetingAttendanceReport>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MeetingAttendanceReport> getAttendanceReports() {
@@ -90,7 +90,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     }
     /**
      * Gets the audioConferencing property value. The phone access (dial-in) information for an online meeting. Read-only.
-     * @return a AudioConferencing
+     * @return a {@link AudioConferencing}
      */
     @jakarta.annotation.Nullable
     public AudioConferencing getAudioConferencing() {
@@ -98,7 +98,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     }
     /**
      * Gets the chatInfo property value. The chat information associated with this online meeting.
-     * @return a ChatInfo
+     * @return a {@link ChatInfo}
      */
     @jakarta.annotation.Nullable
     public ChatInfo getChatInfo() {
@@ -106,7 +106,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -134,7 +134,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     }
     /**
      * Gets the isEntryExitAnnounced property value. Indicates whether to announce when callers join or leave.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEntryExitAnnounced() {
@@ -142,7 +142,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     }
     /**
      * Gets the joinInformation property value. The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only.
-     * @return a ItemBody
+     * @return a {@link ItemBody}
      */
     @jakarta.annotation.Nullable
     public ItemBody getJoinInformation() {
@@ -150,7 +150,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     }
     /**
      * Gets the joinMeetingIdSettings property value. Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode. Once an onlineMeeting is created, the joinMeetingIdSettings can't be modified. To make any changes to this property, you must cancel this meeting and create a new one.
-     * @return a JoinMeetingIdSettings
+     * @return a {@link JoinMeetingIdSettings}
      */
     @jakarta.annotation.Nullable
     public JoinMeetingIdSettings getJoinMeetingIdSettings() {
@@ -158,7 +158,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     }
     /**
      * Gets the joinWebUrl property value. The join URL of the online meeting. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getJoinWebUrl() {
@@ -166,7 +166,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     }
     /**
      * Gets the lobbyBypassSettings property value. Specifies which participants can bypass the meeting lobby.
-     * @return a LobbyBypassSettings
+     * @return a {@link LobbyBypassSettings}
      */
     @jakarta.annotation.Nullable
     public LobbyBypassSettings getLobbyBypassSettings() {
@@ -174,7 +174,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     }
     /**
      * Gets the recordAutomatically property value. Indicates whether to record the meeting automatically.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRecordAutomatically() {
@@ -182,7 +182,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     }
     /**
      * Gets the shareMeetingChatHistoryDefault property value. The shareMeetingChatHistoryDefault property
-     * @return a MeetingChatHistoryDefaultMode
+     * @return a {@link MeetingChatHistoryDefaultMode}
      */
     @jakarta.annotation.Nullable
     public MeetingChatHistoryDefaultMode getShareMeetingChatHistoryDefault() {
@@ -190,7 +190,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     }
     /**
      * Gets the subject property value. The subject of the online meeting.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
@@ -198,7 +198,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     }
     /**
      * Gets the videoTeleconferenceId property value. The video teleconferencing ID. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVideoTeleconferenceId() {
@@ -206,7 +206,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     }
     /**
      * Gets the watermarkProtection property value. Specifies whether the client application should apply a watermark to a content type.
-     * @return a WatermarkProtectionValues
+     * @return a {@link WatermarkProtectionValues}
      */
     @jakarta.annotation.Nullable
     public WatermarkProtectionValues getWatermarkProtection() {

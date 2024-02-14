@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuditLogRoot extends Entity implements Parsable {
     /**
-     * Instantiates a new AuditLogRoot and sets the default values.
+     * Instantiates a new {@link AuditLogRoot} and sets the default values.
      */
     public AuditLogRoot() {
         super();
@@ -17,7 +17,7 @@ public class AuditLogRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuditLogRoot
+     * @return a {@link AuditLogRoot}
      */
     @jakarta.annotation.Nonnull
     public static AuditLogRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class AuditLogRoot extends Entity implements Parsable {
     }
     /**
      * Gets the directoryAudits property value. The directoryAudits property
-     * @return a java.util.List<DirectoryAudit>
+     * @return a {@link java.util.List<DirectoryAudit>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryAudit> getDirectoryAudits() {
@@ -34,7 +34,7 @@ public class AuditLogRoot extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class AuditLogRoot extends Entity implements Parsable {
     }
     /**
      * Gets the provisioning property value. The provisioning property
-     * @return a java.util.List<ProvisioningObjectSummary>
+     * @return a {@link java.util.List<ProvisioningObjectSummary>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProvisioningObjectSummary> getProvisioning() {
@@ -54,7 +54,7 @@ public class AuditLogRoot extends Entity implements Parsable {
     }
     /**
      * Gets the signIns property value. The signIns property
-     * @return a java.util.List<SignIn>
+     * @return a {@link java.util.List<SignIn>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SignIn> getSignIns() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class NetworkConnectionEvidence extends AlertEvidence implements Parsable {
     /**
-     * Instantiates a new NetworkConnectionEvidence and sets the default values.
+     * Instantiates a new {@link NetworkConnectionEvidence} and sets the default values.
      */
     public NetworkConnectionEvidence() {
         super();
@@ -18,7 +18,7 @@ public class NetworkConnectionEvidence extends AlertEvidence implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a NetworkConnectionEvidence
+     * @return a {@link NetworkConnectionEvidence}
      */
     @jakarta.annotation.Nonnull
     public static NetworkConnectionEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class NetworkConnectionEvidence extends AlertEvidence implements Parsable
     }
     /**
      * Gets the destinationAddress property value. The destinationAddress property
-     * @return a IpEvidence
+     * @return a {@link IpEvidence}
      */
     @jakarta.annotation.Nullable
     public IpEvidence getDestinationAddress() {
@@ -35,7 +35,7 @@ public class NetworkConnectionEvidence extends AlertEvidence implements Parsable
     }
     /**
      * Gets the destinationPort property value. The destinationPort property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDestinationPort() {
@@ -43,7 +43,7 @@ public class NetworkConnectionEvidence extends AlertEvidence implements Parsable
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class NetworkConnectionEvidence extends AlertEvidence implements Parsable
     }
     /**
      * Gets the protocol property value. The protocol property
-     * @return a ProtocolType
+     * @return a {@link ProtocolType}
      */
     @jakarta.annotation.Nullable
     public ProtocolType getProtocol() {
@@ -65,7 +65,7 @@ public class NetworkConnectionEvidence extends AlertEvidence implements Parsable
     }
     /**
      * Gets the sourceAddress property value. The sourceAddress property
-     * @return a IpEvidence
+     * @return a {@link IpEvidence}
      */
     @jakarta.annotation.Nullable
     public IpEvidence getSourceAddress() {
@@ -73,7 +73,7 @@ public class NetworkConnectionEvidence extends AlertEvidence implements Parsable
     }
     /**
      * Gets the sourcePort property value. The sourcePort property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSourcePort() {

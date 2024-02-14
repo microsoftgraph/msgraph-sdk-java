@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedAccessSchedule extends Entity implements Parsable {
     /**
-     * Instantiates a new PrivilegedAccessSchedule and sets the default values.
+     * Instantiates a new {@link PrivilegedAccessSchedule} and sets the default values.
      */
     public PrivilegedAccessSchedule() {
         super();
@@ -18,7 +18,7 @@ public class PrivilegedAccessSchedule extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrivilegedAccessSchedule
+     * @return a {@link PrivilegedAccessSchedule}
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedAccessSchedule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class PrivilegedAccessSchedule extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. When the schedule was created. Optional.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -43,7 +43,7 @@ public class PrivilegedAccessSchedule extends Entity implements Parsable {
     }
     /**
      * Gets the createdUsing property value. The identifier of the access assignment or eligibility request that created this schedule. Optional.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCreatedUsing() {
@@ -51,7 +51,7 @@ public class PrivilegedAccessSchedule extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -65,7 +65,7 @@ public class PrivilegedAccessSchedule extends Entity implements Parsable {
     }
     /**
      * Gets the modifiedDateTime property value. When the schedule was last modified. Optional.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
@@ -73,7 +73,7 @@ public class PrivilegedAccessSchedule extends Entity implements Parsable {
     }
     /**
      * Gets the scheduleInfo property value. Represents the period of the access assignment or eligibility. The scheduleInfo can represent a single occurrence or multiple recurring instances. Required.
-     * @return a RequestSchedule
+     * @return a {@link RequestSchedule}
      */
     @jakarta.annotation.Nullable
     public RequestSchedule getScheduleInfo() {
@@ -81,7 +81,7 @@ public class PrivilegedAccessSchedule extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status of the access assignment or eligibility request. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable. Optional.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStatus() {

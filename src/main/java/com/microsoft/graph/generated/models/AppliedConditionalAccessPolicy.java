@@ -18,7 +18,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AppliedConditionalAccessPolicy and sets the default values.
+     * Instantiates a new {@link AppliedConditionalAccessPolicy} and sets the default values.
      */
     public AppliedConditionalAccessPolicy() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AppliedConditionalAccessPolicy
+     * @return a {@link AppliedConditionalAccessPolicy}
      */
     @jakarta.annotation.Nonnull
     public static AppliedConditionalAccessPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the displayName property value. Refers to the Name of the conditional access policy (example: 'Require MFA for Salesforce').
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -65,7 +65,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the enforcedGrantControls property value. Refers to the grant controls enforced by the conditional access policy (example: 'Require multifactor authentication').
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEnforcedGrantControls() {
@@ -73,7 +73,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the enforcedSessionControls property value. Refers to the session controls enforced by the conditional access policy (example: 'Require app enforced controls').
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEnforcedSessionControls() {
@@ -81,7 +81,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -96,7 +96,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the id property value. An identifier of the conditional access policy. Supports $filter (eq).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -104,7 +104,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -112,7 +112,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (policy isn't applied because policy conditions weren't met), notEnabled (This is due to the policy in a disabled state), unknown, unknownFutureValue, reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.  You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.
-     * @return a AppliedConditionalAccessPolicyResult
+     * @return a {@link AppliedConditionalAccessPolicyResult}
      */
     @jakarta.annotation.Nullable
     public AppliedConditionalAccessPolicyResult getResult() {

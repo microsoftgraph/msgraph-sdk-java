@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpointConfiguration implements Parsable {
     /**
-     * Instantiates a new LogicAppTriggerEndpointConfiguration and sets the default values.
+     * Instantiates a new {@link LogicAppTriggerEndpointConfiguration} and sets the default values.
      */
     public LogicAppTriggerEndpointConfiguration() {
         super();
@@ -18,7 +18,7 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a LogicAppTriggerEndpointConfiguration
+     * @return a {@link LogicAppTriggerEndpointConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static LogicAppTriggerEndpointConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
     }
     /**
      * Gets the logicAppWorkflowName property value. The name of the logic app.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLogicAppWorkflowName() {
@@ -48,7 +48,7 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
     }
     /**
      * Gets the resourceGroupName property value. The Azure resource group name for the logic app.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourceGroupName() {
@@ -56,7 +56,7 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
     }
     /**
      * Gets the subscriptionId property value. Identifier of the Azure subscription for the logic app.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubscriptionId() {
@@ -64,7 +64,7 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
     }
     /**
      * Gets the url property value. The URL to the logic app endpoint that will be triggered. Only required for app-only token scenarios where app is creating a customCalloutExtension without a signed-in user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUrl() {

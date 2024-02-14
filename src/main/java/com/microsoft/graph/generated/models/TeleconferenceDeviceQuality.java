@@ -19,7 +19,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Backed
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new TeleconferenceDeviceQuality and sets the default values.
+     * Instantiates a new {@link TeleconferenceDeviceQuality} and sets the default values.
      */
     public TeleconferenceDeviceQuality() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Backed
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeleconferenceDeviceQuality
+     * @return a {@link TeleconferenceDeviceQuality}
      */
     @jakarta.annotation.Nonnull
     public static TeleconferenceDeviceQuality createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the callChainId property value. A unique identifier for all  the participant calls in a conference or a unique identifier for two participant calls in P2P call. This needs to be copied over from Microsoft.Graph.Call.CallChainId.
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getCallChainId() {
@@ -66,7 +66,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the cloudServiceDeploymentEnvironment property value. A geo-region where the service is deployed, such as ProdNoam.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCloudServiceDeploymentEnvironment() {
@@ -74,7 +74,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the cloudServiceDeploymentId property value. A unique deployment identifier assigned by Azure.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCloudServiceDeploymentId() {
@@ -82,7 +82,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the cloudServiceInstanceName property value. The Azure deployed cloud service instance name, such as FrontEndIN3.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCloudServiceInstanceName() {
@@ -90,7 +90,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the cloudServiceName property value. The Azure deployed cloud service name, such as contoso.cloudapp.net.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCloudServiceName() {
@@ -98,7 +98,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the deviceDescription property value. Any additional description, such as VTC Bldg 30/21.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceDescription() {
@@ -106,7 +106,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the deviceName property value. The user media agent name, such as Cisco SX80.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -114,7 +114,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Backed
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -134,7 +134,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the mediaLegId property value. A unique identifier for a specific media leg of a participant in a conference.  One participant can have multiple media leg identifiers if retargeting happens. CVI partner assigns this value.
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getMediaLegId() {
@@ -142,7 +142,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the mediaQualityList property value. The list of media qualities in a media session (call), such as audio quality, video quality, and/or screen sharing quality.
-     * @return a java.util.List<TeleconferenceDeviceMediaQuality>
+     * @return a {@link java.util.List<TeleconferenceDeviceMediaQuality>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeleconferenceDeviceMediaQuality> getMediaQualityList() {
@@ -150,7 +150,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -158,7 +158,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the participantId property value. A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property.
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getParticipantId() {

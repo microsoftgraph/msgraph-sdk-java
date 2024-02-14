@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartAxes extends Entity implements Parsable {
     /**
-     * Instantiates a new WorkbookChartAxes and sets the default values.
+     * Instantiates a new {@link WorkbookChartAxes} and sets the default values.
      */
     public WorkbookChartAxes() {
         super();
@@ -17,7 +17,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookChartAxes
+     * @return a {@link WorkbookChartAxes}
      */
     @jakarta.annotation.Nonnull
     public static WorkbookChartAxes createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
     }
     /**
      * Gets the categoryAxis property value. Represents the category axis in a chart. Read-only.
-     * @return a WorkbookChartAxis
+     * @return a {@link WorkbookChartAxis}
      */
     @jakarta.annotation.Nullable
     public WorkbookChartAxis getCategoryAxis() {
@@ -34,7 +34,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
     }
     /**
      * Gets the seriesAxis property value. Represents the series axis of a 3-dimensional chart. Read-only.
-     * @return a WorkbookChartAxis
+     * @return a {@link WorkbookChartAxis}
      */
     @jakarta.annotation.Nullable
     public WorkbookChartAxis getSeriesAxis() {
@@ -54,7 +54,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
     }
     /**
      * Gets the valueAxis property value. Represents the value axis in an axis. Read-only.
-     * @return a WorkbookChartAxis
+     * @return a {@link WorkbookChartAxis}
      */
     @jakarta.annotation.Nullable
     public WorkbookChartAxis getValueAxis() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintOperation extends Entity implements Parsable {
     /**
-     * Instantiates a new PrintOperation and sets the default values.
+     * Instantiates a new {@link PrintOperation} and sets the default values.
      */
     public PrintOperation() {
         super();
@@ -18,7 +18,7 @@ public class PrintOperation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrintOperation
+     * @return a {@link PrintOperation}
      */
     @jakarta.annotation.Nonnull
     public static PrintOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class PrintOperation extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The DateTimeOffset when the operation was created. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -42,7 +42,7 @@ public class PrintOperation extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -53,7 +53,7 @@ public class PrintOperation extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a PrintOperationStatus
+     * @return a {@link PrintOperationStatus}
      */
     @jakarta.annotation.Nullable
     public PrintOperationStatus getStatus() {

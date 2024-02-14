@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsWebApp extends MobileApp implements Parsable {
     /**
-     * Instantiates a new WindowsWebApp and sets the default values.
+     * Instantiates a new {@link WindowsWebApp} and sets the default values.
      */
     public WindowsWebApp() {
         super();
@@ -21,7 +21,7 @@ public class WindowsWebApp extends MobileApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsWebApp
+     * @return a {@link WindowsWebApp}
      */
     @jakarta.annotation.Nonnull
     public static WindowsWebApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class WindowsWebApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the appUrl property value. Indicates the Windows web app URL. Example: 'https://www.contoso.com'
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppUrl() {
@@ -38,7 +38,7 @@ public class WindowsWebApp extends MobileApp implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

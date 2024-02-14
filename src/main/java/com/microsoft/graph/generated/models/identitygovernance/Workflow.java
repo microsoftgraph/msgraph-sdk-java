@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Workflow extends WorkflowBase implements Parsable {
     /**
-     * Instantiates a new Workflow and sets the default values.
+     * Instantiates a new {@link Workflow} and sets the default values.
      */
     public Workflow() {
         super();
@@ -19,7 +19,7 @@ public class Workflow extends WorkflowBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Workflow
+     * @return a {@link Workflow}
      */
     @jakarta.annotation.Nonnull
     public static Workflow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class Workflow extends WorkflowBase implements Parsable {
     }
     /**
      * Gets the deletedDateTime property value. When the workflow was deleted.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDeletedDateTime() {
@@ -36,7 +36,7 @@ public class Workflow extends WorkflowBase implements Parsable {
     }
     /**
      * Gets the executionScope property value. The unique identifier of the Microsoft Entra identity that last modified the workflow object.
-     * @return a java.util.List<UserProcessingResult>
+     * @return a {@link java.util.List<UserProcessingResult>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserProcessingResult> getExecutionScope() {
@@ -44,7 +44,7 @@ public class Workflow extends WorkflowBase implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -62,7 +62,7 @@ public class Workflow extends WorkflowBase implements Parsable {
     }
     /**
      * Gets the id property value. Identifier used for individually addressing a specific workflow.Supports $filter(eq, ne) and $orderby.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -70,7 +70,7 @@ public class Workflow extends WorkflowBase implements Parsable {
     }
     /**
      * Gets the nextScheduleRunDateTime property value. The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderby.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getNextScheduleRunDateTime() {
@@ -78,7 +78,7 @@ public class Workflow extends WorkflowBase implements Parsable {
     }
     /**
      * Gets the runs property value. Workflow runs.
-     * @return a java.util.List<Run>
+     * @return a {@link java.util.List<Run>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Run> getRuns() {
@@ -86,7 +86,7 @@ public class Workflow extends WorkflowBase implements Parsable {
     }
     /**
      * Gets the taskReports property value. Represents the aggregation of task execution data for tasks within a workflow object.
-     * @return a java.util.List<TaskReport>
+     * @return a {@link java.util.List<TaskReport>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TaskReport> getTaskReports() {
@@ -94,7 +94,7 @@ public class Workflow extends WorkflowBase implements Parsable {
     }
     /**
      * Gets the userProcessingResults property value. Per-user workflow execution results.
-     * @return a java.util.List<UserProcessingResult>
+     * @return a {@link java.util.List<UserProcessingResult>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserProcessingResult> getUserProcessingResults() {
@@ -102,7 +102,7 @@ public class Workflow extends WorkflowBase implements Parsable {
     }
     /**
      * Gets the version property value. The current version number of the workflow. Value is 1 when the workflow is first created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {
@@ -110,7 +110,7 @@ public class Workflow extends WorkflowBase implements Parsable {
     }
     /**
      * Gets the versions property value. The workflow versions that are available.
-     * @return a java.util.List<WorkflowVersion>
+     * @return a {@link java.util.List<WorkflowVersion>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkflowVersion> getVersions() {

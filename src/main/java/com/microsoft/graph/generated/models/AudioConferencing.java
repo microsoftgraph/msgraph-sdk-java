@@ -18,7 +18,7 @@ public class AudioConferencing implements AdditionalDataHolder, BackedModel, Par
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AudioConferencing and sets the default values.
+     * Instantiates a new {@link AudioConferencing} and sets the default values.
      */
     public AudioConferencing() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AudioConferencing implements AdditionalDataHolder, BackedModel, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AudioConferencing
+     * @return a {@link AudioConferencing}
      */
     @jakarta.annotation.Nonnull
     public static AudioConferencing createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AudioConferencing implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AudioConferencing implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class AudioConferencing implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the conferenceId property value. The conference id of the online meeting.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getConferenceId() {
@@ -65,7 +65,7 @@ public class AudioConferencing implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the dialinUrl property value. A URL to the externally-accessible web page that contains dial-in information.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDialinUrl() {
@@ -73,7 +73,7 @@ public class AudioConferencing implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -89,7 +89,7 @@ public class AudioConferencing implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,7 +97,7 @@ public class AudioConferencing implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the tollFreeNumber property value. The tollFreeNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTollFreeNumber() {
@@ -105,7 +105,7 @@ public class AudioConferencing implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the tollFreeNumbers property value. List of toll-free numbers that are displayed in the meeting invite.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTollFreeNumbers() {
@@ -113,7 +113,7 @@ public class AudioConferencing implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the tollNumber property value. The tollNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTollNumber() {
@@ -121,7 +121,7 @@ public class AudioConferencing implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the tollNumbers property value. List of toll numbers that are displayed in the meeting invite.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTollNumbers() {

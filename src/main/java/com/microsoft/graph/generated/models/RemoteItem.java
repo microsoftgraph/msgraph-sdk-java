@@ -19,7 +19,7 @@ public class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new RemoteItem and sets the default values.
+     * Instantiates a new {@link RemoteItem} and sets the default values.
      */
     public RemoteItem() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RemoteItem
+     * @return a {@link RemoteItem}
      */
     @jakarta.annotation.Nonnull
     public static RemoteItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the createdBy property value. Identity of the user, device, and application which created the item. Read-only.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -66,7 +66,7 @@ public class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the createdDateTime property value. Date and time of item creation. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -74,7 +74,7 @@ public class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -103,7 +103,7 @@ public class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the file property value. Indicates that the remote item is a file. Read-only.
-     * @return a File
+     * @return a {@link File}
      */
     @jakarta.annotation.Nullable
     public File getFile() {
@@ -111,7 +111,7 @@ public class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the fileSystemInfo property value. Information about the remote item from the local file system. Read-only.
-     * @return a FileSystemInfo
+     * @return a {@link FileSystemInfo}
      */
     @jakarta.annotation.Nullable
     public FileSystemInfo getFileSystemInfo() {
@@ -119,7 +119,7 @@ public class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the folder property value. Indicates that the remote item is a folder. Read-only.
-     * @return a Folder
+     * @return a {@link Folder}
      */
     @jakarta.annotation.Nullable
     public Folder getFolder() {
@@ -127,7 +127,7 @@ public class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the id property value. Unique identifier for the remote item in its drive. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -135,7 +135,7 @@ public class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the image property value. Image metadata, if the item is an image. Read-only.
-     * @return a Image
+     * @return a {@link Image}
      */
     @jakarta.annotation.Nullable
     public Image getImage() {
@@ -143,7 +143,7 @@ public class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. Identity of the user, device, and application which last modified the item. Read-only.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -151,7 +151,7 @@ public class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. Date and time the item was last modified. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -159,7 +159,7 @@ public class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the name property value. Optional. Filename of the remote item. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -167,7 +167,7 @@ public class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -175,7 +175,7 @@ public class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the package property value. If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
-     * @return a PackageEscaped
+     * @return a {@link PackageEscaped}
      */
     @jakarta.annotation.Nullable
     public PackageEscaped getPackage() {
@@ -183,7 +183,7 @@ public class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the parentReference property value. Properties of the parent of the remote item. Read-only.
-     * @return a ItemReference
+     * @return a {@link ItemReference}
      */
     @jakarta.annotation.Nullable
     public ItemReference getParentReference() {
@@ -191,7 +191,7 @@ public class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the shared property value. Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
-     * @return a Shared
+     * @return a {@link Shared}
      */
     @jakarta.annotation.Nullable
     public Shared getShared() {
@@ -199,7 +199,7 @@ public class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the sharepointIds property value. Provides interop between items in OneDrive for Business and SharePoint with the full set of item identifiers. Read-only.
-     * @return a SharepointIds
+     * @return a {@link SharepointIds}
      */
     @jakarta.annotation.Nullable
     public SharepointIds getSharepointIds() {
@@ -207,7 +207,7 @@ public class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the size property value. Size of the remote item. Read-only.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getSize() {
@@ -215,7 +215,7 @@ public class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the specialFolder property value. If the current item is also available as a special folder, this facet is returned. Read-only.
-     * @return a SpecialFolder
+     * @return a {@link SpecialFolder}
      */
     @jakarta.annotation.Nullable
     public SpecialFolder getSpecialFolder() {
@@ -223,7 +223,7 @@ public class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the video property value. Video metadata, if the item is a video. Read-only.
-     * @return a Video
+     * @return a {@link Video}
      */
     @jakarta.annotation.Nullable
     public Video getVideo() {
@@ -231,7 +231,7 @@ public class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the webDavUrl property value. DAV compatible URL for the item.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebDavUrl() {
@@ -239,7 +239,7 @@ public class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the webUrl property value. URL that displays the resource in the browser. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {

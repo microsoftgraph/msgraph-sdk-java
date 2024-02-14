@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceLocalCredentialInfo extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceLocalCredentialInfo and sets the default values.
+     * Instantiates a new {@link DeviceLocalCredentialInfo} and sets the default values.
      */
     public DeviceLocalCredentialInfo() {
         super();
@@ -18,7 +18,7 @@ public class DeviceLocalCredentialInfo extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceLocalCredentialInfo
+     * @return a {@link DeviceLocalCredentialInfo}
      */
     @jakarta.annotation.Nonnull
     public static DeviceLocalCredentialInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class DeviceLocalCredentialInfo extends Entity implements Parsable {
     }
     /**
      * Gets the credentials property value. The credentials of the device's local administrator account backed up to Azure Active Directory.
-     * @return a java.util.List<DeviceLocalCredential>
+     * @return a {@link java.util.List<DeviceLocalCredential>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceLocalCredential> getCredentials() {
@@ -35,7 +35,7 @@ public class DeviceLocalCredentialInfo extends Entity implements Parsable {
     }
     /**
      * Gets the deviceName property value. Display name of the device that the local credentials are associated with.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -43,7 +43,7 @@ public class DeviceLocalCredentialInfo extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -56,7 +56,7 @@ public class DeviceLocalCredentialInfo extends Entity implements Parsable {
     }
     /**
      * Gets the lastBackupDateTime property value. When the local administrator account credential was backed up to Azure Active Directory.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastBackupDateTime() {
@@ -64,7 +64,7 @@ public class DeviceLocalCredentialInfo extends Entity implements Parsable {
     }
     /**
      * Gets the refreshDateTime property value. When the local administrator account credential will be refreshed and backed up to Azure Active Directory.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRefreshDateTime() {

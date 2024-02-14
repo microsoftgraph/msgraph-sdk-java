@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements Parsable {
     /**
-     * Instantiates a new Windows10MobileCompliancePolicy and sets the default values.
+     * Instantiates a new {@link Windows10MobileCompliancePolicy} and sets the default values.
      */
     public Windows10MobileCompliancePolicy() {
         super();
@@ -21,7 +21,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Windows10MobileCompliancePolicy
+     * @return a {@link Windows10MobileCompliancePolicy}
      */
     @jakarta.annotation.Nonnull
     public static Windows10MobileCompliancePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the bitLockerEnabled property value. Require devices to be reported healthy by Windows Device Health Attestation - bit locker is enabled
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getBitLockerEnabled() {
@@ -38,7 +38,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the codeIntegrityEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getCodeIntegrityEnabled() {
@@ -46,7 +46,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the earlyLaunchAntiMalwareDriverEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEarlyLaunchAntiMalwareDriverEnabled() {
@@ -54,7 +54,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the osMaximumVersion property value. Maximum Windows Phone version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsMaximumVersion() {
@@ -87,7 +87,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the osMinimumVersion property value. Minimum Windows Phone version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsMinimumVersion() {
@@ -95,7 +95,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the passwordBlockSimple property value. Whether or not to block syncing the calendar.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockSimple() {
@@ -103,7 +103,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the passwordExpirationDays property value. Number of days before password expiration. Valid values 1 to 255
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
@@ -111,7 +111,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumCharacterSetCount() {
@@ -119,7 +119,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the passwordMinimumLength property value. Minimum password length. Valid values 4 to 16
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
@@ -127,7 +127,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeLock() {
@@ -135,7 +135,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. The number of previous passwords to prevent re-use of.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
@@ -143,7 +143,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the passwordRequired property value. Require a password to unlock Windows Phone device.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRequired() {
@@ -151,7 +151,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
-     * @return a RequiredPasswordType
+     * @return a {@link RequiredPasswordType}
      */
     @jakarta.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {
@@ -159,7 +159,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the passwordRequireToUnlockFromIdle property value. Require a password to unlock an idle device.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRequireToUnlockFromIdle() {
@@ -167,7 +167,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the secureBootEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation - secure boot is enabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSecureBootEnabled() {
@@ -175,7 +175,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the storageRequireEncryption property value. Require encryption on windows devices.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageRequireEncryption() {

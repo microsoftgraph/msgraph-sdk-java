@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MediaPrompt extends Prompt implements Parsable {
     /**
-     * Instantiates a new MediaPrompt and sets the default values.
+     * Instantiates a new {@link MediaPrompt} and sets the default values.
      */
     public MediaPrompt() {
         super();
@@ -18,7 +18,7 @@ public class MediaPrompt extends Prompt implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MediaPrompt
+     * @return a {@link MediaPrompt}
      */
     @jakarta.annotation.Nonnull
     public static MediaPrompt createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class MediaPrompt extends Prompt implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class MediaPrompt extends Prompt implements Parsable {
     }
     /**
      * Gets the mediaInfo property value. The mediaInfo property
-     * @return a MediaInfo
+     * @return a {@link MediaInfo}
      */
     @jakarta.annotation.Nullable
     public MediaInfo getMediaInfo() {

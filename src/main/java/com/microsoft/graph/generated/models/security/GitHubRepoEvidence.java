@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GitHubRepoEvidence extends AlertEvidence implements Parsable {
     /**
-     * Instantiates a new GitHubRepoEvidence and sets the default values.
+     * Instantiates a new {@link GitHubRepoEvidence} and sets the default values.
      */
     public GitHubRepoEvidence() {
         super();
@@ -18,7 +18,7 @@ public class GitHubRepoEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GitHubRepoEvidence
+     * @return a {@link GitHubRepoEvidence}
      */
     @jakarta.annotation.Nonnull
     public static GitHubRepoEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class GitHubRepoEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the baseUrl property value. The baseUrl property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBaseUrl() {
@@ -35,7 +35,7 @@ public class GitHubRepoEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -49,7 +49,7 @@ public class GitHubRepoEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the login property value. The login property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLogin() {
@@ -57,7 +57,7 @@ public class GitHubRepoEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the owner property value. The owner property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOwner() {
@@ -65,7 +65,7 @@ public class GitHubRepoEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the ownerType property value. The ownerType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOwnerType() {
@@ -73,7 +73,7 @@ public class GitHubRepoEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the repoId property value. The repoId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRepoId() {

@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TermsAndConditions extends Entity implements Parsable {
     /**
-     * Instantiates a new TermsAndConditions and sets the default values.
+     * Instantiates a new {@link TermsAndConditions} and sets the default values.
      */
     public TermsAndConditions() {
         super();
@@ -21,7 +21,7 @@ public class TermsAndConditions extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TermsAndConditions
+     * @return a {@link TermsAndConditions}
      */
     @jakarta.annotation.Nonnull
     public static TermsAndConditions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class TermsAndConditions extends Entity implements Parsable {
     }
     /**
      * Gets the acceptanceStatement property value. Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&C policy. This is shown to the user on prompts to accept the T&C policy.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAcceptanceStatement() {
@@ -38,7 +38,7 @@ public class TermsAndConditions extends Entity implements Parsable {
     }
     /**
      * Gets the acceptanceStatuses property value. The list of acceptance statuses for this T&C policy.
-     * @return a java.util.List<TermsAndConditionsAcceptanceStatus>
+     * @return a {@link java.util.List<TermsAndConditionsAcceptanceStatus>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TermsAndConditionsAcceptanceStatus> getAcceptanceStatuses() {
@@ -46,7 +46,7 @@ public class TermsAndConditions extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The list of assignments for this T&C policy.
-     * @return a java.util.List<TermsAndConditionsAssignment>
+     * @return a {@link java.util.List<TermsAndConditionsAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TermsAndConditionsAssignment> getAssignments() {
@@ -54,7 +54,7 @@ public class TermsAndConditions extends Entity implements Parsable {
     }
     /**
      * Gets the bodyText property value. Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&C policy.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBodyText() {
@@ -62,7 +62,7 @@ public class TermsAndConditions extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. DateTime the object was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -70,7 +70,7 @@ public class TermsAndConditions extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Administrator-supplied description of the T&C policy.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -78,7 +78,7 @@ public class TermsAndConditions extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Administrator-supplied name for the T&C policy.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -86,7 +86,7 @@ public class TermsAndConditions extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -105,7 +105,7 @@ public class TermsAndConditions extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. DateTime the object was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -113,7 +113,7 @@ public class TermsAndConditions extends Entity implements Parsable {
     }
     /**
      * Gets the title property value. Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&C policy.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
@@ -121,7 +121,7 @@ public class TermsAndConditions extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&C policy.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {
