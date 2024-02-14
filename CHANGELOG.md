@@ -11,6 +11,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [6.2.0] - 2024-02-14
+
+- Weekly Generated v1.0 models and request builders using Kiota.
+- Bumps dependency to microsoft-graph-core 3.1.2
+
 ## [6.1.0] - 2024-02-07
 
 - Major Version 6.1.0 now Generally Available.
