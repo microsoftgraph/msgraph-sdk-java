@@ -18,7 +18,7 @@ public class MediaContentRatingUnitedStates implements AdditionalDataHolder, Bac
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new MediaContentRatingUnitedStates and sets the default values.
+     * Instantiates a new {@link MediaContentRatingUnitedStates} and sets the default values.
      */
     public MediaContentRatingUnitedStates() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class MediaContentRatingUnitedStates implements AdditionalDataHolder, Bac
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MediaContentRatingUnitedStates
+     * @return a {@link MediaContentRatingUnitedStates}
      */
     @jakarta.annotation.Nonnull
     public static MediaContentRatingUnitedStates createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class MediaContentRatingUnitedStates implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class MediaContentRatingUnitedStates implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class MediaContentRatingUnitedStates implements AdditionalDataHolder, Bac
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class MediaContentRatingUnitedStates implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the movieRating property value. Movies rating labels in United States
-     * @return a RatingUnitedStatesMoviesType
+     * @return a {@link RatingUnitedStatesMoviesType}
      */
     @jakarta.annotation.Nullable
     public RatingUnitedStatesMoviesType getMovieRating() {
@@ -77,7 +77,7 @@ public class MediaContentRatingUnitedStates implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -85,7 +85,7 @@ public class MediaContentRatingUnitedStates implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the tvRating property value. TV content rating labels in United States
-     * @return a RatingUnitedStatesTelevisionType
+     * @return a {@link RatingUnitedStatesTelevisionType}
      */
     @jakarta.annotation.Nullable
     public RatingUnitedStatesTelevisionType getTvRating() {

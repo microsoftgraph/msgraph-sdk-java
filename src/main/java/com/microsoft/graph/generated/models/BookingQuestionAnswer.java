@@ -18,7 +18,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new BookingQuestionAnswer and sets the default values.
+     * Instantiates a new {@link BookingQuestionAnswer} and sets the default values.
      */
     public BookingQuestionAnswer() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel,
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BookingQuestionAnswer
+     * @return a {@link BookingQuestionAnswer}
      */
     @jakarta.annotation.Nonnull
     public static BookingQuestionAnswer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the answer property value. The answer given by the user in case the answerInputType is text.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAnswer() {
@@ -57,7 +57,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the answerInputType property value. The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
-     * @return a AnswerInputType
+     * @return a {@link AnswerInputType}
      */
     @jakarta.annotation.Nullable
     public AnswerInputType getAnswerInputType() {
@@ -65,7 +65,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the answerOptions property value. In case the answerInputType is radioButton, this will consists of a list of possible answer values.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAnswerOptions() {
@@ -73,7 +73,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -81,7 +81,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel,
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -98,7 +98,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the isRequired property value. Indicates whether it is mandatory to answer the custom question.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRequired() {
@@ -106,7 +106,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -114,7 +114,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the question property value. The question.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getQuestion() {
@@ -122,7 +122,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the questionId property value. The ID of the custom question.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getQuestionId() {
@@ -130,7 +130,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the selectedOptions property value. The answers selected by the user.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSelectedOptions() {

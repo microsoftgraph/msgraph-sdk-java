@@ -18,7 +18,7 @@ public class GeoCoordinates implements AdditionalDataHolder, BackedModel, Parsab
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new GeoCoordinates and sets the default values.
+     * Instantiates a new {@link GeoCoordinates} and sets the default values.
      */
     public GeoCoordinates() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class GeoCoordinates implements AdditionalDataHolder, BackedModel, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GeoCoordinates
+     * @return a {@link GeoCoordinates}
      */
     @jakarta.annotation.Nonnull
     public static GeoCoordinates createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class GeoCoordinates implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class GeoCoordinates implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the altitude property value. Optional. The altitude (height), in feet,  above sea level for the item. Read-only.
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getAltitude() {
@@ -57,7 +57,7 @@ public class GeoCoordinates implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class GeoCoordinates implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class GeoCoordinates implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the latitude property value. Optional. The latitude, in decimal, for the item. Read-only.
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getLatitude() {
@@ -86,7 +86,7 @@ public class GeoCoordinates implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the longitude property value. Optional. The longitude, in decimal, for the item. Read-only.
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getLongitude() {
@@ -94,7 +94,7 @@ public class GeoCoordinates implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

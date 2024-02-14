@@ -19,7 +19,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Back
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SecureScoreControlStateUpdate and sets the default values.
+     * Instantiates a new {@link SecureScoreControlStateUpdate} and sets the default values.
      */
     public SecureScoreControlStateUpdate() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Back
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SecureScoreControlStateUpdate
+     * @return a {@link SecureScoreControlStateUpdate}
      */
     @jakarta.annotation.Nonnull
     public static SecureScoreControlStateUpdate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Back
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Back
     }
     /**
      * Gets the assignedTo property value. Assigns the control to the user who will take the action.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAssignedTo() {
@@ -58,7 +58,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Back
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -66,7 +66,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Back
     }
     /**
      * Gets the comment property value. Provides optional comment about the control.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getComment() {
@@ -74,7 +74,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Back
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -89,7 +89,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Back
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,7 +97,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Back
     }
     /**
      * Gets the state property value. State of the control, which can be modified via a PATCH command (for example, ignored, thirdParty).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getState() {
@@ -105,7 +105,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Back
     }
     /**
      * Gets the updatedBy property value. ID of the user who updated tenant state.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUpdatedBy() {
@@ -113,7 +113,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Back
     }
     /**
      * Gets the updatedDateTime property value. Time at which the control state was updated.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getUpdatedDateTime() {

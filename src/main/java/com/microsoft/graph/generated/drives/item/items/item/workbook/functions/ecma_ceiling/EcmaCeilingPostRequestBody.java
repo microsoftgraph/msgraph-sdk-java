@@ -19,7 +19,7 @@ public class EcmaCeilingPostRequestBody implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new EcmaCeilingPostRequestBody and sets the default values.
+     * Instantiates a new {@link EcmaCeilingPostRequestBody} and sets the default values.
      */
     public EcmaCeilingPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class EcmaCeilingPostRequestBody implements AdditionalDataHolder, BackedM
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EcmaCeilingPostRequestBody
+     * @return a {@link EcmaCeilingPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static EcmaCeilingPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class EcmaCeilingPostRequestBody implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class EcmaCeilingPostRequestBody implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class EcmaCeilingPostRequestBody implements AdditionalDataHolder, BackedM
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class EcmaCeilingPostRequestBody implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the number property value. The number property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getNumber() {
@@ -77,7 +77,7 @@ public class EcmaCeilingPostRequestBody implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the significance property value. The significance property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getSignificance() {

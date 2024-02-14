@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageAssignment extends Entity implements Parsable {
     /**
-     * Instantiates a new AccessPackageAssignment and sets the default values.
+     * Instantiates a new {@link AccessPackageAssignment} and sets the default values.
      */
     public AccessPackageAssignment() {
         super();
@@ -18,7 +18,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessPackageAssignment
+     * @return a {@link AccessPackageAssignment}
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackage property value. Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters.
-     * @return a AccessPackage
+     * @return a {@link AccessPackage}
      */
     @jakarta.annotation.Nullable
     public AccessPackage getAccessPackage() {
@@ -35,7 +35,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the assignmentPolicy property value. Read-only. Supports $filter (eq) on the id property and $expand query parameters.
-     * @return a AccessPackageAssignmentPolicy
+     * @return a {@link AccessPackageAssignmentPolicy}
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignmentPolicy getAssignmentPolicy() {
@@ -43,7 +43,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the customExtensionCalloutInstances property value. Information about all the custom extension calls that were made during the access package assignment workflow.
-     * @return a java.util.List<CustomExtensionCalloutInstance>
+     * @return a {@link java.util.List<CustomExtensionCalloutInstance>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomExtensionCalloutInstance> getCustomExtensionCalloutInstances() {
@@ -51,7 +51,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the expiredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpiredDateTime() {
@@ -59,7 +59,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -76,7 +76,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the schedule property value. When the access assignment is to be in place. Read-only.
-     * @return a EntitlementManagementSchedule
+     * @return a {@link EntitlementManagementSchedule}
      */
     @jakarta.annotation.Nullable
     public EntitlementManagementSchedule getSchedule() {
@@ -84,7 +84,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The state of the access package assignment. The possible values are: delivering, partiallyDelivered, delivered, expired, deliveryFailed, unknownFutureValue. Read-only. Supports $filter (eq).
-     * @return a AccessPackageAssignmentState
+     * @return a {@link AccessPackageAssignmentState}
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignmentState getState() {
@@ -92,7 +92,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
@@ -100,7 +100,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the target property value. The subject of the access package assignment. Read-only. Nullable. Supports $expand. Supports $filter (eq) on objectId.
-     * @return a AccessPackageSubject
+     * @return a {@link AccessPackageSubject}
      */
     @jakarta.annotation.Nullable
     public AccessPackageSubject getTarget() {

@@ -29,6 +29,7 @@ import java.util.Objects;
 public class DirectoryRoleItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the checkMemberGroups method.
+     * @return a {@link CheckMemberGroupsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CheckMemberGroupsRequestBuilder checkMemberGroups() {
@@ -36,6 +37,7 @@ public class DirectoryRoleItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the checkMemberObjects method.
+     * @return a {@link CheckMemberObjectsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CheckMemberObjectsRequestBuilder checkMemberObjects() {
@@ -43,6 +45,7 @@ public class DirectoryRoleItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getMemberGroups method.
+     * @return a {@link GetMemberGroupsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetMemberGroupsRequestBuilder getMemberGroups() {
@@ -50,6 +53,7 @@ public class DirectoryRoleItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getMemberObjects method.
+     * @return a {@link GetMemberObjectsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetMemberObjectsRequestBuilder getMemberObjects() {
@@ -57,6 +61,7 @@ public class DirectoryRoleItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the members property of the microsoft.graph.directoryRole entity.
+     * @return a {@link MembersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MembersRequestBuilder members() {
@@ -64,6 +69,7 @@ public class DirectoryRoleItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the restore method.
+     * @return a {@link RestoreRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RestoreRequestBuilder restore() {
@@ -71,13 +77,14 @@ public class DirectoryRoleItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the scopedMembers property of the microsoft.graph.directoryRole entity.
+     * @return a {@link ScopedMembersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ScopedMembersRequestBuilder scopedMembers() {
         return new ScopedMembersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new DirectoryRoleItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link DirectoryRoleItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -85,7 +92,7 @@ public class DirectoryRoleItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directoryRoles/{directoryRole%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new DirectoryRoleItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link DirectoryRoleItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -94,6 +101,7 @@ public class DirectoryRoleItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete entity from directoryRoles
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -101,17 +109,18 @@ public class DirectoryRoleItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete entity from directoryRoles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve the properties of a directoryRole object. The role must be activated in tenant for a successful response. You can use both the object ID and template ID of the directoryRole with this API. The template ID of a built-in role is immutable and can be seen in the role description on the Microsoft Entra admin center. For details, see Role template IDs.
-     * @return a DirectoryRole
+     * @return a {@link DirectoryRole}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/directoryrole-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -121,21 +130,22 @@ public class DirectoryRoleItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties of a directoryRole object. The role must be activated in tenant for a successful response. You can use both the object ID and template ID of the directoryRole with this API. The template ID of a built-in role is immutable and can be seen in the role description on the Microsoft Entra admin center. For details, see Role template IDs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DirectoryRole
+     * @return a {@link DirectoryRole}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/directoryrole-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectoryRole get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryRole::createFromDiscriminatorValue);
     }
     /**
      * Update entity in directoryRoles
      * @param body The request body
-     * @return a DirectoryRole
+     * @return a {@link DirectoryRole}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DirectoryRole patch(@jakarta.annotation.Nonnull final DirectoryRole body) {
@@ -145,20 +155,20 @@ public class DirectoryRoleItemRequestBuilder extends BaseRequestBuilder {
      * Update entity in directoryRoles
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DirectoryRole
+     * @return a {@link DirectoryRole}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DirectoryRole patch(@jakarta.annotation.Nonnull final DirectoryRole body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryRole::createFromDiscriminatorValue);
     }
     /**
      * Delete entity from directoryRoles
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -167,18 +177,18 @@ public class DirectoryRoleItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete entity from directoryRoles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/directoryRoles/{directoryRole%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Retrieve the properties of a directoryRole object. The role must be activated in tenant for a successful response. You can use both the object ID and template ID of the directoryRole with this API. The template ID of a built-in role is immutable and can be seen in the role description on the Microsoft Entra admin center. For details, see Role template IDs.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -187,7 +197,7 @@ public class DirectoryRoleItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties of a directoryRole object. The role must be activated in tenant for a successful response. You can use both the object ID and template ID of the directoryRole with this API. The template ID of a built-in role is immutable and can be seen in the role description on the Microsoft Entra admin center. For details, see Role template IDs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -199,7 +209,7 @@ public class DirectoryRoleItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update entity in directoryRoles
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DirectoryRole body) {
@@ -209,12 +219,12 @@ public class DirectoryRoleItemRequestBuilder extends BaseRequestBuilder {
      * Update entity in directoryRoles
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DirectoryRole body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/directoryRoles/{directoryRole%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -223,7 +233,7 @@ public class DirectoryRoleItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DirectoryRoleItemRequestBuilder
+     * @return a {@link DirectoryRoleItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DirectoryRoleItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -253,7 +263,7 @@ public class DirectoryRoleItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

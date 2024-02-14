@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnenoteOperation extends Operation implements Parsable {
     /**
-     * Instantiates a new OnenoteOperation and sets the default values.
+     * Instantiates a new {@link OnenoteOperation} and sets the default values.
      */
     public OnenoteOperation() {
         super();
@@ -17,7 +17,7 @@ public class OnenoteOperation extends Operation implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnenoteOperation
+     * @return a {@link OnenoteOperation}
      */
     @jakarta.annotation.Nonnull
     public static OnenoteOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class OnenoteOperation extends Operation implements Parsable {
     }
     /**
      * Gets the error property value. The error returned by the operation.
-     * @return a OnenoteOperationError
+     * @return a {@link OnenoteOperationError}
      */
     @jakarta.annotation.Nullable
     public OnenoteOperationError getError() {
@@ -34,7 +34,7 @@ public class OnenoteOperation extends Operation implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,7 +47,7 @@ public class OnenoteOperation extends Operation implements Parsable {
     }
     /**
      * Gets the percentComplete property value. The operation percent complete if the operation is still in running status.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPercentComplete() {
@@ -55,7 +55,7 @@ public class OnenoteOperation extends Operation implements Parsable {
     }
     /**
      * Gets the resourceId property value. The resource id.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {
@@ -63,7 +63,7 @@ public class OnenoteOperation extends Operation implements Parsable {
     }
     /**
      * Gets the resourceLocation property value. The resource URI for the object. For example, the resource URI for a copied page or section.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourceLocation() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationModule extends Entity implements Parsable {
     /**
-     * Instantiates a new EducationModule and sets the default values.
+     * Instantiates a new {@link EducationModule} and sets the default values.
      */
     public EducationModule() {
         super();
@@ -18,7 +18,7 @@ public class EducationModule extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationModule
+     * @return a {@link EducationModule}
      */
     @jakarta.annotation.Nonnull
     public static EducationModule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EducationModule extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The createdBy property
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -35,7 +35,7 @@ public class EducationModule extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The createdDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -43,7 +43,7 @@ public class EducationModule extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -51,7 +51,7 @@ public class EducationModule extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -59,7 +59,7 @@ public class EducationModule extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class EducationModule extends Entity implements Parsable {
     }
     /**
      * Gets the isPinned property value. The isPinned property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPinned() {
@@ -86,7 +86,7 @@ public class EducationModule extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The lastModifiedBy property
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -94,7 +94,7 @@ public class EducationModule extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -102,7 +102,7 @@ public class EducationModule extends Entity implements Parsable {
     }
     /**
      * Gets the resources property value. The resources property
-     * @return a java.util.List<EducationModuleResource>
+     * @return a {@link java.util.List<EducationModuleResource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationModuleResource> getResources() {
@@ -110,7 +110,7 @@ public class EducationModule extends Entity implements Parsable {
     }
     /**
      * Gets the resourcesFolderUrl property value. The resourcesFolderUrl property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourcesFolderUrl() {
@@ -118,7 +118,7 @@ public class EducationModule extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a EducationModuleStatus
+     * @return a {@link EducationModuleStatus}
      */
     @jakarta.annotation.Nullable
     public EducationModuleStatus getStatus() {

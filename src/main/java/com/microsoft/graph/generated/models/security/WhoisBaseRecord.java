@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WhoisBaseRecord extends Entity implements Parsable {
     /**
-     * Instantiates a new WhoisBaseRecord and sets the default values.
+     * Instantiates a new {@link WhoisBaseRecord} and sets the default values.
      */
     public WhoisBaseRecord() {
         super();
@@ -19,7 +19,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WhoisBaseRecord
+     * @return a {@link WhoisBaseRecord}
      */
     @jakarta.annotation.Nonnull
     public static WhoisBaseRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the abuse property value. The contact information for the abuse contact.
-     * @return a WhoisContact
+     * @return a {@link WhoisContact}
      */
     @jakarta.annotation.Nullable
     public WhoisContact getAbuse() {
@@ -44,7 +44,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the admin property value. The contact information for the admin contact.
-     * @return a WhoisContact
+     * @return a {@link WhoisContact}
      */
     @jakarta.annotation.Nullable
     public WhoisContact getAdmin() {
@@ -52,7 +52,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the billing property value. The contact information for the billing contact.
-     * @return a WhoisContact
+     * @return a {@link WhoisContact}
      */
     @jakarta.annotation.Nullable
     public WhoisContact getBilling() {
@@ -60,7 +60,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the domainStatus property value. The domain status for this WHOIS object.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDomainStatus() {
@@ -68,7 +68,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the expirationDateTime property value. The date and time when this WHOIS record expires with the registrar. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
@@ -76,7 +76,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -103,7 +103,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the firstSeenDateTime property value. The first seen date and time of this WHOIS record. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
@@ -111,7 +111,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the host property value. The host property
-     * @return a Host
+     * @return a {@link Host}
      */
     @jakarta.annotation.Nullable
     public Host getHost() {
@@ -119,7 +119,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the lastSeenDateTime property value. The last seen date and time of this WHOIS record. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
@@ -127,7 +127,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the lastUpdateDateTime property value. The date and time when this WHOIS record was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdateDateTime() {
@@ -135,7 +135,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the nameservers property value. The nameservers for this WHOIS object.
-     * @return a java.util.List<WhoisNameserver>
+     * @return a {@link java.util.List<WhoisNameserver>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WhoisNameserver> getNameservers() {
@@ -143,7 +143,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the noc property value. The contact information for the noc contact.
-     * @return a WhoisContact
+     * @return a {@link WhoisContact}
      */
     @jakarta.annotation.Nullable
     public WhoisContact getNoc() {
@@ -151,7 +151,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the rawWhoisText property value. The raw WHOIS details for this WHOIS object.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRawWhoisText() {
@@ -159,7 +159,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the registrant property value. The contact information for the registrant contact.
-     * @return a WhoisContact
+     * @return a {@link WhoisContact}
      */
     @jakarta.annotation.Nullable
     public WhoisContact getRegistrant() {
@@ -167,7 +167,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the registrar property value. The contact information for the registrar contact.
-     * @return a WhoisContact
+     * @return a {@link WhoisContact}
      */
     @jakarta.annotation.Nullable
     public WhoisContact getRegistrar() {
@@ -175,7 +175,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the registrationDateTime property value. The date and time when this WHOIS record was registered with a registrar. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRegistrationDateTime() {
@@ -183,7 +183,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the technical property value. The contact information for the technical contact.
-     * @return a WhoisContact
+     * @return a {@link WhoisContact}
      */
     @jakarta.annotation.Nullable
     public WhoisContact getTechnical() {
@@ -191,7 +191,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the whoisServer property value. The WHOIS server that provides the details.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWhoisServer() {
@@ -199,7 +199,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the zone property value. The contact information for the zone contact.
-     * @return a WhoisContact
+     * @return a {@link WhoisContact}
      */
     @jakarta.annotation.Nullable
     public WhoisContact getZone() {

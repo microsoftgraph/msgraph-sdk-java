@@ -20,7 +20,7 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new WorkflowBase and sets the default values.
+     * Instantiates a new {@link WorkflowBase} and sets the default values.
      */
     public WorkflowBase() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -29,7 +29,7 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkflowBase
+     * @return a {@link WorkflowBase}
      */
     @jakarta.annotation.Nonnull
     public static WorkflowBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -59,7 +59,7 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -67,7 +67,7 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the category property value. The category property
-     * @return a LifecycleWorkflowCategory
+     * @return a {@link LifecycleWorkflowCategory}
      */
     @jakarta.annotation.Nullable
     public LifecycleWorkflowCategory getCategory() {
@@ -75,7 +75,7 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the createdBy property value. The user who created the workflow.
-     * @return a User
+     * @return a {@link User}
      */
     @jakarta.annotation.Nullable
     public User getCreatedBy() {
@@ -83,7 +83,7 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the createdDateTime property value. When a workflow was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -91,7 +91,7 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the description property value. A string that describes the purpose of the workflow.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -99,7 +99,7 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the displayName property value. A string to identify the workflow.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -107,7 +107,7 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the executionConditions property value. Defines when and for who the workflow will run.
-     * @return a WorkflowExecutionConditions
+     * @return a {@link WorkflowExecutionConditions}
      */
     @jakarta.annotation.Nullable
     public WorkflowExecutionConditions getExecutionConditions() {
@@ -115,7 +115,7 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -136,7 +136,7 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the isEnabled property value. Whether the workflow is enabled or disabled. If this setting is true, the workflow can be run on demand or on schedule when isSchedulingEnabled is true.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -144,7 +144,7 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the isSchedulingEnabled property value. If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Can't be true for a disabled workflow (where isEnabled is false).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSchedulingEnabled() {
@@ -152,7 +152,7 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the lastModifiedBy property value. The unique identifier of the Microsoft Entra identity that last modified the workflow.
-     * @return a User
+     * @return a {@link User}
      */
     @jakarta.annotation.Nullable
     public User getLastModifiedBy() {
@@ -160,7 +160,7 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the lastModifiedDateTime property value. When the workflow was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -168,7 +168,7 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -176,7 +176,7 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the tasks property value. The tasks in the workflow.
-     * @return a java.util.List<Task>
+     * @return a {@link java.util.List<Task>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Task> getTasks() {

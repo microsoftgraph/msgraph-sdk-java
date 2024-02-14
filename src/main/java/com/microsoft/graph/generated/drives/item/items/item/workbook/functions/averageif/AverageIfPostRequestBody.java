@@ -19,7 +19,7 @@ public class AverageIfPostRequestBody implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AverageIfPostRequestBody and sets the default values.
+     * Instantiates a new {@link AverageIfPostRequestBody} and sets the default values.
      */
     public AverageIfPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class AverageIfPostRequestBody implements AdditionalDataHolder, BackedMod
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AverageIfPostRequestBody
+     * @return a {@link AverageIfPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static AverageIfPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class AverageIfPostRequestBody implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class AverageIfPostRequestBody implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the averageRange property value. The averageRange property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getAverageRange() {
@@ -58,7 +58,7 @@ public class AverageIfPostRequestBody implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -66,7 +66,7 @@ public class AverageIfPostRequestBody implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the criteria property value. The criteria property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getCriteria() {
@@ -74,7 +74,7 @@ public class AverageIfPostRequestBody implements AdditionalDataHolder, BackedMod
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -86,7 +86,7 @@ public class AverageIfPostRequestBody implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the range property value. The range property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getRange() {

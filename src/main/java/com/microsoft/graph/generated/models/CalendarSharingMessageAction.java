@@ -18,7 +18,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new CalendarSharingMessageAction and sets the default values.
+     * Instantiates a new {@link CalendarSharingMessageAction} and sets the default values.
      */
     public CalendarSharingMessageAction() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Backe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CalendarSharingMessageAction
+     * @return a {@link CalendarSharingMessageAction}
      */
     @jakarta.annotation.Nonnull
     public static CalendarSharingMessageAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the action property value. The action property
-     * @return a CalendarSharingAction
+     * @return a {@link CalendarSharingAction}
      */
     @jakarta.annotation.Nullable
     public CalendarSharingAction getAction() {
@@ -44,7 +44,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the actionType property value. The actionType property
-     * @return a CalendarSharingActionType
+     * @return a {@link CalendarSharingActionType}
      */
     @jakarta.annotation.Nullable
     public CalendarSharingActionType getActionType() {
@@ -52,7 +52,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -65,7 +65,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -73,7 +73,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Backe
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -86,7 +86,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the importance property value. The importance property
-     * @return a CalendarSharingActionImportance
+     * @return a {@link CalendarSharingActionImportance}
      */
     @jakarta.annotation.Nullable
     public CalendarSharingActionImportance getImportance() {
@@ -94,7 +94,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

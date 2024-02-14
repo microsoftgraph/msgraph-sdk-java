@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new Windows10TeamGeneralConfiguration and sets the default values.
+     * Instantiates a new {@link Windows10TeamGeneralConfiguration} and sets the default values.
      */
     public Windows10TeamGeneralConfiguration() {
         super();
@@ -22,7 +22,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Windows10TeamGeneralConfiguration
+     * @return a {@link Windows10TeamGeneralConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static Windows10TeamGeneralConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the azureOperationalInsightsBlockTelemetry property value. Indicates whether or not to Block Azure Operational Insights.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAzureOperationalInsightsBlockTelemetry() {
@@ -39,7 +39,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the azureOperationalInsightsWorkspaceId property value. The Azure Operational Insights workspace id.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureOperationalInsightsWorkspaceId() {
@@ -47,7 +47,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the azureOperationalInsightsWorkspaceKey property value. The Azure Operational Insights Workspace key.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureOperationalInsightsWorkspaceKey() {
@@ -55,7 +55,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the connectAppBlockAutoLaunch property value. Specifies whether to automatically launch the Connect app whenever a projection is initiated.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectAppBlockAutoLaunch() {
@@ -63,7 +63,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -92,7 +92,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the maintenanceWindowBlocked property value. Indicates whether or not to Block setting a maintenance window for device updates.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getMaintenanceWindowBlocked() {
@@ -100,7 +100,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the maintenanceWindowDurationInHours property value. Maintenance window duration for device updates. Valid values 0 to 5
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMaintenanceWindowDurationInHours() {
@@ -108,7 +108,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the maintenanceWindowStartTime property value. Maintenance window start time for device updates.
-     * @return a LocalTime
+     * @return a {@link LocalTime}
      */
     @jakarta.annotation.Nullable
     public LocalTime getMaintenanceWindowStartTime() {
@@ -116,7 +116,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the miracastBlocked property value. Indicates whether or not to Block wireless projection.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getMiracastBlocked() {
@@ -124,7 +124,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the miracastChannel property value. Possible values for Miracast channel.
-     * @return a MiracastChannel
+     * @return a {@link MiracastChannel}
      */
     @jakarta.annotation.Nullable
     public MiracastChannel getMiracastChannel() {
@@ -132,7 +132,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the miracastRequirePin property value. Indicates whether or not to require a pin for wireless projection.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getMiracastRequirePin() {
@@ -140,7 +140,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the settingsBlockMyMeetingsAndFiles property value. Specifies whether to disable the 'My meetings and files' feature in the Start menu, which shows the signed-in user's meetings and files from Office 365.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSettingsBlockMyMeetingsAndFiles() {
@@ -148,7 +148,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the settingsBlockSessionResume property value. Specifies whether to allow the ability to resume a session when the session times out.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSettingsBlockSessionResume() {
@@ -156,7 +156,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the settingsBlockSigninSuggestions property value. Specifies whether to disable auto-populating of the sign-in dialog with invitees from scheduled meetings.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSettingsBlockSigninSuggestions() {
@@ -164,7 +164,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the settingsDefaultVolume property value. Specifies the default volume value for a new session. Permitted values are 0-100. The default is 45. Valid values 0 to 100
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSettingsDefaultVolume() {
@@ -172,7 +172,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the settingsScreenTimeoutInMinutes property value. Specifies the number of minutes until the Hub screen turns off.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSettingsScreenTimeoutInMinutes() {
@@ -180,7 +180,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the settingsSessionTimeoutInMinutes property value. Specifies the number of minutes until the session times out.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSettingsSessionTimeoutInMinutes() {
@@ -188,7 +188,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the settingsSleepTimeoutInMinutes property value. Specifies the number of minutes until the Hub enters sleep mode.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSettingsSleepTimeoutInMinutes() {
@@ -196,7 +196,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the welcomeScreenBackgroundImageUrl property value. The welcome screen background image URL. The URL must use the HTTPS protocol and return a PNG image.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWelcomeScreenBackgroundImageUrl() {
@@ -204,7 +204,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the welcomeScreenBlockAutomaticWakeUp property value. Indicates whether or not to Block the welcome screen from waking up automatically when someone enters the room.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getWelcomeScreenBlockAutomaticWakeUp() {
@@ -212,7 +212,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the welcomeScreenMeetingInformation property value. Possible values for welcome screen meeting information.
-     * @return a WelcomeScreenMeetingInformation
+     * @return a {@link WelcomeScreenMeetingInformation}
      */
     @jakarta.annotation.Nullable
     public WelcomeScreenMeetingInformation getWelcomeScreenMeetingInformation() {

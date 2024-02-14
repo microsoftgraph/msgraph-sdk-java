@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TermsOfUseContainer extends Entity implements Parsable {
     /**
-     * Instantiates a new TermsOfUseContainer and sets the default values.
+     * Instantiates a new {@link TermsOfUseContainer} and sets the default values.
      */
     public TermsOfUseContainer() {
         super();
@@ -17,7 +17,7 @@ public class TermsOfUseContainer extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TermsOfUseContainer
+     * @return a {@link TermsOfUseContainer}
      */
     @jakarta.annotation.Nonnull
     public static TermsOfUseContainer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class TermsOfUseContainer extends Entity implements Parsable {
     }
     /**
      * Gets the agreementAcceptances property value. Represents the current status of a user's response to a company's customizable terms of use agreement.
-     * @return a java.util.List<AgreementAcceptance>
+     * @return a {@link java.util.List<AgreementAcceptance>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AgreementAcceptance> getAgreementAcceptances() {
@@ -34,7 +34,7 @@ public class TermsOfUseContainer extends Entity implements Parsable {
     }
     /**
      * Gets the agreements property value. Represents a tenant's customizable terms of use agreement that's created and managed with Microsoft Entra ID Governance.
-     * @return a java.util.List<Agreement>
+     * @return a {@link java.util.List<Agreement>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Agreement> getAgreements() {
@@ -42,7 +42,7 @@ public class TermsOfUseContainer extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

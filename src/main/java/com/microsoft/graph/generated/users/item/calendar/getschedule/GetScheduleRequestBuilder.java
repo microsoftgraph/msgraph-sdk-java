@@ -19,7 +19,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetScheduleRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new GetScheduleRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetScheduleRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -27,7 +27,7 @@ public class GetScheduleRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendar/getSchedule", pathParameters);
     }
     /**
-     * Instantiates a new GetScheduleRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetScheduleRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,7 +37,8 @@ public class GetScheduleRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the free/busy availability information for a collection of users, distributions lists, or resources (rooms or equipment) for a specified time period.
      * @param body The request body
-     * @return a GetSchedulePostResponse
+     * @return a {@link GetSchedulePostResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/calendar-getschedule?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -48,7 +49,8 @@ public class GetScheduleRequestBuilder extends BaseRequestBuilder {
      * Get the free/busy availability information for a collection of users, distributions lists, or resources (rooms or equipment) for a specified time period.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a GetSchedulePostResponse
+     * @return a {@link GetSchedulePostResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/calendar-getschedule?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -56,14 +58,13 @@ public class GetScheduleRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, GetSchedulePostResponse::createFromDiscriminatorValue);
     }
     /**
      * Get the free/busy availability information for a collection of users, distributions lists, or resources (rooms or equipment) for a specified time period.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final GetSchedulePostRequestBody body) {
@@ -73,7 +74,7 @@ public class GetScheduleRequestBuilder extends BaseRequestBuilder {
      * Get the free/busy availability information for a collection of users, distributions lists, or resources (rooms or equipment) for a specified time period.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final GetSchedulePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -87,7 +88,7 @@ public class GetScheduleRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GetScheduleRequestBuilder
+     * @return a {@link GetScheduleRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetScheduleRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

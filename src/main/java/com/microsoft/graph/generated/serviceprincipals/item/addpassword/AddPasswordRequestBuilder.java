@@ -20,7 +20,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AddPasswordRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new AddPasswordRequestBuilder and sets the default values.
+     * Instantiates a new {@link AddPasswordRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -28,7 +28,7 @@ public class AddPasswordRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/addPassword", pathParameters);
     }
     /**
-     * Instantiates a new AddPasswordRequestBuilder and sets the default values.
+     * Instantiates a new {@link AddPasswordRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -38,7 +38,8 @@ public class AddPasswordRequestBuilder extends BaseRequestBuilder {
     /**
      * Add a strong password or secret to a servicePrincipal object.
      * @param body The request body
-     * @return a PasswordCredential
+     * @return a {@link PasswordCredential}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-addpassword?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -49,7 +50,8 @@ public class AddPasswordRequestBuilder extends BaseRequestBuilder {
      * Add a strong password or secret to a servicePrincipal object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PasswordCredential
+     * @return a {@link PasswordCredential}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-addpassword?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -57,14 +59,13 @@ public class AddPasswordRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PasswordCredential::createFromDiscriminatorValue);
     }
     /**
      * Add a strong password or secret to a servicePrincipal object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AddPasswordPostRequestBody body) {
@@ -74,7 +75,7 @@ public class AddPasswordRequestBuilder extends BaseRequestBuilder {
      * Add a strong password or secret to a servicePrincipal object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AddPasswordPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -88,7 +89,7 @@ public class AddPasswordRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AddPasswordRequestBuilder
+     * @return a {@link AddPasswordRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AddPasswordRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

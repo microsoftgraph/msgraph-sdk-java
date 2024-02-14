@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AzureUsage extends Entity implements Parsable {
     /**
-     * Instantiates a new AzureUsage and sets the default values.
+     * Instantiates a new {@link AzureUsage} and sets the default values.
      */
     public AzureUsage() {
         super();
@@ -18,7 +18,7 @@ public class AzureUsage extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AzureUsage
+     * @return a {@link AzureUsage}
      */
     @jakarta.annotation.Nonnull
     public static AzureUsage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AzureUsage extends Entity implements Parsable {
     }
     /**
      * Gets the billed property value. The billed property
-     * @return a BilledUsage
+     * @return a {@link BilledUsage}
      */
     @jakarta.annotation.Nullable
     public BilledUsage getBilled() {
@@ -35,7 +35,7 @@ public class AzureUsage extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class AzureUsage extends Entity implements Parsable {
     }
     /**
      * Gets the unbilled property value. The unbilled property
-     * @return a UnbilledUsage
+     * @return a {@link UnbilledUsage}
      */
     @jakarta.annotation.Nullable
     public UnbilledUsage getUnbilled() {

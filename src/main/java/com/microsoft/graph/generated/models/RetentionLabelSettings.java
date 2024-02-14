@@ -19,7 +19,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new RetentionLabelSettings and sets the default values.
+     * Instantiates a new {@link RetentionLabelSettings} and sets the default values.
      */
     public RetentionLabelSettings() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, BackedModel
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RetentionLabelSettings
+     * @return a {@link RetentionLabelSettings}
      */
     @jakarta.annotation.Nonnull
     public static RetentionLabelSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the behaviorDuringRetentionPeriod property value. Describes the item behavior during retention period. Possible values are: doNotRetain, retain, retainAsRecord, retainAsRegulatoryRecord, unknownFutureValue. Read-only.
-     * @return a BehaviorDuringRetentionPeriod
+     * @return a {@link BehaviorDuringRetentionPeriod}
      */
     @jakarta.annotation.Nullable
     public BehaviorDuringRetentionPeriod getBehaviorDuringRetentionPeriod() {
@@ -66,7 +66,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, BackedModel
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -82,7 +82,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the isContentUpdateAllowed property value. Specifies whether updates to document content are allowed. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsContentUpdateAllowed() {
@@ -90,7 +90,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the isDeleteAllowed property value. Specifies whether the document deletion is allowed. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeleteAllowed() {
@@ -98,7 +98,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the isLabelUpdateAllowed property value. Specifies whether you're allowed to change the retention label on the document. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsLabelUpdateAllowed() {
@@ -106,7 +106,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the isMetadataUpdateAllowed property value. Specifies whether updates to the item metadata (for example, the Title field) are blocked. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMetadataUpdateAllowed() {
@@ -114,7 +114,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the isRecordLocked property value. Specifies whether the item is locked. Read-write.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRecordLocked() {
@@ -122,7 +122,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

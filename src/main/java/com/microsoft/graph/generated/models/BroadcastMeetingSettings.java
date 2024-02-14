@@ -18,7 +18,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new BroadcastMeetingSettings and sets the default values.
+     * Instantiates a new {@link BroadcastMeetingSettings} and sets the default values.
      */
     public BroadcastMeetingSettings() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, BackedMod
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BroadcastMeetingSettings
+     * @return a {@link BroadcastMeetingSettings}
      */
     @jakarta.annotation.Nonnull
     public static BroadcastMeetingSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the allowedAudience property value. Defines who can join the Teams live event. Possible values are listed in the following table.
-     * @return a BroadcastMeetingAudience
+     * @return a {@link BroadcastMeetingAudience}
      */
     @jakarta.annotation.Nullable
     public BroadcastMeetingAudience getAllowedAudience() {
@@ -57,7 +57,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the captions property value. Caption settings of a Teams live event.
-     * @return a BroadcastMeetingCaptionSettings
+     * @return a {@link BroadcastMeetingCaptionSettings}
      */
     @jakarta.annotation.Nullable
     public BroadcastMeetingCaptionSettings getCaptions() {
@@ -73,7 +73,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -89,7 +89,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the isAttendeeReportEnabled property value. Indicates whether attendee report is enabled for this Teams live event. Default value is false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAttendeeReportEnabled() {
@@ -97,7 +97,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the isQuestionAndAnswerEnabled property value. Indicates whether Q&A is enabled for this Teams live event. Default value is false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsQuestionAndAnswerEnabled() {
@@ -105,7 +105,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the isRecordingEnabled property value. Indicates whether recording is enabled for this Teams live event. Default value is false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRecordingEnabled() {
@@ -113,7 +113,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the isVideoOnDemandEnabled property value. Indicates whether video on demand is enabled for this Teams live event. Default value is false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsVideoOnDemandEnabled() {
@@ -121,7 +121,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

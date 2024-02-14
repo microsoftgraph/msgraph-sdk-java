@@ -18,7 +18,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ParseExpressionResponse and sets the default values.
+     * Instantiates a new {@link ParseExpressionResponse} and sets the default values.
      */
     public ParseExpressionResponse() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, BackedMode
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ParseExpressionResponse
+     * @return a {@link ParseExpressionResponse}
      */
     @jakarta.annotation.Nonnull
     public static ParseExpressionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the error property value. Error details, if expression evaluation resulted in an error.
-     * @return a PublicError
+     * @return a {@link PublicError}
      */
     @jakarta.annotation.Nullable
     public PublicError getError() {
@@ -65,7 +65,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the evaluationResult property value. A collection of values produced by the evaluation of the expression.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEvaluationResult() {
@@ -73,7 +73,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the evaluationSucceeded property value. true if the evaluation was successful.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEvaluationSucceeded() {
@@ -81,7 +81,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, BackedMode
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -96,7 +96,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -104,7 +104,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the parsedExpression property value. An attributeMappingSource object representing the parsed expression.
-     * @return a AttributeMappingSource
+     * @return a {@link AttributeMappingSource}
      */
     @jakarta.annotation.Nullable
     public AttributeMappingSource getParsedExpression() {
@@ -112,7 +112,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the parsingSucceeded property value. true if the expression was parsed successfully.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getParsingSucceeded() {

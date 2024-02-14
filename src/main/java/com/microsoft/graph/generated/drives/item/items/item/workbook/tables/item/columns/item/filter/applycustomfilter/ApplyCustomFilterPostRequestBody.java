@@ -18,7 +18,7 @@ public class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, B
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ApplyCustomFilterPostRequestBody and sets the default values.
+     * Instantiates a new {@link ApplyCustomFilterPostRequestBody} and sets the default values.
      */
     public ApplyCustomFilterPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, B
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ApplyCustomFilterPostRequestBody
+     * @return a {@link ApplyCustomFilterPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static ApplyCustomFilterPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, B
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, B
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, B
     }
     /**
      * Gets the criteria1 property value. The criteria1 property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCriteria1() {
@@ -65,7 +65,7 @@ public class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, B
     }
     /**
      * Gets the criteria2 property value. The criteria2 property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCriteria2() {
@@ -73,7 +73,7 @@ public class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, B
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -85,7 +85,7 @@ public class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, B
     }
     /**
      * Gets the oper property value. The oper property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOper() {

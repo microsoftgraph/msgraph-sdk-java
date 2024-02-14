@@ -41,6 +41,7 @@ import java.util.Objects;
 public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the exportJobs property of the microsoft.graph.deviceManagementReports entity.
+     * @return a {@link ExportJobsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExportJobsRequestBuilder exportJobs() {
@@ -48,6 +49,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getCachedReport method.
+     * @return a {@link GetCachedReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetCachedReportRequestBuilder getCachedReport() {
@@ -55,6 +57,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getCompliancePolicyNonComplianceReport method.
+     * @return a {@link GetCompliancePolicyNonComplianceReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetCompliancePolicyNonComplianceReportRequestBuilder getCompliancePolicyNonComplianceReport() {
@@ -62,6 +65,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getCompliancePolicyNonComplianceSummaryReport method.
+     * @return a {@link GetCompliancePolicyNonComplianceSummaryReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetCompliancePolicyNonComplianceSummaryReportRequestBuilder getCompliancePolicyNonComplianceSummaryReport() {
@@ -69,6 +73,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getComplianceSettingNonComplianceReport method.
+     * @return a {@link GetComplianceSettingNonComplianceReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetComplianceSettingNonComplianceReportRequestBuilder getComplianceSettingNonComplianceReport() {
@@ -76,6 +81,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getConfigurationPolicyNonComplianceReport method.
+     * @return a {@link GetConfigurationPolicyNonComplianceReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetConfigurationPolicyNonComplianceReportRequestBuilder getConfigurationPolicyNonComplianceReport() {
@@ -83,6 +89,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getConfigurationPolicyNonComplianceSummaryReport method.
+     * @return a {@link GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder getConfigurationPolicyNonComplianceSummaryReport() {
@@ -90,6 +97,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getConfigurationSettingNonComplianceReport method.
+     * @return a {@link GetConfigurationSettingNonComplianceReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetConfigurationSettingNonComplianceReportRequestBuilder getConfigurationSettingNonComplianceReport() {
@@ -97,6 +105,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getDeviceManagementIntentPerSettingContributingProfiles method.
+     * @return a {@link GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder getDeviceManagementIntentPerSettingContributingProfiles() {
@@ -104,6 +113,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getDeviceManagementIntentSettingsReport method.
+     * @return a {@link GetDeviceManagementIntentSettingsReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetDeviceManagementIntentSettingsReportRequestBuilder getDeviceManagementIntentSettingsReport() {
@@ -111,6 +121,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getDeviceNonComplianceReport method.
+     * @return a {@link GetDeviceNonComplianceReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetDeviceNonComplianceReportRequestBuilder getDeviceNonComplianceReport() {
@@ -118,6 +129,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getDevicesWithoutCompliancePolicyReport method.
+     * @return a {@link GetDevicesWithoutCompliancePolicyReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetDevicesWithoutCompliancePolicyReportRequestBuilder getDevicesWithoutCompliancePolicyReport() {
@@ -125,6 +137,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getHistoricalReport method.
+     * @return a {@link GetHistoricalReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetHistoricalReportRequestBuilder getHistoricalReport() {
@@ -132,6 +145,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getNoncompliantDevicesAndSettingsReport method.
+     * @return a {@link GetNoncompliantDevicesAndSettingsReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetNoncompliantDevicesAndSettingsReportRequestBuilder getNoncompliantDevicesAndSettingsReport() {
@@ -139,6 +153,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getPolicyNonComplianceMetadata method.
+     * @return a {@link GetPolicyNonComplianceMetadataRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetPolicyNonComplianceMetadataRequestBuilder getPolicyNonComplianceMetadata() {
@@ -146,6 +161,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getPolicyNonComplianceReport method.
+     * @return a {@link GetPolicyNonComplianceReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetPolicyNonComplianceReportRequestBuilder getPolicyNonComplianceReport() {
@@ -153,6 +169,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getPolicyNonComplianceSummaryReport method.
+     * @return a {@link GetPolicyNonComplianceSummaryReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetPolicyNonComplianceSummaryReportRequestBuilder getPolicyNonComplianceSummaryReport() {
@@ -160,6 +177,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getReportFilters method.
+     * @return a {@link GetReportFiltersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetReportFiltersRequestBuilder getReportFilters() {
@@ -167,13 +185,14 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getSettingNonComplianceReport method.
+     * @return a {@link GetSettingNonComplianceReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetSettingNonComplianceReportRequestBuilder getSettingNonComplianceReport() {
         return new GetSettingNonComplianceReportRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new ReportsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ReportsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -181,7 +200,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/reports{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new ReportsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ReportsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -190,6 +209,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property reports for deviceManagement
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -197,17 +217,18 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property reports for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read properties and relationships of the deviceManagementReports object.
-     * @return a DeviceManagementReports
+     * @return a {@link DeviceManagementReports}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementreports-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -217,21 +238,22 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read properties and relationships of the deviceManagementReports object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceManagementReports
+     * @return a {@link DeviceManagementReports}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementreports-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceManagementReports get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementReports::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of a deviceManagementReports object.
      * @param body The request body
-     * @return a DeviceManagementReports
+     * @return a {@link DeviceManagementReports}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementreports-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -242,7 +264,8 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a deviceManagementReports object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceManagementReports
+     * @return a {@link DeviceManagementReports}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementreports-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -250,13 +273,12 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementReports::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property reports for deviceManagement
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -265,18 +287,18 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property reports for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/deviceManagement/reports", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Read properties and relationships of the deviceManagementReports object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -285,7 +307,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read properties and relationships of the deviceManagementReports object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -297,7 +319,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a deviceManagementReports object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceManagementReports body) {
@@ -307,12 +329,12 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a deviceManagementReports object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceManagementReports body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/deviceManagement/reports", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -321,7 +343,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ReportsRequestBuilder
+     * @return a {@link ReportsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReportsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -351,7 +373,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

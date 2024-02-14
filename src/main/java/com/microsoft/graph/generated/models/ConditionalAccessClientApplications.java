@@ -18,7 +18,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ConditionalAccessClientApplications and sets the default values.
+     * Instantiates a new {@link ConditionalAccessClientApplications} and sets the default values.
      */
     public ConditionalAccessClientApplications() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConditionalAccessClientApplications
+     * @return a {@link ConditionalAccessClientApplications}
      */
     @jakarta.annotation.Nonnull
     public static ConditionalAccessClientApplications createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
     }
     /**
      * Gets the excludeServicePrincipals property value. Service principal IDs excluded from the policy scope.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExcludeServicePrincipals() {
@@ -65,7 +65,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
     }
     /**
      * Gets the includeServicePrincipals property value. Service principal IDs included in the policy scope, or ServicePrincipalsInMyTenant.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getIncludeServicePrincipals() {
@@ -86,7 +86,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -94,7 +94,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
     }
     /**
      * Gets the servicePrincipalFilter property value. The servicePrincipalFilter property
-     * @return a ConditionalAccessFilter
+     * @return a {@link ConditionalAccessFilter}
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessFilter getServicePrincipalFilter() {

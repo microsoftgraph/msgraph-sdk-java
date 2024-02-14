@@ -19,7 +19,7 @@ public class ScheduleEntity implements AdditionalDataHolder, BackedModel, Parsab
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ScheduleEntity and sets the default values.
+     * Instantiates a new {@link ScheduleEntity} and sets the default values.
      */
     public ScheduleEntity() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class ScheduleEntity implements AdditionalDataHolder, BackedModel, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ScheduleEntity
+     * @return a {@link ScheduleEntity}
      */
     @jakarta.annotation.Nonnull
     public static ScheduleEntity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class ScheduleEntity implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -59,7 +59,7 @@ public class ScheduleEntity implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -67,7 +67,7 @@ public class ScheduleEntity implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the endDateTime property value. The endDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
@@ -75,7 +75,7 @@ public class ScheduleEntity implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -88,7 +88,7 @@ public class ScheduleEntity implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -96,7 +96,7 @@ public class ScheduleEntity implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the startDateTime property value. The startDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
@@ -104,7 +104,7 @@ public class ScheduleEntity implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the theme property value. The theme property
-     * @return a ScheduleEntityTheme
+     * @return a {@link ScheduleEntityTheme}
      */
     @jakarta.annotation.Nullable
     public ScheduleEntityTheme getTheme() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintTaskDefinition extends Entity implements Parsable {
     /**
-     * Instantiates a new PrintTaskDefinition and sets the default values.
+     * Instantiates a new {@link PrintTaskDefinition} and sets the default values.
      */
     public PrintTaskDefinition() {
         super();
@@ -17,7 +17,7 @@ public class PrintTaskDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrintTaskDefinition
+     * @return a {@link PrintTaskDefinition}
      */
     @jakarta.annotation.Nonnull
     public static PrintTaskDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class PrintTaskDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The createdBy property
-     * @return a AppIdentity
+     * @return a {@link AppIdentity}
      */
     @jakarta.annotation.Nullable
     public AppIdentity getCreatedBy() {
@@ -34,7 +34,7 @@ public class PrintTaskDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the printTaskDefinition.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -42,7 +42,7 @@ public class PrintTaskDefinition extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -54,7 +54,7 @@ public class PrintTaskDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the tasks property value. A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
-     * @return a java.util.List<PrintTask>
+     * @return a {@link java.util.List<PrintTask>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintTask> getTasks() {

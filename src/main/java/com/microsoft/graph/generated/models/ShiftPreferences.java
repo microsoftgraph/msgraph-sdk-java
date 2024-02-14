@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ShiftPreferences extends ChangeTrackedEntity implements Parsable {
     /**
-     * Instantiates a new ShiftPreferences and sets the default values.
+     * Instantiates a new {@link ShiftPreferences} and sets the default values.
      */
     public ShiftPreferences() {
         super();
@@ -18,7 +18,7 @@ public class ShiftPreferences extends ChangeTrackedEntity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ShiftPreferences
+     * @return a {@link ShiftPreferences}
      */
     @jakarta.annotation.Nonnull
     public static ShiftPreferences createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ShiftPreferences extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the availability property value. Availability of the user to be scheduled for work and its recurrence pattern.
-     * @return a java.util.List<ShiftAvailability>
+     * @return a {@link java.util.List<ShiftAvailability>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ShiftAvailability> getAvailability() {
@@ -35,7 +35,7 @@ public class ShiftPreferences extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

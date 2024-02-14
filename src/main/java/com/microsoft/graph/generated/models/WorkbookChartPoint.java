@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartPoint extends Entity implements Parsable {
     /**
-     * Instantiates a new WorkbookChartPoint and sets the default values.
+     * Instantiates a new {@link WorkbookChartPoint} and sets the default values.
      */
     public WorkbookChartPoint() {
         super();
@@ -17,7 +17,7 @@ public class WorkbookChartPoint extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookChartPoint
+     * @return a {@link WorkbookChartPoint}
      */
     @jakarta.annotation.Nonnull
     public static WorkbookChartPoint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class WorkbookChartPoint extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class WorkbookChartPoint extends Entity implements Parsable {
     }
     /**
      * Gets the format property value. Encapsulates the format properties chart point. Read-only.
-     * @return a WorkbookChartPointFormat
+     * @return a {@link WorkbookChartPointFormat}
      */
     @jakarta.annotation.Nullable
     public WorkbookChartPointFormat getFormat() {
@@ -45,7 +45,7 @@ public class WorkbookChartPoint extends Entity implements Parsable {
     }
     /**
      * Gets the value property value. Returns the value of a chart point. Read-only.
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getValue() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BlobEvidence extends AlertEvidence implements Parsable {
     /**
-     * Instantiates a new BlobEvidence and sets the default values.
+     * Instantiates a new {@link BlobEvidence} and sets the default values.
      */
     public BlobEvidence() {
         super();
@@ -18,7 +18,7 @@ public class BlobEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BlobEvidence
+     * @return a {@link BlobEvidence}
      */
     @jakarta.annotation.Nonnull
     public static BlobEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class BlobEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the blobContainer property value. The container which the blob belongs to.
-     * @return a BlobContainerEvidence
+     * @return a {@link BlobContainerEvidence}
      */
     @jakarta.annotation.Nullable
     public BlobContainerEvidence getBlobContainer() {
@@ -35,7 +35,7 @@ public class BlobEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the etag property value. The Etag associated with this blob.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEtag() {
@@ -43,7 +43,7 @@ public class BlobEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class BlobEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the fileHashes property value. The file hashes associated with this blob.
-     * @return a java.util.List<FileHash>
+     * @return a {@link java.util.List<FileHash>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<FileHash> getFileHashes() {
@@ -65,7 +65,7 @@ public class BlobEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the name property value. The name of the blob.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -73,7 +73,7 @@ public class BlobEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the url property value. The full URL representation of the blob.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUrl() {

@@ -27,6 +27,7 @@ import java.util.Objects;
 public class CustodiansRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -34,6 +35,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the applyHold method.
+     * @return a {@link MicrosoftGraphSecurityApplyHoldRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityApplyHoldRequestBuilder microsoftGraphSecurityApplyHold() {
@@ -41,6 +43,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the removeHold method.
+     * @return a {@link MicrosoftGraphSecurityRemoveHoldRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityRemoveHoldRequestBuilder microsoftGraphSecurityRemoveHold() {
@@ -49,7 +52,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the custodians property of the microsoft.graph.security.ediscoveryCase entity.
      * @param ediscoveryCustodianId The unique identifier of ediscoveryCustodian
-     * @return a EdiscoveryCustodianItemRequestBuilder
+     * @return a {@link EdiscoveryCustodianItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EdiscoveryCustodianItemRequestBuilder byEdiscoveryCustodianId(@jakarta.annotation.Nonnull final String ediscoveryCustodianId) {
@@ -59,7 +62,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         return new EdiscoveryCustodianItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new CustodiansRequestBuilder and sets the default values.
+     * Instantiates a new {@link CustodiansRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -67,7 +70,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new CustodiansRequestBuilder and sets the default values.
+     * Instantiates a new {@link CustodiansRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -76,7 +79,8 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the custodian objects and their properties.
-     * @return a EdiscoveryCustodianCollectionResponse
+     * @return a {@link EdiscoveryCustodianCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-custodians?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -86,21 +90,22 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the custodian objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EdiscoveryCustodianCollectionResponse
+     * @return a {@link EdiscoveryCustodianCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-custodians?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryCustodianCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryCustodianCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new ediscoveryCustodian object.After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site.
      * @param body The request body
-     * @return a EdiscoveryCustodian
+     * @return a {@link EdiscoveryCustodian}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-post-custodians?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -111,7 +116,8 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
      * Create a new ediscoveryCustodian object.After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EdiscoveryCustodian
+     * @return a {@link EdiscoveryCustodian}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-post-custodians?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -119,13 +125,12 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryCustodian::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the custodian objects and their properties.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -134,7 +139,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the custodian objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -146,7 +151,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new ediscoveryCustodian object.After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final EdiscoveryCustodian body) {
@@ -156,12 +161,12 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
      * Create a new ediscoveryCustodian object.After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final EdiscoveryCustodian body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -170,7 +175,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a CustodiansRequestBuilder
+     * @return a {@link CustodiansRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CustodiansRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -224,7 +229,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

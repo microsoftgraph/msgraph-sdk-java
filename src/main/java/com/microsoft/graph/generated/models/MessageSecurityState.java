@@ -19,7 +19,7 @@ public class MessageSecurityState implements AdditionalDataHolder, BackedModel, 
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new MessageSecurityState and sets the default values.
+     * Instantiates a new {@link MessageSecurityState} and sets the default values.
      */
     public MessageSecurityState() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class MessageSecurityState implements AdditionalDataHolder, BackedModel, 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MessageSecurityState
+     * @return a {@link MessageSecurityState}
      */
     @jakarta.annotation.Nonnull
     public static MessageSecurityState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class MessageSecurityState implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class MessageSecurityState implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class MessageSecurityState implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the connectingIP property value. The connectingIP property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getConnectingIP() {
@@ -66,7 +66,7 @@ public class MessageSecurityState implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the deliveryAction property value. The deliveryAction property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeliveryAction() {
@@ -74,7 +74,7 @@ public class MessageSecurityState implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the deliveryLocation property value. The deliveryLocation property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeliveryLocation() {
@@ -82,7 +82,7 @@ public class MessageSecurityState implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the directionality property value. The directionality property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDirectionality() {
@@ -90,7 +90,7 @@ public class MessageSecurityState implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -109,7 +109,7 @@ public class MessageSecurityState implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the internetMessageId property value. The internetMessageId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInternetMessageId() {
@@ -117,7 +117,7 @@ public class MessageSecurityState implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the messageFingerprint property value. The messageFingerprint property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMessageFingerprint() {
@@ -125,7 +125,7 @@ public class MessageSecurityState implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the messageReceivedDateTime property value. The messageReceivedDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getMessageReceivedDateTime() {
@@ -133,7 +133,7 @@ public class MessageSecurityState implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the messageSubject property value. The messageSubject property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMessageSubject() {
@@ -141,7 +141,7 @@ public class MessageSecurityState implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the networkMessageId property value. The networkMessageId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNetworkMessageId() {
@@ -149,7 +149,7 @@ public class MessageSecurityState implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

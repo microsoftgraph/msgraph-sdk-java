@@ -24,6 +24,7 @@ import java.util.Objects;
 public class SchoolsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -32,7 +33,7 @@ public class SchoolsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the schools property of the microsoft.graph.educationClass entity.
      * @param educationSchoolId The unique identifier of educationSchool
-     * @return a EducationSchoolItemRequestBuilder
+     * @return a {@link EducationSchoolItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EducationSchoolItemRequestBuilder byEducationSchoolId(@jakarta.annotation.Nonnull final String educationSchoolId) {
@@ -42,7 +43,7 @@ public class SchoolsRequestBuilder extends BaseRequestBuilder {
         return new EducationSchoolItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new SchoolsRequestBuilder and sets the default values.
+     * Instantiates a new {@link SchoolsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -50,7 +51,7 @@ public class SchoolsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/schools{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new SchoolsRequestBuilder and sets the default values.
+     * Instantiates a new {@link SchoolsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +60,8 @@ public class SchoolsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of schools in which the class is taught.
-     * @return a EducationSchoolCollectionResponse
+     * @return a {@link EducationSchoolCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-list-schools?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -69,20 +71,20 @@ public class SchoolsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of schools in which the class is taught.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EducationSchoolCollectionResponse
+     * @return a {@link EducationSchoolCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-list-schools?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationSchoolCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EducationSchoolCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of schools in which the class is taught.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -91,7 +93,7 @@ public class SchoolsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of schools in which the class is taught.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +105,7 @@ public class SchoolsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a SchoolsRequestBuilder
+     * @return a {@link SchoolsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SchoolsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -157,7 +159,7 @@ public class SchoolsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -19,7 +19,7 @@ public class ConfidenceNormPostRequestBody implements AdditionalDataHolder, Back
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ConfidenceNormPostRequestBody and sets the default values.
+     * Instantiates a new {@link ConfidenceNormPostRequestBody} and sets the default values.
      */
     public ConfidenceNormPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class ConfidenceNormPostRequestBody implements AdditionalDataHolder, Back
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConfidenceNormPostRequestBody
+     * @return a {@link ConfidenceNormPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static ConfidenceNormPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class ConfidenceNormPostRequestBody implements AdditionalDataHolder, Back
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class ConfidenceNormPostRequestBody implements AdditionalDataHolder, Back
     }
     /**
      * Gets the alpha property value. The alpha property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getAlpha() {
@@ -58,7 +58,7 @@ public class ConfidenceNormPostRequestBody implements AdditionalDataHolder, Back
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -66,7 +66,7 @@ public class ConfidenceNormPostRequestBody implements AdditionalDataHolder, Back
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class ConfidenceNormPostRequestBody implements AdditionalDataHolder, Back
     }
     /**
      * Gets the size property value. The size property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getSize() {
@@ -86,7 +86,7 @@ public class ConfidenceNormPostRequestBody implements AdditionalDataHolder, Back
     }
     /**
      * Gets the standardDev property value. The standardDev property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getStandardDev() {

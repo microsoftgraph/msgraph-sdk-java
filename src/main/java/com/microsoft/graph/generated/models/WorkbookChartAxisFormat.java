@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartAxisFormat extends Entity implements Parsable {
     /**
-     * Instantiates a new WorkbookChartAxisFormat and sets the default values.
+     * Instantiates a new {@link WorkbookChartAxisFormat} and sets the default values.
      */
     public WorkbookChartAxisFormat() {
         super();
@@ -17,7 +17,7 @@ public class WorkbookChartAxisFormat extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookChartAxisFormat
+     * @return a {@link WorkbookChartAxisFormat}
      */
     @jakarta.annotation.Nonnull
     public static WorkbookChartAxisFormat createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class WorkbookChartAxisFormat extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class WorkbookChartAxisFormat extends Entity implements Parsable {
     }
     /**
      * Gets the font property value. Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
-     * @return a WorkbookChartFont
+     * @return a {@link WorkbookChartFont}
      */
     @jakarta.annotation.Nullable
     public WorkbookChartFont getFont() {
@@ -45,7 +45,7 @@ public class WorkbookChartAxisFormat extends Entity implements Parsable {
     }
     /**
      * Gets the line property value. Represents chart line formatting. Read-only.
-     * @return a WorkbookChartLineFormat
+     * @return a {@link WorkbookChartLineFormat}
      */
     @jakarta.annotation.Nullable
     public WorkbookChartLineFormat getLine() {

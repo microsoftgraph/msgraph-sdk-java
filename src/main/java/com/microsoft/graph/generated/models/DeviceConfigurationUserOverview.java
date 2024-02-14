@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceConfigurationUserOverview extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceConfigurationUserOverview and sets the default values.
+     * Instantiates a new {@link DeviceConfigurationUserOverview} and sets the default values.
      */
     public DeviceConfigurationUserOverview() {
         super();
@@ -18,7 +18,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceConfigurationUserOverview
+     * @return a {@link DeviceConfigurationUserOverview}
      */
     @jakarta.annotation.Nonnull
     public static DeviceConfigurationUserOverview createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
     }
     /**
      * Gets the configurationVersion property value. Version of the policy for that overview
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getConfigurationVersion() {
@@ -35,7 +35,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
     }
     /**
      * Gets the errorCount property value. Number of error Users
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCount() {
@@ -43,7 +43,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
     }
     /**
      * Gets the failedCount property value. Number of failed Users
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getFailedCount() {
@@ -51,7 +51,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -67,7 +67,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
     }
     /**
      * Gets the lastUpdateDateTime property value. Last update time
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdateDateTime() {
@@ -75,7 +75,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
     }
     /**
      * Gets the notApplicableCount property value. Number of not applicable users
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableCount() {
@@ -83,7 +83,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
     }
     /**
      * Gets the pendingCount property value. Number of pending Users
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPendingCount() {
@@ -91,7 +91,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
     }
     /**
      * Gets the successCount property value. Number of succeeded Users
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessCount() {

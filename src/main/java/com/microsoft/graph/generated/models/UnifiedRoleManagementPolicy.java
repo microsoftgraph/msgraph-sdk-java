@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
     /**
-     * Instantiates a new UnifiedRoleManagementPolicy and sets the default values.
+     * Instantiates a new {@link UnifiedRoleManagementPolicy} and sets the default values.
      */
     public UnifiedRoleManagementPolicy() {
         super();
@@ -18,7 +18,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnifiedRoleManagementPolicy
+     * @return a {@link UnifiedRoleManagementPolicy}
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleManagementPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description for the policy.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -35,7 +35,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name for the policy.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -43,7 +43,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the effectiveRules property value. The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval. Supports $expand.
-     * @return a java.util.List<UnifiedRoleManagementPolicyRule>
+     * @return a {@link java.util.List<UnifiedRoleManagementPolicyRule>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleManagementPolicyRule> getEffectiveRules() {
@@ -51,7 +51,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the isOrganizationDefault property value. This can only be set to true for a single tenant-wide policy which will apply to all scopes and roles. Set the scopeId to / and scopeType to Directory. Supports $filter (eq, ne).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsOrganizationDefault() {
@@ -77,7 +77,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The identity who last modified the role setting.
-     * @return a Identity
+     * @return a {@link Identity}
      */
     @jakarta.annotation.Nullable
     public Identity getLastModifiedBy() {
@@ -85,7 +85,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The time when the role setting was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -93,7 +93,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the rules property value. The collection of rules like approval rules and expiration rules. Supports $expand.
-     * @return a java.util.List<UnifiedRoleManagementPolicyRule>
+     * @return a {@link java.util.List<UnifiedRoleManagementPolicyRule>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleManagementPolicyRule> getRules() {
@@ -101,7 +101,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the scopeId property value. The identifier of the scope where the policy is created. Can be / for the tenant or a group ID. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getScopeId() {
@@ -109,7 +109,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the scopeType property value. The type of the scope where the policy is created. One of Directory, DirectoryRole, Group. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getScopeType() {

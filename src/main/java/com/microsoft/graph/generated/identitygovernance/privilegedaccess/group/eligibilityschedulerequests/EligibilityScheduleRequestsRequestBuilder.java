@@ -26,6 +26,7 @@ import java.util.Objects;
 public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -34,7 +35,7 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
     /**
      * Provides operations to manage the eligibilityScheduleRequests property of the microsoft.graph.privilegedAccessGroup entity.
      * @param privilegedAccessGroupEligibilityScheduleRequestId The unique identifier of privilegedAccessGroupEligibilityScheduleRequest
-     * @return a PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilder
+     * @return a {@link PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilder byPrivilegedAccessGroupEligibilityScheduleRequestId(@jakarta.annotation.Nonnull final String privilegedAccessGroupEligibilityScheduleRequestId) {
@@ -44,7 +45,7 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
         return new PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new EligibilityScheduleRequestsRequestBuilder and sets the default values.
+     * Instantiates a new {@link EligibilityScheduleRequestsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -52,7 +53,7 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/identityGovernance/privilegedAccess/group/eligibilityScheduleRequests{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new EligibilityScheduleRequestsRequestBuilder and sets the default values.
+     * Instantiates a new {@link EligibilityScheduleRequestsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -62,7 +63,7 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
     /**
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on='{on}'
-     * @return a FilterByCurrentUserWithOnRequestBuilder
+     * @return a {@link FilterByCurrentUserWithOnRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
@@ -71,7 +72,8 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Get a list of the privilegedAccessGroupEligibilityScheduleRequest objects and their properties.
-     * @return a PrivilegedAccessGroupEligibilityScheduleRequestCollectionResponse
+     * @return a {@link PrivilegedAccessGroupEligibilityScheduleRequestCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-eligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -81,21 +83,22 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
     /**
      * Get a list of the privilegedAccessGroupEligibilityScheduleRequest objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PrivilegedAccessGroupEligibilityScheduleRequestCollectionResponse
+     * @return a {@link PrivilegedAccessGroupEligibilityScheduleRequestCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-eligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupEligibilityScheduleRequestCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedAccessGroupEligibilityScheduleRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new privilegedAccessGroupEligibilityScheduleRequest object.
      * @param body The request body
-     * @return a PrivilegedAccessGroupEligibilityScheduleRequest
+     * @return a {@link PrivilegedAccessGroupEligibilityScheduleRequest}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-post-eligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -106,7 +109,8 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
      * Create a new privilegedAccessGroupEligibilityScheduleRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PrivilegedAccessGroupEligibilityScheduleRequest
+     * @return a {@link PrivilegedAccessGroupEligibilityScheduleRequest}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-post-eligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -114,13 +118,12 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedAccessGroupEligibilityScheduleRequest::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the privilegedAccessGroupEligibilityScheduleRequest objects and their properties.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -129,7 +132,7 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
     /**
      * Get a list of the privilegedAccessGroupEligibilityScheduleRequest objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -141,7 +144,7 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
     /**
      * Create a new privilegedAccessGroupEligibilityScheduleRequest object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final PrivilegedAccessGroupEligibilityScheduleRequest body) {
@@ -151,12 +154,12 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
      * Create a new privilegedAccessGroupEligibilityScheduleRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final PrivilegedAccessGroupEligibilityScheduleRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/identityGovernance/privilegedAccess/group/eligibilityScheduleRequests", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -165,7 +168,7 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a EligibilityScheduleRequestsRequestBuilder
+     * @return a {@link EligibilityScheduleRequestsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EligibilityScheduleRequestsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -219,7 +222,7 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PeopleAdminSettings extends Entity implements Parsable {
     /**
-     * Instantiates a new PeopleAdminSettings and sets the default values.
+     * Instantiates a new {@link PeopleAdminSettings} and sets the default values.
      */
     public PeopleAdminSettings() {
         super();
@@ -17,7 +17,7 @@ public class PeopleAdminSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PeopleAdminSettings
+     * @return a {@link PeopleAdminSettings}
      */
     @jakarta.annotation.Nonnull
     public static PeopleAdminSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class PeopleAdminSettings extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class PeopleAdminSettings extends Entity implements Parsable {
     }
     /**
      * Gets the profileCardProperties property value. Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card.
-     * @return a java.util.List<ProfileCardProperty>
+     * @return a {@link java.util.List<ProfileCardProperty>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProfileCardProperty> getProfileCardProperties() {
@@ -45,7 +45,7 @@ public class PeopleAdminSettings extends Entity implements Parsable {
     }
     /**
      * Gets the pronouns property value. Represents administrator settings that manage the support of pronouns in an organization.
-     * @return a PronounsSettings
+     * @return a {@link PronounsSettings}
      */
     @jakarta.annotation.Nullable
     public PronounsSettings getPronouns() {

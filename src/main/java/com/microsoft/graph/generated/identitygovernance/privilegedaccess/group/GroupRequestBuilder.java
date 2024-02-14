@@ -29,6 +29,7 @@ import java.util.Objects;
 public class GroupRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the assignmentApprovals property of the microsoft.graph.privilegedAccessGroup entity.
+     * @return a {@link AssignmentApprovalsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignmentApprovalsRequestBuilder assignmentApprovals() {
@@ -36,6 +37,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the assignmentScheduleInstances property of the microsoft.graph.privilegedAccessGroup entity.
+     * @return a {@link AssignmentScheduleInstancesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignmentScheduleInstancesRequestBuilder assignmentScheduleInstances() {
@@ -43,6 +45,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the assignmentScheduleRequests property of the microsoft.graph.privilegedAccessGroup entity.
+     * @return a {@link AssignmentScheduleRequestsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignmentScheduleRequestsRequestBuilder assignmentScheduleRequests() {
@@ -50,6 +53,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the assignmentSchedules property of the microsoft.graph.privilegedAccessGroup entity.
+     * @return a {@link AssignmentSchedulesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignmentSchedulesRequestBuilder assignmentSchedules() {
@@ -57,6 +61,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the eligibilityScheduleInstances property of the microsoft.graph.privilegedAccessGroup entity.
+     * @return a {@link EligibilityScheduleInstancesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EligibilityScheduleInstancesRequestBuilder eligibilityScheduleInstances() {
@@ -64,6 +69,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the eligibilityScheduleRequests property of the microsoft.graph.privilegedAccessGroup entity.
+     * @return a {@link EligibilityScheduleRequestsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EligibilityScheduleRequestsRequestBuilder eligibilityScheduleRequests() {
@@ -71,13 +77,14 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the eligibilitySchedules property of the microsoft.graph.privilegedAccessGroup entity.
+     * @return a {@link EligibilitySchedulesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EligibilitySchedulesRequestBuilder eligibilitySchedules() {
         return new EligibilitySchedulesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new GroupRequestBuilder and sets the default values.
+     * Instantiates a new {@link GroupRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -85,7 +92,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/privilegedAccess/group{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new GroupRequestBuilder and sets the default values.
+     * Instantiates a new {@link GroupRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -94,6 +101,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property group for identityGovernance
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -101,17 +109,18 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property group for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * A group that's governed through Privileged Identity Management (PIM).
-     * @return a PrivilegedAccessGroup
+     * @return a {@link PrivilegedAccessGroup}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroup get() {
@@ -120,20 +129,21 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
     /**
      * A group that's governed through Privileged Identity Management (PIM).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PrivilegedAccessGroup
+     * @return a {@link PrivilegedAccessGroup}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroup get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedAccessGroup::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property group in identityGovernance
      * @param body The request body
-     * @return a PrivilegedAccessGroup
+     * @return a {@link PrivilegedAccessGroup}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroup patch(@jakarta.annotation.Nonnull final PrivilegedAccessGroup body) {
@@ -143,20 +153,20 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property group in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PrivilegedAccessGroup
+     * @return a {@link PrivilegedAccessGroup}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroup patch(@jakarta.annotation.Nonnull final PrivilegedAccessGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedAccessGroup::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property group for identityGovernance
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -165,18 +175,18 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property group for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/identityGovernance/privilegedAccess/group", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * A group that's governed through Privileged Identity Management (PIM).
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -185,7 +195,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
     /**
      * A group that's governed through Privileged Identity Management (PIM).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -197,7 +207,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property group in identityGovernance
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final PrivilegedAccessGroup body) {
@@ -207,12 +217,12 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property group in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final PrivilegedAccessGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/identityGovernance/privilegedAccess/group", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -221,7 +231,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GroupRequestBuilder
+     * @return a {@link GroupRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GroupRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -251,7 +261,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

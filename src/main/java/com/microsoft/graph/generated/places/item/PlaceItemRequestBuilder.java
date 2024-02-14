@@ -23,6 +23,7 @@ import java.util.Objects;
 public class PlaceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Casts the previous resource to room.
+     * @return a {@link GraphRoomRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphRoomRequestBuilder graphRoom() {
@@ -30,13 +31,14 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to roomList.
+     * @return a {@link GraphRoomListRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphRoomListRequestBuilder graphRoomList() {
         return new GraphRoomListRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new PlaceItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link PlaceItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -44,7 +46,7 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/places/{place%2Did}", pathParameters);
     }
     /**
-     * Instantiates a new PlaceItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link PlaceItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -53,6 +55,7 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete entity from places
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -60,18 +63,19 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete entity from places
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Update the properties of place object, which can be a room or roomList. You can identify the room or roomList by specifying the id or emailAddress property.
      * @param body The request body
-     * @return a Place
+     * @return a {@link Place}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/place-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -82,7 +86,8 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of place object, which can be a room or roomList. You can identify the room or roomList by specifying the id or emailAddress property.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Place
+     * @return a {@link Place}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/place-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -90,13 +95,12 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Place::createFromDiscriminatorValue);
     }
     /**
      * Delete entity from places
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -105,7 +109,7 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete entity from places
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -117,7 +121,7 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of place object, which can be a room or roomList. You can identify the room or roomList by specifying the id or emailAddress property.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Place body) {
@@ -127,7 +131,7 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of place object, which can be a room or roomList. You can identify the room or roomList by specifying the id or emailAddress property.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Place body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -141,7 +145,7 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a PlaceItemRequestBuilder
+     * @return a {@link PlaceItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PlaceItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

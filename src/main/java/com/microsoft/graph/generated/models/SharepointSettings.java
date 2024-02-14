@@ -10,7 +10,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SharepointSettings extends Entity implements Parsable {
     /**
-     * Instantiates a new SharepointSettings and sets the default values.
+     * Instantiates a new {@link SharepointSettings} and sets the default values.
      */
     public SharepointSettings() {
         super();
@@ -18,7 +18,7 @@ public class SharepointSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SharepointSettings
+     * @return a {@link SharepointSettings}
      */
     @jakarta.annotation.Nonnull
     public static SharepointSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the allowedDomainGuidsForSyncApp property value. Collection of trusted domain GUIDs for the OneDrive sync app.
-     * @return a java.util.List<UUID>
+     * @return a {@link java.util.List<UUID>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UUID> getAllowedDomainGuidsForSyncApp() {
@@ -35,7 +35,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the availableManagedPathsForSiteCreation property value. Collection of managed paths available for site creation. Read-only.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAvailableManagedPathsForSiteCreation() {
@@ -43,7 +43,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the deletedUserPersonalSiteRetentionPeriodInDays property value. The number of days for preserving a deleted user's OneDrive.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDeletedUserPersonalSiteRetentionPeriodInDays() {
@@ -51,7 +51,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the excludedFileExtensionsForSyncApp property value. Collection of file extensions not uploaded by the OneDrive sync app.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExcludedFileExtensionsForSyncApp() {
@@ -59,7 +59,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -97,7 +97,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the idleSessionSignOut property value. Specifies the idle session sign-out policies for the tenant.
-     * @return a IdleSessionSignOut
+     * @return a {@link IdleSessionSignOut}
      */
     @jakarta.annotation.Nullable
     public IdleSessionSignOut getIdleSessionSignOut() {
@@ -105,7 +105,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the imageTaggingOption property value. Specifies the image tagging option for the tenant. Possible values are: disabled, basic, enhanced.
-     * @return a ImageTaggingChoice
+     * @return a {@link ImageTaggingChoice}
      */
     @jakarta.annotation.Nullable
     public ImageTaggingChoice getImageTaggingOption() {
@@ -113,7 +113,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the isCommentingOnSitePagesEnabled property value. Indicates whether comments are allowed on modern site pages in SharePoint.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCommentingOnSitePagesEnabled() {
@@ -121,7 +121,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the isFileActivityNotificationEnabled property value. Indicates whether push notifications are enabled for OneDrive events.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsFileActivityNotificationEnabled() {
@@ -129,7 +129,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the isLegacyAuthProtocolsEnabled property value. Indicates whether legacy authentication protocols are enabled for the tenant.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsLegacyAuthProtocolsEnabled() {
@@ -137,7 +137,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the isLoopEnabled property value. Indicates whether if Fluid Framework is allowed on SharePoint sites.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsLoopEnabled() {
@@ -145,7 +145,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the isMacSyncAppEnabled property value. Indicates whether files can be synced using the OneDrive sync app for Mac.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMacSyncAppEnabled() {
@@ -153,7 +153,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the isRequireAcceptingUserToMatchInvitedUserEnabled property value. Indicates whether guests must sign in using the same account to which sharing invitations are sent.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRequireAcceptingUserToMatchInvitedUserEnabled() {
@@ -161,7 +161,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the isResharingByExternalUsersEnabled property value. Indicates whether guests are allowed to reshare files, folders, and sites they don't own.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsResharingByExternalUsersEnabled() {
@@ -169,7 +169,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the isSharePointMobileNotificationEnabled property value. Indicates whether mobile push notifications are enabled for SharePoint.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSharePointMobileNotificationEnabled() {
@@ -177,7 +177,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the isSharePointNewsfeedEnabled property value. Indicates whether the newsfeed is allowed on the modern site pages in SharePoint.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSharePointNewsfeedEnabled() {
@@ -185,7 +185,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the isSiteCreationEnabled property value. Indicates whether users are allowed to create sites.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSiteCreationEnabled() {
@@ -193,7 +193,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the isSiteCreationUIEnabled property value. Indicates whether the UI commands for creating sites are shown.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSiteCreationUIEnabled() {
@@ -201,7 +201,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the isSitePagesCreationEnabled property value. Indicates whether creating new modern pages is allowed on SharePoint sites.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSitePagesCreationEnabled() {
@@ -209,7 +209,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the isSitesStorageLimitAutomatic property value. Indicates whether site storage space is automatically managed or if specific storage limits are set per site.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSitesStorageLimitAutomatic() {
@@ -217,7 +217,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the isSyncButtonHiddenOnPersonalSite property value. Indicates whether the sync button in OneDrive is hidden.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSyncButtonHiddenOnPersonalSite() {
@@ -225,7 +225,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the isUnmanagedSyncAppForTenantRestricted property value. Indicates whether users are allowed to sync files only on PCs joined to specific domains.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsUnmanagedSyncAppForTenantRestricted() {
@@ -233,7 +233,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the personalSiteDefaultStorageLimitInMB property value. The default OneDrive storage limit for all new and existing users who are assigned a qualifying license. Measured in megabytes (MB).
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getPersonalSiteDefaultStorageLimitInMB() {
@@ -241,7 +241,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the sharingAllowedDomainList property value. Collection of email domains that are allowed for sharing outside the organization.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSharingAllowedDomainList() {
@@ -249,7 +249,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the sharingBlockedDomainList property value. Collection of email domains that are blocked for sharing outside the organization.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSharingBlockedDomainList() {
@@ -257,7 +257,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the sharingCapability property value. Sharing capability for the tenant. Possible values are: disabled, externalUserSharingOnly, externalUserAndGuestSharing, existingExternalUserSharingOnly.
-     * @return a SharingCapabilities
+     * @return a {@link SharingCapabilities}
      */
     @jakarta.annotation.Nullable
     public SharingCapabilities getSharingCapability() {
@@ -265,7 +265,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the sharingDomainRestrictionMode property value. Specifies the external sharing mode for domains. Possible values are: none, allowList, blockList.
-     * @return a SharingDomainRestrictionMode
+     * @return a {@link SharingDomainRestrictionMode}
      */
     @jakarta.annotation.Nullable
     public SharingDomainRestrictionMode getSharingDomainRestrictionMode() {
@@ -273,7 +273,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the siteCreationDefaultManagedPath property value. The value of the team site managed path. This is the path under which new team sites will be created.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSiteCreationDefaultManagedPath() {
@@ -281,7 +281,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the siteCreationDefaultStorageLimitInMB property value. The default storage quota for a new site upon creation. Measured in megabytes (MB).
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSiteCreationDefaultStorageLimitInMB() {
@@ -289,7 +289,7 @@ public class SharepointSettings extends Entity implements Parsable {
     }
     /**
      * Gets the tenantDefaultTimezone property value. The default timezone of a tenant for newly created sites. For a list of possible values, see SPRegionalSettings.TimeZones property.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantDefaultTimezone() {

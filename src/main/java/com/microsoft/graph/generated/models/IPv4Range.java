@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IPv4Range extends IpRange implements Parsable {
     /**
-     * Instantiates a new IPv4Range and sets the default values.
+     * Instantiates a new {@link IPv4Range} and sets the default values.
      */
     public IPv4Range() {
         super();
@@ -21,7 +21,7 @@ public class IPv4Range extends IpRange implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IPv4Range
+     * @return a {@link IPv4Range}
      */
     @jakarta.annotation.Nonnull
     public static IPv4Range createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class IPv4Range extends IpRange implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -41,7 +41,7 @@ public class IPv4Range extends IpRange implements Parsable {
     }
     /**
      * Gets the lowerAddress property value. Lower address.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLowerAddress() {
@@ -49,7 +49,7 @@ public class IPv4Range extends IpRange implements Parsable {
     }
     /**
      * Gets the upperAddress property value. Upper address.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUpperAddress() {

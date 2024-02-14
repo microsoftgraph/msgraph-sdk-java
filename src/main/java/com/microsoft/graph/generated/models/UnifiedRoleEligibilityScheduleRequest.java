@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable {
     /**
-     * Instantiates a new UnifiedRoleEligibilityScheduleRequest and sets the default values.
+     * Instantiates a new {@link UnifiedRoleEligibilityScheduleRequest} and sets the default values.
      */
     public UnifiedRoleEligibilityScheduleRequest() {
         super();
@@ -17,7 +17,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnifiedRoleEligibilityScheduleRequest
+     * @return a {@link UnifiedRoleEligibilityScheduleRequest}
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleEligibilityScheduleRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     }
     /**
      * Gets the action property value. Represents the type of operation on the role eligibility request. The possible values are: adminAssign, adminUpdate, adminRemove, selfActivate, selfDeactivate, adminExtend, adminRenew, selfExtend, selfRenew, unknownFutureValue. adminAssign: For administrators to assign eligible roles to principals.adminRemove: For administrators to remove eligible roles from principals. adminUpdate: For administrators to change existing role eligibilities.adminExtend: For administrators to extend expiring role eligibilities.adminRenew: For administrators to renew expired eligibilities.selfActivate: For users to activate their assignments.selfDeactivate: For users to deactivate their active assignments.selfExtend: For users to request to extend their expiring assignments.selfRenew: For users to request to renew their expired assignments.
-     * @return a UnifiedRoleScheduleRequestActions
+     * @return a {@link UnifiedRoleScheduleRequestActions}
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleScheduleRequestActions getAction() {
@@ -34,7 +34,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     }
     /**
      * Gets the appScope property value. Read-only property with details of the app-specific scope when the role eligibility is scoped to an app. Nullable. Supports $expand.
-     * @return a AppScope
+     * @return a {@link AppScope}
      */
     @jakarta.annotation.Nullable
     public AppScope getAppScope() {
@@ -42,7 +42,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     }
     /**
      * Gets the appScopeId property value. Identifier of the app-specific scope when the role eligibility is scoped to an app. The scope of a role eligibility determines the set of resources for which the principal is eligible to access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units. Supports $filter (eq, ne, and on null values).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppScopeId() {
@@ -50,7 +50,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     }
     /**
      * Gets the directoryScope property value. The directory object that is the scope of the role eligibility. Read-only. Supports $expand.
-     * @return a DirectoryObject
+     * @return a {@link DirectoryObject}
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getDirectoryScope() {
@@ -58,7 +58,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     }
     /**
      * Gets the directoryScopeId property value. Identifier of the directory object representing the scope of the role eligibility. The scope of a role eligibility determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only. Supports $filter (eq, ne, and on null values).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDirectoryScopeId() {
@@ -66,7 +66,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -90,7 +90,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     }
     /**
      * Gets the isValidationOnly property value. Determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsValidationOnly() {
@@ -98,7 +98,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     }
     /**
      * Gets the justification property value. A message provided by users and administrators when create they create the unifiedRoleEligibilityScheduleRequest object.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getJustification() {
@@ -106,7 +106,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     }
     /**
      * Gets the principal property value. The principal that's getting a role eligibility through the request. Supports $expand.
-     * @return a DirectoryObject
+     * @return a {@link DirectoryObject}
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getPrincipal() {
@@ -114,7 +114,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     }
     /**
      * Gets the principalId property value. Identifier of the principal that has been granted the role eligibility. Can be a user or a role-assignable group. You can grant only active assignments service principals.Supports $filter (eq, ne).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPrincipalId() {
@@ -122,7 +122,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     }
     /**
      * Gets the roleDefinition property value. Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand.
-     * @return a UnifiedRoleDefinition
+     * @return a {@link UnifiedRoleDefinition}
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleDefinition getRoleDefinition() {
@@ -130,7 +130,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     }
     /**
      * Gets the roleDefinitionId property value. Identifier of the unifiedRoleDefinition object that is being assigned to the principal. Supports $filter (eq, ne).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRoleDefinitionId() {
@@ -138,7 +138,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     }
     /**
      * Gets the scheduleInfo property value. The period of the role eligibility. Recurring schedules are currently unsupported.
-     * @return a RequestSchedule
+     * @return a {@link RequestSchedule}
      */
     @jakarta.annotation.Nullable
     public RequestSchedule getScheduleInfo() {
@@ -146,7 +146,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     }
     /**
      * Gets the targetSchedule property value. The schedule for a role eligibility that is referenced through the targetScheduleId property. Supports $expand.
-     * @return a UnifiedRoleEligibilitySchedule
+     * @return a {@link UnifiedRoleEligibilitySchedule}
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleEligibilitySchedule getTargetSchedule() {
@@ -154,7 +154,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     }
     /**
      * Gets the targetScheduleId property value. Identifier of the schedule object that's linked to the eligibility request. Supports $filter (eq, ne).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTargetScheduleId() {
@@ -162,7 +162,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     }
     /**
      * Gets the ticketInfo property value. Ticket details linked to the role eligibility request including details of the ticket number and ticket system. Optional.
-     * @return a TicketInfo
+     * @return a {@link TicketInfo}
      */
     @jakarta.annotation.Nullable
     public TicketInfo getTicketInfo() {

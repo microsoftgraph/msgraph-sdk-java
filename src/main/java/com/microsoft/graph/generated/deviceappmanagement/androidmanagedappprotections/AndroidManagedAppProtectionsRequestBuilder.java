@@ -25,6 +25,7 @@ import java.util.Objects;
 public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
     /**
      * Provides operations to manage the androidManagedAppProtections property of the microsoft.graph.deviceAppManagement entity.
      * @param androidManagedAppProtectionId The unique identifier of androidManagedAppProtection
-     * @return a AndroidManagedAppProtectionItemRequestBuilder
+     * @return a {@link AndroidManagedAppProtectionItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AndroidManagedAppProtectionItemRequestBuilder byAndroidManagedAppProtectionId(@jakarta.annotation.Nonnull final String androidManagedAppProtectionId) {
@@ -43,7 +44,7 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         return new AndroidManagedAppProtectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new AndroidManagedAppProtectionsRequestBuilder and sets the default values.
+     * Instantiates a new {@link AndroidManagedAppProtectionsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/deviceAppManagement/androidManagedAppProtections{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new AndroidManagedAppProtectionsRequestBuilder and sets the default values.
+     * Instantiates a new {@link AndroidManagedAppProtectionsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
     }
     /**
      * List properties and relationships of the androidManagedAppProtection objects.
-     * @return a AndroidManagedAppProtectionCollectionResponse
+     * @return a {@link AndroidManagedAppProtectionCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
     /**
      * List properties and relationships of the androidManagedAppProtection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AndroidManagedAppProtectionCollectionResponse
+     * @return a {@link AndroidManagedAppProtectionCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AndroidManagedAppProtectionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AndroidManagedAppProtectionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new androidManagedAppProtection object.
      * @param body The request body
-     * @return a AndroidManagedAppProtection
+     * @return a {@link AndroidManagedAppProtection}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -95,7 +98,8 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
      * Create a new androidManagedAppProtection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AndroidManagedAppProtection
+     * @return a {@link AndroidManagedAppProtection}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -103,13 +107,12 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AndroidManagedAppProtection::createFromDiscriminatorValue);
     }
     /**
      * List properties and relationships of the androidManagedAppProtection objects.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -118,7 +121,7 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
     /**
      * List properties and relationships of the androidManagedAppProtection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +133,7 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
     /**
      * Create a new androidManagedAppProtection object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AndroidManagedAppProtection body) {
@@ -140,12 +143,12 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
      * Create a new androidManagedAppProtection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AndroidManagedAppProtection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceAppManagement/androidManagedAppProtections", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -154,7 +157,7 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AndroidManagedAppProtectionsRequestBuilder
+     * @return a {@link AndroidManagedAppProtectionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AndroidManagedAppProtectionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -208,7 +211,7 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

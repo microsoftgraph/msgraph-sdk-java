@@ -19,7 +19,7 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new UserTrainingContentEventInfo and sets the default values.
+     * Instantiates a new {@link UserTrainingContentEventInfo} and sets the default values.
      */
     public UserTrainingContentEventInfo() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Backe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserTrainingContentEventInfo
+     * @return a {@link UserTrainingContentEventInfo}
      */
     @jakarta.annotation.Nonnull
     public static UserTrainingContentEventInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the browser property value. Browser of the user from where the training event was generated.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBrowser() {
@@ -66,7 +66,7 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the contentDateTime property value. Date and time of the training content playback by the user.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getContentDateTime() {
@@ -74,7 +74,7 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Backe
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -89,7 +89,7 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the ipAddress property value. IP address of the user for the training event.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
@@ -97,7 +97,7 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the osPlatformDeviceDetails property value. The operating system, platform, and device details of the user for the training event.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsPlatformDeviceDetails() {
@@ -113,7 +113,7 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the potentialScoreImpact property value. Potential improvement in the tenant security posture after completion of the training by the user.
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getPotentialScoreImpact() {

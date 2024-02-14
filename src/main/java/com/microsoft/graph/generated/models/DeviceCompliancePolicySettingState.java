@@ -21,7 +21,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DeviceCompliancePolicySettingState and sets the default values.
+     * Instantiates a new {@link DeviceCompliancePolicySettingState} and sets the default values.
      */
     public DeviceCompliancePolicySettingState() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceCompliancePolicySettingState
+     * @return a {@link DeviceCompliancePolicySettingState}
      */
     @jakarta.annotation.Nonnull
     public static DeviceCompliancePolicySettingState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the currentValue property value. Current value of setting on device
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCurrentValue() {
@@ -68,7 +68,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the errorCode property value. Error code for the setting
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getErrorCode() {
@@ -76,7 +76,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the errorDescription property value. Error description
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getErrorDescription() {
@@ -84,7 +84,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -106,7 +106,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the instanceDisplayName property value. Name of setting instance that is being reported.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInstanceDisplayName() {
@@ -114,7 +114,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -122,7 +122,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the setting property value. The setting that is being reported
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSetting() {
@@ -130,7 +130,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the settingName property value. Localized/user friendly setting name that is being reported
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSettingName() {
@@ -138,7 +138,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the sources property value. Contributing policies
-     * @return a java.util.List<SettingSource>
+     * @return a {@link java.util.List<SettingSource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SettingSource> getSources() {
@@ -146,7 +146,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the state property value. The state property
-     * @return a ComplianceStatus
+     * @return a {@link ComplianceStatus}
      */
     @jakarta.annotation.Nullable
     public ComplianceStatus getState() {
@@ -154,7 +154,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the userEmail property value. UserEmail
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserEmail() {
@@ -162,7 +162,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the userId property value. UserId
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -170,7 +170,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the userName property value. UserName
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
@@ -178,7 +178,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the userPrincipalName property value. UserPrincipalName.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

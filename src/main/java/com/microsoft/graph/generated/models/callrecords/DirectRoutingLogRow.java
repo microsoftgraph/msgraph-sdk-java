@@ -19,7 +19,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DirectRoutingLogRow and sets the default values.
+     * Instantiates a new {@link DirectRoutingLogRow} and sets the default values.
      */
     public DirectRoutingLogRow() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DirectRoutingLogRow
+     * @return a {@link DirectRoutingLogRow}
      */
     @jakarta.annotation.Nonnull
     public static DirectRoutingLogRow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the calleeNumber property value. Number of the user or bot who received the call. E.164 format, but might include other data.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCalleeNumber() {
@@ -66,7 +66,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the callEndSubReason property value. In addition to the SIP codes, Microsoft has subcodes that indicate the specific issue.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCallEndSubReason() {
@@ -74,7 +74,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the callerNumber property value. Number of the user or bot who made the call. E.164 format, but might include other data.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCallerNumber() {
@@ -82,7 +82,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the callType property value. Call type and direction.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCallType() {
@@ -90,7 +90,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the correlationId property value. Identifier for the call that you can use when calling Microsoft Support. GUID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCorrelationId() {
@@ -98,7 +98,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the duration property value. Duration of the call in seconds.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDuration() {
@@ -106,7 +106,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the endDateTime property value. Only exists for successful (fully established) calls. Time when call ended.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
@@ -114,7 +114,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the failureDateTime property value. Only exists for failed (not fully established) calls.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFailureDateTime() {
@@ -122,7 +122,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -153,7 +153,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the finalSipCode property value. The code with which the call ended. For more information, see RFC 3261.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getFinalSipCode() {
@@ -161,7 +161,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the finalSipCodePhrase property value. Description of the SIP code and Microsoft subcode.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFinalSipCodePhrase() {
@@ -169,7 +169,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the id property value. Unique call identifier. GUID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -177,7 +177,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the inviteDateTime property value. When the initial invite was sent.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getInviteDateTime() {
@@ -185,7 +185,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the mediaBypassEnabled property value. Indicates whether the trunk was enabled for media bypass.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getMediaBypassEnabled() {
@@ -193,7 +193,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the mediaPathLocation property value. The datacenter used for media path in a nonbypass call.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMediaPathLocation() {
@@ -201,7 +201,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -209,7 +209,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the signalingLocation property value. The datacenter used for signaling for both bypass and nonbypass calls.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSignalingLocation() {
@@ -217,7 +217,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the startDateTime property value. Call start time.For failed and unanswered calls, this can be equal to the invite or failure time.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
@@ -225,7 +225,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the successfulCall property value. Success or attempt.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSuccessfulCall() {
@@ -233,7 +233,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the trunkFullyQualifiedDomainName property value. Fully qualified domain name of the session border controller.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTrunkFullyQualifiedDomainName() {
@@ -241,7 +241,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the userDisplayName property value. Display name of the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
@@ -249,7 +249,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the userId property value. Calling user's ID in Microsoft Graph. This and other user information is null/empty for bot call types. GUID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -257,7 +257,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the userPrincipalName property value. UserPrincipalName (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP Address, and can be the same as the user's email address.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

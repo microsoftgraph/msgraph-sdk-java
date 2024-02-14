@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceHealth extends Entity implements Parsable {
     /**
-     * Instantiates a new ServiceHealth and sets the default values.
+     * Instantiates a new {@link ServiceHealth} and sets the default values.
      */
     public ServiceHealth() {
         super();
@@ -17,7 +17,7 @@ public class ServiceHealth extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ServiceHealth
+     * @return a {@link ServiceHealth}
      */
     @jakarta.annotation.Nonnull
     public static ServiceHealth createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class ServiceHealth extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class ServiceHealth extends Entity implements Parsable {
     }
     /**
      * Gets the issues property value. A collection of issues that happened on the service, with detailed information for each issue.
-     * @return a java.util.List<ServiceHealthIssue>
+     * @return a {@link java.util.List<ServiceHealthIssue>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServiceHealthIssue> getIssues() {
@@ -46,7 +46,7 @@ public class ServiceHealth extends Entity implements Parsable {
     }
     /**
      * Gets the service property value. The service name. Use the list healthOverviews operation to get exact string names for services subscribed by the tenant.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getService() {
@@ -54,7 +54,7 @@ public class ServiceHealth extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a ServiceHealthStatus
+     * @return a {@link ServiceHealthStatus}
      */
     @jakarta.annotation.Nullable
     public ServiceHealthStatus getStatus() {

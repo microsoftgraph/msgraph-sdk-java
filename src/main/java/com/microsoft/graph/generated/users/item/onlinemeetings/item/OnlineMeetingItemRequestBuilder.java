@@ -29,6 +29,7 @@ import java.util.Objects;
 public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the attendanceReports property of the microsoft.graph.onlineMeetingBase entity.
+     * @return a {@link AttendanceReportsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AttendanceReportsRequestBuilder attendanceReports() {
@@ -36,6 +37,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the media for the user entity.
+     * @return a {@link AttendeeReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AttendeeReportRequestBuilder attendeeReport() {
@@ -43,6 +45,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getVirtualAppointmentJoinWebUrl method.
+     * @return a {@link GetVirtualAppointmentJoinWebUrlRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetVirtualAppointmentJoinWebUrlRequestBuilder getVirtualAppointmentJoinWebUrl() {
@@ -50,6 +53,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the recordings property of the microsoft.graph.onlineMeeting entity.
+     * @return a {@link RecordingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RecordingsRequestBuilder recordings() {
@@ -57,6 +61,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the sendVirtualAppointmentReminderSms method.
+     * @return a {@link SendVirtualAppointmentReminderSmsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SendVirtualAppointmentReminderSmsRequestBuilder sendVirtualAppointmentReminderSms() {
@@ -64,6 +69,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the sendVirtualAppointmentSms method.
+     * @return a {@link SendVirtualAppointmentSmsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SendVirtualAppointmentSmsRequestBuilder sendVirtualAppointmentSms() {
@@ -71,13 +77,14 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the transcripts property of the microsoft.graph.onlineMeeting entity.
+     * @return a {@link TranscriptsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TranscriptsRequestBuilder transcripts() {
         return new TranscriptsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new OnlineMeetingItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link OnlineMeetingItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -85,7 +92,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/onlineMeetings/{onlineMeeting%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new OnlineMeetingItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link OnlineMeetingItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -94,6 +101,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete an onlineMeeting object.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -102,18 +110,19 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete an onlineMeeting object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report (deprecated) is an online meeting artifact. For details, see Online meeting artifacts and permissions.
-     * @return a OnlineMeeting
+     * @return a {@link OnlineMeeting}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -123,21 +132,22 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report (deprecated) is an online meeting artifact. For details, see Online meeting artifacts and permissions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a OnlineMeeting
+     * @return a {@link OnlineMeeting}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OnlineMeeting get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, OnlineMeeting::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of the specified onlineMeeting object. Please see Request body section for the list of properties that support updating.
      * @param body The request body
-     * @return a OnlineMeeting
+     * @return a {@link OnlineMeeting}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -148,7 +158,8 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of the specified onlineMeeting object. Please see Request body section for the list of properties that support updating.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a OnlineMeeting
+     * @return a {@link OnlineMeeting}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -156,13 +167,12 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, OnlineMeeting::createFromDiscriminatorValue);
     }
     /**
      * Delete an onlineMeeting object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -171,18 +181,18 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete an onlineMeeting object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/users/{user%2Did}/onlineMeetings/{onlineMeeting%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report (deprecated) is an online meeting artifact. For details, see Online meeting artifacts and permissions.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -191,7 +201,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report (deprecated) is an online meeting artifact. For details, see Online meeting artifacts and permissions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -203,7 +213,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of the specified onlineMeeting object. Please see Request body section for the list of properties that support updating.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final OnlineMeeting body) {
@@ -213,12 +223,12 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of the specified onlineMeeting object. Please see Request body section for the list of properties that support updating.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final OnlineMeeting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/users/{user%2Did}/onlineMeetings/{onlineMeeting%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -227,7 +237,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a OnlineMeetingItemRequestBuilder
+     * @return a {@link OnlineMeetingItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OnlineMeetingItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -257,7 +267,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

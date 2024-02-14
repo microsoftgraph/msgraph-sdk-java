@@ -13,7 +13,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsInformationProtection extends ManagedAppPolicy implements Parsable {
     /**
-     * Instantiates a new WindowsInformationProtection and sets the default values.
+     * Instantiates a new {@link WindowsInformationProtection} and sets the default values.
      */
     public WindowsInformationProtection() {
         super();
@@ -22,7 +22,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsInformationProtection
+     * @return a {@link WindowsInformationProtection}
      */
     @jakarta.annotation.Nonnull
     public static WindowsInformationProtection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the assignments property value. Navigation property to list of security groups targeted for policy.
-     * @return a java.util.List<TargetedManagedAppPolicyAssignment>
+     * @return a {@link java.util.List<TargetedManagedAppPolicyAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TargetedManagedAppPolicyAssignment> getAssignments() {
@@ -47,7 +47,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the azureRightsManagementServicesAllowed property value. Specifies whether to allow Azure RMS encryption for WIP
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAzureRightsManagementServicesAllowed() {
@@ -55,7 +55,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the dataRecoveryCertificate property value. Specifies a recovery certificate that can be used for data recovery of encrypted files. This is the same as the data recovery agent(DRA) certificate for encrypting file system(EFS)
-     * @return a WindowsInformationProtectionDataRecoveryCertificate
+     * @return a {@link WindowsInformationProtectionDataRecoveryCertificate}
      */
     @jakarta.annotation.Nullable
     public WindowsInformationProtectionDataRecoveryCertificate getDataRecoveryCertificate() {
@@ -63,7 +63,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the enforcementLevel property value. Possible values for WIP Protection enforcement levels
-     * @return a WindowsInformationProtectionEnforcementLevel
+     * @return a {@link WindowsInformationProtectionEnforcementLevel}
      */
     @jakarta.annotation.Nullable
     public WindowsInformationProtectionEnforcementLevel getEnforcementLevel() {
@@ -71,7 +71,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the enterpriseDomain property value. Primary enterprise domain
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEnterpriseDomain() {
@@ -79,7 +79,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the enterpriseInternalProxyServers property value. This is the comma-separated list of internal proxy servers. For example, '157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59'. These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseProxiedDomains policy to force traffic to the matched domains through these proxies
-     * @return a java.util.List<WindowsInformationProtectionResourceCollection>
+     * @return a {@link java.util.List<WindowsInformationProtectionResourceCollection>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsInformationProtectionResourceCollection> getEnterpriseInternalProxyServers() {
@@ -87,7 +87,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the enterpriseIPRanges property value. Sets the enterprise IP ranges that define the computers in the enterprise network. Data that comes from those computers will be considered part of the enterprise and protected. These locations will be considered a safe destination for enterprise data to be shared to
-     * @return a java.util.List<WindowsInformationProtectionIPRangeCollection>
+     * @return a {@link java.util.List<WindowsInformationProtectionIPRangeCollection>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsInformationProtectionIPRangeCollection> getEnterpriseIPRanges() {
@@ -95,7 +95,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the enterpriseIPRangesAreAuthoritative property value. Boolean value that tells the client to accept the configured list and not to use heuristics to attempt to find other subnets. Default is false
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnterpriseIPRangesAreAuthoritative() {
@@ -103,7 +103,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the enterpriseNetworkDomainNames property value. This is the list of domains that comprise the boundaries of the enterprise. Data from one of these domains that is sent to a device will be considered enterprise data and protected These locations will be considered a safe destination for enterprise data to be shared to
-     * @return a java.util.List<WindowsInformationProtectionResourceCollection>
+     * @return a {@link java.util.List<WindowsInformationProtectionResourceCollection>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsInformationProtectionResourceCollection> getEnterpriseNetworkDomainNames() {
@@ -111,7 +111,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the enterpriseProtectedDomainNames property value. List of enterprise domains to be protected
-     * @return a java.util.List<WindowsInformationProtectionResourceCollection>
+     * @return a {@link java.util.List<WindowsInformationProtectionResourceCollection>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsInformationProtectionResourceCollection> getEnterpriseProtectedDomainNames() {
@@ -119,7 +119,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the enterpriseProxiedDomains property value. Contains a list of Enterprise resource domains hosted in the cloud that need to be protected. Connections to these resources are considered enterprise data. If a proxy is paired with a cloud resource, traffic to the cloud resource will be routed through the enterprise network via the denoted proxy server (on Port 80). A proxy server used for this purpose must also be configured using the EnterpriseInternalProxyServers policy
-     * @return a java.util.List<WindowsInformationProtectionProxiedDomainCollection>
+     * @return a {@link java.util.List<WindowsInformationProtectionProxiedDomainCollection>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsInformationProtectionProxiedDomainCollection> getEnterpriseProxiedDomains() {
@@ -127,7 +127,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the enterpriseProxyServers property value. This is a list of proxy servers. Any server not on this list is considered non-enterprise
-     * @return a java.util.List<WindowsInformationProtectionResourceCollection>
+     * @return a {@link java.util.List<WindowsInformationProtectionResourceCollection>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsInformationProtectionResourceCollection> getEnterpriseProxyServers() {
@@ -135,7 +135,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the enterpriseProxyServersAreAuthoritative property value. Boolean value that tells the client to accept the configured list of proxies and not try to detect other work proxies. Default is false
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnterpriseProxyServersAreAuthoritative() {
@@ -143,7 +143,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the exemptAppLockerFiles property value. Another way to input exempt apps through xml files
-     * @return a java.util.List<WindowsInformationProtectionAppLockerFile>
+     * @return a {@link java.util.List<WindowsInformationProtectionAppLockerFile>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsInformationProtectionAppLockerFile> getExemptAppLockerFiles() {
@@ -151,7 +151,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the exemptApps property value. Exempt applications can also access enterprise data, but the data handled by those applications are not protected. This is because some critical enterprise applications may have compatibility problems with encrypted data.
-     * @return a java.util.List<WindowsInformationProtectionApp>
+     * @return a {@link java.util.List<WindowsInformationProtectionApp>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsInformationProtectionApp> getExemptApps() {
@@ -159,7 +159,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -193,7 +193,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the iconsVisible property value. Determines whether overlays are added to icons for WIP protected files in Explorer and enterprise only app tiles in the Start menu. Starting in Windows 10, version 1703 this setting also configures the visibility of the WIP icon in the title bar of a WIP-protected app
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIconsVisible() {
@@ -201,7 +201,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the indexingEncryptedStoresOrItemsBlocked property value. This switch is for the Windows Search Indexer, to allow or disallow indexing of items
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIndexingEncryptedStoresOrItemsBlocked() {
@@ -209,7 +209,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the isAssigned property value. Indicates if the policy is deployed to any inclusion groups or not.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAssigned() {
@@ -217,7 +217,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the neutralDomainResources property value. List of domain names that can used for work or personal resource
-     * @return a java.util.List<WindowsInformationProtectionResourceCollection>
+     * @return a {@link java.util.List<WindowsInformationProtectionResourceCollection>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsInformationProtectionResourceCollection> getNeutralDomainResources() {
@@ -225,7 +225,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the protectedAppLockerFiles property value. Another way to input protected apps through xml files
-     * @return a java.util.List<WindowsInformationProtectionAppLockerFile>
+     * @return a {@link java.util.List<WindowsInformationProtectionAppLockerFile>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsInformationProtectionAppLockerFile> getProtectedAppLockerFiles() {
@@ -233,7 +233,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the protectedApps property value. Protected applications can access enterprise data and the data handled by those applications are protected with encryption
-     * @return a java.util.List<WindowsInformationProtectionApp>
+     * @return a {@link java.util.List<WindowsInformationProtectionApp>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsInformationProtectionApp> getProtectedApps() {
@@ -241,7 +241,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the protectionUnderLockConfigRequired property value. Specifies whether the protection under lock feature (also known as encrypt under pin) should be configured
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getProtectionUnderLockConfigRequired() {
@@ -249,7 +249,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the revokeOnUnenrollDisabled property value. This policy controls whether to revoke the WIP keys when a device unenrolls from the management service. If set to 1 (Don't revoke keys), the keys will not be revoked and the user will continue to have access to protected files after unenrollment. If the keys are not revoked, there will be no revoked file cleanup subsequently.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRevokeOnUnenrollDisabled() {
@@ -257,7 +257,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the rightsManagementServicesTemplateId property value. TemplateID GUID to use for RMS encryption. The RMS template allows the IT admin to configure the details about who has access to RMS-protected file and how long they have access
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getRightsManagementServicesTemplateId() {
@@ -265,7 +265,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the smbAutoEncryptedFileExtensions property value. Specifies a list of file extensions, so that files with these extensions are encrypted when copying from an SMB share within the corporate boundary
-     * @return a java.util.List<WindowsInformationProtectionResourceCollection>
+     * @return a {@link java.util.List<WindowsInformationProtectionResourceCollection>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsInformationProtectionResourceCollection> getSmbAutoEncryptedFileExtensions() {

@@ -21,7 +21,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SharedPCAccountManagerPolicy and sets the default values.
+     * Instantiates a new {@link SharedPCAccountManagerPolicy} and sets the default values.
      */
     public SharedPCAccountManagerPolicy() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Backe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SharedPCAccountManagerPolicy
+     * @return a {@link SharedPCAccountManagerPolicy}
      */
     @jakarta.annotation.Nonnull
     public static SharedPCAccountManagerPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the accountDeletionPolicy property value. Possible values for when accounts are deleted on a shared PC.
-     * @return a SharedPCAccountDeletionPolicyType
+     * @return a {@link SharedPCAccountDeletionPolicyType}
      */
     @jakarta.annotation.Nullable
     public SharedPCAccountDeletionPolicyType getAccountDeletionPolicy() {
@@ -47,7 +47,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -60,7 +60,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -68,7 +68,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the cacheAccountsAboveDiskFreePercentage property value. Sets the percentage of available disk space a PC should have before it stops deleting cached shared PC accounts. Only applies when AccountDeletionPolicy is DiskSpaceThreshold or DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCacheAccountsAboveDiskFreePercentage() {
@@ -76,7 +76,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Backe
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -90,7 +90,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the inactiveThresholdDays property value. Specifies when the accounts will start being deleted when they have not been logged on during the specified period, given as number of days. Only applies when AccountDeletionPolicy is DiskSpaceThreshold or DiskSpaceThresholdOrInactiveThreshold.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getInactiveThresholdDays() {
@@ -98,7 +98,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -106,7 +106,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the removeAccountsBelowDiskFreePercentage property value. Sets the percentage of disk space remaining on a PC before cached accounts will be deleted to free disk space. Accounts that have been inactive the longest will be deleted first. Only applies when AccountDeletionPolicy is DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRemoveAccountsBelowDiskFreePercentage() {

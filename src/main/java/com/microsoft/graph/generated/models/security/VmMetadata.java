@@ -18,7 +18,7 @@ public class VmMetadata implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new VmMetadata and sets the default values.
+     * Instantiates a new {@link VmMetadata} and sets the default values.
      */
     public VmMetadata() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class VmMetadata implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a VmMetadata
+     * @return a {@link VmMetadata}
      */
     @jakarta.annotation.Nonnull
     public static VmMetadata createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class VmMetadata implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class VmMetadata implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class VmMetadata implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the cloudProvider property value. The cloudProvider property
-     * @return a VmCloudProvider
+     * @return a {@link VmCloudProvider}
      */
     @jakarta.annotation.Nullable
     public VmCloudProvider getCloudProvider() {
@@ -65,7 +65,7 @@ public class VmMetadata implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class VmMetadata implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -87,7 +87,7 @@ public class VmMetadata implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the resourceId property value. Unique identifier of the Azure resource.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {
@@ -95,7 +95,7 @@ public class VmMetadata implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the subscriptionId property value. Unique identifier of the Azure subscription the customer tenant belongs to.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubscriptionId() {
@@ -103,7 +103,7 @@ public class VmMetadata implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the vmId property value. Unique identifier of the virtual machine instance.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVmId() {

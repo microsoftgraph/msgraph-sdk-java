@@ -18,7 +18,7 @@ public class HostSecurityState implements AdditionalDataHolder, BackedModel, Par
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new HostSecurityState and sets the default values.
+     * Instantiates a new {@link HostSecurityState} and sets the default values.
      */
     public HostSecurityState() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class HostSecurityState implements AdditionalDataHolder, BackedModel, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a HostSecurityState
+     * @return a {@link HostSecurityState}
      */
     @jakarta.annotation.Nonnull
     public static HostSecurityState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class HostSecurityState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class HostSecurityState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class HostSecurityState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -76,7 +76,7 @@ public class HostSecurityState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the fqdn property value. Host FQDN (Fully Qualified Domain Name) (for example, machine.company.com).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFqdn() {
@@ -84,7 +84,7 @@ public class HostSecurityState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the isAzureAdJoined property value. The isAzureAdJoined property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAzureAdJoined() {
@@ -92,7 +92,7 @@ public class HostSecurityState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the isAzureAdRegistered property value. The isAzureAdRegistered property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAzureAdRegistered() {
@@ -100,7 +100,7 @@ public class HostSecurityState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the isHybridAzureDomainJoined property value. True if the host is domain joined to an on-premises Active Directory domain.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsHybridAzureDomainJoined() {
@@ -108,7 +108,7 @@ public class HostSecurityState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the netBiosName property value. The local host name, without the DNS domain name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNetBiosName() {
@@ -116,7 +116,7 @@ public class HostSecurityState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -124,7 +124,7 @@ public class HostSecurityState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the os property value. Host Operating System. (For example, Windows 10, macOS, RHEL, etc.).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOs() {
@@ -132,7 +132,7 @@ public class HostSecurityState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the privateIpAddress property value. Private (not routable) IPv4 or IPv6 address (see RFC 1918) at the time of the alert.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPrivateIpAddress() {
@@ -140,7 +140,7 @@ public class HostSecurityState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the publicIpAddress property value. Publicly routable IPv4 or IPv6 address (see RFC 1918) at time of the alert.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPublicIpAddress() {
@@ -148,7 +148,7 @@ public class HostSecurityState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the riskScore property value. Provider-generated/calculated risk score of the host.  Recommended value range of 0-1, which equates to a percentage.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRiskScore() {

@@ -27,6 +27,7 @@ import java.util.Objects;
 public class DirectoryRoleTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the checkMemberGroups method.
+     * @return a {@link CheckMemberGroupsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CheckMemberGroupsRequestBuilder checkMemberGroups() {
@@ -34,6 +35,7 @@ public class DirectoryRoleTemplateItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Provides operations to call the checkMemberObjects method.
+     * @return a {@link CheckMemberObjectsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CheckMemberObjectsRequestBuilder checkMemberObjects() {
@@ -41,6 +43,7 @@ public class DirectoryRoleTemplateItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Provides operations to call the getMemberGroups method.
+     * @return a {@link GetMemberGroupsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetMemberGroupsRequestBuilder getMemberGroups() {
@@ -48,6 +51,7 @@ public class DirectoryRoleTemplateItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Provides operations to call the getMemberObjects method.
+     * @return a {@link GetMemberObjectsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetMemberObjectsRequestBuilder getMemberObjects() {
@@ -55,13 +59,14 @@ public class DirectoryRoleTemplateItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Provides operations to call the restore method.
+     * @return a {@link RestoreRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RestoreRequestBuilder restore() {
         return new RestoreRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new DirectoryRoleTemplateItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link DirectoryRoleTemplateItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -69,7 +74,7 @@ public class DirectoryRoleTemplateItemRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/directoryRoleTemplates/{directoryRoleTemplate%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new DirectoryRoleTemplateItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link DirectoryRoleTemplateItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -78,6 +83,7 @@ public class DirectoryRoleTemplateItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Delete entity from directoryRoleTemplates
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -85,17 +91,18 @@ public class DirectoryRoleTemplateItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Delete entity from directoryRoleTemplates
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve the properties and relationships of a directoryroletemplate object.
-     * @return a DirectoryRoleTemplate
+     * @return a {@link DirectoryRoleTemplate}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/directoryroletemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -105,21 +112,22 @@ public class DirectoryRoleTemplateItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Retrieve the properties and relationships of a directoryroletemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DirectoryRoleTemplate
+     * @return a {@link DirectoryRoleTemplate}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/directoryroletemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectoryRoleTemplate get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryRoleTemplate::createFromDiscriminatorValue);
     }
     /**
      * Update entity in directoryRoleTemplates
      * @param body The request body
-     * @return a DirectoryRoleTemplate
+     * @return a {@link DirectoryRoleTemplate}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DirectoryRoleTemplate patch(@jakarta.annotation.Nonnull final DirectoryRoleTemplate body) {
@@ -129,20 +137,20 @@ public class DirectoryRoleTemplateItemRequestBuilder extends BaseRequestBuilder 
      * Update entity in directoryRoleTemplates
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DirectoryRoleTemplate
+     * @return a {@link DirectoryRoleTemplate}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DirectoryRoleTemplate patch(@jakarta.annotation.Nonnull final DirectoryRoleTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryRoleTemplate::createFromDiscriminatorValue);
     }
     /**
      * Delete entity from directoryRoleTemplates
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -151,18 +159,18 @@ public class DirectoryRoleTemplateItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Delete entity from directoryRoleTemplates
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/directoryRoleTemplates/{directoryRoleTemplate%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Retrieve the properties and relationships of a directoryroletemplate object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -171,7 +179,7 @@ public class DirectoryRoleTemplateItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Retrieve the properties and relationships of a directoryroletemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -183,7 +191,7 @@ public class DirectoryRoleTemplateItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Update entity in directoryRoleTemplates
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DirectoryRoleTemplate body) {
@@ -193,12 +201,12 @@ public class DirectoryRoleTemplateItemRequestBuilder extends BaseRequestBuilder 
      * Update entity in directoryRoleTemplates
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DirectoryRoleTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/directoryRoleTemplates/{directoryRoleTemplate%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -207,7 +215,7 @@ public class DirectoryRoleTemplateItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DirectoryRoleTemplateItemRequestBuilder
+     * @return a {@link DirectoryRoleTemplateItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DirectoryRoleTemplateItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -237,7 +245,7 @@ public class DirectoryRoleTemplateItemRequestBuilder extends BaseRequestBuilder 
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

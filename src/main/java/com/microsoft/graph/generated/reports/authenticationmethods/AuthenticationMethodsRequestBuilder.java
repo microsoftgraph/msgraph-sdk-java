@@ -27,6 +27,7 @@ import java.util.Objects;
 public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the userRegistrationDetails property of the microsoft.graph.authenticationMethodsRoot entity.
+     * @return a {@link UserRegistrationDetailsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserRegistrationDetailsRequestBuilder userRegistrationDetails() {
@@ -34,6 +35,7 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the usersRegisteredByFeature method.
+     * @return a {@link UsersRegisteredByFeatureRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UsersRegisteredByFeatureRequestBuilder usersRegisteredByFeature() {
@@ -41,13 +43,14 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the usersRegisteredByMethod method.
+     * @return a {@link UsersRegisteredByMethodRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UsersRegisteredByMethodRequestBuilder usersRegisteredByMethod() {
         return new UsersRegisteredByMethodRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new AuthenticationMethodsRequestBuilder and sets the default values.
+     * Instantiates a new {@link AuthenticationMethodsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -55,7 +58,7 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/authenticationMethods{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new AuthenticationMethodsRequestBuilder and sets the default values.
+     * Instantiates a new {@link AuthenticationMethodsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -64,6 +67,7 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property authenticationMethods for reports
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -71,17 +75,18 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property authenticationMethods for reports
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Container for navigation properties for Microsoft Entra authentication methods resources.
-     * @return a AuthenticationMethodsRoot
+     * @return a {@link AuthenticationMethodsRoot}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodsRoot get() {
@@ -90,20 +95,21 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Container for navigation properties for Microsoft Entra authentication methods resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AuthenticationMethodsRoot
+     * @return a {@link AuthenticationMethodsRoot}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodsRoot get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationMethodsRoot::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property authenticationMethods in reports
      * @param body The request body
-     * @return a AuthenticationMethodsRoot
+     * @return a {@link AuthenticationMethodsRoot}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodsRoot patch(@jakarta.annotation.Nonnull final AuthenticationMethodsRoot body) {
@@ -113,20 +119,20 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property authenticationMethods in reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AuthenticationMethodsRoot
+     * @return a {@link AuthenticationMethodsRoot}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodsRoot patch(@jakarta.annotation.Nonnull final AuthenticationMethodsRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationMethodsRoot::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property authenticationMethods for reports
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -135,18 +141,18 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property authenticationMethods for reports
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/reports/authenticationMethods", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Container for navigation properties for Microsoft Entra authentication methods resources.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -155,7 +161,7 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Container for navigation properties for Microsoft Entra authentication methods resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -167,7 +173,7 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property authenticationMethods in reports
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AuthenticationMethodsRoot body) {
@@ -177,12 +183,12 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property authenticationMethods in reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AuthenticationMethodsRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/reports/authenticationMethods", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -192,7 +198,7 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the usersRegisteredByFeature method.
      * @param includedUserRoles Usage: includedUserRoles='{includedUserRoles}'
      * @param includedUserTypes Usage: includedUserTypes='{includedUserTypes}'
-     * @return a UsersRegisteredByFeatureWithIncludedUserTypesWithIncludedUserRolesRequestBuilder
+     * @return a {@link UsersRegisteredByFeatureWithIncludedUserTypesWithIncludedUserRolesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UsersRegisteredByFeatureWithIncludedUserTypesWithIncludedUserRolesRequestBuilder usersRegisteredByFeatureWithIncludedUserTypesWithIncludedUserRoles(@jakarta.annotation.Nonnull final String includedUserRoles, @jakarta.annotation.Nonnull final String includedUserTypes) {
@@ -204,7 +210,7 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the usersRegisteredByMethod method.
      * @param includedUserRoles Usage: includedUserRoles='{includedUserRoles}'
      * @param includedUserTypes Usage: includedUserTypes='{includedUserTypes}'
-     * @return a UsersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRolesRequestBuilder
+     * @return a {@link UsersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRolesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UsersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRolesRequestBuilder usersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRoles(@jakarta.annotation.Nonnull final String includedUserRoles, @jakarta.annotation.Nonnull final String includedUserTypes) {
@@ -215,7 +221,7 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AuthenticationMethodsRequestBuilder
+     * @return a {@link AuthenticationMethodsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AuthenticationMethodsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -245,7 +251,7 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

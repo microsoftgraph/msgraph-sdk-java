@@ -25,6 +25,7 @@ import java.util.Objects;
 public class RelationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the fromTerm property of the microsoft.graph.termStore.relation entity.
+     * @return a {@link FromTermRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FromTermRequestBuilder fromTerm() {
@@ -32,6 +33,7 @@ public class RelationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the set property of the microsoft.graph.termStore.relation entity.
+     * @return a {@link SetRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SetRequestBuilder set() {
@@ -39,13 +41,14 @@ public class RelationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the toTerm property of the microsoft.graph.termStore.relation entity.
+     * @return a {@link ToTermRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ToTermRequestBuilder toTerm() {
         return new ToTermRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new RelationItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link RelationItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -53,7 +56,7 @@ public class RelationItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/termStore/sets/{set%2Did}/parentGroup/sets/{set%2Did1}/terms/{term%2Did}/children/{term%2Did1}/relations/{relation%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new RelationItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link RelationItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -62,6 +65,7 @@ public class RelationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property relations for groups
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -69,17 +73,18 @@ public class RelationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property relations for groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * To indicate which terms are related to the current term as either pinned or reused.
-     * @return a Relation
+     * @return a {@link Relation}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Relation get() {
@@ -88,20 +93,21 @@ public class RelationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * To indicate which terms are related to the current term as either pinned or reused.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Relation
+     * @return a {@link Relation}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Relation get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Relation::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property relations in groups
      * @param body The request body
-     * @return a Relation
+     * @return a {@link Relation}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Relation patch(@jakarta.annotation.Nonnull final Relation body) {
@@ -111,20 +117,20 @@ public class RelationItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property relations in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Relation
+     * @return a {@link Relation}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Relation patch(@jakarta.annotation.Nonnull final Relation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Relation::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property relations for groups
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -133,18 +139,18 @@ public class RelationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property relations for groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/termStore/sets/{set%2Did}/parentGroup/sets/{set%2Did1}/terms/{term%2Did}/children/{term%2Did1}/relations/{relation%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * To indicate which terms are related to the current term as either pinned or reused.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -153,7 +159,7 @@ public class RelationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * To indicate which terms are related to the current term as either pinned or reused.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -165,7 +171,7 @@ public class RelationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property relations in groups
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Relation body) {
@@ -175,12 +181,12 @@ public class RelationItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property relations in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Relation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/termStore/sets/{set%2Did}/parentGroup/sets/{set%2Did1}/terms/{term%2Did}/children/{term%2Did1}/relations/{relation%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -189,7 +195,7 @@ public class RelationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a RelationItemRequestBuilder
+     * @return a {@link RelationItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RelationItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -219,7 +225,7 @@ public class RelationItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

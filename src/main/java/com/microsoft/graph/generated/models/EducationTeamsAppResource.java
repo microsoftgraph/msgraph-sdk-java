@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationTeamsAppResource extends EducationResource implements Parsable {
     /**
-     * Instantiates a new EducationTeamsAppResource and sets the default values.
+     * Instantiates a new {@link EducationTeamsAppResource} and sets the default values.
      */
     public EducationTeamsAppResource() {
         super();
@@ -18,7 +18,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationTeamsAppResource
+     * @return a {@link EducationTeamsAppResource}
      */
     @jakarta.annotation.Nonnull
     public static EducationTeamsAppResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
     }
     /**
      * Gets the appIconWebUrl property value. URL that points to the icon of the app.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppIconWebUrl() {
@@ -35,7 +35,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
     }
     /**
      * Gets the appId property value. Teams app ID of the application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
@@ -43,7 +43,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -56,7 +56,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
     }
     /**
      * Gets the teamsEmbeddedContentUrl property value. URL for the app resource that will be opened by Teams.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTeamsEmbeddedContentUrl() {
@@ -64,7 +64,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
     }
     /**
      * Gets the webUrl property value. URL for the app resource that can be opened in the browser.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {

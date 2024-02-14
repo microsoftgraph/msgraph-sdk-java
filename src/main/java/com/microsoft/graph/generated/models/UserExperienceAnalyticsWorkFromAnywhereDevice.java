@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implements Parsable {
     /**
-     * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereDevice and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsWorkFromAnywhereDevice} and sets the default values.
      */
     public UserExperienceAnalyticsWorkFromAnywhereDevice() {
         super();
@@ -20,7 +20,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsWorkFromAnywhereDevice
+     * @return a {@link UserExperienceAnalyticsWorkFromAnywhereDevice}
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsWorkFromAnywhereDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the autoPilotProfileAssigned property value. When TRUE, indicates the intune device's autopilot profile is assigned. When FALSE, indicates it's not Assigned. Supports: $select, $OrderBy. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAutoPilotProfileAssigned() {
@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the autoPilotRegistered property value. When TRUE, indicates the intune device's autopilot is registered. When FALSE, indicates it's not registered. Supports: $select, $OrderBy. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAutoPilotRegistered() {
@@ -45,7 +45,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the azureAdDeviceId property value. The Azure Active Directory (Azure AD) device Id. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureAdDeviceId() {
@@ -53,7 +53,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the azureAdJoinType property value. The work from anywhere device's Azure Active Directory (Azure AD) join type. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureAdJoinType() {
@@ -61,7 +61,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the azureAdRegistered property value. When TRUE, indicates the device's Azure Active Directory (Azure AD) is registered. When False, indicates it's not registered. Supports: $select, $OrderBy. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAzureAdRegistered() {
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the cloudIdentityScore property value. Indicates per device cloud identity score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getCloudIdentityScore() {
@@ -77,7 +77,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the cloudManagementScore property value. Indicates per device cloud management score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getCloudManagementScore() {
@@ -85,7 +85,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the cloudProvisioningScore property value. Indicates per device cloud provisioning score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getCloudProvisioningScore() {
@@ -93,7 +93,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the compliancePolicySetToIntune property value. When TRUE, indicates the device's compliance policy is set to intune. When FALSE, indicates it's not set to intune. Supports: $select, $OrderBy. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getCompliancePolicySetToIntune() {
@@ -101,7 +101,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the deviceId property value. The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -109,7 +109,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the deviceName property value. The name of the device. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -117,7 +117,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -160,7 +160,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the healthStatus property value. The healthStatus property
-     * @return a UserExperienceAnalyticsHealthState
+     * @return a {@link UserExperienceAnalyticsHealthState}
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsHealthState getHealthStatus() {
@@ -168,7 +168,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the isCloudManagedGatewayEnabled property value. When TRUE, indicates the device's Cloud Management Gateway for Configuration Manager is enabled. When FALSE, indicates it's not enabled. Supports: $select, $OrderBy. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCloudManagedGatewayEnabled() {
@@ -176,7 +176,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the managedBy property value. The management agent of the device. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagedBy() {
@@ -184,7 +184,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the manufacturer property value. The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
@@ -192,7 +192,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the model property value. The model name of the device. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getModel() {
@@ -200,7 +200,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the osCheckFailed property value. When TRUE, indicates OS check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getOsCheckFailed() {
@@ -208,7 +208,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the osDescription property value. The OS description of the device. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsDescription() {
@@ -216,7 +216,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the osVersion property value. The OS version of the device. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
@@ -224,7 +224,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the otherWorkloadsSetToIntune property value. When TRUE, indicates the device's other workloads is set to intune. When FALSE, indicates it's not set to intune. Supports: $select, $OrderBy. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getOtherWorkloadsSetToIntune() {
@@ -232,7 +232,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the ownership property value. Ownership of the device. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOwnership() {
@@ -240,7 +240,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the processor64BitCheckFailed property value. When TRUE, indicates processor hardware 64-bit architecture check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getProcessor64BitCheckFailed() {
@@ -248,7 +248,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the processorCoreCountCheckFailed property value. When TRUE, indicates processor hardware core count check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getProcessorCoreCountCheckFailed() {
@@ -256,7 +256,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the processorFamilyCheckFailed property value. When TRUE, indicates processor hardware family check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getProcessorFamilyCheckFailed() {
@@ -264,7 +264,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the processorSpeedCheckFailed property value. When TRUE, indicates processor hardware speed check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getProcessorSpeedCheckFailed() {
@@ -272,7 +272,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the ramCheckFailed property value. When TRUE, indicates RAM hardware check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRamCheckFailed() {
@@ -280,7 +280,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the secureBootCheckFailed property value. When TRUE, indicates secure boot hardware check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSecureBootCheckFailed() {
@@ -288,7 +288,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the serialNumber property value. The serial number of the device. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSerialNumber() {
@@ -296,7 +296,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the storageCheckFailed property value. When TRUE, indicates storage hardware check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageCheckFailed() {
@@ -304,7 +304,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the tenantAttached property value. When TRUE, indicates the device is Tenant Attached. When FALSE, indicates it's not Tenant Attached. Supports: $select, $OrderBy. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getTenantAttached() {
@@ -312,7 +312,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the tpmCheckFailed property value. When TRUE, indicates Trusted Platform Module (TPM) hardware check failed for device to the latest version of upgrade to windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getTpmCheckFailed() {
@@ -320,7 +320,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the upgradeEligibility property value. Work From Anywhere windows device upgrade eligibility status.
-     * @return a OperatingSystemUpgradeEligibility
+     * @return a {@link OperatingSystemUpgradeEligibility}
      */
     @jakarta.annotation.Nullable
     public OperatingSystemUpgradeEligibility getUpgradeEligibility() {
@@ -328,7 +328,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the windowsScore property value. Indicates per device windows score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getWindowsScore() {
@@ -336,7 +336,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the workFromAnywhereScore property value. Indicates work from anywhere per device overall score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getWorkFromAnywhereScore() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServicePrincipalEvidence extends AlertEvidence implements Parsable {
     /**
-     * Instantiates a new ServicePrincipalEvidence and sets the default values.
+     * Instantiates a new {@link ServicePrincipalEvidence} and sets the default values.
      */
     public ServicePrincipalEvidence() {
         super();
@@ -18,7 +18,7 @@ public class ServicePrincipalEvidence extends AlertEvidence implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ServicePrincipalEvidence
+     * @return a {@link ServicePrincipalEvidence}
      */
     @jakarta.annotation.Nonnull
     public static ServicePrincipalEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ServicePrincipalEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * Gets the appId property value. The appId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
@@ -35,7 +35,7 @@ public class ServicePrincipalEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * Gets the appOwnerTenantId property value. The appOwnerTenantId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppOwnerTenantId() {
@@ -43,7 +43,7 @@ public class ServicePrincipalEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -58,7 +58,7 @@ public class ServicePrincipalEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * Gets the servicePrincipalName property value. The servicePrincipalName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalName() {
@@ -66,7 +66,7 @@ public class ServicePrincipalEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * Gets the servicePrincipalObjectId property value. The servicePrincipalObjectId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalObjectId() {
@@ -74,7 +74,7 @@ public class ServicePrincipalEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * Gets the servicePrincipalType property value. The servicePrincipalType property
-     * @return a ServicePrincipalType
+     * @return a {@link ServicePrincipalType}
      */
     @jakarta.annotation.Nullable
     public ServicePrincipalType getServicePrincipalType() {
@@ -82,7 +82,7 @@ public class ServicePrincipalEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * Gets the tenantId property value. The tenantId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {

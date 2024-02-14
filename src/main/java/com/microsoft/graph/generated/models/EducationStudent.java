@@ -19,7 +19,7 @@ public class EducationStudent implements AdditionalDataHolder, BackedModel, Pars
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new EducationStudent and sets the default values.
+     * Instantiates a new {@link EducationStudent} and sets the default values.
      */
     public EducationStudent() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class EducationStudent implements AdditionalDataHolder, BackedModel, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationStudent
+     * @return a {@link EducationStudent}
      */
     @jakarta.annotation.Nonnull
     public static EducationStudent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class EducationStudent implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class EducationStudent implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class EducationStudent implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the birthDate property value. Birth date of the student.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getBirthDate() {
@@ -66,7 +66,7 @@ public class EducationStudent implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the externalId property value. ID of the student in the source system.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
@@ -74,7 +74,7 @@ public class EducationStudent implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -90,7 +90,7 @@ public class EducationStudent implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the gender property value. The possible values are: female, male, other, unknownFutureValue.
-     * @return a EducationGender
+     * @return a {@link EducationGender}
      */
     @jakarta.annotation.Nullable
     public EducationGender getGender() {
@@ -98,7 +98,7 @@ public class EducationStudent implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the grade property value. Current grade level of the student.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getGrade() {
@@ -106,7 +106,7 @@ public class EducationStudent implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the graduationYear property value. Year the student is graduating from the school.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getGraduationYear() {
@@ -114,7 +114,7 @@ public class EducationStudent implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -122,7 +122,7 @@ public class EducationStudent implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the studentNumber property value. Student Number.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStudentNumber() {

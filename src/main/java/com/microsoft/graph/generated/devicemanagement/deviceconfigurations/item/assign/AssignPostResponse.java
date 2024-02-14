@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AssignPostResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new AssignPostResponse and sets the default values.
+     * Instantiates a new {@link AssignPostResponse} and sets the default values.
      */
     public AssignPostResponse() {
         super();
@@ -19,7 +19,7 @@ public class AssignPostResponse extends BaseCollectionPaginationCountResponse im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AssignPostResponse
+     * @return a {@link AssignPostResponse}
      */
     @jakarta.annotation.Nonnull
     public static AssignPostResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class AssignPostResponse extends BaseCollectionPaginationCountResponse im
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class AssignPostResponse extends BaseCollectionPaginationCountResponse im
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<DeviceConfigurationAssignment>
+     * @return a {@link java.util.List<DeviceConfigurationAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceConfigurationAssignment> getValue() {

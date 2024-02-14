@@ -18,7 +18,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new MeetingParticipantInfo and sets the default values.
+     * Instantiates a new {@link MeetingParticipantInfo} and sets the default values.
      */
     public MeetingParticipantInfo() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MeetingParticipantInfo
+     * @return a {@link MeetingParticipantInfo}
      */
     @jakarta.annotation.Nonnull
     public static MeetingParticipantInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -70,7 +70,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the identity property value. Identity information of the participant.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getIdentity() {
@@ -78,7 +78,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -86,7 +86,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the role property value. Specifies the participant's role in the meeting.
-     * @return a OnlineMeetingRole
+     * @return a {@link OnlineMeetingRole}
      */
     @jakarta.annotation.Nullable
     public OnlineMeetingRole getRole() {
@@ -94,7 +94,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the upn property value. User principal name of the participant.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUpn() {

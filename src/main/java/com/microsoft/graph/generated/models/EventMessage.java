@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EventMessage extends Message implements Parsable {
     /**
-     * Instantiates a new EventMessage and sets the default values.
+     * Instantiates a new {@link EventMessage} and sets the default values.
      */
     public EventMessage() {
         super();
@@ -18,7 +18,7 @@ public class EventMessage extends Message implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EventMessage
+     * @return a {@link EventMessage}
      */
     @jakarta.annotation.Nonnull
     public static EventMessage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class EventMessage extends Message implements Parsable {
     }
     /**
      * Gets the endDateTime property value. The endDateTime property
-     * @return a DateTimeTimeZone
+     * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getEndDateTime() {
@@ -43,7 +43,7 @@ public class EventMessage extends Message implements Parsable {
     }
     /**
      * Gets the event property value. The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.  Read-only.
-     * @return a Event
+     * @return a {@link Event}
      */
     @jakarta.annotation.Nullable
     public Event getEvent() {
@@ -51,7 +51,7 @@ public class EventMessage extends Message implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -70,7 +70,7 @@ public class EventMessage extends Message implements Parsable {
     }
     /**
      * Gets the isAllDay property value. The isAllDay property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAllDay() {
@@ -78,7 +78,7 @@ public class EventMessage extends Message implements Parsable {
     }
     /**
      * Gets the isDelegated property value. The isDelegated property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDelegated() {
@@ -86,7 +86,7 @@ public class EventMessage extends Message implements Parsable {
     }
     /**
      * Gets the isOutOfDate property value. The isOutOfDate property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsOutOfDate() {
@@ -94,7 +94,7 @@ public class EventMessage extends Message implements Parsable {
     }
     /**
      * Gets the location property value. The location property
-     * @return a Location
+     * @return a {@link Location}
      */
     @jakarta.annotation.Nullable
     public Location getLocation() {
@@ -102,7 +102,7 @@ public class EventMessage extends Message implements Parsable {
     }
     /**
      * Gets the meetingMessageType property value. The meetingMessageType property
-     * @return a MeetingMessageType
+     * @return a {@link MeetingMessageType}
      */
     @jakarta.annotation.Nullable
     public MeetingMessageType getMeetingMessageType() {
@@ -110,7 +110,7 @@ public class EventMessage extends Message implements Parsable {
     }
     /**
      * Gets the recurrence property value. The recurrence property
-     * @return a PatternedRecurrence
+     * @return a {@link PatternedRecurrence}
      */
     @jakarta.annotation.Nullable
     public PatternedRecurrence getRecurrence() {
@@ -118,7 +118,7 @@ public class EventMessage extends Message implements Parsable {
     }
     /**
      * Gets the startDateTime property value. The startDateTime property
-     * @return a DateTimeTimeZone
+     * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getStartDateTime() {
@@ -126,7 +126,7 @@ public class EventMessage extends Message implements Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a EventType
+     * @return a {@link EventType}
      */
     @jakarta.annotation.Nullable
     public EventType getType() {

@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity implements Parsable {
     /**
-     * Instantiates a new UserExperienceAnalyticsAppHealthDevicePerformance and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsAppHealthDevicePerformance} and sets the default values.
      */
     public UserExperienceAnalyticsAppHealthDevicePerformance() {
         super();
@@ -21,7 +21,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsAppHealthDevicePerformance
+     * @return a {@link UserExperienceAnalyticsAppHealthDevicePerformance}
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsAppHealthDevicePerformance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
     }
     /**
      * Gets the appCrashCount property value. The number of application crashes for the device. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getAppCrashCount() {
@@ -38,7 +38,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
     }
     /**
      * Gets the appHangCount property value. The number of application hangs for the device. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getAppHangCount() {
@@ -46,7 +46,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
     }
     /**
      * Gets the crashedAppCount property value. The number of distinct application crashes for the device. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCrashedAppCount() {
@@ -54,7 +54,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
     }
     /**
      * Gets the deviceAppHealthScore property value. The application health score of the device. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getDeviceAppHealthScore() {
@@ -62,7 +62,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
     }
     /**
      * Gets the deviceDisplayName property value. The name of the device. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
@@ -70,7 +70,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
     }
     /**
      * Gets the deviceId property value. The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -78,7 +78,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
     }
     /**
      * Gets the deviceManufacturer property value. The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceManufacturer() {
@@ -86,7 +86,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
     }
     /**
      * Gets the deviceModel property value. The model name of the device. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceModel() {
@@ -94,7 +94,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -114,7 +114,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
     }
     /**
      * Gets the healthStatus property value. The healthStatus property
-     * @return a UserExperienceAnalyticsHealthState
+     * @return a {@link UserExperienceAnalyticsHealthState}
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsHealthState getHealthStatus() {
@@ -122,7 +122,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
     }
     /**
      * Gets the meanTimeToFailureInMinutes property value. The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMeanTimeToFailureInMinutes() {
@@ -130,7 +130,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
     }
     /**
      * Gets the processedDateTime property value. The date and time when the statistics were last computed. The value cannot be modified and is automatically populated when the statistics are computed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getProcessedDateTime() {

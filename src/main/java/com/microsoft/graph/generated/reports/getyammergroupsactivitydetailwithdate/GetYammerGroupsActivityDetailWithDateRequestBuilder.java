@@ -21,7 +21,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetYammerGroupsActivityDetailWithDateRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new GetYammerGroupsActivityDetailWithDateRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetYammerGroupsActivityDetailWithDateRequestBuilder} and sets the default values.
      * @param date Usage: date={date}
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -31,7 +31,7 @@ public class GetYammerGroupsActivityDetailWithDateRequestBuilder extends BaseReq
         this.pathParameters.put("date", date);
     }
     /**
-     * Instantiates a new GetYammerGroupsActivityDetailWithDateRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetYammerGroupsActivityDetailWithDateRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -40,7 +40,8 @@ public class GetYammerGroupsActivityDetailWithDateRequestBuilder extends BaseReq
     }
     /**
      * Invoke function getYammerGroupsActivityDetail
-     * @return a InputStream
+     * @return a {@link InputStream}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public InputStream get() {
@@ -49,19 +50,19 @@ public class GetYammerGroupsActivityDetailWithDateRequestBuilder extends BaseReq
     /**
      * Invoke function getYammerGroupsActivityDetail
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a InputStream
+     * @return a {@link InputStream}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public InputStream get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
      * Invoke function getYammerGroupsActivityDetail
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -70,7 +71,7 @@ public class GetYammerGroupsActivityDetailWithDateRequestBuilder extends BaseReq
     /**
      * Invoke function getYammerGroupsActivityDetail
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +83,7 @@ public class GetYammerGroupsActivityDetailWithDateRequestBuilder extends BaseReq
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GetYammerGroupsActivityDetailWithDateRequestBuilder
+     * @return a {@link GetYammerGroupsActivityDetailWithDateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetYammerGroupsActivityDetailWithDateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

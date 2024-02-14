@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IPv6CidrRange extends IpRange implements Parsable {
     /**
-     * Instantiates a new IPv6CidrRange and sets the default values.
+     * Instantiates a new {@link IPv6CidrRange} and sets the default values.
      */
     public IPv6CidrRange() {
         super();
@@ -18,7 +18,7 @@ public class IPv6CidrRange extends IpRange implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IPv6CidrRange
+     * @return a {@link IPv6CidrRange}
      */
     @jakarta.annotation.Nonnull
     public static IPv6CidrRange createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class IPv6CidrRange extends IpRange implements Parsable {
     }
     /**
      * Gets the cidrAddress property value. IPv6 address in CIDR notation. Not nullable.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCidrAddress() {
@@ -35,7 +35,7 @@ public class IPv6CidrRange extends IpRange implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

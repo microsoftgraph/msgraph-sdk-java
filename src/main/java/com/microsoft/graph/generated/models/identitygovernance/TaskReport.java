@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TaskReport extends Entity implements Parsable {
     /**
-     * Instantiates a new TaskReport and sets the default values.
+     * Instantiates a new {@link TaskReport} and sets the default values.
      */
     public TaskReport() {
         super();
@@ -19,7 +19,7 @@ public class TaskReport extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TaskReport
+     * @return a {@link TaskReport}
      */
     @jakarta.annotation.Nonnull
     public static TaskReport createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class TaskReport extends Entity implements Parsable {
     }
     /**
      * Gets the completedDateTime property value. The date time that the associated run completed. Value is null if the run has not completed.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
@@ -36,7 +36,7 @@ public class TaskReport extends Entity implements Parsable {
     }
     /**
      * Gets the failedUsersCount property value. The number of users in the run execution for which the associated task failed.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getFailedUsersCount() {
@@ -44,7 +44,7 @@ public class TaskReport extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -65,7 +65,7 @@ public class TaskReport extends Entity implements Parsable {
     }
     /**
      * Gets the lastUpdatedDateTime property value. The date and time that the task report was last updated.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
@@ -73,7 +73,7 @@ public class TaskReport extends Entity implements Parsable {
     }
     /**
      * Gets the processingStatus property value. The processingStatus property
-     * @return a LifecycleWorkflowProcessingStatus
+     * @return a {@link LifecycleWorkflowProcessingStatus}
      */
     @jakarta.annotation.Nullable
     public LifecycleWorkflowProcessingStatus getProcessingStatus() {
@@ -81,7 +81,7 @@ public class TaskReport extends Entity implements Parsable {
     }
     /**
      * Gets the runId property value. The unique identifier of the associated run.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRunId() {
@@ -89,7 +89,7 @@ public class TaskReport extends Entity implements Parsable {
     }
     /**
      * Gets the startedDateTime property value. The date time that the associated run started. Value is null if the run has not started.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartedDateTime() {
@@ -97,7 +97,7 @@ public class TaskReport extends Entity implements Parsable {
     }
     /**
      * Gets the successfulUsersCount property value. The number of users in the run execution for which the associated task succeeded.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessfulUsersCount() {
@@ -105,7 +105,7 @@ public class TaskReport extends Entity implements Parsable {
     }
     /**
      * Gets the task property value. The task property
-     * @return a Task
+     * @return a {@link Task}
      */
     @jakarta.annotation.Nullable
     public Task getTask() {
@@ -113,7 +113,7 @@ public class TaskReport extends Entity implements Parsable {
     }
     /**
      * Gets the taskDefinition property value. The taskDefinition property
-     * @return a TaskDefinition
+     * @return a {@link TaskDefinition}
      */
     @jakarta.annotation.Nullable
     public TaskDefinition getTaskDefinition() {
@@ -121,7 +121,7 @@ public class TaskReport extends Entity implements Parsable {
     }
     /**
      * Gets the taskProcessingResults property value. The related lifecycle workflow taskProcessingResults.
-     * @return a java.util.List<TaskProcessingResult>
+     * @return a {@link java.util.List<TaskProcessingResult>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TaskProcessingResult> getTaskProcessingResults() {
@@ -129,7 +129,7 @@ public class TaskReport extends Entity implements Parsable {
     }
     /**
      * Gets the totalUsersCount property value. The total number of users in the run execution for which the associated task was scheduled to execute.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalUsersCount() {
@@ -137,7 +137,7 @@ public class TaskReport extends Entity implements Parsable {
     }
     /**
      * Gets the unprocessedUsersCount property value. The number of users in the run execution for which the associated task is queued, in progress, or canceled.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUnprocessedUsersCount() {

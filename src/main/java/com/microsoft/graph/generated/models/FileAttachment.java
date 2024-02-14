@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class FileAttachment extends Attachment implements Parsable {
     /**
-     * Instantiates a new FileAttachment and sets the default values.
+     * Instantiates a new {@link FileAttachment} and sets the default values.
      */
     public FileAttachment() {
         super();
@@ -18,7 +18,7 @@ public class FileAttachment extends Attachment implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a FileAttachment
+     * @return a {@link FileAttachment}
      */
     @jakarta.annotation.Nonnull
     public static FileAttachment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class FileAttachment extends Attachment implements Parsable {
     }
     /**
      * Gets the contentBytes property value. The base64-encoded contents of the file.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getContentBytes() {
@@ -35,7 +35,7 @@ public class FileAttachment extends Attachment implements Parsable {
     }
     /**
      * Gets the contentId property value. The ID of the attachment in the Exchange store.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContentId() {
@@ -43,7 +43,7 @@ public class FileAttachment extends Attachment implements Parsable {
     }
     /**
      * Gets the contentLocation property value. Don't use this property as it isn't supported.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContentLocation() {
@@ -51,7 +51,7 @@ public class FileAttachment extends Attachment implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

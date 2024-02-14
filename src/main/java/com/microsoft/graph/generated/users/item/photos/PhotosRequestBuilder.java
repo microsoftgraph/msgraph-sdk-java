@@ -24,7 +24,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the photos property of the microsoft.graph.user entity.
      * @param profilePhotoId The unique identifier of profilePhoto
-     * @return a ProfilePhotoItemRequestBuilder
+     * @return a {@link ProfilePhotoItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ProfilePhotoItemRequestBuilder byProfilePhotoId(@jakarta.annotation.Nonnull final String profilePhotoId) {
@@ -34,7 +34,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
         return new ProfilePhotoItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new PhotosRequestBuilder and sets the default values.
+     * Instantiates a new {@link PhotosRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -42,7 +42,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/photos{?%24filter,%24orderby,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new PhotosRequestBuilder and sets the default values.
+     * Instantiates a new {@link PhotosRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +51,8 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of the user's profile photos in different sizes. Read-only.
-     * @return a ProfilePhotoCollectionResponse
+     * @return a {@link ProfilePhotoCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ProfilePhotoCollectionResponse get() {
@@ -60,19 +61,19 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of the user's profile photos in different sizes. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ProfilePhotoCollectionResponse
+     * @return a {@link ProfilePhotoCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ProfilePhotoCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ProfilePhotoCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * The collection of the user's profile photos in different sizes. Read-only.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -81,7 +82,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of the user's profile photos in different sizes. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -93,7 +94,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a PhotosRequestBuilder
+     * @return a {@link PhotosRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PhotosRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -132,7 +133,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

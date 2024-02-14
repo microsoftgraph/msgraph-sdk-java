@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BitlockerRecoveryKey extends Entity implements Parsable {
     /**
-     * Instantiates a new BitlockerRecoveryKey and sets the default values.
+     * Instantiates a new {@link BitlockerRecoveryKey} and sets the default values.
      */
     public BitlockerRecoveryKey() {
         super();
@@ -18,7 +18,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BitlockerRecoveryKey
+     * @return a {@link BitlockerRecoveryKey}
      */
     @jakarta.annotation.Nonnull
     public static BitlockerRecoveryKey createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time when the key was originally backed up to Microsoft Entra ID. Not nullable.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -35,7 +35,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
     }
     /**
      * Gets the deviceId property value. Identifier of the device the BitLocker key is originally backed up from. Supports $filter (eq).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -43,7 +43,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -56,7 +56,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
     }
     /**
      * Gets the key property value. The BitLocker recovery key. Returned only on $select. Not nullable.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getKey() {
@@ -64,7 +64,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
     }
     /**
      * Gets the volumeType property value. Indicates the type of volume the BitLocker key is associated with. The possible values are: 1 (for operatingSystemVolume), 2 (for fixedDataVolume), 3 (for removableDataVolume), and 4 (for unknownFutureValue).
-     * @return a VolumeType
+     * @return a {@link VolumeType}
      */
     @jakarta.annotation.Nullable
     public VolumeType getVolumeType() {

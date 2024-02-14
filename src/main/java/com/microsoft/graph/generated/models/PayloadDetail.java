@@ -18,7 +18,7 @@ public class PayloadDetail implements AdditionalDataHolder, BackedModel, Parsabl
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new PayloadDetail and sets the default values.
+     * Instantiates a new {@link PayloadDetail} and sets the default values.
      */
     public PayloadDetail() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class PayloadDetail implements AdditionalDataHolder, BackedModel, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PayloadDetail
+     * @return a {@link PayloadDetail}
      */
     @jakarta.annotation.Nonnull
     public static PayloadDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class PayloadDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -56,7 +56,7 @@ public class PayloadDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -64,7 +64,7 @@ public class PayloadDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the coachmarks property value. Payload coachmark details.
-     * @return a java.util.List<PayloadCoachmark>
+     * @return a {@link java.util.List<PayloadCoachmark>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PayloadCoachmark> getCoachmarks() {
@@ -72,7 +72,7 @@ public class PayloadDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the content property value. Payload content details.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContent() {
@@ -80,7 +80,7 @@ public class PayloadDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -93,7 +93,7 @@ public class PayloadDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -101,7 +101,7 @@ public class PayloadDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the phishingUrl property value. The phishing URL used to target a user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPhishingUrl() {

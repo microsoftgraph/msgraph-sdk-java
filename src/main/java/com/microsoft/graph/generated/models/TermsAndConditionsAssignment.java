@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TermsAndConditionsAssignment extends Entity implements Parsable {
     /**
-     * Instantiates a new TermsAndConditionsAssignment and sets the default values.
+     * Instantiates a new {@link TermsAndConditionsAssignment} and sets the default values.
      */
     public TermsAndConditionsAssignment() {
         super();
@@ -20,7 +20,7 @@ public class TermsAndConditionsAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TermsAndConditionsAssignment
+     * @return a {@link TermsAndConditionsAssignment}
      */
     @jakarta.annotation.Nonnull
     public static TermsAndConditionsAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class TermsAndConditionsAssignment extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -39,7 +39,7 @@ public class TermsAndConditionsAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the target property value. Assignment target that the T&C policy is assigned to.
-     * @return a DeviceAndAppManagementAssignmentTarget
+     * @return a {@link DeviceAndAppManagementAssignmentTarget}
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {

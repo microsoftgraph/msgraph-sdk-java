@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookTableColumn extends Entity implements Parsable {
     /**
-     * Instantiates a new WorkbookTableColumn and sets the default values.
+     * Instantiates a new {@link WorkbookTableColumn} and sets the default values.
      */
     public WorkbookTableColumn() {
         super();
@@ -17,7 +17,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookTableColumn
+     * @return a {@link WorkbookTableColumn}
      */
     @jakarta.annotation.Nonnull
     public static WorkbookTableColumn createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -39,7 +39,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
     }
     /**
      * Gets the filter property value. Retrieve the filter applied to the column. Read-only.
-     * @return a WorkbookFilter
+     * @return a {@link WorkbookFilter}
      */
     @jakarta.annotation.Nullable
     public WorkbookFilter getFilter() {
@@ -47,7 +47,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
     }
     /**
      * Gets the index property value. Returns the index number of the column within the columns collection of the table. Zero-indexed. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getIndex() {
@@ -55,7 +55,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. Returns the name of the table column.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -63,7 +63,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
     }
     /**
      * Gets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getValues() {

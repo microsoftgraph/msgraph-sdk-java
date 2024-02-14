@@ -29,6 +29,7 @@ import java.util.Objects;
 public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -36,6 +37,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the delta method.
+     * @return a {@link DeltaRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeltaRequestBuilder delta() {
@@ -43,6 +45,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getAvailableExtensionProperties method.
+     * @return a {@link GetAvailableExtensionPropertiesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetAvailableExtensionPropertiesRequestBuilder getAvailableExtensionProperties() {
@@ -50,6 +53,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getByIds method.
+     * @return a {@link GetByIdsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetByIdsRequestBuilder getByIds() {
@@ -57,6 +61,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the validateProperties method.
+     * @return a {@link ValidatePropertiesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
@@ -65,7 +70,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of application entities.
      * @param applicationId The unique identifier of application
-     * @return a ApplicationItemRequestBuilder
+     * @return a {@link ApplicationItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ApplicationItemRequestBuilder byApplicationId(@jakarta.annotation.Nonnull final String applicationId) {
@@ -75,7 +80,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         return new ApplicationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new ApplicationsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ApplicationsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -83,7 +88,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new ApplicationsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ApplicationsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -92,7 +97,8 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of applications in this organization.
-     * @return a ApplicationCollectionResponse
+     * @return a {@link ApplicationCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/application-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -102,21 +108,22 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of applications in this organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ApplicationCollectionResponse
+     * @return a {@link ApplicationCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/application-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ApplicationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ApplicationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new application object.
      * @param body The request body
-     * @return a Application
+     * @return a {@link Application}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/application-post-applications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -127,7 +134,8 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
      * Create a new application object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Application
+     * @return a {@link Application}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/application-post-applications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -135,13 +143,12 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Application::createFromDiscriminatorValue);
     }
     /**
      * Get the list of applications in this organization.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -150,7 +157,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of applications in this organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -162,7 +169,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new application object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Application body) {
@@ -172,12 +179,12 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
      * Create a new application object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Application body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/applications", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -186,7 +193,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ApplicationsRequestBuilder
+     * @return a {@link ApplicationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ApplicationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -240,7 +247,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

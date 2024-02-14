@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IpAddress extends Host implements Parsable {
     /**
-     * Instantiates a new IpAddress and sets the default values.
+     * Instantiates a new {@link IpAddress} and sets the default values.
      */
     public IpAddress() {
         super();
@@ -18,7 +18,7 @@ public class IpAddress extends Host implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IpAddress
+     * @return a {@link IpAddress}
      */
     @jakarta.annotation.Nonnull
     public static IpAddress createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class IpAddress extends Host implements Parsable {
     }
     /**
      * Gets the autonomousSystem property value. The details about the autonomous system to which this IP address belongs.
-     * @return a AutonomousSystem
+     * @return a {@link AutonomousSystem}
      */
     @jakarta.annotation.Nullable
     public AutonomousSystem getAutonomousSystem() {
@@ -35,7 +35,7 @@ public class IpAddress extends Host implements Parsable {
     }
     /**
      * Gets the countryOrRegion property value. The country/region for this IP address.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCountryOrRegion() {
@@ -43,7 +43,7 @@ public class IpAddress extends Host implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -56,7 +56,7 @@ public class IpAddress extends Host implements Parsable {
     }
     /**
      * Gets the hostingProvider property value. The hosting company listed for this host.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getHostingProvider() {
@@ -64,7 +64,7 @@ public class IpAddress extends Host implements Parsable {
     }
     /**
      * Gets the netblock property value. The block of IP addresses this IP address belongs to.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNetblock() {

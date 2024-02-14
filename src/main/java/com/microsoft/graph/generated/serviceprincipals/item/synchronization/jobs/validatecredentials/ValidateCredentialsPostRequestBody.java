@@ -19,7 +19,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ValidateCredentialsPostRequestBody and sets the default values.
+     * Instantiates a new {@link ValidateCredentialsPostRequestBody} and sets the default values.
      */
     public ValidateCredentialsPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ValidateCredentialsPostRequestBody
+     * @return a {@link ValidateCredentialsPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static ValidateCredentialsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
     }
     /**
      * Gets the applicationIdentifier property value. The applicationIdentifier property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getApplicationIdentifier() {
@@ -58,7 +58,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -66,7 +66,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
     }
     /**
      * Gets the credentials property value. The credentials property
-     * @return a java.util.List<SynchronizationSecretKeyStringValuePair>
+     * @return a {@link java.util.List<SynchronizationSecretKeyStringValuePair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SynchronizationSecretKeyStringValuePair> getCredentials() {
@@ -74,7 +74,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -87,7 +87,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
     }
     /**
      * Gets the templateId property value. The templateId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTemplateId() {
@@ -95,7 +95,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
     }
     /**
      * Gets the useSavedCredentials property value. The useSavedCredentials property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getUseSavedCredentials() {

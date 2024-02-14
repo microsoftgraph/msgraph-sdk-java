@@ -33,6 +33,7 @@ import java.util.Objects;
 public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the createdBy property of the microsoft.graph.identityGovernance.workflowBase entity.
+     * @return a {@link CreatedByRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CreatedByRequestBuilder createdBy() {
@@ -40,6 +41,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the executionScope property of the microsoft.graph.identityGovernance.workflow entity.
+     * @return a {@link ExecutionScopeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExecutionScopeRequestBuilder executionScope() {
@@ -47,6 +49,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the lastModifiedBy property of the microsoft.graph.identityGovernance.workflowBase entity.
+     * @return a {@link LastModifiedByRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LastModifiedByRequestBuilder lastModifiedBy() {
@@ -54,6 +57,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the activate method.
+     * @return a {@link MicrosoftGraphIdentityGovernanceActivateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernanceActivateRequestBuilder microsoftGraphIdentityGovernanceActivate() {
@@ -61,6 +65,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the createNewVersion method.
+     * @return a {@link MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder microsoftGraphIdentityGovernanceCreateNewVersion() {
@@ -68,6 +73,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the restore method.
+     * @return a {@link MicrosoftGraphIdentityGovernanceRestoreRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernanceRestoreRequestBuilder microsoftGraphIdentityGovernanceRestore() {
@@ -75,6 +81,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the runs property of the microsoft.graph.identityGovernance.workflow entity.
+     * @return a {@link RunsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RunsRequestBuilder runs() {
@@ -82,6 +89,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the taskReports property of the microsoft.graph.identityGovernance.workflow entity.
+     * @return a {@link TaskReportsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TaskReportsRequestBuilder taskReports() {
@@ -89,6 +97,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the tasks property of the microsoft.graph.identityGovernance.workflowBase entity.
+     * @return a {@link TasksRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TasksRequestBuilder tasks() {
@@ -96,6 +105,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userProcessingResults property of the microsoft.graph.identityGovernance.workflow entity.
+     * @return a {@link UserProcessingResultsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserProcessingResultsRequestBuilder userProcessingResults() {
@@ -103,13 +113,14 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the versions property of the microsoft.graph.identityGovernance.workflow entity.
+     * @return a {@link VersionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public VersionsRequestBuilder versions() {
         return new VersionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new WorkflowItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link WorkflowItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -117,7 +128,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new WorkflowItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link WorkflowItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -126,6 +137,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete a workflow object.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-deletedItemcontainer-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -134,18 +146,19 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a workflow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-deletedItemcontainer-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve a deleted workflow object.
-     * @return a Workflow
+     * @return a {@link Workflow}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-deleteditemcontainer-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -155,20 +168,20 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a deleted workflow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Workflow
+     * @return a {@link Workflow}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-deleteditemcontainer-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Workflow get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Workflow::createFromDiscriminatorValue);
     }
     /**
      * Delete a workflow object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -177,18 +190,18 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a workflow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Retrieve a deleted workflow object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -197,7 +210,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a deleted workflow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -209,7 +222,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a WorkflowItemRequestBuilder
+     * @return a {@link WorkflowItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WorkflowItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -239,7 +252,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

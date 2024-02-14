@@ -26,6 +26,7 @@ import java.util.Objects;
 public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -34,7 +35,7 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends Base
     /**
      * Provides operations to manage the userExperienceAnalyticsDevicePerformance property of the microsoft.graph.deviceManagement entity.
      * @param userExperienceAnalyticsDevicePerformanceId The unique identifier of userExperienceAnalyticsDevicePerformance
-     * @return a UserExperienceAnalyticsDevicePerformanceItemRequestBuilder
+     * @return a {@link UserExperienceAnalyticsDevicePerformanceItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsDevicePerformanceItemRequestBuilder byUserExperienceAnalyticsDevicePerformanceId(@jakarta.annotation.Nonnull final String userExperienceAnalyticsDevicePerformanceId) {
@@ -44,7 +45,7 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends Base
         return new UserExperienceAnalyticsDevicePerformanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new UserExperienceAnalyticsDevicePerformanceRequestBuilder and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsDevicePerformanceRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -52,7 +53,7 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends Base
         super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsDevicePerformance{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new UserExperienceAnalyticsDevicePerformanceRequestBuilder and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsDevicePerformanceRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -61,7 +62,8 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends Base
     }
     /**
      * User experience analytics device performance
-     * @return a UserExperienceAnalyticsDevicePerformanceCollectionResponse
+     * @return a {@link UserExperienceAnalyticsDevicePerformanceCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsDevicePerformanceCollectionResponse get() {
@@ -70,20 +72,21 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends Base
     /**
      * User experience analytics device performance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UserExperienceAnalyticsDevicePerformanceCollectionResponse
+     * @return a {@link UserExperienceAnalyticsDevicePerformanceCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsDevicePerformanceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsDevicePerformanceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to userExperienceAnalyticsDevicePerformance for deviceManagement
      * @param body The request body
-     * @return a UserExperienceAnalyticsDevicePerformance
+     * @return a {@link UserExperienceAnalyticsDevicePerformance}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsDevicePerformance post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDevicePerformance body) {
@@ -93,21 +96,21 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends Base
      * Create new navigation property to userExperienceAnalyticsDevicePerformance for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UserExperienceAnalyticsDevicePerformance
+     * @return a {@link UserExperienceAnalyticsDevicePerformance}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsDevicePerformance post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDevicePerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsDevicePerformance::createFromDiscriminatorValue);
     }
     /**
      * Provides operations to call the summarizeDevicePerformanceDevices method.
      * @param summarizeBy Usage: summarizeBy='{summarizeBy}'
-     * @return a SummarizeDevicePerformanceDevicesWithSummarizeByRequestBuilder
+     * @return a {@link SummarizeDevicePerformanceDevicesWithSummarizeByRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SummarizeDevicePerformanceDevicesWithSummarizeByRequestBuilder summarizeDevicePerformanceDevicesWithSummarizeBy(@jakarta.annotation.Nonnull final String summarizeBy) {
@@ -116,7 +119,7 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends Base
     }
     /**
      * User experience analytics device performance
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -125,7 +128,7 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends Base
     /**
      * User experience analytics device performance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -137,7 +140,7 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends Base
     /**
      * Create new navigation property to userExperienceAnalyticsDevicePerformance for deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDevicePerformance body) {
@@ -147,12 +150,12 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends Base
      * Create new navigation property to userExperienceAnalyticsDevicePerformance for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDevicePerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceManagement/userExperienceAnalyticsDevicePerformance", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -161,7 +164,7 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends Base
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a UserExperienceAnalyticsDevicePerformanceRequestBuilder
+     * @return a {@link UserExperienceAnalyticsDevicePerformanceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsDevicePerformanceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -215,7 +218,7 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends Base
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

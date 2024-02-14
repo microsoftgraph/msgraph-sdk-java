@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ApplicationTemplateCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new ApplicationTemplateCollectionResponse and sets the default values.
+     * Instantiates a new {@link ApplicationTemplateCollectionResponse} and sets the default values.
      */
     public ApplicationTemplateCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class ApplicationTemplateCollectionResponse extends BaseCollectionPaginat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ApplicationTemplateCollectionResponse
+     * @return a {@link ApplicationTemplateCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static ApplicationTemplateCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class ApplicationTemplateCollectionResponse extends BaseCollectionPaginat
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class ApplicationTemplateCollectionResponse extends BaseCollectionPaginat
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<ApplicationTemplate>
+     * @return a {@link java.util.List<ApplicationTemplate>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ApplicationTemplate> getValue() {

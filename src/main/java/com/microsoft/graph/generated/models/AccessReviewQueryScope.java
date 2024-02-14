@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewQueryScope extends AccessReviewScope implements Parsable {
     /**
-     * Instantiates a new AccessReviewQueryScope and sets the default values.
+     * Instantiates a new {@link AccessReviewQueryScope} and sets the default values.
      */
     public AccessReviewQueryScope() {
         super();
@@ -18,7 +18,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessReviewQueryScope
+     * @return a {@link AccessReviewQueryScope}
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewQueryScope createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
     }
     /**
      * Gets the query property value. The query representing what will be reviewed in an access review.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getQuery() {
@@ -54,7 +54,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
     }
     /**
      * Gets the queryRoot property value. In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query is specified. For example, ./manager.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getQueryRoot() {
@@ -62,7 +62,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
     }
     /**
      * Gets the queryType property value. Indicates the type of query. Types include MicrosoftGraph and ARM.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getQueryType() {

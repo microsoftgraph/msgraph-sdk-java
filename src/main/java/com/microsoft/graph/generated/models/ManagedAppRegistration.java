@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedAppRegistration extends Entity implements Parsable {
     /**
-     * Instantiates a new ManagedAppRegistration and sets the default values.
+     * Instantiates a new {@link ManagedAppRegistration} and sets the default values.
      */
     public ManagedAppRegistration() {
         super();
@@ -21,7 +21,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedAppRegistration
+     * @return a {@link ManagedAppRegistration}
      */
     @jakarta.annotation.Nonnull
     public static ManagedAppRegistration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the appIdentifier property value. The app package Identifier
-     * @return a MobileAppIdentifier
+     * @return a {@link MobileAppIdentifier}
      */
     @jakarta.annotation.Nullable
     public MobileAppIdentifier getAppIdentifier() {
@@ -46,7 +46,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the applicationVersion property value. App version
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getApplicationVersion() {
@@ -54,7 +54,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the appliedPolicies property value. Zero or more policys already applied on the registered app when it last synchronized with managment service.
-     * @return a java.util.List<ManagedAppPolicy>
+     * @return a {@link java.util.List<ManagedAppPolicy>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAppPolicy> getAppliedPolicies() {
@@ -62,7 +62,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Date and time of creation
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -70,7 +70,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the deviceName property value. Host device name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -78,7 +78,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the deviceTag property value. App management SDK generated tag, which helps relate apps hosted on the same device. Not guaranteed to relate apps in all conditions.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceTag() {
@@ -86,7 +86,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the deviceType property value. Host device type
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceType() {
@@ -94,7 +94,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -118,7 +118,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the flaggedReasons property value. Zero or more reasons an app registration is flagged. E.g. app running on rooted device
-     * @return a java.util.List<ManagedAppFlaggedReason>
+     * @return a {@link java.util.List<ManagedAppFlaggedReason>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAppFlaggedReason> getFlaggedReasons() {
@@ -126,7 +126,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the intendedPolicies property value. Zero or more policies admin intended for the app as of now.
-     * @return a java.util.List<ManagedAppPolicy>
+     * @return a {@link java.util.List<ManagedAppPolicy>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAppPolicy> getIntendedPolicies() {
@@ -134,7 +134,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the lastSyncDateTime property value. Date and time of last the app synced with management service.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
@@ -142,7 +142,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the managementSdkVersion property value. App management SDK version
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagementSdkVersion() {
@@ -150,7 +150,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the operations property value. Zero or more long running operations triggered on the app registration.
-     * @return a java.util.List<ManagedAppOperation>
+     * @return a {@link java.util.List<ManagedAppOperation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAppOperation> getOperations() {
@@ -158,7 +158,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the platformVersion property value. Operating System version
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPlatformVersion() {
@@ -166,7 +166,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. The user Id to who this app registration belongs.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -174,7 +174,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. Version of the entity.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

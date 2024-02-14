@@ -21,7 +21,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SendActivityNotificationPostRequestBody and sets the default values.
+     * Instantiates a new {@link SendActivityNotificationPostRequestBody} and sets the default values.
      */
     public SendActivityNotificationPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SendActivityNotificationPostRequestBody
+     * @return a {@link SendActivityNotificationPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static SendActivityNotificationPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
     }
     /**
      * Gets the activityType property value. The activityType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getActivityType() {
@@ -47,7 +47,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -60,7 +60,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -68,7 +68,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
     }
     /**
      * Gets the chainId property value. The chainId property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getChainId() {
@@ -76,7 +76,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -91,7 +91,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
     }
     /**
      * Gets the previewText property value. The previewText property
-     * @return a ItemBody
+     * @return a {@link ItemBody}
      */
     @jakarta.annotation.Nullable
     public ItemBody getPreviewText() {
@@ -99,7 +99,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
     }
     /**
      * Gets the teamsAppId property value. The teamsAppId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTeamsAppId() {
@@ -107,7 +107,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
     }
     /**
      * Gets the templateParameters property value. The templateParameters property
-     * @return a java.util.List<KeyValuePair>
+     * @return a {@link java.util.List<KeyValuePair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getTemplateParameters() {
@@ -115,7 +115,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
     }
     /**
      * Gets the topic property value. The topic property
-     * @return a TeamworkActivityTopic
+     * @return a {@link TeamworkActivityTopic}
      */
     @jakarta.annotation.Nullable
     public TeamworkActivityTopic getTopic() {

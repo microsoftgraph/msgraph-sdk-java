@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PersistentBrowserSessionControl extends ConditionalAccessSessionControl implements Parsable {
     /**
-     * Instantiates a new PersistentBrowserSessionControl and sets the default values.
+     * Instantiates a new {@link PersistentBrowserSessionControl} and sets the default values.
      */
     public PersistentBrowserSessionControl() {
         super();
@@ -18,7 +18,7 @@ public class PersistentBrowserSessionControl extends ConditionalAccessSessionCon
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PersistentBrowserSessionControl
+     * @return a {@link PersistentBrowserSessionControl}
      */
     @jakarta.annotation.Nonnull
     public static PersistentBrowserSessionControl createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class PersistentBrowserSessionControl extends ConditionalAccessSessionCon
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class PersistentBrowserSessionControl extends ConditionalAccessSessionCon
     }
     /**
      * Gets the mode property value. Possible values are: always, never.
-     * @return a PersistentBrowserSessionMode
+     * @return a {@link PersistentBrowserSessionMode}
      */
     @jakarta.annotation.Nullable
     public PersistentBrowserSessionMode getMode() {

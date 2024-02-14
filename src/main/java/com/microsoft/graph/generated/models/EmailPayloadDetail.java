@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmailPayloadDetail extends PayloadDetail implements Parsable {
     /**
-     * Instantiates a new EmailPayloadDetail and sets the default values.
+     * Instantiates a new {@link EmailPayloadDetail} and sets the default values.
      */
     public EmailPayloadDetail() {
         super();
@@ -18,7 +18,7 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EmailPayloadDetail
+     * @return a {@link EmailPayloadDetail}
      */
     @jakarta.annotation.Nonnull
     public static EmailPayloadDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
     }
     /**
      * Gets the fromEmail property value. Email address of the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFromEmail() {
@@ -48,7 +48,7 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
     }
     /**
      * Gets the fromName property value. Display name of the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFromName() {
@@ -56,7 +56,7 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
     }
     /**
      * Gets the isExternalSender property value. Indicates whether the sender isn't from the user's organization.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExternalSender() {
@@ -64,7 +64,7 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
     }
     /**
      * Gets the subject property value. The subject of the email address sent to the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubject() {

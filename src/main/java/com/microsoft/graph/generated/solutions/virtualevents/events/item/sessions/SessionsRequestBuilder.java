@@ -25,6 +25,7 @@ import java.util.Objects;
 public class SessionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the sessions property of the microsoft.graph.virtualEvent entity.
      * @param virtualEventSessionId The unique identifier of virtualEventSession
-     * @return a VirtualEventSessionItemRequestBuilder
+     * @return a {@link VirtualEventSessionItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public VirtualEventSessionItemRequestBuilder byVirtualEventSessionId(@jakarta.annotation.Nonnull final String virtualEventSessionId) {
@@ -43,7 +44,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
         return new VirtualEventSessionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new SessionsRequestBuilder and sets the default values.
+     * Instantiates a new {@link SessionsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/events/{virtualEvent%2Did}/sessions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new SessionsRequestBuilder and sets the default values.
+     * Instantiates a new {@link SessionsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Sessions for the virtual event.
-     * @return a VirtualEventSessionCollectionResponse
+     * @return a {@link VirtualEventSessionCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public VirtualEventSessionCollectionResponse get() {
@@ -69,20 +71,21 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Sessions for the virtual event.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a VirtualEventSessionCollectionResponse
+     * @return a {@link VirtualEventSessionCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public VirtualEventSessionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventSessionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to sessions for solutions
      * @param body The request body
-     * @return a VirtualEventSession
+     * @return a {@link VirtualEventSession}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public VirtualEventSession post(@jakarta.annotation.Nonnull final VirtualEventSession body) {
@@ -92,20 +95,20 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to sessions for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a VirtualEventSession
+     * @return a {@link VirtualEventSession}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public VirtualEventSession post(@jakarta.annotation.Nonnull final VirtualEventSession body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventSession::createFromDiscriminatorValue);
     }
     /**
      * Sessions for the virtual event.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -114,7 +117,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Sessions for the virtual event.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -126,7 +129,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to sessions for solutions
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final VirtualEventSession body) {
@@ -136,12 +139,12 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to sessions for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final VirtualEventSession body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/solutions/virtualEvents/events/{virtualEvent%2Did}/sessions", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -150,7 +153,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a SessionsRequestBuilder
+     * @return a {@link SessionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SessionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -204,7 +207,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

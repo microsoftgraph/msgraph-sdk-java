@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IntelligenceProfile extends Entity implements Parsable {
     /**
-     * Instantiates a new IntelligenceProfile and sets the default values.
+     * Instantiates a new {@link IntelligenceProfile} and sets the default values.
      */
     public IntelligenceProfile() {
         super();
@@ -19,7 +19,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IntelligenceProfile
+     * @return a {@link IntelligenceProfile}
      */
     @jakarta.annotation.Nonnull
     public static IntelligenceProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
     }
     /**
      * Gets the aliases property value. A list of commonly-known aliases for the threat intelligence included in the intelligenceProfile.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAliases() {
@@ -36,7 +36,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
     }
     /**
      * Gets the countriesOrRegionsOfOrigin property value. The country/region of origin for the given actor or threat associated with this intelligenceProfile.
-     * @return a java.util.List<IntelligenceProfileCountryOrRegionOfOrigin>
+     * @return a {@link java.util.List<IntelligenceProfileCountryOrRegionOfOrigin>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IntelligenceProfileCountryOrRegionOfOrigin> getCountriesOrRegionsOfOrigin() {
@@ -44,7 +44,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a FormattedContent
+     * @return a {@link FormattedContent}
      */
     @jakarta.annotation.Nullable
     public FormattedContent getDescription() {
@@ -52,7 +52,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -71,7 +71,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
     }
     /**
      * Gets the firstActiveDateTime property value. The date and time when this intelligenceProfile was first active. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFirstActiveDateTime() {
@@ -79,7 +79,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
     }
     /**
      * Gets the indicators property value. Includes an assemblage of high-fidelity network indicators of compromise.
-     * @return a java.util.List<IntelligenceProfileIndicator>
+     * @return a {@link java.util.List<IntelligenceProfileIndicator>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IntelligenceProfileIndicator> getIndicators() {
@@ -87,7 +87,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
     }
     /**
      * Gets the kind property value. The kind property
-     * @return a IntelligenceProfileKind
+     * @return a {@link IntelligenceProfileKind}
      */
     @jakarta.annotation.Nullable
     public IntelligenceProfileKind getKind() {
@@ -95,7 +95,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
     }
     /**
      * Gets the summary property value. The summary property
-     * @return a FormattedContent
+     * @return a {@link FormattedContent}
      */
     @jakarta.annotation.Nullable
     public FormattedContent getSummary() {
@@ -103,7 +103,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
     }
     /**
      * Gets the targets property value. Known targets related to this intelligenceProfile.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTargets() {
@@ -111,7 +111,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
     }
     /**
      * Gets the title property value. The title of this intelligenceProfile.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
@@ -119,7 +119,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
     }
     /**
      * Gets the tradecraft property value. Formatted information featuring a description of the distinctive tactics, techniques, and procedures (TTP) of the group, followed by a list of all known custom, commodity, and publicly available implants used by the group.
-     * @return a FormattedContent
+     * @return a {@link FormattedContent}
      */
     @jakarta.annotation.Nullable
     public FormattedContent getTradecraft() {

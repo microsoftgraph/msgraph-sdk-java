@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryCase extends CaseEscaped implements Parsable {
     /**
-     * Instantiates a new EdiscoveryCase and sets the default values.
+     * Instantiates a new {@link EdiscoveryCase} and sets the default values.
      */
     public EdiscoveryCase() {
         super();
@@ -20,7 +20,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EdiscoveryCase
+     * @return a {@link EdiscoveryCase}
      */
     @jakarta.annotation.Nonnull
     public static EdiscoveryCase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
     }
     /**
      * Gets the closedBy property value. The user who closed the case.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getClosedBy() {
@@ -37,7 +37,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
     }
     /**
      * Gets the closedDateTime property value. The date and time when the case was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getClosedDateTime() {
@@ -45,7 +45,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
     }
     /**
      * Gets the custodians property value. Returns a list of case ediscoveryCustodian objects for this case.
-     * @return a java.util.List<EdiscoveryCustodian>
+     * @return a {@link java.util.List<EdiscoveryCustodian>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryCustodian> getCustodians() {
@@ -53,7 +53,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
     }
     /**
      * Gets the externalId property value. The external case number for customer reference.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
@@ -61,7 +61,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -80,7 +80,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
     }
     /**
      * Gets the noncustodialDataSources property value. Returns a list of case ediscoveryNoncustodialDataSource objects for this case.
-     * @return a java.util.List<EdiscoveryNoncustodialDataSource>
+     * @return a {@link java.util.List<EdiscoveryNoncustodialDataSource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryNoncustodialDataSource> getNoncustodialDataSources() {
@@ -88,7 +88,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
     }
     /**
      * Gets the operations property value. Returns a list of case caseOperation objects for this case.
-     * @return a java.util.List<CaseOperation>
+     * @return a {@link java.util.List<CaseOperation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CaseOperation> getOperations() {
@@ -96,7 +96,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
     }
     /**
      * Gets the reviewSets property value. Returns a list of eDiscoveryReviewSet objects in the case.
-     * @return a java.util.List<EdiscoveryReviewSet>
+     * @return a {@link java.util.List<EdiscoveryReviewSet>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryReviewSet> getReviewSets() {
@@ -104,7 +104,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
     }
     /**
      * Gets the searches property value. Returns a list of eDiscoverySearch objects associated with this case.
-     * @return a java.util.List<EdiscoverySearch>
+     * @return a {@link java.util.List<EdiscoverySearch>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EdiscoverySearch> getSearches() {
@@ -112,7 +112,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
     }
     /**
      * Gets the settings property value. Returns a list of eDIscoverySettings objects in the case.
-     * @return a EdiscoveryCaseSettings
+     * @return a {@link EdiscoveryCaseSettings}
      */
     @jakarta.annotation.Nullable
     public EdiscoveryCaseSettings getSettings() {
@@ -120,7 +120,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
     }
     /**
      * Gets the tags property value. Returns a list of ediscoveryReviewTag objects associated to this case.
-     * @return a java.util.List<EdiscoveryReviewTag>
+     * @return a {@link java.util.List<EdiscoveryReviewTag>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryReviewTag> getTags() {

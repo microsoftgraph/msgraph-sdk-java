@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceComplianceSettingState extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceComplianceSettingState and sets the default values.
+     * Instantiates a new {@link DeviceComplianceSettingState} and sets the default values.
      */
     public DeviceComplianceSettingState() {
         super();
@@ -21,7 +21,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceComplianceSettingState
+     * @return a {@link DeviceComplianceSettingState}
      */
     @jakarta.annotation.Nonnull
     public static DeviceComplianceSettingState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the complianceGracePeriodExpirationDateTime property value. The DateTime when device compliance grace period expires
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getComplianceGracePeriodExpirationDateTime() {
@@ -38,7 +38,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the deviceId property value. The Device Id that is being reported
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -46,7 +46,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the deviceModel property value. The device model that is being reported
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceModel() {
@@ -54,7 +54,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the deviceName property value. The Device Name that is being reported
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -62,7 +62,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -82,7 +82,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the setting property value. The setting class name and property name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSetting() {
@@ -90,7 +90,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the settingName property value. The Setting Name that is being reported
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSettingName() {
@@ -98,7 +98,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a ComplianceStatus
+     * @return a {@link ComplianceStatus}
      */
     @jakarta.annotation.Nullable
     public ComplianceStatus getState() {
@@ -106,7 +106,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the userEmail property value. The User email address that is being reported
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserEmail() {
@@ -114,7 +114,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. The user Id that is being reported
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -122,7 +122,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the userName property value. The User Name that is being reported
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
@@ -130,7 +130,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. The User PrincipalName that is being reported
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

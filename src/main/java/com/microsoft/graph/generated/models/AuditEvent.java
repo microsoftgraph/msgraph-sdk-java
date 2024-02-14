@@ -14,7 +14,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuditEvent extends Entity implements Parsable {
     /**
-     * Instantiates a new AuditEvent and sets the default values.
+     * Instantiates a new {@link AuditEvent} and sets the default values.
      */
     public AuditEvent() {
         super();
@@ -22,7 +22,7 @@ public class AuditEvent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuditEvent
+     * @return a {@link AuditEvent}
      */
     @jakarta.annotation.Nonnull
     public static AuditEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the activity property value. Friendly name of the activity.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getActivity() {
@@ -39,7 +39,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the activityDateTime property value. The date time in UTC when the activity was performed.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getActivityDateTime() {
@@ -47,7 +47,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the activityOperationType property value. The HTTP operation type of the activity.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getActivityOperationType() {
@@ -55,7 +55,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the activityResult property value. The result of the activity.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getActivityResult() {
@@ -63,7 +63,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the activityType property value. The type of activity that was being performed.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getActivityType() {
@@ -71,7 +71,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the actor property value. AAD user and application that are associated with the audit event.
-     * @return a AuditActor
+     * @return a {@link AuditActor}
      */
     @jakarta.annotation.Nullable
     public AuditActor getActor() {
@@ -79,7 +79,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. Audit category.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory() {
@@ -87,7 +87,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the componentName property value. Component name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getComponentName() {
@@ -95,7 +95,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the correlationId property value. The client request Id that is used to correlate activity within the system.
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getCorrelationId() {
@@ -103,7 +103,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Event display name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -111,7 +111,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -131,7 +131,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the resources property value. Resources being modified.
-     * @return a java.util.List<AuditResource>
+     * @return a {@link java.util.List<AuditResource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuditResource> getResources() {

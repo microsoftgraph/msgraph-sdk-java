@@ -28,6 +28,7 @@ import java.util.Objects;
 public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.educationUser entity.
+     * @return a {@link AssignmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
@@ -35,6 +36,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the classes property of the microsoft.graph.educationUser entity.
+     * @return a {@link ClassesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ClassesRequestBuilder classes() {
@@ -42,6 +44,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the rubrics property of the microsoft.graph.educationUser entity.
+     * @return a {@link RubricsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RubricsRequestBuilder rubrics() {
@@ -49,6 +52,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the schools property of the microsoft.graph.educationUser entity.
+     * @return a {@link SchoolsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SchoolsRequestBuilder schools() {
@@ -56,6 +60,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the taughtClasses property of the microsoft.graph.educationUser entity.
+     * @return a {@link TaughtClassesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TaughtClassesRequestBuilder taughtClasses() {
@@ -63,13 +68,14 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the user property of the microsoft.graph.educationUser entity.
+     * @return a {@link UserRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserRequestBuilder user() {
         return new UserRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new EducationUserItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link EducationUserItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -77,7 +83,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/users/{educationUser%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new EducationUserItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link EducationUserItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -86,6 +92,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete a user.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationuser-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -94,18 +101,19 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationuser-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read the properties and relationships of an educationUser object.
-     * @return a EducationUser
+     * @return a {@link EducationUser}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationuser-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -115,21 +123,22 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an educationUser object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EducationUser
+     * @return a {@link EducationUser}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationuser-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationUser get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EducationUser::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of an educationUser object.
      * @param body The request body
-     * @return a EducationUser
+     * @return a {@link EducationUser}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationuser-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -140,7 +149,8 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an educationUser object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EducationUser
+     * @return a {@link EducationUser}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationuser-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -148,13 +158,12 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EducationUser::createFromDiscriminatorValue);
     }
     /**
      * Delete a user.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -163,18 +172,18 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/education/users/{educationUser%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Read the properties and relationships of an educationUser object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -183,7 +192,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an educationUser object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -195,7 +204,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of an educationUser object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EducationUser body) {
@@ -205,12 +214,12 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an educationUser object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EducationUser body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/education/users/{educationUser%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -219,7 +228,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a EducationUserItemRequestBuilder
+     * @return a {@link EducationUserItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EducationUserItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -249,7 +258,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -21,7 +21,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new IosNotificationSettings and sets the default values.
+     * Instantiates a new {@link IosNotificationSettings} and sets the default values.
      */
     public IosNotificationSettings() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, BackedMode
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosNotificationSettings
+     * @return a {@link IosNotificationSettings}
      */
     @jakarta.annotation.Nonnull
     public static IosNotificationSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the alertType property value. Notification Settings Alert Type.
-     * @return a IosNotificationAlertType
+     * @return a {@link IosNotificationAlertType}
      */
     @jakarta.annotation.Nullable
     public IosNotificationAlertType getAlertType() {
@@ -60,7 +60,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the appName property value. Application name to be associated with the bundleID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppName() {
@@ -68,7 +68,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -76,7 +76,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the badgesEnabled property value. Indicates whether badges are allowed for this app.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getBadgesEnabled() {
@@ -84,7 +84,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the bundleID property value. Bundle id of app to which to apply these notification settings.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBundleID() {
@@ -92,7 +92,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the enabled property value. Indicates whether notifications are allowed for this app.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnabled() {
@@ -100,7 +100,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, BackedMode
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -119,7 +119,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -127,7 +127,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the publisher property value. Publisher to be associated with the bundleID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
@@ -135,7 +135,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the showInNotificationCenter property value. Indicates whether notifications can be shown in notification center.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getShowInNotificationCenter() {
@@ -143,7 +143,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the showOnLockScreen property value. Indicates whether notifications can be shown on the lock screen.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getShowOnLockScreen() {
@@ -151,7 +151,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the soundsEnabled property value. Indicates whether sounds are allowed for this app.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSoundsEnabled() {

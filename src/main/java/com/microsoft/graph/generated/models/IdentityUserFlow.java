@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IdentityUserFlow extends Entity implements Parsable {
     /**
-     * Instantiates a new IdentityUserFlow and sets the default values.
+     * Instantiates a new {@link IdentityUserFlow} and sets the default values.
      */
     public IdentityUserFlow() {
         super();
@@ -17,7 +17,7 @@ public class IdentityUserFlow extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IdentityUserFlow
+     * @return a {@link IdentityUserFlow}
      */
     @jakarta.annotation.Nonnull
     public static IdentityUserFlow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -33,7 +33,7 @@ public class IdentityUserFlow extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -44,7 +44,7 @@ public class IdentityUserFlow extends Entity implements Parsable {
     }
     /**
      * Gets the userFlowType property value. The userFlowType property
-     * @return a UserFlowType
+     * @return a {@link UserFlowType}
      */
     @jakarta.annotation.Nullable
     public UserFlowType getUserFlowType() {
@@ -52,7 +52,7 @@ public class IdentityUserFlow extends Entity implements Parsable {
     }
     /**
      * Gets the userFlowTypeVersion property value. The userFlowTypeVersion property
-     * @return a Float
+     * @return a {@link Float}
      */
     @jakarta.annotation.Nullable
     public Float getUserFlowTypeVersion() {

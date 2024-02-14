@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartTitleFormat extends Entity implements Parsable {
     /**
-     * Instantiates a new WorkbookChartTitleFormat and sets the default values.
+     * Instantiates a new {@link WorkbookChartTitleFormat} and sets the default values.
      */
     public WorkbookChartTitleFormat() {
         super();
@@ -17,7 +17,7 @@ public class WorkbookChartTitleFormat extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookChartTitleFormat
+     * @return a {@link WorkbookChartTitleFormat}
      */
     @jakarta.annotation.Nonnull
     public static WorkbookChartTitleFormat createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class WorkbookChartTitleFormat extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class WorkbookChartTitleFormat extends Entity implements Parsable {
     }
     /**
      * Gets the fill property value. Represents the fill format of an object, which includes background formatting information. Read-only.
-     * @return a WorkbookChartFill
+     * @return a {@link WorkbookChartFill}
      */
     @jakarta.annotation.Nullable
     public WorkbookChartFill getFill() {
@@ -45,7 +45,7 @@ public class WorkbookChartTitleFormat extends Entity implements Parsable {
     }
     /**
      * Gets the font property value. Represents the font attributes (font name, font size, color, etc.) for the current object. Read-only.
-     * @return a WorkbookChartFont
+     * @return a {@link WorkbookChartFont}
      */
     @jakarta.annotation.Nullable
     public WorkbookChartFont getFont() {

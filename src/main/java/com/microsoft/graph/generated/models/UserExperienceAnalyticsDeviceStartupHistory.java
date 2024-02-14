@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implements Parsable {
     /**
-     * Instantiates a new UserExperienceAnalyticsDeviceStartupHistory and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsDeviceStartupHistory} and sets the default values.
      */
     public UserExperienceAnalyticsDeviceStartupHistory() {
         super();
@@ -21,7 +21,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsDeviceStartupHistory
+     * @return a {@link UserExperienceAnalyticsDeviceStartupHistory}
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceStartupHistory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     }
     /**
      * Gets the coreBootTimeInMs property value. The device core boot time in milliseconds. Supports: $select, $OrderBy. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCoreBootTimeInMs() {
@@ -38,7 +38,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     }
     /**
      * Gets the coreLoginTimeInMs property value. The device core login time in milliseconds. Supports: $select, $OrderBy. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCoreLoginTimeInMs() {
@@ -46,7 +46,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     }
     /**
      * Gets the deviceId property value. The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -54,7 +54,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     }
     /**
      * Gets the featureUpdateBootTimeInMs property value. The impact of device feature updates on boot time in milliseconds. Supports: $select, $OrderBy. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getFeatureUpdateBootTimeInMs() {
@@ -62,7 +62,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -87,7 +87,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     }
     /**
      * Gets the groupPolicyBootTimeInMs property value. The impact of device group policy client on boot time in milliseconds. Supports: $select, $OrderBy. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getGroupPolicyBootTimeInMs() {
@@ -95,7 +95,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     }
     /**
      * Gets the groupPolicyLoginTimeInMs property value. The impact of device group policy client on login time in milliseconds. Supports: $select, $OrderBy. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getGroupPolicyLoginTimeInMs() {
@@ -103,7 +103,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     }
     /**
      * Gets the isFeatureUpdate property value. When TRUE, indicates the device boot record is associated with feature updates. When FALSE, indicates the device boot record is not associated with feature updates. Supports: $select, $OrderBy. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsFeatureUpdate() {
@@ -111,7 +111,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     }
     /**
      * Gets the isFirstLogin property value. When TRUE, indicates the device login is the first login after a reboot. When FALSE, indicates the device login is not the first login after a reboot. Supports: $select, $OrderBy. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsFirstLogin() {
@@ -119,7 +119,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     }
     /**
      * Gets the operatingSystemVersion property value. The user experience analytics device boot record's operating system version. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystemVersion() {
@@ -127,7 +127,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     }
     /**
      * Gets the responsiveDesktopTimeInMs property value. The time for desktop to become responsive during login process in milliseconds. Supports: $select, $OrderBy. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getResponsiveDesktopTimeInMs() {
@@ -135,7 +135,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     }
     /**
      * Gets the restartCategory property value. Operating System restart category.
-     * @return a UserExperienceAnalyticsOperatingSystemRestartCategory
+     * @return a {@link UserExperienceAnalyticsOperatingSystemRestartCategory}
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsOperatingSystemRestartCategory getRestartCategory() {
@@ -143,7 +143,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     }
     /**
      * Gets the restartFaultBucket property value. OS restart fault bucket. The fault bucket is used to find additional information about a system crash. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRestartFaultBucket() {
@@ -151,7 +151,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     }
     /**
      * Gets the restartStopCode property value. OS restart stop code. This shows the bug check code which can be used to look up the blue screen reason. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRestartStopCode() {
@@ -159,7 +159,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     }
     /**
      * Gets the startTime property value. The device boot start time. The value cannot be modified and is automatically populated when the device performs a reboot. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartTime() {
@@ -167,7 +167,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     }
     /**
      * Gets the totalBootTimeInMs property value. The device total boot time in milliseconds. Supports: $select, $OrderBy. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalBootTimeInMs() {
@@ -175,7 +175,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     }
     /**
      * Gets the totalLoginTimeInMs property value. The device total login time in milliseconds. Supports: $select, $OrderBy. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalLoginTimeInMs() {

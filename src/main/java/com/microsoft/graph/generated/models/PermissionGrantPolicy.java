@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PermissionGrantPolicy extends PolicyBase implements Parsable {
     /**
-     * Instantiates a new PermissionGrantPolicy and sets the default values.
+     * Instantiates a new {@link PermissionGrantPolicy} and sets the default values.
      */
     public PermissionGrantPolicy() {
         super();
@@ -18,7 +18,7 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PermissionGrantPolicy
+     * @return a {@link PermissionGrantPolicy}
      */
     @jakarta.annotation.Nonnull
     public static PermissionGrantPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the excludes property value. Condition sets which are excluded in this permission grant policy. Automatically expanded on GET.
-     * @return a java.util.List<PermissionGrantConditionSet>
+     * @return a {@link java.util.List<PermissionGrantConditionSet>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PermissionGrantConditionSet> getExcludes() {
@@ -35,7 +35,7 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the includes property value. Condition sets which are included in this permission grant policy. Automatically expanded on GET.
-     * @return a java.util.List<PermissionGrantConditionSet>
+     * @return a {@link java.util.List<PermissionGrantConditionSet>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PermissionGrantConditionSet> getIncludes() {

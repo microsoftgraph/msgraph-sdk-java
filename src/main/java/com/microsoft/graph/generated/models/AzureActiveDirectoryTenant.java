@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AzureActiveDirectoryTenant extends IdentitySource implements Parsable {
     /**
-     * Instantiates a new AzureActiveDirectoryTenant and sets the default values.
+     * Instantiates a new {@link AzureActiveDirectoryTenant} and sets the default values.
      */
     public AzureActiveDirectoryTenant() {
         super();
@@ -18,7 +18,7 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AzureActiveDirectoryTenant
+     * @return a {@link AzureActiveDirectoryTenant}
      */
     @jakarta.annotation.Nonnull
     public static AzureActiveDirectoryTenant createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements Parsab
     }
     /**
      * Gets the displayName property value. The name of the Microsoft Entra tenant. Read only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -35,7 +35,7 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements Parsab
     }
     /**
      * Gets the tenantId property value. The ID of the Microsoft Entra tenant. Read only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {

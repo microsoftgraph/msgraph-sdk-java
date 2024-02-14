@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppLogCollectionRequestCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new AppLogCollectionRequestCollectionResponse and sets the default values.
+     * Instantiates a new {@link AppLogCollectionRequestCollectionResponse} and sets the default values.
      */
     public AppLogCollectionRequestCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class AppLogCollectionRequestCollectionResponse extends BaseCollectionPag
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AppLogCollectionRequestCollectionResponse
+     * @return a {@link AppLogCollectionRequestCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static AppLogCollectionRequestCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class AppLogCollectionRequestCollectionResponse extends BaseCollectionPag
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class AppLogCollectionRequestCollectionResponse extends BaseCollectionPag
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<AppLogCollectionRequest>
+     * @return a {@link java.util.List<AppLogCollectionRequest>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppLogCollectionRequest> getValue() {

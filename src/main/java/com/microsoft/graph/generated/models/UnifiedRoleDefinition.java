@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleDefinition extends Entity implements Parsable {
     /**
-     * Instantiates a new UnifiedRoleDefinition and sets the default values.
+     * Instantiates a new {@link UnifiedRoleDefinition} and sets the default values.
      */
     public UnifiedRoleDefinition() {
         super();
@@ -17,7 +17,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnifiedRoleDefinition
+     * @return a {@link UnifiedRoleDefinition}
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -34,7 +34,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq, in).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -42,7 +42,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -60,7 +60,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the inheritsPermissionsFrom property value. Read-only collection of role definitions that the given role definition inherits from. Only Microsoft Entra built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
-     * @return a java.util.List<UnifiedRoleDefinition>
+     * @return a {@link java.util.List<UnifiedRoleDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleDefinition> getInheritsPermissionsFrom() {
@@ -68,7 +68,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the isBuiltIn property value. Flag indicating whether the role definition is part of the default set included in Microsoft Entra or a custom definition. Read-only. Supports $filter (eq, in).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBuiltIn() {
@@ -76,7 +76,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the isEnabled property value. Flag indicating whether the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -84,7 +84,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the resourceScopes property value. List of the scopes or permissions the role definition applies to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getResourceScopes() {
@@ -92,7 +92,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the rolePermissions property value. List of permissions included in the role. Read-only when isBuiltIn is true. Required.
-     * @return a java.util.List<UnifiedRolePermission>
+     * @return a {@link java.util.List<UnifiedRolePermission>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRolePermission> getRolePermissions() {
@@ -100,7 +100,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the templateId property value. Custom template identifier that can be set when isBuiltIn is false but is read-only when isBuiltIn is true. This identifier is typically used if one needs an identifier to be the same across different directories.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTemplateId() {
@@ -108,7 +108,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. Indicates version of the role definition. Read-only when isBuiltIn is true.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

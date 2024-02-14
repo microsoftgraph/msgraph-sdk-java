@@ -18,7 +18,7 @@ public class FollowupFlag implements AdditionalDataHolder, BackedModel, Parsable
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new FollowupFlag and sets the default values.
+     * Instantiates a new {@link FollowupFlag} and sets the default values.
      */
     public FollowupFlag() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class FollowupFlag implements AdditionalDataHolder, BackedModel, Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a FollowupFlag
+     * @return a {@link FollowupFlag}
      */
     @jakarta.annotation.Nonnull
     public static FollowupFlag createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class FollowupFlag implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class FollowupFlag implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class FollowupFlag implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the completedDateTime property value. The date and time that the follow-up was finished.
-     * @return a DateTimeTimeZone
+     * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getCompletedDateTime() {
@@ -65,7 +65,7 @@ public class FollowupFlag implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the dueDateTime property value. The date and time that the follow-up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you get a 400 Bad Request response.
-     * @return a DateTimeTimeZone
+     * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getDueDateTime() {
@@ -73,7 +73,7 @@ public class FollowupFlag implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -87,7 +87,7 @@ public class FollowupFlag implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the flagStatus property value. The status for follow-up for an item. Possible values are notFlagged, complete, and flagged.
-     * @return a FollowupFlagStatus
+     * @return a {@link FollowupFlagStatus}
      */
     @jakarta.annotation.Nullable
     public FollowupFlagStatus getFlagStatus() {
@@ -95,7 +95,7 @@ public class FollowupFlag implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -103,7 +103,7 @@ public class FollowupFlag implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the startDateTime property value. The date and time that the follow-up is to begin.
-     * @return a DateTimeTimeZone
+     * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getStartDateTime() {

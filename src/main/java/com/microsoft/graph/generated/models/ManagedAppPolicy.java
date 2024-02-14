@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedAppPolicy extends Entity implements Parsable {
     /**
-     * Instantiates a new ManagedAppPolicy and sets the default values.
+     * Instantiates a new {@link ManagedAppPolicy} and sets the default values.
      */
     public ManagedAppPolicy() {
         super();
@@ -21,7 +21,7 @@ public class ManagedAppPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedAppPolicy
+     * @return a {@link ManagedAppPolicy}
      */
     @jakarta.annotation.Nonnull
     public static ManagedAppPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class ManagedAppPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time the policy was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -54,7 +54,7 @@ public class ManagedAppPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The policy's description.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -62,7 +62,7 @@ public class ManagedAppPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Policy display name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -70,7 +70,7 @@ public class ManagedAppPolicy extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -84,7 +84,7 @@ public class ManagedAppPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. Last time the policy was modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -92,7 +92,7 @@ public class ManagedAppPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. Version of the entity.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

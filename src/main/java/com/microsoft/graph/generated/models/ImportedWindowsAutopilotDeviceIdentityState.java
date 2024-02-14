@@ -18,7 +18,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ImportedWindowsAutopilotDeviceIdentityState and sets the default values.
+     * Instantiates a new {@link ImportedWindowsAutopilotDeviceIdentityState} and sets the default values.
      */
     public ImportedWindowsAutopilotDeviceIdentityState() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ImportedWindowsAutopilotDeviceIdentityState
+     * @return a {@link ImportedWindowsAutopilotDeviceIdentityState}
      */
     @jakarta.annotation.Nonnull
     public static ImportedWindowsAutopilotDeviceIdentityState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     }
     /**
      * Gets the deviceErrorCode property value. Device error code reported by Device Directory Service(DDS).
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceErrorCode() {
@@ -65,7 +65,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     }
     /**
      * Gets the deviceErrorName property value. Device error name reported by Device Directory Service(DDS).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceErrorName() {
@@ -73,7 +73,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     }
     /**
      * Gets the deviceImportStatus property value. The deviceImportStatus property
-     * @return a ImportedWindowsAutopilotDeviceIdentityImportStatus
+     * @return a {@link ImportedWindowsAutopilotDeviceIdentityImportStatus}
      */
     @jakarta.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentityImportStatus getDeviceImportStatus() {
@@ -81,7 +81,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     }
     /**
      * Gets the deviceRegistrationId property value. Device Registration ID for successfully added device reported by Device Directory Service(DDS).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceRegistrationId() {
@@ -89,7 +89,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -103,7 +103,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

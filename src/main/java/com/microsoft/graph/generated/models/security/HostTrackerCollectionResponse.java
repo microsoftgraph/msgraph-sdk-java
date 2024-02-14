@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class HostTrackerCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new HostTrackerCollectionResponse and sets the default values.
+     * Instantiates a new {@link HostTrackerCollectionResponse} and sets the default values.
      */
     public HostTrackerCollectionResponse() {
         super();
@@ -18,7 +18,7 @@ public class HostTrackerCollectionResponse extends BaseCollectionPaginationCount
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a HostTrackerCollectionResponse
+     * @return a {@link HostTrackerCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static HostTrackerCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class HostTrackerCollectionResponse extends BaseCollectionPaginationCount
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class HostTrackerCollectionResponse extends BaseCollectionPaginationCount
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<HostTracker>
+     * @return a {@link java.util.List<HostTracker>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostTracker> getValue() {

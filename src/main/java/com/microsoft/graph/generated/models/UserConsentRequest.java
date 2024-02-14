@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserConsentRequest extends Request implements Parsable {
     /**
-     * Instantiates a new UserConsentRequest and sets the default values.
+     * Instantiates a new {@link UserConsentRequest} and sets the default values.
      */
     public UserConsentRequest() {
         super();
@@ -17,7 +17,7 @@ public class UserConsentRequest extends Request implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserConsentRequest
+     * @return a {@link UserConsentRequest}
      */
     @jakarta.annotation.Nonnull
     public static UserConsentRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class UserConsentRequest extends Request implements Parsable {
     }
     /**
      * Gets the approval property value. Approval decisions associated with a request.
-     * @return a Approval
+     * @return a {@link Approval}
      */
     @jakarta.annotation.Nullable
     public Approval getApproval() {
@@ -34,7 +34,7 @@ public class UserConsentRequest extends Request implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -45,7 +45,7 @@ public class UserConsentRequest extends Request implements Parsable {
     }
     /**
      * Gets the reason property value. The user's justification for requiring access to the app. Supports $filter (eq only) and $orderby.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getReason() {

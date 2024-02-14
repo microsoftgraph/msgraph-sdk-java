@@ -24,6 +24,7 @@ import java.util.Objects;
 public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -32,7 +33,7 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the softwareOathMethods property of the microsoft.graph.authentication entity.
      * @param softwareOathAuthenticationMethodId The unique identifier of softwareOathAuthenticationMethod
-     * @return a SoftwareOathAuthenticationMethodItemRequestBuilder
+     * @return a {@link SoftwareOathAuthenticationMethodItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SoftwareOathAuthenticationMethodItemRequestBuilder bySoftwareOathAuthenticationMethodId(@jakarta.annotation.Nonnull final String softwareOathAuthenticationMethodId) {
@@ -42,7 +43,7 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
         return new SoftwareOathAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new SoftwareOathMethodsRequestBuilder and sets the default values.
+     * Instantiates a new {@link SoftwareOathMethodsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -50,7 +51,7 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/softwareOathMethods{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new SoftwareOathMethodsRequestBuilder and sets the default values.
+     * Instantiates a new {@link SoftwareOathMethodsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +60,8 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of a user's software OATH token authentication method objects and their properties.
-     * @return a SoftwareOathAuthenticationMethodCollectionResponse
+     * @return a {@link SoftwareOathAuthenticationMethodCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/authentication-list-softwareoathmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -69,20 +71,20 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of a user's software OATH token authentication method objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a SoftwareOathAuthenticationMethodCollectionResponse
+     * @return a {@link SoftwareOathAuthenticationMethodCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/authentication-list-softwareoathmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SoftwareOathAuthenticationMethodCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SoftwareOathAuthenticationMethodCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of a user's software OATH token authentication method objects and their properties.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -91,7 +93,7 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of a user's software OATH token authentication method objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +105,7 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a SoftwareOathMethodsRequestBuilder
+     * @return a {@link SoftwareOathMethodsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SoftwareOathMethodsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -157,7 +159,7 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

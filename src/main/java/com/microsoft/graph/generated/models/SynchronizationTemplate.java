@@ -10,7 +10,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SynchronizationTemplate extends Entity implements Parsable {
     /**
-     * Instantiates a new SynchronizationTemplate and sets the default values.
+     * Instantiates a new {@link SynchronizationTemplate} and sets the default values.
      */
     public SynchronizationTemplate() {
         super();
@@ -18,7 +18,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SynchronizationTemplate
+     * @return a {@link SynchronizationTemplate}
      */
     @jakarta.annotation.Nonnull
     public static SynchronizationTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the applicationId property value. Identifier of the application this template belongs to.
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getApplicationId() {
@@ -35,7 +35,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the default property value. true if this template is recommended to be the default for the application.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefault() {
@@ -43,7 +43,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description of the template.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -51,7 +51,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the discoverable property value. true if this template should appear in the collection of templates available for the application instance (service principal).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDiscoverable() {
@@ -59,7 +59,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the factoryTag property value. One of the well-known factory tags supported by the synchronization engine. The factoryTag tells the synchronization engine which implementation to use when processing jobs based on this template.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFactoryTag() {
@@ -67,7 +67,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -83,7 +83,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the metadata property value. Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
-     * @return a java.util.List<SynchronizationMetadataEntry>
+     * @return a {@link java.util.List<SynchronizationMetadataEntry>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SynchronizationMetadataEntry> getMetadata() {
@@ -91,7 +91,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the schema property value. Default synchronization schema for the jobs based on this template.
-     * @return a SynchronizationSchema
+     * @return a {@link SynchronizationSchema}
      */
     @jakarta.annotation.Nullable
     public SynchronizationSchema getSchema() {

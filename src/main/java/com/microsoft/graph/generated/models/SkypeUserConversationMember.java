@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SkypeUserConversationMember extends ConversationMember implements Parsable {
     /**
-     * Instantiates a new SkypeUserConversationMember and sets the default values.
+     * Instantiates a new {@link SkypeUserConversationMember} and sets the default values.
      */
     public SkypeUserConversationMember() {
         super();
@@ -18,7 +18,7 @@ public class SkypeUserConversationMember extends ConversationMember implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SkypeUserConversationMember
+     * @return a {@link SkypeUserConversationMember}
      */
     @jakarta.annotation.Nonnull
     public static SkypeUserConversationMember createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class SkypeUserConversationMember extends ConversationMember implements P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class SkypeUserConversationMember extends ConversationMember implements P
     }
     /**
      * Gets the skypeId property value. Skype ID of the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSkypeId() {

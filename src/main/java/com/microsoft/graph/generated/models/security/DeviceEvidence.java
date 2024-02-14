@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceEvidence extends AlertEvidence implements Parsable {
     /**
-     * Instantiates a new DeviceEvidence and sets the default values.
+     * Instantiates a new {@link DeviceEvidence} and sets the default values.
      */
     public DeviceEvidence() {
         super();
@@ -19,7 +19,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceEvidence
+     * @return a {@link DeviceEvidence}
      */
     @jakarta.annotation.Nonnull
     public static DeviceEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the azureAdDeviceId property value. A unique identifier assigned to a device by Microsoft Entra ID when device is Microsoft Entra joined.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureAdDeviceId() {
@@ -36,7 +36,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the defenderAvStatus property value. State of the Defender AntiMalware engine. The possible values are: notReporting, disabled, notUpdated, updated, unknown, notSupported, unknownFutureValue.
-     * @return a DefenderAvStatus
+     * @return a {@link DefenderAvStatus}
      */
     @jakarta.annotation.Nullable
     public DefenderAvStatus getDefenderAvStatus() {
@@ -44,7 +44,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the deviceDnsName property value. The fully qualified domain name (FQDN) for the device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceDnsName() {
@@ -52,7 +52,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the firstSeenDateTime property value. The date and time when the device was first seen.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
@@ -85,7 +85,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the healthStatus property value. The health state of the device. The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
-     * @return a DeviceHealthStatus
+     * @return a {@link DeviceHealthStatus}
      */
     @jakarta.annotation.Nullable
     public DeviceHealthStatus getHealthStatus() {
@@ -93,7 +93,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the ipInterfaces property value. Ip interfaces of the device during the time of the alert.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getIpInterfaces() {
@@ -101,7 +101,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the loggedOnUsers property value. Users that were logged on the machine during the time of the alert.
-     * @return a java.util.List<LoggedOnUser>
+     * @return a {@link java.util.List<LoggedOnUser>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<LoggedOnUser> getLoggedOnUsers() {
@@ -109,7 +109,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the mdeDeviceId property value. A unique identifier assigned to a device by Microsoft Defender for Endpoint.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMdeDeviceId() {
@@ -117,7 +117,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the onboardingStatus property value. The status of the machine onboarding to Microsoft Defender for Endpoint. The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
-     * @return a OnboardingStatus
+     * @return a {@link OnboardingStatus}
      */
     @jakarta.annotation.Nullable
     public OnboardingStatus getOnboardingStatus() {
@@ -125,7 +125,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the osBuild property value. The build version for the operating system the device is running.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getOsBuild() {
@@ -133,7 +133,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the osPlatform property value. The operating system platform the device is running.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsPlatform() {
@@ -141,7 +141,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the rbacGroupId property value. The ID of the role-based access control (RBAC) device group.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRbacGroupId() {
@@ -149,7 +149,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the rbacGroupName property value. The name of the RBAC device group.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRbacGroupName() {
@@ -157,7 +157,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the riskScore property value. Risk score as evaluated by Microsoft Defender for Endpoint. The possible values are: none, informational, low, medium, high, unknownFutureValue.
-     * @return a DeviceRiskScore
+     * @return a {@link DeviceRiskScore}
      */
     @jakarta.annotation.Nullable
     public DeviceRiskScore getRiskScore() {
@@ -165,7 +165,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the version property value. The version of the operating system platform.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
@@ -173,7 +173,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the vmMetadata property value. Metadata of the virtual machine (VM) on which Microsoft Defender for Endpoint is running.
-     * @return a VmMetadata
+     * @return a {@link VmMetadata}
      */
     @jakarta.annotation.Nullable
     public VmMetadata getVmMetadata() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookRangeBorder extends Entity implements Parsable {
     /**
-     * Instantiates a new WorkbookRangeBorder and sets the default values.
+     * Instantiates a new {@link WorkbookRangeBorder} and sets the default values.
      */
     public WorkbookRangeBorder() {
         super();
@@ -17,7 +17,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookRangeBorder
+     * @return a {@link WorkbookRangeBorder}
      */
     @jakarta.annotation.Nonnull
     public static WorkbookRangeBorder createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
     }
     /**
      * Gets the color property value. HTML color code representing the color of the border line, of the form #RRGGBB (for example 'FFA500') or as a named HTML color (for example 'orange').
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getColor() {
@@ -34,7 +34,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,7 +47,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
     }
     /**
      * Gets the sideIndex property value. Constant value that indicates the specific side of the border. The possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSideIndex() {
@@ -55,7 +55,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
     }
     /**
      * Gets the style property value. One of the constants of line style specifying the line style for the border. The possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStyle() {
@@ -63,7 +63,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
     }
     /**
      * Gets the weight property value. Specifies the weight of the border around a range. The possible values are: Hairline, Thin, Medium, Thick.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWeight() {

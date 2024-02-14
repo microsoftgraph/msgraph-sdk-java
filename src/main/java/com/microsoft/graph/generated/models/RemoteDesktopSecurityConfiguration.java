@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RemoteDesktopSecurityConfiguration extends Entity implements Parsable {
     /**
-     * Instantiates a new RemoteDesktopSecurityConfiguration and sets the default values.
+     * Instantiates a new {@link RemoteDesktopSecurityConfiguration} and sets the default values.
      */
     public RemoteDesktopSecurityConfiguration() {
         super();
@@ -17,7 +17,7 @@ public class RemoteDesktopSecurityConfiguration extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RemoteDesktopSecurityConfiguration
+     * @return a {@link RemoteDesktopSecurityConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static RemoteDesktopSecurityConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class RemoteDesktopSecurityConfiguration extends Entity implements Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class RemoteDesktopSecurityConfiguration extends Entity implements Parsab
     }
     /**
      * Gets the isRemoteDesktopProtocolEnabled property value. Determines if Microsoft Entra ID RDS authentication protocol for RDP is enabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRemoteDesktopProtocolEnabled() {
@@ -45,7 +45,7 @@ public class RemoteDesktopSecurityConfiguration extends Entity implements Parsab
     }
     /**
      * Gets the targetDeviceGroups property value. The collection of target device groups that are associated with the RDS security configuration that will be enabled for SSO when a client connects to the target device over RDP using the new Microsoft Entra ID RDS authentication protocol.
-     * @return a java.util.List<TargetDeviceGroup>
+     * @return a {@link java.util.List<TargetDeviceGroup>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TargetDeviceGroup> getTargetDeviceGroups() {

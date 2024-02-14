@@ -46,6 +46,7 @@ import java.util.Objects;
 public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the bypassActivationLock method.
+     * @return a {@link BypassActivationLockRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BypassActivationLockRequestBuilder bypassActivationLock() {
@@ -53,6 +54,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the cleanWindowsDevice method.
+     * @return a {@link CleanWindowsDeviceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CleanWindowsDeviceRequestBuilder cleanWindowsDevice() {
@@ -60,6 +62,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the deleteUserFromSharedAppleDevice method.
+     * @return a {@link DeleteUserFromSharedAppleDeviceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeleteUserFromSharedAppleDeviceRequestBuilder deleteUserFromSharedAppleDevice() {
@@ -67,6 +70,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the deviceCategory property of the microsoft.graph.managedDevice entity.
+     * @return a {@link DeviceCategoryRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceCategoryRequestBuilder deviceCategory() {
@@ -74,6 +78,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the deviceCompliancePolicyStates property of the microsoft.graph.managedDevice entity.
+     * @return a {@link DeviceCompliancePolicyStatesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceCompliancePolicyStatesRequestBuilder deviceCompliancePolicyStates() {
@@ -81,6 +86,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the deviceConfigurationStates property of the microsoft.graph.managedDevice entity.
+     * @return a {@link DeviceConfigurationStatesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceConfigurationStatesRequestBuilder deviceConfigurationStates() {
@@ -88,6 +94,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the disableLostMode method.
+     * @return a {@link DisableLostModeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DisableLostModeRequestBuilder disableLostMode() {
@@ -95,6 +102,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the locateDevice method.
+     * @return a {@link LocateDeviceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LocateDeviceRequestBuilder locateDevice() {
@@ -102,6 +110,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the logCollectionRequests property of the microsoft.graph.managedDevice entity.
+     * @return a {@link LogCollectionRequestsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LogCollectionRequestsRequestBuilder logCollectionRequests() {
@@ -109,6 +118,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the logoutSharedAppleDeviceActiveUser method.
+     * @return a {@link LogoutSharedAppleDeviceActiveUserRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LogoutSharedAppleDeviceActiveUserRequestBuilder logoutSharedAppleDeviceActiveUser() {
@@ -116,6 +126,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the rebootNow method.
+     * @return a {@link RebootNowRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RebootNowRequestBuilder rebootNow() {
@@ -123,6 +134,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the recoverPasscode method.
+     * @return a {@link RecoverPasscodeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RecoverPasscodeRequestBuilder recoverPasscode() {
@@ -130,6 +142,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the remoteLock method.
+     * @return a {@link RemoteLockRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RemoteLockRequestBuilder remoteLock() {
@@ -137,6 +150,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the requestRemoteAssistance method.
+     * @return a {@link RequestRemoteAssistanceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RequestRemoteAssistanceRequestBuilder requestRemoteAssistance() {
@@ -144,6 +158,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the resetPasscode method.
+     * @return a {@link ResetPasscodeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ResetPasscodeRequestBuilder resetPasscode() {
@@ -151,6 +166,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the retire method.
+     * @return a {@link RetireRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RetireRequestBuilder retire() {
@@ -158,6 +174,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the shutDown method.
+     * @return a {@link ShutDownRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ShutDownRequestBuilder shutDown() {
@@ -165,6 +182,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the syncDevice method.
+     * @return a {@link SyncDeviceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SyncDeviceRequestBuilder syncDevice() {
@@ -172,6 +190,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the updateWindowsDeviceAccount method.
+     * @return a {@link UpdateWindowsDeviceAccountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UpdateWindowsDeviceAccountRequestBuilder updateWindowsDeviceAccount() {
@@ -179,6 +198,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the users property of the microsoft.graph.managedDevice entity.
+     * @return a {@link UsersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UsersRequestBuilder users() {
@@ -186,6 +206,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the windowsDefenderScan method.
+     * @return a {@link WindowsDefenderScanRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WindowsDefenderScanRequestBuilder windowsDefenderScan() {
@@ -193,6 +214,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the windowsDefenderUpdateSignatures method.
+     * @return a {@link WindowsDefenderUpdateSignaturesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WindowsDefenderUpdateSignaturesRequestBuilder windowsDefenderUpdateSignatures() {
@@ -200,6 +222,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the windowsProtectionState property of the microsoft.graph.managedDevice entity.
+     * @return a {@link WindowsProtectionStateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WindowsProtectionStateRequestBuilder windowsProtectionState() {
@@ -207,13 +230,14 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the wipe method.
+     * @return a {@link WipeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WipeRequestBuilder wipe() {
         return new WipeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new ManagedDeviceItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link ManagedDeviceItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -221,7 +245,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/managedDevices/{managedDevice%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new ManagedDeviceItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link ManagedDeviceItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -230,6 +254,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Deletes a managedDevice.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddevice-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -238,18 +263,19 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Deletes a managedDevice.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddevice-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read properties and relationships of the managedDevice object.
-     * @return a ManagedDevice
+     * @return a {@link ManagedDevice}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddevice-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -259,21 +285,22 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read properties and relationships of the managedDevice object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ManagedDevice
+     * @return a {@link ManagedDevice}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddevice-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedDevice get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ManagedDevice::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of a managedDevice object.
      * @param body The request body
-     * @return a ManagedDevice
+     * @return a {@link ManagedDevice}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddevice-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -284,7 +311,8 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a managedDevice object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ManagedDevice
+     * @return a {@link ManagedDevice}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddevice-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -292,13 +320,12 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ManagedDevice::createFromDiscriminatorValue);
     }
     /**
      * Deletes a managedDevice.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -307,18 +334,18 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Deletes a managedDevice.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/deviceManagement/managedDevices/{managedDevice%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Read properties and relationships of the managedDevice object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -327,7 +354,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read properties and relationships of the managedDevice object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -339,7 +366,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a managedDevice object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ManagedDevice body) {
@@ -349,12 +376,12 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a managedDevice object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ManagedDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/deviceManagement/managedDevices/{managedDevice%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -363,7 +390,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ManagedDeviceItemRequestBuilder
+     * @return a {@link ManagedDeviceItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagedDeviceItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -393,7 +420,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserTeamwork extends Entity implements Parsable {
     /**
-     * Instantiates a new UserTeamwork and sets the default values.
+     * Instantiates a new {@link UserTeamwork} and sets the default values.
      */
     public UserTeamwork() {
         super();
@@ -17,7 +17,7 @@ public class UserTeamwork extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserTeamwork
+     * @return a {@link UserTeamwork}
      */
     @jakarta.annotation.Nonnull
     public static UserTeamwork createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class UserTeamwork extends Entity implements Parsable {
     }
     /**
      * Gets the associatedTeams property value. The list of associatedTeamInfo objects that a user is associated with.
-     * @return a java.util.List<AssociatedTeamInfo>
+     * @return a {@link java.util.List<AssociatedTeamInfo>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AssociatedTeamInfo> getAssociatedTeams() {
@@ -34,7 +34,7 @@ public class UserTeamwork extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -45,7 +45,7 @@ public class UserTeamwork extends Entity implements Parsable {
     }
     /**
      * Gets the installedApps property value. The apps installed in the personal scope of this user.
-     * @return a java.util.List<UserScopeTeamsAppInstallation>
+     * @return a {@link java.util.List<UserScopeTeamsAppInstallation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserScopeTeamsAppInstallation> getInstalledApps() {

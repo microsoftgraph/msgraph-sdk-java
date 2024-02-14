@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CertificateBasedAuthConfiguration extends Entity implements Parsable {
     /**
-     * Instantiates a new CertificateBasedAuthConfiguration and sets the default values.
+     * Instantiates a new {@link CertificateBasedAuthConfiguration} and sets the default values.
      */
     public CertificateBasedAuthConfiguration() {
         super();
@@ -17,7 +17,7 @@ public class CertificateBasedAuthConfiguration extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CertificateBasedAuthConfiguration
+     * @return a {@link CertificateBasedAuthConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static CertificateBasedAuthConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class CertificateBasedAuthConfiguration extends Entity implements Parsabl
     }
     /**
      * Gets the certificateAuthorities property value. Collection of certificate authorities which creates a trusted certificate chain.
-     * @return a java.util.List<CertificateAuthority>
+     * @return a {@link java.util.List<CertificateAuthority>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CertificateAuthority> getCertificateAuthorities() {
@@ -34,7 +34,7 @@ public class CertificateBasedAuthConfiguration extends Entity implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

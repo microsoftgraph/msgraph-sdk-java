@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class HostSslCertificateCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new HostSslCertificateCollectionResponse and sets the default values.
+     * Instantiates a new {@link HostSslCertificateCollectionResponse} and sets the default values.
      */
     public HostSslCertificateCollectionResponse() {
         super();
@@ -18,7 +18,7 @@ public class HostSslCertificateCollectionResponse extends BaseCollectionPaginati
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a HostSslCertificateCollectionResponse
+     * @return a {@link HostSslCertificateCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static HostSslCertificateCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class HostSslCertificateCollectionResponse extends BaseCollectionPaginati
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class HostSslCertificateCollectionResponse extends BaseCollectionPaginati
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<HostSslCertificate>
+     * @return a {@link java.util.List<HostSslCertificate>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostSslCertificate> getValue() {

@@ -18,7 +18,7 @@ public class SynchronizationRule implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SynchronizationRule and sets the default values.
+     * Instantiates a new {@link SynchronizationRule} and sets the default values.
      */
     public SynchronizationRule() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class SynchronizationRule implements AdditionalDataHolder, BackedModel, P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SynchronizationRule
+     * @return a {@link SynchronizationRule}
      */
     @jakarta.annotation.Nonnull
     public static SynchronizationRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class SynchronizationRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class SynchronizationRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class SynchronizationRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the containerFilter property value. The containerFilter property
-     * @return a ContainerFilter
+     * @return a {@link ContainerFilter}
      */
     @jakarta.annotation.Nullable
     public ContainerFilter getContainerFilter() {
@@ -65,7 +65,7 @@ public class SynchronizationRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the editable property value. true if the synchronization rule can be customized; false if this rule is read-only and shouldn't be changed.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEditable() {
@@ -73,7 +73,7 @@ public class SynchronizationRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -93,7 +93,7 @@ public class SynchronizationRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the groupFilter property value. The groupFilter property
-     * @return a GroupFilter
+     * @return a {@link GroupFilter}
      */
     @jakarta.annotation.Nullable
     public GroupFilter getGroupFilter() {
@@ -101,7 +101,7 @@ public class SynchronizationRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the id property value. Synchronization rule identifier. Must be one of the identifiers recognized by the synchronization engine. Supported rule identifiers can be found in the synchronization template returned by the API.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -109,7 +109,7 @@ public class SynchronizationRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the metadata property value. Additional extension properties. Unless instructed explicitly by the support team, metadata values shouldn't be changed.
-     * @return a java.util.List<StringKeyStringValuePair>
+     * @return a {@link java.util.List<StringKeyStringValuePair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<StringKeyStringValuePair> getMetadata() {
@@ -117,7 +117,7 @@ public class SynchronizationRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the name property value. Human-readable name of the synchronization rule. Not nullable.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -125,7 +125,7 @@ public class SynchronizationRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the objectMappings property value. Collection of object mappings supported by the rule. Tells the synchronization engine which objects should be synchronized.
-     * @return a java.util.List<ObjectMapping>
+     * @return a {@link java.util.List<ObjectMapping>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ObjectMapping> getObjectMappings() {
@@ -133,7 +133,7 @@ public class SynchronizationRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -141,7 +141,7 @@ public class SynchronizationRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the priority property value. Priority relative to other rules in the synchronizationSchema. Rules with the lowest priority number will be processed first.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
@@ -149,7 +149,7 @@ public class SynchronizationRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the sourceDirectoryName property value. Name of the source directory. Must match one of the directory definitions in synchronizationSchema.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSourceDirectoryName() {
@@ -157,7 +157,7 @@ public class SynchronizationRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the targetDirectoryName property value. Name of the target directory. Must match one of the directory definitions in synchronizationSchema.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTargetDirectoryName() {

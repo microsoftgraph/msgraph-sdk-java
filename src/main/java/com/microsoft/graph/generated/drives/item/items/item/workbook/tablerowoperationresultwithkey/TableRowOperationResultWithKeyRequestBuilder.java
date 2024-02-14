@@ -20,7 +20,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TableRowOperationResultWithKeyRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new TableRowOperationResultWithKeyRequestBuilder and sets the default values.
+     * Instantiates a new {@link TableRowOperationResultWithKeyRequestBuilder} and sets the default values.
      * @param key Usage: key='{key}'
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -30,7 +30,7 @@ public class TableRowOperationResultWithKeyRequestBuilder extends BaseRequestBui
         this.pathParameters.put("key", key);
     }
     /**
-     * Instantiates a new TableRowOperationResultWithKeyRequestBuilder and sets the default values.
+     * Instantiates a new {@link TableRowOperationResultWithKeyRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -39,7 +39,8 @@ public class TableRowOperationResultWithKeyRequestBuilder extends BaseRequestBui
     }
     /**
      * Invoke function tableRowOperationResult
-     * @return a WorkbookTableRow
+     * @return a {@link WorkbookTableRow}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WorkbookTableRow get() {
@@ -48,19 +49,19 @@ public class TableRowOperationResultWithKeyRequestBuilder extends BaseRequestBui
     /**
      * Invoke function tableRowOperationResult
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WorkbookTableRow
+     * @return a {@link WorkbookTableRow}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WorkbookTableRow get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookTableRow::createFromDiscriminatorValue);
     }
     /**
      * Invoke function tableRowOperationResult
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -69,7 +70,7 @@ public class TableRowOperationResultWithKeyRequestBuilder extends BaseRequestBui
     /**
      * Invoke function tableRowOperationResult
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +82,7 @@ public class TableRowOperationResultWithKeyRequestBuilder extends BaseRequestBui
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a TableRowOperationResultWithKeyRequestBuilder
+     * @return a {@link TableRowOperationResultWithKeyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TableRowOperationResultWithKeyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

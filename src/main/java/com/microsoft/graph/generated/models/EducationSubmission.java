@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationSubmission extends Entity implements Parsable {
     /**
-     * Instantiates a new EducationSubmission and sets the default values.
+     * Instantiates a new {@link EducationSubmission} and sets the default values.
      */
     public EducationSubmission() {
         super();
@@ -18,7 +18,7 @@ public class EducationSubmission extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationSubmission
+     * @return a {@link EducationSubmission}
      */
     @jakarta.annotation.Nonnull
     public static EducationSubmission createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -51,7 +51,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the outcomes property value. The outcomes property
-     * @return a java.util.List<EducationOutcome>
+     * @return a {@link java.util.List<EducationOutcome>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationOutcome> getOutcomes() {
@@ -59,7 +59,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the reassignedBy property value. User who moved the status of this submission to reassigned.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getReassignedBy() {
@@ -67,7 +67,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the reassignedDateTime property value. Moment in time when the submission was reassigned. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReassignedDateTime() {
@@ -75,7 +75,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the recipient property value. Who this submission is assigned to.
-     * @return a EducationSubmissionRecipient
+     * @return a {@link EducationSubmissionRecipient}
      */
     @jakarta.annotation.Nullable
     public EducationSubmissionRecipient getRecipient() {
@@ -83,7 +83,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the resources property value. The resources property
-     * @return a java.util.List<EducationSubmissionResource>
+     * @return a {@link java.util.List<EducationSubmissionResource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationSubmissionResource> getResources() {
@@ -91,7 +91,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the resourcesFolderUrl property value. Folder where all file resources for this submission need to be stored.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourcesFolderUrl() {
@@ -99,7 +99,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the returnedBy property value. User who moved the status of this submission to returned.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getReturnedBy() {
@@ -107,7 +107,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the returnedDateTime property value. Moment in time when the submission was returned. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReturnedDateTime() {
@@ -115,7 +115,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Read-only. Possible values are: working, submitted, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned.
-     * @return a EducationSubmissionStatus
+     * @return a {@link EducationSubmissionStatus}
      */
     @jakarta.annotation.Nullable
     public EducationSubmissionStatus getStatus() {
@@ -123,7 +123,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the submittedBy property value. User who moved the resource into the submitted state.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getSubmittedBy() {
@@ -131,7 +131,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the submittedDateTime property value. Moment in time when the submission was moved into the submitted state. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getSubmittedDateTime() {
@@ -139,7 +139,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the submittedResources property value. The submittedResources property
-     * @return a java.util.List<EducationSubmissionResource>
+     * @return a {@link java.util.List<EducationSubmissionResource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationSubmissionResource> getSubmittedResources() {
@@ -147,7 +147,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the unsubmittedBy property value. User who moved the resource from submitted into the working state.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getUnsubmittedBy() {
@@ -155,7 +155,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the unsubmittedDateTime property value. Moment in time when the submission was moved from submitted into the working state. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getUnsubmittedDateTime() {
@@ -163,7 +163,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the webUrl property value. The deep link URL for the given submission.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {

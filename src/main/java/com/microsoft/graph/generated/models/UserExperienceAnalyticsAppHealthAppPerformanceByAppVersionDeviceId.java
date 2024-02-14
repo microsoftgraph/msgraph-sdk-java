@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId extends Entity implements Parsable {
     /**
-     * Instantiates a new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId} and sets the default values.
      */
     public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId() {
         super();
@@ -21,7 +21,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId
+     * @return a {@link UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId}
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
     }
     /**
      * Gets the appCrashCount property value. The number of crashes for the app. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getAppCrashCount() {
@@ -38,7 +38,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
     }
     /**
      * Gets the appDisplayName property value. The friendly name of the application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
@@ -46,7 +46,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
     }
     /**
      * Gets the appName property value. The name of the application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppName() {
@@ -54,7 +54,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
     }
     /**
      * Gets the appPublisher property value. The publisher of the application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppPublisher() {
@@ -62,7 +62,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
     }
     /**
      * Gets the appVersion property value. The version of the application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppVersion() {
@@ -70,7 +70,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
     }
     /**
      * Gets the deviceDisplayName property value. The name of the device. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
@@ -78,7 +78,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
     }
     /**
      * Gets the deviceId property value. The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -86,7 +86,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -103,7 +103,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
     }
     /**
      * Gets the processedDateTime property value. The date and time when the statistics were last computed. The value cannot be modified and is automatically populated when the statistics are computed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getProcessedDateTime() {

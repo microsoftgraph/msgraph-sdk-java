@@ -21,13 +21,14 @@ import java.util.Objects;
 public class SecretsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new SecretsRequestBuilder and sets the default values.
+     * Instantiates a new {@link SecretsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -35,7 +36,7 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/synchronization/secrets", pathParameters);
     }
     /**
-     * Instantiates a new SecretsRequestBuilder and sets the default values.
+     * Instantiates a new {@link SecretsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -45,7 +46,8 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update property secrets value.
      * @param body The request body
-     * @return a SecretsPutResponse
+     * @return a {@link SecretsPutResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SecretsPutResponse put(@jakarta.annotation.Nonnull final SecretsPutRequestBody body) {
@@ -55,21 +57,21 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
      * Update property secrets value.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a SecretsPutResponse
+     * @return a {@link SecretsPutResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SecretsPutResponse put(@jakarta.annotation.Nonnull final SecretsPutRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPutRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SecretsPutResponse::createFromDiscriminatorValue);
     }
     /**
      * Update property secrets value.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final SecretsPutRequestBody body) {
@@ -79,7 +81,7 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
      * Update property secrets value.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final SecretsPutRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
@@ -93,7 +95,7 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a SecretsRequestBuilder
+     * @return a {@link SecretsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SecretsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

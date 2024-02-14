@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookOperation extends Entity implements Parsable {
     /**
-     * Instantiates a new WorkbookOperation and sets the default values.
+     * Instantiates a new {@link WorkbookOperation} and sets the default values.
      */
     public WorkbookOperation() {
         super();
@@ -17,7 +17,7 @@ public class WorkbookOperation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookOperation
+     * @return a {@link WorkbookOperation}
      */
     @jakarta.annotation.Nonnull
     public static WorkbookOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class WorkbookOperation extends Entity implements Parsable {
     }
     /**
      * Gets the error property value. The error returned by the operation.
-     * @return a WorkbookOperationError
+     * @return a {@link WorkbookOperationError}
      */
     @jakarta.annotation.Nullable
     public WorkbookOperationError getError() {
@@ -34,7 +34,7 @@ public class WorkbookOperation extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class WorkbookOperation extends Entity implements Parsable {
     }
     /**
      * Gets the resourceLocation property value. The resource URI for the result.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourceLocation() {
@@ -54,7 +54,7 @@ public class WorkbookOperation extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a WorkbookOperationStatus
+     * @return a {@link WorkbookOperationStatus}
      */
     @jakarta.annotation.Nullable
     public WorkbookOperationStatus getStatus() {

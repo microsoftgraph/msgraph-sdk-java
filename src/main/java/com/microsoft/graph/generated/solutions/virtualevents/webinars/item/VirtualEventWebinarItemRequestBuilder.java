@@ -24,6 +24,7 @@ import java.util.Objects;
 public class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the registrations property of the microsoft.graph.virtualEventWebinar entity.
+     * @return a {@link RegistrationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RegistrationsRequestBuilder registrations() {
@@ -31,13 +32,14 @@ public class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the sessions property of the microsoft.graph.virtualEvent entity.
+     * @return a {@link SessionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SessionsRequestBuilder sessions() {
         return new SessionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new VirtualEventWebinarItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link VirtualEventWebinarItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -45,7 +47,7 @@ public class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new VirtualEventWebinarItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link VirtualEventWebinarItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -54,6 +56,7 @@ public class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property webinars for solutions
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -61,17 +64,18 @@ public class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property webinars for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get webinars from solutions
-     * @return a VirtualEventWebinar
+     * @return a {@link VirtualEventWebinar}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public VirtualEventWebinar get() {
@@ -80,20 +84,21 @@ public class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get webinars from solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a VirtualEventWebinar
+     * @return a {@link VirtualEventWebinar}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public VirtualEventWebinar get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventWebinar::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property webinars in solutions
      * @param body The request body
-     * @return a VirtualEventWebinar
+     * @return a {@link VirtualEventWebinar}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public VirtualEventWebinar patch(@jakarta.annotation.Nonnull final VirtualEventWebinar body) {
@@ -103,20 +108,20 @@ public class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property webinars in solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a VirtualEventWebinar
+     * @return a {@link VirtualEventWebinar}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public VirtualEventWebinar patch(@jakarta.annotation.Nonnull final VirtualEventWebinar body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventWebinar::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property webinars for solutions
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -125,18 +130,18 @@ public class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property webinars for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Get webinars from solutions
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -145,7 +150,7 @@ public class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get webinars from solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -157,7 +162,7 @@ public class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property webinars in solutions
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final VirtualEventWebinar body) {
@@ -167,12 +172,12 @@ public class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property webinars in solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final VirtualEventWebinar body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -181,7 +186,7 @@ public class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a VirtualEventWebinarItemRequestBuilder
+     * @return a {@link VirtualEventWebinarItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public VirtualEventWebinarItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -211,7 +216,7 @@ public class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

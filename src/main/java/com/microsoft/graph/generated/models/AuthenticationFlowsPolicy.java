@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationFlowsPolicy extends Entity implements Parsable {
     /**
-     * Instantiates a new AuthenticationFlowsPolicy and sets the default values.
+     * Instantiates a new {@link AuthenticationFlowsPolicy} and sets the default values.
      */
     public AuthenticationFlowsPolicy() {
         super();
@@ -17,7 +17,7 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuthenticationFlowsPolicy
+     * @return a {@link AuthenticationFlowsPolicy}
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationFlowsPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Inherited property. A description of the policy. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -34,7 +34,7 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Inherited property. The human-readable name of the policy. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -42,7 +42,7 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -54,7 +54,7 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the selfServiceSignUp property value. Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. Optional. Read-only.
-     * @return a SelfServiceSignUpAuthenticationFlowConfiguration
+     * @return a {@link SelfServiceSignUpAuthenticationFlowConfiguration}
      */
     @jakarta.annotation.Nullable
     public SelfServiceSignUpAuthenticationFlowConfiguration getSelfServiceSignUp() {

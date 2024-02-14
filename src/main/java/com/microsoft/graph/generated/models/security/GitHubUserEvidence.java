@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GitHubUserEvidence extends AlertEvidence implements Parsable {
     /**
-     * Instantiates a new GitHubUserEvidence and sets the default values.
+     * Instantiates a new {@link GitHubUserEvidence} and sets the default values.
      */
     public GitHubUserEvidence() {
         super();
@@ -18,7 +18,7 @@ public class GitHubUserEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GitHubUserEvidence
+     * @return a {@link GitHubUserEvidence}
      */
     @jakarta.annotation.Nonnull
     public static GitHubUserEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class GitHubUserEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the email property value. The email property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -35,7 +35,7 @@ public class GitHubUserEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -49,7 +49,7 @@ public class GitHubUserEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the login property value. The login property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLogin() {
@@ -57,7 +57,7 @@ public class GitHubUserEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the name property value. The name property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -65,7 +65,7 @@ public class GitHubUserEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the userId property value. The userId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -73,7 +73,7 @@ public class GitHubUserEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the webUrl property value. The webUrl property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {

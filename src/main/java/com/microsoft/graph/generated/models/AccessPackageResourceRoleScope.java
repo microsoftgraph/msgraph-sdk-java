@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageResourceRoleScope extends Entity implements Parsable {
     /**
-     * Instantiates a new AccessPackageResourceRoleScope and sets the default values.
+     * Instantiates a new {@link AccessPackageResourceRoleScope} and sets the default values.
      */
     public AccessPackageResourceRoleScope() {
         super();
@@ -18,7 +18,7 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessPackageResourceRoleScope
+     * @return a {@link AccessPackageResourceRoleScope}
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageResourceRoleScope createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -35,7 +35,7 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,7 +47,7 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
     }
     /**
      * Gets the role property value. The role property
-     * @return a AccessPackageResourceRole
+     * @return a {@link AccessPackageResourceRole}
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceRole getRole() {
@@ -55,7 +55,7 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
     }
     /**
      * Gets the scope property value. The scope property
-     * @return a AccessPackageResourceScope
+     * @return a {@link AccessPackageResourceScope}
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceScope getScope() {

@@ -18,7 +18,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new UnifiedRolePermission and sets the default values.
+     * Instantiates a new {@link UnifiedRolePermission} and sets the default values.
      */
     public UnifiedRolePermission() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, BackedModel,
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnifiedRolePermission
+     * @return a {@link UnifiedRolePermission}
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRolePermission createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the allowedResourceActions property value. Set of tasks that can be performed on a resource. Required.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedResourceActions() {
@@ -57,7 +57,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the condition property value. Optional constraints that must be met for the permission to be effective. Not supported for custom roles.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCondition() {
@@ -73,7 +73,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the excludedResourceActions property value. Set of tasks that may not be performed on a resource. Not yet supported.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExcludedResourceActions() {
@@ -81,7 +81,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, BackedModel,
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -94,7 +94,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

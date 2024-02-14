@@ -20,7 +20,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new GetMailTipsPostRequestBody and sets the default values.
+     * Instantiates a new {@link GetMailTipsPostRequestBody} and sets the default values.
      */
     public GetMailTipsPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -29,7 +29,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedM
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GetMailTipsPostRequestBody
+     * @return a {@link GetMailTipsPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static GetMailTipsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -51,7 +51,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -59,7 +59,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the EmailAddresses property value. The EmailAddresses property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEmailAddresses() {
@@ -67,7 +67,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedM
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the MailTipsOptions property value. The MailTipsOptions property
-     * @return a EnumSet<MailTipsType>
+     * @return a {@link EnumSet<MailTipsType>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<MailTipsType> getMailTipsOptions() {

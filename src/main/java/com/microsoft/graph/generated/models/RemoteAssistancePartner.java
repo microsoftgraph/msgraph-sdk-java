@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RemoteAssistancePartner extends Entity implements Parsable {
     /**
-     * Instantiates a new RemoteAssistancePartner and sets the default values.
+     * Instantiates a new {@link RemoteAssistancePartner} and sets the default values.
      */
     public RemoteAssistancePartner() {
         super();
@@ -21,7 +21,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RemoteAssistancePartner
+     * @return a {@link RemoteAssistancePartner}
      */
     @jakarta.annotation.Nonnull
     public static RemoteAssistancePartner createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name of the partner.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -38,7 +38,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -51,7 +51,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
     }
     /**
      * Gets the lastConnectionDateTime property value. Timestamp of the last request sent to Intune by the TEM partner.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastConnectionDateTime() {
@@ -59,7 +59,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
     }
     /**
      * Gets the onboardingStatus property value. The current TeamViewer connector status
-     * @return a RemoteAssistanceOnboardingStatus
+     * @return a {@link RemoteAssistanceOnboardingStatus}
      */
     @jakarta.annotation.Nullable
     public RemoteAssistanceOnboardingStatus getOnboardingStatus() {
@@ -67,7 +67,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
     }
     /**
      * Gets the onboardingUrl property value. URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOnboardingUrl() {

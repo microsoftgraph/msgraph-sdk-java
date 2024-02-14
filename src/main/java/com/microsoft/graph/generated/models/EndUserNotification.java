@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EndUserNotification extends Entity implements Parsable {
     /**
-     * Instantiates a new EndUserNotification and sets the default values.
+     * Instantiates a new {@link EndUserNotification} and sets the default values.
      */
     public EndUserNotification() {
         super();
@@ -18,7 +18,7 @@ public class EndUserNotification extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EndUserNotification
+     * @return a {@link EndUserNotification}
      */
     @jakarta.annotation.Nonnull
     public static EndUserNotification createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EndUserNotification extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. Identity of the user who created the notification.
-     * @return a EmailIdentity
+     * @return a {@link EmailIdentity}
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getCreatedBy() {
@@ -35,7 +35,7 @@ public class EndUserNotification extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Date and time when the notification was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -43,7 +43,7 @@ public class EndUserNotification extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description of the notification as defined by the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -51,7 +51,7 @@ public class EndUserNotification extends Entity implements Parsable {
     }
     /**
      * Gets the details property value. The details property
-     * @return a java.util.List<EndUserNotificationDetail>
+     * @return a {@link java.util.List<EndUserNotificationDetail>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EndUserNotificationDetail> getDetails() {
@@ -59,7 +59,7 @@ public class EndUserNotification extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Name of the notification as defined by the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -67,7 +67,7 @@ public class EndUserNotification extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -87,7 +87,7 @@ public class EndUserNotification extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. Identity of the user who last modified the notification.
-     * @return a EmailIdentity
+     * @return a {@link EmailIdentity}
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getLastModifiedBy() {
@@ -95,7 +95,7 @@ public class EndUserNotification extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. Date and time when the notification was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -103,7 +103,7 @@ public class EndUserNotification extends Entity implements Parsable {
     }
     /**
      * Gets the notificationType property value. Type of notification. Possible values are: unknown, positiveReinforcement, noTraining, trainingAssignment, trainingReminder, unknownFutureValue.
-     * @return a EndUserNotificationType
+     * @return a {@link EndUserNotificationType}
      */
     @jakarta.annotation.Nullable
     public EndUserNotificationType getNotificationType() {
@@ -111,7 +111,7 @@ public class EndUserNotification extends Entity implements Parsable {
     }
     /**
      * Gets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
-     * @return a SimulationContentSource
+     * @return a {@link SimulationContentSource}
      */
     @jakarta.annotation.Nullable
     public SimulationContentSource getSource() {
@@ -119,7 +119,7 @@ public class EndUserNotification extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status of the notification. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
-     * @return a SimulationContentStatus
+     * @return a {@link SimulationContentStatus}
      */
     @jakarta.annotation.Nullable
     public SimulationContentStatus getStatus() {
@@ -127,7 +127,7 @@ public class EndUserNotification extends Entity implements Parsable {
     }
     /**
      * Gets the supportedLocales property value. Supported locales for endUserNotification content.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedLocales() {

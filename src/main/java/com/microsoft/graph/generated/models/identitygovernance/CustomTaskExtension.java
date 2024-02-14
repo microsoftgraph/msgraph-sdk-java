@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomTaskExtension extends CustomCalloutExtension implements Parsable {
     /**
-     * Instantiates a new CustomTaskExtension and sets the default values.
+     * Instantiates a new {@link CustomTaskExtension} and sets the default values.
      */
     public CustomTaskExtension() {
         super();
@@ -22,7 +22,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CustomTaskExtension
+     * @return a {@link CustomTaskExtension}
      */
     @jakarta.annotation.Nonnull
     public static CustomTaskExtension createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
     }
     /**
      * Gets the callbackConfiguration property value. The callback configuration for a custom task extension.
-     * @return a CustomExtensionCallbackConfiguration
+     * @return a {@link CustomExtensionCallbackConfiguration}
      */
     @jakarta.annotation.Nullable
     public CustomExtensionCallbackConfiguration getCallbackConfiguration() {
@@ -39,7 +39,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
     }
     /**
      * Gets the createdBy property value. The unique identifier of the Microsoft Entra user that created the custom task extension.Supports $filter(eq, ne) and $expand.
-     * @return a User
+     * @return a {@link User}
      */
     @jakarta.annotation.Nullable
     public User getCreatedBy() {
@@ -47,7 +47,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
     }
     /**
      * Gets the createdDateTime property value. When the custom task extension was created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -55,7 +55,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
     }
     /**
      * Gets the lastModifiedBy property value. The unique identifier of the Microsoft Entra user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
-     * @return a User
+     * @return a {@link User}
      */
     @jakarta.annotation.Nullable
     public User getLastModifiedBy() {
@@ -77,7 +77,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
     }
     /**
      * Gets the lastModifiedDateTime property value. When the custom extension was last modified.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {

@@ -10,7 +10,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthorizationPolicy extends PolicyBase implements Parsable {
     /**
-     * Instantiates a new AuthorizationPolicy and sets the default values.
+     * Instantiates a new {@link AuthorizationPolicy} and sets the default values.
      */
     public AuthorizationPolicy() {
         super();
@@ -19,7 +19,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuthorizationPolicy
+     * @return a {@link AuthorizationPolicy}
      */
     @jakarta.annotation.Nonnull
     public static AuthorizationPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the allowedToSignUpEmailBasedSubscriptions property value. Indicates whether users can sign up for email based subscriptions.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowedToSignUpEmailBasedSubscriptions() {
@@ -36,7 +36,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the allowedToUseSSPR property value. Indicates whether users can use the Self-Service Password Reset feature on the tenant.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowedToUseSSPR() {
@@ -44,7 +44,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the allowEmailVerifiedUsersToJoinOrganization property value. Indicates whether a user can join the tenant by email validation.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowEmailVerifiedUsersToJoinOrganization() {
@@ -52,7 +52,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the allowInvitesFrom property value. Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. For more information, see allowInvitesFrom values.
-     * @return a AllowInvitesFrom
+     * @return a {@link AllowInvitesFrom}
      */
     @jakarta.annotation.Nullable
     public AllowInvitesFrom getAllowInvitesFrom() {
@@ -60,7 +60,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the allowUserConsentForRiskyApps property value. Indicates whether user consent for risky apps is allowed. We recommend keeping allowUserConsentForRiskyApps as false. Default value is false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowUserConsentForRiskyApps() {
@@ -68,7 +68,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the blockMsolPowerShell property value. To disable the use of MSOL PowerShell, set this property to true. This also disables user-based access to the legacy service endpoint used by MSOL PowerShell. This doesn't affect Microsoft Entra Connect or Microsoft Graph.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockMsolPowerShell() {
@@ -76,7 +76,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the defaultUserRolePermissions property value. The defaultUserRolePermissions property
-     * @return a DefaultUserRolePermissions
+     * @return a {@link DefaultUserRolePermissions}
      */
     @jakarta.annotation.Nullable
     public DefaultUserRolePermissions getDefaultUserRolePermissions() {
@@ -84,7 +84,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -101,7 +101,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the guestUserRoleId property value. Represents role templateId for the role that should be granted to guest user. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getGuestUserRoleId() {

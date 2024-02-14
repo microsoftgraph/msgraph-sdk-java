@@ -18,7 +18,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AccessPackageAssignmentRequestorSettings and sets the default values.
+     * Instantiates a new {@link AccessPackageAssignmentRequestorSettings} and sets the default values.
      */
     public AccessPackageAssignmentRequestorSettings() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessPackageAssignmentRequestorSettings
+     * @return a {@link AccessPackageAssignmentRequestorSettings}
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAssignmentRequestorSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     }
     /**
      * Gets the allowCustomAssignmentSchedule property value. False indicates that the requestor isn't permitted to include a schedule in their request.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowCustomAssignmentSchedule() {
@@ -57,7 +57,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     }
     /**
      * Gets the enableOnBehalfRequestorsToAddAccess property value. True allows on-behalf-of requestors to create a request to add access for another principal.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableOnBehalfRequestorsToAddAccess() {
@@ -73,7 +73,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     }
     /**
      * Gets the enableOnBehalfRequestorsToRemoveAccess property value. True allows on-behalf-of requestors to create a request to remove access for another principal.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableOnBehalfRequestorsToRemoveAccess() {
@@ -81,7 +81,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     }
     /**
      * Gets the enableOnBehalfRequestorsToUpdateAccess property value. True allows on-behalf-of requestors to create a request to update access for another principal.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableOnBehalfRequestorsToUpdateAccess() {
@@ -89,7 +89,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     }
     /**
      * Gets the enableTargetsToSelfAddAccess property value. True allows requestors to create a request to add access for themselves.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableTargetsToSelfAddAccess() {
@@ -97,7 +97,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     }
     /**
      * Gets the enableTargetsToSelfRemoveAccess property value. True allows requestors to create a request to remove their access.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableTargetsToSelfRemoveAccess() {
@@ -105,7 +105,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     }
     /**
      * Gets the enableTargetsToSelfUpdateAccess property value. True allows requestors to create a request to update their access.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableTargetsToSelfUpdateAccess() {
@@ -113,7 +113,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -131,7 +131,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -139,7 +139,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     }
     /**
      * Gets the onBehalfRequestors property value. The principals who can request on-behalf-of others.
-     * @return a java.util.List<SubjectSet>
+     * @return a {@link java.util.List<SubjectSet>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SubjectSet> getOnBehalfRequestors() {

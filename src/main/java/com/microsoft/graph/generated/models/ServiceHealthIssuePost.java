@@ -19,7 +19,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ServiceHealthIssuePost and sets the default values.
+     * Instantiates a new {@link ServiceHealthIssuePost} and sets the default values.
      */
     public ServiceHealthIssuePost() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ServiceHealthIssuePost
+     * @return a {@link ServiceHealthIssuePost}
      */
     @jakarta.annotation.Nonnull
     public static ServiceHealthIssuePost createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the createdDateTime property value. The published time of the post.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -66,7 +66,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the description property value. The content of the service issue post. The supported value for the contentType property is html.
-     * @return a ItemBody
+     * @return a {@link ItemBody}
      */
     @jakarta.annotation.Nullable
     public ItemBody getDescription() {
@@ -74,7 +74,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -87,7 +87,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -95,7 +95,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the postType property value. The post type of the service issue historical post. Possible values are: regular, quick, strategic, unknownFutureValue.
-     * @return a PostType
+     * @return a {@link PostType}
      */
     @jakarta.annotation.Nullable
     public PostType getPostType() {

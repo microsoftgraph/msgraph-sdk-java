@@ -18,7 +18,7 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, 
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new Fido2KeyRestrictions and sets the default values.
+     * Instantiates a new {@link Fido2KeyRestrictions} and sets the default values.
      */
     public Fido2KeyRestrictions() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Fido2KeyRestrictions
+     * @return a {@link Fido2KeyRestrictions}
      */
     @jakarta.annotation.Nonnull
     public static Fido2KeyRestrictions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the aaGuids property value. A collection of Authenticator Attestation GUIDs. AADGUIDs define key types and manufacturers.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAaGuids() {
@@ -44,7 +44,7 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -57,7 +57,7 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the enforcementType property value. Enforcement type. Possible values are: allow, block.
-     * @return a Fido2RestrictionEnforcementType
+     * @return a {@link Fido2RestrictionEnforcementType}
      */
     @jakarta.annotation.Nullable
     public Fido2RestrictionEnforcementType getEnforcementType() {
@@ -73,7 +73,7 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -86,7 +86,7 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the isEnforced property value. Determines if the configured key enforcement is enabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnforced() {
@@ -94,7 +94,7 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

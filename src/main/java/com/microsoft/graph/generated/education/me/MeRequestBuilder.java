@@ -28,6 +28,7 @@ import java.util.Objects;
 public class MeRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.educationUser entity.
+     * @return a {@link AssignmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
@@ -35,6 +36,7 @@ public class MeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the classes property of the microsoft.graph.educationUser entity.
+     * @return a {@link ClassesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ClassesRequestBuilder classes() {
@@ -42,6 +44,7 @@ public class MeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the rubrics property of the microsoft.graph.educationUser entity.
+     * @return a {@link RubricsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RubricsRequestBuilder rubrics() {
@@ -49,6 +52,7 @@ public class MeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the schools property of the microsoft.graph.educationUser entity.
+     * @return a {@link SchoolsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SchoolsRequestBuilder schools() {
@@ -56,6 +60,7 @@ public class MeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the taughtClasses property of the microsoft.graph.educationUser entity.
+     * @return a {@link TaughtClassesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TaughtClassesRequestBuilder taughtClasses() {
@@ -63,13 +68,14 @@ public class MeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the user property of the microsoft.graph.educationUser entity.
+     * @return a {@link UserRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserRequestBuilder user() {
         return new UserRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new MeRequestBuilder and sets the default values.
+     * Instantiates a new {@link MeRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -77,7 +83,7 @@ public class MeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/me{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new MeRequestBuilder and sets the default values.
+     * Instantiates a new {@link MeRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -86,6 +92,7 @@ public class MeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property me for education
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -93,17 +100,18 @@ public class MeRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property me for education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get me from education
-     * @return a EducationUser
+     * @return a {@link EducationUser}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public EducationUser get() {
@@ -112,20 +120,21 @@ public class MeRequestBuilder extends BaseRequestBuilder {
     /**
      * Get me from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EducationUser
+     * @return a {@link EducationUser}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public EducationUser get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EducationUser::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property me in education
      * @param body The request body
-     * @return a EducationUser
+     * @return a {@link EducationUser}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public EducationUser patch(@jakarta.annotation.Nonnull final EducationUser body) {
@@ -135,20 +144,20 @@ public class MeRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property me in education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EducationUser
+     * @return a {@link EducationUser}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public EducationUser patch(@jakarta.annotation.Nonnull final EducationUser body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EducationUser::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property me for education
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -157,18 +166,18 @@ public class MeRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property me for education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/education/me", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Get me from education
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -177,7 +186,7 @@ public class MeRequestBuilder extends BaseRequestBuilder {
     /**
      * Get me from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -189,7 +198,7 @@ public class MeRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property me in education
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EducationUser body) {
@@ -199,12 +208,12 @@ public class MeRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property me in education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EducationUser body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/education/me", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -213,7 +222,7 @@ public class MeRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a MeRequestBuilder
+     * @return a {@link MeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -243,7 +252,7 @@ public class MeRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

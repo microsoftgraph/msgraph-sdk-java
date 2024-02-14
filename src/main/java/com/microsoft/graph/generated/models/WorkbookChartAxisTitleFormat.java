@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartAxisTitleFormat extends Entity implements Parsable {
     /**
-     * Instantiates a new WorkbookChartAxisTitleFormat and sets the default values.
+     * Instantiates a new {@link WorkbookChartAxisTitleFormat} and sets the default values.
      */
     public WorkbookChartAxisTitleFormat() {
         super();
@@ -17,7 +17,7 @@ public class WorkbookChartAxisTitleFormat extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookChartAxisTitleFormat
+     * @return a {@link WorkbookChartAxisTitleFormat}
      */
     @jakarta.annotation.Nonnull
     public static WorkbookChartAxisTitleFormat createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class WorkbookChartAxisTitleFormat extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class WorkbookChartAxisTitleFormat extends Entity implements Parsable {
     }
     /**
      * Gets the font property value. Represents the font attributes, such as font name, font size, color, etc. of chart axis title object. Read-only.
-     * @return a WorkbookChartFont
+     * @return a {@link WorkbookChartFont}
      */
     @jakarta.annotation.Nullable
     public WorkbookChartFont getFont() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Message extends OutlookItem implements Parsable {
     /**
-     * Instantiates a new Message and sets the default values.
+     * Instantiates a new {@link Message} and sets the default values.
      */
     public Message() {
         super();
@@ -19,7 +19,7 @@ public class Message extends OutlookItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Message
+     * @return a {@link Message}
      */
     @jakarta.annotation.Nonnull
     public static Message createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the attachments property value. The fileAttachment and itemAttachment attachments for the message.
-     * @return a java.util.List<Attachment>
+     * @return a {@link java.util.List<Attachment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Attachment> getAttachments() {
@@ -46,7 +46,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the bccRecipients property value. The Bcc: recipients for the message.
-     * @return a java.util.List<Recipient>
+     * @return a {@link java.util.List<Recipient>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getBccRecipients() {
@@ -54,7 +54,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the body property value. The body of the message. It can be in HTML or text format. Find out about safe HTML in a message body.
-     * @return a ItemBody
+     * @return a {@link ItemBody}
      */
     @jakarta.annotation.Nullable
     public ItemBody getBody() {
@@ -62,7 +62,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the bodyPreview property value. The first 255 characters of the message body. It is in text format.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBodyPreview() {
@@ -70,7 +70,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the ccRecipients property value. The Cc: recipients for the message.
-     * @return a java.util.List<Recipient>
+     * @return a {@link java.util.List<Recipient>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getCcRecipients() {
@@ -78,7 +78,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the conversationId property value. The ID of the conversation the email belongs to.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getConversationId() {
@@ -86,7 +86,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the conversationIndex property value. Indicates the position of the message within the conversation.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getConversationIndex() {
@@ -94,7 +94,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the extensions property value. The collection of open extensions defined for the message. Nullable.
-     * @return a java.util.List<Extension>
+     * @return a {@link java.util.List<Extension>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
@@ -102,7 +102,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -141,7 +141,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the flag property value. The flag value that indicates the status, start date, due date, or completion date for the message.
-     * @return a FollowupFlag
+     * @return a {@link FollowupFlag}
      */
     @jakarta.annotation.Nullable
     public FollowupFlag getFlag() {
@@ -149,7 +149,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the from property value. The owner of the mailbox from which the message is sent. In most cases, this value is the same as the sender property, except for sharing or delegation scenarios. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
-     * @return a Recipient
+     * @return a {@link Recipient}
      */
     @jakarta.annotation.Nullable
     public Recipient getFrom() {
@@ -157,7 +157,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the hasAttachments property value. Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as <IMG src='cid:image001.jpg@01D26CD8.6C05F070'>.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHasAttachments() {
@@ -165,7 +165,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the importance property value. The importance property
-     * @return a Importance
+     * @return a {@link Importance}
      */
     @jakarta.annotation.Nullable
     public Importance getImportance() {
@@ -173,7 +173,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the inferenceClassification property value. The inferenceClassification property
-     * @return a InferenceClassificationType
+     * @return a {@link InferenceClassificationType}
      */
     @jakarta.annotation.Nullable
     public InferenceClassificationType getInferenceClassification() {
@@ -181,7 +181,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the internetMessageHeaders property value. The internetMessageHeaders property
-     * @return a java.util.List<InternetMessageHeader>
+     * @return a {@link java.util.List<InternetMessageHeader>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<InternetMessageHeader> getInternetMessageHeaders() {
@@ -189,7 +189,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the internetMessageId property value. The internetMessageId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInternetMessageId() {
@@ -197,7 +197,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the isDeliveryReceiptRequested property value. The isDeliveryReceiptRequested property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeliveryReceiptRequested() {
@@ -205,7 +205,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the isDraft property value. The isDraft property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDraft() {
@@ -213,7 +213,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the isRead property value. The isRead property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRead() {
@@ -221,7 +221,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the isReadReceiptRequested property value. The isReadReceiptRequested property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsReadReceiptRequested() {
@@ -229,7 +229,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the message. Nullable.
-     * @return a java.util.List<MultiValueLegacyExtendedProperty>
+     * @return a {@link java.util.List<MultiValueLegacyExtendedProperty>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MultiValueLegacyExtendedProperty> getMultiValueExtendedProperties() {
@@ -237,7 +237,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the parentFolderId property value. The parentFolderId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getParentFolderId() {
@@ -245,7 +245,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the receivedDateTime property value. The receivedDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReceivedDateTime() {
@@ -253,7 +253,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the replyTo property value. The replyTo property
-     * @return a java.util.List<Recipient>
+     * @return a {@link java.util.List<Recipient>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getReplyTo() {
@@ -261,7 +261,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the sender property value. The sender property
-     * @return a Recipient
+     * @return a {@link Recipient}
      */
     @jakarta.annotation.Nullable
     public Recipient getSender() {
@@ -269,7 +269,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the sentDateTime property value. The sentDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getSentDateTime() {
@@ -277,7 +277,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the message. Nullable.
-     * @return a java.util.List<SingleValueLegacyExtendedProperty>
+     * @return a {@link java.util.List<SingleValueLegacyExtendedProperty>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SingleValueLegacyExtendedProperty> getSingleValueExtendedProperties() {
@@ -285,7 +285,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the subject property value. The subject property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
@@ -293,7 +293,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the toRecipients property value. The toRecipients property
-     * @return a java.util.List<Recipient>
+     * @return a {@link java.util.List<Recipient>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getToRecipients() {
@@ -301,7 +301,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the uniqueBody property value. The uniqueBody property
-     * @return a ItemBody
+     * @return a {@link ItemBody}
      */
     @jakarta.annotation.Nullable
     public ItemBody getUniqueBody() {
@@ -309,7 +309,7 @@ public class Message extends OutlookItem implements Parsable {
     }
     /**
      * Gets the webLink property value. The webLink property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebLink() {

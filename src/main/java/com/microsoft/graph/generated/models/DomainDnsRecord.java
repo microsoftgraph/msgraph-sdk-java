@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DomainDnsRecord extends Entity implements Parsable {
     /**
-     * Instantiates a new DomainDnsRecord and sets the default values.
+     * Instantiates a new {@link DomainDnsRecord} and sets the default values.
      */
     public DomainDnsRecord() {
         super();
@@ -17,7 +17,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DomainDnsRecord
+     * @return a {@link DomainDnsRecord}
      */
     @jakarta.annotation.Nonnull
     public static DomainDnsRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -51,7 +51,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
     }
     /**
      * Gets the isOptional property value. If false, this record must be configured by the customer at the DNS host for Microsoft Online Services to operate correctly with the domain.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsOptional() {
@@ -59,7 +59,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
     }
     /**
      * Gets the label property value. Value used when configuring the name of the DNS record at the DNS host.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLabel() {
@@ -67,7 +67,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
     }
     /**
      * Gets the recordType property value. Indicates what type of DNS record this entity represents. The value can be CName, Mx, Srv, or Txt.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRecordType() {
@@ -75,7 +75,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
     }
     /**
      * Gets the supportedService property value. Microsoft Online Service or feature that has a dependency on this DNS record. Can be one of the following values: null, Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSupportedService() {
@@ -83,7 +83,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
     }
     /**
      * Gets the ttl property value. Value to use when configuring the time-to-live (ttl) property of the DNS record at the DNS host. Not nullable.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTtl() {

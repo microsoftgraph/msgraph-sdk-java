@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftTrainingAssignmentMapping extends TrainingSetting implements Parsable {
     /**
-     * Instantiates a new MicrosoftTrainingAssignmentMapping and sets the default values.
+     * Instantiates a new {@link MicrosoftTrainingAssignmentMapping} and sets the default values.
      */
     public MicrosoftTrainingAssignmentMapping() {
         super();
@@ -18,7 +18,7 @@ public class MicrosoftTrainingAssignmentMapping extends TrainingSetting implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MicrosoftTrainingAssignmentMapping
+     * @return a {@link MicrosoftTrainingAssignmentMapping}
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftTrainingAssignmentMapping createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class MicrosoftTrainingAssignmentMapping extends TrainingSetting implemen
     }
     /**
      * Gets the assignedTo property value. A user collection that specifies to whom the training should be assigned. Possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
-     * @return a java.util.List<TrainingAssignedTo>
+     * @return a {@link java.util.List<TrainingAssignedTo>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TrainingAssignedTo> getAssignedTo() {
@@ -35,7 +35,7 @@ public class MicrosoftTrainingAssignmentMapping extends TrainingSetting implemen
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class MicrosoftTrainingAssignmentMapping extends TrainingSetting implemen
     }
     /**
      * Gets the training property value. The training property
-     * @return a Training
+     * @return a {@link Training}
      */
     @jakarta.annotation.Nullable
     public Training getTraining() {

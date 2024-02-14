@@ -29,6 +29,7 @@ import java.util.Objects;
 public class RegisteredUsersRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -36,6 +37,7 @@ public class RegisteredUsersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to appRoleAssignment.
+     * @return a {@link GraphAppRoleAssignmentRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphAppRoleAssignmentRequestBuilder graphAppRoleAssignment() {
@@ -43,6 +45,7 @@ public class RegisteredUsersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to endpoint.
+     * @return a {@link GraphEndpointRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphEndpointRequestBuilder graphEndpoint() {
@@ -50,6 +53,7 @@ public class RegisteredUsersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to servicePrincipal.
+     * @return a {@link GraphServicePrincipalRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphServicePrincipalRequestBuilder graphServicePrincipal() {
@@ -57,6 +61,7 @@ public class RegisteredUsersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Casts the previous resource to user.
+     * @return a {@link GraphUserRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphUserRequestBuilder graphUser() {
@@ -64,6 +69,7 @@ public class RegisteredUsersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of device entities.
+     * @return a {@link RefRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RefRequestBuilder ref() {
@@ -72,7 +78,7 @@ public class RegisteredUsersRequestBuilder extends BaseRequestBuilder {
     /**
      * Gets an item from the com.Microsoft.Graph.devices.item.registeredUsers.item collection
      * @param directoryObjectId The unique identifier of directoryObject
-     * @return a DirectoryObjectItemRequestBuilder
+     * @return a {@link DirectoryObjectItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DirectoryObjectItemRequestBuilder byDirectoryObjectId(@jakarta.annotation.Nonnull final String directoryObjectId) {
@@ -82,7 +88,7 @@ public class RegisteredUsersRequestBuilder extends BaseRequestBuilder {
         return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new RegisteredUsersRequestBuilder and sets the default values.
+     * Instantiates a new {@link RegisteredUsersRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -90,7 +96,7 @@ public class RegisteredUsersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/devices/{device%2Did}/registeredUsers{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new RegisteredUsersRequestBuilder and sets the default values.
+     * Instantiates a new {@link RegisteredUsersRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -99,7 +105,8 @@ public class RegisteredUsersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.
-     * @return a DirectoryObjectCollectionResponse
+     * @return a {@link DirectoryObjectCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/device-list-registeredusers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -109,20 +116,20 @@ public class RegisteredUsersRequestBuilder extends BaseRequestBuilder {
     /**
      * Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DirectoryObjectCollectionResponse
+     * @return a {@link DirectoryObjectCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/device-list-registeredusers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectoryObjectCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObjectCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -131,7 +138,7 @@ public class RegisteredUsersRequestBuilder extends BaseRequestBuilder {
     /**
      * Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -143,7 +150,7 @@ public class RegisteredUsersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a RegisteredUsersRequestBuilder
+     * @return a {@link RegisteredUsersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RegisteredUsersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -197,7 +204,7 @@ public class RegisteredUsersRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

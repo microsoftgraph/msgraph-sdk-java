@@ -21,7 +21,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereDevicesSummary and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsWorkFromAnywhereDevicesSummary} and sets the default values.
      */
     public UserExperienceAnalyticsWorkFromAnywhereDevicesSummary() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsWorkFromAnywhereDevicesSummary
+     * @return a {@link UserExperienceAnalyticsWorkFromAnywhereDevicesSummary}
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsWorkFromAnywhereDevicesSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     }
     /**
      * Gets the autopilotDevicesSummary property value. The user experience analytics work from anywhere Autopilot devices summary. Read-only.
-     * @return a UserExperienceAnalyticsAutopilotDevicesSummary
+     * @return a {@link UserExperienceAnalyticsAutopilotDevicesSummary}
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAutopilotDevicesSummary getAutopilotDevicesSummary() {
@@ -60,7 +60,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -68,7 +68,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     }
     /**
      * Gets the cloudIdentityDevicesSummary property value. The user experience analytics work from anywhere Cloud Identity devices summary. Read-only.
-     * @return a UserExperienceAnalyticsCloudIdentityDevicesSummary
+     * @return a {@link UserExperienceAnalyticsCloudIdentityDevicesSummary}
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCloudIdentityDevicesSummary getCloudIdentityDevicesSummary() {
@@ -76,7 +76,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     }
     /**
      * Gets the cloudManagementDevicesSummary property value. The user experience analytics work from anywhere Cloud management devices summary. Read-only.
-     * @return a UserExperienceAnalyticsCloudManagementDevicesSummary
+     * @return a {@link UserExperienceAnalyticsCloudManagementDevicesSummary}
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCloudManagementDevicesSummary getCloudManagementDevicesSummary() {
@@ -84,7 +84,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     }
     /**
      * Gets the coManagedDevices property value. Total number of co-managed devices. Read-only. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCoManagedDevices() {
@@ -92,7 +92,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     }
     /**
      * Gets the devicesNotAutopilotRegistered property value. The count of intune devices that are not autopilot registerd. Read-only. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDevicesNotAutopilotRegistered() {
@@ -100,7 +100,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     }
     /**
      * Gets the devicesWithoutAutopilotProfileAssigned property value. The count of intune devices not autopilot profile assigned. Read-only. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDevicesWithoutAutopilotProfileAssigned() {
@@ -108,7 +108,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     }
     /**
      * Gets the devicesWithoutCloudIdentity property value. The count of devices that are not cloud identity. Read-only. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDevicesWithoutCloudIdentity() {
@@ -116,7 +116,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -140,7 +140,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     }
     /**
      * Gets the intuneDevices property value. The count of intune devices that are not autopilot registerd. Read-only. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getIntuneDevices() {
@@ -148,7 +148,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -156,7 +156,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     }
     /**
      * Gets the tenantAttachDevices property value. Total count of tenant attach devices. Read-only. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTenantAttachDevices() {
@@ -164,7 +164,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     }
     /**
      * Gets the totalDevices property value. The total count of devices. Read-only. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalDevices() {
@@ -172,7 +172,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     }
     /**
      * Gets the unsupportedOSversionDevices property value. The count of Windows 10 devices that have unsupported OS versions. Read-only. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUnsupportedOSversionDevices() {
@@ -180,7 +180,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     }
     /**
      * Gets the windows10Devices property value. The count of windows 10 devices. Read-only. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getWindows10Devices() {
@@ -188,7 +188,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     }
     /**
      * Gets the windows10DevicesSummary property value. The user experience analytics work from anywhere Windows 10 devices summary. Read-only.
-     * @return a UserExperienceAnalyticsWindows10DevicesSummary
+     * @return a {@link UserExperienceAnalyticsWindows10DevicesSummary}
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsWindows10DevicesSummary getWindows10DevicesSummary() {
@@ -196,7 +196,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     }
     /**
      * Gets the windows10DevicesWithoutTenantAttach property value. The count of windows 10 devices that are Intune and co-managed. Read-only. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getWindows10DevicesWithoutTenantAttach() {

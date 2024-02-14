@@ -20,7 +20,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new MediaStream and sets the default values.
+     * Instantiates a new {@link MediaStream} and sets the default values.
      */
     public MediaStream() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -29,7 +29,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MediaStream
+     * @return a {@link MediaStream}
      */
     @jakarta.annotation.Nonnull
     public static MediaStream createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -51,7 +51,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the audioCodec property value. Codec name used to encode audio for transmission on the network. Possible values are: unknown, invalid, cn, pcma, pcmu, amrWide, g722, g7221, g7221c, g729, multiChannelAudio, muchv2, opus, satin, satinFullband, rtAudio8, rtAudio16, silk, silkNarrow, silkWide, siren, xmsRta, unknownFutureValue.
-     * @return a AudioCodec
+     * @return a {@link AudioCodec}
      */
     @jakarta.annotation.Nullable
     public AudioCodec getAudioCodec() {
@@ -59,7 +59,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the averageAudioDegradation property value. Average Network Mean Opinion Score degradation for stream. Represents how much the network loss and jitter has impacted the quality of received audio.
-     * @return a Float
+     * @return a {@link Float}
      */
     @jakarta.annotation.Nullable
     public Float getAverageAudioDegradation() {
@@ -67,7 +67,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the averageAudioNetworkJitter property value. Average jitter for the stream computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getAverageAudioNetworkJitter() {
@@ -75,7 +75,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the averageBandwidthEstimate property value. Average estimated bandwidth available between two endpoints in bits per second.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getAverageBandwidthEstimate() {
@@ -83,7 +83,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the averageFreezeDuration property value. Average duration of the received freezing time in the video stream.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getAverageFreezeDuration() {
@@ -91,7 +91,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the averageJitter property value. Average jitter for the stream computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getAverageJitter() {
@@ -99,7 +99,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the averagePacketLossRate property value. Average packet loss rate for stream.
-     * @return a Float
+     * @return a {@link Float}
      */
     @jakarta.annotation.Nullable
     public Float getAveragePacketLossRate() {
@@ -107,7 +107,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the averageRatioOfConcealedSamples property value. Ratio of the number of audio frames with samples generated by packet loss concealment to the total number of audio frames.
-     * @return a Float
+     * @return a {@link Float}
      */
     @jakarta.annotation.Nullable
     public Float getAverageRatioOfConcealedSamples() {
@@ -115,7 +115,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the averageReceivedFrameRate property value. Average frames per second received for all video streams computed over the duration of the session.
-     * @return a Float
+     * @return a {@link Float}
      */
     @jakarta.annotation.Nullable
     public Float getAverageReceivedFrameRate() {
@@ -123,7 +123,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the averageRoundTripTime property value. Average network propagation round-trip time computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getAverageRoundTripTime() {
@@ -131,7 +131,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the averageVideoFrameLossPercentage property value. Average percentage of video frames lost as displayed to the user.
-     * @return a Float
+     * @return a {@link Float}
      */
     @jakarta.annotation.Nullable
     public Float getAverageVideoFrameLossPercentage() {
@@ -139,7 +139,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the averageVideoFrameRate property value. Average frames per second received for a video stream, computed over the duration of the session.
-     * @return a Float
+     * @return a {@link Float}
      */
     @jakarta.annotation.Nullable
     public Float getAverageVideoFrameRate() {
@@ -147,7 +147,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the averageVideoPacketLossRate property value. Average fraction of packets lost, as specified in [RFC 3550][], computed over the duration of the session.
-     * @return a Float
+     * @return a {@link Float}
      */
     @jakarta.annotation.Nullable
     public Float getAverageVideoPacketLossRate() {
@@ -155,7 +155,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -163,7 +163,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the endDateTime property value. UTC time when the stream ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. This field is only available for streams that use the SIP protocol.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
@@ -171,7 +171,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -211,7 +211,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the isAudioForwardErrorCorrectionUsed property value. Indicates whether the forward error correction (FEC) was used at some point during the session. The default value is null.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAudioForwardErrorCorrectionUsed() {
@@ -219,7 +219,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the lowFrameRateRatio property value. Fraction of the call where frame rate is less than 7.5 frames per second.
-     * @return a Float
+     * @return a {@link Float}
      */
     @jakarta.annotation.Nullable
     public Float getLowFrameRateRatio() {
@@ -227,7 +227,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the lowVideoProcessingCapabilityRatio property value. Fraction of the call that the client is running less than 70% expected video processing capability.
-     * @return a Float
+     * @return a {@link Float}
      */
     @jakarta.annotation.Nullable
     public Float getLowVideoProcessingCapabilityRatio() {
@@ -235,7 +235,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the maxAudioNetworkJitter property value. Maximum of audio network jitter computed over each of the 20 second windows during the session, denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getMaxAudioNetworkJitter() {
@@ -243,7 +243,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the maxJitter property value. Maximum jitter for the stream computed as specified in RFC 3550, denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getMaxJitter() {
@@ -251,7 +251,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the maxPacketLossRate property value. Maximum packet loss rate for the stream.
-     * @return a Float
+     * @return a {@link Float}
      */
     @jakarta.annotation.Nullable
     public Float getMaxPacketLossRate() {
@@ -259,7 +259,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the maxRatioOfConcealedSamples property value. Maximum ratio of packets concealed by the healer.
-     * @return a Float
+     * @return a {@link Float}
      */
     @jakarta.annotation.Nullable
     public Float getMaxRatioOfConcealedSamples() {
@@ -267,7 +267,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the maxRoundTripTime property value. Maximum network propagation round-trip time computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getMaxRoundTripTime() {
@@ -275,7 +275,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -283,7 +283,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the packetUtilization property value. Packet count for the stream.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getPacketUtilization() {
@@ -291,7 +291,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the postForwardErrorCorrectionPacketLossRate property value. Packet loss rate after FEC has been applied aggregated across all video streams and codecs.
-     * @return a Float
+     * @return a {@link Float}
      */
     @jakarta.annotation.Nullable
     public Float getPostForwardErrorCorrectionPacketLossRate() {
@@ -299,7 +299,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the rmsFreezeDuration property value. Average duration of the received freezing time in the video stream represented in root mean square.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getRmsFreezeDuration() {
@@ -307,7 +307,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the startDateTime property value. UTC time when the stream started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. This field is only available for streams that use the SIP protocol.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
@@ -315,7 +315,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the streamDirection property value. The streamDirection property
-     * @return a MediaStreamDirection
+     * @return a {@link MediaStreamDirection}
      */
     @jakarta.annotation.Nullable
     public MediaStreamDirection getStreamDirection() {
@@ -323,7 +323,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the streamId property value. Unique identifier for the stream.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStreamId() {
@@ -331,7 +331,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the videoCodec property value. Codec name used to encode video for transmission on the network. Possible values are: unknown, invalid, av1, h263, h264, h264s, h264uc, h265, rtvc1, rtVideo, xrtvc1, unknownFutureValue.
-     * @return a VideoCodec
+     * @return a {@link VideoCodec}
      */
     @jakarta.annotation.Nullable
     public VideoCodec getVideoCodec() {
@@ -339,7 +339,7 @@ public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the wasMediaBypassed property value. True if the media stream bypassed the Mediation Server and went straight between client and PSTN Gateway/PBX, false otherwise.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getWasMediaBypassed() {

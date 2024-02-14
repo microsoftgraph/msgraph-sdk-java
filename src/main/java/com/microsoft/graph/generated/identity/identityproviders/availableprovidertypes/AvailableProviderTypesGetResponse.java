@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AvailableProviderTypesGetResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new AvailableProviderTypesGetResponse and sets the default values.
+     * Instantiates a new {@link AvailableProviderTypesGetResponse} and sets the default values.
      */
     public AvailableProviderTypesGetResponse() {
         super();
@@ -18,7 +18,7 @@ public class AvailableProviderTypesGetResponse extends BaseCollectionPaginationC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AvailableProviderTypesGetResponse
+     * @return a {@link AvailableProviderTypesGetResponse}
      */
     @jakarta.annotation.Nonnull
     public static AvailableProviderTypesGetResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AvailableProviderTypesGetResponse extends BaseCollectionPaginationC
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class AvailableProviderTypesGetResponse extends BaseCollectionPaginationC
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getValue() {

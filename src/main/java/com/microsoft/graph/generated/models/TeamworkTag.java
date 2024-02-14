@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamworkTag extends Entity implements Parsable {
     /**
-     * Instantiates a new TeamworkTag and sets the default values.
+     * Instantiates a new {@link TeamworkTag} and sets the default values.
      */
     public TeamworkTag() {
         super();
@@ -17,7 +17,7 @@ public class TeamworkTag extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamworkTag
+     * @return a {@link TeamworkTag}
      */
     @jakarta.annotation.Nonnull
     public static TeamworkTag createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class TeamworkTag extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of the tag as it appears to the user in Microsoft Teams. A teamworkTag can't have more than 200 teamworkTagMembers.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -34,7 +34,7 @@ public class TeamworkTag extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the tag as it appears to the user in Microsoft Teams.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -42,7 +42,7 @@ public class TeamworkTag extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class TeamworkTag extends Entity implements Parsable {
     }
     /**
      * Gets the memberCount property value. The number of users assigned to the tag.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMemberCount() {
@@ -65,7 +65,7 @@ public class TeamworkTag extends Entity implements Parsable {
     }
     /**
      * Gets the members property value. Users assigned to the tag.
-     * @return a java.util.List<TeamworkTagMember>
+     * @return a {@link java.util.List<TeamworkTagMember>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamworkTagMember> getMembers() {
@@ -73,7 +73,7 @@ public class TeamworkTag extends Entity implements Parsable {
     }
     /**
      * Gets the tagType property value. The type of the tag. Default is standard.
-     * @return a TeamworkTagType
+     * @return a {@link TeamworkTagType}
      */
     @jakarta.annotation.Nullable
     public TeamworkTagType getTagType() {
@@ -81,7 +81,7 @@ public class TeamworkTag extends Entity implements Parsable {
     }
     /**
      * Gets the teamId property value. ID of the team in which the tag is defined.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTeamId() {

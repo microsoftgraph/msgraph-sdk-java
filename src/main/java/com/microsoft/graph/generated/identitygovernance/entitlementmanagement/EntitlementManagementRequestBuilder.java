@@ -34,6 +34,7 @@ import java.util.Objects;
 public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the accessPackageAssignmentApprovals property of the microsoft.graph.entitlementManagement entity.
+     * @return a {@link AccessPackageAssignmentApprovalsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AccessPackageAssignmentApprovalsRequestBuilder accessPackageAssignmentApprovals() {
@@ -41,6 +42,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the accessPackages property of the microsoft.graph.entitlementManagement entity.
+     * @return a {@link AccessPackagesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AccessPackagesRequestBuilder accessPackages() {
@@ -48,6 +50,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the assignmentPolicies property of the microsoft.graph.entitlementManagement entity.
+     * @return a {@link AssignmentPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignmentPoliciesRequestBuilder assignmentPolicies() {
@@ -55,6 +58,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the assignmentRequests property of the microsoft.graph.entitlementManagement entity.
+     * @return a {@link AssignmentRequestsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignmentRequestsRequestBuilder assignmentRequests() {
@@ -62,6 +66,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.entitlementManagement entity.
+     * @return a {@link AssignmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
@@ -69,6 +74,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the catalogs property of the microsoft.graph.entitlementManagement entity.
+     * @return a {@link CatalogsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CatalogsRequestBuilder catalogs() {
@@ -76,6 +82,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the connectedOrganizations property of the microsoft.graph.entitlementManagement entity.
+     * @return a {@link ConnectedOrganizationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ConnectedOrganizationsRequestBuilder connectedOrganizations() {
@@ -83,6 +90,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the resourceEnvironments property of the microsoft.graph.entitlementManagement entity.
+     * @return a {@link ResourceEnvironmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ResourceEnvironmentsRequestBuilder resourceEnvironments() {
@@ -90,6 +98,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the resourceRequests property of the microsoft.graph.entitlementManagement entity.
+     * @return a {@link ResourceRequestsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ResourceRequestsRequestBuilder resourceRequests() {
@@ -97,6 +106,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the resourceRoleScopes property of the microsoft.graph.entitlementManagement entity.
+     * @return a {@link ResourceRoleScopesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ResourceRoleScopesRequestBuilder resourceRoleScopes() {
@@ -104,6 +114,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the resources property of the microsoft.graph.entitlementManagement entity.
+     * @return a {@link ResourcesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ResourcesRequestBuilder resources() {
@@ -111,13 +122,14 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the settings property of the microsoft.graph.entitlementManagement entity.
+     * @return a {@link SettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SettingsRequestBuilder settings() {
         return new SettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new EntitlementManagementRequestBuilder and sets the default values.
+     * Instantiates a new {@link EntitlementManagementRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -125,7 +137,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new EntitlementManagementRequestBuilder and sets the default values.
+     * Instantiates a new {@link EntitlementManagementRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -134,6 +146,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property entitlementManagement for identityGovernance
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -141,17 +154,18 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property entitlementManagement for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get entitlementManagement from identityGovernance
-     * @return a EntitlementManagement
+     * @return a {@link EntitlementManagement}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public EntitlementManagement get() {
@@ -160,20 +174,21 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entitlementManagement from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EntitlementManagement
+     * @return a {@link EntitlementManagement}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public EntitlementManagement get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EntitlementManagement::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property entitlementManagement in identityGovernance
      * @param body The request body
-     * @return a EntitlementManagement
+     * @return a {@link EntitlementManagement}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public EntitlementManagement patch(@jakarta.annotation.Nonnull final EntitlementManagement body) {
@@ -183,20 +198,20 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property entitlementManagement in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EntitlementManagement
+     * @return a {@link EntitlementManagement}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public EntitlementManagement patch(@jakarta.annotation.Nonnull final EntitlementManagement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EntitlementManagement::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property entitlementManagement for identityGovernance
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -205,18 +220,18 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property entitlementManagement for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/identityGovernance/entitlementManagement", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Get entitlementManagement from identityGovernance
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -225,7 +240,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entitlementManagement from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -237,7 +252,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property entitlementManagement in identityGovernance
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EntitlementManagement body) {
@@ -247,12 +262,12 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property entitlementManagement in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EntitlementManagement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/identityGovernance/entitlementManagement", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -261,7 +276,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a EntitlementManagementRequestBuilder
+     * @return a {@link EntitlementManagementRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EntitlementManagementRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -291,7 +306,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

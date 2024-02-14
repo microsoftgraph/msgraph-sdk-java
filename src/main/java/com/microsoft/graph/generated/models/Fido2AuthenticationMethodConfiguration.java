@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
     /**
-     * Instantiates a new Fido2AuthenticationMethodConfiguration and sets the default values.
+     * Instantiates a new {@link Fido2AuthenticationMethodConfiguration} and sets the default values.
      */
     public Fido2AuthenticationMethodConfiguration() {
         super();
@@ -18,7 +18,7 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Fido2AuthenticationMethodConfiguration
+     * @return a {@link Fido2AuthenticationMethodConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static Fido2AuthenticationMethodConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
     }
     /**
      * Gets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
-     * @return a java.util.List<AuthenticationMethodTarget>
+     * @return a {@link java.util.List<AuthenticationMethodTarget>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodTarget> getIncludeTargets() {
@@ -48,7 +48,7 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
     }
     /**
      * Gets the isAttestationEnforced property value. Determines whether attestation must be enforced for FIDO2 security key registration.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAttestationEnforced() {
@@ -56,7 +56,7 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
     }
     /**
      * Gets the isSelfServiceRegistrationAllowed property value. Determines if users can register new FIDO2 security keys.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSelfServiceRegistrationAllowed() {
@@ -64,7 +64,7 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
     }
     /**
      * Gets the keyRestrictions property value. Controls whether key restrictions are enforced on FIDO2 security keys, either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (e.g. make and model) of the authenticator.
-     * @return a Fido2KeyRestrictions
+     * @return a {@link Fido2KeyRestrictions}
      */
     @jakarta.annotation.Nullable
     public Fido2KeyRestrictions getKeyRestrictions() {

@@ -13,6 +13,7 @@ import java.util.Objects;
 public class GroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of print entities.
+     * @return a {@link RefRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RefRequestBuilder ref() {
@@ -20,13 +21,14 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The serviceProvisioningErrors property
+     * @return a {@link ServiceProvisioningErrorsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ServiceProvisioningErrorsRequestBuilder serviceProvisioningErrors() {
         return new ServiceProvisioningErrorsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new GroupItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link GroupItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -34,7 +36,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/shares/{printerShare%2Did}/allowedGroups/{group%2Did}", pathParameters);
     }
     /**
-     * Instantiates a new GroupItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link GroupItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */

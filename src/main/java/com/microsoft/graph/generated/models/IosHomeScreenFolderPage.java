@@ -21,7 +21,7 @@ public class IosHomeScreenFolderPage implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new IosHomeScreenFolderPage and sets the default values.
+     * Instantiates a new {@link IosHomeScreenFolderPage} and sets the default values.
      */
     public IosHomeScreenFolderPage() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class IosHomeScreenFolderPage implements AdditionalDataHolder, BackedMode
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosHomeScreenFolderPage
+     * @return a {@link IosHomeScreenFolderPage}
      */
     @jakarta.annotation.Nonnull
     public static IosHomeScreenFolderPage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class IosHomeScreenFolderPage implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class IosHomeScreenFolderPage implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the apps property value. A list of apps and web clips to appear on a page within a folder. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<IosHomeScreenApp>
+     * @return a {@link java.util.List<IosHomeScreenApp>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IosHomeScreenApp> getApps() {
@@ -60,7 +60,7 @@ public class IosHomeScreenFolderPage implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -68,7 +68,7 @@ public class IosHomeScreenFolderPage implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the displayName property value. Name of the folder page
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -76,7 +76,7 @@ public class IosHomeScreenFolderPage implements AdditionalDataHolder, BackedMode
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -88,7 +88,7 @@ public class IosHomeScreenFolderPage implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

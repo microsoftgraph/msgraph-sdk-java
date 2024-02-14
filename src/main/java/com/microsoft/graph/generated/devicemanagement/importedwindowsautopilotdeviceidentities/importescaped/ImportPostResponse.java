@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ImportPostResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new ImportPostResponse and sets the default values.
+     * Instantiates a new {@link ImportPostResponse} and sets the default values.
      */
     public ImportPostResponse() {
         super();
@@ -19,7 +19,7 @@ public class ImportPostResponse extends BaseCollectionPaginationCountResponse im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ImportPostResponse
+     * @return a {@link ImportPostResponse}
      */
     @jakarta.annotation.Nonnull
     public static ImportPostResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class ImportPostResponse extends BaseCollectionPaginationCountResponse im
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class ImportPostResponse extends BaseCollectionPaginationCountResponse im
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<ImportedWindowsAutopilotDeviceIdentity>
+     * @return a {@link java.util.List<ImportedWindowsAutopilotDeviceIdentity>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ImportedWindowsAutopilotDeviceIdentity> getValue() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EnterpriseCodeSigningCertificate extends Entity implements Parsable {
     /**
-     * Instantiates a new EnterpriseCodeSigningCertificate and sets the default values.
+     * Instantiates a new {@link EnterpriseCodeSigningCertificate} and sets the default values.
      */
     public EnterpriseCodeSigningCertificate() {
         super();
@@ -18,7 +18,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EnterpriseCodeSigningCertificate
+     * @return a {@link EnterpriseCodeSigningCertificate}
      */
     @jakarta.annotation.Nonnull
     public static EnterpriseCodeSigningCertificate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     }
     /**
      * Gets the content property value. The Windows Enterprise Code-Signing Certificate in the raw data format. Set to null once certificate has been uploaded and other properties have been populated.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
@@ -35,7 +35,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     }
     /**
      * Gets the expirationDateTime property value. The cert expiration date and time (using ISO 8601 format, in UTC time). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
@@ -43,7 +43,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -60,7 +60,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     }
     /**
      * Gets the issuer property value. The issuer value for the cert. This might contain information such as country (C), state or province (S), locality (L), common name of the cert (CN), organization (O), and organizational unit (OU). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIssuer() {
@@ -68,7 +68,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     }
     /**
      * Gets the issuerName property value. The issuer name for the cert. This might contain information such as country (C), state or province (S), locality (L), common name of the cert (CN), organization (O), and organizational unit (OU). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIssuerName() {
@@ -76,7 +76,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     }
     /**
      * Gets the status property value. The status property
-     * @return a CertificateStatus
+     * @return a {@link CertificateStatus}
      */
     @jakarta.annotation.Nullable
     public CertificateStatus getStatus() {
@@ -84,7 +84,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     }
     /**
      * Gets the subject property value. The subject value for the cert. This might contain information such as country (C), state or province (S), locality (L), common name of the cert (CN), organization (O), and organizational unit (OU). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
@@ -92,7 +92,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     }
     /**
      * Gets the subjectName property value. The subject name for the cert. This might contain information such as country (C), state or province (S), locality (L), common name of the cert (CN), organization (O), and organizational unit (OU). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubjectName() {
@@ -100,7 +100,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     }
     /**
      * Gets the uploadDateTime property value. The date time of CodeSigning Cert when it is uploaded (using ISO 8601 format, in UTC time). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getUploadDateTime() {

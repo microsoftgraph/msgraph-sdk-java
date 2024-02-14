@@ -18,7 +18,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AccessPackageAssignmentApprovalSettings and sets the default values.
+     * Instantiates a new {@link AccessPackageAssignmentApprovalSettings} and sets the default values.
      */
     public AccessPackageAssignmentApprovalSettings() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessPackageAssignmentApprovalSettings
+     * @return a {@link AccessPackageAssignmentApprovalSettings}
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAssignmentApprovalSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -70,7 +70,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
     }
     /**
      * Gets the isApprovalRequiredForAdd property value. If false, then approval isn't required for new requests in this policy.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsApprovalRequiredForAdd() {
@@ -78,7 +78,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
     }
     /**
      * Gets the isApprovalRequiredForUpdate property value. If false, then approval isn't required for updates to requests in this policy.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsApprovalRequiredForUpdate() {
@@ -86,7 +86,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -94,7 +94,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
     }
     /**
      * Gets the stages property value. If approval is required, the one, two or three elements of this collection define each of the stages of approval. An empty array is present if no approval is required.
-     * @return a java.util.List<AccessPackageApprovalStage>
+     * @return a {@link java.util.List<AccessPackageApprovalStage>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageApprovalStage> getStages() {

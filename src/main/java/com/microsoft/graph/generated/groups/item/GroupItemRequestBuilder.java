@@ -65,6 +65,7 @@ import java.util.Objects;
 public class GroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the acceptedSenders property of the microsoft.graph.group entity.
+     * @return a {@link AcceptedSendersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AcceptedSendersRequestBuilder acceptedSenders() {
@@ -72,6 +73,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the addFavorite method.
+     * @return a {@link AddFavoriteRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AddFavoriteRequestBuilder addFavorite() {
@@ -79,6 +81,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the appRoleAssignments property of the microsoft.graph.group entity.
+     * @return a {@link AppRoleAssignmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AppRoleAssignmentsRequestBuilder appRoleAssignments() {
@@ -86,6 +89,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the assignLicense method.
+     * @return a {@link AssignLicenseRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignLicenseRequestBuilder assignLicense() {
@@ -93,6 +97,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the calendar property of the microsoft.graph.group entity.
+     * @return a {@link CalendarRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CalendarRequestBuilder calendar() {
@@ -100,6 +105,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the calendarView property of the microsoft.graph.group entity.
+     * @return a {@link CalendarViewRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CalendarViewRequestBuilder calendarView() {
@@ -107,6 +113,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the checkGrantedPermissionsForApp method.
+     * @return a {@link CheckGrantedPermissionsForAppRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CheckGrantedPermissionsForAppRequestBuilder checkGrantedPermissionsForApp() {
@@ -114,6 +121,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the checkMemberGroups method.
+     * @return a {@link CheckMemberGroupsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CheckMemberGroupsRequestBuilder checkMemberGroups() {
@@ -121,6 +129,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the checkMemberObjects method.
+     * @return a {@link CheckMemberObjectsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CheckMemberObjectsRequestBuilder checkMemberObjects() {
@@ -128,6 +137,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the conversations property of the microsoft.graph.group entity.
+     * @return a {@link ConversationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ConversationsRequestBuilder conversations() {
@@ -135,6 +145,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the createdOnBehalfOf property of the microsoft.graph.group entity.
+     * @return a {@link CreatedOnBehalfOfRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CreatedOnBehalfOfRequestBuilder createdOnBehalfOf() {
@@ -142,6 +153,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the drive property of the microsoft.graph.group entity.
+     * @return a {@link DriveRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DriveRequestBuilder drive() {
@@ -149,6 +161,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the drives property of the microsoft.graph.group entity.
+     * @return a {@link DrivesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DrivesRequestBuilder drives() {
@@ -156,6 +169,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the events property of the microsoft.graph.group entity.
+     * @return a {@link EventsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EventsRequestBuilder events() {
@@ -163,6 +177,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the extensions property of the microsoft.graph.group entity.
+     * @return a {@link ExtensionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
@@ -170,6 +185,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getMemberGroups method.
+     * @return a {@link GetMemberGroupsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetMemberGroupsRequestBuilder getMemberGroups() {
@@ -177,6 +193,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getMemberObjects method.
+     * @return a {@link GetMemberObjectsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetMemberObjectsRequestBuilder getMemberObjects() {
@@ -184,6 +201,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the groupLifecyclePolicies property of the microsoft.graph.group entity.
+     * @return a {@link GroupLifecyclePoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GroupLifecyclePoliciesRequestBuilder groupLifecyclePolicies() {
@@ -191,6 +209,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the memberOf property of the microsoft.graph.group entity.
+     * @return a {@link MemberOfRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MemberOfRequestBuilder memberOf() {
@@ -198,6 +217,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the members property of the microsoft.graph.group entity.
+     * @return a {@link MembersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MembersRequestBuilder members() {
@@ -205,6 +225,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the membersWithLicenseErrors property of the microsoft.graph.group entity.
+     * @return a {@link MembersWithLicenseErrorsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MembersWithLicenseErrorsRequestBuilder membersWithLicenseErrors() {
@@ -212,6 +233,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the onenote property of the microsoft.graph.group entity.
+     * @return a {@link OnenoteRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OnenoteRequestBuilder onenote() {
@@ -219,6 +241,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the owners property of the microsoft.graph.group entity.
+     * @return a {@link OwnersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OwnersRequestBuilder owners() {
@@ -226,6 +249,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the permissionGrants property of the microsoft.graph.group entity.
+     * @return a {@link PermissionGrantsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PermissionGrantsRequestBuilder permissionGrants() {
@@ -233,6 +257,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the photo property of the microsoft.graph.group entity.
+     * @return a {@link PhotoRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PhotoRequestBuilder photo() {
@@ -240,6 +265,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the photos property of the microsoft.graph.group entity.
+     * @return a {@link PhotosRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PhotosRequestBuilder photos() {
@@ -247,6 +273,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the planner property of the microsoft.graph.group entity.
+     * @return a {@link PlannerRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PlannerRequestBuilder planner() {
@@ -254,6 +281,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the rejectedSenders property of the microsoft.graph.group entity.
+     * @return a {@link RejectedSendersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RejectedSendersRequestBuilder rejectedSenders() {
@@ -261,6 +289,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the removeFavorite method.
+     * @return a {@link RemoveFavoriteRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RemoveFavoriteRequestBuilder removeFavorite() {
@@ -268,6 +297,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the renew method.
+     * @return a {@link RenewRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RenewRequestBuilder renew() {
@@ -275,6 +305,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the resetUnseenCount method.
+     * @return a {@link ResetUnseenCountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ResetUnseenCountRequestBuilder resetUnseenCount() {
@@ -282,6 +313,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the restore method.
+     * @return a {@link RestoreRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RestoreRequestBuilder restore() {
@@ -289,6 +321,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the retryServiceProvisioning method.
+     * @return a {@link RetryServiceProvisioningRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RetryServiceProvisioningRequestBuilder retryServiceProvisioning() {
@@ -296,6 +329,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The serviceProvisioningErrors property
+     * @return a {@link ServiceProvisioningErrorsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ServiceProvisioningErrorsRequestBuilder serviceProvisioningErrors() {
@@ -303,6 +337,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the settings property of the microsoft.graph.group entity.
+     * @return a {@link SettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SettingsRequestBuilder settings() {
@@ -310,6 +345,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the sites property of the microsoft.graph.group entity.
+     * @return a {@link SitesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SitesRequestBuilder sites() {
@@ -317,6 +353,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the subscribeByMail method.
+     * @return a {@link SubscribeByMailRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SubscribeByMailRequestBuilder subscribeByMail() {
@@ -324,6 +361,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the team property of the microsoft.graph.group entity.
+     * @return a {@link TeamRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TeamRequestBuilder team() {
@@ -331,6 +369,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the threads property of the microsoft.graph.group entity.
+     * @return a {@link ThreadsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ThreadsRequestBuilder threads() {
@@ -338,6 +377,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.group entity.
+     * @return a {@link TransitiveMemberOfRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TransitiveMemberOfRequestBuilder transitiveMemberOf() {
@@ -345,6 +385,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the transitiveMembers property of the microsoft.graph.group entity.
+     * @return a {@link TransitiveMembersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TransitiveMembersRequestBuilder transitiveMembers() {
@@ -352,6 +393,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the unsubscribeByMail method.
+     * @return a {@link UnsubscribeByMailRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UnsubscribeByMailRequestBuilder unsubscribeByMail() {
@@ -359,13 +401,14 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the validateProperties method.
+     * @return a {@link ValidatePropertiesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
         return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new GroupItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link GroupItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -373,7 +416,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new GroupItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link GroupItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -382,6 +425,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete group. When deleted, Microsoft 365 groups are moved to a temporary container and can be restored within 30 days. After that time, they're permanently deleted. This isn't applicable to Security groups and Distribution groups which are permanently deleted immediately. To learn more, see deletedItems.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/group-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -390,18 +434,19 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete group. When deleted, Microsoft 365 groups are moved to a temporary container and can be restored within 30 days. After that time, they're permanently deleted. This isn't applicable to Security groups and Distribution groups which are permanently deleted immediately. To learn more, see deletedItems.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/group-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get the properties and relationships of a group object. This operation returns by default only a subset of all the available properties, as noted in the Properties section. To get properties that aren't_ returned by default, specify them in a $select OData query option. The hasMembersWithLicenseErrors and isArchived properties are an exception and aren't returned in the $select query.
-     * @return a Group
+     * @return a {@link Group}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/group-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -411,46 +456,47 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of a group object. This operation returns by default only a subset of all the available properties, as noted in the Properties section. To get properties that aren't_ returned by default, specify them in a $select OData query option. The hasMembersWithLicenseErrors and isArchived properties are an exception and aren't returned in the $select query.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Group
+     * @return a {@link Group}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/group-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Group get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Group::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a group object.
+     * Add a member to a security or Microsoft 365 group through the members navigation property. The following table shows the types of members that can be added to either security groups or Microsoft 365 groups.
      * @param body The request body
-     * @return a Group
-     * @see <a href="https://learn.microsoft.com/graph/api/group-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a {@link Group}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/group-post-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Group patch(@jakarta.annotation.Nonnull final Group body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a group object.
+     * Add a member to a security or Microsoft 365 group through the members navigation property. The following table shows the types of members that can be added to either security groups or Microsoft 365 groups.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Group
-     * @see <a href="https://learn.microsoft.com/graph/api/group-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a {@link Group}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/group-post-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Group patch(@jakarta.annotation.Nonnull final Group body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Group::createFromDiscriminatorValue);
     }
     /**
      * Delete group. When deleted, Microsoft 365 groups are moved to a temporary container and can be restored within 30 days. After that time, they're permanently deleted. This isn't applicable to Security groups and Distribution groups which are permanently deleted immediately. To learn more, see deletedItems.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -459,18 +505,18 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete group. When deleted, Microsoft 365 groups are moved to a temporary container and can be restored within 30 days. After that time, they're permanently deleted. This isn't applicable to Security groups and Distribution groups which are permanently deleted immediately. To learn more, see deletedItems.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/groups/{group%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Get the properties and relationships of a group object. This operation returns by default only a subset of all the available properties, as noted in the Properties section. To get properties that aren't_ returned by default, specify them in a $select OData query option. The hasMembersWithLicenseErrors and isArchived properties are an exception and aren't returned in the $select query.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -479,7 +525,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of a group object. This operation returns by default only a subset of all the available properties, as noted in the Properties section. To get properties that aren't_ returned by default, specify them in a $select OData query option. The hasMembersWithLicenseErrors and isArchived properties are an exception and aren't returned in the $select query.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -489,24 +535,24 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a group object.
+     * Add a member to a security or Microsoft 365 group through the members navigation property. The following table shows the types of members that can be added to either security groups or Microsoft 365 groups.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Group body) {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a group object.
+     * Add a member to a security or Microsoft 365 group through the members navigation property. The following table shows the types of members that can be added to either security groups or Microsoft 365 groups.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Group body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/groups/{group%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -515,7 +561,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GroupItemRequestBuilder
+     * @return a {@link GroupItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GroupItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -545,7 +591,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

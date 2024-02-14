@@ -18,7 +18,7 @@ public class ColumnValidation implements AdditionalDataHolder, BackedModel, Pars
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ColumnValidation and sets the default values.
+     * Instantiates a new {@link ColumnValidation} and sets the default values.
      */
     public ColumnValidation() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ColumnValidation implements AdditionalDataHolder, BackedModel, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ColumnValidation
+     * @return a {@link ColumnValidation}
      */
     @jakarta.annotation.Nonnull
     public static ColumnValidation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ColumnValidation implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ColumnValidation implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class ColumnValidation implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the defaultLanguage property value. Default BCP 47 language tag for the description.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDefaultLanguage() {
@@ -65,7 +65,7 @@ public class ColumnValidation implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the descriptions property value. Localized messages that explain what is needed for this column's value to be considered valid. User will be prompted with this message if validation fails.
-     * @return a java.util.List<DisplayNameLocalization>
+     * @return a {@link java.util.List<DisplayNameLocalization>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DisplayNameLocalization> getDescriptions() {
@@ -73,7 +73,7 @@ public class ColumnValidation implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -86,7 +86,7 @@ public class ColumnValidation implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the formula property value. The formula to validate column value. For examples, see Examples of common formulas in lists.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFormula() {
@@ -94,7 +94,7 @@ public class ColumnValidation implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

@@ -18,7 +18,7 @@ public class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ScheduleItem and sets the default values.
+     * Instantiates a new {@link ScheduleItem} and sets the default values.
      */
     public ScheduleItem() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ScheduleItem
+     * @return a {@link ScheduleItem}
      */
     @jakarta.annotation.Nonnull
     public static ScheduleItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the end property value. The date, time, and time zone that the corresponding event ends.
-     * @return a DateTimeTimeZone
+     * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getEnd() {
@@ -65,7 +65,7 @@ public class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -81,7 +81,7 @@ public class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the isPrivate property value. The sensitivity of the corresponding event. True if the event is marked private, false otherwise. Optional.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPrivate() {
@@ -89,7 +89,7 @@ public class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the location property value. The location where the corresponding event is held or attended from. Optional.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLocation() {
@@ -97,7 +97,7 @@ public class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the start property value. The date, time, and time zone that the corresponding event starts.
-     * @return a DateTimeTimeZone
+     * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getStart() {
@@ -113,7 +113,7 @@ public class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the status property value. The availability status of the user or resource during the corresponding event. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
-     * @return a FreeBusyStatus
+     * @return a {@link FreeBusyStatus}
      */
     @jakarta.annotation.Nullable
     public FreeBusyStatus getStatus() {
@@ -121,7 +121,7 @@ public class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the subject property value. The corresponding event's subject line. Optional.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubject() {

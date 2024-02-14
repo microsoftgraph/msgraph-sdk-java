@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LocateDeviceActionResult extends DeviceActionResult implements Parsable {
     /**
-     * Instantiates a new LocateDeviceActionResult and sets the default values.
+     * Instantiates a new {@link LocateDeviceActionResult} and sets the default values.
      */
     public LocateDeviceActionResult() {
         super();
@@ -20,7 +20,7 @@ public class LocateDeviceActionResult extends DeviceActionResult implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a LocateDeviceActionResult
+     * @return a {@link LocateDeviceActionResult}
      */
     @jakarta.annotation.Nonnull
     public static LocateDeviceActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class LocateDeviceActionResult extends DeviceActionResult implements Pars
     }
     /**
      * Gets the deviceLocation property value. device location
-     * @return a DeviceGeoLocation
+     * @return a {@link DeviceGeoLocation}
      */
     @jakarta.annotation.Nullable
     public DeviceGeoLocation getDeviceLocation() {
@@ -37,7 +37,7 @@ public class LocateDeviceActionResult extends DeviceActionResult implements Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

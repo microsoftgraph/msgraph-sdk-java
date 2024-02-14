@@ -83,6 +83,7 @@ import java.util.Objects;
 public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the applePushNotificationCertificate property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link ApplePushNotificationCertificateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ApplePushNotificationCertificateRequestBuilder applePushNotificationCertificate() {
@@ -90,6 +91,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the auditEvents property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link AuditEventsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AuditEventsRequestBuilder auditEvents() {
@@ -97,6 +99,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the complianceManagementPartners property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link ComplianceManagementPartnersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ComplianceManagementPartnersRequestBuilder complianceManagementPartners() {
@@ -104,6 +107,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the conditionalAccessSettings property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link ConditionalAccessSettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ConditionalAccessSettingsRequestBuilder conditionalAccessSettings() {
@@ -111,6 +115,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the detectedApps property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link DetectedAppsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DetectedAppsRequestBuilder detectedApps() {
@@ -118,6 +123,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the deviceCategories property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link DeviceCategoriesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceCategoriesRequestBuilder deviceCategories() {
@@ -125,6 +131,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the deviceCompliancePolicies property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link DeviceCompliancePoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceCompliancePoliciesRequestBuilder deviceCompliancePolicies() {
@@ -132,6 +139,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the deviceCompliancePolicyDeviceStateSummary property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link DeviceCompliancePolicyDeviceStateSummaryRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceCompliancePolicyDeviceStateSummaryRequestBuilder deviceCompliancePolicyDeviceStateSummary() {
@@ -139,6 +147,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the deviceCompliancePolicySettingStateSummaries property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link DeviceCompliancePolicySettingStateSummariesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceCompliancePolicySettingStateSummariesRequestBuilder deviceCompliancePolicySettingStateSummaries() {
@@ -146,6 +155,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the deviceConfigurationDeviceStateSummaries property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link DeviceConfigurationDeviceStateSummariesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceConfigurationDeviceStateSummariesRequestBuilder deviceConfigurationDeviceStateSummaries() {
@@ -153,6 +163,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the deviceConfigurations property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link DeviceConfigurationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceConfigurationsRequestBuilder deviceConfigurations() {
@@ -160,6 +171,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the deviceEnrollmentConfigurations property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link DeviceEnrollmentConfigurationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceEnrollmentConfigurationsRequestBuilder deviceEnrollmentConfigurations() {
@@ -167,6 +179,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the deviceManagementPartners property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link DeviceManagementPartnersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceManagementPartnersRequestBuilder deviceManagementPartners() {
@@ -174,6 +187,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the exchangeConnectors property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link ExchangeConnectorsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExchangeConnectorsRequestBuilder exchangeConnectors() {
@@ -181,6 +195,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the importedWindowsAutopilotDeviceIdentities property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder importedWindowsAutopilotDeviceIdentities() {
@@ -188,6 +203,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the iosUpdateStatuses property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link IosUpdateStatusesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IosUpdateStatusesRequestBuilder iosUpdateStatuses() {
@@ -195,6 +211,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managedDeviceOverview property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link ManagedDeviceOverviewRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagedDeviceOverviewRequestBuilder managedDeviceOverview() {
@@ -202,6 +219,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managedDevices property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link ManagedDevicesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagedDevicesRequestBuilder managedDevices() {
@@ -209,6 +227,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the mobileAppTroubleshootingEvents property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link MobileAppTroubleshootingEventsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MobileAppTroubleshootingEventsRequestBuilder mobileAppTroubleshootingEvents() {
@@ -216,6 +235,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the mobileThreatDefenseConnectors property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link MobileThreatDefenseConnectorsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MobileThreatDefenseConnectorsRequestBuilder mobileThreatDefenseConnectors() {
@@ -223,6 +243,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the notificationMessageTemplates property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link NotificationMessageTemplatesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public NotificationMessageTemplatesRequestBuilder notificationMessageTemplates() {
@@ -230,6 +251,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the remoteAssistancePartners property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link RemoteAssistancePartnersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RemoteAssistancePartnersRequestBuilder remoteAssistancePartners() {
@@ -237,6 +259,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the reports property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link ReportsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReportsRequestBuilder reports() {
@@ -244,6 +267,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the resourceOperations property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link ResourceOperationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ResourceOperationsRequestBuilder resourceOperations() {
@@ -251,6 +275,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the roleAssignments property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link RoleAssignmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleAssignmentsRequestBuilder roleAssignments() {
@@ -258,6 +283,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the roleDefinitions property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link RoleDefinitionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleDefinitionsRequestBuilder roleDefinitions() {
@@ -265,6 +291,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the softwareUpdateStatusSummary property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link SoftwareUpdateStatusSummaryRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SoftwareUpdateStatusSummaryRequestBuilder softwareUpdateStatusSummary() {
@@ -272,6 +299,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the telecomExpenseManagementPartners property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link TelecomExpenseManagementPartnersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TelecomExpenseManagementPartnersRequestBuilder telecomExpenseManagementPartners() {
@@ -279,6 +307,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the termsAndConditions property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link TermsAndConditionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TermsAndConditionsRequestBuilder termsAndConditions() {
@@ -286,6 +315,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the troubleshootingEvents property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link TroubleshootingEventsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TroubleshootingEventsRequestBuilder troubleshootingEvents() {
@@ -293,6 +323,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsAppHealthApplicationPerformance property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link UserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformance() {
@@ -300,6 +331,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetailsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetailsRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails() {
@@ -307,6 +339,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceIdRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId() {
@@ -314,6 +347,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link UserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersionRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion() {
@@ -321,6 +355,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsAppHealthDeviceModelPerformance property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link UserExperienceAnalyticsAppHealthDeviceModelPerformanceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsAppHealthDeviceModelPerformanceRequestBuilder userExperienceAnalyticsAppHealthDeviceModelPerformance() {
@@ -328,6 +363,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsAppHealthDevicePerformance property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilder userExperienceAnalyticsAppHealthDevicePerformance() {
@@ -335,6 +371,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsAppHealthDevicePerformanceDetails property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequestBuilder userExperienceAnalyticsAppHealthDevicePerformanceDetails() {
@@ -342,6 +379,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsAppHealthOSVersionPerformance property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder userExperienceAnalyticsAppHealthOSVersionPerformance() {
@@ -349,6 +387,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsAppHealthOverview property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link UserExperienceAnalyticsAppHealthOverviewRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsAppHealthOverviewRequestBuilder userExperienceAnalyticsAppHealthOverview() {
@@ -356,6 +395,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsBaselines property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link UserExperienceAnalyticsBaselinesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsBaselinesRequestBuilder userExperienceAnalyticsBaselines() {
@@ -363,6 +403,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsCategories property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link UserExperienceAnalyticsCategoriesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsCategoriesRequestBuilder userExperienceAnalyticsCategories() {
@@ -370,6 +411,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsDevicePerformance property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link UserExperienceAnalyticsDevicePerformanceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsDevicePerformanceRequestBuilder userExperienceAnalyticsDevicePerformance() {
@@ -377,6 +419,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsDeviceScores property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link UserExperienceAnalyticsDeviceScoresRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsDeviceScoresRequestBuilder userExperienceAnalyticsDeviceScores() {
@@ -384,6 +427,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsDeviceStartupHistory property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder userExperienceAnalyticsDeviceStartupHistory() {
@@ -391,6 +435,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsDeviceStartupProcesses property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder userExperienceAnalyticsDeviceStartupProcesses() {
@@ -398,6 +443,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsDeviceStartupProcessPerformance property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link UserExperienceAnalyticsDeviceStartupProcessPerformanceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsDeviceStartupProcessPerformanceRequestBuilder userExperienceAnalyticsDeviceStartupProcessPerformance() {
@@ -405,6 +451,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsMetricHistory property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link UserExperienceAnalyticsMetricHistoryRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsMetricHistoryRequestBuilder userExperienceAnalyticsMetricHistory() {
@@ -412,6 +459,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsModelScores property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link UserExperienceAnalyticsModelScoresRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsModelScoresRequestBuilder userExperienceAnalyticsModelScores() {
@@ -419,6 +467,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsOverview property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link UserExperienceAnalyticsOverviewRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsOverviewRequestBuilder userExperienceAnalyticsOverview() {
@@ -426,6 +475,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsScoreHistory property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link UserExperienceAnalyticsScoreHistoryRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsScoreHistoryRequestBuilder userExperienceAnalyticsScoreHistory() {
@@ -433,6 +483,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the userExperienceAnalyticsSummarizeWorkFromAnywhereDevices method.
+     * @return a {@link UserExperienceAnalyticsSummarizeWorkFromAnywhereDevicesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsSummarizeWorkFromAnywhereDevicesRequestBuilder userExperienceAnalyticsSummarizeWorkFromAnywhereDevices() {
@@ -440,6 +491,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricRequestBuilder userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric() {
@@ -447,6 +499,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsWorkFromAnywhereMetrics property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilder userExperienceAnalyticsWorkFromAnywhereMetrics() {
@@ -454,6 +507,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsWorkFromAnywhereModelPerformance property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder userExperienceAnalyticsWorkFromAnywhereModelPerformance() {
@@ -461,6 +515,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the virtualEndpoint property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link VirtualEndpointRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public VirtualEndpointRequestBuilder virtualEndpoint() {
@@ -468,6 +523,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the windowsAutopilotDeviceIdentities property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link WindowsAutopilotDeviceIdentitiesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WindowsAutopilotDeviceIdentitiesRequestBuilder windowsAutopilotDeviceIdentities() {
@@ -475,6 +531,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the windowsInformationProtectionAppLearningSummaries property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link WindowsInformationProtectionAppLearningSummariesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WindowsInformationProtectionAppLearningSummariesRequestBuilder windowsInformationProtectionAppLearningSummaries() {
@@ -482,6 +539,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the windowsInformationProtectionNetworkLearningSummaries property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link WindowsInformationProtectionNetworkLearningSummariesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WindowsInformationProtectionNetworkLearningSummariesRequestBuilder windowsInformationProtectionNetworkLearningSummaries() {
@@ -489,13 +547,14 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the windowsMalwareInformation property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link WindowsMalwareInformationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WindowsMalwareInformationRequestBuilder windowsMalwareInformation() {
         return new WindowsMalwareInformationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new DeviceManagementRequestBuilder and sets the default values.
+     * Instantiates a new {@link DeviceManagementRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -503,7 +562,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new DeviceManagementRequestBuilder and sets the default values.
+     * Instantiates a new {@link DeviceManagementRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -512,8 +571,9 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read properties and relationships of the deviceManagement object.
-     * @return a DeviceManagement
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-policyset-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
+     * @return a {@link DeviceManagement}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceManagement get() {
@@ -522,21 +582,21 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Read properties and relationships of the deviceManagement object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceManagement
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-policyset-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
+     * @return a {@link DeviceManagement}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceManagement get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagement::createFromDiscriminatorValue);
     }
     /**
      * Provides operations to call the getEffectivePermissions method.
      * @param scope Usage: scope='{scope}'
-     * @return a GetEffectivePermissionsWithScopeRequestBuilder
+     * @return a {@link GetEffectivePermissionsWithScopeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetEffectivePermissionsWithScopeRequestBuilder getEffectivePermissionsWithScope(@jakarta.annotation.Nonnull final String scope) {
@@ -546,8 +606,9 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a deviceManagement object.
      * @param body The request body
-     * @return a DeviceManagement
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a {@link DeviceManagement}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceManagement patch(@jakarta.annotation.Nonnull final DeviceManagement body) {
@@ -557,21 +618,21 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a deviceManagement object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceManagement
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a {@link DeviceManagement}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceManagement patch(@jakarta.annotation.Nonnull final DeviceManagement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagement::createFromDiscriminatorValue);
     }
     /**
      * Read properties and relationships of the deviceManagement object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -580,7 +641,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Read properties and relationships of the deviceManagement object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -592,7 +653,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a deviceManagement object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceManagement body) {
@@ -602,12 +663,12 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a deviceManagement object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceManagement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/deviceManagement", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -616,7 +677,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the verifyWindowsEnrollmentAutoDiscovery method.
      * @param domainName Usage: domainName='{domainName}'
-     * @return a VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder
+     * @return a {@link VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder verifyWindowsEnrollmentAutoDiscoveryWithDomainName(@jakarta.annotation.Nonnull final String domainName) {
@@ -626,7 +687,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DeviceManagementRequestBuilder
+     * @return a {@link DeviceManagementRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceManagementRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -650,7 +711,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

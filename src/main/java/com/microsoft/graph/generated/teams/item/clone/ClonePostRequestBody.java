@@ -21,7 +21,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, 
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ClonePostRequestBody and sets the default values.
+     * Instantiates a new {@link ClonePostRequestBody} and sets the default values.
      */
     public ClonePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ClonePostRequestBody
+     * @return a {@link ClonePostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static ClonePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the classification property value. The classification property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getClassification() {
@@ -68,7 +68,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the description property value. The description property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -76,7 +76,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -84,7 +84,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -99,7 +99,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the mailNickname property value. The mailNickname property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMailNickname() {
@@ -107,7 +107,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the partsToClone property value. The partsToClone property
-     * @return a EnumSet<ClonableTeamParts>
+     * @return a {@link EnumSet<ClonableTeamParts>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<ClonableTeamParts> getPartsToClone() {
@@ -115,7 +115,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the visibility property value. The visibility property
-     * @return a TeamVisibilityType
+     * @return a {@link TeamVisibilityType}
      */
     @jakarta.annotation.Nullable
     public TeamVisibilityType getVisibility() {

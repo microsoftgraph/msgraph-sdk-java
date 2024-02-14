@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable {
     /**
-     * Instantiates a new UnifiedRoleManagementPolicyRule and sets the default values.
+     * Instantiates a new {@link UnifiedRoleManagementPolicyRule} and sets the default values.
      */
     public UnifiedRoleManagementPolicyRule() {
         super();
@@ -17,7 +17,7 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnifiedRoleManagementPolicyRule
+     * @return a {@link UnifiedRoleManagementPolicyRule}
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleManagementPolicyRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,7 +47,7 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
     }
     /**
      * Gets the target property value. Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne).
-     * @return a UnifiedRoleManagementPolicyRuleTarget
+     * @return a {@link UnifiedRoleManagementPolicyRuleTarget}
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleManagementPolicyRuleTarget getTarget() {
