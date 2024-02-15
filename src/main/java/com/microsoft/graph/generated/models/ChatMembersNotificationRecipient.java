@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipient implements Parsable {
     /**
-     * Instantiates a new ChatMembersNotificationRecipient and sets the default values.
+     * Instantiates a new {@link ChatMembersNotificationRecipient} and sets the default values.
      */
     public ChatMembersNotificationRecipient() {
         super();
@@ -18,7 +18,7 @@ public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ChatMembersNotificationRecipient
+     * @return a {@link ChatMembersNotificationRecipient}
      */
     @jakarta.annotation.Nonnull
     public static ChatMembersNotificationRecipient createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipi
     }
     /**
      * Gets the chatId property value. The unique identifier for the chat whose members should receive the notifications.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getChatId() {
@@ -35,7 +35,7 @@ public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipi
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

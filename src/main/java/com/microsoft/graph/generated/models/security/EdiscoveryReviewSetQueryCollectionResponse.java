@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryReviewSetQueryCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new EdiscoveryReviewSetQueryCollectionResponse and sets the default values.
+     * Instantiates a new {@link EdiscoveryReviewSetQueryCollectionResponse} and sets the default values.
      */
     public EdiscoveryReviewSetQueryCollectionResponse() {
         super();
@@ -18,7 +18,7 @@ public class EdiscoveryReviewSetQueryCollectionResponse extends BaseCollectionPa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EdiscoveryReviewSetQueryCollectionResponse
+     * @return a {@link EdiscoveryReviewSetQueryCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static EdiscoveryReviewSetQueryCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EdiscoveryReviewSetQueryCollectionResponse extends BaseCollectionPa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class EdiscoveryReviewSetQueryCollectionResponse extends BaseCollectionPa
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<EdiscoveryReviewSetQuery>
+     * @return a {@link java.util.List<EdiscoveryReviewSetQuery>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryReviewSetQuery> getValue() {

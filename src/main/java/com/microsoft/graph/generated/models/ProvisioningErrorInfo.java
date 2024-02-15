@@ -18,7 +18,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ProvisioningErrorInfo and sets the default values.
+     * Instantiates a new {@link ProvisioningErrorInfo} and sets the default values.
      */
     public ProvisioningErrorInfo() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel,
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ProvisioningErrorInfo
+     * @return a {@link ProvisioningErrorInfo}
      */
     @jakarta.annotation.Nonnull
     public static ProvisioningErrorInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the additionalDetails property value. Additional details if there's error.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAdditionalDetails() {
@@ -57,7 +57,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the errorCategory property value. Categorizes the error code. Possible values are failure, nonServiceFailure, success, unknownFutureValue
-     * @return a ProvisioningStatusErrorCategory
+     * @return a {@link ProvisioningStatusErrorCategory}
      */
     @jakarta.annotation.Nullable
     public ProvisioningStatusErrorCategory getErrorCategory() {
@@ -73,7 +73,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the errorCode property value. Unique error code if any occurred. Learn more
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getErrorCode() {
@@ -81,7 +81,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel,
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -96,7 +96,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -104,7 +104,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the reason property value. Summarizes the status and describes why the status happened.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getReason() {
@@ -112,7 +112,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the recommendedAction property value. Provides the resolution for the corresponding error.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRecommendedAction() {

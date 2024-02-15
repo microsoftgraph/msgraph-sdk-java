@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
     /**
-     * Instantiates a new EmailAuthenticationMethodConfiguration and sets the default values.
+     * Instantiates a new {@link EmailAuthenticationMethodConfiguration} and sets the default values.
      */
     public EmailAuthenticationMethodConfiguration() {
         super();
@@ -18,7 +18,7 @@ public class EmailAuthenticationMethodConfiguration extends AuthenticationMethod
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EmailAuthenticationMethodConfiguration
+     * @return a {@link EmailAuthenticationMethodConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static EmailAuthenticationMethodConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EmailAuthenticationMethodConfiguration extends AuthenticationMethod
     }
     /**
      * Gets the allowExternalIdToUseEmailOtp property value. Determines whether email OTP is usable by external users for authentication. Possible values are: default, enabled, disabled, unknownFutureValue. Tenants in the default state who didn't use public preview have email OTP enabled beginning in October 2021.
-     * @return a ExternalEmailOtpState
+     * @return a {@link ExternalEmailOtpState}
      */
     @jakarta.annotation.Nullable
     public ExternalEmailOtpState getAllowExternalIdToUseEmailOtp() {
@@ -35,7 +35,7 @@ public class EmailAuthenticationMethodConfiguration extends AuthenticationMethod
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class EmailAuthenticationMethodConfiguration extends AuthenticationMethod
     }
     /**
      * Gets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
-     * @return a java.util.List<AuthenticationMethodTarget>
+     * @return a {@link java.util.List<AuthenticationMethodTarget>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodTarget> getIncludeTargets() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPolicyRule implements Parsable {
     /**
-     * Instantiates a new UnifiedRoleManagementPolicyExpirationRule and sets the default values.
+     * Instantiates a new {@link UnifiedRoleManagementPolicyExpirationRule} and sets the default values.
      */
     public UnifiedRoleManagementPolicyExpirationRule() {
         super();
@@ -19,7 +19,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnifiedRoleManagementPolicyExpirationRule
+     * @return a {@link UnifiedRoleManagementPolicyExpirationRule}
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleManagementPolicyExpirationRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -39,7 +39,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
     }
     /**
      * Gets the isExpirationRequired property value. Indicates whether expiration is required or if it's a permanently active assignment or eligibility.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExpirationRequired() {
@@ -47,7 +47,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
     }
     /**
      * Gets the maximumDuration property value. The maximum duration allowed for eligibility or assignment that isn't permanent. Required when isExpirationRequired is true.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getMaximumDuration() {

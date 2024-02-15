@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppleManagedIdentityProvider extends IdentityProviderBase implements Parsable {
     /**
-     * Instantiates a new AppleManagedIdentityProvider and sets the default values.
+     * Instantiates a new {@link AppleManagedIdentityProvider} and sets the default values.
      */
     public AppleManagedIdentityProvider() {
         super();
@@ -18,7 +18,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AppleManagedIdentityProvider
+     * @return a {@link AppleManagedIdentityProvider}
      */
     @jakarta.annotation.Nonnull
     public static AppleManagedIdentityProvider createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
     }
     /**
      * Gets the certificateData property value. The certificate data, which is a long string of text from the certificate. Can be null.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCertificateData() {
@@ -35,7 +35,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
     }
     /**
      * Gets the developerId property value. The Apple developer identifier. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeveloperId() {
@@ -43,7 +43,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -56,7 +56,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
     }
     /**
      * Gets the keyId property value. The Apple key identifier. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getKeyId() {
@@ -64,7 +64,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
     }
     /**
      * Gets the serviceId property value. The Apple service identifier. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getServiceId() {

@@ -22,13 +22,14 @@ import java.util.Objects;
 public class ItemAtWithIndexRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the range method.
+     * @return a {@link RangeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RangeRequestBuilder range() {
         return new RangeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new ItemAtWithIndexRequestBuilder and sets the default values.
+     * Instantiates a new {@link ItemAtWithIndexRequestBuilder} and sets the default values.
      * @param index Usage: index={index}
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -38,7 +39,7 @@ public class ItemAtWithIndexRequestBuilder extends BaseRequestBuilder {
         this.pathParameters.put("index", index);
     }
     /**
-     * Instantiates a new ItemAtWithIndexRequestBuilder and sets the default values.
+     * Instantiates a new {@link ItemAtWithIndexRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -47,7 +48,8 @@ public class ItemAtWithIndexRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function itemAt
-     * @return a WorkbookTableRow
+     * @return a {@link WorkbookTableRow}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WorkbookTableRow get() {
@@ -56,19 +58,19 @@ public class ItemAtWithIndexRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function itemAt
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WorkbookTableRow
+     * @return a {@link WorkbookTableRow}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WorkbookTableRow get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookTableRow::createFromDiscriminatorValue);
     }
     /**
      * Invoke function itemAt
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -77,7 +79,7 @@ public class ItemAtWithIndexRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function itemAt
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +91,7 @@ public class ItemAtWithIndexRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ItemAtWithIndexRequestBuilder
+     * @return a {@link ItemAtWithIndexRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ItemAtWithIndexRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

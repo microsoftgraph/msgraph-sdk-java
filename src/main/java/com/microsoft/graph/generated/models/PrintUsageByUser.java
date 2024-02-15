@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintUsageByUser extends PrintUsage implements Parsable {
     /**
-     * Instantiates a new PrintUsageByUser and sets the default values.
+     * Instantiates a new {@link PrintUsageByUser} and sets the default values.
      */
     public PrintUsageByUser() {
         super();
@@ -18,7 +18,7 @@ public class PrintUsageByUser extends PrintUsage implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrintUsageByUser
+     * @return a {@link PrintUsageByUser}
      */
     @jakarta.annotation.Nonnull
     public static PrintUsageByUser createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class PrintUsageByUser extends PrintUsage implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class PrintUsageByUser extends PrintUsage implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. The UPN of the user represented by these statistics.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

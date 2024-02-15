@@ -25,6 +25,7 @@ import java.util.Objects;
 public class UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder extends
     /**
      * Provides operations to manage the userExperienceAnalyticsDeviceStartupProcesses property of the microsoft.graph.deviceManagement entity.
      * @param userExperienceAnalyticsDeviceStartupProcessId The unique identifier of userExperienceAnalyticsDeviceStartupProcess
-     * @return a UserExperienceAnalyticsDeviceStartupProcessItemRequestBuilder
+     * @return a {@link UserExperienceAnalyticsDeviceStartupProcessItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsDeviceStartupProcessItemRequestBuilder byUserExperienceAnalyticsDeviceStartupProcessId(@jakarta.annotation.Nonnull final String userExperienceAnalyticsDeviceStartupProcessId) {
@@ -43,7 +44,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder extends
         return new UserExperienceAnalyticsDeviceStartupProcessItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder extends
         super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsDeviceStartupProcesses{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder extends
     }
     /**
      * User experience analytics device Startup Processes
-     * @return a UserExperienceAnalyticsDeviceStartupProcessCollectionResponse
+     * @return a {@link UserExperienceAnalyticsDeviceStartupProcessCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsDeviceStartupProcessCollectionResponse get() {
@@ -69,20 +71,21 @@ public class UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder extends
     /**
      * User experience analytics device Startup Processes
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UserExperienceAnalyticsDeviceStartupProcessCollectionResponse
+     * @return a {@link UserExperienceAnalyticsDeviceStartupProcessCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsDeviceStartupProcessCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsDeviceStartupProcessCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to userExperienceAnalyticsDeviceStartupProcesses for deviceManagement
      * @param body The request body
-     * @return a UserExperienceAnalyticsDeviceStartupProcess
+     * @return a {@link UserExperienceAnalyticsDeviceStartupProcess}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsDeviceStartupProcess post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceStartupProcess body) {
@@ -92,20 +95,20 @@ public class UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder extends
      * Create new navigation property to userExperienceAnalyticsDeviceStartupProcesses for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UserExperienceAnalyticsDeviceStartupProcess
+     * @return a {@link UserExperienceAnalyticsDeviceStartupProcess}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsDeviceStartupProcess post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceStartupProcess body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsDeviceStartupProcess::createFromDiscriminatorValue);
     }
     /**
      * User experience analytics device Startup Processes
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -114,7 +117,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder extends
     /**
      * User experience analytics device Startup Processes
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -126,7 +129,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder extends
     /**
      * Create new navigation property to userExperienceAnalyticsDeviceStartupProcesses for deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceStartupProcess body) {
@@ -136,12 +139,12 @@ public class UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder extends
      * Create new navigation property to userExperienceAnalyticsDeviceStartupProcesses for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceStartupProcess body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceManagement/userExperienceAnalyticsDeviceStartupProcesses", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -150,7 +153,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder extends
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder
+     * @return a {@link UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -204,7 +207,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder extends
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

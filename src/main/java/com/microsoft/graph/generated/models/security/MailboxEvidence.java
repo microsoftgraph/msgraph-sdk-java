@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MailboxEvidence extends AlertEvidence implements Parsable {
     /**
-     * Instantiates a new MailboxEvidence and sets the default values.
+     * Instantiates a new {@link MailboxEvidence} and sets the default values.
      */
     public MailboxEvidence() {
         super();
@@ -18,7 +18,7 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MailboxEvidence
+     * @return a {@link MailboxEvidence}
      */
     @jakarta.annotation.Nonnull
     public static MailboxEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the displayName property value. The name associated with the mailbox.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -35,7 +35,7 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,7 +47,7 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the primaryAddress property value. The primary email address of the mailbox.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPrimaryAddress() {
@@ -55,7 +55,7 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the userAccount property value. The user account of the mailbox.
-     * @return a UserAccount
+     * @return a {@link UserAccount}
      */
     @jakarta.annotation.Nullable
     public UserAccount getUserAccount() {

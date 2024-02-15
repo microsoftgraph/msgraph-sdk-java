@@ -25,6 +25,7 @@ import java.util.Objects;
 public class RetentionEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class RetentionEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the retentionEvents property of the microsoft.graph.security.triggersRoot entity.
      * @param retentionEventId The unique identifier of retentionEvent
-     * @return a RetentionEventItemRequestBuilder
+     * @return a {@link RetentionEventItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RetentionEventItemRequestBuilder byRetentionEventId(@jakarta.annotation.Nonnull final String retentionEventId) {
@@ -43,7 +44,7 @@ public class RetentionEventsRequestBuilder extends BaseRequestBuilder {
         return new RetentionEventItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new RetentionEventsRequestBuilder and sets the default values.
+     * Instantiates a new {@link RetentionEventsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class RetentionEventsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/triggers/retentionEvents{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new RetentionEventsRequestBuilder and sets the default values.
+     * Instantiates a new {@link RetentionEventsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class RetentionEventsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the retentionEvent objects and their properties.
-     * @return a RetentionEventCollectionResponse
+     * @return a {@link RetentionEventCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-retentionevent-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class RetentionEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the retentionEvent objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RetentionEventCollectionResponse
+     * @return a {@link RetentionEventCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-retentionevent-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RetentionEventCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, RetentionEventCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new retentionEvent object.
      * @param body The request body
-     * @return a RetentionEvent
+     * @return a {@link RetentionEvent}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-retentionevent-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -95,7 +98,8 @@ public class RetentionEventsRequestBuilder extends BaseRequestBuilder {
      * Create a new retentionEvent object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RetentionEvent
+     * @return a {@link RetentionEvent}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-retentionevent-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -103,13 +107,12 @@ public class RetentionEventsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, RetentionEvent::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the retentionEvent objects and their properties.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -118,7 +121,7 @@ public class RetentionEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the retentionEvent objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +133,7 @@ public class RetentionEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new retentionEvent object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final RetentionEvent body) {
@@ -140,12 +143,12 @@ public class RetentionEventsRequestBuilder extends BaseRequestBuilder {
      * Create a new retentionEvent object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final RetentionEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/security/triggers/retentionEvents", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -154,7 +157,7 @@ public class RetentionEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a RetentionEventsRequestBuilder
+     * @return a {@link RetentionEventsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RetentionEventsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -208,7 +211,7 @@ public class RetentionEventsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

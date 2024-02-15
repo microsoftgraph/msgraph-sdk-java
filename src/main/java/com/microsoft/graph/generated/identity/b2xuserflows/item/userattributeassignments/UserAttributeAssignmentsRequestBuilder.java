@@ -27,6 +27,7 @@ import java.util.Objects;
 public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -34,6 +35,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getOrder method.
+     * @return a {@link GetOrderRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetOrderRequestBuilder getOrder() {
@@ -41,6 +43,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the setOrder method.
+     * @return a {@link SetOrderRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SetOrderRequestBuilder setOrder() {
@@ -49,7 +52,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the userAttributeAssignments property of the microsoft.graph.b2xIdentityUserFlow entity.
      * @param identityUserFlowAttributeAssignmentId The unique identifier of identityUserFlowAttributeAssignment
-     * @return a IdentityUserFlowAttributeAssignmentItemRequestBuilder
+     * @return a {@link IdentityUserFlowAttributeAssignmentItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IdentityUserFlowAttributeAssignmentItemRequestBuilder byIdentityUserFlowAttributeAssignmentId(@jakarta.annotation.Nonnull final String identityUserFlowAttributeAssignmentId) {
@@ -59,7 +62,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
         return new IdentityUserFlowAttributeAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new UserAttributeAssignmentsRequestBuilder and sets the default values.
+     * Instantiates a new {@link UserAttributeAssignmentsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -67,7 +70,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/userAttributeAssignments{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new UserAttributeAssignmentsRequestBuilder and sets the default values.
+     * Instantiates a new {@link UserAttributeAssignmentsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -76,7 +79,8 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
-     * @return a IdentityUserFlowAttributeAssignmentCollectionResponse
+     * @return a {@link IdentityUserFlowAttributeAssignmentCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-list-userattributeassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -86,21 +90,22 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a IdentityUserFlowAttributeAssignmentCollectionResponse
+     * @return a {@link IdentityUserFlowAttributeAssignmentCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-list-userattributeassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IdentityUserFlowAttributeAssignmentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityUserFlowAttributeAssignmentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow.
      * @param body The request body
-     * @return a IdentityUserFlowAttributeAssignment
+     * @return a {@link IdentityUserFlowAttributeAssignment}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-post-userattributeassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -111,7 +116,8 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
      * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a IdentityUserFlowAttributeAssignment
+     * @return a {@link IdentityUserFlowAttributeAssignment}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-post-userattributeassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -119,13 +125,12 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityUserFlowAttributeAssignment::createFromDiscriminatorValue);
     }
     /**
      * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -134,7 +139,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -146,7 +151,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final IdentityUserFlowAttributeAssignment body) {
@@ -156,12 +161,12 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
      * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final IdentityUserFlowAttributeAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/userAttributeAssignments", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -170,7 +175,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a UserAttributeAssignmentsRequestBuilder
+     * @return a {@link UserAttributeAssignmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserAttributeAssignmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -224,7 +229,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

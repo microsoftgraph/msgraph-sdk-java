@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BookingBusiness extends Entity implements Parsable {
     /**
-     * Instantiates a new BookingBusiness and sets the default values.
+     * Instantiates a new {@link BookingBusiness} and sets the default values.
      */
     public BookingBusiness() {
         super();
@@ -20,7 +20,7 @@ public class BookingBusiness extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BookingBusiness
+     * @return a {@link BookingBusiness}
      */
     @jakarta.annotation.Nonnull
     public static BookingBusiness createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class BookingBusiness extends Entity implements Parsable {
     }
     /**
      * Gets the address property value. The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
-     * @return a PhysicalAddress
+     * @return a {@link PhysicalAddress}
      */
     @jakarta.annotation.Nullable
     public PhysicalAddress getAddress() {
@@ -37,7 +37,7 @@ public class BookingBusiness extends Entity implements Parsable {
     }
     /**
      * Gets the appointments property value. All the appointments of this business. Read-only. Nullable.
-     * @return a java.util.List<BookingAppointment>
+     * @return a {@link java.util.List<BookingAppointment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingAppointment> getAppointments() {
@@ -45,7 +45,7 @@ public class BookingBusiness extends Entity implements Parsable {
     }
     /**
      * Gets the businessHours property value. The hours of operation for the business.
-     * @return a java.util.List<BookingWorkHours>
+     * @return a {@link java.util.List<BookingWorkHours>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingWorkHours> getBusinessHours() {
@@ -53,7 +53,7 @@ public class BookingBusiness extends Entity implements Parsable {
     }
     /**
      * Gets the businessType property value. The type of business.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBusinessType() {
@@ -61,7 +61,7 @@ public class BookingBusiness extends Entity implements Parsable {
     }
     /**
      * Gets the calendarView property value. The set of appointments of this business in a specified date range. Read-only. Nullable.
-     * @return a java.util.List<BookingAppointment>
+     * @return a {@link java.util.List<BookingAppointment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingAppointment> getCalendarView() {
@@ -69,7 +69,7 @@ public class BookingBusiness extends Entity implements Parsable {
     }
     /**
      * Gets the customers property value. All the customers of this business. Read-only. Nullable.
-     * @return a java.util.List<BookingCustomerBase>
+     * @return a {@link java.util.List<BookingCustomerBase>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingCustomerBase> getCustomers() {
@@ -77,7 +77,7 @@ public class BookingBusiness extends Entity implements Parsable {
     }
     /**
      * Gets the customQuestions property value. All the custom questions of this business. Read-only. Nullable.
-     * @return a java.util.List<BookingCustomQuestion>
+     * @return a {@link java.util.List<BookingCustomQuestion>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingCustomQuestion> getCustomQuestions() {
@@ -85,7 +85,7 @@ public class BookingBusiness extends Entity implements Parsable {
     }
     /**
      * Gets the defaultCurrencyIso property value. The code for the currency that the business operates in on Microsoft Bookings.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDefaultCurrencyIso() {
@@ -93,7 +93,7 @@ public class BookingBusiness extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the business, which interfaces with customers. This name appears at the top of the business scheduling page.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -101,7 +101,7 @@ public class BookingBusiness extends Entity implements Parsable {
     }
     /**
      * Gets the email property value. The email address for the business.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -109,7 +109,7 @@ public class BookingBusiness extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -136,7 +136,7 @@ public class BookingBusiness extends Entity implements Parsable {
     }
     /**
      * Gets the isPublished property value. The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPublished() {
@@ -144,7 +144,7 @@ public class BookingBusiness extends Entity implements Parsable {
     }
     /**
      * Gets the languageTag property value. The language of the self-service booking page.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLanguageTag() {
@@ -152,7 +152,7 @@ public class BookingBusiness extends Entity implements Parsable {
     }
     /**
      * Gets the phone property value. The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPhone() {
@@ -160,7 +160,7 @@ public class BookingBusiness extends Entity implements Parsable {
     }
     /**
      * Gets the publicUrl property value. The URL for the scheduling page, which is set after you publish or unpublish the page. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPublicUrl() {
@@ -168,7 +168,7 @@ public class BookingBusiness extends Entity implements Parsable {
     }
     /**
      * Gets the schedulingPolicy property value. Specifies how bookings can be created for this business.
-     * @return a BookingSchedulingPolicy
+     * @return a {@link BookingSchedulingPolicy}
      */
     @jakarta.annotation.Nullable
     public BookingSchedulingPolicy getSchedulingPolicy() {
@@ -176,7 +176,7 @@ public class BookingBusiness extends Entity implements Parsable {
     }
     /**
      * Gets the services property value. All the services offered by this business. Read-only. Nullable.
-     * @return a java.util.List<BookingService>
+     * @return a {@link java.util.List<BookingService>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingService> getServices() {
@@ -184,7 +184,7 @@ public class BookingBusiness extends Entity implements Parsable {
     }
     /**
      * Gets the staffMembers property value. All the staff members that provide services in this business. Read-only. Nullable.
-     * @return a java.util.List<BookingStaffMemberBase>
+     * @return a {@link java.util.List<BookingStaffMemberBase>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingStaffMemberBase> getStaffMembers() {
@@ -192,7 +192,7 @@ public class BookingBusiness extends Entity implements Parsable {
     }
     /**
      * Gets the webSiteUrl property value. The URL of the business web site. The webSiteUrl property, together with address, phone, appear in the footer of a business scheduling page.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebSiteUrl() {

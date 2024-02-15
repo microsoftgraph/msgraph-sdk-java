@@ -20,7 +20,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new KeyCredentialConfiguration and sets the default values.
+     * Instantiates a new {@link KeyCredentialConfiguration} and sets the default values.
      */
     public KeyCredentialConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -29,7 +29,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a KeyCredentialConfiguration
+     * @return a {@link KeyCredentialConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static KeyCredentialConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -51,7 +51,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -59,7 +59,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -72,7 +72,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the maxLifetime property value. The maxLifetime property
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getMaxLifetime() {
@@ -80,7 +80,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -88,7 +88,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the restrictForAppsCreatedAfterDateTime property value. Timestamp when the policy is enforced for all apps created on or after the specified date. For existing applications, the enforcement date would be back dated. To apply to all applications regardless of their creation date, this property would be null. Nullable.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRestrictForAppsCreatedAfterDateTime() {
@@ -96,7 +96,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the restrictionType property value. The type of restriction being applied. Possible values are asymmetricKeyLifetime, unknownFutureValue. Each value of restrictionType can be used only once per policy.
-     * @return a AppKeyCredentialRestrictionType
+     * @return a {@link AppKeyCredentialRestrictionType}
      */
     @jakarta.annotation.Nullable
     public AppKeyCredentialRestrictionType getRestrictionType() {

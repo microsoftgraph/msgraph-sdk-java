@@ -19,7 +19,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SynchronizationProgress and sets the default values.
+     * Instantiates a new {@link SynchronizationProgress} and sets the default values.
      */
     public SynchronizationProgress() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, BackedMode
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SynchronizationProgress
+     * @return a {@link SynchronizationProgress}
      */
     @jakarta.annotation.Nonnull
     public static SynchronizationProgress createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the completedUnits property value. The numerator of a progress ratio; the number of units of changes already processed.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getCompletedUnits() {
@@ -66,7 +66,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, BackedMode
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -80,7 +80,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -88,7 +88,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the progressObservationDateTime property value. The time of a progress observation as an offset in minutes from UTC.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getProgressObservationDateTime() {
@@ -96,7 +96,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the totalUnits property value. The denominator of a progress ratio; a number of units of changes to be processed to accomplish synchronization.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getTotalUnits() {
@@ -104,7 +104,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the units property value. An optional description of the units.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUnits() {

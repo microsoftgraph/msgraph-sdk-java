@@ -22,7 +22,7 @@ public class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new BrowserSiteHistory and sets the default values.
+     * Instantiates a new {@link BrowserSiteHistory} and sets the default values.
      */
     public BrowserSiteHistory() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -31,7 +31,7 @@ public class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BrowserSiteHistory
+     * @return a {@link BrowserSiteHistory}
      */
     @jakarta.annotation.Nonnull
     public static BrowserSiteHistory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -53,7 +53,7 @@ public class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the allowRedirect property value. Controls the behavior of redirected sites. If true, indicates that the site will open in Internet Explorer 11 or Microsoft Edge even if the site is navigated to as part of a HTTP or meta refresh redirection chain.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowRedirect() {
@@ -61,7 +61,7 @@ public class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -69,7 +69,7 @@ public class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the comment property value. The comment for the site.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getComment() {
@@ -77,7 +77,7 @@ public class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the compatibilityMode property value. Controls what compatibility setting is used for specific sites or domains. The possible values are: default, internetExplorer8Enterprise, internetExplorer7Enterprise, internetExplorer11, internetExplorer10, internetExplorer9, internetExplorer8, internetExplorer7, internetExplorer5, unknownFutureValue.
-     * @return a BrowserSiteCompatibilityMode
+     * @return a {@link BrowserSiteCompatibilityMode}
      */
     @jakarta.annotation.Nullable
     public BrowserSiteCompatibilityMode getCompatibilityMode() {
@@ -85,7 +85,7 @@ public class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -102,7 +102,7 @@ public class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the lastModifiedBy property value. The user who last modified the site.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -110,7 +110,7 @@ public class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the mergeType property value. The merge type of the site. The possible values are: noMerge, default, unknownFutureValue.
-     * @return a BrowserSiteMergeType
+     * @return a {@link BrowserSiteMergeType}
      */
     @jakarta.annotation.Nullable
     public BrowserSiteMergeType getMergeType() {
@@ -118,7 +118,7 @@ public class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -126,7 +126,7 @@ public class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the publishedDateTime property value. The date and time when the site was last published.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getPublishedDateTime() {
@@ -134,7 +134,7 @@ public class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the targetEnvironment property value. The target environment that the site should open in. The possible values are: internetExplorerMode, internetExplorer11, microsoftEdge, configurable, none, unknownFutureValue.Prior to June 15, 2022, the internetExplorer11 option would allow opening a site in the Internet Explorer 11 (IE11) desktop application. Following the retirement of IE11 on June 15, 2022, the internetExplorer11 option will no longer open an IE11 window and will instead behave the same as the internetExplorerMode option.
-     * @return a BrowserSiteTargetEnvironment
+     * @return a {@link BrowserSiteTargetEnvironment}
      */
     @jakarta.annotation.Nullable
     public BrowserSiteTargetEnvironment getTargetEnvironment() {

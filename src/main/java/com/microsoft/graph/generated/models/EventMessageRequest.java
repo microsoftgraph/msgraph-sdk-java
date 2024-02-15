@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EventMessageRequest extends EventMessage implements Parsable {
     /**
-     * Instantiates a new EventMessageRequest and sets the default values.
+     * Instantiates a new {@link EventMessageRequest} and sets the default values.
      */
     public EventMessageRequest() {
         super();
@@ -18,7 +18,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EventMessageRequest
+     * @return a {@link EventMessageRequest}
      */
     @jakarta.annotation.Nonnull
     public static EventMessageRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
     }
     /**
      * Gets the allowNewTimeProposals property value. True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowNewTimeProposals() {
@@ -35,7 +35,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -50,7 +50,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
     }
     /**
      * Gets the meetingRequestType property value. The meetingRequestType property
-     * @return a MeetingRequestType
+     * @return a {@link MeetingRequestType}
      */
     @jakarta.annotation.Nullable
     public MeetingRequestType getMeetingRequestType() {
@@ -58,7 +58,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
     }
     /**
      * Gets the previousEndDateTime property value. If the meeting update changes the meeting end time, this property specifies the previous meeting end time.
-     * @return a DateTimeTimeZone
+     * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getPreviousEndDateTime() {
@@ -66,7 +66,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
     }
     /**
      * Gets the previousLocation property value. If the meeting update changes the meeting location, this property specifies the previous meeting location.
-     * @return a Location
+     * @return a {@link Location}
      */
     @jakarta.annotation.Nullable
     public Location getPreviousLocation() {
@@ -74,7 +74,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
     }
     /**
      * Gets the previousStartDateTime property value. If the meeting update changes the meeting start time, this property specifies the previous meeting start time.
-     * @return a DateTimeTimeZone
+     * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getPreviousStartDateTime() {
@@ -82,7 +82,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
     }
     /**
      * Gets the responseRequested property value. Set to true if the sender would like the invitee to send a response to the requested meeting.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getResponseRequested() {

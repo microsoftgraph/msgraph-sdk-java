@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConditionalAccessTemplate extends Entity implements Parsable {
     /**
-     * Instantiates a new ConditionalAccessTemplate and sets the default values.
+     * Instantiates a new {@link ConditionalAccessTemplate} and sets the default values.
      */
     public ConditionalAccessTemplate() {
         super();
@@ -18,7 +18,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConditionalAccessTemplate
+     * @return a {@link ConditionalAccessTemplate}
      */
     @jakarta.annotation.Nonnull
     public static ConditionalAccessTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The user-friendly name of the template.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -35,7 +35,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the details property value. The details property
-     * @return a ConditionalAccessPolicyDetail
+     * @return a {@link ConditionalAccessPolicyDetail}
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessPolicyDetail getDetails() {
@@ -43,7 +43,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -56,7 +56,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The user-friendly name of the template.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -64,7 +64,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the scenarios property value. The scenarios property
-     * @return a EnumSet<TemplateScenarios>
+     * @return a {@link EnumSet<TemplateScenarios>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<TemplateScenarios> getScenarios() {

@@ -19,7 +19,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GrantRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new GrantRequestBuilder and sets the default values.
+     * Instantiates a new {@link GrantRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -27,7 +27,7 @@ public class GrantRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/permission/grant", pathParameters);
     }
     /**
-     * Instantiates a new GrantRequestBuilder and sets the default values.
+     * Instantiates a new {@link GrantRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,7 +37,8 @@ public class GrantRequestBuilder extends BaseRequestBuilder {
     /**
      * Grant users access to a link represented by a [permission][].
      * @param body The request body
-     * @return a GrantPostResponse
+     * @return a {@link GrantPostResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/permission-grant?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -48,7 +49,8 @@ public class GrantRequestBuilder extends BaseRequestBuilder {
      * Grant users access to a link represented by a [permission][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a GrantPostResponse
+     * @return a {@link GrantPostResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/permission-grant?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -56,14 +58,13 @@ public class GrantRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, GrantPostResponse::createFromDiscriminatorValue);
     }
     /**
      * Grant users access to a link represented by a [permission][].
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final GrantPostRequestBody body) {
@@ -73,7 +74,7 @@ public class GrantRequestBuilder extends BaseRequestBuilder {
      * Grant users access to a link represented by a [permission][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final GrantPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -87,7 +88,7 @@ public class GrantRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GrantRequestBuilder
+     * @return a {@link GrantRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GrantRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

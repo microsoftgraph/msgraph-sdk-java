@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrinterShare extends PrinterBase implements Parsable {
     /**
-     * Instantiates a new PrinterShare and sets the default values.
+     * Instantiates a new {@link PrinterShare} and sets the default values.
      */
     public PrinterShare() {
         super();
@@ -19,7 +19,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrinterShare
+     * @return a {@link PrinterShare}
      */
     @jakarta.annotation.Nonnull
     public static PrinterShare createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
     }
     /**
      * Gets the allowAllUsers property value. If true, all users and groups will be granted access to this printer share. This supersedes the allow lists defined by the allowedUsers and allowedGroups navigation properties.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowAllUsers() {
@@ -36,7 +36,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
     }
     /**
      * Gets the allowedGroups property value. The groups whose users have access to print using the printer.
-     * @return a java.util.List<Group>
+     * @return a {@link java.util.List<Group>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Group> getAllowedGroups() {
@@ -44,7 +44,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
     }
     /**
      * Gets the allowedUsers property value. The users who have access to print using the printer.
-     * @return a java.util.List<User>
+     * @return a {@link java.util.List<User>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<User> getAllowedUsers() {
@@ -52,7 +52,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The DateTimeOffset when the printer share was created. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -60,7 +60,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -75,7 +75,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
     }
     /**
      * Gets the printer property value. The printer that this printer share is related to.
-     * @return a Printer
+     * @return a {@link Printer}
      */
     @jakarta.annotation.Nullable
     public Printer getPrinter() {
@@ -83,7 +83,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
     }
     /**
      * Gets the viewPoint property value. Additional data for a printer share as viewed by the signed-in user.
-     * @return a PrinterShareViewpoint
+     * @return a {@link PrinterShareViewpoint}
      */
     @jakarta.annotation.Nullable
     public PrinterShareViewpoint getViewPoint() {

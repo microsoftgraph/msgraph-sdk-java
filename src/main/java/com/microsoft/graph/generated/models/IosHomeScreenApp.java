@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosHomeScreenApp extends IosHomeScreenItem implements Parsable {
     /**
-     * Instantiates a new IosHomeScreenApp and sets the default values.
+     * Instantiates a new {@link IosHomeScreenApp} and sets the default values.
      */
     public IosHomeScreenApp() {
         super();
@@ -21,7 +21,7 @@ public class IosHomeScreenApp extends IosHomeScreenItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosHomeScreenApp
+     * @return a {@link IosHomeScreenApp}
      */
     @jakarta.annotation.Nonnull
     public static IosHomeScreenApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class IosHomeScreenApp extends IosHomeScreenItem implements Parsable {
     }
     /**
      * Gets the bundleID property value. BundleID of the app if isWebClip is false or the URL of a web clip if isWebClip is true.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBundleID() {
@@ -38,7 +38,7 @@ public class IosHomeScreenApp extends IosHomeScreenItem implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

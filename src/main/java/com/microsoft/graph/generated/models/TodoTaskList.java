@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TodoTaskList extends Entity implements Parsable {
     /**
-     * Instantiates a new TodoTaskList and sets the default values.
+     * Instantiates a new {@link TodoTaskList} and sets the default values.
      */
     public TodoTaskList() {
         super();
@@ -17,7 +17,7 @@ public class TodoTaskList extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TodoTaskList
+     * @return a {@link TodoTaskList}
      */
     @jakarta.annotation.Nonnull
     public static TodoTaskList createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class TodoTaskList extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the task list.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -34,7 +34,7 @@ public class TodoTaskList extends Entity implements Parsable {
     }
     /**
      * Gets the extensions property value. The collection of open extensions defined for the task list. Nullable.
-     * @return a java.util.List<Extension>
+     * @return a {@link java.util.List<Extension>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
@@ -42,7 +42,7 @@ public class TodoTaskList extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class TodoTaskList extends Entity implements Parsable {
     }
     /**
      * Gets the isOwner property value. True if the user is owner of the given task list.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsOwner() {
@@ -65,7 +65,7 @@ public class TodoTaskList extends Entity implements Parsable {
     }
     /**
      * Gets the isShared property value. True if the task list is shared with other users
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsShared() {
@@ -73,7 +73,7 @@ public class TodoTaskList extends Entity implements Parsable {
     }
     /**
      * Gets the tasks property value. The tasks in this task list. Read-only. Nullable.
-     * @return a java.util.List<TodoTask>
+     * @return a {@link java.util.List<TodoTask>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TodoTask> getTasks() {
@@ -81,7 +81,7 @@ public class TodoTaskList extends Entity implements Parsable {
     }
     /**
      * Gets the wellknownListName property value. The wellknownListName property
-     * @return a WellknownListName
+     * @return a {@link WellknownListName}
      */
     @jakarta.annotation.Nullable
     public WellknownListName getWellknownListName() {

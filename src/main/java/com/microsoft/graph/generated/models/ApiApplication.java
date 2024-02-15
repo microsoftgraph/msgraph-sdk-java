@@ -19,7 +19,7 @@ public class ApiApplication implements AdditionalDataHolder, BackedModel, Parsab
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ApiApplication and sets the default values.
+     * Instantiates a new {@link ApiApplication} and sets the default values.
      */
     public ApiApplication() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class ApiApplication implements AdditionalDataHolder, BackedModel, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ApiApplication
+     * @return a {@link ApiApplication}
      */
     @jakarta.annotation.Nonnull
     public static ApiApplication createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class ApiApplication implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the acceptMappedClaims property value. When true, allows an application to use claims mapping without specifying a custom signing key.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAcceptMappedClaims() {
@@ -45,7 +45,7 @@ public class ApiApplication implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -58,7 +58,7 @@ public class ApiApplication implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -66,7 +66,7 @@ public class ApiApplication implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -81,7 +81,7 @@ public class ApiApplication implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the knownClientApplications property value. Used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app. If you set the appID of the client app to this value, the user only consents once to the client app. Microsoft Entra ID knows that consenting to the client means implicitly consenting to the web API and automatically provisions service principals for both APIs at the same time. Both the client and the web API app must be registered in the same tenant.
-     * @return a java.util.List<UUID>
+     * @return a {@link java.util.List<UUID>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UUID> getKnownClientApplications() {
@@ -89,7 +89,7 @@ public class ApiApplication implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the oauth2PermissionScopes property value. The definition of the delegated permissions exposed by the web API represented by this application registration. These delegated permissions may be requested by a client application, and may be granted by users or administrators during consent. Delegated permissions are sometimes referred to as OAuth 2.0 scopes.
-     * @return a java.util.List<PermissionScope>
+     * @return a {@link java.util.List<PermissionScope>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PermissionScope> getOauth2PermissionScopes() {
@@ -97,7 +97,7 @@ public class ApiApplication implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class ApiApplication implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the preAuthorizedApplications property value. Lists the client applications that are preauthorized with the specified delegated permissions to access this application's APIs. Users aren't required to consent to any preauthorized application (for the permissions specified). However, any other permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
-     * @return a java.util.List<PreAuthorizedApplication>
+     * @return a {@link java.util.List<PreAuthorizedApplication>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PreAuthorizedApplication> getPreAuthorizedApplications() {
@@ -113,7 +113,7 @@ public class ApiApplication implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the requestedAccessTokenVersion property value. Specifies the access token version expected by this resource. This changes the version and format of the JWT produced independent of the endpoint or client used to request the access token.  The endpoint used, v1.0 or v2.0, is chosen by the client and only impacts the version of id_tokens. Resources need to explicitly configure requestedAccessTokenVersion to indicate the supported access token format.  Possible values for requestedAccessTokenVersion are 1, 2, or null. If the value is null, this defaults to 1, which corresponds to the v1.0 endpoint.  If signInAudience on the application is configured as AzureADandPersonalMicrosoftAccount or PersonalMicrosoftAccount, the value for this property must be 2.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRequestedAccessTokenVersion() {

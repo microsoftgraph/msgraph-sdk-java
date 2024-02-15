@@ -20,7 +20,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      * @param role Usage: role='{role}'
@@ -32,7 +32,7 @@ public class GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder extends BaseRequ
         this.pathParameters.put("userId", userId);
     }
     /**
-     * Instantiates a new GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -41,7 +41,8 @@ public class GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder extends BaseRequ
     }
     /**
      * Invoke function getByUserIdAndRole
-     * @return a GetByUserIdAndRoleWithUserIdWithRoleGetResponse
+     * @return a {@link GetByUserIdAndRoleWithUserIdWithRoleGetResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GetByUserIdAndRoleWithUserIdWithRoleGetResponse get() {
@@ -50,19 +51,19 @@ public class GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder extends BaseRequ
     /**
      * Invoke function getByUserIdAndRole
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a GetByUserIdAndRoleWithUserIdWithRoleGetResponse
+     * @return a {@link GetByUserIdAndRoleWithUserIdWithRoleGetResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GetByUserIdAndRoleWithUserIdWithRoleGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, GetByUserIdAndRoleWithUserIdWithRoleGetResponse::createFromDiscriminatorValue);
     }
     /**
      * Invoke function getByUserIdAndRole
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -71,7 +72,7 @@ public class GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder extends BaseRequ
     /**
      * Invoke function getByUserIdAndRole
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +84,7 @@ public class GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder extends BaseRequ
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder
+     * @return a {@link GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -137,7 +138,7 @@ public class GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder extends BaseRequ
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

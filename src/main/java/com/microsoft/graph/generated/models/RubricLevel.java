@@ -18,7 +18,7 @@ public class RubricLevel implements AdditionalDataHolder, BackedModel, Parsable 
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new RubricLevel and sets the default values.
+     * Instantiates a new {@link RubricLevel} and sets the default values.
      */
     public RubricLevel() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class RubricLevel implements AdditionalDataHolder, BackedModel, Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RubricLevel
+     * @return a {@link RubricLevel}
      */
     @jakarta.annotation.Nonnull
     public static RubricLevel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class RubricLevel implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class RubricLevel implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class RubricLevel implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the description property value. The description of this rubric level.
-     * @return a EducationItemBody
+     * @return a {@link EducationItemBody}
      */
     @jakarta.annotation.Nullable
     public EducationItemBody getDescription() {
@@ -65,7 +65,7 @@ public class RubricLevel implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the displayName property value. The name of this rubric level.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -73,7 +73,7 @@ public class RubricLevel implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -87,7 +87,7 @@ public class RubricLevel implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the grading property value. Null if this is a no-points rubric; educationAssignmentPointsGradeType if it's a points rubric.
-     * @return a EducationAssignmentGradeType
+     * @return a {@link EducationAssignmentGradeType}
      */
     @jakarta.annotation.Nullable
     public EducationAssignmentGradeType getGrading() {
@@ -95,7 +95,7 @@ public class RubricLevel implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the levelId property value. The ID of this resource.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLevelId() {
@@ -103,7 +103,7 @@ public class RubricLevel implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

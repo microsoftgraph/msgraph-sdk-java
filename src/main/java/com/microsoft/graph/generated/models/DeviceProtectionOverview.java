@@ -21,7 +21,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DeviceProtectionOverview and sets the default values.
+     * Instantiates a new {@link DeviceProtectionOverview} and sets the default values.
      */
     public DeviceProtectionOverview() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, BackedMod
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceProtectionOverview
+     * @return a {@link DeviceProtectionOverview}
      */
     @jakarta.annotation.Nonnull
     public static DeviceProtectionOverview createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the cleanDeviceCount property value. Indicates number of devices reporting as clean
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCleanDeviceCount() {
@@ -68,7 +68,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the criticalFailuresDeviceCount property value. Indicates number of devices with critical failures
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCriticalFailuresDeviceCount() {
@@ -76,7 +76,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, BackedMod
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -97,7 +97,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the inactiveThreatAgentDeviceCount property value. Indicates number of devices with inactive threat agent
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getInactiveThreatAgentDeviceCount() {
@@ -105,7 +105,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -113,7 +113,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the pendingFullScanDeviceCount property value. Indicates number of devices pending full scan
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPendingFullScanDeviceCount() {
@@ -121,7 +121,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the pendingManualStepsDeviceCount property value. Indicates number of devices with pending manual steps
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPendingManualStepsDeviceCount() {
@@ -129,7 +129,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the pendingOfflineScanDeviceCount property value. Indicates number of pending offline scan devices
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPendingOfflineScanDeviceCount() {
@@ -137,7 +137,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the pendingQuickScanDeviceCount property value. Indicates the number of devices that have a pending full scan. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPendingQuickScanDeviceCount() {
@@ -145,7 +145,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the pendingRestartDeviceCount property value. Indicates number of devices pending restart
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPendingRestartDeviceCount() {
@@ -153,7 +153,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the pendingSignatureUpdateDeviceCount property value. Indicates number of devices with an old signature
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPendingSignatureUpdateDeviceCount() {
@@ -161,7 +161,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the totalReportedDeviceCount property value. Total device count.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalReportedDeviceCount() {
@@ -169,7 +169,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the unknownStateThreatAgentDeviceCount property value. Indicates number of devices with threat agent state as unknown
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUnknownStateThreatAgentDeviceCount() {

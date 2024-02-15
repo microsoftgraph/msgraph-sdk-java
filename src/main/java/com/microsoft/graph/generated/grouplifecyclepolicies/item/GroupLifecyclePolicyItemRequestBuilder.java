@@ -24,6 +24,7 @@ import java.util.Objects;
 public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the addGroup method.
+     * @return a {@link AddGroupRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AddGroupRequestBuilder addGroup() {
@@ -31,13 +32,14 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the removeGroup method.
+     * @return a {@link RemoveGroupRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RemoveGroupRequestBuilder removeGroup() {
         return new RemoveGroupRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new GroupLifecyclePolicyItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link GroupLifecyclePolicyItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -45,7 +47,7 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groupLifecyclePolicies/{groupLifecyclePolicy%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new GroupLifecyclePolicyItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link GroupLifecyclePolicyItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -54,6 +56,7 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete a groupLifecyclePolicy.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -62,18 +65,19 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a groupLifecyclePolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve the properties and relationships of a groupLifecyclePolicies object.
-     * @return a GroupLifecyclePolicy
+     * @return a {@link GroupLifecyclePolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -83,21 +87,22 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a groupLifecyclePolicies object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a GroupLifecyclePolicy
+     * @return a {@link GroupLifecyclePolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GroupLifecyclePolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, GroupLifecyclePolicy::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object.
      * @param body The request body
-     * @return a GroupLifecyclePolicy
+     * @return a {@link GroupLifecyclePolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -108,7 +113,8 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a GroupLifecyclePolicy
+     * @return a {@link GroupLifecyclePolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -116,13 +122,12 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, GroupLifecyclePolicy::createFromDiscriminatorValue);
     }
     /**
      * Delete a groupLifecyclePolicy.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -131,18 +136,18 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a groupLifecyclePolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/groupLifecyclePolicies/{groupLifecyclePolicy%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Retrieve the properties and relationships of a groupLifecyclePolicies object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -151,7 +156,7 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a groupLifecyclePolicies object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -163,7 +168,7 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final GroupLifecyclePolicy body) {
@@ -173,12 +178,12 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final GroupLifecyclePolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/groupLifecyclePolicies/{groupLifecyclePolicy%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -187,7 +192,7 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GroupLifecyclePolicyItemRequestBuilder
+     * @return a {@link GroupLifecyclePolicyItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GroupLifecyclePolicyItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -217,7 +222,7 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

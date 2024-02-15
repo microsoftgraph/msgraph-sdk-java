@@ -24,6 +24,7 @@ import java.util.Objects;
 public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -32,7 +33,7 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
     /**
      * Provides operations to manage the accessPackagesIncompatibleWith property of the microsoft.graph.accessPackage entity.
      * @param accessPackageId1 The unique identifier of accessPackage
-     * @return a AccessPackageItemRequestBuilder
+     * @return a {@link AccessPackageItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AccessPackageItemRequestBuilder byAccessPackageId1(@jakarta.annotation.Nonnull final String accessPackageId1) {
@@ -42,7 +43,7 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
         return new AccessPackageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new AccessPackagesIncompatibleWithRequestBuilder and sets the default values.
+     * Instantiates a new {@link AccessPackagesIncompatibleWithRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -50,7 +51,7 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/accessPackagesIncompatibleWith{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new AccessPackagesIncompatibleWithRequestBuilder and sets the default values.
+     * Instantiates a new {@link AccessPackagesIncompatibleWithRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +60,8 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
     }
     /**
      * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
-     * @return a AccessPackageCollectionResponse
+     * @return a {@link AccessPackageCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-list-accesspackagesincompatiblewith?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -69,20 +71,20 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
     /**
      * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AccessPackageCollectionResponse
+     * @return a {@link AccessPackageCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-list-accesspackagesincompatiblewith?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -91,7 +93,7 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
     /**
      * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +105,7 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AccessPackagesIncompatibleWithRequestBuilder
+     * @return a {@link AccessPackagesIncompatibleWithRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AccessPackagesIncompatibleWithRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -157,7 +159,7 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

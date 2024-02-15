@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosLobApp extends MobileLobApp implements Parsable {
     /**
-     * Instantiates a new IosLobApp and sets the default values.
+     * Instantiates a new {@link IosLobApp} and sets the default values.
      */
     public IosLobApp() {
         super();
@@ -22,7 +22,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosLobApp
+     * @return a {@link IosLobApp}
      */
     @jakarta.annotation.Nonnull
     public static IosLobApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the applicableDeviceType property value. Contains properties of the possible iOS device types the mobile app can run on.
-     * @return a IosDeviceType
+     * @return a {@link IosDeviceType}
      */
     @jakarta.annotation.Nullable
     public IosDeviceType getApplicableDeviceType() {
@@ -39,7 +39,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the buildNumber property value. The build number of iOS Line of Business (LoB) app.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBuildNumber() {
@@ -47,7 +47,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the bundleId property value. The Identity Name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBundleId() {
@@ -55,7 +55,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the expirationDateTime property value. The expiration time.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
@@ -63,7 +63,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
-     * @return a IosMinimumOperatingSystem
+     * @return a {@link IosMinimumOperatingSystem}
      */
     @jakarta.annotation.Nullable
     public IosMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
@@ -86,7 +86,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the versionNumber property value. The version number of iOS Line of Business (LoB) app.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersionNumber() {

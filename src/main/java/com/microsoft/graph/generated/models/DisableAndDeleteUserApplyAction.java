@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DisableAndDeleteUserApplyAction extends AccessReviewApplyAction implements Parsable {
     /**
-     * Instantiates a new DisableAndDeleteUserApplyAction and sets the default values.
+     * Instantiates a new {@link DisableAndDeleteUserApplyAction} and sets the default values.
      */
     public DisableAndDeleteUserApplyAction() {
         super();
@@ -18,7 +18,7 @@ public class DisableAndDeleteUserApplyAction extends AccessReviewApplyAction imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DisableAndDeleteUserApplyAction
+     * @return a {@link DisableAndDeleteUserApplyAction}
      */
     @jakarta.annotation.Nonnull
     public static DisableAndDeleteUserApplyAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class DisableAndDeleteUserApplyAction extends AccessReviewApplyAction imp
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

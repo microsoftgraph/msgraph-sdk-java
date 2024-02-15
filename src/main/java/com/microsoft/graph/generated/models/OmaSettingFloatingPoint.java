@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OmaSettingFloatingPoint extends OmaSetting implements Parsable {
     /**
-     * Instantiates a new OmaSettingFloatingPoint and sets the default values.
+     * Instantiates a new {@link OmaSettingFloatingPoint} and sets the default values.
      */
     public OmaSettingFloatingPoint() {
         super();
@@ -21,7 +21,7 @@ public class OmaSettingFloatingPoint extends OmaSetting implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OmaSettingFloatingPoint
+     * @return a {@link OmaSettingFloatingPoint}
      */
     @jakarta.annotation.Nonnull
     public static OmaSettingFloatingPoint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class OmaSettingFloatingPoint extends OmaSetting implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class OmaSettingFloatingPoint extends OmaSetting implements Parsable {
     }
     /**
      * Gets the value property value. Value.
-     * @return a Float
+     * @return a {@link Float}
      */
     @jakarta.annotation.Nullable
     public Float getValue() {

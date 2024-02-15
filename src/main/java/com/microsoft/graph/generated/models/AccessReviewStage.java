@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewStage extends Entity implements Parsable {
     /**
-     * Instantiates a new AccessReviewStage and sets the default values.
+     * Instantiates a new {@link AccessReviewStage} and sets the default values.
      */
     public AccessReviewStage() {
         super();
@@ -18,7 +18,7 @@ public class AccessReviewStage extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessReviewStage
+     * @return a {@link AccessReviewStage}
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewStage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AccessReviewStage extends Entity implements Parsable {
     }
     /**
      * Gets the decisions property value. Each user reviewed in an accessReviewStage has a decision item representing if they were approved, denied, or not yet reviewed.
-     * @return a java.util.List<AccessReviewInstanceDecisionItem>
+     * @return a {@link java.util.List<AccessReviewInstanceDecisionItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewInstanceDecisionItem> getDecisions() {
@@ -35,7 +35,7 @@ public class AccessReviewStage extends Entity implements Parsable {
     }
     /**
      * Gets the endDateTime property value. The date and time in ISO 8601 format and UTC time when the review stage is scheduled to end. This property is the cumulative total of the durationInDays for all stages. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
@@ -43,7 +43,7 @@ public class AccessReviewStage extends Entity implements Parsable {
     }
     /**
      * Gets the fallbackReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers are notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner doesn't exist, or manager is specified as reviewer but a user's manager doesn't exist.
-     * @return a java.util.List<AccessReviewReviewerScope>
+     * @return a {@link java.util.List<AccessReviewReviewerScope>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewReviewerScope> getFallbackReviewers() {
@@ -51,7 +51,7 @@ public class AccessReviewStage extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -66,7 +66,7 @@ public class AccessReviewStage extends Entity implements Parsable {
     }
     /**
      * Gets the reviewers property value. This collection of access review scopes is used to define who the reviewers are. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API.
-     * @return a java.util.List<AccessReviewReviewerScope>
+     * @return a {@link java.util.List<AccessReviewReviewerScope>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewReviewerScope> getReviewers() {
@@ -74,7 +74,7 @@ public class AccessReviewStage extends Entity implements Parsable {
     }
     /**
      * Gets the startDateTime property value. The date and time in ISO 8601 format and UTC time when the review stage is scheduled to start. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
@@ -82,7 +82,7 @@ public class AccessReviewStage extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Specifies the status of an accessReviewStage. Possible values: Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed. Supports $orderby, and $filter (eq only). Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStatus() {

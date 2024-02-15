@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TrainingReminderNotification extends BaseEndUserNotification implements Parsable {
     /**
-     * Instantiates a new TrainingReminderNotification and sets the default values.
+     * Instantiates a new {@link TrainingReminderNotification} and sets the default values.
      */
     public TrainingReminderNotification() {
         super();
@@ -18,7 +18,7 @@ public class TrainingReminderNotification extends BaseEndUserNotification implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TrainingReminderNotification
+     * @return a {@link TrainingReminderNotification}
      */
     @jakarta.annotation.Nonnull
     public static TrainingReminderNotification createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class TrainingReminderNotification extends BaseEndUserNotification implem
     }
     /**
      * Gets the deliveryFrequency property value. Configurable frequency for the reminder email introduced during simulation creation. Possible values are: unknown, weekly, biWeekly, unknownFutureValue.
-     * @return a NotificationDeliveryFrequency
+     * @return a {@link NotificationDeliveryFrequency}
      */
     @jakarta.annotation.Nullable
     public NotificationDeliveryFrequency getDeliveryFrequency() {
@@ -35,7 +35,7 @@ public class TrainingReminderNotification extends BaseEndUserNotification implem
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

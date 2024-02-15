@@ -25,6 +25,7 @@ import java.util.Objects;
 public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the userStateSummary property of the microsoft.graph.managedEBook entity.
      * @param userInstallStateSummaryId The unique identifier of userInstallStateSummary
-     * @return a UserInstallStateSummaryItemRequestBuilder
+     * @return a {@link UserInstallStateSummaryItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserInstallStateSummaryItemRequestBuilder byUserInstallStateSummaryId(@jakarta.annotation.Nonnull final String userInstallStateSummaryId) {
@@ -43,7 +44,7 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
         return new UserInstallStateSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new UserStateSummaryRequestBuilder and sets the default values.
+     * Instantiates a new {@link UserStateSummaryRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/managedEBooks/{managedEBook%2Did}/userStateSummary{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new UserStateSummaryRequestBuilder and sets the default values.
+     * Instantiates a new {@link UserStateSummaryRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the userInstallStateSummary objects.
-     * @return a UserInstallStateSummaryCollectionResponse
+     * @return a {@link UserInstallStateSummaryCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-books-userinstallstatesummary-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * List properties and relationships of the userInstallStateSummary objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UserInstallStateSummaryCollectionResponse
+     * @return a {@link UserInstallStateSummaryCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-books-userinstallstatesummary-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserInstallStateSummaryCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UserInstallStateSummaryCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new userInstallStateSummary object.
      * @param body The request body
-     * @return a UserInstallStateSummary
+     * @return a {@link UserInstallStateSummary}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-books-userinstallstatesummary-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -95,7 +98,8 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
      * Create a new userInstallStateSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UserInstallStateSummary
+     * @return a {@link UserInstallStateSummary}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-books-userinstallstatesummary-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -103,13 +107,12 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UserInstallStateSummary::createFromDiscriminatorValue);
     }
     /**
      * List properties and relationships of the userInstallStateSummary objects.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -118,7 +121,7 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * List properties and relationships of the userInstallStateSummary objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +133,7 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new userInstallStateSummary object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UserInstallStateSummary body) {
@@ -140,12 +143,12 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
      * Create a new userInstallStateSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UserInstallStateSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceAppManagement/managedEBooks/{managedEBook%2Did}/userStateSummary", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -154,7 +157,7 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a UserStateSummaryRequestBuilder
+     * @return a {@link UserStateSummaryRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserStateSummaryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -208,7 +211,7 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

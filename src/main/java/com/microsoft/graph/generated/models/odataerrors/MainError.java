@@ -18,7 +18,7 @@ public class MainError implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new MainError and sets the default values.
+     * Instantiates a new {@link MainError} and sets the default values.
      */
     public MainError() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class MainError implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MainError
+     * @return a {@link MainError}
      */
     @jakarta.annotation.Nonnull
     public static MainError createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class MainError implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class MainError implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class MainError implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the code property value. The code property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCode() {
@@ -65,7 +65,7 @@ public class MainError implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the details property value. The details property
-     * @return a java.util.List<ErrorDetails>
+     * @return a {@link java.util.List<ErrorDetails>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ErrorDetails> getDetails() {
@@ -73,7 +73,7 @@ public class MainError implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -87,7 +87,7 @@ public class MainError implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the innerError property value. The innerError property
-     * @return a InnerError
+     * @return a {@link InnerError}
      */
     @jakarta.annotation.Nullable
     public InnerError getInnerError() {
@@ -95,7 +95,7 @@ public class MainError implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the message property value. The message property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMessage() {
@@ -103,7 +103,7 @@ public class MainError implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the target property value. The target property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTarget() {

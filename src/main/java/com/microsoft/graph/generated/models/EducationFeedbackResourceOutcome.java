@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationFeedbackResourceOutcome extends EducationOutcome implements Parsable {
     /**
-     * Instantiates a new EducationFeedbackResourceOutcome and sets the default values.
+     * Instantiates a new {@link EducationFeedbackResourceOutcome} and sets the default values.
      */
     public EducationFeedbackResourceOutcome() {
         super();
@@ -18,7 +18,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationFeedbackResourceOutcome
+     * @return a {@link EducationFeedbackResourceOutcome}
      */
     @jakarta.annotation.Nonnull
     public static EducationFeedbackResourceOutcome createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
     }
     /**
      * Gets the feedbackResource property value. The actual feedback resource.
-     * @return a EducationResource
+     * @return a {@link EducationResource}
      */
     @jakarta.annotation.Nullable
     public EducationResource getFeedbackResource() {
@@ -35,7 +35,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
     }
     /**
      * Gets the resourceStatus property value. The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, unknownFutureValue.
-     * @return a EducationFeedbackResourceOutcomeStatus
+     * @return a {@link EducationFeedbackResourceOutcomeStatus}
      */
     @jakarta.annotation.Nullable
     public EducationFeedbackResourceOutcomeStatus getResourceStatus() {

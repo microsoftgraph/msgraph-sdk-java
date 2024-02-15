@@ -19,7 +19,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new TranslateExchangeIdsPostRequestBody and sets the default values.
+     * Instantiates a new {@link TranslateExchangeIdsPostRequestBody} and sets the default values.
      */
     public TranslateExchangeIdsPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TranslateExchangeIdsPostRequestBody
+     * @return a {@link TranslateExchangeIdsPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static TranslateExchangeIdsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -70,7 +70,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
     }
     /**
      * Gets the InputIds property value. The InputIds property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getInputIds() {
@@ -78,7 +78,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
     }
     /**
      * Gets the SourceIdType property value. The SourceIdType property
-     * @return a ExchangeIdFormat
+     * @return a {@link ExchangeIdFormat}
      */
     @jakarta.annotation.Nullable
     public ExchangeIdFormat getSourceIdType() {
@@ -86,7 +86,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
     }
     /**
      * Gets the TargetIdType property value. The TargetIdType property
-     * @return a ExchangeIdFormat
+     * @return a {@link ExchangeIdFormat}
      */
     @jakarta.annotation.Nullable
     public ExchangeIdFormat getTargetIdType() {

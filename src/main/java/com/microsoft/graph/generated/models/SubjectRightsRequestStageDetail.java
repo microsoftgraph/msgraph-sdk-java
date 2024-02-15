@@ -18,7 +18,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Ba
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SubjectRightsRequestStageDetail and sets the default values.
+     * Instantiates a new {@link SubjectRightsRequestStageDetail} and sets the default values.
      */
     public SubjectRightsRequestStageDetail() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Ba
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SubjectRightsRequestStageDetail
+     * @return a {@link SubjectRightsRequestStageDetail}
      */
     @jakarta.annotation.Nonnull
     public static SubjectRightsRequestStageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the error property value. Describes the error, if any, for the current stage.
-     * @return a PublicError
+     * @return a {@link PublicError}
      */
     @jakarta.annotation.Nullable
     public PublicError getError() {
@@ -65,7 +65,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Ba
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -86,7 +86,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the stage property value. The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. You must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: approval.
-     * @return a SubjectRightsRequestStage
+     * @return a {@link SubjectRightsRequestStage}
      */
     @jakarta.annotation.Nullable
     public SubjectRightsRequestStage getStage() {
@@ -94,7 +94,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the status property value. Status of the current stage. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
-     * @return a SubjectRightsRequestStageStatus
+     * @return a {@link SubjectRightsRequestStageStatus}
      */
     @jakarta.annotation.Nullable
     public SubjectRightsRequestStageStatus getStatus() {

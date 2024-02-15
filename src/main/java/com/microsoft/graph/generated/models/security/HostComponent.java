@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class HostComponent extends Artifact implements Parsable {
     /**
-     * Instantiates a new HostComponent and sets the default values.
+     * Instantiates a new {@link HostComponent} and sets the default values.
      */
     public HostComponent() {
         super();
@@ -19,7 +19,7 @@ public class HostComponent extends Artifact implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a HostComponent
+     * @return a {@link HostComponent}
      */
     @jakarta.annotation.Nonnull
     public static HostComponent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class HostComponent extends Artifact implements Parsable {
     }
     /**
      * Gets the category property value. The type of component that was detected (for example, Operating System, Framework, Remote Access, or Server).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory() {
@@ -36,7 +36,7 @@ public class HostComponent extends Artifact implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -51,7 +51,7 @@ public class HostComponent extends Artifact implements Parsable {
     }
     /**
      * Gets the firstSeenDateTime property value. The first date and time when Microsoft Defender Threat Intelligence observed this web component. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
@@ -59,7 +59,7 @@ public class HostComponent extends Artifact implements Parsable {
     }
     /**
      * Gets the host property value. The host property
-     * @return a Host
+     * @return a {@link Host}
      */
     @jakarta.annotation.Nullable
     public Host getHost() {
@@ -67,7 +67,7 @@ public class HostComponent extends Artifact implements Parsable {
     }
     /**
      * Gets the lastSeenDateTime property value. The most recent date and time when Microsoft Defender Threat Intelligence observed this web component. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
@@ -75,7 +75,7 @@ public class HostComponent extends Artifact implements Parsable {
     }
     /**
      * Gets the name property value. A name running on the artifact, for example, Microsoft IIS.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -83,7 +83,7 @@ public class HostComponent extends Artifact implements Parsable {
     }
     /**
      * Gets the version property value. The component version running on the artifact, for example, v8.5. This shouldn't be assumed to be strictly numerical.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

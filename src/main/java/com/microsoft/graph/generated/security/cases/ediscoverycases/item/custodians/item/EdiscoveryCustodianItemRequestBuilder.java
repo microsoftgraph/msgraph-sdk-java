@@ -31,6 +31,7 @@ import java.util.Objects;
 public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the lastIndexOperation property of the microsoft.graph.security.ediscoveryCustodian entity.
+     * @return a {@link LastIndexOperationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LastIndexOperationRequestBuilder lastIndexOperation() {
@@ -38,6 +39,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the activate method.
+     * @return a {@link MicrosoftGraphSecurityActivateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityActivateRequestBuilder microsoftGraphSecurityActivate() {
@@ -45,6 +47,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the applyHold method.
+     * @return a {@link MicrosoftGraphSecurityApplyHoldRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityApplyHoldRequestBuilder microsoftGraphSecurityApplyHold() {
@@ -52,6 +55,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the release method.
+     * @return a {@link MicrosoftGraphSecurityReleaseRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityReleaseRequestBuilder microsoftGraphSecurityRelease() {
@@ -59,6 +63,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the removeHold method.
+     * @return a {@link MicrosoftGraphSecurityRemoveHoldRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityRemoveHoldRequestBuilder microsoftGraphSecurityRemoveHold() {
@@ -66,6 +71,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the updateIndex method.
+     * @return a {@link MicrosoftGraphSecurityUpdateIndexRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityUpdateIndexRequestBuilder microsoftGraphSecurityUpdateIndex() {
@@ -73,6 +79,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the siteSources property of the microsoft.graph.security.ediscoveryCustodian entity.
+     * @return a {@link SiteSourcesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SiteSourcesRequestBuilder siteSources() {
@@ -80,6 +87,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the unifiedGroupSources property of the microsoft.graph.security.ediscoveryCustodian entity.
+     * @return a {@link UnifiedGroupSourcesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UnifiedGroupSourcesRequestBuilder unifiedGroupSources() {
@@ -87,13 +95,14 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userSources property of the microsoft.graph.security.ediscoveryCustodian entity.
+     * @return a {@link UserSourcesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserSourcesRequestBuilder userSources() {
         return new UserSourcesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new EdiscoveryCustodianItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link EdiscoveryCustodianItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -101,7 +110,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/{ediscoveryCustodian%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new EdiscoveryCustodianItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link EdiscoveryCustodianItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -110,6 +119,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property custodians for security
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -117,17 +127,18 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property custodians for security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read the properties and relationships of an ediscoveryCustodian object.
-     * @return a EdiscoveryCustodian
+     * @return a {@link EdiscoveryCustodian}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -137,21 +148,22 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an ediscoveryCustodian object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EdiscoveryCustodian
+     * @return a {@link EdiscoveryCustodian}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryCustodian get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryCustodian::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property custodians in security
      * @param body The request body
-     * @return a EdiscoveryCustodian
+     * @return a {@link EdiscoveryCustodian}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public EdiscoveryCustodian patch(@jakarta.annotation.Nonnull final EdiscoveryCustodian body) {
@@ -161,20 +173,20 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property custodians in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EdiscoveryCustodian
+     * @return a {@link EdiscoveryCustodian}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public EdiscoveryCustodian patch(@jakarta.annotation.Nonnull final EdiscoveryCustodian body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryCustodian::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property custodians for security
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -183,18 +195,18 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property custodians for security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/{ediscoveryCustodian%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Read the properties and relationships of an ediscoveryCustodian object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -203,7 +215,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an ediscoveryCustodian object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -215,7 +227,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property custodians in security
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EdiscoveryCustodian body) {
@@ -225,12 +237,12 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property custodians in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EdiscoveryCustodian body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/{ediscoveryCustodian%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -239,7 +251,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a EdiscoveryCustodianItemRequestBuilder
+     * @return a {@link EdiscoveryCustodianItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EdiscoveryCustodianItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -269,7 +281,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

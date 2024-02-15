@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerPlan extends Entity implements Parsable {
     /**
-     * Instantiates a new PlannerPlan and sets the default values.
+     * Instantiates a new {@link PlannerPlan} and sets the default values.
      */
     public PlannerPlan() {
         super();
@@ -18,7 +18,7 @@ public class PlannerPlan extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PlannerPlan
+     * @return a {@link PlannerPlan}
      */
     @jakarta.annotation.Nonnull
     public static PlannerPlan createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class PlannerPlan extends Entity implements Parsable {
     }
     /**
      * Gets the buckets property value. Read-only. Nullable. Collection of buckets in the plan.
-     * @return a java.util.List<PlannerBucket>
+     * @return a {@link java.util.List<PlannerBucket>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerBucket> getBuckets() {
@@ -35,7 +35,7 @@ public class PlannerPlan extends Entity implements Parsable {
     }
     /**
      * Gets the container property value. Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it's set, this property cant be updated. Required.
-     * @return a PlannerPlanContainer
+     * @return a {@link PlannerPlanContainer}
      */
     @jakarta.annotation.Nullable
     public PlannerPlanContainer getContainer() {
@@ -43,7 +43,7 @@ public class PlannerPlan extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. Read-only. The user who created the plan.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -51,7 +51,7 @@ public class PlannerPlan extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Read-only. Date and time at which the plan is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -59,7 +59,7 @@ public class PlannerPlan extends Entity implements Parsable {
     }
     /**
      * Gets the details property value. Read-only. Nullable. Extra details about the plan.
-     * @return a PlannerPlanDetails
+     * @return a {@link PlannerPlanDetails}
      */
     @jakarta.annotation.Nullable
     public PlannerPlanDetails getDetails() {
@@ -67,7 +67,7 @@ public class PlannerPlan extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -84,7 +84,7 @@ public class PlannerPlan extends Entity implements Parsable {
     }
     /**
      * Gets the owner property value. The owner property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOwner() {
@@ -92,7 +92,7 @@ public class PlannerPlan extends Entity implements Parsable {
     }
     /**
      * Gets the tasks property value. Read-only. Nullable. Collection of tasks in the plan.
-     * @return a java.util.List<PlannerTask>
+     * @return a {@link java.util.List<PlannerTask>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerTask> getTasks() {
@@ -100,7 +100,7 @@ public class PlannerPlan extends Entity implements Parsable {
     }
     /**
      * Gets the title property value. Required. Title of the plan.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTitle() {

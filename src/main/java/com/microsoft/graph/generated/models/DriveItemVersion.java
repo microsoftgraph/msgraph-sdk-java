@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DriveItemVersion extends BaseItemVersion implements Parsable {
     /**
-     * Instantiates a new DriveItemVersion and sets the default values.
+     * Instantiates a new {@link DriveItemVersion} and sets the default values.
      */
     public DriveItemVersion() {
         super();
@@ -18,7 +18,7 @@ public class DriveItemVersion extends BaseItemVersion implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DriveItemVersion
+     * @return a {@link DriveItemVersion}
      */
     @jakarta.annotation.Nonnull
     public static DriveItemVersion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class DriveItemVersion extends BaseItemVersion implements Parsable {
     }
     /**
      * Gets the content property value. The content stream for this version of the item.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
@@ -35,7 +35,7 @@ public class DriveItemVersion extends BaseItemVersion implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class DriveItemVersion extends BaseItemVersion implements Parsable {
     }
     /**
      * Gets the size property value. Indicates the size of the content stream for this version of the item.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getSize() {

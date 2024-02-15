@@ -18,7 +18,7 @@ public class Reminder implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new Reminder and sets the default values.
+     * Instantiates a new {@link Reminder} and sets the default values.
      */
     public Reminder() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class Reminder implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Reminder
+     * @return a {@link Reminder}
      */
     @jakarta.annotation.Nonnull
     public static Reminder createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class Reminder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class Reminder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class Reminder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the changeKey property value. Identifies the version of the reminder. Every time the reminder is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getChangeKey() {
@@ -65,7 +65,7 @@ public class Reminder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the eventEndTime property value. The date, time and time zone that the event ends.
-     * @return a DateTimeTimeZone
+     * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getEventEndTime() {
@@ -73,7 +73,7 @@ public class Reminder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the eventId property value. The unique ID of the event. Read only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEventId() {
@@ -81,7 +81,7 @@ public class Reminder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the eventLocation property value. The location of the event.
-     * @return a Location
+     * @return a {@link Location}
      */
     @jakarta.annotation.Nullable
     public Location getEventLocation() {
@@ -89,7 +89,7 @@ public class Reminder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the eventStartTime property value. The date, time, and time zone that the event starts.
-     * @return a DateTimeTimeZone
+     * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getEventStartTime() {
@@ -97,7 +97,7 @@ public class Reminder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the eventSubject property value. The text of the event's subject line.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEventSubject() {
@@ -105,7 +105,7 @@ public class Reminder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the eventWebLink property value. The URL to open the event in Outlook on the web.The event opens in the browser if you're logged in to your mailbox via Outlook on the web. You're prompted to log in if you aren't already logged in with the browser.This URL can't be accessed from within an iFrame.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEventWebLink() {
@@ -113,7 +113,7 @@ public class Reminder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -131,7 +131,7 @@ public class Reminder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -139,7 +139,7 @@ public class Reminder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the reminderFireTime property value. The date, time, and time zone that the reminder is set to occur.
-     * @return a DateTimeTimeZone
+     * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getReminderFireTime() {

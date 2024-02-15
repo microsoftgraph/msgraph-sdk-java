@@ -24,6 +24,7 @@ import java.util.Objects;
 public class AttachmentSessionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -32,7 +33,7 @@ public class AttachmentSessionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the attachmentSessions property of the microsoft.graph.todoTask entity.
      * @param attachmentSessionId The unique identifier of attachmentSession
-     * @return a AttachmentSessionItemRequestBuilder
+     * @return a {@link AttachmentSessionItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AttachmentSessionItemRequestBuilder byAttachmentSessionId(@jakarta.annotation.Nonnull final String attachmentSessionId) {
@@ -42,7 +43,7 @@ public class AttachmentSessionsRequestBuilder extends BaseRequestBuilder {
         return new AttachmentSessionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new AttachmentSessionsRequestBuilder and sets the default values.
+     * Instantiates a new {@link AttachmentSessionsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -50,7 +51,7 @@ public class AttachmentSessionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/todo/lists/{todoTaskList%2Did}/tasks/{todoTask%2Did}/attachmentSessions{?%24count,%24filter,%24orderby,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new AttachmentSessionsRequestBuilder and sets the default values.
+     * Instantiates a new {@link AttachmentSessionsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +60,8 @@ public class AttachmentSessionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get attachmentSessions from users
-     * @return a AttachmentSessionCollectionResponse
+     * @return a {@link AttachmentSessionCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AttachmentSessionCollectionResponse get() {
@@ -68,19 +70,19 @@ public class AttachmentSessionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get attachmentSessions from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AttachmentSessionCollectionResponse
+     * @return a {@link AttachmentSessionCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AttachmentSessionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AttachmentSessionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Get attachmentSessions from users
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -89,7 +91,7 @@ public class AttachmentSessionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get attachmentSessions from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -101,7 +103,7 @@ public class AttachmentSessionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AttachmentSessionsRequestBuilder
+     * @return a {@link AttachmentSessionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AttachmentSessionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -145,7 +147,7 @@ public class AttachmentSessionsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

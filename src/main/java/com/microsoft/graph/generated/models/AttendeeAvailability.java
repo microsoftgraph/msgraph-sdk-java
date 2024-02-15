@@ -18,7 +18,7 @@ public class AttendeeAvailability implements AdditionalDataHolder, BackedModel, 
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AttendeeAvailability and sets the default values.
+     * Instantiates a new {@link AttendeeAvailability} and sets the default values.
      */
     public AttendeeAvailability() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AttendeeAvailability implements AdditionalDataHolder, BackedModel, 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AttendeeAvailability
+     * @return a {@link AttendeeAvailability}
      */
     @jakarta.annotation.Nonnull
     public static AttendeeAvailability createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AttendeeAvailability implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AttendeeAvailability implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the attendee property value. The email address and type of attendee - whether it's a person or a resource, and whether required or optional if it's a person.
-     * @return a AttendeeBase
+     * @return a {@link AttendeeBase}
      */
     @jakarta.annotation.Nullable
     public AttendeeBase getAttendee() {
@@ -57,7 +57,7 @@ public class AttendeeAvailability implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the availability property value. The availability status of the attendee. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
-     * @return a FreeBusyStatus
+     * @return a {@link FreeBusyStatus}
      */
     @jakarta.annotation.Nullable
     public FreeBusyStatus getAvailability() {
@@ -65,7 +65,7 @@ public class AttendeeAvailability implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -73,7 +73,7 @@ public class AttendeeAvailability implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -85,7 +85,7 @@ public class AttendeeAvailability implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

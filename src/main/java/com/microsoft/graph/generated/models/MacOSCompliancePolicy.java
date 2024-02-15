@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable {
     /**
-     * Instantiates a new MacOSCompliancePolicy and sets the default values.
+     * Instantiates a new {@link MacOSCompliancePolicy} and sets the default values.
      */
     public MacOSCompliancePolicy() {
         super();
@@ -21,7 +21,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MacOSCompliancePolicy
+     * @return a {@link MacOSCompliancePolicy}
      */
     @jakarta.annotation.Nonnull
     public static MacOSCompliancePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     }
     /**
      * Gets the deviceThreatProtectionEnabled property value. Require that devices have enabled device threat protection.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceThreatProtectionEnabled() {
@@ -38,7 +38,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     }
     /**
      * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
-     * @return a DeviceThreatProtectionLevel
+     * @return a {@link DeviceThreatProtectionLevel}
      */
     @jakarta.annotation.Nullable
     public DeviceThreatProtectionLevel getDeviceThreatProtectionRequiredSecurityLevel() {
@@ -46,7 +46,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -72,7 +72,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     }
     /**
      * Gets the firewallBlockAllIncoming property value. Corresponds to the 'Block all incoming connections' option.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFirewallBlockAllIncoming() {
@@ -80,7 +80,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     }
     /**
      * Gets the firewallEnabled property value. Whether the firewall should be enabled or not.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFirewallEnabled() {
@@ -88,7 +88,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     }
     /**
      * Gets the firewallEnableStealthMode property value. Corresponds to 'Enable stealth mode.'
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFirewallEnableStealthMode() {
@@ -96,7 +96,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     }
     /**
      * Gets the osMaximumVersion property value. Maximum MacOS version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsMaximumVersion() {
@@ -104,7 +104,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     }
     /**
      * Gets the osMinimumVersion property value. Minimum MacOS version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsMinimumVersion() {
@@ -112,7 +112,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     }
     /**
      * Gets the passwordBlockSimple property value. Indicates whether or not to block simple passwords.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockSimple() {
@@ -120,7 +120,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     }
     /**
      * Gets the passwordExpirationDays property value. Number of days before the password expires. Valid values 1 to 65535
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
@@ -128,7 +128,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     }
     /**
      * Gets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumCharacterSetCount() {
@@ -136,7 +136,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     }
     /**
      * Gets the passwordMinimumLength property value. Minimum length of password. Valid values 4 to 14
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
@@ -144,7 +144,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeLock() {
@@ -152,7 +152,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 1 to 24
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
@@ -160,7 +160,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     }
     /**
      * Gets the passwordRequired property value. Whether or not to require a password.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRequired() {
@@ -168,7 +168,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
-     * @return a RequiredPasswordType
+     * @return a {@link RequiredPasswordType}
      */
     @jakarta.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {
@@ -176,7 +176,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     }
     /**
      * Gets the storageRequireEncryption property value. Require encryption on Mac OS devices.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageRequireEncryption() {
@@ -184,7 +184,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     }
     /**
      * Gets the systemIntegrityProtectionEnabled property value. Require that devices have enabled system integrity protection.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSystemIntegrityProtectionEnabled() {

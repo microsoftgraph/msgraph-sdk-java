@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryReviewTag extends Tag implements Parsable {
     /**
-     * Instantiates a new EdiscoveryReviewTag and sets the default values.
+     * Instantiates a new {@link EdiscoveryReviewTag} and sets the default values.
      */
     public EdiscoveryReviewTag() {
         super();
@@ -18,7 +18,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EdiscoveryReviewTag
+     * @return a {@link EdiscoveryReviewTag}
      */
     @jakarta.annotation.Nonnull
     public static EdiscoveryReviewTag createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
     }
     /**
      * Gets the childSelectability property value. Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
-     * @return a ChildSelectability
+     * @return a {@link ChildSelectability}
      */
     @jakarta.annotation.Nullable
     public ChildSelectability getChildSelectability() {
@@ -35,7 +35,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
     }
     /**
      * Gets the childTags property value. Returns the tags that are a child of a tag.
-     * @return a java.util.List<EdiscoveryReviewTag>
+     * @return a {@link java.util.List<EdiscoveryReviewTag>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryReviewTag> getChildTags() {
@@ -43,7 +43,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -55,7 +55,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
     }
     /**
      * Gets the parent property value. Returns the parent tag of the specified tag.
-     * @return a EdiscoveryReviewTag
+     * @return a {@link EdiscoveryReviewTag}
      */
     @jakarta.annotation.Nullable
     public EdiscoveryReviewTag getParent() {

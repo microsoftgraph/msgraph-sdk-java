@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOsLobAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /**
-     * Instantiates a new MacOsLobAppAssignmentSettings and sets the default values.
+     * Instantiates a new {@link MacOsLobAppAssignmentSettings} and sets the default values.
      */
     public MacOsLobAppAssignmentSettings() {
         super();
@@ -21,7 +21,7 @@ public class MacOsLobAppAssignmentSettings extends MobileAppAssignmentSettings i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MacOsLobAppAssignmentSettings
+     * @return a {@link MacOsLobAppAssignmentSettings}
      */
     @jakarta.annotation.Nonnull
     public static MacOsLobAppAssignmentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class MacOsLobAppAssignmentSettings extends MobileAppAssignmentSettings i
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class MacOsLobAppAssignmentSettings extends MobileAppAssignmentSettings i
     }
     /**
      * Gets the uninstallOnDeviceRemoval property value. When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getUninstallOnDeviceRemoval() {

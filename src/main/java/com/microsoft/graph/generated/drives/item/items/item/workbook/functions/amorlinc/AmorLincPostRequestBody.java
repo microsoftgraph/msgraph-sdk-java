@@ -19,7 +19,7 @@ public class AmorLincPostRequestBody implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AmorLincPostRequestBody and sets the default values.
+     * Instantiates a new {@link AmorLincPostRequestBody} and sets the default values.
      */
     public AmorLincPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class AmorLincPostRequestBody implements AdditionalDataHolder, BackedMode
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AmorLincPostRequestBody
+     * @return a {@link AmorLincPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static AmorLincPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class AmorLincPostRequestBody implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class AmorLincPostRequestBody implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class AmorLincPostRequestBody implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the basis property value. The basis property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getBasis() {
@@ -66,7 +66,7 @@ public class AmorLincPostRequestBody implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the cost property value. The cost property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getCost() {
@@ -74,7 +74,7 @@ public class AmorLincPostRequestBody implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the datePurchased property value. The datePurchased property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getDatePurchased() {
@@ -82,7 +82,7 @@ public class AmorLincPostRequestBody implements AdditionalDataHolder, BackedMode
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -98,7 +98,7 @@ public class AmorLincPostRequestBody implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the firstPeriod property value. The firstPeriod property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getFirstPeriod() {
@@ -106,7 +106,7 @@ public class AmorLincPostRequestBody implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the period property value. The period property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getPeriod() {
@@ -114,7 +114,7 @@ public class AmorLincPostRequestBody implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the rate property value. The rate property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getRate() {
@@ -122,7 +122,7 @@ public class AmorLincPostRequestBody implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the salvage property value. The salvage property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getSalvage() {

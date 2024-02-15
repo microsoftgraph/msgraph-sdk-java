@@ -25,6 +25,7 @@ import java.util.Objects;
 public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the offerShiftRequests property of the microsoft.graph.schedule entity.
      * @param offerShiftRequestId The unique identifier of offerShiftRequest
-     * @return a OfferShiftRequestItemRequestBuilder
+     * @return a {@link OfferShiftRequestItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OfferShiftRequestItemRequestBuilder byOfferShiftRequestId(@jakarta.annotation.Nonnull final String offerShiftRequestId) {
@@ -43,7 +44,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
         return new OfferShiftRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new OfferShiftRequestsRequestBuilder and sets the default values.
+     * Instantiates a new {@link OfferShiftRequestsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/schedule/offerShiftRequests{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new OfferShiftRequestsRequestBuilder and sets the default values.
+     * Instantiates a new {@link OfferShiftRequestsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of all offerShiftRequest objects in a team.
-     * @return a OfferShiftRequestCollectionResponse
+     * @return a {@link OfferShiftRequestCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/offershiftrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of all offerShiftRequest objects in a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a OfferShiftRequestCollectionResponse
+     * @return a {@link OfferShiftRequestCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/offershiftrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OfferShiftRequestCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, OfferShiftRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create an instance of an offerShiftRequest.
      * @param body The request body
-     * @return a OfferShiftRequest
+     * @return a {@link OfferShiftRequest}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/offershiftrequest-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -95,7 +98,8 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
      * Create an instance of an offerShiftRequest.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a OfferShiftRequest
+     * @return a {@link OfferShiftRequest}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/offershiftrequest-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -103,13 +107,12 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, OfferShiftRequest::createFromDiscriminatorValue);
     }
     /**
      * Retrieve the properties and relationships of all offerShiftRequest objects in a team.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -118,7 +121,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of all offerShiftRequest objects in a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +133,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create an instance of an offerShiftRequest.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final OfferShiftRequest body) {
@@ -140,12 +143,12 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
      * Create an instance of an offerShiftRequest.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final OfferShiftRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/teams/{team%2Did}/schedule/offerShiftRequests", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -154,7 +157,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a OfferShiftRequestsRequestBuilder
+     * @return a {@link OfferShiftRequestsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OfferShiftRequestsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -208,7 +211,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

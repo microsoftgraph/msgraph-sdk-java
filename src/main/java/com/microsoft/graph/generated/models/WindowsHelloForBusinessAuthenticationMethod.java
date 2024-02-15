@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /**
-     * Instantiates a new WindowsHelloForBusinessAuthenticationMethod and sets the default values.
+     * Instantiates a new {@link WindowsHelloForBusinessAuthenticationMethod} and sets the default values.
      */
     public WindowsHelloForBusinessAuthenticationMethod() {
         super();
@@ -19,7 +19,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsHelloForBusinessAuthenticationMethod
+     * @return a {@link WindowsHelloForBusinessAuthenticationMethod}
      */
     @jakarta.annotation.Nonnull
     public static WindowsHelloForBusinessAuthenticationMethod createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
     }
     /**
      * Gets the createdDateTime property value. The date and time that this Windows Hello for Business key was registered.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -36,7 +36,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
     }
     /**
      * Gets the device property value. The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user's Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
-     * @return a Device
+     * @return a {@link Device}
      */
     @jakarta.annotation.Nullable
     public Device getDevice() {
@@ -44,7 +44,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
     }
     /**
      * Gets the displayName property value. The name of the device on which Windows Hello for Business is registered
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -52,7 +52,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -65,7 +65,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
     }
     /**
      * Gets the keyStrength property value. Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.
-     * @return a AuthenticationMethodKeyStrength
+     * @return a {@link AuthenticationMethodKeyStrength}
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodKeyStrength getKeyStrength() {

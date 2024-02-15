@@ -19,7 +19,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SnoozeReminderRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new SnoozeReminderRequestBuilder and sets the default values.
+     * Instantiates a new {@link SnoozeReminderRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -27,7 +27,7 @@ public class SnoozeReminderRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendars/{calendar%2Did}/events/{event%2Did}/snoozeReminder", pathParameters);
     }
     /**
-     * Instantiates a new SnoozeReminderRequestBuilder and sets the default values.
+     * Instantiates a new {@link SnoozeReminderRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,6 +37,7 @@ public class SnoozeReminderRequestBuilder extends BaseRequestBuilder {
     /**
      * Postpone a reminder for an event in a user calendar until a new time.
      * @param body The request body
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/event-snoozereminder?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final SnoozeReminderPostRequestBody body) {
@@ -46,20 +47,20 @@ public class SnoozeReminderRequestBuilder extends BaseRequestBuilder {
      * Postpone a reminder for an event in a user calendar until a new time.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/event-snoozereminder?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final SnoozeReminderPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Postpone a reminder for an event in a user calendar until a new time.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SnoozeReminderPostRequestBody body) {
@@ -69,7 +70,7 @@ public class SnoozeReminderRequestBuilder extends BaseRequestBuilder {
      * Postpone a reminder for an event in a user calendar until a new time.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SnoozeReminderPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -83,7 +84,7 @@ public class SnoozeReminderRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a SnoozeReminderRequestBuilder
+     * @return a {@link SnoozeReminderRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SnoozeReminderRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

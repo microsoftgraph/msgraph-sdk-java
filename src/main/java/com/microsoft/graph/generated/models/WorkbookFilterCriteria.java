@@ -18,7 +18,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new WorkbookFilterCriteria and sets the default values.
+     * Instantiates a new {@link WorkbookFilterCriteria} and sets the default values.
      */
     public WorkbookFilterCriteria() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookFilterCriteria
+     * @return a {@link WorkbookFilterCriteria}
      */
     @jakarta.annotation.Nonnull
     public static WorkbookFilterCriteria createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the color property value. The color property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getColor() {
@@ -65,7 +65,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the criterion1 property value. The criterion1 property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCriterion1() {
@@ -73,7 +73,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the criterion2 property value. The criterion2 property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCriterion2() {
@@ -81,7 +81,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the dynamicCriteria property value. The dynamicCriteria property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDynamicCriteria() {
@@ -89,7 +89,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -107,7 +107,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the filterOn property value. The filterOn property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFilterOn() {
@@ -115,7 +115,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the icon property value. The icon property
-     * @return a WorkbookIcon
+     * @return a {@link WorkbookIcon}
      */
     @jakarta.annotation.Nullable
     public WorkbookIcon getIcon() {
@@ -123,7 +123,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -131,7 +131,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the operator property value. The operator property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOperator() {
@@ -139,7 +139,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the values property value. The values property
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getValues() {

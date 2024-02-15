@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalGetResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalGetResponse and sets the default values.
+     * Instantiates a new {@link GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalGetResponse} and sets the default values.
      */
     public GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalGetResponse() {
         super();
@@ -19,7 +19,7 @@ public class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalGetResponse
+     * @return a {@link GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalGetResponse}
      */
     @jakarta.annotation.Nonnull
     public static GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalGetResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<ItemActivityStat>
+     * @return a {@link java.util.List<ItemActivityStat>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ItemActivityStat> getValue() {

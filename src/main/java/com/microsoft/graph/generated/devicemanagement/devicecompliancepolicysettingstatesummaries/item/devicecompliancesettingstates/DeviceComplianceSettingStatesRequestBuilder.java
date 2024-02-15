@@ -25,6 +25,7 @@ import java.util.Objects;
 public class DeviceComplianceSettingStatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class DeviceComplianceSettingStatesRequestBuilder extends BaseRequestBuil
     /**
      * Provides operations to manage the deviceComplianceSettingStates property of the microsoft.graph.deviceCompliancePolicySettingStateSummary entity.
      * @param deviceComplianceSettingStateId The unique identifier of deviceComplianceSettingState
-     * @return a DeviceComplianceSettingStateItemRequestBuilder
+     * @return a {@link DeviceComplianceSettingStateItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceComplianceSettingStateItemRequestBuilder byDeviceComplianceSettingStateId(@jakarta.annotation.Nonnull final String deviceComplianceSettingStateId) {
@@ -43,7 +44,7 @@ public class DeviceComplianceSettingStatesRequestBuilder extends BaseRequestBuil
         return new DeviceComplianceSettingStateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new DeviceComplianceSettingStatesRequestBuilder and sets the default values.
+     * Instantiates a new {@link DeviceComplianceSettingStatesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class DeviceComplianceSettingStatesRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceCompliancePolicySettingStateSummaries/{deviceCompliancePolicySettingStateSummary%2Did}/deviceComplianceSettingStates{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new DeviceComplianceSettingStatesRequestBuilder and sets the default values.
+     * Instantiates a new {@link DeviceComplianceSettingStatesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class DeviceComplianceSettingStatesRequestBuilder extends BaseRequestBuil
     }
     /**
      * List properties and relationships of the deviceComplianceSettingState objects.
-     * @return a DeviceComplianceSettingStateCollectionResponse
+     * @return a {@link DeviceComplianceSettingStateCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancesettingstate-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class DeviceComplianceSettingStatesRequestBuilder extends BaseRequestBuil
     /**
      * List properties and relationships of the deviceComplianceSettingState objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceComplianceSettingStateCollectionResponse
+     * @return a {@link DeviceComplianceSettingStateCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancesettingstate-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceComplianceSettingStateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceComplianceSettingStateCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new deviceComplianceSettingState object.
      * @param body The request body
-     * @return a DeviceComplianceSettingState
+     * @return a {@link DeviceComplianceSettingState}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancesettingstate-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -95,7 +98,8 @@ public class DeviceComplianceSettingStatesRequestBuilder extends BaseRequestBuil
      * Create a new deviceComplianceSettingState object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceComplianceSettingState
+     * @return a {@link DeviceComplianceSettingState}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancesettingstate-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -103,13 +107,12 @@ public class DeviceComplianceSettingStatesRequestBuilder extends BaseRequestBuil
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceComplianceSettingState::createFromDiscriminatorValue);
     }
     /**
      * List properties and relationships of the deviceComplianceSettingState objects.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -118,7 +121,7 @@ public class DeviceComplianceSettingStatesRequestBuilder extends BaseRequestBuil
     /**
      * List properties and relationships of the deviceComplianceSettingState objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +133,7 @@ public class DeviceComplianceSettingStatesRequestBuilder extends BaseRequestBuil
     /**
      * Create a new deviceComplianceSettingState object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceComplianceSettingState body) {
@@ -140,12 +143,12 @@ public class DeviceComplianceSettingStatesRequestBuilder extends BaseRequestBuil
      * Create a new deviceComplianceSettingState object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceComplianceSettingState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceManagement/deviceCompliancePolicySettingStateSummaries/{deviceCompliancePolicySettingStateSummary%2Did}/deviceComplianceSettingStates", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -154,7 +157,7 @@ public class DeviceComplianceSettingStatesRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DeviceComplianceSettingStatesRequestBuilder
+     * @return a {@link DeviceComplianceSettingStatesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceComplianceSettingStatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -208,7 +211,7 @@ public class DeviceComplianceSettingStatesRequestBuilder extends BaseRequestBuil
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

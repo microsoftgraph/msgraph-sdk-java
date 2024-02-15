@@ -22,7 +22,7 @@ public class DeviceActionResult implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DeviceActionResult and sets the default values.
+     * Instantiates a new {@link DeviceActionResult} and sets the default values.
      */
     public DeviceActionResult() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -31,7 +31,7 @@ public class DeviceActionResult implements AdditionalDataHolder, BackedModel, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceActionResult
+     * @return a {@link DeviceActionResult}
      */
     @jakarta.annotation.Nonnull
     public static DeviceActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,7 +52,7 @@ public class DeviceActionResult implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the actionName property value. Action name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getActionName() {
@@ -60,7 +60,7 @@ public class DeviceActionResult implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the actionState property value. State of the action on the device
-     * @return a ActionState
+     * @return a {@link ActionState}
      */
     @jakarta.annotation.Nullable
     public ActionState getActionState() {
@@ -68,7 +68,7 @@ public class DeviceActionResult implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -81,7 +81,7 @@ public class DeviceActionResult implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -89,7 +89,7 @@ public class DeviceActionResult implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -103,7 +103,7 @@ public class DeviceActionResult implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the lastUpdatedDateTime property value. Time the action state was last updated
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
@@ -111,7 +111,7 @@ public class DeviceActionResult implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -119,7 +119,7 @@ public class DeviceActionResult implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the startDateTime property value. Time the action was initiated
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {

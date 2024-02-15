@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity implements Parsable {
     /**
-     * Instantiates a new ManagedDeviceMobileAppConfigurationDeviceStatus and sets the default values.
+     * Instantiates a new {@link ManagedDeviceMobileAppConfigurationDeviceStatus} and sets the default values.
      */
     public ManagedDeviceMobileAppConfigurationDeviceStatus() {
         super();
@@ -21,7 +21,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedDeviceMobileAppConfigurationDeviceStatus
+     * @return a {@link ManagedDeviceMobileAppConfigurationDeviceStatus}
      */
     @jakarta.annotation.Nonnull
     public static ManagedDeviceMobileAppConfigurationDeviceStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
     }
     /**
      * Gets the complianceGracePeriodExpirationDateTime property value. The DateTime when device compliance grace period expires
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getComplianceGracePeriodExpirationDateTime() {
@@ -38,7 +38,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
     }
     /**
      * Gets the deviceDisplayName property value. Device name of the DevicePolicyStatus.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
@@ -46,7 +46,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
     }
     /**
      * Gets the deviceModel property value. The device model that is being reported
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceModel() {
@@ -54,7 +54,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -70,7 +70,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
     }
     /**
      * Gets the lastReportedDateTime property value. Last modified date time of the policy report.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastReportedDateTime() {
@@ -78,7 +78,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
     }
     /**
      * Gets the status property value. The status property
-     * @return a ComplianceStatus
+     * @return a {@link ComplianceStatus}
      */
     @jakarta.annotation.Nullable
     public ComplianceStatus getStatus() {
@@ -86,7 +86,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
     }
     /**
      * Gets the userName property value. The User Name that is being reported
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
@@ -94,7 +94,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
     }
     /**
      * Gets the userPrincipalName property value. UserPrincipalName.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

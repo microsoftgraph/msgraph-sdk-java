@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
     /**
-     * Instantiates a new SoftwareUpdateStatusSummary and sets the default values.
+     * Instantiates a new {@link SoftwareUpdateStatusSummary} and sets the default values.
      */
     public SoftwareUpdateStatusSummary() {
         super();
@@ -17,7 +17,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SoftwareUpdateStatusSummary
+     * @return a {@link SoftwareUpdateStatusSummary}
      */
     @jakarta.annotation.Nonnull
     public static SoftwareUpdateStatusSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
     }
     /**
      * Gets the compliantDeviceCount property value. Number of compliant devices.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCompliantDeviceCount() {
@@ -34,7 +34,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
     }
     /**
      * Gets the compliantUserCount property value. Number of compliant users.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCompliantUserCount() {
@@ -42,7 +42,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
     }
     /**
      * Gets the conflictDeviceCount property value. Number of conflict devices.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getConflictDeviceCount() {
@@ -50,7 +50,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
     }
     /**
      * Gets the conflictUserCount property value. Number of conflict users.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getConflictUserCount() {
@@ -58,7 +58,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the policy.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -66,7 +66,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
     }
     /**
      * Gets the errorDeviceCount property value. Number of devices had error.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getErrorDeviceCount() {
@@ -74,7 +74,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
     }
     /**
      * Gets the errorUserCount property value. Number of users had error.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getErrorUserCount() {
@@ -82,7 +82,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -106,7 +106,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
     }
     /**
      * Gets the nonCompliantDeviceCount property value. Number of non compliant devices.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNonCompliantDeviceCount() {
@@ -114,7 +114,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
     }
     /**
      * Gets the nonCompliantUserCount property value. Number of non compliant users.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNonCompliantUserCount() {
@@ -122,7 +122,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
     }
     /**
      * Gets the notApplicableDeviceCount property value. Number of not applicable devices.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableDeviceCount() {
@@ -130,7 +130,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
     }
     /**
      * Gets the notApplicableUserCount property value. Number of not applicable users.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableUserCount() {
@@ -138,7 +138,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
     }
     /**
      * Gets the remediatedDeviceCount property value. Number of remediated devices.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRemediatedDeviceCount() {
@@ -146,7 +146,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
     }
     /**
      * Gets the remediatedUserCount property value. Number of remediated users.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRemediatedUserCount() {
@@ -154,7 +154,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
     }
     /**
      * Gets the unknownDeviceCount property value. Number of unknown devices.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUnknownDeviceCount() {
@@ -162,7 +162,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
     }
     /**
      * Gets the unknownUserCount property value. Number of unknown users.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUnknownUserCount() {

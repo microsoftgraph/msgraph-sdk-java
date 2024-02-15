@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamsApp extends Entity implements Parsable {
     /**
-     * Instantiates a new TeamsApp and sets the default values.
+     * Instantiates a new {@link TeamsApp} and sets the default values.
      */
     public TeamsApp() {
         super();
@@ -17,7 +17,7 @@ public class TeamsApp extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamsApp
+     * @return a {@link TeamsApp}
      */
     @jakarta.annotation.Nonnull
     public static TeamsApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class TeamsApp extends Entity implements Parsable {
     }
     /**
      * Gets the appDefinitions property value. The details for each version of the app.
-     * @return a java.util.List<TeamsAppDefinition>
+     * @return a {@link java.util.List<TeamsAppDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamsAppDefinition> getAppDefinitions() {
@@ -34,7 +34,7 @@ public class TeamsApp extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the catalog app provided by the app developer in the Microsoft Teams zip app package.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -42,7 +42,7 @@ public class TeamsApp extends Entity implements Parsable {
     }
     /**
      * Gets the distributionMethod property value. The method of distribution for the app. Read-only.
-     * @return a TeamsAppDistributionMethod
+     * @return a {@link TeamsAppDistributionMethod}
      */
     @jakarta.annotation.Nullable
     public TeamsAppDistributionMethod getDistributionMethod() {
@@ -50,7 +50,7 @@ public class TeamsApp extends Entity implements Parsable {
     }
     /**
      * Gets the externalId property value. The ID of the catalog provided by the app developer in the Microsoft Teams zip app package.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
@@ -58,7 +58,7 @@ public class TeamsApp extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

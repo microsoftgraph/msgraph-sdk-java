@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudApplicationEvidence extends AlertEvidence implements Parsable {
     /**
-     * Instantiates a new CloudApplicationEvidence and sets the default values.
+     * Instantiates a new {@link CloudApplicationEvidence} and sets the default values.
      */
     public CloudApplicationEvidence() {
         super();
@@ -18,7 +18,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudApplicationEvidence
+     * @return a {@link CloudApplicationEvidence}
      */
     @jakarta.annotation.Nonnull
     public static CloudApplicationEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * Gets the appId property value. Unique identifier of the application.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getAppId() {
@@ -35,7 +35,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * Gets the displayName property value. Name of the application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -43,7 +43,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * Gets the instanceId property value. Identifier of the instance of the Software as a Service (SaaS) application.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getInstanceId() {
@@ -65,7 +65,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * Gets the instanceName property value. Name of the instance of the SaaS application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInstanceName() {
@@ -73,7 +73,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * Gets the saasAppId property value. The identifier of the SaaS application.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getSaasAppId() {

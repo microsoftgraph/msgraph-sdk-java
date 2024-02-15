@@ -18,7 +18,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SimulationReportOverview and sets the default values.
+     * Instantiates a new {@link SimulationReportOverview} and sets the default values.
      */
     public SimulationReportOverview() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, BackedMod
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SimulationReportOverview
+     * @return a {@link SimulationReportOverview}
      */
     @jakarta.annotation.Nonnull
     public static SimulationReportOverview createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, BackedMod
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -71,7 +71,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the recommendedActions property value. List of recommended actions for a tenant to improve its security posture based on the attack simulation and training campaign attack type.
-     * @return a java.util.List<RecommendedAction>
+     * @return a {@link java.util.List<RecommendedAction>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<RecommendedAction> getRecommendedActions() {
@@ -87,7 +87,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the resolvedTargetsCount property value. Number of valid users in the attack simulation and training campaign.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getResolvedTargetsCount() {
@@ -95,7 +95,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the simulationEventsContent property value. Summary of simulation events in the attack simulation and training campaign.
-     * @return a SimulationEventsContent
+     * @return a {@link SimulationEventsContent}
      */
     @jakarta.annotation.Nullable
     public SimulationEventsContent getSimulationEventsContent() {
@@ -103,7 +103,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the trainingEventsContent property value. Summary of assigned trainings in the attack simulation and training campaign.
-     * @return a TrainingEventsContent
+     * @return a {@link TrainingEventsContent}
      */
     @jakarta.annotation.Nullable
     public TrainingEventsContent getTrainingEventsContent() {

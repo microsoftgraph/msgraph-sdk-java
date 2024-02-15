@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Call extends Entity implements Parsable {
     /**
-     * Instantiates a new Call and sets the default values.
+     * Instantiates a new {@link Call} and sets the default values.
      */
     public Call() {
         super();
@@ -17,7 +17,7 @@ public class Call extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Call
+     * @return a {@link Call}
      */
     @jakarta.annotation.Nonnull
     public static Call createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the audioRoutingGroups property value. The audioRoutingGroups property
-     * @return a java.util.List<AudioRoutingGroup>
+     * @return a {@link java.util.List<AudioRoutingGroup>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AudioRoutingGroup> getAudioRoutingGroups() {
@@ -34,7 +34,7 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the callbackUri property value. The callback URL on which callbacks are delivered. Must be an HTTPS URL.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCallbackUri() {
@@ -42,7 +42,7 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the callChainId property value. A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This identifier must be copied over from Microsoft.Graph.Call.CallChainId.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCallChainId() {
@@ -50,7 +50,7 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the callOptions property value. Contains the optional features for the call.
-     * @return a CallOptions
+     * @return a {@link CallOptions}
      */
     @jakarta.annotation.Nullable
     public CallOptions getCallOptions() {
@@ -58,7 +58,7 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the callRoutes property value. The routing information on how the call was retargeted. Read-only.
-     * @return a java.util.List<CallRoute>
+     * @return a {@link java.util.List<CallRoute>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CallRoute> getCallRoutes() {
@@ -66,7 +66,7 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the chatInfo property value. The chat information. Required information for joining a meeting.
-     * @return a ChatInfo
+     * @return a {@link ChatInfo}
      */
     @jakarta.annotation.Nullable
     public ChatInfo getChatInfo() {
@@ -74,7 +74,7 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the contentSharingSessions property value. The contentSharingSessions property
-     * @return a java.util.List<ContentSharingSession>
+     * @return a {@link java.util.List<ContentSharingSession>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ContentSharingSession> getContentSharingSessions() {
@@ -82,7 +82,7 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the direction property value. The direction of the call. The possible values are incoming or outgoing. Read-only.
-     * @return a CallDirection
+     * @return a {@link CallDirection}
      */
     @jakarta.annotation.Nullable
     public CallDirection getDirection() {
@@ -90,7 +90,7 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -123,7 +123,7 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the incomingContext property value. Call context associated with an incoming call.
-     * @return a IncomingContext
+     * @return a {@link IncomingContext}
      */
     @jakarta.annotation.Nullable
     public IncomingContext getIncomingContext() {
@@ -131,7 +131,7 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the mediaConfig property value. The media configuration. Required.
-     * @return a MediaConfig
+     * @return a {@link MediaConfig}
      */
     @jakarta.annotation.Nullable
     public MediaConfig getMediaConfig() {
@@ -139,7 +139,7 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the mediaState property value. Read-only. The call media state.
-     * @return a CallMediaState
+     * @return a {@link CallMediaState}
      */
     @jakarta.annotation.Nullable
     public CallMediaState getMediaState() {
@@ -147,7 +147,7 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the meetingInfo property value. The meeting information. Required information for meeting scenarios.
-     * @return a MeetingInfo
+     * @return a {@link MeetingInfo}
      */
     @jakarta.annotation.Nullable
     public MeetingInfo getMeetingInfo() {
@@ -155,7 +155,7 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the myParticipantId property value. The myParticipantId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMyParticipantId() {
@@ -163,7 +163,7 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the operations property value. The operations property
-     * @return a java.util.List<CommsOperation>
+     * @return a {@link java.util.List<CommsOperation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CommsOperation> getOperations() {
@@ -171,7 +171,7 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the participants property value. The participants property
-     * @return a java.util.List<Participant>
+     * @return a {@link java.util.List<Participant>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Participant> getParticipants() {
@@ -179,7 +179,7 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the requestedModalities property value. The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data.
-     * @return a java.util.List<Modality>
+     * @return a {@link java.util.List<Modality>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Modality> getRequestedModalities() {
@@ -187,7 +187,7 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the resultInfo property value. The result information. For example, the result can hold termination reason. Read-only.
-     * @return a ResultInfo
+     * @return a {@link ResultInfo}
      */
     @jakarta.annotation.Nullable
     public ResultInfo getResultInfo() {
@@ -195,7 +195,7 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the source property value. The originator of the call.
-     * @return a ParticipantInfo
+     * @return a {@link ParticipantInfo}
      */
     @jakarta.annotation.Nullable
     public ParticipantInfo getSource() {
@@ -203,7 +203,7 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The call state. Possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only.
-     * @return a CallState
+     * @return a {@link CallState}
      */
     @jakarta.annotation.Nullable
     public CallState getState() {
@@ -211,7 +211,7 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the subject property value. The subject of the conversation.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
@@ -219,7 +219,7 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the targets property value. The targets of the call. Required information for creating peer to peer call.
-     * @return a java.util.List<InvitationParticipantInfo>
+     * @return a {@link java.util.List<InvitationParticipantInfo>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<InvitationParticipantInfo> getTargets() {
@@ -227,7 +227,7 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the tenantId property value. The tenantId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -235,7 +235,7 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the toneInfo property value. The toneInfo property
-     * @return a ToneInfo
+     * @return a {@link ToneInfo}
      */
     @jakarta.annotation.Nullable
     public ToneInfo getToneInfo() {
@@ -243,7 +243,7 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the transcription property value. The transcription information for the call. Read-only.
-     * @return a CallTranscriptionInfo
+     * @return a {@link CallTranscriptionInfo}
      */
     @jakarta.annotation.Nullable
     public CallTranscriptionInfo getTranscription() {

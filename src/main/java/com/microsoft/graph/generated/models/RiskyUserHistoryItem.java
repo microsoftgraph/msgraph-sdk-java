@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
     /**
-     * Instantiates a new RiskyUserHistoryItem and sets the default values.
+     * Instantiates a new {@link RiskyUserHistoryItem} and sets the default values.
      */
     public RiskyUserHistoryItem() {
         super();
@@ -17,7 +17,7 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RiskyUserHistoryItem
+     * @return a {@link RiskyUserHistoryItem}
      */
     @jakarta.annotation.Nonnull
     public static RiskyUserHistoryItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
     }
     /**
      * Gets the activity property value. The activity related to user risk level change.
-     * @return a RiskUserActivity
+     * @return a {@link RiskUserActivity}
      */
     @jakarta.annotation.Nullable
     public RiskUserActivity getActivity() {
@@ -34,7 +34,7 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
     }
     /**
      * Gets the initiatedBy property value. The ID of actor that does the operation.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInitiatedBy() {
@@ -54,7 +54,7 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
     }
     /**
      * Gets the userId property value. The ID of the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

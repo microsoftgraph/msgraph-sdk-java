@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OmaSettingBase64 extends OmaSetting implements Parsable {
     /**
-     * Instantiates a new OmaSettingBase64 and sets the default values.
+     * Instantiates a new {@link OmaSettingBase64} and sets the default values.
      */
     public OmaSettingBase64() {
         super();
@@ -21,7 +21,7 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OmaSettingBase64
+     * @return a {@link OmaSettingBase64}
      */
     @jakarta.annotation.Nonnull
     public static OmaSettingBase64 createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -41,7 +41,7 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
     }
     /**
      * Gets the fileName property value. File name associated with the Value property (.cer
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
@@ -49,7 +49,7 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
     }
     /**
      * Gets the value property value. Value. (Base64 encoded string)
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getValue() {

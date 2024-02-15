@@ -18,7 +18,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new PrinterDefaults and sets the default values.
+     * Instantiates a new {@link PrinterDefaults} and sets the default values.
      */
     public PrinterDefaults() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrinterDefaults
+     * @return a {@link PrinterDefaults}
      */
     @jakarta.annotation.Nonnull
     public static PrinterDefaults createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the colorMode property value. The default color mode to use when printing the document. Valid values are described in the following table.
-     * @return a PrintColorMode
+     * @return a {@link PrintColorMode}
      */
     @jakarta.annotation.Nullable
     public PrintColorMode getColorMode() {
@@ -65,7 +65,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the contentType property value. The default content (MIME) type to use when processing documents.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContentType() {
@@ -73,7 +73,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the copiesPerJob property value. The default number of copies printed per job.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCopiesPerJob() {
@@ -81,7 +81,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the dpi property value. The default resolution in DPI to use when printing the job.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDpi() {
@@ -89,7 +89,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the duplexMode property value. The default duplex (double-sided) configuration to use when printing a document. Valid values are described in the following table.
-     * @return a PrintDuplexMode
+     * @return a {@link PrintDuplexMode}
      */
     @jakarta.annotation.Nullable
     public PrintDuplexMode getDuplexMode() {
@@ -97,7 +97,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -124,7 +124,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the finishings property value. The default set of finishings to apply to print jobs. Valid values are described in the following table.
-     * @return a java.util.List<PrintFinishing>
+     * @return a {@link java.util.List<PrintFinishing>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintFinishing> getFinishings() {
@@ -132,7 +132,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the fitPdfToPage property value. The default fitPdfToPage setting. True to fit each page of a PDF document to a physical sheet of media; false to let the printer decide how to lay out impressions.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFitPdfToPage() {
@@ -140,7 +140,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the inputBin property value. The inputBin property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInputBin() {
@@ -148,7 +148,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the mediaColor property value. The default media (such as paper) color to print the document on.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMediaColor() {
@@ -156,7 +156,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the mediaSize property value. The default media size to use. Supports standard size names for ISO and ANSI media sizes. Valid values are listed in the printerCapabilities topic.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMediaSize() {
@@ -164,7 +164,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the mediaType property value. The default media (such as paper) type to print the document on.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMediaType() {
@@ -172,7 +172,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the multipageLayout property value. The default direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table.
-     * @return a PrintMultipageLayout
+     * @return a {@link PrintMultipageLayout}
      */
     @jakarta.annotation.Nullable
     public PrintMultipageLayout getMultipageLayout() {
@@ -180,7 +180,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -188,7 +188,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the orientation property value. The default orientation to use when printing the document. Valid values are described in the following table.
-     * @return a PrintOrientation
+     * @return a {@link PrintOrientation}
      */
     @jakarta.annotation.Nullable
     public PrintOrientation getOrientation() {
@@ -196,7 +196,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the outputBin property value. The default output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOutputBin() {
@@ -204,7 +204,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the pagesPerSheet property value. The default number of document pages to print on each sheet.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPagesPerSheet() {
@@ -212,7 +212,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the quality property value. The default quality to use when printing the document. Valid values are described in the following table.
-     * @return a PrintQuality
+     * @return a {@link PrintQuality}
      */
     @jakarta.annotation.Nullable
     public PrintQuality getQuality() {
@@ -220,7 +220,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the scaling property value. Specifies how the printer scales the document data to fit the requested media. Valid values are described in the following table.
-     * @return a PrintScaling
+     * @return a {@link PrintScaling}
      */
     @jakarta.annotation.Nullable
     public PrintScaling getScaling() {

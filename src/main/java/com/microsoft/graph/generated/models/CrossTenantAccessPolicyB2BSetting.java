@@ -18,7 +18,7 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new CrossTenantAccessPolicyB2BSetting and sets the default values.
+     * Instantiates a new {@link CrossTenantAccessPolicyB2BSetting} and sets the default values.
      */
     public CrossTenantAccessPolicyB2BSetting() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CrossTenantAccessPolicyB2BSetting
+     * @return a {@link CrossTenantAccessPolicyB2BSetting}
      */
     @jakarta.annotation.Nonnull
     public static CrossTenantAccessPolicyB2BSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
     }
     /**
      * Gets the applications property value. The list of applications targeted with your cross-tenant access policy.
-     * @return a CrossTenantAccessPolicyTargetConfiguration
+     * @return a {@link CrossTenantAccessPolicyTargetConfiguration}
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyTargetConfiguration getApplications() {
@@ -57,7 +57,7 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -85,7 +85,7 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
     }
     /**
      * Gets the usersAndGroups property value. The list of users and groups targeted with your cross-tenant access policy.
-     * @return a CrossTenantAccessPolicyTargetConfiguration
+     * @return a {@link CrossTenantAccessPolicyTargetConfiguration}
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyTargetConfiguration getUsersAndGroups() {

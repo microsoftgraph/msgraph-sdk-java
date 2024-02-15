@@ -19,7 +19,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AssignRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new AssignRequestBuilder and sets the default values.
+     * Instantiates a new {@link AssignRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -27,7 +27,7 @@ public class AssignRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps/{mobileApp%2Did}/assign", pathParameters);
     }
     /**
-     * Instantiates a new AssignRequestBuilder and sets the default values.
+     * Instantiates a new {@link AssignRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -35,41 +35,40 @@ public class AssignRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps/{mobileApp%2Did}/assign", rawUrl);
     }
     /**
-     * Not yet documented
+     * Invoke action assign
      * @param body The request body
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobileapp-assign?view=graph-rest-1.0">Find more info here</a>
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void post(@jakarta.annotation.Nonnull final AssignPostRequestBody body) {
         post(body, null);
     }
     /**
-     * Not yet documented
+     * Invoke action assign
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobileapp-assign?view=graph-rest-1.0">Find more info here</a>
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void post(@jakarta.annotation.Nonnull final AssignPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Not yet documented
+     * Invoke action assign
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AssignPostRequestBody body) {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Not yet documented
+     * Invoke action assign
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AssignPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -83,7 +82,7 @@ public class AssignRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AssignRequestBuilder
+     * @return a {@link AssignRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

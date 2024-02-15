@@ -27,6 +27,7 @@ import java.util.Objects;
 public class PresenceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the clearPresence method.
+     * @return a {@link ClearPresenceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ClearPresenceRequestBuilder clearPresence() {
@@ -34,6 +35,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the clearUserPreferredPresence method.
+     * @return a {@link ClearUserPreferredPresenceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ClearUserPreferredPresenceRequestBuilder clearUserPreferredPresence() {
@@ -41,6 +43,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the setPresence method.
+     * @return a {@link SetPresenceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SetPresenceRequestBuilder setPresence() {
@@ -48,6 +51,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the setStatusMessage method.
+     * @return a {@link SetStatusMessageRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SetStatusMessageRequestBuilder setStatusMessage() {
@@ -55,13 +59,14 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the setUserPreferredPresence method.
+     * @return a {@link SetUserPreferredPresenceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SetUserPreferredPresenceRequestBuilder setUserPreferredPresence() {
         return new SetUserPreferredPresenceRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new PresenceRequestBuilder and sets the default values.
+     * Instantiates a new {@link PresenceRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -69,7 +74,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/presence{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new PresenceRequestBuilder and sets the default values.
+     * Instantiates a new {@link PresenceRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -78,6 +83,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property presence for users
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -85,41 +91,43 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property presence for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get a user's presence information.
-     * @return a Presence
-     * @see <a href="https://learn.microsoft.com/graph/api/presence-get?view=graph-rest-1.0">Find more info here</a>
+     * Set a presence status message for a user. An optional expiration date and time can be supplied.
+     * @return a {@link Presence}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/presence-setstatusmessage?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Presence get() {
         return get(null);
     }
     /**
-     * Get a user's presence information.
+     * Set a presence status message for a user. An optional expiration date and time can be supplied.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Presence
-     * @see <a href="https://learn.microsoft.com/graph/api/presence-get?view=graph-rest-1.0">Find more info here</a>
+     * @return a {@link Presence}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/presence-setstatusmessage?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Presence get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Presence::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property presence in users
      * @param body The request body
-     * @return a Presence
+     * @return a {@link Presence}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Presence patch(@jakarta.annotation.Nonnull final Presence body) {
@@ -129,20 +137,20 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property presence in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Presence
+     * @return a {@link Presence}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Presence patch(@jakarta.annotation.Nonnull final Presence body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Presence::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property presence for users
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -151,27 +159,27 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property presence for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/users/{user%2Did}/presence", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Get a user's presence information.
-     * @return a RequestInformation
+     * Set a presence status message for a user. An optional expiration date and time can be supplied.
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a user's presence information.
+     * Set a presence status message for a user. An optional expiration date and time can be supplied.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -183,7 +191,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property presence in users
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Presence body) {
@@ -193,12 +201,12 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property presence in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Presence body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/users/{user%2Did}/presence", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -207,7 +215,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a PresenceRequestBuilder
+     * @return a {@link PresenceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PresenceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -221,7 +229,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get a user's presence information.
+     * Set a presence status message for a user. An optional expiration date and time can be supplied.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
@@ -237,7 +245,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

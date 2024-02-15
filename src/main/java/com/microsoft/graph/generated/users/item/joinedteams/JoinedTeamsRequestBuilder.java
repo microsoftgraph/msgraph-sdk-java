@@ -26,6 +26,7 @@ import java.util.Objects;
 public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,6 +34,7 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getAllMessages method.
+     * @return a {@link GetAllMessagesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetAllMessagesRequestBuilder getAllMessages() {
@@ -41,7 +43,7 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the joinedTeams property of the microsoft.graph.user entity.
      * @param teamId The unique identifier of team
-     * @return a TeamItemRequestBuilder
+     * @return a {@link TeamItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TeamItemRequestBuilder byTeamId(@jakarta.annotation.Nonnull final String teamId) {
@@ -51,7 +53,7 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
         return new TeamItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new JoinedTeamsRequestBuilder and sets the default values.
+     * Instantiates a new {@link JoinedTeamsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +61,7 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/joinedTeams{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new JoinedTeamsRequestBuilder and sets the default values.
+     * Instantiates a new {@link JoinedTeamsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -68,7 +70,8 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the teams in Microsoft Teams that the user is a direct member of.
-     * @return a TeamCollectionResponse
+     * @return a {@link TeamCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-joinedteams?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -78,21 +81,22 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the teams in Microsoft Teams that the user is a direct member of.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a TeamCollectionResponse
+     * @return a {@link TeamCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-joinedteams?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, TeamCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to joinedTeams for users
      * @param body The request body
-     * @return a Team
+     * @return a {@link Team}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Team post(@jakarta.annotation.Nonnull final Team body) {
@@ -102,20 +106,20 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to joinedTeams for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Team
+     * @return a {@link Team}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Team post(@jakarta.annotation.Nonnull final Team body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Team::createFromDiscriminatorValue);
     }
     /**
      * Get the teams in Microsoft Teams that the user is a direct member of.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -124,7 +128,7 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the teams in Microsoft Teams that the user is a direct member of.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -136,7 +140,7 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to joinedTeams for users
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Team body) {
@@ -146,12 +150,12 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to joinedTeams for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Team body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/users/{user%2Did}/joinedTeams", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -160,7 +164,7 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a JoinedTeamsRequestBuilder
+     * @return a {@link JoinedTeamsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public JoinedTeamsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -214,7 +218,7 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -24,6 +24,7 @@ import java.util.Objects;
 public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the subject property of the microsoft.graph.identityGovernance.userProcessingResult entity.
+     * @return a {@link SubjectRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SubjectRequestBuilder subject() {
@@ -31,13 +32,14 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the taskProcessingResults property of the microsoft.graph.identityGovernance.userProcessingResult entity.
+     * @return a {@link TaskProcessingResultsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TaskProcessingResultsRequestBuilder taskProcessingResults() {
         return new TaskProcessingResultsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new UserProcessingResultItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link UserProcessingResultItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -45,7 +47,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/runs/{run%2Did}/userProcessingResults/{userProcessingResult%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new UserProcessingResultItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link UserProcessingResultItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -54,7 +56,8 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the user processing result of a user processing result of a run.
-     * @return a UserProcessingResult
+     * @return a {@link UserProcessingResult}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-userprocessingresult-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -64,20 +67,20 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the user processing result of a user processing result of a run.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UserProcessingResult
+     * @return a {@link UserProcessingResult}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-userprocessingresult-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserProcessingResult get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UserProcessingResult::createFromDiscriminatorValue);
     }
     /**
      * Get the user processing result of a user processing result of a run.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -86,7 +89,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the user processing result of a user processing result of a run.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,7 +101,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a UserProcessingResultItemRequestBuilder
+     * @return a {@link UserProcessingResultItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserProcessingResultItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -122,7 +125,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

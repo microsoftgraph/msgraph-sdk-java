@@ -19,7 +19,7 @@ public class CloudCommunications implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new CloudCommunications and sets the default values.
+     * Instantiates a new {@link CloudCommunications} and sets the default values.
      */
     public CloudCommunications() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class CloudCommunications implements AdditionalDataHolder, BackedModel, P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudCommunications
+     * @return a {@link CloudCommunications}
      */
     @jakarta.annotation.Nonnull
     public static CloudCommunications createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class CloudCommunications implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class CloudCommunications implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class CloudCommunications implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the callRecords property value. The callRecords property
-     * @return a java.util.List<CallRecord>
+     * @return a {@link java.util.List<CallRecord>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CallRecord> getCallRecords() {
@@ -66,7 +66,7 @@ public class CloudCommunications implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the calls property value. The calls property
-     * @return a java.util.List<Call>
+     * @return a {@link java.util.List<Call>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Call> getCalls() {
@@ -74,7 +74,7 @@ public class CloudCommunications implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -88,7 +88,7 @@ public class CloudCommunications implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -96,7 +96,7 @@ public class CloudCommunications implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the onlineMeetings property value. The onlineMeetings property
-     * @return a java.util.List<OnlineMeeting>
+     * @return a {@link java.util.List<OnlineMeeting>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnlineMeeting> getOnlineMeetings() {
@@ -104,7 +104,7 @@ public class CloudCommunications implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the presences property value. The presences property
-     * @return a java.util.List<Presence>
+     * @return a {@link java.util.List<Presence>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Presence> getPresences() {

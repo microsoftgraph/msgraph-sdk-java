@@ -18,7 +18,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SearchHitsContainer and sets the default values.
+     * Instantiates a new {@link SearchHitsContainer} and sets the default values.
      */
     public SearchHitsContainer() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, BackedModel, P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SearchHitsContainer
+     * @return a {@link SearchHitsContainer}
      */
     @jakarta.annotation.Nonnull
     public static SearchHitsContainer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the aggregations property value. The aggregations property
-     * @return a java.util.List<SearchAggregation>
+     * @return a {@link java.util.List<SearchAggregation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SearchAggregation> getAggregations() {
@@ -57,7 +57,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the hits property value. A collection of the search results.
-     * @return a java.util.List<SearchHit>
+     * @return a {@link java.util.List<SearchHit>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SearchHit> getHits() {
@@ -87,7 +87,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the moreResultsAvailable property value. Provides information if more results are available. Based on this information, you can adjust the from and size properties of the searchRequest accordingly.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getMoreResultsAvailable() {
@@ -95,7 +95,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -103,7 +103,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the total property value. The total number of results. Note this isn't the number of results on the page, but the total number of results satisfying the query.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotal() {

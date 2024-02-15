@@ -19,7 +19,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new NetworkConnection and sets the default values.
+     * Instantiates a new {@link NetworkConnection} and sets the default values.
      */
     public NetworkConnection() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a NetworkConnection
+     * @return a {@link NetworkConnection}
      */
     @jakarta.annotation.Nonnull
     public static NetworkConnection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the applicationName property value. Name of the application managing the network connection (for example, Facebook or SMTP).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getApplicationName() {
@@ -58,7 +58,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -66,7 +66,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the destinationAddress property value. Destination IP address (of the network connection).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDestinationAddress() {
@@ -74,7 +74,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the destinationDomain property value. Destination domain portion of the destination URL. (for example 'www.contoso.com').
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDestinationDomain() {
@@ -82,7 +82,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the destinationLocation property value. Location (by IP address mapping) associated with the destination of a network connection.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDestinationLocation() {
@@ -90,7 +90,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the destinationPort property value. Destination port (of the network connection).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDestinationPort() {
@@ -98,7 +98,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the destinationUrl property value. Network connection URL/URI string - excluding parameters. (for example 'www.contoso.com/products/default.html')
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDestinationUrl() {
@@ -106,7 +106,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the direction property value. Network connection direction. Possible values are: unknown, inbound, outbound.
-     * @return a ConnectionDirection
+     * @return a {@link ConnectionDirection}
      */
     @jakarta.annotation.Nullable
     public ConnectionDirection getDirection() {
@@ -114,7 +114,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the domainRegisteredDateTime property value. Date when the destination domain was registered. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDomainRegisteredDateTime() {
@@ -122,7 +122,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -152,7 +152,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the localDnsName property value. The local DNS name resolution as it appears in the host's local DNS cache (for example, in case the 'hosts' file was tampered with).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLocalDnsName() {
@@ -160,7 +160,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the natDestinationAddress property value. Network Address Translation destination IP address.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNatDestinationAddress() {
@@ -168,7 +168,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the natDestinationPort property value. Network Address Translation destination port.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNatDestinationPort() {
@@ -176,7 +176,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the natSourceAddress property value. Network Address Translation source IP address.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNatSourceAddress() {
@@ -184,7 +184,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the natSourcePort property value. Network Address Translation source port.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNatSourcePort() {
@@ -192,7 +192,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -200,7 +200,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the protocol property value. Network protocol. Possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII.
-     * @return a SecurityNetworkProtocol
+     * @return a {@link SecurityNetworkProtocol}
      */
     @jakarta.annotation.Nullable
     public SecurityNetworkProtocol getProtocol() {
@@ -208,7 +208,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the riskScore property value. Provider generated/calculated risk score of the network connection. Recommended value range of 0-1, which equates to a percentage.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRiskScore() {
@@ -216,7 +216,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the sourceAddress property value. Source (i.e. origin) IP address (of the network connection).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSourceAddress() {
@@ -224,7 +224,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the sourceLocation property value. Location (by IP address mapping) associated with the source of a network connection.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSourceLocation() {
@@ -232,7 +232,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the sourcePort property value. Source (i.e. origin) IP port (of the network connection).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSourcePort() {
@@ -240,7 +240,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the status property value. Network connection status. Possible values are: unknown, attempted, succeeded, blocked, failed.
-     * @return a ConnectionStatus
+     * @return a {@link ConnectionStatus}
      */
     @jakarta.annotation.Nullable
     public ConnectionStatus getStatus() {
@@ -248,7 +248,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the urlParameters property value. Parameters (suffix) of the destination URL.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUrlParameters() {

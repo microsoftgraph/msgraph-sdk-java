@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
     /**
-     * Instantiates a new JoinMeetingIdMeetingInfo and sets the default values.
+     * Instantiates a new {@link JoinMeetingIdMeetingInfo} and sets the default values.
      */
     public JoinMeetingIdMeetingInfo() {
         super();
@@ -18,7 +18,7 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a JoinMeetingIdMeetingInfo
+     * @return a {@link JoinMeetingIdMeetingInfo}
      */
     @jakarta.annotation.Nonnull
     public static JoinMeetingIdMeetingInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
     }
     /**
      * Gets the joinMeetingId property value. The ID used to join the meeting.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getJoinMeetingId() {
@@ -46,7 +46,7 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
     }
     /**
      * Gets the passcode property value. The passcode used to join the meeting. Optional.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPasscode() {

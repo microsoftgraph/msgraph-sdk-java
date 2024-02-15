@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Team extends Entity implements Parsable {
     /**
-     * Instantiates a new Team and sets the default values.
+     * Instantiates a new {@link Team} and sets the default values.
      */
     public Team() {
         super();
@@ -18,7 +18,7 @@ public class Team extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Team
+     * @return a {@link Team}
      */
     @jakarta.annotation.Nonnull
     public static Team createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the allChannels property value. List of channels either hosted in or shared with the team (incoming channels).
-     * @return a java.util.List<Channel>
+     * @return a {@link java.util.List<Channel>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Channel> getAllChannels() {
@@ -35,7 +35,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the channels property value. The collection of channels and messages associated with the team.
-     * @return a java.util.List<Channel>
+     * @return a {@link java.util.List<Channel>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Channel> getChannels() {
@@ -43,7 +43,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the classification property value. An optional label. Typically describes the data or business sensitivity of the team. Must match one of a pre-configured set in the tenant's directory.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getClassification() {
@@ -51,7 +51,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Timestamp at which the team was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -59,7 +59,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. An optional description for the team. Maximum length: 1024 characters.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -67,7 +67,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the team.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -75,7 +75,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -112,7 +112,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the funSettings property value. Settings to configure use of Giphy, memes, and stickers in the team.
-     * @return a TeamFunSettings
+     * @return a {@link TeamFunSettings}
      */
     @jakarta.annotation.Nullable
     public TeamFunSettings getFunSettings() {
@@ -120,7 +120,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the group property value. The group property
-     * @return a Group
+     * @return a {@link Group}
      */
     @jakarta.annotation.Nullable
     public Group getGroup() {
@@ -128,7 +128,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the guestSettings property value. Settings to configure whether guests can create, update, or delete channels in the team.
-     * @return a TeamGuestSettings
+     * @return a {@link TeamGuestSettings}
      */
     @jakarta.annotation.Nullable
     public TeamGuestSettings getGuestSettings() {
@@ -136,7 +136,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the incomingChannels property value. List of channels shared with the team.
-     * @return a java.util.List<Channel>
+     * @return a {@link java.util.List<Channel>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Channel> getIncomingChannels() {
@@ -144,7 +144,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the installedApps property value. The apps installed in this team.
-     * @return a java.util.List<TeamsAppInstallation>
+     * @return a {@link java.util.List<TeamsAppInstallation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamsAppInstallation> getInstalledApps() {
@@ -152,7 +152,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the internalId property value. A unique ID for the team that has been used in a few places such as the audit log/Office 365 Management Activity API.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInternalId() {
@@ -160,7 +160,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the isArchived property value. Whether this team is in read-only mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsArchived() {
@@ -168,7 +168,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the members property value. Members and owners of the team.
-     * @return a java.util.List<ConversationMember>
+     * @return a {@link java.util.List<ConversationMember>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConversationMember> getMembers() {
@@ -176,7 +176,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the memberSettings property value. Settings to configure whether members can perform certain actions, for example, create channels and add bots, in the team.
-     * @return a TeamMemberSettings
+     * @return a {@link TeamMemberSettings}
      */
     @jakarta.annotation.Nullable
     public TeamMemberSettings getMemberSettings() {
@@ -184,7 +184,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the messagingSettings property value. Settings to configure messaging and mentions in the team.
-     * @return a TeamMessagingSettings
+     * @return a {@link TeamMessagingSettings}
      */
     @jakarta.annotation.Nullable
     public TeamMessagingSettings getMessagingSettings() {
@@ -192,7 +192,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the operations property value. The async operations that ran or are running on this team.
-     * @return a java.util.List<TeamsAsyncOperation>
+     * @return a {@link java.util.List<TeamsAsyncOperation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamsAsyncOperation> getOperations() {
@@ -200,7 +200,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the permissionGrants property value. A collection of permissions granted to apps to access the team.
-     * @return a java.util.List<ResourceSpecificPermissionGrant>
+     * @return a {@link java.util.List<ResourceSpecificPermissionGrant>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ResourceSpecificPermissionGrant> getPermissionGrants() {
@@ -208,7 +208,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the photo property value. The profile photo for the team.
-     * @return a ProfilePhoto
+     * @return a {@link ProfilePhoto}
      */
     @jakarta.annotation.Nullable
     public ProfilePhoto getPhoto() {
@@ -216,7 +216,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the primaryChannel property value. The general channel for the team.
-     * @return a Channel
+     * @return a {@link Channel}
      */
     @jakarta.annotation.Nullable
     public Channel getPrimaryChannel() {
@@ -224,7 +224,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the schedule property value. The schedule of shifts for this team.
-     * @return a Schedule
+     * @return a {@link Schedule}
      */
     @jakarta.annotation.Nullable
     public Schedule getSchedule() {
@@ -232,7 +232,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the specialization property value. Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case.
-     * @return a TeamSpecialization
+     * @return a {@link TeamSpecialization}
      */
     @jakarta.annotation.Nullable
     public TeamSpecialization getSpecialization() {
@@ -240,7 +240,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the summary property value. Contains summary information about the team, including number of owners, members, and guests.
-     * @return a TeamSummary
+     * @return a {@link TeamSummary}
      */
     @jakarta.annotation.Nullable
     public TeamSummary getSummary() {
@@ -248,7 +248,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the tags property value. The tags associated with the team.
-     * @return a java.util.List<TeamworkTag>
+     * @return a {@link java.util.List<TeamworkTag>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamworkTag> getTags() {
@@ -256,7 +256,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the template property value. The template this team was created from. See available templates.
-     * @return a TeamsTemplate
+     * @return a {@link TeamsTemplate}
      */
     @jakarta.annotation.Nullable
     public TeamsTemplate getTemplate() {
@@ -264,7 +264,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the tenantId property value. The ID of the Microsoft Entra tenant.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -272,7 +272,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the visibility property value. The visibility of the group and team. Defaults to Public.
-     * @return a TeamVisibilityType
+     * @return a {@link TeamVisibilityType}
      */
     @jakarta.annotation.Nullable
     public TeamVisibilityType getVisibility() {
@@ -280,7 +280,7 @@ public class Team extends Entity implements Parsable {
     }
     /**
      * Gets the webUrl property value. A hyperlink that will go to the team in the Microsoft Teams client. This is the URL that you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {

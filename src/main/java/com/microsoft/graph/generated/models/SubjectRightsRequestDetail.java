@@ -18,7 +18,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SubjectRightsRequestDetail and sets the default values.
+     * Instantiates a new {@link SubjectRightsRequestDetail} and sets the default values.
      */
     public SubjectRightsRequestDetail() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, BackedM
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SubjectRightsRequestDetail
+     * @return a {@link SubjectRightsRequestDetail}
      */
     @jakarta.annotation.Nonnull
     public static SubjectRightsRequestDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the excludedItemCount property value. Count of items that are excluded from the request.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getExcludedItemCount() {
@@ -65,7 +65,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, BackedM
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -82,7 +82,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the insightCounts property value. Count of items per insight.
-     * @return a java.util.List<KeyValuePair>
+     * @return a {@link java.util.List<KeyValuePair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getInsightCounts() {
@@ -90,7 +90,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the itemCount property value. Count of items found.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getItemCount() {
@@ -98,7 +98,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the itemNeedReview property value. Count of item that need review.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getItemNeedReview() {
@@ -106,7 +106,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -114,7 +114,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the productItemCounts property value. Count of items per product, such as Exchange, SharePoint, OneDrive, and Teams.
-     * @return a java.util.List<KeyValuePair>
+     * @return a {@link java.util.List<KeyValuePair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getProductItemCounts() {
@@ -122,7 +122,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the signedOffItemCount property value. Count of items signed off by the administrator.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getSignedOffItemCount() {
@@ -130,7 +130,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the totalItemSize property value. Total item size in bytes.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getTotalItemSize() {

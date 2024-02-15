@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecureScore extends Entity implements Parsable {
     /**
-     * Instantiates a new SecureScore and sets the default values.
+     * Instantiates a new {@link SecureScore} and sets the default values.
      */
     public SecureScore() {
         super();
@@ -18,7 +18,7 @@ public class SecureScore extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SecureScore
+     * @return a {@link SecureScore}
      */
     @jakarta.annotation.Nonnull
     public static SecureScore createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class SecureScore extends Entity implements Parsable {
     }
     /**
      * Gets the activeUserCount property value. Active user count of the given tenant.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getActiveUserCount() {
@@ -35,7 +35,7 @@ public class SecureScore extends Entity implements Parsable {
     }
     /**
      * Gets the averageComparativeScores property value. Average score by different scopes (for example, average by industry, average by seating) and control category (Identity, Data, Device, Apps, Infrastructure) within the scope.
-     * @return a java.util.List<AverageComparativeScore>
+     * @return a {@link java.util.List<AverageComparativeScore>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AverageComparativeScore> getAverageComparativeScores() {
@@ -43,7 +43,7 @@ public class SecureScore extends Entity implements Parsable {
     }
     /**
      * Gets the azureTenantId property value. GUID string for tenant ID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureTenantId() {
@@ -51,7 +51,7 @@ public class SecureScore extends Entity implements Parsable {
     }
     /**
      * Gets the controlScores property value. Contains tenant scores for a set of controls.
-     * @return a java.util.List<ControlScore>
+     * @return a {@link java.util.List<ControlScore>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ControlScore> getControlScores() {
@@ -59,7 +59,7 @@ public class SecureScore extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date when the entity is created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -67,7 +67,7 @@ public class SecureScore extends Entity implements Parsable {
     }
     /**
      * Gets the currentScore property value. Tenant current attained score on specified date.
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getCurrentScore() {
@@ -75,7 +75,7 @@ public class SecureScore extends Entity implements Parsable {
     }
     /**
      * Gets the enabledServices property value. Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint).
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEnabledServices() {
@@ -83,7 +83,7 @@ public class SecureScore extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -102,7 +102,7 @@ public class SecureScore extends Entity implements Parsable {
     }
     /**
      * Gets the licensedUserCount property value. Licensed user count of the given tenant.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getLicensedUserCount() {
@@ -110,7 +110,7 @@ public class SecureScore extends Entity implements Parsable {
     }
     /**
      * Gets the maxScore property value. Tenant maximum possible score on specified date.
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getMaxScore() {
@@ -118,7 +118,7 @@ public class SecureScore extends Entity implements Parsable {
     }
     /**
      * Gets the vendorInformation property value. Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required.
-     * @return a SecurityVendorInformation
+     * @return a {@link SecurityVendorInformation}
      */
     @jakarta.annotation.Nullable
     public SecurityVendorInformation getVendorInformation() {

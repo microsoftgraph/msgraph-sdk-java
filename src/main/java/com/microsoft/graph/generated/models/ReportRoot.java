@@ -18,7 +18,7 @@ public class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ReportRoot and sets the default values.
+     * Instantiates a new {@link ReportRoot} and sets the default values.
      */
     public ReportRoot() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ReportRoot
+     * @return a {@link ReportRoot}
      */
     @jakarta.annotation.Nonnull
     public static ReportRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the authenticationMethods property value. Container for navigation properties for Microsoft Entra authentication methods resources.
-     * @return a AuthenticationMethodsRoot
+     * @return a {@link AuthenticationMethodsRoot}
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodsRoot getAuthenticationMethods() {
@@ -57,7 +57,7 @@ public class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the dailyPrintUsageByPrinter property value. Retrieve a list of daily print usage summaries, grouped by printer.
-     * @return a java.util.List<PrintUsageByPrinter>
+     * @return a {@link java.util.List<PrintUsageByPrinter>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintUsageByPrinter> getDailyPrintUsageByPrinter() {
@@ -73,7 +73,7 @@ public class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the dailyPrintUsageByUser property value. Retrieve a list of daily print usage summaries, grouped by user.
-     * @return a java.util.List<PrintUsageByUser>
+     * @return a {@link java.util.List<PrintUsageByUser>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintUsageByUser> getDailyPrintUsageByUser() {
@@ -81,7 +81,7 @@ public class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -98,7 +98,7 @@ public class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the monthlyPrintUsageByPrinter property value. Retrieve a list of monthly print usage summaries, grouped by printer.
-     * @return a java.util.List<PrintUsageByPrinter>
+     * @return a {@link java.util.List<PrintUsageByPrinter>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintUsageByPrinter> getMonthlyPrintUsageByPrinter() {
@@ -106,7 +106,7 @@ public class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the monthlyPrintUsageByUser property value. Retrieve a list of monthly print usage summaries, grouped by user.
-     * @return a java.util.List<PrintUsageByUser>
+     * @return a {@link java.util.List<PrintUsageByUser>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintUsageByUser> getMonthlyPrintUsageByUser() {
@@ -114,7 +114,7 @@ public class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -122,7 +122,7 @@ public class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the partners property value. Represents billing details for a Microsoft direct partner.
-     * @return a Partners
+     * @return a {@link Partners}
      */
     @jakarta.annotation.Nullable
     public Partners getPartners() {
@@ -130,7 +130,7 @@ public class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the security property value. Represents an abstract type that contains resources for attack simulation and training reports.
-     * @return a SecurityReportsRoot
+     * @return a {@link SecurityReportsRoot}
      */
     @jakarta.annotation.Nullable
     public SecurityReportsRoot getSecurity() {

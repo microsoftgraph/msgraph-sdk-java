@@ -28,6 +28,7 @@ import java.util.Objects;
 public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the hostedContents property of the microsoft.graph.chatMessage entity.
+     * @return a {@link HostedContentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public HostedContentsRequestBuilder hostedContents() {
@@ -35,6 +36,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the replies property of the microsoft.graph.chatMessage entity.
+     * @return a {@link RepliesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RepliesRequestBuilder replies() {
@@ -42,6 +44,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the setReaction method.
+     * @return a {@link SetReactionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SetReactionRequestBuilder setReaction() {
@@ -49,6 +52,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the softDelete method.
+     * @return a {@link SoftDeleteRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SoftDeleteRequestBuilder softDelete() {
@@ -56,6 +60,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the undoSoftDelete method.
+     * @return a {@link UndoSoftDeleteRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UndoSoftDeleteRequestBuilder undoSoftDelete() {
@@ -63,13 +68,14 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the unsetReaction method.
+     * @return a {@link UnsetReactionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UnsetReactionRequestBuilder unsetReaction() {
         return new UnsetReactionRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new ChatMessageItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link ChatMessageItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -77,7 +83,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/chats/{chat%2Did}/messages/{chatMessage%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new ChatMessageItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link ChatMessageItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -86,6 +92,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property messages for chats
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -93,17 +100,18 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property messages for chats
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve a single message or a message reply in a channel or a chat.
-     * @return a ChatMessage
+     * @return a {@link ChatMessage}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -113,21 +121,22 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a single message or a message reply in a channel or a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ChatMessage
+     * @return a {@link ChatMessage}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ChatMessage get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ChatMessage::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property messages in chats
      * @param body The request body
-     * @return a ChatMessage
+     * @return a {@link ChatMessage}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ChatMessage patch(@jakarta.annotation.Nonnull final ChatMessage body) {
@@ -137,20 +146,20 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property messages in chats
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ChatMessage
+     * @return a {@link ChatMessage}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ChatMessage patch(@jakarta.annotation.Nonnull final ChatMessage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ChatMessage::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property messages for chats
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -159,18 +168,18 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property messages for chats
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/chats/{chat%2Did}/messages/{chatMessage%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Retrieve a single message or a message reply in a channel or a chat.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -179,7 +188,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a single message or a message reply in a channel or a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -191,7 +200,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property messages in chats
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ChatMessage body) {
@@ -201,12 +210,12 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property messages in chats
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ChatMessage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/chats/{chat%2Did}/messages/{chatMessage%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -215,7 +224,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ChatMessageItemRequestBuilder
+     * @return a {@link ChatMessageItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ChatMessageItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -245,7 +254,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

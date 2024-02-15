@@ -24,6 +24,7 @@ import java.util.Objects;
 public class LastModifiedByRequestBuilder extends BaseRequestBuilder {
     /**
      * The mailboxSettings property
+     * @return a {@link MailboxSettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MailboxSettingsRequestBuilder mailboxSettings() {
@@ -31,13 +32,14 @@ public class LastModifiedByRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The serviceProvisioningErrors property
+     * @return a {@link ServiceProvisioningErrorsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ServiceProvisioningErrorsRequestBuilder serviceProvisioningErrors() {
         return new ServiceProvisioningErrorsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new LastModifiedByRequestBuilder and sets the default values.
+     * Instantiates a new {@link LastModifiedByRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -45,7 +47,7 @@ public class LastModifiedByRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/customTaskExtensions/{customTaskExtension%2Did}/lastModifiedBy{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new LastModifiedByRequestBuilder and sets the default values.
+     * Instantiates a new {@link LastModifiedByRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -54,7 +56,8 @@ public class LastModifiedByRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The unique identifier of the Microsoft Entra user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
-     * @return a User
+     * @return a {@link User}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public User get() {
@@ -63,19 +66,19 @@ public class LastModifiedByRequestBuilder extends BaseRequestBuilder {
     /**
      * The unique identifier of the Microsoft Entra user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a User
+     * @return a {@link User}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public User get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, User::createFromDiscriminatorValue);
     }
     /**
      * The unique identifier of the Microsoft Entra user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -84,7 +87,7 @@ public class LastModifiedByRequestBuilder extends BaseRequestBuilder {
     /**
      * The unique identifier of the Microsoft Entra user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -96,7 +99,7 @@ public class LastModifiedByRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a LastModifiedByRequestBuilder
+     * @return a {@link LastModifiedByRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LastModifiedByRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -120,7 +123,7 @@ public class LastModifiedByRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

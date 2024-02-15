@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Partners extends Entity implements Parsable {
     /**
-     * Instantiates a new Partners and sets the default values.
+     * Instantiates a new {@link Partners} and sets the default values.
      */
     public Partners() {
         super();
@@ -18,7 +18,7 @@ public class Partners extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Partners
+     * @return a {@link Partners}
      */
     @jakarta.annotation.Nonnull
     public static Partners createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class Partners extends Entity implements Parsable {
     }
     /**
      * Gets the billing property value. Represents billing details for billed and unbilled data.
-     * @return a Billing
+     * @return a {@link Billing}
      */
     @jakarta.annotation.Nullable
     public Billing getBilling() {
@@ -35,7 +35,7 @@ public class Partners extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

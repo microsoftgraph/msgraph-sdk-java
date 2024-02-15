@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /**
-     * Instantiates a new WindowsAppXAppAssignmentSettings and sets the default values.
+     * Instantiates a new {@link WindowsAppXAppAssignmentSettings} and sets the default values.
      */
     public WindowsAppXAppAssignmentSettings() {
         super();
@@ -21,7 +21,7 @@ public class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSetting
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsAppXAppAssignmentSettings
+     * @return a {@link WindowsAppXAppAssignmentSettings}
      */
     @jakarta.annotation.Nonnull
     public static WindowsAppXAppAssignmentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSetting
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSetting
     }
     /**
      * Gets the useDeviceContext property value. When TRUE, indicates that device execution context will be used for the AppX mobile app. When FALSE, indicates that user context will be used for the AppX mobile app. By default, this property is set to FALSE. Once this property has been set to TRUE it cannot be changed.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getUseDeviceContext() {

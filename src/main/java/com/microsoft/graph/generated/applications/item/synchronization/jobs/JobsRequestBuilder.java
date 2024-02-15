@@ -26,6 +26,7 @@ import java.util.Objects;
 public class JobsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,6 +34,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the validateCredentials method.
+     * @return a {@link ValidateCredentialsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ValidateCredentialsRequestBuilder validateCredentials() {
@@ -41,7 +43,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the jobs property of the microsoft.graph.synchronization entity.
      * @param synchronizationJobId The unique identifier of synchronizationJob
-     * @return a SynchronizationJobItemRequestBuilder
+     * @return a {@link SynchronizationJobItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SynchronizationJobItemRequestBuilder bySynchronizationJobId(@jakarta.annotation.Nonnull final String synchronizationJobId) {
@@ -51,7 +53,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return new SynchronizationJobItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new JobsRequestBuilder and sets the default values.
+     * Instantiates a new {@link JobsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +61,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/synchronization/jobs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new JobsRequestBuilder and sets the default values.
+     * Instantiates a new {@link JobsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -68,7 +70,8 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List existing jobs for a given application instance (service principal).
-     * @return a SynchronizationJobCollectionResponse
+     * @return a {@link SynchronizationJobCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronization-list-jobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -78,21 +81,22 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
     /**
      * List existing jobs for a given application instance (service principal).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a SynchronizationJobCollectionResponse
+     * @return a {@link SynchronizationJobCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronization-list-jobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SynchronizationJobCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SynchronizationJobCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new synchronization job with a default synchronization schema. The job is created in a disabled state. Call Start job to start synchronization.
      * @param body The request body
-     * @return a SynchronizationJob
+     * @return a {@link SynchronizationJob}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronization-post-jobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -103,7 +107,8 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
      * Create new synchronization job with a default synchronization schema. The job is created in a disabled state. Call Start job to start synchronization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a SynchronizationJob
+     * @return a {@link SynchronizationJob}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronization-post-jobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -111,13 +116,12 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SynchronizationJob::createFromDiscriminatorValue);
     }
     /**
      * List existing jobs for a given application instance (service principal).
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -126,7 +130,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
     /**
      * List existing jobs for a given application instance (service principal).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new synchronization job with a default synchronization schema. The job is created in a disabled state. Call Start job to start synchronization.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SynchronizationJob body) {
@@ -148,12 +152,12 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
      * Create new synchronization job with a default synchronization schema. The job is created in a disabled state. Call Start job to start synchronization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SynchronizationJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/applications/{application%2Did}/synchronization/jobs", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -162,7 +166,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a JobsRequestBuilder
+     * @return a {@link JobsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public JobsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -216,7 +220,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -25,6 +25,7 @@ import java.util.Objects;
 public class DefaultPagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class DefaultPagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the defaultPages property of the microsoft.graph.userFlowLanguageConfiguration entity.
      * @param userFlowLanguagePageId The unique identifier of userFlowLanguagePage
-     * @return a UserFlowLanguagePageItemRequestBuilder
+     * @return a {@link UserFlowLanguagePageItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserFlowLanguagePageItemRequestBuilder byUserFlowLanguagePageId(@jakarta.annotation.Nonnull final String userFlowLanguagePageId) {
@@ -43,7 +44,7 @@ public class DefaultPagesRequestBuilder extends BaseRequestBuilder {
         return new UserFlowLanguagePageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new DefaultPagesRequestBuilder and sets the default values.
+     * Instantiates a new {@link DefaultPagesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class DefaultPagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/languages/{userFlowLanguageConfiguration%2Did}/defaultPages{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new DefaultPagesRequestBuilder and sets the default values.
+     * Instantiates a new {@link DefaultPagesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class DefaultPagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Collection of pages with the default content to display in a user flow for a specified language. This collection doesn't allow any kind of modification.
-     * @return a UserFlowLanguagePageCollectionResponse
+     * @return a {@link UserFlowLanguagePageCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserFlowLanguagePageCollectionResponse get() {
@@ -69,20 +71,21 @@ public class DefaultPagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Collection of pages with the default content to display in a user flow for a specified language. This collection doesn't allow any kind of modification.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UserFlowLanguagePageCollectionResponse
+     * @return a {@link UserFlowLanguagePageCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserFlowLanguagePageCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UserFlowLanguagePageCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to defaultPages for identity
      * @param body The request body
-     * @return a UserFlowLanguagePage
+     * @return a {@link UserFlowLanguagePage}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserFlowLanguagePage post(@jakarta.annotation.Nonnull final UserFlowLanguagePage body) {
@@ -92,20 +95,20 @@ public class DefaultPagesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to defaultPages for identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UserFlowLanguagePage
+     * @return a {@link UserFlowLanguagePage}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserFlowLanguagePage post(@jakarta.annotation.Nonnull final UserFlowLanguagePage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UserFlowLanguagePage::createFromDiscriminatorValue);
     }
     /**
      * Collection of pages with the default content to display in a user flow for a specified language. This collection doesn't allow any kind of modification.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -114,7 +117,7 @@ public class DefaultPagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Collection of pages with the default content to display in a user flow for a specified language. This collection doesn't allow any kind of modification.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -126,7 +129,7 @@ public class DefaultPagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to defaultPages for identity
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UserFlowLanguagePage body) {
@@ -136,12 +139,12 @@ public class DefaultPagesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to defaultPages for identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UserFlowLanguagePage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/languages/{userFlowLanguageConfiguration%2Did}/defaultPages", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -150,7 +153,7 @@ public class DefaultPagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DefaultPagesRequestBuilder
+     * @return a {@link DefaultPagesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DefaultPagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -204,7 +207,7 @@ public class DefaultPagesRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

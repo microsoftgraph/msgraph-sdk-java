@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     /**
-     * Instantiates a new WindowsUniversalAppX and sets the default values.
+     * Instantiates a new {@link WindowsUniversalAppX} and sets the default values.
      */
     public WindowsUniversalAppX() {
         super();
@@ -22,7 +22,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsUniversalAppX
+     * @return a {@link WindowsUniversalAppX}
      */
     @jakarta.annotation.Nonnull
     public static WindowsUniversalAppX createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the applicableArchitectures property value. Contains properties for Windows architecture.
-     * @return a EnumSet<WindowsArchitecture>
+     * @return a {@link EnumSet<WindowsArchitecture>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<WindowsArchitecture> getApplicableArchitectures() {
@@ -39,7 +39,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the applicableDeviceTypes property value. Contains properties for Windows device type. Multiple values can be selected. Default value is `none`.
-     * @return a EnumSet<WindowsDeviceType>
+     * @return a {@link EnumSet<WindowsDeviceType>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<WindowsDeviceType> getApplicableDeviceTypes() {
@@ -47,7 +47,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the committedContainedApps property value. The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
-     * @return a java.util.List<MobileContainedApp>
+     * @return a {@link java.util.List<MobileContainedApp>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileContainedApp> getCommittedContainedApps() {
@@ -55,7 +55,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -73,7 +73,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the identityName property value. The Identity Name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIdentityName() {
@@ -81,7 +81,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the identityPublisherHash property value. The Identity Publisher Hash.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIdentityPublisherHash() {
@@ -89,7 +89,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the identityResourceIdentifier property value. The Identity Resource Identifier.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIdentityResourceIdentifier() {
@@ -97,7 +97,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the identityVersion property value. The identity version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIdentityVersion() {
@@ -105,7 +105,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the isBundle property value. Whether or not the app is a bundle.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBundle() {
@@ -113,7 +113,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The minimum operating system required for a Windows mobile app.
-     * @return a WindowsMinimumOperatingSystem
+     * @return a {@link WindowsMinimumOperatingSystem}
      */
     @jakarta.annotation.Nullable
     public WindowsMinimumOperatingSystem getMinimumSupportedOperatingSystem() {

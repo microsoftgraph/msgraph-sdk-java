@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ApplePushNotificationCertificate extends Entity implements Parsable {
     /**
-     * Instantiates a new ApplePushNotificationCertificate and sets the default values.
+     * Instantiates a new {@link ApplePushNotificationCertificate} and sets the default values.
      */
     public ApplePushNotificationCertificate() {
         super();
@@ -21,7 +21,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ApplePushNotificationCertificate
+     * @return a {@link ApplePushNotificationCertificate}
      */
     @jakarta.annotation.Nonnull
     public static ApplePushNotificationCertificate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
     }
     /**
      * Gets the appleIdentifier property value. Apple Id of the account used to create the MDM push certificate.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppleIdentifier() {
@@ -38,7 +38,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
     }
     /**
      * Gets the certificate property value. Not yet documented
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCertificate() {
@@ -46,7 +46,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
     }
     /**
      * Gets the certificateSerialNumber property value. Certificate serial number. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCertificateSerialNumber() {
@@ -54,7 +54,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
     }
     /**
      * Gets the certificateUploadFailureReason property value. The reason the certificate upload failed.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCertificateUploadFailureReason() {
@@ -62,7 +62,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
     }
     /**
      * Gets the certificateUploadStatus property value. The certificate upload status.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCertificateUploadStatus() {
@@ -70,7 +70,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
     }
     /**
      * Gets the expirationDateTime property value. The expiration date and time for Apple push notification certificate.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
@@ -78,7 +78,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -95,7 +95,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
     }
     /**
      * Gets the lastModifiedDateTime property value. Last modified date and time for Apple push notification certificate.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -103,7 +103,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
     }
     /**
      * Gets the topicIdentifier property value. Topic Id.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTopicIdentifier() {

@@ -19,7 +19,7 @@ public class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsabl
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ObjectMapping and sets the default values.
+     * Instantiates a new {@link ObjectMapping} and sets the default values.
      */
     public ObjectMapping() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ObjectMapping
+     * @return a {@link ObjectMapping}
      */
     @jakarta.annotation.Nonnull
     public static ObjectMapping createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the attributeMappings property value. Attribute mappings define which attributes to map from the source object into the target object and how they should flow. A number of functions are available to support the transformation of the original source values.
-     * @return a java.util.List<AttributeMapping>
+     * @return a {@link java.util.List<AttributeMapping>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttributeMapping> getAttributeMappings() {
@@ -58,7 +58,7 @@ public class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -66,7 +66,7 @@ public class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the enabled property value. When true, this object mapping will be processed during synchronization. When false, this object mapping will be skipped.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnabled() {
@@ -74,7 +74,7 @@ public class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -92,7 +92,7 @@ public class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the flowTypes property value. The flowTypes property
-     * @return a EnumSet<ObjectFlowTypes>
+     * @return a {@link EnumSet<ObjectFlowTypes>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<ObjectFlowTypes> getFlowTypes() {
@@ -100,7 +100,7 @@ public class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the metadata property value. Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
-     * @return a java.util.List<ObjectMappingMetadataEntry>
+     * @return a {@link java.util.List<ObjectMappingMetadataEntry>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ObjectMappingMetadataEntry> getMetadata() {
@@ -108,7 +108,7 @@ public class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the name property value. Human-friendly name of the object mapping.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -116,7 +116,7 @@ public class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -124,7 +124,7 @@ public class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the scope property value. Defines a filter to be used when deciding whether a given object should be provisioned. For example, you might want to only provision users that are located in the US.
-     * @return a Filter
+     * @return a {@link Filter}
      */
     @jakarta.annotation.Nullable
     public Filter getScope() {
@@ -132,7 +132,7 @@ public class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the sourceObjectName property value. Name of the object in the source directory. Must match the object name from the source directory definition.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSourceObjectName() {
@@ -140,7 +140,7 @@ public class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the targetObjectName property value. Name of the object in target directory. Must match the object name from the target directory definition.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTargetObjectName() {

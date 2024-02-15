@@ -25,6 +25,7 @@ import java.util.Objects;
 public class DelegatedPermissionClassificationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
     /**
      * Provides operations to manage the delegatedPermissionClassifications property of the microsoft.graph.servicePrincipal entity.
      * @param delegatedPermissionClassificationId The unique identifier of delegatedPermissionClassification
-     * @return a DelegatedPermissionClassificationItemRequestBuilder
+     * @return a {@link DelegatedPermissionClassificationItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DelegatedPermissionClassificationItemRequestBuilder byDelegatedPermissionClassificationId(@jakarta.annotation.Nonnull final String delegatedPermissionClassificationId) {
@@ -43,7 +44,7 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
         return new DelegatedPermissionClassificationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new DelegatedPermissionClassificationsRequestBuilder and sets the default values.
+     * Instantiates a new {@link DelegatedPermissionClassificationsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/delegatedPermissionClassifications{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new DelegatedPermissionClassificationsRequestBuilder and sets the default values.
+     * Instantiates a new {@link DelegatedPermissionClassificationsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
     }
     /**
      * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API.
-     * @return a DelegatedPermissionClassificationCollectionResponse
+     * @return a {@link DelegatedPermissionClassificationCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-delegatedpermissionclassifications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
     /**
      * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DelegatedPermissionClassificationCollectionResponse
+     * @return a {@link DelegatedPermissionClassificationCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-delegatedpermissionclassifications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DelegatedPermissionClassificationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DelegatedPermissionClassificationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Classify a delegated permission by adding a delegatedPermissionClassification to the servicePrincipal representing the API.
      * @param body The request body
-     * @return a DelegatedPermissionClassification
+     * @return a {@link DelegatedPermissionClassification}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-post-delegatedpermissionclassifications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -95,7 +98,8 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
      * Classify a delegated permission by adding a delegatedPermissionClassification to the servicePrincipal representing the API.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DelegatedPermissionClassification
+     * @return a {@link DelegatedPermissionClassification}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-post-delegatedpermissionclassifications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -103,13 +107,12 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DelegatedPermissionClassification::createFromDiscriminatorValue);
     }
     /**
      * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -118,7 +121,7 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
     /**
      * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +133,7 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
     /**
      * Classify a delegated permission by adding a delegatedPermissionClassification to the servicePrincipal representing the API.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DelegatedPermissionClassification body) {
@@ -140,12 +143,12 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
      * Classify a delegated permission by adding a delegatedPermissionClassification to the servicePrincipal representing the API.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DelegatedPermissionClassification body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/delegatedPermissionClassifications", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -154,7 +157,7 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DelegatedPermissionClassificationsRequestBuilder
+     * @return a {@link DelegatedPermissionClassificationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DelegatedPermissionClassificationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -208,7 +211,7 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

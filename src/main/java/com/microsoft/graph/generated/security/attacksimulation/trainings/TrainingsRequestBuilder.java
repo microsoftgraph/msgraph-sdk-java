@@ -25,6 +25,7 @@ import java.util.Objects;
 public class TrainingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the trainings property of the microsoft.graph.attackSimulationRoot entity.
      * @param trainingId The unique identifier of training
-     * @return a TrainingItemRequestBuilder
+     * @return a {@link TrainingItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TrainingItemRequestBuilder byTrainingId(@jakarta.annotation.Nonnull final String trainingId) {
@@ -43,7 +44,7 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
         return new TrainingItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new TrainingsRequestBuilder and sets the default values.
+     * Instantiates a new {@link TrainingsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/trainings{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new TrainingsRequestBuilder and sets the default values.
+     * Instantiates a new {@link TrainingsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the training objects and their properties.
-     * @return a TrainingCollectionResponse
+     * @return a {@link TrainingCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-trainings?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the training objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a TrainingCollectionResponse
+     * @return a {@link TrainingCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-trainings?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TrainingCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, TrainingCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to trainings for security
      * @param body The request body
-     * @return a Training
+     * @return a {@link Training}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Training post(@jakarta.annotation.Nonnull final Training body) {
@@ -94,20 +97,20 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to trainings for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Training
+     * @return a {@link Training}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Training post(@jakarta.annotation.Nonnull final Training body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Training::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the training objects and their properties.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -116,7 +119,7 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the training objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -128,7 +131,7 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to trainings for security
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Training body) {
@@ -138,12 +141,12 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to trainings for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Training body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/security/attackSimulation/trainings", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -152,7 +155,7 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a TrainingsRequestBuilder
+     * @return a {@link TrainingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TrainingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -206,7 +209,7 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

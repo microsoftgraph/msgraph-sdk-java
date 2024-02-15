@@ -18,7 +18,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ConditionalAccessUsers and sets the default values.
+     * Instantiates a new {@link ConditionalAccessUsers} and sets the default values.
      */
     public ConditionalAccessUsers() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConditionalAccessUsers
+     * @return a {@link ConditionalAccessUsers}
      */
     @jakarta.annotation.Nonnull
     public static ConditionalAccessUsers createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the excludeGroups property value. Group IDs excluded from scope of policy.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExcludeGroups() {
@@ -65,7 +65,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the excludeGuestsOrExternalUsers property value. Internal guests or external users excluded from the policy scope. Optionally populated.
-     * @return a ConditionalAccessGuestsOrExternalUsers
+     * @return a {@link ConditionalAccessGuestsOrExternalUsers}
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessGuestsOrExternalUsers getExcludeGuestsOrExternalUsers() {
@@ -73,7 +73,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the excludeRoles property value. Role IDs excluded from scope of policy.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExcludeRoles() {
@@ -81,7 +81,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the excludeUsers property value. User IDs excluded from scope of policy and/or GuestsOrExternalUsers.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExcludeUsers() {
@@ -89,7 +89,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -107,7 +107,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the includeGroups property value. Group IDs in scope of policy unless explicitly excluded.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getIncludeGroups() {
@@ -115,7 +115,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the includeGuestsOrExternalUsers property value. Internal guests or external users included in the policy scope. Optionally populated.
-     * @return a ConditionalAccessGuestsOrExternalUsers
+     * @return a {@link ConditionalAccessGuestsOrExternalUsers}
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessGuestsOrExternalUsers getIncludeGuestsOrExternalUsers() {
@@ -123,7 +123,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the includeRoles property value. Role IDs in scope of policy unless explicitly excluded.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getIncludeRoles() {
@@ -131,7 +131,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the includeUsers property value. User IDs in scope of policy unless explicitly excluded, None, All, or GuestsOrExternalUsers.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getIncludeUsers() {
@@ -139,7 +139,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

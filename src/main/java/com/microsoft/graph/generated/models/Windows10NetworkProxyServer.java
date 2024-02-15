@@ -21,7 +21,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Backed
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new Windows10NetworkProxyServer and sets the default values.
+     * Instantiates a new {@link Windows10NetworkProxyServer} and sets the default values.
      */
     public Windows10NetworkProxyServer() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Backed
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Windows10NetworkProxyServer
+     * @return a {@link Windows10NetworkProxyServer}
      */
     @jakarta.annotation.Nonnull
     public static Windows10NetworkProxyServer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the address property value. Address to the proxy server. Specify an address in the format [':']
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAddress() {
@@ -60,7 +60,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -68,7 +68,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the exceptions property value. Addresses that should not use the proxy server. The system will not use the proxy server for addresses beginning with what is specified in this node.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExceptions() {
@@ -76,7 +76,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Backed
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -89,7 +89,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,7 +97,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the useForLocalAddresses property value. Specifies whether the proxy server should be used for local (intranet) addresses.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getUseForLocalAddresses() {

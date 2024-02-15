@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InsightValueDouble extends UserExperienceAnalyticsInsightValue implements Parsable {
     /**
-     * Instantiates a new InsightValueDouble and sets the default values.
+     * Instantiates a new {@link InsightValueDouble} and sets the default values.
      */
     public InsightValueDouble() {
         super();
@@ -21,7 +21,7 @@ public class InsightValueDouble extends UserExperienceAnalyticsInsightValue impl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a InsightValueDouble
+     * @return a {@link InsightValueDouble}
      */
     @jakarta.annotation.Nonnull
     public static InsightValueDouble createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class InsightValueDouble extends UserExperienceAnalyticsInsightValue impl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class InsightValueDouble extends UserExperienceAnalyticsInsightValue impl
     }
     /**
      * Gets the value property value. The double value of the user experience analytics insight.
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getValue() {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserProcessingResult extends Entity implements Parsable {
     /**
-     * Instantiates a new UserProcessingResult and sets the default values.
+     * Instantiates a new {@link UserProcessingResult} and sets the default values.
      */
     public UserProcessingResult() {
         super();
@@ -20,7 +20,7 @@ public class UserProcessingResult extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserProcessingResult
+     * @return a {@link UserProcessingResult}
      */
     @jakarta.annotation.Nonnull
     public static UserProcessingResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class UserProcessingResult extends Entity implements Parsable {
     }
     /**
      * Gets the completedDateTime property value. The date time that the workflow execution for a user completed. Value is null if the workflow hasn't completed.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
@@ -37,7 +37,7 @@ public class UserProcessingResult extends Entity implements Parsable {
     }
     /**
      * Gets the failedTasksCount property value. The number of tasks that failed in the workflow execution.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getFailedTasksCount() {
@@ -45,7 +45,7 @@ public class UserProcessingResult extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -65,7 +65,7 @@ public class UserProcessingResult extends Entity implements Parsable {
     }
     /**
      * Gets the processingStatus property value. The processingStatus property
-     * @return a LifecycleWorkflowProcessingStatus
+     * @return a {@link LifecycleWorkflowProcessingStatus}
      */
     @jakarta.annotation.Nullable
     public LifecycleWorkflowProcessingStatus getProcessingStatus() {
@@ -73,7 +73,7 @@ public class UserProcessingResult extends Entity implements Parsable {
     }
     /**
      * Gets the scheduledDateTime property value. The date time that the workflow is scheduled to be executed for a user.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getScheduledDateTime() {
@@ -81,7 +81,7 @@ public class UserProcessingResult extends Entity implements Parsable {
     }
     /**
      * Gets the startedDateTime property value. The date time that the workflow execution started. Value is null if the workflow execution has not started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartedDateTime() {
@@ -89,7 +89,7 @@ public class UserProcessingResult extends Entity implements Parsable {
     }
     /**
      * Gets the subject property value. The subject property
-     * @return a User
+     * @return a {@link User}
      */
     @jakarta.annotation.Nullable
     public User getSubject() {
@@ -97,7 +97,7 @@ public class UserProcessingResult extends Entity implements Parsable {
     }
     /**
      * Gets the taskProcessingResults property value. The associated individual task execution.
-     * @return a java.util.List<TaskProcessingResult>
+     * @return a {@link java.util.List<TaskProcessingResult>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TaskProcessingResult> getTaskProcessingResults() {
@@ -105,7 +105,7 @@ public class UserProcessingResult extends Entity implements Parsable {
     }
     /**
      * Gets the totalTasksCount property value. The total number of tasks that in the workflow execution.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalTasksCount() {
@@ -113,7 +113,7 @@ public class UserProcessingResult extends Entity implements Parsable {
     }
     /**
      * Gets the totalUnprocessedTasksCount property value. The total number of unprocessed tasks for the workflow.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalUnprocessedTasksCount() {
@@ -121,7 +121,7 @@ public class UserProcessingResult extends Entity implements Parsable {
     }
     /**
      * Gets the workflowExecutionType property value. The workflowExecutionType property
-     * @return a WorkflowExecutionType
+     * @return a {@link WorkflowExecutionType}
      */
     @jakarta.annotation.Nullable
     public WorkflowExecutionType getWorkflowExecutionType() {
@@ -129,7 +129,7 @@ public class UserProcessingResult extends Entity implements Parsable {
     }
     /**
      * Gets the workflowVersion property value. The version of the workflow that was executed.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getWorkflowVersion() {

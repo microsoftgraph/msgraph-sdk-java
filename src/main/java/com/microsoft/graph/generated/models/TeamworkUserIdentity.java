@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamworkUserIdentity extends Identity implements Parsable {
     /**
-     * Instantiates a new TeamworkUserIdentity and sets the default values.
+     * Instantiates a new {@link TeamworkUserIdentity} and sets the default values.
      */
     public TeamworkUserIdentity() {
         super();
@@ -18,7 +18,7 @@ public class TeamworkUserIdentity extends Identity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamworkUserIdentity
+     * @return a {@link TeamworkUserIdentity}
      */
     @jakarta.annotation.Nonnull
     public static TeamworkUserIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class TeamworkUserIdentity extends Identity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class TeamworkUserIdentity extends Identity implements Parsable {
     }
     /**
      * Gets the userIdentityType property value. Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, unknownFutureValue and emailUser.
-     * @return a TeamworkUserIdentityType
+     * @return a {@link TeamworkUserIdentityType}
      */
     @jakarta.annotation.Nullable
     public TeamworkUserIdentityType getUserIdentityType() {

@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedGroupSource extends DataSource implements Parsable {
     /**
-     * Instantiates a new UnifiedGroupSource and sets the default values.
+     * Instantiates a new {@link UnifiedGroupSource} and sets the default values.
      */
     public UnifiedGroupSource() {
         super();
@@ -20,7 +20,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnifiedGroupSource
+     * @return a {@link UnifiedGroupSource}
      */
     @jakarta.annotation.Nonnull
     public static UnifiedGroupSource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
     }
     /**
      * Gets the group property value. The group property
-     * @return a Group
+     * @return a {@link Group}
      */
     @jakarta.annotation.Nullable
     public Group getGroup() {
@@ -48,7 +48,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
     }
     /**
      * Gets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
-     * @return a EnumSet<SourceType>
+     * @return a {@link EnumSet<SourceType>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<SourceType> getIncludedSources() {

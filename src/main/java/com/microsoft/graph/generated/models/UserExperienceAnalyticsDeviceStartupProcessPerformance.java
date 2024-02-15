@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity implements Parsable {
     /**
-     * Instantiates a new UserExperienceAnalyticsDeviceStartupProcessPerformance and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsDeviceStartupProcessPerformance} and sets the default values.
      */
     public UserExperienceAnalyticsDeviceStartupProcessPerformance() {
         super();
@@ -20,7 +20,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsDeviceStartupProcessPerformance
+     * @return a {@link UserExperienceAnalyticsDeviceStartupProcessPerformance}
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceStartupProcessPerformance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
     }
     /**
      * Gets the deviceCount property value. The count of devices which initiated this process on startup. Supports: $filter, $select, $OrderBy. Read-only.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getDeviceCount() {
@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -52,7 +52,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
     }
     /**
      * Gets the medianImpactInMs property value. The median impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getMedianImpactInMs() {
@@ -60,7 +60,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
     }
     /**
      * Gets the processName property value. The name of the startup process. Examples: outlook, excel. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProcessName() {
@@ -68,7 +68,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
     }
     /**
      * Gets the productName property value. The product name of the startup process. Examples: Microsoft Outlook, Microsoft Excel. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProductName() {
@@ -76,7 +76,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
     }
     /**
      * Gets the publisher property value. The publisher of the startup process. Examples: Microsoft Corporation, Contoso Corp. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
@@ -84,7 +84,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
     }
     /**
      * Gets the totalImpactInMs property value. The total impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getTotalImpactInMs() {

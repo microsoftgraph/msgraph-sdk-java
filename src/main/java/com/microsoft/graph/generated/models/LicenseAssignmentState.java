@@ -20,7 +20,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new LicenseAssignmentState and sets the default values.
+     * Instantiates a new {@link LicenseAssignmentState} and sets the default values.
      */
     public LicenseAssignmentState() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -29,7 +29,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, BackedModel
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a LicenseAssignmentState
+     * @return a {@link LicenseAssignmentState}
      */
     @jakarta.annotation.Nonnull
     public static LicenseAssignmentState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -51,7 +51,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the assignedByGroup property value. The assignedByGroup property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAssignedByGroup() {
@@ -59,7 +59,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -67,7 +67,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the disabledPlans property value. The disabledPlans property
-     * @return a java.util.List<UUID>
+     * @return a {@link java.util.List<UUID>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UUID> getDisabledPlans() {
@@ -75,7 +75,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the error property value. The error property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getError() {
@@ -83,7 +83,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, BackedModel
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -99,7 +99,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
@@ -107,7 +107,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -115,7 +115,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the skuId property value. The skuId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getSkuId() {
@@ -123,7 +123,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the state property value. The state property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getState() {

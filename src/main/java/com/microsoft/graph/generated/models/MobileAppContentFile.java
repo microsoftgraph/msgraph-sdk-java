@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileAppContentFile extends Entity implements Parsable {
     /**
-     * Instantiates a new MobileAppContentFile and sets the default values.
+     * Instantiates a new {@link MobileAppContentFile} and sets the default values.
      */
     public MobileAppContentFile() {
         super();
@@ -21,7 +21,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MobileAppContentFile
+     * @return a {@link MobileAppContentFile}
      */
     @jakarta.annotation.Nonnull
     public static MobileAppContentFile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the azureStorageUri property value. The Azure Storage URI.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureStorageUri() {
@@ -38,7 +38,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the azureStorageUriExpirationDateTime property value. The time the Azure storage Uri expires.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAzureStorageUriExpirationDateTime() {
@@ -46,7 +46,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The time the file was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -54,7 +54,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -72,7 +72,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the isCommitted property value. A value indicating whether the file is committed.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCommitted() {
@@ -80,7 +80,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the manifest property value. The manifest information.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getManifest() {
@@ -88,7 +88,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. the file name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -96,7 +96,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the size property value. The size of the file prior to encryption.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getSize() {
@@ -104,7 +104,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the sizeEncrypted property value. The size of the file after encryption.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getSizeEncrypted() {
@@ -112,7 +112,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the uploadState property value. Contains properties for upload request states.
-     * @return a MobileAppContentFileUploadState
+     * @return a {@link MobileAppContentFileUploadState}
      */
     @jakarta.annotation.Nullable
     public MobileAppContentFileUploadState getUploadState() {

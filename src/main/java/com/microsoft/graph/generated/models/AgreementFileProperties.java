@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AgreementFileProperties extends Entity implements Parsable {
     /**
-     * Instantiates a new AgreementFileProperties and sets the default values.
+     * Instantiates a new {@link AgreementFileProperties} and sets the default values.
      */
     public AgreementFileProperties() {
         super();
@@ -18,7 +18,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AgreementFileProperties
+     * @return a {@link AgreementFileProperties}
      */
     @jakarta.annotation.Nonnull
     public static AgreementFileProperties createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date time representing when the file was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -44,7 +44,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Localized display name of the policy file of an agreement. The localized display name is shown to end users who view the agreement.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -52,7 +52,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,7 +68,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
     }
     /**
      * Gets the fileData property value. Data that represents the terms of use PDF document. Read-only.
-     * @return a AgreementFileData
+     * @return a {@link AgreementFileData}
      */
     @jakarta.annotation.Nullable
     public AgreementFileData getFileData() {
@@ -76,7 +76,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
     }
     /**
      * Gets the fileName property value. Name of the agreement file (for example, TOU.pdf). Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
@@ -84,7 +84,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
     }
     /**
      * Gets the isDefault property value. If none of the languages matches the client preference, indicates whether this is the default agreement file. If none of the files are marked as default, the first one is treated as the default. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
@@ -92,7 +92,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
     }
     /**
      * Gets the isMajorVersion property value. Indicates whether the agreement file is a major version update. Major version updates invalidate the agreement's acceptances on the corresponding language.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMajorVersion() {
@@ -100,7 +100,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
     }
     /**
      * Gets the language property value. The language of the agreement file in the format 'languagecode2-country/regioncode2'. 'languagecode2' is a lowercase two-letter code derived from ISO 639-1, while 'country/regioncode2' is derived from ISO 3166 and usually consists of two uppercase letters, or a BCP-47 language tag. For example, U.S. English is en-US. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLanguage() {

@@ -21,7 +21,7 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Back
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AddToReviewSetPostRequestBody and sets the default values.
+     * Instantiates a new {@link AddToReviewSetPostRequestBody} and sets the default values.
      */
     public AddToReviewSetPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Back
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AddToReviewSetPostRequestBody
+     * @return a {@link AddToReviewSetPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static AddToReviewSetPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Back
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Back
     }
     /**
      * Gets the additionalDataOptions property value. The additionalDataOptions property
-     * @return a EnumSet<AdditionalDataOptions>
+     * @return a {@link EnumSet<AdditionalDataOptions>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<AdditionalDataOptions> getAdditionalDataOptions() {
@@ -60,7 +60,7 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Back
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -68,7 +68,7 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Back
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Back
     }
     /**
      * Gets the search property value. The search property
-     * @return a EdiscoverySearch
+     * @return a {@link EdiscoverySearch}
      */
     @jakarta.annotation.Nullable
     public EdiscoverySearch getSearch() {

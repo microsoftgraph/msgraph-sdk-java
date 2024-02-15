@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * Instantiates a new ConversationMemberRoleUpdatedEventMessageDetail and sets the default values.
+     * Instantiates a new {@link ConversationMemberRoleUpdatedEventMessageDetail} and sets the default values.
      */
     public ConversationMemberRoleUpdatedEventMessageDetail() {
         super();
@@ -18,7 +18,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConversationMemberRoleUpdatedEventMessageDetail
+     * @return a {@link ConversationMemberRoleUpdatedEventMessageDetail}
      */
     @jakarta.annotation.Nonnull
     public static ConversationMemberRoleUpdatedEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
     }
     /**
      * Gets the conversationMemberRoles property value. Roles for the coversation member user.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getConversationMemberRoles() {
@@ -35,7 +35,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
     }
     /**
      * Gets the conversationMemberUser property value. Identity of the conversation member user.
-     * @return a TeamworkUserIdentity
+     * @return a {@link TeamworkUserIdentity}
      */
     @jakarta.annotation.Nullable
     public TeamworkUserIdentity getConversationMemberUser() {
@@ -43,7 +43,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -55,7 +55,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
     }
     /**
      * Gets the initiator property value. Initiator of the event.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {

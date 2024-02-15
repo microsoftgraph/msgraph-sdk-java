@@ -18,7 +18,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Ba
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new LoginPageTextVisibilitySettings and sets the default values.
+     * Instantiates a new {@link LoginPageTextVisibilitySettings} and sets the default values.
      */
     public LoginPageTextVisibilitySettings() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Ba
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a LoginPageTextVisibilitySettings
+     * @return a {@link LoginPageTextVisibilitySettings}
      */
     @jakarta.annotation.Nonnull
     public static LoginPageTextVisibilitySettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Ba
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -73,7 +73,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the hideAccountResetCredentials property value. Option to hide the self-service password reset (SSPR) hyperlinks such as 'Can't access your account?', 'Forgot my password' and 'Reset it now' on the sign-in form.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHideAccountResetCredentials() {
@@ -81,7 +81,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the hideCannotAccessYourAccount property value. Option to hide the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in form.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHideCannotAccessYourAccount() {
@@ -89,7 +89,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the hideForgotMyPassword property value. Option to hide the self-service password reset (SSPR) 'Forgot my password' hyperlink on the sign-in form.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHideForgotMyPassword() {
@@ -97,7 +97,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the hidePrivacyAndCookies property value. Option to hide the 'Privacy & Cookies' hyperlink in the footer.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHidePrivacyAndCookies() {
@@ -105,7 +105,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the hideResetItNow property value. Option to hide the self-service password reset (SSPR) 'reset it now' hyperlink on the sign-in form.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHideResetItNow() {
@@ -113,7 +113,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the hideTermsOfUse property value. Option to hide the 'Terms of Use' hyperlink in the footer.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHideTermsOfUse() {
@@ -121,7 +121,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

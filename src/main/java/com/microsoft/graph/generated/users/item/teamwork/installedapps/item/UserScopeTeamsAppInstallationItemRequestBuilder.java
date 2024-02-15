@@ -25,6 +25,7 @@ import java.util.Objects;
 public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the chat property of the microsoft.graph.userScopeTeamsAppInstallation entity.
+     * @return a {@link ChatRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ChatRequestBuilder chat() {
@@ -32,6 +33,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
     }
     /**
      * Provides operations to manage the teamsApp property of the microsoft.graph.teamsAppInstallation entity.
+     * @return a {@link TeamsAppRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TeamsAppRequestBuilder teamsApp() {
@@ -39,13 +41,14 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
     }
     /**
      * Provides operations to manage the teamsAppDefinition property of the microsoft.graph.teamsAppInstallation entity.
+     * @return a {@link TeamsAppDefinitionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TeamsAppDefinitionRequestBuilder teamsAppDefinition() {
         return new TeamsAppDefinitionRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new UserScopeTeamsAppInstallationItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link UserScopeTeamsAppInstallationItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -53,7 +56,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/teamwork/installedApps/{userScopeTeamsAppInstallation%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new UserScopeTeamsAppInstallationItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link UserScopeTeamsAppInstallationItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -62,6 +65,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
     }
     /**
      * Uninstall an app from the personal scope of the specified user.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-delete-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -70,18 +74,19 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
     /**
      * Uninstall an app from the personal scope of the specified user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-delete-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve the app installed in the personal scope of the specified user.
-     * @return a UserScopeTeamsAppInstallation
+     * @return a {@link UserScopeTeamsAppInstallation}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-get-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -91,21 +96,22 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
     /**
      * Retrieve the app installed in the personal scope of the specified user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UserScopeTeamsAppInstallation
+     * @return a {@link UserScopeTeamsAppInstallation}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-get-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserScopeTeamsAppInstallation get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UserScopeTeamsAppInstallation::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property installedApps in users
      * @param body The request body
-     * @return a UserScopeTeamsAppInstallation
+     * @return a {@link UserScopeTeamsAppInstallation}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserScopeTeamsAppInstallation patch(@jakarta.annotation.Nonnull final UserScopeTeamsAppInstallation body) {
@@ -115,20 +121,20 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
      * Update the navigation property installedApps in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UserScopeTeamsAppInstallation
+     * @return a {@link UserScopeTeamsAppInstallation}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UserScopeTeamsAppInstallation patch(@jakarta.annotation.Nonnull final UserScopeTeamsAppInstallation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UserScopeTeamsAppInstallation::createFromDiscriminatorValue);
     }
     /**
      * Uninstall an app from the personal scope of the specified user.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -137,18 +143,18 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
     /**
      * Uninstall an app from the personal scope of the specified user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/users/{user%2Did}/teamwork/installedApps/{userScopeTeamsAppInstallation%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Retrieve the app installed in the personal scope of the specified user.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -157,7 +163,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
     /**
      * Retrieve the app installed in the personal scope of the specified user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -169,7 +175,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property installedApps in users
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UserScopeTeamsAppInstallation body) {
@@ -179,12 +185,12 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
      * Update the navigation property installedApps in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UserScopeTeamsAppInstallation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/users/{user%2Did}/teamwork/installedApps/{userScopeTeamsAppInstallation%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -193,7 +199,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a UserScopeTeamsAppInstallationItemRequestBuilder
+     * @return a {@link UserScopeTeamsAppInstallationItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserScopeTeamsAppInstallationItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -223,7 +229,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

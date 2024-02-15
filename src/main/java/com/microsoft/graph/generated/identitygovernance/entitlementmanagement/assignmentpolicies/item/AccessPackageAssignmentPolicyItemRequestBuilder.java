@@ -26,6 +26,7 @@ import java.util.Objects;
 public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the accessPackage property of the microsoft.graph.accessPackageAssignmentPolicy entity.
+     * @return a {@link AccessPackageRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AccessPackageRequestBuilder accessPackage() {
@@ -33,6 +34,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
     }
     /**
      * Provides operations to manage the catalog property of the microsoft.graph.accessPackageAssignmentPolicy entity.
+     * @return a {@link CatalogRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CatalogRequestBuilder catalog() {
@@ -40,6 +42,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
     }
     /**
      * Provides operations to manage the customExtensionStageSettings property of the microsoft.graph.accessPackageAssignmentPolicy entity.
+     * @return a {@link CustomExtensionStageSettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CustomExtensionStageSettingsRequestBuilder customExtensionStageSettings() {
@@ -47,13 +50,14 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
     }
     /**
      * Provides operations to manage the questions property of the microsoft.graph.accessPackageAssignmentPolicy entity.
+     * @return a {@link QuestionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public QuestionsRequestBuilder questions() {
         return new QuestionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new AccessPackageAssignmentPolicyItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link AccessPackageAssignmentPolicyItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -61,7 +65,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/assignmentPolicies/{accessPackageAssignmentPolicy%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new AccessPackageAssignmentPolicyItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link AccessPackageAssignmentPolicyItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -70,6 +74,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
     }
     /**
      * In Microsoft Entra entitlement management, delete an accessPackageAssignmentPolicy.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -78,18 +83,19 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
     /**
      * In Microsoft Entra entitlement management, delete an accessPackageAssignmentPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * In Microsoft Entra entitlement management, retrieve the properties and relationships of an accessPackageAssignmentPolicy object.
-     * @return a AccessPackageAssignmentPolicy
+     * @return a {@link AccessPackageAssignmentPolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -99,21 +105,22 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
     /**
      * In Microsoft Entra entitlement management, retrieve the properties and relationships of an accessPackageAssignmentPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AccessPackageAssignmentPolicy
+     * @return a {@link AccessPackageAssignmentPolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignmentPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageAssignmentPolicy::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property assignmentPolicies in identityGovernance
      * @param body The request body
-     * @return a AccessPackageAssignmentPolicy
+     * @return a {@link AccessPackageAssignmentPolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignmentPolicy put(@jakarta.annotation.Nonnull final AccessPackageAssignmentPolicy body) {
@@ -123,20 +130,20 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
      * Update the navigation property assignmentPolicies in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AccessPackageAssignmentPolicy
+     * @return a {@link AccessPackageAssignmentPolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignmentPolicy put(@jakarta.annotation.Nonnull final AccessPackageAssignmentPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPutRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageAssignmentPolicy::createFromDiscriminatorValue);
     }
     /**
      * In Microsoft Entra entitlement management, delete an accessPackageAssignmentPolicy.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -145,18 +152,18 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
     /**
      * In Microsoft Entra entitlement management, delete an accessPackageAssignmentPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/identityGovernance/entitlementManagement/assignmentPolicies/{accessPackageAssignmentPolicy%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * In Microsoft Entra entitlement management, retrieve the properties and relationships of an accessPackageAssignmentPolicy object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -165,7 +172,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
     /**
      * In Microsoft Entra entitlement management, retrieve the properties and relationships of an accessPackageAssignmentPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -177,7 +184,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property assignmentPolicies in identityGovernance
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final AccessPackageAssignmentPolicy body) {
@@ -187,12 +194,12 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
      * Update the navigation property assignmentPolicies in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final AccessPackageAssignmentPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PUT, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PUT, "{+baseurl}/identityGovernance/entitlementManagement/assignmentPolicies/{accessPackageAssignmentPolicy%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PutRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -201,7 +208,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AccessPackageAssignmentPolicyItemRequestBuilder
+     * @return a {@link AccessPackageAssignmentPolicyItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AccessPackageAssignmentPolicyItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -231,7 +238,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamsAppInstalledEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * Instantiates a new TeamsAppInstalledEventMessageDetail and sets the default values.
+     * Instantiates a new {@link TeamsAppInstalledEventMessageDetail} and sets the default values.
      */
     public TeamsAppInstalledEventMessageDetail() {
         super();
@@ -18,7 +18,7 @@ public class TeamsAppInstalledEventMessageDetail extends EventMessageDetail impl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamsAppInstalledEventMessageDetail
+     * @return a {@link TeamsAppInstalledEventMessageDetail}
      */
     @jakarta.annotation.Nonnull
     public static TeamsAppInstalledEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class TeamsAppInstalledEventMessageDetail extends EventMessageDetail impl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -39,7 +39,7 @@ public class TeamsAppInstalledEventMessageDetail extends EventMessageDetail impl
     }
     /**
      * Gets the initiator property value. Initiator of the event.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
@@ -47,7 +47,7 @@ public class TeamsAppInstalledEventMessageDetail extends EventMessageDetail impl
     }
     /**
      * Gets the teamsAppDisplayName property value. Display name of the teamsApp.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTeamsAppDisplayName() {
@@ -55,7 +55,7 @@ public class TeamsAppInstalledEventMessageDetail extends EventMessageDetail impl
     }
     /**
      * Gets the teamsAppId property value. Unique identifier of the teamsApp.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTeamsAppId() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
     /**
-     * Instantiates a new CrossTenantAccessPolicy and sets the default values.
+     * Instantiates a new {@link CrossTenantAccessPolicy} and sets the default values.
      */
     public CrossTenantAccessPolicy() {
         super();
@@ -18,7 +18,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CrossTenantAccessPolicy
+     * @return a {@link CrossTenantAccessPolicy}
      */
     @jakarta.annotation.Nonnull
     public static CrossTenantAccessPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the allowedCloudEndpoints property value. Used to specify which Microsoft clouds an organization would like to collaborate with. By default, this value is empty. Supported values for this field are: microsoftonline.com, microsoftonline.us, and partner.microsoftonline.cn.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedCloudEndpoints() {
@@ -35,7 +35,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the default property value. Defines the default configuration for how your organization interacts with external Microsoft Entra organizations.
-     * @return a CrossTenantAccessPolicyConfigurationDefault
+     * @return a {@link CrossTenantAccessPolicyConfigurationDefault}
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyConfigurationDefault getDefault() {
@@ -43,7 +43,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -55,7 +55,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the partners property value. Defines partner-specific configurations for external Microsoft Entra organizations.
-     * @return a java.util.List<CrossTenantAccessPolicyConfigurationPartner>
+     * @return a {@link java.util.List<CrossTenantAccessPolicyConfigurationPartner>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CrossTenantAccessPolicyConfigurationPartner> getPartners() {

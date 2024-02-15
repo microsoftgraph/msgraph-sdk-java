@@ -20,7 +20,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DataBodyRangeRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new DataBodyRangeRequestBuilder and sets the default values.
+     * Instantiates a new {@link DataBodyRangeRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -28,7 +28,7 @@ public class DataBodyRangeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/tables/{workbookTable%2Did}/columns/itemAt(index={index})/dataBodyRange()", pathParameters);
     }
     /**
-     * Instantiates a new DataBodyRangeRequestBuilder and sets the default values.
+     * Instantiates a new {@link DataBodyRangeRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,7 +37,8 @@ public class DataBodyRangeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Gets the range object associated with the data body of the column.
-     * @return a WorkbookRange
+     * @return a {@link WorkbookRange}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-databodyrange?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -47,20 +48,20 @@ public class DataBodyRangeRequestBuilder extends BaseRequestBuilder {
     /**
      * Gets the range object associated with the data body of the column.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WorkbookRange
+     * @return a {@link WorkbookRange}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-databodyrange?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookRange get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookRange::createFromDiscriminatorValue);
     }
     /**
      * Gets the range object associated with the data body of the column.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -69,7 +70,7 @@ public class DataBodyRangeRequestBuilder extends BaseRequestBuilder {
     /**
      * Gets the range object associated with the data body of the column.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +82,7 @@ public class DataBodyRangeRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DataBodyRangeRequestBuilder
+     * @return a {@link DataBodyRangeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DataBodyRangeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

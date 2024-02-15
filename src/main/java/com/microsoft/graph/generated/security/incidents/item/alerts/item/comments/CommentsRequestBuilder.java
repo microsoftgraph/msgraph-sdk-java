@@ -22,13 +22,14 @@ import java.util.Objects;
 public class CommentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new CommentsRequestBuilder and sets the default values.
+     * Instantiates a new {@link CommentsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -36,7 +37,7 @@ public class CommentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/incidents/{incident%2Did}/alerts/{alert%2Did}/comments", pathParameters);
     }
     /**
-     * Instantiates a new CommentsRequestBuilder and sets the default values.
+     * Instantiates a new {@link CommentsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -46,7 +47,8 @@ public class CommentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Sets a new value for the collection of alertComment.
      * @param body The request body
-     * @return a java.util.List<AlertComment>
+     * @return a {@link java.util.List<AlertComment>}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public java.util.List<AlertComment> post(@jakarta.annotation.Nonnull final java.util.List<AlertComment> body) {
@@ -56,21 +58,21 @@ public class CommentsRequestBuilder extends BaseRequestBuilder {
      * Sets a new value for the collection of alertComment.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a java.util.List<AlertComment>
+     * @return a {@link java.util.List<AlertComment>}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public java.util.List<AlertComment> post(@jakarta.annotation.Nonnull final java.util.List<AlertComment> body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.sendCollection(requestInfo, errorMapping, AlertComment::createFromDiscriminatorValue);
     }
     /**
      * Sets a new value for the collection of alertComment.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final java.util.List<AlertComment> body) {
@@ -80,7 +82,7 @@ public class CommentsRequestBuilder extends BaseRequestBuilder {
      * Sets a new value for the collection of alertComment.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final java.util.List<AlertComment> body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -94,7 +96,7 @@ public class CommentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a CommentsRequestBuilder
+     * @return a {@link CommentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CommentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

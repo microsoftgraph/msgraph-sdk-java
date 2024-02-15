@@ -18,7 +18,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new TeamMemberSettings and sets the default values.
+     * Instantiates a new {@link TeamMemberSettings} and sets the default values.
      */
     public TeamMemberSettings() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamMemberSettings
+     * @return a {@link TeamMemberSettings}
      */
     @jakarta.annotation.Nonnull
     public static TeamMemberSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the allowAddRemoveApps property value. If set to true, members can add and remove apps.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowAddRemoveApps() {
@@ -57,7 +57,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the allowCreatePrivateChannels property value. If set to true, members can add and update private channels.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowCreatePrivateChannels() {
@@ -65,7 +65,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the allowCreateUpdateChannels property value. If set to true, members can add and update channels.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowCreateUpdateChannels() {
@@ -73,7 +73,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the allowCreateUpdateRemoveConnectors property value. If set to true, members can add, update, and remove connectors.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowCreateUpdateRemoveConnectors() {
@@ -81,7 +81,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the allowCreateUpdateRemoveTabs property value. If set to true, members can add, update, and remove tabs.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowCreateUpdateRemoveTabs() {
@@ -89,7 +89,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the allowDeleteChannels property value. If set to true, members can delete channels.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowDeleteChannels() {
@@ -97,7 +97,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -105,7 +105,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -121,7 +121,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

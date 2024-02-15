@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceAnnouncementBase extends Entity implements Parsable {
     /**
-     * Instantiates a new ServiceAnnouncementBase and sets the default values.
+     * Instantiates a new {@link ServiceAnnouncementBase} and sets the default values.
      */
     public ServiceAnnouncementBase() {
         super();
@@ -18,7 +18,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ServiceAnnouncementBase
+     * @return a {@link ServiceAnnouncementBase}
      */
     @jakarta.annotation.Nonnull
     public static ServiceAnnouncementBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
     }
     /**
      * Gets the details property value. More details about service event. This property doesn't support filters.
-     * @return a java.util.List<KeyValuePair>
+     * @return a {@link java.util.List<KeyValuePair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getDetails() {
@@ -43,7 +43,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
     }
     /**
      * Gets the endDateTime property value. The end time of the service event.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
@@ -51,7 +51,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -65,7 +65,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The last modified time of the service event.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -73,7 +73,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
     }
     /**
      * Gets the startDateTime property value. The start time of the service event.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
@@ -81,7 +81,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
     }
     /**
      * Gets the title property value. The title of the service event.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTitle() {

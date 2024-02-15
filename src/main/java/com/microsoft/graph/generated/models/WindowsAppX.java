@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsAppX extends MobileLobApp implements Parsable {
     /**
-     * Instantiates a new WindowsAppX and sets the default values.
+     * Instantiates a new {@link WindowsAppX} and sets the default values.
      */
     public WindowsAppX() {
         super();
@@ -22,7 +22,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsAppX
+     * @return a {@link WindowsAppX}
      */
     @jakarta.annotation.Nonnull
     public static WindowsAppX createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the applicableArchitectures property value. Contains properties for Windows architecture.
-     * @return a EnumSet<WindowsArchitecture>
+     * @return a {@link EnumSet<WindowsArchitecture>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<WindowsArchitecture> getApplicableArchitectures() {
@@ -39,7 +39,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -55,7 +55,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the identityName property value. The identity name of the uploaded app package. For example: 'Contoso.DemoApp'.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIdentityName() {
@@ -63,7 +63,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the identityPublisherHash property value. The identity publisher hash of the uploaded app package. This is the hash of the publisher from the manifest. For example: 'AB82CD0XYZ'.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIdentityPublisherHash() {
@@ -71,7 +71,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the identityResourceIdentifier property value. The identity resource identifier of the uploaded app package. For example: 'TestResourceId'.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIdentityResourceIdentifier() {
@@ -79,7 +79,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the identityVersion property value. The identity version of the uploaded app package. For example: '1.0.0.0'.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIdentityVersion() {
@@ -87,7 +87,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the isBundle property value. When TRUE, indicates that the app is a bundle. When FALSE, indicates that the app is not a bundle. By default, property is set to FALSE.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBundle() {
@@ -95,7 +95,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The minimum operating system required for a Windows mobile app.
-     * @return a WindowsMinimumOperatingSystem
+     * @return a {@link WindowsMinimumOperatingSystem}
      */
     @jakarta.annotation.Nullable
     public WindowsMinimumOperatingSystem getMinimumSupportedOperatingSystem() {

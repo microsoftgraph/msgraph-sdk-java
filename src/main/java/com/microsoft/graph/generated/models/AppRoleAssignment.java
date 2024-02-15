@@ -11,7 +11,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppRoleAssignment extends DirectoryObject implements Parsable {
     /**
-     * Instantiates a new AppRoleAssignment and sets the default values.
+     * Instantiates a new {@link AppRoleAssignment} and sets the default values.
      */
     public AppRoleAssignment() {
         super();
@@ -20,7 +20,7 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AppRoleAssignment
+     * @return a {@link AppRoleAssignment}
      */
     @jakarta.annotation.Nonnull
     public static AppRoleAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the appRoleId property value. The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getAppRoleId() {
@@ -37,7 +37,7 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The time when the app role assignment was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -45,7 +45,7 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -61,7 +61,7 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the principalDisplayName property value. The display name of the user, group, or service principal that was granted the app role assignment. Read-only. Supports $filter (eq and startswith).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPrincipalDisplayName() {
@@ -69,7 +69,7 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the principalId property value. The unique identifier (id) for the user, security group, or service principal being granted the app role. Security groups with dynamic memberships are supported. Required on create.
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getPrincipalId() {
@@ -77,7 +77,7 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the principalType property value. The type of the assigned principal. This can either be User, Group, or ServicePrincipal. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPrincipalType() {
@@ -85,7 +85,7 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the resourceDisplayName property value. The display name of the resource app's service principal to which the assignment is made.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourceDisplayName() {
@@ -93,7 +93,7 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the resourceId property value. The unique identifier (id) for the resource service principal for which the assignment is made. Required on create. Supports $filter (eq only).
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getResourceId() {

@@ -18,7 +18,7 @@ public class SharingLink implements AdditionalDataHolder, BackedModel, Parsable 
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SharingLink and sets the default values.
+     * Instantiates a new {@link SharingLink} and sets the default values.
      */
     public SharingLink() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class SharingLink implements AdditionalDataHolder, BackedModel, Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SharingLink
+     * @return a {@link SharingLink}
      */
     @jakarta.annotation.Nonnull
     public static SharingLink createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class SharingLink implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class SharingLink implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the application property value. The app the link is associated with.
-     * @return a Identity
+     * @return a {@link Identity}
      */
     @jakarta.annotation.Nullable
     public Identity getApplication() {
@@ -57,7 +57,7 @@ public class SharingLink implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class SharingLink implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -81,7 +81,7 @@ public class SharingLink implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -89,7 +89,7 @@ public class SharingLink implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the preventsDownload property value. If true then the user can only use this link to view the item on the web, and cannot use it to download the contents of the item. Only for OneDrive for Business and SharePoint.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPreventsDownload() {
@@ -97,7 +97,7 @@ public class SharingLink implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the scope property value. The scope of the link represented by this permission. Value anonymous indicates the link is usable by anyone, organization indicates the link is only usable for users signed into the same tenant.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getScope() {
@@ -105,7 +105,7 @@ public class SharingLink implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the type property value. The type of the link created.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getType() {
@@ -113,7 +113,7 @@ public class SharingLink implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the webHtml property value. For embed links, this property contains the HTML code for an <iframe> element that will embed the item in a webpage.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebHtml() {
@@ -121,7 +121,7 @@ public class SharingLink implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the webUrl property value. A URL that opens the item in the browser on the OneDrive website.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {

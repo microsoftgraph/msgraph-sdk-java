@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageResourceRequest extends Entity implements Parsable {
     /**
-     * Instantiates a new AccessPackageResourceRequest and sets the default values.
+     * Instantiates a new {@link AccessPackageResourceRequest} and sets the default values.
      */
     public AccessPackageResourceRequest() {
         super();
@@ -18,7 +18,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessPackageResourceRequest
+     * @return a {@link AccessPackageResourceRequest}
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageResourceRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the catalog property value. The catalog property
-     * @return a AccessPackageCatalog
+     * @return a {@link AccessPackageCatalog}
      */
     @jakarta.annotation.Nullable
     public AccessPackageCatalog getCatalog() {
@@ -35,7 +35,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -43,7 +43,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the requestType property value. The type of the request. Use adminAdd to add a resource, if the caller is an administrator or resource owner, adminUpdate to update a resource, or adminRemove to remove a resource.
-     * @return a AccessPackageRequestType
+     * @return a {@link AccessPackageRequestType}
      */
     @jakarta.annotation.Nullable
     public AccessPackageRequestType getRequestType() {
@@ -65,7 +65,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the resource property value. The resource property
-     * @return a AccessPackageResource
+     * @return a {@link AccessPackageResource}
      */
     @jakarta.annotation.Nullable
     public AccessPackageResource getResource() {
@@ -73,7 +73,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed, and deliveryFailed if it could not be added or removed. Read-only.
-     * @return a AccessPackageRequestState
+     * @return a {@link AccessPackageRequestState}
      */
     @jakarta.annotation.Nullable
     public AccessPackageRequestState getState() {

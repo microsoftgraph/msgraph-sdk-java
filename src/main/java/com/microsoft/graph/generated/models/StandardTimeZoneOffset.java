@@ -19,7 +19,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new StandardTimeZoneOffset and sets the default values.
+     * Instantiates a new {@link StandardTimeZoneOffset} and sets the default values.
      */
     public StandardTimeZoneOffset() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a StandardTimeZoneOffset
+     * @return a {@link StandardTimeZoneOffset}
      */
     @jakarta.annotation.Nonnull
     public static StandardTimeZoneOffset createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +44,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -57,7 +57,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the dayOccurrence property value. Represents the nth occurrence of the day of week that the transition from daylight saving time to standard time occurs.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDayOccurrence() {
@@ -73,7 +73,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the dayOfWeek property value. Represents the day of the week when the transition from daylight saving time to standard time.
-     * @return a DayOfWeek
+     * @return a {@link DayOfWeek}
      */
     @jakarta.annotation.Nullable
     public DayOfWeek getDayOfWeek() {
@@ -81,7 +81,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -96,7 +96,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the month property value. Represents the month of the year when the transition from daylight saving time to standard time occurs.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMonth() {
@@ -104,7 +104,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -112,7 +112,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the time property value. Represents the time of day when the transition from daylight saving time to standard time occurs.
-     * @return a LocalTime
+     * @return a {@link LocalTime}
      */
     @jakarta.annotation.Nullable
     public LocalTime getTime() {
@@ -120,7 +120,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the year property value. Represents how frequently in terms of years the change from daylight saving time to standard time occurs. For example, a value of 0 means every year.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getYear() {

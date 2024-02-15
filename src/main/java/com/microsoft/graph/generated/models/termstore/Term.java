@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Term extends Entity implements Parsable {
     /**
-     * Instantiates a new Term and sets the default values.
+     * Instantiates a new {@link Term} and sets the default values.
      */
     public Term() {
         super();
@@ -20,7 +20,7 @@ public class Term extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Term
+     * @return a {@link Term}
      */
     @jakarta.annotation.Nonnull
     public static Term createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class Term extends Entity implements Parsable {
     }
     /**
      * Gets the children property value. Children of current term.
-     * @return a java.util.List<Term>
+     * @return a {@link java.util.List<Term>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Term> getChildren() {
@@ -37,7 +37,7 @@ public class Term extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Date and time of term creation. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -45,7 +45,7 @@ public class Term extends Entity implements Parsable {
     }
     /**
      * Gets the descriptions property value. Description about term that is dependent on the languageTag.
-     * @return a java.util.List<LocalizedDescription>
+     * @return a {@link java.util.List<LocalizedDescription>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<LocalizedDescription> getDescriptions() {
@@ -53,7 +53,7 @@ public class Term extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -70,7 +70,7 @@ public class Term extends Entity implements Parsable {
     }
     /**
      * Gets the labels property value. Label metadata for a term.
-     * @return a java.util.List<LocalizedLabel>
+     * @return a {@link java.util.List<LocalizedLabel>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<LocalizedLabel> getLabels() {
@@ -78,7 +78,7 @@ public class Term extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. Last date and time of term modification. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -86,7 +86,7 @@ public class Term extends Entity implements Parsable {
     }
     /**
      * Gets the properties property value. Collection of properties on the term.
-     * @return a java.util.List<KeyValue>
+     * @return a {@link java.util.List<KeyValue>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getProperties() {
@@ -94,7 +94,7 @@ public class Term extends Entity implements Parsable {
     }
     /**
      * Gets the relations property value. To indicate which terms are related to the current term as either pinned or reused.
-     * @return a java.util.List<Relation>
+     * @return a {@link java.util.List<Relation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Relation> getRelations() {
@@ -102,7 +102,7 @@ public class Term extends Entity implements Parsable {
     }
     /**
      * Gets the set property value. The [set] in which the term is created.
-     * @return a Set
+     * @return a {@link Set}
      */
     @jakarta.annotation.Nullable
     public Set getSet() {

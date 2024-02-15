@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource extends AccessReviewInstanceDecisionItemResource implements Parsable {
     /**
-     * Instantiates a new AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource and sets the default values.
+     * Instantiates a new {@link AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource} and sets the default values.
      */
     public AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource() {
         super();
@@ -18,7 +18,7 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource
+     * @return a {@link AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource}
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
     }
     /**
      * Gets the accessPackageDisplayName property value. Display name of the access package to which access has been granted.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAccessPackageDisplayName() {
@@ -35,7 +35,7 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
     }
     /**
      * Gets the accessPackageId property value. Identifier of the access package to which access has been granted.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAccessPackageId() {
@@ -43,7 +43,7 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

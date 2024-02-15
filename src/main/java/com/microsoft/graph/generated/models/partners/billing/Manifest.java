@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Manifest extends Entity implements Parsable {
     /**
-     * Instantiates a new Manifest and sets the default values.
+     * Instantiates a new {@link Manifest} and sets the default values.
      */
     public Manifest() {
         super();
@@ -19,7 +19,7 @@ public class Manifest extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Manifest
+     * @return a {@link Manifest}
      */
     @jakarta.annotation.Nonnull
     public static Manifest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class Manifest extends Entity implements Parsable {
     }
     /**
      * Gets the blobCount property value. The total file count for this partner tenant ID.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getBlobCount() {
@@ -36,7 +36,7 @@ public class Manifest extends Entity implements Parsable {
     }
     /**
      * Gets the blobs property value. A collection of blob objects that contain details of all the files for the partner tenant ID.
-     * @return a java.util.List<Blob>
+     * @return a {@link java.util.List<Blob>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Blob> getBlobs() {
@@ -44,7 +44,7 @@ public class Manifest extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time when a manifest resource was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -52,7 +52,7 @@ public class Manifest extends Entity implements Parsable {
     }
     /**
      * Gets the dataFormat property value. The billing data file format. The possible value is: compressedJSONLines. Each blob is a compressed file and data in the file is in JSON lines format. Decompress the file to access the data.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDataFormat() {
@@ -60,7 +60,7 @@ public class Manifest extends Entity implements Parsable {
     }
     /**
      * Gets the eTag property value. Version of data represented by the manifest. Any change in eTag indicates a new data version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getETag() {
@@ -68,7 +68,7 @@ public class Manifest extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -87,7 +87,7 @@ public class Manifest extends Entity implements Parsable {
     }
     /**
      * Gets the partitionType property value. Indicates the division of data. If a given partition has more than the supported number, the data is split into multiple files, each file representing a specific partitionValue. By default, the data in the file is partitioned by the number of line items.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPartitionType() {
@@ -95,7 +95,7 @@ public class Manifest extends Entity implements Parsable {
     }
     /**
      * Gets the partnerTenantId property value. The Microsoft Entra tenant ID of the partner.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPartnerTenantId() {
@@ -103,7 +103,7 @@ public class Manifest extends Entity implements Parsable {
     }
     /**
      * Gets the rootDirectory property value. The root directory that contains all the files.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRootDirectory() {
@@ -111,7 +111,7 @@ public class Manifest extends Entity implements Parsable {
     }
     /**
      * Gets the sasToken property value. The SAS token for accessing the directory or an individual file in the directory.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSasToken() {
@@ -119,7 +119,7 @@ public class Manifest extends Entity implements Parsable {
     }
     /**
      * Gets the schemaVersion property value. The version of the manifest schema.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSchemaVersion() {

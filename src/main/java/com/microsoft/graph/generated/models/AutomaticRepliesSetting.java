@@ -18,7 +18,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AutomaticRepliesSetting and sets the default values.
+     * Instantiates a new {@link AutomaticRepliesSetting} and sets the default values.
      */
     public AutomaticRepliesSetting() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AutomaticRepliesSetting
+     * @return a {@link AutomaticRepliesSetting}
      */
     @jakarta.annotation.Nonnull
     public static AutomaticRepliesSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the externalAudience property value. The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
-     * @return a ExternalAudienceScope
+     * @return a {@link ExternalAudienceScope}
      */
     @jakarta.annotation.Nullable
     public ExternalAudienceScope getExternalAudience() {
@@ -65,7 +65,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the externalReplyMessage property value. The automatic reply to send to the specified external audience, if Status is AlwaysEnabled or Scheduled.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalReplyMessage() {
@@ -73,7 +73,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -89,7 +89,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the internalReplyMessage property value. The automatic reply to send to the audience internal to the signed-in user's organization, if Status is AlwaysEnabled or Scheduled.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInternalReplyMessage() {
@@ -97,7 +97,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the scheduledEndDateTime property value. The date and time that automatic replies are set to end, if Status is set to Scheduled.
-     * @return a DateTimeTimeZone
+     * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getScheduledEndDateTime() {
@@ -113,7 +113,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the scheduledStartDateTime property value. The date and time that automatic replies are set to begin, if Status is set to Scheduled.
-     * @return a DateTimeTimeZone
+     * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getScheduledStartDateTime() {
@@ -121,7 +121,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the status property value. Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
-     * @return a AutomaticRepliesStatus
+     * @return a {@link AutomaticRepliesStatus}
      */
     @jakarta.annotation.Nullable
     public AutomaticRepliesStatus getStatus() {

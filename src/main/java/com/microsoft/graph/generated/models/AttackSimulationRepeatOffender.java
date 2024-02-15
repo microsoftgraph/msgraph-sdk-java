@@ -18,7 +18,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Bac
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AttackSimulationRepeatOffender and sets the default values.
+     * Instantiates a new {@link AttackSimulationRepeatOffender} and sets the default values.
      */
     public AttackSimulationRepeatOffender() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Bac
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AttackSimulationRepeatOffender
+     * @return a {@link AttackSimulationRepeatOffender}
      */
     @jakarta.annotation.Nonnull
     public static AttackSimulationRepeatOffender createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the attackSimulationUser property value. The user in an attack simulation and training campaign.
-     * @return a AttackSimulationUser
+     * @return a {@link AttackSimulationUser}
      */
     @jakarta.annotation.Nullable
     public AttackSimulationUser getAttackSimulationUser() {
@@ -57,7 +57,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Bac
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -85,7 +85,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the repeatOffenceCount property value. Number of repeat offences of the user in attack simulation and training campaigns.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRepeatOffenceCount() {

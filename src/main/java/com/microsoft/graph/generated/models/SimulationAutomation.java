@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SimulationAutomation extends Entity implements Parsable {
     /**
-     * Instantiates a new SimulationAutomation and sets the default values.
+     * Instantiates a new {@link SimulationAutomation} and sets the default values.
      */
     public SimulationAutomation() {
         super();
@@ -18,7 +18,7 @@ public class SimulationAutomation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SimulationAutomation
+     * @return a {@link SimulationAutomation}
      */
     @jakarta.annotation.Nonnull
     public static SimulationAutomation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class SimulationAutomation extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. Identity of the user who created the attack simulation automation.
-     * @return a EmailIdentity
+     * @return a {@link EmailIdentity}
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getCreatedBy() {
@@ -35,7 +35,7 @@ public class SimulationAutomation extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Date and time when the attack simulation automation was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -43,7 +43,7 @@ public class SimulationAutomation extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description of the attack simulation automation.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -51,7 +51,7 @@ public class SimulationAutomation extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name of the attack simulation automation. Supports $filter and $orderby.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -59,7 +59,7 @@ public class SimulationAutomation extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class SimulationAutomation extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. Identity of the user who most recently modified the attack simulation automation.
-     * @return a EmailIdentity
+     * @return a {@link EmailIdentity}
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getLastModifiedBy() {
@@ -86,7 +86,7 @@ public class SimulationAutomation extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. Date and time when the attack simulation automation was most recently modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -94,7 +94,7 @@ public class SimulationAutomation extends Entity implements Parsable {
     }
     /**
      * Gets the lastRunDateTime property value. Date and time of the latest run of the attack simulation automation.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastRunDateTime() {
@@ -102,7 +102,7 @@ public class SimulationAutomation extends Entity implements Parsable {
     }
     /**
      * Gets the nextRunDateTime property value. Date and time of the upcoming run of the attack simulation automation.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getNextRunDateTime() {
@@ -110,7 +110,7 @@ public class SimulationAutomation extends Entity implements Parsable {
     }
     /**
      * Gets the runs property value. A collection of simulation automation runs.
-     * @return a java.util.List<SimulationAutomationRun>
+     * @return a {@link java.util.List<SimulationAutomationRun>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SimulationAutomationRun> getRuns() {
@@ -118,7 +118,7 @@ public class SimulationAutomation extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Status of the attack simulation automation. Supports $filter and $orderby. The possible values are: unknown, draft, notRunning, running, completed, unknownFutureValue.
-     * @return a SimulationAutomationStatus
+     * @return a {@link SimulationAutomationStatus}
      */
     @jakarta.annotation.Nullable
     public SimulationAutomationStatus getStatus() {

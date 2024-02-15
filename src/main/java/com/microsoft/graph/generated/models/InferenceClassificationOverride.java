@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InferenceClassificationOverride extends Entity implements Parsable {
     /**
-     * Instantiates a new InferenceClassificationOverride and sets the default values.
+     * Instantiates a new {@link InferenceClassificationOverride} and sets the default values.
      */
     public InferenceClassificationOverride() {
         super();
@@ -17,7 +17,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a InferenceClassificationOverride
+     * @return a {@link InferenceClassificationOverride}
      */
     @jakarta.annotation.Nonnull
     public static InferenceClassificationOverride createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
     }
     /**
      * Gets the classifyAs property value. Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other.
-     * @return a InferenceClassificationType
+     * @return a {@link InferenceClassificationType}
      */
     @jakarta.annotation.Nullable
     public InferenceClassificationType getClassifyAs() {
@@ -34,7 +34,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -45,7 +45,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
     }
     /**
      * Gets the senderEmailAddress property value. The email address information of the sender for whom the override is created.
-     * @return a EmailAddress
+     * @return a {@link EmailAddress}
      */
     @jakarta.annotation.Nullable
     public EmailAddress getSenderEmailAddress() {

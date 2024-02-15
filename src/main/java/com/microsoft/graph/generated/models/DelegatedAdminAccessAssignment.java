@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
     /**
-     * Instantiates a new DelegatedAdminAccessAssignment and sets the default values.
+     * Instantiates a new {@link DelegatedAdminAccessAssignment} and sets the default values.
      */
     public DelegatedAdminAccessAssignment() {
         super();
@@ -18,7 +18,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DelegatedAdminAccessAssignment
+     * @return a {@link DelegatedAdminAccessAssignment}
      */
     @jakarta.annotation.Nonnull
     public static DelegatedAdminAccessAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the accessContainer property value. The accessContainer property
-     * @return a DelegatedAdminAccessContainer
+     * @return a {@link DelegatedAdminAccessContainer}
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminAccessContainer getAccessContainer() {
@@ -35,7 +35,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the accessDetails property value. The accessDetails property
-     * @return a DelegatedAdminAccessDetails
+     * @return a {@link DelegatedAdminAccessDetails}
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminAccessDetails getAccessDetails() {
@@ -43,7 +43,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time in ISO 8601 format and in UTC time when the access assignment was created. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -51,7 +51,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -65,7 +65,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time in ISO 8601 and in UTC time when this access assignment was last modified. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -73,7 +73,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status of the access assignment. Read-only. The possible values are: pending, active, deleting, deleted, error, unknownFutureValue.
-     * @return a DelegatedAdminAccessAssignmentStatus
+     * @return a {@link DelegatedAdminAccessAssignmentStatus}
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminAccessAssignmentStatus getStatus() {

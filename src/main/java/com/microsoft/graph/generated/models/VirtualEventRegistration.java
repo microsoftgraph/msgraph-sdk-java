@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VirtualEventRegistration extends Entity implements Parsable {
     /**
-     * Instantiates a new VirtualEventRegistration and sets the default values.
+     * Instantiates a new {@link VirtualEventRegistration} and sets the default values.
      */
     public VirtualEventRegistration() {
         super();
@@ -18,7 +18,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a VirtualEventRegistration
+     * @return a {@link VirtualEventRegistration}
      */
     @jakarta.annotation.Nonnull
     public static VirtualEventRegistration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the cancelationDateTime property value. Date and time when the registrant cancels their registration for the virtual event. Only appears when applicable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCancelationDateTime() {
@@ -35,7 +35,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the email property value. Email address of the registrant.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -43,7 +43,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -60,7 +60,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the firstName property value. First name of the registrant.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFirstName() {
@@ -68,7 +68,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the lastName property value. Last name of the registrant.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLastName() {
@@ -76,7 +76,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the registrationDateTime property value. Date and time when the registrant registers for the virtual event. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRegistrationDateTime() {
@@ -84,7 +84,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the registrationQuestionAnswers property value. The registrant's answer to the registration questions.
-     * @return a java.util.List<VirtualEventRegistrationQuestionAnswer>
+     * @return a {@link java.util.List<VirtualEventRegistrationQuestionAnswer>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<VirtualEventRegistrationQuestionAnswer> getRegistrationQuestionAnswers() {
@@ -92,7 +92,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Registration status of the registrant. Read-only.
-     * @return a VirtualEventAttendeeRegistrationStatus
+     * @return a {@link VirtualEventAttendeeRegistrationStatus}
      */
     @jakarta.annotation.Nullable
     public VirtualEventAttendeeRegistrationStatus getStatus() {
@@ -100,7 +100,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. The registrant's ID in Microsoft Entra ID. Only appears when the registrant is registered in Microsoft Entra ID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

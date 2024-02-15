@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConditionalAccessPolicy extends Entity implements Parsable {
     /**
-     * Instantiates a new ConditionalAccessPolicy and sets the default values.
+     * Instantiates a new {@link ConditionalAccessPolicy} and sets the default values.
      */
     public ConditionalAccessPolicy() {
         super();
@@ -18,7 +18,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConditionalAccessPolicy
+     * @return a {@link ConditionalAccessPolicy}
      */
     @jakarta.annotation.Nonnull
     public static ConditionalAccessPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the conditions property value. The conditions property
-     * @return a ConditionalAccessConditionSet
+     * @return a {@link ConditionalAccessConditionSet}
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessConditionSet getConditions() {
@@ -35,7 +35,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -43,7 +43,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -51,7 +51,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Specifies a display name for the conditionalAccessPolicy object.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -59,7 +59,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the grantControls property value. Specifies the grant controls that must be fulfilled to pass the policy.
-     * @return a ConditionalAccessGrantControls
+     * @return a {@link ConditionalAccessGrantControls}
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessGrantControls getGrantControls() {
@@ -85,7 +85,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
@@ -93,7 +93,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the sessionControls property value. Specifies the session controls that are enforced after sign-in.
-     * @return a ConditionalAccessSessionControls
+     * @return a {@link ConditionalAccessSessionControls}
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessSessionControls getSessionControls() {
@@ -101,7 +101,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a ConditionalAccessPolicyState
+     * @return a {@link ConditionalAccessPolicyState}
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessPolicyState getState() {
@@ -109,7 +109,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the templateId property value. The templateId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTemplateId() {

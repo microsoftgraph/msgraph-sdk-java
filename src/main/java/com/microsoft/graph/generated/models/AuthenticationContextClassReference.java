@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationContextClassReference extends Entity implements Parsable {
     /**
-     * Instantiates a new AuthenticationContextClassReference and sets the default values.
+     * Instantiates a new {@link AuthenticationContextClassReference} and sets the default values.
      */
     public AuthenticationContextClassReference() {
         super();
@@ -17,7 +17,7 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuthenticationContextClassReference
+     * @return a {@link AuthenticationContextClassReference}
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationContextClassReference createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
     }
     /**
      * Gets the description property value. A short explanation of the policies that are enforced by authenticationContextClassReference. This value should be used to provide secondary text to describe the authentication context class reference when building user-facing admin experiences. For example, a selection UX.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -34,7 +34,7 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
     }
     /**
      * Gets the displayName property value. The display name is the friendly name of the authenticationContextClassReference object. This value should be used to identify the authentication context class reference when building user-facing admin experiences. For example, a selection UX.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -42,7 +42,7 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -54,7 +54,7 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
     }
     /**
      * Gets the isAvailable property value. Indicates whether the authenticationContextClassReference has been published by the security admin and is ready for use by apps. When it's set to false, it shouldn't be shown in authentication context selection UX, or used to protect app resources. It's shown and available for Conditional Access policy authoring. The default value is false.  Supports $filter (eq).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAvailable() {

@@ -14,6 +14,7 @@ import java.util.Objects;
 public class UserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The mailboxSettings property
+     * @return a {@link MailboxSettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MailboxSettingsRequestBuilder mailboxSettings() {
@@ -21,6 +22,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of print entities.
+     * @return a {@link RefRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RefRequestBuilder ref() {
@@ -28,13 +30,14 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The serviceProvisioningErrors property
+     * @return a {@link ServiceProvisioningErrorsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ServiceProvisioningErrorsRequestBuilder serviceProvisioningErrors() {
         return new ServiceProvisioningErrorsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new UserItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link UserItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -42,7 +45,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/shares/{printerShare%2Did}/allowedUsers/{user%2Did}", pathParameters);
     }
     /**
-     * Instantiates a new UserItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link UserItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IdentityBuiltInUserFlowAttribute extends IdentityUserFlowAttribute implements Parsable {
     /**
-     * Instantiates a new IdentityBuiltInUserFlowAttribute and sets the default values.
+     * Instantiates a new {@link IdentityBuiltInUserFlowAttribute} and sets the default values.
      */
     public IdentityBuiltInUserFlowAttribute() {
         super();
@@ -18,7 +18,7 @@ public class IdentityBuiltInUserFlowAttribute extends IdentityUserFlowAttribute 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IdentityBuiltInUserFlowAttribute
+     * @return a {@link IdentityBuiltInUserFlowAttribute}
      */
     @jakarta.annotation.Nonnull
     public static IdentityBuiltInUserFlowAttribute createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class IdentityBuiltInUserFlowAttribute extends IdentityUserFlowAttribute 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

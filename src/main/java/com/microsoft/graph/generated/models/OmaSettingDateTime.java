@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OmaSettingDateTime extends OmaSetting implements Parsable {
     /**
-     * Instantiates a new OmaSettingDateTime and sets the default values.
+     * Instantiates a new {@link OmaSettingDateTime} and sets the default values.
      */
     public OmaSettingDateTime() {
         super();
@@ -22,7 +22,7 @@ public class OmaSettingDateTime extends OmaSetting implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OmaSettingDateTime
+     * @return a {@link OmaSettingDateTime}
      */
     @jakarta.annotation.Nonnull
     public static OmaSettingDateTime createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class OmaSettingDateTime extends OmaSetting implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -41,7 +41,7 @@ public class OmaSettingDateTime extends OmaSetting implements Parsable {
     }
     /**
      * Gets the value property value. Value.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getValue() {

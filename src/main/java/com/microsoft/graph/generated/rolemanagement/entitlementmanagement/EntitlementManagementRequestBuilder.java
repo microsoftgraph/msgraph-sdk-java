@@ -31,6 +31,7 @@ import java.util.Objects;
 public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the resourceNamespaces property of the microsoft.graph.rbacApplication entity.
+     * @return a {@link ResourceNamespacesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ResourceNamespacesRequestBuilder resourceNamespaces() {
@@ -38,6 +39,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the roleAssignments property of the microsoft.graph.rbacApplication entity.
+     * @return a {@link RoleAssignmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleAssignmentsRequestBuilder roleAssignments() {
@@ -45,6 +47,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the roleAssignmentScheduleInstances property of the microsoft.graph.rbacApplication entity.
+     * @return a {@link RoleAssignmentScheduleInstancesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleAssignmentScheduleInstancesRequestBuilder roleAssignmentScheduleInstances() {
@@ -52,6 +55,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the roleAssignmentScheduleRequests property of the microsoft.graph.rbacApplication entity.
+     * @return a {@link RoleAssignmentScheduleRequestsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleAssignmentScheduleRequestsRequestBuilder roleAssignmentScheduleRequests() {
@@ -59,6 +63,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the roleAssignmentSchedules property of the microsoft.graph.rbacApplication entity.
+     * @return a {@link RoleAssignmentSchedulesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleAssignmentSchedulesRequestBuilder roleAssignmentSchedules() {
@@ -66,6 +71,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the roleDefinitions property of the microsoft.graph.rbacApplication entity.
+     * @return a {@link RoleDefinitionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleDefinitionsRequestBuilder roleDefinitions() {
@@ -73,6 +79,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the roleEligibilityScheduleInstances property of the microsoft.graph.rbacApplication entity.
+     * @return a {@link RoleEligibilityScheduleInstancesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleEligibilityScheduleInstancesRequestBuilder roleEligibilityScheduleInstances() {
@@ -80,6 +87,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the roleEligibilityScheduleRequests property of the microsoft.graph.rbacApplication entity.
+     * @return a {@link RoleEligibilityScheduleRequestsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleEligibilityScheduleRequestsRequestBuilder roleEligibilityScheduleRequests() {
@@ -87,13 +95,14 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the roleEligibilitySchedules property of the microsoft.graph.rbacApplication entity.
+     * @return a {@link RoleEligibilitySchedulesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleEligibilitySchedulesRequestBuilder roleEligibilitySchedules() {
         return new RoleEligibilitySchedulesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new EntitlementManagementRequestBuilder and sets the default values.
+     * Instantiates a new {@link EntitlementManagementRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -101,7 +110,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/roleManagement/entitlementManagement{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new EntitlementManagementRequestBuilder and sets the default values.
+     * Instantiates a new {@link EntitlementManagementRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -110,6 +119,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property entitlementManagement for roleManagement
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -117,17 +127,18 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property entitlementManagement for roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Container for roles and assignments for entitlement management resources.
-     * @return a RbacApplication
+     * @return a {@link RbacApplication}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public RbacApplication get() {
@@ -136,20 +147,21 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Container for roles and assignments for entitlement management resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RbacApplication
+     * @return a {@link RbacApplication}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public RbacApplication get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, RbacApplication::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property entitlementManagement in roleManagement
      * @param body The request body
-     * @return a RbacApplication
+     * @return a {@link RbacApplication}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public RbacApplication patch(@jakarta.annotation.Nonnull final RbacApplication body) {
@@ -159,20 +171,20 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property entitlementManagement in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RbacApplication
+     * @return a {@link RbacApplication}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public RbacApplication patch(@jakarta.annotation.Nonnull final RbacApplication body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, RbacApplication::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property entitlementManagement for roleManagement
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -181,18 +193,18 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property entitlementManagement for roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/roleManagement/entitlementManagement", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Container for roles and assignments for entitlement management resources.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -201,7 +213,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Container for roles and assignments for entitlement management resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -213,7 +225,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property entitlementManagement in roleManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final RbacApplication body) {
@@ -223,12 +235,12 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property entitlementManagement in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final RbacApplication body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/roleManagement/entitlementManagement", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -237,7 +249,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a EntitlementManagementRequestBuilder
+     * @return a {@link EntitlementManagementRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EntitlementManagementRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -267,7 +279,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

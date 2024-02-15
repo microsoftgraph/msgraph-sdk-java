@@ -18,7 +18,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new InvitationParticipantInfo and sets the default values.
+     * Instantiates a new {@link InvitationParticipantInfo} and sets the default values.
      */
     public InvitationParticipantInfo() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, BackedMo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a InvitationParticipantInfo
+     * @return a {@link InvitationParticipantInfo}
      */
     @jakarta.annotation.Nonnull
     public static InvitationParticipantInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, BackedMo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -72,7 +72,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the hidden property value. Optional. Whether to hide the participant from the roster.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHidden() {
@@ -80,7 +80,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the identity property value. The identity property
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getIdentity() {
@@ -88,7 +88,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -96,7 +96,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the participantId property value. Optional. The ID of the target participant.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getParticipantId() {
@@ -104,7 +104,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the removeFromDefaultAudioRoutingGroup property value. Optional. Whether to remove them from the main mixer.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRemoveFromDefaultAudioRoutingGroup() {
@@ -112,7 +112,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the replacesCallId property value. Optional. The call which the target identity is currently a part of. For peer-to-peer case, the call will be dropped once the participant is added successfully.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getReplacesCallId() {

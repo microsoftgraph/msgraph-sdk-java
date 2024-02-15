@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DriveItem extends BaseItem implements Parsable {
     /**
-     * Instantiates a new DriveItem and sets the default values.
+     * Instantiates a new {@link DriveItem} and sets the default values.
      */
     public DriveItem() {
         super();
@@ -18,7 +18,7 @@ public class DriveItem extends BaseItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DriveItem
+     * @return a {@link DriveItem}
      */
     @jakarta.annotation.Nonnull
     public static DriveItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the analytics property value. Analytics about the view activities that took place on this item.
-     * @return a ItemAnalytics
+     * @return a {@link ItemAnalytics}
      */
     @jakarta.annotation.Nullable
     public ItemAnalytics getAnalytics() {
@@ -35,7 +35,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the audio property value. Audio metadata, if the item is an audio file. Read-only. Read-only. Only on OneDrive Personal.
-     * @return a Audio
+     * @return a {@link Audio}
      */
     @jakarta.annotation.Nullable
     public Audio getAudio() {
@@ -43,7 +43,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the bundle property value. Bundle metadata, if the item is a bundle. Read-only.
-     * @return a Bundle
+     * @return a {@link Bundle}
      */
     @jakarta.annotation.Nullable
     public Bundle getBundle() {
@@ -51,7 +51,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the children property value. Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
-     * @return a java.util.List<DriveItem>
+     * @return a {@link java.util.List<DriveItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DriveItem> getChildren() {
@@ -59,7 +59,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the content property value. The content stream, if the item represents a file.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
@@ -67,7 +67,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the cTag property value. An eTag for the content of the item. This eTag isn't changed if only the metadata is changed. Note This property isn't returned if the item is a folder. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCTag() {
@@ -75,7 +75,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the deleted property value. Information about the deleted state of the item. Read-only.
-     * @return a Deleted
+     * @return a {@link Deleted}
      */
     @jakarta.annotation.Nullable
     public Deleted getDeleted() {
@@ -83,7 +83,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -125,7 +125,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the file property value. File metadata, if the item is a file. Read-only.
-     * @return a File
+     * @return a {@link File}
      */
     @jakarta.annotation.Nullable
     public File getFile() {
@@ -133,7 +133,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the fileSystemInfo property value. File system information on client. Read-write.
-     * @return a FileSystemInfo
+     * @return a {@link FileSystemInfo}
      */
     @jakarta.annotation.Nullable
     public FileSystemInfo getFileSystemInfo() {
@@ -141,7 +141,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the folder property value. Folder metadata, if the item is a folder. Read-only.
-     * @return a Folder
+     * @return a {@link Folder}
      */
     @jakarta.annotation.Nullable
     public Folder getFolder() {
@@ -149,7 +149,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the image property value. Image metadata, if the item is an image. Read-only.
-     * @return a Image
+     * @return a {@link Image}
      */
     @jakarta.annotation.Nullable
     public Image getImage() {
@@ -157,7 +157,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the listItem property value. For drives in SharePoint, the associated document library list item. Read-only. Nullable.
-     * @return a ListItem
+     * @return a {@link ListItem}
      */
     @jakarta.annotation.Nullable
     public ListItem getListItem() {
@@ -165,7 +165,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the location property value. Location metadata, if the item has location data. Read-only.
-     * @return a GeoCoordinates
+     * @return a {@link GeoCoordinates}
      */
     @jakarta.annotation.Nullable
     public GeoCoordinates getLocation() {
@@ -173,7 +173,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the malware property value. Malware metadata, if the item was detected to contain malware. Read-only.
-     * @return a Malware
+     * @return a {@link Malware}
      */
     @jakarta.annotation.Nullable
     public Malware getMalware() {
@@ -181,7 +181,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the package property value. If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
-     * @return a PackageEscaped
+     * @return a {@link PackageEscaped}
      */
     @jakarta.annotation.Nullable
     public PackageEscaped getPackage() {
@@ -189,7 +189,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the pendingOperations property value. If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
-     * @return a PendingOperations
+     * @return a {@link PendingOperations}
      */
     @jakarta.annotation.Nullable
     public PendingOperations getPendingOperations() {
@@ -197,7 +197,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the permissions property value. The set of permissions for the item. Read-only. Nullable.
-     * @return a java.util.List<Permission>
+     * @return a {@link java.util.List<Permission>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Permission> getPermissions() {
@@ -205,7 +205,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the photo property value. Photo metadata, if the item is a photo. Read-only.
-     * @return a Photo
+     * @return a {@link Photo}
      */
     @jakarta.annotation.Nullable
     public Photo getPhoto() {
@@ -213,7 +213,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the publication property value. Provides information about the published or checked-out state of an item, in locations that support such actions. This property isn't returned by default. Read-only.
-     * @return a PublicationFacet
+     * @return a {@link PublicationFacet}
      */
     @jakarta.annotation.Nullable
     public PublicationFacet getPublication() {
@@ -221,7 +221,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the remoteItem property value. Remote item data, if the item is shared from a drive other than the one being accessed. Read-only.
-     * @return a RemoteItem
+     * @return a {@link RemoteItem}
      */
     @jakarta.annotation.Nullable
     public RemoteItem getRemoteItem() {
@@ -229,7 +229,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the retentionLabel property value. Information about retention label and settings enforced on the driveItem. Read-write.
-     * @return a ItemRetentionLabel
+     * @return a {@link ItemRetentionLabel}
      */
     @jakarta.annotation.Nullable
     public ItemRetentionLabel getRetentionLabel() {
@@ -237,7 +237,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the root property value. If this property is non-null, it indicates that the driveItem is the top-most driveItem in the drive.
-     * @return a Root
+     * @return a {@link Root}
      */
     @jakarta.annotation.Nullable
     public Root getRoot() {
@@ -245,7 +245,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the searchResult property value. Search metadata, if the item is from a search result. Read-only.
-     * @return a SearchResult
+     * @return a {@link SearchResult}
      */
     @jakarta.annotation.Nullable
     public SearchResult getSearchResult() {
@@ -253,7 +253,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the shared property value. Indicates that the item was shared with others and provides information about the shared state of the item. Read-only.
-     * @return a Shared
+     * @return a {@link Shared}
      */
     @jakarta.annotation.Nullable
     public Shared getShared() {
@@ -261,7 +261,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
-     * @return a SharepointIds
+     * @return a {@link SharepointIds}
      */
     @jakarta.annotation.Nullable
     public SharepointIds getSharepointIds() {
@@ -269,7 +269,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the size property value. Size of the item in bytes. Read-only.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getSize() {
@@ -277,7 +277,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the specialFolder property value. If the current item is also available as a special folder, this facet is returned. Read-only.
-     * @return a SpecialFolder
+     * @return a {@link SpecialFolder}
      */
     @jakarta.annotation.Nullable
     public SpecialFolder getSpecialFolder() {
@@ -285,7 +285,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the subscriptions property value. The set of subscriptions on the item. Only supported on the root of a drive.
-     * @return a java.util.List<Subscription>
+     * @return a {@link java.util.List<Subscription>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Subscription> getSubscriptions() {
@@ -293,7 +293,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the thumbnails property value. Collection of [thumbnailSet][] objects associated with the item. For more information, see [getting thumbnails][]. Read-only. Nullable.
-     * @return a java.util.List<ThumbnailSet>
+     * @return a {@link java.util.List<ThumbnailSet>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ThumbnailSet> getThumbnails() {
@@ -301,7 +301,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the versions property value. The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.
-     * @return a java.util.List<DriveItemVersion>
+     * @return a {@link java.util.List<DriveItemVersion>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DriveItemVersion> getVersions() {
@@ -309,7 +309,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the video property value. Video metadata, if the item is a video. Read-only.
-     * @return a Video
+     * @return a {@link Video}
      */
     @jakarta.annotation.Nullable
     public Video getVideo() {
@@ -317,7 +317,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the webDavUrl property value. WebDAV compatible URL for the item.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebDavUrl() {
@@ -325,7 +325,7 @@ public class DriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the workbook property value. For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
-     * @return a Workbook
+     * @return a {@link Workbook}
      */
     @jakarta.annotation.Nullable
     public Workbook getWorkbook() {

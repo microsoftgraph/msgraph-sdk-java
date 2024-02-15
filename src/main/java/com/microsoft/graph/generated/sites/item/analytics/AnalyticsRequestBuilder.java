@@ -25,6 +25,7 @@ import java.util.Objects;
 public class AnalyticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the allTime property of the microsoft.graph.itemAnalytics entity.
+     * @return a {@link AllTimeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AllTimeRequestBuilder allTime() {
@@ -32,6 +33,7 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the itemActivityStats property of the microsoft.graph.itemAnalytics entity.
+     * @return a {@link ItemActivityStatsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ItemActivityStatsRequestBuilder itemActivityStats() {
@@ -39,13 +41,14 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the lastSevenDays property of the microsoft.graph.itemAnalytics entity.
+     * @return a {@link LastSevenDaysRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LastSevenDaysRequestBuilder lastSevenDays() {
         return new LastSevenDaysRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new AnalyticsRequestBuilder and sets the default values.
+     * Instantiates a new {@link AnalyticsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -53,7 +56,7 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/analytics{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new AnalyticsRequestBuilder and sets the default values.
+     * Instantiates a new {@link AnalyticsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -62,6 +65,7 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property analytics for sites
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -69,17 +73,18 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property analytics for sites
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Analytics about the view activities that took place in this site.
-     * @return a ItemAnalytics
+     * @return a {@link ItemAnalytics}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ItemAnalytics get() {
@@ -88,20 +93,21 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Analytics about the view activities that took place in this site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ItemAnalytics
+     * @return a {@link ItemAnalytics}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ItemAnalytics get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ItemAnalytics::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property analytics in sites
      * @param body The request body
-     * @return a ItemAnalytics
+     * @return a {@link ItemAnalytics}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ItemAnalytics patch(@jakarta.annotation.Nonnull final ItemAnalytics body) {
@@ -111,20 +117,20 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property analytics in sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ItemAnalytics
+     * @return a {@link ItemAnalytics}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ItemAnalytics patch(@jakarta.annotation.Nonnull final ItemAnalytics body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ItemAnalytics::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property analytics for sites
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -133,18 +139,18 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property analytics for sites
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/sites/{site%2Did}/analytics", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Analytics about the view activities that took place in this site.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -153,7 +159,7 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Analytics about the view activities that took place in this site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -165,7 +171,7 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property analytics in sites
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ItemAnalytics body) {
@@ -175,12 +181,12 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property analytics in sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ItemAnalytics body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/sites/{site%2Did}/analytics", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -189,7 +195,7 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AnalyticsRequestBuilder
+     * @return a {@link AnalyticsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AnalyticsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -219,7 +225,7 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

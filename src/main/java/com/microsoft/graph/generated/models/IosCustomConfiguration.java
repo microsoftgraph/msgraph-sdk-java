@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosCustomConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new IosCustomConfiguration and sets the default values.
+     * Instantiates a new {@link IosCustomConfiguration} and sets the default values.
      */
     public IosCustomConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosCustomConfiguration
+     * @return a {@link IosCustomConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static IosCustomConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -42,7 +42,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
     }
     /**
      * Gets the payload property value. Payload. (UTF8 encoded byte array)
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getPayload() {
@@ -50,7 +50,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
     }
     /**
      * Gets the payloadFileName property value. Payload file name (.mobileconfig
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPayloadFileName() {
@@ -58,7 +58,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
     }
     /**
      * Gets the payloadName property value. Name that is displayed to the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPayloadName() {

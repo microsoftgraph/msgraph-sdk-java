@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DelegatedAdminRelationshipRequest extends Entity implements Parsable {
     /**
-     * Instantiates a new DelegatedAdminRelationshipRequest and sets the default values.
+     * Instantiates a new {@link DelegatedAdminRelationshipRequest} and sets the default values.
      */
     public DelegatedAdminRelationshipRequest() {
         super();
@@ -18,7 +18,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DelegatedAdminRelationshipRequest
+     * @return a {@link DelegatedAdminRelationshipRequest}
      */
     @jakarta.annotation.Nonnull
     public static DelegatedAdminRelationshipRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
     }
     /**
      * Gets the action property value. The action property
-     * @return a DelegatedAdminRelationshipRequestAction
+     * @return a {@link DelegatedAdminRelationshipRequestAction}
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminRelationshipRequestAction getAction() {
@@ -35,7 +35,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
     }
     /**
      * Gets the createdDateTime property value. The date and time in ISO 8601 format and in UTC time when the relationship request was created. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -43,7 +43,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -56,7 +56,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time in ISO 8601 format and UTC time when this relationship request was last modified. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -64,7 +64,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
     }
     /**
      * Gets the status property value. The status of the request. Read-only. The possible values are: created, pending, succeeded, failed, unknownFutureValue.
-     * @return a DelegatedAdminRelationshipRequestStatus
+     * @return a {@link DelegatedAdminRelationshipRequestStatus}
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminRelationshipRequestStatus getStatus() {

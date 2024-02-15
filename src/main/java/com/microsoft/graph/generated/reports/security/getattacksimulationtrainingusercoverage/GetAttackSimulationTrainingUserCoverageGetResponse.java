@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetAttackSimulationTrainingUserCoverageGetResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new GetAttackSimulationTrainingUserCoverageGetResponse and sets the default values.
+     * Instantiates a new {@link GetAttackSimulationTrainingUserCoverageGetResponse} and sets the default values.
      */
     public GetAttackSimulationTrainingUserCoverageGetResponse() {
         super();
@@ -19,7 +19,7 @@ public class GetAttackSimulationTrainingUserCoverageGetResponse extends BaseColl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GetAttackSimulationTrainingUserCoverageGetResponse
+     * @return a {@link GetAttackSimulationTrainingUserCoverageGetResponse}
      */
     @jakarta.annotation.Nonnull
     public static GetAttackSimulationTrainingUserCoverageGetResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class GetAttackSimulationTrainingUserCoverageGetResponse extends BaseColl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class GetAttackSimulationTrainingUserCoverageGetResponse extends BaseColl
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<AttackSimulationTrainingUserCoverage>
+     * @return a {@link java.util.List<AttackSimulationTrainingUserCoverage>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttackSimulationTrainingUserCoverage> getValue() {

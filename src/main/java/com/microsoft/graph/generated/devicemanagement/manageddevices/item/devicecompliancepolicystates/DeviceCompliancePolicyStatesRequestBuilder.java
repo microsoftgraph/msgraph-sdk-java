@@ -25,6 +25,7 @@ import java.util.Objects;
 public class DeviceCompliancePolicyStatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class DeviceCompliancePolicyStatesRequestBuilder extends BaseRequestBuild
     /**
      * Provides operations to manage the deviceCompliancePolicyStates property of the microsoft.graph.managedDevice entity.
      * @param deviceCompliancePolicyStateId The unique identifier of deviceCompliancePolicyState
-     * @return a DeviceCompliancePolicyStateItemRequestBuilder
+     * @return a {@link DeviceCompliancePolicyStateItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceCompliancePolicyStateItemRequestBuilder byDeviceCompliancePolicyStateId(@jakarta.annotation.Nonnull final String deviceCompliancePolicyStateId) {
@@ -43,7 +44,7 @@ public class DeviceCompliancePolicyStatesRequestBuilder extends BaseRequestBuild
         return new DeviceCompliancePolicyStateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new DeviceCompliancePolicyStatesRequestBuilder and sets the default values.
+     * Instantiates a new {@link DeviceCompliancePolicyStatesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class DeviceCompliancePolicyStatesRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/deviceManagement/managedDevices/{managedDevice%2Did}/deviceCompliancePolicyStates{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new DeviceCompliancePolicyStatesRequestBuilder and sets the default values.
+     * Instantiates a new {@link DeviceCompliancePolicyStatesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class DeviceCompliancePolicyStatesRequestBuilder extends BaseRequestBuild
     }
     /**
      * Device compliance policy states for this device.
-     * @return a DeviceCompliancePolicyStateCollectionResponse
+     * @return a {@link DeviceCompliancePolicyStateCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceCompliancePolicyStateCollectionResponse get() {
@@ -69,20 +71,21 @@ public class DeviceCompliancePolicyStatesRequestBuilder extends BaseRequestBuild
     /**
      * Device compliance policy states for this device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceCompliancePolicyStateCollectionResponse
+     * @return a {@link DeviceCompliancePolicyStateCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceCompliancePolicyStateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceCompliancePolicyStateCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to deviceCompliancePolicyStates for deviceManagement
      * @param body The request body
-     * @return a DeviceCompliancePolicyState
+     * @return a {@link DeviceCompliancePolicyState}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceCompliancePolicyState post(@jakarta.annotation.Nonnull final DeviceCompliancePolicyState body) {
@@ -92,20 +95,20 @@ public class DeviceCompliancePolicyStatesRequestBuilder extends BaseRequestBuild
      * Create new navigation property to deviceCompliancePolicyStates for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceCompliancePolicyState
+     * @return a {@link DeviceCompliancePolicyState}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceCompliancePolicyState post(@jakarta.annotation.Nonnull final DeviceCompliancePolicyState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceCompliancePolicyState::createFromDiscriminatorValue);
     }
     /**
      * Device compliance policy states for this device.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -114,7 +117,7 @@ public class DeviceCompliancePolicyStatesRequestBuilder extends BaseRequestBuild
     /**
      * Device compliance policy states for this device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -126,7 +129,7 @@ public class DeviceCompliancePolicyStatesRequestBuilder extends BaseRequestBuild
     /**
      * Create new navigation property to deviceCompliancePolicyStates for deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceCompliancePolicyState body) {
@@ -136,12 +139,12 @@ public class DeviceCompliancePolicyStatesRequestBuilder extends BaseRequestBuild
      * Create new navigation property to deviceCompliancePolicyStates for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceCompliancePolicyState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceManagement/managedDevices/{managedDevice%2Did}/deviceCompliancePolicyStates", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -150,7 +153,7 @@ public class DeviceCompliancePolicyStatesRequestBuilder extends BaseRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DeviceCompliancePolicyStatesRequestBuilder
+     * @return a {@link DeviceCompliancePolicyStatesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceCompliancePolicyStatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -204,7 +207,7 @@ public class DeviceCompliancePolicyStatesRequestBuilder extends BaseRequestBuild
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

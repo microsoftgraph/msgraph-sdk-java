@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppManagementPolicy extends PolicyBase implements Parsable {
     /**
-     * Instantiates a new AppManagementPolicy and sets the default values.
+     * Instantiates a new {@link AppManagementPolicy} and sets the default values.
      */
     public AppManagementPolicy() {
         super();
@@ -18,7 +18,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AppManagementPolicy
+     * @return a {@link AppManagementPolicy}
      */
     @jakarta.annotation.Nonnull
     public static AppManagementPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the appliesTo property value. Collection of applications and service principals to which the policy is applied.
-     * @return a java.util.List<DirectoryObject>
+     * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getAppliesTo() {
@@ -35,7 +35,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,7 +47,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the isEnabled property value. Denotes whether the policy is enabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -55,7 +55,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the restrictions property value. Restrictions that apply to an application or service principal object.
-     * @return a AppManagementConfiguration
+     * @return a {@link AppManagementConfiguration}
      */
     @jakarta.annotation.Nullable
     public AppManagementConfiguration getRestrictions() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GitHubOrganizationEvidence extends AlertEvidence implements Parsable {
     /**
-     * Instantiates a new GitHubOrganizationEvidence and sets the default values.
+     * Instantiates a new {@link GitHubOrganizationEvidence} and sets the default values.
      */
     public GitHubOrganizationEvidence() {
         super();
@@ -18,7 +18,7 @@ public class GitHubOrganizationEvidence extends AlertEvidence implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GitHubOrganizationEvidence
+     * @return a {@link GitHubOrganizationEvidence}
      */
     @jakarta.annotation.Nonnull
     public static GitHubOrganizationEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class GitHubOrganizationEvidence extends AlertEvidence implements Parsabl
     }
     /**
      * Gets the company property value. The company property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCompany() {
@@ -35,7 +35,7 @@ public class GitHubOrganizationEvidence extends AlertEvidence implements Parsabl
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -43,7 +43,7 @@ public class GitHubOrganizationEvidence extends AlertEvidence implements Parsabl
     }
     /**
      * Gets the email property value. The email property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -51,7 +51,7 @@ public class GitHubOrganizationEvidence extends AlertEvidence implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -66,7 +66,7 @@ public class GitHubOrganizationEvidence extends AlertEvidence implements Parsabl
     }
     /**
      * Gets the login property value. The login property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLogin() {
@@ -74,7 +74,7 @@ public class GitHubOrganizationEvidence extends AlertEvidence implements Parsabl
     }
     /**
      * Gets the orgId property value. The orgId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOrgId() {
@@ -82,7 +82,7 @@ public class GitHubOrganizationEvidence extends AlertEvidence implements Parsabl
     }
     /**
      * Gets the webUrl property value. The webUrl property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {

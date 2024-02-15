@@ -10,7 +10,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServicePrincipal extends DirectoryObject implements Parsable {
     /**
-     * Instantiates a new ServicePrincipal and sets the default values.
+     * Instantiates a new {@link ServicePrincipal} and sets the default values.
      */
     public ServicePrincipal() {
         super();
@@ -19,7 +19,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ServicePrincipal
+     * @return a {@link ServicePrincipal}
      */
     @jakarta.annotation.Nonnull
     public static ServicePrincipal createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the accountEnabled property value. true if the service principal account is enabled; otherwise, false. If set to false, then no users will be able to sign in to this app, even if they are assigned to it. Supports $filter (eq, ne, not, in).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAccountEnabled() {
@@ -36,7 +36,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the addIns property value. Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Microsoft 365 call the application in the context of a document the user is working on.
-     * @return a java.util.List<AddIn>
+     * @return a {@link java.util.List<AddIn>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AddIn> getAddIns() {
@@ -44,7 +44,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the alternativeNames property value. Used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities. Supports $filter (eq, not, ge, le, startsWith).
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAlternativeNames() {
@@ -52,7 +52,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the appDescription property value. The description exposed by the associated application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppDescription() {
@@ -60,7 +60,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the appDisplayName property value. The display name exposed by the associated application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
@@ -68,7 +68,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the appId property value. The unique identifier for the associated application (its appId property). Alternate key. Supports $filter (eq, ne, not, in, startsWith).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
@@ -76,7 +76,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the applicationTemplateId property value. Unique identifier of the applicationTemplate that the servicePrincipal was created from. Read-only. Supports $filter (eq, ne, NOT, startsWith).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getApplicationTemplateId() {
@@ -84,7 +84,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the appManagementPolicies property value. The appManagementPolicy applied to this application.
-     * @return a java.util.List<AppManagementPolicy>
+     * @return a {@link java.util.List<AppManagementPolicy>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppManagementPolicy> getAppManagementPolicies() {
@@ -92,7 +92,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the appOwnerOrganizationId property value. Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le).
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getAppOwnerOrganizationId() {
@@ -100,7 +100,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the appRoleAssignedTo property value. App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
-     * @return a java.util.List<AppRoleAssignment>
+     * @return a {@link java.util.List<AppRoleAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppRoleAssignment> getAppRoleAssignedTo() {
@@ -108,7 +108,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the appRoleAssignmentRequired property value. Specifies whether users or other service principals need to be granted an app role assignment for this service principal before users can sign in or apps can get tokens. The default value is false. Not nullable. Supports $filter (eq, ne, NOT).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAppRoleAssignmentRequired() {
@@ -116,7 +116,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the appRoleAssignments property value. App role assignment for another app or service, granted to this service principal. Supports $expand.
-     * @return a java.util.List<AppRoleAssignment>
+     * @return a {@link java.util.List<AppRoleAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppRoleAssignment> getAppRoleAssignments() {
@@ -124,7 +124,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the appRoles property value. The roles exposed by the application which this service principal represents. For more information see the appRoles property definition on the application entity. Not nullable.
-     * @return a java.util.List<AppRole>
+     * @return a {@link java.util.List<AppRole>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppRole> getAppRoles() {
@@ -132,7 +132,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the claimsMappingPolicies property value. The claimsMappingPolicies assigned to this service principal. Supports $expand.
-     * @return a java.util.List<ClaimsMappingPolicy>
+     * @return a {@link java.util.List<ClaimsMappingPolicy>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ClaimsMappingPolicy> getClaimsMappingPolicies() {
@@ -140,7 +140,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the createdObjects property value. Directory objects created by this service principal. Read-only. Nullable.
-     * @return a java.util.List<DirectoryObject>
+     * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getCreatedObjects() {
@@ -148,7 +148,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the customSecurityAttributes property value. An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith). Filter value is case sensitive.
-     * @return a CustomSecurityAttributeValue
+     * @return a {@link CustomSecurityAttributeValue}
      */
     @jakarta.annotation.Nullable
     public CustomSecurityAttributeValue getCustomSecurityAttributes() {
@@ -156,7 +156,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the delegatedPermissionClassifications property value. The delegatedPermissionClassifications property
-     * @return a java.util.List<DelegatedPermissionClassification>
+     * @return a {@link java.util.List<DelegatedPermissionClassification>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DelegatedPermissionClassification> getDelegatedPermissionClassifications() {
@@ -164,7 +164,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the description property value. Free text field to provide an internal end-user facing description of the service principal. End-user portals such MyApps will display the application description in this field. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -172,7 +172,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the disabledByMicrosoftStatus property value. Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisabledByMicrosoftStatus() {
@@ -180,7 +180,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the service principal. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -188,7 +188,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the endpoints property value. The endpoints property
-     * @return a java.util.List<Endpoint>
+     * @return a {@link java.util.List<Endpoint>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Endpoint> getEndpoints() {
@@ -196,7 +196,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the federatedIdentityCredentials property value. Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (/$count eq 0, /$count ne 0).
-     * @return a java.util.List<FederatedIdentityCredential>
+     * @return a {@link java.util.List<FederatedIdentityCredential>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<FederatedIdentityCredential> getFederatedIdentityCredentials() {
@@ -204,7 +204,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -265,7 +265,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the homepage property value. Home page or landing page of the application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getHomepage() {
@@ -273,7 +273,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the homeRealmDiscoveryPolicies property value. The homeRealmDiscoveryPolicies assigned to this service principal. Supports $expand.
-     * @return a java.util.List<HomeRealmDiscoveryPolicy>
+     * @return a {@link java.util.List<HomeRealmDiscoveryPolicy>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<HomeRealmDiscoveryPolicy> getHomeRealmDiscoveryPolicies() {
@@ -281,7 +281,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the info property value. Basic profile information of the acquired application such as app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Microsoft Entra apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
-     * @return a InformationalUrl
+     * @return a {@link InformationalUrl}
      */
     @jakarta.annotation.Nullable
     public InformationalUrl getInfo() {
@@ -289,7 +289,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the keyCredentials property value. The collection of key credentials associated with the service principal. Not nullable. Supports $filter (eq, not, ge, le).
-     * @return a java.util.List<KeyCredential>
+     * @return a {@link java.util.List<KeyCredential>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyCredential> getKeyCredentials() {
@@ -297,7 +297,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the loginUrl property value. Specifies the URL where the service provider redirects the user to Microsoft Entra ID to authenticate. Microsoft Entra ID uses the URL to launch the application from Microsoft 365 or the Microsoft Entra My Apps. When blank, Microsoft Entra ID performs IdP-initiated sign-on for applications configured with SAML-based single sign-on. The user launches the application from Microsoft 365, the Microsoft Entra My Apps, or the Microsoft Entra SSO URL.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLoginUrl() {
@@ -305,7 +305,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the logoutUrl property value. Specifies the URL that will be used by Microsoft's authorization service to logout an user using OpenId Connect front-channel, back-channel or SAML logout protocols.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLogoutUrl() {
@@ -313,7 +313,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the memberOf property value. Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand.
-     * @return a java.util.List<DirectoryObject>
+     * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getMemberOf() {
@@ -321,7 +321,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the notes property value. Free text field to capture information about the service principal, typically used for operational purposes. Maximum allowed size is 1024 characters.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNotes() {
@@ -329,7 +329,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the notificationEmailAddresses property value. Specifies the list of email addresses where Microsoft Entra ID sends a notification when the active certificate is near the expiration date. This is only for the certificates used to sign the SAML token issued for Microsoft Entra Gallery applications.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getNotificationEmailAddresses() {
@@ -337,7 +337,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the oauth2PermissionGrants property value. Delegated permission grants authorizing this service principal to access an API on behalf of a signed-in user. Read-only. Nullable.
-     * @return a java.util.List<OAuth2PermissionGrant>
+     * @return a {@link java.util.List<OAuth2PermissionGrant>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<OAuth2PermissionGrant> getOauth2PermissionGrants() {
@@ -345,7 +345,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the oauth2PermissionScopes property value. The delegated permissions exposed by the application. For more information see the oauth2PermissionScopes property on the application entity's api property. Not nullable.
-     * @return a java.util.List<PermissionScope>
+     * @return a {@link java.util.List<PermissionScope>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PermissionScope> getOauth2PermissionScopes() {
@@ -353,7 +353,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the ownedObjects property value. Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand, $select nested in $expand, and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
-     * @return a java.util.List<DirectoryObject>
+     * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getOwnedObjects() {
@@ -361,7 +361,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the owners property value. Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable. Supports $expand, $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1), and $select nested in $expand.
-     * @return a java.util.List<DirectoryObject>
+     * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getOwners() {
@@ -369,7 +369,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the passwordCredentials property value. The collection of password credentials associated with the application. Not nullable.
-     * @return a java.util.List<PasswordCredential>
+     * @return a {@link java.util.List<PasswordCredential>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PasswordCredential> getPasswordCredentials() {
@@ -377,7 +377,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the preferredSingleSignOnMode property value. Specifies the single sign-on mode configured for this application. Microsoft Entra ID uses the preferred single sign-on mode to launch the application from Microsoft 365 or the My Apps portal. The supported values are password, saml, notSupported, and oidc.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPreferredSingleSignOnMode() {
@@ -385,7 +385,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the preferredTokenSigningKeyThumbprint property value. This property can be used on SAML applications (apps that have preferredSingleSignOnMode set to saml) to control which certificate is used to sign the SAML responses. For applications that are not SAML, do not write or otherwise rely on this property.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPreferredTokenSigningKeyThumbprint() {
@@ -393,7 +393,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the remoteDesktopSecurityConfiguration property value. The remoteDesktopSecurityConfiguration object applied to this service principal. Supports $filter (eq) for isRemoteDesktopProtocolEnabled property.
-     * @return a RemoteDesktopSecurityConfiguration
+     * @return a {@link RemoteDesktopSecurityConfiguration}
      */
     @jakarta.annotation.Nullable
     public RemoteDesktopSecurityConfiguration getRemoteDesktopSecurityConfiguration() {
@@ -401,7 +401,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the replyUrls property value. The URLs that user tokens are sent to for sign in with the associated application, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to for the associated application. Not nullable.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getReplyUrls() {
@@ -409,7 +409,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the resourceSpecificApplicationPermissions property value. The resource-specific application permissions exposed by this application. Currently, resource-specific permissions are only supported for Teams apps accessing to specific chats and teams using Microsoft Graph. Read-only.
-     * @return a java.util.List<ResourceSpecificPermission>
+     * @return a {@link java.util.List<ResourceSpecificPermission>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ResourceSpecificPermission> getResourceSpecificApplicationPermissions() {
@@ -417,7 +417,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the samlSingleSignOnSettings property value. The collection for settings related to saml single sign-on.
-     * @return a SamlSingleSignOnSettings
+     * @return a {@link SamlSingleSignOnSettings}
      */
     @jakarta.annotation.Nullable
     public SamlSingleSignOnSettings getSamlSingleSignOnSettings() {
@@ -425,7 +425,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the servicePrincipalNames property value. Contains the list of identifiersUris, copied over from the associated application. Additional values can be added to hybrid applications. These values can be used to identify the permissions exposed by this app within Microsoft Entra ID. For example,Client apps can specify a resource URI which is based on the values of this property to acquire an access token, which is the URI returned in the 'aud' claim.The any operator is required for filter expressions on multi-valued properties. Not nullable.  Supports $filter (eq, not, ge, le, startsWith).
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getServicePrincipalNames() {
@@ -433,7 +433,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the servicePrincipalType property value. Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Microsoft Entra ID internally. The servicePrincipalType property can be set to three different values: Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.SocialIdp - For internal use.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalType() {
@@ -441,7 +441,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization's Microsoft Entra tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization's Microsoft Entra tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization's Microsoft Entra tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSignInAudience() {
@@ -449,7 +449,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the synchronization property value. Represents the capability for Microsoft Entra identity synchronization through the Microsoft Graph API.
-     * @return a Synchronization
+     * @return a {@link Synchronization}
      */
     @jakarta.annotation.Nullable
     public Synchronization getSynchronization() {
@@ -457,7 +457,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the tags property value. Custom strings that can be used to categorize and identify the service principal. Not nullable. The value is the union of strings set here and on the associated application entity's tags property.Supports $filter (eq, not, ge, le, startsWith).
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
@@ -465,7 +465,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the tokenEncryptionKeyId property value. Specifies the keyId of a public key from the keyCredentials collection. When configured, Microsoft Entra ID issues tokens for this application encrypted using the key specified by this property. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getTokenEncryptionKeyId() {
@@ -473,7 +473,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the tokenIssuancePolicies property value. The tokenIssuancePolicies assigned to this service principal.
-     * @return a java.util.List<TokenIssuancePolicy>
+     * @return a {@link java.util.List<TokenIssuancePolicy>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TokenIssuancePolicy> getTokenIssuancePolicies() {
@@ -481,7 +481,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the tokenLifetimePolicies property value. The tokenLifetimePolicies assigned to this service principal.
-     * @return a java.util.List<TokenLifetimePolicy>
+     * @return a {@link java.util.List<TokenLifetimePolicy>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TokenLifetimePolicy> getTokenLifetimePolicies() {
@@ -489,7 +489,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the transitiveMemberOf property value. The transitiveMemberOf property
-     * @return a java.util.List<DirectoryObject>
+     * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getTransitiveMemberOf() {
@@ -497,7 +497,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the verifiedPublisher property value. Specifies the verified publisher of the application which this service principal represents.
-     * @return a VerifiedPublisher
+     * @return a {@link VerifiedPublisher}
      */
     @jakarta.annotation.Nullable
     public VerifiedPublisher getVerifiedPublisher() {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
     /**
-     * Instantiates a new ManagedAndroidStoreApp and sets the default values.
+     * Instantiates a new {@link ManagedAndroidStoreApp} and sets the default values.
      */
     public ManagedAndroidStoreApp() {
         super();
@@ -21,7 +21,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedAndroidStoreApp
+     * @return a {@link ManagedAndroidStoreApp}
      */
     @jakarta.annotation.Nonnull
     public static ManagedAndroidStoreApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
     }
     /**
      * Gets the appStoreUrl property value. The Android AppStoreUrl.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppStoreUrl() {
@@ -38,7 +38,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -50,7 +50,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. Contains properties for the minimum operating system required for an Android mobile app.
-     * @return a AndroidMinimumOperatingSystem
+     * @return a {@link AndroidMinimumOperatingSystem}
      */
     @jakarta.annotation.Nullable
     public AndroidMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
@@ -58,7 +58,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
     }
     /**
      * Gets the packageId property value. The app's package ID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPackageId() {

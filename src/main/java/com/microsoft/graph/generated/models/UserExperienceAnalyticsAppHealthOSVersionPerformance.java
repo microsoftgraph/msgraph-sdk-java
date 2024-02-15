@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity implements Parsable {
     /**
-     * Instantiates a new UserExperienceAnalyticsAppHealthOSVersionPerformance and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsAppHealthOSVersionPerformance} and sets the default values.
      */
     public UserExperienceAnalyticsAppHealthOSVersionPerformance() {
         super();
@@ -20,7 +20,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsAppHealthOSVersionPerformance
+     * @return a {@link UserExperienceAnalyticsAppHealthOSVersionPerformance}
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsAppHealthOSVersionPerformance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
     }
     /**
      * Gets the activeDeviceCount property value. The number of active devices for the OS version. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getActiveDeviceCount() {
@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -51,7 +51,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
     }
     /**
      * Gets the meanTimeToFailureInMinutes property value. The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMeanTimeToFailureInMinutes() {
@@ -59,7 +59,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
     }
     /**
      * Gets the osBuildNumber property value. The OS build number installed on the device. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsBuildNumber() {
@@ -67,7 +67,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
     }
     /**
      * Gets the osVersion property value. The OS version installed on the device. Supports: $select, $OrderBy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
@@ -75,7 +75,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
     }
     /**
      * Gets the osVersionAppHealthScore property value. The application health score of the OS version. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getOsVersionAppHealthScore() {

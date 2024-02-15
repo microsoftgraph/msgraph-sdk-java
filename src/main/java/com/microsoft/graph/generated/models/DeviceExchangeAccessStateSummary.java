@@ -21,7 +21,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, B
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DeviceExchangeAccessStateSummary and sets the default values.
+     * Instantiates a new {@link DeviceExchangeAccessStateSummary} and sets the default values.
      */
     public DeviceExchangeAccessStateSummary() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, B
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceExchangeAccessStateSummary
+     * @return a {@link DeviceExchangeAccessStateSummary}
      */
     @jakarta.annotation.Nonnull
     public static DeviceExchangeAccessStateSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, B
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, B
     }
     /**
      * Gets the allowedDeviceCount property value. Total count of devices with Exchange Access State: Allowed.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getAllowedDeviceCount() {
@@ -60,7 +60,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, B
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -68,7 +68,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, B
     }
     /**
      * Gets the blockedDeviceCount property value. Total count of devices with Exchange Access State: Blocked.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getBlockedDeviceCount() {
@@ -76,7 +76,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, B
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -91,7 +91,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, B
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -99,7 +99,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, B
     }
     /**
      * Gets the quarantinedDeviceCount property value. Total count of devices with Exchange Access State: Quarantined.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getQuarantinedDeviceCount() {
@@ -107,7 +107,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, B
     }
     /**
      * Gets the unavailableDeviceCount property value. Total count of devices for which no Exchange Access State could be found.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUnavailableDeviceCount() {
@@ -115,7 +115,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, B
     }
     /**
      * Gets the unknownDeviceCount property value. Total count of devices with Exchange Access State: Unknown.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUnknownDeviceCount() {

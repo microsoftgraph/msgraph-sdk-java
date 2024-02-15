@@ -18,7 +18,7 @@ public class ScheduleInformation implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ScheduleInformation and sets the default values.
+     * Instantiates a new {@link ScheduleInformation} and sets the default values.
      */
     public ScheduleInformation() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ScheduleInformation implements AdditionalDataHolder, BackedModel, P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ScheduleInformation
+     * @return a {@link ScheduleInformation}
      */
     @jakarta.annotation.Nonnull
     public static ScheduleInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ScheduleInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ScheduleInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the availabilityView property value. Represents a merged view of availability of all the items in scheduleItems. The view consists of time slots. Availability during each time slot is indicated with: 0= free, 1= tentative, 2= busy, 3= out of office, 4= working elsewhere.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAvailabilityView() {
@@ -57,7 +57,7 @@ public class ScheduleInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class ScheduleInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the error property value. Error information from attempting to get the availability of the user, distribution list, or resource.
-     * @return a FreeBusyError
+     * @return a {@link FreeBusyError}
      */
     @jakarta.annotation.Nullable
     public FreeBusyError getError() {
@@ -73,7 +73,7 @@ public class ScheduleInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -88,7 +88,7 @@ public class ScheduleInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -96,7 +96,7 @@ public class ScheduleInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the scheduleId property value. An SMTP address of the user, distribution list, or resource, identifying an instance of scheduleInformation.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getScheduleId() {
@@ -104,7 +104,7 @@ public class ScheduleInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the scheduleItems property value. Contains the items that describe the availability of the user or resource.
-     * @return a java.util.List<ScheduleItem>
+     * @return a {@link java.util.List<ScheduleItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ScheduleItem> getScheduleItems() {
@@ -112,7 +112,7 @@ public class ScheduleInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the workingHours property value. The days of the week and hours in a specific time zone that the user works. These are set as part of the user's mailboxSettings.
-     * @return a WorkingHours
+     * @return a {@link WorkingHours}
      */
     @jakarta.annotation.Nullable
     public WorkingHours getWorkingHours() {

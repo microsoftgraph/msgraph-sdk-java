@@ -25,6 +25,7 @@ import java.util.Objects;
 public class TaskReportItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the task property of the microsoft.graph.identityGovernance.taskReport entity.
+     * @return a {@link TaskRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TaskRequestBuilder task() {
@@ -32,6 +33,7 @@ public class TaskReportItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the taskDefinition property of the microsoft.graph.identityGovernance.taskReport entity.
+     * @return a {@link TaskDefinitionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TaskDefinitionRequestBuilder taskDefinition() {
@@ -39,13 +41,14 @@ public class TaskReportItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the taskProcessingResults property of the microsoft.graph.identityGovernance.taskReport entity.
+     * @return a {@link TaskProcessingResultsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TaskProcessingResultsRequestBuilder taskProcessingResults() {
         return new TaskProcessingResultsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new TaskReportItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link TaskReportItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -53,7 +56,7 @@ public class TaskReportItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow%2Did}/taskReports/{taskReport%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new TaskReportItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link TaskReportItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -62,7 +65,8 @@ public class TaskReportItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Represents the aggregation of task execution data for tasks within a workflow object.
-     * @return a TaskReport
+     * @return a {@link TaskReport}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public TaskReport get() {
@@ -71,19 +75,19 @@ public class TaskReportItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents the aggregation of task execution data for tasks within a workflow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a TaskReport
+     * @return a {@link TaskReport}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public TaskReport get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, TaskReport::createFromDiscriminatorValue);
     }
     /**
      * Represents the aggregation of task execution data for tasks within a workflow object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -92,7 +96,7 @@ public class TaskReportItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents the aggregation of task execution data for tasks within a workflow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -104,7 +108,7 @@ public class TaskReportItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a TaskReportItemRequestBuilder
+     * @return a {@link TaskReportItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TaskReportItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -128,7 +132,7 @@ public class TaskReportItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

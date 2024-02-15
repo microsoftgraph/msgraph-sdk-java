@@ -18,7 +18,7 @@ public class TargetResource implements AdditionalDataHolder, BackedModel, Parsab
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new TargetResource and sets the default values.
+     * Instantiates a new {@link TargetResource} and sets the default values.
      */
     public TargetResource() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class TargetResource implements AdditionalDataHolder, BackedModel, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TargetResource
+     * @return a {@link TargetResource}
      */
     @jakarta.annotation.Nonnull
     public static TargetResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class TargetResource implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class TargetResource implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class TargetResource implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the displayName property value. Indicates the visible name defined for the resource. Typically specified when the resource is created.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -65,7 +65,7 @@ public class TargetResource implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -81,7 +81,7 @@ public class TargetResource implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the groupType property value. When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue
-     * @return a GroupType
+     * @return a {@link GroupType}
      */
     @jakarta.annotation.Nullable
     public GroupType getGroupType() {
@@ -89,7 +89,7 @@ public class TargetResource implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the id property value. Indicates the unique ID of the resource.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -97,7 +97,7 @@ public class TargetResource implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the modifiedProperties property value. Indicates name, old value and new value of each attribute that changed. Property values depend on the operation type.
-     * @return a java.util.List<ModifiedProperty>
+     * @return a {@link java.util.List<ModifiedProperty>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ModifiedProperty> getModifiedProperties() {
@@ -105,7 +105,7 @@ public class TargetResource implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -113,7 +113,7 @@ public class TargetResource implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the type property value. Describes the resource type.  Example values include Application, Group, ServicePrincipal, and User.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getType() {
@@ -121,7 +121,7 @@ public class TargetResource implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the userPrincipalName property value. When type is set to User, this includes the user name that initiated the action; null for other types.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

@@ -18,7 +18,7 @@ public class FileSecurityState implements AdditionalDataHolder, BackedModel, Par
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new FileSecurityState and sets the default values.
+     * Instantiates a new {@link FileSecurityState} and sets the default values.
      */
     public FileSecurityState() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class FileSecurityState implements AdditionalDataHolder, BackedModel, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a FileSecurityState
+     * @return a {@link FileSecurityState}
      */
     @jakarta.annotation.Nonnull
     public static FileSecurityState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class FileSecurityState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class FileSecurityState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class FileSecurityState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -71,7 +71,7 @@ public class FileSecurityState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the fileHash property value. Complex type containing file hashes (cryptographic and location-sensitive).
-     * @return a FileHash
+     * @return a {@link FileHash}
      */
     @jakarta.annotation.Nullable
     public FileHash getFileHash() {
@@ -79,7 +79,7 @@ public class FileSecurityState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the name property value. File name (without path).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -87,7 +87,7 @@ public class FileSecurityState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -95,7 +95,7 @@ public class FileSecurityState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the path property value. Full file path of the file/imageFile.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPath() {
@@ -103,7 +103,7 @@ public class FileSecurityState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the riskScore property value. Provider generated/calculated risk score of the alert file. Recommended value range of 0-1, which equates to a percentage.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRiskScore() {
