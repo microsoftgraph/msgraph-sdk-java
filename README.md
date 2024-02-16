@@ -20,7 +20,7 @@ repositories {
 
 dependencies {
     // Include the sdk as a dependency
-    implementation 'com.microsoft.graph:microsoft-graph:6.2.0'
+    implementation 'com.microsoft.graph:microsoft-graph:6.2.1'
     // Uncomment the line below if you are building an android application
     //implementation 'com.google.guava:guava:30.1.1-android'
     // This dependency is only needed if you are using a TokenCredential object for authentication
@@ -37,7 +37,7 @@ Add the dependency in `dependencies` in pom.xml
   <!-- Include the sdk as a dependency -->
   <groupId>com.microsoft.graph</groupId>
   <artifactId>microsoft-graph</artifactId>
-  <version>6.2.0</version>
+  <version>6.2.1</version>
 </dependency>
 <dependency>
   <!-- This dependency is only needed if you are using a TokenCredential object for authentication -->
