@@ -78,7 +78,7 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Build with Gradle
-        run: ./gradlew build
+        run: ./gradlew --no-build-cache build
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
