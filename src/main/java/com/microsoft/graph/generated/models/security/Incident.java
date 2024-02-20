@@ -75,7 +75,7 @@ public class Incident extends Entity implements Parsable {
         return this.backingStore.get("customTags");
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. A rich text string describing the incident
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -173,7 +173,7 @@ public class Incident extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the systemTags property value. The systemTags property
+     * Gets the systemTags property value. The system tags associated with the incident
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -256,7 +256,7 @@ public class Incident extends Entity implements Parsable {
         this.backingStore.set("customTags", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. A rich text string describing the incident
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
@@ -319,7 +319,7 @@ public class Incident extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the systemTags property value. The systemTags property
+     * Sets the systemTags property value. The system tags associated with the incident
      * @param value Value to set for the systemTags property.
      */
     public void setSystemTags(@jakarta.annotation.Nullable final java.util.List<String> value) {

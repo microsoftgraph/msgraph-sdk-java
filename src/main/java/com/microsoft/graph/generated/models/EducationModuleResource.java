@@ -35,7 +35,7 @@ public class EducationModuleResource extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the resource property value. The resource property
+     * Gets the resource property value. Resource object that is with this module.
      * @return a {@link EducationResource}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class EducationModuleResource extends Entity implements Parsable {
         writer.writeObjectValue("resource", this.getResource());
     }
     /**
-     * Sets the resource property value. The resource property
+     * Sets the resource property value. Resource object that is with this module.
      * @param value Value to set for the resource property.
      */
     public void setResource(@jakarta.annotation.Nullable final EducationResource value) {

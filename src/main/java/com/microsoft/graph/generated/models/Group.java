@@ -327,7 +327,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("licenseProcessingState");
     }
     /**
-     * Gets the mail property value. The SMTP address for the group, for example, 'serviceadmins@contoso.onmicrosoft.com'. Returned by default. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Gets the mail property value. The SMTP address for the group, for example, 'serviceadmins@contoso.com'. Returned by default. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -910,7 +910,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("licenseProcessingState", value);
     }
     /**
-     * Sets the mail property value. The SMTP address for the group, for example, 'serviceadmins@contoso.onmicrosoft.com'. Returned by default. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Sets the mail property value. The SMTP address for the group, for example, 'serviceadmins@contoso.com'. Returned by default. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @param value Value to set for the mail property.
      */
     public void setMail(@jakarta.annotation.Nullable final String value) {

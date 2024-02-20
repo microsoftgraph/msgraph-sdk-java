@@ -111,7 +111,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         return this.backingStore.get("jobTitle");
     }
     /**
-     * Gets the mail property value. The SMTP address for the contact, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
+     * Gets the mail property value. The SMTP address for the contact, for example, 'jeff@contoso.com'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -283,7 +283,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         this.backingStore.set("jobTitle", value);
     }
     /**
-     * Sets the mail property value. The SMTP address for the contact, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
+     * Sets the mail property value. The SMTP address for the contact, for example, 'jeff@contoso.com'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @param value Value to set for the mail property.
      */
     public void setMail(@jakarta.annotation.Nullable final String value) {

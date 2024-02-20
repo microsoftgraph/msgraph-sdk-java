@@ -60,7 +60,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendars{?%24count,%24expand,%24filter,%24orderby,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get all the user's calendars (/calendars navigation property), get the calendars from the default calendar group or from a specific calendar group. 
+     * Get all the user's calendars (/calendars navigation property), get the calendars from the default calendar group or from a specific calendar group.
      * @return a {@link CalendarCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-calendars?view=graph-rest-1.0">Find more info here</a>
@@ -70,7 +70,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get all the user's calendars (/calendars navigation property), get the calendars from the default calendar group or from a specific calendar group. 
+     * Get all the user's calendars (/calendars navigation property), get the calendars from the default calendar group or from a specific calendar group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CalendarCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -111,7 +111,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Calendar::createFromDiscriminatorValue);
     }
     /**
-     * Get all the user's calendars (/calendars navigation property), get the calendars from the default calendar group or from a specific calendar group. 
+     * Get all the user's calendars (/calendars navigation property), get the calendars from the default calendar group or from a specific calendar group.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +119,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get all the user's calendars (/calendars navigation property), get the calendars from the default calendar group or from a specific calendar group. 
+     * Get all the user's calendars (/calendars navigation property), get the calendars from the default calendar group or from a specific calendar group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -165,7 +165,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
         return new CalendarsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get all the user's calendars (/calendars navigation property), get the calendars from the default calendar group or from a specific calendar group. 
+     * Get all the user's calendars (/calendars navigation property), get the calendars from the default calendar group or from a specific calendar group.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

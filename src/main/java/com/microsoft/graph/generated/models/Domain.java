@@ -99,7 +99,7 @@ public class Domain extends Entity implements Parsable {
         return this.backingStore.get("isDefault");
     }
     /**
-     * Gets the isInitial property value. true if this is the initial domain created by Microsoft Online Services (companyname.onmicrosoft.com). There is only one initial domain per company. Not nullable
+     * Gets the isInitial property value. true if this is the initial domain created by Microsoft Online Services (contoso.com). There is only one initial domain per company. Not nullable
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -254,7 +254,7 @@ public class Domain extends Entity implements Parsable {
         this.backingStore.set("isDefault", value);
     }
     /**
-     * Sets the isInitial property value. true if this is the initial domain created by Microsoft Online Services (companyname.onmicrosoft.com). There is only one initial domain per company. Not nullable
+     * Sets the isInitial property value. true if this is the initial domain created by Microsoft Online Services (contoso.com). There is only one initial domain per company. Not nullable
      * @param value Value to set for the isInitial property.
      */
     public void setIsInitial(@jakarta.annotation.Nullable final Boolean value) {

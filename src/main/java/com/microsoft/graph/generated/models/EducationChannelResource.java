@@ -36,7 +36,7 @@ public class EducationChannelResource extends EducationResource implements Parsa
         return deserializerMap;
     }
     /**
-     * Gets the url property value. The url property
+     * Gets the url property value. URL of the channel resource.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class EducationChannelResource extends EducationResource implements Parsa
         writer.writeStringValue("url", this.getUrl());
     }
     /**
-     * Sets the url property value. The url property
+     * Sets the url property value. URL of the channel resource.
      * @param value Value to set for the url property.
      */
     public void setUrl(@jakarta.annotation.Nullable final String value) {

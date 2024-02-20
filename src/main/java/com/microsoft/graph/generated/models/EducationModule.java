@@ -26,7 +26,7 @@ public class EducationModule extends Entity implements Parsable {
         return new EducationModule();
     }
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. The display name of the user that created the module.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class EducationModule extends Entity implements Parsable {
         return this.backingStore.get("createdBy");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Date time the module was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class EducationModule extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Description of the module.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -50,7 +50,7 @@ public class EducationModule extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Name of the module.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class EducationModule extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isPinned property value. The isPinned property
+     * Gets the isPinned property value. Indicates whether the module is pinned or not.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class EducationModule extends Entity implements Parsable {
         return this.backingStore.get("isPinned");
     }
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. The last user that modified the module.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class EducationModule extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedBy");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Date time the module was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class EducationModule extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the resources property value. The resources property
+     * Gets the resources property value. Learning objects that are associated with this module. Only teachers can modify this list. Nullable.
      * @return a {@link java.util.List<EducationModuleResource>}
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class EducationModule extends Entity implements Parsable {
         return this.backingStore.get("resources");
     }
     /**
-     * Gets the resourcesFolderUrl property value. The resourcesFolderUrl property
+     * Gets the resourcesFolderUrl property value. Folder URL where all the file resources for this module are stored.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,7 @@ public class EducationModule extends Entity implements Parsable {
         return this.backingStore.get("resourcesFolderUrl");
     }
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. Status of the module. You can't use a PATCH operation to update this value. Possible values are: draft and published.
      * @return a {@link EducationModuleStatus}
      */
     @jakarta.annotation.Nullable
@@ -137,70 +137,70 @@ public class EducationModule extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("resources", this.getResources());
     }
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. The display name of the user that created the module.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("createdBy", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Date time the module was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description of the module.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Name of the module.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the isPinned property value. The isPinned property
+     * Sets the isPinned property value. Indicates whether the module is pinned or not.
      * @param value Value to set for the isPinned property.
      */
     public void setIsPinned(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isPinned", value);
     }
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. The last user that modified the module.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("lastModifiedBy", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Date time the module was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the resources property value. The resources property
+     * Sets the resources property value. Learning objects that are associated with this module. Only teachers can modify this list. Nullable.
      * @param value Value to set for the resources property.
      */
     public void setResources(@jakarta.annotation.Nullable final java.util.List<EducationModuleResource> value) {
         this.backingStore.set("resources", value);
     }
     /**
-     * Sets the resourcesFolderUrl property value. The resourcesFolderUrl property
+     * Sets the resourcesFolderUrl property value. Folder URL where all the file resources for this module are stored.
      * @param value Value to set for the resourcesFolderUrl property.
      */
     public void setResourcesFolderUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("resourcesFolderUrl", value);
     }
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. Status of the module. You can't use a PATCH operation to update this value. Possible values are: draft and published.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final EducationModuleStatus value) {
