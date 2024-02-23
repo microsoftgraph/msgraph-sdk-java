@@ -56,7 +56,7 @@ public class SiteCollection implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore;
     }
     /**
-     * Gets the dataLocationCode property value. The geographic region code for where this site collection resides. Read-only.
+     * Gets the dataLocationCode property value. The geographic region code for where this site collection resides. Only present for multi-geo tenants. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class SiteCollection implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore = value;
     }
     /**
-     * Sets the dataLocationCode property value. The geographic region code for where this site collection resides. Read-only.
+     * Sets the dataLocationCode property value. The geographic region code for where this site collection resides. Only present for multi-geo tenants. Read-only.
      * @param value Value to set for the dataLocationCode property.
      */
     public void setDataLocationCode(@jakarta.annotation.Nullable final String value) {

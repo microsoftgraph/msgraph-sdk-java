@@ -36,7 +36,7 @@ public class EducationLinkedAssignmentResource extends EducationResource impleme
         return deserializerMap;
     }
     /**
-     * Gets the url property value. The url property
+     * Gets the url property value. URL of the actual assignment.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class EducationLinkedAssignmentResource extends EducationResource impleme
         writer.writeStringValue("url", this.getUrl());
     }
     /**
-     * Sets the url property value. The url property
+     * Sets the url property value. URL of the actual assignment.
      * @param value Value to set for the url property.
      */
     public void setUrl(@jakarta.annotation.Nullable final String value) {

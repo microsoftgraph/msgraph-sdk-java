@@ -169,7 +169,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.backingStore.get("givenName");
     }
     /**
-     * Gets the mail property value. The SMTP address for the user, for example, jeff@contoso.onmicrosoft.com. Read-Only. Supports $filter.
+     * Gets the mail property value. The SMTP address for the user, for example, jeff@contoso.com. Read-Only. Supports $filter.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -507,7 +507,7 @@ public class EducationUser extends Entity implements Parsable {
         this.backingStore.set("givenName", value);
     }
     /**
-     * Sets the mail property value. The SMTP address for the user, for example, jeff@contoso.onmicrosoft.com. Read-Only. Supports $filter.
+     * Sets the mail property value. The SMTP address for the user, for example, jeff@contoso.com. Read-Only. Supports $filter.
      * @param value Value to set for the mail property.
      */
     public void setMail(@jakarta.annotation.Nullable final String value) {
