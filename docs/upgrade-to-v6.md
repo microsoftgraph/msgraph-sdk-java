@@ -86,7 +86,8 @@ public class CustomTokenProvider implements AccessTokenProvider {
     @Override 
     public AllowedHostsValidator getAllowedHostsValidator() {
         // Handle allowed hosts validation logic here
-        return new DefaultAllowedHostsValidator();
+        // Defaults to all hosts being valid
+        return new AllowedHostsValidator();
     }
 ```
 Then instantiate the GraphServiceClient as follows: 
