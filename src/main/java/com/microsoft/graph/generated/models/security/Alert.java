@@ -35,7 +35,7 @@ public class Alert extends Entity implements Parsable {
         return this.backingStore.get("actorDisplayName");
     }
     /**
-     * Gets the alertPolicyId property value. The alertPolicyId property
+     * Gets the alertPolicyId property value. The ID of the policy that generated the alert, and populated when there is a specific policy that generated the alert, whether configured by a customer or a built-in policy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -43,7 +43,7 @@ public class Alert extends Entity implements Parsable {
         return this.backingStore.get("alertPolicyId");
     }
     /**
-     * Gets the alertWebUrl property value. URL for the alert page in the Microsoft 365 Defender portal.
+     * Gets the alertWebUrl property value. The alertWebUrl property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class Alert extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the detectionSource property value. Detection technology or sensor that identified the notable component or activity. Possible values are: unknown, microsoftDefenderForEndpoint, antivirus, smartScreen, customTi, microsoftDefenderForOffice365, automatedInvestigation, microsoftThreatExperts, customDetection, microsoftDefenderForIdentity, cloudAppSecurity, microsoft365Defender, azureAdIdentityProtection, manual, microsoftDataLossPrevention, appGovernancePolicy, appGovernanceDetection, unknownFutureValue, microsoftDefenderForCloud, microsoftDefenderForIoT, microsoftDefenderForServers, microsoftDefenderForStorage, microsoftDefenderForDNS, microsoftDefenderForDatabases, microsoftDefenderForContainers, microsoftDefenderForNetwork, microsoftDefenderForAppService, microsoftDefenderForKeyVault, microsoftDefenderForResourceManager, microsoftDefenderForApiManagement. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud, microsoftDefenderForIoT, microsoftDefenderForServers, microsoftDefenderForStorage, microsoftDefenderForDNS, microsoftDefenderForDatabases, microsoftDefenderForContainers, microsoftDefenderForNetwork, microsoftDefenderForAppService, microsoftDefenderForKeyVault, microsoftDefenderForResourceManager, microsoftDefenderForApiManagement.
+     * Gets the detectionSource property value. Detection technology or sensor that identified the notable component or activity. Possible values are: unknown, microsoftDefenderForEndpoint, antivirus, smartScreen, customTi, microsoftDefenderForOffice365, automatedInvestigation, microsoftThreatExperts, customDetection, microsoftDefenderForIdentity, cloudAppSecurity, microsoft365Defender, azureAdIdentityProtection, manual, microsoftDataLossPrevention, appGovernancePolicy, appGovernanceDetection, unknownFutureValue, microsoftDefenderForCloud, microsoftDefenderForIoT, microsoftDefenderForServers, microsoftDefenderForStorage, microsoftDefenderForDNS, microsoftDefenderForDatabases, microsoftDefenderForContainers, microsoftDefenderForNetwork, microsoftDefenderForAppService, microsoftDefenderForKeyVault, microsoftDefenderForResourceManager, microsoftDefenderForApiManagement, microsoftSentinel, nrtAlerts, scheduledAlerts, microsoftDefenderThreatIntelligenceAnalytics, builtInMl. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud, microsoftDefenderForIoT, microsoftDefenderForServers, microsoftDefenderForStorage, microsoftDefenderForDNS, microsoftDefenderForDatabases, microsoftDefenderForContainers, microsoftDefenderForNetwork, microsoftDefenderForAppService, microsoftDefenderForKeyVault, microsoftDefenderForResourceManager, microsoftDefenderForApiManagement, microsoftSentinel, nrtAlerts, scheduledAlerts, microsoftDefenderThreatIntelligenceAnalytics, builtInMl.
      * @return a {@link DetectionSource}
      */
     @jakarta.annotation.Nullable
@@ -163,6 +163,7 @@ public class Alert extends Entity implements Parsable {
         deserializerMap.put("serviceSource", (n) -> { this.setServiceSource(n.getEnumValue(ServiceSource::forValue)); });
         deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(AlertSeverity::forValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AlertStatus::forValue)); });
+        deserializerMap.put("systemTags", (n) -> { this.setSystemTags(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
         deserializerMap.put("threatDisplayName", (n) -> { this.setThreatDisplayName(n.getStringValue()); });
         deserializerMap.put("threatFamilyName", (n) -> { this.setThreatFamilyName(n.getStringValue()); });
@@ -274,6 +275,14 @@ public class Alert extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
+     * Gets the systemTags property value. The system tags associated with the alert.
+     * @return a {@link java.util.List<String>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<String> getSystemTags() {
+        return this.backingStore.get("systemTags");
+    }
+    /**
      * Gets the tenantId property value. The Microsoft Entra tenant the alert was created in.
      * @return a {@link String}
      */
@@ -338,6 +347,7 @@ public class Alert extends Entity implements Parsable {
         writer.writeEnumValue("serviceSource", this.getServiceSource());
         writer.writeEnumValue("severity", this.getSeverity());
         writer.writeEnumValue("status", this.getStatus());
+        writer.writeCollectionOfPrimitiveValues("systemTags", this.getSystemTags());
         writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeStringValue("threatDisplayName", this.getThreatDisplayName());
         writer.writeStringValue("threatFamilyName", this.getThreatFamilyName());
@@ -351,14 +361,14 @@ public class Alert extends Entity implements Parsable {
         this.backingStore.set("actorDisplayName", value);
     }
     /**
-     * Sets the alertPolicyId property value. The alertPolicyId property
+     * Sets the alertPolicyId property value. The ID of the policy that generated the alert, and populated when there is a specific policy that generated the alert, whether configured by a customer or a built-in policy.
      * @param value Value to set for the alertPolicyId property.
      */
     public void setAlertPolicyId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("alertPolicyId", value);
     }
     /**
-     * Sets the alertWebUrl property value. URL for the alert page in the Microsoft 365 Defender portal.
+     * Sets the alertWebUrl property value. The alertWebUrl property
      * @param value Value to set for the alertWebUrl property.
      */
     public void setAlertWebUrl(@jakarta.annotation.Nullable final String value) {
@@ -407,7 +417,7 @@ public class Alert extends Entity implements Parsable {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the detectionSource property value. Detection technology or sensor that identified the notable component or activity. Possible values are: unknown, microsoftDefenderForEndpoint, antivirus, smartScreen, customTi, microsoftDefenderForOffice365, automatedInvestigation, microsoftThreatExperts, customDetection, microsoftDefenderForIdentity, cloudAppSecurity, microsoft365Defender, azureAdIdentityProtection, manual, microsoftDataLossPrevention, appGovernancePolicy, appGovernanceDetection, unknownFutureValue, microsoftDefenderForCloud, microsoftDefenderForIoT, microsoftDefenderForServers, microsoftDefenderForStorage, microsoftDefenderForDNS, microsoftDefenderForDatabases, microsoftDefenderForContainers, microsoftDefenderForNetwork, microsoftDefenderForAppService, microsoftDefenderForKeyVault, microsoftDefenderForResourceManager, microsoftDefenderForApiManagement. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud, microsoftDefenderForIoT, microsoftDefenderForServers, microsoftDefenderForStorage, microsoftDefenderForDNS, microsoftDefenderForDatabases, microsoftDefenderForContainers, microsoftDefenderForNetwork, microsoftDefenderForAppService, microsoftDefenderForKeyVault, microsoftDefenderForResourceManager, microsoftDefenderForApiManagement.
+     * Sets the detectionSource property value. Detection technology or sensor that identified the notable component or activity. Possible values are: unknown, microsoftDefenderForEndpoint, antivirus, smartScreen, customTi, microsoftDefenderForOffice365, automatedInvestigation, microsoftThreatExperts, customDetection, microsoftDefenderForIdentity, cloudAppSecurity, microsoft365Defender, azureAdIdentityProtection, manual, microsoftDataLossPrevention, appGovernancePolicy, appGovernanceDetection, unknownFutureValue, microsoftDefenderForCloud, microsoftDefenderForIoT, microsoftDefenderForServers, microsoftDefenderForStorage, microsoftDefenderForDNS, microsoftDefenderForDatabases, microsoftDefenderForContainers, microsoftDefenderForNetwork, microsoftDefenderForAppService, microsoftDefenderForKeyVault, microsoftDefenderForResourceManager, microsoftDefenderForApiManagement, microsoftSentinel, nrtAlerts, scheduledAlerts, microsoftDefenderThreatIntelligenceAnalytics, builtInMl. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud, microsoftDefenderForIoT, microsoftDefenderForServers, microsoftDefenderForStorage, microsoftDefenderForDNS, microsoftDefenderForDatabases, microsoftDefenderForContainers, microsoftDefenderForNetwork, microsoftDefenderForAppService, microsoftDefenderForKeyVault, microsoftDefenderForResourceManager, microsoftDefenderForApiManagement, microsoftSentinel, nrtAlerts, scheduledAlerts, microsoftDefenderThreatIntelligenceAnalytics, builtInMl.
      * @param value Value to set for the detectionSource property.
      */
     public void setDetectionSource(@jakarta.annotation.Nullable final DetectionSource value) {
@@ -524,6 +534,13 @@ public class Alert extends Entity implements Parsable {
      */
     public void setStatus(@jakarta.annotation.Nullable final AlertStatus value) {
         this.backingStore.set("status", value);
+    }
+    /**
+     * Sets the systemTags property value. The system tags associated with the alert.
+     * @param value Value to set for the systemTags property.
+     */
+    public void setSystemTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.backingStore.set("systemTags", value);
     }
     /**
      * Sets the tenantId property value. The Microsoft Entra tenant the alert was created in.

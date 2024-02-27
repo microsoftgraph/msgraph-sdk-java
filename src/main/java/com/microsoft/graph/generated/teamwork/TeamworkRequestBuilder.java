@@ -2,6 +2,7 @@ package com.microsoft.graph.teamwork;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Teamwork;
+import com.microsoft.graph.teamwork.deletedchats.DeletedChatsRequestBuilder;
 import com.microsoft.graph.teamwork.deletedteams.DeletedTeamsRequestBuilder;
 import com.microsoft.graph.teamwork.sendactivitynotificationtorecipients.SendActivityNotificationToRecipientsRequestBuilder;
 import com.microsoft.graph.teamwork.teamsappsettings.TeamsAppSettingsRequestBuilder;
@@ -24,6 +25,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamworkRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the deletedChats property of the microsoft.graph.teamwork entity.
+     * @return a {@link DeletedChatsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DeletedChatsRequestBuilder deletedChats() {
+        return new DeletedChatsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the deletedTeams property of the microsoft.graph.teamwork entity.
      * @return a {@link DeletedTeamsRequestBuilder}

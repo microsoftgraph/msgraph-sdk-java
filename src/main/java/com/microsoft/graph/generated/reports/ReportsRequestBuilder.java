@@ -48,6 +48,7 @@ import com.microsoft.graph.reports.getonedriveusageaccountdetailwithperiod.GetOn
 import com.microsoft.graph.reports.getonedriveusagefilecountswithperiod.GetOneDriveUsageFileCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.reports.getonedriveusagestoragewithperiod.GetOneDriveUsageStorageWithPeriodRequestBuilder;
 import com.microsoft.graph.reports.getprinterarchivedprintjobswithprinteridwithstartdatetimewithenddatetime.GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder;
+import com.microsoft.graph.reports.getrelyingpartydetailedsummarywithperiod.GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder;
 import com.microsoft.graph.reports.getsharepointactivityfilecountswithperiod.GetSharePointActivityFileCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.reports.getsharepointactivitypageswithperiod.GetSharePointActivityPagesWithPeriodRequestBuilder;
 import com.microsoft.graph.reports.getsharepointactivityusercountswithperiod.GetSharePointActivityUserCountsWithPeriodRequestBuilder;
@@ -669,6 +670,16 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(printerId);
         Objects.requireNonNull(startDateTime);
         return new GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, printerId, startDateTime);
+    }
+    /**
+     * Provides operations to call the getRelyingPartyDetailedSummary method.
+     * @param period Usage: period='{period}'
+     * @return a {@link GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder getRelyingPartyDetailedSummaryWithPeriod(@jakarta.annotation.Nonnull final String period) {
+        Objects.requireNonNull(period);
+        return new GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
     }
     /**
      * Provides operations to call the getSharePointActivityFileCounts method.

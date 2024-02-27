@@ -35,18 +35,20 @@ public class SendVirtualAppointmentReminderSmsRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/onlineMeetings/{onlineMeeting%2Did}/sendVirtualAppointmentReminderSms", rawUrl);
     }
     /**
-     * Invoke action sendVirtualAppointmentReminderSms
+     * Send an SMS reminder to external attendees for a Teams virtual appointment. This feature requires Teams premium and attendees must have a valid United States phone number to receive SMS notifications.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualappointment-sendvirtualappointmentremindersms?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final SendVirtualAppointmentReminderSmsPostRequestBody body) {
         post(body, null);
     }
     /**
-     * Invoke action sendVirtualAppointmentReminderSms
+     * Send an SMS reminder to external attendees for a Teams virtual appointment. This feature requires Teams premium and attendees must have a valid United States phone number to receive SMS notifications.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualappointment-sendvirtualappointmentremindersms?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final SendVirtualAppointmentReminderSmsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
@@ -56,7 +58,7 @@ public class SendVirtualAppointmentReminderSmsRequestBuilder extends BaseRequest
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Invoke action sendVirtualAppointmentReminderSms
+     * Send an SMS reminder to external attendees for a Teams virtual appointment. This feature requires Teams premium and attendees must have a valid United States phone number to receive SMS notifications.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -65,7 +67,7 @@ public class SendVirtualAppointmentReminderSmsRequestBuilder extends BaseRequest
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action sendVirtualAppointmentReminderSms
+     * Send an SMS reminder to external attendees for a Teams virtual appointment. This feature requires Teams premium and attendees must have a valid United States phone number to receive SMS notifications.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

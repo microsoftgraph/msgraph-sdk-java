@@ -75,7 +75,7 @@ public class Incident extends Entity implements Parsable {
         return this.backingStore.get("customTags");
     }
     /**
-     * Gets the description property value. A rich text string describing the incident
+     * Gets the description property value. Description of the incident.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class Incident extends Entity implements Parsable {
         return this.backingStore.get("incidentWebUrl");
     }
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. The identity that last modified the incident.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -149,7 +149,7 @@ public class Incident extends Entity implements Parsable {
         return this.backingStore.get("lastUpdateDateTime");
     }
     /**
-     * Gets the redirectIncidentId property value. Only populated in case an incident is grouped together with another incident, as part of the logic that processes incidents. In such a case, the status property is redirected.
+     * Gets the redirectIncidentId property value. Only populated in case an incident is grouped with another incident, as part of the logic that processes incidents. In such a case, the status property is redirected.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -173,7 +173,7 @@ public class Incident extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the systemTags property value. The system tags associated with the incident
+     * Gets the systemTags property value. The system tags associated with the incident.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -256,7 +256,7 @@ public class Incident extends Entity implements Parsable {
         this.backingStore.set("customTags", value);
     }
     /**
-     * Sets the description property value. A rich text string describing the incident
+     * Sets the description property value. Description of the incident.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
@@ -284,7 +284,7 @@ public class Incident extends Entity implements Parsable {
         this.backingStore.set("incidentWebUrl", value);
     }
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. The identity that last modified the incident.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final String value) {
@@ -298,7 +298,7 @@ public class Incident extends Entity implements Parsable {
         this.backingStore.set("lastUpdateDateTime", value);
     }
     /**
-     * Sets the redirectIncidentId property value. Only populated in case an incident is grouped together with another incident, as part of the logic that processes incidents. In such a case, the status property is redirected.
+     * Sets the redirectIncidentId property value. Only populated in case an incident is grouped with another incident, as part of the logic that processes incidents. In such a case, the status property is redirected.
      * @param value Value to set for the redirectIncidentId property.
      */
     public void setRedirectIncidentId(@jakarta.annotation.Nullable final String value) {
@@ -319,7 +319,7 @@ public class Incident extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the systemTags property value. The system tags associated with the incident
+     * Sets the systemTags property value. The system tags associated with the incident.
      * @param value Value to set for the systemTags property.
      */
     public void setSystemTags(@jakarta.annotation.Nullable final java.util.List<String> value) {

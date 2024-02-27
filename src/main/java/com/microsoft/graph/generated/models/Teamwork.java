@@ -25,6 +25,14 @@ public class Teamwork extends Entity implements Parsable {
         return new Teamwork();
     }
     /**
+     * Gets the deletedChats property value. The deletedChats property
+     * @return a {@link java.util.List<DeletedChat>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<DeletedChat> getDeletedChats() {
+        return this.backingStore.get("deletedChats");
+    }
+    /**
      * Gets the deletedTeams property value. The deleted team.
      * @return a {@link java.util.List<DeletedTeam>}
      */
@@ -39,6 +47,7 @@ public class Teamwork extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deletedChats", (n) -> { this.setDeletedChats(n.getCollectionOfObjectValues(DeletedChat::createFromDiscriminatorValue)); });
         deserializerMap.put("deletedTeams", (n) -> { this.setDeletedTeams(n.getCollectionOfObjectValues(DeletedTeam::createFromDiscriminatorValue)); });
         deserializerMap.put("teamsAppSettings", (n) -> { this.setTeamsAppSettings(n.getObjectValue(TeamsAppSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("workforceIntegrations", (n) -> { this.setWorkforceIntegrations(n.getCollectionOfObjectValues(WorkforceIntegration::createFromDiscriminatorValue)); });
@@ -67,9 +76,17 @@ public class Teamwork extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("deletedChats", this.getDeletedChats());
         writer.writeCollectionOfObjectValues("deletedTeams", this.getDeletedTeams());
         writer.writeObjectValue("teamsAppSettings", this.getTeamsAppSettings());
         writer.writeCollectionOfObjectValues("workforceIntegrations", this.getWorkforceIntegrations());
+    }
+    /**
+     * Sets the deletedChats property value. The deletedChats property
+     * @param value Value to set for the deletedChats property.
+     */
+    public void setDeletedChats(@jakarta.annotation.Nullable final java.util.List<DeletedChat> value) {
+        this.backingStore.set("deletedChats", value);
     }
     /**
      * Sets the deletedTeams property value. The deleted team.

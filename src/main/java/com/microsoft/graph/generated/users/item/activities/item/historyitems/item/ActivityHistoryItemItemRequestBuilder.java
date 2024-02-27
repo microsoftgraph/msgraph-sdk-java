@@ -86,23 +86,23 @@ public class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ActivityHistoryItem::createFromDiscriminatorValue);
     }
     /**
-     * Create a new or replace an existing history item for an existing user activity.
+     * Delete an existing history item for an existing user activity.
      * @param body The request body
      * @return a {@link ActivityHistoryItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/projectrome-put-historyitem?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/projectrome-delete-historyitem?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ActivityHistoryItem patch(@jakarta.annotation.Nonnull final ActivityHistoryItem body) {
         return patch(body, null);
     }
     /**
-     * Create a new or replace an existing history item for an existing user activity.
+     * Delete an existing history item for an existing user activity.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ActivityHistoryItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/projectrome-put-historyitem?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/projectrome-delete-historyitem?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ActivityHistoryItem patch(@jakarta.annotation.Nonnull final ActivityHistoryItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -153,7 +153,7 @@ public class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new or replace an existing history item for an existing user activity.
+     * Delete an existing history item for an existing user activity.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -162,7 +162,7 @@ public class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Create a new or replace an existing history item for an existing user activity.
+     * Delete an existing history item for an existing user activity.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

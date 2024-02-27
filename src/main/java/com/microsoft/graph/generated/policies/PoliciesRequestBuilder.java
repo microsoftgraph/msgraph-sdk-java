@@ -13,6 +13,7 @@ import com.microsoft.graph.policies.claimsmappingpolicies.ClaimsMappingPoliciesR
 import com.microsoft.graph.policies.conditionalaccesspolicies.ConditionalAccessPoliciesRequestBuilder;
 import com.microsoft.graph.policies.crosstenantaccesspolicy.CrossTenantAccessPolicyRequestBuilder;
 import com.microsoft.graph.policies.defaultappmanagementpolicy.DefaultAppManagementPolicyRequestBuilder;
+import com.microsoft.graph.policies.deviceregistrationpolicy.DeviceRegistrationPolicyRequestBuilder;
 import com.microsoft.graph.policies.featurerolloutpolicies.FeatureRolloutPoliciesRequestBuilder;
 import com.microsoft.graph.policies.homerealmdiscoverypolicies.HomeRealmDiscoveryPoliciesRequestBuilder;
 import com.microsoft.graph.policies.identitysecuritydefaultsenforcementpolicy.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
@@ -126,6 +127,14 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DefaultAppManagementPolicyRequestBuilder defaultAppManagementPolicy() {
         return new DefaultAppManagementPolicyRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the deviceRegistrationPolicy property of the microsoft.graph.policyRoot entity.
+     * @return a {@link DeviceRegistrationPolicyRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DeviceRegistrationPolicyRequestBuilder deviceRegistrationPolicy() {
+        return new DeviceRegistrationPolicyRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the featureRolloutPolicies property of the microsoft.graph.policyRoot entity.

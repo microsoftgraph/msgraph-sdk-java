@@ -143,8 +143,10 @@ public class Device extends DirectoryObject implements Parsable {
         deserializerMap.put("extensions", (n) -> { this.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
         deserializerMap.put("isCompliant", (n) -> { this.setIsCompliant(n.getBooleanValue()); });
         deserializerMap.put("isManaged", (n) -> { this.setIsManaged(n.getBooleanValue()); });
+        deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
         deserializerMap.put("mdmAppId", (n) -> { this.setMdmAppId(n.getStringValue()); });
         deserializerMap.put("memberOf", (n) -> { this.setMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
         deserializerMap.put("onPremisesLastSyncDateTime", (n) -> { this.setOnPremisesLastSyncDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("onPremisesSecurityIdentifier", (n) -> { this.setOnPremisesSecurityIdentifier(n.getStringValue()); });
         deserializerMap.put("onPremisesSyncEnabled", (n) -> { this.setOnPremisesSyncEnabled(n.getBooleanValue()); });
@@ -177,6 +179,14 @@ public class Device extends DirectoryObject implements Parsable {
         return this.backingStore.get("isManaged");
     }
     /**
+     * Gets the manufacturer property value. Manufacturer of the device. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getManufacturer() {
+        return this.backingStore.get("manufacturer");
+    }
+    /**
      * Gets the mdmAppId property value. Application identifier used to register device into MDM. Read-only. Supports $filter (eq, ne, not, startsWith).
      * @return a {@link String}
      */
@@ -191,6 +201,14 @@ public class Device extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getMemberOf() {
         return this.backingStore.get("memberOf");
+    }
+    /**
+     * Gets the model property value. Model of the device. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getModel() {
+        return this.backingStore.get("model");
     }
     /**
      * Gets the onPremisesLastSyncDateTime property value. The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Read-only. Supports $filter (eq, ne, not, ge, le, in).
@@ -317,8 +335,10 @@ public class Device extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("extensions", this.getExtensions());
         writer.writeBooleanValue("isCompliant", this.getIsCompliant());
         writer.writeBooleanValue("isManaged", this.getIsManaged());
+        writer.writeStringValue("manufacturer", this.getManufacturer());
         writer.writeStringValue("mdmAppId", this.getMdmAppId());
         writer.writeCollectionOfObjectValues("memberOf", this.getMemberOf());
+        writer.writeStringValue("model", this.getModel());
         writer.writeOffsetDateTimeValue("onPremisesLastSyncDateTime", this.getOnPremisesLastSyncDateTime());
         writer.writeStringValue("onPremisesSecurityIdentifier", this.getOnPremisesSecurityIdentifier());
         writer.writeBooleanValue("onPremisesSyncEnabled", this.getOnPremisesSyncEnabled());
@@ -432,6 +452,13 @@ public class Device extends DirectoryObject implements Parsable {
         this.backingStore.set("isManaged", value);
     }
     /**
+     * Sets the manufacturer property value. Manufacturer of the device. Read-only.
+     * @param value Value to set for the manufacturer property.
+     */
+    public void setManufacturer(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("manufacturer", value);
+    }
+    /**
      * Sets the mdmAppId property value. Application identifier used to register device into MDM. Read-only. Supports $filter (eq, ne, not, startsWith).
      * @param value Value to set for the mdmAppId property.
      */
@@ -444,6 +471,13 @@ public class Device extends DirectoryObject implements Parsable {
      */
     public void setMemberOf(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.backingStore.set("memberOf", value);
+    }
+    /**
+     * Sets the model property value. Model of the device. Read-only.
+     * @param value Value to set for the model property.
+     */
+    public void setModel(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("model", value);
     }
     /**
      * Sets the onPremisesLastSyncDateTime property value. The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Read-only. Supports $filter (eq, ne, not, ge, le, in).

@@ -113,6 +113,14 @@ public class PolicyRoot extends Entity implements Parsable {
         return this.backingStore.get("defaultAppManagementPolicy");
     }
     /**
+     * Gets the deviceRegistrationPolicy property value. The deviceRegistrationPolicy property
+     * @return a {@link DeviceRegistrationPolicy}
+     */
+    @jakarta.annotation.Nullable
+    public DeviceRegistrationPolicy getDeviceRegistrationPolicy() {
+        return this.backingStore.get("deviceRegistrationPolicy");
+    }
+    /**
      * Gets the featureRolloutPolicies property value. The feature rollout policy associated with a directory object.
      * @return a {@link java.util.List<FeatureRolloutPolicy>}
      */
@@ -138,6 +146,7 @@ public class PolicyRoot extends Entity implements Parsable {
         deserializerMap.put("conditionalAccessPolicies", (n) -> { this.setConditionalAccessPolicies(n.getCollectionOfObjectValues(ConditionalAccessPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("crossTenantAccessPolicy", (n) -> { this.setCrossTenantAccessPolicy(n.getObjectValue(CrossTenantAccessPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("defaultAppManagementPolicy", (n) -> { this.setDefaultAppManagementPolicy(n.getObjectValue(TenantAppManagementPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceRegistrationPolicy", (n) -> { this.setDeviceRegistrationPolicy(n.getObjectValue(DeviceRegistrationPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("featureRolloutPolicies", (n) -> { this.setFeatureRolloutPolicies(n.getCollectionOfObjectValues(FeatureRolloutPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("homeRealmDiscoveryPolicies", (n) -> { this.setHomeRealmDiscoveryPolicies(n.getCollectionOfObjectValues(HomeRealmDiscoveryPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("identitySecurityDefaultsEnforcementPolicy", (n) -> { this.setIdentitySecurityDefaultsEnforcementPolicy(n.getObjectValue(IdentitySecurityDefaultsEnforcementPolicy::createFromDiscriminatorValue)); });
@@ -222,6 +231,7 @@ public class PolicyRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("conditionalAccessPolicies", this.getConditionalAccessPolicies());
         writer.writeObjectValue("crossTenantAccessPolicy", this.getCrossTenantAccessPolicy());
         writer.writeObjectValue("defaultAppManagementPolicy", this.getDefaultAppManagementPolicy());
+        writer.writeObjectValue("deviceRegistrationPolicy", this.getDeviceRegistrationPolicy());
         writer.writeCollectionOfObjectValues("featureRolloutPolicies", this.getFeatureRolloutPolicies());
         writer.writeCollectionOfObjectValues("homeRealmDiscoveryPolicies", this.getHomeRealmDiscoveryPolicies());
         writer.writeObjectValue("identitySecurityDefaultsEnforcementPolicy", this.getIdentitySecurityDefaultsEnforcementPolicy());
@@ -307,6 +317,13 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     public void setDefaultAppManagementPolicy(@jakarta.annotation.Nullable final TenantAppManagementPolicy value) {
         this.backingStore.set("defaultAppManagementPolicy", value);
+    }
+    /**
+     * Sets the deviceRegistrationPolicy property value. The deviceRegistrationPolicy property
+     * @param value Value to set for the deviceRegistrationPolicy property.
+     */
+    public void setDeviceRegistrationPolicy(@jakarta.annotation.Nullable final DeviceRegistrationPolicy value) {
+        this.backingStore.set("deviceRegistrationPolicy", value);
     }
     /**
      * Sets the featureRolloutPolicies property value. The feature rollout policy associated with a directory object.

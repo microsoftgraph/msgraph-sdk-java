@@ -76,7 +76,7 @@ public class AttendeeNotificationInfo implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the phoneNumber property value. The phoneNumber property
+     * Gets the phoneNumber property value. The phone number of the external attendee. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class AttendeeNotificationInfo implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("phoneNumber");
     }
     /**
-     * Gets the timeZone property value. The timeZone property
+     * Gets the timeZone property value. The time zone of the external attendee. The timeZone property can be set to any of the time zones currently supported by Windows. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -125,14 +125,14 @@ public class AttendeeNotificationInfo implements AdditionalDataHolder, BackedMod
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the phoneNumber property value. The phoneNumber property
+     * Sets the phoneNumber property value. The phone number of the external attendee. Required.
      * @param value Value to set for the phoneNumber property.
      */
     public void setPhoneNumber(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("phoneNumber", value);
     }
     /**
-     * Sets the timeZone property value. The timeZone property
+     * Sets the timeZone property value. The time zone of the external attendee. The timeZone property can be set to any of the time zones currently supported by Windows. Required.
      * @param value Value to set for the timeZone property.
      */
     public void setTimeZone(@jakarta.annotation.Nullable final String value) {
