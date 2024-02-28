@@ -277,6 +277,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.chatMessageInfo": return new ChatMessageInfo();
             case "#microsoft.graph.checklistItem": return new ChecklistItem();
             case "#microsoft.graph.claimsMappingPolicy": return new ClaimsMappingPolicy();
+            case "#microsoft.graph.cloudClipboardItem": return new CloudClipboardItem();
+            case "#microsoft.graph.cloudClipboardRoot": return new CloudClipboardRoot();
             case "#microsoft.graph.columnDefinition": return new ColumnDefinition();
             case "#microsoft.graph.columnLink": return new ColumnLink();
             case "#microsoft.graph.commsOperation": return new CommsOperation();
@@ -308,6 +310,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.delegatedAdminRelationshipRequest": return new DelegatedAdminRelationshipRequest();
             case "#microsoft.graph.delegatedAdminServiceManagementDetail": return new DelegatedAdminServiceManagementDetail();
             case "#microsoft.graph.delegatedPermissionClassification": return new DelegatedPermissionClassification();
+            case "#microsoft.graph.deletedChat": return new DeletedChat();
             case "#microsoft.graph.deletedItemContainer": return new DeletedItemContainer();
             case "#microsoft.graph.deletedTeam": return new DeletedTeam();
             case "#microsoft.graph.deltaParticipants": return new DeltaParticipants();
@@ -350,6 +353,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.deviceManagementPartner": return new DeviceManagementPartner();
             case "#microsoft.graph.deviceManagementReports": return new DeviceManagementReports();
             case "#microsoft.graph.deviceManagementTroubleshootingEvent": return new DeviceManagementTroubleshootingEvent();
+            case "#microsoft.graph.deviceRegistrationPolicy": return new DeviceRegistrationPolicy();
             case "#microsoft.graph.directory": return new Directory();
             case "#microsoft.graph.directoryAudit": return new DirectoryAudit();
             case "#microsoft.graph.directoryDefinition": return new DirectoryDefinition();
@@ -643,10 +647,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.printUsage": return new PrintUsage();
             case "#microsoft.graph.printUsageByPrinter": return new PrintUsageByPrinter();
             case "#microsoft.graph.printUsageByUser": return new PrintUsageByUser();
-            case "#microsoft.graph.privilegedAccessGroup": return new PrivilegedAccessGroup();
-            case "#microsoft.graph.privilegedAccessGroupAssignmentSchedule": return new PrivilegedAccessGroupAssignmentSchedule();
-            case "#microsoft.graph.privilegedAccessGroupAssignmentScheduleInstance": return new PrivilegedAccessGroupAssignmentScheduleInstance();
-            case "#microsoft.graph.privilegedAccessGroupAssignmentScheduleRequest": return new PrivilegedAccessGroupAssignmentScheduleRequest();
         }
         return null;
     }
@@ -658,6 +658,10 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.privilegedAccessGroup": return new PrivilegedAccessGroup();
+            case "#microsoft.graph.privilegedAccessGroupAssignmentSchedule": return new PrivilegedAccessGroupAssignmentSchedule();
+            case "#microsoft.graph.privilegedAccessGroupAssignmentScheduleInstance": return new PrivilegedAccessGroupAssignmentScheduleInstance();
+            case "#microsoft.graph.privilegedAccessGroupAssignmentScheduleRequest": return new PrivilegedAccessGroupAssignmentScheduleRequest();
             case "#microsoft.graph.privilegedAccessGroupEligibilitySchedule": return new PrivilegedAccessGroupEligibilitySchedule();
             case "#microsoft.graph.privilegedAccessGroupEligibilityScheduleInstance": return new PrivilegedAccessGroupEligibilityScheduleInstance();
             case "#microsoft.graph.privilegedAccessGroupEligibilityScheduleRequest": return new PrivilegedAccessGroupEligibilityScheduleRequest();
@@ -672,6 +676,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.rbacApplication": return new RbacApplication();
             case "#microsoft.graph.recordOperation": return new RecordOperation();
             case "#microsoft.graph.referenceAttachment": return new ReferenceAttachment();
+            case "#microsoft.graph.relyingPartyDetailedSummary": return new RelyingPartyDetailedSummary();
             case "#microsoft.graph.remoteAssistancePartner": return new RemoteAssistancePartner();
             case "#microsoft.graph.remoteDesktopSecurityConfiguration": return new RemoteDesktopSecurityConfiguration();
             case "#microsoft.graph.request": return new Request();
@@ -945,6 +950,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.windowsPhone81CustomConfiguration": return new WindowsPhone81CustomConfiguration();
             case "#microsoft.graph.windowsPhone81GeneralConfiguration": return new WindowsPhone81GeneralConfiguration();
             case "#microsoft.graph.windowsProtectionState": return new WindowsProtectionState();
+            case "#microsoft.graph.windowsSetting": return new WindowsSetting();
+            case "#microsoft.graph.windowsSettingInstance": return new WindowsSettingInstance();
             case "#microsoft.graph.windowsUniversalAppX": return new WindowsUniversalAppX();
             case "#microsoft.graph.windowsUniversalAppXContainedApp": return new WindowsUniversalAppXContainedApp();
             case "#microsoft.graph.windowsUpdateForBusinessConfiguration": return new WindowsUpdateForBusinessConfiguration();

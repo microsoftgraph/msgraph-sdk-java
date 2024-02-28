@@ -50,6 +50,7 @@ public class UserSettings extends Entity implements Parsable {
         deserializerMap.put("contributionToContentDiscoveryAsOrganizationDisabled", (n) -> { this.setContributionToContentDiscoveryAsOrganizationDisabled(n.getBooleanValue()); });
         deserializerMap.put("contributionToContentDiscoveryDisabled", (n) -> { this.setContributionToContentDiscoveryDisabled(n.getBooleanValue()); });
         deserializerMap.put("shiftPreferences", (n) -> { this.setShiftPreferences(n.getObjectValue(ShiftPreferences::createFromDiscriminatorValue)); });
+        deserializerMap.put("windows", (n) -> { this.setWindows(n.getCollectionOfObjectValues(WindowsSetting::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -61,6 +62,14 @@ public class UserSettings extends Entity implements Parsable {
         return this.backingStore.get("shiftPreferences");
     }
     /**
+     * Gets the windows property value. The windows property
+     * @return a {@link java.util.List<WindowsSetting>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<WindowsSetting> getWindows() {
+        return this.backingStore.get("windows");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -70,6 +79,7 @@ public class UserSettings extends Entity implements Parsable {
         writer.writeBooleanValue("contributionToContentDiscoveryAsOrganizationDisabled", this.getContributionToContentDiscoveryAsOrganizationDisabled());
         writer.writeBooleanValue("contributionToContentDiscoveryDisabled", this.getContributionToContentDiscoveryDisabled());
         writer.writeObjectValue("shiftPreferences", this.getShiftPreferences());
+        writer.writeCollectionOfObjectValues("windows", this.getWindows());
     }
     /**
      * Sets the contributionToContentDiscoveryAsOrganizationDisabled property value. Reflects the organization level setting controlling delegate access to the trending API. When set to true, the organization doesn't have access to Office Delve. The relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for Business is affected for the whole organization. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
@@ -91,5 +101,12 @@ public class UserSettings extends Entity implements Parsable {
      */
     public void setShiftPreferences(@jakarta.annotation.Nullable final ShiftPreferences value) {
         this.backingStore.set("shiftPreferences", value);
+    }
+    /**
+     * Sets the windows property value. The windows property
+     * @param value Value to set for the windows property.
+     */
+    public void setWindows(@jakarta.annotation.Nullable final java.util.List<WindowsSetting> value) {
+        this.backingStore.set("windows", value);
     }
 }

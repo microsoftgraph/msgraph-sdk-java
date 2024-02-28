@@ -82,7 +82,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
         return this.backingStore.get("customer");
     }
     /**
-     * Gets the displayName property value. The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner and is set by the partner only when the relationship is in the created status and can't be changed by the customer.
+     * Gets the displayName property value. The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner and is set by the partner only when the relationship is in the created status and can't be changed by the customer. Maximum length is 50 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -223,7 +223,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
         this.backingStore.set("customer", value);
     }
     /**
-     * Sets the displayName property value. The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner and is set by the partner only when the relationship is in the created status and can't be changed by the customer.
+     * Sets the displayName property value. The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner and is set by the partner only when the relationship is in the created status and can't be changed by the customer. Maximum length is 50 characters.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

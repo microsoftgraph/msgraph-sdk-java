@@ -77,21 +77,23 @@ public class EducationGradingCategoryItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, EducationGradingCategory::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property gradingCategories in education
+     * Update a single gradingCategory on the educationAssignmentSettings. Only teachers can perform this operation.
      * @param body The request body
      * @return a {@link EducationGradingCategory}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationgradingcategory-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationGradingCategory patch(@jakarta.annotation.Nonnull final EducationGradingCategory body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property gradingCategories in education
+     * Update a single gradingCategory on the educationAssignmentSettings. Only teachers can perform this operation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationGradingCategory}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationgradingcategory-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationGradingCategory patch(@jakarta.annotation.Nonnull final EducationGradingCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -142,7 +144,7 @@ public class EducationGradingCategoryItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Update the navigation property gradingCategories in education
+     * Update a single gradingCategory on the educationAssignmentSettings. Only teachers can perform this operation.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +153,7 @@ public class EducationGradingCategoryItemRequestBuilder extends BaseRequestBuild
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property gradingCategories in education
+     * Update a single gradingCategory on the educationAssignmentSettings. Only teachers can perform this operation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
