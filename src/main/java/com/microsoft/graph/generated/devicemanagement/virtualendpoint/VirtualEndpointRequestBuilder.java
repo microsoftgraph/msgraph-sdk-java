@@ -1,5 +1,8 @@
 package com.microsoft.graph.devicemanagement.virtualendpoint;
 
+import com.microsoft.graph.devicemanagement.virtualendpoint.auditevents.AuditEventsRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.provisioningpolicies.ProvisioningPoliciesRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.usersettings.UserSettingsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.VirtualEndpoint;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -20,6 +23,30 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the auditEvents property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link AuditEventsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AuditEventsRequestBuilder auditEvents() {
+        return new AuditEventsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the provisioningPolicies property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link ProvisioningPoliciesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ProvisioningPoliciesRequestBuilder provisioningPolicies() {
+        return new ProvisioningPoliciesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userSettings property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link UserSettingsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UserSettingsRequestBuilder userSettings() {
+        return new UserSettingsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new {@link VirtualEndpointRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request

@@ -37,7 +37,7 @@ public class PrincipalRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/roleManagement/entitlementManagement/roleAssignmentScheduleRequests/{unifiedRoleAssignmentScheduleRequest%2Did}/principal{?%24expand,%24select}", rawUrl);
     }
     /**
-     * The principal that's getting a role assignment through the request. Supports $expand.
+     * The principal that's getting a role assignment through the request. Supports $expand and $select nested in $expand for id only.
      * @return a {@link DirectoryObject}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class PrincipalRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The principal that's getting a role assignment through the request. Supports $expand.
+     * The principal that's getting a role assignment through the request. Supports $expand and $select nested in $expand for id only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DirectoryObject}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class PrincipalRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObject::createFromDiscriminatorValue);
     }
     /**
-     * The principal that's getting a role assignment through the request. Supports $expand.
+     * The principal that's getting a role assignment through the request. Supports $expand and $select nested in $expand for id only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class PrincipalRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The principal that's getting a role assignment through the request. Supports $expand.
+     * The principal that's getting a role assignment through the request. Supports $expand and $select nested in $expand for id only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class PrincipalRequestBuilder extends BaseRequestBuilder {
         return new PrincipalRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The principal that's getting a role assignment through the request. Supports $expand.
+     * The principal that's getting a role assignment through the request. Supports $expand and $select nested in $expand for id only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

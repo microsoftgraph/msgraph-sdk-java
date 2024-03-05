@@ -33,7 +33,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
         return this.backingStore.get("action");
     }
     /**
-     * Gets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it's null. Supports $expand.
+     * Gets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it's null. Supports $expand and $select nested in $expand.
      * @return a {@link UnifiedRoleEligibilitySchedule}
      */
     @jakarta.annotation.Nullable
@@ -114,7 +114,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
         return this.backingStore.get("justification");
     }
     /**
-     * Gets the principal property value. The principal that's getting a role assignment through the request. Supports $expand.
+     * Gets the principal property value. The principal that's getting a role assignment through the request. Supports $expand and $select nested in $expand for id only.
      * @return a {@link DirectoryObject}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
         return this.backingStore.get("principalId");
     }
     /**
-     * Gets the roleDefinition property value. Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand.
+     * Gets the roleDefinition property value. Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand and $select nested in $expand.
      * @return a {@link UnifiedRoleDefinition}
      */
     @jakarta.annotation.Nullable
@@ -154,7 +154,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
         return this.backingStore.get("scheduleInfo");
     }
     /**
-     * Gets the targetSchedule property value. The schedule for an eligible role assignment that is referenced through the targetScheduleId property. Supports $expand.
+     * Gets the targetSchedule property value. The schedule for an eligible role assignment that is referenced through the targetScheduleId property. Supports $expand and $select nested in $expand.
      * @return a {@link UnifiedRoleAssignmentSchedule}
      */
     @jakarta.annotation.Nullable
@@ -209,7 +209,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
         this.backingStore.set("action", value);
     }
     /**
-     * Sets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it's null. Supports $expand.
+     * Sets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it's null. Supports $expand and $select nested in $expand.
      * @param value Value to set for the activatedUsing property.
      */
     public void setActivatedUsing(@jakarta.annotation.Nullable final UnifiedRoleEligibilitySchedule value) {
@@ -258,7 +258,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
         this.backingStore.set("justification", value);
     }
     /**
-     * Sets the principal property value. The principal that's getting a role assignment through the request. Supports $expand.
+     * Sets the principal property value. The principal that's getting a role assignment through the request. Supports $expand and $select nested in $expand for id only.
      * @param value Value to set for the principal property.
      */
     public void setPrincipal(@jakarta.annotation.Nullable final DirectoryObject value) {
@@ -272,7 +272,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
         this.backingStore.set("principalId", value);
     }
     /**
-     * Sets the roleDefinition property value. Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand.
+     * Sets the roleDefinition property value. Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand and $select nested in $expand.
      * @param value Value to set for the roleDefinition property.
      */
     public void setRoleDefinition(@jakarta.annotation.Nullable final UnifiedRoleDefinition value) {
@@ -293,7 +293,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
         this.backingStore.set("scheduleInfo", value);
     }
     /**
-     * Sets the targetSchedule property value. The schedule for an eligible role assignment that is referenced through the targetScheduleId property. Supports $expand.
+     * Sets the targetSchedule property value. The schedule for an eligible role assignment that is referenced through the targetScheduleId property. Supports $expand and $select nested in $expand.
      * @param value Value to set for the targetSchedule property.
      */
     public void setTargetSchedule(@jakarta.annotation.Nullable final UnifiedRoleAssignmentSchedule value) {

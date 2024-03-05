@@ -2,8 +2,10 @@ package com.microsoft.graph.users.item.followedsites;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SiteCollectionResponse;
+import com.microsoft.graph.users.item.followedsites.add.AddRequestBuilder;
 import com.microsoft.graph.users.item.followedsites.count.CountRequestBuilder;
 import com.microsoft.graph.users.item.followedsites.item.SiteItemRequestBuilder;
+import com.microsoft.graph.users.item.followedsites.remove.RemoveRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -23,12 +25,28 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class FollowedSitesRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to call the add method.
+     * @return a {@link AddRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AddRequestBuilder add() {
+        return new AddRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the remove method.
+     * @return a {@link RemoveRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RemoveRequestBuilder remove() {
+        return new RemoveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the followedSites property of the microsoft.graph.user entity.

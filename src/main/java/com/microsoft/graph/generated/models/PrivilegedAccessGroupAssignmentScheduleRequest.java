@@ -59,7 +59,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAc
         return deserializerMap;
     }
     /**
-     * Gets the group property value. References the group that is the scope of the membership or ownership assignment request through PIM for groups. Supports $expand.
+     * Gets the group property value. References the group that is the scope of the membership or ownership assignment request through PIM for groups. Supports $expand and $select nested in $expand for select properties like id, displayName, and mail.
      * @return a {@link Group}
      */
     @jakarta.annotation.Nullable
@@ -75,7 +75,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAc
         return this.backingStore.get("groupId");
     }
     /**
-     * Gets the principal property value. References the principal that's in the scope of this membership or ownership assignment request through the group that's governed by PIM. Supports $expand.
+     * Gets the principal property value. References the principal that's in the scope of this membership or ownership assignment request through the group that's governed by PIM. Supports $expand and $select nested in $expand for id only.
      * @return a {@link DirectoryObject}
      */
     @jakarta.annotation.Nullable
@@ -137,7 +137,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAc
         this.backingStore.set("activatedUsing", value);
     }
     /**
-     * Sets the group property value. References the group that is the scope of the membership or ownership assignment request through PIM for groups. Supports $expand.
+     * Sets the group property value. References the group that is the scope of the membership or ownership assignment request through PIM for groups. Supports $expand and $select nested in $expand for select properties like id, displayName, and mail.
      * @param value Value to set for the group property.
      */
     public void setGroup(@jakarta.annotation.Nullable final Group value) {
@@ -151,7 +151,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAc
         this.backingStore.set("groupId", value);
     }
     /**
-     * Sets the principal property value. References the principal that's in the scope of this membership or ownership assignment request through the group that's governed by PIM. Supports $expand.
+     * Sets the principal property value. References the principal that's in the scope of this membership or ownership assignment request through the group that's governed by PIM. Supports $expand and $select nested in $expand for id only.
      * @param value Value to set for the principal property.
      */
     public void setPrincipal(@jakarta.annotation.Nullable final DirectoryObject value) {

@@ -69,7 +69,7 @@ public class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsa
         return deserializerMap;
     }
     /**
-     * Gets the forceChangePasswordNextSignIn property value. true if the user must change her password on the next login; otherwise false.
+     * Gets the forceChangePasswordNextSignIn property value. true if the user must change their password on the next sign-in; otherwise false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("forceChangePasswordNextSignIn");
     }
     /**
-     * Gets the forceChangePasswordNextSignInWithMfa property value. If true, at next sign-in, the user must perform a multi-factor authentication (MFA) before being forced to change their password. The behavior is identical to forceChangePasswordNextSignIn except that the user is required to first perform a multi-factor authentication before password change. After a password change, this property will be automatically reset to false. If not set, default is false.
+     * Gets the forceChangePasswordNextSignInWithMfa property value. If true, at next sign-in, the user must perform a multifactor authentication (MFA) before being forced to change their password. The behavior is identical to forceChangePasswordNextSignIn except that the user is required to first perform a multifactor authentication before password change. After a password change, this property will be automatically reset to false. If not set, default is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the password property value. The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the user's passwordPolicies property. By default, a strong password is required.
+     * Gets the password property value. The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next sign-in. The password must satisfy minimum requirements as specified by the user's passwordPolicies property. By default, a strong password is required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,14 +128,14 @@ public class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore = value;
     }
     /**
-     * Sets the forceChangePasswordNextSignIn property value. true if the user must change her password on the next login; otherwise false.
+     * Sets the forceChangePasswordNextSignIn property value. true if the user must change their password on the next sign-in; otherwise false.
      * @param value Value to set for the forceChangePasswordNextSignIn property.
      */
     public void setForceChangePasswordNextSignIn(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("forceChangePasswordNextSignIn", value);
     }
     /**
-     * Sets the forceChangePasswordNextSignInWithMfa property value. If true, at next sign-in, the user must perform a multi-factor authentication (MFA) before being forced to change their password. The behavior is identical to forceChangePasswordNextSignIn except that the user is required to first perform a multi-factor authentication before password change. After a password change, this property will be automatically reset to false. If not set, default is false.
+     * Sets the forceChangePasswordNextSignInWithMfa property value. If true, at next sign-in, the user must perform a multifactor authentication (MFA) before being forced to change their password. The behavior is identical to forceChangePasswordNextSignIn except that the user is required to first perform a multifactor authentication before password change. After a password change, this property will be automatically reset to false. If not set, default is false.
      * @param value Value to set for the forceChangePasswordNextSignInWithMfa property.
      */
     public void setForceChangePasswordNextSignInWithMfa(@jakarta.annotation.Nullable final Boolean value) {
@@ -149,7 +149,7 @@ public class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the password property value. The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the user's passwordPolicies property. By default, a strong password is required.
+     * Sets the password property value. The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next sign-in. The password must satisfy minimum requirements as specified by the user's passwordPolicies property. By default, a strong password is required.
      * @param value Value to set for the password property.
      */
     public void setPassword(@jakarta.annotation.Nullable final String value) {
