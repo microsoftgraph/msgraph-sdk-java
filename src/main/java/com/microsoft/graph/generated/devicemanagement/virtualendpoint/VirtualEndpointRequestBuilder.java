@@ -1,5 +1,12 @@
 package com.microsoft.graph.devicemanagement.virtualendpoint;
 
+import com.microsoft.graph.devicemanagement.virtualendpoint.auditevents.AuditEventsRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.CloudPCsRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.deviceimages.DeviceImagesRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.galleryimages.GalleryImagesRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.onpremisesconnections.OnPremisesConnectionsRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.provisioningpolicies.ProvisioningPoliciesRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.usersettings.UserSettingsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.VirtualEndpoint;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -20,6 +27,62 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the auditEvents property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link AuditEventsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AuditEventsRequestBuilder auditEvents() {
+        return new AuditEventsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the cloudPCs property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link CloudPCsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CloudPCsRequestBuilder cloudPCs() {
+        return new CloudPCsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the deviceImages property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link DeviceImagesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DeviceImagesRequestBuilder deviceImages() {
+        return new DeviceImagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the galleryImages property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link GalleryImagesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GalleryImagesRequestBuilder galleryImages() {
+        return new GalleryImagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the onPremisesConnections property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link OnPremisesConnectionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public OnPremisesConnectionsRequestBuilder onPremisesConnections() {
+        return new OnPremisesConnectionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the provisioningPolicies property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link ProvisioningPoliciesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ProvisioningPoliciesRequestBuilder provisioningPolicies() {
+        return new ProvisioningPoliciesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userSettings property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link UserSettingsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UserSettingsRequestBuilder userSettings() {
+        return new UserSettingsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new {@link VirtualEndpointRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request

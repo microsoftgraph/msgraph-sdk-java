@@ -152,7 +152,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         return deserializerMap;
     }
     /**
-     * Gets the finalSipCode property value. The code with which the call ended. For more information, see RFC 3261.
+     * Gets the finalSipCode property value. The final response code with which the call ended. For more information, see RFC 3261.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -176,7 +176,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("id");
     }
     /**
-     * Gets the inviteDateTime property value. When the initial invite was sent.
+     * Gets the inviteDateTime property value. The date and time when the initial invite was sent.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -216,7 +216,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("signalingLocation");
     }
     /**
-     * Gets the startDateTime property value. Call start time.For failed and unanswered calls, this can be equal to the invite or failure time.
+     * Gets the startDateTime property value. Call start time.For failed and unanswered calls, this value can be equal to the invite or failure time.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -256,7 +256,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("userId");
     }
     /**
-     * Gets the userPrincipalName property value. UserPrincipalName (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP Address, and can be the same as the user's email address.
+     * Gets the userPrincipalName property value. UserPrincipalName (sign-in name) in Microsoft Entra ID. This value is usually the same as the user's SIP Address, and can be the same as the user's email address.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -365,7 +365,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("failureDateTime", value);
     }
     /**
-     * Sets the finalSipCode property value. The code with which the call ended. For more information, see RFC 3261.
+     * Sets the finalSipCode property value. The final response code with which the call ended. For more information, see RFC 3261.
      * @param value Value to set for the finalSipCode property.
      */
     public void setFinalSipCode(@jakarta.annotation.Nullable final Integer value) {
@@ -386,7 +386,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("id", value);
     }
     /**
-     * Sets the inviteDateTime property value. When the initial invite was sent.
+     * Sets the inviteDateTime property value. The date and time when the initial invite was sent.
      * @param value Value to set for the inviteDateTime property.
      */
     public void setInviteDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -421,7 +421,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("signalingLocation", value);
     }
     /**
-     * Sets the startDateTime property value. Call start time.For failed and unanswered calls, this can be equal to the invite or failure time.
+     * Sets the startDateTime property value. Call start time.For failed and unanswered calls, this value can be equal to the invite or failure time.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -456,7 +456,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("userId", value);
     }
     /**
-     * Sets the userPrincipalName property value. UserPrincipalName (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP Address, and can be the same as the user's email address.
+     * Sets the userPrincipalName property value. UserPrincipalName (sign-in name) in Microsoft Entra ID. This value is usually the same as the user's SIP Address, and can be the same as the user's email address.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {

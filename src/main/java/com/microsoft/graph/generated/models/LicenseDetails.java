@@ -38,7 +38,7 @@ public class LicenseDetails extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the servicePlans property value. Information about the service plans assigned with the license. Read-only, Not nullable
+     * Gets the servicePlans property value. Information about the service plans assigned with the license. Read-only. Not nullable.
      * @return a {@link java.util.List<ServicePlanInfo>}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class LicenseDetails extends Entity implements Parsable {
         return this.backingStore.get("servicePlans");
     }
     /**
-     * Gets the skuId property value. Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object. Read-only
+     * Gets the skuId property value. Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related subscribedSku object. Read-only.
      * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class LicenseDetails extends Entity implements Parsable {
         return this.backingStore.get("skuId");
     }
     /**
-     * Gets the skuPartNumber property value. Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: 'AAD_Premium'. Read-only
+     * Gets the skuPartNumber property value. Unique SKU display name. Equal to the skuPartNumber on the related subscribedSku object; for example, AAD_Premium. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,21 +73,21 @@ public class LicenseDetails extends Entity implements Parsable {
         writer.writeStringValue("skuPartNumber", this.getSkuPartNumber());
     }
     /**
-     * Sets the servicePlans property value. Information about the service plans assigned with the license. Read-only, Not nullable
+     * Sets the servicePlans property value. Information about the service plans assigned with the license. Read-only. Not nullable.
      * @param value Value to set for the servicePlans property.
      */
     public void setServicePlans(@jakarta.annotation.Nullable final java.util.List<ServicePlanInfo> value) {
         this.backingStore.set("servicePlans", value);
     }
     /**
-     * Sets the skuId property value. Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object. Read-only
+     * Sets the skuId property value. Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related subscribedSku object. Read-only.
      * @param value Value to set for the skuId property.
      */
     public void setSkuId(@jakarta.annotation.Nullable final UUID value) {
         this.backingStore.set("skuId", value);
     }
     /**
-     * Sets the skuPartNumber property value. Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: 'AAD_Premium'. Read-only
+     * Sets the skuPartNumber property value. Unique SKU display name. Equal to the skuPartNumber on the related subscribedSku object; for example, AAD_Premium. Read-only.
      * @param value Value to set for the skuPartNumber property.
      */
     public void setSkuPartNumber(@jakarta.annotation.Nullable final String value) {

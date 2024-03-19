@@ -110,6 +110,7 @@ public class Site extends BaseItem implements Parsable {
         deserializerMap.put("lists", (n) -> { this.setLists(n.getCollectionOfObjectValues(List::createFromDiscriminatorValue)); });
         deserializerMap.put("onenote", (n) -> { this.setOnenote(n.getObjectValue(Onenote::createFromDiscriminatorValue)); });
         deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(RichLongRunningOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("pages", (n) -> { this.setPages(n.getCollectionOfObjectValues(BaseSitePage::createFromDiscriminatorValue)); });
         deserializerMap.put("permissions", (n) -> { this.setPermissions(n.getCollectionOfObjectValues(Permission::createFromDiscriminatorValue)); });
         deserializerMap.put("root", (n) -> { this.setRoot(n.getObjectValue(Root::createFromDiscriminatorValue)); });
         deserializerMap.put("sharepointIds", (n) -> { this.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
@@ -158,6 +159,14 @@ public class Site extends BaseItem implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<RichLongRunningOperation> getOperations() {
         return this.backingStore.get("operations");
+    }
+    /**
+     * Gets the pages property value. The pages property
+     * @return a {@link java.util.List<BaseSitePage>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<BaseSitePage> getPages() {
+        return this.backingStore.get("pages");
     }
     /**
      * Gets the permissions property value. The permissions associated with the site. Nullable.
@@ -235,6 +244,7 @@ public class Site extends BaseItem implements Parsable {
         writer.writeCollectionOfObjectValues("lists", this.getLists());
         writer.writeObjectValue("onenote", this.getOnenote());
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
+        writer.writeCollectionOfObjectValues("pages", this.getPages());
         writer.writeCollectionOfObjectValues("permissions", this.getPermissions());
         writer.writeObjectValue("root", this.getRoot());
         writer.writeObjectValue("sharepointIds", this.getSharepointIds());
@@ -333,6 +343,13 @@ public class Site extends BaseItem implements Parsable {
      */
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<RichLongRunningOperation> value) {
         this.backingStore.set("operations", value);
+    }
+    /**
+     * Sets the pages property value. The pages property
+     * @param value Value to set for the pages property.
+     */
+    public void setPages(@jakarta.annotation.Nullable final java.util.List<BaseSitePage> value) {
+        this.backingStore.set("pages", value);
     }
     /**
      * Sets the permissions property value. The permissions associated with the site. Nullable.

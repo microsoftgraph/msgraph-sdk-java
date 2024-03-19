@@ -25,7 +25,7 @@ public class SynchronizationJob extends Entity implements Parsable {
         return new SynchronizationJob();
     }
     /**
-     * Gets the bulkUpload property value. The bulkUpload property
+     * Gets the bulkUpload property value. The bulk upload operation for the job.
      * @return a {@link BulkUpload}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class SynchronizationJob extends Entity implements Parsable {
         writer.writeStringValue("templateId", this.getTemplateId());
     }
     /**
-     * Sets the bulkUpload property value. The bulkUpload property
+     * Sets the bulkUpload property value. The bulk upload operation for the job.
      * @param value Value to set for the bulkUpload property.
      */
     public void setBulkUpload(@jakarta.annotation.Nullable final BulkUpload value) {

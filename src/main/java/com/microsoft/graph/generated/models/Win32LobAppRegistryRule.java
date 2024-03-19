@@ -68,7 +68,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
         return this.backingStore.get("keyPath");
     }
     /**
-     * Gets the operationType property value. Contains all supported registry data detection type.
+     * Gets the operationType property value. A list of possible operations for rules used to make determinations about an application based on registry keys or values. Unless noted, the values can be used with either detection or requirement rules.
      * @return a {@link Win32LobAppRegistryRuleOperationType}
      */
     @jakarta.annotation.Nullable
@@ -127,7 +127,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
         this.backingStore.set("keyPath", value);
     }
     /**
-     * Sets the operationType property value. Contains all supported registry data detection type.
+     * Sets the operationType property value. A list of possible operations for rules used to make determinations about an application based on registry keys or values. Unless noted, the values can be used with either detection or requirement rules.
      * @param value Value to set for the operationType property.
      */
     public void setOperationType(@jakarta.annotation.Nullable final Win32LobAppRegistryRuleOperationType value) {

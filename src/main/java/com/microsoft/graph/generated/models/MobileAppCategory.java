@@ -63,7 +63,6 @@ public class MobileAppCategory extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
     }
     /**
      * Sets the displayName property value. The name of the app category.

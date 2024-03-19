@@ -64,7 +64,7 @@ public class AggregationOption implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("bucketDefinition");
     }
     /**
-     * Gets the field property value. Computes aggregation on the field while the field exists in current entity type. Required.
+     * Gets the field property value. Computes aggregation on the field while the field exists in the current entity type. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class AggregationOption implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the size property value. The number of searchBucket resources to be returned. This isn't required when the range is provided manually in the search request. Optional.
+     * Gets the size property value. The number of searchBucket resources to be returned. This isn't required when the range is provided manually in the search request. The minimum accepted size is 1, and the maximum is 65535. Optional.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class AggregationOption implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("bucketDefinition", value);
     }
     /**
-     * Sets the field property value. Computes aggregation on the field while the field exists in current entity type. Required.
+     * Sets the field property value. Computes aggregation on the field while the field exists in the current entity type. Required.
      * @param value Value to set for the field property.
      */
     public void setField(@jakarta.annotation.Nullable final String value) {
@@ -149,7 +149,7 @@ public class AggregationOption implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the size property value. The number of searchBucket resources to be returned. This isn't required when the range is provided manually in the search request. Optional.
+     * Sets the size property value. The number of searchBucket resources to be returned. This isn't required when the range is provided manually in the search request. The minimum accepted size is 1, and the maximum is 65535. Optional.
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Integer value) {

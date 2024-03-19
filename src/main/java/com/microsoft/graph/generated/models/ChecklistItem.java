@@ -42,7 +42,7 @@ public class ChecklistItem extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the displayName property value. Field indicating the title of checklistItem.
+     * Gets the displayName property value. Indicates the title of the checklistItem.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class ChecklistItem extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isChecked property value. State indicating whether the item is checked off or not.
+     * Gets the isChecked property value. State that indicates whether the item is checked off or not.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -97,14 +97,14 @@ public class ChecklistItem extends Entity implements Parsable {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the displayName property value. Field indicating the title of checklistItem.
+     * Sets the displayName property value. Indicates the title of the checklistItem.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the isChecked property value. State indicating whether the item is checked off or not.
+     * Sets the isChecked property value. State that indicates whether the item is checked off or not.
      * @param value Value to set for the isChecked property.
      */
     public void setIsChecked(@jakarta.annotation.Nullable final Boolean value) {

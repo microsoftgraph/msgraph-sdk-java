@@ -77,7 +77,7 @@ public class EventMessage extends Message implements Parsable {
         return this.backingStore.get("isAllDay");
     }
     /**
-     * Gets the isDelegated property value. The isDelegated property
+     * Gets the isDelegated property value. True if this meeting request is accessible to a delegate, false otherwise. Default is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class EventMessage extends Message implements Parsable {
         return this.backingStore.get("location");
     }
     /**
-     * Gets the meetingMessageType property value. The meetingMessageType property
+     * Gets the meetingMessageType property value. The type of event message: none, meetingRequest, meetingCancelled, meetingAccepted, meetingTenativelyAccepted, meetingDeclined.
      * @return a {@link MeetingMessageType}
      */
     @jakarta.annotation.Nullable
@@ -172,7 +172,7 @@ public class EventMessage extends Message implements Parsable {
         this.backingStore.set("isAllDay", value);
     }
     /**
-     * Sets the isDelegated property value. The isDelegated property
+     * Sets the isDelegated property value. True if this meeting request is accessible to a delegate, false otherwise. Default is false.
      * @param value Value to set for the isDelegated property.
      */
     public void setIsDelegated(@jakarta.annotation.Nullable final Boolean value) {
@@ -193,7 +193,7 @@ public class EventMessage extends Message implements Parsable {
         this.backingStore.set("location", value);
     }
     /**
-     * Sets the meetingMessageType property value. The meetingMessageType property
+     * Sets the meetingMessageType property value. The type of event message: none, meetingRequest, meetingCancelled, meetingAccepted, meetingTenativelyAccepted, meetingDeclined.
      * @param value Value to set for the meetingMessageType property.
      */
     public void setMeetingMessageType(@jakarta.annotation.Nullable final MeetingMessageType value) {

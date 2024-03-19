@@ -125,10 +125,6 @@ public class MobileAppContentFile extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("azureStorageUri", this.getAzureStorageUri());
-        writer.writeOffsetDateTimeValue("azureStorageUriExpirationDateTime", this.getAzureStorageUriExpirationDateTime());
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
-        writer.writeBooleanValue("isCommitted", this.getIsCommitted());
         writer.writeByteArrayValue("manifest", this.getManifest());
         writer.writeStringValue("name", this.getName());
         writer.writeLongValue("size", this.getSize());
