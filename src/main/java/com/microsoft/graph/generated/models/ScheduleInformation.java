@@ -48,7 +48,7 @@ public class ScheduleInformation implements AdditionalDataHolder, BackedModel, P
         return value;
     }
     /**
-     * Gets the availabilityView property value. Represents a merged view of availability of all the items in scheduleItems. The view consists of time slots. Availability during each time slot is indicated with: 0= free, 1= tentative, 2= busy, 3= out of office, 4= working elsewhere.
+     * Gets the availabilityView property value. Represents a merged view of availability of all the items in scheduleItems. The view consists of time slots. Availability during each time slot is indicated with: 0= free, 1= tentative, 2= busy, 3= out of office, 0= working elsewhere.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
