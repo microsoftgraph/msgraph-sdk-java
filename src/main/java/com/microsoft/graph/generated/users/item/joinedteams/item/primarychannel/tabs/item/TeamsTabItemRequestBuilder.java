@@ -90,7 +90,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamsTab::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of the specified tab.This can be used to configure the content of the tab.
+     * Update the properties of the specified tab.This API can be used to configure the content of the tab.
      * @param body The request body
      * @return a {@link TeamsTab}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -101,7 +101,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of the specified tab.This can be used to configure the content of the tab.
+     * Update the properties of the specified tab.This API can be used to configure the content of the tab.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamsTab}
@@ -157,7 +157,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of the specified tab.This can be used to configure the content of the tab.
+     * Update the properties of the specified tab.This API can be used to configure the content of the tab.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -166,7 +166,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of the specified tab.This can be used to configure the content of the tab.
+     * Update the properties of the specified tab.This API can be used to configure the content of the tab.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

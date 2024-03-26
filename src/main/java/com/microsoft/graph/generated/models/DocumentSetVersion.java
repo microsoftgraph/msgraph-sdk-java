@@ -73,7 +73,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
         return this.backingStore.get("items");
     }
     /**
-     * Gets the shouldCaptureMinorVersion property value. If true, minor versions of items are also captured; otherwise, only major versions will be captured. Default value is false.
+     * Gets the shouldCaptureMinorVersion property value. If true, minor versions of items are also captured; otherwise, only major versions are captured. The default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -122,7 +122,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
         this.backingStore.set("items", value);
     }
     /**
-     * Sets the shouldCaptureMinorVersion property value. If true, minor versions of items are also captured; otherwise, only major versions will be captured. Default value is false.
+     * Sets the shouldCaptureMinorVersion property value. If true, minor versions of items are also captured; otherwise, only major versions are captured. The default value is false.
      * @param value Value to set for the shouldCaptureMinorVersion property.
      */
     public void setShouldCaptureMinorVersion(@jakarta.annotation.Nullable final Boolean value) {

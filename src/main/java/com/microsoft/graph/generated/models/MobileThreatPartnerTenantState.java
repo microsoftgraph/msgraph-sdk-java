@@ -15,7 +15,9 @@ public enum MobileThreatPartnerTenantState implements ValuedEnum {
     /** Partner is enabled. */
     Enabled("enabled"),
     /** Partner is unresponsive. */
-    Unresponsive("unresponsive");
+    Unresponsive("unresponsive"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     MobileThreatPartnerTenantState(final String value) {
         this.value = value;
@@ -30,6 +32,7 @@ public enum MobileThreatPartnerTenantState implements ValuedEnum {
             case "available": return Available;
             case "enabled": return Enabled;
             case "unresponsive": return Unresponsive;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

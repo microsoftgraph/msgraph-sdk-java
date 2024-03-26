@@ -36,7 +36,7 @@ public class MicrosoftGraphPartnersBillingExportRequestBuilder extends BaseReque
         super(requestAdapter, "{+baseurl}/reports/partners/billing/usage/unbilled/microsoft.graph.partners.billing.export", rawUrl);
     }
     /**
-     * Export the unbilled Azure usage data for a specific billing period and a given currency.
+     * Export unbilled Azure usage data for a specific billing period and currency.
      * @param body The request body
      * @return a {@link Operation}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -47,7 +47,7 @@ public class MicrosoftGraphPartnersBillingExportRequestBuilder extends BaseReque
         return post(body, null);
     }
     /**
-     * Export the unbilled Azure usage data for a specific billing period and a given currency.
+     * Export unbilled Azure usage data for a specific billing period and currency.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Operation}
@@ -63,7 +63,7 @@ public class MicrosoftGraphPartnersBillingExportRequestBuilder extends BaseReque
         return this.requestAdapter.send(requestInfo, errorMapping, Operation::createFromDiscriminatorValue);
     }
     /**
-     * Export the unbilled Azure usage data for a specific billing period and a given currency.
+     * Export unbilled Azure usage data for a specific billing period and currency.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -72,7 +72,7 @@ public class MicrosoftGraphPartnersBillingExportRequestBuilder extends BaseReque
         return toPostRequestInformation(body, null);
     }
     /**
-     * Export the unbilled Azure usage data for a specific billing period and a given currency.
+     * Export unbilled Azure usage data for a specific billing period and currency.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -37,7 +37,7 @@ public class LinkedResourceItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/todo/lists/{todoTaskList%2Did}/tasks/{todoTask%2Did}/linkedResources/{linkedResource%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes a linkedResource object.
+     * Delete a linkedResource object.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/linkedresource-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class LinkedResourceItemRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Deletes a linkedResource object.
+     * Delete a linkedResource object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/linkedresource-delete?view=graph-rest-1.0">Find more info here</a>
@@ -108,7 +108,7 @@ public class LinkedResourceItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, LinkedResource::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a linkedResource object.
+     * Delete a linkedResource object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class LinkedResourceItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a linkedResource object.
+     * Delete a linkedResource object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

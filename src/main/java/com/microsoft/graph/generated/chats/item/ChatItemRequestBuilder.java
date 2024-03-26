@@ -145,16 +145,18 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/chats/{chat%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete entity from chats
+     * Soft-delete a chat. When invoked with delegated permissions, this operation only works for tenant admins and Teams service admins.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete entity from chats
+     * Soft-delete a chat. When invoked with delegated permissions, this operation only works for tenant admins and Teams service admins.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -214,7 +216,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Chat::createFromDiscriminatorValue);
     }
     /**
-     * Delete entity from chats
+     * Soft-delete a chat. When invoked with delegated permissions, this operation only works for tenant admins and Teams service admins.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -222,7 +224,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete entity from chats
+     * Soft-delete a chat. When invoked with delegated permissions, this operation only works for tenant admins and Teams service admins.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

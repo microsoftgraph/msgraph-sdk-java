@@ -53,6 +53,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
         deserializerMap.put("instanceId", (n) -> { this.setInstanceId(n.getLongValue()); });
         deserializerMap.put("instanceName", (n) -> { this.setInstanceName(n.getStringValue()); });
         deserializerMap.put("saasAppId", (n) -> { this.setSaasAppId(n.getLongValue()); });
+        deserializerMap.put("stream", (n) -> { this.setStream(n.getObjectValue(Stream::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -80,6 +81,14 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
         return this.backingStore.get("saasAppId");
     }
     /**
+     * Gets the stream property value. The stream property
+     * @return a {@link Stream}
+     */
+    @jakarta.annotation.Nullable
+    public Stream getStream() {
+        return this.backingStore.get("stream");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -91,6 +100,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
         writer.writeLongValue("instanceId", this.getInstanceId());
         writer.writeStringValue("instanceName", this.getInstanceName());
         writer.writeLongValue("saasAppId", this.getSaasAppId());
+        writer.writeObjectValue("stream", this.getStream());
     }
     /**
      * Sets the appId property value. Unique identifier of the application.
@@ -126,5 +136,12 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
      */
     public void setSaasAppId(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("saasAppId", value);
+    }
+    /**
+     * Sets the stream property value. The stream property
+     * @param value Value to set for the stream property.
+     */
+    public void setStream(@jakarta.annotation.Nullable final Stream value) {
+        this.backingStore.set("stream", value);
     }
 }

@@ -115,6 +115,14 @@ public class Device extends DirectoryObject implements Parsable {
         return this.backingStore.get("enrollmentProfileName");
     }
     /**
+     * Gets the enrollmentType property value. The enrollmentType property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getEnrollmentType() {
+        return this.backingStore.get("enrollmentType");
+    }
+    /**
      * Gets the extensions property value. The collection of open extensions defined for the device. Read-only. Nullable.
      * @return a {@link java.util.List<Extension>}
      */
@@ -140,9 +148,12 @@ public class Device extends DirectoryObject implements Parsable {
         deserializerMap.put("deviceVersion", (n) -> { this.setDeviceVersion(n.getIntegerValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("enrollmentProfileName", (n) -> { this.setEnrollmentProfileName(n.getStringValue()); });
+        deserializerMap.put("enrollmentType", (n) -> { this.setEnrollmentType(n.getStringValue()); });
         deserializerMap.put("extensions", (n) -> { this.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
         deserializerMap.put("isCompliant", (n) -> { this.setIsCompliant(n.getBooleanValue()); });
         deserializerMap.put("isManaged", (n) -> { this.setIsManaged(n.getBooleanValue()); });
+        deserializerMap.put("isRooted", (n) -> { this.setIsRooted(n.getBooleanValue()); });
+        deserializerMap.put("managementType", (n) -> { this.setManagementType(n.getStringValue()); });
         deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
         deserializerMap.put("mdmAppId", (n) -> { this.setMdmAppId(n.getStringValue()); });
         deserializerMap.put("memberOf", (n) -> { this.setMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
@@ -177,6 +188,22 @@ public class Device extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getIsManaged() {
         return this.backingStore.get("isManaged");
+    }
+    /**
+     * Gets the isRooted property value. The isRooted property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsRooted() {
+        return this.backingStore.get("isRooted");
+    }
+    /**
+     * Gets the managementType property value. The managementType property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getManagementType() {
+        return this.backingStore.get("managementType");
     }
     /**
      * Gets the manufacturer property value. Manufacturer of the device. Read-only.
@@ -219,7 +246,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this.backingStore.get("onPremisesLastSyncDateTime");
     }
     /**
-     * Gets the onPremisesSecurityIdentifier property value. The onPremisesSecurityIdentifier property
+     * Gets the onPremisesSecurityIdentifier property value. The on-premises security identifier (SID) for the user who was synchronized from on-premises to the cloud. Read-only. Returned only on $select. Supports $filter (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -332,9 +359,12 @@ public class Device extends DirectoryObject implements Parsable {
         writer.writeIntegerValue("deviceVersion", this.getDeviceVersion());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("enrollmentProfileName", this.getEnrollmentProfileName());
+        writer.writeStringValue("enrollmentType", this.getEnrollmentType());
         writer.writeCollectionOfObjectValues("extensions", this.getExtensions());
         writer.writeBooleanValue("isCompliant", this.getIsCompliant());
         writer.writeBooleanValue("isManaged", this.getIsManaged());
+        writer.writeBooleanValue("isRooted", this.getIsRooted());
+        writer.writeStringValue("managementType", this.getManagementType());
         writer.writeStringValue("manufacturer", this.getManufacturer());
         writer.writeStringValue("mdmAppId", this.getMdmAppId());
         writer.writeCollectionOfObjectValues("memberOf", this.getMemberOf());
@@ -431,6 +461,13 @@ public class Device extends DirectoryObject implements Parsable {
         this.backingStore.set("enrollmentProfileName", value);
     }
     /**
+     * Sets the enrollmentType property value. The enrollmentType property
+     * @param value Value to set for the enrollmentType property.
+     */
+    public void setEnrollmentType(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("enrollmentType", value);
+    }
+    /**
      * Sets the extensions property value. The collection of open extensions defined for the device. Read-only. Nullable.
      * @param value Value to set for the extensions property.
      */
@@ -450,6 +487,20 @@ public class Device extends DirectoryObject implements Parsable {
      */
     public void setIsManaged(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isManaged", value);
+    }
+    /**
+     * Sets the isRooted property value. The isRooted property
+     * @param value Value to set for the isRooted property.
+     */
+    public void setIsRooted(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isRooted", value);
+    }
+    /**
+     * Sets the managementType property value. The managementType property
+     * @param value Value to set for the managementType property.
+     */
+    public void setManagementType(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("managementType", value);
     }
     /**
      * Sets the manufacturer property value. Manufacturer of the device. Read-only.
@@ -487,7 +538,7 @@ public class Device extends DirectoryObject implements Parsable {
         this.backingStore.set("onPremisesLastSyncDateTime", value);
     }
     /**
-     * Sets the onPremisesSecurityIdentifier property value. The onPremisesSecurityIdentifier property
+     * Sets the onPremisesSecurityIdentifier property value. The on-premises security identifier (SID) for the user who was synchronized from on-premises to the cloud. Read-only. Returned only on $select. Supports $filter (eq).
      * @param value Value to set for the onPremisesSecurityIdentifier property.
      */
     public void setOnPremisesSecurityIdentifier(@jakarta.annotation.Nullable final String value) {

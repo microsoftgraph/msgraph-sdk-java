@@ -56,7 +56,7 @@ public class CloudClipboardItemPayload implements AdditionalDataHolder, BackedMo
         return this.backingStore;
     }
     /**
-     * Gets the content property value. The content property
+     * Gets the content property value. The formatName version of the value of a cloud clipboard encoded in base64.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class CloudClipboardItemPayload implements AdditionalDataHolder, BackedMo
         return deserializerMap;
     }
     /**
-     * Gets the formatName property value. The formatName property
+     * Gets the formatName property value. For a list of possible values see formatName values.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,14 +118,14 @@ public class CloudClipboardItemPayload implements AdditionalDataHolder, BackedMo
         this.backingStore = value;
     }
     /**
-     * Sets the content property value. The content property
+     * Sets the content property value. The formatName version of the value of a cloud clipboard encoded in base64.
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("content", value);
     }
     /**
-     * Sets the formatName property value. The formatName property
+     * Sets the formatName property value. For a list of possible values see formatName values.
      * @param value Value to set for the formatName property.
      */
     public void setFormatName(@jakarta.annotation.Nullable final String value) {

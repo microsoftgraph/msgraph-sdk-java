@@ -42,7 +42,7 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
         return new B2xUserFlowsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the conditionalAccess property of the microsoft.graph.identityContainer entity.
+     * The conditionalAccess property
      * @return a {@link ConditionalAccessRequestBuilder}
      */
     @jakarta.annotation.Nonnull

@@ -68,7 +68,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
         return this.backingStore.get("fileOrFolderName");
     }
     /**
-     * Gets the operationType property value. Contains all supported file system detection type.
+     * Gets the operationType property value. A list of possible operations for rules used to make determinations about an application based on files or folders. Unless noted, can be used with either detection or requirement rules.
      * @return a {@link Win32LobAppFileSystemOperationType}
      */
     @jakarta.annotation.Nullable
@@ -127,7 +127,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
         this.backingStore.set("fileOrFolderName", value);
     }
     /**
-     * Sets the operationType property value. Contains all supported file system detection type.
+     * Sets the operationType property value. A list of possible operations for rules used to make determinations about an application based on files or folders. Unless noted, can be used with either detection or requirement rules.
      * @param value Value to set for the operationType property.
      */
     public void setOperationType(@jakarta.annotation.Nullable final Win32LobAppFileSystemOperationType value) {

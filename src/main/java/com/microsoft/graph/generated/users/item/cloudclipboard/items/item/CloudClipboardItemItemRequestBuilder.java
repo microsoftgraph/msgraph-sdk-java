@@ -55,7 +55,7 @@ public class CloudClipboardItemItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get items from users
+     * Represents a collection of Cloud Clipboard items.
      * @return a {@link CloudClipboardItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class CloudClipboardItemItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get items from users
+     * Represents a collection of Cloud Clipboard items.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudClipboardItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class CloudClipboardItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get items from users
+     * Represents a collection of Cloud Clipboard items.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class CloudClipboardItemItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get items from users
+     * Represents a collection of Cloud Clipboard items.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class CloudClipboardItemItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get items from users
+     * Represents a collection of Cloud Clipboard items.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

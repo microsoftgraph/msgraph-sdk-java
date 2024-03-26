@@ -25,7 +25,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
         return new DelegatedPermissionClassification();
     }
     /**
-     * Gets the classification property value. The classification value being given. Possible value: low. Doesn't support $filter.
+     * Gets the classification property value. The classification value. Possible values: low, medium (preview), high (preview). Doesn't support $filter.
      * @return a {@link PermissionClassificationType}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
         writer.writeStringValue("permissionName", this.getPermissionName());
     }
     /**
-     * Sets the classification property value. The classification value being given. Possible value: low. Doesn't support $filter.
+     * Sets the classification property value. The classification value. Possible values: low, medium (preview), high (preview). Doesn't support $filter.
      * @param value Value to set for the classification property.
      */
     public void setClassification(@jakarta.annotation.Nullable final PermissionClassificationType value) {

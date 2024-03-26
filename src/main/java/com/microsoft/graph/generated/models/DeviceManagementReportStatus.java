@@ -4,19 +4,19 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 /**
- * Possible statuses associated with a generated report
+ * Possible statuses associated with a generated report.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementReportStatus implements ValuedEnum {
-    /** Report generation status is unknown */
+    /** Report generation status is unknown. */
     Unknown("unknown"),
-    /** Report generation has not started */
+    /** Report generation has not started. */
     NotStarted("notStarted"),
-    /** Report generation is in progress */
+    /** Report generation is in progress. */
     InProgress("inProgress"),
-    /** Report generation is completed */
+    /** Report generation is completed. */
     Completed("completed"),
-    /** Report generation has failed */
+    /** Report generation has failed. */
     Failed("failed");
     public final String value;
     DeviceManagementReportStatus(final String value) {

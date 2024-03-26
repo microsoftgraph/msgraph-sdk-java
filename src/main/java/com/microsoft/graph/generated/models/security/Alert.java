@@ -35,6 +35,14 @@ public class Alert extends Entity implements Parsable {
         return this.backingStore.get("actorDisplayName");
     }
     /**
+     * Gets the additionalData property value. A collection of other alert properties, including user-defined properties. Any custom details defined in the alert, and any dynamic content in the alert details, are stored here.
+     * @return a {@link Dictionary}
+     */
+    @jakarta.annotation.Nullable
+    public Dictionary getAdditionalDataProperty() {
+        return this.backingStore.get("additionalDataProperty");
+    }
+    /**
      * Gets the alertPolicyId property value. The ID of the policy that generated the alert, and populated when there is a specific policy that generated the alert, whether configured by a customer or a built-in policy.
      * @return a {@link String}
      */
@@ -138,6 +146,7 @@ public class Alert extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("actorDisplayName", (n) -> { this.setActorDisplayName(n.getStringValue()); });
+        deserializerMap.put("additionalData", (n) -> { this.setAdditionalDataProperty(n.getObjectValue(Dictionary::createFromDiscriminatorValue)); });
         deserializerMap.put("alertPolicyId", (n) -> { this.setAlertPolicyId(n.getStringValue()); });
         deserializerMap.put("alertWebUrl", (n) -> { this.setAlertWebUrl(n.getStringValue()); });
         deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getStringValue()); });
@@ -322,6 +331,7 @@ public class Alert extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("actorDisplayName", this.getActorDisplayName());
+        writer.writeObjectValue("additionalData", this.getAdditionalDataProperty());
         writer.writeStringValue("alertPolicyId", this.getAlertPolicyId());
         writer.writeStringValue("alertWebUrl", this.getAlertWebUrl());
         writer.writeStringValue("assignedTo", this.getAssignedTo());
@@ -359,6 +369,13 @@ public class Alert extends Entity implements Parsable {
      */
     public void setActorDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("actorDisplayName", value);
+    }
+    /**
+     * Sets the additionalData property value. A collection of other alert properties, including user-defined properties. Any custom details defined in the alert, and any dynamic content in the alert details, are stored here.
+     * @param value Value to set for the additionalData property.
+     */
+    public void setAdditionalDataProperty(@jakarta.annotation.Nullable final Dictionary value) {
+        this.backingStore.set("additionalDataProperty", value);
     }
     /**
      * Sets the alertPolicyId property value. The ID of the policy that generated the alert, and populated when there is a specific policy that generated the alert, whether configured by a customer or a built-in policy.

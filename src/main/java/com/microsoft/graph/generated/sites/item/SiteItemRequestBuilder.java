@@ -18,6 +18,7 @@ import com.microsoft.graph.sites.item.lastmodifiedbyuser.LastModifiedByUserReque
 import com.microsoft.graph.sites.item.lists.ListsRequestBuilder;
 import com.microsoft.graph.sites.item.onenote.OnenoteRequestBuilder;
 import com.microsoft.graph.sites.item.operations.OperationsRequestBuilder;
+import com.microsoft.graph.sites.item.pages.PagesRequestBuilder;
 import com.microsoft.graph.sites.item.permissions.PermissionsRequestBuilder;
 import com.microsoft.graph.sites.item.sites.SitesRequestBuilder;
 import com.microsoft.graph.sites.item.termstore.TermStoreRequestBuilder;
@@ -143,6 +144,14 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the pages property of the microsoft.graph.site entity.
+     * @return a {@link PagesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PagesRequestBuilder pages() {
+        return new PagesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the permissions property of the microsoft.graph.site entity.

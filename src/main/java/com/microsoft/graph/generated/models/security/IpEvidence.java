@@ -42,6 +42,7 @@ public class IpEvidence extends AlertEvidence implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("countryLetterCode", (n) -> { this.setCountryLetterCode(n.getStringValue()); });
         deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
+        deserializerMap.put("stream", (n) -> { this.setStream(n.getObjectValue(Stream::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -53,6 +54,14 @@ public class IpEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("ipAddress");
     }
     /**
+     * Gets the stream property value. The stream property
+     * @return a {@link Stream}
+     */
+    @jakarta.annotation.Nullable
+    public Stream getStream() {
+        return this.backingStore.get("stream");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -61,6 +70,7 @@ public class IpEvidence extends AlertEvidence implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("countryLetterCode", this.getCountryLetterCode());
         writer.writeStringValue("ipAddress", this.getIpAddress());
+        writer.writeObjectValue("stream", this.getStream());
     }
     /**
      * Sets the countryLetterCode property value. The two-letter country code according to ISO 3166 format, for example: US, UK, CA, etc.
@@ -75,5 +85,12 @@ public class IpEvidence extends AlertEvidence implements Parsable {
      */
     public void setIpAddress(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("ipAddress", value);
+    }
+    /**
+     * Sets the stream property value. The stream property
+     * @param value Value to set for the stream property.
+     */
+    public void setStream(@jakarta.annotation.Nullable final Stream value) {
+        this.backingStore.set("stream", value);
     }
 }

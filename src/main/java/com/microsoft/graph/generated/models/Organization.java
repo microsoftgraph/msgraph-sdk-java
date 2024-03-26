@@ -43,7 +43,7 @@ public class Organization extends DirectoryObject implements Parsable {
         return this.backingStore.get("branding");
     }
     /**
-     * Gets the businessPhones property value. Telephone number for the organization. Although this is a string collection, only one number can be set for this property.
+     * Gets the businessPhones property value. Telephone number for the organization. Although this property is a string collection, only one number can be set.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class Organization extends DirectoryObject implements Parsable {
         return this.backingStore.get("city");
     }
     /**
-     * Gets the country property value. Country/region name of the address for the organization.
+     * Gets the country property value. Country or region name of the address for the organization.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class Organization extends DirectoryObject implements Parsable {
         return this.backingStore.get("countryLetterCode");
     }
     /**
-     * Gets the createdDateTime property value. Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Gets the createdDateTime property value. Timestamp of when the organization was created. The value can't be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -175,7 +175,7 @@ public class Organization extends DirectoryObject implements Parsable {
         return this.backingStore.get("onPremisesLastSyncDateTime");
     }
     /**
-     * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object has never been synced from an on-premises directory (default).
+     * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object isn't synced from on-premises active directory (default).
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -263,7 +263,7 @@ public class Organization extends DirectoryObject implements Parsable {
         return this.backingStore.get("technicalNotificationMails");
     }
     /**
-     * Gets the tenantType property value. Not nullable. The tenant type option that was selected when the tenant was created. The possible values are:  AAD - An enterprise identity access management (IAM) service that serves business-to-employee and business-to-business (B2B) scenarios.  AAD B2C A customer identity access management (CIAM) service that serves business-to-consumer (B2C) scenarios.
+     * Gets the tenantType property value. Not nullable. Can be one of the following types:  AAD - An enterprise identity access management (IAM) service that serves business-to-employee and business-to-business (B2B) scenarios.  AAD B2C An identity access management (IAM) service that serves business-to-consumer (B2C) scenarios.   CIAM - A customer identity & access management (CIAM) solution that provides an integrated platform to serve consumers, partners, and citizen scenarios.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -328,7 +328,7 @@ public class Organization extends DirectoryObject implements Parsable {
         this.backingStore.set("branding", value);
     }
     /**
-     * Sets the businessPhones property value. Telephone number for the organization. Although this is a string collection, only one number can be set for this property.
+     * Sets the businessPhones property value. Telephone number for the organization. Although this property is a string collection, only one number can be set.
      * @param value Value to set for the businessPhones property.
      */
     public void setBusinessPhones(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -349,7 +349,7 @@ public class Organization extends DirectoryObject implements Parsable {
         this.backingStore.set("city", value);
     }
     /**
-     * Sets the country property value. Country/region name of the address for the organization.
+     * Sets the country property value. Country or region name of the address for the organization.
      * @param value Value to set for the country property.
      */
     public void setCountry(@jakarta.annotation.Nullable final String value) {
@@ -363,7 +363,7 @@ public class Organization extends DirectoryObject implements Parsable {
         this.backingStore.set("countryLetterCode", value);
     }
     /**
-     * Sets the createdDateTime property value. Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Sets the createdDateTime property value. Timestamp of when the organization was created. The value can't be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -412,7 +412,7 @@ public class Organization extends DirectoryObject implements Parsable {
         this.backingStore.set("onPremisesLastSyncDateTime", value);
     }
     /**
-     * Sets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object has never been synced from an on-premises directory (default).
+     * Sets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object isn't synced from on-premises active directory (default).
      * @param value Value to set for the onPremisesSyncEnabled property.
      */
     public void setOnPremisesSyncEnabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -489,7 +489,7 @@ public class Organization extends DirectoryObject implements Parsable {
         this.backingStore.set("technicalNotificationMails", value);
     }
     /**
-     * Sets the tenantType property value. Not nullable. The tenant type option that was selected when the tenant was created. The possible values are:  AAD - An enterprise identity access management (IAM) service that serves business-to-employee and business-to-business (B2B) scenarios.  AAD B2C A customer identity access management (CIAM) service that serves business-to-consumer (B2C) scenarios.
+     * Sets the tenantType property value. Not nullable. Can be one of the following types:  AAD - An enterprise identity access management (IAM) service that serves business-to-employee and business-to-business (B2B) scenarios.  AAD B2C An identity access management (IAM) service that serves business-to-consumer (B2C) scenarios.   CIAM - A customer identity & access management (CIAM) solution that provides an integrated platform to serve consumers, partners, and citizen scenarios.
      * @param value Value to set for the tenantType property.
      */
     public void setTenantType(@jakarta.annotation.Nullable final String value) {

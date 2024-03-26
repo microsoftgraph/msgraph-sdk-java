@@ -518,6 +518,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("signInActivity", (n) -> { this.setSignInActivity(n.getObjectValue(SignInActivity::createFromDiscriminatorValue)); });
         deserializerMap.put("signInSessionsValidFromDateTime", (n) -> { this.setSignInSessionsValidFromDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("skills", (n) -> { this.setSkills(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("sponsors", (n) -> { this.setSponsors(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("state", (n) -> { this.setState(n.getStringValue()); });
         deserializerMap.put("streetAddress", (n) -> { this.setStreetAddress(n.getStringValue()); });
         deserializerMap.put("surname", (n) -> { this.setSurname(n.getStringValue()); });
@@ -1098,6 +1099,14 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("skills");
     }
     /**
+     * Gets the sponsors property value. The sponsors property
+     * @return a {@link java.util.List<DirectoryObject>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<DirectoryObject> getSponsors() {
+        return this.backingStore.get("sponsors");
+    }
+    /**
      * Gets the state property value. The state or province in the user's address. Maximum length is 128 characters. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @return a {@link String}
      */
@@ -1293,6 +1302,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeObjectValue("signInActivity", this.getSignInActivity());
         writer.writeOffsetDateTimeValue("signInSessionsValidFromDateTime", this.getSignInSessionsValidFromDateTime());
         writer.writeCollectionOfPrimitiveValues("skills", this.getSkills());
+        writer.writeCollectionOfObjectValues("sponsors", this.getSponsors());
         writer.writeStringValue("state", this.getState());
         writer.writeStringValue("streetAddress", this.getStreetAddress());
         writer.writeStringValue("surname", this.getSurname());
@@ -2121,6 +2131,13 @@ public class User extends DirectoryObject implements Parsable {
      */
     public void setSkills(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("skills", value);
+    }
+    /**
+     * Sets the sponsors property value. The sponsors property
+     * @param value Value to set for the sponsors property.
+     */
+    public void setSponsors(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
+        this.backingStore.set("sponsors", value);
     }
     /**
      * Sets the state property value. The state or province in the user's address. Maximum length is 128 characters. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).

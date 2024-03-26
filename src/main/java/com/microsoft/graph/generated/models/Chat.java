@@ -74,7 +74,7 @@ public class Chat extends Entity implements Parsable {
         return this.backingStore.get("installedApps");
     }
     /**
-     * Gets the lastMessagePreview property value. Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property.
+     * Gets the lastMessagePreview property value. Preview of the last message sent in the chat. Null if no messages were sent in the chat. Currently, only the list chats operation supports this property.
      * @return a {@link ChatMessageInfo}
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class Chat extends Entity implements Parsable {
         return this.backingStore.get("lastMessagePreview");
     }
     /**
-     * Gets the lastUpdatedDateTime property value. Date and time at which the chat was renamed or list of members were last changed. Read-only.
+     * Gets the lastUpdatedDateTime property value. Date and time at which the chat was renamed or the list of members was last changed. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -154,7 +154,7 @@ public class Chat extends Entity implements Parsable {
         return this.backingStore.get("topic");
     }
     /**
-     * Gets the viewpoint property value. Represents caller-specific information about the chat, such as last message read date and time. This property is populated only when the request is made in a delegated context.
+     * Gets the viewpoint property value. Represents caller-specific information about the chat, such as the last message read date and time. This property is populated only when the request is made in a delegated context.
      * @return a {@link ChatViewpoint}
      */
     @jakarta.annotation.Nullable
@@ -214,14 +214,14 @@ public class Chat extends Entity implements Parsable {
         this.backingStore.set("installedApps", value);
     }
     /**
-     * Sets the lastMessagePreview property value. Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property.
+     * Sets the lastMessagePreview property value. Preview of the last message sent in the chat. Null if no messages were sent in the chat. Currently, only the list chats operation supports this property.
      * @param value Value to set for the lastMessagePreview property.
      */
     public void setLastMessagePreview(@jakarta.annotation.Nullable final ChatMessageInfo value) {
         this.backingStore.set("lastMessagePreview", value);
     }
     /**
-     * Sets the lastUpdatedDateTime property value. Date and time at which the chat was renamed or list of members were last changed. Read-only.
+     * Sets the lastUpdatedDateTime property value. Date and time at which the chat was renamed or the list of members was last changed. Read-only.
      * @param value Value to set for the lastUpdatedDateTime property.
      */
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -284,7 +284,7 @@ public class Chat extends Entity implements Parsable {
         this.backingStore.set("topic", value);
     }
     /**
-     * Sets the viewpoint property value. Represents caller-specific information about the chat, such as last message read date and time. This property is populated only when the request is made in a delegated context.
+     * Sets the viewpoint property value. Represents caller-specific information about the chat, such as the last message read date and time. This property is populated only when the request is made in a delegated context.
      * @param value Value to set for the viewpoint property.
      */
     public void setViewpoint(@jakarta.annotation.Nullable final ChatViewpoint value) {

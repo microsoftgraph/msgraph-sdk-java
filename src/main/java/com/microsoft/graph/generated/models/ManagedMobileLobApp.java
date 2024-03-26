@@ -91,7 +91,6 @@ public class ManagedMobileLobApp extends ManagedApp implements Parsable {
         writer.writeStringValue("committedContentVersion", this.getCommittedContentVersion());
         writer.writeCollectionOfObjectValues("contentVersions", this.getContentVersions());
         writer.writeStringValue("fileName", this.getFileName());
-        writer.writeLongValue("size", this.getSize());
     }
     /**
      * Sets the committedContentVersion property value. The internal committed content version.

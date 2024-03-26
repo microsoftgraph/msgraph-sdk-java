@@ -4,21 +4,21 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 /**
- * Contains all supported registry data detection type.
+ * A list of possible operations for rules used to make determinations about an application based on registry keys or values. Unless noted, the values can be used with either detection or requirement rules.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum Win32LobAppRegistryRuleOperationType implements ValuedEnum {
-    /** Not configured. */
+    /** Default. Indicates that the rule does not have the operation type configured. */
     NotConfigured("notConfigured"),
-    /** The specified registry key or value exists. */
+    /** Indicates that the rule evaluates whether the specified registry key or value exists. */
     Exists("exists"),
-    /** The specified registry key or value does not exist. */
+    /** Indicates that the rule evaluates whether the specified registry key or value does not exist. It is the functional inverse of an equivalent rule that uses operation type `exists`. */
     DoesNotExist("doesNotExist"),
-    /** String value type. */
+    /** Indicates that the rule compares the value read at the given registry value against a provided comparison value by string comparison. */
     String("string"),
-    /** Integer value type. */
+    /** Indicates that the rule compares the value read at the given registry value against a provided comparison value by integer comparison. */
     Integer("integer"),
-    /** Version value type. */
+    /** Indicates that the rule compares the value read at the given registry value against a provided comparison value via version semantics (both operand values will be parsed as versions and directly compared). If the value read at the given registry value is not discovered to be in version-compatible format, a string comparison will be used instead. */
     Version("version");
     public final String value;
     Win32LobAppRegistryRuleOperationType(final String value) {

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Entity representing a job to export a report
+ * Entity representing a job to export a report.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementExportJob extends Entity implements Parsable {
@@ -64,7 +64,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         return this.backingStore.get("filter");
     }
     /**
-     * Gets the format property value. Possible values for the file format of a report
+     * Gets the format property value. Possible values for the file format of a report.
      * @return a {@link DeviceManagementReportFileFormat}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         return this.backingStore.get("format");
     }
     /**
-     * Gets the localizationType property value. Configures how the requested export job is localized
+     * Gets the localizationType property value. Configures how the requested export job is localized.
      * @return a {@link DeviceManagementExportJobLocalizationType}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         return this.backingStore.get("snapshotId");
     }
     /**
-     * Gets the status property value. Possible statuses associated with a generated report
+     * Gets the status property value. Possible statuses associated with a generated report.
      * @return a {@link DeviceManagementReportStatus}
      */
     @jakarta.annotation.Nullable
@@ -160,14 +160,14 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         this.backingStore.set("filter", value);
     }
     /**
-     * Sets the format property value. Possible values for the file format of a report
+     * Sets the format property value. Possible values for the file format of a report.
      * @param value Value to set for the format property.
      */
     public void setFormat(@jakarta.annotation.Nullable final DeviceManagementReportFileFormat value) {
         this.backingStore.set("format", value);
     }
     /**
-     * Sets the localizationType property value. Configures how the requested export job is localized
+     * Sets the localizationType property value. Configures how the requested export job is localized.
      * @param value Value to set for the localizationType property.
      */
     public void setLocalizationType(@jakarta.annotation.Nullable final DeviceManagementExportJobLocalizationType value) {
@@ -202,7 +202,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         this.backingStore.set("snapshotId", value);
     }
     /**
-     * Sets the status property value. Possible statuses associated with a generated report
+     * Sets the status property value. Possible statuses associated with a generated report.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final DeviceManagementReportStatus value) {

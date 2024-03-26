@@ -27,7 +27,7 @@ public class Site extends BaseItem implements Parsable {
         return new Site();
     }
     /**
-     * Gets the analytics property value. Analytics about the view activities that took place in this site.
+     * Gets the analytics property value. Analytics about the view activities that took place on this site.
      * @return a {@link ItemAnalytics}
      */
     @jakarta.annotation.Nullable
@@ -110,6 +110,7 @@ public class Site extends BaseItem implements Parsable {
         deserializerMap.put("lists", (n) -> { this.setLists(n.getCollectionOfObjectValues(List::createFromDiscriminatorValue)); });
         deserializerMap.put("onenote", (n) -> { this.setOnenote(n.getObjectValue(Onenote::createFromDiscriminatorValue)); });
         deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(RichLongRunningOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("pages", (n) -> { this.setPages(n.getCollectionOfObjectValues(BaseSitePage::createFromDiscriminatorValue)); });
         deserializerMap.put("permissions", (n) -> { this.setPermissions(n.getCollectionOfObjectValues(Permission::createFromDiscriminatorValue)); });
         deserializerMap.put("root", (n) -> { this.setRoot(n.getObjectValue(Root::createFromDiscriminatorValue)); });
         deserializerMap.put("sharepointIds", (n) -> { this.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
@@ -160,6 +161,14 @@ public class Site extends BaseItem implements Parsable {
         return this.backingStore.get("operations");
     }
     /**
+     * Gets the pages property value. The pages property
+     * @return a {@link java.util.List<BaseSitePage>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<BaseSitePage> getPages() {
+        return this.backingStore.get("pages");
+    }
+    /**
      * Gets the permissions property value. The permissions associated with the site. Nullable.
      * @return a {@link java.util.List<Permission>}
      */
@@ -168,7 +177,7 @@ public class Site extends BaseItem implements Parsable {
         return this.backingStore.get("permissions");
     }
     /**
-     * Gets the root property value. If present, indicates that this is the root site in the site collection. Read-only.
+     * Gets the root property value. If present, provides the root site in the site collection. Read-only.
      * @return a {@link Root}
      */
     @jakarta.annotation.Nullable
@@ -235,6 +244,7 @@ public class Site extends BaseItem implements Parsable {
         writer.writeCollectionOfObjectValues("lists", this.getLists());
         writer.writeObjectValue("onenote", this.getOnenote());
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
+        writer.writeCollectionOfObjectValues("pages", this.getPages());
         writer.writeCollectionOfObjectValues("permissions", this.getPermissions());
         writer.writeObjectValue("root", this.getRoot());
         writer.writeObjectValue("sharepointIds", this.getSharepointIds());
@@ -244,7 +254,7 @@ public class Site extends BaseItem implements Parsable {
         writer.writeCollectionOfObjectValues("termStores", this.getTermStores());
     }
     /**
-     * Sets the analytics property value. Analytics about the view activities that took place in this site.
+     * Sets the analytics property value. Analytics about the view activities that took place on this site.
      * @param value Value to set for the analytics property.
      */
     public void setAnalytics(@jakarta.annotation.Nullable final ItemAnalytics value) {
@@ -335,6 +345,13 @@ public class Site extends BaseItem implements Parsable {
         this.backingStore.set("operations", value);
     }
     /**
+     * Sets the pages property value. The pages property
+     * @param value Value to set for the pages property.
+     */
+    public void setPages(@jakarta.annotation.Nullable final java.util.List<BaseSitePage> value) {
+        this.backingStore.set("pages", value);
+    }
+    /**
      * Sets the permissions property value. The permissions associated with the site. Nullable.
      * @param value Value to set for the permissions property.
      */
@@ -342,7 +359,7 @@ public class Site extends BaseItem implements Parsable {
         this.backingStore.set("permissions", value);
     }
     /**
-     * Sets the root property value. If present, indicates that this is the root site in the site collection. Read-only.
+     * Sets the root property value. If present, provides the root site in the site collection. Read-only.
      * @param value Value to set for the root property.
      */
     public void setRoot(@jakarta.annotation.Nullable final Root value) {

@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.partners.billing.Billing;
 import com.microsoft.graph.reports.partners.billing.manifests.ManifestsRequestBuilder;
 import com.microsoft.graph.reports.partners.billing.operations.OperationsRequestBuilder;
+import com.microsoft.graph.reports.partners.billing.reconciliation.ReconciliationRequestBuilder;
 import com.microsoft.graph.reports.partners.billing.usage.UsageRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -38,6 +39,14 @@ public class BillingRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the reconciliation property of the microsoft.graph.partners.billing.billing entity.
+     * @return a {@link ReconciliationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ReconciliationRequestBuilder reconciliation() {
+        return new ReconciliationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the usage property of the microsoft.graph.partners.billing.billing entity.

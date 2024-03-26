@@ -34,6 +34,7 @@ public class Billing extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("manifests", (n) -> { this.setManifests(n.getCollectionOfObjectValues(Manifest::createFromDiscriminatorValue)); });
         deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(Operation::createFromDiscriminatorValue)); });
+        deserializerMap.put("reconciliation", (n) -> { this.setReconciliation(n.getObjectValue(BillingReconciliation::createFromDiscriminatorValue)); });
         deserializerMap.put("usage", (n) -> { this.setUsage(n.getObjectValue(AzureUsage::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -54,6 +55,14 @@ public class Billing extends Entity implements Parsable {
         return this.backingStore.get("operations");
     }
     /**
+     * Gets the reconciliation property value. The reconciliation property
+     * @return a {@link BillingReconciliation}
+     */
+    @jakarta.annotation.Nullable
+    public BillingReconciliation getReconciliation() {
+        return this.backingStore.get("reconciliation");
+    }
+    /**
      * Gets the usage property value. The usage property
      * @return a {@link AzureUsage}
      */
@@ -70,6 +79,7 @@ public class Billing extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("manifests", this.getManifests());
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
+        writer.writeObjectValue("reconciliation", this.getReconciliation());
         writer.writeObjectValue("usage", this.getUsage());
     }
     /**
@@ -85,6 +95,13 @@ public class Billing extends Entity implements Parsable {
      */
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<Operation> value) {
         this.backingStore.set("operations", value);
+    }
+    /**
+     * Sets the reconciliation property value. The reconciliation property
+     * @param value Value to set for the reconciliation property.
+     */
+    public void setReconciliation(@jakarta.annotation.Nullable final BillingReconciliation value) {
+        this.backingStore.set("reconciliation", value);
     }
     /**
      * Sets the usage property value. The usage property
